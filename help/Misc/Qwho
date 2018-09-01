@@ -1,0 +1,21 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+qwho : displays a shorter list of all players on<br>
+<br>
+FLAGS<br>
+<br>
+i : only lists those you recognize<br>
+b : only lists those you have befriended<br>
+<br>
+<h1> Description </h1>
+<br>
+Command lists a shorter version of who - skips the titles and puts 3<br>
+characters per line.  For those using ansi - players you have been<br>
+introduced to are in yellow and those you have befriended are in green.<br>
+For those curious, qwho stands for quick who.<br>
+<br>
+See also: who<br>
+</html>
+</body>

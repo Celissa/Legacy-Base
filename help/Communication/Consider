@@ -1,0 +1,28 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+consider [mob]<br>
+<br>
+<h1> Description </h1>
+<br>
+This compares you and the monster to see which would most likely win a<br>
+fight.  Use it to avoid hopeless battles.  Also, keep in mind there are<br>
+many many variables to combat here, such as special attacks, so this is a<br>
+very rough and frequently unreliable idea of an opponent's strength. <br>
+Below is a list of the possible messages in logical order.<br>
+<br>
+MESSAGES<br>
+<br>
+An unworthy opponent.<br>
+Should be an easy kill.<br>
+You shouldn't have much difficulty.<br>
+It looks like a fair fight.<br>
+It will be a tough fight.<br>
+With luck on your side you might prevail.<br>
+You'll need a lot of help.<br>
+You don't have much of a hope.<br>
+You would require divine intervention<br>
+Attacking and suicide are equivalent.<br>
+</html>
+</body>

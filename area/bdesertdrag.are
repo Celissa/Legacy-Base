@@ -1,0 +1,1080 @@
+#M2_AREA
+2
+
+Brown Desert Dragons~
+Florian~
+none~
+~
+~
+
+0 0
+0
+0
+#ROOMS
+
+#78000
+Beneath a Sand Dune~
+Little more than a slanted sinkhole, a tunnel of limestone rises upwards
+to peak out at the base of a dune of sand.  The floor of the small cavern
+is covered with loose sand and flecks of chipped limestone while the
+walls have been smoothed by water erosion.  From the top of the cavern to
+a gentle, sloping passage to the south, the cavern curves in a single,
+graceful arc, from top to horizontal bottom.  Up and down the eastern
+wall of the cavern, natural depressions resembling handholds have eroded
+into the pale green rock.
+~
+*CF
+~
+167247884 11 5 0
+D2
+~
+~
+0 -1 78001 10 10 5
+D4
+~
+~
+235 -1 78129 10 10 5
+E
+natural handhold depressions eastern~
+Formed by the erosion of the limestone wall, a series of pitted
+depressions score the eastern side of the cavern, providing natural hand
+holds up the side of the sink hole.
+~
+E
+loose sand~
+Piles of loose sand lie about the bottom of this shallow sink hole. 
+Every now and again, a few sandy grains will filter down from the mouth
+of the sink hole, adding to the loose sand covering the floor.
+~
+E
+flecks chipped limestone~
+Chips of limestone lie strewn about the bottom of the sink hole and
+around the mouth of the cavern system to the south.  The limestone flakes
+look to have been chipped off of the edges of the sink hole.
+~
+E
+1 up sinkhole~
+The edges of the sink hole are jagged and uneven, and looks very fragile. 
+The lip of the hole looks like it could fracture or chip into pieces at
+any moment, assuming pressure were applied in the right (or wrong) spots.
+The main part of the sink hole is composed of a fissure.
+~
+A
+look~
+1 up fissure~
+if( !is_open( room, up ) )
+  act_tochar( #open, ch );
+else
+  act_tochar( #notopen, ch );
+~
+E
+notopen~
+Through the fissure in the ceiling, you can see the desert above.
+~
+E
+open~
+A fairly long and wide fissure runs through the ceiling.  However, an
+abundance of rock and sand fills the fissure.  Perhaps it can be cleared.
+~
+!
+0 0 0
+A
+move unclog clean clear~
+sand rocks debris 1 up~
+if( !is_open( room, up ) ) {
+  act_tochar( #clears, ch );
+  act_notchar( #rclears, ch );
+  open( room, up );
+}
+else
+  act_tochar( #already, ch );
+~
+E
+clears~
+Jumping up and down, you manage to clear the fissure of rocks and sand,
+revealing the desert above.
+~
+E
+rclears~
+After much jumping about, $n manages to clear the fissure in the
+ceiling of rocks and debris.
+~
+E
+already~
+The fissure in the ceiling has already been cleared and the way to the
+desert above opened.
+~
+!
+0 0 0
+A
+climb~
+1 up wall handholds~
+if( is_open( room, up ) ) {
+  if( !can_fly( ch ) ) {
+    i = add( random( 1, 10 ), find_skill( ch, climb ) );
+    if( i > 9 ) {
+      act_tochar( #climbs, ch );
+      act_notchar( #rclimbs, ch );
+      transfer( ch, find_room( 78129 ) );
+      act_notchar( #carr, ch );
+    }
+    else {
+      act_tochar( #trouble, ch );
+      end;
+    }
+  }
+  else {
+    act_tochar( #floatup, ch );
+    act_notchar( #rfloatup, ch );
+    transfer( ch, find_room( 78129 ) );
+    act_notchar( #farr, ch );
+  }
+}
+else {
+  act_tochar( #notclear, ch );
+  end;
+}
+loop( followers ) {
+  if( !is_player( rch ) ) {
+    act_tochar( #joins, rch );
+    act_notchar( #follow, rch );
+    transfer( rch, find_room( 78129 ) );
+    act_notchar( #arrives, rch );
+  }
+  else
+    act_tochar( #cant, rch );
+}
+~
+E
+climbs~
+Using the natural handholds, you climb out of the cavern, through a
+fissure in the ceiling.
+~
+E
+rclimbs~
+$n climbs up a set of natural handholds, disappearing out the fissure
+in the ceiling.
+~
+E
+trouble~
+Try as you might, you can't quite get a good grip.. and slide back down.
+~
+E
+floatup~
+With ease, you float up through the fissure.
+~
+E
+rfloatup~
+$n floats up through the fissure in the ceiling.
+~
+E
+notclear~
+You cannot make your way through the fissure.  Rocks and sand block it.
+~
+E
+joins~
+$n somehow manages to climb up after you.
+~
+E
+cant~
+You try following behind but slip and fall.
+~
+E
+follow~
+$n follows up after $s master.
+~
+E
+arrives~
+$n arrives right behind $s master.
+~
+E
+carr~
+$n climbs out of a fissure in the ground.
+~
+E
+farr~
+$n floats up from a fissure in the ground.
+~
+!
+0 0 0
+A
+up~
+*~
+act_tochar( #climb, ch, obj );
+~
+E
+climb~
+The ceiling is too high to reach.  You must find some other way out or
+try climbing.
+~
+!
+0 0 0
+-1
+S
+
+#78001
+Desert Warren~
+Judging from the scrapings along the floor and the piles of bone
+scattered here and there, it looks as if something very large has taken
+up residence in this system of underground caverns.  The roof of the
+cavern here slopes gently downward, to the south, where the cavern opens
+up into a simple chamber of hard-packed sand.  The brown rock walls bear
+ripple marks, as though formed by some great heat.  But these are not the
+only marks on the wall.  Deep, gouging claw marks also mar the surfaces
+of the cavern walls.  To the west lies the mouth of a tunnel, which is
+framed by a row of teeth-like dripstone formations.
+~
+~
+167247876 11 7 0
+D0
+~
+~
+0 -1 78000 10 10 5
+D3
+~
+~
+0 -1 78002 10 10 5
+E
+scratches scrapings~
+The markings trailing along the floor amidst the sand appear to be
+nothing more than scrapings from continual traffic through the cavern
+system.
+~
+E
+piles bones~
+The remains of several very humanoid bodies lie strewn about the sandy
+floor.  Their remains have been picked clean of flesh and belongings and
+several appear to be missing body parts as well.  All in all, for those
+with a weak stomach, the sight of so many fleshless corpses lying
+together en masse is, at best, a bit unnerving.  The bones of several of
+the individuals are deeply pitted, as though abraded by something fierce.
+~
+E
+gouging marks claw~
+Deep, blade-thin gouges have been sliced into the rocky walls in
+groupings of four.  Obviously claw marks, the gashes are each about eight
+inches long.  While you do not have an exact idea about what caused them,
+you get the feeling it would probably be best to avoid them.
+~
+E
+mouth tunnel teeth-like dripstone formations~
+Tiny, teeth-like stalactites no bigger than a tailor's needle surround
+the upper part of a cavern mouth which extends to the west.  Formed from
+deposits of red limestone, the toothy stalactites give the cavern
+entrance the overall appear of walking into the orifice of some extremely
+large creature, whose teeth are dripping blood.
+~
+E
+ripple patterns~
+The constant presence of dripping moisture has eroded away the walls of
+the cavern in places and deposited excess minerals in others.  The
+overall affect is to score the limestone walls with a series of wave-like
+ripples that undulate up and down the surfaces of the pale green rock.
+~
+1171 9 1509949540 3 0
+-1
+S
+
+#78002
+Cavern Tunnel~
+The walls of this tunnel have a smooth, but rippled texture, as though
+some great river of fire coursed down through its limestone branches. 
+The only exception to this is the limestone floor, which is scuffed and
+scratched by what looks to be constant traffic.  A small cavern opens up
+to the north while to the west and east, the smooth tunnel continues
+onward.
+~
+*CF
+~
+167247876 11 7 0
+D0
+~
+~
+0 -1 78003 10 10 5
+D1
+~
+~
+0 -1 78001 10 10 5
+D3
+~
+~
+0 -1 78004 10 10 5
+E
+small cavern 1 north~
+The small cavern to the north does not appear to have always been so
+small.  In fact, along the edges of the northern entrance are a few
+felled rocks - evidence of a minor cave-in.
+~
+-1
+S
+
+#78003
+Small Cavern~
+Though not very tall, this limestone cavern is extremely wide.  But it is
+also very plain.  There are no formations of dripstone rising from the
+floor or ceiling and nor are the walls rippled.  Instead, there is but a
+single drapery of iridescent stone which sparkles with a hint of gold
+along its edges.  The mouth of the cavern narrows into a small tunnel
+which extends to the south.
+~
+*CF
+~
+167247872 11 3 0
+D2
+~
+~
+0 -1 78002 10 10 5
+E
+drapery~
+Created by a steady flow of water depositing sediments to form the
+delicate mineral curtain, the iridescent drapery sparkles like a faerie's
+gossamer wings.  The fragile dripstone formation hangs in the center of
+the chamber, like a veil.  It appears as though gold has been deposited
+around the bottom fringes of the drapery.
+~
+E
+hint gold sparkle~
+Though there is but a needle's width of metallic gleam along the bottom
+of the mineral drapery, your keen eyes assure you that it is indeed gold. 
+While it might be hard to believe, it looks as though a vein of gold ore
+is slowly being eroded and deposited along the edge of the iridescent
+drapery.  Unfortunately, there is not enough gold here to bother with
+taking.
+~
+1532 9 1509949540 3 0
+1532 9 1509949540 3 0
+-1
+S
+
+#78004
+Cavern Tunnel~
+With walls of brown limestone, this cavern tunnel has few features, other
+than the melted look its walls has.  The cavern has three branches.  The
+western branch appears to enter into a large, domed chamber.  A dim, red
+glow and waves of heat can be seen coming from the mouth of the domed
+cavern.  To the north looms a cavern maybe twice the size of the one to
+the west.  The tunnel continues onward down the eastern branch.
+~
+*CF
+~
+167247876 11 7 0
+D0
+~
+~
+0 -1 78006 10 10 5
+D1
+~
+~
+0 -1 78002 10 10 5
+D3
+~
+~
+0 -1 78005 10 10 5
+A
+untrap disarm~
+ceiling next cavern piercers~
+acode( find_room( 78007 ), 2 );
+~
+!
+0 0 0
+A
+inspect look~
+ceiling cavern next chamber piercers~
+acode( find_room( 78007 ), 3 );
+~
+!
+0 0 0
+1171 9 1509949540 3 0
+-1
+S
+
+#78005
+Domed Cavern~
+The first thing which catches your attention is this cavern is its
+incredibly hot temperature and the waves of visible heat uplifting from
+the back of the chamber.  Taller than any part of the cavern system you
+have so far seen, the ceiling of this cavern rises up into a gentle
+hemisphere dome over your head.  You can easily pick out veins of quartz
+and other minerals running through the immense ceiling dome.  A dim but
+eerie red glow illuminates the humid chamber and seems to emanate from a
+circular depression in the limestone floor.  Malproportioned with the
+chamber itself, a tunnel leads east out of the chamber.
+~
+*CF
+~
+167247884 11 9 0
+D1
+~
+~
+0 -1 78004 10 10 5
+E
+depression circular~
+Situated in the center of the domed cavern lies a circular depression in
+the floor about fifteen feet wide.  The depression glows with a red
+illumination and as you get closer, you can see why.  Gurgling up but
+remaining within the basin is a small lake of molten lava!  Floating in
+the lake are several round stones about two feet in diameter that swirl
+with the lava's viscous current.
+~
+E
+round stones~
+The smooth, round stones floating within the basin of molten lava look as
+though they would melt and be consumed by the fiery liquid.  But as the
+round stones circle around, being carried on the currents of the lava,
+you notice for the first time that the stones have a scaly texture to
+them.  Perhaps they are not stones at all, but eggs!
+~
+E
+eggs~
+Thinking that perhaps the scaly round stones floating in the basin of
+lava are eggs, you notice that indeed, one of the 'stones' is beginning
+to crack open.  Perhaps it would be best to leave now.
+~
+E
+dim red glow magma~
+The dim red glow reminds you much of light cast from a source of intense
+fire.  The source of the dim illumination comes from a depression in the
+center of the cavern.
+~
+E
+tunnel 1 east~
+A tunnel much too small for anything larger than an ent to leave through
+extends to the east, out of the domed cavern.  The sides of the tunnel
+are rough and scraped.
+~
+E
+veins quartz gold~
+Thick veins of quartz and gold run through the domed ceiling of the
+cavern, which arcs nearly a hundred feet over your head.  The quartz
+appears to be in more abundance than the gold, but is also located in a
+much more dangerous spot to mine.  While the veins of gold ore are
+concentrated mainly along the sides of the dome, the quartz veins run
+right through its center, directly over the lava-filled depression.  It
+looks as though removal of too much of either mineral would severely
+compromise the integrity of the cavern.
+~
+A
+touch get examine~
+eggs round stones~
+act_tochar( #touches, ch );
+act_notchar( #rtouches, ch );
+wait( 1 );
+act_tochar( #burn, ch );
+act_notchar( #rburns, ch );
+damage( mob, ch, 3d6+12, fire, "the searing hot surface of the egg", "incineration" );
+~
+E
+touches~
+Reaching out, you touch the side of one of the large, round stones.
+~
+E
+rtouches~
+$n touches one of the round stones in the depression.
+~
+E
+burn~
+You pull your hand back when you realize your hand is catching on fire!
+~
+E
+rburns~
+$n screams and removes $s hand from the round stone.
+~
+!
+0 0 0
+A
+dig mine excavate~
+quartz ~
+if( has_obj( 2589, ch ) ) {
+  act_tochar( #not, ch );
+  end;
+}
+i = random( 1, 10 );
+if( find_skill( ch, float ) > 0 )
+  if( rflag( reset0, room ) )
+  if( has_obj( 1632, ch ) ) 
+  if( i < 3 ) {
+  act_tochar( #mine, ch );
+  act_notchar( #rmine, ch );
+  obj_to_char( oload( 2139 ), ch );
+  remove_rflag( reset0, room );
+  end;
+}
+else if( i == 5 ) {
+  act_tochar( #mine2, ch );
+  act_notchar( #rmine2, ch );
+  obj_to_char( oload( 2139 ), ch );
+  obj_to_char( oload( 2139 ), ch );
+  remove_rflag( reset0, room );
+}
+else {
+  act_tochar( #nothing, ch );
+  act_notchar( #rnothing, ch );
+  remove_rflag( reset0, room );
+  end;
+}
+else {
+  act_tochar( #needtool, ch );
+  end;
+}
+else {
+  act_tochar( #minedout, ch );
+  end;
+}
+else {
+  act_tochar( #cantfly, ch );
+  end;
+}
+wait( 2 );
+act_room( #closecall, ch );
+wait( 2 );
+if( random( 1, 5 ) == 1 ) {
+  act_room( #cavein, ch );
+  loop( all_in_room ) {
+    damage( mob, rch, 10d10+30, physical, "a section of the cavern's ceiling", "a mining accident" );
+  }
+}
+else
+  act_room( #closecall, ch );
+~
+E
+needtool~
+You lack the right type of mining tool to dig into the rock.  Try a
+pickaxe.
+~
+E
+minedout~
+On closer examination, it looks as though the veins of quartz have been
+played out.
+~
+E
+cantfly~
+You cannot reach the veins of ore.
+~
+E
+cavein~
+Loosened by recent digging, part of the cavern collapses!
+~
+E
+nothing~
+You dig and dig, but obtain not a single piece of valuable quartz out of
+the vein.
+~
+E
+rnothing~
+$n takes a pickaxe to the ceiling, digging for quartz, but finds none
+worth keeping.
+~
+E
+mine~
+A single piece of quartz, no larger than a copper piece, catches your eye
+as you dig.  You quickly scoop it up.
+~
+E
+rmine~
+It looks as though $n has managed to dig a small chunk of quartz out of the
+ceiling.
+~
+E
+mine2~
+With your trusty pickaxe, you discover not one but two pieces of quartz
+that look worthy of keeping.
+~
+E
+rmine2~
+$n knocks two pieces of quartz loose from the ceiling and 
+pockets them both.
+~
+E
+closecall~
+The cavern rumbles and the ceiling looks to have been weakened enough to
+collapse at any moment!
+~
+E
+not~
+The pickaxe you are carrying is much too small for mining here.
+~
+!
+0 0 0
+A
+dig mine excavate~
+gold~
+if( has_obj( 2589, ch ) ) {
+  act_tochar( #not, ch );
+  end;
+}
+i = random( 1, 20 );
+if( find_skill( ch, float ) > 0 )
+  if( rflag( reset0, room ) )
+  if( has_obj( 1632, ch ) ) 
+  if( i < 3 ) {
+  act_tochar( #mine, ch );
+  act_notchar( #rmine, ch );
+  obj_to_char( oload( 927 ), ch );
+  remove_rflag( reset0, room );
+  end;
+}
+else if( i == 5 ) {
+  act_tochar( #mine2, ch );
+  act_notchar( #rmine2, ch );
+  obj_to_char( oload( 927 ), ch );
+  obj_to_char( oload( 927 ), ch );
+  remove_rflag( reset0, room );
+}
+else {
+  act_tochar( #nothing, ch );
+  act_notchar( #rnothing, ch );
+  remove_rflag( reset0, room );
+  end;
+}
+else {
+  act_tochar( #needtool, ch );
+  end;
+}
+else {
+  act_tochar( #minedout, ch );
+  end;
+}
+else {
+  act_tochar( #cantfly, ch );
+  end;
+}
+wait( 2 );
+act_room( #closecall, ch );
+wait( 2 );
+if( random( 1, 5 ) == 1 ) {
+  act_room( #cavein, ch );
+  loop( all_in_room ) {
+    damage( mob, rch, 10d10+30, physical, "a section of the cavern's ceiling", "a mining accident" );
+  }
+}
+else
+  act_room( #closecall, ch );
+~
+E
+needtool~
+You lack the right type of mining tool to dig into the rock.  Try a
+pickaxe.
+~
+E
+minedout~
+On closer examination, it looks as though the veins of gold have been
+played out.
+~
+E
+cantfly~
+You cannot reach the veins of ore.
+~
+E
+cavein~
+Loosened by recent digging, part of the cavern collapses!
+~
+E
+nothing~
+You dig and dig, but obtain not a single piece of valuable gold out of
+the vein.
+~
+E
+rnothing~
+$n takes a pickaxe to the ceiling, digging for gold, but finds none
+worth keeping.
+~
+E
+mine~
+A single piece of gold, no larger than your hand, catches your eye as you
+dig.  You quickly scoop it up promptly.
+~
+E
+rmine~
+It looks as though $n has managed to dig a piece of gold ore out of the
+ceiling.
+~
+E
+mine2~
+With your trusty pickaxe, you discover not one but two pieces of gold
+that look worthy of keeping.
+~
+E
+rmine2~
+$n knocks two pieces of gold loose from the ceiling and 
+pockets them both.
+~
+E
+closecall~
+The cavern rumbles and the ceiling looks to have been weakened enough to
+collapse at any moment!
+~
+E
+not~
+The pickaxe you are carrying is much too small for mining here.
+~
+!
+0 0 0
+1530 9 1509949540 3 0
+1532 9 1509949540 3 0
+1532 9 1509949540 3 0
+-1
+S
+
+#78006
+Gigantic Chamber~
+The shaly, sedimentary rock walls of this massive cavern bulge in several
+places, where the moisture rolling down off the ceiling has caused the
+stone to literally dissolve and reform.  Also, stone waves run through
+nearly every surface imaginable.  From ceiling to floor, tiny undulations
+course through the limestone cavern, like gentle ripples in a pond.  From
+the ceiling hangs an assortment of needle-thin stalactites, whose grip
+seems so precarious that the slightest noise might send them crashing
+down upon your head.  To the west, you can see a pair of stalactites and
+stalagmites framing the entrance to a side cavern and to the south, the
+cavern narrows to but a single tunnel.
+~
+*CF
+~
+167247876 11 9 0
+D2
+~
+~
+0 -1 78004 10 10 5
+D3
+~
+~
+0 -1 78007 10 10 5
+E
+bulges~
+Much as it appears at first glance, moisture rolling in from above has
+eroded the walls in some places, but not others, creating a bulging
+affect.  Like a warped plank of wood, each bulge looks very unstable.
+~
+E
+ripples undulations~
+The tiny ripples coursing all throughout the cavern walls are yet another
+formation caused by water erosion.  Here, where water has encountered
+veins of rock other than limestone embedded in the walls, rippled have
+been 'etched' into the surfaces of the cavern.
+~
+E
+needle-like stalactites stalagmites 1 west~
+The two pairs of dripstone columns which frame the cavern mouth to the
+west are quite ordinary looking and about the same size as a modest tree
+trunk.  The smaller, thinner stalactites hanging from the ceiling up
+above, though, are cause for more concern.  Not only are they as thin as
+needles, but many of them look extremely loose.  One false move could
+bring them all down about your head.
+~
+A
+~
+~
+if( num_in_room( find_room( 78006 ) ) < 8 )
+  if( random( 1, 5 )  > 3 )
+  if( rflag( reset0, room ) ) {
+  ch = rand_player( room );
+  act_tochar( #theyfall, ch );
+  act_notchar( #rthey, ch );
+  mload( 1494, room );
+  mob_in_room( 1494, find_room( 78006 ) );
+  damage( rch, ch, 4d6+10, physical, "the needle sharp piercer", "a piercer" );
+}
+else
+  act_room( #something, ch );
+~
+E
+theyfall~
+A mass of something dark falls from the ceiling of the cavern, directly
+on you!
+~
+E
+something~
+You detect, out of the corner of your eye, something moving along the
+ceiling.
+~
+E
+rthey~
+Something sharp falls from the ceiling on top of $n!
+~
+!
+2 3000 0
+A
+~
+~
+if( mob_in_room( 1494, find_room( 78006 ) ) )
+  if( random( 1, 5 ) > 3 ) {
+  act_room( #crawls, ch );
+  mob = mob_in_room( 1494, room );
+  junk_mob( mob );
+}
+else {
+  mob = mob_in_room( 1494, room );
+  attack( mob, victim, 3d2+1, "rough bite" );
+}
+else
+  continue;
+~
+E
+crawls~
+The crawling piercer scurries up the wall, out of reach.
+~
+!
+2 3000 0
+A
+~
+~
+if( mob_in_room( 1494, find_room( 48249 ) ) )
+  if( random( 1, 5 ) > 3 ) {
+  act_room( #crawls, ch );
+  mob = mob_in_room( 1494, room );
+  junk_mob( mob );
+  }
+else {
+  mob = mob_in_room( 1494, room );
+  attack( mob, ch, 3d2+1, "rough bite" );
+  }
+else
+  continue;
+~
+E
+crawls~
+A crawling piercer makes its way up the wall.
+~
+!
+0 0 0
+1171 9 1509949540 3 0
+-1
+S
+
+#78007
+Hatchling Chamber~
+The ceiling of this limestone chamber is low-lying.  It expands upward
+towards the center of the cavern like a tent, only to descend along the
+back.  Beads of moisture roll down the brown limestone walls, to collect
+in small puddles along the ground.  Two conical stalagmites reach from
+the ground until they meet up with two stalactites of roughly the same
+size, with their tips pressed together like a pair of lovers locked in a
+tender embrace.  The dripstone formations frame the threshold of the
+chamber's entrance where the cavern extends to the east.  Against the
+western wall, in a bowl-like depression, lie a pile of discarded bones. 
+~
+*CF
+~
+167378948 11 9 0
+D1
+~
+~
+0 -1 78006 10 10 5
+E
+stalactites ~
+While the limestone in this chamber is of a pale, green hue, the
+stalactites are a mixture of both green and yellow limestone varieties. 
+As the stalactites taper downward to points, the green and yellow
+limestones swirl together in layers.
+~
+E
+stalagmites~
+The teeth-like protrusions of limestone erupting from the floor are
+formed of pale green limestone.  Narrow claw marks have been slashed into
+the sides of the stalagmites, revealing yellow limestone beneath.
+~
+E
+bones~
+Much to your relief, the bones look to be those of some large pack beast
+and not a humanoid.  Long, curving horns stretch out of the skeleton's
+cranium and judging from what is left intact of the spinal column, the
+beast had a tail.  Other than that, the bones are in complete disarray. 
+And as expected, there are deep gnaw marks on most of the bones.
+~
+E
+bowl-like depression~
+Formed by the erosion of limestone, this large, oval depression sinks
+about three feet into the floor of the cavern.  The smoothness of its
+sides indicates that water must have been the source of erosion.  Inside
+the bowl, there is a large pile of bones.
+~
+E
+1 east dripstone formations entrance~
+To the east, below a translucent dripstone curtain, lies the only
+entrance and exit to the cavern.  The passage appears to extend into a
+much larger cavern.  To either side of the cavern mouth stand the pairs
+of stalactites and stalagmites, like sentinels.
+~
+A
+~
+bones~
+i = random( 1, 10 );
+if( rflag( reset0, room ) )
+  if( is_player( ch ) )
+  if( i == 1 ) {
+  act_tochar( #search, ch );
+  act_notchar( #rsearch, ch );
+  remove_rflag( reset0, room );
+  wait( 2 );
+  act_tochar( #finds, ch );
+  act_notchar( #rfinds, ch );
+  obj_to_char( oload( 2026 ), ch );
+  end;
+  }
+else {
+  act_tochar( #search, ch );
+  act_notchar( #rsearch, ch );
+  }
+else {
+  act_tochar( #notplayer, ch );
+  end;
+  }
+else {
+  act_tochar( #already, ch );
+  end;
+  }
+remove_rflag( reset0, room );
+wait( 2 );
+act_tochar( #nothing, ch );
+~
+E
+search~
+You begin picking through some of the bones left in the depression.
+~
+E
+rsearch~
+$n begins picking through some of the bones in the
+depression.
+~
+E
+finds~
+Amidst the bones, you find an iron spade, still wrapped in the skeletal
+hands of some creature.  With little effort, you remove the spade from
+its death grip.
+~
+E
+rfinds~
+$n discovers a short, bladed object in the pile of bones.
+~
+E
+notplayer~
+Eeew!  Bones!  You think you should have your master pick through them,
+instead.
+~
+E
+nothing~
+You find nothing besides broken and chewed bones in the
+cavern depression.
+~
+E
+already~
+Judging from the amount of bones that lie outside of the depression, it
+looks as though someone else has already searched through it.
+~
+!
+9 0 0
+A
+untrap~
+east ceiling piercers ambush~
+if( rflag( reset0, find_room( 78006 ) ) )
+  if( find_skill( ch, untrap ) > 2 )
+  if( random( 1, 10 ) == 1 ) {
+  act_tochar( #notice, ch );
+  wait( 2 );
+  act_tochar( #throw, ch );
+  act_notchar( #rthrows, ch );
+  wait( 1 );
+  send_to_room( #screech, find_room( 78006 ) );
+  send_to_room( #screech, find_room( 78007 ) );
+  send_to_room( #screech, find_room( 78004 ) );
+  interpret( ch, "gt Everyone, watch the ceiling in the next chamber!");
+  remove_rflag( reset0, find_room( 78006 ) );
+  }
+else {
+  act_tochar( #miss, ch );
+  act_notchar( #rmiss, ch );
+  }
+else 
+  act_tochar( #moreskill, ch );
+else
+  act_tochar( #nosee, ch );
+~
+E
+throw~
+Picking up a chunk of stone lying nearby, you throw it into the next
+cavern, hoping to disrupt the ambush that waits for you along the ceiling.
+~
+E
+rthrows~
+$n throws a piece of rock into the next chamber.
+~
+E
+miss~
+Picking up a chunk of stone lying nearby, you throw it into the next
+chamber, but your throw goes horribly wide.
+~
+E
+notice~
+Watching the ceiling of the cavern in the next room carefully, you let
+your eyes adjust to the darkness and pick out a target.
+~
+E
+screech~
+A series of piercing screams assails your ears and you hear the loud thump
+of several creatures hitting the ground.
+~
+E
+moreskill~
+Perhaps if you had more skill in disarm ambushes and traps, you could do
+something.
+~
+E
+nosee~
+There does not seem to be any traps awaiting you in the next chamber.
+~
+E
+rmiss~
+$n tries throwing a stone into the next cavern, but $s 
+throw goes wide.
+~
+!
+0 0 0
+A
+inspect look~
+ceiling cavern next piercers~
+if( rflag( reset0, find_room( 78006 ) ) )
+if( find_skill( ch, inspect ) > 5 )
+act_tochar( #notice, ch );
+else
+act_notchar( #almost, ch );
+else
+continue;
+~
+E
+notice~
+Along the ceiling, in the next cavern, you can make out the forms of
+piercers, clinging to the ceiling, awaiting to fall down upon you and
+anyone else who is foolish enough to enter it without trying to get rid
+of the ambush trap.
+~
+E
+almost~
+There is something unusual about the ceiling in the next cavern, but as
+to what, you have no idea.
+~
+!
+9 0 0
+A
+2 skin~
+1 corpse 1 brown 1 sand 1 dragon 1 sire 1 the 1 of~
+if( obj_in_room( 10, room ) ) {
+  act_tochar( #skin, ch );
+  end;
+  }
+continue;
+~
+E
+skin~
+The dragon doesn't seem to have left enough of the corpse for you to skin.
+~
+!
+0 0 0
+1531 9 1509949540 3 0
+329 49 1509949540 -1 0
+970 81 1509949443 -1 0
+939 81 1509949443 -1 0
+-1
+S
+
+#0
+

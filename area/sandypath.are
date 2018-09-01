@@ -1,0 +1,444 @@
+#M2_AREA
+2
+
+Sandy Path~
+Larken Gosil~
+(null)~
+~
+~
+
+0 1986816371
+0
+1
+#ROOMS
+
+#79000
+Sandy Path~
+Twisting like a snake between encrouching healthy green shrubs, the path
+is strewn with small chunks of sandstone.  To the north and south you can
+see mounds of sand rising and falling like ripples on water.  Wind
+formed, they are held steadily in place by the shrubs which seem to
+thrive on the dunes, however, the foliage is patchy in parts exposing
+bare sand.  The path continues to the east, rising on a small dune.
+~
+[Larken] zirn w
+[Xai'Naga] I fixed a few typos, and added an extra for the shrubs.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 79001 10 10 5
+D3
+~
+~
+0 -1 150015 10 10 5
+E
+shrubs~
+These small shrubs, while bare in appearance, seem to thrive on the dunes
+they have called home.  They are stick-like in appearance, and a light
+brown in color.  Looking closely, you notice that some of the plant's
+roots have been exposed, possibly from the constant wind that seems to
+blow through here.
+~
+-1
+S
+
+#79001
+Sandy Path~
+The path continues over a small dune which you are standing on now.  The
+sand here is fairly deep in parts and tires your legs a little when
+walking.  the path trails down towards the east, coming to a large dune
+that looms over the surrounding area, though less so from your current
+vantage.  Encircling the path are the same green shrubs you saw elsewhere
+their twiggy refuse littering the sides of the path.
+~
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 79002 10 10 5
+D3
+~
+~
+0 -1 79000 10 10 5
+29 0 1509949540 -2 0
+-1
+S
+
+#79002
+Sandy Path~
+A huge dune of golden sand rises to the east above the surrounding
+sandscape.  The dune is mostly covered in small shrubs, though the top is
+bald, leaving a concave sand bowl.  Like a small stream, a line of sand
+flows down from the bowl, flaring out at the bottom of the dune.  Caught
+in the sand are small broken twigs no doubt roots from previous
+generations of shrubs.
+~
+[Larken] large dune east.. have to go around
+~
+167247872 16 9 0
+D0
+~
+~
+0 -1 79003 10 10 5
+D3
+~
+~
+0 -1 79001 10 10 5
+-1
+S
+
+#79003
+Sandy Path~
+A transition begins to occur here, green shrubs begin to grow smaller,
+and give way to small palms.  The sand here seems to be lighter in color
+than the previous sand saw to the west.  Tiny bits of various shells can
+be seen amongst the sand.  The path continues east and west around the
+large dune of sand.
+~
+[Xai'Naga] Maybe make sand searchable for a snail shell?
+[Larken] made snail shell a reset
+~
+167247872 16 9 0
+D1
+~
+~
+0 -1 79004 10 10 5
+D2
+~
+~
+0 -1 79002 10 10 5
+189 17 1509949460 -2 0
+-1
+S
+
+#79004
+Sandy Path~
+Small palms fawn over a small circular pool of water.  the depth of the
+pool is about a body length and does not seem to be stangant, despite
+being still.  A layer of green slime floats at the edges of the pool
+while the center is crystal clear, showing rocks caked in mud.
+~
+~
+167247872 16 9 0
+D1
+~
+~
+0 -1 79005 10 10 5
+D3
+~
+~
+0 -1 79003 10 10 5
+E
+look pool~
+The pool is crystal clear and looks almost inviting.  fingerling fish can
+be seen within with the occasional dark flash from a a disturbed eel.
+~
+-1
+S
+
+#79005
+Sandy Path~
+You are standing in a dip and the air is oppressive with heat.  Naked
+dunes encircle the area, blocking any winds other than an occasional sea
+breeze.  The dip seems to focus the sun's energy, the crusty sand
+retaining that heat even at night.  Though the air is static here, a wind
+whips at the tops of some of the dunes, scattering sand randomly.
+~
+~
+167247872 16 9 0
+D2
+~
+~
+0 -1 79006 10 10 5
+D3
+~
+~
+0 -1 79004 10 10 5
+-1
+S
+
+#79006
+Sandy Path~
+The soft sand spreads out under the shadow of a towering mud-colored
+statue.  The statues surface has been marred by countless small nicks and
+scratches, perhaps from someone's attempt to deface the monument.  To the
+right of it slender wooden poles have been hammered into the ground. 
+Sets of footprints cover the sand around and through the poles, one set
+clearly larger than the other as if a adult and child danced upon the
+beach.
+~
+[Larken] large dune west..
+[Larken] blade trainer's stone hut east
+~
+167247880 16 9 0
+D0
+~
+~
+0 -1 79005 10 10 5
+D1
+~
+~
+0 -1 79015 10 10 5
+D2
+~
+~
+0 -1 79007 10 10 5
+E
+look statue~
+The statue is for a want of a better word, buff.  Roughly the shape but
+four times the size of an Ogre it has trunklike thickly smoothed arms and
+legs.  Each of it's four arms ends in a devastating looking apendage, be
+it cutting, pounding or flailing.  It's surface is a rusty-muddy colour
+and crisscrossed with what look to be battle scars.  It's torso has six
+bulbious orbs in two lines begining at the torso and ending at the
+abdomin, on its lapel the word Chirox can be seen in simple script.
+~
+-1
+S
+
+#79007
+Sandy Path~
+To the east looms a large sand dune which casts half this area in a deep
+shadow.  The ground here is patched with large rough rocks being burried
+underneath a sheet of sand varying in thickness from a foot to mere
+inches.  To either side of the path hardy groundcover of small bushes
+cling to existance, trying to penetrate the rocks.
+~
+~
+167247872 16 9 0
+D0
+~
+~
+0 -1 79006 10 10 5
+D1
+~
+~
+0 -1 79008 10 10 5
+-1
+S
+
+#79008
+Sandy Path~
+At the foot of a large sand dune the area here is partially shaded.  The
+sand is deep here having flowed from the dune else carried by the winds
+to settle.  Green bushes line the path to west and cover the dune in a
+patches, though exposing large gaps.  There is evidence of rabbits or
+some other small critters presence, their leavings caught between the
+undergrowth and across the path.
+~
+[Larken] large dune.. up and over
+~
+167247872 16 9 0
+D3
+~
+~
+0 -1 79007 10 10 5
+D4
+~
+~
+0 -1 79009 10 10 5
+-1
+S
+
+#79009
+Sandy Path~
+You stand atop the dune which affords you a view of the surrounding
+dunes, and the path from which you have come.  To the east you can see
+the sapphire blue of the ocean while the sound of the surf and moisture
+laden air touch your senses.
+~
+~
+167247872 16 9 0
+D1
+~
+~
+0 -1 79010 10 10 5
+D5
+~
+~
+0 -1 79008 10 10 5
+180 9 1509949540 3 0
+-1
+S
+
+#79010
+Sandy Path~
+The sound of the ocean is fairly loud here, from your vantage point you
+can make out tumbling white of the surf as it crashes towards the beach. 
+A formation of rocks stands like a beseiged bastion on the sands and you
+are also able to make out darker patches where a hidden reef lies
+partially submerged.  The path itself tapers here, being that it has been
+gouged out of clay by running water, giving evidence that the dune is not
+entirely made of sand.
+~
+~
+167247872 16 9 0
+D1
+~
+~
+0 -1 79011 10 10 5
+D3
+~
+~
+0 -1 79009 10 10 5
+-1
+S
+
+#79011
+Sandy Path~
+You are amazed with the quantity of seashells here, mound upon mound,
+blanketing the area in a whitewashed mass.  At some stage this may have
+been a gathering place for creatures eating the sea's bounty, else
+perhaps seabirds have a penchant for cracking shells here.  The Sea jumps
+in and out of view here as the trial snakes down the dune at stark angles
+towards the beach under a covering of bushes.
+~
+~
+167247872 16 9 0
+D3
+~
+~
+0 -1 79010 10 10 5
+D5
+~
+~
+0 -1 79012 10 10 5
+1324 17 1509949450 -2 0
+-1
+S
+
+#79012
+Sandy Path~
+You stand at the foot of a huge sand dune on the beech, while other dunes
+can be seen in either direction, this one is the only one with a clearly
+defined path.  Hardy reed-like grasses cover the dunes, buffering them
+from the swirling winds and keeping the dunes held together.  The fresh
+smell of the sea blows in from the east feeding the air with moisture. 
+Bits of driftwood, dry and encrusted in salt have carried to the foot of
+the dunes, most likely from a violent storm in the not too distant past.
+~
+~
+167247872 16 9 0
+D1
+~
+~
+0 -1 79013 10 10 5
+D2
+~
+~
+0 -1 79014 10 10 5
+D4
+~
+~
+0 -1 79011 10 10 5
+-1
+S
+
+#79013
+Sandy Path~
+A stand of large black rock rises from the sand here, like a small
+bastion it guards the golden sanded beach.  It is entirely natural, being
+carved and battered by the sea, covered in limpets, welks and other
+creatures which trawl the rocks for sustanence.  The rock has several
+tidal rock pools which are a teaming with small fish and other creatures
+who were either caught by the tide or choose to make this their home.  To
+the east is what looks to be a shipwreck, caught on the treacherous
+rocks, you would almost be tempted to explore the wreckage but for the
+strenght of the surf today.
+~
+[Larken] shipwreck here. cant continue any farther
+[Gosil] how about a couple of crabs for atmostphere
+~
+167247872 16 9 0
+D3
+~
+~
+0 -1 79012 10 10 5
+A
+~
+~
+send_to_area( "@BThe sound of waves crashing on the shore roars all around you.@n", room );
+~
+!
+2 5 0
+180 9 1509949540 3 0
+180 9 1509949540 3 0
+-1
+S
+
+#79014
+Sandy Path~
+What madness is this?  Several bodies lie on the sand having been spewed
+out of the sea.  Somebody has gathered these corpses and spread them in
+the sand, while bloated and partially eaten by ocean dwellers they have
+been further mutilated with cabalistic symbols cut into them.  Several
+piles of seaweed exude an unpleasant smell as they rot while other bits
+having undergone a drying process lie blackened on the sand.  Markings
+have been made in the wet sand, the symbols unfamiliar to you while the
+pounding surf crashes against the beachhead.  to the south is a large
+unclimable sandstone cliff while to the north you can see a black rock
+jutting from the golden sands.
+~
+[Larken] sorc trainer here
+~
+167251970 16 9 0
+D0
+~
+~
+0 -1 79012 10 10 5
+A
+~
+~
+act_tochar( "@rAs you enter the maimed orc stands to greet you.@n", ch );
+~
+!
+1 0 1
+2735 9 1509949540 3 0
+-1
+S
+
+#79015
+Simple Stone Hut~
+The disorganised mix-match of uneven, rough cut and poorly laid stones
+form the walls of the small hut.  Despite the haphazard construction the
+stones interlock well enough to keep the place standing.  A small cot
+lies in one corner with a pile of jumbled sheets in the centre.  Across
+the room from the cot stands a simple weapon rack containing a wide
+assortment of bladed weapons.
+~
+[Larken] blade trainer
+[Gosil] take weapon - id like to have him say dont do that but here, take one of my training weapons (wooden sword)
+~
+167251974 0 6 0
+D3
+~
+~
+0 -1 79006 10 10 5
+E
+look rack~
+The rack is a simple affair, being made of bamboo - more impressive are
+the immaculately kept weapons, a stark contrast to the haphazard room. 
+While the blades are without chinks and look recently oiled, the weapon
+handles have look that suggests many hours of use.
+~
+A
+~
+~
+act_tochar( #enter, ch );
+~
+E
+enter~
+@cAs you enter the hermit looks up and smiles.@n
+The simple hermit tells you: "Welcome friend."
+~
+!
+1 0 8
+2733 9 1509949540 3 0
+-1
+S
+
+#0
+

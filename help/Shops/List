@@ -1,0 +1,33 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+list        : lists all objects a shopkeeper has to sell <br>
+list [item] : lists items matching argument<br>
+<br>
+<h1> Description </h1>
+<br>
+ List gives you a table of all the objects a shopkeeper has, and their<br>
+respective costs, levels, number, and condition.  The cost is always<br>
+listed in copper pieces, and is based on the value of the object and<br>
+how many are in stock.  The level is the minimum level needed to use the<br>
+object, and is often low, although the more powerful items tend to have<br>
+high levels.<br>
+<br>
+ The number is the amount of a particular item that the shopkeeper<br>
+currently has.  As it varies, the amount that the item is sold for varies<br>
+as well; the more items he has, the less they will cost, and the less<br>
+items he has, the more they will cost.<br>
+<br>
+ The condition tells the status of the object.  A shop always sells<br>
+items in excellent condition, unless an item in need of repair has<br>
+been sold to it by a player.<br>
+<br>
+ If an argument is specified it uses the same input as buy so it can be<br>
+used to verify you are buying what you think you are.  Thus to see a list<br>
+of all shields in a shop you would use list all.shield.<br>
+<br>
+*** in the level portion of the list means that either your race,<br>
+class, or alignment forbids your use of the item.<br>
+</html>
+</body>

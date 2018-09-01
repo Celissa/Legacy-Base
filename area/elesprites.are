@@ -1,0 +1,1733 @@
+#M2_AREA
+2
+
+Elemental Sprites~
+Larken~
+Elemental Sprites~
+~
+~
+
+30 0
+0
+1
+#ROOMS
+
+#75750
+Grassy Path~
+The grassy path here continues west and south.  Light green grass grows
+along the path muffling the sounds of all who travel here.  On either
+side of the path a grassy plain continues for as far the eye can see. 
+Off to the far north east you can just barely make out the what looks to
+be a large building on the horizon, and the wind from the east brings the
+smell of salt water.
+~
+[Azerin] done - az
+[Virt] where's pop room?
+~
+167247873 12 9 0
+D2
+~
+~
+0 -1 75751 10 10 5
+D3
+~
+~
+0 -1 76259 10 10 5
+-1
+S
+
+#75751
+Grassy Path~
+Small wildflowers grow along the path here and there.  The path leads to
+the north and south across the open grass land.  The smell of salt drifts
+in the breeze from the east and off in the far distance to the west you
+see what looks like might be the beginning of a forest.
+~
+need look wildflower special here.. perhaps even pick wild
+look wildflower
+[Azerin] done - Az
+~
+167247873 2 9 0
+D0
+~
+~
+0 -1 75750 10 10 5
+D2
+~
+~
+0 -1 75752 10 10 5
+E
+wildflower~
+Small bunches of foxgloves and daisies grow along the path and seem to
+spread across the fields to the north, east, and west, but not south.
+~
+A
+pick search~
+wild daisy foxglove~
+act_tochar( #pick, ch );
+act_notchar( #rpick, ch );
+if( rflag( reset0, room ) ) {
+     i = random( 1, 4 );
+     if( i == 1 ) {
+        act_tochar( #daisy, ch );
+        act_notchar( #rdaisy, ch );
+        obj_to_char( oload( 3053 ), ch );
+     }
+     if( i == 2 ) {
+        act_tochar( #fox, ch );
+        act_notchar( #rfox, ch );
+        obj_to_char( oload( 4241 ), ch );
+     }
+     if( i == 3 ) {
+        act_tochar( #wild, ch );
+        act_notchar( #rwild, ch );
+        obj_to_char( oload( 7376 ), ch );
+     }
+     if( i == 4 ) {
+        act_tochar( #none, ch );
+        act_notchar( #rnone, ch );
+        remove_rflag( reset0, room );
+     }
+  }
+else {
+  act_tochar( #young, ch );
+  act_notchar( #ryoung, ch );
+}
+~
+E
+pick~
+@yYou search through the wildflowers.
+~
+E
+rpick~
+@y$n searches through the wildflowers.
+~
+E
+daisy~
+@wYou find a daisy amongst all the wildflowers.
+~
+E
+rdaisy~
+@w$n holds up a daisy triumphantly after $m long search.
+~
+E
+fox~
+@MYou are able to pick a flower from one of the tall foxglove plants.
+~
+E
+rfox~
+$n smiles as $e is able to pick one of the @Mviolet@n flowers from the
+tall drooping plants.
+~
+E
+young~
+As you search through the wildflowers, you realize that all are to young
+to be picked.
+~
+E
+ryoung~
+$n scratches $m head in disbelief that there are not flowers to be picked.
+~
+E
+wild~
+@bYou search amongst the wild-flowers and are able to gather a small
+bundle of wild-flowers.
+~
+E
+rwild~
+@b$n searches amongst the wild-flowers and is able to gather a small
+bundle of wild-flowers.
+~
+E
+none~
+@yYou search amongst the wild-flowers, but are unable to find any
+suitable for picking.
+~
+E
+rnone~
+@y$n scratches $m head after comming up empty-handed.
+~
+!
+0 0 0
+-1
+S
+
+#75752
+The Edge of a Burnt Field~
+A grassy path leads in from the north and seems to end here and a burnt
+field begins and continues to the west.  Small stones and charred sticks
+litter the vague boundary between the two.  What ever happened in the
+field to the east must have happened a while ago because here and there in
+the charred landscape you can see small insects and birds trying to
+survive.  Living creatures would never return to a place like this soon
+after it's destruction.  Great boulders mar the surface of the field as
+if tossed carelessly.
+~
+[Larken] no.mob to keep sprites in
+elementalist here
+[Azerin] done - Az
+~
+167247883 2 9 0
+D0
+~
+~
+0 -1 75751 10 10 5
+D1
+~
+~
+0 -1 75753 10 10 5
+A
+~
+~
+// determine if they are allowed to get the objects from this room
+// tears should only be get-able by the person who quested for them
+i = get_integer( obj, "/vaco/quests/tearowner" );
+if( i != 0 ) {
+  // is a tear that belongs to someone
+  if( i != vnum( ch ) ) {
+    // not the owner, give 'em a shock or something
+    act_tochar( #not_yours, ch, obj, mob );
+    act_notchar( #rnot_yours, ch, obj, mob, sight );
+    end;
+  }
+  else {
+    // is the owner, check to see if they already got one
+    if( get_integer( ch, "/vaco/quests/hasatear" ) != 0 ) {
+      // greedy bugger
+      act_tochar( #greedy, ch, obj, mob );
+      act_notchar( #rgreedy, ch, obj, mob, sight );
+      if( vnum( obj ) == 4255 ) {
+        if( random( 1, 2 ) == 1 )
+          do_spell( lightning bolt, ch );
+        else
+          do_spell( freeze, ch );
+      }
+      if( vnum( obj ) == 4254 ) {
+        if( random( 1, 2 ) == 1 )
+          do_spell( fireball, ch );
+        else
+          do_spell( acid blast, ch );
+      }
+      junk_obj( obj, 1 );
+      end;
+    }
+    else {
+      // get the tear
+      act_tochar( #gain, ch, obj, mob );
+      act_notchar( #rgain, ch, obj, mob, sight );
+      set_integer( ch, "/vaco/quests/hasatear", 1 ); // set so they can't get the other
+      set_integer( obj, "/vaco/quests/tearowner", 0 ); // unset owner so they can pass it around freely now that they chose it
+      continue;
+    }
+  }
+}
+else {
+  // not a tear, just let them get the object
+  continue;
+}
+~
+E
+fa~
+The @Gjade@n and @Rruby@n tear throbs violently.  The tear explodes.
+~
+E
+ce~
+The @Bsapphire@n and @Ccitrine@n tear throbs violently.  The tear
+explodes.
+~
+E
+rnot_yours~
+$n is not the owner of $p.
+~
+E
+not_yours~
+You are not the owner of $p.
+~
+E
+rgreedy~
+$p explodes in a flash of light, $n obviously did something wrong.
+~
+E
+greedy~
+$p explodes in a flash of light, you recall another gem of these you gained.
+~
+E
+rgain~
+$n gets $p, lucky $m.
+~
+E
+gain~
+You get $p, lucky you.
+~
+!
+15 0 0
+2697 9 1509949540 3 0
+-1
+S
+
+#75753
+Burnt Field - Between a Rock and a Hard Place~
+You are now at the western edge of this wasted land.  Two great boulders
+lie to your north and south, leaving you the only option of heading east
+into the desolation or west toward what looks like living plants.  The
+boulders on either side of you stand as tall as a giant and are coated in
+a light dusting of soot.  Directly between the two boulders is a hole. 
+It looks just about big enough for you to squeeze through.
+~
+[Azerin] done - az
+~
+167247873 2 9 0
+D1
+~
+~
+0 -1 75754 10 10 5
+D3
+~
+~
+0 -1 75752 10 10 5
+D5
+~
+~
+0 -1 75774 10 10 5
+A
+~
+~
+act_tochar( #hope, ch );
+continue;
+~
+E
+hope~
+@RA feeling of hopelessness washes over you as you see nothing but
+barren, burnt land before you.
+~
+!
+3 0 2
+-1
+S
+
+#75754
+Burnt Field~
+Blackened tuffs of grass litter the area with no signs of growth or life. 
+The field continues around you in every direction.  You can see large
+boulders rising up from the ground to the west.  A faint breeze blows in
+from the east laden with the smell of salt.
+~
+[Azerin] done - az
+~
+167247873 2 9 0
+D0
+~
+~
+0 -1 75762 10 10 5
+D1
+~
+~
+0 -1 75755 10 10 5
+D2
+~
+~
+0 -1 75761 10 10 5
+D3
+~
+~
+0 -1 75753 10 10 5
+A
+~
+~
+send_to_room( #babble, room );
+~
+E
+babble~
+@BThe soft sounds of a stream come babbling from the south.
+~
+!
+2 500 0
+-1
+S
+
+#75755
+Burnt Field~
+Burnt desolation spreads from you in every direction.  If you look close
+enough you can see small signs of life here and there.  Small insects
+chew on the blackened grass and a few brave birds have begun to swoop in
+for the insects.  Large boulders lie along the perimeter of the field
+giving you the impression of a prison.
+~
+[Azerin] done - az
+~
+167247873 2 9 0
+D0
+~
+~
+0 -1 75763 10 10 5
+D1
+~
+~
+0 -1 75756 10 10 5
+D2
+~
+~
+0 -1 75759 10 10 5
+D3
+~
+~
+0 -1 75754 10 10 5
+2703 9 1509949540 3 0
+2703 9 1509949540 3 0
+-1
+S
+
+#75756
+Burnt Field~
+Large boulders and slabs of stone seem to line a path to the east.  Small
+tracks of lizards are the only sign of life here.  The tracks crisscross
+the ground running from boulder to boulder.  A sea of burnt grass and
+dirt extends to the east, north, and south.  The smell of a nearby ocean
+on the breeze teases your nose.  It must be there beyond the boulders to
+the east somewhere.
+~
+[Azerin] done - az
+~
+167247873 2 9 0
+D0
+~
+~
+0 -1 75765 10 10 5
+D1
+~
+~
+0 -1 75757 10 10 5
+D2
+~
+~
+0 -1 75758 10 10 5
+D3
+~
+~
+0 -1 75755 10 10 5
+-1
+S
+
+#75757
+Burnt Field - Cul-de-Sac~
+You are almost completely surrounded by boulders here.  The only way you
+can see out is through a path in the boulders to the west.  The smooth
+surfaces of the boulders make them impossible to climb, and trying to do
+so just gets you covered in soot.  The breeze whistles through cracks in
+the boulders bringing with it the smells of the ocean.  If you listen
+closely you can hear the occasional caw of a sea gull amid the sound of
+breakers crashing on the shore.  The ground around you is bare blackened
+dirt littered with small rocks.  At the far eastern edge of the
+cul-de-sac a particularly smooth stone slab lies on the ground.
+~
+need look stone slab - shows that is movable
+and the acode to move it opening an exit down
+[Azerin] done - az
+~
+167247873 2 9 0
+D3
+~
+~
+0 -1 75756 10 10 5
+D5
+~
+~
+227 -1 75766 10 10 5
+E
+stone slab~
+The smooth stone slab is larger than most of the rest of the rocks around. 
+The dirt around the stone appears to have been recently disturbed. 
+Perhaps with a little effort you could move it.
+~
+A
+move lift~
+stone slab~
+if( is_open( room, down ) ) {
+  act_tochar( #open, ch );
+}
+else {
+  if( find_stat( ch, str ) < 16 ) {
+     act_tochar( #weak, ch );
+     act_notchar( #rweak, ch );
+  }
+  else {
+     act_tochar( #strong, ch );
+     act_notchar( #rstrong, ch );
+     send_to_room( #ropen, find_room( 75766 ) );
+     open( room, down );
+  }
+}
+~
+E
+weak~
+@WYou are to weak to move the slab.
+~
+E
+rweak~
+@W$n is unable to budge the stone slab.
+~
+E
+strong~
+@CWith a great heave, you are able to move the stone slab revealing a
+hole in the ground.
+~
+E
+rstrong~
+@y$n gasps as $e reveals an exit below the stone slab.
+~
+E
+open~
+@bThe slab has already been moved.
+~
+E
+ropen~
+@yLight floods in from above as the stone slab is moved.
+~
+!
+0 0 0
+2704 9 1509949540 3 0
+2704 9 1509949540 3 0
+-1
+S
+
+#75758
+Burnt Field~
+Large slabs of stone block any travel to the east or south.  Small gaps
+in the stone allow a faint sea breeze to blow by.  Peeking into the gaps
+you can see a perfect white sand beach stretching out before you.  Flocks
+of sea gulls wheel in the air and dolphins jump in the waters off shore. 
+The beach makes a stark contrast to the burnt and blackened land that
+lies to your north and west.
+~
+[Azerin] done az
+~
+167247873 2 9 0
+D0
+~
+~
+0 -1 75756 10 10 5
+D3
+~
+~
+0 -1 75759 10 10 5
+-1
+S
+
+#75759
+Burnt Field~
+All around you is burnt desolation.  Blackened boulders line what looks
+to be a path to the south, and open field lies to the north, east, and
+west.  If you stand still long enough you can hear the occasional chirp
+of an insect trying to find food among the ruined grasses.  Small clumps
+that look like they were once bushes or shrubs dot the landscape.
+~
+need a look shrub bush - maybe acode a pop for a rare flower.
+[Azerin] done - az
+~
+167247873 2 9 0
+D0
+~
+~
+0 -1 75755 10 10 5
+D1
+~
+~
+0 -1 75758 10 10 5
+D2
+~
+~
+0 -1 75760 10 10 5
+D3
+~
+~
+0 -1 75761 10 10 5
+E
+bush shrub~
+Looking at the clumps you can see from their leaf structure that there
+was at least four different species here at one point.  Deep in the
+centre of one of the bushes you see what looks to be a small red flower
+that has survived the destruction here.
+~
+A
+~
+~
+send_to_room( #babble, room );
+~
+E
+babble~
+@BThe soothing sounds of a stream come babbling from the west.
+~
+!
+2 500 0
+-1
+S
+
+#75760
+Burnt Field - Cul-de-Sac~
+Large boulders block any further travel in any direction except back to
+the north.  Tucked into a nook between two boulders some brave bird has
+made a nest.  The way north is littered with small stones and only leads
+into the rest of the burnt fields.
+~
+look nest - acode sear nest for shiny braclet
+[Azerin] done - az
+~
+167247873 2 9 0
+D0
+~
+~
+0 -1 75759 10 10 5
+E
+nest~
+Made of pieces of black grass this small nest is home to a bird trying to
+make it's way in this desolation.  Small blue and green feathers line the
+inside of the nest.  Under one of the feathers you think you might have
+seen something shinny.
+~
+A
+search~
+nest~
+act_tochar( #search, ch );
+act_notchar( #rsearch, ch );
+if( rflag( reset0, room ) ) {
+  i = random( 1, 20 );
+  if( i == 1 ) {
+     act_tochar( #found, ch );
+     act_notchar( #rfound, ch );
+     obj_to_char( oload( 2097 ), ch );
+     remove_rflag( reset0, room );
+  }
+  else {
+     act_tochar( #none, ch );
+     act_notchar( #rnone, ch );
+     remove_rflag( reset0, room );
+  }
+}
+~
+E
+found~
+@yAfter spending some time digging through the nest, you find a something!
+~
+E
+rfound~
+@b$n excitedly extracts something from the nest!
+~
+E
+search~
+You being to rifle through the nest.
+~
+E
+rsearch~
+$n begins rifling through the nest.
+~
+E
+none~
+@rAfter a thorough search, you are unable to find anything.
+~
+E
+rnone~
+@y$n thoroughly searches through the nest, but is unable to find anything.
+~
+!
+0 0 0
+2696 9 1509949540 3 0
+2696 9 1509949540 3 0
+-1
+S
+
+#75761
+Burnt Field~
+Blackened boulders block the way west and southward.  A small stream
+passes beneath the boulders and ends a few feet into the field.  Small
+clumps of blackened grass along the stream seem to have small bits of
+green showing near the ground, but not enough to get excited about.
+~
+need stream in here..
+[Azerin] done - az
+~
+167247873 2 9 0
+D0
+~
+~
+0 -1 75754 10 10 5
+D1
+~
+~
+0 -1 75759 10 10 5
+398 17 1509949540 -2 0
+-1
+S
+
+#75762
+Burnt Field~
+The stone wall of boulders prevents you from heading north or west of
+here.  Small insects strive to survive here while birds hop along the
+ground and swoop in the air trying to catch them.  Listening closely you
+can hear the sound of rustling grass and the chirps of happy birds and
+insects on the other side of the wall.
+~
+[Azerin] done - Az
+~
+167247873 2 9 0
+D1
+~
+~
+0 -1 75763 10 10 5
+D2
+~
+~
+0 -1 75754 10 10 5
+-1
+S
+
+#75763
+Burnt Field~
+Tuffs of blackened grass surround you and continue in every direction. 
+Looking out across the field you can see small birds diving for insects
+and feel a faint breeze out of the east.  All around the perimeter of
+the field great slabs of stone and boulder rise up out of the ground. 
+~
+[Azerin] last part doesnt make sense
+[Azerin] Much like the boulders that line a small path to the north from here.
+[Azerin] az
+[Larken] fixed
+~
+167247873 2 9 0
+D0
+~
+~
+0 -1 75764 10 10 5
+D1
+~
+~
+0 -1 75765 10 10 5
+D2
+~
+~
+0 -1 75755 10 10 5
+D3
+~
+~
+0 -1 75762 10 10 5
+-1
+S
+
+#75764
+Burnt Field - Cul-de-Sac~
+It appears you have reached a dead end.  The only obvious exit is through
+the path lined with boulders to the south.  Down near the ground on the
+northern side do the cul-de-sac a small green vine has squeezed its way
+between two of the boulders bringing a touch of color and life to this
+black and dead place.  The ground near the vine seems softer than the
+rest of the area.
+~
+look ground
+[Azerin] done Az - Actions should prob be acodes rather than looks, so you dont force players into actions
+[Larken] ok fixed
+~
+167247873 2 9 0
+D2
+~
+~
+0 -1 75763 10 10 5
+E
+ground~
+@yThe ground at the base of one of the boulders seems soft and loose.
+Perhaps you would be able to dig through it.
+~
+A
+dig~
+down ground loose~
+act_tochar( #dig, ch );
+act_notchar( #digr, ch );
+~
+E
+dig~
+@yExcitedly you dig at the loose dirt hoping to find a way out.  You only
+dig a few inches before all your hopes of escape crash as you hit solid
+rock.@n 
+~
+E
+digr~
+@yWith a look of excitement $n digs at the loose dirt.  Moments later the
+look turns to dissapointment as $e hits solid rock.
+~
+!
+0 0 0
+2702 9 1509949540 3 0
+2702 9 1509949540 3 0
+-1
+S
+
+#75765
+Burnt Field~
+Boulders block travel to the north or east.  Looking around all you can
+see is desolation.  The sings of life that you had seen in other parts of
+the field are absent here.  Not even the soot that covers the boulders
+seems to move.  Soot covers everything here muffling every sound, even
+that of your walking.
+~
+look soot
+look outline
+look pile bones
+need a search pile or bone here..  pop something..  like a 1% pop of a
+--lvl 25 +1 wis belt of the mystic
+If charcter has been assigned quest 87 50% chance of poping charred dwarven skull
+[Azerin] this again, should be acode  - anytime you have an "action" make it an acode
+[Azerin] Done - Az
+brush wipe - soot
+[Larken] fixed
+~
+167247873 2 9 0
+D2
+~
+~
+0 -1 75756 10 10 5
+D3
+~
+~
+0 -1 75763 10 10 5
+E
+soot boulders~
+A thin layer of black soot covers everything here.  The fine grains blow
+around in the wind.  Perhaps you could brush some of the soot away to see
+what lies beneath it.
+~
+E
+outline~
+The outline appears to be the shadow of a dwarf, short and stocky burnt
+into the stone except its the stone that has been burnt and the shadowed
+area that remains as it should be.  Looking closly at the bottom of the
+boulder you now see what looks to be a pile of bone just where the feet
+of the shadow end.
+~
+E
+pile bones~
+The pile of bone appears to be all that's left of the unlucky soul that
+was standing here when what ever destroyed this area happened.  Perhaps
+there is still something useful among the bone.
+~
+A
+search~
+pile bone skeleton dwarf~
+act_tochar( #search, ch );
+act_notchar( #rsearch, ch );
+if( rflag( reset0, room ) ) {
+  i = random( 1, 100 );
+  if( i == 1 ) {
+     act_tochar( #found, ch );
+     act_notchar( #rfound, ch );
+     obj_to_char( oload( 4243 ), ch );
+     remove_rflag( reset0, room );
+  }
+  else {
+     act_tochar( #none, ch );
+     act_notchar( #rnone, ch );
+     remove_rflag( reset0, room );
+  }
+  if( doing_quest( ch, 87 ) ) {
+     if( i < 50 ) {
+        act_tochar( #skull, ch );
+        act_notchar( #rskull, ch );
+        obj_to_char( oload( 4253 ), ch );
+        remove_rflag( reset0, room );
+     }
+  }
+}
+else {
+  act_tochar( #gone, ch );
+  act_notchar( #rgone, ch );
+}
+~
+E
+search~
+@yYou begin rummaging through the dwarven skeleton.
+~
+E
+rsearch~
+@y$n crouches down and begins to poke through the dwarven remains.
+~
+E
+found~
+@CTo your amazement you find a thin leather belt studded with sapphires.
+~
+E
+rfound~
+@C$n gasps in surprise from what $e has found.
+~
+E
+none~
+@ySearching throught the remains, you come up with nothing.
+~
+E
+rnone~
+@y$n shakes $m head for finding nothing of value.
+~
+E
+gone~
+@yThe skeleton of a dwarf has already been searched.
+~
+E
+rgone~
+@y$n grumbles as $e realizes that the skeleton has already been searched.
+~
+E
+skull~
+@GYou are able to extract a small humaniod skull from the pile.
+~
+E
+rskull~
+@G$n pulls a small humaniod skull for the pile.@n
+~
+!
+0 0 0
+A
+~
+~
+act_tochar( #soot, ch );
+act_notchar( #rsoot, ch );
+~
+E
+rsoot~
+@yAs $n enters the room, the kicked up soot swirls and dances in the
+air before finally settling to the ground.@n
+~
+E
+soot~
+@yAs you enter the room, the kicked up soot swirls and dances in the air
+before settling to the ground.@n
+~
+!
+1 0 12
+A
+brush wipe~
+soot~
+act_tochar( #soot, ch );
+act_notchar( #sootr, ch );
+~
+E
+soot~
+Looking at the soot covered boulders you decide to brush the soot away to
+see what lies beneath it.  As you begin you bush the soot away you see
+that the boulders are blackened beneath the soot too.  You are just about
+to give up when you find a patch of gray stone about three feet off the
+ground on one of the boulders.  After many minutes of work you have
+finally uncovered the entire boulder leaving you with a strange outline
+in gray on a black background.
+~
+E
+sootr~
+$n starts brushing away some soot from the boulders, $e spends a few
+minutes working at it, and uncovers an unusual outline.
+~
+!
+0 0 0
+-1
+S
+
+#75766
+Dark Tunnel~
+The tunnel of hard packed clay continues north and south from here.  The
+walls pulse with a faint glow that looks more and more green the farther
+north you look and more and more blue the farther south.  Looking at the
+ceiling you see what looks to be a hole covered by a slab of stone.
+~
+hole up covered by slab of stone. move stone to go up
+[Azerin] done - az
+[Azerin] done - try not to put actions in rdescs btw..
+[Larken] fixed
+~
+167378945 11 5 0
+D0
+~
+~
+0 -1 75767 10 10 5
+D2
+~
+~
+0 -1 75781 10 10 5
+D4
+~
+~
+227 -1 75757 10 10 5
+E
+stone hole~
+Looking closer at the hole you see that it is indeed covered by a slab of
+stone.  It looks like it might be light enough to move.
+~
+A
+move push~
+stone slab~
+if( is_open( room, up ) ) {
+  act_tochar( #done, ch );
+}
+else {
+  if( find_stat( ch, str ) < 16 ) {
+     act_tochar( #weak, ch );
+     act_notchar( #rweak, ch );
+  }
+  else {
+     act_tochar( #strong, ch );
+     act_notchar( #rstrong, ch );
+     send_to_room( #ropen, find_room( 75757 ) );
+     open( room, up );
+  }
+}
+~
+E
+done~
+@bThe slab has already been moved.
+~
+E
+weak~
+@YYou are to weak to move the stone slab above you.
+~
+E
+rweak~
+@y$n heaves against the stone slab above, but is unable to budge it.
+~
+E
+strong~
+@yWith a mighty heave, you are able to push the stone slab aside,
+clearing a passage above.
+~
+E
+rstrong~
+@yWith a mighty heave, $n pushes the stone slab aside, clearing a passage
+above.
+~
+E
+ropen~
+@rThe stone slab slides to the side, revealing a passage down.
+~
+!
+0 0 0
+-1
+S
+
+#75767
+Dark Tunnel~
+From here you can continue north towards the green glow or south away
+from it.  A faint breeze of fresh air seems to blow in from the south. 
+The hard packed dirt walls are smooth and cool to the touch.  They seem
+to be dug out of the earth with precision exceeding even the skill of the
+dwarves.  No beams or supports are necessary to keep the ceiling from
+caving in.
+~
+[Azerin] done - az
+~
+167378945 11 5 0
+D0
+~
+~
+0 -1 75768 10 10 5
+D2
+~
+~
+0 -1 75766 10 10 5
+-1
+S
+
+#75768
+Dark Tunnel - Green Tunnel~
+A green portal set in the north wall pulses with a soft light.  The rest
+of the walls are made of hard packed clay with bits of small rocks mixed
+in here and there.  The light from the portal gives everything here a
+sickly green light.
+~
+portal north
+to 75784
+[Azerin] no portal extra
+[Azerin] done az
+[Larken] fixed
+~
+167378945 11 5 0
+D0
+~
+~
+98 -1 75784 10 10 5
+D2
+~
+~
+0 -1 75767 10 10 5
+D3
+~
+~
+0 -1 75769 10 10 5
+E
+portal north~
+The stone and clay portal to the north pulses with a rich green light. 
+Small streams of acid run down the sides of the portal eating away at the
+stone walls.
+~
+A
+enter~
+portal~
+act_tochar( #portal, ch );
+act_notchar( #rportal, ch );
+transfer( ch, find_room( 75784 ) );
+loop( followers ) {
+  ch = rch;
+  acode( room, 1 );
+}
+act_notchar( #arrive, ch );
+~
+E
+portal~
+@CYou step into the portal unknowing what lies beyond.
+~
+E
+rportal~
+@C$n steps through the portal and dissappears.
+~
+E
+arrive~
+$n arrives from the portal to the north.
+~
+!
+0 0 0
+2703 9 1509949540 3 0
+-1
+S
+
+#75769
+Dark Tunnel~
+The way west is blocked by side of a great boulder that rises out of the
+floor and up through the ceiling.  There is no way you could move such a
+colossal stone.  The tunnel continues back to the east toward a pulsing
+green light.
+~
+[Azerin] done az
+~
+167378945 11 5 0
+D1
+~
+~
+0 -1 75768 10 10 5
+-1
+S
+
+#75771
+Dark Tunnel~
+A great boulder blocks any further travel to the east.  The colossal
+stone rises out of the floor and up through the ceiling.  There is no way
+to move such a rock or go around it.  The only way to continue is back
+the way you came, towards the pulsing yellow light to the west.
+~
+[Azerin] done - az
+~
+167378945 11 5 0
+D3
+~
+~
+0 -1 75772 10 10 5
+-1
+S
+
+#75772
+Dark Tunnel - Yellow Portal~
+The source of the yellow light you have been seeing must be the yellow
+portal that is set in the west wall here.  It fills the room with a
+yellow glow.  The tunnel continues to the east and south from here. 
+Small piles of bones litter the floor in several places hinting that some
+danger may lie nearby.
+~
+portal
+to 75785
+[Azerin] portal extra missing
+[Azerin] done - az
+[Larken] fixed
+~
+167378945 11 5 0
+D1
+~
+~
+0 -1 75771 10 10 5
+D2
+~
+~
+0 -1 75773 10 10 5
+D3
+~
+~
+98 -1 75785 10 10 5
+E
+portal~
+~
+E
+portal west~
+The portal to the west crackles with electric energy.  The very substance
+of the portal itself appears to be lightning.  Only a truely brave solo
+would venture through such a gate.
+~
+A
+enter~
+portal~
+act_tochar( #portal, ch );
+act_notchar( #rportal, ch );
+transfer( ch, find_room( 75785 ) );
+ loop( followers ) {
+   ch = rch;
+acode( room, 1 );
+}
+act_notchar( #arrive, ch );
+~
+E
+portal~
+@CYou step into the portal unknowing what lies beyond.
+~
+E
+rportal~
+@C$n steps through the portal and dissappears.
+~
+E
+arrive~
+$n steps through the portal to the west.
+~
+!
+0 0 0
+2702 9 1509949540 3 0
+2702 9 1509949540 3 0
+-1
+S
+
+#75773
+Dark Tunnel~
+Bits of stone and clumps of clay litter the floor here.  The walls pulse
+with a bright yellow light.  Looking closely at the walls you see small
+crude carvings adorn the eastern wall.  The carvings were etched into
+the eastern wall in a great hurry.  The depict what looks like a dwarf
+battling four different creatures.  One looks like a flame, another
+resembles a lightning bolt, the third appears to be an icicle, and the
+last one is impossible to make out.  It seems who ever started this had
+to stop in a hurry.
+~
+[Azerin] done - az
+~
+167378945 11 5 0
+D0
+~
+~
+0 -1 75772 10 10 5
+D2
+~
+~
+0 -1 75774 10 10 5
+E
+carvings wall eastern~
+No description.
+~
+-1
+S
+
+#75774
+Dark Tunnel~
+Hard packed earth makes up the wall of this tunnel.  A hole in the
+ceiling allows access to the field above.  The tunnel continues to the
+north and south.  The walls of the tunnel seem to pulse with a strange
+red and yellow light.  As you look farther north the pulsing light seems
+to be more and more yellow, and as you look south it looks more and more
+red.
+~
+[Azerin] done - az
+~
+167378945 11 5 0
+D0
+~
+~
+0 -1 75773 10 10 5
+D2
+~
+~
+0 -1 75775 10 10 5
+D4
+~
+~
+0 -1 75753 10 10 5
+-1
+S
+
+#75775
+Dark Tunnel~
+As you continue along the tunnel you can see small bones littering the
+floor.  The walls pulse with an unearthly reddish glow that gets brighter
+the further south you look.  To the north the glow seems to have a faint
+hint of yellow in it.  The air here is hot and humid making it difficult
+to breathe.
+~
+[Azerin] done - az
+~
+167378945 11 5 0
+D0
+~
+~
+0 -1 75774 10 10 5
+D2
+~
+~
+0 -1 75776 10 10 5
+-1
+S
+
+#75776
+Dark Tunnel - Red Portal~
+This area is dominated by the red portal to the south.  This is obvoiusly
+the source of the reddish glow you have been seeing.  Gazing at the
+portal you are unable to see through to where it could possibly lead. 
+The walls and floor of the tunnel are made of hard packed dirt and clay. 
+Small bits of stone are scattered here and there on the floor.
+~
+portal south
+to 75782
+look portal
+[Azerin] done - az
+~
+167378945 11 5 0
+D0
+~
+~
+0 -1 75775 10 10 5
+D1
+~
+~
+0 -1 75777 10 10 5
+D2
+~
+~
+98 -1 75782 10 10 5
+E
+portal~
+The portal glows with an unearthly light.  Red and orange flames dance
+around the edges casting dark shadows in the centre.  The shadows prevent
+you from seeing what lies on the other side.  You will just have to enter
+it to find out.
+~
+A
+enter~
+portal~
+act_tochar( #portal, ch, obj, mob, sight );
+act_notchar( #rportal, ch, obj, mob, sight );
+transfer( ch, find_room( 75782 ) );
+act_notchar( #arrive, ch, obj, mob, sight );
+loop( followers ) {
+  ch = rch;
+  acode( room, 1 );
+}
+~
+E
+portal~
+You step into the portal.
+~
+E
+rportal~
+@C$n steps through the portal and dissappears.
+~
+E
+arrive~
+$n arrives from the portal to the east.
+~
+!
+0 0 0
+2696 9 1509949540 3 0
+2696 9 1509949540 3 0
+-1
+S
+
+#75777
+Dark Tunnel~
+The tunnel here continues west towards a faint glow or east into darkness. 
+Water drips through the hard clay ceiling forming murky puddles of
+stagnate water.  Looking at the ceiling you can see a few thread like
+roots trying to make their way in the clay.  The air here is still and
+hot making it very hard to breathe.
+~
+[Azerin] done - az
+~
+167378945 11 5 0
+D1
+~
+~
+0 -1 75778 10 10 5
+D3
+~
+~
+0 -1 75776 10 10 5
+-1
+S
+
+#75778
+Dark Tunnel~
+You have reached a dead end.  A large pile of rock blocks any further
+travel to the east.  The only way out from here is to go back the way you
+came, back towards the reddish glow in the west.  The walls of the tunnel
+leading to the west are made of hard packed dirt and clay.
+~
+[Azerin] done - az
+~
+167378945 11 5 0
+D3
+~
+~
+0 -1 75777 10 10 5
+-1
+S
+
+#75780
+Dark Tunnel - Blue Portal~
+A great blue portal fills the eastern wall here, and fills the area with
+a soft blue light.  Stone walls prevent any travel to the south or west. 
+The only choices to continue on are through the portal or north toward
+the sent of fresh air.
+~
+portal east
+to 75783
+[Azerin] no portal extra
+[Azerin] done - az
+[Larken] fixed
+~
+167378945 11 5 0
+D0
+~
+~
+0 -1 75781 10 10 5
+D1
+~
+~
+98 -1 75783 10 10 5
+E
+portal east~
+The portal pluses with a cold @cblue@n light.  Small icicles line the
+edge of the portal line the teeth of some giant monster, but the air here
+is obvoiusly to warm for ice.  The only way to find out more about this
+portal would be to enter it and see where it leads.
+~
+A
+enter~
+portal~
+act_tochar( #portal, ch );
+act_notchar( #rportal, ch );
+transfer( ch, find_room( 75783 ) );
+loop( followers ) {
+  ch = rch;
+  acode( room, 1 );
+}
+act_notchar( #arrive, ch );
+~
+E
+portal~
+@CYou step into the portal unknowing what lies beyond.
+~
+E
+rportal~
+@C$n steps through the portal and dissappears.
+~
+E
+arrive~
+$n arrives from the portal to the east.
+~
+!
+0 0 0
+2704 9 1509949540 3 0
+2704 9 1509949540 3 0
+-1
+S
+
+#75781
+Dark Tunnel~
+A faint breeze whafts in from the north to tease your nose with the sent
+of fresh air.  The walls here seem of pulse with a faint blue light that
+seems to come from the south.  Looking at the dirt walls you see they are
+lacking the trails of ants and worms usually found in dirt.
+~
+[Azerin] done - az
+[Yuilden] sent - scent
+~
+167378945 11 5 0
+D0
+~
+~
+0 -1 75766 10 10 5
+D2
+~
+~
+0 -1 75780 10 10 5
+-1
+S
+
+#75782
+The Plane of Fire~
+@RYou find yourself in the elemental plane of fire.  Tall pillars of fire
+surround you.  All that can be seen in every direction is fire.  A
+searing wind blows through the area.  To the north a shimmering portal
+beckons to you offering a way out of this burning place.@n 
+~
+portal north
+to 75776
+need an acoded wind here that does burning hands type damage occaionaly
+[Azerin] this should lead to a high lvl zone maybe
+[Azerin] done - az
+~
+167247873 0 9 0
+D0
+~
+~
+98 -1 75776 10 10 5
+E
+portal north shimmering~
+The shimmering portal to the north offers a means of escape from this
+place.  Watching the portal you see flashes of what looks like a dark
+tunnel beyond.
+~
+A
+enter~
+portal~
+act_tochar( #portal, ch, obj, mob, sight );
+act_notchar( #rportal, ch, obj, mob, sight );
+transfer( ch, find_room( 75776 ) );
+act_notchar( #arrive, ch, obj, mob, sight );
+loop( followers ) {
+  ch = rch;
+  acode( room, 1 );
+}
+~
+E
+portal~
+@CYou step into the portal unknowing what lies beyond.
+~
+E
+rportal~
+@C$n steps through the portal and dissappears.
+~
+E
+arrive~
+$n arrives from the portal to the east.
+~
+!
+0 0 0
+A
+~
+~
+send_to_room( #choke, room );
+loop( all_in_room ) {
+  if( race( rch ) != imp )
+     do_spell( burning hands, rch );
+}
+~
+E
+choke~
+@rRolling waves of heat scorch your flesh!!
+~
+!
+2 333 0
+2698 9 1509949540 3 0
+-1
+S
+
+#75783
+The Plane of Ice~
+@CYou find yourself in a place of ice and cold.  Tall mountains of ice
+stretch for as far as you can see.  A chilling wind blast through here
+constantly chilling you to the bone.  A shimmering portal to the west
+offers relief from this freezing hell.@n
+~
+portal west
+to 75780
+need acode wind here that does chilling touch
+[Azerin] extra done
+~
+167247873 0 9 0
+D3
+~
+~
+98 -1 75780 10 10 5
+E
+portal~
+The shimmering portal to the west offers a means of escape from this
+place.  Watching the portal you see flashes of what looks like a dark
+tunnel beyond.
+~
+A
+enter~
+portal~
+act_tochar( #portal, ch );
+act_notchar( #rportal, ch );
+transfer( ch, find_room( 75780 ) );
+loop( followers ) {
+  ch = rch;
+  acode( room, 1 );
+}
+act_notchar( #arrive, ch );
+~
+E
+rportal~
+@C$n steps through the portal and dissappears.
+~
+E
+portal~
+@CYou step into the portal unknowing what lies beyond.
+~
+E
+arrive~
+$n arrives from the portal to the west.
+~
+!
+0 0 0
+A
+~
+~
+send_to_room( #breeze, room );
+loop( all_in_room ) {
+  if( race( rch ) != imp )
+     do_spell( chilling touch, rch );
+}
+~
+E
+breeze~
+@CA strong gust of frigid air sweeps across the room.
+~
+!
+2 333 0
+2700 9 1509949540 3 0
+-1
+S
+
+#75784
+The Plane of Earth~
+@GAn acidic wind blows through here.  Small hills of dirt and stone rise up
+to the north and east.  To the west a great lake of green acid stretches
+as far as you can see.  The smell of freshly turned soil lingers in the
+air.  To the south a faint portal reveals glimpses of a dark tunnel.@n
+~
+portal south
+to 75768
+acode wind that does acid arrow is damage
+[Azerin] this room acid arrows, that seems odd
+~
+167247873 0 9 0
+D2
+~
+~
+98 -1 75768 10 10 5
+E
+portal~
+The shimmering portal to the south offers a means of escape from this
+place.  Watching the portal you see flashes of what looks like a dark
+tunnel beyond.
+~
+A
+enter~
+portal~
+act_tochar( #portal, ch );
+act_notchar( #rportal, ch );
+transfer( ch, find_room( 75768 ) );
+ loop( followers ) {
+   ch = rch;
+   act_tochar( #portal, ch );
+   act_notchar( #rportal, ch );
+  transfer( ch, find_room( 75768 ) );
+}
+act_notchar( #arrive, ch );
+~
+E
+rportal~
+@C$n steps through the portal and dissappears.
+~
+E
+portal~
+@CYou step into the portal unknowing what lies beyond.
+~
+E
+arrive~
+$n arrives from the portal to the south.
+~
+!
+0 0 0
+A
+~
+~
+send_to_room( #gas, room );
+loop( all_in_room ) {
+  if( race( rch ) != imp )
+     do_spell( acid arrow, rch );
+}
+~
+E
+gas~
+@GThe acidic air chokes you.
+~
+!
+2 333 0
+2699 9 1509949540 3 0
+-1
+S
+
+#75785
+The Plane of Electricity~
+@YYou find yourself in the elemental plane of electricity.  Lightning
+seems Even the air you breathe and the ground you stand on seems to be
+made of sparks.  A shimmering portal fills the eastern side of the plane
+eastern side of the plane offering a way to retreat from this place.@n
+~
+portal e
+to 75772
+need random acode to zap a group member with a small lightning bolt
+[Azerin] done - az
+~
+167247873 0 9 0
+D1
+~
+~
+98 -1 75772 10 10 5
+E
+portal~
+The shimmering portal to the east offers a means of escape from this
+place.  Watching the portal you see flashes of what looks like a dark
+tunnel beyond.
+~
+A
+enter~
+portal~
+act_tochar( #portal, ch );
+act_notchar( #rportal, ch );
+transfer( ch, find_room( 75772 ) );
+loop( followers ) {
+  ch = rch;
+  acode( room, 1 );
+}
+act_notchar( #arrive, ch );
+~
+E
+portal~
+@CYou step into the portal unknowing what lies beyond.
+~
+E
+rportal~
+@C$n steps through the portal and dissappears.
+~
+E
+arrive~
+$n arrives from the portal to the east.
+~
+!
+0 0 0
+A
+~
+~
+send_to_room( #shock, room );
+loop( all_in_room ) {
+  if( race( rch ) != imp )
+     do_spell( shock, rch );
+}
+~
+E
+shock~
+@cBolts of lightning dance down from above striking you!!
+~
+!
+2 333 15
+2701 9 1509949540 3 0
+-1
+S
+
+#0
+

@@ -1,0 +1,678 @@
+#M2_AREA
+2
+
+Tar'ippal caverns (4)~
+Azerin~
+~
+~
+~
+
+0 0
+0
+1
+#ROOMS
+
+#5000
+Tar'ippal Caverns - Stairs to The Underpass~
+The broken statues of dwarven warriors litter the dusty chamber, their
+once proud demeanor shattered by a concentrated effort to dismantle them. 
+Ancient-looking pillars rise from behind the base of each one, the
+surface carved with symbols of axes and picks.  At the apex of the
+ceiling dented copper lanterns dangle from rusty chains, a faint
+green-blue flame flickering in each one.  Hewen from the limestone rocks
+are wide stairs that spiral into the very bowls of the earth.
+~
+[Azerin] leaving decend the winding stairs
+[Azerin] lanterns have mage light in them
+[Guin] Have this as part of the passage from Tar to Mar Q?
+[Virt] "hewen" and "bowls" misspelled
+~
+167247876 12 6 0
+D4
+~
+~
+0 -1 4828 10 10 5
+D5
+~
+~
+0 -1 5001 10 10 5
+-1
+S
+
+#5001
+Tar'ippal Caverns - Stairs to The Underpass~
+Winding stairs ascend and descend, their destination quickly lost in the
+darknes.  Hacked from limestone the stairs have been worn smooth by the
+passage of time, shallow indentations in the center of each step show
+where the majority of traffic has walked.  A montage of faint carvings
+cover the walls, their exact details unclear.
+~
+[Azerin] carvings of dwarven warriors battling foes
+[Guin] Have this as part of the passage from Tar to Mar Q?
+~
+167247876 12 6 0
+D4
+~
+~
+0 -1 5000 10 10 5
+D5
+~
+~
+0 -1 5002 10 10 5
+-1
+S
+
+#5002
+Tar'ippal Caverns - Stairs to Tar'ippal Caverns~
+An archway of limestone and orange-hued stone lies at the southern end of
+the chamber, a spiral staircase winding upwards beyond the arch.  The
+soft cream-colored rocks give way to a basalt rock, a few quartz veins
+sparking through it.  Stone pillars rise from the edges of the cavern, at
+the ceiling they form arched beams across the roof, adding some stability
+to the room.  An archway of blue-black stone frames iron double doors in
+the center of the northern walls, a tarnished brass plaque set into its
+keystone.
+~
+[Azerin] read plaque - writen in dwarven, BEWARE, DANGEROUS PASSAGEWAY BEYOND,
+[Azerin] pillars made from a dusky-yellow stone
+[Azerin] leaves through the archway, being the long accent
+[Azerin] northern doors(need key? good way to limit traffice untill people are a bit higher lvl)
+[Eno] there is a plauque here but no way of looking at it
+~
+167247876 12 6 0
+D0
+iron door~
+~
+131 -1 5003 10 10 5
+D4
+~
+~
+0 -1 5001 10 10 5
+A
+read translate~
+3 plaque brass tarnished sign~
+if( random( 4, 7 ) < find_skill( ch, dwarvish ) ) {
+  act_tochar( #read_warning, ch, obj );
+  act_notchar( #rread_warning, ch, obj, mob, sight );
+  end;
+}
+act_tochar( #huh, ch, obj );
+act_notchar( #rhuh, ch, obj, mob, sight );
+~
+E
+read_warning~
+You peer carefully at the plaque, and manage to make out
+
+@I@I@I@I@R'BEWARE DANGEROUS PASSAGEWAY BEYOND.'@n
+~
+E
+rread_warning~
+$n appears to be trying to read the plaque.
+~
+E
+huh~
+You attempt to read the plaque, but are unable to understand it.
+~
+E
+rhuh~
+$n attempts to read the plaque.
+~
+!
+0 0 0
+-1
+S
+
+#5003
+Tar'ippal Caverns - The Underpass~
+Whorls of orange-hued rock spiral through the dark basalt of the tunnel,
+a scattering of minerals sparkling with faint ghost-light.  The walls and
+floor have been constructed from stygian-colored bricks, each set with a
+smear of pale-blue mortar.  A basin of burnished copper dangles from
+rusted chains that have been set into the natural rock of the ceiling, a
+faint glow illuminating from them.  An Archway of blue-black stone frame
+iron double-doors to the south a grime-covered brass plaque set into the
+keystone.
+~
+~
+167247876 12 6 0
+D0
+~
+~
+0 -1 5004 10 10 5
+D2
+iron door~
+~
+131 -1 5002 10 10 5
+-1
+S
+
+#5004
+Tar'ippal Caverns - The Underpass~
+The passageway forks a narrow passageway heading westwards while the
+major tunnel winds eastwards and into a dark chamber.  A statue of a
+dwarven maiden sits in an alcove in the northern wall, carvings of
+flowers forming an arch around her.  In her hands rests a silver bowl,
+flickering green and gold flames dance above its gleaming surface. 
+Southwards pale ghost-flames dance across the ceiling, providing as much
+shadow as illumination.
+~
+[Azerin] west small tunnel leading to new area/store room
+[Azerin] get silver, cant take the bowel, maiden a dwarven hero
+~
+167247876 12 6 0
+D1
+~
+~
+0 -1 5006 10 10 5
+D2
+~
+~
+0 -1 5003 10 10 5
+D3
+~
+~
+0 -1 5005 10 10 5
+5393 9 1509949540 3 0
+-1
+S
+
+#5005
+Tar'ippal Caverns - Stairs to Tar'ippal Caverns~
+The walls and floor of the tunnel have been constructed from blue-black
+bricks, their surface polished like marble.  The tunnels roof remains
+natural rock, a few cracks and crevices marring its surface.  Set into
+the eastern wall is a white-stone door, its pale colors gleaming in
+comparison to the dull tunnel.  Above the door a winged dragon has been
+carved, its teeth and claws a burnished gold that catches the light.
+~
+[Azerin] door not open atm
+[Azerin] dragon rumble when pass thru door
+~
+167247876 12 5 0
+D1
+~
+~
+0 -1 5004 10 10 5
+-1
+S
+
+#5006
+Tar'ippal Caverns - The Underpass~
+The black-stone room streches about one hundred feet length and half that
+in width.  Four iron braziers rise at the corners of a square dais in the
+chambers center, flickering flames dancing across the smoldering coals. 
+Blood-red stone arches frame doors in the north and east walls, their
+surface slick and gleaming as if wet.
+~
+[Azerin] light a torch/lanter from braziers
+[Azerin] door east locked
+[Azerin] door north begining of underpass and end of Tar caverns
+~
+167247876 12 9 0
+D0
+stone door~
+~
+131 -1 5007 10 10 5
+D3
+~
+~
+0 -1 5004 10 10 5
+-1
+S
+
+#5007
+The Underpass - Walkway Around The Abyssal Cavern~
+Stretching far into the darkness the huge chamber must reach over a mile
+in distance.  A crumbling road cuts its way around the side of the mammoth
+cavern, slowly descending as it widens.  Echoing from below is the sound of
+rushing waters, beyond the edge of the landing the cliffs tumble away
+into an abyss of darkness.  A constant wind tugs at the walkway, as if the
+elements themselves where trying to tear travelers to their death.  Set
+into the southern wall is a pale-stone door, a burnished copper plaque
+set into its keystone.  Far above the cavern gleams with rich mineral
+deposits, some providing a dull light, beyond a hundred feet upwards the
+chamber is once again cloaked in the mantle of shadows.
+~
+[Azerin] down is long way to river and beach, one day climb down  to new higher lvl stuff
+[Azerin] randoms of wind and crumbling rock
+[Azerin] plaque in dwarven - BEWARE, DRAGON BELOW
+~
+167247876 12 9 0
+D1
+~
+~
+0 -1 5008 10 10 5
+D2
+stone door~
+~
+131 -1 5006 10 10 5
+5393 9 1509949540 3 0
+1120 9 1509949540 3 0
+-1
+S
+
+#5008
+The Underpass - Walkway Around The Abyssal Cavern~
+A little wider than a wagon the roadway winds around the crumbling edge
+of a massive cavern.  Stretching well over a mile in length the road runs
+across the narrow eastern end of the chamber.  High above stalactites
+spread across the caverns roof, some of them reaching over fifty feet in
+length.  The roar of water echoes from the darkness below, as a torrent
+of water pours from the cavern wall a hundred feet below the trail, the
+resulting waterfall disappearing out of sight into the darkness. 
+Westwards the road rises to a flat stone landing, a pale-stone door
+gleaming in the southern wall.  Eastwards the road bends around a jutting
+spire of rock and seems to disappear into the cavern wall.
+~
+[Azerin] rumbling through rocks
+[Azerin] bats dancing on updraft randoms
+[Azerin] falling rocks random
+~
+167247876 12 9 0
+D1
+~
+~
+0 -1 5009 10 10 5
+D3
+~
+~
+0 -1 5007 10 10 5
+-1
+S
+
+#5009
+The Underpass - Tunnel Through The Rock~
+Bending southwards the narrow roadway disappears into a gloomy tunnel. 
+Beyond the road the cliffs spiral far below, jagged and cracked they are
+swallowed by the darkness before the bottom can be seen.  A single copper
+sconce has been set in the western wall, a pale-blue stone set into it. 
+A flickering ghost light surrounds the stone giving off enough light to
+see a few feet in each direction.  An archway of greenstone frames the
+tunnels entrance, the light danceing across its smooth surface.
+~
+[Azerin] rock beetle reset
+[Azerin] pebble reset
+~
+167247876 12 9 0
+D2
+~
+~
+0 -1 5010 10 10 5
+D3
+~
+~
+0 -1 5008 10 10 5
+5395 9 1509949540 3 0
+78 17 1509949540 -2 0
+-1
+S
+
+#5010
+The Underpass - Tunnel Through The Rock~
+Cut out of the dark stone the tunnel bends sharply to the east, and ends
+a short distance beyond.  The roadway here is cobbled, with a
+water-filled ditch running down the southern side of it.  Northwards the
+tunnel ends into a massive chamber, the roof lost in the gloom.  A strong
+wind billows up from the cleft sending clouds mist into the air.  A
+flicking light shines from ice-blue stones that have been embedded in the
+tunnels roof, their pale light as strong as a candles.
+~
+[Azerin] cant reach light
+[Azerin] drink water acode
+[Azerin] water flows from pipe in wall and out the east, before crossing the road and flowing into the cavern
+~
+167247876 12 6 0
+D0
+~
+~
+0 -1 5009 10 10 5
+D1
+~
+~
+0 -1 5011 10 10 5
+-1
+S
+
+#5011
+The Underpass - Before a Stone Bridge~
+The rough cliff face tumbles into the darkness below the cobbled road,
+covered in countless fissures and jutting spires of rock.  Some way below
+a torrent of water bursts from the rocks, forming a mighty waterfall that
+spills into the cavern.  Westwards an archway leads into a faintly lit
+tunnel that disappears around a sharp northern bend.  A ditch in the
+southern wall crosses the road at the tunnels entrance, dumping the
+waters into the cave.  The rocks above the tunnel are slick and gleam
+with dew from billowing clouds of mist that a buffting wind blows up from
+below.  To the north a white-stone bridge spans a gap left by a sizable
+landslide that has left a rift in the cavern wall.
+~
+~
+167247876 12 9 0
+D0
+~
+~
+0 -1 5012 10 10 5
+D3
+~
+~
+0 -1 5010 10 10 5
+-1
+S
+
+#5012
+The Underpass - The Middle of The Bridge~
+Rising slightly in the middle the stone bridge is a wonder of engineering. 
+The stones have been joined seamlessly, without any hint of mortar being
+used.  Elegant stone struts support the bridge from beneath, each one
+carved with runic script.  Southwards the bridge ends in an archway that
+leads into a tunnel.  Northwards the road bends round a huge spire of
+rock and disappears eastwards.  From far below the roar of a waterfall
+echoes through the cavern.
+~
+[Azerin] wind random
+~
+167247876 12 9 0
+D0
+~
+~
+0 -1 5013 10 10 5
+D2
+~
+~
+0 -1 5011 10 10 5
+-1
+S
+
+#5013
+The Underpass - Before a Stone Bridge~
+The road bends round a huge spire of rock then darts between the jagged
+chunks of the outcrops apex.  Dark blue-black cobbles line the road,
+their surface slick with moister.  Stretching across a massive slip is a
+slender white-stone brige, its gracefull span reaching over one hundread
+feet in length.  Overhead clusters of sparkling stalactites send a rain
+of mineral water splashing down upon the road and cliff face.  The
+buffering winds carry the sound of rushing water from somewhere below. 
+Eastwards the road spirals sharply downwards before almost zigzagging
+back upon itself.
+~
+[Azerin] sliver of quartz reset
+~
+167247876 12 9 0
+D1
+~
+~
+0 -1 5014 10 10 5
+D2
+~
+~
+0 -1 5012 10 10 5
+7760 17 1509949540 -2 0
+-1
+S
+
+#5014
+The Underpass - Spiraling Ramp~
+The road spirals downwards forming a zigzagging ramp as it rapidly
+descends over one hundred feet before continuing onwards.  A stonewall
+runs beside the cliff face, ensuring that the steep climb is as safe as
+possible.  Attached to the eastern wall are three iron rungs, the
+tattered remains of hemp ropes still wound around them.  The faint sound
+of water echos through the massive cavern, the air chilled with moister. 
+Westwards the road bends around an impressive spire of rock and
+disappears from sight.
+~
+[Azerin] rope for getting wagons up the ramp
+[Azerin] randoms of rocks sounds or rumblings
+[Azerin] bat reset
+~
+167247876 12 9 0
+D3
+~
+~
+0 -1 5013 10 10 5
+D5
+~
+~
+0 -1 5015 10 10 5
+1120 9 1509949540 3 0
+-1
+S
+
+#5015
+The Underpass - Upon the Spiraling Ramp~
+Looping down the rock face like a black serpent runs the cobbled road.
+The steep ramp makes for a difficult travel but with the aid of a few
+handholds and steps it is manageable A wall of stone rises three feet high
+at the cliffs edge, making the road safer and somewhat sheltered from the
+constant winds.  Far below the cliffs are lost in darkness, the enormity
+of the cavern clear.
+~
+~
+167247876 12 6 0
+D4
+~
+~
+0 -1 5014 10 10 5
+D5
+~
+~
+0 -1 5016 10 10 5
+-1
+S
+
+#5016
+The Underpass - Before a Spiraling Ramp~
+The cobbled road winds across the towering edge of the crumbling cavern
+wall.  Several troll-szied alcoves have been cut into the eastern wall,
+pale blue stones set in the alcoves keystone give of a faint ghost-light
+that illuminates the road.  Southwards the road begins a rapid ascent of
+the cliff face, a spiraling ramp leading upwards into the gloom beyond. 
+Eastwards the road dips and dives around the caverns edge, an overhang of
+rock sheltering it from a few waterfalls that splash down from high above.
+~
+[Azerin] pebble reset
+[Azerin] carion reset
+[Nelo'langos] troll-sized should be
+~
+167247876 12 6 0
+D1
+~
+~
+0 -1 5017 10 10 5
+D4
+~
+~
+0 -1 5015 10 10 5
+78 17 1509949540 -2 0
+5393 9 1509949540 3 0
+-1
+S
+
+#5017
+The Underpass - Cliffside Road~
+Running along the edge of the massive chamber winds the cobbled stone
+road.  At regular intervals a icy-blue stone has been set into the rock,
+each one glowing with pale light.  Stretching beyond visual range to the
+west the cavern seems without end.  A few tips of towering stalactites
+gleam from the cieling, each one over one hundred feet in length, An
+overhand of rock shelters the roadway from several waterfalls that tumble
+down from somehwere above.  Northwards the road begins a slow climb back
+up the caverns side, and disappears from sight.
+~
+~
+167247876 12 9 0
+D0
+~
+~
+0 -1 5018 10 10 5
+D3
+~
+~
+0 -1 5016 10 10 5
+-1
+S
+
+#5018
+The Underpass - Cliffside Road~
+The steeply sloped road winds westwards up the face of the cliff, its
+cobbles gleaming with dew.  Gouged out of the cliff below the road is a
+crescent shaped cave mouth, the crumbling lip covered in loose rocks. 
+Southwards the road heads along the cliff side, a few tumbling waterfalls
+crashing across it.  High overhead the tips of massive stalactites can
+just be seen, their surfaces covered with sparkling minerals that almost
+look like stars at night.
+~
+[Azerin] climb down to cave to new zone at some point, maybe require a rope
+~
+167247876 12 9 0
+D2
+~
+~
+0 -1 5017 10 10 5
+D4
+~
+~
+0 -1 5019 10 10 5
+-1
+S
+
+#5019
+The Underpass - Cliffside Road~
+Sloping sharply the road descends down the size of the great cavern, the
+walls and cobblestones slick with splashing water from several small
+waterfalls that cascade over it.  On a ledge of rock below the road an
+empty nest of twigs and moss has been built, a few broken shells
+remaining within.
+~
+[Azerin] climb down to nest acodes climb down, search nest climb up
+[Azerin] repop minor reagens maybe a silver coin
+~
+167247876 12 9 0
+D3
+~
+~
+0 -1 5020 10 10 5
+D5
+~
+~
+0 -1 5018 10 10 5
+-1
+S
+
+#5020
+The Underpass - Cliffside Road~
+The road cuts its way across the cliff face of the massive chamber,
+heading in a roughtly east-west direction.  The drop below spirals out of
+sight, the rock face slick and black, with a few silvery ribbons of
+tumbling streams marring its surface.  Above the road three alcoves have
+been dug, the entombed remains of dwarven warriors set within each.
+~
+[Azerin] cant reach dwarvies
+~
+167247876 12 9 0
+D1
+~
+~
+0 -1 5019 10 10 5
+D4
+~
+~
+0 -1 5021 10 10 5
+-1
+S
+
+#5021
+The Underpass - Cliffside Road~
+An arch of bluestone frames the road as it enters a massive cavern, well
+over a mile in length and half as wide.  The ceiling of the chamber is
+lost in darkness, as is the floor, a wind whirls through the blackness
+stiring up dank air and carrying a hint of moister upon it.  The road
+descends sharply down the cliff side, beginning its long journey around
+the might cleft.  Onwards to the west the tunnel bends northwards and
+into the gloom.
+~
+[Kao] moister -> moisture
+~
+167247876 12 9 0
+D3
+~
+~
+0 -1 5022 10 10 5
+D5
+~
+~
+0 -1 5020 10 10 5
+-1
+S
+
+#5022
+The Underpass - Tunnel Through the Black Stone~
+The gleaming stones of the tunnel are blue-black in coloration, each
+brick less that half a foot in length they form a almost seamless
+passageway through the mountain.  Bending sharply the tunnel heads in a
+northern direction, into a circular chamber and eastwards towards an
+archway of pale-blue stones.  A few fissures run across the ceiling
+clusters of amber-hued minerals framing their edges.
+~
+[Azerin] carrion crawler reset
+~
+167247876 12 6 0
+D0
+~
+~
+0 -1 5023 10 10 5
+D1
+~
+~
+0 -1 5021 10 10 5
+5393 9 1509949540 3 0
+-1
+S
+
+#5023
+The Underpass - Before a Bloodstone Door~
+The circular chamber rises up to an apex about fifty feet in height, a
+cluster of crystals gleaming forming stalactites at the rooms center.  A
+heavy-looking bloodstone door is framed by a purple-stone arch in the
+north of the chamber, gleaming silver handles jutting from the stone. 
+Southwards a blue-black cobbled road winds down a wagon-sized tunnel, the
+way illuminated by burnished copper basins that dangle from the roof.
+~
+~
+167247876 12 7 0
+D0
+bloodstone door~
+~
+131 -1 5024 10 10 5
+D2
+~
+~
+0 -1 5022 10 10 5
+-1
+S
+
+#5024
+The Underpass - Before a Bloodstone Door~
+Resting in shallow alcoves that line the passageway are the stone
+carvings of dwarven warriors, each one armed with a battle axe and shield. 
+Above each a square of stone appears to be slightly discolored, as if a
+plaque had been removed.  An archway of vibrant blue-hued stones frames a
+bloodstone door in the south, ornate silver dragon handles set in the
+door.  A collection of glowing crystals line the ceiling, the pale light
+just enough to see by.
+~
+~
+167247876 12 9 0
+D0
+~
+~
+0 -1 1300 10 10 5
+D2
+bloodstone door~
+~
+131 -1 5023 10 10 5
+-1
+S
+
+#0
+

@@ -1,0 +1,14 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+gtell [message] : tell [message] to all members of your group<br>
+gtell : list last five gtells you have received<br>
+<br>
+<h1> Description </h1>
+<br>
+Gtell, or "group tell", functions much the same as the conventional<br>
+tell command, with the general exception that the message is shared<br>
+with everyone in your group.<br>
+</html>
+</body>

@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FBB599A1-51BE-4986-8300-0AAF2C85DE21}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.27924.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Release/Mysteria2.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeaderOutputFile>.\Release/Mysteria2.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalIncludeDirectories>F:\Legacy Base\mysql;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0c09</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;wsock32.lib;libmysql.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>bin/Mysteria2.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ProgramDatabaseFile>.\Release/Mysteria2.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalLibraryDirectories>F:\Legacy Base\mysql;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release/Mysteria2.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/Mysteria2.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>./mysql;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>.\Debug/Mysteria2.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0c09</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;wsock32.lib;libmysql.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>bin/Mysteria2.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>./mysql;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\Debug/Mysteria2.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug/Mysteria2.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\abil.cpp" />
+    <ClCompile Include="src\account.cpp" />
+    <ClCompile Include="src\acid.cpp" />
+    <ClCompile Include="src\act.cpp" />
+    <ClCompile Include="src\action.cpp" />
+    <ClCompile Include="src\affect.cpp" />
+    <ClCompile Include="src\alias.cpp" />
+    <ClCompile Include="src\align.cpp" />
+    <ClCompile Include="src\appear.cpp" />
+    <ClCompile Include="src\area.cpp" />
+    <ClCompile Include="src\armor.cpp" />
+    <ClCompile Include="src\auction.cpp" />
+    <ClCompile Include="src\ban.cpp" />
+    <ClCompile Include="src\bank.cpp" />
+    <ClCompile Include="src\bash.cpp" />
+    <ClCompile Include="src\bladedancer.cpp" />
+    <ClCompile Include="src\bow.cpp" />
+    <ClCompile Include="src\bstrlib.c" />
+    <ClCompile Include="src\bstrwrap.cpp" />
+    <ClCompile Include="src\bug.cpp" />
+    <ClCompile Include="src\cards.cpp" />
+    <ClCompile Include="src\channel.cpp" />
+    <ClCompile Include="src\char.cpp" />
+    <ClCompile Include="src\char_name.cpp" />
+    <ClCompile Include="src\clan.cpp" />
+    <ClCompile Include="src\cleric.cpp" />
+    <ClCompile Include="src\code.cpp" />
+    <ClCompile Include="src\code2.cpp" />
+    <ClCompile Include="src\cold.cpp" />
+    <ClCompile Include="src\color.cpp" />
+    <ClCompile Include="src\const.cpp" />
+    <ClCompile Include="src\corpse.cpp" />
+    <ClCompile Include="src\custom.cpp" />
+    <ClCompile Include="src\damage.cpp" />
+    <ClCompile Include="src\death.cpp" />
+    <ClCompile Include="src\descr.cpp" />
+    <ClCompile Include="src\display.cpp" />
+    <ClCompile Include="src\drink.cpp" />
+    <ClCompile Include="src\druid.cpp" />
+    <ClCompile Include="src\dungeon.cpp" />
+    <ClCompile Include="src\edit.cpp" />
+    <ClCompile Include="src\editor.cpp" />
+    <ClCompile Include="src\enemy.cpp" />
+    <ClCompile Include="src\event.cpp" />
+    <ClCompile Include="src\event2.cpp" />
+    <ClCompile Include="src\exit.cpp" />
+    <ClCompile Include="src\exp.cpp" />
+    <ClCompile Include="src\familiar.cpp" />
+    <ClCompile Include="src\fight.cpp" />
+    <ClCompile Include="src\fight2.cpp" />
+    <ClCompile Include="src\fight3.cpp" />
+    <ClCompile Include="src\file.cpp" />
+    <ClCompile Include="src\find.cpp" />
+    <ClCompile Include="src\fire.cpp" />
+    <ClCompile Include="src\flag.cpp" />
+    <ClCompile Include="src\flee.cpp" />
+    <ClCompile Include="src\food.cpp" />
+    <ClCompile Include="src\get.cpp" />
+    <ClCompile Include="src\give.cpp" />
+    <ClCompile Include="src\group.cpp" />
+    <ClCompile Include="src\handler.cpp" />
+    <ClCompile Include="src\help.cpp" />
+    <ClCompile Include="src\hide.cpp" />
+    <ClCompile Include="src\host.cpp" />
+    <ClCompile Include="src\imm.cpp" />
+    <ClCompile Include="src\interp.cpp" />
+    <ClCompile Include="src\kick.cpp" />
+    <ClCompile Include="src\leech.cpp" />
+    <ClCompile Include="src\level.cpp" />
+    <ClCompile Include="src\library.cpp" />
+    <ClCompile Include="src\lib_exit.cpp" />
+    <ClCompile Include="src\lib_fight.cpp" />
+    <ClCompile Include="src\lib_logic.cpp" />
+    <ClCompile Include="src\lib_object.cpp" />
+    <ClCompile Include="src\lib_quest.cpp" />
+    <ClCompile Include="src\light.cpp" />
+    <ClCompile Include="src\liquid.cpp" />
+    <ClCompile Include="src\list.cpp" />
+    <ClCompile Include="src\lists.cpp" />
+    <ClCompile Include="src\log.cpp" />
+    <ClCompile Include="src\login.cpp" />
+    <ClCompile Include="src\look.cpp" />
+    <ClCompile Include="src\macros.cpp" />
+    <ClCompile Include="src\mage.cpp" />
+    <ClCompile Include="src\magic.cpp" />
+    <ClCompile Include="src\magic2.cpp" />
+    <ClCompile Include="src\misc.cpp" />
+    <ClCompile Include="src\mobile.cpp" />
+    <ClCompile Include="src\mob_imm.cpp" />
+    <ClCompile Include="src\money.cpp" />
+    <ClCompile Include="src\monk.cpp" />
+    <ClCompile Include="src\mount.cpp" />
+    <ClCompile Include="src\move.cpp" />
+    <ClCompile Include="src\move2.cpp" />
+    <ClCompile Include="src\mprog.cpp" />
+    <ClCompile Include="src\network.cpp" />
+    <ClCompile Include="src\newbie.cpp" />
+    <ClCompile Include="src\note.cpp" />
+    <ClCompile Include="src\notes.cpp" />
+    <ClCompile Include="src\number.cpp" />
+    <ClCompile Include="src\object.cpp" />
+    <ClCompile Include="src\object2.cpp" />
+    <ClCompile Include="src\object3.cpp" />
+    <ClCompile Include="src\obj_imm.cpp" />
+    <ClCompile Include="src\obj_name.cpp" />
+    <ClCompile Include="src\obj_prop.cpp" />
+    <ClCompile Include="src\obj_sort.cpp" />
+    <ClCompile Include="src\oprog.cpp" />
+    <ClCompile Include="src\option.cpp" />
+    <ClCompile Include="src\output.cpp" />
+    <ClCompile Include="src\paladin.cpp" />
+    <ClCompile Include="src\path.cpp" />
+    <ClCompile Include="src\pet.cpp" />
+    <ClCompile Include="src\player.cpp" />
+    <ClCompile Include="src\pos.cpp" />
+    <ClCompile Include="src\program.cpp" />
+    <ClCompile Include="src\prompt.cpp" />
+    <ClCompile Include="src\psi.cpp" />
+    <ClCompile Include="src\put.cpp" />
+    <ClCompile Include="src\quest.cpp" />
+    <ClCompile Include="src\ranger.cpp" />
+    <ClCompile Include="src\recipe.cpp" />
+    <ClCompile Include="src\recog.cpp" />
+    <ClCompile Include="src\regen.cpp" />
+    <ClCompile Include="src\relig.cpp" />
+    <ClCompile Include="src\reput.cpp" />
+    <ClCompile Include="src\rescue.cpp" />
+    <ClCompile Include="src\reset.cpp" />
+    <ClCompile Include="src\resist.cpp" />
+    <ClCompile Include="src\room.cpp" />
+    <ClCompile Include="src\rtable.cpp" />
+    <ClCompile Include="src\save.cpp" />
+    <ClCompile Include="src\score.cpp" />
+    <ClCompile Include="src\sdb.cpp" />
+    <ClCompile Include="src\search.cpp" />
+    <ClCompile Include="src\set.cpp" />
+    <ClCompile Include="src\shock.cpp" />
+    <ClCompile Include="src\shop.cpp" />
+    <ClCompile Include="src\skill.cpp" />
+    <ClCompile Include="src\social.cpp" />
+    <ClCompile Include="src\sorceror.cpp" />
+    <ClCompile Include="src\spell.cpp" />
+    <ClCompile Include="src\sql.cpp" />
+    <ClCompile Include="src\startup.cpp" />
+    <ClCompile Include="src\string2.cpp" />
+    <ClCompile Include="src\string3.cpp" />
+    <ClCompile Include="src\suid.cpp" />
+    <ClCompile Include="src\switch.cpp" />
+    <ClCompile Include="src\table.cpp" />
+    <ClCompile Include="src\teleport.cpp" />
+    <ClCompile Include="src\tfe.cpp" />
+    <ClCompile Include="src\tfemem.cpp" />
+    <ClCompile Include="src\thief.cpp" />
+    <ClCompile Include="src\thing.cpp" />
+    <ClCompile Include="src\throw.cpp" />
+    <ClCompile Include="src\time.cpp" />
+    <ClCompile Include="src\track.cpp" />
+    <ClCompile Include="src\trainer.cpp" />
+    <ClCompile Include="src\undead.cpp" />
+    <ClCompile Include="src\update.cpp" />
+    <ClCompile Include="src\variable.cpp" />
+    <ClCompile Include="src\verb.cpp" />
+    <ClCompile Include="src\vote.cpp" />
+    <ClCompile Include="src\wand.cpp" />
+    <ClCompile Include="src\water.cpp" />
+    <ClCompile Include="src\wear.cpp" />
+    <ClCompile Include="src\weather.cpp" />
+    <ClCompile Include="src\weight.cpp" />
+    <ClCompile Include="src\where.cpp" />
+    <ClCompile Include="src\who.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="src\resource.rc">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\abil.h" />
+    <ClInclude Include="src\account.h" />
+    <ClInclude Include="src\affect.h" />
+    <ClInclude Include="src\array.h" />
+    <ClInclude Include="src\auction.h" />
+    <ClInclude Include="src\bank.h" />
+    <ClInclude Include="src\bit.h" />
+    <ClInclude Include="src\bstrlib.h" />
+    <ClInclude Include="src\bstrwrap.h" />
+    <ClInclude Include="src\cards.h" />
+    <ClInclude Include="src\channel.h" />
+    <ClInclude Include="src\char.h" />
+    <ClInclude Include="src\clan.h" />
+    <ClInclude Include="src\code.h" />
+    <ClInclude Include="src\color.h" />
+    <ClInclude Include="src\define.h" />
+    <ClInclude Include="src\dungeon.h" />
+    <ClInclude Include="src\editor.h" />
+    <ClInclude Include="src\element.h" />
+    <ClInclude Include="src\event.h" />
+    <ClInclude Include="src\fight.h" />
+    <ClInclude Include="src\file.h" />
+    <ClInclude Include="src\flag.h" />
+    <ClInclude Include="src\general.h" />
+    <ClInclude Include="src\group.h" />
+    <ClInclude Include="src\imm.h" />
+    <ClInclude Include="src\inline.h" />
+    <ClInclude Include="src\interp.h" />
+    <ClInclude Include="src\library.h" />
+    <ClInclude Include="src\liquid.h" />
+    <ClInclude Include="src\list.h" />
+    <ClInclude Include="src\lists.h" />
+    <ClInclude Include="src\look.h" />
+    <ClInclude Include="src\macros.h" />
+    <ClInclude Include="src\magic.h" />
+    <ClInclude Include="src\mob.h" />
+    <ClInclude Include="src\move.h" />
+    <ClInclude Include="src\network.h" />
+    <ClInclude Include="src\note.h" />
+    <ClInclude Include="src\notes.h" />
+    <ClInclude Include="src\number.h" />
+    <ClInclude Include="src\object.h" />
+    <ClInclude Include="src\option.h" />
+    <ClInclude Include="src\output.h" />
+    <ClInclude Include="src\player.h" />
+    <ClInclude Include="src\pos.h" />
+    <ClInclude Include="src\program.h" />
+    <ClInclude Include="src\reput.h" />
+    <ClInclude Include="src\reset.h" />
+    <ClInclude Include="src\resource.h" />
+    <ClInclude Include="src\room.h" />
+    <ClInclude Include="src\sdb.h" />
+    <ClInclude Include="src\selt_telnet.h" />
+    <ClInclude Include="src\set.h" />
+    <ClInclude Include="src\shop.h" />
+    <ClInclude Include="src\skill.h" />
+    <ClInclude Include="src\sql.h" />
+    <ClInclude Include="src\string2.h" />
+    <ClInclude Include="src\string3.h" />
+    <ClInclude Include="src\struct.h" />
+    <ClInclude Include="src\suid.h" />
+    <ClInclude Include="src\system.h" />
+    <ClInclude Include="src\table.h" />
+    <ClInclude Include="src\tfemem.h" />
+    <ClInclude Include="src\thief.h" />
+    <ClInclude Include="src\thing.h" />
+    <ClInclude Include="src\thing2.h" />
+    <ClInclude Include="src\update.h" />
+    <ClInclude Include="src\wear.h" />
+    <ClInclude Include="src\weather.h" />
+    <ClInclude Include="src\weight.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="src\systray.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

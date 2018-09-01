@@ -1,0 +1,28 @@
+<html>
+<body>
+This mud expects a syntax of input slightly different than most muds, which<br>
+can be confusing at first.  There are special characters that must be used<br>
+in conjunction with certain commands to either distinguish between items<br>
+with similar names, or do an action to multiple items.<br>
+<br>
+There are many objects in the mud that have almost identical names.  For<br>
+example, if you have a short sword and a long sword in your inventory,<br>
+typing 'look sword' might not look at the correct sword.  To look<br>
+specifically at the long sword, you would put a period in between the words<br>
+of the object's name.  So, 'look long.sword' would look at the long sword.<br>
+If you wanted to buy a soft leather jacket and not a hard leather jacket,<br>
+you would type 'buy soft.leather.jacket'.<br>
+<br>
+Often, you will want to do something with many of the same type of item.<br>
+To get, give, drop, sell, or buy many of the same type of item, you would<br>
+use the '*' character in front of the object's name, in the form<br>
+x*[object], x being the number of that object.  For example, to drop 10<br>
+copper pieces, you would type 'drop 10*copper'.  To buy 3 wooden shields,<br>
+you would type 'buy 3*wooden.shield'.<br>
+<br>
+The prefix 'all' is also used.  To sell all the skins in your inventory,<br>
+you would type 'sell all.skin'.  HOWEVER, 'all' can be used in two ways.<br>
+To get all the objects from your bag, you would type 'get all bag'.  But,<br>
+to get all the bags in the room, you would type 'get all.bag'.<br>
+</html>
+</body>

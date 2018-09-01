@@ -1,0 +1,1371 @@
+#M2_AREA
+2
+
+Naisai Lake~
+Nnilb~
+~
+~
+~
+
+0 0
+2
+1
+#ROOMS
+
+#2000
+Kassanin River~
+The chill waters of the Kassanin River rush by from west to east, easily
+ten feet deep and pushing strong.  The river flows under a pine log
+bridge to the east, along the path to the south.  The bank to the north
+is a sheer face of rock, below an overhanging canopy of pine branches
+from the forest above.  Fallen leaves and pine needles dance upon the
+white-waters like ships in a stormy sea.
+~
+[Nnilb] river source to west, or something.
+[Nnilb] bridge e, go under.
+[Nnilb] pine forest area to n
+[Azerin] needs a water random
+[Azerin] desc changed
+[Guin] South connects to 78507
+~
+33030144 6 8 0
+D1
+~
+~
+0 -1 2001 10 10 5
+D3
+~
+~
+0 -1 2045 10 10 5
+-1
+S
+
+#2001
+Kassanin River~
+~
+[Nnilb] under bridge
+~
+33030144 6 9 0
+D3
+~
+~
+0 -1 2000 10 10 5
+-1
+S
+
+#2003
+Stream of Naisai~
+Mist clings to the surface of this quiet, clear stream.  The stream has
+branched off from the Kassanin River to the west, and flows gently south. 
+A trail is visible to the north, but you can wade through the stream to
+the south, into the thickening mist.
+~
+[Nnilb] stream
+~
+33030144 13 9 0
+-1
+S
+
+#2004
+Stream of Naisai~
+Under a think blanket of cool, rolling mist, the stream rushes south and
+into a lake.  A faint trail to the west leads south onto a dock
+overhanging the lake.  While not much of the lake can be seen from here,
+through the clinging fog, the surface shimmers with reflected light which
+dances like fireflies in the mist.
+~
+[Nnilb] search for pebble/gem
+~
+33030144 13 9 0
+D3
+~
+~
+0 -1 78545 10 10 5
+-1
+S
+
+#2006
+Nothing~
+Under Construction.
+~
+~
+33030144 13 9 0
+D1
+~
+~
+0 -1 2059 10 10 5
+D2
+~
+~
+0 -1 2074 10 10 5
+D3
+~
+~
+0 -1 2007 10 10 5
+-1
+S
+
+#2007
+Nothing~
+Under Construction.
+~
+[Nnilb] dock n
+~
+33030144 13 9 0
+D0
+~
+~
+0 -1 2010 10 10 5
+D1
+~
+~
+0 -1 2006 10 10 5
+D2
+~
+~
+0 -1 2073 10 10 5
+D3
+~
+~
+0 -1 2008 10 10 5
+-1
+S
+
+#2008
+Lake Naisai~
+lake
+~
+~
+33030144 13 9 0
+D0
+~
+~
+0 -1 2009 10 10 5
+D1
+~
+~
+0 -1 2007 10 10 5
+D2
+~
+~
+0 -1 2011 10 10 5
+-1
+S
+
+#2009
+Lake Naisai~
+lake
+~
+[Nnilb] dock e
+[Nnilb] muddy bank too steep to n, w
+~
+33030144 13 9 0
+D1
+~
+~
+0 -1 2010 10 10 5
+D2
+~
+~
+0 -1 2008 10 10 5
+-1
+S
+
+#2010
+Under a Dock~
+under dock
+~
+[Nnilb] under the dock
+~
+33030144 13 9 0
+D2
+~
+~
+0 -1 2007 10 10 5
+D3
+~
+~
+0 -1 2009 10 10 5
+-1
+S
+
+#2011
+Lake Naisai~
+lake
+~
+[Nnilb] ledge to w
+~
+33030144 13 9 0
+D0
+~
+~
+0 -1 2008 10 10 5
+D1
+~
+~
+0 -1 2073 10 10 5
+D2
+~
+~
+0 -1 2015 10 10 5
+D3
+~
+~
+0 -1 2012 10 10 5
+-1
+S
+
+#2012
+Rock Ledge~
+Under Construction.
+~
+~
+33030144 12 9 0
+D1
+~
+~
+0 -1 2011 10 10 5
+D2
+~
+~
+0 -1 2013 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+You $t $T into the lake.
+~
+E
+to_room~
+$n $t $T into the lake.
+~
+!
+3 0 2
+-1
+S
+
+#2013
+Rock Ledge~
+Under Construction.
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 2012 10 10 5
+D1
+~
+~
+0 -1 2015 10 10 5
+D2
+~
+~
+0 -1 2014 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+You $t $T into the lake.
+~
+E
+to_room~
+$n $t $T into the lake.
+~
+!
+3 0 2
+-1
+S
+
+#2014
+Rock Ledge~
+Under Construction.
+~
+[Nnilb] perhaps tunnel w
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 2013 10 10 5
+D1
+~
+~
+0 -1 2016 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+You $t $T into the lake.
+~
+E
+to_room~
+$n $t $T into the lake.
+~
+!
+3 0 2
+-1
+S
+
+#2015
+Lake Naisai~
+lake
+~
+~
+33030144 13 9 0
+D0
+~
+~
+0 -1 2011 10 10 5
+D1
+~
+~
+0 -1 2072 10 10 5
+D2
+~
+~
+0 -1 2016 10 10 5
+D3
+~
+~
+0 -1 2013 10 10 5
+-1
+S
+
+#2016
+Lake Naisai~
+lake
+~
+~
+33030144 13 9 0
+D0
+~
+~
+0 -1 2015 10 10 5
+D1
+~
+~
+0 -1 2071 10 10 5
+D2
+~
+~
+0 -1 2017 10 10 5
+D3
+~
+~
+0 -1 2014 10 10 5
+-1
+S
+
+#2017
+Lake Naisai~
+lake
+~
+[Nnilb] ledge to s again
+shallow, reflective lake
+mist floats above
+~
+33030144 13 9 0
+D0
+~
+~
+0 -1 2016 10 10 5
+D1
+~
+~
+0 -1 2070 10 10 5
+D2
+~
+~
+0 -1 2018 10 10 5
+-1
+S
+
+#2018
+Along a Narrow Ledge - Before a Small Cave~
+Like a shimmering vision, a twisting, serpentine mist floats a few inches
+above the glistening surface of a perfectly calm lake which stretches
+across your vision to the northeast.  To the south, the mist pours into
+the mouth of a small cave.  You can tread the mist-cloaked ledge to the
+east, if indeed the rock is solid, not illusion.
+~
+[Nnilb] lake n, this is a ledge
+[Nnilb] this will be where we connect to ravenwood, perhaps
+[Greth] maybe dive into the lake here, only way to get to another secret room?
+[Greth] climb down if you want to head north
+check action
+[Eliza] this leads to Nasai Lake, none of which is finished..
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 2017 10 10 5
+D1
+~
+~
+0 -1 2019 10 10 5
+D2
+~
+~
+0 -1 2477 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+You $t $T into the lake.
+~
+E
+to_room~
+$n $t $T into the lake.
+~
+!
+3 0 1
+-1
+S
+
+#2019
+Along a Narrow Ledge~
+This narrow ledge makes its way around the shimmering vision of mist and
+lake to the north, between the lake and the white mountain rock to the
+south.
+~
+[Nnilb] lake n
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 2070 10 10 5
+D1
+~
+~
+0 -1 2020 10 10 5
+D3
+~
+~
+0 -1 2018 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+You $t $T into the lake.
+~
+E
+to_room~
+$n $t $T into the lake.
+~
+!
+3 0 1
+-1
+S
+
+#2020
+Along a Narrow Ledge~
+Under Construction.
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 2069 10 10 5
+D1
+~
+~
+0 -1 2021 10 10 5
+D3
+~
+~
+0 -1 2019 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+You $t $T into the lake.
+~
+E
+to_room~
+$n $t $T into the lake.
+~
+!
+3 0 1
+-1
+S
+
+#2021
+A Bend in a Narrow Ledge~
+Under Construction.
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 2022 10 10 5
+D3
+~
+~
+0 -1 2020 10 10 5
+-1
+S
+
+#2022
+Along a Narrow Ledge~
+Under Construction.
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 2067 10 10 5
+D1
+~
+~
+0 -1 2023 10 10 5
+D2
+~
+~
+0 -1 2021 10 10 5
+D3
+~
+~
+0 -1 2069 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+You $t $T into the lake.
+~
+E
+to_room~
+$n $t $T into the lake.
+~
+!
+3 0 9
+-1
+S
+
+#2023
+ledge~
+Under Construction.
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 2066 10 10 5
+D3
+~
+~
+0 -1 2022 10 10 5
+D5
+~
+~
+0 -1 2024 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+You $t $T into the lake.
+~
+E
+to_room~
+$n $t $T into the lake.
+~
+!
+3 0 1
+-1
+S
+
+#2024
+ledge~
+Under Construction.
+~
+~
+33030144 12 9 0
+D1
+~
+~
+0 -1 2025 10 10 5
+D4
+~
+~
+0 -1 2023 10 10 5
+-1
+S
+
+#2025
+ledge~
+Under Construction.
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 2026 10 10 5
+D3
+~
+~
+0 -1 2024 10 10 5
+-1
+S
+
+#2026
+ledge~
+Under Construction.
+~
+~
+33030144 12 9 0
+D2
+~
+~
+0 -1 2025 10 10 5
+D4
+~
+~
+0 -1 2027 10 10 5
+-1
+S
+
+#2027
+ledge~
+Under Construction.
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 2064 10 10 5
+D1
+~
+~
+0 -1 2028 10 10 5
+D3
+~
+~
+0 -1 2066 10 10 5
+D5
+~
+~
+0 -1 2026 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+You $t $T into the lake.
+~
+E
+to_room~
+$n $t $T into the lake.
+~
+!
+3 0 8
+-1
+S
+
+#2028
+cave~
+Under Construction.
+~
+~
+33030144 12 9 0
+D3
+~
+~
+0 -1 2027 10 10 5
+-1
+S
+
+#2036
+Kassanin River~
+The current rushes from south to north as the Kassanin River takes a
+short jog on its eastward journey to the sea.  A bridge crosses overhead,
+joining paths on the east and west side of the river.  To the north, the
+Kassanin is joined by another, smaller river, and together the waters
+flow east.  You can also try to fight the strong current and swim south.
+~
+~
+33030144 6 9 0
+D0
+~
+~
+0 -1 2037 10 10 5
+A
+~
+~
+if( can_fly( ch ) )
+  continue;
+else {
+  act_tochar("You try to swim upstream against the strong current.", ch );
+  act_notchar("$n tries to swim upstream against the strong current.", ch );
+  if( find_skill( ch, swimming ) > random( 3, 7 ) )
+    continue;
+  else {
+    act_tochar("You fail to swim upstream.", ch );
+    act_notchar("$n floats back after failing to make it upstream.", ch );
+    }
+  }
+~
+!
+3 0 4
+-1
+S
+
+#2037
+Two Rivers Ford~
+A swift, steady rush of water flows in from the west to join the mighty
+Kassanin as it bends to the east, becoming the Issui as the river makes
+the long eastern journey to the sea.  The river flows under bridge to the
+east, or you can try to swim upstream to the south or west.
+~
+[Nnilb] bridge e, go under
+[Nnilb] upriver to w
+~
+33030144 6 9 0
+D1
+~
+~
+0 -1 2039 10 10 5
+D2
+~
+~
+0 -1 2036 10 10 5
+A
+~
+~
+if( can_fly( ch ) )
+  continue;
+else {
+  act_tochar("You try to swim upstream against the strong current.", ch );
+  act_notchar("$n tries to swim upstream against the strong current.", ch );
+  if( find_skill( ch, swimming ) > random( 3, 7 ) )
+    continue;
+  else {
+    act_tochar("You fail to swim upstream.", ch );
+    act_notchar("$n floats back after failing to make it upstream.", ch );
+    }
+  }
+~
+!
+3 0 12
+-1
+S
+
+#2039
+The Issui~
+The clear waters of the Issui rush beneath the bridge overhead, flowing
+east along the southern border of a small village.  You can try to swim
+against the current to the west.
+~
+[Nnilb] under bridge
+~
+33030144 6 9 0
+D3
+~
+~
+0 -1 2037 10 10 5
+A
+~
+~
+if( can_fly( ch ) )
+  continue;
+else {
+  act_tochar("You try to swim upstream against the strong current.", ch );
+  act_notchar("$n tries to swim upstream against the strong current.", ch );
+  if( find_skill( ch, swimming ) > random( 3, 7 ) )
+    continue;
+  else {
+    act_tochar("You fail to swim upstream.", ch );
+    act_notchar("$n floats back after failing to make it upstream.", ch );
+    }
+  }
+~
+!
+3 0 8
+-1
+S
+
+#2041
+The Issui~
+~
+[Nnilb] ruined mill to s
+[Nnilb] ruined gate to n
+~
+33030144 6 9 0
+D1
+~
+~
+0 -1 2042 10 10 5
+-1
+S
+
+#2042
+The Issui~
+Under Construction.
+~
+[Nnilb] other side of village gate to the north.
+[Nnilb] something to s
+~
+33030144 6 9 0
+D1
+~
+~
+0 -1 2043 10 10 5
+D3
+~
+~
+0 -1 2041 10 10 5
+-1
+S
+
+#2043
+The Issui~
+Under Construction.
+~
+~
+33030144 6 9 0
+D1
+~
+~
+0 -1 2044 10 10 5
+D3
+~
+~
+0 -1 2042 10 10 5
+-1
+S
+
+#2044
+The Issui~
+Under Construction.
+~
+~
+33030144 6 9 0
+D3
+~
+~
+0 -1 2043 10 10 5
+-1
+S
+
+#2045
+Kassanin River~
+Water gushes forth from a narrow fissure in the rock to the west, the
+only feature on the three walls of rock which enclose the river from
+north, west, and south.  The river flows with a heavy current, pouring
+east as it seeks its way out to the sea.  Pine forest lines the river to
+the north and south.  Large, flat rocks line the bottom of the river, and
+in more shallow spots the river churns across the rocks.
+~
+[Nnilb] river source to w, underground, cannot go :)
+[Nnilb] better yet, connect to kassanin
+[Nnilb] takes good swim skill and strength to swim to w
+~
+33030144 6 9 0
+D1
+~
+~
+0 -1 2000 10 10 5
+D3
+~
+~
+226 -1 11933 10 10 5
+-1
+S
+
+#2056
+ledge~
+Under Construction.
+~
+[Nnilb] lake
+~
+33030144 12 9 0
+D2
+~
+~
+0 -1 2059 10 10 5
+-1
+S
+
+#2059
+ledge~
+Under Construction.
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 2056 10 10 5
+D1
+~
+~
+0 -1 2060 10 10 5
+D2
+~
+~
+0 -1 2076 10 10 5
+D3
+~
+~
+0 -1 2006 10 10 5
+-1
+S
+
+#2060
+ledge~
+Under Construction.
+~
+~
+33030144 12 9 0
+D2
+~
+~
+0 -1 2078 10 10 5
+D3
+~
+~
+0 -1 2059 10 10 5
+-1
+S
+
+#2063
+ledge~
+Under Construction.
+~
+~
+33030144 12 9 0
+D2
+~
+~
+0 -1 2064 10 10 5
+D3
+~
+~
+0 -1 2078 10 10 5
+-1
+S
+
+#2064
+ledge~
+Under Construction.
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 2063 10 10 5
+D2
+~
+~
+0 -1 2027 10 10 5
+D3
+~
+~
+0 -1 2065 10 10 5
+-1
+S
+
+#2065
+Nothing~
+Under Construction.
+~
+~
+33030144 13 9 0
+D0
+~
+~
+0 -1 2078 10 10 5
+D1
+~
+~
+0 -1 2064 10 10 5
+D2
+~
+~
+0 -1 2066 10 10 5
+D3
+~
+~
+0 -1 2077 10 10 5
+-1
+S
+
+#2066
+Nothing~
+Under Construction.
+~
+~
+33030144 13 9 0
+D0
+~
+~
+0 -1 2065 10 10 5
+D1
+~
+~
+0 -1 2027 10 10 5
+D2
+~
+~
+0 -1 2023 10 10 5
+D3
+~
+~
+0 -1 2067 10 10 5
+-1
+S
+
+#2067
+Nothing~
+Under Construction.
+~
+~
+33030144 13 9 0
+D0
+~
+~
+0 -1 2077 10 10 5
+D1
+~
+~
+0 -1 2066 10 10 5
+D2
+~
+~
+0 -1 2022 10 10 5
+D3
+~
+~
+0 -1 2068 10 10 5
+-1
+S
+
+#2068
+Nothing~
+Under Construction.
+~
+~
+33030144 13 9 0
+D0
+~
+~
+0 -1 2075 10 10 5
+D1
+~
+~
+0 -1 2067 10 10 5
+D2
+~
+~
+0 -1 2069 10 10 5
+D3
+~
+~
+0 -1 2071 10 10 5
+-1
+S
+
+#2069
+Nothing~
+Under Construction.
+~
+~
+33030144 13 9 0
+D0
+~
+~
+0 -1 2068 10 10 5
+D1
+~
+~
+0 -1 2022 10 10 5
+D2
+~
+~
+0 -1 2020 10 10 5
+D3
+~
+~
+0 -1 2070 10 10 5
+-1
+S
+
+#2070
+Nothing~
+Under Construction.
+~
+~
+33030144 13 9 0
+D0
+~
+~
+0 -1 2071 10 10 5
+D1
+~
+~
+0 -1 2069 10 10 5
+D2
+~
+~
+0 -1 2019 10 10 5
+D3
+~
+~
+0 -1 2017 10 10 5
+-1
+S
+
+#2071
+Nothing~
+Under Construction.
+~
+~
+33030144 13 9 0
+D0
+~
+~
+0 -1 2072 10 10 5
+D1
+~
+~
+0 -1 2068 10 10 5
+D2
+~
+~
+0 -1 2070 10 10 5
+D3
+~
+~
+0 -1 2016 10 10 5
+-1
+S
+
+#2072
+Lake Naisai~
+lake
+~
+~
+33030144 13 9 0
+D0
+~
+~
+0 -1 2073 10 10 5
+D1
+~
+~
+0 -1 2075 10 10 5
+D2
+~
+~
+0 -1 2071 10 10 5
+D3
+~
+~
+0 -1 2015 10 10 5
+-1
+S
+
+#2073
+Lake Naisai~
+lake
+~
+~
+33030144 13 9 0
+D0
+~
+~
+0 -1 2007 10 10 5
+D1
+~
+~
+0 -1 2074 10 10 5
+D2
+~
+~
+0 -1 2072 10 10 5
+D3
+~
+~
+0 -1 2011 10 10 5
+-1
+S
+
+#2074
+Nothing~
+Under Construction.
+~
+~
+33030144 13 9 0
+D0
+~
+~
+0 -1 2006 10 10 5
+D1
+~
+~
+0 -1 2076 10 10 5
+D2
+~
+~
+0 -1 2075 10 10 5
+D3
+~
+~
+0 -1 2073 10 10 5
+-1
+S
+
+#2075
+Nothing~
+Under Construction.
+~
+[Nnilb] d for little underwater fun
+~
+33030144 6 9 0
+D0
+~
+~
+0 -1 2074 10 10 5
+D1
+~
+~
+0 -1 2077 10 10 5
+D2
+~
+~
+0 -1 2068 10 10 5
+D3
+~
+~
+0 -1 2072 10 10 5
+D5
+~
+~
+0 -1 2079 10 10 5
+-1
+S
+
+#2076
+Nothing~
+Under Construction.
+~
+~
+33030144 13 9 0
+D0
+~
+~
+0 -1 2059 10 10 5
+D1
+~
+~
+0 -1 2078 10 10 5
+D2
+~
+~
+0 -1 2077 10 10 5
+D3
+~
+~
+0 -1 2074 10 10 5
+-1
+S
+
+#2077
+Nothing~
+Under Construction.
+~
+~
+33030144 13 9 0
+D0
+~
+~
+0 -1 2076 10 10 5
+D1
+~
+~
+0 -1 2065 10 10 5
+D2
+~
+~
+0 -1 2067 10 10 5
+D3
+~
+~
+0 -1 2075 10 10 5
+-1
+S
+
+#2078
+ledge~
+Under Construction.
+~
+~
+33030144 13 9 0
+D0
+~
+~
+0 -1 2060 10 10 5
+D1
+~
+~
+0 -1 2063 10 10 5
+D2
+~
+~
+0 -1 2065 10 10 5
+D3
+~
+~
+0 -1 2076 10 10 5
+-1
+S
+
+#2079
+Nothing~
+Under Construction.
+~
+~
+33030144 6 9 0
+D4
+~
+~
+0 -1 2075 10 10 5
+-1
+S
+
+#0
+

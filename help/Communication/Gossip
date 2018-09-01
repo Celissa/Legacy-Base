@@ -1,0 +1,20 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+gossip [message] : send [message] to the global gossip chat channel<br>
+gossip [on|off]  : turn gossip on or off<br>
+gossip           : displays last ten gossips<br>
+<br>
+<h1> Description </h1>
+<br>
+Use this channel for talking about mud related topics in character. <br>
+Use of this channel also requires gossip points.  It costs ten gossip<br>
+points to gossip once.  The points accumulate over time, and unuse of the<br>
+gossip channel.  To see how many gossip points your character has<br>
+accumulated, type "score" (see help score); the points are listed<br>
+under Gsp_points . <br>
+<br>
+See also: help channels<br>
+</html>
+</body>

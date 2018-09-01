@@ -1,0 +1,56 @@
+CPP     = nice -n 7 /usr/bin/g++
+PROF    = 
+DEBUG   = -ggdb
+WARN    = -Wall
+CFLAGS  = $(DEBUG) -O $(WARN) $(PROF) 
+C_FLAGS = $(CFLAGS)
+L_FLAGS = -lm -L/usr/lib/mysql -lmysqlclient -lz -lstdc++
+I_FLAGS = -I /usr/include/mysql # -I /usr/include/c++/3.2 -I /usr/include/c++/3.2/i386-redhat-linux
+
+# -I /usr/lib/gcc-lib/egcs-1.1.2/libstdc++/stl -I /usr/lib/gcc-lib/egcs-1.1.2/gcc/include -I /usr/lib/gcc-lib/egcs-1.1.2/libstdc++ -I /usr/lib/gcc-lib/egcs-1.1.2/libio
+
+OBJ_DIR = ./obj
+BIN_DIR = ../bin
+
+vpath %.o ./obj
+
+C_FILES = abil.cpp account.cpp acid.cpp act.cpp action.cpp affect.cpp alias.cpp \
+          align.cpp appear.cpp area.cpp armor.cpp auction.cpp ban.cpp bank.cpp \
+          bash.cpp bstrlib.c bstrwrap.cpp bow.cpp bug.cpp cards.cpp channel.cpp char.cpp char_name.cpp \
+          clan.cpp cleric.cpp code.cpp code2.cpp cold.cpp color.cpp const.cpp \
+          bladedancer.cpp corpse.cpp custom.cpp damage.cpp death.cpp descr.cpp \
+          display.cpp drink.cpp druid.cpp dungeon.cpp edit.cpp editor.cpp enemy.cpp event.cpp \
+          event2.cpp exit.cpp exp.cpp familiar.cpp fight.cpp fight2.cpp fight3.cpp \
+          file.cpp find.cpp fire.cpp flag.cpp flee.cpp food.cpp get.cpp give.cpp \
+          group.cpp handler.cpp help.cpp hide.cpp host.cpp imm.cpp interp.cpp kick.cpp \
+          leech.cpp level.cpp lib_exit.cpp lib_fight.cpp lib_logic.cpp lib_object.cpp \
+          lib_quest.cpp library.cpp light.cpp list.cpp lists.cpp liquid.cpp log.cpp \
+          login.cpp look.cpp macros.cpp mage.cpp magic.cpp magic2.cpp misc.cpp \
+          mob_imm.cpp mobile.cpp money.cpp monk.cpp mount.cpp move.cpp move2.cpp \
+          mprog.cpp network.cpp newbie.cpp note.cpp notes.cpp number.cpp obj_imm.cpp \
+          obj_name.cpp obj_prop.cpp obj_sort.cpp object.cpp object2.cpp object3.cpp \
+          oprog.cpp option.cpp output.cpp paladin.cpp path.cpp pet.cpp player.cpp \
+          pos.cpp program.cpp prompt.cpp psi.cpp put.cpp quest.cpp ranger.cpp recipe.cpp \
+          recog.cpp regen.cpp relig.cpp reput.cpp rescue.cpp reset.cpp resist.cpp \
+          room.cpp rtable.cpp save.cpp score.cpp sdb.cpp search.cpp suid.cpp sql.cpp \
+          set.cpp shock.cpp shop.cpp skill.cpp social.cpp sorceror.cpp spell.cpp \
+          startup.cpp string2.cpp string3.cpp switch.cpp table.cpp teleport.cpp tfe.cpp \
+          tfemem.cpp thief.cpp thing.cpp throw.cpp time.cpp track.cpp trainer.cpp \
+          undead.cpp update.cpp variable.cpp verb.cpp vote.cpp wand.cpp water.cpp \
+          wear.cpp  weather.cpp weight.cpp where.cpp who.cpp
+
+O_FILES = $(C_FILES:.cpp=.o)
+O_FILES2 := $(patsubst %.cpp,$(OBJ_DIR)/%.o,$(C_FILES))
+
+all:  $(BIN_DIR)/newtfe $(BIN_DIR)/daemon
+
+$(BIN_DIR)/newtfe: $(O_FILES)
+	@echo "Linking $@ ... "
+	@$(CPP) $(C_FLAGS) -o $(BIN_DIR)/newtfe $(O_FILES2) $(L_FLAGS)
+
+$(BIN_DIR)/daemon: daemon.o
+	@echo "Linking $@ ... "
+	@$(CPP) $(C_FLAGS) -o $(BIN_DIR)/daemon $(OBJ_DIR)/daemon.o $(L_FLAGS)
+
+.cpp.o:
+	$(CPP) -c $(C_FLAGS) -I. $< -o $(OBJ_DIR)/$@ $(I_FLAGS)

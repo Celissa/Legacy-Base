@@ -1,0 +1,19 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+reply        : replies to the last person to tell to you<br>
+reply lock   : locks reply onto whoever last told to you<br>
+reply unlock : unlocks reply<br>
+<br>
+<h1> Description </h1>
+<br>
+This command is a method to tell to people whom you can not see or a<br>
+shorthand while carrying on a conversation with someone.  Should be wary<br>
+of using it unlocked for private conversations as if someone tells to you<br>
+just before you send your reply, the message may very well go to an<br>
+unintended recipient.<br>
+<br>
+See also: tell<br>
+</html>
+</body>

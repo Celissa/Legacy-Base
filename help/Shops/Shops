@@ -1,0 +1,26 @@
+<html>
+<body>
+ In every town can be found a variety of shops, selling and buying<br>
+everything from armor to magical regeants.  While in a shop, typing<br>
+list will display a table of what is for sale, and their prices as<br>
+well as minimum level and condition.  Most of the time, you can buy<br>
+items from the store by typing buy [object], assuming you have enough<br>
+money to pay for it.  If you want to sell an item, the value command<br>
+has the shopkeeper appraise the object, and then tell you how much he<br>
+will pay for it, and the cost to repair it if it is damaged.  Then,<br>
+you can sell the item from your inventory by typing sell [object].<br>
+<br>
+ Sometimes, shopkeepers have the ability to make rare, special, often<br>
+magical items, given the correct ingredients.  By typing custom, you<br>
+can see if a shopkeeper produces any special item.  Once you have<br>
+collected all the necessary ingredients and can pay forthe item, then you<br>
+can purchase it by typing custom [object].<br>
+<br>
+ Although the primary function of the shopkeepers is to maintain their<br>
+business, often they act as trainers as well.  They can teach you skills<br>
+and spells, which you spend by using practice points.<br>
+<br>
+ To buy or sell multiple objects at one time, it is posssible to use an<br>
+extended description for objects, which are detailed under syntax.<br>
+</html>
+</body>

@@ -1,0 +1,2536 @@
+#M2_AREA
+2
+
+Kobold Raider Camp~
+Rikahn~
+Kobold Raiders~
+~
+~
+
+8 0
+0
+1
+#ROOMS
+
+#4000
+A Path Through a Dense Forest~
+A trampled path zigzags its way through a forest of densely packed trees. 
+Coating the trees, a thick matting of shaggy green moss conceals much of
+the bark.  Long branches covered with countless broad, green leaves
+stretch outward from the trunks, shielding most of the forest from the
+bright light of a blazing bonfire flickering to the east.  Leading
+slightly uphill, the path continues to the west behind the veil of
+branches, that which lies beyond completely hidden from view.
+~
+[Rikahn] 4096 has information about the 'entire' area
+[Eliza] Done.
+[Eliza] Kobold Raider Camp.
+~
+167247880 3 9 0
+D1
+~
+~
+0 -1 4021 10 10 5
+D3
+~
+~
+0 -1 4001 10 10 5
+E
+densely packed trees~
+Towering oaks dominate the landscape, standing at least thirty feet tall. 
+Perhaps centuries old, these trees have a thick, healthy layer of tan
+bark.  High above the ground, their thick branches and dense foliage
+block out the entire view from above, draping the area in darkness.
+~
+E
+shaggy matting green moss~
+Clinging to the side of the trees like a second skin, a thick layer of
+spongy lime-green moss clings tenaciously to the cracks and crevices of
+the craggy bark.  Moist to the touch and extremely soft, the stringy
+lichen glows dimly in the otherwise pitch black forest.
+~
+A
+1 north 1 south~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+The trees are too densely packed in that direction for you to go that way.
+~
+!
+0 0 0
+A
+search get take grab steal~
+shaggy green lime-green moss matting spongy~
+i = random( 1, 3 );
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( i == 1 ) {
+    act_tochar( #gotit, ch );
+    act_notchar( #gotit2, ch );
+    obj_to_char( oload( 2857 ), ch );
+    end;
+    }
+  }
+act_tochar( #nogo, ch );
+act_notchar( #nogo2, ch );
+~
+E
+gotit~
+@GYou grab ahold of a small clump of moss and tear it away from the tree. 
+Thick and spongy, it begins to glow in your hand.@n 
+~
+E
+gotit2~
+@G$n grabs ahold of a small clump of moss and tears it away from the tree. 
+Thick and spongy, it begins to glow in $s hand.@n 
+~
+E
+nogo~
+@GYou grab ahold of a small clump of moss and tear it away from the tree. 
+Dried and stringy, it disintegrates in your hand.@n 
+~
+E
+nogo2~
+@G$n grabs ahold of a small clump of moss and tears it away from the tree. 
+Dried and stringy, it disintegrates in $s hand.@n 
+~
+!
+0 0 0
+-1
+S
+
+#4001
+A Hastily-Erected Guard Post~
+The paths through the forest open up into a modest clearing here, where a
+crude guard post has been erected to alert the camp in case of intruders. 
+A makeshift hot rock pit has been built in a way to keep the area warm,
+yet prevent escaping light from giving away the guard's position.  Rows
+of broken branches have been placed on the ground to trip up the unwary. 
+Narrow paths lead off to the north and south, while a wider thoroughfare
+continues into a clearing to the east.
+~
+[Rikahn] Will enable cflag once quests/cflags are all sorted out
+[Rikahn] will probably assign a randomness to setting the cflag
+[Eliza] Done
+~
+167247873 3 9 0
+D0
+~
+~
+0 -1 4002 10 10 5
+D1
+~
+~
+0 -1 4000 10 10 5
+D2
+~
+~
+0 -1 4018 10 10 5
+E
+crude guard post~
+Rocks have been dug from the soil and stacked together to create a
+hastily-built hasty guard post for temporary encampment.  A lower pyramid
+of stones lies over a bed of hot coals, allowing some warmth into the
+chill air, yet preventing escaping light from giving away the camp's
+location.  A single large stone rests against a magestic oak, its purpose
+not readily apparent.
+~
+E
+makeshift hot rock pit~
+Numerous melon-shaped rocks have been stacked one on top of the other,
+forming a small pyramid-shaped cairn, with a glowing bed of coals within
+warming up the guard post.  Built in such a way to prevent escaping
+light, the rock pit raises the temperature of the otherwise dark, chill
+forest by a healthy margin.
+~
+E
+rows broken branches trap~
+A primitive trap of stripped tree limbs lies on the ground, perpendicular
+to the pathway that enters the forest from the east.  Due to the
+darkness, it would be easy to miss the slippery limbs and trip over them,
+creating more than a little ruckus.  Between each row of branches, there
+is enough room to fit a large boot.  Evidently, the kobolds are not
+expecting enough company to their encampment to warrant a more complex
+warning system.
+~
+A
+~
+~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  loop( all_in_room ) {
+    if( !is_player( ch ) )
+      continue;
+    if( find_stat( ch, dex ) < random( 5, 11 ) ) {
+      if( random( 1, 5 ) == 3 ) {
+        act_tochar( #slip, ch );
+        act_notchar( #slip2, ch );
+        interpret( ch, "+sit" );
+        end; }
+        }
+      }
+    }
+  act_tochar( #climb, ch );
+~
+E
+slip~
+@yYou clumsily trip over the trap of fallen logs.@n
+~
+E
+slip2~
+@y$n clumsily trips over the trap of fallen logs.@n
+~
+E
+climb~
+@yStepping gingerly, you manage to avoid the trap of fallen logs.@n
+~
+!
+1 0 2
+A
+search get grab take steal~
+hot rock pit~
+damage( mob, ch, 1d10, fire, "The hot rock", "being burned by a hot rock" );
+~
+!
+0 0 0
+5029 9 1509949540 3 0
+-1
+S
+
+#4002
+Path Around a Great Oak Tree~
+The path wraps around a great oak here, winding off toward the south. 
+The rutted trail is littered with twisted roots and sharp rocks; with
+visibility no further than arms length, navigation is treacherous.  The
+smell of burning wood lingers in the air, riding a slight air movement
+out of the south.  A single strand of whitish moss hangs from a tangle of
+branches in the canopy, like the windless sail of a tiny ship lost amid
+an endless ocean of greens, browns, and ambers.
+~
+[Eliza] Done.
+~
+167247880 3 9 0
+D2
+~
+~
+0 -1 4001 10 10 5
+D3
+~
+~
+0 -1 4003 10 10 5
+E
+oak tree~
+Its bark cracked and covered with a leafy grey-white lichen, the old oak
+has stood watch over this part of the forest for countless years. 
+Doubtless she is the mother of the surrounding trees, having watched them
+fall, as acorns, from her great boughs.  Her branches twist and tangle
+with her offsprings in the canopy above, hoarding the sunlight and
+leaving little leftover for floor-dwelling flora.
+~
+E
+moss whitish white strand~
+Draped down over a cluster of branches that jut out from the side of the
+great oak, a long clump of whitish moss limply hangs in mid-air. 
+Deposited on the branches after drifting in on a gust of wind, the shaggy
+growth does not match the color of any of the surrounding trees.  Though
+firmly dangling from the tree, it appears quite brittle and dried.
+~
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 ) {
+  send_to_room( #action1, room );
+  end;
+  }
+if( i == 2 ) {
+  send_to_room( #action2, room );
+  end;
+  }
+if( i == 3 ) {
+  send_to_room( #action3, room );
+  end;
+  }
+~
+E
+action1~
+@cA small bird flies overhead, flitting between the trees.@n
+~
+E
+action2~
+@cA rush of wind gusts through the forest, stirring the dead, dried
+leaves along the forest floor.@n 
+~
+E
+action3~
+@cA chipmunk climbs down one of the nearby trees, grabs a stray acorn off
+the ground, then scrambles back up the tree.@n 
+~
+!
+2 200 0
+A
+1 north 1 east~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+The trees are too densely packed in that direction for you to go that way.
+~
+!
+0 0 0
+A
+climb~
+tree up~
+act_tochar( #no, ch );
+~
+E
+no~
+The tree is much to big around to allow sufficient purchase for climbing.
+~
+!
+0 0 0
+A
+get take steal grab search~
+whitish moss tangled branches~
+act_tochar( #moss, ch );
+~
+E
+moss~
+As you reach up and grab the moss, it disintegrates in your hand, the dry
+and brittle pieces fluttering down to the ground.
+~
+!
+0 0 0
+7066 17 1509949465 -2 0
+-1
+S
+
+#4003
+A Winding Path Next to a Great Oak Tree~
+Squeezed in tightly between the densely packed trees, the narrow path of
+trampled foliage winds its way to the east and west.  The forest floor is
+covered in a layer of dead, dried leaves, matted into a thick mulch that
+slowly decomposes on the ground.  A weak rotting stench emanates from the
+composting material, leaving a lingering odor in the air.  An immense oak
+towers skyward to the south, its breadth and dense branches filtering
+most of the light from above.  A particularly large limb juts out from
+the side of the tree at shoulder-height, slightly obstructing the path.
+~
+[Eliza] Done.
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 4002 10 10 5
+D3
+~
+~
+0 -1 4004 10 10 5
+E
+dead dried leaves ground thick mulch~
+A thick layer of dried leaves, fallen from the treetops, has
+settled on the ground and begun to decompose.  Emanating a weak
+stench from its composting, the mulch is slightly warm and damp to the
+touch.  Numerous twigs poke out of the deep layer at intermittent
+intervals, broken off of the trees by careless passersby.
+~
+E
+immense oak tree~
+Vast in girth, this huge oak dominates the view of the forest in
+comparison to the smaller trees surrounding it.  A thick layer of dark
+bark slowly peels off its exterior, with numerous slivers of bark mixed
+in with the rotting mulch on the ground.  Thick branches jut out from the
+sides of the tree, their leafy limbs stretching out among the heavens and
+blocking out all available sunlight from above.
+~
+E
+large branch blocking~
+A four-foot diameter branch sticks out from the side of the tree at
+approximately shoulder-level, its thick limb protruding through the
+foliage of the other nearby trees and into darkness.  Much of its
+underside bark has been stripped away by travelers not stooping low
+enough to pass underneath without scraping some off.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cDucking under a large branch, you follow the narrow path through the
+trees.@n 
+~
+E
+to_room~
+@cDucking under a large branch, $n follows the narrow path through the
+trees.@n 
+~
+!
+3 0 10
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 ) {
+  send_to_room( #action1, room );
+  end;
+  }
+if( i == 2 ) {
+  send_to_room( #action2, room );
+  end;
+  }
+if( i == 3 ) {
+  send_to_room( #action3, room );
+  end;
+  }
+~
+E
+action1~
+@cA few leaves slowly flutter to the ground from high above.@n
+~
+E
+action2~
+@cThe sound of twigs snapping can be heard further along the path.@n
+~
+E
+action3~
+@cSmall mosquitoes irritatingly hover around your head.  The damp, musky
+air appears to be attracting hundreds of them.@n 
+~
+!
+2 200 0
+A
+north~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+The trees are too densely packed in that direction for you to go that way.
+~
+!
+0 0 0
+A
+south~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+An immense oak tree blocks you from traveling in that direction.
+~
+!
+0 0 0
+A
+climb~
+up tree south~
+act_tochar( #no, ch );
+~
+E
+no~
+The tree is much to big around to get sufficient handholds for climbing.
+~
+!
+0 0 0
+5021 9 1509949540 3 0
+-1
+S
+
+#4004
+A Dark, Foreboding Clearing~
+Coming to a crossroads deep within the forest, two narrow paths of
+trampled foliage converge within a dark clearing.  Running east to west,
+one path seems to have born the brunt of frequent usage, widening
+slightly to the west before disappearing into the trees beyond.  The
+pathway that runs north to south is considerably more narrow, barely
+squeezing between two gigantic oaks that flank the path.  The sound of
+gurgling water can be heard to the north, trickling off into the distance.
+~
+[Eliza] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 4006 10 10 5
+D1
+~
+~
+0 -1 4003 10 10 5
+D2
+~
+~
+0 -1 4005 10 10 5
+D3
+~
+~
+0 -1 4007 10 10 5
+E
+gigantic oak trees~
+Twin oaks loom over the rest of the forest to the northwest and southwest. 
+Perhaps centuries old, these trees are massive in girth, and have a
+thick, healthy layer of tan bark.  High above the ground, their ample
+branches and dense foliage block out the entire view from above, draping
+the area in darkness.
+~
+E
+sound gurgling water~
+And just how do you think you are going to see a sound?
+~
+E
+trampled foliage~
+A dense layer of fallen leaves and broken twigs lies matted along the
+forest floor.  Numerous small saplings like twisted and broken
+underfoot, carelessly stepped upon by some misplaced footstep.
+~
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 ) {
+  send_to_room( #action1, room );
+  end;
+  }
+if( i == 2 ) {
+  send_to_room( #action2, room );
+  end;
+  }
+if( i == 3 ) {
+  send_to_room( #action3, room );
+  end;
+  }
+~
+E
+action1~
+@cThe hooting of an owl can be heard echoing through the forest.@n
+~
+E
+action2~
+@cA falling leaf brushes against your shoulder before landing on the
+ground.@n 
+~
+E
+action3~
+@cA light drizzle of rain falls down from the canopy high above.@n
+~
+!
+2 200 0
+A
+climb~
+tree up~
+act_tochar( #no, ch );
+~
+E
+no~
+The tree is much to big around to get sufficient handholds for climbing.
+~
+!
+0 0 0
+-1
+S
+
+#4005
+Between Two Giant Oak Trees~
+This narrow trail zigzags between two enormous old oak trees.  The path
+here is not as trampled as the rest of the forest area, with many slender
+saplings poking up through the dense undergrowth.  Scattered shards of
+bark have been stripped from the tree, jutting out into the air.  Running
+to the north and south, the passage makes for a tight squeeze yet a
+convenient shortcut through the camp area.
+~
+[Eliza] done
+~
+167247872 3 5 0
+D0
+~
+~
+0 -1 4004 10 10 5
+D2
+~
+~
+0 -1 4015 10 10 5
+D3
+secret wooden panel~
+west secret wooden panel~
+139 -1 4019 10 10 5
+E
+shards bark jutting~
+Created from the constant foot traffic of kobolds rushing from one part
+of the camp to another, bits of bark have been damaged off the sides of
+the trees.  Jutting into the air, the splinters look like they would be
+somewhat painful, although fewer splinters just out of the tree to the
+west.
+~
+E
+enormous old oak 4 trees~
+Growing high above the natural canopy of the forest, these two massive
+oak trees must be hundreds of years old for them to have grown to such a
+height and breadth.  The raider presence in the area has taken its toll
+on these trees, however.  Splinters jut out from the trees from the
+constant traffic, and the tree to the west has an oddly-colored patch of
+bark.
+~
+E
+oddly colored patch 1 west~
+A large patch of bark on the tree is discolored slightly, turned a dull
+greyish-brown, as if that part of the tree was not quite so healthy as
+the rest.  At first, it appears as if disease has infested the plant, but
+closer examination reveals the sickly spot has an unusual shape.
+~
+A
+~
+west wood tree bark splinters~
+i = random( 4, 10 );
+if( find_skill( ch, searching ) > i ) {
+  act_tochar( #door, ch );
+  act_notchar( #door2, ch );
+  show( ch, room, west );
+  }
+else {
+  act_tochar( #nodoor, ch );
+  act_notchar( #nodoor2, ch );
+  }
+~
+E
+door~
+@yYou feel along the bark, and find the seam of a door!@n
+~
+E
+door2~
+@y$n feels along the bark, and shouts when $s finds a door!@n
+~
+E
+nodoor~
+@yYou feel along the bark, but it is just another tree.@n
+~
+E
+nodoor2~
+@y$n feels along the bark, but cannot find anything.@n
+~
+!
+9 0 0
+A
+~
+~
+if( is_player( ch ) ) {
+  act_tochar( #bark, ch );
+  damage( mob, ch, 1d5+5, physical, "the splinter", "being pierced by a splinter" );
+}
+continue;
+~
+E
+bark~
+@yWhile squeezing between the two trees, some rough bark breaks off,
+poking your arm!@n
+~
+!
+3 0 5
+A
+~
+~
+wait( 1 );
+send_to_room( #closed, room );
+send_to_room( #closed, find_room( 4019 ) );
+close( room, west );
+~
+E
+closed~
+@gThe wooden panel slowly closes.@n
+~
+!
+1 0 8
+5021 9 1509949540 3 0
+-1
+S
+
+#4006
+A Small Clearing in the Forest~
+Approached from the narrow southward path, this forest clearing is quite
+tranquil.  Circular in shape, this natural meadow rises up slightly in
+the middle, where a bubbling @espring@n has erupted from the ground.  A
+slender cut in the earth draws the water away from the sparkling pool,
+the burbling stream winding its way northward through the trees.  A
+multitude of tracks surround a thin muddy strip around the pool, before
+disappearing into the bushy crabgrasses at the bottom of the slope.
+~
+[Eliza] Done.
+~
+167247872 3 9 0
+D2
+~
+~
+0 -1 4004 10 10 5
+E
+bubbling spring~
+Sparkling clear water pours forth from a rough hole that leads deep into
+the earth.  The miniature geyser gushes from the top of a low dirt mound,
+rising above the small clearing.  Tiny bubbles of air float to the
+surface, its light fizzing sound penetrating the otherwise ominous
+silence of the dark forest.
+~
+E
+cut earth~
+Erosion from the bubbling spring has gouged a narrow cut in the lip of
+the earth at the top of the small hill, allowing the spring to trickle
+down the side of the low hill and flow off through the trees to to the
+north.
+~
+E
+small stream~
+Slowly trickling to the north, this small stream of crystal-clear water
+treeline.  The sound of the water slowly falling over small rocks and
+sticks lends a peaceful rushing sound to the otherwise ominous forest.
+~
+E
+animal tracks thin muddy strip~
+A thin strip of oozing mud lines the outside edge of the bubbling spring,
+before meeting the rocks on the crest of the hill.  Numerous small animal
+tracks, mostly belonging to birds, lay pressed in the mud, disappearing
+over the lip of the grassy mound.
+~
+E
+bushy crabgrass~
+Growing tall and lush, a ring of bushy crabgrass begins at the bottom of
+the dirt mound and continues into the forest.  Fed from the moisture that
+runs underground, this wide patch of leafy foliage grows tall in some
+spots, yet has been nibbled down by animals in others.
+~
+A
+1 west 1 north 1 east~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+The trees are too densely packed in that direction for you to go that way.
+~
+!
+0 0 0
+5026 9 1509949540 3 0
+22 17 1509949540 -2 0
+-1
+S
+
+#4007
+Beside a Great Oak Tree~
+Here, deep within the forest, the trail slowly widens toward the west
+where more and more foliage has been trampled underfoot.  Paralleling a
+great oak to the south, the narrow track through the trees also leads off
+to the east, where it narrows off into total darkness.  A slender sapling
+stands intact in the middle of the path, refusing to yield to the forces
+that crushed its neighbors.  Lying across the path are low stacks of
+chopped logs, stored as firewood.
+~
+[Eliza] Done.
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 4004 10 10 5
+D3
+~
+~
+0 -1 4008 10 10 5
+E
+great oak tree~
+Soaring skyward, this gigantic oak tree appears to have been standing
+here for eons by how large its breadth has grown.  Easily thirty feet in
+diameter, its rough bark shows a very healthy growth pattern and does not
+flake off easily.  The thick foliage growing from its limbs blocks out
+the sky, as if it were the darkest night without any stars.
+~
+E
+small sapling middle~
+Standing almost with a sense of pride, this small three-foot sapling has
+withstood the ravages that trampled all of the nearby foliage.  As thick
+around as your finger, the young tree has a few thin branches growing
+from its sides, and small buds have started to grow at the tips.
+~
+A
+~
+~
+act_tochar( #move, ch );
+continue;
+~
+E
+move~
+@cStepping over a small pile of logs, you quietly make your way around
+the large oak tree.@n 
+~
+!
+3 0 10
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 ) {
+  send_to_room( #action1, room );
+  end;
+  }
+if( i == 2 ) {
+  send_to_room( #action2, room );
+  end;
+  }
+if( i == 3 ) {
+  send_to_room( #action3, room );
+  end;
+  }
+~
+E
+action1~
+@cA few leaves slowly flutter to the ground from high above.@n
+~
+E
+action2~
+@cThe sound of twigs snapping can be heard further along the path.@n
+
+~
+E
+action3~
+@cSmall mosquitoes irritatingly hover around your head.  The damp, musky
+air appears to be attracting hundreds of them.@n 
+~
+!
+2 200 0
+A
+north~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+The trees are too densely packed in that direction for you to go that way.
+~
+!
+0 0 0
+A
+south~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+An immense oak tree blocks you from traveling in that direction.
+~
+!
+0 0 0
+A
+climb~
+up south tree~
+act_tochar( #no, ch );
+~
+E
+no~
+The tree is much to big around to get sufficient handholds for climbing.
+~
+!
+0 0 0
+5022 9 1509949460 3 0
+805 17 1509949445 -2 0
+-1
+S
+
+#4008
+Outside a Worn Canvas Tent~
+Barely fitting into a clearing of crudely hacked down trees, a worn
+canvas tent provides some slight protection against inclement weather. 
+Loose flaps hang limp against the taut front panel of the tent, obscuring
+who or what may be inside.  A narrow, yet heavily trampled, path runs
+from the east to the south around a great oak tree, leading into darkness
+in both directions.
+~
+[Eliza] Done.
+~
+167247872 3 9 0
+D0
+tent flap~
+tent flap north~
+131 -1 4009 10 10 5
+D1
+~
+~
+0 -1 4007 10 10 5
+D2
+~
+~
+0 -1 4010 10 10 5
+E
+worn canvas tent north~
+A mid-sized canvas tent has been erected to the north, wedged into the
+space between two large trees.  The canvas, once thick and sturdy, has
+been worn down to the point where patches of individually frazzled
+threads are easily visible.
+~
+E
+loose flaps taut front panel~
+Big flaps of worn canvas hang limply from both upper corners of the tent,
+providing a basic yet effective doorway.  The tie strings of the flaps
+have long since been torn away, but the lack of wind in this dense forest
+allows the flaps to remain in place.
+~
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 ) {
+  send_to_room( #action1, room );
+  end;
+  }
+if( i == 2 ) {
+  send_to_room( #action2, room );
+  end;
+  }
+if( i == 3 ) {
+  send_to_room( #action3, room );
+  end;
+  }
+~
+E
+action1~
+@cA small bird flies overhead, flitting between the trees.@n
+~
+E
+action2~
+@cA rush of wind gusts through the forest, stirring the dead, dried
+leaves along the forest floor.@n 
+~
+E
+action3~
+@cA chipmunk climbs down one of the nearby trees, grabs a stray acorn off
+the ground, then scrambles back up the tree.@n 
+~
+!
+2 200 0
+A
+west~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+The trees are too densely packed in that direction for you to go that way.
+~
+!
+0 0 0
+A
+climb~
+up tree~
+act_tochar( #no, ch );
+~
+E
+no~
+The tree is much to big around to get sufficient handholds for climbing.
+~
+!
+0 0 0
+A
+~
+~
+act_tochar( #leaving, ch );
+act_notchar( #leaving2, ch );
+continue;
+~
+E
+leaving~
+@yThe smell of melted wax overpowers your senses as you step inside the
+tent.@n 
+~
+E
+leaving2~
+@yWrinkling $s nose, $n steps inside of the tent.@n
+~
+!
+3 0 1
+5020 9 1509949540 3 0
+-1
+S
+
+#4009
+Inside a Worn Canvas Tent~
+Pale, flickering light illuminates the interior of the worn canvas tent,
+issuing from the middle of the shelter where a cluster of burning candles
+has been stuck atop a flat grey stone.  The debris from the trees that
+were cut down to make room for this tent has been cleared, and the ground
+meticulously swept.  Shallow grooves have been gouged from the dirt
+surrounding the centrally-placed rock, forming some sort of idyllic
+symbol.
+~
+[Eliza] Done.
+~
+167247872 3 9 0
+D2
+tent flap~
+tent flap south~
+131 -1 4008 10 10 5
+E
+cluster candles big rock~
+A three-foot wide rock sits in the middle of this tent, with a cluster of
+lit candles resting on top of its flat surface.  The candles have been
+arranged in some sort of star shape, though what significance the pattern
+holds is unknown.
+~
+E
+shallow grooves gouged dirt idyllic symbol~
+A shallow trench, mere inches wide, has been precisely incised around the
+flat stone in the middle of the tent.  Dug in an odd yet flowing pattern,
+the trench has been filled with a an foul-looking concoction of blood,
+wax, and various herbs.
+~
+A
+~
+~
+send_to_room( #candles, room );
+~
+E
+candles~
+@yA breath of wind causes the candles to momentarily flicker.@n
+~
+!
+2 300 0
+A
+search get take grab steal~
+cluster white candles~
+if( rflag( reset0, room ) ) {
+  i = random( 1, 3 );
+  if( i == 2 )
+    remove_rflag( reset0, room );
+  act_tochar( #candle, ch );
+  act_notchar( #candle2, ch );
+  obj_to_char( oload( 330 ), ch );
+  end;
+  }
+act_tochar( #nocandle, ch );
+~
+E
+candle~
+You reach down and pick up one of the white candles.
+~
+E
+candle2~
+$n reaches down and picks up one of the white candles.
+~
+E
+nocandle~
+None of the remaining candles are worth taking.
+~
+!
+0 0 0
+A
+~
+~
+act_tochar( #leaving, ch );
+act_notchar( #leaving2, ch );
+continue;
+~
+E
+leaving~
+@yThe candles flicker as you walk outside of the tent.@n
+~
+E
+leaving2~
+@yThe candles flicker as $n walks out of the tent.@n
+~
+!
+3 0 4
+5015 9 1509949540 3 0
+-1
+S
+
+#4010
+Outside a Fine Canvas Tent~
+This section of the path through the forest is heavily trampled, with
+dozens of footprints leading toward a large canvas tent that lies to the
+west.  Unlike the other tents in the area, the canvas is of the finest
+quality and has been thoroughly cleaned and scrubbed.  The edges of the
+tent flaps have ornate designs integrated into the cloth, and thick,
+sturdy poles hold the tent up high.  The well-trodden track continues to
+both the north and south, and toward a great oak that lies to the
+northeast.
+~
+[Eliza] Done
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 4008 10 10 5
+D2
+~
+~
+0 -1 4012 10 10 5
+D3
+tent flap~
+tent flap west~
+131 -1 4011 10 10 5
+E
+fine canvas tent ornate designs~
+This tent must belong to someone of importance, as its surface has nary a
+rip or tear, and no mildew grows on its surface.  The walls of the tent
+are pulled taut by strong wooden poles reinforced with iron bands driven
+into the ground, and wildly complicated designs have been sewn into the
+edges of the canvas.  Two large flaps cover the front of the tent to
+provide access to its interior.
+~
+E
+path forest trampled~
+This portion of the forest looks heavily trampled, evidenced by the
+numerous footprints visible in the soft dirt.  Shreds of broken limbs and
+leaves cover the ground, where any obstructing foliage has been ripped
+from the trees and mashed into the ground by the heavy traffic.
+~
+A
+~
+~
+if( mob_in_room( 5031, find_room( 4011 ) ) )
+  send_to_room( #barks, room );
+~
+E
+barks~
+@yThe sounds of someone barking out orders can be heard from within the
+tent that lies westward.@n 
+~
+!
+2 250 0
+A
+climb~
+tree up east~
+act_tochar( #no, ch );
+~
+E
+no~
+The tree is much to big around to get sufficient handholds for climbing.
+~
+!
+0 0 0
+A
+~
+~
+act_tochar( #leaving, ch );
+act_notchar( #leaving2, ch );
+continue;
+~
+E
+leaving~
+@yDucking under the wide flaps, you enter the tent.@n
+~
+E
+leaving2~
+@yDucking under the wide flaps, $n enters the tent.@n
+~
+!
+3 0 8
+5030 9 1509949540 3 0
+-1
+S
+
+#4011
+Inside a Fine Canvas Tent~
+The interior of the sprawling tent is quite spacious.  Tall wooden poles
+reinforced with iron bands heave great amounts of canvas high into the
+air, and the long walls of fibers are pulled taut.  Flickering light,
+thrown by a fire burning in the center of the tent, dances through the
+shadows, its smoke rising up through a ventilation hole overhead.  A
+makeshift throne lies some distance from the other crudely built
+furniture surrounding the campfire, placed for the kobold war council.  A
+wide pot of soup boils next to the blaze, perhaps its the kobold leader's
+next meal.
+~
+[Eliza] Done
+~
+167247872 3 9 0
+D1
+tent flap~
+tent flap east~
+131 -1 4010 10 10 5
+E
+tall wooden poles reinforced iron bands~
+Sturdy wooden poles reinforced with iron bands heave the massive weight
+of this large canvas tent high into the air, leaving the walls taut and
+stiff.  Reinforced by ropes and slightly buried into the ground, it
+appears as if this tent would be able to stand quite a fierce storm and
+still stay erect.
+~
+E
+flickering small campfire smoke~
+A campfire burns inside of a rock pit centered in the tent's interior. 
+fine canvas tent.  The flames burn high but smoky, a result of using too
+many dried leaves and thin branches found in abundance along the forest
+floor.  A ventilation hole has been opened overhead, but the air still
+remains hazy.
+~
+E
+makeshift throne logs furniture~
+Massive amounts of wood must have been chopped down to make room for the
+spacious tent, and those logs not burned have been shaped into a crude,
+makeshift throne.  Primitive by any opinion, the wooden chair provides a
+loftier position than sitting on the ground.  Smaller logs have been used
+to create some basic benches and tables surrounding the campfire.
+~
+A
+look~
+wide pot soup~
+act_tochar( #soup, ch );
+~
+E
+soup~
+The plain pot rests atop a bed of heated rocks just next to the blazing
+campfire.  The pot contains a mixture of unnamed meat, potatos, and
+native vegetables, simmering in a light brown broth, ready to be eaten.
+~
+!
+0 0 0
+A
+~
+~
+send_to_room( #lantern, room );
+~
+E
+lantern~
+@yFlashes of light flicker across the canvas walls from the burning campfire.@n
+~
+!
+2 300 0
+A
+~
+~
+act_tochar( #leaving, ch );
+act_notchar( #leaving2, ch );
+continue;
+~
+E
+leaving~
+@yYour eyesight begins to clear after exiting the smoky tent.@n
+~
+E
+leaving2~
+@y$n rubs the smoke out of $s eyes as $e leaves the tent.@n
+~
+!
+3 0 2
+5031 9 1509949540 3 0
+7370 17 1509949540 -2 16
+5023 9 1509949540 3 0
+-1
+S
+
+#4012
+Outside a Shabby Canvas Tent~
+Snaking through the dense trees, the narrow-cut path turns from north to
+east around an immense oak tree.  A crudely chopped-down section of trees
+have been cleared to the south where a grubby old tent has been erected,
+just narrowly fitting between two tall trees.  Scores of tracks lead in
+both directions along the path, as if there were something of importance
+nearby.
+~
+[Eliza] Done
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 4010 10 10 5
+D1
+~
+~
+0 -1 4014 10 10 5
+D2
+tent flap~
+tent flap south~
+131 -1 4013 10 10 5
+E
+dense trees immense oak~
+The thick, leafy foliage of the densely packed trees in this part of the
+forest completely block out any light from the sky above.  Heavy tree
+limbs and sturdy trunks make it a miracle that a path could ever have
+been hewn through here to begin with.  Crude cuts in the bark of the
+trees indicate where branches once jutted out, now barbarically hacked
+off and lying on the ground.
+~
+E
+grubby old tent south~
+Its hard to imagine the original color of the dirty and shabby tent that
+lies to the south.  Crudely-sewn patches of multi-hued canvas squares
+decorate the outside surface of the tent where battlefield repairs have
+been made.  Large splotches of mold and mildew grow where sections of the
+canvas have been left damp during storage, leaving a musty smell hanging
+in the air.
+~
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 ) {
+  send_to_room( #action1, room );
+  end;
+  }
+if( i == 2 ) {
+  send_to_room( #action2, room );
+  end;
+  }
+if( i == 3 ) {
+  send_to_room( #action3, room );
+  end;
+  }
+~
+E
+action1~
+@cThe hooting of an owl can be heard echoing through the forest.@n
+~
+E
+action2~
+@cA falling leaf brushes against your shoulder before landing on the
+ground.@n 
+~
+E
+action3~
+@cA light drizzle of rain falls down from the canopy high above.@n
+~
+!
+2 200 0
+A
+west~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+The trees are too densely packed in that direction for you to go that way.
+~
+!
+0 0 0
+A
+climb~
+up tree~
+act_tochar( #no, ch );
+~
+E
+no~
+The tree is much to big around to get sufficient handholds for climbing.
+~
+!
+0 0 0
+A
+~
+~
+act_tochar( #leaving, ch );
+act_notchar( #leaving2, ch );
+continue;
+~
+E
+leaving~
+@yYou step gingerly over the threshhold of the tent, looking to see
+what's inside.@n 
+~
+E
+leaving2~
+@y$n gingerly steps over the threshhold of the tent, looking to see
+what's inside.@n 
+~
+!
+3 0 4
+5020 9 1509949540 3 0
+-1
+S
+
+#4013
+Inside a Shabby Canvas Tent~
+The musty smell of moldy canvas and damp foliage permeates this grubby
+old tent.  Crude poles of banded wood support the canvas up in the air,
+although it looks like it could collapse at any moment.  A single old and
+dented brass lantern hangs from one of the support rods, throwing meager
+light into the cramped quarters of this tent.
+~
+[Eliza] Reviewed
+~
+167247877 3 9 0
+D0
+tent flap~
+tent flap north~
+131 -1 4012 10 10 5
+E
+grubby old canvas tent~
+It is hard to imagine what color this tent was originally colored when it
+was sewn together.  Crudely-sewn patches of multicolored canvas squares
+decorate the outside surface of the tent where battlefield repairs have
+been made.  Large patches of mold are growing where sections of the
+canvas have been left damp during storage, leaving a musty smell hanging
+in the air.
+~
+E
+crude banded wood poles~
+Grooved wooden poles an inch in diameter bow heavily as they hold up the
+heavy canvas skin of this grubby old tent.  Lashed together with leather
+straps, they just barely keep the tent from collapsing into itself.
+~
+E
+rusty dented brass lantern~
+Countless dents mar the surface of this heavily tarnished old brass
+lantern, yet it still continues to provide meager light within the tent. 
+Hung from on of the support poles by a twisted loop of wire, its glass
+shell has numerous spiderwebbed cracks running through it.
+~
+A
+~
+~
+send_to_room( #lantern, room );
+~
+E
+lantern~
+@yLight from the brass lantern dances across the canvas walls.@n
+~
+!
+2 200 0
+A
+get search take grab steal~
+dented brass lantern~
+act_tochar( #no, ch );
+~
+E
+no~
+The old brass lantern is firmly affixed to the tent's crossmember.  Any
+attempt to remove the lamp would cause the tent to collapse.
+~
+!
+0 0 0
+A
+~
+~
+act_tochar( #leaving, ch );
+act_notchar( #leaving, ch );
+continue;
+~
+E
+leaving~
+@yYou step outside of the tent, leaving the musty smell of the moldy tent
+behind.@n 
+~
+E
+leaving2~
+@y$n steps outside of the moldy tent.@n
+~
+!
+3 0 1
+5027 9 1509949540 3 0
+5028 9 1509949540 3 0
+5028 9 1509949540 3 0
+-1
+S
+
+#4014
+Beside a Great Oak Tree~
+Squeezing between a mighty oak to the north and a stand of younger trees
+to the south, the path appears to be heavily traveled.  Slender saplings
+that had pushed up through the thick underbrush, now lay trampled and
+broken on the ground, and scores of gouges are present in the bark of the
+trees.  Most of the tracks lead down the path to the west, though some
+are still visible heading off to the east as well.
+~
+[Eliza] done
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 4015 10 10 5
+D3
+~
+~
+0 -1 4012 10 10 5
+E
+huge oak tree north gouges bark~
+At least twenty feet in diameter and stretching up into the sky, the
+massive oak must be at least two hundred years old to have reached such
+size.  From the base of the tree to a height of about four feet, various
+gouges are present in the bark from passersby banging and scraping their
+equipment and weapons against the ancient bark, tearing off small
+sections to the ground.
+~
+A
+~
+~
+act_tochar( #move, ch );
+continue;
+~
+E
+move~
+@cTreading lightly, you steathily move along the forest path.@n
+~
+!
+3 0 10
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 ) {
+  send_to_room( #action1, room );
+  end;
+  }
+if( i == 2 ) {
+  send_to_room( #action2, room );
+  end;
+  }
+if( i == 3 ) {
+  send_to_room( #action3, room );
+  end;
+  }
+~
+E
+action1~
+@cA few leaves slowly flutter to the ground from high above.@n
+~
+E
+action2~
+@cThe sound of twigs snapping can be heard further along the path.@n
+~
+E
+action3~
+@cSmall mosquitoes irritatingly hover around your head.  The damp, musky
+air appears to be attracting hundreds of them.@n 
+~
+!
+2 200 0
+A
+south~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+The trees are too densely packed in that direction for you to go that way.
+~
+!
+0 0 0
+A
+north~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+An immense oak tree blocks you from traveling in that direction.
+~
+!
+0 0 0
+A
+climb~
+up tree north~
+act_tochar( #no, ch );
+~
+E
+no~
+The tree is much to big around to get sufficient handholds for climbing.
+~
+!
+0 0 0
+5022 9 1509949540 3 0
+-1
+S
+
+#4015
+A Dark, Foreboding Clearing~
+Black as night under the thick canopy of leaves high above, this small
+clearing boasts little undergrowth in its hardpack dirt, due to the lack
+of light filtering down from above.  Tightly-packed majestic oaks pepper
+the landscape, their thick limbs spread through the air like a giant
+wooden spider web.  Narrow paths lead off in all directions, with nothing
+but darkness visible through the trees.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 4005 10 10 5
+D1
+~
+~
+0 -1 4017 10 10 5
+D2
+~
+~
+0 -1 4016 10 10 5
+D3
+~
+~
+0 -1 4014 10 10 5
+E
+great oak trees~
+Soaring high into the sky, two massive oaks dominate the view within this
+deep, dark forest.  Obscuring all even the strongest filtered light with
+their thick, leafy canopy, the trees stand tall as they have for
+centuries.
+~
+E
+thick limbs~
+Stretching overhead from the spreading trees, the visually overlapping
+branches from the nearby oaks looks similar to a gigantic wooden
+spiderweb, criss-crossing over and over in intricate patterns.
+~
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 ) {
+  send_to_room( #action1, room );
+  end;
+  }
+if( i == 2 ) {
+  send_to_room( #action2, room );
+  end;
+  }
+if( i == 3 ) {
+  send_to_room( #action3, room );
+  end;
+  }
+~
+E
+action1~
+@cA small bird flies overhead, flitting between the trees.@n
+~
+E
+action2~
+@cA rush of wind gusts through the forest, stirring the dead, dried
+leaves along the forest floor.@n 
+~
+E
+action3~
+@cA chipmunk climbs down one of the nearby trees, grabs a stray acorn off
+the ground, then scrambles back up the tree.@n 
+~
+!
+2 200 0
+A
+climb~
+up tree~
+act_tochar( #no, ch );
+~
+E
+no~
+The tree is much to big around to get sufficient handholds for climbing.
+~
+!
+0 0 0
+A
+~
+clearing ground undergrowth~
+if( rflag( reset0, room ) ) {
+  i = random( 1, 3 );
+  if( i == 2 )
+    remove_rflag( reset0, room );
+  act_tochar( #mush, ch );
+  act_notchar( #mush2, ch );
+  i = random( 1, 8 );
+  if( i == 6 ) {
+    obj_to_char( oload( 1113 ), ch );
+    end;
+    }
+  obj_to_char( oload( 7008 ), ch );
+  end;
+  }
+act_tochar( #nomush, ch );
+~
+E
+mush~
+Running your hands through the undergrowth, you find something!
+~
+E
+mush2~
+Running $s hands through the undergrowth, $n finds something!
+~
+E
+nomush~
+You sort through the underbrush but find nothing.
+~
+!
+9 0 0
+672 17 1509949465 -2 0
+-1
+S
+
+#4016
+A Small Clearing in the Forest~
+Cleared to make a sleeping space for the kobold raiders, this deforested
+clearing is littered with sleeping mats and battle supplies.  Logs that
+were chopped down have been stacked around the perimeter, providing some
+protection from the light winds that swirl through the forest.  Closed in
+by dense trees on three sides, the only way out of this clearing is via a
+narrow break in the foliage to the north.
+~
+[Rikahn] Will come back to this room after talking with Azerin long-term, would prefer he replaces the current object #s than creating new ones so old resets get updated instead of having to remove/mreset new gems
+[Eliza] Done
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 4015 10 10 5
+E
+sleeping mat~
+Spread out in an orderly fashion, a number of basic brown sleeping mats
+have been laid out on the ground by the kobold raiders.  Stacked next to
+each mat is a cache of battle tools and supplies.  While all of the mats
+have been laid with military precision, one errant kobold seems to have
+left something under his mat.
+~
+E
+cache battle tools supplies~
+Laid at the end of each sleeping mat is a small bundle of battle tools
+and basic supplies, rolled up neatly and tied together with rope.  None
+of the tools seem to be in very good condition, and the food supplies
+smell rather rank.  Apparently kobold fighters aren't too well equipped.
+~
+A
+search lift move take grab get~
+sleeping mat~
+if( !rflag( reset0, room ) ) {
+  act_tochar( #already, ch );
+  end;
+  }
+if( !mob_in_room( 5026, room ) ) {
+  if( !mob_in_room( 5021, room ) ) {
+    if( !mob_in_room( 5022, room ) ) {
+      remove_rflag( reset0, room );
+      act_tochar( #lift, ch );
+      act_notchar( #lift2, ch );
+      wait( 1 );
+      i = random( 1, 15 );
+      if( i == 3 ) {
+        act_tochar( #pretty, ch );
+        act_notchar( #pretty2, ch );
+        obj_to_char( oload( 998 ), ch );
+        end;
+        }
+      act_tochar( #crud, ch );
+      act_notchar( #crud, ch );
+      obj_to_char( oload( 2360 ), ch );
+      end;
+      }
+    }
+  }
+act_tochar( #nosearch, ch );
+act_notchar( #nosearch2, ch );
+~
+E
+already~
+The mat has already been moved aside, and nothing remains beneath it.
+~
+E
+lift~
+@cYou lift the sleeping mat, only to find...@n
+~
+E
+lift2~
+@c$n lifts the sleeping mat, only to find...@n
+~
+E
+pretty~
+@cA sparkly treasure stashed by the kobold!@n
+~
+E
+pretty2~
+@c$n finds a sparkly treasure stashed by the kobold!@n
+~
+E
+crud~
+@cA fist-sized rock.  The kobold must have been in a hurry when he set up
+his mat.@n 
+~
+E
+crud2~
+@c$n finds a fist-sized rock.  The kobold must have been in a hurry when
+he set up his mat.@n 
+~
+E
+nosearch~
+@YThe kobold howls in anger at you for disturbing the mats!@n
+~
+E
+nosearch2~
+@YThe kobold howls in anger at $n for disturbing the mats!@n
+~
+!
+0 0 0
+A
+1 west 1 east 1 south~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+The trees are too densely packed in that direction for you to go that way.
+~
+!
+0 0 0
+5026 9 1509949540 3 0
+-1
+S
+
+#4017
+A Winding Path Next to a Great Oak Tree~
+Barely visible through the dense forest, this narrow path winds its way
+between a great oak and a stand of elms in a dark, heavy forest.  Slender
+saplings have been trampled into the dirt by heavy traffic, with no
+thought for the damage caused to the local fauna.  A tangle of roots,
+exposed through the dry, crumbling dirt, makes travel difficult.  Broken
+branches and ripped leaves mark the path's exits to the east and the west.
+~
+[Eliza] Done
+~
+167510016 3 9 0
+D1
+~
+~
+0 -1 4018 10 10 5
+D3
+~
+~
+0 -1 4015 10 10 5
+E
+slender saplings trampled~
+Young saplings saplings have been ground into the layer of crumbling dirt
+and dried leaves on the ground.  The thick canopy of leaves high above
+has caused this lee side ancient oak to receive little moisture, making
+everything crisp and brittle.  Passersby have repeatedly crushed the
+diminutive trees in order to create the narrow path that runs from the
+east to the west through the forest.
+~
+E
+tangle roots exposed~
+A lack of water on the lee side of the great oak tree has caused the dry,
+crumbling dirt to break up and turn into dust, exposing a twisted tangle
+of roots on the ground.  Weaving their way in near-infinite directions in
+an attempt to draw moisture into the tree, the mass makes travel
+difficult along this portion of the path.
+~
+E
+broken branches ripped leaves~
+Almost invisible through the dark, murky forest, the pathway that runs
+east and west is marked by the trampled foliage on the ground, and the
+damage that has been done to the trees in either direction.  Small twigs
+have been broken off at regular intervals, and lush foliage has been
+ripped into pieces, marking the passage.
+~
+A
+~
+~
+act_tochar( #move, ch );
+continue;
+~
+E
+move~
+@cCarefully stepping around the tangled mass of roots, you quietly weave
+your way along the narrow forest path.@n 
+~
+!
+3 0 10
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 ) {
+  send_to_room( #action1, room );
+  end;
+  }
+if( i == 2 ) {
+  send_to_room( #action2, room );
+  end;
+  }
+if( i == 3 ) {
+  send_to_room( #action3, room );
+  end;
+  }
+~
+E
+action1~
+@cA few leaves slowly flutter to the ground from high above.@n
+~
+E
+action2~
+@cThe sound of twigs snapping can be heard further along the path.@n
+~
+E
+action3~
+@cSmall mosquitoes irritatingly hover around your head.  The damp, musky
+air appears to be attracting hundreds of them.@n 
+~
+!
+2 200 0
+A
+south~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+The trees are too densely packed in that direction for you to go that way.
+~
+!
+0 0 0
+A
+north~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+An immense oak tree blocks you from traveling in that direction.
+~
+!
+0 0 0
+A
+climb~
+up tree north~
+act_tochar( #no, ch );
+~
+E
+no~
+The tree is much to big around to get sufficient handholds for climbing.
+~
+!
+0 0 0
+5021 9 1509949540 3 0
+-1
+S
+
+#4018
+Path Around a Great Oak Tree~
+Twisting its way between a great oak and other smaller trees nearby, the
+narrow path is shrouded in shadows, the dense forest canopy allowing only
+the strongest light to filter down from above.  Along the forest floor,
+the normally-lush foliage and just-emerging saplings have been ground
+underfoot, whether by the normal fauna or unusually heavy traffic not
+readily detected.  Angling off to the north and west, the narrow track
+disappears deep into the forest.
+~
+[Rikahn] Will add weapon custom at a later time, want to devise some sort of quest weapon where parts are collected from all 3 of these clustered zones.
+[Eliza] Done
+~
+167247880 3 9 0
+D0
+~
+~
+0 -1 4001 10 10 5
+D3
+~
+~
+0 -1 4017 10 10 5
+E
+great oak tree~
+Her bark cracked and covered with pale grey-green lichen, the oak stands
+watch over this part of the forest, much as it has for countless years. 
+Perhaps, she is the mother of the surrounding trees, having watched them
+fall as acorns from her great boughs.  Her branches twist and tangle with
+those of her offspring, both young and old, in the crowded canopy above,
+hoarding what light might filter down to the flora below.
+~
+E
+foliage saplings ground~
+Tiny tree saplings have been ground into the layer of crumbling dirt and
+dried leaves on the ground.  The thick canopy of leaves high above has
+caused this lee side of the tree to receive little moisture, making
+everything crisp and brittle.  Passersby have repeatedly crushed the
+young trees in order to create the narrow path that runs west and north
+through the forest.
+~
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 ) {
+  send_to_room( #action1, room );
+  end;
+  }
+if( i == 2 ) {
+  send_to_room( #action2, room );
+  end;
+  }
+if( i == 3 ) {
+  send_to_room( #action3, room );
+  end;
+  }
+~
+E
+action1~
+@cThe hooting of an owl can be heard echoing through the forest.@n
+~
+E
+action2~
+@cA falling leaf brushes against your shoulder before landing on the
+ground.@n 
+~
+E
+action3~
+@cA light drizzle of rain falls down from the canopy high above.@n
+~
+!
+2 200 0
+A
+1 south 1 east~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+The trees are too densely packed in that direction for you to go that way.
+~
+!
+0 0 0
+A
+climb~
+up tree~
+act_tochar( #no, ch );
+~
+E
+no~
+The tree is much to big around to get sufficient handholds for climbing.
+~
+!
+0 0 0
+-1
+S
+
+#4019
+Inside of a Great Oak Tree~
+Crudely carved from the inside of the great oak, this chamber appears to
+serves as a barrier between the forest and what lies below.  No light
+seeps through the tightly sealed outer layer of wood and the bark hides
+this chamber from the outside world.  A narrower chamber has been cut
+deeper into the bottom of the tree, with a crude rope ladder leading down
+into darkness.
+~
+[Eliza] Done
+~
+167247884 3 9 0
+D1
+secret wooden panel~
+east secret wooden panel~
+139 -1 4005 10 10 5
+D5
+~
+~
+0 -1 4020 10 10 5
+E
+chamber carved inside great oak tree~
+Crudely hacked out of the inside of this great oak tree, the chamber is
+large enough for a small band of travelers to fit into comfortably.  The
+walls are very rough, and sap oozes from the still-fresh hack marks. 
+Chunks and slivers of wood lie in piles against the sides of the tree,
+leftover from the violent butchery of the living tree.
+~
+E
+crude rope ladder~
+A long stretch of rope has been knotted into a crude rope ladder, then
+tied around a thick node of wood that was not hacked away when the
+chamber was created.  Draped over the edge of the small pit, it leads
+down into the darkness and what lies beyond.
+~
+A
+~
+east wood tree panel~
+i = random( 4, 10 );
+if( find_skill( ch, searching ) > i ) {
+  act_tochar( #door, ch );
+  act_notchar( #door2, ch );
+  show( ch, room, east );
+  }
+else {
+  act_tochar( #nodoor, ch );
+  act_notchar( #nodoor2, ch );
+  }
+~
+E
+door~
+@yYou feel along the wood, and find the seam of a door!@n
+~
+E
+door2~
+@y$n feels along the wood, and finds the seam of a door!@n
+~
+E
+nodoor~
+@yYou feel along the sides of the wooden chamber, but can't find a way out.@n
+~
+E
+nodoor2~
+@y$n feels along the sides of the wooden chamber, but can't find a way out.@n
+~
+!
+9 0 0
+A
+~
+~
+wait( 1 );
+send_to_room( #closed, room );
+send_to_room( #closed, find_room( 4005 ) );
+close( room, east );
+~
+E
+closed~
+@gThe wooden panel slowly closes.@n
+~
+!
+1 0 2
+A
+~
+~
+send_to_room( #stench, room );
+~
+E
+stench~
+@MA horrible stench wafts up from the pit below.@n
+~
+!
+2 250 0
+A
+~
+~
+if( mob_in_room( 5503, find_room( 4020 ) ) )
+  send_to_room( #croak, room );
+~
+E
+croak~
+@GA fearful croaking sound echoes up from the pit!@n
+~
+!
+2 250 0
+A
+climb scale~
+crude rope ladder 1 down~
+act_tochar( #down, ch );
+act_notchar( #ndown, ch );
+transfer( ch, find_room( 4020 ) );
+if( find_stat( ch, dex ) < random( 5, 10 ) ) {
+  act_tochar( #slip, ch );
+  act_notchar( #slip2, ch );
+  position( ch, 6 );
+}
+act_notchar( #arri, ch );
+loop( followers ) {
+  if( is_player( rch ) ) {
+    if( is_standing( rch ) ) {
+      transfer( rch, find_room( 4020 ) );
+      if( find_stat( rch, dex ) < random( 5, 10 ) ) {
+        act_tochar( #slip, rch );
+        act_notchar( #slip2, rch );
+position( rch, 6 );
+      }
+      act_notchar( #arri, rch );
+    }
+  }
+}
+loop( followers ) {
+  if( can_fly( rch ) )
+    transfer( rch, find_room( 4020 ) );
+  act_notchar( #arri, rch );
+}
+~
+E
+to_char~
+@cYou grab ahold of the rungs and lower yourself into the pit.@n
+~
+E
+to_room~
+@c$n grabs ahold of the rungs and lowers $sself down into the pit.@n
+~
+E
+down~
+You grab ahold of the rope ladder and carefully lower yourself into the
+pit.
+~
+E
+ndown~
+$n grabs ahold of the rope ladder and lowers $mself down into the pit.
+~
+E
+arri~
+$n arrives from above.
+~
+E
+slip~
+@RYour foot slips on the ladder, spilling you to the floor.@n
+~
+E
+slip2~
+@R$n's foot slips on the ladder, spilling $m to the floor.@n
+~
+!
+18 0 32
+A
+1 down~
+*~
+act_tochar( #nope, ch );
+~
+E
+nope~
+Walking off of the edge into a deep pit would hurt a lot.
+~
+!
+0 0 0
+-1
+S
+
+#4020
+A Murky Pool Inside of a Great Oak Tree~
+More narrow than the chamber above, this pit, carved from the heart of a
+great oak, reeks with reeks with a melange of fetid and rank smells. 
+Water and sap have collected at the bottom of the cavity, along with some
+sort of mucus from the toadlike creature imprisoned here, creating a
+foul, rank-looking mixture.  A crude rope ladder drapes down from above,
+hanging just low enough to use for the climb to safety, but out of reach
+of the creature.
+~
+[Eliza] Done.
+~
+167247876 13 9 0
+D4
+~
+~
+0 -1 4019 10 10 5
+E
+pit carved heart oak tree~
+Savagely hacked out of the heart of the great oak tree, this pit is ten
+feet wide and intrudes into the tree trunk above.  Water and sap have
+pooled into the bottom of the tree, and mixed with the body excretions of
+the gigantic creature imprisoned here.
+~
+E
+melange reek smell~
+How do you expect to use your eyes to see a scent?
+~
+E
+water sap excretions mucus~
+Rainwater seeping into the pit from above has mixed with sap that oozed
+from the tree when it was carved out to create this place.  Floating atop
+the briny soup is a layer of mucus and excretions from the gigantic
+toadlike creature imprisoned inside of the tree, creating a disgusting
+mixture that fills the air with a thick scent that manages to cling to
+everything.
+~
+E
+crude rope ladder~
+Dangling down from above, a crude rope ladder made from single length of
+rope with knots tied in it at regular intervals, provides a means of
+leaving this dark, smelly pit.  Hanging low enough for someone to grab
+ahold and climb to safety, yet not close enough for the creature to make
+an escape, it provides a welcome sight to those who have found this dank,
+rank place.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cJumping up, you manage to grab ahold of the rope ladder and climb to
+safety.@n 
+~
+E
+to_room~
+@cJumping up, $n manages to grab ahold of the rope ladder and climbs to
+safety.@n 
+~
+!
+3 0 16
+A
+~
+~
+send_to_room( #gag, room );
+loop( all_in_room )
+  if( !is_mob( rch ) )
+  damage( mob, rch, 1d10, acid, "the nauseous fumes", "asphyxiation" );
+~
+E
+gag~
+@YThe putrid fumes overwhelm you for a moment, causing you to gag.@n
+~
+!
+2 100 0
+5503 9 1509949540 3 0
+-1
+S
+
+#4021
+A Path Through a Dense Forest~
+A dense forest of trees forms a sort of natural tunnel; the trunks
+creating the walls and the arching branches overhead the ceiling.  Wide
+green leaves and broad branches combine to effectively hide the sky.
+~
+[Guin] Done.
+~
+167247944 3 9 0
+D0
+~
+~
+0 -1 4022 10 10 5
+D3
+~
+~
+0 -1 4000 10 10 5
+-1
+S
+
+#4022
+A Path Through a Dense Forest~
+Wide-trunked trees line the path, their craggy park almost entirely
+covered with shaggy dark-green moss.  Broad leaves sprout from branches
+at every possible opportunity, creating a dense wall of foliage.  A thick
+limb has fallen from one of the trees and lies blocking the path, its
+slender offshoot branches poking up at the sky.
+~
+[Guin] Done.
+~
+167247944 3 9 0
+D0
+~
+~
+0 -1 4023 10 10 5
+D2
+~
+~
+0 -1 4021 10 10 5
+A
+move pull push~
+branch limb log~
+act_tochar( #no, ch );
+act_notchar( #nno, ch );
+~
+E
+no~
+@yThe branch seems to be firmly stuck in place and will not move.@n 
+~
+E
+nno~
+@y$n tries to move the branch from across the path, but it is firmly
+stuck in place.@n 
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou carefully step over the fallen branch and continue $dward.@n
+~
+E
+not_char~
+@c$n carefully steps over the fallen branch and continues $dward.@n
+~
+!
+3 0 5
+-1
+S
+
+#4023
+A Path Through a Dense Forest~
+The path continues south and north, thick moss lines the base of the
+trees throughout the area, perhaps a stream of some sorts is near by.  A
+large branch has fallen to the south, blocking most of the path from
+passage.  Any attempts to move east or west are pointless, as the trees
+are packed too close for most forest animals to fit through.
+~
+[Guin] Done.
+~
+167247944 3 9 0
+D0
+~
+~
+0 -1 4024 10 10 5
+D2
+~
+~
+0 -1 4022 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou follow the tree-darkened path to the $T.@n
+~
+E
+to_room~
+@G$n follows the tree-darkened path to the $T.@n
+~
+!
+3 0 5
+-1
+S
+
+#4024
+A Path Through a Dense Forest~
+The dense profusion of trees pulls back somewhat to the east, revealing a
+wide river flowing through the woods.  Rushing across a riverbed cut deep
+into the forest floor, the water and turns like a snake.  The forest
+continues to grow to the south, unaffected by the river's path.  Heavy
+moss covers the broad, rugged trunks of the trees, giving the illusion of
+green walls.  An old log bridge, a brace of felled tree trunks lashed
+together with weathered rope, spans the river to the east.
+~
+[Rikahn] river east
+[Guin] Connects east to 6721
+[Guin] Done.
+~
+167247944 3 9 0
+D1
+~
+~
+0 -1 6721 10 10 5
+D2
+~
+~
+0 -1 4023 10 10 5
+D4
+~
+~
+0 -1 4025 10 10 5
+E
+trees moss walls trunk~
+Enormous, moss-covered trees hug the path, halting any movement to the
+north or west.  The gray-green moss spreads like wildfire from tree to
+tree, creating a monstrous mirage of a wall.
+~
+E
+river~
+The raging river whips left and right; a beautiful sight from a distance
+but truly a complication for anyone trying to cross it.
+~
+E
+log bridge 1 east~
+The logs, like the rest of the forest, are mammoth in size and knotted
+together tightly; the bridge leaps over the river, built well enough to
+cross safely.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CYou scramble atop the log and make your way across the river.@n
+~
+E
+to_room~
+@C$n scrambles atop the log and makes $s way across the river.@n
+~
+!
+3 0 16
+-1
+S
+
+#4025
+Log Bridge in Coralon Forest~
+A small-scale excavation has occurred here in order to allow for the
+foundations that support the log bridge that spans eastward over the
+river.  Leading up to the bridge are four shallow steps, each about one
+foot in height.  A half dozen tree trunks have been lashed together with
+yard upon yard of weather worn rope.  Very little has been done to the
+logs other than the stripping of the bark and the smearing of a tar and
+sand slurry over each trunk.  At random intervals occasional gaps varying
+in size from an inch or so to over a foot in width lie between the logs
+making it easy to stumble or even fall on the uneven surface.
+~
+[Guin] swift moving river below.
+[Guin] Done.
+~
+167247944 3 9 0
+D1
+~
+~
+0 -1 6745 10 10 5
+D5
+~
+~
+0 -1 4024 10 10 5
+E
+excavation foundations~
+A series of deep holes and trenches have been hacked into the side of the
+riverbank, and the foundations that support the bridge are, for the most
+part, buried in the hard packed earth.  It looks as though some repairs
+have been made in the past when parts of the foundation have become too
+unstable to continue supporting the heavy log bridge.
+~
+E
+shallow steps~
+These appear to be the off cuts from the trunks that have been used to
+create the surrounding foundations of the bridge.  Most appear to be
+roughly hewn and sit at badly skewed angles, wobbling unsteadily when any
+weight is placed upon them.
+~
+E
+tree trunks logs tar sand slurry~
+Each trunk is around a foot in diameter and long enough to span the
+entire width of the river without a break.  Their bark has been stripped
+back in an effort to smooth their surfaces slightly before being coated
+in a viscous concoction of sand and tar that has been used to keep the
+majority of the weather from the hard wood.
+~
+E
+weather worn rope~
+Weaving over and under the logs, this durable rope tightly secures the
+logs together, forming the wide bridge that spans the river.  Here and
+there strands of twine uncurl from the twisted length of rope - a sign of
+its slow degradation from time and weathering.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CYou climb down from the log to solid ground.@n
+~
+E
+to_room~
+@C$n climbs down from the log back to solid ground.@n
+~
+!
+3 0 32
+A
+~
+~
+if( !is_mob( ch ) )
+  if( find_stat( ch, dex ) < random( 6, 15 ) ) {
+  act_tochar( #fall, ch );
+  act_notchar( #rfall, ch, obj, mob, sight );
+  position( ch, 6 );
+  end;
+}
+continue;
+~
+E
+fall~
+@cYou slip on the unstable step and land on your bottom.@n
+~
+E
+rfall~
+@c$n slips on the unstable step and lands on $s bottom.@n
+~
+E
+to_char~
+@cYou nimbly manage your way up the wobbling stairs.@n
+~
+E
+to_room~
+@c$n nimbly manages $s way up the wobbling stairs.@n
+~
+!
+3 0 2
+-1
+S
+
+#0
+

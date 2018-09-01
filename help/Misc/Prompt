@@ -1,0 +1,55 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+prompt          : lists your current prompt<br>
+prompt [text]   : sets your prompt to given text<br>
+prompt [name]   : sets your prompt to a standard prompt<br>
+<br>
+<h1> Description </h1>
+<br>
+Below is a list of standard prompts which may be selected by typing<br>
+prompt [name].<br>
+<br>
+Default, Immortal, Cleric, Warrior, Simple, Complex, Color<br>
+<br>
+The following are if statements.  The letter after the expression or the<br>
+phrase surrounded by single quotes is evaluated if the statement is true. <br>
+For if not, use an exclamation mark instead of a question mark.<br>
+<br>
+?p - has page info<br>
+?m - is mounted<br>
+?f - has flags set<br>
+?b - is in battle<br>
+?l - is following someone<br>
+?w - is weighed down<br>
+<br>
+The next set of variables allows the inclusion of various quanties in<br>
+your prompt.  Some of them can be capitalized to get maximum values for<br>
+that statistic.<br>
+<br>
+%h  - hitmarks<br>
+%e  - energy<br>
+%v  - movement points<br>
+%m  - mounts moves<br>
+%x  - experience points<br>
+%f  - flags<br>
+%t  - mud time<br>
+%T  - real time (use time -z to set zone)<br>
+%\  - carriage return<br>
+%c  - enemies condition<br>
+%C  - leader's condition<br>
+%s  - condition of self<br>
+%d  - seen exits<br>
+%g  - lowest moves of any group member<br>
+%G  - gossip points<br>
+%w  - weight word (burdened, overtaxed, etc)<br>
+<br>
+As an example the default prompt is:<br>
+<br>
+?p'-- MORE -- '[%f?f|%hhp %ee ?m'[%mmv]'!m'%vmv' ?b'%c'!b'%d']<br>
+<br>
+Various option flags appear in your prompt when applicable.  See prompt<br>
+flags for more information.<br>
+</html>
+</body>

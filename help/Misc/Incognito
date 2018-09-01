@@ -1,0 +1,17 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+option incognito # : sets your incognito level to a value between 0-3.<br>
+<br>
+<h1> Description </h1>
+<br>
+Incognito hides your race, class and level on the who/whois list as<br>
+follows: <br>
+<br>
+opt incog 0 : your stats are visible to all players<br>
+opt incog 1 : your stats are visible to anyone you have introduced<br>
+opt incog 2 : your stats are visible to befriended and clan members<br>
+opt incog 3 : your stats are hidden from everybody<br>
+</html>
+</body>

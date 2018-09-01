@@ -1,0 +1,1348 @@
+#M2_AREA
+2
+
+Water Imps~
+Ciani Burne~
+Water Imps~
+~
+~
+
+5 0
+0
+1
+#ROOMS
+
+#5700
+A Dark-Watered Pond~
+Ill-looking bullrushes grow along the edge of the pond, lurching sickly
+away from the water.  The plants around the pond also seem to be pulling
+back from the shoreline.  An oily substance covers the water around the base
+of the rushes, gleaming sullenly.  A few bubbles rise occasionally to the
+surface, popping loudly and releasing a vaguely nauseating smell.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+200802304 6 9 0
+D1
+~
+~
+0 -1 5709 10 10 5
+D2
+~
+~
+0 -1 5702 10 10 5
+D3
+~
+~
+0 -1 5703 10 10 5
+E
+oily substance~
+A greasy film of some unknown composition coats the top of the pond,
+smelling faintly of rot.  It appears to be somewhat iridescent, as it
+reflects a sickly green-blue colour when the light catches it just so.
+~
+A
+~
+~
+if( race( ch ) != imp )
+  continue;
+~
+E
+to_char~
+@BYou shake the slimy water off your legs, thankful to be leaving the
+pond.@n 
+~
+E
+to_room~
+@B$n shakes the slimy water from $s legs as $e leaves the pond.@n
+~
+!
+3 0 2
+A
+~
+~
+continue;
+~
+E
+to_char~
+@BThe oily substance sloshing around your legs, you wade $T.@n
+~
+E
+to_room~
+@B$n wades $T, oily substance sloshing around $s legs.@n
+~
+!
+3 0 12
+5409 9 1509949540 3 0
+578 9 1509949540 3 0
+1146 17 1509949540 -2 0
+7760 17 1509949540 -2 0
+-1
+S
+
+#5701
+West of a River - In a Pool~
+~
+~
+200802304 6 9 0
+E
+grasses trees land~
+Aquatic grasses and some growing on the edge of the land come as high as
+two to three feet out of the water, creating a sort of shelter for any
+small fish or animals.
+~
+E
+fallen grasses boats~
+Pieces of fallen grass stiff and dead float on the surface of the water,
+providing transportation or a resting spot for the insects and other
+small animal life that passes through.
+~
+-1
+S
+
+#5702
+A Dark-Watered Pond~
+The plants surrounding the pond seem to be pulling back from the waters,
+their stalks tilting wildly away.  A large branch protrudes from the
+water, its skeletal finger pointing almost accusingly at the sky.  A
+small collection of detritus -- branches, broken boards and long reeds --
+are collected around the base, looking almost as though they have been
+woven together.
+~
+[Guin] Done.
+~
+200802304 6 9 0
+D0
+~
+~
+0 -1 5700 10 10 5
+D3
+~
+~
+0 -1 5705 10 10 5
+E
+sandy river bottom~
+As the shore grows closer, a sandy river bottom can be felt underfoot. 
+It moves and shifts underneath, but for the most part provides steady
+ground for walking onto the shore.
+~
+E
+1 south reeds grass blades trees~
+To the south, along the shore's edges, blades of grass grow very thin,
+but thick enough to act as a small fence.  Further behind them on the
+land, tall trees grow over the river and pool.
+~
+E
+detritus branches broken boards~
+Boards of various sizes and shapes deteriorate amongst the long branches
+and reeds.  Some boards are smoothly cut off, while others are broken,
+chipped and scratched.  All of them are, however, blackened with age, wet
+surroundings contributing their fast decay.  Long reeds weave between the
+boards, almost as if someone has tried connecting them to create some
+sort of a dam.
+~
+A
+detritus branches broken boards dam~
+~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  i = random( 1, 10 );
+  if( i == 9 )
+    obj = oload( 7979 );
+  if( obj ) {
+    act_tochar( #gotit, ch, obj );
+    act_notchar( #rgotit, ch, obj, mob, sight );
+    obj_to_char( obj, ch );
+  }
+  else {
+    act_tochar( #nothing, ch, obj );
+    act_notchar( #rnothing, ch, obj, mob, sight );
+  }
+}
+else
+  act_tochar( #already, ch, obj );
+~
+E
+gotit~
+@YYou yank a few boards free and find a $p under them.@n
+~
+E
+rgotit~
+@Y$n pulls out $p from under some boards.@n
+~
+E
+nothing~
+@yYou shift some boards and branches, but come up with nothing useful.@n
+~
+E
+rnothing~
+@y$n looks through the debris, but finds nothing useful to take.@n
+~
+E
+already~
+@yIt looks like someone has already searched through the debris here.@n
+~
+!
+9 0 0
+1146 17 1509949540 -2 0
+-1
+S
+
+#5703
+A Dark-Watered Pond~
+The dark water stretches out in all directions, interrupted sporadically
+by wooden debris lashed into crude dams.  A slightly iridescent oily foam
+sits atop the pond, collecting around the edges of the branches and other
+items forming the low walls.  The surface occasionally ripples as
+something of medium size moves just far enough down to be out of view.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+200802304 6 9 0
+D0
+~
+~
+0 -1 5704 10 10 5
+D1
+~
+~
+0 -1 5700 10 10 5
+D2
+~
+~
+0 -1 5705 10 10 5
+D3
+~
+~
+0 -1 5706 10 10 5
+E
+edges circular sides~
+The edges of the pool extend in a rough circular pattern around the
+center point here, an accident of nature.  This natural pool provides
+great shelter for the fish from the currents of the stream.
+~
+E
+fish calm waters~
+Tall trees around the pool block most of the wind, and the almost
+closed-circle formation of the pool hold river's current at bay, keeping
+the water here calm and peaceful.  The fish of the river obviously take
+advantage of it, as they are occasionally felt around one's legs.  This
+pool is likely an excellent source of food for them.
+~
+A
+~
+~
+send_to_room( #fish, room, sight );
+~
+E
+fish~
+@gSomething@n @Gslimy@n @gtouches your foot momentarily, but the water
+is too murky to see what it was.@n 
+~
+!
+2 200 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou disturb the peaceful pool surface by wading $T.
+~
+E
+to_room~
+@g$n wades $T disturbing the otherwise peaceful pond surface.@n
+~
+!
+3 0 3
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou splash your way $T, creating even more of the@n
+@Yyellow@n@y-@n@Ggreen@n @yoily foam.@n
+~
+E
+to_room~
+@y$n splashes $s way $T, creating even more of the@n
+@Yyellow@n@y-@n@Ggreen@n @yoily foam.@n 
+~
+!
+3 0 12
+5409 9 1509949540 3 0
+1146 17 1509949540 -2 0
+-1
+S
+
+#5704
+A Dark-Watered Pond~
+Slender reeds grow along the edge of the pond, collecting a thin layer of
+scum around their bases.  A slight current in the pond pushes the water
+up against the stalks, causing small eddies to swirl 'round near the
+perimeter.  A few long branches have been jammed into the mud along the
+banks, and they protrude into the pond.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+200802304 6 9 0
+D2
+~
+~
+0 -1 5703 10 10 5
+D3
+~
+~
+0 -1 5707 10 10 5
+E
+murky waters creatures bubbles turtle frog~
+Due to the composition of the ground below, the water is a murky
+greenish-brown.  Not much visibility is allowed as clouds of sand drift
+through the water.  Bubbles are noticeably popping as they hit the
+water's surface, the sign of some turtle or frog swimming beneath the
+surface.
+~
+E
+edge grass insects stalky leaves~
+Tall, thin blades of river grass line the banks of the pool.  The sound
+of insects and other tiny creatures can be heard taking refuge in them.
+~
+A
+~
+~
+i = random( 1, 2 );
+if( i == 1 )
+  send_to_room( #insect, room, sight );
+if( i == 2 )
+  send_to_room( #bubbles, room, sight );
+~
+E
+insect~
+@gA pondskater slides across the pool's still surface leaving a tiny,
+ripply trail.@n 
+~
+E
+bubbles~
+@YBubbles come up to the surface, causing some foam to form around the
+reed's long stalks.@n 
+~
+!
+2 200 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@YAs you wade $T, your leg gets caught in a tangle of reed roots and you
+almost fall in the water!@n 
+~
+E
+to_room~
+@YYou watch as $n stumbles forward, almost falling into the oily water!@n
+~
+!
+3 0 8
+A
+~
+~
+if( is_player( ch ) )
+  send_to_room( #fish, room, sight );
+~
+E
+fish~
+@yA cloud of insects leaves the pond surface and starts flying around,
+obviously disturbed by your presence.@n 
+~
+!
+1 0 12
+5410 9 1509949540 3 0
+1146 17 1509949540 -2 0
+-1
+S
+
+#5705
+A Dark-Watered Pond~
+A sort of slipshod dam stretches from the ragged shoreline of the pond,
+composed of broken boards and irregular branches poorly bound together
+with long reeds.  The water laps silently against the wooden construct,
+an oily foam accumulating along its edges.  A few reeds grow tall and
+proud amongst a collection of wilting ones.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+200802304 6 9 0
+D0
+~
+~
+0 -1 5703 10 10 5
+D1
+~
+~
+0 -1 5702 10 10 5
+D3
+~
+~
+0 -1 5708 10 10 5
+E
+1 south shore grasses~
+Along the banks of the pool, green and yellow grasses grow very thin and
+tall, and quite close together.  The blades are so stiff they look almost
+sharp.  They seem like a miniature fence for animals and other small
+creatures.
+~
+E
+oily substance foam~
+The oily substance that covers the water's surface foams around the edges
+of the small dam-like structure.  Both foam and pond surface itself have
+a sickening yellow-green hue to them, the reflection of light just making
+the impression worse.
+~
+A
+~
+~
+send_to_room( #float, room, sight );
+~
+E
+float~
+@YOne of the long reeds breaks, releasing a single board that starts
+floating loose, away from the dam.@n 
+~
+!
+2 150 0
+1146 17 1509949540 -2 0
+-1
+S
+
+#5706
+A Dark-Watered Pond~
+A construct of broken planks and bent branches floats atop the pond,
+collecting pale foam around its edges and rotting slowly.  The dark
+surface of the water seems vaguely oily, definitely not a healthy state. 
+A slight current ripples through the water, leaving small eddies on the
+surface to mark its motion.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+200802304 6 9 0
+D0
+~
+~
+0 -1 5707 10 10 5
+D1
+~
+~
+0 -1 5703 10 10 5
+D2
+~
+~
+0 -1 5708 10 10 5
+D3
+~
+~
+0 -1 5710 10 10 5
+E
+broken planks branches construct~
+A group of aged, blackened planks and branches is interwoven with long
+reeds to create some sort of a dam.  The whole structure doesn't appear
+to be very stable and would probably fall apart at the slightest water
+current.  The slime-covered pond surface is still, however, and the shaky
+construct stands.
+~
+A
+~
+~
+send_to_room( #smell, room );
+~
+E
+smell~
+@YA foul smell rises from the murky waters.@n
+~
+!
+2 200 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou $t $T, disturbing the still water surface and causing more foam
+to form.@n 
+~
+E
+to_room~
+@g$n $t $T, disturbing the water's surface and causing more of the
+oily foam to appear.@n 
+~
+!
+3 0 15
+1146 17 1509949540 -2 0
+-1
+S
+
+#5707
+A Dark-Watered Pond~
+The stinking muddy shoreline grudgingly gives way to the dark, slightly
+oily waters of the pond.  A few gnarled branches have been pushed into
+the mud, wrapped with reeds to create a sort of dam.  Iridescent foam has
+collected along the edges of the wood, which has begun to rot.  Patches
+of green scum drift and cling together, torn apart by the passing of
+animals.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+200802304 6 9 0
+D1
+~
+~
+0 -1 5704 10 10 5
+D2
+~
+~
+0 -1 5706 10 10 5
+E
+4 branches 4 reeds dam wood foam~
+The dam leans awkwardly against the bank, reeds and rushes stained with
+the mud of the pond.
+~
+E
+scum green~
+The color of lush grass, the algae swirls with your passage.
+~
+A
+~
+~
+send_to_room( #bubble, room );
+~
+E
+bubble~
+@GWith a dull pop, a bubble bursts to the surface, a reek of decay
+drifting through the air.  @n 
+~
+!
+2 150 0
+901 9 1509949540 3 0
+1146 17 1509949540 -2 0
+-1
+S
+
+#5708
+A Dark-Watered Pond~
+A faint, putrescent stink of rot and decay rises from the still waters of
+the pond.  Perhaps it comes from the thin layer of oily scum atop the
+water, which ripples with a sickly iridescence.  The thin foam collecting
+along the pond's edge could also be the culprit; "diseased" is the best
+way to describe its colour.  A few broken planks bob forlornly here and
+there, scratched and dinged.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+200802304 6 9 0
+D0
+~
+~
+0 -1 5706 10 10 5
+D1
+~
+~
+0 -1 5705 10 10 5
+D3
+~
+~
+0 -1 5723 10 10 5
+E
+foam surface oily waters~
+Clusters of broken reeds float atop the pond's surface, slowly rotting
+away and giving off horrible stench.  A yellow-green oily substance swims
+on the murky water, foaming around the decaying flotsam.  The substance
+seems to stick to everything -- it's hard to imagine you will ever be
+able to clean yourself from it.
+~
+A
+~
+~
+send_to_room( #stench, room );
+~
+E
+stench~
+@yA putrid stench wafts from the rotting reeds, threatening to choke
+you.@n 
+~
+!
+2 200 0
+1146 17 1509949540 -2 0
+901 9 1509949540 3 0
+-1
+S
+
+#5709
+At The Edge of a Pond~
+The footpath comes to an end here as a pond sits right in its way.  The
+grass, which grew thickly and profusely seems to be a little browner and
+a little drier as it approaches the edge of the pond.  Similarly, the few
+trees in the area seem to be pulling away from the dark waters.  It
+appears that the ground slopes gently toward the pond, as if inviting
+one to wade...
+~
+[Yrna] Done.
+[Guin] Done.
+~
+200802304 12 9 0
+D1
+~
+~
+0 -1 5724 10 10 5
+D3
+~
+~
+0 -1 5700 10 10 5
+E
+pond~
+The murky pond extends out a few hundred feet westward, nestled in this
+tiny valley.  Stagnant and green, the water looks rather unappetizing.
+~
+E
+grass brown~
+Patches of grass grow along the pond's shore, wilting and brown, almost
+black at places, as if life has been sucked out of it.  A heavy, noxious
+smell raises from the half-rotten grass as it struggles to grow in this
+sorry place.
+~
+A
+~
+~
+if( is_player( ch ) ) {
+  act_tochar( #leave, ch, obj );
+  act_notchar( #rleave, ch, obj, mob, sight );
+  continue;
+}
+else
+  continue;
+~
+E
+leave~
+@yYou wrinkle your nose at the waters infront of you and decide you've
+had enough of this place.@n 
+~
+E
+rleave~
+@y$n looks at the pond and wrinkles $s nose in disgust.@n
+~
+!
+3 0 2
+A
+~
+~
+if( is_player( ch ) ) {
+  act_tochar( #enter, ch, obj );
+  continue;
+}
+else
+  continue;
+~
+E
+enter~
+@BThe pond looks really uninviting, but you decide to explore further.@n
+~
+!
+3 0 8
+A
+~
+~
+send_to_room( #smell, room );
+~
+E
+smell~
+@gA rank stench wafts from the pond's stagnant surface.@n
+~
+!
+2 150 0
+-1
+S
+
+#5710
+A Dark-Watered Pond~
+The surface of the dark water ripples slightly, the oily foam floating
+atop it drifting slightly on the small current.  A faint sickly smell
+rises from the waters.  Formed into crude constructs, twisting branches
+and broken boards drift on the pond, looking as though they may fall
+apart at any moment.  A large shelf of rock rises to the west.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+200802304 6 5 0
+D1
+~
+~
+0 -1 5706 10 10 5
+D2
+~
+~
+0 -1 5723 10 10 5
+D3
+~
+~
+0 -1 5711 10 10 5
+E
+crude constructs branches boards~
+Broken wooden planks and branches are intertwined with long reed stalks
+into a crude dam of sorts.  Several larger planks lean onto the large
+rock shelf to the west for additional support, but even that wouldn't
+help much with any amount of water current.  The pond is almost perfectly
+still, however, so the strange construct stands.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@BYou clamber onto the shelf of stone, the dank water only reluctantly
+releasing its hold.  @n 
+~
+E
+to_room~
+@B$1 clambers onto the shelf of stone, with a glurtch of displaced
+water.@n
+~
+!
+3 0 8
+A
+~
+~
+send_to_room( #touch, room );
+wait( 1 );
+send_to_room( #algae, room, sight );
+~
+E
+touch~
+@GSomething slimy touches your hand, making you jump!@n
+~
+E
+algae~
+@gLooking down, you see it's only an algae cluster floating past.@n
+~
+!
+2 200 0
+1146 17 1509949540 -2 0
+901 9 1509949540 3 0
+-1
+S
+
+#5711
+A Shelf of Flat Rock~
+A huge rock sits in the pond, its surface quite flat and suitable for
+sitting upon, sloping only slightly downward in all directions.  More of
+the iridescent foam is collected around its sides, and a few branches
+abut its edges, sticking out in all directions.  A few pits and gouges
+break up the surface of the rock, though it is still quite solid.  The
+vegatation on the bank to the north looks ill, and seems to 
+be pulling back from the pond.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+200933376 6 5 0
+D1
+~
+~
+0 -1 5710 10 10 5
+D2
+~
+~
+0 -1 5722 10 10 5
+D3
+~
+~
+0 -1 5712 10 10 5
+E
+vegetation bank north~
+The reeds and bullrushes, while sick and brown, form an impenetrable
+knotted barrier.  For some reason, they appear to be growing at a tilt,
+their tips pulling away from the murky water.  Some stubby stalks can be
+seen, where rushes have been either cut or broken off; it's hard to tell
+which, the edges being so frayed and tattered.  If a tool was used at
+all, it certainly wasn't a sharp one.
+~
+E
+rock surface shelf~
+The rock's surface is covered in the strange, oily substance, and quite
+slippery.  Clusters of rotten reeds and algae scattered around the
+surface contribute that that fact.  The whole place reeks of decay.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@BYou leap into the water to the $T, landing with an almighty splurk.@n
+~
+E
+to_room~
+@B$1 leaps from the rock to the $T, spraying black water everywhere.@n 
+~
+!
+3 0 14
+A
+2 sleep~
+~
+act_tochar( #relax, ch, obj );
+act_notchar( #rrelax, ch, obj, mob, sight );
+position( ch, 4 );
+wait( 2 );
+act_tochar( #slide, ch, obj );
+act_notchar( #rslide, ch, obj, mob, sight );
+wait( 2 );
+act_notchar( #rgone, ch, obj, mob, sight );
+i = random( 1, 3 );
+if( i == 1 )
+  transfer( ch, find_room( 5710 ) );
+elseif( i == 2 )
+  transfer( ch, find_room( 5712 ) );
+else
+  transfer( ch, find_room( 5722 ) );
+position( ch, 6 );
+act_tochar( #yuck, ch, obj );
+act_notchar( #ryuck, ch, obj, mob, sight );
+~
+E
+relax~
+@gYou lie down, your muscles relaxing, and start falling asleep.@n
+~
+E
+rrelax~
+@g$n lies down and relaxes, obviously falling asleep.@n
+~
+E
+slide~
+@gJust as you start to drift off to the dreamworld, you find yourself
+sliding of the rock and into the water!@n 
+~
+E
+rslide~
+@gRelaxed and half-asleep, $n starts sliding of the edge of the rock!@n
+~
+E
+rgone~
+@GBefore you can react, $n disappears in the murky waters. Yuck!@n
+~
+E
+yuck~
+@GWhat a terrible way to wake up -- sitting up to the neck in oily, foamy
+water!@n 
+~
+E
+ryuck~
+@G$n splashes into the water right next to you.  Why did $e decide to
+take a swim in this gunge?@n 
+~
+!
+0 0 0
+A
+sit 1 rest~
+~
+if( !is_sleeping( ch ) ) {
+  act_tochar( #position, ch, obj );
+  act_notchar( #rposition, ch, obj, mob, sight );
+  position( ch, 6 );
+}
+else
+  act_tochar( #nope, ch, obj );
+~
+E
+position~
+@gYou sit at the top of the rock, hoping you won't slide off accidently.@n
+~
+E
+rposition~
+@g$n carefully sits down, trying not to slip and fall in the water.@n
+~
+E
+nope~
+@WYou are too engulfed in your dreams at the moment.  You don't want to
+wake up just yet!@n 
+~
+!
+0 0 0
+A
+wake stand~
+~
+if( is_sleeping( ch ) )
+  act_tochar( #nope, ch, obj );
+else
+continue;
+~
+E
+nope~
+@WYou are too engulfed in your dreams at the moment.  You don't want to
+wake up just yet!@n 
+~
+!
+0 0 12
+518 9 1509949540 3 0
+901 9 1509949540 3 0
+-1
+S
+
+#5712
+A Dark-Watered Pond~
+Slight ripples interrupt the dark, oily water of the pond, creating
+shifting patterns in the vaguely iridescent surface.  Half-rotten
+branches and broken planks float atop the water; some are crudely tied
+together and stuck into the muddy banks while others just drift about.  A
+mostly flat shelf of rock rises from the pond to the east, providing a
+surface upon which one might sun themselves if they were so inclined. 
+The shore rises sharply fifty yards, strewn with gorse and rough stone,
+too steep for anyone to climb.
+~
+[Guin] Done.
+~
+200802304 6 9 0
+D1
+~
+~
+0 -1 5711 10 10 5
+D2
+~
+~
+0 -1 5713 10 10 5
+E
+cliff shore rough stone gorse~
+Steep cliffs rise high above the murky pond, shading the view of the sky
+above.  Just above the water line there is a thin vertical crack in the
+otherwise even cliff face.  The oily substance that pollutes the pond's
+water appears to be oozing slowly from it; it spreads slowly away from
+the crack and, eventually, reaches even the far end of the pond.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@BYou clamber onto the shelf of stone, the dank water only reluctantly
+releasing its hold.  @n 
+~
+E
+to_room~
+@B$1 clambers onto the shelf of stone, with a glurtch of displaced  
+water.@n
+~
+!
+3 0 2
+A
+~
+~
+send_to_room( #ooze, room, sight );
+~
+E
+ooze~
+@yA dropplet of strange, oily substance falls from the crack to the pond
+surface with a slurping sound.@n 
+~
+!
+2 200 0
+A
+~
+cliff crack oily~
+act_tochar( #plunge, ch, obj );
+act_notchar( #rplunge, ch, obj, mob, sight );
+wait( 2 );
+i = random( 1, 5 );
+if( i < 3 ) {
+  act_tochar( #goo, ch, obj );
+  act_notchar( #rgoo, ch, obj, mob, sight );
+}
+else {
+  act_tochar( #squirt, ch, obj );
+  act_notchar( #rsquirt, ch, obj, mob, sight );
+  damage( mob, ch, 1d5, acid, "The oily substance", "the oil squirt" );
+}
+~
+E
+plunge~
+@yYou stick your hand into the narrow crack, hoping to find some hidden
+treasure.@n 
+~
+E
+rplunge~
+@y$n sticks his hand up to the elbow into the narrow, oil-dripping
+crack.@n 
+~
+E
+rgoo~
+@YThe oil squirts out of the crack soaking $n's clothes.  Fortunately, $e
+ducks just in time to avoid a splat in the face!@n 
+~
+E
+goo~
+@YThe oily substances squirts from the crack, covering you in goo.  You
+duck just in time to avoid a splash in the face!@n 
+~
+E
+squirt~
+@YThe oily substance squirts out of the crack and the splash hits you in
+the face.@n @RYour eyes burn with pain!@n 
+~
+E
+rsquirt~
+@YThe oily substance squirts out of the crack and hits $n right in the
+face -- $e staggers backward clutching $s eyes in pain!@n 
+~
+!
+9 0 0
+5411 9 1509949540 3 0
+197 9 1509949540 3 0
+1123 49 1509949540 -2 0
+1146 17 1509949540 -2 0
+-1
+S
+
+#5713
+A Dark-Watered Pond~
+A few forlorn bullrushes rise up from the murky depths of the water,
+broken and tattered.  The light gleams sickly from the pond's surface,
+reflected from some oily substance floating atop the still waters.  A
+faint smell of decay seems to hang heavy in the air.  Rising high,
+adorned with crags and thorned plants, the valley wall bounds the water.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+200802304 6 9 0
+D0
+~
+~
+0 -1 5712 10 10 5
+D1
+~
+~
+0 -1 5722 10 10 5
+E
+rushes bullrushes~
+The sickly-brown rushes sway slightly in the breeze coming down from the
+valley.  Some bear frayed cut-marks, and some are just stubby stalks, the
+better part of the stem cut off.  The cuts are frayed and tattered,
+indicating some sort of a blunt tool was used to sever them.
+~
+E
+valley crest wall thorned plant~
+The valley crest is far above, outlined against the sky.  It looks a
+terribly hard climb, soaked as you are.  An unidentified thorny plant
+grows at the water's edge, clinging to the wall, climbing high as if
+seeking sunlight.  Its lower parts are brown and almost dry, but looking
+high up you can see green leaves on the top, the only sign of healthy 
+life in this gloomy environment.
+~
+A
+~
+~
+send_to_room( #floats, room );
+~
+E
+floats~
+@BA chill gust of wind sends sticks and debris skittering aimlessly across
+the water.@n
+~
+!
+2 150 0
+A
+get pick~
+4 bullrushes 4 rushes~
+act_tochar( #get, ch );
+act_notchar( #oget, ch );
+~
+E
+get~
+The rushes appear to have been harvested of usable leaves.
+~
+E
+oget~
+$n inspects the bullrushes for a moment.
+~
+!
+0 0 0
+A
+climb~
+up plant thorny thorned wall~
+act_tochar( #climb, ch, obj );
+act_notchar( #rclimb, ch, obj, mob, sight );
+wait( 2 );
+act_tochar( #splat, ch, obj );
+act_notchar( #rsplat, ch, obj, mob, sight );
+damage( mob, ch, 1d10, physical, "The fall", "falling" );
+position( ch, 6 );
+~
+E
+climb~
+@cYou grab the plant and pull yourself up and out of the water, trying to
+climb the steep wall.@n 
+~
+E
+rclimb~
+@c$n grabs the plant and pulls $mself up and out of the water, climbing
+the steep wall.@n 
+~
+E
+splat~
+@CUnable to support your weight, the plant breaks and you land back in
+the murky, oily waters!@n 
+~
+E
+rsplat~
+@CUnable to support $n's weight, the plant breaks under $s feet and $e
+lands back in the murky, oily waters.  Yuck!@n
+~
+!
+0 0 0
+5409 9 1509949540 3 0
+1146 17 1509949540 -2 0
+-1
+S
+
+#5722
+A Dark-Watered Pond~
+The still surface of the pond is partially obscured by an oily,
+iridescent film.  Flat rainbows swirl across the slimy substance,
+changing colours as the light reflects.  A few floating branches drift
+lazily across the pond, leaving patterns as they move.  A small amount of
+a greasy foam has accumulated against the sides of all stationary objects
+nearby, and is especially thick against the southern edge of the flat
+shelf of rock, rising up just to the north.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+200802304 6 9 0
+D0
+~
+~
+0 -1 5711 10 10 5
+D1
+~
+~
+0 -1 5723 10 10 5
+D3
+~
+~
+0 -1 5713 10 10 5
+E
+branch foam~
+Blackened with age and water, several branches and broken planks float on
+the water's surface.  Some have long, half-rotten reeds wrapped around
+them, as if they have been tied onto something before they broke off and
+started floating loose.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@BYou clamber onto the shelf of stone, the dank water only reluctantly
+releasing its hold.  @n 
+~
+E
+to_room~
+@B$1 clambers onto the shelf of stone, with a glurtch of displaced
+water. @n
+~
+!
+3 0 1
+A
+~
+~
+send_to_room( #branch, room, sight );
+~
+E
+branch~
+@yA branch slowly floats past, leaving foamy ripples behind.@n
+~
+!
+2 150 0
+5410 9 1509949540 3 0
+1146 17 1509949540 -2 0
+-1
+S
+
+#5723
+A Dark-Watered Pond~
+The dark waters of the pond are essentially motionless, disturbed only by
+the slow passage of floating wooden debris.  A few broken rush-stalks
+rise forlornly from the murk beneath the water, brown and thoroughly
+dead-looking.  A pale, scuzzy foam is gathering on everything along the
+water's edge: the shoreline, the floating wood, the stalks, and smells
+foul.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+200802304 6 9 0
+D0
+~
+~
+0 -1 5710 10 10 5
+D1
+~
+~
+0 -1 5708 10 10 5
+D3
+~
+~
+0 -1 5722 10 10 5
+E
+debris floating plank broken wooden~
+Floating on the pond's surface are broken wooden planks, blackened with
+long term water exposure.  Rotting steadily, they reek of decay,
+assulting your senses and making your eyes water.
+~
+A
+~
+~
+send_to_room( #plank, room, sight );
+~
+E
+plank~
+@gA broken plank floats past you, creating a small, foamy ripple in the
+oily waters.@n 
+~
+!
+2 150 0
+A
+~
+~
+rch = rand_player( room );
+interpret( rch, "cough" );
+~
+!
+2 200 0
+197 9 1509949540 3 0
+1123 17 1509949540 -2 0
+1146 17 1509949540 -2 0
+-1
+S
+
+#5724
+A Stony Footpath, Nearing a Pond~
+The broken cobblestones give way to a hard dirt trail, edged by a thick
+carpet of grass, which is brown and sickly at the edges.  A faint
+putrescent smell hangs in the air, drifting in from the west.  The
+nearby cliff faces are visible to the northeast, looming over the lands
+below.  The light glints occasionally, as if off some body of water, from
+the west.  Curling around, lower than the cliffs but protruding over the
+treetops, jagged spurs of rock form the valley-crest.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+200802304 12 9 0
+D1
+~
+~
+0 -1 5725 10 10 5
+D3
+~
+~
+0 -1 5709 10 10 5
+A
+smell sniff~
+air smell~
+send_to_room( #smell, room );
+wait( 1 );
+send_to_room( #smell2, room );
+~
+E
+smell~
+@gYou stop a moment and take a sniff of the air.@n
+~
+E
+smell2~
+@gThere's rot there, and death...@n
+~
+!
+2 150 0
+-1
+S
+
+#5725
+A Stony Footpath~
+The cobblestones underfoot are badly cracked and damaged; indeed, they
+are barely recognizable as cobblestones at all.  Sickly weeds grow up
+through the cracks, their browned stems bowed.  Growing just off the path
+is a slender @eplant@n with long, jagged-edged leaves.  A massive pine
+tree grows to the north, overshadowing the path.  The nearby mountains
+loom intimidatingly, casting a shadow over the lands below.  The path
+continues to descend into this tiny valley.
+~
+[Azerin] no.mob
+Guin Hemp search - can be used for ropes.
+[Guin] Done
+~
+200802312 12 7 0
+D1
+~
+~
+0 -1 7951 10 10 5
+D3
+~
+~
+0 -1 5724 10 10 5
+E
+slender plant jagged-edged leaves~
+This plant grows to a height of about two feet, its slender stalk easily
+supporting its long, jagged-edged green leaves.  The stalk seems to be
+formed of long, fibrous strands, which may have many uses.
+~
+A
+pull strip get pick~
+fibres fibrous strands plant~
+if( random( 1, 2 ) == 1 ) {
+  if( rflag( reset0, room ) ) {
+    act_tochar( #pick, ch );
+    act_notchar( #npick, ch );
+    obj_to_char( oload( 7934 ), ch );
+    remove_rflag( reset0, room );
+    }
+  else
+    act_tochar( #nope, ch );
+  end;
+  }
+act_tochar( #nope, ch );
+~
+E
+pick~
+@GYou carefully pull one of the fibrous strands off the plant's stalk.@n
+~
+E
+npick~
+@G$n carefully pulls one of the fibrous strands off the plant's stalk.@n
+~
+E
+nope~
+There are no strands loose enough to pull off.
+~
+!
+0 0 0
+-1
+S
+
+#0
+

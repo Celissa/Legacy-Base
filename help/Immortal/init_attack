@@ -1,0 +1,12 @@
+<html>
+<body>
+<h1> Description </h1>
+<br>
+EXAMPLES:<br>
+This sample will load a mob in the room, and initiate the attack with the player:<br>
+<br>
+mload( 1234, room );<br>
+mob = mob_in_room( 1234, room );<br>
+init_attack( mob, ch );<br>
+</html>
+</body>

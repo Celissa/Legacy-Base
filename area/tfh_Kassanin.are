@@ -1,0 +1,3555 @@
+#M2_AREA
+2
+
+Kassanin~
+Ravane~
+~
+~
+~
+
+0 0
+2
+1
+#ROOMS
+
+#11750
+Center of the Village Lawn~
+The broad village lawn unfolds in all directions, its once lush grass
+trampled into a thick, stringy mush of mud and straw.  The grass is
+matted so completely that it has formed two makeshift roads, one heading
+north-south, the other heading east-west.  To the west rise several
+wooden buildings and far to the south is a large cluster of tents.  Here,
+in the center of the village lawn, is a tall stone well.
+~
+Village will have open, sprawling feel with vast, open fields and
+sporadic buildings.  Livestock wandering freely, very dirty.  There will
+be no good equipment available, rather the kind of shoddy, fourth-hand
+merchandise you would expect from a shantytown in the hinterlands with
+almost no trade.  Idea is to get new players out and exploring as soon as
+possible.  Nearest town, Talane at the great crossroads, will be more of
+a real city with jewelers and weapon shops, etc.
+[Sleeping] also important to keep them moving, past talane to bigger cities? and NOT coming back here as a home base ?
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11751 10 10 5
+D1
+~
+~
+0 -1 11770 10 10 5
+D3
+~
+~
+0 -1 11758 10 10 5
+E
+well~
+A large, deep well stands here, the mossy limestone slats that form its
+outer wall glistening darkly with splashes of water.
+~
+E
+roads grass~
+The grass has been worn down here in two distinct paths, forming a kind
+of crossroads at the well.  The worn paths radiate in all directions.
+~
+E
+west buildings~
+A short walk to the west stand several small, wooden buildings.  Even at
+this distance, their construction is obviously shoddy.
+~
+E
+south tents~
+Squatting far to the south, the tight-packed grayish cluster is only
+barely recognizable as a group of tents.  A long walk to the south, they
+huddle under the looming mass of the Andel mountain range.
+~
+82 17 1509949540 -2 0
+-1
+S
+
+#11751
+North on the Village Lawn~
+A wide, matted swath which runs north-to-south has been trampled into the
+long lush grass, forming a makeshift road wide enough for a team of
+horses.  This is the northern edge of the village lawn of Kassanin, and
+just to the south is the village's lone well.  To the north the grassy
+path heads toward a handful of buildings, and to the east and west the
+village lawn continues.
+~
+village green
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11752 10 10 5
+D1
+~
+~
+0 -1 11788 10 10 5
+D2
+~
+~
+0 -1 11750 10 10 5
+D3
+~
+~
+0 -1 11787 10 10 5
+-1
+S
+
+#11752
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11753 10 10 5
+D2
+~
+~
+0 -1 11751 10 10 5
+-1
+S
+
+#11753
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 11754 10 10 5
+D2
+~
+~
+0 -1 11752 10 10 5
+D3
+~
+~
+0 -1 11790 10 10 5
+-1
+S
+
+#11754
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 11755 10 10 5
+D3
+~
+~
+0 -1 11753 10 10 5
+-1
+S
+
+#11755
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11756 10 10 5
+D3
+~
+~
+0 -1 11754 10 10 5
+-1
+S
+
+#11756
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 11755 10 10 5
+D4
+~
+~
+0 -1 11757 10 10 5
+-1
+S
+
+#11757
+Nothing~
+Under Construction.
+~
+Shady money-lender (bank)
+~
+33030144 3 9 0
+D5
+~
+~
+0 -1 11756 10 10 5
+-1
+S
+
+#11758
+The Village Lawn~
+The village lawn seems particular worn here, the trodding of countless
+footsteps having worn a wide, muddy swath in the long green grass.  The
+path goes from east to west in a kind of makeshift, unpaved road.  To the
+north and south the village lawn continues, and to the east is the lawn's
+centerpiece, the village well.  A packet of small buildings stands
+immediately to the west.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11787 10 10 5
+D1
+~
+~
+0 -1 11750 10 10 5
+D2
+~
+~
+0 -1 11786 10 10 5
+D3
+~
+~
+0 -1 11759 10 10 5
+-1
+S
+
+#11759
+Muddy Road in Kassanin~
+A wide, muddy road of straw and trampled grass runs east and west here
+through the length of the village of Kassanin.  The road is uneven and
+pockmarked with long wagonruts and deep pits of murky water.  A shoddy,
+unmarked wooden building stands to the north, and to the east is the
+village lawn.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11760 10 10 5
+D1
+~
+~
+0 -1 11758 10 10 5
+D3
+~
+~
+0 -1 11761 10 10 5
+E
+north building~
+A squat, rickety building with a thatch roof stands to the north.  It
+looks as if it was thrown together in a day and has been falling apart
+ever since.
+~
+-1
+S
+
+#11760
+The Village Trader~
+Water leaks steadily through a long gash in the thatch roof of this hut,
+and the air smells dank and sickening like rotting vegetables.  A thick,
+mud-covered mat of straw serves as the floor, and several carpets have
+been thrown down, atop of which rest the shopkeeper's meager inventory. 
+There are no shelves or even furniture except for a barrel and set of
+boxes, which must pass for a table and chairs.
+~
+Store
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 11759 10 10 5
+E
+floor straw~
+Both the floor and roof of this hut are made of old, rotting, thinning
+straw, which has long since given way to the watery climate.
+~
+E
+table chairs barrel box~
+The shopkeeper has improvised and table and chairs by using a set of
+squat wooden boxes and half of an old barrel.  None of them look
+particular sturdy.
+~
+-1
+S
+
+#11761
+Muddy Road in Kassanin~
+A wide path that runs east to west has been trampled into the tall,
+glistening grass that surrounds this village.  It has just rained--the
+muddy, pitted road is slick and treacherous, and the air is filled with
+the dank and musty odor of wet straw.  To the north is a field of long,
+unbroken grass and thick, tangled brambles.  To the south is a stone wall
+roughly the height of a man.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 11759 10 10 5
+D3
+~
+~
+0 -1 11762 10 10 5
+E
+north field brambles grass~
+This village was placed right in the middle of a large, grassy field, and
+to the north a portion of that original field remains.  The grass is
+long, and the brambles are massive and dangerous.
+~
+E
+south wall~
+A stone wall stands to the south, its limestone surface glistening with
+droplets of fresh rain.
+~
+-1
+S
+
+#11762
+Muddy Road in Kassanin~
+A mucky road of trampled grass heads east and west here, and another,
+somewhat smaller path breaks away and heads south toward a small stone
+building.  An impenetrable wall of thorns stands to the north, blocking
+any passage.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 11761 10 10 5
+D2
+~
+~
+0 -1 11766 10 10 5
+D3
+~
+~
+0 -1 11763 10 10 5
+E
+north wall thorns~
+One of the few vestiges of the wilderness untouched by the rapid
+expansion of this hastily constructed village, wild thorns grow in a
+thick impassable tangle.
+~
+-1
+S
+
+#11763
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11764 10 10 5
+D1
+~
+~
+0 -1 11762 10 10 5
+D3
+~
+~
+0 -1 11860 10 10 5
+-1
+S
+
+#11764
+Nothing~
+Under Construction.
+~
+Tavern/meeting hall/social hub
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 11763 10 10 5
+D4
+~
+~
+0 -1 11765 10 10 5
+-1
+S
+
+#11765
+Nothing~
+Under Construction.
+~
+Don't know, but it seems like it should be here.
+~
+33030144 3 9 0
+D5
+~
+~
+0 -1 11764 10 10 5
+-1
+S
+
+#11766
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11762 10 10 5
+D2
+~
+~
+0 -1 11767 10 10 5
+-1
+S
+
+#11767
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11766 10 10 5
+D1
+~
+~
+0 -1 11768 10 10 5
+-1
+S
+
+#11768
+Nothing~
+Under Construction.
+~
+Temple-esque.  Swarthy evangelistic cleric, a la travelling frontier
+preachers.
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11769 10 10 5
+D3
+~
+~
+0 -1 11767 10 10 5
+-1
+S
+
+#11769
+Nothing~
+Under Construction.
+~
+garden/altar
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 11768 10 10 5
+-1
+S
+
+#11770
+The Village Lawn~
+A heavily traveled path runs east-to-west through the tall grass of
+Kassanin's village lawn.  To the west is the village's centerpiece, the
+water well, and to the east a road leads out toward the wilderness.  The
+village lawn continues to the north and south.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11788 10 10 5
+D1
+~
+~
+0 -1 11771 10 10 5
+D2
+~
+~
+0 -1 11789 10 10 5
+D3
+~
+~
+0 -1 11750 10 10 5
+-1
+S
+
+#11771
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 11772 10 10 5
+D2
+~
+~
+0 -1 11774 10 10 5
+D3
+~
+~
+0 -1 11770 10 10 5
+-1
+S
+
+#11772
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 11773 10 10 5
+D3
+~
+~
+0 -1 11771 10 10 5
+-1
+S
+
+#11773
+Rickety wooden gate~
+Under Construction.
+~
+east entrance to town
+No portcullis, but a rickety wooden gate and a couple of sleepy,
+out-of-shape guards.
+[Sleeping] nice :)
+~
+33030144 3 9 0
+D1
+rickety wooden gate~
+rickety wooden gate e east~
+195 -1 11834 10 10 5
+D2
+~
+~
+0 -1 11857 10 10 5
+D3
+~
+~
+0 -1 11772 10 10 5
+-1
+S
+
+#11774
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11771 10 10 5
+D2
+~
+~
+0 -1 11775 10 10 5
+D3
+~
+~
+0 -1 11789 10 10 5
+-1
+S
+
+#11775
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11774 10 10 5
+D2
+~
+~
+0 -1 11776 10 10 5
+-1
+S
+
+#11776
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11775 10 10 5
+D1
+~
+~
+0 -1 11778 10 10 5
+D3
+~
+~
+0 -1 11777 10 10 5
+-1
+S
+
+#11777
+Nothing~
+Under Construction.
+~
+Fur trader 2
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 11776 10 10 5
+-1
+S
+
+#11778
+Nothing~
+Under Construction.
+~
+Fur trader 1
+~
+33030144 3 9 0
+D3
+~
+~
+0 -1 11776 10 10 5
+-1
+S
+
+#11779
+South on the Village Lawn~
+A well-worn path runs through the dewy grass, heading north toward the
+well at the center of the village lawn, and south toward a road that
+leads to a large cluster of tents and ramshackle houses in the distance. 
+The village lawn stretches to the east and west.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11750 10 10 5
+D1
+~
+~
+0 -1 11789 10 10 5
+D2
+~
+~
+0 -1 11780 10 10 5
+D3
+~
+~
+0 -1 11786 10 10 5
+-1
+S
+
+#11780
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11779 10 10 5
+D2
+~
+~
+0 -1 11781 10 10 5
+-1
+S
+
+#11781
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11780 10 10 5
+D2
+~
+~
+0 -1 11782 10 10 5
+-1
+S
+
+#11782
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11781 10 10 5
+D3
+~
+~
+0 -1 11783 10 10 5
+-1
+S
+
+#11783
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 11782 10 10 5
+D3
+~
+~
+0 -1 11784 10 10 5
+-1
+S
+
+#11784
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 11783 10 10 5
+D2
+~
+~
+0 -1 11785 10 10 5
+-1
+S
+
+#11785
+Nothing~
+Under Construction.
+~
+"tent town" to the south, primitive, portable housing.  Handful of useful
+npc's, but no one who can train more than a skill or spell or two.
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11784 10 10 5
+D2
+~
+~
+0 -1 11894 10 10 5
+-1
+S
+
+#11786
+The Village Lawn~
+An impenetrable wall of brambles and tall reeds blocks passage to the
+south and west.  The haze of a recent rain hangs thick and low in the
+air, glistening on the trampled grass.  The ground here is entirely
+saturated and is pockmarked with deep, muddy pools.  The village green
+stretches out to the north and east.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11758 10 10 5
+D1
+~
+~
+0 -1 11779 10 10 5
+E
+wall reeds brambles south west~
+It would be very difficult and extremely painful to pass through the wall
+of weeds and brambles.  Taking one of the village's many paths would be
+much easier.  one of the village's many paths.
+~
+-1
+S
+
+#11787
+The Village Lawn~
+A recent rain as left dark puddles in the furrows and wagonruts that have
+been worn into the spongy earth here in the northwest corner of the
+village lawn.  Progress to the north is blocked by a tall pile of lumber,
+ready to be used for expansion of this hastily constructed village.  To
+the west is the outer wall of a rickety wooden building.  The village
+lawn stretches to the east and south.
+~
+acode to search puddle.  might oload a copper piece.
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 11751 10 10 5
+D2
+~
+~
+0 -1 11758 10 10 5
+E
+north lumber wood~
+A pile of low-quality lumber, the boards bent and knotted and already
+waterlogged, stands to the north.  It looks as if the wood is meant to be
+used to construct another of the many ramshackle buildings of this
+village.
+~
+E
+west building~
+To the west is the side of a shoddy-looking wooden building.  Its
+entrance appears to be to the southwest.
+~
+E
+puddles water furrow wagonruts~
+The passing of traffic has gouged deep scars into the soft, rich soil and
+the steady rain of this temperate zone has saturated the earth and left
+dark, murky puddles.
+~
+-1
+S
+
+#11788
+The Village Lawn~
+Two heavy fence rails meet to form a barrier in the northeast corner of
+the village lawn.  The ground is littered with the remnant of recent
+construction--nails gleam in the damp grass, wooden tools lie shattered
+and useless, mounds of wood shaving and sawdust have mixed with the
+murky, muddy pools to form a pasty sludge.  The village lawn continues to
+the south and west.
+~
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 11770 10 10 5
+D3
+~
+~
+0 -1 11751 10 10 5
+E
+fence rail north east~
+Two fence rails meet in the northeast corner of the village lawn.  Beyond
+that stand piles of lumber and the signs of constant building.
+~
+E
+tools~
+The tools--wooden mallets, mostly--have been mutilated through overuse
+and are now just scraps of splintered wood.  They will serve no purpose.
+~
+E
+mounds sawdust mud pool sludge~
+The sawdust and wood chips that have fallen into the many pools of water
+here have been saturated and turned into a thick paste that smells of
+rain and mud and rot.
+~
+-1
+S
+
+#11789
+The Village Lawn~
+Tall, coarse weeds have grown here in the soft and sodden earth of the
+village lawn.  The ground is a murky sludge of mud and trampled grass and
+is littered with splintered boards and animal waste.  To the north and
+the west the village lawn continues, and to the east, through a thick
+stand of tall weeds, is a well-worn path that heads north and south.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11770 10 10 5
+D1
+~
+~
+0 -1 11774 10 10 5
+D3
+~
+~
+0 -1 11779 10 10 5
+-1
+S
+
+#11790
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11791 10 10 5
+D1
+~
+~
+0 -1 11753 10 10 5
+-1
+S
+
+#11791
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11792 10 10 5
+D2
+~
+~
+0 -1 11790 10 10 5
+-1
+S
+
+#11792
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11793 10 10 5
+D2
+~
+~
+0 -1 11791 10 10 5
+-1
+S
+
+#11793
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11794 10 10 5
+D2
+~
+~
+0 -1 11792 10 10 5
+-1
+S
+
+#11794
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11795 10 10 5
+D2
+~
+~
+0 -1 11793 10 10 5
+-1
+S
+
+#11795
+Nothing~
+Under Construction.
+~
+Fishing dock
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11796 10 10 5
+D2
+~
+~
+0 -1 11794 10 10 5
+D3
+~
+~
+0 -1 11919 10 10 5
+-1
+S
+
+#11796
+River~
+Under Construction.
+~
+~
+33030144 8 9 0
+D1
+~
+~
+0 -1 11808 10 10 5
+D2
+~
+~
+0 -1 11795 10 10 5
+D3
+~
+~
+0 -1 11797 10 10 5
+-1
+S
+
+#11797
+River~
+Under Construction.
+~
+~
+33030144 8 9 0
+D1
+~
+~
+0 -1 11796 10 10 5
+D3
+~
+~
+0 -1 11798 10 10 5
+-1
+S
+
+#11798
+River~
+Under Construction.
+~
+~
+33030144 8 9 0
+D1
+~
+~
+0 -1 11797 10 10 5
+D3
+~
+~
+0 -1 11799 10 10 5
+-1
+S
+
+#11799
+River~
+Under Construction.
+~
+~
+33030144 8 9 0
+D1
+~
+~
+0 -1 11798 10 10 5
+D3
+~
+~
+0 -1 11800 10 10 5
+-1
+S
+
+#11800
+River~
+Under Construction.
+~
+~
+33030144 8 9 0
+D1
+~
+~
+0 -1 11799 10 10 5
+D3
+~
+~
+0 -1 11801 10 10 5
+-1
+S
+
+#11801
+River~
+Under Construction.
+~
+~
+33030144 8 9 0
+D0
+~
+~
+0 -1 11802 10 10 5
+D1
+~
+~
+0 -1 11800 10 10 5
+-1
+S
+
+#11802
+River~
+Under Construction.
+~
+~
+33030144 8 9 0
+D0
+~
+~
+0 -1 11803 10 10 5
+D2
+~
+~
+0 -1 11801 10 10 5
+-1
+S
+
+#11803
+River~
+Under Construction.
+~
+~
+33030144 8 9 0
+D2
+~
+~
+0 -1 11802 10 10 5
+D3
+~
+~
+0 -1 11804 10 10 5
+-1
+S
+
+#11804
+River~
+Under Construction.
+~
+~
+33030144 8 9 0
+D1
+~
+~
+0 -1 11803 10 10 5
+D3
+~
+~
+0 -1 11805 10 10 5
+-1
+S
+
+#11805
+River~
+Under Construction.
+~
+~
+33030144 8 9 0
+D1
+~
+~
+0 -1 11804 10 10 5
+D3
+~
+~
+0 -1 11806 10 10 5
+-1
+S
+
+#11806
+River~
+Under Construction.
+~
+~
+33030144 8 9 0
+D1
+~
+~
+0 -1 11805 10 10 5
+D3
+~
+~
+0 -1 11807 10 10 5
+-1
+S
+
+#11807
+River~
+Under Construction.
+~
+Glistening pool at the base of a waterfall.  No more movement.  Water
+drops from mountains high above.  Artesian well.
+[Nnilb] raven woods are west of here, perhaps
+~
+33030144 8 9 0
+D1
+~
+~
+0 -1 11806 10 10 5
+-1
+S
+
+#11808
+River~
+Under Construction.
+~
+~
+33030144 8 9 0
+D1
+~
+~
+0 -1 11809 10 10 5
+D3
+~
+~
+0 -1 11796 10 10 5
+-1
+S
+
+#11809
+River~
+Under Construction.
+~
+~
+33030144 8 9 0
+D1
+~
+~
+0 -1 11810 10 10 5
+D3
+~
+~
+0 -1 11808 10 10 5
+-1
+S
+
+#11810
+River~
+Under Construction.
+~
+~
+33030144 8 9 0
+D1
+~
+~
+0 -1 11811 10 10 5
+D3
+~
+~
+0 -1 11809 10 10 5
+-1
+S
+
+#11811
+River~
+Under Construction.
+~
+~
+33030144 8 9 0
+D1
+~
+~
+0 -1 11812 10 10 5
+D3
+~
+~
+0 -1 11810 10 10 5
+-1
+S
+
+#11812
+River~
+Under Construction.
+~
+~
+33030144 8 9 0
+D1
+~
+~
+0 -1 11813 10 10 5
+D3
+~
+~
+0 -1 11811 10 10 5
+-1
+S
+
+#11813
+River~
+Under Construction.
+~
+~
+33030144 8 9 0
+D1
+~
+~
+0 -1 11814 10 10 5
+D3
+~
+~
+0 -1 11812 10 10 5
+-1
+S
+
+#11814
+River~
+Under Construction.
+~
+~
+33030144 8 9 0
+D1
+~
+~
+0 -1 11815 10 10 5
+D3
+~
+~
+0 -1 11813 10 10 5
+-1
+S
+
+#11815
+River~
+Under Construction.
+~
+~
+33030144 8 9 0
+D0
+~
+~
+0 -1 11816 10 10 5
+D3
+~
+~
+0 -1 11814 10 10 5
+-1
+S
+
+#11816
+River~
+Under Construction.
+~
+~
+33030144 8 9 0
+D1
+~
+~
+0 -1 11817 10 10 5
+D2
+~
+~
+0 -1 11815 10 10 5
+-1
+S
+
+#11817
+River~
+Under Construction.
+~
+~
+33030144 8 9 0
+D1
+~
+~
+0 -1 11818 10 10 5
+D3
+~
+~
+0 -1 11816 10 10 5
+-1
+S
+
+#11818
+River~
+Under Construction.
+~
+~
+33030144 8 9 0
+D2
+~
+~
+0 -1 11819 10 10 5
+D3
+~
+~
+0 -1 11817 10 10 5
+-1
+S
+
+#11819
+River~
+Under Construction.
+~
+~
+33030144 8 9 0
+D0
+~
+~
+0 -1 11818 10 10 5
+D1
+~
+~
+0 -1 11820 10 10 5
+-1
+S
+
+#11820
+River~
+Under Construction.
+~
+~
+33030144 8 9 0
+D2
+~
+~
+0 -1 11821 10 10 5
+D3
+~
+~
+0 -1 11819 10 10 5
+-1
+S
+
+#11821
+River~
+Under Construction.
+~
+~
+33030144 8 9 0
+D0
+~
+~
+0 -1 11820 10 10 5
+D1
+~
+~
+0 -1 11822 10 10 5
+-1
+S
+
+#11822
+River~
+Under Construction.
+~
+~
+33030144 8 9 0
+D1
+~
+~
+0 -1 11823 10 10 5
+D3
+~
+~
+0 -1 11821 10 10 5
+-1
+S
+
+#11823
+River~
+Under Construction.
+~
+~
+33030144 8 9 0
+D1
+~
+~
+0 -1 11824 10 10 5
+D3
+~
+~
+0 -1 11822 10 10 5
+-1
+S
+
+#11824
+River~
+Under Construction.
+~
+~
+33030144 8 9 0
+D1
+~
+~
+0 -1 11825 10 10 5
+D3
+~
+~
+0 -1 11823 10 10 5
+-1
+S
+
+#11825
+River~
+Under Construction.
+~
+~
+33030144 8 9 0
+D1
+~
+~
+0 -1 11826 10 10 5
+D3
+~
+~
+0 -1 11824 10 10 5
+-1
+S
+
+#11826
+River~
+Under Construction.
+~
+~
+33030144 8 9 0
+D1
+~
+~
+0 -1 11827 10 10 5
+D3
+~
+~
+0 -1 11825 10 10 5
+-1
+S
+
+#11827
+River~
+Under Construction.
+~
+~
+33030144 8 9 0
+D1
+~
+~
+0 -1 11828 10 10 5
+D3
+~
+~
+0 -1 11826 10 10 5
+-1
+S
+
+#11828
+River~
+Under Construction.
+~
+~
+33030144 8 9 0
+D2
+~
+~
+0 -1 11829 10 10 5
+D3
+~
+~
+0 -1 11827 10 10 5
+-1
+S
+
+#11829
+River~
+Under Construction.
+~
+~
+33030144 8 9 0
+D0
+~
+~
+0 -1 11828 10 10 5
+D1
+~
+~
+0 -1 11830 10 10 5
+-1
+S
+
+#11830
+River~
+Under Construction.
+~
+~
+33030144 8 9 0
+D1
+~
+~
+0 -1 11831 10 10 5
+D3
+~
+~
+0 -1 11829 10 10 5
+-1
+S
+
+#11831
+River~
+Under Construction.
+~
+~
+33030144 8 9 0
+D1
+~
+~
+0 -1 11832 10 10 5
+D3
+~
+~
+0 -1 11830 10 10 5
+-1
+S
+
+#11832
+River - West of a Bridge~
+Under Construction.
+~
+~
+33030144 8 9 0
+D1
+~
+~
+0 -1 11917 10 10 5
+D3
+~
+~
+0 -1 11831 10 10 5
+-1
+S
+
+#11833
+Bridge over river~
+Under Construction.
+~
+Farthest river goes for now.  Figure out a way to end it realistically. 
+In actuality, runs far to southeast, emptying into enormous lake.
+To add long road to Talane north.
+[Sleeping] diff are n
+[Nivel] also deleted west exit, linked to area underneath bridge
+acode jump here maybe, into #3671 or 1582?
+[Nivel] ok now I stop messing with your areas :)
+[Nnilb] now where did this path SUPPOSED to go...
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 11934 10 10 5
+D2
+~
+~
+0 -1 11856 10 10 5
+-1
+S
+
+#11834
+Road outside a rickety wooden gate~
+A rickety wooden gate stands to the west, an obviously hastily-built
+defense for the village beyond.  The gate stands between the vertical
+stone face of the mountain to the north and a shoddy, ramshackle
+limestone wall follows a generally southern path away from the gate.  A
+dirt road leads east along the stone, betwixt the mountain and the light
+forest to its south.
+~
+south good place to add light woods/newbie rabbit killing area
+[Sleeping] not a bad idea...
+[Nnilb] no way in, since kassanin isn't finished or being worked on
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 11835 10 10 5
+D2
+~
+~
+0 -1 3000 10 10 5
+D3
+rickety wooden gate~
+rickety wooden gate w west~
+195 -1 11773 10 10 5
+-1
+S
+
+#11835
+Dirt road~
+Under Construction.
+~
+[Sleeping] road
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 11836 10 10 5
+D2
+~
+~
+0 -1 3006 10 10 5
+D3
+~
+~
+0 -1 11834 10 10 5
+-1
+S
+
+#11836
+Dirt road~
+Under Construction.
+~
+[Sleeping] road
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 11837 10 10 5
+D2
+~
+~
+0 -1 3007 10 10 5
+D3
+~
+~
+0 -1 11835 10 10 5
+-1
+S
+
+#11837
+Dirt road~
+Under Construction.
+~
+[Sleeping] road
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 11838 10 10 5
+D2
+~
+~
+0 -1 3008 10 10 5
+D3
+~
+~
+0 -1 11836 10 10 5
+-1
+S
+
+#11838
+Nothing~
+Under Construction.
+~
+[Sleeping] road
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 11839 10 10 5
+D2
+~
+~
+0 -1 3009 10 10 5
+D3
+~
+~
+0 -1 11837 10 10 5
+-1
+S
+
+#11839
+Nothing~
+Under Construction.
+~
+[Sleeping] road
+[Sleeping] stone e
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11840 10 10 5
+D2
+~
+~
+0 -1 3010 10 10 5
+D3
+~
+~
+0 -1 11838 10 10 5
+-1
+S
+
+#11840
+Nothing~
+Under Construction.
+~
+[Sleeping] road
+[Sleeping] stone se
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 11841 10 10 5
+D2
+~
+~
+0 -1 11839 10 10 5
+-1
+S
+
+#11841
+Nothing~
+Under Construction.
+~
+[Sleeping] road
+[Sleeping] stone s
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11842 10 10 5
+D1
+~
+~
+0 -1 3063 10 10 5
+D3
+~
+~
+0 -1 11840 10 10 5
+-1
+S
+
+#11842
+Nothing~
+Under Construction.
+~
+[Sleeping] road
+[Sleeping] light bridge over ravine
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11843 10 10 5
+D2
+~
+~
+0 -1 11841 10 10 5
+-1
+S
+
+#11843
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11844 10 10 5
+D2
+~
+~
+0 -1 11842 10 10 5
+-1
+S
+
+#11844
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11845 10 10 5
+D2
+~
+~
+0 -1 11843 10 10 5
+-1
+S
+
+#11845
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 11846 10 10 5
+D2
+~
+~
+0 -1 11844 10 10 5
+-1
+S
+
+#11846
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 11847 10 10 5
+D3
+~
+~
+0 -1 11845 10 10 5
+-1
+S
+
+#11847
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 11848 10 10 5
+D3
+~
+~
+0 -1 11846 10 10 5
+-1
+S
+
+#11848
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 11849 10 10 5
+D3
+~
+~
+0 -1 11847 10 10 5
+-1
+S
+
+#11849
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 11850 10 10 5
+D3
+~
+~
+0 -1 11848 10 10 5
+-1
+S
+
+#11850
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 11851 10 10 5
+D3
+~
+~
+0 -1 11849 10 10 5
+-1
+S
+
+#11851
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 11852 10 10 5
+D3
+~
+~
+0 -1 11850 10 10 5
+-1
+S
+
+#11852
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 11853 10 10 5
+D3
+~
+~
+0 -1 11851 10 10 5
+-1
+S
+
+#11853
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 11854 10 10 5
+D3
+~
+~
+0 -1 11852 10 10 5
+-1
+S
+
+#11854
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 11855 10 10 5
+D3
+~
+~
+0 -1 11853 10 10 5
+-1
+S
+
+#11855
+Nothing~
+Under Construction.
+~
+[Nivel] going to build the massive Raven Wood forest east from here.
+[Nivel] it should have many exits.
+[Nnilb] raven MOVED
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11856 10 10 5
+D3
+~
+~
+0 -1 11854 10 10 5
+-1
+S
+
+#11856
+Nothing~
+Under Construction.
+~
+[Nnilb] n WAS 3583
+[Nnilb] think caused a loop
+[Nnilb] nope, was one more to the n.
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11833 10 10 5
+D2
+~
+~
+0 -1 11855 10 10 5
+-1
+S
+
+#11857
+Limestone wall~
+Under Construction.
+~
+limestone wall
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11773 10 10 5
+D2
+~
+~
+0 -1 11858 10 10 5
+-1
+S
+
+#11858
+Limestone wall~
+Under Construction.
+~
+limestone wall
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11857 10 10 5
+D2
+~
+~
+0 -1 11859 10 10 5
+-1
+S
+
+#11859
+Small hut~
+Under Construction.
+~
+small hut.  Old, grizzly warrior.  Trainer, but very, very basic stuff.
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11858 10 10 5
+-1
+S
+
+#11860
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 11763 10 10 5
+D2
+~
+~
+0 -1 11861 10 10 5
+D3
+~
+~
+0 -1 11863 10 10 5
+-1
+S
+
+#11861
+Nothing~
+Under Construction.
+~
+simple blacksmith.  Offer a basic knife, shovel, maybe an old, junky iron
+helm.  Also acts as the stablemaster.
+[Sleeping] will this place be selling horses?
+[Nivel] I assume so, but probably not great horses.
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11860 10 10 5
+D2
+~
+~
+0 -1 11862 10 10 5
+-1
+S
+
+#11862
+Nothing~
+Under Construction.
+~
+stable behind smithy
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11861 10 10 5
+-1
+S
+
+#11863
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11864 10 10 5
+D1
+~
+~
+0 -1 11860 10 10 5
+D3
+~
+~
+0 -1 11873 10 10 5
+-1
+S
+
+#11864
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11865 10 10 5
+D2
+~
+~
+0 -1 11863 10 10 5
+D3
+~
+~
+0 -1 11872 10 10 5
+-1
+S
+
+#11865
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11866 10 10 5
+D2
+~
+~
+0 -1 11864 10 10 5
+D3
+~
+~
+0 -1 11871 10 10 5
+-1
+S
+
+#11866
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11867 10 10 5
+D2
+~
+~
+0 -1 11865 10 10 5
+D3
+~
+~
+0 -1 11870 10 10 5
+-1
+S
+
+#11867
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 11866 10 10 5
+D3
+~
+~
+0 -1 11868 10 10 5
+-1
+S
+
+#11868
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11869 10 10 5
+D1
+~
+~
+0 -1 11867 10 10 5
+D2
+~
+~
+0 -1 11870 10 10 5
+D3
+~
+~
+0 -1 11878 10 10 5
+-1
+S
+
+#11869
+Nothing~
+Under Construction.
+~
+to north and west is sheer face of mountain
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 11868 10 10 5
+-1
+S
+
+#11870
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11868 10 10 5
+D1
+~
+~
+0 -1 11866 10 10 5
+D2
+~
+~
+0 -1 11871 10 10 5
+D3
+~
+~
+0 -1 11877 10 10 5
+-1
+S
+
+#11871
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11870 10 10 5
+D1
+~
+~
+0 -1 11865 10 10 5
+D2
+~
+~
+0 -1 11872 10 10 5
+D3
+~
+~
+0 -1 11876 10 10 5
+-1
+S
+
+#11872
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11871 10 10 5
+D1
+~
+~
+0 -1 11864 10 10 5
+D2
+~
+~
+0 -1 11873 10 10 5
+D3
+~
+~
+0 -1 11875 10 10 5
+-1
+S
+
+#11873
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11872 10 10 5
+D1
+~
+~
+0 -1 11863 10 10 5
+D3
+~
+~
+0 -1 11874 10 10 5
+-1
+S
+
+#11874
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11875 10 10 5
+D1
+~
+~
+0 -1 11873 10 10 5
+D3
+~
+~
+0 -1 11880 10 10 5
+-1
+S
+
+#11875
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11876 10 10 5
+D1
+~
+~
+0 -1 11872 10 10 5
+D2
+~
+~
+0 -1 11874 10 10 5
+D3
+~
+~
+0 -1 11879 10 10 5
+-1
+S
+
+#11876
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11877 10 10 5
+D1
+~
+~
+0 -1 11871 10 10 5
+D2
+~
+~
+0 -1 11875 10 10 5
+-1
+S
+
+#11877
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11878 10 10 5
+D1
+~
+~
+0 -1 11870 10 10 5
+D2
+~
+~
+0 -1 11876 10 10 5
+-1
+S
+
+#11878
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 11868 10 10 5
+D2
+~
+~
+0 -1 11877 10 10 5
+-1
+S
+
+#11879
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 11875 10 10 5
+D2
+~
+~
+0 -1 11880 10 10 5
+-1
+S
+
+#11880
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11879 10 10 5
+D1
+~
+~
+0 -1 11874 10 10 5
+D2
+~
+~
+0 -1 11881 10 10 5
+-1
+S
+
+#11881
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11880 10 10 5
+D2
+~
+~
+0 -1 11882 10 10 5
+-1
+S
+
+#11882
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11881 10 10 5
+D3
+~
+~
+0 -1 11883 10 10 5
+-1
+S
+
+#11883
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 11882 10 10 5
+D3
+~
+~
+0 -1 11884 10 10 5
+-1
+S
+
+#11884
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 11883 10 10 5
+D2
+~
+~
+0 -1 11885 10 10 5
+-1
+S
+
+#11885
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11884 10 10 5
+D3
+~
+~
+0 -1 11886 10 10 5
+-1
+S
+
+#11886
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 11885 10 10 5
+D3
+~
+~
+0 -1 11887 10 10 5
+-1
+S
+
+#11887
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11888 10 10 5
+D1
+~
+~
+0 -1 11886 10 10 5
+-1
+S
+
+#11888
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 11887 10 10 5
+D3
+~
+~
+0 -1 11889 10 10 5
+-1
+S
+
+#11889
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11890 10 10 5
+D1
+~
+~
+0 -1 11888 10 10 5
+-1
+S
+
+#11890
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11891 10 10 5
+D2
+~
+~
+0 -1 11889 10 10 5
+-1
+S
+
+#11891
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11892 10 10 5
+D2
+~
+~
+0 -1 11890 10 10 5
+-1
+S
+
+#11892
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 11891 10 10 5
+D3
+~
+~
+0 -1 11893 10 10 5
+-1
+S
+
+#11893
+Nothing~
+Under Construction.
+~
+hidden path into hills up to good 'ol boys' still.
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 11892 10 10 5
+-1
+S
+
+#11894
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11785 10 10 5
+D1
+~
+~
+0 -1 11896 10 10 5
+D3
+~
+~
+0 -1 11895 10 10 5
+-1
+S
+
+#11895
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11910 10 10 5
+D1
+~
+~
+0 -1 11894 10 10 5
+D3
+~
+~
+0 -1 11897 10 10 5
+-1
+S
+
+#11896
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 11900 10 10 5
+D2
+~
+~
+0 -1 11909 10 10 5
+D3
+~
+~
+0 -1 11894 10 10 5
+-1
+S
+
+#11897
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11911 10 10 5
+D1
+~
+~
+0 -1 11895 10 10 5
+D2
+~
+~
+0 -1 11912 10 10 5
+D3
+~
+~
+0 -1 11898 10 10 5
+-1
+S
+
+#11898
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11913 10 10 5
+D1
+~
+~
+0 -1 11897 10 10 5
+D2
+~
+~
+0 -1 11914 10 10 5
+D3
+~
+~
+0 -1 11899 10 10 5
+-1
+S
+
+#11899
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11915 10 10 5
+D1
+~
+~
+0 -1 11898 10 10 5
+-1
+S
+
+#11900
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11907 10 10 5
+D1
+~
+~
+0 -1 11901 10 10 5
+D2
+~
+~
+0 -1 11908 10 10 5
+D3
+~
+~
+0 -1 11896 10 10 5
+-1
+S
+
+#11901
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11906 10 10 5
+D1
+~
+~
+0 -1 11902 10 10 5
+D3
+~
+~
+0 -1 11900 10 10 5
+-1
+S
+
+#11902
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11903 10 10 5
+D1
+~
+~
+0 -1 11905 10 10 5
+D2
+~
+~
+0 -1 11904 10 10 5
+D3
+~
+~
+0 -1 11901 10 10 5
+-1
+S
+
+#11903
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 11902 10 10 5
+-1
+S
+
+#11904
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11902 10 10 5
+-1
+S
+
+#11905
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D3
+~
+~
+0 -1 11902 10 10 5
+-1
+S
+
+#11906
+Nothing~
+Under Construction.
+~
+Whittling old codger here who can custom staves of various woods.
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 11901 10 10 5
+-1
+S
+
+#11907
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 11900 10 10 5
+-1
+S
+
+#11908
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11900 10 10 5
+-1
+S
+
+#11909
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11896 10 10 5
+-1
+S
+
+#11910
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 11895 10 10 5
+-1
+S
+
+#11911
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 11897 10 10 5
+-1
+S
+
+#11912
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11897 10 10 5
+-1
+S
+
+#11913
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 11898 10 10 5
+-1
+S
+
+#11914
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 11898 10 10 5
+-1
+S
+
+#11915
+Nothing~
+Under Construction.
+~
+west is door to small garden
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 11899 10 10 5
+D3
+~
+~
+0 -1 11916 10 10 5
+-1
+S
+
+#11916
+Nothing~
+Under Construction.
+~
+npc here.  Old woman, perhaps sells herbs she grows in her garden, or
+knows some very, very basic healing magic.
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 11915 10 10 5
+-1
+S
+
+#11917
+River - Underneath a Bridge~
+Under Construction.
+~
+~
+33030144 8 9 0
+D1
+~
+~
+0 -1 11918 10 10 5
+D3
+~
+~
+0 -1 11832 10 10 5
+-1
+S
+
+#11918
+River - East of a Bridge~
+Under Construction.
+~
+[Sleeping] river forks south here also
+~
+33030144 8 9 0
+D1
+~
+~
+0 -1 11920 10 10 5
+D2
+~
+~
+0 -1 3123 10 10 5
+D3
+~
+~
+0 -1 11917 10 10 5
+-1
+S
+
+#11919
+Nothing~
+Under Construction.
+~
+Old guy who might sell a fishing pole, or maybe just the bait.  Might
+have old guy in the tents who customs staves custom a fishing pole.
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 11795 10 10 5
+-1
+S
+
+#11920
+River - East of a Bridge~
+Under Construction.
+~
+[Sleeping] log up and east
+~
+33030144 8 9 0
+D1
+~
+~
+0 -1 11921 10 10 5
+D3
+~
+~
+0 -1 11918 10 10 5
+-1
+S
+
+#11921
+River - East of a Bridge~
+Under Construction.
+~
+[Sleeping] under log
+[Nnilb] u is 3109
+~
+33030144 8 9 0
+D1
+~
+~
+0 -1 11922 10 10 5
+D3
+~
+~
+0 -1 11920 10 10 5
+-1
+S
+
+#11922
+River - East of a Bridge~
+Under Construction.
+~
+[Sleeping] log up and west
+~
+33030144 8 9 0
+D1
+~
+~
+0 -1 11923 10 10 5
+D3
+~
+~
+0 -1 11921 10 10 5
+-1
+S
+
+#11923
+River - East of a Bridge~
+Under Construction.
+~
+~
+33030144 8 9 0
+D1
+~
+~
+0 -1 11924 10 10 5
+D3
+~
+~
+0 -1 11922 10 10 5
+-1
+S
+
+#11924
+River - East of a Bridge~
+Under Construction.
+~
+~
+33030144 8 9 0
+D1
+~
+~
+0 -1 11925 10 10 5
+D3
+~
+~
+0 -1 11923 10 10 5
+-1
+S
+
+#11925
+River - East of a Bridge~
+Under Construction.
+~
+~
+33030144 8 9 0
+D1
+~
+~
+0 -1 11926 10 10 5
+D3
+~
+~
+0 -1 11924 10 10 5
+-1
+S
+
+#11926
+River - East of a Bridge~
+Under Construction.
+~
+~
+33030144 8 9 0
+D2
+~
+~
+0 -1 11927 10 10 5
+D3
+~
+~
+0 -1 11925 10 10 5
+-1
+S
+
+#11927
+River - East of a Bridge~
+Under Construction.
+~
+~
+33030144 8 9 0
+D0
+~
+~
+0 -1 11926 10 10 5
+D1
+~
+~
+0 -1 11928 10 10 5
+-1
+S
+
+#11928
+River - East of a Bridge~
+Under Construction.
+~
+~
+33030144 8 9 0
+D1
+~
+~
+0 -1 11929 10 10 5
+D3
+~
+~
+0 -1 11927 10 10 5
+-1
+S
+
+#11929
+River - East of a Bridge~
+Under Construction.
+~
+~
+33030144 8 9 0
+D2
+~
+~
+0 -1 11930 10 10 5
+D3
+~
+~
+0 -1 11928 10 10 5
+-1
+S
+
+#11930
+River - East of a Bridge~
+Under Construction.
+~
+~
+33030144 8 9 0
+D0
+~
+~
+0 -1 11929 10 10 5
+D1
+~
+~
+0 -1 11931 10 10 5
+-1
+S
+
+#11931
+River - East of a Bridge~
+Under Construction.
+~
+~
+33030144 8 9 0
+D1
+~
+~
+0 -1 11932 10 10 5
+D3
+~
+~
+0 -1 11930 10 10 5
+-1
+S
+
+#11932
+River - East of a Bridge~
+Under Construction.
+~
+~
+33030144 8 9 0
+D1
+~
+~
+0 -1 11933 10 10 5
+D3
+~
+~
+0 -1 11931 10 10 5
+-1
+S
+
+#11933
+River - East of a Bridge~
+Under Construction.
+~
+~
+33030144 8 9 0
+D1
+~
+~
+0 -1 2045 10 10 5
+D3
+~
+~
+0 -1 11932 10 10 5
+-1
+S
+
+#11934
+Road~
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 11935 10 10 5
+D2
+~
+~
+0 -1 11833 10 10 5
+-1
+S
+
+#11935
+Overgrown road~
+Forest have overgrown and swallowed what must have been a road leading
+north, but the kuzu has overwhelmed the oaks, bringing them crashing
+down, crisscrossing the worn path.  The road continues unhindered to the
+south, skirting the stone face of a mountain to the west and the thickets
+of kuzu to the east.
+~
+[Nnilb] onward n and e to TALENE, then on to the main ryoushi port city
+[Nnilb] in what life were you thinking that?
+~
+33030144 12 9 0
+D2
+~
+~
+0 -1 11934 10 10 5
+-1
+S
+
+#0
+

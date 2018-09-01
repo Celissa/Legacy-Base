@@ -1,0 +1,13 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+filter [name] : start/stop filtering a person<br>
+filter        : display list of people whom you are filtering<br>
+<br>
+<h1> Description </h1>
+<br>
+Filter blocks both tells and messages on the global channels by a person<br>
+from being seen.<br>
+</html>
+</body>

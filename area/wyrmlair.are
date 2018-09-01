@@ -1,0 +1,1484 @@
+#M2_AREA
+2
+
+Wyrm Lair~
+Phule~
+Wyrm Lair~
+~
+~
+
+25 0
+0
+0
+#ROOMS
+
+#34250
+In a Dirt Tunnel~
+This narrow dirt tunnel is chill and bare.  A narrow opening leads upward
+toward the west, its entrance easily reachable.  The soil here is
+hard-packed into the ground, and slender roots protrude from the sides of
+the passageway.  Echoes of growling and a faint scraping sound come from
+the east, but perhaps it is just the surrounding roots which brush
+against the sides of the tunnel.
+~
+[Guinafaer] Need climb code for west.
+[Guinafaer] Reviewed.
+~
+167378948 11 5 0
+D1
+~
+~
+0 -1 34251 10 10 5
+D3
+~
+~
+0 -1 33094 10 10 5
+E
+roots~
+These small roots stick out from the plantlife above you.
+~
+E
+hole~
+A small ramp of dirt leads to a hole high on the west wall, and small
+roots allow easy access to handholds to pull yourself up and out.
+~
+E
+soil ground~
+The soil here is packed into the ground, with small roots popping up from
+the sides of the tunnel.
+~
+A
+listen~
+echoes growling scraping sound~
+act_tochar( #growl, ch );
+~
+E
+growl~
+@cThe breezes coming from outside the hole deaden the sound a bit, but it
+sounds a little like a growling stomach.@n 
+~
+!
+0 0 0
+A
+listen~
+~
+acode( room, 1 );
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou weave through the intrusive roots, and head eastward.@n
+~
+E
+to_room~
+@y$n weaves through the intrusive roots, and heads eastward.@n
+~
+!
+3 0 2
+304 17 1509949450 -2 0
+1814 9 1509949540 3 0
+-1
+S
+
+#34251
+Along a Dirt Tunnel - Bend in the Tunnel~
+A slight breeze blows icy air from the west.  Threadlike roots protrude
+from the sides of the tunnel here.  Most of the roots hang from the
+ceiling, but they cover the walls and floor as well.  The tunnel's
+confining space makes it hard to avoid them as they edge ever closer to
+your skin.  On the ground, serpentine marks have been tracked into the
+black earth.
+~
+[Guinafaer] Reviewed
+~
+167378948 11 5 0
+D2
+~
+~
+0 -1 34252 10 10 5
+D3
+~
+~
+0 -1 34250 10 10 5
+E
+marks dirt 1 down slimy residue~
+They appear to be snakelike trails, about one to three feet in width. 
+Whatever made them slithered.  There also appears to be the slightest
+amount of a slimy residue on the ground here, but whether it is part of
+the marks is uncertain.
+~
+E
+roots walls floor ceiling~
+These small roots look like upside-down trees in winter, popping out from
+the upper walls and ceiling.  They rigidly comb your garments as you pass
+through the tunnel.
+~
+A
+~
+~
+send_to_room( #shiv, room );
+~
+E
+shiv~
+@cYou shiver, overcome by the cold and bare surroundings.@n
+~
+!
+2 150 0
+A
+get take grab~
+roots~
+act_tochar( "You tug firmly but can't pull out any roots.", ch );
+~
+!
+0 0 0
+A
+~
+~
+act_tochar( #blah, ch );
+continue;
+~
+E
+blah~
+@yYou wind through the roots and head southward.@n
+~
+!
+3 0 4
+-1
+S
+
+#34252
+Along a Small Dirt Tunnel~
+A pungent odor seems to emanate from the dirt itself in this short,
+narrow tunnel.  The cold, rocklike earth carries with it a briny,
+sulfurous smell.  A few stray roots sprout from the ceiling and walls,
+making it harder to move about without scraping upon them.  Several
+odd-looking marks mar the dirt underfoot.
+~
+[Guinafaer] Reviewed.
+~
+167378948 11 5 0
+D0
+~
+~
+0 -1 34251 10 10 5
+D2
+~
+~
+0 -1 34253 10 10 5
+E
+odd-looking marks dirt 1 down~
+These strange marks seem to come from some sort of snake-like creature,
+as they wind their way through the tunnel back and forth in a serpentine
+pattern.  The marks travel throughout the tunnel.  A foul-smelling slime
+residue has been left where the marks appear.
+~
+E
+roots stray~
+These roots make it harder to travel, their cold branching fingers as
+tough as the solid brown dirt.
+~
+A
+get take grab~
+roots~
+act_tochar( "You tug firmly but can't pull out any roots.", ch );
+~
+!
+0 0 0
+1814 9 1509949540 3 0
+-1
+S
+
+#34253
+Intersection in the Dirt Tunnel~
+Here the narrow dirt tunnel branches off in three directions.  Sharp,
+broken rock blankets the ground underfoot, making footing a little more
+difficult.  Knobby roots reach down from the ceiling like deathly pale
+gnarled hands.  The dirt is hard-packed and cold, giving the tunnel the
+feeling of a tomb.  The air here smells of sulfur, but it is different,
+with a distinct tinge.
+~
+[Guinafaer] reviewed
+~
+167378948 11 5 0
+D0
+~
+~
+0 -1 34252 10 10 5
+D1
+~
+~
+0 -1 34254 10 10 5
+D3
+~
+~
+0 -1 34255 10 10 5
+E
+roots ceiling~
+Small roots branch down rigidly from the packed soil overhead.  There
+appears to be no end of them, as they continue to scrape and poke you as
+you move.
+~
+E
+gravel sharp rocky~
+The gravel here is sharp and stabs upwards at your feet as you walk.
+~
+A
+smell~
+~
+act_tochar( #you, ch );
+~
+E
+you~
+@yThe air here smells of rotten eggs, intensifying as it nears the
+ground, where green puddles of slime have formed.@n 
+~
+!
+0 0 0
+A
+get~
+knobby root~
+act_tochar( #no, ch );
+~
+E
+no~
+@cYou try to rip the roots overhead from the ceiling, but they appear
+to be attached to something much bigger, like a tree or large bush.@n
+~
+!
+0 0 0
+-1
+S
+
+#34254
+Along a Dirt Tunnel~
+The air here is quite musty and dust-filled.  Loose dirt lines the tunnel
+here, where a few large roots strike downwards in the middle of the path. 
+Their cold, unbending grasp gives the impression of the frozen tundra,
+lying just above your head.  Strange white rocks dot the ground here,
+many covered by a thin layer of green slime.
+~
+[Guinafaer] Reviewed.
+~
+167378948 11 5 0
+D2
+~
+~
+0 -1 34256 10 10 5
+D3
+~
+~
+0 -1 34253 10 10 5
+E
+white rocks~
+At closer inspection, they seem to be fragments of bone, and as you dig
+into the tough floor a ways, you notice larger bones compressed into the
+ground.
+~
+E
+roots~
+These large, knobby roots form a small barrier in the middle of this
+tunnel, making travel difficult.
+~
+A
+dig~
+bones white~
+act_tochar( #dig, ch );
+~
+E
+dig~
+@cTry as you might, the bones can't be freed from the densely-packed
+earth.@n 
+~
+!
+0 0 0
+A
+~
+~
+if( random( 0, 5 ) == 3 ) {
+act_tochar( #shower, ch );
+continue;
+}
+else continue;
+~
+E
+shower~
+@yDust showers you from above as you progress along the tunnel.@n
+~
+!
+3 0 4
+1814 9 1509949540 3 0
+-1
+S
+
+#34255
+Small Hole at Tunnel's End~
+Small chunks of cold, frozen soil dot this room.  Great roots from some
+enormous tree growing above have blocked off any passage to the west.  A
+small trail of slime, nevertheless, courses from the east to the west,
+burrowing through the thick roots and into a medium-sized hole that would
+be too small for a gnome to enter but large enough for some mid-sized
+animal.
+~
+[Guinafaer] Reviewed.
+~
+167378948 11 5 0
+D1
+~
+~
+0 -1 34253 10 10 5
+E
+hole 1 west medium-sized~
+This hole looks just big-enough for a medium-sized gopher, but the odd
+trail of slime near the hole waylays any thought of mammalia within.
+~
+E
+trail dirt 1 down odd-looking marks slime~
+These strange marks are the tracks of some slithering creature, but of
+what creature that is uncertain.
+~
+E
+soil frozed pieces~
+Small chunks of frozen earth have cracked apart into fragments, a
+crumbling remnant of something's violent passage through the area.
+~
+E
+roots~
+Small roots branch down rigidly from the packed soil overhead.  There
+appears to be no end of them, as they continue to scrape and poke you as
+you move.
+~
+A
+enter crawl~
+hole~
+if( size( ch ) < 5 ) {
+  act_tochar( #sq, ch );
+  act_notchar( #rsq, ch );
+  transfer( ch, find_room( 34265 ) );
+  act_notchar( #pop, ch );
+  }
+else
+  act_tochar( #no, ch );
+~
+E
+no~
+@yYou are too large to fit into the hole.@n
+~
+E
+sq~
+@yYou squeeze through a small hole in the western wall.@n
+~
+E
+rsq~
+@y$n squeezes through a small hole in the western wall.@n
+~
+E
+pop~
+@y$n pops in from a hole in the western wall.@n
+~
+!
+0 0 0
+1814 9 1509949540 3 0
+-1
+S
+
+#34256
+In a Dirt Tunnel~
+Thick, heavy air hangs like a shroud in the dirt tunnel.  It is harder to
+avoid the plethora of roots that sprout downwards in every direction,
+their dirt-riddled branches sprinkling soil from the ceiling downward to
+the ground below.  An eerie-looking trail of slime slowly bends from the
+east to travel north, its surface shimmering on the dirt floor.
+~
+no.mob
+[Guinafaer] Reviewed.
+~
+167378956 11 5 0
+D0
+~
+~
+0 -1 34254 10 10 5
+D1
+~
+~
+0 -1 34257 10 10 5
+E
+slime trail 1 down~
+This trail of slime is above a foot wide and only thinly dispersed upon
+the ground.  A faint, bluish-green hue, it provides a splash of color to
+the cold cavern.  A faint, sulfurous smell seems to emanate from it, and
+as you examine further you are forced to plug your nose.
+~
+E
+dirt-riddled roots~
+They reach down out of the ceiling like lost souls trying to grasp onto
+something in vain.
+~
+1814 9 1509949540 3 0
+-1
+S
+
+#34257
+Intersection in the Dirt Tunnel~
+The ceiling is higher here, rising to a height of about twelve feet.  In
+the center is a chandelier of roots which sprinkles not light but dirt
+upon the cold, rock-hard soil.  The ground here is covered in a thin
+slime, whose slippery qualities make it hard to keep your balance.
+~
+[Guinafaer] reviewed.
+~
+167378948 11 6 0
+D0
+~
+~
+0 -1 34258 10 10 5
+D1
+~
+~
+0 -1 34260 10 10 5
+D2
+~
+~
+0 -1 34259 10 10 5
+D3
+~
+~
+0 -1 34256 10 10 5
+E
+slime trail 1 down~
+This thin layer of slime is a greenish-blue hue, and seems to all but
+cover the solid dirt floor.  The mucus substance is quite slippery. 
+Small slithering trails lead in all directions, and you think the slime
+is probably caused by some worm-like creature.
+~
+E
+root chandelier~
+These roots fork downward from a large tree above you, their rigid wood
+decorating the ceiling like an upside down tree.
+~
+A
+~
+~
+if( random( 0, 7 ) == 2 ) {
+  if( find_stat( ch, dex ) < 18 ) {
+    act_tochar( #slip, ch );
+    act_notchar( #rslip, ch );
+    position( ch, 6 );
+    end;
+  }
+  else act_tochar( #it, ch );
+    continue;
+}
+else continue;
+~
+E
+slip~
+@gYou slip on the slime below and land on your rump with a solid@n
+@rTHUMP@n!
+~
+E
+it~
+@gYou carefully step over the slime and continue onward@n.
+~
+E
+rslip~
+@g$n slips on the slime and lands on $s rump@n.
+~
+!
+3 0 15
+-1
+S
+
+#34258
+In a Dirt Tunnel - Dead End~
+Hard, packed dirt and heavy roots to the north make passage impossible. 
+A few holes have been riddled in the north wall, however, near the
+ground, just large enough for some mid-sized animal.  A curious trail of
+slime covers the entrance to each; perhaps the holes were caused by some
+wormlike creatures, although they would have to be fairly large.
+~
+[Guinafaer] Done.
+~
+167378948 11 5 0
+D2
+~
+~
+0 -1 34257 10 10 5
+E
+holes~
+The strange holes have a thick layer of slime on them, but whatever has
+made them is not in sight.
+~
+E
+slime trail 1 down~
+This thin layer of slime is both sticky and slippery.  A good amount of
+it is near the holes in the wall to your north.
+~
+E
+roots 1 north~
+The roots here form an impenetrable barrier to the north.  There are
+several holes in the walls near the ground, where the tough roots have
+not yet grown.
+~
+A
+search~
+holes~
+act_tochar( #search, ch );
+act_notchar( #rsearch, ch );
+~
+E
+search~
+@GYou search the holes, but come away with only a handful of the smelly,
+mucusy slime.@n
+~
+E
+rsearch~
+@g$n searches the holes, but comes away with only a handful of the
+smelly, sticky slime.@n
+~
+!
+0 0 0
+A
+enter~
+hole~
+if( !is_player( ch ) )
+  act_tochar( #cant, ch );
+else
+  act_tochar( #no, ch );
+~
+E
+no~
+You are too large to fit in any of the small holes.
+~
+E
+cant~
+You enter a hole, but it begins to slope upwards, and you lose your grip
+on the slime and slide back down.
+~
+!
+0 0 0
+1814 9 1509949540 3 0
+2110 9 1509949540 3 0
+-1
+S
+
+#34259
+In a Dirt Tunnel - Bend in the Tunnel~
+The tightly packed, frozen dirt has made the air here extremely cold and
+musty.  A ragged trail of humanoid bones and rags litter the room here,
+and they form an obvious trail which heads eastward.  A thin layer of
+slime covers the now decaying fossils, a smelly and slippery residue of a
+greenish@n color.  The confining dirt tunnel continues east and north.
+~
+[Guinafaer] Done.
+~
+167378948 11 5 0
+D0
+~
+~
+0 -1 34257 10 10 5
+D1
+~
+~
+0 -1 34264 10 10 5
+E
+slime residue~
+It has covered the bones entirely, and it is nearly impossible to pick up
+a bone for its slipperiness.  The rags are coated in the substance, and
+you notice an insignia of a lion embroidered on one of the rags.
+~
+E
+bones rags~
+They litter the ground here, and are covered in a thick layer of slime. 
+One of the rags, saturated in the green substance, shows an insignia of a
+lion.  It was probably the clothing of some unfortunate nobleman.
+~
+A
+search~
+bones~
+act_tochar( #nothing, ch );
+act_notchar( #rnothing, ch );
+~
+E
+nothing~
+@cYou search through the thin trail of bones, but come up empty-handed@n.
+~
+E
+rnothing~
+@c$n searches through the thin trail of bones, but finds nothing.@n
+~
+!
+0 0 0
+1814 9 1509949540 3 0
+-1
+S
+
+#34260
+Along a Dirt Tunnel - Near a Hole-Riddled Wall~
+Roots protrude from the ceiling and walls rake through your clothes,
+sprinkling cold soil into uncomfortable places.  The rigid, fork-like
+branches stab at your head and side from their fortified positions around
+you.  A trail of slime, apparently caused by some slithering animal,
+bends off to the north and west.  A few diminutive holes have been
+drilled into the eastern wall here, probably by the same creatures which
+have created the slimy trail.
+~
+[Guinafaer] Done.
+~
+167378948 11 5 0
+D0
+~
+~
+0 -1 34261 10 10 5
+D3
+~
+~
+0 -1 34257 10 10 5
+E
+holes~
+These slime-covered holes are probably the living quarters of whatever
+creatures make the slithering S-shaped trails on the ground here.  Green
+fumes randomly emanate from them.
+~
+E
+trail slime slimy 1 down~
+These slime-covered trails are in abundance here, making it a little
+difficult to walk, as they are slippery but sticky as well.
+~
+E
+roots ceiling branches forklike~
+Bristling on the ceiling and walls of this tunnel, these cold, hard roots
+scrape against you and make travel difficult.
+~
+A
+enter~
+hole~
+act_tochar( #no, ch );
+~
+E
+no~
+@yApproaching the hole, you are repelled by the noxious fumes emanating from them.
+The hole itself is much too small for you to enter, in any case.@n
+~
+!
+0 0 0
+A
+search~
+holes wall~
+act_tochar( #no, ch );
+~
+E
+no~
+You thoroughly search for something in the holes in the wall, but you
+come up emptyhanded, with only a handful of green slime.
+~
+!
+0 0 0
+A
+~
+~
+send_to_room( #wretch, room );
+~
+E
+wretch~
+@GGreen fumes emanate from the holes in the side of the wall, releasing a
+potent smell into the air.
+~
+!
+2 200 0
+304 17 1509949455 -2 0
+2110 9 1509949540 3 0
+-1
+S
+
+#34261
+Along a Dirt Tunnel~
+Only a few rare roots pop out of the ceiling here, but the room is tiny
+and cramped and the air is musty.  A few brown chunks of earth lay on the
+ground, silently awaiting a slow, tedious erosion.  A thin layer of
+mucus covers the ground, glowing a faint, greenish-blue hue.  Odd-looking
+pools of slime trail on the ground, the tracks of some snake or worm.
+~
+[Guinafaer] add search for ore?
+[Guinafaer] done.
+~
+167378948 11 5 0
+D1
+~
+~
+0 -1 34262 10 10 5
+D2
+~
+~
+0 -1 34260 10 10 5
+E
+trail mucus slimy slime 1 down pool odd looking~
+This slimy mucus coats the ground in strange S-shaped trails which head
+east and south.  The slime gives off a foul smell.
+~
+E
+roots ceiling~
+Only a few roots pop out of the ceiling here, and there are several
+places where the ceiling is bare.
+~
+-1
+S
+
+#34262
+Along a Dirt Tunnel - Bend in the Tunnel~
+The frozen dirt overhead is barren except for a few sparse roots that
+carpet the walls and ceiling with their bristling fingers.  A few cold
+chunks of soil lie on the ground here.  There are several slimy trails
+traveling north and west, their sheen greenish color shimmering despite
+the lack of light.  There seems to be strange sounds coming from the
+north, but their source is muffled by the soily surroundings.
+~
+[Guinafaer] done.
+~
+167378948 11 5 0
+D0
+~
+~
+0 -1 34263 10 10 5
+D3
+~
+~
+0 -1 34261 10 10 5
+E
+trail slimy slime 1 down~
+Gleaming bluish-green trails lie in abundance here, nearly covering the
+entire ground.  Several of these trails head to the north, while a few
+others lead west.
+~
+E
+roots ceiling walls~
+Only a few roots dot the ceiling and walls here.  They are tough and
+cold, with scraping branches that touch you like bony fingers.
+~
+E
+chunks soil ground~
+Several chunks of dirt lie on the ground here, collecting whatever it is
+chunks of dirt collect.
+~
+A
+listen~
+~
+act_tochar( #noise, ch );
+~
+E
+noise~
+There seem to be strange screeching sounds to the north, but you cannot
+be sure without closer inspection.
+~
+!
+0 0 0
+A
+listen~
+sounds noises north~
+acode( room, 1 );
+~
+!
+0 0 0
+2110 9 1509949540 3 0
+-1
+S
+
+#34263
+In a Small Chamber of Holes~
+This small chamber is riddled with numerous holes which lay near the
+ground.  A thick covering of mucus has covered every inch of the dirt
+floor, making it very slippery and sticky.  The air is hotter here,
+although the cold dirt walls still enclose the chamber, and a few roots
+litter the dirt ceiling.  The only exit lies to the south.
+~
+[Guinafaer] Done.
+~
+167378948 11 5 0
+D2
+~
+~
+0 -1 34262 10 10 5
+E
+holes~
+These holes are covered in thick layers of green slime, and they glimmer
+as you approach them with your light.  A slimy substance seems to suggest
+some sort of worm-like creatures who lived or live here.
+~
+E
+mucus thick covering~
+Colored a bright green, the slimy mucus shimmers as it coats nearly every
+inch of this room.
+~
+E
+roots ceiling~
+These knobby roots stick our sparsely from the ceiling above, their cold,
+hard fingers reaching for the ground.
+~
+A
+climb enter~
+hole~
+act_tochar( #no, ch );
+~
+E
+no~
+@yThe holes are too small for you to fit, and slippery slime covers each,
+making entrance impossible.@n
+~
+!
+0 0 0
+A
+search~
+holes~
+act_tochar( #search, ch );
+~
+E
+search~
+@GYou search around in the holes, but only come away with a thin layer of
+slime.@n 
+~
+!
+0 0 0
+2110 393 1509949540 3 0
+2110 9 1509949540 3 0
+1310 17 1509949540 -2 0
+-1
+S
+
+#34264
+Along a Dirt Tunnel - Pile of Bones~
+A large pile of bones lies in the middle of this small dirt room.  Many
+of them have decayed or are decaying, while some are fresh and still
+tinted a @Rred@n color.  Several of them are animal bones, but there are a
+few pieces of ragged cloth and even the shattered remains of a shield
+lying among the stash as well.  Several skulls lie among the bones, some
+of them crushed in half by whatever creature attacked them.  A thin layer
+of slime covers the pile.  Slithery trails lead off in three different
+directions, while a web of roots block passage to the north.
+~
+[Guinafaer] Done.
+~
+167378948 11 5 0
+D1
+~
+~
+0 -1 34266 10 10 5
+D2
+~
+~
+0 -1 34267 10 10 5
+D3
+~
+~
+0 -1 34259 10 10 5
+E
+trail~
+The scattered remnants of bones trail off to the east, west, and to the
+south.  Many of the bones are covered in a slimy substance.  A few rags
+lie scattered among the bones, also covered in the slippery, oozing green
+slime.
+~
+E
+shield~
+The rusting metal shield seems to have been bitten in half.  It is
+covered in a thick layer of slippery slime, and is unusable.
+~
+E
+roots web~
+They stick out of the ceiling and the dirt walls to your north, making
+passage in that direction impossible.
+~
+E
+skulls~
+Several skulls lie on the pile here.  Many of them are crushed into
+pieces, but are recognizable.  Many of the skulls are animal, their horns
+still intact on the corpse.  Others are humanoid in nature, ranging in
+size from gnome to troll.
+~
+A
+get~
+shield~
+act_tochar( #cannot, ch );
+~
+E
+cannot~
+@yYou try to pick up the shield, but it slips out of your hands.  It
+appears to be rusted beyond the point of usefulness anyway.@n 
+~
+!
+0 0 0
+A
+search~
+pile bones~
+if( !rflag( reset0, room ) )
+  act_tochar( "You search around but don't find anything.", ch );
+else {
+  remove_rflag( reset0, room );
+  act_tochar( "You search the pile of bones.", ch );
+  act_notchar( "$n searches the pile of bones.", ch );
+  if( random( 0, 110 ) == 12 ) {
+    act_tochar( "You find a silver chain in the pile!", ch );
+    act_notchar( "$n finds a silver chain in the pile of bones!", ch );
+    obj_to_char( oload( 1096 ), ch );
+    }
+  else
+    act_tochar( "You search around but don't find anything.", ch );
+  }
+~
+!
+0 0 0
+1814 9 1509949540 3 0
+1814 9 1509949540 3 0
+-1
+S
+
+#34265
+Egg Hatchery~
+This tiny room is full of strange-looking eggs in various sizes and
+colors.  The eggs are covered with a green slime, but they have a rough,
+leathery feel to them, like a snake's eggs.  There is a modest hole in
+the eastern wall, covered with a thick mucus-like substance.
+~
+[Guinafaer] Done.
+~
+167378948 11 9 0
+E
+eggs~
+Strange eggs lie about the room in abundance.  They are in various sizes
+and colors.  Most of the eggs are colored a dark-blue or violet hue and
+marked with iridescent speckles of light green.  They all seem to be
+stuck together by a thick coating of green slime.  An egg over in one
+corner of the room seems to be a little loose.
+~
+E
+thin layer mucus slime substance~
+The slimy substance thoroughly coats the eggs in the room, holding them
+all together.  A thin ribbon of slime also leads eastward, where a small
+hole has been hollowed in the wall.
+~
+E
+1 east hole~
+Covered in a thin layer of slime, this small hole in the east wall is the
+only exit from this room.  It looks too large for a gnome, but is
+probably large enough for a small animal.
+~
+E
+loose corner~
+One egg over in the southwest corner of the room appears to be loose.  It
+is not too large, perhaps you can grab it.
+~
+A
+enter crawl~
+hole~
+if( size( ch ) < 5 ) {
+  act_tochar( #sq, ch );
+  act_notchar( #rsq, ch );
+  transfer( ch, find_room( 34255 ) );
+  act_notchar( #pop, ch );
+  }
+else
+  act_tochar( #no, ch );
+~
+E
+sq~
+@yYou squeeze through the hole in the eastern wall.@n
+~
+E
+rsq~
+@y$n squeezes through the small hole in the eastern wall.@n
+~
+E
+no~
+@yYou are too large to fit into the hole.@n
+~
+E
+pop~
+@y$n pops in from a small hole in the eastern wall.@n
+~
+!
+0 0 0
+A
+get take grab~
+loose egg~
+if( !rflag( reset0, room ) )
+  act_tochar( #pry, ch );
+else {
+  remove_rflag( reset0, room );
+  act_tochar( "You attempt to pry loose one of the eggs.", ch );
+  act_notchar( "$n attempts to pry loose one of the eggs.", ch );
+  if( random( 0, 22 ) == 7 ) {
+    obj_to_char( oload( 3071 ), ch );
+    act_tochar( "You pull out a strange, purple egg!", ch );
+    act_tochar( "$n pulls out a strange, purple egg!", ch );
+    }
+  else
+    act_tochar( #2pry, ch );
+  }
+~
+E
+pry~
+@cYou attempt to pry one of the looser eggs free, but it is too tightly
+wedged between the others.@n
+~
+E
+2pry~
+@cAfter several minutes, you realize that the egg is too firmly wedged to
+be pulled out without seriously damaging its shell.@n 
+~
+!
+0 0 0
+A
+break~
+egg~
+act_tochar( #break, ch );
+act_notchar( #rbreak, ch );
+remove_rflag( reset0, room );
+~
+E
+break~
+@cYou spot a loose egg in the corner and crush it underfoot.  It releases
+a volatile, green gas into the air and a bright yellow slime slowly flows
+out from it.@n
+~
+E
+rbreak~
+@c$n crushes one of the eggs in the corner.  The egg releases a volatile,
+green gas into the air and a bright yellow slime slowly flows out from it.@n
+~
+!
+0 0 0
+3071 17 1509949445 -2 0
+2198 9 1509949540 3 0
+2198 9 1509949540 3 0
+-1
+S
+
+#34266
+A Widening Dirt Tunnel~
+The dirt tunnel widens to the east.  Larger rocks and small boulders
+litter the room.  Several holes line the western end of the tunnel to the
+north and south, and many are covered in a mucus-like layer of slime. 
+The material of the walls seems to be slowly changing to rock as the
+tunnel progresses east, and rumbling echoes resound from that direction.
+~
+[Guinafaer] Done.
+~
+167378948 11 5 0
+D1
+~
+~
+0 -1 34268 10 10 5
+D3
+~
+~
+0 -1 34264 10 10 5
+E
+holes slime mucus-like layer~
+Small holes line the northwest and southwest walls.  They are covered
+with a thin slimy substance which is extremely slippery.  Several of them
+have already caved in, while others are fresh and leave a powerful odor. 
+There looks to be a small object glimmering in a hole on the south wall.
+~
+E
+rocks boulders~
+These rocks and boulders grow in number to the east, where the dirt walls
+slowly meld into a dark, bluish rock.
+~
+E
+walls changing 1 east~
+The walls to the east slowly fade from brown dirt to a bluish-hued rock.
+~
+A
+listen~
+~
+act_tochar( #hear, ch );
+~
+E
+hear~
+You hear faint echoes to the east, and a few scratching and growling
+sounds to the west.
+~
+!
+0 0 0
+A
+search~
+hole south~
+if( !rflag( reset0, room ) )
+  act_tochar( "You don't find anything but a layer of slime.", ch );
+else {
+  remove_rflag( reset0, room );
+  act_tochar( "You feel around in the slimy hole.", ch );
+  act_notchar( "$n feels around in the slimy hole.", ch );
+  if( random( 0, 23 ) == 7 ) {
+    act_tochar( "You find a slime-covered gem!", ch );
+    act_notchar( "$n brings a slimy gem out of the hole!", ch );
+    if( random( 0, 2 ) == 1 )
+      obj_to_char( oload( 998 ), ch );
+    else
+      obj_to_char( oload( 983 ), ch );
+    }
+  else
+    act_tochar( "You don't find anything but a layer of slime.", ch );
+  }
+~
+!
+0 0 0
+A
+listen~
+quiet echoes e east sounds~
+acode( room, 1 );
+~
+!
+0 0 0
+2110 9 1509949540 3 0
+-1
+S
+
+#34267
+Room of Holes~
+The entire room is covered in a thick, slimy green substance that smells
+horrible and makes it hard to remain standing.  Great holes have been
+bored into every inch of the room here, and they are tinted a brown-green
+from the slime.  To the north, a smaller dirt tunnel points to a pile of
+bones.  A particularly large hole lies on the west wall, and you think
+you can hear a low growling from within.
+~
+[Guinafaer] done
+~
+167378948 11 5 0
+D0
+~
+~
+0 -1 34264 10 10 5
+D3
+~
+~
+0 -1 34270 10 10 5
+E
+holes~
+Most of the holes are about six inches to two feet in diameter, and all
+are covered in a thick layer of slime which smells like rotten eggs.  A
+particularly large hole lies on the west wall, and as you inspect
+further, you notice the slime there is a more yellow color.
+~
+E
+trail bones~
+A trail of bones leads northward into darkness.  At least one of them is
+a deer skull, and another set of bones appears to be the skull and rib
+cage of an unfortunate gnome.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+You crawl through the @yyellow@g-green@n slime and continue on your way.
+~
+!
+3 0 8
+A
+search~
+holes~
+if( !rflag( reset0, room ) )
+  act_tochar( "You don't find anything in the holes but a layer of slime.", ch );
+else {
+  remove_rflag( reset0, room );
+  act_tochar( "You feel around in several of the slimy holes.", ch );
+  act_notchar( "$n feels around in several of the slime-covered holes.", ch );
+  if( random( 0, 80 ) == 7 ) {
+    act_tochar( "You pull an orc skull from one of the holes!", ch );
+    act_notchar( "$n pulls an orc skull out of one of the holes.", ch );
+    obj_to_char( oload( 3069 ), ch );
+    }
+  else
+ act_tochar( "You come away with nothing but a handful of green slime.", ch );
+  }
+~
+!
+9 0 0
+A
+listen~
+1 west~
+act_tochar( #whatever, ch );
+~
+E
+whatever~
+You hear a trickling, bubbling noise from the west, and a faint noise
+like the growling of a dog.
+~
+!
+0 0 0
+2110 9 1509949540 3 0
+-1
+S
+
+#34268
+Entrance to a Large Underground Cavern~
+Several shelves of smooth rock act as a great spiralling pathway eastward
+into a dark opening into the earth.  The rock is a dark navy color, and the
+air here is cool and damp.  Small trickles of water can be heard through
+the rock, probably from underground streams.  There appear to be smear
+marks on the far wall.
+~
+[Guinafaer] done.
+~
+167378956 11 8 0
+D1
+~
+~
+0 -1 34269 10 10 5
+D3
+~
+~
+0 -1 34266 10 10 5
+E
+smear marks wall~
+They appear to have been written in @Rblood@n. They read:
+
+
+@I@I@I@I@I@RBEWARE THE
+@I@I@I@I@I@RONE-EYED!@n
+
+
+There are some smaller marks below but they are impossible to read, and
+the marks are old with age.
+~
+E
+spiral stairway shelves~
+The shelves overlap each other in one foot intervals as they circle
+around each other and continue eastward.  It is a wonder such a natural
+formation exists.
+~
+E
+navy dark rock~
+The rock is a cool, attractive color, and it shades the cavern in a
+comforting blue hue.
+~
+A
+~
+~
+act_tochar( #slow, ch );
+act_notchar( #rslow, ch );
+continue;
+~
+E
+slow~
+You slowly climb along the spiral rock formation.
+~
+E
+rslow~
+$n slowly climbs along the spiral rock formation.
+~
+!
+3 0 2
+A
+listen~
+water~
+act_tochar( #ch, ch );
+~
+E
+ch~
+It sounds like water, trickling...
+~
+!
+0 0 0
+-1
+S
+
+#34269
+In a Large Underground Cavern - Before a Large Archway~
+This enormous cavern has slowly eroded over time, and the bluish rock
+here is polished and smooth.  Great shelves of stone form a natural
+stairway that leads upwards in a spiral fashion.  A massive archway can
+be seen to the south, made of blue-hued granite and smooth like the
+surrounding rocks.  A small pool of water has formed in the bowl-shaped
+center of the cavern here, but it is covered with a thin layer of dark
+green slime, and the ground near it is slippery.  A foul stench emanates
+from the area surrounding the pool, and small ripples in the surface have
+been made by small quakes in the earth.
+~
+[Guinafaer] done
+~
+167378948 11 9 0
+D3
+~
+~
+0 -1 34268 10 10 5
+E
+archway~
+This massive stone archway looks natural, but something about it looks
+almost too perfect.  The rock itself is extremely smooth, almost
+slippery, and the blue rock itself seems to glow slightly.  Small marks
+seem to have been carved in one side of it, but the stone resisted and if
+it was writing, it is illegible.  As you take a closer look through the
+archway, you notice that the air seems to waver and liquify like a pebble
+being thrown into a calm pool.  Apparently the archway is a portal of
+some kind.
+~
+E
+portal 1 south~
+The only thing noticeable about this portal is that the air about it
+shimmers and wavers like water.  Perhaps you should try and touch it.
+~
+E
+spiral stairway shelves 1 up~
+The shelves overlap each other in one foot intervals as they circle
+around each other and continue westward.  It is a wonder that such a
+natural formation exists.
+~
+E
+bluish rock~
+The bluish rock is quite polished and smooth, and immerses the room in a
+cool blue light.
+~
+E
+pool~
+Covered by a thin layer of slime, the area surrounding the pool is a dark
+greenish-blue color, giving the ground around it the look of seaweed.
+~
+E
+slime ground~
+The slime here seems to be mostly formed around the brackish pool of
+water.
+~
+A
+touch~
+portal~
+act_tochar( #touch, ch );
+act_notchar( #rtouch, ch );
+~
+E
+touch~
+@cAs you reach out your finger just past the arch, the portal melds into
+a cool blue color and goes clear again as you remove your finger.@n 
+~
+E
+rtouch~
+As $n reaches out $s finger just past the arch, the portal melds into a
+cool blue color and goes clear again as $e removes $s finger.@n 
+~
+!
+0 0 0
+A
+1 south~
+~
+act_tochar( #enter, ch );
+i = 4d6+20;
+dam_message( ch, i, "being thrown back by the portal's blast" );
+inflict( ch, mob, i, "being blasted backwards by a portal" );
+~
+E
+enter~
+@eAs you try to enter the portal, you feel a tingling sensation and you are
+thrown backwards with a sudden flash of light!
+~
+!
+0 0 4
+1662 17 1509949540 -2 0
+2133 137 1509949540 3 0
+-1
+S
+
+#34270
+Before a Yellow Pool~
+A small @Yyellow pool@n lies in the center of this room.  Several holes have
+been riddled in the walls around you, but only one on the eastern wall
+looks large enough to enter.  The pool itself lets off foul vapors of
+sulfurous gas.  Around the pool is a thick layer of green slime, and
+several trails lead into the pool itself.
+~
+[Guinafaer] Done
+~
+167378948 11 5 0
+D1
+~
+~
+0 -1 34267 10 10 7
+E
+pool yellow~
+This bright yellow pool bubbles up from a hole in the ground.  It is
+about three meters in diameter, and small pockets of a foul gas rise up
+from it.  Several trails of green slime lead from and into it, and as you
+examine the edge, you notice a wet skin hanging into the pool.
+~
+E
+skin wet~
+It appears to be the shedded skin of some animal, although you have no
+idea what kind from the looks of it.  It seems to be banded a light red
+and yellow, and is larger than a snakeskin.
+~
+E
+holes~
+These small holes are anywhere from six inches to two feet long, and they
+are covered in a thin layer of greenish-yellow slime.  They have been
+built into the walls, even as high as six feet above the ground, and they
+seem to watch over the pool like eyes.  One hole on the eastern wall is
+three feet in length and is easily big enough to enter.
+~
+E
+layer slime green trails~
+Slimy trails cover the floor of this room.  Several of them seem to run
+into the yellow pool in the center of this room.
+~
+A
+get~
+skin wet~
+act_tochar( #no, ch );
+damage( mob, ch, 3d8+10, acid, "the acidic yellow substance" );
+~
+E
+no~
+As you touch the skin, the yellow substance coated on it burns you and
+you pull away.
+~
+!
+0 0 0
+A
+jump~
+pool~
+act_tochar( #bad, ch );
+~
+E
+bad~
+The pool seems to be boiling and the substance in the pool appears to be
+acidic.  That's not such a good idea.
+~
+!
+0 0 0
+A
+drink~
+pool~
+act_tochar( #drink, ch );
+~
+E
+drink~
+As you reach down to drink, you notice the pool is a filthy yellow color
+and is bubbling, and you step away.
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+You crawl through the @yyellow@g-green@n slime and continue on your way.
+~
+!
+3 0 2
+2110 137 1509949540 3 0
+2110 9 1509949540 3 0
+2110 9 1509949540 3 0
+-1
+S
+
+#0
+

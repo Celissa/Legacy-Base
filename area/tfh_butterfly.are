@@ -1,0 +1,2158 @@
+#M2_AREA
+2
+
+Butterfly Garden~
+Ciani~
+Butterfly Garden~
+~
+~
+
+5 0
+0
+1
+#ROOMS
+
+#4400
+In A Grassy Clearing~
+The trees give way to a lush, grassy meadow.  The short-cropped grass
+grows green and verdant, almost brilliant in its pure hue.  A small
+thatch hut has been built to the north, and just beyond it is a maze of
+neatly-grown hedges.  Another small building lies just to the east, and
+the smell of freshly baked goods drifts in on the soft breeze.  The scent
+of newly-opened wildflowers mingles with the smell of food, creating a
+subtle and varied perfume.
+~
+[Eliza] Done
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 4401 10 10 5
+D1
+~
+~
+0 -1 4402 10 10 5
+D2
+~
+~
+0 -1 13272 10 10 5
+E
+hut~
+Solidly constructed of new wattle, this hut looks as though it is
+designed to shelter one from both the sun and rain.  A tightly woven roof
+of thatch covers the top of the hut, and has been bleached out by the sun. 
+A few straws poke out from the roof at odd angles, as though pulled free
+by birds seeking material for a nest.
+~
+E
+building~
+Built of new wattle, this small building looks as though it was
+constructed by an expert craftsman.  A solid thatch roof covers the top
+of the building, tightly woven to keep the elements out.  Less than an
+enclosed hut, the building seems to merely provide separation for a small
+area, as there is no door at all on either the east or west walls; one
+can see straight through.
+~
+E
+wildflowers~
+Poking up from the lush grass are dozens of tiny wildflowers in all the
+colours of the rainbow.  Their petals are moist with the leftover touch
+of dew.  They grow along the hillside without rhyme or reason, creating
+patterns out of their own randomness.
+~
+E
+hedge maze~
+This large stand of thick hedge is extremely neatly manicured.  Each
+individual plant has been grown to exact specifications, with only one
+purpose: to serve as a wall.
+~
+A
+~
+~
+send_to_room( #birdsong, room );
+~
+E
+birdsong~
+@CThe soft sounds of birdsong drift in from the nearby trees.@n
+~
+!
+2 75 0
+A
+get take pick grab~
+wildflowers flower~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 7402 ), ch );
+  end;
+  }
+act_tochar( #none, ch );
+~
+E
+pick~
+You pick one of the tall red flowers.
+~
+E
+pick2~
+$n picks one of the tall red flowers.
+~
+E
+none~
+There are no grown flowers left to pick.
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CYou wade across the shallow river to the south.@n
+~
+E
+not_char~
+@C$n wades across the shallow river to the south.@n
+~
+!
+3 0 4
+344 17 1509949540 -2 0
+-1
+S
+
+#4401
+Before The Hedge Maze~
+Rising up to the north is the entrance to the hedge maze; the bordering
+hedges have been carefully pruned to create an appealing wide entranceway. 
+Bright orange and red flowers bloom from vines that have grown in and
+around the hedge, lending a splash of colour to the lush, rich green of
+the hedges.  A tiny, one-person hut has been built as a shelter from the
+elements for whomever is selling admission.  The faint trills of birdsong
+echo throughout the area.
+~
+[Ciani] should be 1-2 butterfly wings loading in each room
+[Ciani] should all be from between 3-8%
+[Eliza] Done.
+~
+167247882 2 5 0
+D0
+~
+~
+0 -1 4410 10 10 5
+D2
+~
+~
+0 -1 4400 10 10 5
+E
+hedge red flowers vines~
+Carefully shaped and manicured, the edges and faces of the hedge are
+perfectly straight and orderly.  Thick, dark green leaves sprout from the
+wiry branches of the hedge, around which the slick, twisting stem of a
+vine has grown.  Bright flowers of red and orange bloom from the vine,
+their elongated trumpet shapes still glistening from the morning's dew.
+~
+E
+hut~
+Tightly woven of new wattle, this hut stands more to protect one from the
+sun than anything else.  A thatch roof covers the top, its straws neatly
+arranged and lined up.  The lush grass is somewhat matted inside the hut,
+as though someone spends long periods of time sitting there.
+~
+A
+list~
+~
+act_tochar( #list, ch );
+~
+E
+list~
+Item                                     Cost    Level   Number   Condition
+----                                     ----    -----   ------   ---------
+Admission ticket                           10      1       500    @bexcellent@n
+~
+!
+0 0 0
+A
+~
+~
+if( find_stat( ch, level ) > 90 )
+  continue;
+if( !is_player( ch ) )
+  continue;
+else {
+  mob = mob_in_room( 5170, room );
+  if( mob_in_room( 5170, room ) ) {
+    tell( mob, ch, #heh );
+    end;
+    }
+  end;
+  }
+continue;
+~
+E
+heh~
+You must give me an admission ticket before you can enter.
+~
+!
+3 0 1
+A
+2 buy~
+admission ticket~
+mob = mob_in_room( 5170, room );
+if( !mob )
+  end;
+obj = has_obj( 14, ch );
+if( !obj ) {
+  act_tochar( #silver, ch, obj, mob, sight );
+  end;
+}
+mpcode( mob, 4 );
+~
+E
+silver~
+$N says, "I only accept silver coins."
+~
+!
+0 0 0
+5170 9 1509949540 3 0
+7634 17 1509949540 -2 0
+-1
+S
+
+#4402
+Inside A Wattle Building~
+The breeze blows straight through this well-constructed wattle-walled
+building, as there are no walls to the east and west.  A smooth-planked
+counter sections off the area along the south wall, and displayed upon
+the counter are baked treats of all kinds.  The bright grass underfoot
+has been trampled and flattened by countless passing feet.  Hanging from
+the thin rafters overhead are several sets of pale metal windchimes,
+stirring softly in the breeze.
+~
+[Ciani] Wife here
+[Eliza] Done.
+~
+200806407 0 5 0
+D1
+~
+~
+0 -1 4403 10 10 5
+D3
+~
+~
+0 -1 4400 10 10 5
+E
+windchimes~
+Finger-thin tubes of some pale metal have been suspended from smooth
+wooden discs, which in turn hang from the ceiling at random intervals
+throughout the hut.  They tinkle and click softly as the breeze stirs
+them, creating a muted sort of melody.
+~
+E
+counter baked treats~
+Built from smooth planks of a warm-toned wood, this counter extends the
+entire length of the wattle building.  Several small silver trays have
+been set out atop it, and they are full of delicious-looking and
+wonderful-smelling baked goods.
+~
+A
+~
+~
+send_to_room( #chime, room );
+~
+E
+chime~
+The windchimes tinkle softly in the breeze.
+~
+!
+2 75 0
+A
+push blow touch ring~
+windchimes~
+act_tochar( #touch, ch );
+act_notchar( #ntouch, ch );
+~
+E
+touch~
+You reach up to touch the windchimes, bumping the near tube into the rest
+of them.  A semi-melodious song results.
+~
+E
+ntouch~
+$n reaches up to touch the windchimes, bumping the near tube into the
+rest of them.  A semi-melodious song results.
+~
+!
+0 0 0
+5167 9 1509949540 3 0
+7474 17 1509949540 -1 0
+7475 17 1509949540 -1 0
+7472 17 1509949540 -1 11
+7466 17 100 -1 28
+7550 17 1509949540 -1 12
+3350 17 1509949540 -1 0
+3348 17 1509949540 -1 0
+3349 17 1509949540 -1 0
+3351 17 1509949540 -1 0
+3352 17 1509949540 -1 0
+3353 17 1509949540 -1 0
+3354 17 1509949540 -1 0
+-1
+S
+
+#4403
+A Grassy Meadow~
+A large meadow spreads beneath a lush carpet of thick grass.  The slender
+blades ripple slightly as the breeze brushes by above them, the nearby
+trees rustling in a natural harmony.  A massive rock lies deeply embedded
+in the ground just to the north, scarred and weathered by the passing of
+time.  The field continues to the south and east; the smell of
+freshly-baked goods drifts in from the west.
+~
+[Eliza] Done.
+~
+167247872 2 9 0
+D1
+~
+~
+0 -1 4406 10 10 5
+D2
+~
+~
+0 -1 4404 10 10 5
+D3
+~
+~
+0 -1 4402 10 10 5
+E
+massive rock~
+This enormous chunk of rock lies deeply embedded in the ground, seemingly
+out of place with the carefully sculpted scenery all around.  Its dark
+grey surface has been worn smooth by countless years -- perhaps centuries
+or even eons -- of weathering, yet several deep scratches and gouges mar
+its surface.  Pale spots of white also spot the surface; relics of birds
+long flown by.
+~
+A
+~
+~
+send_to_room( #splat, room );
+~
+E
+splat~
+A large drop of white falls from the sky to land with a *splat* on the
+boulder to the north.
+~
+!
+2 45 0
+-1
+S
+
+#4404
+A Grassy Meadow~
+A dense forest of slender trees grows up to the west and south, curving
+to create a circular edge to the grassy meadow.  The leaves on the boughs
+overhead rustle slightly in the breeze, almost in time with the birdsong
+drifting from deep within the woods.  Tiny white wildflowers pop up in
+scattered clusters throughout the meadow, their dainty petals turned
+upwards to the sky.
+~
+[Tryne] for 'pick' acodes, better to use an object with a pick opcode, for this, then you just code it once.
+[Eliza] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 4403 10 10 5
+D1
+~
+~
+0 -1 4405 10 10 5
+E
+1 south 1 west trees forest leaves~
+Although these trees are slender, they are closely packed preventing any
+travel in this direction.  The leaves are broad, covering each branch in
+a riot of dancing green.
+~
+E
+flower white wildflowers~
+These dainty flowers are scattered all about the meadow, their small
+petals turned up toward the sky in full bloom.
+~
+A
+pick gather get~
+tiny white wildflowers~
+act_tochar( #no, ch );
+~
+E
+no~
+The flowers are too small to be worth picking.
+~
+!
+0 0 0
+-1
+S
+
+#4405
+A Grassy Meadow~
+A forest of small-girthed trees edges the meadow; the slender branches of
+the trees reach overhead and their leaves rustle softly in the breeze. 
+The seeded heads of the grass bob and wave in ripples in time with the
+leaves overhead.  Several small patches of clover are scattered about the
+clearing, dense and green.
+~
+[Eliza] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 4406 10 10 5
+D3
+~
+~
+0 -1 4404 10 10 5
+E
+clover patches meadow~
+The patches of clover are scattered about the meadow, green and full of
+life.  They are crowded so closely, it would be impossible to find a
+four-leaf clover.
+~
+A
+~
+~
+send_to_room( #zip, room );
+~
+E
+zip~
+@wA tiny insect zips by, another chasing close behind it.@n
+~
+!
+2 200 0
+A
+pick get gather search~
+clover~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 125 ) == 3 ){
+    act_tochar( #pick, ch );
+    act_notchar( #pick2, ch );
+    obj_to_char( oload( 407 ), ch );
+    end;
+    }
+  }
+act_tochar( #none, ch );
+~
+E
+pick~
+You find a four-leafed clover in the lush patch!
+~
+E
+pick2~
+$n finds a four-leafed clover in the lush patch!
+~
+E
+none~
+You search the clover, but don't find anything of note.
+~
+!
+0 0 0
+-1
+S
+
+#4406
+A Grassy Meadow~
+The grassy meadow sprawls to the west and south.  To the east, a tiny
+thatch cottage has been built at the edge of the woods.  Miniature white
+wildflowers are scattered through the grass and go right up to the carved
+wooden door.  The slender branches of the trees by the cottage brush up
+against the tightly-bound roof, whispers of melodies drifting from their
+contact.  Just to the north, a gift shop stands with open doors.
+~
+[Eliza] Done.
+~
+167247872 2 5 0
+D0
+~
+~
+0 -1 4407 10 10 5
+D1
+carved wooden door~
+carved wooden door east~
+391 -1 4430 10 10 5
+D2
+~
+~
+0 -1 4405 10 10 5
+D3
+~
+~
+0 -1 4403 10 10 5
+E
+tiny thatch cottage tightly-bound roof~
+This cottage, made of new thatch, looks far to small for anyone to live
+in, and is probably more of an office than anything.  Nearly-round slate
+stepping stones lead up to the cottage, and two narrow wooden stairs look
+to have been recently built before the door, which is several inches
+above the ground.
+~
+E
+miniature white wildflowers~
+These small, seven-petaled flowers grow in abundance all over,
+brightening the monotony of green grass.
+~
+E
+gift shop~
+This small hut, built of new wattle and thatch, marks the end of the
+hedge maze where survivors may buy souvenirs.
+~
+A
+pick get gather~
+miniature white flowers~
+send_to_char( #no, ch );
+~
+E
+no~
+The flowers are far too small to be worth picking.
+~
+!
+0 0 0
+A
+~
+~
+send_to_room( #song, room );
+~
+E
+song~
+@CThe sweet melody of a songbird drifts in from the nearby fringe of trees.@n
+~
+!
+2 175 0
+-1
+S
+
+#4407
+Inside The Gift Shop~
+This small wattle hut is cluttered full of knick-knacks, curios and cheap
+souvenirs.  Racks and shelves cover the sturdy walls, stacked with small,
+breakable items.  Hanging from the slender rafters overhead are several
+delicate, silvery windchimes, which clink and tinkle in the gentle breeze. 
+Along the east wall is a white-topped counter, a tall stool placed behind
+it.  The grass underfoot is cropped short, and shows signs of heavy
+trampling.
+~
+[Eliza] Done.
+[Brunhilde] is this a shop?
+~
+200806477 0 5 0
+D0
+flimsy screen door~
+~
+131 -1 4429 10 10 5
+D2
+~
+~
+0 -1 4406 10 10 5
+E
+1 north~
+The thin door is closed, and a small sign hangs from it saying "No
+re-entry into the maze." 
+~
+E
+knick-knacks curious cheap souvenirs racks shelves~
+Small figurines of clay, porcelaine, bone and wood line the shelves,
+doing little but collecting dust.  Other items, marked as being for sale,
+figure more prominently in the room; lined up on the counter and the
+eye-level shelves they nearly scream for attention.
+~
+E
+silvery windchimes~
+Thin silver metal tubes hang from a glossy wooden disc, clinking and
+tinkling as the breeze touches them to each other.
+~
+A
+1 north~
+none~
+if( find_stat( ch, level ) > 90 )
+continue;
+else
+act_tochar( #no, ch );
+~
+E
+no~
+There is something preventing the door from being opened from this side.
+~
+!
+0 0 0
+A
+~
+~
+act_notchar( #swing, ch );
+close( room, north );
+~
+E
+swing~
+The door swings shut behind $n.
+~
+!
+1 0 1
+A
+open~
+1 north flimsy screen door~
+act_tochar( #no, ch );
+~
+E
+no~
+There is something preventing the door from being opened from this side.
+~
+!
+0 0 0
+5197 9 1509949540 3 0
+7093 17 1509949540 -1 0
+8029 17 1509949540 -1 0
+-1
+S
+
+#4410
+Inside The Hedge Maze~
+The hedges rise up, perfectly manicured, to the north and west.  They
+grow thick and lush, effectively blocking off all travel in those
+directions.  Bright flowers of various hues bloom from between the glossy
+leaves of the hedgerow, and butterflies occasionally alight upon them to
+drink.  The grass underfoot grows bright and verdant, slightly crushed by
+passing feet but showing remarkable resilience.
+~
+[Eliza] Done.
+~
+167247872 2 5 0
+D1
+~
+~
+0 -1 4411 10 10 5
+D2
+~
+~
+0 -1 4401 10 10 5
+E
+bright flowers~
+Bell-shaped blossoms of red, orange, yellow and royal purple bloom from
+between the thick, dark leaves of the hedge.  A faint fragrance drifts
+from within, attracting the nearby butterflies.
+~
+A
+~
+~
+send_to_room( #drone, room, sight );
+~
+E
+drone~
+The drone of bumblebees permeates the area.
+~
+!
+2 175 0
+A
+~
+~
+send_to_room( #flower, room, sight );
+~
+E
+flower~
+@rThe trumpet-shaped flowers bob as the gentle breeze brushes by.@n
+~
+!
+2 230 0
+A
+~
+~
+act_tochar( #call, ch );
+~
+E
+call~
+The elf calls after you, @C"Please be gentle with the butterflies, the
+guards will defend them if attacked!"@n 
+~
+!
+1 100 4
+7471 17 1509949444 -2 0
+7468 17 1509949445 -2 0
+5182 9 1509949540 3 0
+5184 9 1509949540 3 0
+-1
+S
+
+#4411
+Inside The Hedge Maze~
+A thick wall of lush green hedge blocks the way to the south and east. 
+The leaves creating the barrier are thick, dark and glossy, their wide
+surface effectively preventing the existance of any cracks or holes in
+the line of bushes.  Blooming from between the leaves are trumpet-shaped
+flowers, the thick, gnarled roots visible beneath the wall of foliage. 
+Underfoot, the grass grows bright and straight, mostly unharmed by the
+passing feet.
+~
+[Ciani] plat nugg
+[Tryne] use trigger search for searches
+[Eliza] Done.
+~
+167247872 2 5 0
+D0
+~
+~
+0 -1 4412 10 10 5
+D3
+~
+~
+0 -1 4410 10 10 5
+E
+gnarled root~
+These tough, gnarled roots are thick and sturdy-looking, as though
+they're there to stay forever.  Something glints beneath one of the
+smaller root branches.
+~
+E
+trumpet-shaped flowers~
+Small red-orange flowers bloom in and around the hedge, their trumpetlike
+openings turned towards the sky, revealing pollen-laden pistils.
+~
+A
+search~
+gnarled root~
+act_tochar( #search, ch );
+act_notchar( #nsearch, ch );
+wait( 1 );
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 11 ) == 9 ) {
+    act_tochar( #find, ch );
+    obj_to_char( oload( 7174 ), ch );
+    end;
+    }
+  }
+act_tochar( #nada, ch );
+~
+E
+search~
+You lean over and grope around the root.
+~
+E
+nsearch~
+$n leans over and gropes around the roots of one of the hedges.
+~
+E
+nada~
+You couldn't find anything.
+~
+E
+find~
+You find something!
+~
+!
+9 0 0
+A
+~
+~
+send_to_room( #swirl, room );
+~
+E
+swirl~
+@YA small group of butterflies float by, swirling around each other in a
+spiralling rainbow of iridescent wings.@n
+~
+!
+2 235 0
+A
+pick take get grab~
+red trumpet flower~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 7375 ), ch );
+  end;
+  }
+act_tochar( #no, ch );
+~
+E
+pick~
+@rYou pick one of the delicate trumpet-shaped flowers.@n
+~
+E
+pick2~
+@r$n picks one of the trumpet-shaped flowers
+~
+E
+no~
+There are no flowers left to pick.
+~
+!
+0 0 0
+7449 17 1509949444 -2 0
+7468 17 1509949444 -2 0
+5183 9 1509949540 3 0
+5182 9 1509949540 3 0
+-1
+S
+
+#4412
+Inside The Hedge Maze~
+A thick wall of hedge blocks all travel eastward.  Openings in the
+hedgerows lead off to the north, west and south, providing a multitude of
+choices.  Bright, trumpet-shaped flowers bloom from between the thick,
+glossy leaves of the hedge, attracting the occasional passing butterfly. 
+The gentle breeze stirs the leaves as it passes, carrying the soft scent
+of the flowers with it.
+~
+[Ciani] quartz shard
+[Eliza] Done.
+~
+167247872 2 5 0
+D0
+~
+~
+0 -1 4414 10 10 5
+D2
+~
+~
+0 -1 4411 10 10 5
+D3
+~
+~
+0 -1 4413 10 10 5
+E
+flower bright hedge thick leaves~
+The trumpet-shaped flowers show through the green glossy leaves of the
+hedge.  Butterflies occasionally alight upon the leaves, their flexing
+wings adding spots of color to the area.
+~
+A
+~
+~
+send_to_room( #fly, room );
+~
+E
+fly~
+@gThe butterflies take to the air, flying around each other in a @rr@ya@gi@cn@bb@mo@rw@g dance.@n
+~
+!
+2 190 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou continue deeper into the maze.@n
+~
+E
+to_room~
+@g$n moves further into the maze.@n
+~
+!
+3 0 9
+7448 17 1509949446 -2 0
+7467 17 1509949445 -2 0
+5180 9 1509949540 3 0
+5181 9 1509949540 3 0
+7760 17 1509949455 -2 0
+-1
+S
+
+#4413
+Inside The Hedge Maze~
+Neatly manicured hedges rise up on all sides save east, creating a
+cul-de-sac of sorts.  The thick, glossy leaves of the hedge overlap to
+form a solid wall of greenery.  A gentle breeze stirs the leaves and the
+flowers poking out from between them; green and orange and red all
+swaying as one.  Something sparkles faintly in the lush, verdant grass
+underfoot.
+~
+[Ciani] moonstone pebble
+[Eliza] Done.
+~
+167247872 2 5 0
+D1
+~
+~
+0 -1 4412 10 10 5
+E
+flowers~
+Trumpet-shaped flowers in rich bright tones bloom from vines growing
+throughout the hedge.
+~
+E
+sparkles lush verdant grass underfoot~
+The grass underfoot is thick, springy and green, the tips trimmed to a
+uniform length.  The light occasionally catches off something shiny
+between the blades.
+~
+A
+~
+lush verdant grass underfoot sparkles~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 7 ) == 4 ) {
+    act_tochar( #find, ch );
+    act_notchar( #find2, ch );
+    obj_to_char( oload( 7377 ), ch );
+    end;
+    }
+  }
+act_tochar( #nope, ch );
+act_notchar( #nope2, ch );
+~
+E
+find~
+You find something in the grass!
+~
+E
+find2~
+$n finds something in the grass!
+~
+E
+nope~
+You search through the grass but cannot find what caught your eye.
+~
+E
+nope2~
+$n searches through the grass but cannot find what caught $s eye.
+~
+!
+9 0 0
+A
+pick take get grab~
+red trumpet flower~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 7375 ), ch );
+  end;
+  }
+act_tochar( #none, ch );
+~
+E
+pick~
+@rYou pick one of the delicate trumpet-shaped flowers.@n
+~
+E
+pick2~
+@r$n picks one of the trumpet-shaped flowers.@n
+~
+E
+none~
+There are no flowers left to pick.
+~
+!
+0 0 0
+7449 17 1509949443 -2 0
+7467 17 1509949446 -2 0
+5185 9 1509949540 3 0
+5182 9 1509949540 3 0
+-1
+S
+
+#4414
+Inside The Hedge Maze~
+A thick hedge grows to the west, its slim, intertwined branches
+effectively creating a solid wall.  The leaves of the hedge are wide,
+thick and a glossy dark green shade.  The grass underfoot has been
+trampled and matted significantly, as if constantly tread upon, and there
+are bare spots near some of the gnarled roots.  Blooms of bright red and
+orange poke from between the leaves of the hedge, their elongated trumpet
+shapes turned upwards, towards the sky.
+~
+[Ciani] gold thread
+[Tryne] bloom extra
+[Tryne] 1 in 9 chance for object? :P why use the < 4 chance in 27? :P
+[Ciani] because i felt like it
+[Tyrone] *snicker*
+[Eliza] Done.
+~
+167247872 2 5 0
+D0
+~
+~
+0 -1 4415 10 10 5
+D1
+~
+~
+0 -1 4416 10 10 5
+D2
+~
+~
+0 -1 4412 10 10 5
+E
+gnarled roots~
+The small, tightly-growing roots are very gnarled, the bark cracked and
+splitting.  There are a few areas between curves that look as though they
+might hide something interesting.
+~
+E
+blooms red orange trumpet flowers~
+Bright tubelike flowers grow from a twisting vine inside the hedges,
+their wide openings housing heavy pistils.
+~
+A
+~
+gnarled roots~
+act_tochar( #search, ch );
+act_notchar( #nsearch, ch );
+wait( 1 );
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 27 ) < 4 ) {
+    act_tochar( #find, ch );
+    obj_to_char( oload( 7514 ), ch );
+    end;
+    }
+  }
+act_tochar( #nada, ch );
+~
+E
+search~
+You lean over and feel around by the exposed root.
+~
+E
+nsearch~
+$n leans over to feel around an exposed root.
+~
+E
+find~
+You find something!
+~
+E
+nada~
+You don't find anything.
+~
+!
+9 0 0
+A
+~
+~
+send_to_room( #song, room );
+~
+E
+song~
+@gA bird in the distance begins to sing a sweet, happy melody.@n
+~
+!
+2 200 0
+A
+~
+~
+send_to_room( #flap, room );
+~
+E
+flap~
+@mA butterfly comes to rest on a nearby leaf, flapping its wings slowly
+as it settles down.@n 
+~
+!
+2 215 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou continue deeper into the maze.@n
+~
+E
+to_room~
+@g$n moves further into the maze.@n
+~
+!
+3 0 7
+7467 17 1509949444 -2 0
+5180 9 1509949540 3 0
+5184 9 1509949540 3 0
+5202 9 1509949540 3 0
+5202 9 1509949540 3 0
+-1
+S
+
+#4415
+Inside The Hedge Maze~
+Hedges to the north and east form a corner, bending the path to the south
+and west.  The edges of the corner are crisp, sharp; obviously pruned
+recently by a careful hand.  The dark green leaves of the hedges are
+broad in width, and no gaps or spaces are visible between them. 
+Trumpet-like flowers in red and orange bloom amidst the leaves, providing
+occasional perches for the nearby butterflies.
+~
+[Eliza] Done.
+~
+167247872 2 5 0
+D2
+~
+~
+0 -1 4414 10 10 5
+D3
+~
+~
+0 -1 4417 10 10 5
+E
+edges green leaves pruned hedge~
+These hedges are pruned with great care, as there are no leaves out of
+place or unevenly cut.  The hedge grows strong and vibrant with no vacant
+areas between branches.
+~
+A
+~
+~
+send_to_room( #humm, room );
+~
+E
+humm~
+@BA hummingbird alights on a flower just long enough to drink of its nectar.@n
+~
+!
+2 180 0
+A
+~
+~
+send_to_room( #breeze, room );
+~
+E
+breeze~
+@cA gentle breeze blows through the hedges, rustling leaves.@n
+~
+!
+2 200 0
+A
+pick take get grab~
+red trumpet flower~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 7375 ), ch );
+  end;
+  }
+act_tochar( #none, ch );
+~
+E
+pick~
+@rYou pick one of the delicate trumpet-shaped flowers.@n
+~
+E
+pick2~
+@r$n picks one of the trumpet-shaped flowers.@n
+~
+E
+none~
+There are no flowers left to pick.
+~
+!
+0 0 0
+7469 17 1509949444 -2 0
+7471 17 1509949447 -2 0
+5181 9 1509949540 3 0
+5183 9 1509949540 3 0
+-1
+S
+
+#4416
+Inside The Hedge Maze~
+Thick walls grown of hedge rise up to the north and south.  Broad leaves
+grow in multitudes, overlapping so well that no holes show in the green
+vegetation.  The hedges are neatly maintained, looking as though they
+were pruned recently.  The grass underfoot is just as neatly manicured as
+the hedges bordering it, and seems relatively unharmed by the passing of
+feet.  The occasional orange and red flower, growing from the hedge,
+breaks the monotony of green.
+~
+~
+167247872 2 5 0
+D1
+~
+~
+0 -1 4419 10 10 5
+D3
+~
+~
+0 -1 4414 10 10 5
+E
+orange flower red hedge~
+The hedge is perfect in almost every way, an occasional red or orange
+flower pops up in the middle of the hedge adding a nice touch of color.
+~
+A
+~
+~
+send_to_room( #chirp, room );
+~
+E
+chirp~
+@GThe insects in the nearby bushes begin a concert of chirping.@n
+~
+!
+2 200 0
+A
+~
+~
+send_to_room( #glide, room );
+~
+E
+glide~
+@CA butterfly glides by overhead, its iridescent wings shining.@n
+~
+!
+2 200 0
+7467 17 1509949444 -2 0
+7468 17 1509949446 -2 0
+5181 9 1509949540 3 0
+5185 9 1509949540 3 0
+-1
+S
+
+#4417
+Inside The Hedge Maze~
+The thick wall of hedges comes to a corner here, the hedges to the north
+and west bending and curving in both directions.  Broad, waxy green
+leaves form the full walls of this maze, no space or gaps visible between
+their veined surfaces.  Straight lines define the edges of the hedge,
+perfectly maintained by the owners of the maze.
+~
+[Eliza] Done.
+~
+167247872 2 5 0
+D1
+~
+~
+0 -1 4415 10 10 5
+D2
+~
+~
+0 -1 4418 10 10 5
+E
+hedge green north west thick~
+This hedge is too thick to attempt passing through it.  It, as well as
+all others, seems to be recently pruned.
+~
+A
+~
+~
+send_to_room( #pair, room );
+~
+E
+pair~
+@MA pair of butterflies flap by overhead, their wings nearly brushing.@n
+~
+!
+2 215 0
+7468 17 1509949444 -2 0
+7471 17 1509949446 -2 0
+5185 9 1509949540 3 0
+5184 9 1509949540 3 0
+7377 17 1509949460 -2 0
+-1
+S
+
+#4418
+Inside The Hedge Maze~
+The thick walls of hedge come to a dead-end; shaped into a perfectly
+square room by a practiced hand.  Green walls part to the north, giving
+passage back to the maze.  Growing thick and lush, the leaves on the
+hedges effectively create a solid wall.  The grass underfoot is bright
+and springy, neatly cropped to a uniform length.
+~
+[Eliza] Done.
+~
+167247872 2 5 0
+D0
+~
+~
+0 -1 4417 10 10 5
+E
+new grass green wall hegde thick leaves~
+This thick wall is tightly pruned hegdes, with plush cropped grass
+underfoot.  The only exit lies to the north where you came from.
+~
+A
+~
+~
+send_to_room( #glitter, room );
+~
+E
+glitter~
+The light catches off something hidden in the grass.
+~
+!
+2 125 0
+A
+~
+grass~
+act_tochar( #search, ch );
+act_notchar( #nsearch, ch );
+wait( 1 );
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 25 ) < 6 ) {
+    act_tochar( #find, ch );
+    obj_to_char( oload( 7344 ), ch );
+    end;
+    }
+  }
+act_tochar( #nada, ch );
+~
+E
+search~
+You reach down to run your fingers through the grass.
+~
+E
+nsearch~
+$n reaches down to run $s fingers through the grass.
+~
+E
+find~
+You find something!
+~
+E
+nada~
+You don't find anything.
+~
+!
+9 0 0
+A
+~
+~
+send_to_room( #breeze, room );
+~
+E
+breeze~
+@cA gentle breeze wafts through the room, rustling the leaves and cooling
+your skin.@n 
+~
+!
+2 200 0
+7471 17 1509949444 -2 0
+7469 17 1509949446 -2 0
+5180 9 1509949540 3 0
+5183 9 1509949540 3 0
+-1
+S
+
+#4419
+Inside The Hedge Maze~
+Massive walls of hedge rise up on all sides; the wall directly to the
+east looks extremely dense and impenetrable.  Thick, glossy leaves
+overlap tightly to form the barrier, not letting even the thinnest finger
+of light reach through.  A few red and orange flowers grow from vines
+poking through the dense wall, releasing a soft and subtle fragrance to
+the breeze.  The grass underfoot seems to grow a little longer in some
+places.
+~
+[Eliza] Done.
+~
+167247872 2 5 0
+D0
+~
+~
+0 -1 4420 10 10 5
+D2
+~
+~
+0 -1 4421 10 10 5
+D3
+~
+~
+0 -1 4416 10 10 5
+E
+red orange flowers~
+These bright, trumpet-shaped flowers turn up towards the sky, their
+yellow pistils drooping under the weight of their pollen.
+~
+A
+~
+grass~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 9 ) < 3 ) {
+    act_tochar( #find, ch );
+    act_notchar( #find2, ch );
+    obj_to_char( oload( 7415 ), ch );
+    end;
+    }
+  }
+act_tochar( #nope, ch );
+act_notchar( #nope2, ch );
+~
+E
+find~
+You find something in the grass!
+~
+E
+find2~
+$n finds something in the grass!
+~
+E
+nope~
+You find nothing within the grass.
+~
+E
+nope2~
+$n searches through the grass but finds nothing.
+~
+!
+9 0 0
+A
+~
+~
+send_to_room( #breeze, room );
+~
+E
+breeze~
+@bA gentle breeze rustles the hedges, causing the butterflies to rise
+into the air in agitation.@n 
+~
+!
+2 210 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou continue deeper into the maze.@n
+~
+E
+to_room~
+@g$n moves further into the maze.@n
+~
+!
+3 0 13
+7449 17 1509949444 -2 0
+7448 17 1509949448 -2 0
+5182 9 1509949540 3 0
+5183 9 1509949540 3 0
+-1
+S
+
+#4420
+Inside The Hedge Maze~
+Perfectly manicured walls of hedge rise up to the north and east, forming
+a corner.  Broad, glossy leaves of dark green overlap to form an
+impenetrable-seeming wall of foliage.  The breeze rustles the leaves
+about, creating a soft sort of whispering.  Underfoot, the thick carpet
+of grass has been recently trimmed, and the faintest traces of the scent
+of freshly cut lawn linger in the air nearby.
+~
+~
+167247872 2 5 0
+D2
+~
+~
+0 -1 4419 10 10 5
+D3
+~
+~
+0 -1 4422 10 10 5
+E
+grass hedge green leaves~
+The grass as well as the hedge are perfectly trimmed and well-kept, both
+lushishly green and thick.  The breeze gently stirs the leaves, making a
+soft rustling sound.
+~
+A
+~
+~
+send_to_room( #circle, room );
+~
+E
+circle~
+@rA butterfly descends and begins to fly wide circles around your head.@n
+~
+!
+2 195 0
+A
+~
+~
+send_to_room( #hop, room );
+~
+E
+hop~
+@GA grasshopper lands on your foot, then quickly jumps away.@n
+~
+!
+2 205 0
+7469 17 1509949444 -2 0
+7471 17 1509949446 -2 0
+5180 9 1509949540 3 0
+5184 9 1509949540 3 0
+-1
+S
+
+#4421
+Inside The Hedge Maze~
+Rising overhead are the square edges of perfectly manicured hedge,
+forming the walls of this maze.  Broad leaves of glossy green overlap to
+form the dense shrubbery, and the occasional red or orange flower pokes
+out from between the foliage, turned upwards to the sky.  The grass
+underfoot is closely trimmed and lightly trampled by passing feet.
+~
+[Eliza] Done.
+~
+167247872 2 5 0
+D0
+~
+~
+0 -1 4419 10 10 5
+D1
+~
+~
+0 -1 4424 10 10 5
+D3
+~
+~
+0 -1 4423 10 10 5
+E
+green hedge leaves flower red orange shrubbery~
+The hedge is neatly trimmed with tightly packed green leaves, hiding even
+the branches underneath.  A few red and orange flowers can be seen poking
+through at some points.
+~
+A
+~
+~
+send_to_room( #scent, room );
+~
+E
+scent~
+@bThe breeze picks up the gentle scent of the trumpet-shaped flowers and
+carries it to you.@n 
+~
+!
+2 150 0
+A
+~
+~
+send_to_room( #shoulder, room );
+~
+E
+shoulder~
+@gA butterfly flies up to you, hovering for a few seconds above your
+shoulder before it flies away.@n 
+~
+!
+2 200 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou continue deeper into the maze.@n
+~
+E
+to_room~
+@g$n moves further into the maze.@n
+~
+!
+3 0 11
+A
+pick take get grab~
+red trumpet flower~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 7375 ), ch );
+  end;
+  }
+act_tochar( #none, ch );
+~
+E
+pick~
+@rYou pick one of the delicate trumpet-shaped flowers.@n
+~
+E
+pick2~
+@r$n picks one of the trumpet-shaped flowers.@n
+~
+E
+none~
+There are no flowers left to pick.
+~
+!
+0 0 0
+7448 17 1509949448 -2 0
+7467 17 1509949446 -2 0
+5180 9 1509949540 3 0
+5183 9 1509949540 3 0
+7760 17 1509949455 -2 0
+-1
+S
+
+#4422
+Inside The Hedge Maze~
+The maze comes to a dead end here, thick walls of leafy green rising up
+in all directions save east.  A gentle, flowery scent drifts in on the
+breeze, borne from elsewhere in the maze.  The same breeze playfully
+rustles the thick leaves of the hedge.  The hedges are perfectly trimmed
+into straight edges and flat faces, and look to have been recently pruned. 
+The grass, though well maintained, seems to be a little denser in some
+areas.
+~
+[Eliza] Done.
+~
+167247872 2 5 0
+D1
+~
+~
+0 -1 4420 10 10 5
+E
+north west south hedge grass thick leaves wall~
+The thick hedge and dense grass come directly to each other, forming a
+right angle upon the ground.  Nothing...not even a mouse...could possibly
+pass through in this direction.
+~
+A
+~
+grass~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 27 ) < 3 ) {
+    act_tochar( #find, ch );
+    act_notchar( #find2, ch );
+    obj_to_char( oload( 7174 ), ch );
+    end;
+    }
+  }
+act_tochar( #nope, ch );
+act_notchar( #nope2, ch );
+~
+E
+find~
+You find something in the grass!
+~
+E
+find2~
+$n finds something in the grass!
+~
+E
+nope~
+You find nothing in the grass.
+~
+E
+nope2~
+$n roots around through the grass but finds nothing.
+~
+!
+9 0 0
+7467 17 1509949443 -2 0
+7449 17 1509949446 -2 0
+5185 9 1509949540 3 0
+5181 9 1509949540 3 0
+-1
+S
+
+#4423
+Inside The Hedge Maze~
+Thick walls of hedge intersect to form a corner here.  Glossy green
+leaves overlap, keeping the sun's rays from poking through the wall.  The
+grass underfoot is thick and green, the neatly trimmed blades lightly
+trampled by passing feet.  A vine seems to be growing through the hedge,
+its narrow, spiny leaves occasionally showing through the wall.
+~
+[Eliza] Done.
+~
+167247872 2 5 0
+D1
+~
+~
+0 -1 4421 10 10 5
+D2
+~
+~
+0 -1 4428 10 10 5
+E
+vine hedge green leaves~
+The hedge is neatly trimmed as are others, yet in this section of the
+hedge a vine can be seen growing through the hedge itself.  It weaves in
+and out making its beginning and end unknown.
+~
+A
+~
+~
+send_to_room( #preen, room );
+~
+E
+preen~
+@WA butterfly alights upon a leaf and gently fans its wings, preening.@n
+~
+!
+2 200 0
+A
+~
+~
+send_to_room( #dance, room );
+~
+E
+dance~
+@bTwo butterflies begin to circle each other overhead in a brilliant,
+flashing dance.@n 
+~
+!
+2 200 0
+A
+get take grab pull~
+vine~
+act_tochar( #no, ch );
+~
+E
+no~
+The branches and leaves of the hedge prevent you from reaching the vine
+inside.
+~
+!
+0 0 0
+7468 17 1509949444 -2 0
+5182 9 1509949540 3 0
+5184 9 1509949540 3 0
+-1
+S
+
+#4424
+Inside The Hedge Maze~
+Large hedgerow carefully trimmed to have squared edges, rise up all
+around, their leafy surfaces forming dense walls.  There seems to be some
+sort of building visible through the small gaps in the hedgerow to the
+southwest.  Flowers of orange and red bloom between the thick leaves on
+the hedgerow, swaying lightly in the breeze.
+~
+[Eliza] Done.
+~
+167247872 2 5 0
+D0
+~
+~
+0 -1 4425 10 10 5
+D2
+~
+~
+0 -1 4427 10 10 5
+D3
+~
+~
+0 -1 4421 10 10 5
+E
+hedge flower building gap red orange southwest~
+The hedge is a little less dense here than in other areas, as a building
+of some sort can be seen in the distance.  Red and orange flowers add
+some color to the greenery here.
+~
+A
+~
+~
+send_to_room( #zip, room );
+~
+E
+zip~
+@cAn iridescent dragonfly zips by your cheek.@n
+~
+!
+2 200 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou continue deeper into the maze.@n
+~
+E
+to_room~
+@g$n moves further into the maze.@n
+~
+!
+3 0 13
+7471 17 1509949444 -2 0
+7467 17 1509949446 -2 0
+5184 9 1509949540 3 0
+5181 9 1509949540 3 0
+5202 9 1509949540 3 0
+5202 9 1509949540 3 0
+-1
+S
+
+#4425
+Inside The Hedge Maze~
+The hedge maze continues along here in a narrow corridor of leafy green. 
+The walls of overlapping glossy leaves rise overhead in neatly trimmed
+rectangles of corridor, spotted with the occasional trumpet-shaped red or
+orange flower.  The grass is slightly trampled underfoot, from the
+comings and goings of hedge maze explorers.
+~
+[Eliza] Done.
+~
+167247872 2 5 0
+D0
+~
+~
+0 -1 4426 10 10 5
+D2
+~
+~
+0 -1 4424 10 10 5
+E
+grass trampled~
+The grass here is well-kept, although this area is not as plush as others. 
+The footprints of previous travelers can be faintly seen underfoot.
+~
+A
+~
+~
+send_to_room( #swoop, room );
+~
+E
+swoop~
+@yA small songbird swoops by overhead, singing as he flies.@n
+~
+!
+2 210 0
+A
+pick take get grab~
+red trumpet flower~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 7375 ), ch );
+  end;
+  }
+act_tochar( #none, ch );
+~
+E
+pick~
+@rYou pick one of the delicate trumpet-shaped flowers.@n
+~
+E
+pick2~
+@r$n picks one of the trumpet-shaped flowers.@n
+~
+E
+none~
+There are no flowers left to pick.
+~
+!
+0 0 0
+7448 17 1509949446 -2 0
+7468 17 1509949444 -2 0
+5185 9 1509949540 3 0
+5182 9 1509949540 3 0
+-1
+S
+
+#4426
+Inside The Hedge Maze~
+The grassy trail dead ends here in the hedge cul-de-sac.  Spots of dirt
+show through the grassy carpet, evidence of many passing feet.  The
+hedge's wall is formed of broad, overlapping leaves.  A few flowers of
+red and orange poke out between the leaves, breaking up the constant sea
+of green.  The grass and flowers ripple slightly as the breeze touches
+them.
+~
+[Eliza] Done.
+~
+167247872 2 5 0
+D2
+~
+~
+0 -1 4425 10 10 5
+E
+grass dirt~
+The ground here has evidence of many travelers coming to this dead end,
+dirt being all through the grassy area.  A slight breeze circles through
+the cul-de-sac ruffling the grass slightly.
+~
+A
+~
+~
+send_to_room( #nose, room );
+~
+E
+nose~
+@BA butterfly darts by, nearly hitting your nose.@n
+~
+!
+2 215 0
+7449 17 1509949444 -2 0
+7471 17 1509949447 -2 0
+5180 9 1509949540 3 0
+5183 9 1509949540 3 0
+-1
+S
+
+#4427
+Inside The Hedge Maze~
+The hedges begin to give way here; their tops don't reach quite as high
+and the walls aren't quite as thick.  A wattle wall is visible through
+the southern hedge between leaves and flowers.  The grass underfoot has
+been worn thin in places, small patches of dirt showing between bright
+green blades that have been trimmed to a short height.
+~
+[Eliza] Done.
+~
+167247872 2 5 0
+D0
+~
+~
+0 -1 4424 10 10 5
+D3
+~
+~
+0 -1 4429 10 10 5
+E
+grass hedge~
+The grass and hedge perfection has faded here.  The hedge has grown thin
+and a wattle wall is visible through the leaves.  A few flowers sprinkle
+the hegde with color.  The grass is patched with dirt, and seems shorter
+here than in other areas.
+~
+A
+~
+~
+send_to_room( #alight, room );
+~
+E
+alight~
+@mA butterfly alights on a flower, its delicate proboscis extending to
+drink.@n 
+~
+!
+2 185 0
+7448 17 1509949448 -2 0
+7467 17 1509949444 -2 0
+5181 9 1509949540 3 0
+5182 9 1509949540 3 0
+7377 17 1509949460 -2 0
+-1
+S
+
+#4428
+Inside The Hedge Maze~
+The hedge maze comes to a dead end here, the hedge towering overhead on
+three sides.  Glossy green leaves overlap to present a wall of foliage,
+rebuffing explorers.  Underfoot, the well-manicured grass is lightly
+trampled by feet that have arrived, and then turned back.  A vine snakes
+around inside the hedge, an occasional narrow leaf visible in the dense
+wall.
+~
+[Eliza] Done.
+~
+167247872 2 5 0
+D0
+~
+~
+0 -1 4423 10 10 5
+E
+hedge vine leaves green~
+The hedge here forms a circular dead end, forcing all to turn back.  A
+vine can be seen weaving through the hedge, its beginning and ending
+place a mystery.
+~
+A
+~
+~
+send_to_room( #drone, room );
+~
+E
+drone~
+The drone of bees drifts over from the other side of the hedge.
+~
+!
+2 200 0
+7469 17 1509949444 -2 0
+5181 9 1509949540 3 0
+5183 9 1509949540 3 0
+7760 17 1509949455 -2 0
+7344 17 1509949450 -2 0
+-1
+S
+
+#4429
+Inside The Hedge Maze~
+The monotony of the hedge maze has finally ended; a sturdy wattle
+building rises immediately to the south, with a large sign over the door
+proclaiming "@eGift Shop@n".  A pair of small windows flank the door,
+their bright yellow curtains swishing slightly as the breeze runs through
+them.  Through the window, shelves full of shiny curios and memorabilia
+line the walls.  The flowers along the nearby hedge seem to be even
+brighter than within the maze, as if glorifying the end of the twisting
+path.
+~
+[Eliza] Done.
+~
+167247872 2 5 0
+D1
+~
+~
+0 -1 4427 10 10 5
+D2
+flimsy screen door~
+~
+131 -1 4407 10 10 5
+E
+flowers~
+These trumpet-shaped flowers are brilliant hues of red and orange, and
+turn upwards towards the sky, their pistils nearly dripping with pollen.
+~
+E
+sturdy wattle building south windows door curtains~
+This small hut has been solidly constructed of new wattle, and the small
+windows are just holes in the walls covered with cheery yellow curtains. 
+Light glints off shelves of curios and memorabilia inside.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+You go into the gift shop, the door swinging shut behind you.
+~
+E
+to_room~
+$n goes into the gift shop, the door swinging shut behind $m.
+~
+!
+3 0 4
+7469 17 1509949445 -2 0
+7449 17 1509949446 -2 0
+5184 9 1509949540 3 0
+5185 9 1509949540 3 0
+-1
+S
+
+#4430
+Inside The Cottage~
+The wattle walls of the cottage have been covered with thick tapestries
+stitched in blues and greens, depicting idyllic forest scenes. 
+Smooth-planed beams run crisscrossing overhead, supporting the roof of
+tightly-woven thatch.  Underfoot, the floor is of polished wood, covered
+by haphazardly strewn rugs of red and rust.  Carved into the lintel above
+the door is a treescape, one particularly large tree acting as the focal
+point.  Against the south wall is a battered desk of ancient wood, placed
+beneath a shuttered and curtained window.  A sturdy door leads northwards
+to another room.
+~
+[Eliza] Done
+~
+167247879 0 8 0
+D0
+sturdy wooden door~
+sturdy wooden door north~
+391 -1 4431 10 10 5
+D3
+carved wooden door~
+carved wooden door west~
+391 -1 4406 10 10 5
+E
+walls thick tapestries~
+These tapestries, woven of fine wool, depict forest scenery in hundreds
+of shades of blue and green.  The shapes have been rendered exquisitely
+well, and some of the leaves look almost real.
+~
+E
+lintel treescape~
+Some master woodcarver has created a scene above the doorway of trees
+and small animals.  The etching has been stained a darker color to make
+it stand out.
+~
+E
+battered desk~
+A simple desk, built of oak wood.  Its surface is battered and scratched,
+but still looks functional, and papers hide most of its top.
+~
+5200 9 1509949540 3 0
+-1
+S
+
+#4431
+Inside The Cottage~
+This small room seems to be acting as a storage room of sorts.  The
+tightly woven walls of wattle are unadorned, and a pair of rickety
+bookshelves stand against the north wall.  A few poorly bound books grace
+their shelves, but apart from that they exist to collect dust.  Against
+the east and south walls are multitudes of wooden boxes and crates. 
+Beams of wood pass just overhead, supporting the well-thatched roof.
+~
+[Eliza] Done.
+~
+167247876 0 6 0
+D2
+sturdy wooden door~
+~
+391 -1 4430 10 10 5
+E
+multitudes wooden boxes crates~
+Perhaps a dozen and a half boxes have been stacked up along the east and
+south walls.  Built of rough planks nailed shoddily together, they seem
+to be holding old bolts of cloth and other sundry items.  One box stands
+out moreso than others; solidly constructed and bearing a tiny lock on
+its front side it looks as though it may contain something interesting.
+~
+A
+~
+wooden box crates~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #find, ch );
+  act_notchar( #find2, ch );
+  if( random( 1, 100 ) > 80 )
+    obj_to_char( oload( 2 ), ch );
+  if( random( 1, 100 ) < 20 )
+    obj_to_char( oload( 2 ), ch );
+  if( random( 1, 100 ) > 80 )
+    obj_to_char( oload( 2 ), ch );
+  if( random( 1, 100 ) < 30 ) {
+    obj_to_char( oload( 14 ), ch );
+    obj_to_char( oload( 14 ), ch );
+    }
+  if( random( 1, 100 ) > 50 ) {
+    obj_to_char( oload( 12 ), ch );
+    obj_to_char( oload( 12 ), ch );
+    obj_to_char( oload( 12 ), ch );
+    obj_to_char( oload( 12 ), ch );
+    obj_to_char( oload( 12 ), ch );
+    }
+  end;
+  }
+act_tochar( #nope, ch );
+act_notchar( #nope2, ch );
+~
+E
+find~
+You easily snap the lock off one of the boxes and rifle through its
+contents, finding some loose coins!
+~
+E
+find2~
+$n easily snaps the lock off one of the boxes and finds some loose coins
+within.
+~
+E
+nope~
+You root through the boxes but find nothing of interest.
+~
+E
+nope2~
+$n roots through the boxes but finds nothing of interest.
+~
+!
+9 0 0
+-1
+S
+
+#0
+

@@ -1,0 +1,5195 @@
+#M2_AREA
+2
+
+Abhanthorp~
+Gretch Brunhilde Estrella Azerin Guin Ariellen Murdo~
+Abhanthorp~
+~
+~
+
+0 0
+0
+0
+#ROOMS
+
+#44500
+Beyond the Mighty Oaks~
+The trees encroach upon the clearing from the both sides, thick walls of
+bark and leaves preventing all passage.  Dominated by a pair of huge oaks
+at its southern end, this grassy clearing in the woods looks as if it has
+been undisturbed for years uncounted, although there are the recent
+telltale signs of travelers passing through these parts.  Clusters of
+@Wdaisies@n peek out from amongst the rampant clover and short grasses, a
+smattering of white against the verdant greenery.
+~
+[Gretch] Room set to no.mob to prevent wandering.
+[Guin] Done.
+[Cayln] down is storage room for some 'mobs' used in mpcode.
+[Cayln] down (44575) is used for reseting and storing special mobs used here.
+~
+167247880 0 6 0
+D0
+~
+~
+0 -1 44501 10 10 5
+D2
+~
+~
+0 -1 945 10 10 5
+E
+huge oaks~
+These enormously wide trees are obviously two of the oldest oaks of the
+forest, their thick impenetrable bark telling the tale of centuries past.
+~
+E
+daisy daisies clover~
+Sweet-scented, delicate flowers fill the forest floor with a cover of the
+purest white petals.  The green foliage makes a perfect backdrop for the
+beauty of their blossom to shine.
+~
+E
+signs~
+Trampled weeds, broken twigs...the remnants of fading footprints in a
+grassless patch of dirt mark the clearing...signs that travelers have
+recently passed this way.
+~
+1 17 1509949540 -2 0
+3800 17 1509949540 -2 0
+-1
+S
+
+#44501
+Mouth of a Tree-Lined Valley~
+Small birds can be heard chirping in the boughs above as the clearing
+disappears into a lightly forested woodland.  A lattice of mossy green
+rootwork criss-crosses the ground, a light covering of grass blanketing
+the ground to match it.  The trees here are aged and tall, as if they
+have rested here undisturbed for untold years.
+~
+[Guin] Done.
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 44504 10 10 5
+D1
+~
+~
+0 -1 44502 10 10 5
+D2
+~
+~
+0 -1 44500 10 10 5
+D3
+~
+~
+0 -1 44503 10 10 5
+E
+trees tall boughs~
+The wide-stretching boughs of these old growth trees are lush and healthy
+and teem with flora and fauna.
+~
+E
+lattice mossy rootwork~
+The trees overhead have grown over the years, and in doing so have formed
+a complex system of roots.  Moist moss covers the entangled roots to form
+a seamless skin of greenery.
+~
+A
+~
+~
+if( !is_player( ch ) )
+  continue;
+else {
+  if( random( 2, 10 ) >= find_stat( ch, dex ) ) {
+    act_tochar( #ctrip, ch );
+    act_notchar( #ntrip, ch );
+    i = 2d4;
+    dam_message( ch, i, "slipping on a large mossy root" );
+    inflict( ch, mob, i, "slipping on a large mossy root" );
+    interpret( ch, "+sit" );
+  }
+  else
+    continue;
+}
+~
+E
+ctrip~
+@GYou slip and fall while working your way past the lattice of mossy
+rootworks.@n 
+~
+E
+ntrip~
+@G$n slips and falls while trying to work past the lattice of mossy
+roots.@n 
+~
+!
+3 0 15
+203 9 1509949540 3 0
+-1
+S
+
+#44502
+By the Mouth of a Tree-Lined Valley~
+The light is dim here, and the mossy ground is damp with moisture.  The
+high branches of the heavily wooded forest to the west and south encroach
+upon the sky, blocking out much of the light.  Out in the thick
+undergrowth, the forest is filled with life, deer and fox visible but not
+reachable due to the heavy tree cover and thorny bushes.  The growth of
+infant tree seedlings can be seen peeking out through the moss, an
+attempt at new life in this dank section of the forest.
+~
+[Guin] Done.
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 44505 10 10 5
+D3
+~
+~
+0 -1 44501 10 10 5
+D5
+~
+~
+510 -1 44574 10 10 5
+E
+growth seedlings~
+Thin, wiry seedlings are trying to grow, the moist soil a perfect place
+for them to shoot from the ground.  The lack of nutrients gathered by the
+sun hampers their growth, making them not long for this world.
+~
+A
+~
+~
+if( random( 1, 10 ) == 10 ) {
+  mob = mob_in_room( 2506, find_room( 44574 ) );
+  if( mob ) {
+    send_to_room( #fox, room );
+    transfer( mob, room );
+  }
+  else {
+    mob = mob_in_room( 2506, room );
+    if( !mob )
+      end;
+    if( !is_fighting( mob ) ) {
+      send_to_room( #nofox, room );
+      transfer( mob, find_room( 44574 ) );
+    }
+  }
+}
+send_to_room( #deer, room );
+~
+E
+deer~
+A deer peeks out from the heavy tree cover for a moment, but then
+startles and flees to the safety of the dense forest.
+~
+E
+fox~
+A silvery pelted fox slinks out from the undergrowth, sniffing around for
+food.
+~
+E
+nofox~
+A silvery pelted fox slinks back into the undergrowth.
+~
+!
+2 200 0
+587 17 1509949540 -2 0
+-1
+S
+
+#44503
+Beneath the Weeping Willow~
+The drooping leaves and boughs of a magnificent willow provide a sense of
+isolation in this section of the wood, offering partial concealment from
+the elements and prying eyes.  The hanging leaves cascade downward like
+rain over the branches, extending out to shade some of the river to the
+west.  Soft greenish moss covers the lower trunk and root structure of
+this ancient tree, a cushion against the hard-packed earth.  A few
+mushrooms poke up through the layer of moss covering the ground.
+~
+[Guin] Done.
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 44506 10 10 5
+D1
+~
+~
+0 -1 44501 10 10 5
+D3
+~
+~
+0 -1 44507 10 10 5
+E
+soft moss greenish cushion~
+A spongy later of green-hued moss carpets the ground near the waterway. 
+It spreads around the base of the willow, spreading out beneath its
+boughs.  A smattering of white-capped mushrooms poke up through the mossy
+blanket.
+~
+E
+mushrooms~
+These small, white-capped mushrooms have grown under the willow tree, and
+are thriving in the damp shade near the river.  You might be able to
+harvest a few of larger the mushrooms.
+~
+A
+get pick harvest collect~
+mushrooms~
+i = 1d6;
+if( is_player( ch ) ) {
+ if( rflag( reset2, room ) ) {
+  if( random( 1, 4 ) < 2 ) {
+    obj_to_char( oload( 3193 ), ch );
+    send_to_char( #last, ch );
+    act_notchar( #rpick, ch );
+    remove_rflag( reset2, room );
+   }
+  else {
+   if( i == 1 )
+    obj_to_char( oload( 3192 ), ch );
+    send_to_char( #ch, ch );
+    act_notchar( #rpick, ch );
+   if( i == 2 )
+    obj_to_char( oload( 3191 ), ch );
+   if( i == 3 )
+    obj_to_char( oload( 3190 ), ch );
+   if( i == 4 )
+    obj_to_char( oload( 3189 ), ch );
+   if( i == 5 )
+    obj_to_char( oload( 3188 ), ch );
+   if( i == 6 )
+    obj_to_char( oload( 3188 ), ch );
+   }
+  }
+else
+ send_to_char( #none, ch );
+}
+else
+ act_tochar( #no_hands, ch );
+~
+E
+ch~
+You harvest one of the larger mushrooms growing around the willow tree.
+~
+E
+none~
+There are no more suitably sized mushrooms.
+~
+E
+last~
+You pick the last of the harvestable mushrooms; the others will need more
+time to grow.
+~
+E
+no_hands~
+You don't have either hands or the ability to pick and carry the
+mushrooms.
+~
+E
+rpick~
+$n picks one of the suitably sized mushrooms.
+~
+!
+0 0 0
+755 9 1509949540 3 0
+-1
+S
+
+#44504
+Edge of Treeline~
+Amidst the verdant plant life, the beginning of treeline rises faint into
+the sky.  New growth trees mark the border of the light forest, allowing
+the sun to sprinkle generous rays of daylight across the forest floor. 
+Far to the northwest, a great multi-colored tree stand stands stark
+againt the horizon.
+~
+[Guin] Done.
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 44512 10 10 5
+D1
+~
+~
+0 -1 44505 10 10 5
+D2
+~
+~
+0 -1 44501 10 10 5
+D3
+~
+~
+0 -1 44506 10 10 5
+E
+multi-colored horizon~
+On the horizon a large multi-coloured tree rises against the sky, it's
+broad limbs casting great shadows across the ground.  The corpulent
+roots, firmly planted in the earth, give way to a wide, mottled pale and
+dark brown trunk.  The thick branches, extending out from the trunk in
+all directions, end with a flourish of bright colours, giving the great
+tree a rainbow appearance.
+~
+A
+~
+~
+i = 1d2;
+if( i == 1 )
+  send_to_room( #rustle, room );
+if( i == 2 )
+  send_to_room( #river, room );
+~
+E
+rustle~
+@gThe leaves of the trees rustle gently in a whispered breeze.@n
+~
+E
+river~
+@COff in the distance, the soft sounds of rushing water can be heard.@n
+~
+!
+2 200 0
+755 9 1509949540 3 0
+932 9 1509949540 3 0
+-1
+S
+
+#44505
+Corner of the Verdant Valley~
+Daisies and clover dot this lightly wooded corner of the forest, with
+thicker trees blocking access in some directions.  A carpet of soft green
+clover lies amidst the mossy tree roots, the tiny white flowers peeping
+through betwixt.  Oaks and maples provide generous shade to the area,
+their branches providing an aerial patchwork of greenery and the blue of
+the sky shining through.
+~
+[Guin] Done.
+~
+167247872 0 9 0
+D2
+~
+~
+0 -1 44502 10 10 5
+D3
+~
+~
+0 -1 44504 10 10 5
+E
+clover daisies~
+Sweet-scented, delicate flowers have filled the forest floor with a cover
+of the purest white petals.  The green foliage makes a perfect backdrop
+for the beauty of their blossom to shine.
+~
+A
+~
+~
+send_to_room( #maple, room );
+~
+E
+maple~
+@gPretty maple leaves spiral to the forest floor, shaken from their
+branches by the wind.@n 
+~
+!
+2 150 0
+203 9 1509949540 3 0
+3800 17 1509949540 -2 0
+-1
+S
+
+#44506
+Riverbank on the Mighty Elhanni~
+A large rotting log, the remnants of a once mighty oak long since fallen,
+dominates the landscape here where it extends out into the river to the
+west.  The log does little to impede the flow of the swift river's
+rushing current, yet the ebbing of the waters around the end of the log
+seems to provide some protection against the erosion of the moss-covered
+riverbank.  Just to the north, a towering multi-colored tree rises above
+its surrounding neighbors, sheltering them 'neath its spreading boughs.
+~
+[Guin] Done.
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 44511 10 10 5
+D1
+~
+~
+0 -1 44504 10 10 5
+D2
+~
+~
+0 -1 44503 10 10 5
+D3
+~
+~
+0 -1 44509 10 10 5
+E
+north multi-colored merryblossom~
+Covered in a variety of flowers and mushrooms, a great tree stands to the
+north.  Each spreading bough boasts different colored leaves, and a hoard
+of bees swirl and hum busily nearby, attracted by the brilliant colors
+and heady scent of burgeoning blossoms.
+~
+E
+rotten rotting fallen log~
+This large rotting log is all that remains of a once mighty oak.  Now,
+there is a slick coating of moss and mold covering the dead and craggy
+surface of the log's bark.  A multitude of small grubs and insects crawl
+around on the surface of the decaying wood.
+~
+E
+moss covered riverbank~
+A layer of spongy moss has begun to grow all along the bank of the river
+here.  It thickens around the remains of a large rotting log, and closer
+to the water's edge.  The splashing waters along the edge of the river
+perpetually dampen the moss, providing it with ample moisture.
+~
+A
+~
+~
+send_to_room( #sound, room );
+~
+E
+sound~
+@GThe softly audible sound of buzzing emanates from the vast, many-hued
+tree to the north@n.
+~
+!
+2 100 0
+901 9 1509949540 3 0
+-1
+S
+
+#44507
+On the Elhanni - Beneath a Weeping Willow~
+The rapid current of the river sweeps southward, beneath the shaded
+covering of an ancient willow on the eastern bank.  The hanging leaves
+extend over the river, shading the swirling waters below.  The western
+bank of the river, covered with a thorny hedge and heavy forest growth,
+seems perilous to climb and best left alone, while the eastern has a
+shallow edge and a soft carpet of moss down to the waterline.
+~
+[Guin] Done.
+~
+167247872 6 9 0
+D0
+~
+~
+0 -1 44509 10 10 5
+D1
+~
+~
+0 -1 44503 10 10 5
+D2
+~
+~
+0 -1 44508 10 10 5
+E
+thorny western~
+The western bank's slope climbs steeply then levels out into a thick
+briar patch.  The briars grow to the edge of slope and then give way to
+thick clumps of grass leading down to the water.  The shade of the
+ancient willow tree, on the east bank, shelters this side of the river. 
+The thorn bushes, flourishing here under the spread arms of the willow,
+appear to have some kind of fruit on them.
+~
+E
+eastern moss bank riverbank~
+A layer of spongy moss has grown thickly all along the eastern bank of
+the river here.  It has begun to spread up the trunk of the ancient
+willow tree, growing close by the river bank.
+~
+E
+fruit black berries berry patch briars~
+The fruit growing in this patch of brambles and briars turns out to be
+ripe @rblackberries@n.  The fruit looks plump and juicy, and ready to be
+picked.
+~
+A
+1 west~
+~
+send_to_char( #to_char, ch );
+act_notchar( #to_room, ch );
+i = dice( 2, 3 );
+dam_message( ch, i, "The sharp thorny hedge" );
+inflict( ch, mob, i, "being scratched by thorns" );
+~
+E
+to_room~
+$n tries to climb the western bank, and force $s way through the @Gthorny
+hedges@n, but $e has failed.
+~
+E
+to_char~
+You try to climb the western bank, and force your way through the
+@Gthorny hedgerow@n.  You fail, and get nothing but @Rscratches@n for
+your effort.
+~
+!
+0 0 0
+A
+get pick pluck harvest~
+berry blackberry fruit~
+i = 1d7;
+if( i == 1 ) {
+  act_tochar( #thorn, ch );
+  act_notchar( #rthorn, ch );
+  dam_message( ch, 2d4, "The bramble or thorn" );
+  inflict( ch, mob, 2d4, "a sharp prick" );
+}
+if( is_player( ch ) ) {
+ if( rflag( reset2, room ) ) {
+  if( random( 1, 5 ) < 2 ) {
+   obj_to_char( oload( 1278 ), ch );
+   send_to_char( #last, ch );
+   act_notchar( #rpick, ch );
+   remove_rflag( reset2, room );
+   }
+  else {
+   obj_to_char( oload( 1278 ), ch );
+   send_to_char( #ch, ch );
+   act_notchar( #rpick, ch );
+   }
+  }
+else
+ send_to_char( #none, ch );
+}
+else
+ act_tochar( #no_hands, ch );
+~
+E
+thorn~
+As you try to touch the berrys, you snag yourself on a @Gthorn@n or @Gbramble@n.
+~
+E
+rthorn~
+As $n reaches for a berry, $e snags $mself on one of the @Gthorns@n.
+~
+E
+avoid~
+You avoid pricking yourself on the sharp @Gthorns@n and @Gbrambles@n.
+~
+E
+last~
+You pick the last of the yummy blackberries.
+~
+E
+ch~
+You pick one of the blackberries.
+~
+E
+none~
+There are no more berries there.
+~
+E
+no_hands~
+You don't have the ability to either pick or carry the fruit.
+~
+E
+rpick~
+$n picks a ripe @rblackberry@n.
+~
+!
+0 0 0
+3521 17 1509949540 -2 0
+-1
+S
+
+#44508
+On the Elhanni - North of a Bridge~
+The turgid flow of the mighty river is intense here, rushing swiftly
+towards the south.  The mighty Elhanni surges against its rocky banks,
+too steep and thorny to climb, its force directed against the ancient
+stone bridge that arches across its banks.  The smoothed stone of the
+bridge barely leaves room above the flow of the water, floating twigs
+crashing against it with the power of the current.
+~
+[Guin] Done.
+~
+167247880 6 9 0
+D0
+~
+~
+0 -1 44507 10 10 5
+D2
+~
+~
+0 -1 37000 10 10 5
+A
+~
+~
+if( can_fly( ch ) ) end;
+wait( 1 );
+act_tochar( #enter, ch );
+wait( 2 );
+if( char_in_room( ch, room ) ) {
+  act_tochar( #to_char, ch );
+  act_notchar( #to_room, ch );
+  transfer( ch, find_room( 37000 ) );
+  act_notchar( #Nch, ch );
+  wait( 1 );
+  room = find_room( 37000 );
+  act_tochar( #bridge, ch );
+  act_notchar( #bridge_room, ch );}
+else end;
+~
+E
+enter~
+You feel the strong @Ccurrents@n of the Elhanni pushing you toward the
+bridge south of here.
+~
+E
+to_char~
+The @Briver@n pushes you southward with its mighty flow.
+~
+E
+to_room~
+$n is pulled along the flow of the @Briver@n, toward the south.
+~
+E
+Nch~
+$n is pulled along the with the river's flow.
+~
+E
+bridge~
+You catch ahold of the bridge, and scramble up onto it.
+~
+E
+bridge_room~
+$n comes climbing up out of the river and onto the bridge.  $e is
+@Bsoaking wet@n.
+~
+!
+1 -1 5
+-1
+S
+
+#44509
+On The Elhanni - South of a Ford~
+The pace of the water picks up after passing over the shallow ford,
+darkening as it deepens in the direction of its flow.  A stand of reeds
+weathers the force of the current alongside the high thorny western bank,
+a tangle of brambles amidst the thick tree growth of the forest's edge. 
+The eastern bank is moss covered, and one end of an old rotting log lies
+draped into the waters, the current ebbing around it.
+~
+[Guin] Done.
+~
+167247872 6 9 0
+D0
+~
+~
+0 -1 44510 10 10 5
+D1
+~
+~
+0 -1 44506 10 10 5
+D2
+~
+~
+0 -1 44507 10 10 5
+E
+old rotting rotten log~
+The large rotting log dips into the waters of the Elhanni near the
+eastern bank.  The log is coated in moss and mold, and a multitude of
+small grubs and insects crawl around on the surface of the rotten wood.
+~
+E
+bank moss riverbank~
+A layer of spongy moss has begun to grow all along the eastern bank of
+the river.  It thickens around the water's edge, and around the rotten log.
+The waters of the Elhanni splash up, and perpetually dampen the moss.
+~
+E
+reeds stand thorny western~
+The western bank's slope climbs steeply then levels out into a thick
+briar patch.  The briars grow to the edge of slope and then give way to
+thick clumps of grass leading down to the water.  A stand of reeds
+thrives in the waters near the edge of the Elhanni.  The reeds are whip
+thin, green with new growth and grow to the height of a man.  The reeds
+rustle in the breeze, and a mournful sound emanates from them.
+~
+A
+~
+~
+i = 1d2;
+if( i == 1 )
+  send_to_room( #sound, room );
+if( i == 2)
+  send_to_room( #sound2, room );
+~
+E
+Sound~
+The wind rustles the @Greeds@n causing them to clink together.
+~
+E
+Sound2~
+The wind rustles the @Greeds,@n and a mournful sound emanates from them.
+~
+!
+2 150 0
+A
+1 west~
+~
+send_to_char( #to_char, ch );
+act_notchar( #to_room, ch );
+i = dice( 2, 3 );
+dam_message( ch, i, "The sharp brambles" );
+inflict( ch, mob, i, "being cut by the brambles thorns" );
+~
+E
+to_char~
+You attempt to force your way through the @Gbrambles@n along the western
+bank, but the brambles @Rscratch@n you!
+~
+E
+to_room~
+$n attempts to force $s way through the @Gbrambles@n but fails.
+~
+!
+0 0 0
+3521 17 1509949540 -2 0
+-1
+S
+
+#44510
+Shallow Ford Across the Elhanni~
+The rippling surface of the Elhanni river flows swiftly as it passes over
+this shallow ford.  The clear water swirls and ebbs over small rounded
+stones and larger rocks which poke up above the flow, a trail of stepping
+stones crossing the wide berth of the river.  The lightly-wooded forest
+of old-growth trees crowd close along the river's edge, dangling branches
+dipping in places to kiss its surface.
+~
+[Guin] Done.
+~
+167247872 13 9 0
+D0
+~
+~
+0 -1 44514 10 10 5
+D1
+~
+~
+0 -1 44511 10 10 5
+D2
+~
+~
+0 -1 44509 10 10 5
+D3
+~
+~
+0 -1 44513 10 10 5
+E
+stepping stones ford shallow rocks~
+The clear waters of the Elhanni swirl and ebb over small rounded
+stones and larger rocks which poke up above the water's surface. They
+form a trail of stepping stones that cross the wide berth of the river. 
+The natural ford across the river has caused the flow to hasten, and the
+river to widen.
+~
+E
+branches wooded forest old-growth trees~
+Old hardwood trees grow here along the banks of the Elhanni.  An
+occasional branch dips down and touches the water.  A wide variety of
+trees grow here, including oak, maple, birch, and cedar.
+~
+A
+~
+~
+i = 1d2;
+if( i == 1 )
+  send_to_room( #sound, room );
+if( i == 2)
+  send_to_room( #river, room );
+~
+E
+sound~
+The softly audible sound of @ybuzzing@n emanates from the large,
+@Rmu@n@ylt@n@Yi-@n@Gco@n@glo@n@Bur@n@Med@n tree to the east.
+~
+E
+river~
+You hear the @Briver@n gurgling over the rocks, and the distant echoes of
+a @Cwaterfall@n.
+~
+!
+2 150 0
+901 9 1509949540 3 0
+3521 17 1509949540 -2 0
+-1
+S
+
+#44511
+Before a Great MerryBlossom~
+Dominating this area stands a legendary halfling Merryblossom.  Reputed
+to induce peaceful dreams while resting, the Merryblossom is a symbol of
+the halfling race.  The trunk of the tree is completely covered in a
+light moss, home to many different varieties of flowers and mushrooms. 
+Each of it's great branches is bedecked with different coloured leaves,
+all with their own unique scent and colour.  There is an abundance of
+activity here, bees in particular have made this ancient tree their home,
+attracted to the bright colours and promise of sweet nectar.
+~
+[Guin] Done
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 44517 10 10 5
+D1
+~
+~
+0 -1 44512 10 10 5
+D2
+~
+~
+0 -1 44506 10 10 5
+D3
+~
+~
+0 -1 44510 10 10 5
+D4
+~
+~
+0 -1 44544 10 10 5
+E
+merryblossom tree halfling~
+The legendary multi-colored MerryBlosson tree sprouts here on the east
+bank of the Elhanni.  The wondrous tree is sheathed in a variety of
+flowers and mushrooms.  Each great branch sprouts different colored
+leaves.  Countless bees buzz around the tree, attracted to the bright
+colors and the scent of the multitude of flowers.
+~
+E
+flowers leaves~
+A great many flowers decorate the MerryBlossom, each diffrent colour to
+its own branch.  Each branch has the same coloured leaves as its flowers,
+making for a rainbow effect.  @RRed@n, @Yyellow@n, @Ggreen@n, @Wwhite@n, @Mmagenta@n, and @Bblue@n
+flowers dot the diffrent brances, along with thier @Rmu@n@ylt@n@Yi-@n@Gco@n@Wlo@n@Mur@n@Bed@n leaves.
+~
+E
+moss~
+A light layer of @Gmoss@n coats the trunk of the MerryBlossom.  Patches
+of mushrooms grow through the moss on the trunk.
+~
+A
+~
+~
+i = 1d3;
+if( i == 1 )
+  send_to_room( #beesound, room );
+if( i == 2)
+  send_to_room( #beework, room );
+if( i == 3 )
+  send_to_room( #lavender, room );
+~
+E
+beesound~
+@cThe drone of countless bees surrounds the tree and its environs, the
+sound swaying back and forth in the breeze before drifting back into the
+echoing forest once again@n.
+~
+E
+beework~
+@gIndustrious bees buzz merrily from coloured flower to coloured flower,
+collecting pollen before flying off into the branches above@n 
+~
+E
+lavender~
+@cThe sweet scent of lavender fills the air near the foot of the great
+Merryblossom tree@n.
+~
+!
+2 150 0
+A
+1 up~
+~
+if( can_fly( ch ) ) {
+  send_to_char( #fly, ch );
+  act_notchar( #flying, ch );
+  transfer( ch, find_room( 44544 ) );
+  act_notchar( #flying2, ch );
+  end;}
+  if( is_mounted( ch ) ) {
+    send_to_char( #nomount, ch );
+    end;  }
+    if( find_skill( ch, climb ) > random( 0, 7 ) ) {
+      send_to_char( #success, ch );
+      act_notchar( #success1, ch );
+      transfer( ch, find_room( 44544 ) );
+      act_notchar( #success2, ch );  }
+      else {
+        send_to_char( #fail, ch );
+        act_notchar( #failed, ch );
+        end;  }
+        loop( followers ) {
+          if( !is_resting( rch ) ) {
+            ch = rch;
+            acode( room, 1 );    }
+          }
+~
+E
+fly~
+You fly up into the tree.
+~
+E
+flying~
+$n flies up into the tree.
+~
+E
+flying2~
+$n flies up from below and lands on a nearby branch.
+~
+E
+nomount~
+You cant do that while mounted.
+~
+E
+failed~
+$n slips on the mossy tree trunk while trying to climb up.
+~
+E
+fail~
+You slip on the mossy covered trunk, and slide down to the ground.
+~
+E
+success~
+You climb up the tree after slipping on the @Gmoss@n several times.
+~
+E
+success1~
+$n grabs a low lying branch and clambers up the tree.
+~
+E
+success2~
+$n comes climbing up the tree from below.
+~
+!
+0 0 0
+755 9 1509949540 3 0
+-1
+S
+
+#44512
+Pockerly~
+The thin treeline to the east is structured, almost orderly in its
+placement.  A close row of ash trees form a vertical wall of trunks on
+one side of this spacious clearing, almost as if it was created
+purposefully as a windbreak or for a similar purpose.  A single holly
+bush looks almost out of place in the centre of the pockerly, its
+red-hued berries and spiked green leaves standing out against the white
+and yellow daisies peeping out amid the short grass.
+~
+[Guin] Done
+[Zuig] - not a typo, holly bush has been given some prominence in description, but cant look/pick berries it.
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 44520 10 10 5
+D2
+~
+~
+0 -1 44504 10 10 5
+D3
+~
+~
+0 -1 44511 10 10 5
+E
+line treeline ash~
+A thick line of ash trees grow here in a near-perfect straight line.  The
+space between the trunks is small, and forms an impassable wall of
+vegetation.
+~
+E
+daisies grass~
+Simple white petals framing a delicate yellow centre grow rampantly here,
+their sweet aroma permeating the air.  The bright flowers peek out from a
+the soft foliage, the short grass a suitable backdrop for the blooming
+daisies.
+~
+A
+~
+~
+i = 1d2;
+if( i == 1 )
+send_to_room( #sound, room );
+if( i == 2 )
+send_to_room( #sound2, room );
+~
+E
+sound~
+@GThe softly audible sound of buzzing emanates from the vast, many-hued
+tree lying westward@n.
+~
+E
+sound2~
+The rush of @Bwater@n can be heard to the west.
+~
+!
+2 200 0
+A
+search~
+bush holly~
+if( random( 0, 3 ) == 0 ) {
+  act_tochar( #prick, ch );
+  act_notchar( #prick_room, ch );
+  dam_message( ch, 2d4, "One of the bush's prickly thorns" );
+  inflict( ch, mob, 2d4, "a sharp leaf prick" );
+}
+if( !rflag( reset0, room ) ) {
+  send_to_char( #search, ch );
+  end;
+}
+else
+if( find_skill( ch, searching ) > 0 ) {
+  if( random( 1, 10 ) < 6 ) {
+    remove_rflag( reset0, room );
+    obj_to_char( oload( 14 ), ch );
+    send_to_char( #find, ch );
+    act_notchar( #search_room, ch );
+    end;
+    }
+  }
+else
+  send_to_char( #search, ch );
+~
+E
+search~
+You search through the bushes and find nothing.
+~
+E
+prick~
+You prick your hand on the spiked leaves, and a drop of @Rblood@n oozes
+out.
+~
+E
+prick_room~
+$n pricks $s fingers while trying to search through the bush.
+~
+E
+search_room~
+$n searches though the holly bush.
+~
+E
+find~
+You find a silver coin nestled at the base of the holly bush.
+~
+!
+0 0 0
+A
+1 east~
+~
+act_tochar( #fail, ch );
+act_notchar( #fail_room, ch );
+~
+E
+fail~
+The way east is blocked by a line of tall ash trees.
+~
+E
+fail_room~
+$n attempts to go east, but is blocked by a line of tall ash trees.
+~
+!
+0 0 0
+203 9 1509949540 3 0
+3800 17 1509949540 -2 0
+-1
+S
+
+#44513
+Grassy Clearing by the Riverside~
+The thick tree cover encroaches upon this small clearing close by the
+riverside.  Tall verdant grass, a foot in height, grows rampantly between
+the river's edge and the treelines, although a narrow game trail of
+trampled grass leads off toward the north.  A clump of bullrushes rests
+by the waterside, swaying gently in the ebb and flow of the current.
+~
+[Guin] Done.
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 44516 10 10 5
+D1
+~
+~
+0 -1 44510 10 10 5
+E
+bullrushes clump~
+A small stand of bullrushes grows by the edge of the river, swaying
+gently in the breeze.  For a moment, they rustle a little more violently,
+some movement evident in the grasses near the base of the bullrushes.
+~
+E
+grasses~
+Tall verdant grass, around a foot in height, grow between the river's
+edge and the treeline.  There is evidence, in the grasses, that a game
+trail runs north from here.
+~
+A
+search~
+bullrushes grass base~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 10 ) < 7 ) {
+    mob = mload( 901, room );
+    send_to_char( #duck, ch );
+    act_notchar( #duck2, ch );
+    end;
+  }
+}
+// they failed the search, inform them
+send_to_char( #search, ch );
+~
+E
+duck~
+You search through the bullrushes, disturbing a rather surprised duck!
+~
+E
+duck2~
+$n searches through the bullrushes, disturbing a rather surprised duck!
+~
+E
+search~
+You search through the bullrushes, but find nothing of note.
+~
+!
+0 0 0
+901 9 1509949540 3 0
+-1
+S
+
+#44514
+Splitting of Ways - Junction on the Elhanni~
+The main flow of the Elhanni river surges in from the west, beneath a
+strong looking bridge of oaken logs and rope, and continues in a
+southerly direction.  The grassy bank to the east has been eroded by the
+powerful force of the river, its rock and clay interior easily visible a
+good foot above the waterline.  To the north, a smaller tributary of the
+river can be seen coursing over top of a cliff, and even above the
+torrent of the river, the thundering sound of rushing water crashing
+against rocks can be clearly heard in the distance.
+~
+[Guin] Done.
+~
+167247872 6 9 0
+D0
+~
+~
+0 -1 44515 10 10 5
+D1
+~
+~
+0 -1 44517 10 10 5
+D2
+~
+~
+0 -1 44510 10 10 5
+D3
+~
+~
+0 -1 44516 10 10 5
+E
+eastern bank riverbank~
+Lying beneath the overhanging bank, the stark rock has been smoothed by
+the constant erosion caused by the torrential Elhanni.  The swift current
+washes away the silt and sand from the muddy shore, leaving the water
+clear as it eddies briefly before gushing away to the south.
+~
+E
+bridge oaken logs rope~
+Hanging from great oaken supports, this sturdy rope bridge spans the
+width of the Elhanni.  Cleft in half, large trunks have been tightly
+secured together by screeds of the thick rope, forming a relatively even
+surface for walking along.
+~
+A
+~
+~
+i = 1d2;
+if( i == 1 )
+send_to_room( #bees, room );
+if( i == 2)
+send_to_room( #sound, room );
+~
+E
+sound~
+You hear the sound of @Bwater@n rushing off a cliff to the north.
+~
+E
+bees~
+You faintly hear the drone of @Ybees@n in the distance.
+~
+E
+against~
+You valiantly swim against the swift @Ccurrent@n that threatens to take
+you over the @Cwaterfall@n.
+delete
+~
+!
+2 150 1
+3521 17 1509949540 -2 0
+-1
+S
+
+#44515
+Elhanni Falls~
+The sounds of the rushing river are overwhelming here.  To the north the
+swift waters rush over the edge of a cliff, tumbling down in a single
+unbroken flow into the distance far below.  A tall oak tree towers
+against the western bank of the precipice, a thick branch hanging over
+the river perhaps ten feet above the surface of the waters, far too high
+to reach.  Both banks of the river here are clad in a blanket of clay and
+rocks, the forceful flow of the water wearing away the grassy blanket
+that covered them once years ago.
+~
+[Gretch] No.mob.
+[Guin] Done.
+~
+167247880 6 9 0
+D1
+~
+~
+0 -1 44519 10 10 5
+D2
+~
+~
+0 -1 44514 10 10 5
+D3
+~
+~
+0 -1 44518 10 10 5
+D5
+~
+~
+0 -1 44524 10 10 5
+E
+branch tree~
+Reaching out like a gnarly hand to those caught in the river's current,
+this branch is a cruel twist of irony...just out of reach of even the
+longest arms.
+~
+A
+~
+~
+if( can_fly( ch ) ) end;
+wait( 1 );
+act_tochar( #enter, ch );
+wait( 2 );
+if( char_in_room( ch, room ) ) {
+  act_tochar( #to_char, ch );
+  act_notchar( #to_room, ch );
+  transfer( ch, find_room( 44524 ) );
+  act_notchar( #Nch, ch );}
+else end;
+~
+E
+enter~
+You feel the swift @Ccurrent@n of the @Briver@n dragging you over the
+@Cwaterfall@n.
+~
+E
+to_char~
+The strong @Ccurrent@n pulls you over the @Cwaterfall@n!
+~
+E
+to_room~
+@b$n is pulled over the @Cwaterfall@n@b!@n
+~
+E
+Nch~
+$n is swept over the @Wroaring@n @Cwaterfalls@n.
+~
+!
+1 -1 62
+A
+~
+~
+i = 1d3;
+if( i == 1 )
+send_to_room( #river, room );
+if( i == 2)
+send_to_room( #mist, room );
+if( i == 3 )
+send_to_room( #sound, room );
+~
+E
+river~
+The @Wroaring@n of the @Cwaterfalls@n is overwhelming.
+~
+E
+mist~
+A @Wthick plume@n of @Cmist@n rises up from the @Bwater@n crashing over
+the falls.
+~
+E
+sound~
+The rushing @Briver@n flow pounds onto the rocks below, creating a
+deafening roar and throws a @Wplume of white mist@n into the air.
+~
+!
+2 350 0
+3521 17 1509949540 -2 0
+-1
+S
+
+#44516
+Bridge Over the Mighty Elhanni~
+A sturdy bridge of solid oak spans the raging torrents of the mighty
+river, flowing eastward beneath its weathered log planks.  Handrails of
+twisted rope strands, braided together, hang on either side of the
+bridge, both set at two feet and four feet high.  Supporting either end
+of the span, low grass-covered banks lead away into the distance.  To the
+north, a huge oak towers over the edge of the waterfall.
+~
+[Guin] Done.
+~
+167247880 0 9 0
+D0
+~
+~
+0 -1 44518 10 10 5
+D1
+~
+~
+0 -1 44514 10 10 5
+D2
+~
+~
+0 -1 44513 10 10 5
+E
+bridge planks~
+A well-constructed bridge made of thick oak planks lies over the swiftly
+flowing river.  Although this walkway has been expertly crafted, the
+occasional plank has rotted from the continual fine spray deposited on it
+by the river.  On the other side of the bridge, the grass looks greener.
+~
+A
+east~
+~
+act_tochar( #to_char, ch );
+act_notchar( #to_room, ch );
+transfer( ch, find_room( 44514 ) );
+~
+E
+to_char~
+You dive into the swift moving @Bwaters@n before the waterfall.
+~
+E
+to_room~
+$n dove into the quick moving @Bwaters@n of the Elhanni, right before the
+@Cwaterfalls@n.
+~
+!
+0 0 0
+3521 17 1509949540 -2 0
+-1
+S
+
+#44517
+In the Shadow of a Great MerryBlossom~
+The forest darkens, the shade of the ancient tree to the south making
+this part of the forest seem cooler.  Moss and clumps of lush grass
+carpet the ground, pockets of reddish mushrooms flourishing in the danker
+conditions here.  The rocky riverbank falls away to the west, the water
+rushing by furiously as it heads towards the cliff's edge.
+~
+[Guin] Done.
+~
+167248896 2 9 0
+D0
+~
+~
+0 -1 44519 10 10 5
+D1
+~
+~
+0 -1 44520 10 10 5
+D2
+~
+~
+0 -1 44511 10 10 5
+D3
+~
+~
+0 -1 44514 10 10 5
+E
+moss~
+Thick patches of moss cover the ground here.  The moss has flourished in
+the shade of the great MerryBlossom tree to the south.  Moss has also
+grown to cover the scattered rocks that dot the landscape.  The moss is a
+deep @Ggreen@n and is speckled through with a growth of @Rdark red mushrooms@n.
+~
+E
+clump grass~
+Clumps of lush grass dot the landscape wherever the thick carpet of moss
+doesn't cover the ground.  The blades of the grass are thumb's width for
+a normal man, and a deep green in color.  The grass has never been cut or
+trampled it appears.
+~
+E
+pocket reddish mushrooms~
+@RReddish mushrooms@n flourish here in the damp air and shade provided by
+the great MerryBlossom to the south.  The mushrooms often times grow
+three or four in a clump, sharing the same piece of decaying wood for
+nourishment.  The mushrooms have very few marks on them, and appear
+wholly intact as if the forest animals have avoided them.
+~
+E
+cliff's edge~
+The cliff's edge looms before you to the north.  The quick flow of the
+Elhanni roaring over the @Cwaterfalls@n to the northwest has caused a
+deep erosion to the cliff in the past.  The signs of the cliff's edge
+receding are apparent all around you.
+~
+E
+riverbank bank rocky~
+The rocky riverbank of the Elhanni lies to the west of here.  The
+riverbank has a steep incline to it in places, speaking of the slow
+erosion caused by the quick moving @Briver@n flow.
+~
+A
+~
+~
+send_to_room( #sound, room );
+~
+E
+sound~
+@YThe softly audible sound of buzzing emanates from the large,
+multi-hued tree to the south.@n 
+~
+!
+2 100 0
+1113 17 1509949450 -2 0
+2508 9 1509949540 3 0
+130 9 1509949540 3 0
+-1
+S
+
+#44518
+Before an Ancient Oak~
+The knobbled oaken bark and solid, gangly branches of a huge tree climb
+skywards, thick roots cracking the earth amidst the grassy meadow.  White
+and red spotted mushrooms grow amidst the nest of roots, some almost as
+round as a human hand.  The craggy skin of the tree and its many low
+branches make it look as if it would be easy to scale.  Directly to the
+east of the grassy carpet, the bank falls away sharply to reveal a
+rushing river, tumbling down over the edge of a cliff in a cacophony of
+sound.
+~
+[Guin] Done.
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 44523 10 10 5
+D1
+~
+~
+0 -1 44515 10 10 5
+D2
+~
+~
+0 -1 44516 10 10 5
+D4
+~
+~
+0 -1 44521 10 10 5
+E
+knobbled oaken bark gangly branches huge tree~
+Awesome in its age and girth, this oak towers high into the sky.  Many
+healthy leaves throw shadows on the ground here from high within the
+trees gangly, twisted branches.  Knobbled, rough bark gives handy
+footholds and crags to hold onto, perfect for scaling this tree.
+~
+E
+mushroom white red~
+Insect eaten mushrooms with red caps and white spots marking their
+surface grow in the shady position under the huge oak tree.  These
+mushrooms encompass the area approximately the size of an orange, and
+although they are mushrooms, they do not look as if they would make a
+terribly healthy meal.  These fungi still look majestic despite their
+half eaten state as their caps are slightly pointed at the peak.
+~
+A
+~
+~
+if( is_mob( ch ) || is_pet( ch ) )
+  if( !can_climb( ch ) ) {
+  act_tochar( #noclimb, ch );
+  end;
+}
+continue;
+~
+E
+to_char~
+@gGrabbing one the lower limbs, you shinny up the ancient tree.@n
+~
+E
+to_room~
+@gGrabbing one the lower limbs, $n shinnies up the ancient tree.@n
+~
+E
+noclimb~
+You can't climb.
+~
+!
+3 0 16
+755 9 1509949540 3 0
+-1
+S
+
+#44519
+Cliff Overlooking the Valley~
+The tumultuous sound of the raging river plummeting over the cliffside is
+incredible.  From this vantage point southeast of the river, the tumbling
+descent of the liquid into the isolated rocky pool is visible far below. 
+Sheer walls of rock fall away to the north and the southeast, a lone bush of
+wild roses clinging to the edge of the precipice.  The only visible
+pathway into the valley below lies to the southeast.
+~
+[Guin] Done.
+~
+167247872 0 9 0
+D2
+~
+~
+0 -1 44517 10 10 5
+D3
+~
+~
+0 -1 44515 10 10 5
+E
+pool~
+The pool at the base of the waterfall seems strangely calm considering
+the torrent of water crashing into the southern end of it.  The waters
+are placid and still with very few ripples.  A @Wmist@n rises from around
+the base of the falls.
+~
+E
+1 west waterfalls falls~
+A branch of the Elhanni tumbles over the cliff just west of here in a
+rush.  The torrent of water spills into a pool at the base of the cliff,
+in what appears to be a fertile valley.  The water roars defiantly as it
+pounds into the rocks and pool below; mist blankets the bottom of the
+falls from sight.
+~
+E
+pathway view cliff~
+From this vantage point high atop the cliff, a lush green valley extends
+outward toward the north.  There is an area of desolation to the north
+east, consisting of blackened earth and ruined buildings.  Far to the
+north, the palisade walls and smoking chimneys of a small thorp rise
+aganst the valley's verdant backdrop.  the lush valley can be seen, the
+way down being a sparsely travelled path that weaves a path along the
+cliffside to the east.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cStepping close to the river's edge, you slip on patch of mud and go
+sliding into the sparkling pool@n.
+~
+E
+to_room~
+@cStepping close to the river's edge, $n slips on a patch of mud and goes
+sliding into the sparkling pool@n.
+~
+!
+3 0 8
+544 17 1509949540 -2 0
+130 9 1509949540 3 0
+-1
+S
+
+#44520
+Entrance to the Forgotten Valley~
+From this vantage point high on the clifftops, a lush green valley can be
+seen, extending to the north.  A few notable landmarks stand out against
+the verdant backdrop.  An area of desolation, blackened earth and ruins
+lies ahead to the north, and a little west of it, a clear mountain pool
+with a waterfall.  Far to the north, the palisade walls and smoking
+chimneys of a small thorp thrives deep in the lush wilderness.  A sparsely
+travelled path weaves its way down the cliffside, giving way to greenery.
+~
+[Guin] Done.
+~
+167247872 0 9 0
+D2
+~
+~
+0 -1 44512 10 10 5
+D3
+~
+~
+0 -1 44517 10 10 5
+D5
+~
+~
+0 -1 44525 10 10 5
+E
+path down cliffside~
+A rarely travelled path snakes its way straight down along the cliffside.
+~
+A
+~
+~
+send_to_room( #light , room );
+~
+E
+light~
+@cSoft light reflects against the shimmering waters of the pool below@n.
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yFinding ample hand and foot holds, you attempt the climb down the rocky
+cliff face.@n 
+~
+E
+to_room~
+@yFinding ample hand and foot holds, $n attempts the climb down the rocky
+cliff face.@n 
+~
+!
+3 0 32
+755 9 1509949540 3 0
+932 9 1509949540 3 0
+473 9 1509949540 3 0
+-1
+S
+
+#44521
+In the Branches of an Ancient Oak~
+The deep gnarled oaken trunk spirals upwards, branches spreading out to
+form a huge cover of shadow over the ground far below.  A soft gust of
+wind causes the leaves to stir, the gentle sound of the rustling greenery
+muffling the echoes coming from the nearby waterfall.  A particularly
+large branch hangs out towards the east, parallel to the apex of the
+cascading falls.  Its bark is smooth and worn, as if its length has been
+travelled many times.
+~
+[Guin] Done.
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 44522 10 10 5
+D5
+~
+~
+0 -1 44518 10 10 5
+A
+~
+~
+i = random( 1, 4 );
+act_room( #rustle, ch );
+if( i == 4 ) { 
+  act_room( #acorn, ch );
+  obj_to_room( oload( 672 ), room );
+}
+~
+E
+rustle~
+A faint breeze blows through the tree, rustling the myriad of leaves like
+the soft breath of a natural spirit.
+~
+E
+acorn~
+Dislodged by the wind, an acorn falls and rolls into a crook in the wide,
+gnarled branch.
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gPicking your way along the branches, you climb carefully down the
+tree@n.
+~
+E
+to_room~
+@gPicking $s way along the branches, $n climbs carefully down the tree@n.
+~
+!
+3 0 32
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou inch along the branch toward the east@n.
+~
+E
+to_room~
+@g$n inches along the branch toward the east@n.
+~
+!
+3 0 2
+473 9 1509949540 3 0
+-1
+S
+
+#44522
+On an Overhanging Branch~
+This overhanging branch hangs a good twenty feet above the top of the
+waterfall, the rushing water hurtling downwards into the deep blue pool
+far below.  The bark of this branch has been worn smooth by the passage
+of many years, hands, and feet, a prime location to dive into the
+sparkling waters formed by the cascading falls.
+~
+[Guin] Done.
+~
+167247872 0 9 0
+D3
+~
+~
+0 -1 44521 10 10 5
+A
+dive~
+pool water~
+act_tochar( #dive, ch );
+act_notchar( #rdive, ch );
+transfer( ch, find_room( 44524 ) );
+~
+E
+dive~
+You dive through the air, hurling towards the cool @Bwaters@n of the
+@Bpool@n far below.  You land in the pool sending @Cwater@n everywhere.
+~
+E
+rdive~
+$n into the cool @Bwaters$n of the @Bpool$n far below, splashing
+@Cwater@n everywhere.
+~
+!
+0 0 0
+A
+~
+~
+send_to_room( #leaf, room );
+~
+E
+leaf~
+@gA single leaf breaks loose and spirals in dizzying pirouettes into the
+pool far below@n.
+~
+!
+2 150 0
+-1
+S
+
+#44523
+Cliffside Trail~
+The valley falls away to the east, revealing a sheltered cliffside
+waterfall and pool below.  This narrow trail is framed to the west by a
+towering rocky cliff, with roughly four feet of walkable space.  The
+trail is strewn with fallen rubble, and in places climbing is the only
+way to pass.
+~
+[Guin] Done.
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 44526 10 10 5
+D2
+~
+~
+0 -1 44518 10 10 5
+E
+waterfall pool 1 down~
+The jagged cliff falls away steeply to the pure greenish-blue waters of a
+@Bpool@n below, shrouded in the gentle mist of the roaring @Bwaterfall@n
+that crashes down the rocks to the north.
+~
+A
+dive~
+pool water~
+act_tochar( #dive, ch );
+act_notchar( #rdive, ch, obj, mob, sight );
+transfer( ch, find_room( 44524 ) );
+act_notchar( #arrive, ch, obj, mob, sight );
+~
+E
+dive~
+You dive through the air, hurling towards the cool @Bwaters@n of the
+@Bpool@n far below.  You land in the pool sending @Cwater@n everywhere.
+~
+E
+rdive~
+$n dives into the cool @Bwaters@n of the @Bpool@n far below, splashing
+@Cwater@n everywhere.
+~
+E
+arrive~
+$n dives into the @Cwater@n from the cliffside trail.
+~
+!
+0 0 0
+2508 9 1509949540 3 0
+-1
+S
+
+#44524
+Secluded Pool Below the Waterfall~
+The sparkling clear waters of this pool seem strangely still, considering
+the raging torrent of the waterfall cascading into it from the northern
+end.  There is a heady air to the atmosphere, a tingling sensation of
+enchantment and magic permeating the air and waters.  The rocky edges of
+the vast natural pool are surrounded by a lush carpet of clover,
+extending all the way to the rocky cliff walls rimming the entrance.
+~
+[Guin] Done.
+~
+167247874 13 9 0
+D0
+~
+~
+0 -1 44529 10 10 5
+D4
+~
+~
+0 -1 44515 10 10 5
+E
+clover~
+Fresh green clover blankets the entire area surrounding the pool of
+water, the occasional patch of dry rubbled earth can be seen peeking
+through the verdant greenery.
+~
+E
+cliff walls~
+The cliff walls are steep and smooth.  No foot or handholds can be seen
+anywhere along the entire surface of the massive stone wall.
+~
+A
+up~
+~
+act_tochar( #to_char, ch );
+act_notchar( #to_room, ch );
+~
+E
+to_char~
+You try to swim up the fast moving @Bwaterfall@n, but the @Ccurrent@n is
+too strong.
+~
+E
+to_room~
+$n tries to swim up the fast moving @Bwaterfall@n, but the @Ccurrent@n
+is too strong for $s.
+~
+!
+0 0 0
+A
+~
+~
+i = 1d4;
+if( i == 1 )
+  send_to_room( #sound, room );
+if( i == 2 )
+  send_to_room( #sound2, room );
+if( i == 3 )
+  send_to_room( #waves, room );
+if( i == 4 )
+  send_to_room( #sound, room );
+~
+E
+sound~
+@CThe roar of cascading water crashing over the falls is nearly
+deafening.@n 
+~
+E
+waves~
+Waves flow outward from the @Cwaterfall@n rippling across the small
+@Bpool@n.
+~
+E
+sound2~
+@BWater crashes over the falls with a tremendous roar, tossing a fine spray
+of mist into the air@n.
+~
+!
+2 150 0
+A
+~
+~
+act_tochar( #splash, ch );
+act_notchar( #to_room, ch );
+~
+E
+splash~
+@BYou tumble over the falls, landing with a terrific splash in center of
+the pool.@n 
+~
+E
+to_room~
+@B$n tumbles over the falls, landing with a terrific splash in center of
+the pool.@n 
+~
+!
+1 0 16
+198 9 1509949540 3 0
+198 9 1509949540 3 0
+3521 17 1509949540 -2 0
+-1
+S
+
+#44525
+Entrance of a Grassy Valley~
+Here, the hillside fades gently into a valley of verdant grass, filled
+with flowering thistle.  The soft sound of the wind through the grass,
+the scent of flowers on the air, all combine to give a feeling of calm
+and peace.  A flock of diminutive purple-feathered birds roost high above
+in nooks and crannies on the cliff, fluttering and flowing in the air
+high above.
+~
+[Guin] Done.
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 44532 10 10 5
+D4
+~
+~
+0 -1 44520 10 10 5
+E
+thistle verdant grass flower~
+Green grass blankets this valley, intermixed with handsome, flowering
+thistle.  The soft purple blossoms poke out of large prickly buds that
+perch atop eve more viciously spiked plants.  These thistles have fresh
+yellow pollen sprinkled at the peak of their blossoms.  Only the rare
+plant has gone to seed and shared its feathery, fairy blossom with the
+wind.
+~
+E
+birds roost nooks crannies cliff~
+Nooks and crannies along the cliff face are populated with teams of birds
+bedecked with the most exquisite purple feathers.  Simple mud nests
+protrude from confined bird-sized caverns within the rockface.
+~
+A
+~
+~
+send_to_room( #thistle, room );
+~
+E
+thistle~
+@cThin, feathery thistle seeds fly through the air with grace and beauty.@n
+~
+!
+2 200 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yFinding ample hand and foot holds, you attempt the climb up the rocky
+cliff face.@n 
+~
+E
+to_room~
+@yFinding ample hand and foot holds, $n attempts the climb up the rocky
+cliff face.@n 
+~
+!
+3 0 16
+-1
+S
+
+#44526
+Overlooking the Forgotten Valley~
+The trees back away from the rocky precipice below, forming a safe
+perimeter distance from the craggy edge.  Small shrubs cling desperately
+to the clifftop, unprotected and yet resilient against the strong wind. 
+The panoramic view of the valley below is breathtaking, a verdant
+paradise of grasses and trees, with pillars of smoke gently wisping up
+from the snug, palisade wall enshrouded thorp to the north.  A jagged
+rocky path winds its way down the steep slope, doubling back on itself
+and weaving amidst sharp boulders and earthy rubble.
+~
+[Gretch] alternate entrance into the valley
+[Guin] Done.
+~
+167247872 0 9 0
+D2
+~
+~
+0 -1 44523 10 10 5
+D5
+~
+~
+0 -1 44527 10 10 5
+E
+shrub clifftop~
+Along this windswept ridge small patches of hardy scrub decorated with
+pale pink buds flourish.  This low-lying ground cover remains atop this
+peak where all other plantlife has been ripped out of the crumbling soil.
+~
+E
+jagged rocky slope boulders rubble~
+A narrow trail leading from atop the cliff towards the snug thorp down
+below.  Sharp twists and turns weave between viciously pointed boulders
+and dangerous rubble.  One wrong step could see you tumbling over the
+precipice.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou follow the jagged, winding path downward along the slope.@n
+~
+E
+to_room~
+@y$n follows the jagged, winding path downward along the slope.@n
+~
+!
+3 0 32
+1974 17 1509949490 -2 0
+-1
+S
+
+#44527
+Rocky Cliff Path~
+The trees fall away here from the hill's edge, and jumbled rocks lie
+about like a child's forgotten toys left behind after a day's play. 
+Sharp edges and jagged lines define the pathway as it wends its way up
+the steep terrain of the rock-strewn cliffside path.  Clinging forgotten
+amongst the rocks of the trail, a small crop of daisies flowers brightly,
+adding a touch of colour to the drab walls of rough stone.
+~
+[Guin] Done.
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 44528 10 10 5
+D4
+~
+~
+0 -1 44526 10 10 5
+E
+rocks~
+Broken rocks lay haphazardly across the cliffs base, rubble that has at
+one time been part of the cliffs themselves.
+~
+E
+pathway cliffside~
+Leading high above, a cliffside trail winds around rocks and boulders,
+twists and turns and across precipitous drops.  A view of the entire
+valley would be perfect from atop this cliff.
+~
+E
+daisies daisy~
+Pretty daisies spring up from between rocks lining the steep uphill trail
+winding its was across the face of the cliff.  White petals gently give
+the dull and boring cliff some beauty and colour.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou follow the jagged, winding path upward along the slope.@n
+~
+E
+to_char~
+@y$n follows the jagged, winding pathway upward along the slope.@n
+~
+!
+3 0 16
+-1
+S
+
+#44528
+'Neath a Sheltering Oak~
+An ancient oak, old beyond man's reckoning, rises here 'neath a cerulean
+sky, its ancient limbs gnarled and twisted with age.  Its grasping roots
+dig down deep into the earth, seeking nourishment and moisture from the
+virgin soil.  Wide swatches of thin-bladed grass grow up to and beneath
+the old giant, basking in the protection of densely-leaved branches.  In
+the distance to the north, a haze of woodsmoke lies low against the
+horizon, showing signs of habitation.
+~
+[Guin] Done.
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 44535 10 10 5
+D1
+~
+~
+0 -1 44533 10 10 5
+D2
+~
+~
+0 -1 44529 10 10 5
+D3
+~
+~
+0 -1 44527 10 10 5
+E
+oak ancient~
+Gnarled boughs snake with many twists, outreaching from the ancient trunk
+of an extremely well preserved oak.  An abundance of healthy green
+leaves are held in the branches high above you, whilst green acorns
+dangle from the fingers of this wise old tree.
+~
+E
+roots grass~
+Soft and flexible grass grows in thick swatches right up to 'neath the
+sheltering oaktree.  The protection of the leaves giving the plant life a
+perfect place to grow.  Wide-spread roots ensure the continued safety of
+these grasses, encircling them within their grasping arms as they search
+for the virgin soil.
+~
+E
+north horizon woodsmoke smoke~
+Along the horizon directly to the north, a thin haze of woodsmoke leaves
+gentle grey clouds.  A village or encampment of some kind would be the
+probable cause of that much smoke.
+~
+A
+~
+oak grass~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 30 ) < 3 ) {
+    act_tochar( #found_acorn, ch );
+    act_notchar( #rfound_acorn, ch );
+    obj_to_char( oload( 672 ), ch );
+  }
+  else {
+    act_tochar( #found_grass, ch );
+    act_notchar( #rfound_grass, ch );
+    obj_to_char( oload( 1595 ), ch );
+  }
+  end;
+}
+act_tochar( #dont_see, ch );
+~
+E
+found_acorn~
+You search around the base of the tree and find an acorn.
+~
+E
+rfound_acorn~
+$n searches around the base of the tree and comes up with an acorn.
+~
+E
+found_grass~
+You find a usable piece of grass, probably suitable for a spell component.
+~
+E
+rfound_grass~
+$n plucks a piece of grass from the ground after careful scrutiny.
+~
+E
+dont_see~
+You don't see anything worth taking.
+~
+!
+9 0 0
+-1
+S
+
+#44529
+Grass Along the Valley Floor~
+The rock-embedded ground, surrounding the pool to the south, gives way to
+flatter terrain covered in lush stands of short-bladed grass, spreading
+out across the valley floor.  Interspersed among the verdant clumps,
+thick tufts of delicate tri-leaved clover flourish in the fertile soil. 
+In the distance, an ancient oak towers upward, its faded branches
+reaching toward the sky as if in supplication to the gods.
+~
+[Guin] Done.
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 44528 10 10 5
+D1
+~
+~
+0 -1 44530 10 10 5
+D2
+~
+~
+0 -1 44524 10 10 5
+E
+ancient oak branches~
+A towering oak lies to the north, its ancient branches spreading high and
+wide towards the heavens.  Dense foliage covers its gnarled and twisted
+boughs.
+~
+E
+verdant clumps tufts clover~
+Clover pops out of the lusciously fertile soil in tightly packed tuffets. 
+Trefoil leaves cushion sweetly perfumed clover blossoms colored a pastel
+pink.
+~
+A
+~
+clover grass~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 100 ) < 6 )
+    if( find_skill( ch, searching ) > random( 2, 4 ) ) {
+    act_tochar( #found_clover, ch );
+    act_notchar( #rfound_clover, ch );
+    obj_to_char( oload( 407 ), ch );
+    end;
+  }
+}
+act_tochar( #nothing, ch );
+act_notchar( #rnothing, ch );
+~
+E
+found_clover~
+You found a very rare item, a @gfour leaf clover@n.
+~
+E
+rfound_clover~
+$n looks to have found something interesting amongst all the foilage.
+~
+E
+nothing~
+You don't find anything of interest among the clover.
+~
+E
+rnothing~
+$n searches around, but doesn't seem to find anything.
+~
+!
+9 0 0
+587 17 1509949540 -2 0
+-1
+S
+
+#44530
+Grassy Plateau~
+Burnt and dessicated ground gives way, grudgingly, to a grassy plateau. 
+Low hanging clouds, rising from the river mist, obscure the view of the
+surrounding countryside, with the only visible landmark being a tall
+stony pillar rising to the east, piercing through the clouds and
+disappearing skyward.  Pathways lead away from the desolation to the
+north and west, and deep, intermittent rumblings come from nearby. 
+Glancing northward is the likely source - the dark opening to the
+habitation of some kind of burrowing creature.
+~
+[Guin] done
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 44533 10 10 5
+D1
+~
+~
+0 -1 44531 10 10 5
+D3
+~
+~
+0 -1 44529 10 10 5
+E
+pillar east~
+Far to the east, a scorched pillar rises into the clouds.  Vines cover
+almost every inch of the pillar and look as if they would make an easy
+ladder skyward.
+~
+E
+north dark opening burrow~
+A dark and uninviting mound lies northwards, the lair of an creature from
+all appearances.  Soil and grass lie strewn across the ground in a
+careless fashion, great claw marks scratched into the earth clearly
+visible even from this distance.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou continue along the plateau toward the north.@n
+~
+E
+to_char~
+@gYou continue along the plateau toward the north.@n
+~
+E
+to_room~
+@g$n continues along the plateau toward the north.@n
+~
+E
+to_room~
+@gSkirting the tumbled stones, n makes $s way eastward through the
+ruins.@n 
+~
+!
+3 0 1
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gSkirting the tumbled stones, you make your way eastward through the
+ruins.@n 
+~
+!
+3 0 2
+-1
+S
+
+#44531
+Before the Ruins~
+The surrounding terrain is a scene of utter devastation.  In sharp
+contrast to the verdant life visible throughout the rest of the valley,
+here nothing grows.  The earth here is charred and pitted almost as
+though a great flame has branded it's heat upon the very soil itself. 
+The scorched, blackened remains of what was once a stone structure of
+sorts lies here, strewn across the landscape.  Towards the east, a mighty
+pillar rises skyward, seemingly untouched by the devastation that befell
+this small corner of the valley.
+~
+[Guin] Is there an explanation for this room somewhere? What caused it.
+[Guin] seems like there should be some sort of search here.
+[Guin] Leaving added.
+[Guin] extras added.
+[Guin] Reviewed.
+[Gretch] Town itself should have rumors about the ruins at various shops.
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 44546 10 10 5
+D1
+~
+~
+0 -1 44547 10 10 5
+D2
+~
+~
+0 -1 44532 10 10 5
+D3
+~
+~
+0 -1 44530 10 10 5
+E
+charred pitted soil~
+Black soil covers the desolate area around here.  No plant life survives
+as the soil looks as though it had endured temperatures only a dragon's
+flame could produce.
+~
+E
+stone scorched blackened structure remains~
+Across this landscape of utter desolation that was lush and brimming with
+life, blackened and scorched stones are to be found.  These blocks of
+stone once belonged to an indeterminable structure, but the same thing
+that destroyed the surrounding greenery was surely the cause of this
+building's downfall.
+~
+E
+pillar east~
+A towering vine-entwined pillar resides amoung the ruins to the east.  It
+remains immovable and solid, although it bears the tell-tale markings of
+the rest of this singed area.  It has not escaped the ravages of time.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gSkirting the fallen blocks of stone, you make your way through the
+ruins toward the $T.@n 
+~
+E
+to_room~
+@gSkirting the fallen blocks of stone, $n makes $s way through the ruins
+toward the $T.@n 
+~
+!
+3 0 15
+-1
+S
+
+#44532
+Deep in a Grassy Valley~
+Tall rocky cliffs enclose the grassy carpeting of the valley in a close
+embrace, rising up to either side.  A downy, light green moss grows on
+the western side of the trees, giving off a faint, musty smell, and plump
+beetles work industriously in the moss, moulding it into a haven from
+predators.  To the north, all is still and quiet, few sounds floating on
+the air.
+~
+[Guin] Done.
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 44531 10 10 5
+D2
+~
+~
+0 -1 44525 10 10 5
+E
+moss downy light green trees beetles~
+Moist caverns, home to numerous beetles and bugs, has been finely crafted
+through the feathery moss by industrious forest beetles.  The moss,
+growing on the surrounding trees, produces a slightly musty smell, as if
+this region of forest hadn't been dry in quite some time.
+~
+A
+~
+feathery moss~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( find_skill( ch, searching ) >= random( 0, 4 ) ) {
+    obj = oload( 37 );
+    obj_to_char( obj, ch );
+    act_tochar( #search, ch, obj );
+    act_notchar( #search1, ch, obj );
+    end;
+  }
+  else {
+    act_tochar( #ouch, ch );
+    act_notchar( #ouch1, ch );
+    i = 1d3;
+    dam_message( ch, i, "a beetle's pincer" );
+    inflict( ch, mob, i, "small beetle" );
+    end;
+  }
+}
+send_to_char( #notfound, ch );
+~
+E
+search~
+You search through the moss and find $p.
+~
+E
+search1~
+$n searches through the moss and finds $p.
+~
+E
+ouch~
+As you search through the moss a small black beetle nips your hand.
+~
+E
+ouch1~
+$n yelps as $e pulls $s hand from the moss.
+~
+E
+notfound~
+You search through the moss and find nothing of interest.
+~
+!
+9 0 0
+A
+~
+~
+send_to_room( #bird, room );
+~
+E
+bird~
+@BThe shrill calls of birds sound from the distant bush.@n
+~
+!
+2 150 0
+-1
+S
+
+#44533
+Disturbed Soil Mound~
+The sweetly-scented clover and short grasses have been torn asunder,
+revealing, a gaping hole in the earth several feet wide.  A mound of
+loosely packed soil surrounds the earthy pit in all directions,
+haphazardly thrown about as the burrow was carved from the earth by some
+kind of forest denizen.  Powerful looking claw marks rim the hole, recent
+scars against the grassy ground.
+~
+[Guin] Moles connect here - rm 80000
+[Guin] Done.
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 44534 10 10 5
+D2
+~
+~
+0 -1 44530 10 10 5
+D3
+~
+~
+0 -1 44528 10 10 5
+D5
+~
+~
+0 -1 80000 10 10 5
+E
+clover~
+Broken clover, sweet and fresh, has been ripped from its bed and thrown in
+all directions along with a vast quantity of earth.
+~
+E
+hole mound earth soil burrow~
+A burrow of some large animal has been dug here, loose soil and uprooted
+clover strewn across a fairly wide area.  Around the opening of this
+burrow a mound of freshly dug earth rests, piled high to form a
+protective barrier.
+~
+E
+claw marks rim scars~
+Across the surface of the mound which surrounds the large burrow, deep
+claw marks have been left by whatever foul creature dug this pit.  The
+marks look recent as if the creature was still at home.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou jump feet first $Tward into the mound.@n
+~
+E
+to_room~
+@y$n jumps feet first $Tward into the mound.@n
+~
+!
+3 0 32
+A
+~
+~
+send_to_room( #growl, room, sight );
+~
+E
+growl~
+@rA low rumbling growling echos from deep within the mound.@n
+~
+!
+2 150 0
+2499 9 1509949540 3 0
+-1
+S
+
+#44534
+Fallen Oak - Bend in the Path~
+The dessicated husk of a ancient tree, long since felled by time and
+weather, lies across the path there, forcing turns to both north and
+south.  Little is left of the old giant except the vast, bark-stripped
+trunk and the stump of an broken limb.  Patches of moss thrive on the
+fertile wood, and a cluster of toadstools lies beneath one wrenched up
+root.  The trail continues northward, toward a haze hanging below an
+azure sky, and southward, toward a low-rising mound of loose soil.
+~
+[Guin] Done.
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 44536 10 10 5
+D2
+~
+~
+0 -1 44533 10 10 5
+D3
+~
+~
+0 -1 44535 10 10 5
+E
+husk tree trunk~
+The empty shell of a tree lays here across the path, this giant oak long
+since fallen victim to the weather and time.  Moss and lichen cover the
+cracked and broken bark of the log, which is all but hollow within.  A
+cluster of crimsom speckled toadstools shelter here amid roots pulled
+from the earth when the forest giant fell.
+~
+E
+toadstools moss~
+Patches of grey-green moss cover the broken bark of the ancient tree and
+the ground hovering in its shadow.  A cluster of earthen-colored
+toadstools, no more than a dozen in number shelter in the crook of two
+roots, splashes of crimson spattering their caps like droplets of
+long-dried blood.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gFollowing the lay of the log, you continue southward toward a mound of
+loosely-piled soil.@n 
+~
+E
+to_room~
+@gFollowing the lay of the log, $n continues southward toward a mound of
+loosely-piled soil.@n 
+~
+!
+3 0 4
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gFollowing the lay of the log, you continue northward toward the haze of
+smoke in the distance.@n 
+~
+E
+to_room~
+@gFollowing the lay of the log, $n continues northward toward the haze of
+smoke in the distance.@n 
+~
+!
+3 0 1
+-1
+S
+
+#44535
+Grass and Clover~
+The valley narrows here and the rugged path, if it can be called such,
+takes a jog to the east, before turning back northward in the direction
+of a grey woodsmoke haze floating against the horizon.  As far as the eye
+can see, only wide patches of verdant grass and stands of delicate clover
+blanket the valley floor, save a lone oak rising in the distant south.
+~
+[Guin] Done.
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 44537 10 10 5
+D1
+~
+~
+0 -1 44534 10 10 5
+D2
+~
+~
+0 -1 44528 10 10 5
+E
+oak south~
+A lone oak, tall and proud, stands to the south of here.  Majestic with
+all its branches spread wide, leaves green and healthy.  It looks like it
+could be the grandfather of all the surrounding oaks.
+~
+E
+haze woodsmoke smoke north horizon~
+Far to the north grey woodsmoke hovers along the horizon, signs that
+civilization lays ahead to the north.
+~
+E
+clover~
+Clover, green as a sparking emerald, completely blankets the valley as
+far as the eye can see.  Pretty white and pink blossom pop out from
+amoung the clover and bees hover over them searching for nectar to take
+back to their hive.
+~
+A
+~
+~
+send_to_room( #buzz, room );
+~
+E
+buzz~
+@yThe constant drone of industrious bees hovers just at the edge of
+sound.@n 
+~
+!
+2 150 0
+A
+~
+3 clover 3 fields~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 100 ) < 6 )
+    if( find_skill( ch, searching ) > random( 2, 4 ) ) {
+    act_tochar( #found_clover, ch );
+    act_notchar( #rfound_clover, ch );
+    obj_to_char( oload( 407 ), ch );
+    end;
+  }
+}
+act_tochar( #nothing, ch );
+act_notchar( #rnothing, ch );
+~
+E
+found_clover~
+You found a very rare item, a @gfour leaf clover@n.
+~
+E
+rfound_clover~
+$n looks to have found something interesting amongst all the foilage.
+~
+E
+nothing~
+You don't find anything of interest.
+~
+E
+rnothing~
+$n searches around, but doesn't seem to find anything.
+~
+!
+9 0 0
+-1
+S
+
+#44536
+South of a Palisade Wall~
+Bordered by a stout wooden palisade, a hard-packed dirt trail flows to
+the east and west, disappearing into the trees in both directions.  The
+surface of the road is pitted and rutted by countless scores of passing
+wagons.  Thistles and foxgloves grow in brightly colored clumps around
+the path, the patches of flowers and thorns adding a splash of color to
+the grassland surrounds.  Southward, copses of trees begin to cluster
+into a light woodlands, the trail winding into their heart.
+~
+[Guin] Done.
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 44538 10 10 5
+D2
+~
+~
+0 -1 44534 10 10 5
+D3
+~
+~
+0 -1 44537 10 10 5
+E
+thistles foxgloves clumps~
+The idea of tromping through the tall stands of yellow, white and pink
+foxgloves is tempered by the fine collecton of stinging thistles that
+flourish amongst the roadside blooms.
+~
+E
+stout wooden palisade~
+Pine trunks have been lashed with hemp rope and set deep into the
+earth to form a stalwart defense against roaming orcs and wolves.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou continue along the rutted dirt road toward the $T.@n
+~
+E
+to_room~
+@y$n continues along the rutted dirt road toward the $T.@n
+~
+!
+3 0 10
+-1
+S
+
+#44537
+South of a Palisade Wall - Wagon Trail~
+A dusty road winds through the wild oats and grasses; its hard earthen
+surface marred by the scars of wagon wheels and ox hooves.  A
+spike-tipped palisade flanks the roadway to the north and east, further
+towards the north a gate carves an entrance through the sturdy
+fortification.  Westward, the grasslands wash against more of the stout
+fence, the golden grains dotted with soft white and blue clover patches. 
+A fine collection of thistles thrive at the eastern side of the trail,
+their purple flowers drooping under their own weight.
+~
+[Guin] Done.
+~
+167247880 0 9 0
+D0
+~
+~
+0 -1 44553 10 10 5
+D1
+~
+~
+0 -1 44536 10 10 5
+D2
+~
+~
+0 -1 44535 10 10 5
+D3
+~
+~
+0 -1 44552 10 10 5
+E
+fortification~
+The wooden gate allows entrance to the lands beyond the palisade. 
+Encircled by three walls it would be an unpleasant point to mount an
+assault.
+~
+E
+1 north gate entrance~
+A sturdy gate, formed of two sections of poles lashed together, flanks
+the road to the north.  The breach in the palisade wall is secured by
+stout timber locking the two sides together.  From here, the ruts in the
+road seem deeper in that direction, as if the wagons had come to rest and
+waited there for the gates to be opened.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou take the road northward in the direction of the palisade gate.@n
+~
+E
+to_room~
+@y$n takes the road northward in the direction of the palisade gate.@n
+~
+!
+3 0 1
+-1
+S
+
+#44538
+South of a Palisade Wall~
+Young oak and maples fight for space around the edge of a rope-lashed
+wooden palisade, the tangled trees locked in a desperate race to fill the
+void left by the clearing of older trees.  Toadstools spread across the
+rotting stumps of felled trees, their delicate caps brightly colored to
+warn of their poisonous nature.  Westward, a dirt track cuts through the
+woodlands heading in a southwesterly direction, clusters of thistles and
+wild grass flanking its sides.  The path runs parallel to the palisade
+toward the east.
+~
+[Guin] 68500 connects to the east.
+[Guin] Done.
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 68500 10 10 5
+D3
+~
+~
+0 -1 44536 10 10 5
+E
+toadstools rotting stumps~
+Feasting upon the corpse of the crumbling stump are the dotted red the
+dusky-white toadstools.  Under their pale roots the bark and wood turns
+to a oozing black liquid.
+~
+E
+palisade~
+The pine trunks have been set into the earth, each one lashed together
+with loops of hemp rope.  A scattering of axe marks scar some of the
+wood, where someone has made a half-hearted attempt to break the defense.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou follow the path along the palisade to the east@n.
+~
+E
+to_room~
+@g$n follows the path along the palisade to the east@n.
+~
+!
+3 0 2
+-1
+S
+
+#44539
+Deeper into the Mound~
+Large and darkly shadowed, the uneven form of the walls makes it
+difficult to determine the extent of this hole.  Strange tufts of hair
+litter the floor of the cavern, and fresh marks gouged into the ground in
+and around these tufts of hair give rise to a growing fear.  Numerous
+skeletons of various creatures seem to have found their final resting
+place here, although it was likely not their intent.
+~
+[Brunhilde] extras added
+[Brunhilde] old room up is #44533
+~
+167247872 0 9 0
+D5
+~
+~
+0 -1 44540 10 10 5
+E
+skeletons~
+Decimated body parts, bones and complete skeletons are littering the area
+here.  Deer, rabbit, squirrel, none of these animals have escaped the
+slaugher of the creature that resides here.
+~
+E
+tufts hair~
+Dark chestnut clumps of short hair have been left behind from some
+creature.  Stuck in clumps to the walls and floor, nestled amoungst deep
+gouges scratched into the walls.
+~
+E
+gouged marks~
+Large, deep gouge marks have been left in the hard packed earth here. 
+Scratches only possible to have come from some large vicious beast. 
+Greasy short brown hairs have been left on the walls and also surrounding
+the scarey claw marks.
+~
+-1
+S
+
+#44540
+End of a Muddy Tunnel~
+Bones half stripped of meat and fur litter the floor of a lair, the
+stench of rotting meat rife in the air.  Clumps of hair and deep claw
+marks make this burrow strangely sickening.  A hastily assembled bed of
+leaves, sticks and mud covers the western wall.  Inside the nest a
+depression of a large animal shows that only too recently something was
+here.
+~
+[Gretch] mole cache
+[Brunhilde] extras added
+~
+167247872 0 9 0
+D4
+~
+~
+0 -1 44539 10 10 5
+E
+bones rotting meat~
+Bones that have been split by giant teeth and gnawed on until they have
+been polished rest here beside bones that still are recognisable as once
+belonging to a deer or rabbit.  Rotting flesh covered with maggots and
+flies are heaped in a corner here and make this room feel more like an
+abotior than a place a creature could possibly live.
+~
+E
+clumps hair~
+Greasy clumps of matted hair, short and brown lie on the floor discarded
+from an unknown creature.  A concentration of this horrible hair lies
+entangled inside a nest which borders the western wall.
+~
+E
+bed leaves sticks mud~
+Masses of leaves and twigs have been piled against the west cavern wall,
+held together with mud this appears to be a bed or sorts for a rather
+large creature.  A shallow depression in the centre of the pallet
+littered with clumps of messy hair is obviously where the beast sleeps.
+~
+-1
+S
+
+#44541
+Inside a Wooden Shack~
+This small shack contains rather meagre, but comfortable furnishings; a
+wooden bed with a straw pallet and bearskin blanket lies against the
+south wall opposite a stone hearth.  A simple iron pot and stack of
+firewood sit on either side of the stone fireplace.  Shuttered windows
+look outward in the direction of the garden, and a sturdy-looking shovel
+rests against the frame of the door.
+~
+[Guin] Door is pick only.
+[Guin] Done.
+~
+167247872 0 9 0
+D3
+oaken shack door~
+oaken shack door~
+391 -1 44555 10 10 5
+E
+fireplace iron pot firewood~
+Carefully stacked firewood rests on the hearth bordering the crudely made
+stone fireplace.  A wide greystone chimney allows the smoke to escape the
+shack so as not to let a smokefilled room make people cough and splutter. 
+An age old iron pot rests is the furthest corner of the hearth and you
+can see copious amounts of cold, dry ash residing inside its open mouth.
+~
+E
+bearskin wooden bed south wall~
+A sturdy wooden bed lies along the southern wall, a pallet with straw
+poking through the seams atop it.  The pallet is covered by a dark
+bearskin, luxuriously thick and warm enough to keep the harsh winter
+nights at bay.
+~
+A
+get~
+shovel~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 0, 100 ) < 75 ) {             // 75% poprate
+    obj = oload( 1489 );
+    act_tochar( #shovel, ch, obj );
+    act_notchar( #oshovel, ch, obj );
+    obj_to_char( obj, ch );
+    end;
+  }
+}
+act_tochar( #nshovel, ch, obj );
+~
+E
+shovel~
+You grab $p from next to the door.
+~
+E
+oshovel~
+$n grabs $p from next to the door.
+~
+E
+nshovel~
+Somebody has already grabbed the shovel.
+~
+!
+0 0 0
+-1
+S
+
+#44542
+Way of Shinanne~
+The simple earthen road bisects a more grand, floral path here.  The
+wagon ruts and smooth packed dirt continue north and south, while verdant
+lawns of clover, brimming with flowers and bushes extend to the east and
+west.  To the north, there seems to be a bustle of activity, and the
+sound of splashing water can clearly be heard over the chatter.
+~
+[Guin] Done.
+~
+167247872 12 6 0
+D0
+~
+~
+0 -1 44559 10 10 5
+D1
+~
+~
+0 -1 44558 10 10 5
+D2
+~
+~
+0 -1 44554 10 10 5
+D3
+~
+~
+0 -1 44543 10 10 5
+E
+flowers bushes~
+Tulips, daffodils and wall flowers cluster together to form sweet scented
+blooms across the lawns, their sweet nectar attracting a fair share of
+buzzing insects.
+~
+A
+~
+~
+send_to_room( #ran1, room );
+~
+E
+ran1~
+@cThe sound of giggling halfling children drifts in from the north@n.
+~
+!
+2 150 0
+544 17 1509949540 -2 0
+-1
+S
+
+#44543
+Floral Path Within the Thorp~
+Winding through the fields of green and gold is a hard-packed trail. 
+Dotting the gentle rolling hills are wildflowers and more traditionally
+planted flowers.  Further from the path, a scattering of brush and gorse
+has taken root, the scraggy bushes are yet to dominate the landscape. 
+Northward, clusters of houses gather around the roadside, their
+white-washed walls gleaming against the woodland hues of the surrounding
+countryside.
+~
+[Guin] Done.
+~
+167247872 0 6 0
+D1
+~
+~
+0 -1 44542 10 10 5
+D3
+~
+~
+0 -1 44557 10 10 5
+E
+wildflower planted flowers~
+Scatterings of wildflowers in every rainbow hue dot the surrounding
+hills, lying beyond the planted beds of roses, daisies and a myriad of
+other colorful blossoms.
+~
+A
+~
+~
+send_to_room( #scent, room );
+~
+E
+scent~
+@cThe sweet scent of blooming flowers floats by in a passing breeze@n.
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou wander $T along the path, winding between stands of planted
+flowers@n.
+~
+E
+to_room~
+@g$n wanders $T along the path, winding between stands of planted
+flowers@n.
+~
+!
+3 0 10
+-1
+S
+
+#44544
+Midway up the Great Merryblossom~
+Directly beneath the widespreading canopy of this ancient tree, all the
+colours of the spectrum flourish here, given life by the warm glow of the
+sun.  Huge branches encircle the massive trunk, covered with moss and a
+myriad tiny flowers.  Embedded between a pair of intertwined branches
+amidst the colourful flowers is the source of the ever-present buzzing
+noise - a great beehive.
+~
+[Brunhilde] actual typo when you fill a waterskin from the beehive
+[Brunhilde] if you GET honey from beehive they attack
+[Brunhilde] if you FILL waterskin beehive they dont attack
+[Gretch] This code needs looking at / fixing please
+[Guin] The fill container messed up message is a hard code fix.
+[Guin] Room set no.mob. Don't want deer and fox in climbing the tree..
+[Guin] need up/down leaving messages for climbing the tree..
+[Guin] add pick flower code re: last line of rextra 2?
+[Guin] Reviewed.
+~
+167247880 0 9 0
+D4
+~
+~
+0 -1 44545 10 10 5
+D5
+~
+~
+0 -1 44511 10 10 5
+E
+moss~
+A light layer of @Gmoss@n coats the trunk of the MerryBlossom.  Patches
+of mushrooms grow through the moss on the trunk.
+~
+E
+leaves leaf flowers~
+A great many flowers decorate the MerryBlossom, each diffrent colour to
+its own branch.  Each branch has the same coloured leaves as its flowers,
+creating a rainbow effect.  Red, yellow, green, white, magenta, and blue
+flowers dot the different branches, along with their multi-coloured
+leaves.  It looks like you might be able to pick a few of them.
+~
+A
+~
+~
+send_to_room( #beesting, room );
+i = 1d12;
+loop( all_in_room ) {
+  dam_message( rch, i, "the bee stinging" );
+  inflict( ch, mob, i, "a swarm of stinging bees" );
+}
+~
+E
+beesting~
+@RThe bees swarm from their hive, stinging everything in sight@n.
+~
+!
+2 150 0
+A
+~
+~
+i = 1d2;
+if( i == 1 )
+send_to_room( #sound, room );
+if( i == 2)
+send_to_room( #sound2, room );
+~
+E
+sound~
+The bee activity here is very high, and they seem a little annoyed that
+you are here.  They buzz about your head in an atempt to get you to move
+away.
+~
+E
+sound2~
+The bee hive here bustles with activity, and the buzzing of bees is near
+constant.  Bees fly close to you on their way to the hive.
+~
+!
+2 150 0
+A
+fill jump get touch smack hit~
+*~
+act_tochar( #sting, ch );
+act_notchar( #sting_room, ch );
+dam_message( ch, 2d4, "The bees stinging" );
+inflict( ch, mob, 2d4, "the bee stings" );
+~
+E
+sting~
+@bThe bees swarm from the hive taking their vengence out on you.@n
+~
+E
+sting_room~
+@BBees swarm out of their hive and sting $n in defense.@n 
+~
+!
+0 0 0
+596 17 1509949540 -2 21
+-1
+S
+
+#44545
+Atop the Great MerryBlossom~
+The green leaves and multi-coloured flowers of the mighty behemoth give
+way to clear skies, a break in the canopy above.  From this vantage
+farmland past the forests to the west, and far to the north, snugly the
+distance: A walled city of granite far to the east, a sprawling farmland
+to the west, past the forests, and far to the north, snugly situated in
+the middle of the lush valley, lies the smallest of the three - a
+palisade-enshrouded thorp.
+~
+[Gretch] Room Done
+[Guin] add up/down leaving codes for tree climbing please.
+[Guin] Reviewed.
+~
+167247872 0 9 0
+D5
+~
+~
+0 -1 44544 10 10 5
+E
+moss mushrooms~
+A light layer of @Gmoss@n coats the trunk of the MerryBlossom, growing
+mostly under the branches and in the shady portions of the tree.  Patches
+of mushrooms grow through the moss here and there.
+~
+E
+birds~
+The birds circle slowly in the sky.  They appear to be one or another
+species of predatory bird from around the area, perhaps they are hawks or
+eagles.
+~
+E
+leaves leafs flowers~
+A myriad of flowers decorate the MerryBlossom, each different colour to
+its own branch.  Each branch has the same coloured leaves as its
+flowers, creating a rainbow effect.  @RRed@n, @Yyellow@n, @Ggreen@n,
+@Wwhite@n, @Mmagenta@n, and @Bblue@n flowers dot the different brances,
+along with their @Rmu@n@ylt@n@Yi-@n@Gco@n@Wlo@n@Mur@n@Bed@n leaves 
+~
+A
+~
+~
+i = 1d2;
+if( i == 1 )
+send_to_room( #bird, room );
+if( i == 2 )
+send_to_room( #bees, room );
+~
+E
+bird~
+Birds circle the area casting their shadows over the boughs of the
+Merryblossom.
+~
+E
+bees~
+There is a loud @ybuzzing@n of @Gannoyed@n @Ybees@n from one of the lower
+branches.
+~
+!
+2 150 0
+932 9 1509949540 3 0
+-1
+S
+
+#44546
+Ruined Marble Statue~
+Another silent victim of devastation, the marble statue before you
+testifies with unspoken words to what happened here.  In a former life,
+you imagine the marble statue to be of great importance, but the stoney
+robed figure stands here, charred and ruined.  As a contrast to the fiery
+destruction in this area, a small crop of daisies somehow manages to
+cling to life in the blackened earth by the feet of the statue, a sign
+that perhaps one day, this area will be verdant again.
+~
+[Brunhilde] extras done
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 44548 10 10 5
+D2
+~
+~
+0 -1 44531 10 10 5
+E
+marble statue~
+Broken marble litters the floor around the small patch of daisies, come
+no doubt from the lifesize statue of a robed elven man.  Flowing robes
+spread out from the body of the statue and two outstretched arms have
+been broken off at the elbows.  No trace of them can be found anywhere
+nearby.  Black scorch marks cover the entirety of this statue and his
+face shows much sorrow, almost as if it is responding to the destruction
+that has occured here.
+~
+E
+daisy daisies~
+These daisies have defied the destruction of the surrounding area, and
+their presence begins the hard task of once again making this area green. 
+The tiny white flowers with centres of sunshine yellow and undersides of
+the palest pink circle a large marble statue, almost as if it was
+standing in a small patch of paradise.
+~
+-1
+S
+
+#44547
+Ruined Pillar~
+Still erect amidst blackened stone and charred plant life, a single
+pillar of stone stands here in the ruins.  Crumbling and discoloured, the
+column is home to a half-dozen or more creeping vines, somehow managing
+to crawl from the scorched earth.  Far overhead on the scorched and aging
+pillar, the soft glint of light hitting metal can be seen reflecting down.
+~
+[Guin] Done.
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 44548 10 10 5
+D3
+~
+~
+0 -1 44531 10 10 5
+D4
+~
+~
+0 -1 44551 10 10 5
+E
+creeping vines pillar~
+Pale stone, cracked and crumbled, its surface blemished and discolored by
+endless years in the open, poises sturdily with the ruins...still upright. 
+Vines emerge from scorched earth surrounding the base of the pillar and wind
+their way up and around, almost as far as the eye can see.
+~
+E
+glint metal 1 up.~
+A glint of metal flickers down from further up the vine entwined pillar.
+~
+E
+glint metal up~
+No description.
+~
+A
+3 climb~
+3 pillar 3 vines 1 up~
+if( find_skill( ch, climb ) > random( 3, 6 ) ) {
+  act_tochar( #went_up, ch );
+  act_notchar( #rwent_up, ch );
+  transfer( ch, find_room( 44551 ) );
+act_notchar( #in_next_room, ch );
+  end;
+}
+act_tochar( #failed, ch );
+act_notchar( #rfailed, ch );
+~
+E
+went_up~
+You quickly climb up the the pillar, using the various hand holds and
+vines as purchase.
+~
+E
+rwent_up~
+$n quickly climbs up the eroding pillar, nimbly using the vines and
+outcroppings as purchase.
+~
+E
+failed~
+You can not seem to find enough of a hand hold to climb up the tower.
+~
+E
+rfailed~
+$n seems to be having a hard time finding a hold for $m to climb up.
+~
+E
+in_next_room~
+$n struggles up into this spot.
+~
+!
+0 0 0
+A
+~
+~
+act_tochar( #try_climbing, ch );
+~
+E
+try_climbing~
+You can't just walk up there, maybe you should try climbing.
+~
+!
+3 0 16
+210 17 1509949490 -2 0
+-1
+S
+
+#44548
+Before the Altar~
+Seemingly untouched by the intense heat which caused the destruction of
+the surrounding area lies a mithril bas-relief, delicately placed upon a
+block of black obsidian.  The entire surface of the altar is etched in
+glowing white runes, which throb to and fro in color like a heartbeat. 
+Whatever or whoever caused the devastation of the plantlife around here,
+this was obviously the focal-point of the decimation.
+~
+[Strinan] Zatafrag -name of priest
+[Guin] add search for down exit.
+[Guin] hide same.
+[Gretch] search to add
+~
+167247872 0 9 0
+D2
+~
+~
+0 -1 44547 10 10 5
+D3
+~
+~
+0 -1 44546 10 10 5
+D5
+trapdoor~
+~
+171 -1 44550 10 10 5
+E
+altar runes mithril bas-relief~
+A mithril slab being used as an altar, decorated with raised runes sits
+atop a solid obsidian base.  Bordered by a simple leaf design this
+bas-relief contains etchings of white, radiantly glowing runes.  These
+runes pulsate from radiant to dull with perfectly timed rhythm,
+reminiscent of a heartbeat.
+~
+E
+obsidian block black~
+A low standing obsidian block lies beneath a mithril bas-relief.  This
+obsidian is a midnight hue, but has the extremely rare tinge of green
+which has only been found within the dead volcanic mountains of Kha-da.
+~
+A
+~
+1 down~
+act_tochar( #found_door, ch );
+act_notchar( #rfound_door, ch );
+open( room, down );
+~
+E
+found_door~
+You search the floor around the altar and notice some cracks in the
+flooring.  After wiggling your fingers into the cracks you find that it
+is actually a door.
+~
+E
+rfound_door~
+$n is searching around the floor, you now notice some cracks there, as $e
+gives a heave you see a door open.
+~
+!
+9 0 0
+-1
+S
+
+#44549
+Mole Cache~
+Under Construction.
+~
+~
+167247872 0 9 0
+-1
+S
+
+#44550
+Beneath the Altar of Light~
+Knife-thin shafts of light do little to illuminate this hidden chamber.  The
+immediate smell of something burning assails your nostrils, as well as
+the stench of death.  Placed in the centre of the room upon a simple
+stone slab is the body of a skeleton, swathed in rotting black cloth. 
+The skeleton has been laid out with its legs outstretched and its arms
+folded across its chest in a simplistic burial fashion.  This skeleton
+must have been of some import to have been placed here like this.
+~
+[Strinan] Body of Zatafrag, deposited here by the halflings after the tragedy
+[Brunhilde] object silver cross . 472
+[Brunhilde] extras done
+[Guin] need corpse object here. [Hilde] done.
+~
+167247872 0 9 0
+D4
+~
+~
+171 -1 44548 10 10 5
+E
+slab stone~
+A thick granite slab that was cut from a gold enriched vein rests in the
+centre of this dark and putrid smelling room. Four thick blocks carved
+from white granite hold the skeleton resting on this simple slab 1'6" off
+the cold floor.
+~
+E
+body~
+Bleached bones of a well preserved skeleton rest here atop a cold granite
+slab, most likely belonging to a long dead elven man.  Most bones have
+stood the test of time and lie here undisturbed, but some bones such as
+the skull and left femur have been shattered into nothing more than
+shards of sharp white bone.  Tatters of black cloth cover the midsection
+and chest of this long dead body, although its limbs and head remain on
+display 
+~
+E
+black cloth rotting~
+Ancient black cloth has been spread atop this bleached skeleton, covering
+all but its head and limbs.  At one time this cloth looks as if it could
+have been a finely stitched robe or a lovingly crafted death shroud. 
+~
+3777 49 1509949540 -2 0
+472 81 1509949445 -2 0
+14 81 1509949530 -2 0
+14 81 1509949490 -2 0
+14 81 1509949460 -2 0
+-1
+S
+
+#44551
+Halfway up the Crumbling Pillar~
+The crumbling stonework of the pillar is black with soot and ash, marks
+of the intense and raging heat that scorched the stone in the past. 
+Vines and creepers inch their way around the darkened stone, clinging
+tenaciously to solid column.  There is a glint of metal amid the vines,
+semi-hidden within the dark green vegetation.
+~
+[Guin] Done.
+~
+167247872 0 9 0
+D5
+~
+~
+0 -1 44547 10 10 5
+E
+vines vegetation glint~
+The vines, thick as a man's thumb and covered with darkly green
+heart-shaped leaves, grips the eroded surface of the proud column,
+affording a sturdy...if slippery...surface for climbing.  Winking
+enticely from within the intertwining vegetation, the sun glints off of
+some shiny metallic surface.
+~
+E
+metallic vegetation surface metal~
+Pushing the vegetation aside, you find a shiny place crafted from
+well-polished gold that still holds a hint of its former beauty.  There
+are lines engraved into the plaque...writing it seems.  The writing
+reads: 
+
+           @CDedicated to the glory of Zatafrag@n
+~
+A
+3 climb~
+3 pillar 3 vines 1 down~
+if( find_stat( ch, dex ) > random( 8, 15 ) ) {
+  act_tochar( #dex_down, ch );
+  act_notchar( #rdex_down, ch );
+  transfer( ch, find_room( 44547 ) );
+  act_notchar( #down_room, ch );
+  end;
+}
+act_tochar( #ohoh, ch );
+act_notchar( #rohoh, ch );
+transfer( ch, find_room( 44547 ) );
+act_notchar( #arrival, ch );
+i = random( 2, 4 );
+inflict( ch, mob, i, "the fall" );
+dam_message( ch, i, "the fall" );
+~
+E
+dex_down~
+You manage to diligently find the first hold to get down from your perch.
+~
+E
+rdex_down~
+$n seems to find $s step to getting off this pillar.
+~
+E
+down_room~
+$n arrives carefully, searching for spots to put $s hands and feet.
+~
+E
+ohoh~
+You thought you had a firm grip on that spot, but slip oh so much from
+your perch.
+~
+E
+rohoh~
+$n slips and falls to the ground below.
+~
+E
+arrival~
+$n bounces lightly onto the ground.
+~
+!
+0 0 0
+A
+~
+~
+act_tochar( #have_to_climb, ch );
+~
+E
+have_to_climb~
+You have to climb down from here.
+~
+!
+3 0 32
+-1
+S
+
+#44552
+South of a Palisade Wall~
+A stout wooden palisade cuts through the sun-drenched grasslands, the
+rough timbers lashed together with rope and pegs.  A scattering of tree
+stumps lie partially buried under a blanket of wild barley and clover,
+the unfortunate trees cut down to provide a killing ground before the
+fortification, and probably to provide some of the building timber. 
+Eastward, a dusty road meanders through the high grass, its hard-packed
+surface cut with the scars of wagonwheels.
+~
+[Guin] Done.
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 44537 10 10 5
+E
+wooden palisade~
+Disecting the grasslands, the fortification appears ideal for keeping
+wandering dangers from the settlement beyond.  Hemp ropes have been bound
+around the timbers, a handful of them appearing recently replaced.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou continue east along the narrow rutted road.@n
+~
+E
+to_room~
+@y$n continues to the east along the narrow rutted road.@n
+~
+!
+3 0 2
+-1
+S
+
+#44553
+Gap in a Palisade Wall~
+A pair of wooden gates hang open here, creating a gaping hole in the
+sturdy defenses of the spike-tipped palisade.  A set of wheel ruts, the
+size of a small cart, have been worn in the earth, and it seems apparent
+that the clover foliage abundant in most parts of this valley has been
+worn away by the various types of traffic.  A small patch of wildflowers
+grows undisturbed in the shade of the great wooden walls, patches of
+vibrant purple and orange constrasting strongly against the knobbled bark
+of the sharpened poles.
+~
+[Gretch] thorp gate
+[Guin] Leaving/extras added.
+[Guin] Reviewed.
+~
+167247880 0 9 0
+D0
+~
+~
+0 -1 44554 10 10 5
+D2
+~
+~
+0 -1 44537 10 10 5
+E
+wildflowers shade purple orange~
+Wildflowers hug the palisade wall, safe from all action of the nearby
+gate.  Sunset orange blossoms with long yellow stamen adorn wiry, twiggy
+plants.  Interspersed with the orange, flowers the hue of juicy
+blackberries nestle against the dark soil.
+~
+E
+wheel ruts~
+Deeply carved furrows stretch along the bare earthen road testament to
+the heavey infux of travelers and merchants.  No plantlife grows along
+the road as if it dared to show its leaves to the sky they would be
+immediately trampled.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou enter Abhanthorp through the opened gates breaching the palisade.@n
+~
+E
+to_room~
+@g$n enters Abhanthorp through the opened gates breaching the palisade.@n
+~
+!
+3 0 1
+2499 9 1509949540 3 0
+-1
+S
+
+#44554
+Way of Shinanne~
+This quaint thorp has a definite halfling feel to it.  This, the main
+road, is a simple path of packed earth flanked on either side by beds of
+multi-coloured flowers.  Small children and animals run about barefoot
+and carefree in this peaceful village environment.  The town itself seems
+to be a combination of wooden huts and underground hobbit-holes built
+into the hilly terrain in this section of the valley.  Set into the
+hillside to the west, a circular oaken portal is decorated with a banner
+of coloured cloth, the stitched image of a needle and thread emblazoned
+on it.  To the east, a large field of vegetables is clearly visible,
+while the main road continues north.
+~
+[Brunhilde] room extras added.
+[Guin] Done
+~
+167247872 0 6 0
+D0
+~
+~
+0 -1 44542 10 10 5
+D1
+~
+~
+0 -1 44555 10 10 5
+D2
+~
+~
+0 -1 44553 10 10 5
+D3
+circular oaken portal~
+circular oaken portal door~
+131 -1 44556 10 10 5
+E
+bed multicolored colored flowers~
+Primulas and petunias of all colors have been planted in neat beds on
+each side of the road here.  They have been well looked after by a city
+gardener or some well meaning citizen, and they bloom with absolute
+perfection.
+~
+E
+banner cloth image~
+A golden needle and thread have been expertly stitched onto a bright
+banner of red cloth trimmed with golden fringing.  The banner has been
+draped over two wooden pegs that have been driven into the house above
+the oaken portal.
+~
+E
+circular oaken portal~
+Ancient oak has been carved into perfectly circular doorframe and has
+been polished into a shining gleam.  Flowers and leaves cover the portal
+in a festoon of carvings, each one stained in the exact color of its
+likeness.
+~
+E
+vegetables field~
+Vegetables of all kinds can be seen growing in neat rows in the field to
+the east.  Row upon row of delicious greenery beckons to you.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou leave Abhanthorp through the opened gates breaching the palisade.@n
+~
+E
+to_room~
+@g$n leaves Abhanthorp through the opened gates breaching the palisade.@n
+~
+!
+3 0 4
+-1
+S
+
+#44555
+A Healthy Vegetable Field~
+Row upon row of lettuces, carrots, potato, and other vegetables grow in
+this well tilled field of vegetables.  The rows are even and orderly, and
+there is barely a hint of weeds to be seen amongst the abundant food crop
+that flourishes here.  A solid looking shack of oaken logs and thatched
+straw has been built on the eastern end of this field, its crude
+shuttered windows looking out over the growing plants.
+~
+[Guin] Veggie seller here. Feel free to create more veggies and add them to shop.
+[Guin] Do not add turnips to this list as there is a pop for them elsewhere.
+[Guin] East door is pick only.
+[Guin] Done.
+~
+167251973 0 6 0
+D1
+oaken shack door~
+oaken shack door~
+391 -1 44541 10 10 5
+D3
+~
+~
+0 -1 44554 10 10 5
+E
+carrot~
+Rows of feathery shoots of greenery spring from the ground here.  One has
+been slightly pulled from the fertile soil; the orange flesh of a carrot
+peeks through the dirt that is caked onto it.
+~
+E
+lettuce~
+Crisp lettuces grow fresh and green; rows of lettuces just inviting you
+to pick them.
+~
+E
+shack logs thatched straw eastern~
+Tightly thatched straw has been used for keeping the elements out of this
+small house and it looks as if it has been freshly repaired.  Roughly
+painted shutters are firmly attached to a sturdy shack of oaken logs. 
+Pegs have been hammered into the logs in two horizontal rows and on these
+pegs various farming tools are being stored.
+~
+A
+~
+~
+send_to_room( #rattle, room );
+~
+E
+rattle~
+@rOne of the loosely-hinged shutters rattles threateningly in a passing
+breeze.@n 
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou pick a careful path through the neatly sown vegetables.@n
+~
+E
+to_room~
+@g$n picks a careful path through the neatly sewn vegetables.@n
+~
+!
+3 0 2
+2496 9 1509949540 3 0
+1489 17 1509949465 -1 0
+866 17 1509949540 -1 0
+3157 17 1509949540 -1 0
+3154 17 1509949540 -1 0
+3588 17 1509949540 -1 0
+2499 9 1509949540 3 0
+-1
+S
+
+#44556
+Sayessa's Seamstress Shack~
+This snug halfling-hole has the definite feel of a woman's touch.  A
+stitched 'home sweet home' sign hangs on the inside of the door, and
+several hanging baskets full of sweet smelling herbs and flowers are
+scattered about the ceiling.  The walls of this comfortable chamber are
+draped with swathes of brightly coloured cloth, and a wooden counter
+shows off some finely crafted wares.  A ceramic cookie jar sits on the
+edge of the counter, and a cushioned wicker rocking chair sits adjacent
+to a small brick fireplace.
+~
+[Guin] Steal cookie code here.
+[Guin] Done
+~
+167251981 0 5 0
+D1
+circular oaken portal~
+circular oaken portal door~
+131 -1 44554 10 10 5
+E
+home sweet sign~
+Cross-stitched in warm colors, this "Home Sweet Home" picture has
+obviously been sewn with a delicate hand.  Although its message is
+simple, its meaning brings untold love of this quaint home.  A well worn
+oak frame decorates the embroidery.
+~
+E
+baskets herbs flowers~
+Aromatic herbs and flowers, only slightly faded from the drying process,
+have been woven into hanging wicker baskets.  These colorful baskets are
+well aranged and compliment perfectly the bright cloth on the walls of
+this humble abode.
+~
+E
+counter cookie jar~
+A long counter made of an undeterminable red wood holds host to many
+items.  Handmade goods such as warm, multi-colored garments, knitted from
+the finest wool and a wide array of useful wicker baskets.  A blue
+ceramic cookie jar has been placed in pride of place, near the center
+front of the counter.
+~
+E
+brick fireplace~
+Red bricks form an often used fireplace against the north wall.  Black
+smoke stains line the inside of the fireplace and bright embers burn
+within the grate.  Oddly shaped bluestones form the hearth, which has
+been decorated with tall redclay pottery pots.
+~
+E
+vase redclay pottery~
+Dried grasses with small fluffy seedheads that resemble cute bunnytails
+have been artfully aranged in these vases.
+~
+A
+steal~
+cookie~
+/*
+ *   who stole the cookies from the cookie jar!
+ *   acode to steal a random flavour cookie from the cookie jar
+ *
+ *   reset0 - designates cookie guardian has caught a thief and is watching the jar closely
+ *   reset1 - designates cookie jar has been plundered until it was empty
+ *   cookie vnums range from 3348 to 3356
+ */
+
+if( !rflag( reset1, room ) ) {                          // check if the cookie jar is empty
+  act_tochar( #empty, ch );                               // tell the thief that the cookie jar is empty
+  end;                                                    // end the program
+}
+mob = mob_in_room( 2439, room );                        // 2439 is the vnum for the cookie guardian (if in room, set it to 'mob')
+if( mob ) {                                             // cookie guardian is in the room
+  if( !rflag( reset0, room ) ) {                          // check if the cookie guardian is on the lookout for thieves
+    act_tochar( #wary, ch, obj, mob );                      // tell the thief that the cookie guardian is wary
+    end;                                                    // end the program
+  }
+  obj = oload( random( 3348, 3356 ) );                    // load the cookie that you tried to steal
+  if( random( -2, 15 ) > find_skill( ch, steal ) ) {      // check steal skill
+    remove_rflag( reset0, room );                           // failed!  flag as being caught
+    act_tochar( #caught, ch, obj, mob );                    // inform the thief they were caught
+    act_notchar( #ocaught, ch, obj, mob );                  // inform the room that the thief was caught
+    junk_obj( obj, 1 );                                     // junk the stolen cookie (back into the jar)
+    end;                                                    // end the program
+  }
+}
+else
+  obj = oload( random( 3348, 3356 ) );                    // no guardian so automatically load the stolen cookie
+act_tochar( #steal, ch, obj, mob );                     // inform the thief of their success
+act_notchar( #osteal, ch, obj, mob );                   // inform the room of the thief's misbehavior
+obj_to_char( obj, ch );                                 // give the cookie to the thief
+if( random( 0, 10 ) == 0 )                              // 10%(ish) chance of cookie jar becoming empty
+  remove_rflag( reset1, room );                           // flag jar as empty (if necessary)
+
+/*
+ *   note that you could have reset a cookie jar object with cookies inside
+ *   but it's more fun this way, imho :)
+ */
+~
+E
+wary~
+$N is too wary for you to steal a cookie unnoticed.
+~
+E
+caught~
+$N catches you stealing $p from the cookie jar and makes you put it back.
+~
+E
+ocaught~
+$N catches $n stealing $p from the cookie jar, and promptly makes $m put it back.
+~
+E
+steal~
+You manage to quietly steal $p from the cookie jar.
+~
+E
+osteal~
+$n appears to be doing something surreptitious with the cookie jar.
+~
+E
+empty~
+Glancing at the cookie jar, you notice there are no more cookies to steal.
+~
+!
+0 0 0
+A
+~
+~
+/*
+ *   makes the guardian of cookie jar grumble if she notices all the
+ *   cookies are gone, but hasn't caught the thief
+ *
+ *   reset1 - designates cookie jar has been plundered until it was empty
+ */
+
+if( rflag( reset1, room ) )
+  end;
+mob = mob_in_room( 2439, room );
+if( mob ) {
+  interpret( mob, "scowl" );
+  wait( 1 );
+  interpret( mob, "say Who stole the cookies from the cookie jar?" );
+  wait( 1 );
+  interpret( mob, "sigh" );
+  wait( 1 );
+  interpret( mob, "emote grumbles to herself as she restocks the cookie jar." );
+  set_rflag( reset1, room );
+}
+~
+!
+2 100 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou exit the shop through the circular portal@n.
+~
+E
+to_room~
+@g$n exits the shop through the circular portal@n.
+~
+!
+3 0 2
+2439 9 1509949540 3 0
+627 17 838860900 -1 0
+202 17 1509949540 -1 0
+-1
+S
+
+#44557
+Before a Painted Caravan~
+A brightly painted wagon, large blocks of hewn wood wedged behind its
+wheels, nestles between a pair of ancient oaks, creating a more permanent
+home for its owner.  A muddy trail winds eastward from here, its earthen
+surface flanked by wildflowers and grasses.  Light woodlands spreads
+across the western hills, the mixture of maple, oak and walnut becoming a
+dense forest further out.  A patch of @Wdaisies@n lies close by the wagon
+steps, a splash of brilliance against the darker forest green.
+~
+[Guin] Pick daisy code added in this room.
+[Guin] need extras for the wagon/blocks/steps (one to include allthat)
+[Guin] extra for path/wildflowers/grasses
+[Guin] extra for daisy - use description from object 3800 for it.
+[Guin] reviewed.
+~
+167247872 12 6 0
+D1
+~
+~
+0 -1 44543 10 10 5
+D2
+~
+~
+0 -1 44560 10 10 5
+E
+woodland~
+Vanishing off into the distance is a beautiful woodland made up of oak,
+maple and elm trees.  Woodland becomes forest, and life continues in its
+stunning fashion.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou climb the two steps up to the wagon and step inside@n.
+~
+E
+to_room~
+@g$n climbs the two steps up to the wagon and steps inside@n.
+~
+!
+3 0 4
+3800 17 1509949540 -2 0
+-1
+S
+
+#44558
+Floral Clearing Near the Way of Shinanne~
+Thick hedges brimming with colour surround this floral alcove off the
+main road.  The verdant bushes sprout with yellow, red, purple, and many
+other different bright blooms as they compete for attention.  Wildflowers
+grow rampant amongst the clover lawn here, and reddish-gold fish swim
+happily in a small azure rockpool situated near the far end of the
+clearing.
+~
+[Guin] Done.
+~
+167251969 0 6 0
+D3
+~
+~
+0 -1 44542 10 10 5
+A
+~
+~
+send_to_room(#fish, room );
+~
+E
+fish~
+@RA red-gold fish tops the water, grabbing a passing insect from the air
+before disappearing behind a stand of reeds@n.
+~
+!
+2 150 0
+2694 17 1509949540 -2 0
+3492 17 1509949540 -2 0
+2497 9 1509949540 3 0
+-1
+S
+
+#44559
+Well of Shinanne~
+The centre of the quaint halfling settlement is marked by a simple stone
+well, cobbled together with smooth, rounded rocks and mortar.  The well
+itself stands around two feet high, and is capped with a wooden winch and
+bucket.  The crossing dirt paths have been laid in a circular pattern
+around the fountain, and small flowers and clover peek between the
+rounded stones.  A silvery plaque set into the side of the well glimmers
+in the light, small lettering etched into it in a flowing script.
+~
+[Guin] Done.
+~
+167247874 12 6 0
+D0
+~
+~
+0 -1 44562 10 10 5
+D1
+~
+~
+0 -1 44564 10 10 5
+D2
+~
+~
+0 -1 44542 10 10 5
+D3
+~
+~
+0 -1 44563 10 10 5
+E
+silvery plaque~
+In a flowing, elvish style script:
+
+@cMay the grace and blessing of Shinanne quench your thirst.@n
+~
+A
+turn lower raise~
+crank~
+if( obj_in_room( 1372, room ) ) {
+act_tochar( #lower, ch );
+act_notchar( #rlower, ch );
+junk_obj( obj_in_room( 1372, room ), 1 );
+}
+else {
+act_tochar( #raise, ch );
+act_notchar( #rraise, ch );
+obj_to_room( oload( 1372 ), room );
+}
+~
+E
+lower~
+@gTurning the wooden crank, you lower the bucket down into the well.@n
+~
+E
+rlower~
+@gYou turn the wooden crank, raising the bucket out of the well.@n
+~
+E
+raise~
+@g$n turns the wooden crank, raising the bucket out of the well.@n
+~
+E
+rraise~
+@g$n turns the wooden crank, raising the bucket out of the well.@n
+~
+!
+0 0 0
+82 17 1509949540 -2 0
+-1
+S
+
+#44560
+Inside a Painted Caravan~
+The wooden panels of the quaint caravan have been bedecked in floral
+paintings, most deplicting frolicing animals bounding through fields of
+flowers.  A circular stained glass window has been set in the northern
+door, fine lead workings dividing the glass into four sections, each one
+crafted into a different season.  Flax baskets and wicker dangle from the
+rafters, a mixture of herbs and dried flowers hanging with them.  A
+simple wooden half-door blocks the southern exit, a faint scuffling sound
+emanating from the other side.
+~
+[Guin] Done.
+~
+200814597 0 5 0
+D0
+~
+~
+0 -1 44557 10 10 5
+D2
+~
+~
+235 -1 44561 10 10 5
+E
+glass stained window~
+Exquisitely colored glass has been lovingly cut and set into a circular
+window, divided into four panes each of which is separated from the other
+by lead caming.  Crafted into the top of the circular window are the
+seasons of summer and winter.  Spring and autumn fill in the bottom half. 
+Perhaps, looking at each section in turn would shed more light into their
+appearance.
+~
+E
+spring~
+Spring belongs to the daffodils and tulips and young yellow-haired
+halfling couples sitting beneath blossoming cherry trees, fledgling birds
+flying overhead, soft white clouds filling the sky.
+~
+E
+summer~
+Summer reveals rosy-cheeked maidens with long, colorful ribbons woven
+through their hair and pretty dresses, the flowers in full bloom and a
+clear blue sky.  A pool of clear water surrounded by long willowy reeds
+reflects the golden sun in the sky.
+~
+E
+autumn~
+Autumn, the most colorful of the panes, shows red and orange leaves of
+maples and flametrees.  A beautiful maiden with glorious curls of red
+hair twirls and dances among the trees, her long golden dress flaring
+daringly.
+~
+E
+winter~
+Winter depicts dancing white snowflakes, snowfields, and merry halfling
+children busy in play.  Mounds of snow, carefully moulded into little
+snowfolk bedecked in cast-off halfling clothing, sit atop rolling hills
+of white.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou step through the wagon opening to the north@n.
+~
+E
+to_room~
+@g$n steps through the wagon opening to the north.@n
+~
+!
+3 0 1
+2450 9 1509949540 3 0
+-1
+S
+
+#44561
+Holding Chamber~
+This room is a holding chamber for the pet store to the north.  Players
+should (in theory) not be able to get in here.  :) 
+~
+~
+167260167 0 9 0
+D0
+~
+~
+235 -1 44560 10 10 5
+2451 9 1509949540 3 0
+2452 9 1509949540 3 0
+2453 9 1509949540 3 0
+2454 9 1509949540 3 0
+2455 9 1509949540 3 0
+2456 9 1509949540 3 0
+-1
+S
+
+#44562
+Way of Shinanne~
+A dusty trail meanders through the village, the hard-packed path only
+surviving through the determination of countless halfling feet that
+trample down the prolific flora that threatens to envelop the entire town. 
+Cascading wallflowers and tulips bustle for space amidst aster and
+sunflowers, the riot of growth matched by a riot of color.  A grand
+building rises to the west of the trail.  The thorp spreads southward,
+the cluster of buildings singing with the energies of industrial
+halflings hard at work and play.
+~
+[Guin] Done.
+~
+167247872 12 6 0
+D0
+~
+~
+0 -1 44571 10 10 5
+D2
+~
+~
+0 -1 44559 10 10 5
+D3
+low wooden door~
+~
+131 -1 44573 10 10 5
+E
+grand building~
+The lower portions or the grand building have been cut from ash-colored
+stone.  At its foundation tendrils of sunset-red ivy sprawl languidly,
+the verdant plant only beginning to climb the rockface.  Above the stone
+foundations rise walls of redwood, the richly grained wood polished with
+a sweet-smelling oil.
+~
+E
+wallflowers tulips aster sunflowers~
+With a flourish of colour, all manner of flowers spring to life on either
+side of the path.  Small white asters sway close to the ground, their
+long petals a little dusty from the dirt road.  Mottled brown and yellow
+wallflowers decorate the stone masonry around the lower foundations of
+the building, adding a tranquil, rustic charm to the stately building.  A
+swathe of scarlet red and sunshine yellow tulips dance among the thick
+stems of the towering sunflowers.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou duck through the low doorway, enterring the building to the west@n.
+~
+E
+to_room~
+@g$n ducks through the low doorway, enterring the building to the west@n.
+~
+!
+3 0 8
+-1
+S
+
+#44563
+Tobacco Way~
+Carving its way through the pastural lands is a hard packed earthen
+road, its rutted surface pockmarked from years of wagon wheels and heavy
+tread.  A copse of slender birch trees spreads across the golden grasses,
+their dappled trunks and branches silver and black.  The sweet smell of
+flowers calls a swarm of bees to their embrace, the tiny insects darting
+between clover, wall flowers, tulips and irises.
+~
+[Guin] Done.
+~
+167247872 12 6 0
+D1
+~
+~
+0 -1 44559 10 10 5
+D3
+~
+~
+0 -1 44565 10 10 5
+E
+birch copse trunks branches~
+The tall, golden-leafed birches grow thickly across the hillside.  The
+rustles of their papery leaves can be heard, even at this distance.
+~
+E
+clover wall flowers tulips iris~
+Casual beds of flowers are scattered randomly along the path, their color
+and scent a delight to the eye and nose.  Dozens of honey bees flit among
+the many-hued blooms, their constant movement and audible drone.
+~
+A
+~
+~
+~
+!
+0 0 0
+A
+pick get~
+tulip iris clover flower~
+act_tochar( #nope, ch );
+act_notchar( #rnope, ch );
+~
+E
+nope~
+@cYou start to pick a handful of flowers but decide not to disturb the
+careless symmetry of the beds@n.
+~
+E
+rnope~
+@c$n stoops down as if to pick a nearby blossom then stops@n.
+~
+!
+0 0 0
+3779 17 1509949490 -2 0
+3779 17 1509949465 -2 0
+-1
+S
+
+#44564
+Tobacco Way~
+A weatherworn picket fence meanders beside the earthern trail as it winds
+in an east-west direction.  Rutted and scarred by wagons, the road is
+poorly maintained despite being a merchant route.  Hillside houses sprout
+across the surrounding landscape, brightly bedecked with tulips and wild
+flowers.  Many of the homes appear to be built into the hillocks as well
+as upon them.  A scattering of trees cluster together in a distant field.
+~
+[Guin] Done.
+~
+167247872 12 6 0
+D1
+~
+~
+0 -1 44567 10 10 5
+D3
+~
+~
+0 -1 44559 10 10 5
+E
+picket fence~
+A picket fence, gray with age and exposure to the elements, skirts the
+edge of the path.  Despite its maturity, the fence seems in good repair
+and solidly planted in the fertile soil.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou follow the rutted path to the $T@n.
+~
+E
+to_room~
+@c$n follows the rutted path to the $T@n.
+~
+!
+3 0 10
+3779 17 1509949455 -2 0
+-1
+S
+
+#44565
+Tobacco Way~
+The well-used path meanders through a mixture of flowers, grass and
+shrubs on its east-west journey.  Hard packed by wagons and countless
+tread, the roadway would be a quagmire of mud after a serious rainstorm. 
+A crumbling red-brick wall runs parallel to the road, its surface coated
+in lichen and a few spurs of wild rose and creeping ivy.  Hills rise to
+the west and south, a few wisps of woodsmoke spiraling from them.
+~
+[Guin] Done.
+~
+167247872 12 6 0
+D1
+~
+~
+0 -1 44563 10 10 5
+D3
+~
+~
+0 -1 44566 10 10 5
+E
+crumbling brick wall lichen rose ivy~
+A short span of brick wall skirts the path, its ancient sun-baked brick
+at last succumbing to nature.  Patches of gray-green lichen spot the wall
+in places, growing between a pendulous ivy vine heavy with lustrous
+emerald leaves and twisted bush of climbing roses bedecked with perfect
+crimson-hued blossoms.
+~
+-1
+S
+
+#44566
+Tobacco Way~
+A perfectly circular door frames the grass and flower dappled hill to the
+south.  Rising from the apex of the hill, a crocket chimney pokes through
+the grasses, belching a puff of wispy woodsmoke into the sky.  A
+smattering of holly bushes spreads across the western rim of the hillock,
+their bright red berries untouched by bird or insect.  A hard packed
+earthen road carves its way eastward, running towards the center of the
+village.
+~
+[Guin] Done.
+~
+167247872 12 6 0
+D1
+~
+~
+0 -1 44565 10 10 5
+D2
+circular door~
+~
+131 -1 44570 10 10 5
+E
+chimney grasses hillock~
+Carved from the side of the grass-covered hill, a hobbit hole is secured
+by a circular shaped doorway.  Protruding from the apex of the hill, a
+chimney stack puffs wispy tendrils of smoke toward the sky, dissipating
+into the air a few feet from its origin.  Low-growing tufts and dense
+grass covers the hill with a half dozen holly bushes sprouting above it.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou head through the opened doorway, enterring the building to the
+south@n.
+~
+E
+to_room~
+@g$n heads through the opened doorway, enterring the building to the
+south@n.
+~
+!
+3 0 4
+2499 9 1509949540 3 0
+-1
+S
+
+#44567
+Tobacco Way~
+The obstinate ruts and strewn cobbles come abruptly to an end at the wide
+eastern terminal of this bustling road, to the piping sound of voices and
+the gentle din of industry.  Built of worn but sturdy wood, a small open
+store to the north appears suited for ponies...but the harsh orange glow
+and occasional ring of hammers is evident promise of a metal-worker's
+wares.  Southward, rising gracefully out of the lush grass, a low
+halfling dwelling bears the hanging sign of a fine armorer and crafter. 
+A lone cart sits waiting for a merchant's whim near a rickety log fence,
+enjoying the view of neatly-laid turnip fields that consume the eastern
+soil.
+~
+[Guin] Done.
+~
+167247872 12 6 0
+D0
+~
+~
+0 -1 44568 10 10 5
+D2
+~
+~
+0 -1 44569 10 10 5
+D3
+~
+~
+0 -1 44564 10 10 5
+E
+sign hanging~
+Hung from a polished chain, this small wooden sign is all that separates
+this small hollow from any other common home.  Struggling stoically with
+the weight, a small painted halfling bears a full suit of armor...  a
+comical but no doubt enticing and exciting image for the village's native
+soldiers.
+~
+E
+cart fence~
+A cracked and peeling fence, only just managing to stand upright, stands
+behind a gaudy and colorful cart.  No horse has been hitched to it
+recently, and the contents of the cart are sparse.  Only rotting
+vegetables and the like occupy it now.
+~
+A
+~
+~
+send_to_room( #forge, room );
+~
+E
+forge~
+@RWith a WHOOSH, the forge to the north belches out a blast of heat... 
+and the column of smoke rising from the small chimney grows more robust. 
+@n 
+~
+!
+2 100 0
+A
+~
+cart vegetable~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  i = random( 0, 100 );
+  if( i < 60 )
+    obj = oload( 1039 );
+  else
+    obj = oload( 3802 );
+  act_tochar( #find, ch, obj );
+  act_notchar( #ofind, ch, obj );
+  obj_to_char( obj, ch );
+  end;
+}
+act_tochar( #search, ch );
+act_notchar( #osearch, ch );
+~
+E
+find~
+@mYou search through the rotting vegetables and pull out something interesting.@n
+~
+E
+ofind~
+@m$n searches through the cart and uncovers a small prize.@n
+~
+E
+search~
+@bSearching through the muck in the cart you find nothing.@n
+~
+E
+osearch~
+@b$n searches through the rotting heap inside the cart and comes out empty handed.@n
+~
+!
+9 0 0
+-1
+S
+
+#44568
+Boigo's Blades~
+This sturdy wooden edifice appears to be a converted stables of sorts,
+with an open storefront and sloping split-log roof.  What makes it differ
+from a stables however, is the halfling-sized anvil set into the centre
+of the room and the burning fires of a forge producing a sweltering heat. 
+Where the feed bags and saddles would normally be are racks of weapons,
+finely crafted swords, axes, and hammers laid out for the perusal of
+eager patrons.
+~
+[Guin] Done
+~
+167251973 0 5 0
+D2
+~
+~
+0 -1 44567 10 10 5
+E
+forge anvil~
+Centered in the open space, the smoke from the forge is vented through a
+brick chimney that does little to alleviate the heat in the shop.  A
+flat-topped halfling-height anvil sits near the glowing fire, obviously
+well-used and cared for.
+~
+A
+touch get take~
+fire forge~
+act_tochar( #idiot, ch );
+act_notchar( #ridiot, ch );
+damage( mob, ch, 1d8+7, fire, "touching the red-hot forge" );
+~
+E
+idiot~
+You reach out to touch the blazing forge and not surprisingly, get burned.
+~
+E
+ridiot~
+$n reaches out to touch the blazing forge and not surprisingly, gets
+burned.
+~
+!
+0 0 0
+A
+~
+~
+wait( 1 );
+act_tochar( #heatwave, ch );
+~
+E
+heatwave~
+@RA wave of heat assaults you as you enter the vicinity of the hot forge.@n
+~
+!
+1 0 4
+2468 9 1509949540 3 0
+3002 17 40 -1 0
+3028 17 100 -1 0
+890 17 70 -1 0
+3014 17 50 -1 0
+3001 17 80 -1 0
+3104 17 90 -1 0
+3000 17 90 -1 0
+1053 17 50 -1 0
+3020 17 35 -1 0
+1060 17 25 -1 0
+968 17 40 -1 0
+1052 17 45 -1 0
+3021 17 50 -1 0
+3032 17 80 -1 0
+3007 17 70 -1 0
+935 17 40 -1 0
+3712 17 1509949540 -1 0
+3601 17 1509949540 -1 0
+3713 17 1509949540 -1 0
+-1
+S
+
+#44569
+Sagrin's Fine Armors~
+The interior of this cozy halfling-hole has been shaped for function,
+rather than for beauty.  The mahogany walls have been lined with racks to
+hold a variety of types and styles of armour.  A simple wooden bunkbed
+sits on the other side of a finely polished mahogany counter, as if the
+proprietor of the shop spends a lot of her time working.  The room is lit
+by a pair of bright oil lamps sitting on the counter, the shadows created
+dancing lightly across the suits and helms nearby.
+~
+[Guin] Done.
+[Guin] check codite customs at a later date.
+~
+167251973 0 5 0
+D0
+~
+~
+0 -1 44567 10 10 5
+E
+racks armour~
+Lining the walls in a neat orderly fashion well crafted racks made from
+dark finely grained mahogany stretch from corner to corner, each rack a
+few feet deep.  Folded studded leather and fernweave mesh armour sit in
+tidy piles on the polished shelves; in front of each pile, a small sign
+describes what the items are.  Further along the racks, more hardy armour
+is displayed; shining steel breastplates, helms made of stags heads and
+banded mail jackets gleam in the dim light of the of the candles.  Steel
+boots and banded armour are laid out on the lower shelves while heavy oak
+shields are positioned both on the floor and on the higher shelves.
+~
+2469 9 1509949540 3 0
+3530 17 1509949540 -1 0
+3709 17 1509949540 -1 0
+980 17 1509949540 -1 0
+2003 17 1509949540 -1 0
+1077 17 1509949540 -1 0
+186 17 1509949540 -1 0
+2182 17 1509949540 -1 0
+2103 17 1509949540 -1 0
+2005 17 1509949540 -1 0
+2043 17 1509949540 -1 0
+2023 17 1509949540 -1 0
+-1
+S
+
+#44570
+Tobacco Way~
+The circular room has been disected by a fine oaken table, its surface
+covered with bundles of dried bitter-smelling leaves.  Dangling from the
+rafters are flowers, leaves and herbs, the bunches left to dry in the
+warm shop air.  A shuttered window has been set into the eastern wall, a
+stack of books resting upon its ledge.  A circular door leads out of the
+shop to the north, a painted clover-leaf adorns the keystone above it.
+~
+[Guin] Ring for Old Bigglesoot's quest is 3814.
+[Gretch] has clues about ferrets
+[Guin] can add mole clues/info here or on some other mob.. just not the daisy chain chick.
+Done.
+[Guin] Done.
+~
+167247873 0 5 0
+D0
+circular door~
+~
+131 -1 44566 10 10 5
+E
+windows books ledge~
+A stack of three books rests upon the window's sill, each of them
+unremarkable in appearance and size.  The title of a palm-sized volume
+with a well-worn spine is 'The Virtues of Locally Grown Tobacco'. 
+Another has gilded lettering too faded to read, its binding of brown
+moleskin stained with dirt and oil.  The last, and probably the one in
+worst condition, is bound in bleached deerskin, the title, 'Bigglesoot,
+His Diary', scribed across the front with a blunted quill pen.
+~
+E
+clover leaf keystone door~
+Just above the wooden door, a stone cut in the shape of a four-leafed
+clover juts outward.  The surfaces have been painted a pale green,
+although the colouration looks rather tarnished - possibly on account of
+the thick smoke pervading through the room.
+~
+A
+~
+~
+send_to_room( #smoke, room );
+~
+E
+smoke~
+@cA wispy ring of smoke drifts outward toward the door, seeking escape
+from the small cramped shop@n.
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou leave the shop, ducking through the opened portal@n.
+~
+E
+to_room~
+@c$n exits the shop, ducking through the opened portal@n.
+~
+!
+3 0 1
+2498 9 1509949540 3 0
+1120 17 1509949490 -1 0
+874 17 1509949465 -1 0
+770 17 1509949490 -1 0
+-1
+S
+
+#44571
+Way of Shinanne~
+The dirt path continues along the wide valley floor in a straight,
+practical manner.  The grassy verge on either side of the road has
+recently been cut back to a few inches tall, revealing a sea of brightly
+coloured flowers.  Dominating the northern horizon, twin towering oaks
+spread their massive branches, a flourish of laurel entwined throughout
+the stately foliage.  Broad meadows of tulips and poppies stretch to the
+east and west as the well-traveled road cuts through the middle on the
+most direct route through the quaint village.
+~
+[Guin] Done.
+~
+167247872 12 6 0
+D0
+~
+~
+0 -1 44572 10 10 5
+D2
+~
+~
+0 -1 44562 10 10 5
+E
+oak branches laurel~
+Towering oaks rise up from the ground, their thick roots planted firmly
+into the hard-packed earth.  Entwined about the stately branches,
+tendrils of pale yellow laurel adorn the lofty branches that form an
+archway over the end of the road.
+~
+E
+meadow tulips poppies~
+The sea of waist-high green grass covers the entire valley floor. 
+Bespeckled throughout the field, colourful tulips and poppies rise as
+tall as the grass, their sweet scent wafting in a gentle breeze.
+~
+E
+verge grassy road~
+Lying in a straight line, the hard-packed road runs north and south, an
+altar visible to the north and the village some distance to the south. 
+For precisely three feet on both sides of the road, the grass has been
+immaculately cut to a couple of inches high.  Each individual blade has
+been cut diagonally, forming a point at the tip of every shoot.
+~
+-1
+S
+
+#44572
+Altar of Shinanne~
+A clearing opens up at the northern end of the dirt road, sheltered
+beneath a pair of stately oaks.  On the far side is a simple altar of
+greenish-black basalt, covered with what looks like a patchwork
+tablecloth.  The clover has been permitted to grow long here, providing a
+soft carpet beneath the feet.  Pockets of wildflowers grow amid the
+clover, and the whole area has a rather peaceful, serene feeling to it. 
+Atop the altar rest some standard clerical wares; holy water, a silver
+holy symbol, and a not-so-standard mug of frothing ale.  On the far side
+of the clearing, an ancient oak rises majestically toward the sky.
+~
+[Guin] Done.
+~
+167252097 2 6 0
+D2
+~
+~
+0 -1 44571 10 10 5
+E
+patchworth tablecloth~
+This patchwork tablecloth is spread lovingly atop the basalt altar,
+covering the majority of the top face.  Stitched in the centre of its
+multicoloured patches is a large symbol, that of a loaf of fresh-baked
+bread sitting beside a mug of frothing ale.
+~
+E
+clover wildflowers~
+The sweet-scented clover runs rampant throughout the clearing, the
+brightly coloured purples, yellows, and reds of wildflowers peeking
+through them.  It seems almost like the flowers are permitted to run
+rampant here near the altar, although out of respect, they keep
+themselves from becoming too dominant.
+~
+E
+oaks~
+The tall trees flank the altar on either side, extending their branches
+and providing a leafy canopy over the clearing.  The trunks of these oaks
+are wider than many men are tall, and by the looks of their interwoven
+roots and craggy bark, it is obvious they have weathered the weight of
+many years.
+~
+E
+altar mug holy silver symbol water~
+Resting atop the altar, a slender vial of holy water and tall wooden mug
+of frothing ale sit beside a finely crafted holy symbol.  The symbol is
+etched with the symbols of Shinanne, the traditional mug of ale and a
+load of home baked bread.  Runes scribed down its length dedicate the
+symbol to the goddess.
+~
+A
+~
+~
+send_to_room( #birdsong, room );
+~
+E
+birdsong~
+@cThe carol of birdsong echoes melodically from high among the trees,
+filling the clearing with song.@n 
+~
+!
+2 150 0
+A
+~
+~
+obj = obj_in_room( 3808, room );
+if( obj )
+  if( get_integer( obj, "/Cayln/ThorpPublic/SegmentTried" ) == 1 )
+  set_integer( obj, "/Cayln/ThorpPublic/SegmentTried", 0 )
+~
+!
+16 0 0
+201 17 1509949540 -2 0
+682 9 1509949540 3 0
+37 17 1509949540 -1 0
+743 17 1509949490 -1 0
+743 17 1509949540 -1 0
+28 17 1509949490 -1 0
+28 17 1509949540 -1 0
+977 17 1509949515 -1 0
+230 17 1509949540 -1 0
+98 17 1509949540 -1 0
+1194 17 1509949515 -1 0
+109 17 1509949540 -1 0
+3808 17 1509949540 -2 0
+-1
+S
+
+#44573
+Dining Hall~
+The lower section of the high-roofed building has been crafted from
+neatly cut blocks of ash-hued stone.  A delicate layer of mortar runs
+between each of the blocks ensuring the snug fit will last for many a
+lifetime.  At about halfling head-height the walls transform into wide
+red-wood panels, each of the fine-grained planks polished to a sheen
+with grapeseed or linseed oil.  Set into the northern and southern walls
+are whitewashed framed windows, the pale shutters tied with braided cord
+enabling them to be bound in times of high wind and rain.  Squat
+furniture spreads in a semi-circle around an oaken serving bench.  A
+single door leads out of the mess hall to the east, a horseshoe and
+mistletoe sprig above its arched keystone.
+~
+[Guin] Add table and chairs.
+[Guin] Done.
+[Cayln] need a cauldron full of hot soup added.
+~
+167247885 0 5 0
+D1
+low wooden door~
+~
+131 -1 44562 10 10 5
+E
+1 north 1 south window~
+Set firmly into the northern and southern walls are a pair of
+white-washed framed windows in good repair, even though the glass is
+uneven and wavery.  The view through the distortion of the panes to the
+north reveals a clearing, a rotund and robed halfling tending the flowers
+growing there.  The second of the pair shows the view lying southward,
+shows a stout hobbit hole set into a rounded hill, its chimney puffing
+wisps of smoke into the air.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou duck through the low doorway, leaving the building@n.
+~
+E
+to_room~
+@c$n ducks through the low doorway, leaving the building@n.
+~
+!
+3 0 2
+A
+~
+~
+send_to_room( #ferret, room );
+~
+E
+ferret~
+@GTwo grey-haired halflings sit in the corner conversing.  You overhear
+one of them muttering something about Old Grey@n.
+~
+!
+2 150 0
+2470 9 1509949540 3 0
+3338 17 1509949540 -1 0
+3346 17 1509949540 -1 0
+3368 17 1509949540 -1 0
+3258 17 1509949540 -1 0
+3271 17 1509949540 -1 0
+3714 17 1509949540 -1 0
+8026 17 1509949540 -2 0
+1824 17 1509949540 -2 0
+1824 17 1509949540 -2 0
+2499 9 1509949540 3 0
+2499 9 1509949540 3 0
+-1
+S
+
+#44574
+Fox Den~
+Under Construction.
+If you are in here, please ask for an immortal.
+~
+Houses the fox for the acode above.
+~
+167247872 0 9 0
+D4
+~
+~
+510 -1 44502 10 10 5
+2506 9 1509949540 3 0
+-1
+S
+
+#44575
+Beyond the Mighty Oaks~
+Under Construction.
+If you are in here, please ask for an immortal.
+~
+[Cayln] up should be 44500, this is where you should transfer odd players
+~
+167247880 0 9 0
+A
+~
+~
+mob = mob_in_room( 2514, room );
+if( mob )
+  transfer( mob, find_room( 44567 ) );
+~
+!
+2 1000 0
+2514 41 1509949540 3 0
+1920 73 1509949540 3 0
+1920 73 1509949540 3 0
+1920 73 1509949540 3 0
+1920 73 1509949540 3 0
+-1
+S
+
+#0
+

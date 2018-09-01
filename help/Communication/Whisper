@@ -1,0 +1,18 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+whisper : lists previous whispers<br>
+whisper [player in room] [message] : whispers something to another player<br>
+in the same room <br>
+<br>
+<h1> Description </h1>
+<br>
+Whisper is used to communicate to another player in the same room as you<br>
+are and uses the language you are currently speaking.  Only the person you<br>
+whispered to will see what you just said, but others in the room will see<br>
+that you just whispered something to that person.<br>
+<br>
+See also: languages, to, tell, say, yell<br>
+</html>
+</body>

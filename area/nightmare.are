@@ -1,0 +1,4445 @@
+#M2_AREA
+2
+
+Nightmare Woods~
+Greth Yrna Estrella~
+Nightmare Woods~
+~
+~
+
+25 0
+0
+1
+#ROOMS
+
+#2400
+Dark Woods - A Clearing in the Forest~
+Here the great oaks that make up the bulk of trees in the forest have
+surrounded the clearing in a circle.  A few limbs have invaded the
+clearing, and a small sapling has begun to grow near its center;
+unfortunately, it looks like the sapling is bent at a bad angle and many
+of its leaves have fallen off.  Two narrow-looking paths head west and
+north, barely distinguishable in the leaves that carpet this wood.  Thick
+brush guards another path that leads eastward.  Some of the oak trees
+surrounding the clearing have been carved with strange-looking markings.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 6 0
+D0
+~
+~
+0 -1 2401 10 10 5
+D1
+~
+~
+0 -1 2455 10 10 5
+D3
+~
+~
+0 -1 2423 10 10 5
+E
+markings strange-looking~
+The markings appear to be runes of some sort, but the newly grown bark of
+the trees has begun to cover them, rendering them illegible for the most
+part.  In some places, where the bark has not regrown, the remaining
+glyphs portray an evil that may be synonymous with a dark rite of some
+kind.
+~
+E
+sapling center~
+The small sapling, which grows in the centre of the clearing, looks to be
+dying despite its age.  Its withered leaves are turning a sickly brown
+colour and about half of them are already lying desolately on the ground. 
+At closer inspection, the bark of the tree seems to have been cleared off
+by some large animal, no doubt marking its territory.
+~
+A
+~
+~
+continue;
+
+~
+E
+to_char~
+You step through the brush and continue on your way.
+
+~
+E
+to_room~
+$1 steps through the brush on the east side of the clearing.
+
+~
+!
+3 0 2
+-1
+S
+
+#2401
+Dark Woods - Southwest of a Great Oak~
+The ground here is riddled with tree roots that make walking treacherous. 
+Blocking the dark, narrow path to the north is the gigantic husk of a
+tree; upon closer inspection it seems to have been a branch that broke
+off a huge tree at some point.  The branch climbs diagonally upwards in
+northeast direction, the apparent source of the branch, a great oak tree
+that dwarfs all others in this part of the forest.  The sound of
+trickling water, probably a small stream or creek, emanates from the west.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 2402 10 10 5
+D1
+~
+~
+0 -1 2456 10 10 5
+D2
+~
+~
+0 -1 2400 10 10 5
+D3
+~
+~
+0 -1 2424 10 10 5
+E
+branch tree 1 northeast~
+It is unclear as to how this sturdy branch came to be separated from the
+mighty oak, though the scar on the tree indicates that there was an
+almighty force that caused this brutal destruction of nature.
+~
+A
+~
+~
+continue;
+
+~
+E
+to_char~
+@YYou carefully dip your head under the fallen branch and continue north.@n
+
+~
+E
+to_room~
+@Y$n carefully dips $s head under the fallen branch and continues north.@n
+~
+!
+3 0 1
+-1
+S
+
+#2402
+Dark Woods - Near the West Face of a Great Oak~
+Huge limbs stretch upward from the great oak tree to your east, while
+its massive roots dig into the loam around you like grasping fingers. 
+Its limbs turn to branches and the branches grow thinner and thinner as
+they extend out from the main trunk of the tree, but even the smallest
+capillary-like twigs of the trees are the size of a normal oak sapling's
+trunk.
+~
+[Yrna] done.
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 2403 10 10 5
+D2
+~
+~
+0 -1 2401 10 10 5
+D3
+~
+~
+0 -1 2430 10 10 5
+E
+great oak tree 1 east roots~
+Dominating the forest to the east, this great ancient oak must have spent
+aeons growing into its unfathomable size of today.  Futilely competing
+with the giant roots, a number of scraggly saplings attempt to survive in
+the dark shadow of the enormous tree.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@YYou carefully dip your head under the fallen branch and continue south.@n
+~
+E
+to_room~
+@Y$n carefully dips his head under the fallen branch and continues south.@n
+~
+!
+3 0 4
+29 0 1509949540 -2 0
+-1
+S
+
+#2403
+Dark Woods - Northwest of a Great Oak~
+The great branches of a massive oak tree, which lies to the southeast,
+still shades this area of the forest, and the plants here grow close to
+the ground.  Heavy and moist air permeates the air, and the earth is
+shrouded in thick fog that encircles the plants and drifts along the
+ground, snaking around roots and brush.  Soft and damp, the earth falls
+just short of being considered muddy, and there is a pungent smell to the
+air.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 2404 10 10 5
+D1
+~
+~
+0 -1 2448 10 10 5
+D2
+~
+~
+0 -1 2402 10 10 5
+D3
+~
+~
+0 -1 2436 10 10 5
+E
+earth thick fog roots brush~
+The soft, loamy soil is of a rich brown colour, a distinctly earthy smell
+emanates from the fertile ground.  Lying in the deep shadow of the
+towering oak, the plants here are severely stunted, their growth impaired
+by lack of sunlight.  Writhing about the roots of the shrubs and bushes,
+the thick cool mist shrouds the undergrowth with a revered silence.
+~
+-1
+S
+
+#2404
+Dark Woods - Steep Incline~
+The earth is dark and damp here, covered with ferns that grow in
+abundance among the rotted logs of fallen trees.  Mosses of varied
+colors, ranging from blue to deep orange, and occasionally red, cover the
+ground in uneven clumps.  Fewer trees grow here; many have been uprooted
+from the lack of firm earth.  A light layer of fog wafts through the
+forest like white fingers; it is thicker to the west, where the land
+slopes downward into marshland.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 2405 10 10 5
+D1
+~
+~
+0 -1 2459 10 10 5
+D2
+~
+~
+0 -1 2403 10 10 5
+D3
+~
+~
+0 -1 2442 10 10 5
+E
+rotten logs fallen trees~
+Partially decayed logs of long fallen trees provide a rich bed in which
+the fern trees plant their roots.  The damp wood of the decomposing wood
+is soft and ridden with mites and borers that slowly eat away at the
+crumbling pulp.
+~
+E
+ferns mosses~
+The ferns and mosses that grow in the festering remains of the fallen
+trees are much more vibrant in hue than the plants which attempt to grow
+in the friable soil here.  Towering above their struggling peers, the
+well-nourished ferns drape their lacy leaves across the uneven ground.
+~
+2577 9 1509949540 3 0
+-1
+S
+
+#2405
+Lighter Woods - Near Mountain and Stream~
+Steep mountains border the forest to the north, and the oak trees that by
+and large crowd the forest have thinned out here as the earth becomes dry
+and rocky.  To the east, the ground dives down to the banks of a swiftly
+flowing mountain stream that cascades over rapids and disappears from
+view into the trees beyond.  What lies among the trees is hard to tell;
+the forest is shrouded in thick fog that dampens the sounds as well as
+mood.
+~
+[Yrna] Done, yet again
+[Guin] Done.
+~
+167247880 3 9 0
+D2
+~
+~
+0 -1 2404 10 10 5
+D3
+~
+~
+0 -1 2406 10 10 5
+E
+banks stream 1 east 1 southeast~
+Cutting off the ground to the east, the swiftly flowing river wends its
+way through the forest.  Foaming rapids boil angrily as the current is
+forced downstream over the jutting boulders.
+~
+E
+1 west ravine fog~
+Disappearing in a thick shroud of mist, the declining land fades into
+obscurity as drifts of fog smother the landscape.  The sparse oaks eerily
+phase in and out of sight as the roving mist sifts through their verdant
+boughs.
+~
+A
+~
+~
+send_to_room( #water, room );
+~
+E
+water~
+@BThe sound of running water reaches you through the fog.@n
+~
+!
+2 200 0
+A
+1 look~
+thick fog mist~
+if( is_blind( ch ) )
+  act_tochar( #blind, ch );
+else {
+  if( rflag( reset0, room ) ) {
+    remove_rflag( reset0, room );
+    i = random( 1, 200 );
+    if( i < 35 )
+      mob = mload( 2578, room );
+    elseif( i < 60 )
+      mob = mload( 2579, room );
+    else if( i < 75 )
+      mob = mload( 2580, room );
+    else if( i < 85 )
+      mob = mload( 5195, room );
+    elseif( i < 90 )
+      mob = mload( 2581, room );
+    else {
+      act_tochar( #curl, ch, obj, mob );
+      act_notchar( #rcurl, ch, obj, mob, sight );
+    }
+    if( mob ) {
+      act_tochar( #mob, ch, obj, mob );
+      act_notchar( #rmob, ch, obj, mob, sight );
+      init_attack( mob, ch );
+    }
+  }
+  else
+    act_tochar( #gone, ch );
+}
+~
+E
+blind~
+It is hard to look at things while blind.
+~
+E
+curl~
+@cYou peer into the thick fog and your eyes start to water.  The mist
+twirls and swirls, and one of its tendrils seems to act almost alive!  It
+starts taking a shape of a @Cbear@n @c...  then it shrinks and becomes a
+@Cwolf@n @c...  it changed again, it's a @Chawk@n @cfor a short time!  The
+image fades back into the background and all you can see is fog.@n
+~
+E
+rcurl~
+@c $n peers intensly into the fog.  You wonder what does $e see ...@n
+~
+E
+mob~
+@CYou peer into the fog and notice one wispy tendril separating and
+advancing towards you, growing and changing shape as it goes!  By the
+time it reaches you, it is most definitely $N!@n 
+~
+E
+rmob~
+@C$n peers into the fog and all of a sudden you see $N advancing towards $m!
+~
+E
+gone~
+@cWhatever you thought you saw in the fog, it isn't there any more.@n
+~
+!
+0 0 0
+-1
+S
+
+#2406
+Dark Woods - A Foggy Clearing in the Marsh~
+The land flattens in a foggy clearing.  No tree or plant grows here but
+marshgrass, which thrives in this boggy environment, rising three to four
+feet from the ground.  The white mist permeates the air and makes it hard
+to see in any direction, although a large pond can be made out to the
+west, and the sheer grey cliffs of the mountains that tower above are
+discernable as they rise close to the north.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 2405 10 10 5
+D2
+~
+~
+0 -1 2442 10 10 5
+D3
+~
+~
+0 -1 2407 10 10 5
+E
+marsh grass soggy ground~
+The swampy ground is devoid of trees and bushes, the only flora able to
+grow in this sickly clearing is the marsh grass.  Looping around the
+slender blades of grass, fine tendrils of fog silently envelop the area.
+~
+-1
+S
+
+#2407
+Large Pond - Mist-covered Waters~
+A large pond has formed in a depression in the land.  Its brackish waters
+are filled with muddy sediment and strands of brown and green algae. 
+Reeds and other small marshgrass fill the edges of the pond, while the
+pond is bordered to the north by sheer grey rock.  A thin layer of fog
+obscures your view, making it difficult to know what lies in what
+direction, although more of the pond continues to the west and south.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247880 13 9 0
+D1
+~
+~
+0 -1 2406 10 10 5
+D2
+~
+~
+0 -1 2443 10 10 5
+D3
+~
+~
+0 -1 2408 10 10 5
+E
+pond brackish waters algae~
+Stagnating in the centre of the ravine, the still water hoards a myriad
+of dead branches and brittle skeletons.  A thick layer of slimy algae
+festers around the shallows of the murky pond, the greens and browns
+giving the water an unsightly, putrid tinge.
+~
+E
+1 north white rock~
+Rising out of the fetid water, a cliff of deathly-white rock severs any
+potential pathway out of the rank swamp.  Clinging to crevices in the
+rock face are sickly mosses and lichen, desperately clutching to the
+fractured surface in an attempt to keep their knotted roots out of the
+poisoned water.
+~
+A
+~
+~
+send_to_room( #eek, room );
+~
+E
+eek~
+@GSomething disturbs the water briefly, touches your leg and is gone
+before you can see what it was.@n 
+~
+!
+2 200 0
+29 0 1509949540 -2 0
+-1
+S
+
+#2408
+Large Pond - Slime-Coated Boulder~
+A great boulder rests in the middle of the pond; a heavy layer of green
+and black slime has worked its way up its smooth surface, making it
+slippery and impossible to climb atop.  The top of the boulder is blocked
+from sight by thick fog.  Small branches from trees dip into the west end
+of the pond and offer a way to climb out, while the pond continues to the
+south and east.
+~
+[Yrna] Leaving this room as is until I talk to Guin because she had some idea for it
+[Guin] Guin don't remember no stoopid idear fer here.
+[Guin] Done.
+[Yrna] *laugh* ok, leaving as is then. I wish I could remember what it was...
+~
+167247880 13 9 0
+D1
+~
+~
+0 -1 2407 10 10 5
+D2
+~
+~
+0 -1 2444 10 10 5
+D3
+~
+~
+0 -1 2409 10 10 5
+A
+~
+~
+if( is_mob( ch ) )
+  continue;
+else {
+  act_tochar( #branch, ch );
+  act_notchar( #rbranch, ch, obj, mob, sight );
+  continue;
+}
+~
+E
+branch~
+@GYou grab hold of a lower branch and pull yourself out of the pond.@n 
+~
+E
+rbranch~
+@G$n grabs hold of a lower branch and pulls $mself out of the pond.@n
+~
+!
+3 0 8
+-1
+S
+
+#2409
+Dark Woods - Rough Weeds and Brambles~
+The forest has all but disappeared where the dark, gnarled roots of an
+ancient oak touch everything; black brambles with pointy thistles
+surround it, and dark green briars with their sharp leaves grow
+everywhere.  Small trees, their bark covered in black and green mosses,
+encircle the edge of a pond that lies to the east, misty filaments
+stretched between them almost like an ever-changing, ever-moving spider
+web.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 2408 10 10 5
+D2
+~
+~
+0 -1 2445 10 10 5
+D3
+~
+~
+0 -1 2410 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou leave east, entering the dark, slimy waters of a small,
+mist-shrouded pond.@n 
+~
+E
+to_room~
+@c$n enters the dark, slimy waters of a small, mist-shrouded pond.@n
+~
+!
+3 0 2
+-1
+S
+
+#2410
+The Northern Edge of the Forest - Walnut Trees~
+Surrounded by a dozen walnut trees stands a lone, giant oak, wrinkled
+with age and passage of time.  Its great, moss-covered bole rises high
+above the smaller trees, completely blocking off the sun.  Maybe that is
+why the place is cold and misty, as there is no sunlight to warm things
+up.  The ground is dotted with the small, brownish-black shells of
+walnuts, many of which have been broken in half and eaten, showing at
+least some signs of wildlife in this apparently lifeless place.
+~
+[Yrna] Quest Raven here?
+[Yrna] Done for now
+[Guin] Done.
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 2409 10 10 5
+D2
+~
+~
+0 -1 2446 10 10 5
+D3
+~
+~
+0 -1 2411 10 10 5
+E
+giant oak moss-covered~
+Towering a good ten feet above the canopy of the surrounding forest, this
+massive oak dominates this part of the woods.  Planted firmly into the
+arable soil the sizable roots spread throughout the area leaving very
+little room for other trees to grow.  The lower portions of the ancient
+oaks wide girth is covered in a dark green moss, that thrives on the
+dew-spangled bark.  Blocking the sky from view, broad leafy branches
+splay across the close canopy, the upper branches masked by a thick
+shroud of mist that hangs heavily about the area.
+~
+1142 17 1509949540 -2 0
+-1
+S
+
+#2411
+The Northern Edge of the Forest - Dark Evergreen Shrubs~
+The ground slopes upward to the west, where it climbs to the nearly
+vertical cliffs of grey rock not too far in the distance.  A trickling
+creek flows to the south, its waters unclean and murky, carrying some
+sort of fine, dark sediment.  The earth is covered in dark green shrubs
+whose twigs and branches make walking difficult.  Smaller ferns and other
+flora are tangled among them, including several strange-looking white
+flowers whose petals are almost the size of a human hand.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 2410 10 10 5
+D2
+~
+~
+0 -1 2447 10 10 5
+D3
+~
+~
+0 -1 2412 10 10 5
+E
+white flowers flora ferns~
+A tangled mass of dark green ferns and briars thrive in this rocky
+ground, supported by the creek that flows nearby.  Large, white flowers
+grow in a cluster near the creek, their stems almost invisible, their
+large, heavy petals supported by the ground itself.  Oddly enough, small
+insects steer away from them, even though they're rich with thick, yellow
+pollen.  Amongst the flowers and ferns, you think you have seen something
+out of place, something man-made.
+~
+A
+~
+~
+continue;
+~
+E
+to_room~
+@G$n finds $s way between the shrubs and ferns, leaving $d.@n
+~
+E
+to_char~
+@GYou find your way between the shrubs and ferns, leaving $d.@n
+~
+!
+3 0 10
+A
+~
+~
+continue;
+~
+E
+to_char~
+@BYou step into the murky creek and leave south.@n
+~
+E
+to_room~
+@B$n leaves south, stepping into the murky creek.@n
+~
+!
+3 0 4
+A
+1 pick 1 get~
+flowers ferns~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 15 ) == 8 ) {
+    obj = oload( 3115 );
+    act_tochar( #get, ch, obj );
+    act_notchar( #rget, ch, obj, mob, sight );
+    obj_to_char( obj,ch );
+  }
+  else {
+    mob = mob_in_room( 5128, find_room( 14643 ) );
+    act_tochar( #search, ch, obj, mob );
+    act_notchar( #rsearch, ch, obj, mob, sight );
+    wait( random( 1, 2 ) );
+    act_room( #pollen, ch, obj );
+    loop( all_in_room )
+      if( !is_mob( rch ) )
+      do_spell( sleep, mob, rch );
+  }
+}
+else
+  act_tochar( #no, ch );
+~
+E
+search~
+@yYou reach into the undergrowth and accidently disturb one of the flowers!@n
+~
+E
+rsearch~
+@y$n reaches into the undergrowth and accidently disturbs one of the flowers.@n
+~
+E
+pollen~
+@YThe flower sends a cloud of thick, yellow pollen in the air!@n
+~
+E
+get~
+@WCareful not to touch the flowers, you reach into the undergrowth and
+pull out $p!@n 
+~
+E
+rget~
+@WVery slowly, $n reaches between the petals and ferns and pulls out $p!@n
+~
+E
+no~
+@yYou look again, but it must have been a trick of light - there is
+nothing in the undergrowth.@n 
+~
+!
+9 0 0
+2577 9 1509949520 3 0
+-1
+S
+
+#2412
+At the Northwest Edge of the Woods~
+Steep mountains form the northwest barrier of the forest, walls of grey
+rock quickly disappearing into the dense mist above.  The trees have
+thinned this close to the mountains, where the earth becomes hard and
+impenetrable; only tough weeds and shrubs can grow in such an
+inhospitable environment.  The ground here is of higher elevation than
+most of the forest below, although much of the forest is shrouded in
+thick fog.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 2411 10 10 5
+D2
+~
+~
+0 -1 2413 10 10 5
+E
+walls grey rock mist mountains~
+The granite cliffs rise almost vertically, blocking the passage to the
+northwest.  Too high to climb, they quickly disappear in the thick mist
+overhead, making it impossible to judge exactly how high they really are.
+~
+5470 9 1509949540 3 0
+-1
+S
+
+#2413
+At the Edge of the Woods - A Cold Bubbling Spring~
+The great Everwinter Mountains rise vertically to the west, their
+massive, granite cliffs towering over the forest; the snow-covered peaks
+are completely obscuring the sky.  A small spring bubbles up from beneath
+the mountain wall, becoming a narrow creek which flows east, carrying
+with it some fine, dark sediment.  The forest is much thicker and alive
+to the east, covered with patches of briar and bramble, and shadowed by
+tall oaks which cluster close together.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 13 9 0
+D0
+~
+~
+0 -1 2412 10 10 5
+D1
+~
+~
+0 -1 2447 10 10 5
+A
+~
+~
+send_to_room( #sound, room, sight );
+~
+E
+sound~
+@gA long, low growl interrupts the silence.@n
+~
+!
+2 200 0
+29 0 1509949540 -2 0
+660 17 1509949540 -2 0
+-1
+S
+
+#2414
+Raven Wood - A Clearing in the Forest~
+Under Construction.
+
+~
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 2413 10 10 5
+D1
+~
+~
+0 -1 2441 10 10 5
+D2
+~
+~
+0 -1 2415 10 10 5
+-1
+S
+
+#2415
+Dark Woods - Western Boundary of the Forest~
+A sheer, grey wall of rock bounds the western end of the forest, running
+nearly straight from south to north.  Many of the trees here are pine,
+while you can see an abundance of oak further to the east.  Broken twigs
+and branches throughout the forest floor indicate the presence of variety
+of wild life, although the forest is solemn and quiet.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 2435 10 10 5
+D2
+~
+~
+0 -1 2416 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yTwigs and leaves rustle under your feet as you leave $d.@n
+~
+E
+to_room~
+@yTwigs and leaves rustle under $n's feet as $e leaves $d.@n
+~
+!
+3 0 6
+29 0 1509949540 -2 0
+-1
+S
+
+#2416
+Dark Woods - Western Boundary of the Forest~
+A great grey cliff of rock bars any movement westward, and it seems to
+bound the forested area.  The ground here is hilly, rising up to the
+north and sloping down to the southeast, toward a small green pond. 
+Several pine trees grow here, forming a nearly straight line parallel
+with the cliff face, and to the north, a small trail is discernable.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 2415 10 10 5
+D1
+~
+~
+0 -1 2429 10 10 5
+D2
+~
+~
+0 -1 2417 10 10 5
+A
+~
+~
+send_to_room( #cry, room );
+~
+E
+cry~
+@YA cry of an eagle comes from the cliffs above, carried far on the cold,
+mountain breeze.@n 
+~
+!
+2 200 0
+5467 9 1509949540 3 0
+-1
+S
+
+#2417
+Dark Woods - Southwest Boundary of the Forest~
+Two sheer walls of grey rock rise up to meet each other while the forest
+grows right up to them.  A great boulder rests at the meeting point of
+the two rock boundaries, the ground around it muddy and free of any
+vegetation.  The trees are not as green and forest not as thick this
+close to the great cliffs, the soil lacking the necessary nutrients and
+massive walls creating permanent shadow.  This corner is the lowest point
+of a steep hill, almost as if the weight of the mountains pushes the
+earth ever down.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 2416 10 10 5
+D1
+~
+~
+0 -1 2418 10 10 5
+E
+great boulder ground~
+Resting between the two cliff walls, the large boulder sits on a freshly
+disturbed bed of dirt.  Scratch marks around the lower side of the great
+rock indicate that it has frequently been moved about.
+~
+E
+pond 1 east~
+A thick layer of greenish-brown algae covers the pond to the east.  The
+festering water is home to a myriad of insects; mosquitos, dragonflies
+and mayflies flitter above the surface, occasionally darting down to feed
+off the algae.  Sedate ripples mar the slime-coated water, perhaps caused
+by an amphibian moving beneath the surface.
+~
+A
+~
+~
+continue;
+
+~
+E
+to_room~
+$1 slowly wades into the slimy pond.
+
+~
+E
+to_char~
+You slowly wade into the slimy pond.
+
+~
+!
+3 0 2
+A
+move push pull open~
+boulder~
+act_tochar( #no, ch );
+act_notchar( #rno, ch );
+~
+E
+no~
+@WAs hard as you push, you are unable to budge the boulder.@n
+~
+E
+rno~
+@W$n tries to move the boulder but is unable to budge it.@n
+~
+!
+0 0 0
+2577 9 1509949540 3 0
+-1
+S
+
+#2418
+Dark Woods - A Slime-Covered Pond~
+Small waterplants float on the surface of the tiny pond, which rests at
+the bottom of this basin.  The pool is covered in a layer of pond scum,
+and only a minimal wake is created by the small, water-treading insects
+that flitter across the stagnant water.  The surrounding ground is quite
+lifeless, almost as if the pond slime has polluted the earth and made any
+growth impossible.  Fortunately, it is only so in the vicinity of the
+pond; several arm's lengths away, the small bushes start, before the
+large oak trees take over in all directions.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247880 6 9 0
+D0
+~
+~
+0 -1 2429 10 10 5
+D1
+~
+~
+0 -1 2419 10 10 5
+D3
+~
+~
+0 -1 2417 10 10 5
+E
+pond scum~
+Nearly covering the entirety of the pool, the slimy scum appears to be
+some kind of water algae that flourishes in the brackish waters.  Choking
+the scant few reeds and rushes, the pond scum is thickest around the edges
+of the stagnating water.
+~
+A
+~
+~
+continue;
+
+~
+E
+to_char~
+@YWater and slime oozes off you as you leave the pond, the stagnant smell
+lingering about your clothes.@n 
+~
+E
+to_room~
+@YWater and slime oozes off $n as $e leave the pond, the stagnant smell
+lingering about $s clothes.  Ugh!@n 
+~
+!
+3 0 11
+A
+~
+~
+send_to_room( #bob, room, sight );
+~
+E
+bob~
+@BA large water boatman bobs up to the pond surface.@n
+~
+!
+2 200 0
+-1
+S
+
+#2419
+Dark Woods - At the Eastern Edge of a Pond~
+A shallow basin extends to the west, forming a natural catchment area in
+which to collect water.  A thin, green layer of pond scum has formed
+across the surface, and the surrounding shore is mostly coated by a
+sticky layer of mud.  Several plants grow on or near the pond, including
+a large oak, which grows on the eastern edge of the pond.  Blocking the
+way south is a great cliff of white rock that borders the area far to the
+east.  From here you can make out where a similar cliff lies, not too far
+to the west.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 2428 10 10 5
+D1
+~
+~
+0 -1 2420 10 10 5
+D3
+~
+~
+0 -1 2418 10 10 5
+E
+pond 1 west~
+Spanning westward into a shroud of mist, the pond disappears in an eerie
+grey haze.  Beneath a slime-covered surface, unseen creatures of the
+water sliver through the stems of reeds and bulrushes causing them to
+waver and ripple the putrid surface.
+~
+E
+cliff white rock 1 south~
+The sheer white wall of rock, stretching from east to west, rises upward
+into the mist that hides the sky above this diseased forest.  The
+forboding cliff faces offer no handholds and in the few crevices that
+riddle the rock, a sparse amount of moss and lichen cling to the surfaces.
+~
+A
+~
+~
+continue;
+
+~
+E
+to_char~
+@BYou almost slip as you wade into the slimy pond.@n
+~
+E
+to_room~
+@BWith a splash, $n almsot slips as $e wades into the slimy pond.@n
+
+~
+!
+3 0 8
+5467 9 1509949540 3 0
+5467 9 1509949540 3 0
+-1
+S
+
+#2420
+Dark Woods - Near the Centre of the Small Basin~
+A small pathway leads east-west through the narrowing basin, though it
+looks to be not much more than a natural drainage course leading down the
+slope.  A few stepping logs, which must have been built many years ago,
+disappear into the side of the hill here.  Several vines hang down from
+the lofty branches of gnarled oak trees that have somehow grown out of
+crevices in the side of the sheer cliff-face.
+~
+[Yrna] wrote a series of acodes here, all connected to searching a crack half way up the cliff. At the moment, the search will give a plat or a silver coin, but that can be modified at any point
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 2427 10 10 5
+D1
+~
+~
+0 -1 2421 10 10 5
+D3
+~
+~
+0 -1 2419 10 10 5
+E
+vines~
+Great vines, as thick as a man's arm, hang down from the towering oaks
+that spread their branches overhead.  The dangling lianas look as though
+they could support quite some weight on their rope-like tendrils.  The
+lowest of vines hang down to about nine feet above the forest floor;
+acquiring a length of this natural rope would be no small feat.
+~
+E
+stepping logs~
+The remains of once sturdy stepping logs jut out from the soft earth of
+the hill.  The aged wood is mostly decayed from a combination of time and
+exposure to the damp air of the dark forest.
+~
+A
+jump climb~
+vine~
+if( !get_integer( ch, "Yrna/Ravenwood/Vine" ) == 1 ) {
+  if( size( ch ) < 4 ) {
+    if( get_integer( ch, "Yrna/Ravenwood/Log" ) == 1 ) {
+      if( random( 1, 2 ) == 1 ) {
+        act_tochar( #vine, ch );
+        act_notchar( #rvine, ch, obj, mob, sight );
+        set_integer( ch, "Yrna/Ravenwood/Vine", 1 );
+        wait( 2 );
+        act_tochar( #top, ch );
+        act_notchar( #rtop, ch, obj, mob, sight );
+      }
+      else {
+        act_tochar( #jump, ch );
+        act_notchar( #rjump, ch, obj, mob, sight );
+        damage( mob, ch, 2d6, physical, "the pulled muscle", "pulled muscle" );
+        position( ch, 6 );
+      }
+    }
+    else
+      act_tochar( #short, ch );
+  }
+  else {
+    if( random( 1, 2 ) == 1 ) {
+      act_tochar( #vine, ch );
+      act_notchar( #rvine, ch, obj, mob, sight );
+      set_integer( ch, "Yrna/Ravenwood/Vine", 1 );
+      wait( 2 );
+      act_tochar( #top, ch );
+      act_notchar( #rtop, ch, obj, mob, sight );
+    }
+    else {
+      act_tochar( #jump, ch );
+      act_notchar( #rjump, ch, obj, mob, sight );
+      damage( mob, ch, 2d6, physical, "the pulled muscle", "pulled muscle" );
+      position( ch, 6 );
+    }
+  }
+}
+else {
+  if( random( 1, 3 ) == 2 ) {
+    act_tochar( #down, ch );
+    act_notchar( #rdown, ch, obj, mob, sight );
+    set_integer( ch, "Yrna/Ravenwood/Vine", 0 );
+    set_integer( ch, "Yrna/Ravenwood/Log", 0 );
+  }
+  else {
+    act_tochar( #fall, ch );
+    act_notchar( #rfall, ch, obj, mob, sight );
+    damage( mob, ch, 3d6, physical, "the fall", "falling from a vine" );
+    position( ch, 6 );
+    set_integer( ch, "Yrna/Ravenwood/Vine", 0 );
+    set_integer( ch, "Yrna/Ravenwood/Log", 0 );
+  }
+}
+~
+E
+vine~
+@GYou leap high in the air and grab hold of the vine!  Careful not to
+look down, you start the climb.@n 
+~
+E
+rvine~
+@G$n leaps up and grabs hold of the vine, dangles on its end for a moment
+and then starts climbing up.@n 
+~
+E
+jump~
+@gYou jump to reach the vine, but fall and twist your ankle!@n
+~
+E
+rjump~
+@g$n jumps to reach the vine, but falls and twists $s ankle!@n
+~
+E
+short~
+@yYou are much too short to reach the vines - maybe you should stand on
+something.@n 
+~
+E
+top~
+@YAfter a long climb, you reach the roots of the vine.  Four times the
+height of a man above the ground, this is as far as you can climb.@n 
+~
+E
+rtop~
+@Y$n climbs higher and higher until $e finally reaches the vine's roots.@n
+~
+E
+down~
+@GYou carefully climb down the vine and jump the last few feet to the
+ground.@n 
+~
+E
+rdown~
+@G$n slips down the vine and jumps to the ground.@n
+~
+E
+fall~
+@YYou climb down the vine and try jumping to the ground, but land
+clumsily and hurt yourself!@n
+~
+E
+rfall~
+@Y$n climbs down the vine and lets go in attempt to jump.  Landing
+clumsily, however, $e manages to hurt $mself!@n 
+~
+!
+0 0 0
+A
+~
+~
+if( rflag( reset0, room ) )
+  send_to_room( #glint, room, sight );
+else
+  send_to_room( #swing, room, sight );
+~
+E
+glint~
+@WYou think you notice something glinting high up the cliff, stuck in a
+narrow crevice the vines grow from.@n 
+~
+E
+swing~
+@gThe vines swing gently in the breeze.@n
+~
+!
+2 200 0
+A
+climb step~
+logs~
+if( get_integer( ch, "Yrna/Ravenwood/Log" ) != 1 ) {
+  act_tochar( #log, ch );
+  act_notchar( #rlog, ch, obj, mob, sight );
+  set_integer( ch, "Yrna/Ravenwood/Log", 1 );
+}
+else {
+  act_tochar( #off, ch );
+  act_notchar( #roff, ch, obj, mob, sight );
+  set_integer( ch, "Yrna/Ravenwood/Log", 0 );
+}
+~
+E
+log~
+@gYou stand on a log. Doesn't that make you feel tall?@n
+~
+E
+rlog~
+@g$n climbs on the log.@n
+~
+E
+off~
+@gYou climb down from the log.@n
+~
+E
+roff~
+@g$n climbs down from the log.@n
+~
+!
+0 0 0
+A
+~
+~
+if( get_integer( ch, "Yrna/Ravenwood/Vine" ) == 1 )
+  act_tochar( #noway, ch );
+elseif( get_integer( ch, "Yrna/Ravenwood/Log" ) == 1 )
+  act_tochar( #onlog, ch );
+else
+  continue;
+~
+E
+noway~
+@yYou are currently dangling from the vine.  Perhaps you should get off
+before you try walking away.@n 
+~
+E
+onlog~
+@yYou should get off the log before you can walk away from it.@n
+~
+!
+3 0 11
+A
+~
+roots crevice crack~
+if( get_integer( ch, "Yrna/Ravenwood/Vine" ) == 1 ) {
+  if( rflag( reset0, room ) ) {
+    remove_rflag( reset0, room );
+    if( random( 1, 5 ) == 1 )
+      obj = oload( 16 );
+    else
+      obj = oload( 14 );
+    act_tochar( #coin, ch, obj );
+    act_notchar( #rcoin, ch, obj, mob, sight );
+    obj_to_char( obj, ch );
+  }
+  else
+    act_tochar( #already, ch );
+}
+else
+  act_tochar( #toofar, ch );
+~
+E
+coin~
+@CYou reach between the vine roots and find a coin!@n
+~
+E
+rcoin~
+@CDangling from the vine, $n appears to be searching its roots.@n
+~
+E
+already~
+@cWhatever it was that glinted here before, someone must have taken it already.@n
+~
+E
+toofar~
+@yStanding where you are, it is impossible to reach the crack half way up
+the cliff.@n 
+~
+!
+9 0 0
+A
+look~
+crack crevice root~
+if( get_integer( ch, "Yrna/Ravenwood/Vine" ) == 1 ) {
+  if( rflag( reset0, room ) )
+    act_tochar( #coin, ch, obj );
+  else
+    act_tochar( #nocoin, ch, obj );
+}
+else
+  act_tochar( #toohigh, ch );
+~
+E
+coin~
+The narrow crack on the cliff face has just enough earth in it to support
+the growth of the long vines.  Their great roots are partially uncovered
+and you are unsure can they support your weight for much longer.  Between
+those roots you can just about see something shiny, possibly left here by
+a raven or a magpie.
+~
+E
+nocoin~
+The narrow crack on the cliff face has just enough earth in it to support
+the growth of the long vines.  Their great roots are partially uncovered
+and you are unsure can they support your weight for much longer.  Seeing
+how there is nothing of interest up here, maybe you should just climb
+down before the roots give way.
+~
+E
+toohigh~
+All you can see from here is a long, but narrow crack on the cliff face. 
+Exploring inside it requires being much closer.
+~
+!
+0 0 0
+2577 9 1509949540 3 0
+-1
+S
+
+#2421
+Dark Woods - In a Wide Basin~
+The ground here has begun to dip into a wide basin that descends to the
+west.  It is covered with a thick carpet of dark green moss, the ground
+soft and almost boggy; an indication, perhaps, of some underground water
+flow.  A small path follows the basin's edge, and old, rotten logs seem
+to have been placed as steps leading downward into it.  Time and dirt
+have worn down the stepping logs, and most are cracked and rotten.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 2426 10 10 5
+D1
+~
+~
+0 -1 2422 10 10 5
+D3
+~
+~
+0 -1 2420 10 10 5
+E
+stepping logs~
+The thick log sleepers have, for the most part, decayed into a
+worm-ridden pulp.  The once smooth wood is now riddled with cracks as
+moss and tufts of whitish-green grass persistently grown through the
+rotting logs.
+~
+A
+~
+~
+continue;
+
+~
+E
+to_char~
+@YYou climb up the crumbling steps, heading $T.@n
+~
+E
+to_room~
+@Y$n climbs up the crumbling steps to the $T.@n
+~
+!
+3 0 3
+29 0 1509949540 -2 0
+7649 17 1509949540 -2 0
+-1
+S
+
+#2422
+Dark Woods - A Small Narrow Path in the Forest~
+A small path runs from east to west through the forest here, bounded by a
+small pool to the north and a smooth, mountainous wall of rock to the
+south.  The grey rock is camouflaged by a small stand of pines which
+grow near it and a mass of green lichens which have spread over its lower
+portion.  The forest lightens here a little where the oak trees have
+spread out some, and the brisk scent of pine flourishes.  To the west,
+the ground descends into a deep basin.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 2425 10 10 5
+D1
+~
+~
+0 -1 2423 10 10 5
+D3
+~
+~
+0 -1 2421 10 10 5
+E
+lichens rock white~
+The mass of lichen, which has spread up the mountainous wall of grey
+rock, look like small circular tiles.  Their mottled hues of green and
+greyish-blue give the lower portion of the cliff face a piebald
+appearance.
+~
+685 17 1509949540 -2 0
+-1
+S
+
+#2423
+Dark Woods - A Small Narrow Path in the Forest~
+A narrow trail of trampled leaves and broken sticks undulates among the
+trees, winding its way between the massive trees.  Much of the path is
+barely visible, and the forest has grown over it in places.  Small
+patches of green vegetation lurk in various spots on the ground, but the
+majority of the land here is taken up by massive oak trees which grow up
+in columns along the forest bed.  To the east lies a small clearing.  A
+few pines, rare in this forest, lie at the southern boundary of the
+forest, where a sheer rock wall rises up. 
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 2424 10 10 5
+D1
+~
+~
+0 -1 2400 10 10 5
+D3
+~
+~
+0 -1 2422 10 10 5
+E
+green vegetation patches~
+Small green weeds and shrubs grow on either side of the narrow trail;
+many cluster around the roots of the towering oaks, forming rings of
+leafy brush around the trunks.  One particularly large oak's trunk is
+entirely covered by a net of light-purple ivy, the hardy plant supporting
+scant few white flowers.
+~
+E
+1 east clearing~
+As the oaks thin, and the gloominess of the forest lightens, it is
+possible to see a small clearing hiding off to the east.  The trees seem
+to part as they approach the clearing, making a verdant avenue into the
+small glade.
+~
+E
+trampled leaves broken sticks trail~
+The small trail, which has formed between the trees, is outlined by
+broken and crushed vegetation.  It appears that the narrow path has only
+recently been created through the dense forest.  Small footprints in the
+soft loam suggest that perhaps animals roaming through the woods had made
+the trail.
+~
+29 0 1509949540 -2 0
+-1
+S
+
+#2424
+Dark Woods - A Small Creek~
+The trees have thinned here to allow for a shallow creek, the stony bed
+dividing the forest.  Despite the fewer trees, the canopy is still plush
+with leaves, the dense green ceiling allowing not even the slightest of
+breezes to lift the swathes of mist.  The small ribbon of water flows in
+from the west, and here it disappears under a sizable boulder; the water
+lets off a cool spray as it runs along the pebbly course.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 13 9 0
+D0
+~
+~
+0 -1 2430 10 10 5
+D1
+~
+~
+0 -1 2401 10 10 5
+D2
+~
+~
+0 -1 2423 10 10 5
+D3
+~
+~
+0 -1 2425 10 10 5
+E
+boulder stony bed pebbly course~
+Predominantly made up of relatively small stones, the riverbed is
+scattered with an occasional boulder of substantial size.  One, in
+particular, lies across the slowly trickling creek, preventing any flow
+beyond this point, the water disappearing beneath the large rock.
+~
+660 17 1509949540 -2 0
+-1
+S
+
+#2425
+Dark Woods - A Shallow Pool~
+A shallow creek runs in from the north and swirls about a low depression
+in the ground before proceeding eastwards.  A thick log has fallen along
+the south side of the pool, its soft decaying wood overridden by slaters. 
+Covering the entire length of the log, and spilling onto the ground
+beyond, a dark green moss converges on the uneven ground.  The pungent
+smell of rotting wood permeates through the moisture-laden air.
+~
+[Yrna] done.
+[Guin] Done.
+~
+167247872 13 9 0
+D0
+~
+~
+0 -1 2431 10 10 5
+D1
+~
+~
+0 -1 2424 10 10 5
+D2
+~
+~
+0 -1 2422 10 10 5
+D3
+~
+~
+0 -1 2426 10 10 5
+E
+log 1 south wood~
+For how long this log has lain here, slowly decaying with time, no one
+knows.  The omnipresent moisture that hangs over the area has had a
+detrimental effect on the fallen tree; the wood so bloated with water has
+caused the bark to split several times along the trunk.  It is difficult
+to tell from this angle, but it appears as though there might be
+something buried beneath the rotting log.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@BStepping over the mossy log, you leave the stream and head south.@n
+~
+E
+to_room~
+@B$n steps over the mossy log and, leaving the stream, heads south.@n
+~
+!
+3 0 4
+A
+move~
+log~
+act_tochar( #slaters, ch );
+act_notchar( #rslaters, ch, obj, mob, sight );
+~
+E
+slaters~
+@YYou shift the log, sending scores of slaters scurrying away into the
+moss.@n 
+~
+E
+rslaters~
+@Y$n shifts the heavy log, sending scores of slaters scurrying away into
+the moss.@n 
+~
+!
+0 0 0
+660 17 1509949540 -2 0
+-1
+S
+
+#2426
+Dark Woods - A Dried Creek and Pool~
+Once the site of a muddy stream bed, a layer of moss blankets the slight
+rise in the landscape; the creek's course, changed by a series of natural
+events, moved to the north and east, leaving this area higher and
+slightly drier.  Traces of the dry creek bed can be seen to the
+southwest, ending at a shallow depression that might have been a pool. 
+Deadfall and fallen leaves now reside in the dip of land, where a low
+shrub is attempting to grow.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 2432 10 10 5
+D1
+~
+~
+0 -1 2425 10 10 5
+D2
+~
+~
+0 -1 2421 10 10 5
+D3
+~
+~
+0 -1 2427 10 10 5
+-1
+S
+
+#2427
+Dark Woods - Blackened Trees~
+The great trees huddle together, almost as if trying to stay warm in this
+dark, cold forest.  It is their own thick canopy that blocks off the
+sunlight, causing the tendrils of mist to lift off the ground and curl
+and dance between the trees.  Several of the trees in this part of the
+forest seem to be losing branches, and the trees themselves look
+blackened and burnt, although there is no indication fire ever touched
+them.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 2433 10 10 5
+D1
+~
+~
+0 -1 2426 10 10 5
+D2
+~
+~
+0 -1 2420 10 10 5
+D3
+~
+~
+0 -1 2428 10 10 5
+-1
+S
+
+#2428
+Dark Wood - Small Glade Overlooking a Pond~
+Standing at the northeast edge of a sediment-rich pond, thick brush and
+trees proliferate the side of the slope and veil most of what is below. 
+At the lowest part of the depression a small pond can be discerned
+through the foliage, its surface curdled a bright greenish colour with
+what appears to be a layer of viscid slime.  To the north, the forest
+floor descends a little allowing a small creek to run its course
+eastwards.  The trees here have thinned somewhat, and a circle of stones
+lies in the centre of this small glade; a light scattering of grey-white
+ashes coats the damp earth and charred rocks.
+~
+[Yrna] Added fake search, can be expanded to pop soem ash-related items
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 2434 10 10 5
+D1
+~
+~
+0 -1 2427 10 10 5
+D2
+~
+~
+0 -1 2419 10 10 5
+D3
+~
+~
+0 -1 2429 10 10 5
+E
+ashes circle stones charred rocks~
+Blackened by fire, the stones that were used to prevent the blaze from
+spreading across the ground have been knocked and kicked about by
+negligent feet.  Charred, crumbling logs are all that remain from the
+most recent fire, although when that might have been is very difficult to
+establish as the embers and ashes are completely cold and scattered about
+the area 
+~
+A
+~
+ashes stones charred rocks~
+act_tochar( #ash, ch, obj, mob );
+  act_notchar( #rash, ch, obj, mob, sight );
+  loop( all_in_room ) {
+      interpret( rch, "sneeze" );
+  }
+send_to_room( #blessyou, room );
+~
+E
+ash~
+@cYou disturb the ashes, sending a cloud of fine dust in the air!@n
+~
+E
+rash~
+@c$n pokes around in the ashes, sending a cloud of fine dust in the
+air!@n 
+~
+E
+blessyou~
+@YBless you!@n
+~
+!
+9 0 0
+29 0 1509949540 -2 0
+-1
+S
+
+#2429
+Dark Woods - At the Northern Edge of a Pond~
+The ground here is uneven, as the wooded incline runs upward in all
+directions but south, where a lime-green pond rests at the lowest point
+of the basin.  Thick weeds and rough brush guard this side of it, while a
+sheer wall of granite rock borders the opposite one.  This close to the
+Everwinters' cliffs, the oak trees grow further apart, and there are even
+a few pines on the western half, but several here have been upended by
+the hilly, unsupporting terrain.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 2435 10 10 5
+D1
+~
+~
+0 -1 2428 10 10 5
+D2
+~
+~
+0 -1 2418 10 10 5
+D3
+~
+~
+0 -1 2416 10 10 5
+A
+~
+~
+continue;
+
+~
+E
+to_char~
+@BYou slowly wade into the slimy pond.@n
+~
+E
+to_room~
+@B$n slowly wades into the slimy pond.@n
+~
+!
+3 0 4
+A
+~
+~
+send_to_room( #buzz, room );
+~
+E
+buzz~
+@gThe buzzing of small insects can be heard all around you.@n
+~
+!
+2 200 0
+-1
+S
+
+#2430
+Dark Woods - Thick Brush~
+Dark-green ferns and brush form a decorative and lush carpet around the
+trees here.  Walking is difficult, as a thin shroud of fog covers the
+forest floor, at the same time hiding large, unwieldy roots that spread
+away from the trees.  Not far to the north, a verdant archway of two
+hunched over oaks can be seen through the mist.  The wind seldom whispers
+here, and the eerie silence that surrounds this section of the forest
+picks up even the slightest crackle of branches set off by birds and
+other animals lurking in the leafy canopy.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 2436 10 10 5
+D1
+~
+~
+0 -1 2402 10 10 5
+D2
+~
+~
+0 -1 2424 10 10 5
+D3
+~
+~
+0 -1 2431 10 10 5
+E
+1 north verdant archway hunched oaks~
+It appears that when these two oaks were still saplings their branches
+became entangled, and being so malleable, instead of snapping, they
+continued their co-dependant growth.  A leafy green canopy rises into the
+sky, the foliage particularly thick where the inseparable branches meet.
+~
+E
+fog floor roots~
+The ever-present mist sends a network of tendrils out to quietly seep
+through the trees and bushes.  Scooting just above the ground, the
+wavering fog distorts the forest floor, making it difficult to navigate
+past the gnarled tangle of roots.
+~
+A
+~
+~
+send_to_room( #croak, room );
+~
+E
+croak~
+@YThe distant croaking of ravens disturbs the eerie silence.@n
+~
+!
+2 200 0
+2577 9 1509949540 3 0
+-1
+S
+
+#2431
+Dark Woods - Along a Small Creek~
+The creek bends southward here, its silty waters trickling over the
+pebbled creek bed.  A lot slower than upstream, the water is also much
+clearer; the thin, dark sediment it carries is almost completely settled
+now.  Small fingers of grass dip over the flow and cause small ripples in
+the stream.  The forest has thinned here but for an old tree on the north
+bank of the creek.  It bears no foliage, and its trunk and branches are
+blackened as if by fire.  The tree seems to have forced the creek
+southward with its thick, gnarled roots.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 13 9 0
+D0
+~
+~
+0 -1 2437 10 10 5
+D1
+~
+~
+0 -1 2430 10 10 5
+D2
+~
+~
+0 -1 2425 10 10 5
+D3
+~
+~
+0 -1 2432 10 10 5
+E
+old tree 1 north trunk branches gnarled roots~
+Gnarled roots claw at the ground; the massive tumble of wood twisted so
+close together that even the water had to change its course to get past
+the wide girth.  The haggard bole of this old oak writhes along the
+ground several feet before sharply twisting to rise up at a skewed angle. 
+Strange, however, is the trunk and branches of this bare tree; they
+appear to be blackened as if by fire, yet they are not charred or burnt.
+~
+-1
+S
+
+#2432
+Dark Woods - Plank Across a Small Creek~
+Zig-zagging between the boulders and tree roots is a small stream, its
+slightly murky water making thin, intersecting flowlines as it travels
+over a bed of pebbles.  The stream carries some thin, dark sediment which
+seems to be settling as the water's flow is slowed.  A thick, wooden
+plank stretches across the stream here, although it appears to be
+relatively useless; the stream is very shallow and not very wide at all.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 2438 10 10 5
+D1
+~
+~
+0 -1 2431 10 10 5
+D2
+~
+~
+0 -1 2426 10 10 5
+D3
+~
+~
+0 -1 2433 10 10 5
+E
+wooden plank bridge~
+The small wooden plank is quite thick, stretch out over the creek.  The
+unadorned slab serves as a narrow bridge, although the stream could
+easily be forded or jumped, and indeed has been in several places.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@YYou cross the plank and head $d.@n
+~
+E
+to_room~
+@Y$n crosses the plank and heads $d.@n
+~
+!
+3 0 5
+29 0 1509949540 -2 0
+3936 17 1509949540 -2 0
+-1
+S
+
+#2433
+Dark Woods - Along a Small Creek~
+A shallow creek flows from west to east in its stony bed, carrying with
+it some sort of fine, dark sediment and providing the only sound in a
+forest of still oak trees and brittle dogwood shrubs.  The thick canopy,
+stretching overhead, keeps the damp air trapped beneath the leafy boughs,
+causing the moisture-laden air to cling to the tree trunks and ground.  A
+sweet aroma wafts through the air, the source of which is a small natural
+growth of fennel growing near the stream.
+~
+[Yrna] Done for now
+[Guin] Done.
+~
+167247872 13 9 0
+D0
+~
+~
+0 -1 2439 10 10 5
+D1
+~
+~
+0 -1 2432 10 10 5
+D2
+~
+~
+0 -1 2427 10 10 5
+D3
+~
+~
+0 -1 2434 10 10 5
+E
+fennel~
+Very soft, the gossamer thin tendrils of fennel spill out over the rocky
+ground, the shoots getting bigger and more succulent as they lead down
+toward the woody stem of the plant.  Permeating the close vicinity of the
+delicate plant is its unmistakeable sweet aroma, bringing a spring-like
+freshness to the heavy air.
+~
+A
+~
+~
+send_to_room( #smell, room );
+~
+E
+smell~
+@GWith a sudden shift in the air currents, the gentle scent of nearby
+fennel wafts through the thick fog on the slight breeze.
+~
+!
+2 0 0
+3936 17 1509949540 -2 0
+-1
+S
+
+#2434
+Dark Woods - Bend in a Small Creek~
+A small creek runs through this oak forest, bending eastwards as it flows
+along a natural depression in the ground.  The cool trickling sound of
+its path provides an aura of life in an otherwise dark, somnolent forest. 
+The murky water cascades down a series of rock steps, forming miniature
+waterfalls as it meanders along the stony bed.  A thick canopy stretches
+overhead; a dense fog permeates the area, the moisture-laden air trapped
+by the closeness of the oak trees.
+~
+[Yrna] rdesc revised
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 13 9 0
+D0
+~
+~
+0 -1 2440 10 10 5
+D1
+~
+~
+0 -1 2433 10 10 5
+D2
+~
+~
+0 -1 2428 10 10 5
+D3
+~
+~
+0 -1 2435 10 10 5
+3936 17 1509949540 -2 0
+-1
+S
+
+#2435
+Dark Woods - Oak Trees~
+The great oaks are starting to grow more thickly now, limiting sight and
+making passage difficult.  Many dead branches litter the forest floor,
+and a carpet of leaves hides potential roots that could easily trip a
+hasty person.  Not even wind stirs the trees, and the only thing that can
+be heard is a faint sound of running water; the only movement is of the
+wisps of mist that curl and swirl between the trees, keeping close to the
+ground.  A short distance to the south lies a narrow path that winds down
+into a wide basin.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 2441 10 10 5
+D1
+~
+~
+0 -1 2434 10 10 5
+D2
+~
+~
+0 -1 2429 10 10 5
+D3
+~
+~
+0 -1 2415 10 10 5
+A
+~
+~
+send_to_room( #ravens, room );
+~
+E
+ravens~
+@YThe eerie silence is suddenly interrupted by a croaking of ravens. 
+Looking around, however, you can't spot any.@n 
+~
+!
+2 100 0
+-1
+S
+
+#2436
+Dark Woods - Near an Uprooted Tree~
+Thick fog, shrouding the forest in swirling wisps of white, appears to
+absorb the sounds of the woodlands, making every snap of dried twigs and
+creaking of ancient trees seem faint and distant.  A pair of awkwardly
+bent trees forms a natural archway to the south, it appears that the
+branches of these oaks became entangled when they were but saplings, and
+as the two trees grew with each other, their trunks remained hunched over.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 2442 10 10 5
+D1
+~
+~
+0 -1 2403 10 10 5
+D2
+~
+~
+0 -1 2430 10 10 5
+D3
+~
+~
+0 -1 2437 10 10 5
+E
+pair archway 1 south oaks trunks branches~
+It appears that when these two oaks were still saplings their branches
+became entangled, and being so malleable, instead of snapping, they
+continued their co-dependant growth.  A leafy green canopy rises into the
+sky, the foliage particularly thick where the inseparable branches meet.
+~
+29 0 1509949540 -2 0
+-1
+S
+
+#2437
+Dark Woods - South of a Pond~
+The earth, predominantly silt and clay, is much softer here, and thick,
+reedy grass seems to cover the forest floor in a mat of green, brown, and
+yellow.  A verdant canopy spreads a leafy ceiling overhead, the
+vegetation so dense that a fresh breeze very seldom makes it down to
+ground level.  Between the soggy ground, ever-present mist, and a layer
+of decaying plant matter, the dense air that hangs over the area is laced
+heavily with a pungent sulphuric odour.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 2443 10 10 5
+D1
+~
+~
+0 -1 2436 10 10 5
+D2
+~
+~
+0 -1 2431 10 10 5
+D3
+~
+~
+0 -1 2438 10 10 5
+A
+~
+~
+if( rflag( reset0, room ) )
+  send_to_room( #mist, room );
+~
+E
+mist~
+A @Ccurl of mist@n swirls in between the tree trunks.
+~
+!
+2 200 0
+A
+kill look~
+curl mist~
+act_tochar( #poof, ch );
+act_notchar( #rpoof, ch, obj, mob, sight );
+remove_rflag( reset0, room );
+~
+E
+poof~
+@cThe curl of mist touches you with its wispy tendrils, but before you
+can swing your weapon, it fades away.@n 
+~
+E
+rpoof~
+@cThe curl of mist wraps its wispy tendrils around $n, before fading into
+nothingness.@n 
+~
+!
+0 0 0
+-1
+S
+
+#2438
+Dark Woods - South of a Pond~
+Marsh grasses and reeds flourish in abundance on the soft damp ground at
+the edge of the small lichen-covered pond.  The towering oak trees that
+proliferate the area grow denser as they become further removed from the
+stagnating water.  A heavy mist hugs close to the thick trunks, leaving a
+fine coating of moisture on the bark.  Feeding of the dew-spangled roots,
+a dark green moss covers the lower portion of the trees.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 2444 10 10 5
+D1
+~
+~
+0 -1 2437 10 10 5
+D2
+~
+~
+0 -1 2432 10 10 5
+D3
+~
+~
+0 -1 2439 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou enter the slime-covered pond, holding onto the roots of a fallen
+tree for support.@n 
+~
+E
+to_room~
+@cHolding onto the roots of a fallen tree, $n enters the pond.@n
+~
+!
+3 0 1
+-1
+S
+
+#2439
+Dark Woods - A Quiet Clearing Near the Creekbed~
+The ground here has become less dry and the land more marshy as it turns
+into a shallow depression to the north and east.  Taller oaks and bristly
+shrubs have given way to meshed carpets of marshgrass and weed.  The fog
+rises from the ground and swirls between the trees and bushes, staying
+low and spreading its wispy tendrils in all directions.  A small creek
+threads its way around this section of the forest, and you can hear it
+quietly ripple over the rocks in places south and west of here.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 2445 10 10 5
+D1
+~
+~
+0 -1 2438 10 10 5
+D2
+~
+~
+0 -1 2433 10 10 5
+D3
+~
+~
+0 -1 2440 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@BYou wade into the cold, shallow stream to the $d.@n
+~
+E
+to_room~
+@B$n wades into the cold, shallow stream to the $d.@n
+~
+!
+3 0 12
+A
+~
+~
+if( is_mob( ch ) )
+  continue;
+else {
+  act_tochar( #squish, ch );
+  act_notchar( #rsquish, ch );
+  continue;
+}
+~
+E
+squish~
+@GThe marshy ground squishes under your feet as you leave north.@n
+~
+E
+rsquish~
+@GThe marshy ground squishes under $n's feet as $e disappears between the
+trees to the north.@n 
+~
+!
+3 0 1
+A
+~
+~
+if( is_mob( ch ) )
+  continue;
+else {
+  act_tochar( #squish, ch );
+  act_notchar( #rsquish, ch );
+  continue;
+}
+~
+E
+squish~
+@GThe marshy ground squishes under your feet as you leave east.@n
+~
+E
+rsquish~
+@GThe marshy ground squishes under $n's feet as $e disappears between the
+trees to the east.@n 
+~
+!
+3 0 2
+-1
+S
+
+#2440
+Dark Woods - Along a Small Creek~
+The creek seems to narrow somewhat; the water flows downhill, trickling
+quickly over small, algae-covered rapids in the creek bed.  The creek
+carries some sort of fine, dark sediment which makes its water murky and
+very unattractive to drink.  A cool mountain breeze blows in from the
+west, causing the trees on either bank of the creek to shiver and bend.
+~
+[Yrna] Done.
+[Guin] Done.
+[Jydan] fall over message is ungrammatical
+~
+167247872 13 9 0
+D0
+~
+~
+0 -1 2446 10 10 5
+D1
+~
+~
+0 -1 2439 10 10 5
+D2
+~
+~
+0 -1 2434 10 10 5
+D3
+~
+~
+0 -1 2441 10 10 5
+A
+~
+~
+if( is_night( ) )
+  send_to_room( #shape, room, sight );
+else
+  send_to_room( #raven, room, sight );
+~
+E
+raven~
+@cA large bird flying overhead casts a dark shadow on the rippling
+waters.@n 
+~
+E
+shape~
+@cThe silhouette of a large bird passes across the face of the moon, its
+shape distorted by wispy tree branches.@n 
+~
+!
+2 200 0
+A
+~
+~
+if( !is_mob( ch ) ) {
+  if( random( 1, 4 ) == 2 ) {
+    act_tochar( #oops, ch, obj );
+    act_notchar( #roops, ch, obj, mob, sight );
+    position( ch, 6 );
+  }
+  else
+    continue;
+}
+else
+  continue;
+~
+E
+to_char~
+@BWith not much grace and a lot of arm waving, you hop over the slippery
+rocks and make your way $d.@n 
+~
+E
+to_room~
+@BSomehow maintaining $s balance over the slippery rocks, $n leaves $d.@n 
+~
+E
+roops~
+@YTrying to cross the rapids, $n slips on the slime-covered rocks, slides
+forward a few feet before completely losing $s balance and falling into
+the cool river, drenching $m from head to foot in slightly silty water.@n
+~
+E
+oops~
+@YLosing your footing you slip on the slime-covered rocks and fall head
+first into the cool waters.@n 
+~
+!
+3 0 5
+29 0 1509949540 -2 0
+3936 17 1509949540 -2 31
+-1
+S
+
+#2441
+Dark Woods - At the Edge of the Mountains~
+The massive, granite cliffs of the Everwinter mountains jut out from the
+edge of the forest to the west, casting it into permanent shadow.  There
+is a narrow pass between two of the mountain cliffs, just wide enough to
+fit several horses through.  The pass dips below and widens into a
+shallow-looking pool shadowed by the cliff faces.
+~
+[Yrna] Done.
+[Guin] Done
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 2447 10 10 5
+D1
+~
+~
+0 -1 2440 10 10 5
+D2
+~
+~
+0 -1 2435 10 10 5
+D3
+~
+~
+0 -1 12279 10 10 5
+E
+1 west pass pool~
+The pass to the west narrows as the ground heads downward into what
+appears to be a shallow ford.  The passing of creatures has widened the
+ford into a shallow pool, choked with disturbed sediments.
+~
+415 17 1509949540 -2 0
+-1
+S
+
+#2442
+Dark Woods - East of a Pond~
+Small pools of weed-choked water and methane cover this soggy marshland. 
+Thickets of dogwood shrubs grow in sparse patches, although the marsh
+grass and reeds are in greater abundance.  A large tree has been uprooted
+and its trunk lies half buried in the quagmire.  Green lichens tile its
+rotting bark making intricate, if accidental patterns, while dozens of
+wood lice find their homes in any accessible hole or crack.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 2406 10 10 5
+D1
+~
+~
+0 -1 2404 10 10 5
+D2
+~
+~
+0 -1 2436 10 10 5
+D3
+~
+~
+0 -1 2443 10 10 5
+E
+tree trunk lichen rotting bark~
+Ranging in colour from deep viridian to an almost fluorescent green, the
+lichen thrives upon the slowly festering bark of this waterlogged tree. 
+Very little now remains of the foliage, most of the leaves having long
+since fallen from the branches and sunk into the swampy ground.  At first
+glance the intricate patterns appear to be some form of ancient runes or
+hieroglyphs; but, looking closer, they are no more than haphazard designs
+that have mottled the trunk.
+~
+-1
+S
+
+#2443
+Large Pond - Reed-choked Water~
+Thousands of thin reeds choke this part of the pond, their light brown
+stems tarnished green by the thick algae that covers the putrescent
+waters.  A thick layer of greeny brown slime covers the surface, and a
+myriad of insects thrive on the fetid pond; as they flit across the
+water, they send small circular ripples across it.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247880 13 9 0
+D0
+~
+~
+0 -1 2407 10 10 5
+D1
+~
+~
+0 -1 2442 10 10 5
+D2
+~
+~
+0 -1 2437 10 10 5
+D3
+~
+~
+0 -1 2444 10 10 5
+A
+~
+~
+if( random( 1, 3 ) == 3 )
+  continue;
+else {
+  act_tochar( #slip, ch );
+act_notchar( #rslip, ch, obj, mob, sight );
+}
+~
+E
+to_char~
+@GWith help of some thick reeds, you manage to clamber out of the pond.@n
+~
+E
+to_room~
+@GHolding onto some thick reeds, $n clambers out of the pond.@n
+~
+E
+slip~
+@YTrying to get out of the pond, you slip and fall backwards, splashing
+the water everywhere!@n 
+~
+E
+rslip~
+@Y$n tries to get out of the pond, but slips and falls backwards with a
+splash!@n 
+~
+!
+3 0 6
+A
+~
+~
+rch = rand_player( room );
+send_to_room( #mosq, room );
+damage( mob, rch, 2d5, physical, "an angry mosquito", "a mosquito bite" );
+~
+E
+mosq~
+@RDozens of mosquitos dart back and forth, filling the air with angry
+buzzing.@N 
+~
+!
+2 250 0
+1123 17 1509949540 -2 0
+-1
+S
+
+#2444
+Large Pond - Near a Fallen Oak~
+The parts of the pond that are not covered with patches of green and blue
+algae shine with some strange combination of oil and grime, creating a
+thin, opaque film that sticks to everything.  Every now and then the
+surface ripples as something darts through the pond, disturbing its dark,
+slime-covered waters.  A small oak has fallen at the southwest edge of
+the pond; its branches and trunk have all but disappeared into the muddy
+waters, only its roots still above the pond's surface.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247880 13 9 0
+D0
+~
+~
+0 -1 2408 10 10 5
+D1
+~
+~
+0 -1 2443 10 10 5
+D2
+~
+~
+0 -1 2438 10 10 5
+D3
+~
+~
+0 -1 2445 10 10 5
+E
+oak branches trunk roots tree~
+The vast majority of tree - trunk, branches and leaves - have become
+immersed in the putrid waters, a layer of slick algae coating the
+waterlogged bark.  Protruding from the sickly pond, the roots of the tree
+reach toward the slimy shore like skeletal fingers, draped with wispy
+plant tendrils that waver as something beneath the fetid surface tugs at
+them.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@YHolding onto the roots of a fallen tree for support, you pull yourself
+out of the pond and leave $d.
+~
+E
+to_room~
+@YClimbing through the roots of a fallen tree, $n leaves the pond.@n
+~
+!
+3 0 12
+-1
+S
+
+#2445
+Dark Woods - West of a Pond~
+Fog shrouds the forest in soft white, distorting the shapes of bushes and
+trees and filling the empty space between them with swirling illusions. 
+The woods are thinner here, held by smaller trees, shrubs, and ferns
+which lay low to the ground between the two waters, one running and one
+dark and still, its black waters partially covered by a thin layer of
+green scum.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 2409 10 10 5
+D1
+~
+~
+0 -1 2444 10 10 5
+D2
+~
+~
+0 -1 2439 10 10 5
+D3
+~
+~
+0 -1 2446 10 10 5
+29 0 1509949540 -2 0
+2577 9 1509949540 3 0
+-1
+S
+
+#2446
+Dark Woods - A Bend in the Creek~
+The creek zig-zags through the forest, choosing the easiest path to flow,
+making its way between the large boulders and tree roots.  A large, black
+walnut tree forces it to change the direction here.  Its small, green nut
+coverings dot the forest floor; some of them are bruised and blackened as
+they lay on the ground.  A heavy coating of lichens has formed at the
+base of this tree, close to the stream; their greenish blue mass has just
+begun to overrun the trunk's bark.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 13 9 0
+D0
+~
+~
+0 -1 2410 10 10 5
+D1
+~
+~
+0 -1 2445 10 10 5
+D2
+~
+~
+0 -1 2440 10 10 5
+D3
+~
+~
+0 -1 2447 10 10 5
+E
+walnut tree lichen~
+This old, gnarled tree stands at a slightly skewed angle, the soil from
+beneath its roots having been washed away by the swiftly flowing river. 
+Covering the lower portion of the tree, a growth of greenish blue lichen
+sprouts from the deep crevices in the ebon-hued wrinkled bark, the plant
+matter thriving off the nutrient-rich droplets of water that perpetually
+riddle the crooked trunk.  A scattering of crushed walnuts and walnut
+shells litters the loamy soil beneath the warped tree.
+~
+A
+~
+~
+continue;
+~
+E
+to_room~
+@BSplashing through the murky water, $n leaves $d.@n
+~
+E
+to_char~
+@BSplashing through the murky water, you leave $d.@n
+~
+!
+3 0 12
+3936 17 1509949540 -2 0
+-1
+S
+
+#2447
+Dark Woods - Slime-Covered Oaks~
+A narrow creek runs from west to east through the forest here, its murky
+waters full of fine, dark sediment.  Large, dark oaks crowd it on each
+side and force the flow of water to wind and bend around their tough
+roots.  The oaks themselves are blackened and look burnt; many of them
+have a thin coating of slime around their boles.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 13 9 0
+D0
+~
+~
+0 -1 2411 10 10 5
+D1
+~
+~
+0 -1 2446 10 10 5
+D2
+~
+~
+0 -1 2441 10 10 5
+D3
+~
+~
+0 -1 2413 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@BSplashing through the creek you continue $d.@n
+~
+E
+to_room~
+@BSplashing through the creek, $n continues $d.@n
+~
+!
+3 0 10
+A
+~
+~
+continue;
+~
+E
+to_char~
+@Byou leave the murky creek and head into the dark forest$d.@n
+~
+E
+to_room~
+@B$n leaves the murky creek and heads $d.@n
+~
+!
+3 0 5
+78 17 1509949540 -2 0
+3936 17 1509949540 -2 0
+-1
+S
+
+#2448
+Dark Woods - North of a Great Oak~
+The woods are darker here, covered by the massive foliage of a great oak
+to the south.  Its bole climbs ever upward, branching out into thick
+limbs full of green leaves which shimmer between dark, shiny top layers
+and light underlayers.  Not far to the northeast, you can hear the soft
+hush of a flowing stream, although trees and brush block your view of it. 
+Soft moss-covered earth covers a depression between two roots at the foot
+of the tree; it is well-shaded and would make an excellent place to rest.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 2459 10 10 5
+D1
+~
+~
+0 -1 2449 10 10 5
+D2
+~
+~
+235 -1 2478 10 10 5
+D3
+~
+~
+0 -1 2403 10 10 5
+E
+oak tree root~
+Covered in a soft dark green moss, the lower portions of the great tree
+would make an ideal, sheltered campsite.  A single branch stump notably
+protrudes from the trunk a few feet off the ground; its surface looks
+strangely metallic, as though it had been coated in a substance of some
+kind.  Looking closer at the top of the stump, it surface appears to be
+somewhat eroded, perhaps by something brushing against it.
+~
+A
+~
+~
+if( is_open( room, south ) ) {
+  if( mob_in_room( 5428, room ) ) {
+    act_tochar( #shove, ch );
+    act_notchar( #shove1, ch );
+    end;
+  }
+  else {
+    act_tochar( #north, ch );
+    continue;
+    end;
+  }
+}
+else
+  act_tochar( #noexit, ch );
+~
+E
+shove~
+@GWith a snarl the warder steps in front of you, blocking your attempt to
+head southward.@n 
+~
+E
+north~
+@YThe raucous screech of a raven erupts from a nearby tree as you head
+southward.@n 
+~
+E
+noexit~
+There is no exit to the south.
+~
+E
+shove1~
+@GWith a snarl the warder steps in front of $n, blocking their attempt to
+head southward.@n
+~
+E
+north1~
+@YThe raucous screech of a raven erupts from a nearby tree as $n heads
+southward.@n
+~
+!
+3 0 4
+A
+pull move~
+stump branch~
+if( mob_in_room( 5428, room ) ) {
+  act_tochar( #shove, ch );
+  act_notchar( #shove1, ch );
+  end;
+}
+if( is_open( room, south ) ) {
+  act_tochar( #isopen, ch );
+  act_notchar(#risopen, ch, obj, mob, sight );
+  close( room, south );
+}
+else {
+  act_tochar( #notopen, ch );
+  act_notchar( #rnotopen, ch, obj, mob, sight );
+  open( room, south );
+}
+~
+E
+isopen~
+@gYou pull the unusual stump and the hole in the great oak closes with a
+rumbling sound.@n 
+~
+E
+risopen~
+@g$n moves the unusual stump and the hole in the great oak closes with a
+rumbling sound.@n 
+~
+E
+notopen~
+@GYou pull the metal-coated stump and a hole opens up in the great oak!@n
+~
+E
+rnotopen~
+@G$n pulls the unusual stump and a hole opens up in the great oak to the
+south!@n 
+~
+E
+shove~
+@YThe gnoll warder steps in front of you, blocking your attempt to 
+fiddle with the unusual looking stump.@n
+~
+E
+shove1~
+@YThe gnoll warder steps in front of $n, blocking their attempt to
+fiddle with the unusual looking stump.@n
+~
+!
+0 0 0
+5467 9 1509949540 3 0
+5467 9 1509949540 3 0
+5428 9 1509949540 3 0
+-1
+S
+
+#2449
+At the Bank of a Swift Mountain Stream~
+Brush and trees stop suddenly at the bank of a mountain stream that
+weaves its way through the forest and flows to the southeast.  A cool
+mist fills the air as the stream runs up against large rocks and boulders
+that lie along the edge of the bank.  The rocky sediment that has formed
+near the stream looks to be an excellent spot to find pebbles and small
+rocks.  Just to the southwest of here is a great oak tree whose limbs
+tower high above the rest of the forest canopy.
+~
+[Yrna] Do we want fishing here? Or search pebbles? Or both?
+[Guin] Reviewed.
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 2450 10 10 5
+D2
+~
+~
+0 -1 2457 10 10 5
+D3
+~
+~
+0 -1 2448 10 10 5
+29 0 1509949540 -2 0
+1690 17 1509949540 -2 0
+-1
+S
+
+#2450
+At the Bank of a Swift Mountain Stream~
+The forested land here juts out like a dagger over a quickly moving
+stream that winds its way southeast.  A tall oak stands its ground at the
+edge of the peninsula, its bark wet from the spray of the stream.  Not
+far to the southwest, another oak looms over the forest, although it is
+much larger and dwarfs everything around it.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D2
+~
+~
+0 -1 2451 10 10 5
+D3
+~
+~
+0 -1 2449 10 10 5
+A
+~
+~
+loop( all_in_room ) {
+  if( is_player( rch ) )
+    if( !is_mounted( rch ) )
+    position( rch, 6 );
+}
+send_to_room( #splash, room );
+~
+E
+splash~
+@BA wave hits the peninsula sending a spray of water in the air and
+soaking you to the bone!@n 
+~
+!
+2 200 0
+1690 17 1509949540 -2 0
+-1
+S
+
+#2451
+Dark Woods - A Quiet Spot in the Forest~
+This section of the forest is calm; the usual sounds of the birds,
+insects and flowing water seem muted by tall walls of green bush that
+grow to the west and northeast.  Soft moss covers the dead bark of a
+toppled oak, and small wildflowers bloom out from it.  Their scent is a
+pungent mixture of decay and sweetness.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 2450 10 10 5
+D1
+~
+~
+0 -1 2460 10 10 5
+D2
+~
+~
+0 -1 2452 10 10 5
+E
+bush 1 west~
+A swathe of impenetrable brush with briar-like qualities lies to the
+west, completely blocking any movement in that direction.  A tangle of
+hardy branches covered with small spines tumble across the ground and
+amidst the tree trunks, offering no more than a multitude of scratches
+and no passage.
+~
+A
+clear move open~
+brush west~
+act_tochar( #brush, ch );
+act_notchar( #rbrush, ch, obj, mob, sight );
+~
+E
+brush~
+@GYou try pushing through the thich brush, but with little success. 
+You'll just have to go around.@n 
+~
+E
+rbrush~
+@GWith a look of determination on $s face, $n tries to make $s way
+through the thick brush - and fails.@n 
+~
+!
+0 0 0
+A
+1 west~
+*~
+act_tochar( #brush, ch );
+act_notchar( #rbrush, ch, obj, mob, sight );
+~
+E
+brush~
+@GYou try pushing through the thich brush, but with little success. 
+You'll just have to go around.@n 
+~
+E
+rbrush~
+@GWith a look of determination on $s face, $n tries to make $s way
+through the thick brush - and fails.@n 
+~
+!
+0 0 0
+-1
+S
+
+#2452
+Thinning Woods - A Malformed Pine~
+A few scraggly shrubs, little more than brackish weeds, encircle the
+trunk of a haggard, malformed pine tree.  Deep shadows of the surrounding
+oaks belittle the twisted pine, their roots encroaching on the leached
+ground at its base.  A dense tangle of brush creates a thorny barricade
+to the west, the tumble of prickly bushes stretching both to the north
+and south.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247880 3 9 0
+D0
+~
+~
+0 -1 2451 10 10 5
+D1
+~
+~
+0 -1 2461 10 10 5
+D2
+~
+~
+0 -1 2453 10 10 5
+E
+haggard malformed pine tree~
+The trunk of this gnarled tree is stunted and twisted, extending outward
+at an unpredictable direction before abruptly veering off at another
+random orientation.  Protruding at awkward angles from the severely
+skewed branches, the few disintegrating cones that are still attached
+seem just as ghastly as the tree itself.
+~
+-1
+S
+
+#2453
+Dark Woods - A Small Stand of Evergreens~
+The forest is damp and shrouded in a thin layer of fog which slowly
+snakes between the trees, lowering visibility.  To the south and east,
+the sounds of a river can be heard, although mist seems to obscure its
+origin.  Several tall evergreens grow in a wall to the south, several
+pines and a few firs, although the floor of the forest is surprisingly
+bare of needles.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 2452 10 10 5
+D3
+~
+~
+0 -1 2454 10 10 5
+E
+tall evergreens pines firs~
+These tall coniferous trees are remarkably devoid of needles, although no
+traces of them can be found on the forest floor either.  Several
+pinecones appear to be loose as they grow on the thin, spindly branches.
+~
+E
+river southeast 1 south 1 east~
+It is almost impossible to make any details out to the south or east as
+thick fog and lines of evergreens obscure the area.  Permeating,
+presumably from the river, a dense mist envelops the area with its murky
+greyness.
+~
+A
+~
+~
+send_to_room( #mist, room, sight );
+~
+E
+mist~
+A @Ccurl of mist@n swirls around your ankles, threatening to envelop you.
+~
+!
+2 200 0
+685 17 1509949540 -2 0
+-1
+S
+
+#2454
+Dark Woods - A Moss-covered Clearing~
+Many smaller trees have fallen here and their decay, combined with the
+damp atmosphere, has fed the growth of lichens and moss.  A single oak
+still stands, its trunk now covered in the moss, which ranges in color
+from a dark green to a bright reddish-yellow.  Small plants and even a
+few flowers grow on the fringes of the clearing.
+~
+[Greth] no bandits for now, the area will open at a later date.
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 2453 10 10 5
+D3
+~
+~
+0 -1 2455 10 10 5
+E
+flowers~
+The flowers that border on the fringes of the clearing are of an ambient
+white colour.  Strongly opposing the harsh yellows, greens and browns of
+the thick quilt of moss that grows here, the halcyon flowers steadfastly
+grow despite the efforts of moss and lichen to oust them from their soil.
+~
+E
+oak~
+The limbs of this oak bow slightly under the weight of a flourish of
+leaves ranging in colour from verdant green to golden yellow and even a
+rusty orange hue in some places.  Clinging to the exposed roots and lower
+portion of the trunk, a thin cover of dark green, almost black, moss
+coats the tree with its dew-laden tendrils.
+~
+2577 9 1509949540 3 0
+-1
+S
+
+#2455
+Dark Woods - Around a Large White Boulder~
+A great white boulder blocks passage to the south.  Small markings have
+been scrawled into it.  A thick carpet of red moss grows around its base. 
+A thin layer of black slime covers a good portion of the boulder as well. 
+Not far to the north, a great oak rises above the treeline, trailing
+upwards into mist.
+~
+[Estrella] extra done/revised
+[Yrna] Do we have a zone that attaches here? If not, we may want to change this whole boulder idea because there already is one room (#2417) that looks pretty much the same
+[Guin] Reply appended to the zone note.
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 2456 10 10 5
+D1
+~
+~
+0 -1 2454 10 10 5
+D3
+~
+~
+0 -1 2400 10 10 5
+E
+small markings~
+The small markings appear to be black runes that have been harshly and
+hastily written.  A thin layer of slick algae covers much of the runes in
+a smear of black and green, the slime rendering them into unreadable
+obscurity.
+~
+E
+boulder block south~
+Lying to the south of the forest, this large boulder seems to be
+strategically placed.  Although the boulder looks very heavy, being made
+from dense granite, recently disturbed ground at its base suggests that
+perhaps it is covering up some sort of entrance.
+~
+E
+1 north~
+A great oak rises out of the forest, spreading its verdant boughs above
+the tree line.  Although the tree is quite some distance away, it is
+possible to discern the knots and scars that riddle its wide bole.
+~
+A
+push pull move~
+great boulder~
+act_tochar( #no, ch );
+~
+E
+no~
+You push and pull on the great boulder but it does not budge an inch.
+~
+!
+0 0 0
+5426 9 1509949540 3 0
+5468 9 1509949540 3 0
+-1
+S
+
+#2456
+Dark Woods - Before a Great Oak~
+Huge roots snake into the ground from a great oak tree to the north,
+making movement difficult.  The tree itself is covered with a slimy brown
+mass of lichens which have grown nearly ten feet up its trunk.  No other
+trees grow near it, and its bark is a dark, almost black color.  An
+ominous gloom seems to reside over its black branches and dark-green
+leaves, and you notice for the first time that no leaves have fallen from
+it onto the dark earth that supports its roots.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 2458 10 10 5
+D2
+~
+~
+0 -1 2455 10 10 5
+D3
+~
+~
+0 -1 2401 10 10 5
+-1
+S
+
+#2457
+Dark Woods - East of a Great Oak~
+The ground lies bare but for the small, dried brown stems and leaves
+of the occasional shrub.  No trees grow here, and the earth is shaded by
+an enormous great oak that looms over the rest of the forest.  A swath of
+brush blocks any movement east, while the oak's mighty bole makes any
+travel westward impossible.  The sound of a river or stream can be heard
+not far to the north; you can catch a mirrored glimpse of it through the
+trees.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 2449 10 10 5
+D2
+~
+~
+0 -1 2458 10 10 5
+E
+brush 1 east~
+A swathe of impenetrable brush with briar-like qualities lies to the
+east, completely blocking any movement in that direction.  A tangle of
+hardy branches covered with small spines tumble across the ground and
+amidst the tree trunks, offering no more than a multitude of scratches
+and no passage.
+~
+A
+1 east~
+~
+act_tochar( #bush, ch );
+act_notchar( #rbush, ch, obj, mob, sight );
+~
+E
+bush~
+@GYou try to push your way through the thick brush, but soon have to
+abandon that idea as impossible.@n 
+~
+E
+rbush~
+@G$n tries to make way through the thick brush to the east, but soon
+gives up.@n 
+~
+!
+0 0 2
+A
+open clear move~
+brush east~
+act_tochar( #bush, ch );
+act_notchar( #rbush, ch, obj, mob, sight );
+~
+E
+bush~
+@GYou try to push your way through the thick brush, but soon have to
+abandon that idea as impossible.@n 
+~
+E
+rbush~
+@G$n tries to make way through the thick brush to the east, but soon
+gives up.@n 
+~
+!
+0 0 0
+-1
+S
+
+#2458
+Dark Woods - Before a Great Oak Tree~
+A great oak tree to the northwest has risen far above the forest canopy. 
+Its thick leaves and limbs branch out over much of this part of the
+forest and darken the sky.  Several medium-sized boulders lie scattered
+around it, their smooth sides covered by green and black mosses.  The
+ground is bare and earthen, as not a single leaf from the oak tree above
+your head has fallen to the ground.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 2457 10 10 5
+D3
+~
+~
+0 -1 2456 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYour footsteps break the eerie silence as you head $d.@n
+~
+E
+to_room~
+@c$n's footsteps break the eerie silence as $e heads $d.@n
+~
+!
+3 0 9
+5467 9 1509949540 3 0
+-1
+S
+
+#2459
+Dark Woods - At the Bank of a Swift Mountain Stream~
+The forest has lightened at the banks of a swiftly flowing stream.  The
+gushing waters foam and froth, running around and over rocks, sometimes
+even trying to go straight through.  A tall poplar sways here, alone in a
+forest of thick oak and unyielding bracken.  Small, sweet-smelling pink
+and red flowers grow on its gentle, fingerlike branches.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D2
+~
+~
+0 -1 2448 10 10 5
+D3
+~
+~
+0 -1 2404 10 10 5
+E
+poplar~
+Fitting snugly between the broad oak boughs, and roots buried beneath a
+tangle of bracken, this narrow poplar breaks through the leafy cover, the
+upper branches disappearing above the verdant canopy.  Seemingly caught
+in an eternal autumn, the tall and slender trunk is wreathed with a swath
+of golden brown leaves.  Spine-like branches extend outwards a little way
+before curving sharply to grow straight upwards.
+~
+E
+pink red flowers~
+Fine tendrils loop around the slender branches of the towering poplar,
+the roots disappearing beneath the tangle of matted bracken that lies at
+the foot of the tree.  A few miniature flowers, pale pink to deep
+vermilion in hue, grow erratically along the rope-like vine.  A sweet
+smell lingers around the tiny flowers, the gentle scent a slight reprieve
+from the oppressive mist and fog that permeates the area.
+~
+5467 9 1509949540 3 0
+5467 9 1509949540 3 0
+-1
+S
+
+#2460
+At the Bank of a Swift Mountain Stream~
+The forest thins at the banks of a stream which winds its way between the
+trees and the cliffs, foaming and frothing as it hits an occasional small
+boulder.  Small bushes, replete with red, spotted berries, grow along the
+stream banks.  Some of the berries seem to have been eaten recently, as
+several of them lay squashed on the ground.
+~
+[Yrna] Done
+[Guin] Done.
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 2462 10 10 5
+D2
+~
+~
+0 -1 2461 10 10 5
+D3
+~
+~
+0 -1 2451 10 10 5
+1690 17 1509949540 -2 0
+2441 17 1509949540 -2 0
+-1
+S
+
+#2461
+Light Woods - Small Bushes and Vegetation~
+Small bushes and shrubs dot the forest here, where the trees have thinned
+somewhat.  The earth has been recently cleared for a camp; small sticks
+surround a ring of stones probably used for a fire.  The forest becomes
+less dark and shadowy to the east.  A sheer wall of grey rock can be seen
+through the trees, rising over the forest canopy.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 2460 10 10 5
+D1
+~
+~
+0 -1 2463 10 10 5
+D3
+~
+~
+0 -1 2452 10 10 5
+E
+camp fire ring stones sticks wood~
+The smooth, grey, granite stones lie in a loose ring in the middle of the
+shady grove, their surfaces blackened by a recent campfire.  Ash and
+charred wood lie in the centre of the ring, the desolate remains of a
+small cooking fire.  Lying to the side of the stone ring, a few off-casts
+of twigs and branches have been collected in a pile, dried and ready for
+use.
+~
+A
+gather 1 get grab 1 take~
+sticks firewood wood~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 3 ) == 2 ) {
+    remove_rflag( reset0, room );
+    act_tochar( #found, ch );
+    obj_to_char( oload( 7636 ), ch );
+    end;
+  }
+}
+act_tochar( #nofound, ch );
+~
+E
+found~
+You gather some firewood from around the campfire.
+~
+E
+nofound~
+Not enough wood is left around the embers of the campfire to gather.
+~
+!
+0 0 0
+A
+1 camp~
+*~
+if( find_skill( ch, camp site ) > 0 )
+  continue;
+if( get_integer( room, "/hardcode/camp_site/" ) != 0 ) {
+  set_integer( room, "/hardcode/camp_site/", 0 );
+  set_integer( room, "/hardcode/camp_site/regen/", 0 );
+  act_tochar( #break, ch, obj, mob );
+  act_notchar( #rbreak, ch, obj, mob, sight );
+  end;
+}
+if( get_integer( room, "/hardcode/camp_site/" ) != 0 ) {
+  act_tochar( #already, ch, obj, mob );
+  end;
+}
+act_tochar( #build, ch, obj, mob, sight );
+act_notchar( #noskill, ch, obj, mob, sight );
+set_integer( room, "/hardcode/camp_site/", vnum( ch ) );
+set_integer( room, "/hardcode/camp_site/regen/", random( 5, 10 ) );
+~
+E
+already~
+There is already a camp site here.
+~
+E
+build~
+You start building a camp fire, your not entirely adept at this.
+~
+E
+noskill~
+You smile slightly as $n attempts to set up a camp.
+~
+E
+break~
+You begin breaking down the camp.
+~
+E
+rbreak~
+$n begins breaking down the camp.
+~
+!
+0 0 0
+-1
+S
+
+#2462
+At the Bank of a Swift Mountain Stream - A Tall Elm~
+A giant elm grows here, not twenty feet from a bubbling mountain stream
+that zig zags through the forest, avoiding great tree roots and boulders
+that stand in its way.  The ground around it is surprisingly bare of
+leaves or fallen branches.  The tracks of a small animal can be seen in
+the earth here, perhaps made by a fox or raccoon; they seem to stop at
+the stream's bank.  Not far to the southeast, a dead tree serves as a
+bridge across, although the other side is a dead-end, as sheer mountain
+walls rise up near the east bank of the stream.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D2
+~
+~
+0 -1 2463 10 10 5
+D3
+~
+~
+0 -1 2460 10 10 5
+E
+giant elm~
+The lower part of this lofty elm is free from branches, the limbs
+starting to spread about ten feet off the ground.  Extending upwards and
+outwards from the slender trunk a proliferation of dark green leaves
+crown this giant tree with a lush canopy.  An extensive network of roots
+wends its way through the loamy soil, some of the more determined roots
+reaching the bank of the stream.
+~
+-1
+S
+
+#2463
+Light Woods - West of a Dead Tree~
+Small bushes, a few ferns and some kind of thick-leaved plants dot the
+ground, but the only tree nearby is a dead oak to the east.  It is
+but a log now, and serves only as a bridge across the stream that forms a
+small peninsula of this area.  The tree bridge may be traversible, but it
+is very narrow and looks slippery.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247880 3 9 0
+D0
+~
+~
+0 -1 2462 10 10 5
+D1
+~
+~
+0 -1 2464 10 10 5
+D3
+~
+~
+0 -1 2461 10 10 5
+E
+1 east log tree dead bridge~
+The long fallen tree creates a natural bridge across the swift mountain
+stream.  It appears to be sturdy enough, although its surface is wet and
+slippery as algae flourishes in the thin film of spray that the stream
+drizzles upon it.
+~
+A
+~
+~
+if( players_room( find_room( 2464 ) ) > 0 ) {
+  act_tochar( #no, ch );
+  end;
+  }
+continue;
+~
+E
+to_char~
+@YYou carefully cross onto the tree bridge.@n
+~
+E
+to_room~
+@y$n carefully crosses onto the tree bridge.@n
+~
+E
+no~
+@yYou cannot cross onto the log because there is already someone on it.@n
+~
+E
+fly~
+@YYou fly up onto the dead tree bridge.@n
+~
+!
+3 0 2
+-1
+S
+
+#2464
+Over the Mountain Stream - Along a Dead Tree~
+This oak log serves as a makeshift bridge across the swift mountain
+stream flowing beneath you.  Turbulent waters rush across the small
+rapids, white foam dominating the surface.  Spray from the stream has
+made the log wet, but its rough and textured bark makes it possible to
+walk across.  The log narrows to the east, but it is still wide enough to
+traverse.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+737673216 3 5 0
+D1
+~
+~
+0 -1 2465 10 10 5
+D3
+~
+~
+0 -1 2463 10 10 5
+E
+1 east~
+As the log heads upward to the east its trunk tapers to no more than a
+foot wide, the remains of shattered branches skew out at all angles where
+the end of the bridge meets the jagged rock ledge that forms the eastern
+embankment.  The underside of the log is covered with dangling mossy
+tendrils that are spangled with droplets of water from the gushing stream.
+~
+A
+~
+~
+if( players_room( find_room( 2465 ) ) > 0 ) {
+act_tochar( #no, ch );
+end;
+}
+continue;
+~
+E
+no~
+@yYou cannot cross onto the log because there is already someone on it.@n
+~
+E
+to_char~
+@YKeeping your balance with great difficulty, you travel further up the
+log.@n 
+~
+E
+to_room~
+@y$n travels further up the log, trying to keep $s balance.@n
+~
+!
+3 0 2
+A
+~
+~
+continue;
+~
+E
+to_char~
+@YYou finally reach the end of the log bridge.
+~
+E
+to_room~
+@Y$n reaches the end of the log bridge.@n
+~
+!
+3 0 8
+-1
+S
+
+#2465
+Over the Mountain Stream - Along a Dead Tree~
+This oak log bridges a short gap over a mountain stream which flows
+beneath.  The log is narrow here and high over the stream; its bark is
+almost completely dry, the water just not splashing high enough to keep
+it wet and slippery.  Small patches of moss grow on its underside, and
+there are signs of decay already beginning to weaken it.  To the west,
+the log widens as it slants downward toward a great forest.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+737673216 3 5 0
+D1
+~
+~
+0 -1 2466 10 10 5
+D3
+~
+~
+0 -1 2464 10 10 5
+E
+1 west~
+As the log slants down toward the western bank and forest beyond, its
+trunk widens to what once was a significant root system.  The roots
+beneath the fallen tree are crushed, and have already begun to decay,
+whereas the ones facing upwards appear to still be intact.
+~
+E
+patches moss~
+Although the log is now out of reach from the river's mist, and the bark
+is rather dry, a dense covering of moss has slowly crept its way along
+the fallen trunk.  At the centre of the bridge the moss-cover is almost
+nonexistent, though it appears that eventually this invasive plant will
+coat the entire log.
+~
+E
+1 east~
+The bridge ends not far to the east, where it meets a craggy outcropping
+of mountain rock.  The eastern bank seems to be a composite of limestone
+and pale sandstone, the edges over the water are somewhat eroded.
+~
+A
+~
+~
+if( players_room( find_room( 2464 ) ) > 0 ) {
+  act_tochar( #no, ch );
+  end;
+  }
+else
+  continue;
+~
+E
+no~
+@yYou cannot cross onto the log because there is already someone on it.@n
+~
+E
+to_char~
+@YYou travel further down the log.@n
+~
+!
+3 0 8
+A
+~
+~
+continue;
+~
+E
+to_char~
+@YYou finally reach the end of the log bridge.
+~
+E
+to_room~
+@y$n reaches the end of the log bridge.@n
+~
+!
+3 0 2
+-1
+S
+
+#2466
+At the Foot of the Mountains - East of a Flowing Stream~
+Small patches of brush and various flora dot the land, growing out of
+hard earth and white rock.  A stream lies just to the west and flows
+swiftly across the small rapids, its gurgling sounds filling the air.  A
+dead tree serves as a bridge across it, slanted towards the lower ground
+on the other side of the stream.  The land slopes upward to the north, a
+narrow path leading between the grey cliffs of the Everwinter mountains.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 8 0
+D0
+~
+~
+0 -1 2467 10 10 5
+D3
+~
+~
+0 -1 2465 10 10 5
+E
+1 west tree dead~
+The dead tree appears to be sturdy enough to traverse as it slants
+downward over the river to the west.  A dark woodland lies on the other
+side of the stream, the tall trees appear somewhat malformed from this
+distance, although this may be caused by the thick fog that permeates the
+area.
+~
+E
+flora~
+The flora appears to mainly consist of scraggly weeds and shrubs.  In
+fact, throughout the entire area there appears to be only a small handful
+of the undernourished, yet sweet-smelling, purple flowers.
+~
+A
+~
+~
+if( players_room( find_room( 2465 ) ) > 0 ) {
+act_tochar( #no, ch );
+end;
+}
+continue;
+~
+E
+no~
+You cannot cross onto the log because there is already someone on it.
+~
+E
+to_char~
+@YYou carefully cross onto the dead tree bridge.
+~
+!
+3 0 8
+A
+~
+~
+~
+!
+0 0 0
+-1
+S
+
+#2467
+Before a Hole in the Mountainside~
+You stand at the base of a mountain whose steep grey walls block any
+movement to the east and north.  Little grows here except for a few
+occasional dry shrubs which have sprouted clumsily out of the hard, rocky
+ground.  A medium-sized hole can be seen on the north rock face, only a
+few feet above the ground; small, tough plant roots offer possible
+handholds to reach it.
+~
+[Guin] Done.
+~
+167247880 3 8 0
+D0
+~
+~
+422 -1 2468 10 10 5
+D2
+~
+~
+0 -1 2466 10 10 5
+E
+medium-sized hole 1 north plant root handholds~
+Disappearing into the rock face, a cavern extends backward from the hole
+in the cliff.  Although it sits about ten feet off the ground, there are
+ample hand and footholds provided by the scraggly plant roots that covet
+the nooks and crevices that riddle the rock.
+~
+A
+enter climb~
+hole cave~
+if( is_player( ch ) ) {
+  if( !is_mounted( ch ) ) {
+    act_tochar( #ent, ch );
+    act_notchar( #rent, ch, obj, mob, sight );
+    transfer( ch, find_room( 2468 ) );
+    act_notchar( #inside, ch, obj, mob, sight );
+  }
+  else
+    act_tochar( #mount, ch );
+}
+~
+E
+ent~
+@cYou grab ahold of some roots and manage to pull yourself into the hole.@n
+~
+E
+rent~
+@c$n grabs hold of some tree roots and pulls $mself into the hole.@n
+~
+E
+mount~
+You must dismount before you can climb up to the hole.
+~
+E
+inside~
+@C$n climbs in from a hole in the south wall.@n
+~
+!
+0 0 0
+-1
+S
+
+#2468
+In a Dark Mountain Hollow~
+Damp ochre moss holds tiny droplets of water on the walls of this rocky
+hollow.  Dim light filters through a jagged crevice in the stone, a pair
+of slippery rocks forming a step up.  A pool of opaque green nestles in
+the base of the pocket, ripples spreading as droplets trickle down the
+walls into it.  A series of wide stone shelves spans the chamber's
+circumference; one cradles a man-sized pile of bracken used for sleeping. 
+The other holds a collection of books and scrolls with the stump of a
+candle sitting beside them, strangely out of place in the crude
+habitation.
+~
+[Guin] Quest 82 here.
+[Guin] Done.
+~
+167378948 11 5 0
+D2
+~
+~
+422 -1 2467 10 10 5
+E
+moss ochre wall rock stone~
+The walls of the chamber form a rough arc overhead with a thin layer of
+ochre-hued moss extending back a little into the depths of the cave.  As
+the meagre light slowly peters out, the moss also dwindles until there is
+only sterile rock looming over the cave's floor.
+~
+E
+pool base green opaque pocket ripples droplets~
+Thick with slime, the pool sits in the oppressive darkness, its surface
+intermittently disturbed by an occasional drip of water that sends
+concentric ripples across the stagnant pool.
+~
+E
+collection books scrolls candle stump~
+Old, damp and dusty tomes and equally misused scrolls are stacked atop a
+rock ledge.  In the light of the flickering candle stump, the collection
+appears to be a fount of arcane knowledge.  Runic symbols and protective
+sigils are scrawled into every visible page or surface.
+~
+A
+climb jump leap leave enter~
+out down hole crevice step 5 southwards~
+if( is_player( ch ) ) {
+  if( !is_mounted( ch ) ) {
+    act_tochar( #jump, ch );
+    act_notchar( #rjump, ch );
+    transfer( ch, find_room( 2467 ) );
+    act_notchar( #out, ch, obj, mob, sight );
+  }
+  else
+    act_tochar( #mount, ch );
+}
+~
+E
+jump~
+@cYou jump through the hole.@n
+~
+E
+rjump~
+@c$n jumps through the hole.@n
+~
+E
+mount~
+You cannot jump through the hole while mounted.
+~
+E
+out~
+@C$n jumps down from the hole above.@n
+~
+!
+0 0 0
+A
+~
+pool opaque green water liquid~
+act_tochar( #no, ch );
+act_notchar( #ono, ch );
+~
+E
+no~
+You search through the pool, finding only thick sludge.
+~
+E
+ono~
+$n searches through the pool for a moment, pulling back sludge-covered
+hands.
+~
+!
+9 0 0
+A
+~
+tomes scrolls books collection~
+if( !rflag( reset0, room ) ) {
+  act_tochar( #already, ch );
+  end;
+}
+remove_rflag( reset0, room );
+if( random( 1, 7 ) == 3 )
+  obj = oload( 1006 );
+if( obj ) {
+  act_tochar( #find, ch, obj );
+  act_notchar( #rfind, ch, obj, mob, sight );
+  obj_to_char( obj, ch );
+}
+else {
+  act_tochar( #nothing, ch );
+  act_notchar( #rnothing, ch, obj, mob, sight );
+}
+~
+E
+already~
+@yAlthough there is still a stack of scrolls and tomes there, some are
+scattered on the floor and none appear to be very interesting.  Someone
+probably beat you to it.@n 
+~
+E
+find~
+@YYou find something interesting in the pile, $p.@n
+~
+E
+rfind~
+@Y$n finds $p in the pile.@n
+~
+E
+nothing~
+@yTry as you might, none of the scrolls and tomes make any sense to you. 
+Better leave them where they are.@n 
+~
+E
+rnothing~
+@Y$n rummages through tomes and scrolls for a while, but can't find
+anything of interest.@n 
+~
+!
+9 0 0
+5466 9 1509949540 3 0
+3938 17 1509949540 -2 45
+-1
+S
+
+#2469
+In a Dark Tunnel - A Bend in the Tunnel~
+This limestone tunnel bends from the west to the north here.  The rock is
+surprisingly smooth and there is a natural feel to the cave.  The stone
+is dark and grey from the water that flows on it in beads.  A thick mist
+wafts across the floor, hiding small pools of water that have formed in
+small holes and depressions.
+~
+[Greth] tunnel
+~
+167378948 11 5 0
+D0
+~
+~
+0 -1 2470 10 10 5
+-1
+S
+
+#2470
+A Mist-filled Turn in the Tunnel~
+The dark limestone of this tunnel is shrouded in white mist which flows
+from the west.  It is particularly thick near the floor, where it hides
+tiny streams of water that trickle southward.  The tunnel seems to
+lighten slightly toward the south.
+~
+[Greth] tunnel
+~
+167378948 11 5 0
+D2
+~
+~
+0 -1 2469 10 10 5
+D3
+~
+~
+0 -1 2471 10 10 5
+-1
+S
+
+#2471
+In a Dark Tunnel - East of a Tight Crevice~
+It is quite dark here, brightened only slightly by the white mists at
+your feet.  A chill breeze blows east through a tight crevice.  Small
+limestone rocks surround the small hole in the rock; it looks as if
+someone had widened the hole here.
+~
+[Greth] tunnel
+[Greth] acode through crevice west
+[Greth] something about size maybe.
+[Greth] rextra west
+~
+167378948 11 5 0
+D1
+~
+~
+0 -1 2470 10 10 5
+D3
+~
+~
+0 -1 2472 10 10 5
+-1
+S
+
+#2472
+In a Dark Tunnel - West of a Tight Crevice~
+A small stream of water gathers here from the west, where it pools into a
+small depression near a narrow crevice.  White fog travels east into it,
+although much of the mist collects here.  The crevice is wider in the
+middle and is littered with small pieces of limestone, as if someone had
+hewn through it to reach the other side.
+~
+[Greth] tunnel
+[Greth] acode through crevice east
+[Greth] rextra east, rocks
+[Greth] grab some rocks maybe.
+~
+167378948 11 5 0
+D1
+~
+~
+0 -1 2471 10 10 5
+D3
+~
+~
+0 -1 2473 10 10 5
+-1
+S
+
+#2473
+A Bend in the Limestone Tunnel~
+Thick mist covers the ground here as it flows eastward from the north. 
+Small streams of water trickle beneath it, following the downward slope
+to the east.  The limestone here is coated in a thin layer of
+phosphorescent blue slime.
+~
+[Greth] tunnel
+[Greth] rextra slime
+[Greth] collect it somehow? need a vial or something.
+~
+167378948 11 5 0
+D0
+~
+~
+0 -1 2474 10 10 5
+D1
+~
+~
+0 -1 2472 10 10 5
+-1
+S
+
+#2474
+Before the Arch~
+A large stone arch is inset in the limestone wall to the east, its heavy
+blocks of unmarred white granite in stark contrast to the moss-covered
+limestone of the mist-filled cavern.  The mist and small rivulets of
+condensation ebb to the south, following the slight gradient.
+~
+[Greth] tunnel
+[Nnilb] good place to attack tomb or such to east
+[Estrella] extra done/revised
+~
+167378948 11 5 0
+D0
+~
+~
+0 -1 2475 10 10 5
+D2
+~
+~
+0 -1 2473 10 10 5
+E
+large stone arch white granite blocks~
+The large granite arch is set into the pale limestone wall, but there
+appears to be no room beyond.  The limestone beneath the archway bears
+the same appearance as the other walls of the tunnel; it almost appears
+as though someone purposefully placed the granite into the wall where it
+now stands.
+~
+-1
+S
+
+#2475
+Misty Tunnel~
+Tiny streams flow in the corners of the tunnel, slowly eroding its
+limestone surface.  Mist collects as water on the cold walls of the
+tunnel, then drips down to join small rivulets.  Faint trickles of water
+flow in from the northeast, and continue to the south, following
+gravity's pull.
+~
+[Greth] tunnel
+~
+167378948 11 5 0
+D1
+~
+~
+0 -1 2476 10 10 5
+D2
+~
+~
+0 -1 2474 10 10 5
+-1
+S
+
+#2476
+Misty Tunnel~
+The limestone walls of the tunnel drip with collected moisture, as the
+chill fog condenses on the cold rock.  Tiny rivulets are formed from the
+beading water on the floor of the cavern, flowing gently southwest to
+follow the slight gradient.
+~
+[Greth] tunnel
+~
+167378948 11 5 0
+D0
+~
+~
+0 -1 2477 10 10 5
+D3
+~
+~
+0 -1 2475 10 10 5
+-1
+S
+
+#2477
+Tunnel Mouth~
+Outside the tunnel mouth to the north, a narrow ledge overlooks a quiet
+lake, while to the south the tunnel is swallowed by darkness and chill
+fog.  A mist hangs in the air, and moisture collects on the cold
+limestone walls of the tunnel.
+~
+[Nnilb] possible this is a tunnel to a mountain valley.
+[Nnilb] then can branch off under the mountains into new areas, like caves, tombs, etc.
+[Greth] not cave north
+~
+167247872 11 5 0
+D0
+~
+~
+0 -1 2018 10 10 5
+D2
+~
+~
+0 -1 2476 10 10 5
+-1
+S
+
+#2478
+Inside a Hollow Tree~
+Easily wide enough to provide comfortable habitation, the hollowed out
+section of the tree is smooth and warm.  A layer of bracken spreads
+over the floor, the plants still green as if freshly cut.  An alcove
+carved into the southern wall houses a collection of implements of war,
+resting in a pile on the bottom ledge.  A shiny brass lantern hangs from
+a hook near the entrance, strangely out of place in the primitive room.
+~
+[Guin] Done.
+~
+167247872 0 5 0
+D0
+wooden door~
+~
+235 -1 2448 10 10 5
+E
+brass lantern hook~
+Mounted on ornate plating, the sturdy brass hook hangs on the eastern
+side of the door.  Dangling from the protruding hook, the rather well
+crafted lantern gives off a faint glimmer from the low-burning candlewick. 
+Beneath the base of the lantern, a small loop of brass is visible; it is
+presumed that this is used in conjunction with a rod and hook to remove
+the lantern from more lofty positions.
+~
+A
+pull move~
+hook lantern~
+if( !is_open( room, north )){
+  act_tochar( #open, ch );
+  act_notchar( #ropen, ch );
+  open( room, north );
+}
+else {
+  act_tochar( #close, ch );
+  act_notchar( #rclose, ch );
+  close( room, north );
+}
+~
+E
+open~
+@YYou move the lantern along the hook and a section of wall in the north
+opens.@n 
+~
+E
+ropen~
+@Y$n shifts the lantern along the hook and a section of wall in the north
+opens.@n 
+~
+E
+close~
+@yYou move the lantern along the hook and a section of wall in the north
+closes.@n
+~
+E
+rclose~
+@y$n shifts the lantern along the hook and a section of wall in the north
+closes.@n
+~
+!
+0 0 0
+5469 9 1509949540 3 0
+2740 49 1509949540 -2 0
+7992 81 838860810 -2 0
+7317 81 1509949460 -2 0
+7994 81 1509949480 -2 0
+7534 81 1509949450 -2 0
+2 81 1509949520 -2 0
+2 81 1509949480 -2 0
+1108 81 1509949442 -2 0
+7368 81 1509949540 -2 0
+-1
+S
+
+#0
+

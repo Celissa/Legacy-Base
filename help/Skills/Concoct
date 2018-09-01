@@ -1,0 +1,18 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+concoct [ no argument | argument ]<br>
+<br>
+<h1> Description </h1>
+<br>
+Concoct with no argument will return a list of what possible potions you<br>
+can create with your experience and skill level.  Some concoctions will<br>
+require a skill level higher than 10, so you will need to find some items<br>
+to synergize your skill higher yet.<br>
+<br>
+Concoct's arguments must match exactly one of the names revealed by<br>
+concoct with no argument.  This will either start the concoction process,<br>
+or tell you what your missing.<br>
+</html>
+</body>

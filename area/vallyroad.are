@@ -1,0 +1,2089 @@
+#M2_AREA
+2
+
+Valley Road~
+Hazen Teleute~
+Valley Road~
+~
+~
+
+5 0
+0
+1
+#ROOMS
+
+#2750
+Thick Bush~
+Little more than a goat track, the path clambers upward here, snaking
+between thick shrubs.  Fading out into thick bush, beech trees choked
+with undergrowth twice your height, what was only an animal trail to
+start with rapidly disappears.  A little way further south, the path
+rounds a spear-leaved bush, climbs a stack of boulders, and winds out of
+sight.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 2793 10 10 5
+D2
+~
+~
+0 -1 2751 10 10 5
+E
+goat track path 1 up~
+Nothing but patches of trodden down vegetation, the path climbs upward
+along the rise of a hill.  Thick thorn bushes and a variety of nettles
+sprout near the track, trying to reclaim it.
+~
+E
+spear leaved bush 1 south~
+A sprawling bush forces a turn in the path here, its spear-shaped leaves
+brilliant green.  Its placement forces the track to turn and continue
+toward a stack of large-size boulders further on.
+~
+A
+~
+~
+act_tochar( #leave, ch );
+act_notchar( #oleave, ch );
+continue;
+~
+E
+leave~
+You head around the shrub, up and over the ridge.
+~
+E
+oleave~
+$n heads southwards, clambering over the ridge out of sight.
+~
+!
+3 0 4
+130 9 1509949540 3 0
+755 9 1509949540 3 0
+-1
+S
+
+#2751
+Thick Bush - At a Ravine~
+The dirt track is narrow here, tricklets of water forming patches of mud
+before draining down the bramble-choked slope to the south.  Across the
+ravine, thorn bushes claim the bank, clinging like fur and obscuring
+sight.  Animal tracks climb a few yards over the weatherworn stack of
+boulders northward, and curve along the ravine crest.  In both
+directions, thick brush hides the course of the gully.
+~
+[Guin] Added code blocking fill/drink from water in this room.
+[Guin] Done
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 2750 10 10 5
+D1
+~
+~
+0 -1 2753 10 10 5
+D3
+~
+~
+0 -1 2752 10 10 5
+E
+stack boulder 1 north~
+A half dozen great boulders straddle the track that leads northward, away
+from the ravine.  The stones, stacked one upon the other like a child's
+building blocks, are well sunk into the ground, and grass and other
+vegetation have grown around them.
+~
+A
+~
+~
+act_tochar( #north, ch );
+act_notchar( #onorth, ch );
+continue;
+~
+E
+north~
+@yYou clamber over the pile of stones carefully@n.
+~
+E
+onorth~
+@y$n climbs up and over the pile of stones@n.
+~
+!
+3 0 1
+A
+fill~
+*~
+send_to_char( #fill, ch );
+~
+E
+fill~
+@cThe trickle of water does little more than dampen the dirt and is
+undrinkable@n.
+~
+!
+0 0 0
+A
+drink~
+trickle water~
+obj = weapon_type( ch, 17 );
+if( !obj )
+  act_tochar( #drink, ch, obj, mob );
+else
+  continue;
+~
+E
+drink~
+@cThe trickle of water does little more than dampen the dirt and is
+undrinkable@n.
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou follow the track westward along the top of the ravine@n.
+~
+E
+to_room~
+@g$n follows the track westward, along the top of the ravine@n.
+~
+!
+3 0 8
+755 9 1509949540 3 0
+755 9 1509949540 3 0
+-1
+S
+
+#2752
+Thick Bush - At a Log~
+Brush curls tightly around the path, barely an animal track.  The
+vegetation is thick and impenetrable.  A mass of dirt and twisted root
+ends at a tree trunk, extending out over a thorn-filled ravine, its bark
+moss-covered and treacherous-looking.  Overhead, twisted brush shades the
+sky.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 2751 10 10 5
+D2
+~
+~
+0 -1 2754 10 10 5
+A
+~
+~
+act_tochar( #step, ch );
+act_notchar( #ostep, ch );
+continue;
+~
+E
+step~
+@rYou step gingerly onto the log.@n
+~
+E
+ostep~
+@r$n steps gingerly onto the log.@n
+~
+!
+3 0 4
+5478 9 1509949540 3 0
+-1
+S
+
+#2753
+Thick Bush - At a Ravine~
+The brush encroaches on the ravine here, the dirt path fading to
+occasional patches between high weeds and then to nothing.  Descending
+sharply into shadow, the gully is packed with thorn bushes and moss. 
+Broken slabs of stone, heavily girded with lichen, squat together at the
+end of the track, monuments to nothing.  The bush thins out along the
+ravine edge eastward.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 2793 10 10 5
+D1
+~
+~
+0 -1 2795 10 10 5
+D3
+~
+~
+0 -1 2751 10 10 5
+E
+lichen slabs stones monuments~
+The old stone slabs, cradled in blankets of gray-green lichen lie in
+careless piles, tossed there by the careless hand of nature.  Old beyond
+reckoning, strange-shaped carvings have been faded by time to nearly
+nothing, their meaning unknown in this age.
+~
+A
+~
+~
+send_to_room( #rattle, room );
+~
+E
+string~
+rattle
+~
+E
+rattle~
+@yThe thornbush rattles and shakes when something unseen sneaks into the
+tangle@n.
+~
+!
+2 150 0
+5479 9 1509949540 3 0
+-1
+S
+
+#2754
+Mossy Log Over a Ravine~
+Smashed to the ground by wind or decay, this ancient trunk spans a ravine. 
+Mossy but still strong, the tree-roots form a twisted mass of dirt on the
+north side of the ravine, while further up the gully, on the opposite
+side, another section of shattered trunk can be seen.  Natural paths bend
+at both ends, out of sight.  Shrouding the ravine in gloom, tangled thorn
+bushes form a knotted mass of spikes cutting visibility.
+~
+no.mob
+[Guin] Done.
+~
+167247880 3 9 0
+D0
+~
+~
+0 -1 2752 10 10 5
+D2
+~
+~
+0 -1 2755 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou totter along the log to the $T.
+~
+E
+to_room~
+@y$n totters along the log to the $T@n.
+~
+!
+3 0 5
+-1
+S
+
+#2755
+Thick Bush - At a Log~
+Stubby and broken, the remains of the crown of a fallen tree lie cloaked
+with moss and web here.  The length of the trunk crosses a ravine
+northward, a slippery walk.  Thorn bushes protrude here and there,
+trailing slender tendrils of spikes between the grass and across the
+paths.  A clearing opens to the southeast, a heavily vegetated hill
+rising behind.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 2754 10 10 5
+D1
+~
+~
+0 -1 2756 10 10 5
+D2
+~
+~
+0 -1 2757 10 10 5
+D3
+~
+~
+0 -1 2758 10 10 5
+E
+crown stubby tree moss web~
+Covered by a layer of sticky white web, the crown of the fallen tree is
+now home to a collection of spiders.  The fine netting has ensnared many
+insects with its lacy grip.  A gossamer thin layer of moss has slowly
+started to grow in the damp, sheltered parts of the leafy crown.
+~
+E
+trunk ravine 1 north~
+Coated by a thick layer of algae, the smooth tree trunk looks heavily
+waterlogged.  Part decayed, on account of the moisture held within its
+soft pale wood, it appears as though its wide girth would give way if any
+pressure were applied to it.
+~
+A
+~
+~
+acode( find_room( 2752 ), 1 );
+continue;
+~
+!
+3 0 1
+-1
+S
+
+#2756
+Thorny Bush - At Ravine~
+Animal trails crisscross a sloping grassy clearing here.  A line of red
+thorn shrubs marks a steep dropoff northward, a vegetation-choked gully
+descending behind.  Tiny yellow flowers form patches on the slope,
+interspersed by denser and denser shrubs as the hill rises to the south
+toward the mottled green bush cresting the rise.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 2759 10 10 5
+D2
+~
+~
+0 -1 2760 10 10 5
+D3
+~
+~
+0 -1 2755 10 10 5
+E
+yellow flowers shrubs~
+Dispersing the verdant hillside with patches of sunny yellow, the small
+buds of the marigold dance gently amidst the encroaching shrubs and
+grasses.  The partially opened flowers emit a pleasant fragrance as they
+are unsettled by the deft movements of a myriad of insects and small
+birds.
+~
+5478 9 1509949540 3 0
+-1
+S
+
+#2757
+Thorny Bush~
+A few broken squares of stone, lichen-covered, lie in piles here and
+there.  Spreading beeches shadow the bush, rough black bark tar-like on
+the trunks.  The undergrowth thickens around a cutting southward, a
+faint trail leading deeper into the dim shadow.  Elsewhere, the bush
+opens, scattered thornbushes the only obstacle in the meadow.
+~
+[Azerin] closed west till its done
+[Azerin] closed south till done
+[Guin] thorn spiders located below here.
+[Guin] Done.
+~
+167247880 0 9 0
+D0
+~
+~
+0 -1 2755 10 10 5
+D1
+~
+~
+0 -1 2760 10 10 5
+D2
+~
+~
+430 -1 2776 10 10 5
+D3
+~
+~
+494 -1 2778 10 10 5
+A
+1 south 1 west 1 east~
+~
+act_tochar( #thorn, ch );
+end;
+~
+E
+thorn~
+@yThe thorn bushes are too dense to allow passage@n.
+~
+!
+0 0 0
+A
+~
+~
+send_to_room( #scurry, room );
+~
+E
+scurry~
+@cA small, unseen creature scurries through the thorn bushes, rattling
+the dry stick branches together@n.
+~
+!
+2 150 0
+5475 9 1509949540 3 0
+-1
+S
+
+#2758
+Thorny Bush~
+Trailing whip-like thorn branches like chains, the bushes cluster close
+together, nearly choking the path.  The animal trail becomes indistinct
+here, stomped into the grass and shrubbery from the east, where a
+clearing appears to open.  The thicket growing westward has caught tufts
+of fur on the inch-long points.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 2755 10 10 5
+D3
+~
+~
+2251 -1 2762 10 10 5
+E
+thorns branches thicket westwards~
+On closer examination, it appears animals have brushed through the
+thicket - they've left hair and fur behind.  Possibly there's a clearing
+behind the thicket.
+~
+A
+enter~
+thicket thorns brush westwards bush~
+act_tochar( #go, ch );
+act_notchar( #ogo, ch );
+i = 1d6;
+inflict( ch, mob, i, "pointy thorns" );
+dam_message( ch, i, "the thorns" );
+transfer( ch, find_room( 2762 ) );
+act_notchar( #oarrive, ch );
+~
+E
+go~
+@gYou brush through the thicket, not without a few scratches.@n
+~
+E
+ogo~
+@g$n brushes through the thicket westwards, scratched and torn.@n
+~
+E
+oarrive~
+@g$n arrives crashing through the thicket.@n
+~
+!
+0 0 0
+5478 9 1509949540 3 0
+-1
+S
+
+#2759
+Thick Bush - At a Ravine~
+Rooted tightly into the eroded hillside, the thornbushes grow in thick
+clusters, their twisted stems and sticks intertwined with one another. 
+The steep slope is dry and crumbling, yellow-brown tussock holding the
+clay together.  A series of ledges drops into the gully, a nasty climb,
+and one leads into the shadows below the thorny plants draping the ravine.
+~
+[Guin] Thorn spiders below.
+[Guin] Down closed until thorn spiders is finished.
+[Guin] Reviewed.
+~
+167247880 3 9 0
+D3
+~
+~
+0 -1 2756 10 10 5
+D5
+~
+~
+486 -1 2767 10 10 5
+A
+none~
+1 down~
+if( find_skill( ch, climb ) > random( 2, 5 ) ) {
+  act_tochar( #down, ch );
+  act_notchar( #odown, ch );
+  transfer( ch, find_room( 2767 ) );
+  act_notchar( #dodown, ch );
+  end;
+  } else {
+act_tochar( #fall, ch );
+act_notchar( #ofall, ch );
+transfer( ch, find_room( 2767 ) );
+act_notchar( #dofall, ch );
+interpret( ch, "sit" );
+end;
+}
+~
+E
+down~
+You cling to the roots protruding from the clay slope, working your way 
+downwards.
+~
+E
+odown~
+$n clings to the roots, climbing downwards.
+~
+E
+fall~
+You start the climb down the gully, but the clay proves too unstable,
+sending you sliding the rest of the way in a shower of dust.
+~
+E
+ofall~
+$n clings to the roots, starting to climb downwards.  With a yelp, the
+sounds of a crash are heard.
+~
+E
+dodown~
+~
+E
+dofall~
+@rWith a crash, $n comes sliding down the clay in a shower of dirt.@n
+
+~
+!
+0 0 0
+A
+1 down~
+~
+act_tochar( #down, ch );
+end;
+~
+E
+down~
+@yThe climb is much to treacherous and the thornbushes much to think to
+navigate the gully wall.@n 
+~
+!
+0 0 32
+-1
+S
+
+#2760
+Thorny Bush - Rise~
+Dry grass wrestles with tussock for control of this slope, rising out of
+the beech grove to an exposed ridge.  Weathered, lichen-shrouded boulders
+lurk in the yellow vegetation, treacherous footing.  The occasional dark
+thornbush grows among the low vegetation, inch-long spikes warding off
+curious grazers.
+~
+[Guin] up closed til zones is finished.
+[Guin] Done.
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 2756 10 10 5
+D3
+~
+~
+0 -1 2757 10 10 5
+D4
+~
+~
+430 -1 2780 10 10 5
+A
+~
+~
+act_tochar( #south, ch );
+act_notchar( #osouth, ch );
+continue;
+~
+E
+south~
+@yYou work your way up the slope southwards, towards the crest, avoiding
+the thornbushes.@n
+~
+E
+osouth~
+@y$n continues uphill southwards, into the open.@n
+~
+!
+3 0 16
+A
+1 up~
+~
+send_to_room( #up, room );
+end;
+~
+E
+up~
+@yMassive boulders and viscious thorns block the passage up the rise.@n 
+~
+!
+0 0 0
+5475 9 1509949540 3 0
+-1
+S
+
+#2761
+Thick Bush - At a Ravine~
+Under Construction.
+~
+~
+167247872 0 9 0
+-1
+S
+
+#2762
+Thorny Bush~
+Paths crisscross the shadowy bush, black-barked beeches shadowing the
+area.  Low bushes with long black thorns cluster among the more innocuous
+undergrowth, particularly thick eastwards.  The gully edge drops away
+northward, thick with brush, but a twisted dead tree slopes over the lush
+green foliage as if afloat on the ocean.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 2763 10 10 5
+D1
+~
+~
+2251 -1 2758 10 10 5
+D2
+~
+~
+0 -1 2765 10 10 5
+D3
+~
+~
+0 -1 2764 10 10 5
+E
+eastwards thick bushes thornbushes thorns~
+There is a clearing visible through the thick thornbushes - they could be
+pushed through, with only a few scratches.
+~
+A
+~
+~
+act_tochar( #go, ch );
+act_notchar( #ogo, ch );
+continue;
+~
+E
+go~
+@gYou step gingerly onto the worn tree.@n
+~
+E
+ogo~
+@g$n steps gingerly onto the worn tree.@n
+~
+!
+3 0 1
+A
+enter~
+thorn bushes east thicket brush~
+act_tochar( #go, ch );
+act_notchar( #ogo1, ch );
+i = 1d6;
+inflict( ch, mob, i, "pointy thorn branch" );
+dam_message( ch, i, "the thorn branch" );
+transfer( ch, find_room( 2758 ) );
+act_notchar( #ogo2, ch );
+~
+E
+go~
+@cYou push through the thicket, the tiny red thorns catching at you.@n
+~
+E
+ogo1~
+@c$n pushes through the thicket eastwards.@n
+~
+E
+ogo2~
+@c$n pushes out through the thicket westwards with a rustle.@n
+~
+!
+0 0 0
+134 9 1509949540 3 0
+-1
+S
+
+#2763
+Jutting Log~
+Angling over the ravine like a withered hand, this dead beech tree is
+soon to fall.  The view of the thorn choked gully from here is good,
+leafy vegetation and scattered wisps of spiders' webs forming an
+impassable carpet.  Across the way, a ribbon-thin waterfall streams down
+the clay ravine walls and into the shadows.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D2
+~
+~
+0 -1 2762 10 10 5
+A
+~
+~
+send_to_room( #creak, room );
+~
+E
+creak~
+@gThe old tree creaks with age, threatening to topple over at any
+second.@n 
+~
+!
+2 150 0
+-1
+S
+
+#2764
+Thorny Bush~
+A grove of pines intrudes into the predominantly beech bush here,
+yellow-brown needles littering the ground underfoot with a smooth carpet. 
+The pines form a thicket westward, dense and impassable, clinging to the
+ravine edge.  Scattered thorn bushes continue in the shade of the grove
+in other directions.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 2762 10 10 5
+D2
+~
+~
+0 -1 2766 10 10 5
+5479 9 1509949540 3 0
+-1
+S
+
+#2765
+Thorny Bush~
+A spur of the southern rise blocks off travel to the east, an eroded
+cliff formed by layers of variegated of orange clay.  Tussock and grass
+line the slope above, waving in the breeze.  Scattered beeches are choked
+by thornbushes around the glade, passage impeded by low tripwires of red
+thorns.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 2762 10 10 5
+D3
+~
+~
+0 -1 2766 10 10 5
+A
+~
+~
+send_to_room( #dirt, room );
+~
+E
+dirt~
+@yFine dust and small dirt clods slide down the cliffside to the ground
+below.@n 
+~
+!
+2 150 0
+-1
+S
+
+#2766
+Thorny Bush~
+Pines cluster thickly together and onward up the hillside.  Spreading
+beeches dapple the animal tracks, the sky only visible in patches.  Steep
+and eroded, the clay cliff southward crumbles even in the wind, only
+pine roots holding it together.  Scattered thorn branches cross the
+trails, almost like traps.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 2764 10 10 5
+D1
+~
+~
+0 -1 2765 10 10 5
+E
+animal tracks trails~
+Crisscrossing the clay-formed earth, a multitude of different animal
+tracks have been imprinted across the ground, their owners having long
+moved on after foraging for food amongst the thorny bushes.
+~
+A
+1 look 1 track~
+3 animal 3 tracks~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  improve_skill( ch, track );
+}
+if( find_skill( ch, track ) < 1 ) {
+  act_tochar( #no_track, ch );
+  act_notchar( #rno_track, ch );
+}
+else if( find_skill( ch, track ) < 4 ) {
+  act_tochar( #not_sure, ch );
+  act_notchar( #rnot_sure, ch );
+}
+else {
+  act_tochar( #got_it, ch );
+  act_notchar( #rgot_it, ch );
+}
+~
+E
+no_track~
+@gYou look at the tracks but are unable to make out what they are from.@n
+~
+E
+rno_track~
+@g$n looks at the tracks in bewilderment, obviously $e can't get heads
+nor tails from them.@n
+~
+E
+not_sure~
+@gYou see that a creature with cloven hooves has tread over the area
+recently.@n 
+~
+E
+rnot_sure~
+@g$n looks a little confused, but $e seems to be looking at some odd tracks.@n
+~
+E
+got_it~
+@gYou find a couple of tracks, that really don't fit in with the others. 
+You think they would go with what are obviously boar tracks, but these
+are too deep to be from a boar.@n 
+~
+E
+rgot_it~
+@g$n looks at a set of tracks, $e seems worried about them.@n
+~
+!
+0 0 0
+134 9 1509949540 3 0
+5504 9 1509949540 3 0
+5478 9 1509949540 3 0
+4056 17 1509949540 -2 0
+-1
+S
+
+#2767
+Slippery Slope~
+Eroded dirt walls rise either side of this crack in the hillside. 
+Opening out a little northwards into a ravine, the footing is rough and
+slippery.  Ledges where deep-set roots hold the clay in place form a
+ladder up the ravine, the sky peering between the thorns.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 2768 10 10 5
+D4
+~
+~
+486 -1 2759 10 10 5
+A
+climb~
+slope up wall roots ladder~
+if( random( 0, 4 ) > find_skill( ch, climb ) ) {
+  act_tochar( #fall, ch );
+  act_notchar( #ofall, ch );
+  i = 1d7;
+interpret( ch, "sit" );
+  inflict( ch, mob, i, "a bad fall" );
+  dam_message( ch, i, "The fall" );
+  } else {
+act_tochar( #climb, ch );
+act_notchar( #oclimb, ch );
+transfer( ch, find_room( 2759 ) );
+act_notchar( #oclimb2, ch );
+}
+~
+E
+fall~
+@RYou get a good distance up the rough slope, but the clay crumbles
+underfoot - you slide to the ground heavily.@n 
+~
+E
+ofall~
+@R$n starts climbing the ravine walls, but comes crashing down shortly.@n
+~
+E
+climb~
+@CYou skilfully climb the ravine wall, moving from root to root, and
+pulling yourself over the edge.@n 
+~
+E
+oclimb~
+@C$n nimbly scales the ravine wall, scrambling over the edge.@n
+~
+E
+oclimb2~
+@C$n comes climbing nimbly up the ravine wall.@n
+~
+!
+0 0 0
+-1
+S
+
+#2768
+Thorny Ravine~
+Muddy stream, webs, thorns
+~
+~
+167247872 0 9 0
+D2
+~
+~
+0 -1 2767 10 10 5
+D3
+~
+~
+0 -1 2769 10 10 5
+-1
+S
+
+#2769
+Thorny Ravine~
+Narrow gap, slippery.
+Boulder to sinkhole secret room
+spider guard, heh
+~
+~
+167247872 0 9 0
+D0
+solid boulder~
+~
+2122 -1 2775 10 10 5
+D1
+~
+~
+0 -1 2768 10 10 5
+D3
+~
+~
+0 -1 2770 10 10 5
+5475 9 1509949540 3 0
+-1
+S
+
+#2770
+Thorny Ravine~
+Shadowed by log. Fall here from room
+number 2754
+~
+[Burne] no.mob
+~
+167247880 0 9 0
+D1
+~
+~
+0 -1 2769 10 10 5
+D3
+~
+~
+0 -1 2771 10 10 5
+-1
+S
+
+#2771
+Thorny Ravine~
+Under Construction.
+web entry
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 2772 10 10 5
+D1
+~
+~
+0 -1 2770 10 10 5
+D3
+~
+~
+0 -1 2773 10 10 5
+5475 9 1509949540 3 0
+-1
+S
+
+#2772
+Thorny Ravine~
+Under Construction.
+web room
+~
+~
+167247872 0 9 0
+D2
+~
+~
+0 -1 2771 10 10 5
+D3
+~
+~
+0 -1 2774 10 10 5
+-1
+S
+
+#2773
+Thorny Ravine~
+Under Construction.
+web room
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 2774 10 10 5
+D1
+~
+~
+0 -1 2771 10 10 5
+-1
+S
+
+#2774
+Thorny Ravine~
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 2772 10 10 5
+D2
+~
+~
+0 -1 2773 10 10 5
+5475 9 1509949540 3 0
+-1
+S
+
+#2775
+Sinkhole~
+~
+~
+167247872 0 9 0
+D2
+solid boulder~
+~
+2122 -1 2769 10 10 5
+-1
+S
+
+#2776
+Cutting~
+Under Construction.
+cutting in hill
+brambles overhead
+~
+~
+167247880 0 9 0
+D0
+~
+~
+430 -1 2757 10 10 5
+D1
+~
+~
+0 -1 2777 10 10 5
+-1
+S
+
+#2777
+Thorny Bush~
+Trail starts here to south
+brambles overhead,
+~
+~
+167247880 0 9 0
+D2
+~
+~
+0 -1 2779 10 10 5
+D3
+~
+~
+0 -1 2776 10 10 5
+-1
+S
+
+#2778
+Thorny Bush~
+Under Construction.
+hill south
+climb up
+~
+[Guin] Thorn spiders down
+~
+167247880 0 9 0
+D1
+~
+~
+494 -1 2757 10 10 5
+D4
+~
+~
+67 -1 2789 10 10 5
+5479 9 1509949540 3 0
+-1
+S
+
+#2779
+Shattered Shrine~
+~
+fall from 2786
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 2777 10 10 5
+-1
+S
+
+#2780
+Slippery Ledge~
+The hillcrest here is exposed to the wind, the tussock grass flowing like
+water across the slope.  Across the bushtop northwards, the mountains
+rise, bleak and dark.  A weatherworn, eroded cliff drops away into a
+green, bush-filled valley southwardas, the cliff rising to a treacherous
+ridge eastwards and circling the sheltered vegetation below.  Narrow
+ledges and animal tracks circle the grove.
+~
+[Azerin] closing east till we can finish it
+~
+167247872 0 9 0
+D1
+~
+~
+226 -1 2781 10 10 5
+D5
+~
+~
+430 -1 2760 10 10 5
+A
+~
+~
+act_tochar( #north, ch );
+act_notchar( #onorth, ch );
+continue;
+~
+E
+north~
+@yYou work your way down the hillside northwards into the bush, the wind
+in your face.@n 
+~
+E
+onorth~
+@y$n works their way down the hillside northwards.@n
+~
+!
+3 0 33
+-1
+S
+
+#2781
+Narrow Ledge~
+Under Construction.
+new south
+Cut into hillside - surrounded by thorns
+~
+~
+167247872 0 9 0
+D2
+~
+~
+0 -1 2782 10 10 5
+D3
+~
+~
+226 -1 2780 10 10 5
+5479 9 1509949540 3 0
+-1
+S
+
+#2782
+Narrow Ledge~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 2781 10 10 5
+D2
+~
+~
+0 -1 2783 10 10 5
+-1
+S
+
+#2783
+Narrow Ledge~
+Under Construction.
+Ledge around old shrine - worn statues
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 2782 10 10 5
+D2
+~
+~
+0 -1 2784 10 10 5
+-1
+S
+
+#2784
+Narrow Ledge~
+Under Construction.
+Ledge above shrine.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 2783 10 10 5
+D3
+~
+~
+0 -1 2785 10 10 5
+-1
+S
+
+#2785
+Narrow Ledge~
+Under Construction.
+ledge above shrine.
+view to beech trees over thorn mass
+climb west
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 2784 10 10 5
+D3
+~
+~
+33 -1 2786 10 10 5
+5479 9 1509949540 3 0
+-1
+S
+
+#2786
+Clinging to Ledge~
+This section of the valley cliff is heavily eroded, ancient roots holding
+some of the clay in place.  These roots are the only foothold here, the
+striated ochre dirt crumbling to the touch.  A few feet below, the cliff
+angles back, a sheer drop to the valley floor below, invisible behind the
+thorny vegetation.  A rough track around the valley some distance
+northeast is visible.  From here, the only directions of travel are
+climbing north or east along the fragile roots.  Alternatively, you could
+try scaling the cliff.
+~
+climb east
+climb north
+climb up
+fall to shrine
+fall to 2779
+[Guin] Tried to fix acode 3 by adding adata.. which have no messages yet.. but not sure that is the proper way to fix it..
+[Guin] improve_skill seems to be the problem in acode 6
+~
+167247872 0 9 0
+D0
+~
+~
+35 -1 2787 10 10 5
+D1
+~
+~
+33 -1 2785 10 10 5
+D4
+~
+~
+226 -1 2792 10 10 5
+A
+~
+1 north~
+if( random( 0, 1 ) == 0 ) {
+  acode( room, 5 );
+  end;
+}
+if( find_skill( ch, climb ) < random( 0, 7 ) ) {
+  acode( room, 6 );
+  end;
+}
+act_tochar( #yes, ch );
+act_notchar( #oyes, ch );
+transfer( ch, find_room( 2787 ) );
+act_notchar( #oyes2, ch );
+continue;
+~
+E
+yes~
+@gYou carefully work your way down a little, crumbling clay falling into
+the valley, and around the corner onto a solid ledge.@n 
+~
+E
+oyes~
+@g$n carefully manouvres from root to root around the corner
+northwards.@n 
+~
+E
+oyes2~
+@g$n comes climbing around the cliff edge, dusty with clay.@n
+~
+!
+18 0 0
+A
+~
+1 east~
+if( random( 0, 1 ) == 0 ) {
+  acode( room, 5 );
+  end;
+}
+if( find_skill( ch, climb ) < random( 0, 7 ) ) {
+  acode( room, 6 );
+  end;
+}
+act_tochar( #yes, ch );
+act_notchar( #oyes, ch );
+transfer( ch, find_room( 2785 ) );
+act_notchar( #oyes2, ch );
+continue;
+~
+E
+yes~
+@gCarefully, you move from root to root along the sheer southern slope of
+the valley.  Clouds of crumbled clay fall as you rest your weight on each
+new foothold.  Soon, you reach a wider path.@n 
+~
+E
+oyes~
+@g$n begins moving carefully along the southern cliff of the valley. 
+Soon, $e reaches a ledge further along.@n 
+~
+E
+oyes2~
+@g$n comes climbing carefully along the cliff.@n 
+~
+!
+18 0 0
+A
+scale~
+cliff 1 up~
+if( random( 0, 1 ) == 0 ) {
+  acode( room, 5 );
+  end;
+}
+if( find_skill( ch, climb ) < random( 0, 9 ) ) {
+  acode( room, 6 );
+  end;
+}
+act_tochar( #yes, ch );
+act_notchar( #oyes, ch );
+transfer( ch, find_room( 2787 ) );
+act_notchar( #oyes2, ch );
+continue;
+~
+E
+yes~
+No description.
+~
+E
+oyes~
+No description.
+~
+E
+oyes2~
+No description.
+~
+!
+18 0 0
+A
+~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+<Specify a direction to climb>
+~
+!
+18 0 0
+A
+~
+//random fall~
+act_notchar( #ono, ch );
+act_tochar( #no, ch );
+~
+E
+no~
+@rYou start your climb, but your foot slips - you hang over the valley
+for a moment before regaining your footing.@n 
+~
+E
+ono~
+@r$n starts to climb away, but $s foot slips - $e hangs by $s hands for a
+moment before regaining $s footing.@n 
+~
+!
+0 0 0
+A
+~
+~
+act_tochar( #fall, ch );
+act_notchar( #ofall, ch );
+transfer( ch, find_room( 2779 ) );
+act_tochar( #fall2, ch );
+act_notchar( #ofall2, ch );
+damage( mob, ch, 8d6, physical, "the impact", "amateur mountaineering" );
+position( ch, 6 );
+~
+E
+fall~
+@rYou begin your climb - but with a SNAP the root underfoot breaks,
+sending you sliding the few feet to the drop.  You grab at anything, but
+there is nothing - you slide into midair.@n 
+~
+E
+fall2~
+@rCrashing through the thorns and branches, you smash, broken, into a
+shadowy glade.@n
+~
+E
+ofall2~
+@rWith the snap of broken branches and dragging thorn-branches with
+$m, $n comes falling through the canopy to land with a wet snap.@n
+~
+E
+ofall~
+@r$n begins to climb away, but steps on a weak root - it snaps with a
+sudden crack.  They slide, flailing wildly for a handhold, and drop out
+over the cliff edge.@n 
+~
+!
+0 0 0
+-1
+S
+
+#2787
+Narrow Ledge~
+Under Construction.
+climb south
+~
+~
+167247872 0 9 0
+D2
+~
+~
+35 -1 2786 10 10 5
+D3
+~
+~
+0 -1 2788 10 10 5
+E
+west~
+No description.
+~
+-1
+S
+
+#2788
+Narrow Ledge~
+Under Construction.
+cave south
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 2790 10 10 5
+D1
+~
+~
+0 -1 2787 10 10 5
+D2
+~
+~
+0 -1 2791 10 10 5
+-1
+S
+
+#2789
+Thorny Bush~
+Under Construction.
+climb down
+~
+~
+167247872 0 9 0
+D2
+~
+~
+0 -1 2790 10 10 5
+D5
+~
+~
+67 -1 2778 10 10 5
+-1
+S
+
+#2790
+Thorny Bush~
+Under Construction.
+ledge, fall to thorns
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 2789 10 10 5
+D2
+~
+~
+0 -1 2788 10 10 5
+-1
+S
+
+#2791
+Cavern~
+Under Construction.
+cavern, something living here
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 2788 10 10 5
+-1
+S
+
+#2792
+Cliff Edge~
+Under Construction.
+~
+View over whole sea etc
+~
+167247872 0 9 0
+D5
+~
+~
+226 -1 2786 10 10 5
+A
+climb~
+down~
+if( find_skill( ch, climb ) > random( 0, 9 ) ) {
+  transfer( ch, find_room( 2786 ) );
+  act_notchar( #oyes2, ch );
+  }
+else {
+  act_tochar( #no, ch );
+  act_notchar( #ono, ch );
+  transfer( ch, find_room( 2786 ) );
+  if( find_skill( ch, climb ) > random( 0, 9 ) ) {
+    act_notchar( #ocatch, ch );
+    act_tochar( #catch, ch );
+    i = 1d6;
+    inflict( ch, mob, i, "falling some way" );
+    dam_message( ch, i, "the short fall" );
+    } else {
+  act_tochar( #fall, ch );
+  act_notchar( #ofall, ch );
+  transfer( ch, find_room( 2779 ) );
+act_tochar( #hit, ch );
+act_notchar( #ohit, ch );
+i = 9d6;
+dam_message( ch, i, "the impact" );
+  inflict( ch, mob, i, "that long last step" );
+  }
+}
+~
+E
+yes~
+@gYou carefully work your way back down the eroded clay cliff, moving
+from solid root to rock.@n 
+~
+E
+oyes~
+@g$n climbs down the clay slope into the thorn valley, carefully moving
+from root to root.@n 
+~
+E
+oyes2~
+@g$n carefully comes climbing down the cliff from above, showering you
+with pebbles and dust.@n 
+~
+E
+no~
+@rYou begin to climb carefully down the cliff northwards, but your foot
+slips - despite a frantic grab, you begin to slide down!@n 
+~
+E
+ono~
+@r$n begins to climb back down, but misses a step, and slides down the
+slope in a shower of dust and pebbles.@n 
+~
+E
+catch~
+@gFlailing frantically, you catch a root before falling too far - your
+feet inches from a sheer ledge.  You pull yourself up.@n 
+~
+E
+ocatch~
+@gShowering dust and clay as $e falls, $n comes sliding down the cliff. 
+Moments before $e flies into the valley, $e catches a root, stopping $m
+with a jolt and shaking the whole cliff face.@n 
+~
+E
+ofall~
+@rA small avalanche of clay follows $n as $e comes sliding past,
+flailing, before skidding in an arc over the cliff edge into the
+valley.  A resounding CRASH echoes from below.@n
+~
+E
+fall~
+@rYour slide continues, as you frantically grab at roots to slow your
+fall - but to no avail.  The steep slope suddenly drops away, and you
+plummet towards the valley floor in a cloud of dust and pebbles.@n 
+~
+E
+hit~
+@rCrashing through the thorns and branches, you smash, broken, into a
+shadowy glade.@n 
+~
+E
+ohit~
+@rWith the snap of broken branches and dragging thorn-branches with $m,
+$n comes falling through the canopy to land with a wet snap.@n 
+~
+!
+0 0 0
+-1
+S
+
+#2793
+Thick Bush~
+Beeches and bush mix here, thick vegetation providing difficult passage. 
+The ground drops away sharply to the north into what could be an overgrown
+quarry - dark water lines the base.  Weed-covered shingle and scree form
+a dangerous slope downward.  Far beyond, the valley rises into the
+jagged mountains, blue with distance.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 2794 10 10 5
+D2
+~
+~
+0 -1 2753 10 10 5
+D3
+~
+~
+0 -1 2750 10 10 5
+E
+scree shingle slope 1 down quarry 1 north~
+Deep and dark, the quarry to the north is shrouded in shadow, only the
+wink of light off the water's surface indicating its depth.  Steep walls
+and loose soil and rocks underfoot make the climb down impossible.
+~
+E
+beeches~
+Tall, straight-trunked beech trees grow randomly some distance apart,
+gray-white bark and near-vertical branches rising above the tangled
+undergrowth below.
+~
+A
+~
+~
+send_to_room( #rattle, room );
+~
+E
+rattle~
+@gOverhead, beech leaves rustle together, whispering to the wind@n.
+~
+!
+2 150 0
+-1
+S
+
+#2794
+Valley Road~
+The forest grows close by the road on both sides, oppressive and dense. 
+The west side is less thick, animal trails running through the underbrush. 
+Opposite, the land rises, tussock waving atop a craggy hillcrest. 
+Overhead, branches intertwine in a lacework of foliage, shading the sky. 
+The tattered skeleton of a dead tree lies broken among the vegetation,
+spider webs criscrossing the pale branches.
+~
+[Guin] Add search web here.
+[Guin] Reviewed.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 2301 10 10 5
+D2
+~
+~
+0 -1 2795 10 10 5
+D3
+~
+~
+0 -1 2793 10 10 5
+E
+forest~
+The ebon trunks of towering beech trees gather in close formation on
+either side of the overgrown path, their ghostly limbs congregating in
+dense clusters above the ground.  Little light penetrates through their
+looming branches.
+~
+E
+skeleton dead tree webs branches~
+Deathly pale, the brittle remains of the dead tree are draped with a
+ghostly veil of fine white web.  Entombed amidst the gossamer-thin
+tendrils, the tiny corpses of insects have been left in a semi-desiccated
+state, their mournful condition a brutal reminder of the predators that
+stalk these lands.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou leave the road, pushing your way into the bush.@n
+~
+!
+3 0 8
+A
+~
+~
+send_to_room( #forest, room );
+~
+E
+forest~
+@cSomething skitters through the underbrush in the dappled shadows of the
+forest floor.@n 
+~
+!
+2 150 0
+A
+~
+skeleton webs vegetation branches~
+act_tochar( #web, ch, obj, mob );
+act_notchar( #rweb, ch, obj, mob, sight );
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 3 ) == 2 )
+    obj = oload( 81, random( 1, 3 ) );
+}
+if( obj ) {
+  act_tochar( #found, ch, obj, mob );
+  act_notchar( #rfound, ch, obj, mob, sight );
+  obj_to_char( obj, ch );
+}
+else {
+  act_tochar( #nothing, ch );
+  act_notchar( #rnothing, ch, obj, mob, sight );
+}
+~
+E
+web~
+@CYou start searching through the skeletons and webbing, to see if you
+can find anything usable.@n
+~
+E
+rweb~
+@C$n starts searching through the skeletons and webbing, to see if $e can
+find anything usable.@n 
+~
+E
+found~
+@CYou find $p in your search.@n
+~
+E
+rfound~
+@C$n finds $p in $s search.@n
+~
+E
+nothing~
+You find nothing of interest.
+~
+E
+rnothing~
+$n finds nothing of interest.
+~
+!
+9 0 0
+28 9 1509949540 3 0
+-1
+S
+
+#2795
+Valley Road~
+The road curves here, descending eastward around the side of grey-grassed
+hill.  A ravine drops away below, another taller hill rising beyond it to
+the southwest.  Thick bush and thorns fill the ravine base like litter,
+the slope rocky and spotted with tussock.  A few rounded, palm-sized
+stones lie beside the road among the pines growing there.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 2794 10 10 5
+D1
+~
+~
+0 -1 2796 10 10 5
+D3
+~
+~
+0 -1 2753 10 10 5
+E
+stones road pines~
+A few pines, placed by nature's will, grow close along the roadside. 
+Lying between the trees, some half-buried and others atop the soil,
+smooth and rounded stones look to be the rounded cobbles of an ancient
+road, replace by a broken and rutted dirt path.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou leave the road, striking along the ravine edge.@n
+~
+E
+notchar~
+@g$n strikes out westwards, into the bush.@n
+~
+!
+3 0 8
+-1
+S
+
+#2796
+Valley Road~
+The road is narrow here, an eroded, root-covered cliff of a hillside
+rising high to the east as it curves around the valley.  Dropping away
+past the sliver of road, the valley below narrows westward into a
+thorn-clogged, green ravine...a dry stream beginning.  Below, the
+hillside is sheer and treacherous.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D2
+~
+~
+0 -1 2797 10 10 5
+D3
+~
+~
+0 -1 2795 10 10 5
+E
+1 west valley ravine~
+Far to the west and out of reach beyond the slippery slope of the
+hillside, lies the verdant foliage of a thorn-choked ravine...its secrets
+hidden behind the wall of brambles.
+~
+A
+climb~
+up cliff eroded down slope valley hillside~
+act_tochar( #to_char, ch );
+~
+E
+to_char~
+@rThe cliff both above and below looks too dangerous to attempt.@n
+~
+!
+0 0 0
+2509 105 1509949540 3 0
+2508 9 1509949540 3 0
+-1
+S
+
+#2797
+Valley Road~
+An earth and stone road winds through the forested hills, bordered by
+new-growth trees and scraggly weeds.  Southward, the road dips down and
+begins a descent toward the spreading sea, the rolling foothills and sand
+dunes encircling the sandy beach.  To the north, a dark pine forest
+climbs the mountain's slopes, the dense foliage grabbing at the light.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 2796 10 10 5
+D2
+~
+~
+0 -1 2798 10 10 5
+E
+trees weeds~
+Evergreen saplings replace the stumps seen further south along the road
+and give way some distance off the road to more mature trees, growing
+more closely together.  A few sparse clumps of yellow-green weeds sprout
+in the empty ground.
+~
+2500 9 1509949540 3 0
+-1
+S
+
+#2798
+Valley Road~
+The rutted road winds through and around a scatter of stumps, remnants of
+the old trees felled long ago, a thicket of bracken swarming across the
+ground to obscure many of them.  Beyond the roadway, a forest rises
+across the landscape, its wooded flanks stretching up into the feet of
+the Everwinter Mountains.  Within the shadows of the grey stone range,
+the air is crisp and sharp, biting at exposed flesh.
+~
+cliff curves away southwards around area to west
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 2797 10 10 5
+D1
+~
+~
+0 -1 2799 10 10 5
+E
+forest stumps bracken~
+The beginnings of an uplands pine forest lies just beyond the roadway,
+the trees scattered and distant from each other.  Old stumps, most rotted
+and falling apart, mark those trees cut down to form this path.  All
+manner of plants form the undergrowth beneath and between the stumps and
+trees, but it is mainly dominated by the thick growth of thornbushes
+interwoven together.
+~
+E
+range mountains everwinter~
+The grey stone of the slopes rises in ever-increasing tiers, the lower
+mountains covered in virgin pine forest, the further and higher ones
+blanketed in pristine snow from the treeline to their jagged peaks.
+~
+A
+~
+~
+if( is_player( ch ) ) {
+  if( random( 1, 15 ) > find_stat( ch, dex ) ) {
+    act_tochar( #caught, ch );
+    act_notchar( #rcaught, ch );
+    damage( mob, ch, 1d10, physical, "the thorn bush" );
+    end;
+  }
+}
+continue;
+~
+E
+to_char~
+@gYou navigate the path $Tward, avoiding the thick thornbushes.@n.
+~
+E
+to_room~
+@g$n navigates the path $Tward, avoiding the thick thornbushes.@n.
+~
+E
+caught~
+@RYou get caught on some of the thorns, which tear through your skin.@n
+~
+E
+rcaught~
+@R$n gets caught on some of the thorns, which tear through $s skin.@n
+~
+!
+3 0 3
+-1
+S
+
+#2799
+Valley Road~
+Slowly leaving the rocky base of a valley, the road climbs along the
+eastern slope, little more than a track in places.  Thick black
+thornbush has been hacked and cleared away here as the pathway thrusts
+onward and northward.  Spilling over the hill's crest above, the thorns
+whip like water in the wind above and below, knotting the shattered rock
+and dry stream together in the valley base.
+~
+valley near cliff edge
+meet nick's river?
+[Guin] Done.
+~
+167247872 12 9 0
+D2
+~
+~
+0 -1 2302 10 10 5
+D3
+~
+~
+0 -1 2798 10 10 5
+E
+thornbush black~
+Bearing tiny pink buds in preparation for blooming, the cluster of
+thornbushes entertwine.  The sharp thorns create a deterrent to all but
+the smallest of creatures.
+~
+130 9 1509949540 3 0
+-1
+S
+
+#0
+

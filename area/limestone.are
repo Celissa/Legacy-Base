@@ -1,0 +1,465 @@
+#M2_AREA
+2
+
+Limestone Caves~
+~
+Limestone Caves~
+~
+~
+
+5 0
+0
+1
+#ROOMS
+
+#2100
+Limestone Caves~
+Slick limestone begins to replace the cracked and dry rock.  As it
+spreads so does the water content; small filigrees of water dribble down
+the marbled surface, eroding into grooves into the rock.  Corresponding
+to the increasing water, molds and mildew beings to spread across the
+floor and walls, patches of it so thick they resemble sphagnum moss. 
+Slimy trails run over the stone and vegetation, their cause unclear.
+~
+[Guin] Done
+~
+167378956 11 5 0
+D0
+~
+~
+0 -1 2101 10 10 5
+D1
+~
+~
+0 -1 2102 10 10 5
+D2
+~
+~
+0 -1 4718 10 10 5
+D3
+~
+~
+0 -1 2103 10 10 5
+E
+trails slimy~
+A dozen or more slimy, mucousy-looking trails pattern the stones and
+vegetation in this part of the caves.  They look like something deposited
+there by a slithery type of creature.
+~
+A
+~
+east west~
+act_tochar( #spash, ch );
+act_notchar( #rspash, ch );
+continue;
+~
+E
+spash~
+@CSplashing through the puddles, you continue onward.@n
+~
+E
+rspash~
+@C$n sends a fine spray of water skyward as $e splashes onward.@n 
+~
+!
+3 0 11
+-1
+S
+
+#2101
+Limestone Caves~
+The chamber opens up into a high vaulted ceiling, a stunning array of
+stalactites draping from the roof constantly drip of water, making the
+room appear to be in a light rain storm.  Foot-sized toadstools flourish
+across the floor, their stone-hued caps stained with bands of orange and
+blue minerals from the falling water.  A carpet of mildew spreads amongst
+the toadstool roots, the black and purple mold enjoying the dank
+conditions.
+~
+[Guin] Done.
+~
+167378948 11 7 0
+D0
+~
+~
+0 -1 2105 10 10 5
+D1
+~
+~
+0 -1 2104 10 10 5
+D2
+~
+~
+0 -1 2100 10 10 5
+A
+~
+~
+act_tochar( #shroom, ch );
+act_notchar( #rshroom, ch );
+continue;
+~
+E
+shroom~
+@YAvoiding the strange fungi, you head northward.@n
+~
+E
+rshroom~
+@YAvoiding the fungi garden, $n heads northward.@n
+~
+!
+3 0 1
+2619 9 1509949540 3 0
+2619 9 1509949540 3 0
+-1
+S
+
+#2102
+Limestone Caves~
+The cave narrows somewhat as it bends to the north, clusters of
+stalactites and stalagmites do their best to completely seal the way
+onwards.  A scattering of broken earthen-hued shells lie amongst the
+algae floor, the off casts or remains of small snails.  The limestone
+wall to the south-east drips with mineral water, the years of erosion
+forming a small basin of rock at the base.
+~
+~
+167378948 11 5 0
+D0
+~
+~
+0 -1 2104 10 10 5
+D3
+~
+~
+0 -1 2100 10 10 5
+2617 9 1509949540 3 0
+-1
+S
+
+#2103
+Limestone Caves~
+Stagnant pools of water form in the shallow limestone depression, the
+strong stench of decay hanging above them.  Outside, the water would be a
+magnet to all manner of insect life, these, however, are devoid of even
+mosquito lava.  An impressive spear-like stalactite drips water from the
+ceiling, its swirled surface marking the passage of eons as it slowly
+grows.  Slimy algae slurps around the pools' edges, the slick green plant
+thriving where little else can grow.
+~
+[Guin] Done
+[Laendrix] lava -> larva
+[Kelvrey] I think 'mosquito lava' is supposed to be 'mosquito larvae'
+~
+167378948 11 5 0
+D1
+~
+~
+0 -1 2100 10 10 5
+E
+pools water stagnant~
+Formed in the low areas of this small cavern floor, several shallow pools
+of mineral rich water hold the skeletal carcasses of the local denizens. 
+An unpleasant miasma rises from the water's surface, and the air hangs
+heavy with the stench.
+~
+A
+~
+~
+send_to_room( #plop, room, sight_sound );
+~
+E
+plop~
+@CThe slow and steady drop, plop of liquid dripping echoes quietly
+throughout this small chamber.@n 
+~
+!
+2 150 0
+2618 9 1509949540 3 0
+-1
+S
+
+#2104
+Limestone Caves~
+Deep pools of stagnate water form a trough in the rooms center, a
+thriving collection of toadstools and moss gathering in and around the
+water edge.  A sluggish wall of water dribbles down the eastern rocks,
+the slick limestone scared into deep grooves by the years of water flow. 
+Some of the fungi appear to have been grazed upon, several large chunks
+missing from their caps.  Trails of silvery-slime lead out of the pool
+room, some heading south and the majority slithering westward.
+~
+[Guin] Done.
+~
+167378948 13 9 0
+D2
+~
+~
+0 -1 2102 10 10 5
+D3
+~
+~
+0 -1 2101 10 10 5
+3219 17 1509949540 -2 0
+-1
+S
+
+#2105
+Limestone Caves~
+The tunnel reaches a t-junction, the western and southern passages worn
+from the soft limestone, the eastern branch cut from a harder black stone. 
+Silvery trails of slime drip across the immature stalagmites, the mounds
+of limestone barely a foot in height.  The sound of dripping water echoes
+through the dark cavers, the constant flow reshaping the rocks with every
+drop.
+~
+[Guin] Done.
+~
+167378948 11 5 0
+D1
+~
+~
+0 -1 2106 10 10 5
+D2
+~
+~
+0 -1 2101 10 10 5
+D3
+~
+~
+0 -1 2107 10 10 5
+A
+~
+~
+send_to_room( #drip, room );
+~
+E
+drip~
+@BDrips of water tumble down from the shadowy ceiling to splash upon the
+cavern floor below.@n 
+~
+!
+2 200 0
+-1
+S
+
+#2106
+Limestone Caves~
+Mounds of bug remains and dried moss form nests in the black stone walls,
+the rotting corpses filling the room with a pungent stench.  Red-spotted
+toadstools festoon the corpses, the fungi feasting upon the black ichors
+as the bodies decay.  A bloody handprint smears across the eastern wall,
+perhaps were a victim attempted to claw its way from the mire of death. 
+Against the eastern wall a mound of rotting fabric lies, perhaps the off
+casts of waste cloth.
+~
+[Guin] Done.
+~
+167378948 11 9 0
+D3
+~
+~
+0 -1 2105 10 10 5
+E
+fabric mound cloth~
+A mound of foul-smelling, rotting fabric lies in a filthy heap near the
+eastern side of the chamber.  The cloth shows in various shades of gray,
+determined by the length of time they've been collecting here.
+~
+A
+~
+fabric mound cloth~
+if( !rflag( reset0, room ) ) {
+  act_tochar( #ser, ch, obj, mob );
+  act_notchar( #rser, ch, obj, mob, sight );
+  end;
+}
+remove_rflag( reset0, room );
+if( find_skill( ch, searching ) > random( 5, 10 ) ) {
+  act_tochar( #foun, ch );
+  act_notchar( #rfound, ch );
+  obj_to_char( oload( 4016 ), ch );
+}
+else {
+  act_tochar( #ser, ch );
+  act_notchar( #rser, ch );
+}
+~
+E
+ser~
+@YYou search the rotting fabric, finding nothing of value.@n 
+~
+E
+foun~
+@cYou rummage round the rotting mound and discover some useable cloth!@n
+
+~
+E
+rfound~
+@c$n rummages round the rotting mound and discover some useable cloth!@n
+
+~
+E
+rser~
+@y$n quickly rummages around the rotting cloth.@n
+~
+!
+9 0 0
+A
+~
+~
+send_to_room( #fly, room );
+~
+E
+fly~
+@YA new batch of flies burst from the rotting cloth and garbage, taking
+flight through the caves.@n 
+~
+!
+2 150 0
+2617 9 1509949540 3 0
+-1
+S
+
+#2107
+Limestone Caves~
+Mounds of limestone runoff spill across the black stone floor, the soft
+rock eroded by a constant wash of dripping water.  In thousands of years,
+the mounds will slowly transform into new stalagmites, eventually sealing
+the tunnel completely.  A gleaming silvery trail of slime runs across the
+rocks, the slightly sticky substance having a foul aroma reminiscent of
+rotting fish.
+~
+[Guin] Done.
+~
+167378948 11 5 0
+D1
+~
+~
+0 -1 2105 10 10 5
+D2
+~
+~
+0 -1 2108 10 10 5
+D3
+~
+~
+0 -1 2109 10 10 5
+A
+~
+~
+act_tochar( #slip, ch );
+act_notchar( #rslip, ch );
+continue;
+~
+E
+slip~
+@CYou almost slip on the slimy ground as you head eastward.@n 
+~
+E
+rslip~
+@C$n almost falls over, slipping slightly on the slimy ground.@n
+~
+!
+3 0 2
+-1
+S
+
+#2108
+Limestone Caves~
+The dead end tunnel opens up a bit to form a smooth-walled chamber where
+four hourglass shaped limestone pillars rise to support the roof.  Moss
+and algae compete for every space across the cavern floor, the mixture of
+plants forming a strange, soft carpet underfoot.  The only obvious exit
+from the room is a slime coated tunnel that cuts northward, its space
+cramped by the many outcroppings of stone.
+~
+[Guin] Done
+~
+167378948 11 9 0
+D0
+~
+~
+0 -1 2107 10 10 5
+2618 9 1509949540 3 0
+-1
+S
+
+#2109
+Limestone Caves~
+Rodent bones and beetle husks lie among the broken rubble of a crumbled
+stalagmite.  A nest of sorts has been built from the remains, a layer of
+silvery slime coating everything in the room.  Patches of green moss
+sprout across the rocks, many of the patches showing signs of damage from
+herbivores grazing.  A single exit from the chamber leads eastward, its
+surface coated in the same gooey strands of slime.
+~
+[Guin] Done.
+~
+167378948 11 9 0
+D1
+~
+~
+0 -1 2107 10 10 5
+E
+bones rodents beetle husks rubble~
+Obviously the remants of something's meals, the jumbled bones and insect
+parts have been gnawed upon until only the inedible parts remain.
+~
+A
+~
+bones rodents beetle husks rubble~
+act_tochar( #search, ch, obj );
+act_notchar( #rsearch, ch, obj, mob, sight );
+if( !rflag( reset0, room ) ) {
+  act_tochar( #already, ch, obj );
+  end;
+}
+remove_rflag( reset0, room );
+obj = oload( 3960, random( 3, 10 ) );
+if( obj ) {
+  act_tochar( #found, ch, obj );
+  act_notchar( #rfound, ch, obj, mob, sight );
+  obj_to_char( obj, ch );
+}
+else {
+  act_tochar( #nada, ch );
+  act_notchar( #rnada, ch, obj, mob, sight );
+}
+~
+E
+search~
+You start searching through the detrimus, attempting to find something
+worthwhile.
+~
+E
+rsearch~
+$n starts searching through the detrimus.
+~
+E
+already~
+The remains and such have already been scattered about the room.
+~
+E
+found~
+You find $p in the pile of debris.
+~
+E
+rfound~
+$n finds $p amongst the remains.
+~
+E
+nada~
+You find nothing of interest.
+~
+E
+rnada~
+$n finds nothing of interest.
+~
+!
+9 0 0
+2618 9 1509949540 3 0
+-1
+S
+
+#0
+

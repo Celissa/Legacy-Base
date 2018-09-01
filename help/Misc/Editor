@@ -1,0 +1,37 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+[subj]                   : displays subject being editted<br>
+[subj] #                 : delete the specified line number<br>
+[subj] [text]            : writes text at bottom of note/letter/desc<br>
+[subj] [even #]          : inserts blank line here<br>
+[subj] [even #] [text]   : inserts text between lines here<br>
+[subj] #-#               : formats lines in the specified range<br>
+[subj] ? [word1] [word2] : searches and replaces word1 with word2<br>
+[subj] ? '[phr1]' [phr2] : searches and replaces phrase1 with phrase2 (be<br>
+                           careful with search and replaces...editor<br>
+                           will replace ALL cases it finds)<br>
+[subj] undo              : copies the last editted text into the current<br>
+                           buffer<br>
+  <br>
+<h1> Description </h1>
+<br>
+ It is often simplest to write your message one sentence at a time etc.. <br>
+This is so that you can insert lines of text between what you have<br>
+already written (use even line numbers for this) and format it<br>
+afterwards, using [subj] #-#, which will make your sentences into<br>
+organized paragraphs.<br>
+<br>
+!NOTE!<br>
+<br>
+ [subj] is any one of the following: note, mail, or desc.  There are<br>
+some editor functions that only work for a specific subject, so make sure<br>
+to read the help on note, mail, and desc before going much<br>
+further, if you haven't already.<br>
+<br>
+Example :<br>
+Typing "Desc 1 This is a test" would add "This is a test" as the first<br>
+line of your description.<br>
+</html>
+</body>

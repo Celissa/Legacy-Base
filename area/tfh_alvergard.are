@@ -1,0 +1,2193 @@
+#M2_AREA
+2
+
+Reaches of Alvergard~
+Ciani~
+reaches of alvergard~
+~
+~
+
+25 0
+0
+1
+#ROOMS
+
+#6800
+Mountain Trail - Transition to a Snowy Plain~
+The hard, stony way of the mountain trail begins to give way to a stark,
+snowy plain to the north.  A chill wind whistles about and nips at
+exposed flesh, seemingly as cold as the very hearts of the mountains
+themselves.  Massive clouds of streaked, angry grey loom heavy overhead,
+casting a perpetual pall of semi-darkness over the land to the north. 
+The pure white snow lies dully on the ground, glittering occasionally as
+a random beam of light penetrates the clouds to reflect from the pristine
+surface.
+~
+[Ciani] This is the Reaches of Alvergard
+[Guin] Done.
+~
+167247872 18 9 0
+D0
+~
+~
+0 -1 6801 10 10 5
+D5
+~
+~
+0 -1 6832 10 10 5
+E
+massive clouds~
+A large bank of angry grey clouds have gathered over the snowy plain to
+the north, dark streaks shot through their ephemeral edges.  They cast a
+vast shadow, leaving the flats under a perpetual pall of gloom.
+~
+E
+snowy plain 1 north~
+The trail leading north gradually disappears beneath a blanket of pure
+snow, covering the vast expanse of flats between the slate-colored
+mountains.  The plains seem to stretch uninterrupted for long distances
+between the far-off peaks, and the snow is greyed by the shadow of the
+dark clouds that hang heavily over the region.
+~
+A
+~
+~
+send_to_room( #thunder, room );
+~
+E
+thunder~
+@CAn ominous roll of thunder rumbles softly in the distance.@n
+~
+!
+2 125 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@WYou carefully make your way down the icy incline.@n
+~
+E
+to_room~
+@W$n carefully makes $s way down the icy incline.@n
+~
+!
+3 0 32
+-1
+S
+
+#6801
+A Plain of Drifting Snow~
+The drifting piles of snow have completely covered what might have been a
+path here; a faint low area is barely detectable between the high-piled
+drifts against the cold grey of the mountains' sides.  Angry
+dark-streaked clouds hang heavy overhead, giving the entire area a sort
+of eerie darkness.  A few indistinct tracks take form in the loose snow
+atop the drifts, their shape changing as the wind picks up the white
+fluff and whisks it across the ground.
+~
+[Guin] Done.
+~
+167247872 18 9 0
+D2
+~
+~
+0 -1 6800 10 10 5
+D3
+~
+~
+0 -1 6802 10 10 5
+E
+indistinct tracks snow~
+Thin toe-pads before an elongated heel could only be the tracks of a
+mountain rabbit.
+~
+E
+drifting piles snow path low area sides~
+The path beaten against the hard rock of the mountain that leads away to
+the south is entirely covered with a thick layer of snow here; the wind
+has brushed loose snow up the sides of the mountain to create a miniature
+valley upon the path.  Small flakes drift along the surface of the banks
+and trail, caught up in the chill fingers of the wind.
+~
+E
+angry dark-streaked clouds sky~
+Hanging ominously low, these ebon-shot grey clouds completely cover the
+sky.  The snow and mountains dim considerably beneath their heavy,
+vaporous mass, cast under a constant shadow.
+~
+A
+~
+~
+send_to_room( #thunder, room );
+~
+E
+thunder~
+@BAn ominous roll of thunder rumbles softly in the distance.@n
+~
+!
+2 125 0
+5379 9 1509949540 3 0
+-1
+S
+
+#6802
+A Plain of Drifting Snow - Top of a Steep Bank~
+A vast expanse of undisturbed snow stretches out in the flat, shallow
+basins between craggy mountains, seemingly permanently muted by the
+low-hanging grey clouds.  Piled high in many places, the snow drifts
+softly across the surface as the wind catches it, forming and re-forming
+jagged-edged designs along the snowbanks' sides.  The main flat, forming
+the floor of this basin, gives way sharply to the north, its uneven
+surface descending nearly vertically to the smooth snowy plain below.
+~
+[Eliza] Reviewed.
+[Mad Murdo] Reviewed
+[Guin] add loop all followers to climb down
+~
+167247872 18 9 0
+D1
+~
+~
+0 -1 6801 10 10 5
+D5
+~
+~
+0 -1 6803 10 10 5
+E
+1 north 1 down uneven surface~
+The flat underfoot seems to have broken off abruptly, as it comes to a
+sudden end just north of here.  The face of the drop looks to be nearly
+vertical, a few cracks and clefts looking as though they'd provide good
+handholds for a climber.
+~
+A
+1 down~
+*~
+act_tochar( #no, ch );
+~
+E
+no~
+There doesn't seem to be a way to walk down, perhaps climbing would work.
+~
+!
+0 0 0
+A
+climb scale~
+1 down drift cliff~
+if( is_standing( ch ) ) {
+  act_tochar( #climb, ch );
+  act_notchar( #nclimb, ch );
+  transfer( ch, find_room( 6803 ) );
+  act_notchar( #enter, ch );
+  end;
+}
+act_tochar( #nopos, ch );
+~
+E
+climb~
+@CYou carefully pick your way down the snowy cliff to the north.@n
+~
+E
+nclimb~
+@C$n carefully picks $s way down the snowy cliff to the north.@n
+~
+E
+enter~
+@C$n carefully picks $s way down from the snowy cliff to the north.@n
+~
+E
+nopos~
+You are in no position to be doing that.
+~
+!
+0 0 0
+-1
+S
+
+#6803
+A Plain of Drifting Snow - Base of a Steep Bank~
+The jagged, ice-glazed face of a massive snowdrift rises to the south,
+towering high overhead.  A wide expanse of wind-swept snow unfurls to the
+east, filling the entire wide scope between craggy bleak mountain peaks. 
+Hints of white-on-white motion catch at the eye on the snowy plain;
+perhaps something lives on this barren land after all.  The clouds above
+seem low enough to reach up and touch, their grey surfaces shot with
+angry streaks.
+~
+[Guin] climb up code needs fixed.
+[Guin] Reviewed.
+~
+167247872 18 9 0
+D1
+~
+~
+0 -1 6804 10 10 5
+D4
+~
+~
+0 -1 6802 10 10 5
+E
+snowdrift face south~
+Towering to the south is a huge craggy stone face crusted with snow. 
+Cracks and clefts in its face provide ample handholds for climbing up to
+its top.
+~
+E
+wide exanse snow east~
+Opening to the east is a large plain nestled between mountains, blanketed
+with a thick layer of snow.
+~
+A
+~
+~
+if( !is_player( ch ) ) 
+act_tochar( #no, ch );
+act_tochar( #climb, ch );
+~
+E
+no~
+Walking up the icy face would probably be less productive than climbing.
+~
+E
+climb~
+Walking up the icy face would probably be less productive than climbing.
+~
+!
+3 0 16
+A
+climb scale~
+face cliff south snowdrift drift 1 up~
+if( is_standing( ch ) ) {
+  act_tochar( #climb, ch );
+  act_notchar( #nclimb, ch );
+  transfer( ch, find_room( 6802 ) );
+  act_notchar( #arrive, ch );
+  end;
+}
+act_tochar( #nopos, ch );
+~
+E
+climb~
+@CYou carefully climb up the side of the snowdrift, picking your way
+between icy patches.@n 
+~
+E
+nclimb~
+@C$n carefully climbs up the side of the snowdrift, picking $s way
+between icy patches.@n 
+~
+E
+arrive~
+$n carefully climbs down the side of the snowdrift.
+~
+E
+nopos~
+You are in no position to do that.
+~
+!
+0 0 0
+-1
+S
+
+#6804
+A Plain of Drifting Snow~
+A vast snowy plain stretches out between jagged mountain peaks, paled by
+distance and partially obscured by the angry clouds hanging low around
+their peaks.  What might be glittering snow in another light is muted and
+dim in the oppressive gloom imposed by the clouds.  The biting wind
+catches at the loose snow atop the plain's surface and whisks it along,
+shaping drifts and rearranging their outlines at a whim.  Gray and
+smooth, a mountainous upcropping rises directly to the south, iced over
+and snow-trimmed.
+~
+[Mad Murdo] random acode in this room needs to operate only at night. That has to wait until the time code is fixed.
+[Guin] Reviewed.
+~
+167247872 18 9 0
+D0
+~
+~
+0 -1 6805 10 10 5
+D1
+~
+~
+0 -1 6807 10 10 5
+D3
+~
+~
+0 -1 6803 10 10 5
+E
+vast snowy plain~
+A thick blanket of snow covers the whole of the basin nestled in the
+gigantic mountains.  Its pristine white surface is muted by purple
+shadows from the low-hanging clouds overhead.
+~
+E
+mountainous upcropping south~
+A sheer mountain face looms intimidatingly to the near south, its dark
+face encrusted with ice and snow.  The wind has whipped at the frosty
+coating, creating etched swirls in the looser snow.
+~
+A
+poke~
+~
+if( !is_night( ) )
+  if( random( 0, 19 ) == 3 ) {
+  ch = rand_player( room );
+  if( ch )
+    if( !is_mob( ch ) ) {
+    act_tochar( #blind, ch, obj, mob );
+    act_notchar( #isblind, ch, obj, mob );
+    do_spell( blind, mob, ch );
+  }
+}
+~
+E
+blind~
+@YThe sun momentarily breaks through the clouds, and the glare from the
+stark snow is blinding!@n 
+~
+E
+isblind~
+@YThe sun momentarily breaks through the clouds, glaring off the stark
+snow to blind $n!
+~
+!
+2 150 0
+-1
+S
+
+#6805
+A Plain of Drifting Snow~
+A small trail slides between the two mountains to the north, their sheer
+ice-coated faces rising nearly perpendicular to the snowy ground.  The
+gloom cast by the clouds overhead prevent one from seeing too far down
+the trail.  Spreading to the southeast is a wide field completely
+blanketed with a thick layer of pure white snow, the only motion that of
+the wind carrying loose snow across the rippled snowdrifts.
+~
+[Guin] Done
+~
+167247872 18 9 0
+D0
+~
+~
+0 -1 6808 10 10 5
+D1
+~
+~
+0 -1 6806 10 10 5
+D2
+~
+~
+0 -1 6804 10 10 5
+E
+snow southeast plain white~
+A insignificant footpath passes through a narrow cleft between the two
+mountains to the north.  The snow has built up deeply, and its level is
+considerably higher than that on the plain to the southeast.  It moves
+through the mountains and then turns westward a short distance later.
+~
+E
+mountains sheer ice-coated faces~
+These ancient, craggy mountains have been coated nearly completely with a
+layer of deeply frozen snow and ice, filling any cracks or clefts that
+may rend their surfaces.  Rising high into the sky, their tops are lost
+to sight behind the heavy, opaque clouds.
+~
+E
+clouds overhead sky~
+These angry clouds hang low in the sky, their grey bellies swollen and
+streaked black.  A faint rumbling can be heard emanating from deep within
+their depths.
+~
+E
+snow south-east plain white~
+A thick layer of pristine snow covers the expansive plain to the
+southeast.  The crystalline accumulation would glitter, save for the
+fact that the heavy clouds cast a deep, gloomy pall over the area, muting
+any brightness within.
+~
+A
+~
+~
+send_to_room( #blah, room );
+~
+E
+blah~
+@YThe wind howls shrilly, reminiscent of a wounded animal.@n
+~
+!
+2 200 0
+5382 9 1509949540 3 0
+-1
+S
+
+#6806
+A Plain of Drifting Snow~
+The ice- and snow-coated face of a weathered mountain rises into the sky
+to the north, its peak lost beyond the low-hanging grey clouds.  Pure
+white snow covers the ground in a thick blanket, loose flakes skittering
+across the unmarked surface as the wind catches it in its chill fingers. 
+The snow appears more washed-out grey than white in the dim, gloomy
+shadow of the massed low-hanging clouds.  Almost imperceptibly, the
+ground slopes to the south.
+~
+[Guin] Done
+~
+167247872 18 9 0
+D1
+~
+~
+0 -1 6813 10 10 5
+D2
+~
+~
+0 -1 6807 10 10 5
+D3
+~
+~
+0 -1 6805 10 10 5
+E
+ice- snow-coated face weathered mountain north~
+Ice and snow have seemingly bonded with the drab surface of the
+mountain, so long have they been frozen to the stone.  The top of the
+mountain is lost behind the heavy grey clouds overhead, and its sides are
+also invisible, so wide is its near face.
+~
+E
+low-hanging clouds~
+Thick, dark and still, these black-shot clouds hang low in the sky,
+hiding mountaintops and casting a dim gloom upon the white terrain below. 
+Swirls and whorls are visible in the surface of the clouds, outlined in
+pale grey which contrasts with the dark of the near wisps of vapor.
+~
+E
+pure white snow blanket flakes surface~
+A thick blanket of pristine snow covers the area between mountains, the
+surface clean and unmarred save for the occasional gust of wind
+rearranging the loose fluff on top of the deeper, frozen layer.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CYou trudge $dwards through the snow.@n
+~
+E
+to_room~
+@C$n trudges $dwards through the snow.@n
+~
+!
+3 0 14
+5379 9 1509949540 3 0
+-1
+S
+
+#6807
+A Plain of Drifting Snow~
+Rising up to the south is the smooth, ice-frosted face of a mountain, its
+top lost behind the ever-present heavy grey clouds.  The snowy plain
+stretches along the flat between grey peaks in all other directions, its
+pristine surface marred only by the drifting of loose snow in the wind. 
+The white-carpeted ground seems to slope almost imperceptibly down toward
+the north from all sides of the vast plain.
+~
+[Guin] Leaving north dex check always fails. Would rather see it random like north of Khiren
+[Guin] Reviewed.
+~
+167247872 18 9 0
+D0
+~
+~
+0 -1 6806 10 10 5
+D1
+~
+~
+0 -1 6814 10 10 5
+D3
+~
+~
+0 -1 6804 10 10 5
+E
+ice-frosted face mountain~
+A thick layer of deeply-frozen ice coats the near face of the mountain,
+covering any clefts or jagged edges that might once have been prominent. 
+A thin layer of snow has frozen onto the ice, giving a rough texture to
+the glassy ice.  The top of the mountain rises much higher than the eye
+can see, as the low-hanging clouds completely enfold the top part of the
+peak.
+~
+E
+heavy grey clouds~
+Ominously grey, these dark-streaked clouds hang low in the sky.  Nearly
+completely blotting out the sky, they cast a dark, gloomy pall over the
+entire snowy basin, tinting the snow a sickly grey.
+~
+E
+snowy plain flat~
+The low area between craggy grey mountains is blanketed thickly with
+ivory snow, tinted a washed-out grey by the everpresent shadows from the
+sky.  The basin extends northward from here, inclining vaguely downward
+towards the centre.
+~
+A
+~
+~
+if( find_stat( ch, dex ) < random( 3, 12 ) ) {
+  act_tochar( #slip, ch );
+  act_notchar( #nslip, ch );
+  position( ch, 6 );
+}
+else
+  continue;
+~
+E
+leave~
+@CYou carefully pick your way across the icy field to the north.@n
+~
+E
+nleave~
+@C$n carefully picks $s way across the icy field to the north.@n
+~
+E
+slip~
+@CYou try to walk across the icy field, but slip and fall!@n
+~
+E
+nslip~
+@C$n tries to walk across the icy field to the north, but slips and
+falls!@n 
+~
+E
+to_char~
+@CYou carefully pick your way across the icy field to the north.@n
+~
+E
+to_room~
+@C$n carefully picks $s way across the icy field to the north.@n
+~
+!
+3 0 1
+-1
+S
+
+#6808
+Snowy Trail Between the Mountains~
+The snow seems especially deep here, driven in by the gusting wind and
+left to accumulate.  The icy mountainsides on either side of the path and
+the low-hanging clouds contribute to the strong oppressive feeling of the
+area; the environment seems to be pressing in towards this small trail. 
+Not much further to the west, the trail turns again.  A narrow cleft in
+the mountains to the north permits passage into another snowy basin.
+~
+[Guin] Done.
+~
+167247872 18 9 0
+D0
+~
+~
+0 -1 6825 10 10 5
+D2
+~
+~
+0 -1 6805 10 10 5
+D3
+~
+~
+0 -1 6809 10 10 5
+E
+icy mountain-sides sides path~
+Snow has been driven by the biting wind against the stony mountainside,
+where it has frozen in place and left a fuzzy-looking layer of hoar.
+~
+E
+low-hanging clouds~
+Hanging low over the moutain range, these dark, misty forms obscure the
+upper reaches of the stony fingers.  Covering the entire sky, they block
+out the light and cast a perpetual shadow of gloom upon the snowy plains
+below.
+~
+E
+west trail~
+A ribbon-like trail winds its way through the narrow mountain cleft.  The
+wind has blown a considerable amount of snow into the cramped trail, so
+the level of snow is much higher than elsewhere on the plain.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@MYou slog through the snow to the $d.@n
+~
+E
+to_room~
+@M$n slogs through the snow to the $d.@n
+~
+!
+3 0 13
+5379 9 1509949540 3 0
+-1
+S
+
+#6809
+Snowy Trail Between the Mountains~
+The ice- and snow-frosted faces of the mountains to the north and south
+seem to lean towards each other, providing walls to the ceiling of
+low-hanging dark cloud.  Underfoot, the snowdrifts are extremely deep,
+having accumulated in this narrow tunnel for years, perhaps eons.  A
+chill wind gusts down the narrow corridor, catching up loose snow and
+flinging it like tiny darts.
+~
+[Guin] Done.
+~
+167247872 18 9 0
+D1
+~
+~
+0 -1 6808 10 10 5
+D3
+~
+~
+0 -1 6810 10 10 5
+E
+ice- snow-frosted walls mountains north south~
+Ice and snow have accumulated in the clefts in the mountains' faces,
+frozen in place over countless years.  The faces now have a slick,
+grey-white appearance, which seems to radiate a gloomy chill.  Leaning
+claustrophobically towards each other, the north and south mountains seem
+to lurch drunkly upon their solid bases, almost precariously.
+~
+E
+snowdrifts deep tunnel~
+The sloping walls of the mountainside serve as an area for driving,
+drifting snow to get caught, and it has done so.  Thick, compacted
+snowdrifts line the edges of the path, and spill into the middle, making
+this section especially deep and difficult to move through.
+~
+A
+~
+~
+modify_move( ch, -10 );
+act_tochar( #trudge, ch );
+continue;
+~
+E
+trudge~
+@BYou find it slightly more difficult to plod through the thick snow.@n
+~
+!
+1 0 10
+-1
+S
+
+#6810
+Snowy Trail Between the Mountains~
+The mountain trail bends here, snow rising up especially high in the
+northwest corner.  Frosted over with snow and ice, the walls of stone all
+around seem to radiate a chillness, contained by the low-hanging clouds
+overhead.  The brilliant whiteness of the snow has been muted
+considerably by the shadow of the clouds, lacking the usual brightness of
+pure snow.
+~
+[Guin] Same question as 6804, re:blind code.
+[Guin] Reviewed.
+~
+167247880 18 9 0
+D1
+~
+~
+0 -1 6809 10 10 5
+D2
+~
+~
+0 -1 6811 10 10 5
+E
+walls stone ice~
+The trail runs along a narrow cut through the mountains, their faces
+nearly perpendicular to the ground.  Snow and ice have accumulated in its
+craggy, clefted face over the years, and have become permanently frozen
+in.  Now smooth in appearance and texture, the walls seem to hold and
+emit a dark chill.
+~
+E
+snow shadow clouds~
+The brilliantly white snow is muted and lustreless beneath the
+everpresent pall of the low-hanging clouds.  Their bloated,
+black-streaked bellies engulf the tops of the nearby mountains, hiding
+their peaks from sight.  The shadow extends across the entire snow plain,
+leaving it under a cloak of gloom.
+~
+A
+~
+~
+if( !is_night( ) )
+  if( random( 0, 19 ) == 0 ) {
+  ch = rand_player( room );
+  if( ch )
+    if( !is_mob( ch ) ) {
+    act_tochar( #blind, ch, obj, mob );
+    act_notchar( #isblind, ch, obj, mob );
+    do_spell( blind, mob, ch );
+  }
+}
+~
+E
+blind~
+@YThe sun momentarily breaks through the clouds, and the glare from the
+stark snow is blinding!@n 
+~
+E
+isblind~
+@YThe sun momentarily breaks through the clouds, glaring off the stark
+snow to blind $n!
+~
+!
+2 150 0
+A
+~
+~
+acode( find_room( 76037 ), 2 );
+~
+!
+1 0 10
+5382 9 1509949540 3 0
+-1
+S
+
+#6811
+Snowy Trail Between the Mountains~
+The trail comes to an end not too much further to the west at a stony
+cul-de-sac.  Sharp flakes of snow have been caught up in the chill breeze
+and swirl around in an eddying whirl of wind between the stone walls. 
+Dark, black-shot clouds hang low, an oppressive ceiling upon the mountain
+trail.  The remains of a campsite lie in the dead end to the west.
+~
+[Guin] Add real search fire here, charred stick (246)
+[Guin] Reviewed.
+~
+167247872 18 9 0
+D0
+~
+~
+0 -1 6810 10 10 5
+D3
+~
+~
+0 -1 6812 10 10 5
+E
+dark black-shot clouds~
+Swollen clouds hang low in the sky, their drab grey bellies shot through
+with nearly black streaks.  They cast a dark shadow over the snowy
+mountains and plains below, leaving it in perpetual gloom.
+~
+E
+remains campsite west~
+A piece of weathered, worn-through canvas serving as a roof and a pile of
+furs beneath are all that can be seen of what may well be an abandoned
+campsite in the cul-de-sac to the west.
+~
+A
+~
+~
+send_to_room( #wail, room );
+~
+E
+wail~
+@CA thin, sorrowful wail echoes around the narrow pass.@n
+~
+!
+2 150 0
+A
+~
+camp campsite remains ground~
+act_tochar( #nope, ch );
+act_notchar( #rnope, ch, obj, mob, sight );
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 2 ) == 1 )
+    obj = oload( 246 );
+}
+if( obj ) {
+  act_tochar( #stick, ch, obj, mob );
+  act_notchar( #rstick, ch, obj, mob, sight );
+  obj_to_char( obj, ch );
+}
+else {
+  act_tochar( #nothing, ch );
+  act_notchar( #rnothing, ch, obj, mob, sight );
+}
+~
+E
+nope~
+You start searching through the burnt of fire for anything interesting.
+~
+E
+rnope~
+$n starts searching through the burnt out fire for anything interesting.
+~
+E
+stick~
+You find $p which might have some use.
+~
+E
+rstick~
+$n finds $p which might have some use.
+~
+E
+nothing~
+You find nothing interesting in the pit.
+~
+E
+rnothing~
+$n finds nothing interesting in the pit.
+~
+!
+9 0 0
+-1
+S
+
+#6812
+A Ruined Encampment~
+An ancient piece of canvas has been pegged to the sides of the mountain
+in this cul-de-sac to create a roof of sorts.  The iron pegs holding it
+in place are quite rusty, and two have already fallen and are nowhere to
+be seen.  A slight impression just out from under the roof might have
+been a firepit at one point.  Furs and blankets are piled under the
+middle of the roof, just barely covered by a thin layer of snow.
+~
+[Guin] Done.
+~
+167247880 18 9 0
+D1
+~
+~
+0 -1 6811 10 10 5
+E
+ancient piece ocanvas pegs~
+This large piece of canvas may have been white at one point, but is now
+grey and weathered, with small holes dotting its surface.  Snow has been
+accumulating on its top for quite some time.  The large iron pegs holding
+it into the sides of the mountains have begun to rust though, their red
+surfaces flaky.
+~
+E
+furs blankets pile~
+Left by whomever may once have inhabited this campsite, thick woolen
+blankets and furs of all sorts are stacked in a haphazard pile under the
+middle of the canvas roof.
+~
+A
+search~
+furs blankets pile~
+// mob 5383 needs references changed to 5383
+if( mob_in_room( 5383, room ) ) {
+  act_tochar( #no, ch );
+  end;
+  }
+if( !rflag( reset0, room ) ) {
+  act_tochar( #blah, ch );
+  end;
+  }
+remove_rflag( reset0, room );
+act_tochar( #search, ch );
+act_notchar( #nsearch, ch );
+wait( 1 );
+act_room( #rise, ch );
+mload( 5383, room );
+~
+E
+search~
+You begin to rummage through the pile, but snatch your hand back as
+something within moves on its own!
+~
+E
+nsearch~
+$n rummages through the pile, but snatches $s hand back as something
+within the pile stirs on its own!
+~
+E
+rise~
+@BA ghost rises from the pile of furs!@n
+~
+E
+no~
+You can't get to the blankets; the spectre is in the way.
+~
+E
+blah~
+The blankets have been strewn this way and that, there is nothing to look at.
+~
+!
+9 0 0
+-1
+S
+
+#6813
+A Plain of Drifting Snow~
+The moutains to the north and east pull away from each other slightly,
+creating a trail wide enough for two to pass abreast.  However, there
+looks to have recently been a snowslide as a jumble of uneven snowblocks
+and chunks of ice block all passage.  A perpetual gloom seems to permeate
+the area, cast by the sprawling mass of dark cloud overhead.  The snowy
+plain spreads to the south and west, the surface smooth and blank.
+~
+[Guin] Same re:blind as in 6804
+[Guin] dig acode works more than once/repop
+[Guin] Needs already been dug code.
+[Guin] Reviewed
+~
+167247872 18 9 0
+D0
+~
+~
+227 -1 6815 10 10 5
+D2
+~
+~
+0 -1 6814 10 10 5
+D3
+~
+~
+0 -1 6806 10 10 5
+E
+snowslide jumble uneven snowblocks chunks ice~
+A large mound of fallen snow completely blocks off the path winding
+through the mountains to the north.  The force of the impact upon the
+ground has compacted the snowheap, making it a dense, heavy pile of
+irregular edges and rounded corners.  However, the trail doesn't look to
+be that long, so perhaps a bit of digging could clear the way.
+~
+E
+sprawling mass dark cloud~
+The dark, angry-seeming clouds hang low around the mountain peaks,
+completely blocking the sky.  They leave a dim shadow across the snowy
+plain below, casting it into perpetual gloom.
+~
+A
+~
+~
+if( !is_night( ) )
+if( random( 0, 19 ) == 0 ) {
+  ch = rand_player( room );
+  if( ch )
+    if( !is_mob( ch ) ) {
+    act_tochar( #blind, ch, obj, mob );
+    act_notchar( #isblind, ch, obj, mob );
+    do_spell( blind, mob, ch );
+  }
+}
+~
+E
+blind~
+@YThe sun momentarily breaks through the clouds, and the glare from the
+stark snow is blinding!@n 
+~
+E
+isblind~
+@YThe sun momentarily breaks through the clouds, glaring off the stark
+snow to blind $n!
+~
+!
+2 150 0
+A
+dig~
+1 north snow~
+if( !is_open( room, north ) ) {
+  act_tochar( #dig, ch, obj, mob );
+  act_notchar( #isdig, ch, obj, mob );
+  open( room, north );
+}
+else
+  act_tochar( #already, ch );
+~
+E
+dig~
+You dig through the pile of snow to the north, clearing a narrow passage
+between the mountains.
+~
+E
+isdig~
+$n digs through the pile of snow to the north, clearing a passage between
+the mountains.
+~
+E
+already~
+Why would you want to dig that clear, it already is.
+~
+!
+0 0 0
+-1
+S
+
+#6814
+A Plain of Drifting Snow~
+Two monolithic mountains form the corner of the expansive flat, snow
+riding up their joint in a steep drift.  The wind gusts harshly here,
+funneled by the bend of the mountains into a nasty vortex of whipping,
+stinging snow in the corner.  Small flakes of snow come free of the eddy
+from time to time, drifting softly to fall upon the wind-swept ground. 
+Ponderous dark clouds hang low over the plain, casting a grey pall,
+rendering the usually bright snow into a dull, muted pale grey.
+~
+[Guin] Acode does damage to mortals?
+[Guin] Reviewed.
+~
+167247872 18 9 0
+D0
+~
+~
+0 -1 6813 10 10 5
+D3
+~
+~
+0 -1 6807 10 10 5
+E
+monolithic mountains joint steep drift~
+The plain borders upon two mountains here, their bleak grey stones
+continuing both up and down from the plain.  Ice and snow coat their near
+sides, left there by the bitter wind.  Snow has ridden up the shallow
+cleft at their joint in a steep, frozen drift, blown and held in place by
+gusts long ago.
+~
+E
+nasty vortex whipping eddy~
+The corner of the two mountains acts as a sort of funnel, turning the
+wind back upon itself in a vicious swirl of tearing, biting wind.  It
+catches up sharp-edged flakes of snow and flings it around in tightening
+circles, stinging the exposed flesh of whomever might be foolish enough
+to walk into it.
+~
+E
+ponderous dark clouds~
+Still, dark clouds hang low in the sky, their grey and black masses
+enfolding the nearby mountain peaks and hiding their apexes from view. 
+They cast dim shadows on the land below, muting the bright white of the
+snow and making the mountains especially drab.
+~
+A
+~
+~
+send_to_room( #rise, room );
+loop( all_in_room ) 
+  if( !is_mob( rch ) ) 
+  damage( mob, rch, 5d5+10, cold, "the wind-whipped ice", "the bitter cold" );
+~
+E
+rise~
+@CA sudden gust of wind catches at the razor-edged snowflakes in the air
+and hurls them everywhere!@n 
+~
+!
+2 260 0
+4060 17 1509949540 -2 0
+-1
+S
+
+#6815
+A Plain of Drifting Snow~
+A large, snow-covered mountain rises up from the snow to the west,
+bounding the white plain which stretches in all other directions.  The
+snow, which normally would be bright and crystalline, is made lustreless
+and grey by the everpresent dominance of the low-hanging clouds which
+completely blanket the sky.  A few icy boulders rise from the snowy
+vastness to the northeast.  There appears to be a cave in the mountain to
+the far north, and the narrow gap directly to the south is blocked off by a
+jumble of fallen snow and ice.
+~
+[Guin] dig south, same as otherside dig.
+[Guin] Reviewed.
+~
+167247880 18 9 0
+D0
+~
+~
+0 -1 6819 10 10 5
+D1
+~
+~
+0 -1 6816 10 10 5
+D2
+~
+~
+227 -1 6813 10 10 5
+E
+cave~
+Off in the distance, a dark cave yawns from the face of the snow-covered
+mountain.  Whatever may be inside is blocked from view by the swirling
+snow.
+~
+E
+boulders~
+Rising out of the snow like miniature mountains, these boulders tower
+above the snowy plain.
+~
+A
+dig~
+1 south snow~
+if( !is_open( room, south ) ) {
+  act_tochar( #dig, ch, obj, mob );
+  act_notchar( #isdig, ch, obj, mob );
+  open( room, south );
+}
+else
+  act_tochar( #already, ch );
+~
+E
+dig~
+You dig through the pile of snow to the south, clearing a narrow passage
+between the moutains.
+~
+E
+isdig~
+$n digs through the pile of snow to the south, clearing a narrow passage
+between the mountains.
+~
+E
+already~
+The snow has already been cleared away, why would you want to try again.
+~
+!
+0 0 0
+5386 9 1509949540 3 0
+-1
+S
+
+#6816
+A Plain of Drifting Snow~
+The vast, snowy plain stretches widely across the basin, piled up against
+the sides of the mountains.  Dark blue-purple striations ripple through
+the near stone face, the ice crystallized overtop giving it an almost
+ethereal appearance.  Rising out of the snow to the near north is a pair
+of massive boulders, looking as though they were torn from the depths of
+the earth.
+~
+[Guin] Done.
+~
+167247872 18 9 0
+D0
+~
+~
+0 -1 6821 10 10 5
+D1
+~
+~
+0 -1 6817 10 10 5
+D3
+~
+~
+0 -1 6815 10 10 5
+E
+boulder north pair massive~
+Like miniature mountains, these rocks sit in the middle of the basin. 
+Snow has accumulated around their bases, but has done little to diminish
+their overpoweringly huge height.  Their faces are roughly faceted and
+are quite jagged, coated with ice and dusted with snow.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+You wade northwards through the snow, moving around the two massive
+boulders.
+~
+E
+not_char~
+$n wades northwards through the snow, moving around the massive boulders.
+~
+!
+3 0 1
+A
+climb scale~
+pair massive boulders rocks stone north~
+act_tochar( #start, ch );
+act_notchar( #nstart, ch );
+wait( 1 );
+act_tochar( #slip, ch );
+act_notchar( #nslip, ch );
+i = 2d10+35;
+dam_message( ch, i, "the fall" );
+inflict( ch, mob, i, "falling off an icy rock" );
+~
+E
+start~
+@WYou put your hands upon the snowy boulders, touch your toe against the
+side and begin your attempt at climbing the rock...@n
+~
+E
+nstart~
+@W$n puts $s hands upon the snowy boulders, touches $s toe against the
+side and begins $s attempt at climbing the rock...  @n 
+~
+E
+slip~
+@WAs you put your second foot upon the rock, you slip on its icy surface
+and fall hard, hitting your head against the rock!@n
+~
+E
+nslip~
+As $n puts $s second foot upon the rock, $e slips on its icy surface and
+falls hard, hitting $s head against the rock!@n
+~
+!
+0 0 0
+5381 9 1509949540 3 0
+-1
+S
+
+#6817
+A Plain of Drifting Snow~
+The snowy plain stretches unfettered in all directions, nestled
+comfortably in the basin between snow-frosted peaks.  The purple-shot
+sides of the monolithic stone mountains begin to encroach to the
+northeast and southwest, but barely begin to form anything resembling a
+bottleneck.  Loose snow skitters across the surface of the vast
+snowfield, caught up by and borne upon the frosty, penetrating wind.
+~
+[Guin] Same question as 6804
+[Guin] Reviewed.
+~
+167247872 18 9 0
+D0
+~
+~
+0 -1 6822 10 10 5
+D1
+~
+~
+0 -1 6818 10 10 5
+D2
+~
+~
+0 -1 6823 10 10 5
+D3
+~
+~
+0 -1 6816 10 10 5
+E
+snow-frosted peaks purple-shot monolithic mountains stone~
+Off in the distance, large stone mountains rise up like dark giants.  The
+swirling snow hanging in the air gives them a purplish tint, and their
+tops are lost to sight behind the heavy, low-hanging clouds.
+~
+A
+~
+~
+if( !is_night( ) )
+  if( random( 0, 19 ) == 0 ) {
+  ch = rand_player( room );
+  if( ch )
+    if( !is_mob( ch ) ) {
+    act_tochar( #blind, ch, obj, mob );
+    act_notchar( #isblind, ch, obj, mob );
+    do_spell( blind, mob, ch );
+  }
+}
+~
+E
+blind~
+@YThe sun momentarily breaks through the clouds, and the glare from the
+stark snow is blinding!@n 
+~
+E
+isblind~
+@YThe sun momentarily breaks through the clouds, glaring off the stark
+snow to blind $n!
+~
+!
+2 150 0
+A
+~
+~
+send_to_room( #snow, room );
+~
+E
+snow~
+@bThe wind picks up loose snow from the ground and flings it
+every-which-way.@n 
+~
+!
+2 150 0
+5379 9 1509949540 3 0
+-1
+S
+
+#6818
+A Plain of Drifting Snow~
+The wind howls by, almost a shriek, bearing stinging flakes of snow which
+it tosses this way and that with impunity.  Snow has been tossed into
+cracks in the rough mountain surface encroaching to the north and east,
+and has been crusted over with dense ice.  The snow underfoot drifts as
+the wind catches at it, a perpetually moving landscape.  Bloated purple
+clouds hang low in the sky, casting a gloomy shadow on the basin below.
+~
+[Guin] Done.
+~
+167247872 18 9 0
+D2
+~
+~
+0 -1 6824 10 10 5
+D3
+~
+~
+0 -1 6817 10 10 5
+E
+ice cracks~
+Ice has built up over time to create incredibly dense, dark ice filling
+the deep clefts in the mountains' faces.  It glistens dimly in the muted
+light.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CYou walk $d across the white plain, snow crunching underfoot.@n
+~
+E
+to_room~
+@C$n walks $d across the white plain, the snow crunching under $s feet.@n
+
+~
+!
+3 0 12
+-1
+S
+
+#6819
+A Plain of Drifting Snow~
+Wide striations of purple line the mountains' sides to the west and
+north, nearly hidden beneath the snow and ice encrusted upon the rock. 
+Over time, the elements have worn away at the rock face to the north,
+etching a shallow cave into its side.  Sprawling out to the south and
+east, the pristine white of the snow is made dull and lustreless by the
+everpresent gloom cast by the heavy, swollen clouds hanging low overhead.
+~
+~
+167247872 18 9 0
+D0
+~
+~
+0 -1 6820 10 10 5
+D1
+~
+~
+0 -1 6821 10 10 5
+D2
+~
+~
+0 -1 6815 10 10 5
+E
+cave 1 north~
+A cave large enough to provide shelter has been carved out of the rock
+face to the north.  Although carpeted in snow, it looks as though it may
+provide respite from the howling wind.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou duck your head as you enter the cave to the north.@n
+~
+E
+to_room~
+@c$n ducks $s head as $e enters the cave to the north.@n
+~
+!
+3 0 1
+-1
+S
+
+#6820
+Shallow Cave Inside a Mountain~
+This shallow cave has been eroded from the mountainside over a course of
+millenia.  The walls, while still slightly rough, have been worn down
+over the years by animal bodies rubbing against them on their way by. 
+Densely packed snow forms the floor of this cave; melted and frozen over
+and over by the heat of whatever creature makes its nest here.  Bits of
+bone and flesh sit upon the pristine snow, staining it with small circles
+of red.
+~
+[Guin] Done.
+~
+167247884 18 6 0
+D2
+~
+~
+0 -1 6819 10 10 5
+E
+walls~
+The faintly purple stone of the walls has been worn smooth over time, by
+erosion and friction.  Several small irregularities mar the surface, but
+apart from those it is quite even.  A thin layer of ice clings to the
+stone, glistening softly.
+~
+E
+bits bone flesh stains circles red floor snow~
+Resting atop the snow, as though recently fallen, are several splinters
+of yellowing bone and bloodless flesh.  Spattered about the low pile are
+several tiny red circles, presumably blood.  All in all, it is a rather
+gruesome sight indeed.
+~
+A
+search examine~
+bits bone flesh circles~
+act_tochar( #nyet, ch );
+act_notchar( #nyah, ch );
+~
+E
+nyet~
+@rYou examine the remains on the snowy floor but find nothing out of the
+ordinary.@n 
+~
+E
+nyah~
+@r$n examines the animal remains on the snowy floor, but finds nothing
+out of the ordinary.@n 
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou leave the cave and are immediately assaulted by the chilling wind.@n
+~
+E
+to_room~
+@c$n leaves the relative comfort of the cave for the chill of the
+mountain plain.@n 
+~
+!
+3 0 4
+5381 9 1509949540 3 0
+-1
+S
+
+#6821
+A Plain of Drifting Snow~
+The sound of the wind echos hollowly against the purple and indigo
+mountainsides; the clefts in the craggy stone create perfect acoustic
+amplification.  It whirls around the snowy plain, catching up loose snow
+and blowing it harshly across the rippled, sculpted surface of the field. 
+Two gigantic stones sit just to the south, rough and harshly faceted.
+~
+[Guin] Done.
+~
+167247872 18 9 0
+D1
+~
+~
+0 -1 6822 10 10 5
+D2
+~
+~
+0 -1 6816 10 10 5
+D3
+~
+~
+0 -1 6819 10 10 5
+E
+gigantic stones south~
+Almost like miniature mountains, the pair of craggy, purple-striated
+rocks sit in the middle of the basin.  Snow has accumulated around their
+bases, yet has done nothing to diminish their towering height.  Their
+surfaces are roughly faceted, as though they hit something -- hard --
+causing a rounded edge to fall off, leaving a flattened face.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+You trudge southwards, widely skirting the massive boulders.
+~
+E
+not_char~
+$n trudges southwards, widely skirting the massive boulders.
+~
+!
+3 0 4
+A
+climb scale~
+rock boulder gigantic stone south~
+act_tochar( #start, ch );
+act_notchar( #nstart, ch );
+wait( 1 );
+act_tochar( #slip, ch );
+act_notchar( #nslip, ch );
+i = 2d10+35;
+dam_message( ch, i, "the fall" );
+inflict( ch, mob, i, "falling off an icy rock" );
+~
+E
+start~
+@WYou put your hands upon the snowy boulders, touch your toe against the
+side and begin your attempt at climbing the rock...@n
+~
+E
+nstart~
+@W$n puts $s hands upon the snowy boulders, touches $s toe against the
+side and begins $s attempt at climbing the rock... @n
+~
+E
+slip~
+@WAs you put your second foot upon the rock, you slip on its icy surface
+and fall hard, hitting your head against the rock!@n 
+~
+E
+nslip~
+As $n puts $s second foot upon the rock, $e slips on its icy surface and
+falls hard, hitting $s head against the rock!@n 
+~
+!
+0 0 0
+-1
+S
+
+#6822
+A Plain of Drifting Snow~
+The wind howls as it whips around the corner formed by towering
+purple-grey mountain rock.  The sheer force of the gale has whipped most
+of the snow off the stone face, leaving only the snow lodged deeply in
+the fissures.  Ice clings to the cracks and irregularities of the
+surface, glistening palely.  Ages of wind have worn the corner into a
+more circular form, testament to its ferocity.  The angry, swollen clouds
+overhead cast a perpetual pall of gloom on the barren landscape beneath.
+~
+[Guin] Done.
+~
+167247872 18 9 0
+D2
+~
+~
+0 -1 6817 10 10 5
+D3
+~
+~
+0 -1 6821 10 10 5
+E
+towering purple-grey mountain rock face fissures~
+The ancient stone of the nearby mountains has a purple tinge to it, lent
+by the shadows cast by the low clouds overhead.  Worn away over countless
+centuries, the face is covered in cracks and clefts to which ice and snow
+cling closely.  The snow has compacted into sharp-edged crystalline
+designs.
+~
+A
+~
+~
+send_to_room( #blah, room );
+~
+E
+blah~
+@WThe wind howls savagely, flinging snow against the nearby mountains.@n
+~
+!
+2 200 0
+-1
+S
+
+#6823
+A Plain of Drifting Snow~
+The stark snow field sprawls in the mountain basin, borne upon the wind
+as stinging flakes and piling up in cracks and crevices.  A large, white
+dune has accumulated in the corner.  Long-frozen ice clings to the
+fissured side of the purple-striated mountains, looking more like an
+oozing growth than anything else.  A dark pall hangs over the plain, and
+doesn't seem to let up anywhere in sight.
+~
+[Guin] Done.
+~
+167247872 18 9 0
+D0
+~
+~
+0 -1 6817 10 10 5
+D1
+~
+~
+0 -1 6824 10 10 5
+E
+dune~
+The wind has whipped loose snow into the corner formed by the mountains,
+creating a tall dune of stark snow.  Flakes constantly drift across its
+surface, driven by the gusting wind.
+~
+A
+search~
+dune drift bank~
+act_tochar( #loser, ch );
+act_notchar( #pointnlaugh, ch );
+~
+E
+loser~
+@WA search of the snow dune reveals nothing out of the ordinary.@n
+~
+E
+pointnlaugh~
+@W$n examines the snow dune but finds nothing out of the ordinary.@n
+
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CYou leave $d across the snowy plain, carefully avoiding the icy
+patches.@n 
+~
+E
+to_room~
+@C$n leaves $d across the snowy plain, carefully avoiding the icy
+patches.@n 
+~
+!
+3 0 3
+5382 9 1509949540 3 0
+-1
+S
+
+#6824
+A Plain of Drifting Snow~
+The striated mountain face presses in menacingly, the ice-covered rock
+seeming to almost be falling towards the plain.  This leaning effect
+seems to have been caused by the howling wind eroding away the bottom of
+the face.  Starkly white snow has collected in this hollowed niche, and
+it glints sullenly in the dim light.  The low-hanging clouds cast a dark
+pall upon the frigid lands below, and the light seems to be tinted softly
+blue.
+~
+[Guin] rm6824 - What's the % on the search here?
+[Guin] will change pop most likely
+[Guin] Reviewed.
+~
+167247872 18 9 0
+D0
+~
+~
+0 -1 6818 10 10 5
+D3
+~
+~
+0 -1 6823 10 10 5
+E
+ice-covered rock face~
+Dark ice clings to the craggy face of the mountain, covered with a light
+dust of snow.  The face leans in oppressively, casting a dark shadow on
+the thick snow beneath.
+~
+E
+hollow~
+A slanting hollow has been carved out of the mountainside by the
+incessant whipping of the wind.  The rock is relatively smooth from the
+constant abrasion, and is coated with a thin layer of ice and snow.
+~
+A
+search~
+niche hollow~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 0, 10 ) < 3 ) {
+    act_tochar( #one, ch );
+    act_notchar( #two, ch );
+    obj_to_char( oload( 2253 ), ch );
+    end;
+    }
+  else {
+    act_tochar( #three, ch );
+    act_notchar( #four, ch );
+    }
+  }
+else { act_tochar( #three,ch );
+  act_notchar( #four, ch );
+  }
+~
+E
+one~
+@CSeveral moments and two cold hands later, you discover something in the snow!@n
+~
+E
+two~
+@C$n finds something in the snow!@n
+~
+E
+three~
+@cYou search through the snow, getting nothing but cold hands.@n
+~
+E
+four~
+@c$n searches through the snow but doesn't appear to find anything.@n
+~
+!
+9 0 0
+-1
+S
+
+#6825
+Snowy Trail Between the Mountains~
+A narrow cleft in the mountain provides a pathway between two snowy
+fields.  The walls press in opressively, their fissured surfaces covered
+in dark ice and large-flaked snow.  The path itself is filled quite
+deeply with snow, which drifts as the wind catches it up and carries it
+along.  The low-hanging clouds form a ceiling of sorts over this narrow
+pass, seeming almost close enough to touch.
+~
+[Guin] Done.
+~
+167247872 18 9 0
+D0
+~
+~
+0 -1 6826 10 10 5
+D2
+~
+~
+0 -1 6808 10 10 5
+E
+walls cleft fissured surfaces~
+A narrow passage, looking to be nothing more than an ancient crack in the
+mountain stone, provides passage from one side of the stone monoliths to
+the other.  The stone's surface is cracked, pitted and caked with ice,
+and they lean in extremely closely.
+~
+E
+snowy fields north south~
+The short fissure in the mountain provides passage between the vast snowy
+fields to the north and south.  A howling wind echoes around the northern
+opening of this passage, and the occasional gust of snow bursts angrily
+into the stony hall.  The field to the south is much calmer; both fields
+are thickly blankted in pristine snow.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+You slog $dward through the snow.
+~
+E
+not_char~
+$n slogs $dward through the snow.
+~
+!
+3 0 5
+A
+~
+~
+send_to_room( #snow, room );
+~
+E
+snow~
+@WA few flakes of snow land on your hand, dislodged from the mountainside
+above by the wind.@n 
+~
+!
+2 200 0
+-1
+S
+
+#6826
+A Barren, Snowy Plain~
+The narrow pass to the south opens into this wide field of stark white. 
+The wind howls ferociously, carrying stinging flakes of snow upon its
+fury.  The mountains are almost entirely hidden behind a snowy covering,
+blasted into their faces by the gale.  The deep snow extends to the north
+and west, the basin looking wholly inhospitable.
+~
+[Guin] Done.
+~
+167247936 18 9 0
+D0
+~
+~
+0 -1 6831 10 10 5
+D2
+~
+~
+0 -1 6825 10 10 5
+D3
+~
+~
+0 -1 6827 10 10 5
+E
+field wide snow north west~
+A plain of deeply piled snow lies nestled between the towering stone
+monoliths of the mountains, continually lashed and assaulted by a
+furiously raging storm.
+~
+A
+~
+~
+send_to_room( #wind, room );
+~
+E
+wind~
+@bThe wind howls ferociously, echoing around the basin.@n
+~
+!
+2 250 0
+-1
+S
+
+#6827
+A Barren, Snowy Plain~
+A howling wind hurls stinging snow every which way, screaming furiously. 
+Visibility is minimal at best; the snow fills the air to the point of
+being opaque.  The mountains bordering the basin are just vague dark
+shapes behind the swirling wall of snow, barely discernible despite their
+sheer size.  The snow has accumulated deeply on the ground; the wind
+whips the surface into a swirling mess of white.
+~
+[Guin] Done.
+~
+167247936 18 9 0
+D0
+~
+~
+0 -1 6830 10 10 5
+D1
+~
+~
+0 -1 6826 10 10 5
+D3
+~
+~
+0 -1 6828 10 10 5
+E
+ground snow surface swirling mess~
+The deep blanket of snow on the basin floor is constantly assaulted by
+the wind; its surface is even now being harassed.  The loose snow atop
+the dense buildup is flung everywhere by the chill wind, even back into
+the air.
+~
+A
+~
+~
+send_to_room( #storm, room );
+loop( all_in_room )
+  if( !is_mob( rch ) )
+  damage( mob, rch, 7d4+11, cold, "the stinging snow", "the freezing cold" );
+~
+E
+storm~
+@CThe howling storm hurls stinging snow at you!@n
+~
+!
+2 150 0
+5381 9 1509949540 3 0
+-1
+S
+
+#6828
+A Barren, Snowy Plain~
+The whirling snow fills the air, whipped about by the wind and making it
+nearly impossible to see more than a few feet in any direction.  The gale
+catches at the loose snow atop the ground, whisking it along the surface
+whichever way it blows.  Pale mountains loom, barely visible through the
+snow, to the south and west, vaguely purple.
+~
+[Guin] Done.
+~
+167247936 18 9 0
+D0
+~
+~
+0 -1 6829 10 10 5
+D1
+~
+~
+0 -1 6827 10 10 5
+E
+pale mountains south west purple~
+The towering stone giants of the nearby mountains are barely visible for
+the driving snow.  They have been reduced to mere hazy purple outlines
+and nothing more.  Nevertheless, they cradle the storm's fury impassively.
+~
+A
+~
+~
+send_to_room( #storm, room );
+loop( all_in_room )
+  if( rch )
+  if( !is_mob( rch ) )
+  damage( mob, rch, 7d4+11, cold, "the stinging snow", "the freezing cold" );
+~
+E
+storm~
+@CA sudden gust of wind throws stinging snowflakes in your face!@n
+~
+!
+2 150 0
+5379 9 1509949540 3 0
+-1
+S
+
+#6829
+A Barren, Snowy Plain~
+Stinging bits of crystalline snow are hurled this way and that by the
+shrieking wind, which chills deeply as it gusts by.  The wind whips
+around in swirling eddies, catching at anything and everything in its
+path.  The mountains are barely visible through the blinding snow, pale
+purple giants cradling the fury of the storm in a stony basin.
+~
+[Guin] Done.
+~
+167247936 18 9 0
+D1
+~
+~
+0 -1 6830 10 10 5
+D2
+~
+~
+0 -1 6828 10 10 5
+E
+mountains basin pale purple giants~
+The towering behemoths of the mountains are barely visible past the
+blinding swirl of snow.  All that can be seen is their faint purple
+outlines, cradling the storm in stony arms.
+~
+A
+~
+~
+send_to_room( #blah, room );
+~
+E
+blah~
+@WThe howling wind chills you to the bone!@n
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CYou fight the forceful wind as you leave $d.@n
+~
+E
+to_room~
+@C$n fights the forceful wind as $e leaves $d.@n
+~
+!
+3 0 6
+-1
+S
+
+#6830
+A Barren, Snowy Plain~
+The snow swirls madly, blinding in its density.  The wind howls like a
+tortured animal, shrieking some primeval agony.  It flings the snowflakes
+about in a blind fury, stinging and chilling all within reach of its icy
+fingers.  Faint outlines of the mountains to the north are just visible
+through the storm; the purple behemoths tower menacingly over the basin
+below.
+~
+[Guin] Done.
+~
+167247936 18 9 0
+D1
+~
+~
+0 -1 6831 10 10 5
+D2
+~
+~
+0 -1 6827 10 10 5
+D3
+~
+~
+0 -1 6829 10 10 5
+E
+snow mountains basin~
+Barely discernable through the ferocious snowstorm are the purple
+outlines of massive stone mountains.  They cradle the storm-swept snowy
+basin in their stony midst, keeping the howling fury well contained.
+~
+A
+~
+~
+send_to_room( #stir, room );
+loop( all_in_room ) {
+  i = 5d5+10;
+  dam_message_cold( rch, i, "freezing cold" );
+  inflict_cold( rch, mob, i, "stinging flakes of snow" );
+  }
+~
+E
+stir~
+@CA sudden gust of wind stirs up the snow, hurling it everywhere!@n
+~
+!
+2 0 0
+5386 9 1509949540 3 0
+-1
+S
+
+#6831
+A Barren, Snowy Plain~
+The wind shrieks as it gusts furiously about the plain, whipping snow
+into swirling eddies in mid-air.  The tiny flakes sting everything they
+are hurled against.  The swirling of the snow fills the air with white,
+making it impossible to see very far in any direction.  The faint
+outlines of the mountains looming to the north and east are barely
+visible through the storm.
+~
+[Guin] Done.
+~
+167247936 18 9 0
+D2
+~
+~
+0 -1 6826 10 10 5
+D3
+~
+~
+0 -1 6830 10 10 5
+E
+snow air~
+The howling wind brought by the storm catches at all the falling flakes
+of snow, whipping them everywhere in its fury.  The air is thick with
+white; it is very difficult to see very far.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CYou head $dward, fighting the howling wind and driving snow.@n
+~
+E
+to_room~
+@C$n heads $d, fighting the howling wind and driving snow.@n
+~
+!
+3 0 12
+5381 9 1509949540 3 0
+-1
+S
+
+#6832
+A Snowy Mountain Trail in the Everwinter Mountains~
+The trail becomes increasingly covered in snow as it winds its way up the
+mountainside.  The craggy stone faces enclosing the path are deeply
+pitted by the elements, and ice has frozen into some of the deeper clefts
+in their surfaces.  The low rumble of thunder can be heard in the
+distance.
+~
+[Eliza] Add leaving for up and otherside down.
+[Eliza] Might add a couple of snow rabbits or a mountain goat in these beginning rooms.
+[Eliza] could add search cleft for ice crystals.
+[Eliza] Reviewed.
+[Mad Murdo] Reviewed
+~
+167247872 18 8 0
+D2
+~
+~
+0 -1 6833 10 10 5
+D4
+~
+~
+0 -1 6800 10 10 5
+E
+clefts crag~
+Not even the driving snow and ever-present ice can hide the scars that
+riddle the jagged mountain face.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@WYou slowly make your way up the icy incline.@n
+~
+E
+to_room~
+@W$n slowly makes $s way up the icy incline.@n
+~
+!
+3 0 16
+205 9 1509949540 3 0
+1121 9 1509949540 3 0
+1121 9 1509949540 3 0
+-1
+S
+
+#6833
+A Snowy Mountain Trail in the Everwinter Mountains~
+The fierce wind hurls bits of stinging snow every which way, its chilling
+fingers freezing bone-deep.  Snow has begun to pile quite thickly upon
+the path, making it harder to traverse.  The nearby mountains have been
+heavily eroded by the fierce elements and are caked with ice and dense
+snow.
+~
+[Mad Murdo] Reviewed, added ice crystals.
+[Guin] done
+~
+167247880 18 8 0
+D0
+~
+~
+0 -1 6832 10 10 5
+D5
+~
+~
+0 -1 5919 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CYou pick a path down the icy slope carefully.@n
+~
+E
+to_room~
+@C$n picks a path down the icy slope carefully.@n
+~
+!
+3 0 32
+1602 17 1509949500 -2 0
+-1
+S
+
+#0
+

@@ -1,0 +1,591 @@
+#M2_AREA
+2
+
+K'sarik Swamp~
+Azerin~
+~
+~
+~
+
+0 0
+3
+1
+#ROOMS
+
+#7800
+Nothing~
+~
+[Guin] Will go northwest of mountains aways.. lead to liz city p'rhaps.
+~
+33030144 0 9 0
+D1
+~
+~
+0 -1 7801 10 10 5
+-1
+S
+
+#7801
+Before an Overgrown Bridge~
+Rising out of the fetted jungle vegitation is a slender, single span
+bridge.  It crosses the meandering muddy river to the esat and ends upon
+a jungle-filled island.  Covering most of the stones is a lush layer of
+stringy moss, the pale strands dripping with water.  Barely visible
+through the greenery, the stones of the brige appear to be covered in
+whorles of carvings and beastial faces.  The constant buzzy of swarming
+insects fills the air as damsel flys and midges dance in the damp air
+above the churning river.
+~
+~
+33030144 0 9 0
+D1
+~
+~
+0 -1 7802 10 10 5
+D3
+~
+~
+0 -1 7800 10 10 5
+-1
+S
+
+#7802
+Upon The Overgrown Bridge~
+Sturdy despite its years, the stone bridge crosses a narrow tributary of
+the muddy river and arives to the east upon a jungle-crested isle. 
+Westwards the bridge aligts upon the marshy ground of a misty swam. 
+Eddies and swirls slowly carve through the waters below, as unseen
+creatures swim against the gentle flow.  Rising from the estern island
+are the scattered remanants of buildings, their surfaces so coated with
+moss that they almost dissapear into the surrounding vegitation.
+~
+~
+33030144 0 9 0
+D1
+~
+~
+0 -1 7803 10 10 5
+D3
+~
+~
+0 -1 7801 10 10 5
+-1
+S
+
+#7803
+Before an Overgrown Bridge~
+Rising from the island is a single-span stone bridge.  Its surface is
+covered in a lush growth of moss, the scraggy plants soaked with water, a
+few trickling runs dripping into the rivers below.  Miniture waves wash
+against the muddy bank of the isle, stiring the reeds and watercress that
+thrive at its edge.  A stone pillar rises beside the bridge, marking the
+beginning of an ancient cobbled road that heads northwards allong the
+banks edge.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 7804 10 10 5
+D3
+~
+~
+0 -1 7802 10 10 5
+-1
+S
+
+#7804
+Upon the Island - Ancient Roadway~
+An uneven road cuts through the mud-caked bank of the island, rising to
+the north and then jagging sharply to the east before dissapearing from
+view.  Southwards the rivers soggy bank is breached by a stone bridge,
+the single span reaching to the western rivers edge.  Overhead brightly
+colored foliage intergrow between the tangled trunks of slender trees,
+forming an intricate wall of growth.  Burbling merrily northwards runs
+the jungle river, its swirling waters sending tiny waves against the
+reed-covered shore.
+~
+[Azerin] lizzie township
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 7805 10 10 5
+D2
+~
+~
+0 -1 7803 10 10 5
+2152 17 1509949540 -2 0
+-1
+S
+
+#7805
+Upon the Island - Ancient Roadway~
+Under Construction.
+~
+~
+33030144 0 9 0
+D1
+~
+~
+0 -1 7806 10 10 5
+D2
+~
+~
+0 -1 7804 10 10 5
+-1
+S
+
+#7806
+Upon the Island - Ancient Roadway~
+Under Construction.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 7807 10 10 5
+D1
+~
+~
+0 -1 7809 10 10 5
+D2
+~
+~
+0 -1 7808 10 10 5
+D3
+~
+~
+0 -1 7805 10 10 5
+-1
+S
+
+#7807
+A Cluttered Stone Room~
+Under Construction.
+~
+[Azerin] general store
+~
+33030144 0 9 0
+D2
+~
+~
+0 -1 7806 10 10 5
+-1
+S
+
+#7808
+Overgrown Waterlogged Chamber~
+Under Construction.
+~
+[Azerin] sleeping room
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 7806 10 10 5
+-1
+S
+
+#7809
+Upon the Island - Ancient Roadway~
+Under Construction.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 7810 10 10 5
+D1
+~
+~
+0 -1 7812 10 10 5
+D2
+~
+~
+0 -1 7811 10 10 5
+D3
+~
+~
+0 -1 7806 10 10 5
+-1
+S
+
+#7810
+Upon the Island - Ancient Roadway~
+Under Construction.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 7817 10 10 5
+D2
+~
+~
+0 -1 7809 10 10 5
+-1
+S
+
+#7811
+Upon the Island - Ancient Roadway~
+Under Construction.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 7809 10 10 5
+D2
+~
+~
+0 -1 7813 10 10 5
+-1
+S
+
+#7812
+Upon the Island - Ancient Roadway~
+Under Construction.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 7821 10 10 5
+D1
+~
+~
+0 -1 7822 10 10 5
+D3
+~
+~
+0 -1 7809 10 10 5
+-1
+S
+
+#7813
+Upon the Island - Ancient Roadway~
+Under Construction.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 7811 10 10 5
+D1
+~
+~
+0 -1 7816 10 10 5
+D2
+~
+~
+0 -1 7814 10 10 5
+D3
+~
+~
+0 -1 7815 10 10 5
+-1
+S
+
+#7814
+Upon the Island - Ancient Roadway~
+Under Construction.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 7813 10 10 5
+-1
+S
+
+#7815
+Upon the Island - Ancient Roadway~
+Under Construction.
+~
+~
+33030144 0 9 0
+D1
+~
+~
+0 -1 7813 10 10 5
+-1
+S
+
+#7816
+Upon the Island - Ancient Roadway~
+Under Construction.
+~
+~
+33030144 0 9 0
+D3
+~
+~
+0 -1 7813 10 10 5
+-1
+S
+
+#7817
+Upon the Island - Ancient Roadway~
+Under Construction.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 7818 10 10 5
+D1
+~
+~
+0 -1 7820 10 10 5
+D2
+~
+~
+0 -1 7810 10 10 5
+D3
+~
+~
+0 -1 7819 10 10 5
+-1
+S
+
+#7818
+Upon the Island - Ancient Roadway~
+Under Construction.
+~
+~
+33030144 0 9 0
+D2
+~
+~
+0 -1 7817 10 10 5
+-1
+S
+
+#7819
+Upon the Island - Ancient Roadway~
+Under Construction.
+~
+~
+33030144 0 9 0
+D1
+~
+~
+0 -1 7817 10 10 5
+-1
+S
+
+#7820
+Upon the Island - Ancient Roadway~
+Under Construction.
+~
+~
+33030144 0 9 0
+D3
+~
+~
+0 -1 7817 10 10 5
+-1
+S
+
+#7821
+Upon the Island - Ancient Roadway~
+Under Construction.
+~
+~
+33030144 0 9 0
+D1
+~
+~
+0 -1 7823 10 10 5
+D2
+~
+~
+0 -1 7812 10 10 5
+-1
+S
+
+#7822
+Upon the Island - Ancient Roadway~
+The Dense foliage and crumbling walls rise to form a tunnel around the
+road, plunging it into a twilight gloom.  The cobbles of the road have
+been pushed aside by the tangling roots of trees, making the road
+undulate like ocean waves.  Eastwards the ruins end at the waters edge
+where a reed-covered warf juts into the murky river.  Towards the west
+the shadowy tunnel continues, an opening in the northern wall allowing
+passage in that direction.  Barely visible through the entanglment of
+vines and creepers are wooden planks, that form a walkway of sorts
+overhead.
+~
+~
+33030144 0 9 0
+D1
+~
+~
+0 -1 7828 10 10 5
+D3
+~
+~
+0 -1 7812 10 10 5
+-1
+S
+
+#7823
+Upon the Island - Ancient Roadway~
+Under Construction.
+~
+[Azerin] junk collecter east
+[Azerin] ladder to walkway
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 7824 10 10 5
+D1
+~
+~
+0 -1 7827 10 10 5
+D3
+~
+~
+0 -1 7821 10 10 5
+-1
+S
+
+#7824
+Upon the Island - Ancient Roadway~
+Under Construction.
+~
+[Azerin] armour east
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 7825 10 10 5
+D1
+~
+~
+0 -1 7826 10 10 5
+D2
+~
+~
+0 -1 7823 10 10 5
+-1
+S
+
+#7825
+Upon the Island - Ancient Roadway~
+Under Construction.
+~
+[Azerin] gem store
+~
+33030144 0 9 0
+D2
+~
+~
+0 -1 7824 10 10 5
+-1
+S
+
+#7826
+Room of Dancing Fires~
+Several shallow firepits have been filled with charcole, a soft
+blue-green flame dancing across their surface.  The flicking fires send
+patterns of light across the carved stone walls, deeping the shadows and
+making the whorles of pattern hard to look at.  Ironwood shafts lie
+stacked agains the eastern wall, each bundle wrapped in flax cord.  A
+squat cauldron bubbles with a tar-like resin upon the center fire pit. 
+Streched across the west wall are the hides of various beasts several
+appearing to be from a large black cat.  Various bronze and bone tools
+lie around the fireplaces, each one gleaming in the light.
+~
+[Azerin] armour
+~
+33030144 0 9 0
+D3
+~
+~
+0 -1 7824 10 10 5
+-1
+S
+
+#7827
+A Jumbled Shop~
+Mounds of flax lie in tied bundles upon the floor, almost filling all
+avalible walking space.  The Stones of the ruin have been scrubbed clear,
+allowing the subtile hues of apricot and gold to show.  Across much of
+the stone work are swirling carvings, each line connecting to central
+reliefs of tigers, dragons and other jungle beasts.  Fishing nets dangle
+from the roof, their knotted mesh stinking of river water and fish. 
+Baskets of woven flax hang from pegs set in the east wall, a few shells
+and metalic objects poking over their top.  A hole in the eastern wall
+allows glimps of the mirky river as it flows gently northwards.  a hemp
+cord has been tied around a wooden spike beside the hole, a sturdy net
+attached to one end.  Westwards a woven flax curtain has been tied back
+from the doorway allowing for ease of passage.
+~
+[Azerin] junk collector
+~
+33030144 0 9 0
+D3
+~
+~
+0 -1 7823 10 10 5
+-1
+S
+
+#7828
+Upon the Island - Ancient Roadway~
+Meandering through the verdant growth of the jungle and the crumbling
+walls of the ruins is a narrow cobbled road, its pockmarked surface worn
+by passing time and the prying roots of forest trees.  Further to the
+west the canopy of trees intwine together to form a tunnel of vegiation. 
+A stout wall of moss-coated stone rus to the south, vines and creepers
+spreading tendrels up across its base.
+~
+~
+33030144 0 9 0
+D1
+~
+~
+0 -1 7829 10 10 5
+D3
+~
+~
+0 -1 7822 10 10 5
+-1
+S
+
+#7829
+Docks Upon the Muddy River~
+Over-run with lush reeds the crumbling stones of the old dock are barely
+visible.  A woven tarp of flax has been spread across the rotting boards,
+ensuring the warf remains stable for a few more years.  Spreading
+eastwards is an tributary of a muddy river, the mirky waters lapping
+gentley against the shore.  Westwards a jungle-filled island spreads, a
+few stone buildings scattered through the dense foliage.
+~
+~
+33030144 0 9 0
+D3
+~
+~
+0 -1 7828 10 10 5
+-1
+S
+
+#0
+

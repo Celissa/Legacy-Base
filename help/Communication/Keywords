@@ -1,0 +1,29 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+keyword [list of words] : set your keywords (no commas)<br>
+<br>
+<h1> Description </h1>
+<br>
+This command is used to set the words which the player can be referenced<br>
+by.  They are only checked if the player is unrecognized and thus should<br>
+not include the player's name.  See help appearance for more detail.<br>
+Players should give themselves at least four or five keywords to avoid<br>
+confusion.  Keywords should include your race and everything in your<br>
+appearance, except prepositions and conjunctions.  Keywords should not be<br>
+separated by commas, just spaces.<br>
+<br>
+EXAMPLE<br>
+<br>
+Keyword slim elf hazel eyes<br>
+<br>
+That would set the keywords for an elf mage whose description and<br>
+appearance describe him or her as 'a slim elf with hazel eyes.' Pretty<br>
+straightforward, eh?<br>
+<br>
+Any unique keywords must be taken from your description, or from an IC<br>
+characteristic of your character.  Anachronistic words will not be<br>
+approved.<br>
+</html>
+</body>

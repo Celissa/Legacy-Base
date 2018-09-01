@@ -1,0 +1,1895 @@
+#M2_AREA
+2
+
+Forest Ruins~
+Galstaff~
+Forest Ruins~
+~
+~
+
+20 0
+0
+1
+#ROOMS
+
+#4200
+Nothing~
+~
+~
+167247872 3 9 0
+-1
+S
+
+#4201
+Light Forest in a Valley~
+Ferns, shrubs, and narrow trees grow in relative abundance, though the
+light forest grows thick to the east.  Just visible over banks of soil
+and sparse grass, an ancient valley road winds its way around to the north
+and west...the vegetation bowing to the precedence of the thoroughfare.
+A ranger mark of safe passage has been set upon a rock beside the road.
+~
+[Guin] DO NOT ERASE THE CODES IN THIS ROOM UNDER PENALTY OF DEATH!  or
+lots of bleeding..  whichever is the most painful.
+[Guin] Done.
+[Guin] Done.
+~
+167247880 3 9 0
+D0
+~
+~
+0 -1 7997 10 10 5
+D1
+~
+~
+0 -1 4206 10 10 5
+D2
+~
+~
+0 -1 4202 10 10 5
+D3
+~
+~
+0 -1 7999 10 10 5
+E
+vegetation fern~
+A smattering of ferns and deep green plant life forms the beginning of
+the forest floor which extends as far as the eye can see to the east and
+south.
+~
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 )
+  act_tochar( #tree1, ch );
+elseif( i == 2 )
+  act_tochar( #tree2, ch );
+elseif( i == 3 )
+  act_tochar( #tree3, ch );
+~
+E
+tree1~
+Ancient oaks reach skyward, their gnarled and twisted branches holding
+the dense canopy aloft.
+~
+E
+tree2~
+Crowded stands of trees emerge from the forest undergrowth, their
+dark-barked trunks straining skyward.
+~
+E
+tree3~
+A dense green canopy forms a roof over the forest floor, large branches
+of stout oak holding it aloft.
+~
+!
+0 0 0
+A
+look~
+trees forest~
+acode( find_room( 4201 );, 1 );
+~
+!
+0 0 0
+A
+~
+~
+act_tochar( #desc, ch );
+~
+E
+desc~
+A simple road which is more like a cleared patch of earth through the
+forest.  From some small ruts in the surface, the road looks to be
+reasonably well used.
+~
+!
+0 0 0
+A
+look~
+road~
+acode( find_room( 4201 ), 3 );
+~
+!
+0 0 0
+-1
+S
+
+#4202
+Light Forest Beside a Road~
+Laying at an angle, a large natural rock emerges from the forest floor,
+granting a perfect lookout spot from which to view the road to the west
+as it snakes north and south.  The barest hint of a trail leads away into
+the dense forest to the east, almost imperceptible but for the occasional
+bend of fern leaves and the rare broken twig.
+~
+[Mad Murdo] desc redone
+[Mad Murdo] Extras done
+[Guin] Done.
+~
+167247880 3 9 0
+D0
+~
+~
+0 -1 4201 10 10 5
+D1
+~
+~
+0 -1 4205 10 10 5
+D2
+~
+~
+0 -1 4203 10 10 5
+D3
+~
+~
+0 -1 2300 10 10 5
+E
+trail~
+Perhaps the path of woodland animals, or something more precise...  the
+light trail leads between several birch trees and off to the east.  It's
+impossible to tell where the trail meets the road, but the proximity to
+the rock seems almost uncanny.
+~
+E
+rock~
+Sloping to the west, the top of the rock is almost shrouded by the low
+branches of nearby trees.  A bed of moss and pine needles make what looks
+like a comfortable perch from which to watch the road undetected.
+~
+A
+look~
+trees forest~
+acode( find_room( 4201 ), 1 );
+~
+!
+0 0 0
+A
+look~
+road~
+acode( find_room( 4201 ), 3 );
+~
+!
+0 0 0
+-1
+S
+
+#4203
+Forest Beside a Road~
+Thick bracken grows in abundance at the forest floor, abruptly ending at
+the road's edge to the west.  Several varieties of trees sway in the
+breeze far above, blending patches of brown and grey.  Thick vegetation
+and a sharp rocky rise prevent further travel to the south.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247880 3 9 0
+D0
+~
+~
+0 -1 4202 10 10 5
+D1
+~
+~
+0 -1 4204 10 10 5
+D3
+~
+~
+0 -1 2301 10 10 5
+A
+look~
+forest trees~
+acode( find_room( 4201 ), 1 );
+~
+!
+0 0 0
+A
+look~
+road~
+acode( find_room( 4201 ), 3 );
+~
+!
+0 0 0
+2592 9 1509949540 3 0
+-1
+S
+
+#4204
+West of a Swift River~
+An expansive forest extends in all directions from here, obscuring the
+view of the surrounding area.  Breaking the line of vegetation
+momentarily is a swift river; flowing inevitably to the south, it carries
+with it fallen leaves and twigs.  The density of the shrubs and ferns
+increases to the south, clumps of brambles and vines blocking any hope
+for movement in that direction.
+~
+[Yrna] done.
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 4205 10 10 5
+D1
+~
+~
+0 -1 4207 10 10 5
+D3
+~
+~
+0 -1 4203 10 10 5
+A
+look~
+trees forest~
+acode( find_room( 4201 ), 1 );
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@BYou carefully enter the swift river.@n
+~
+E
+to_room~
+@B$n enters the small but swift river.@n
+~
+!
+3 0 2
+415 17 1509949540 -2 0
+2594 9 1509949540 3 0
+-1
+S
+
+#4205
+West of a Swift River~
+A swift river rushes past to the east, the far bank visible between low
+branched trees.  Flowing south and away from the mountains, the waterflow
+has cut its way through a small rise in the forest floor, leaving the
+roots of a nearby tree dangling above the water as it tries to hold the
+soil in place.  The forest seems to grow lighter to the west, as more
+light reaches the soft soil and vibrant plants at the base of the trees.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 4206 10 10 5
+D1
+~
+~
+0 -1 4209 10 10 5
+D2
+~
+~
+0 -1 4204 10 10 5
+D3
+~
+~
+0 -1 4202 10 10 5
+E
+roots tree~
+Roots of a small tree dangle down the eroded riverbank, just touching the
+water's surface.  The earth seems to be washes away from underneath the
+tree by the swift river's flow; and right there, deep between the roots,
+something reflects the light.
+~
+E
+roots~
+No description.
+~
+A
+look~
+trees forest~
+acode( find_room( 4201 ), 1 );
+~
+!
+0 0 0
+A
+~
+~
+if( rflag( reset0, room ) )
+  send_to_room( #glint, room, sight );
+~
+E
+glint~
+@YSomething reflects the light from between the roots of the tree.@n
+~
+!
+2 200 0
+A
+~
+roots tree~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 4 ) == 2 )
+    obj =  oload( 2 );
+  else
+    obj = oload( 14 );
+  act_tochar( #coin, ch, obj );
+  act_notchar( #rcoin, ch, obj, mob, sight );
+  obj_to_char( obj, ch );
+}
+else
+  act_tochar( #mistake, ch );
+~
+E
+coin~
+@YYou kneel down and patiently pry $p from under the tree roots.@n
+~
+E
+rcoin~
+@Y$n kneels down and searches among the tree roots.@n
+~
+E
+mistake~
+@yWhatever it was you saw, it doesn't appear to be there any more.@n
+~
+!
+9 0 0
+-1
+S
+
+#4206
+Before a Bridge Over a Swift River~
+Directly to the east, a small wooden bridge spans a swiftly-moving river,
+resting just high enough across the banks to escape the rush of spring's
+melting snow.  The river is reasonably narrow, but the constant flow has
+etched a deep path through the forest floor, cascading over smooth,
+moss-covered rocks.  A sharp rise to the north prevents passage for all
+but the occasional adventurous shrub, but the short cliff trails back
+slightly to the east and west.  A well-trodden path yields to the bridge,
+winding to the south and eventually further west amidst the ferns and
+low-branched trees.  A ranger mark of safe passage has been carved into
+the bridge.
+~
+[Mad Murdo] desc and extra done.
+[Mad Murdo] acodes to tie in with eastern room
+[Guin] Done.
+~
+167247880 3 9 0
+D1
+~
+~
+0 -1 4210 10 10 5
+D2
+~
+~
+0 -1 4205 10 10 5
+D3
+~
+~
+0 -1 4201 10 10 5
+E
+bridge wooden~
+The bridge is constructed from unfinished logs, most likely the kin of
+the very trees that now watch over the forest river...  old and
+weathered, but generally free from rot.  Nestled firmly in the rich, dark
+soil of each river bank, the supports show evidence of rising swirling
+waters, heavy with minerals from the mountain streams above.  High above,
+resting regally atop a pylon, the small black head of a crow adjusts
+itself endlessly, fixing all who approach the bridge with a look of no
+small disdain.
+~
+A
+look~
+trees forest~
+acode( find_room( 4201 ), 1 );
+~
+!
+0 0 0
+-1
+S
+
+#4207
+In a Swift River~
+Flowing swiftly to the south, the river gathers momentum as it
+straightens and finds a more accomodating decline.  The tall river banks
+are carved harshly from the forest soil, and occasional protruding roots
+from nearby trees do little to combat the difficulty of climbing through
+the uncooperative mud.  Just to the south, a series of large rocks cause
+the river's water to churn violently and toss waves of angry white into
+the air, before swirling into the mist whence the thundering noise
+thunders.
+~
+[Guin] Done.
+~
+167247872 8 9 0
+D0
+~
+~
+0 -1 4209 10 10 5
+D2
+~
+~
+0 -1 4212 10 10 5
+D3
+~
+~
+0 -1 4204 10 10 5
+E
+1 south rocks~
+Beyond the southern rocks, the river's flow rumbles down in a towering
+waterful.  Swirling air and a modest volume of water cause wisps and
+curtains of spray to tumble about the jagged stones below, only
+increasing the clouds of mist.
+~
+E
+banks bank soil roots mud~
+Those portions of the mud not readily touched by the river's water still
+bear the footprints of animals who struggled valiantly and violently to
+escape the deep bank and regain the safety of the forest floor.
+~
+A
+~
+~
+act_tochar( #to_char, ch );
+~
+E
+to_char~
+Rocks prevent an easy swim to the south, and is probably just as well, as
+beyond the rocks the waterfall tumbles down almost immediately, rushing
+down many meters before slamming into the mist and rocks below.
+~
+!
+3 0 4
+A
+jump climb~
+rocks south~
+act_tochar( #leave, ch );
+act_notchar( #rleave, ch );
+transfer( ch, find_room( 4212 ) );
+act_notchar( #rarrive, ch );
+~
+E
+leave~
+You clamber over the rocks to the south, and get quickly washed off the
+rocks by the swift moving river!
+~
+E
+rleave~
+$n clambers over the rocks to the south, and gets swept away by the
+rushing water!
+~
+E
+rarrive~
+$n arrives from the north, being swept along by the rushing water!
+~
+!
+0 0 0
+A
+look~
+trees forest~
+acode( find_room( 4201 ), 1 );
+~
+!
+0 0 0
+A
+~
+~
+if( random( 1, 3 ) == 1 ) {
+  act_tochar( #fail, ch );
+  act_notchar( #rfail, ch );
+  }
+else
+  continue;
+~
+E
+fail~
+You slip in the mud, and slide back into the stream.
+~
+E
+rfail~
+$1 attempts to head $T out of the river, but slips and slides back in.
+~
+E
+to_char~
+You wade out of the river, and leave $T.
+~
+E
+to_room~
+$1 wades out of the river, heading $T.
+~
+!
+3 0 10
+A
+1 east~
+~
+act_tochar( #fail, ch );
+act_notchar( #rfail, ch );
+end;
+~
+E
+fail~
+You slip in the mud and slide back into the stream.
+~
+E
+rfail~
+$n attempts to head east, but slips and slides back in.
+~
+!
+0 0 0
+398 17 1509949540 -2 0
+-1
+S
+
+#4209
+In a Swift River~
+The river winds steadily southward at an insistent pace, emerging from
+under an old, low, stout oak bridge to the north.  The steep river banks
+are dark with deep and heavy mud, churned and trampled all the way to the
+crest of the grass above.
+~
+[Guin] Done.
+~
+167247872 8 9 0
+D0
+~
+~
+0 -1 4210 10 10 5
+D1
+~
+~
+0 -1 4215 10 10 5
+D2
+~
+~
+0 -1 4207 10 10 5
+D3
+~
+~
+0 -1 4205 10 10 5
+E
+mud bank churned trampled~
+Those portions of the mud not readily touched by the river's water still
+bear the footprints of animals who struggled valiantly and violently to
+escape the deep bank and regain the safety of the forest floor.
+~
+A
+look~
+trees forest~
+acode( find_room( 4201 ), 1 );
+~
+!
+0 0 0
+A
+~
+~
+if( !is_player( ch ) )
+  continue;
+if( find_skill( ch, climb ) > random( 1, 4 ) )
+  continue;
+else { 
+  act_tochar( #fail, ch );
+  act_notchar( #rfail, ch );
+}
+~
+E
+fail~
+In trying to clamber up the side of the bridge, you slip back into the
+water.
+~
+E
+rfail~
+$n tries to clamber up the side of the bridge, but slips back into the
+water.
+~
+E
+to_char~
+You clamber up and over the side of the bridge.
+~
+E
+to_room~
+$1 clambers up and over the bridge to the north.
+~
+!
+3 0 1
+A
+~
+~
+if( random( 1, 3 ) == 1 ) {
+  act_tochar( #fail, ch );
+  act_notchar( #rfail, ch );
+  }
+else
+  continue;
+~
+E
+fail~
+You slip in the mud, and slide back into the stream.
+~
+E
+rfail~
+$n attempts to head out of the river, but slips and slides back in.
+~
+E
+to_char~
+You wade out of the river, and leave $T.
+~
+E
+to_room~
+$1 wades out of the river, heading $T.
+~
+!
+3 0 10
+398 17 1509949540 -2 0
+-1
+S
+
+#4210
+On a Bridge over a Swift River~
+From one bank to the other, this narrow bridge is constructed from hard
+oak, held together by a collaboration of tar, leather bindings, and
+rusted iron nails driven through rough-shaved support beams.  The river
+beneath passes from north to south, cascading over and around rocks both
+large and small under a canopy of low branches.  The forest is thick,
+pausing in respect at the river's sloping edge, and then only barely... 
+but where the bridge ends both east and west a palpable trail leads off
+into the underbrush.  A ranger mark of safe passage has been carved into
+the bridge.
+~
+[Mad Murdo] Desc done, no extra comes to mind. Needs bird acode.
+[Guin] Done.
+~
+167247880 12 9 0
+D0
+~
+~
+0 -1 4211 10 10 5
+D1
+~
+~
+0 -1 4214 10 10 5
+D2
+~
+~
+0 -1 4209 10 10 5
+D3
+~
+~
+0 -1 4206 10 10 5
+A
+look~
+trees forest~
+acode( find_room( 4201 ), 1 );
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+You slide off the bridge into the stream, heading $T.
+~
+E
+to_room~
+$1 slides off the bridge into the stream, heading $T.
+~
+!
+3 0 5
+398 17 1509949540 -2 0
+-1
+S
+
+#4211
+In a Swift River~
+Between the shroud of low-hanging branches to the north, a towering
+waterfall tumbles down an uneven cliff and thunders into a rocky pool
+below.  The river's flow gathers speed as it winds southward down a
+series of gentle declines, framed on either side by steep muddy banks. 
+Further to the south, a stout oak bridge spans the narrow gap, casting
+the dark water briefly in shadow.
+~
+[Mad Murdo] desc done
+[Guin] Done.
+~
+167247872 8 9 0
+D0
+~
+~
+0 -1 4213 10 10 5
+D1
+~
+~
+0 -1 4219 10 10 5
+D2
+~
+~
+0 -1 4210 10 10 5
+A
+look~
+trees forest~
+acode( find_room( 4201 ), 1 );
+~
+!
+0 0 0
+A
+~
+~
+if( !can_fly( ch ) )
+  if( random( 1, 3 ) == 1 ) {
+  act_tochar( #fail, ch );
+  act_notchar( #rfail, ch );
+}
+else
+  continue;
+~
+E
+fail~
+You slip in the mud, and slide back into the stream.
+~
+E
+rfail~
+$1 attempts to head $T out of the river, but slips and slides back in.
+~
+E
+to_char~
+You wade out of the river, and leave $T.
+~
+E
+to_room~
+$1 wades out of the river, heading $T.
+~
+!
+3 0 2
+A
+~
+~
+if( can_fly( ch ) )
+  continue;
+if( find_skill( ch, climb ) > random( -1, 4 ) )
+  continue;
+else {
+  act_tochar( #fail, ch );
+  act_notchar( #rfail, ch );
+}
+~
+E
+fail~
+In trying to clamber up the side of the bridge, you slip back into the
+water.
+~
+E
+rfail~
+$n tries to clamber up the side of the bridge, but slips back into the
+water.
+~
+E
+to_char~
+You clamber up and over the side of the bridge.
+~
+E
+to_room~
+$1 clambers up and over the bridge to the north.
+~
+!
+3 0 4
+398 17 1509949540 -2 0
+-1
+S
+
+#4212
+Going Over a Steep Waterfall~
+Under Construction.
+AAAIIIIEEEEE!
+~
+~
+167247872 8 9 0
+D0
+~
+~
+0 -1 4207 10 10 5
+D5
+~
+~
+0 -1 4231 10 10 5
+A
+~
+~
+continue;
+~
+!
+3 0 1
+-1
+S
+
+#4213
+At the Base of a Tall Waterfall~
+With a repetitive blast of sound, water tumbles down from above, slamming
+into rocks at the base of this tall waterfall.  Flowing off around the
+rocks, a river forms and heads off into the forest to the south.  Thick
+trees grow in abundance throughout the visible forested areas, while
+towering cliffs cut off egress to the north and west.
+~
+[Guin] close up.
+[Guin] Done.
+~
+167247872 6 9 0
+D1
+~
+~
+0 -1 4222 10 10 5
+D2
+~
+~
+0 -1 4211 10 10 5
+D4
+~
+~
+98 -1 4237 10 10 5
+A
+~
+~
+if( can_fly( ch ) )
+  continue;
+else
+  act_tochar( #nogo, ch );
+~
+E
+nogo~
+Without being able to fly up the cliff, traversing the flowing water is
+impossible.
+~
+!
+3 0 16
+A
+look~
+trees forest~
+acode( find_room( 4201 ), 1 );
+~
+!
+0 0 0
+A
+~
+~
+if( random( 1, 4 ) == 1 ) {
+  act_tochar( #fail, ch );
+  act_notchar( #rfail, ch );
+  }
+else
+  continue;
+~
+E
+fail~
+You attempt to climb out of the stream, but slide off the slippery rocks,
+and end up back in the water.
+~
+E
+rfail~
+$n attempts to climb up the east bank, out of the stream, but merely ends
+up sliding back off the slippery rocks.
+~
+E
+to_char~
+You climb over the slippery rocks, and leave east.
+~
+E
+to_room~
+$1 climbs over the slippery rocks, and leaves east.
+~
+!
+3 0 2
+1327 17 1509949540 -2 0
+-1
+S
+
+#4214
+East of a Bridge over a Swift River~
+Directly to the west, a stout wooden bridge traverses the swiftly flowing
+river which winds steadily southwards.  Thick forest extends out on all
+sides, stands of trees hindering free movement through the lush greenery. 
+The area is obviously travelled occasionally, since the bridge looks
+used, and there is a patch of trampled earth leading up to it.
+A ranger mark of safe passage has been carved into a small rock.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247880 3 9 0
+D0
+~
+~
+0 -1 4219 10 10 5
+D1
+~
+~
+0 -1 4217 10 10 5
+D2
+~
+~
+0 -1 4215 10 10 5
+D3
+~
+~
+0 -1 4210 10 10 5
+A
+look~
+trees forest~
+acode( find_room( 4201 ), 1 );
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou step onto the sturdy bridge.@n
+~
+E
+to_room~
+@y$n steps onto the sturdy bridge.@n
+~
+!
+3 0 8
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou leave the clearing before the bridge and enter the thicket.@n
+~
+E
+to_room~
+$n leaves the clearing before the bridge and enters the thicket.@n
+~
+!
+3 0 7
+-1
+S
+
+#4215
+East of a Swift River~
+Rapidly flowing past to the west, a river winds its way steadily
+southwards.  Steep muddy banks line the waters edge in which can be seen
+animal prints, indicating some of the slower sections of the river are
+used as watering holes.  To the north a thick forest extends, preventing
+clear viewing of the valley.  In the opposite direction, an old low wall
+covered in moss and vegetation continues to age, its decrepit bricks a
+relic of some bygone village which once stood here.  Further proof of
+this lies to the east, as the overgrown remains of a stone building block
+passage in that direction.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 4214 10 10 5
+D3
+~
+~
+0 -1 4209 10 10 5
+A
+look~
+trees forest~
+acode( find_room( 4201 ), 1 );
+~
+!
+0 0 0
+415 17 1509949540 -2 0
+-1
+S
+
+#4216
+Ruined Watchtower - Narrow Shelf~
+Around the crumbling walls of this watchtower, a narrow wooden ledge, no
+more than two feet in width, extends towards the centre of the room. 
+Sturdy timbers, bared by the fallen floor, stretch from one side of the
+room to the other, these four-inch thick length of wood were once a part
+of the integral support of the tower.  A slim line of rock, where a
+staircase once stood, winds down the side of the watchtower to the floor
+below.
+~
+[Estrella] done
+[Guin] Done
+~
+167247872 0 9 0
+D5
+~
+~
+1056 -1 4224 10 10 5
+E
+slim line rock staircase~
+This staircase, in its time, would have been rather steep, with a very
+narrow tread and quite tall riser.  For the most part, the stones and
+wood that were used to create the case lie scattered across the floor
+below, the only part of the structure still sturdy enough to support any
+weight juts out a little from the wall.  The floor below looks uneven and
+dangerous; just dropping down could be painful!
+~
+A
+~
+~
+act_tochar( #to_char, ch );
+act_notchar( #to_room, ch, obj, mob, sight );
+transfer( ch, find_room( 4224 ) );
+damage( mob, ch, random( 5, 10 ), physical, "the drop", "unwisely dropping to the floor below" );
+~
+E
+to_char~
+@RBefore you can change your mind you quickly lever yourself over the
+edge of the floor and drop to the floor below!@n 
+~
+E
+to_room~
+@R$n levers $mself over the edge of the hole where the staircase once was
+and drops to the floor below.@n 
+~
+!
+3 0 32
+A
+climb~
+stone strip 1 down~
+act_tochar( #to_char, ch );
+act_notchar( #to_room, ch, obj, mob, sight );
+transfer( ch, find_room( 4224 ) );
+~
+E
+to_char~
+@RYou very carefully climb down the strip of stone.@n
+~
+E
+to_room~
+@R$n carefully inches down the strip of stone to the floor below.@n
+~
+!
+0 0 0
+2592 9 1509949540 3 0
+-1
+S
+
+#4217
+Deep in the Forest~
+Thick forest surrounds the area, yet only thin vegetation occupies the
+forest floor, making movement relatively easy.  Old walls, covered in
+moss and plant growth stand to the south, part of a building which fell
+into ruin a long time ago.  Dark green vines creep over the ancient
+stonework, contributing to its deterioration.  A ranger mark of safe
+passage has been carved into a stone.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247880 3 9 0
+D0
+~
+~
+0 -1 4218 10 10 5
+D1
+~
+~
+0 -1 4223 10 10 5
+D3
+~
+~
+0 -1 4214 10 10 5
+A
+look~
+trees forest~
+acode( find_room( 4201 ), 1 );
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gFinding your way through the undergrowth, you leave $d.@n
+~
+E
+to_room~
+@GPicking $s way through the undergrowth, $n continues $d.@n
+~
+!
+3 0 11
+-1
+S
+
+#4218
+West of a Large Ruined Building~
+Masses of trees can be seen all around the area, growing in wide clumps
+around the few openings in the forest canopy.  Directly to the east
+stands an old wall, covered in plant growth and vegetation.  Once part of
+a very large building, the roof looks to have caved in over time.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 4220 10 10 5
+D2
+~
+~
+0 -1 4217 10 10 5
+D3
+~
+~
+0 -1 4219 10 10 5
+E
+old wall roof~
+Large and small stones litter the area around the old, vine-covered wall. 
+The creepers have pulled the ancient stonework apart, using every crack
+to climb ever higher, eventually causing the wall to crumble and roof to
+collapse. 
+~
+A
+look~
+trees forest~
+acode( find_room( 4201 ), 1 );
+~
+!
+0 0 0
+-1
+S
+
+#4219
+On the East Bank of a Swift River~
+Steep muddy slopes descend to the west and into the swift river that
+flows steadily southwards.  Through low branches to the north, a massive
+cliff can be seen reaching high into the sky, while forest is all that
+can be seen to the east and south.  Thick stands of oak trees slow
+movement down, making travel annoying, but not impossible.  The distant
+echo of thunder seems to come from the north, the source unseen.
+~
+[Yrna] Done
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 4222 10 10 5
+D1
+~
+~
+0 -1 4218 10 10 5
+D2
+~
+~
+0 -1 4214 10 10 5
+D3
+~
+~
+0 -1 4211 10 10 5
+A
+look~
+trees forest~
+acode( find_room( 4201 ), 1 );
+~
+!
+0 0 0
+A
+~
+~
+send_to_room( #thud, room );
+~
+E
+thud~
+@yA low rumbling echoes around you, the thudding making the earth tremble
+slightly.@n 
+~
+!
+2 150 0
+2593 9 1509949540 3 0
+-1
+S
+
+#4220
+Before a Cliff~
+A towering cliff rises to the north, weather having eroded away at its
+sheer surface.  A clear patch near the base of the cliff provides a long
+view to the west, where a waterfall can be seen in the distance.  Forest
+emerges on all other sides, getting thicker further to the south.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 4221 10 10 5
+D2
+~
+~
+0 -1 4218 10 10 5
+D3
+~
+~
+0 -1 4222 10 10 5
+A
+look~
+trees forest~
+acode( find_room( 4201 ), 1 );
+~
+!
+0 0 0
+A
+~
+~
+send_to_room( #water, room );
+~
+E
+water~
+@BA sound of rushing water can be heard to the west.@n
+~
+!
+2 200 0
+-1
+S
+
+#4221
+In the Shadow of a Tall Cliff~
+Under the umbrella of fir tree branches rises a semi-circle of stone, the
+remnants of a ruined tower or guardhouse.  Roots from the surrounding
+trees dig into the remaining stonework, their grasp tearing up cobbles
+and splitting the ancient stone.  Northwards a crumbling cliff face cuts
+in an east-west direction, its rough surface coated with clumps of
+lichen, moss and bracken.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 4227 10 10 5
+D3
+~
+~
+0 -1 4220 10 10 5
+E
+guardhouse semi-circle stone ruined tower remnants~
+Covered in a deep green moss, the weather-beaten stones barely hold their
+semi-circular shape.  Small chips of mortar, which, at some point in
+time, held the structure vertical, lie scattered amidst the broken slabs
+of stone, a reminder that eventually nature will take its toll on even
+the most well built constructions.
+~
+2594 9 1509949540 3 0
+2593 9 1509949540 3 0
+-1
+S
+
+#4222
+Before a Cliff~
+A thundering sound fills the area, the source obviously the towering
+waterfall cascading down the cliff to the west.  The cliff continues
+around to the north, its steep surface devoid of handholds, the years of
+weather having smoothed down the vertical slope.  Forest extends to the
+east and south, the thick woods blocking a clear view of the valley.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 4220 10 10 5
+D2
+~
+~
+0 -1 4219 10 10 5
+D3
+~
+~
+0 -1 4213 10 10 5
+A
+look~
+trees forest~
+acode( find_room( 4201 ), 1 );
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@BYou leave in the direction of thundering water.@n
+~
+E
+to_room~
+@B$n leaves in the direction of thunder water.@n
+~
+!
+3 0 8
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou head $d, leaving the water behind you.@n
+~
+E
+to_room~
+@g$n heads $d and away from the thundering waterfall.@n
+~
+!
+3 0 6
+-1
+S
+
+#4223
+Amidst Forested Ruins~
+A ruined watchtower stands directly to the south, its first level looking
+fairly intact, while the second barely stands.  Hardly visible from the
+forest floor due to the trees surrounding it, the tower has a small
+archway as its entrance.  The forest extends out to the west and east
+from here, while to the north travel is blocked by the collapsed ruins of
+a large building, which has become overgrown with vegetation over the
+years.  A ranger mark of safe passage has been carved into an old log.
+~
+[Yrna] Done.
+[Guin] Done
+~
+167247880 3 9 0
+D1
+~
+~
+0 -1 4225 10 10 5
+D2
+~
+~
+0 -1 4224 10 10 5
+D3
+~
+~
+0 -1 4217 10 10 5
+A
+look~
+trees forest~
+acode( find_room( 4201 ), 1 );
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou pick your way through the rubble and leave towards the
+watchtower.@n 
+~
+E
+to_room~
+@gPicking $s way through the rubble, $n continues towards the tower.@n
+~
+!
+3 0 4
+-1
+S
+
+#4224
+Ruined Watchtower~
+The remains of the ruined watchtower stretch upwards into the greenery of
+the forest's canopy.  Rubble from the smashed roof litters the room, and
+tendrils of climbing plants have grown down through the open ceiling.  A
+slim line of rock, where a staircase once stood, winds up the side of the
+tower to a tiny ledge, which is all that remains of the second floor.
+~
+[Estrella] done
+[Guin] Done.
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 4223 10 10 5
+D4
+~
+~
+1056 -1 4216 10 10 5
+E
+slim line rock staircase~
+This staircase, in its time, would have been rather steep, with a very
+narrow tread and quite tall riser.  For the most part, the stones and
+wood that were used to create the case lie scattered across the floor,
+the only part of the structure still sturdy enough to support any weight
+juts out a little from the wall.
+~
+A
+~
+~
+act_tochar( #to_char, ch );
+~
+E
+to_char~
+@RThe upper floor is well beyond your ability to jump or climb.@n
+~
+!
+3 0 16
+A
+climb~
+1 up stone ledge~
+act_tochar( #to_char, ch );
+act_notchar( #to_room, ch, obj, mob, sight );
+transfer( ch, find_room( 4216 ) );
+~
+E
+to_char~
+@RYou very carefully climb up the narrow strip of stone.@n
+~
+E
+to_room~
+@R$n carefully makes $s way up the narrow strip of stone.@n
+~
+!
+0 0 0
+2594 9 1509949540 3 0
+-1
+S
+
+#4225
+Amidst Forested Ruins~
+The forest is slightly sparser around here, as the ruins take up more and
+more of the fertile ground. Directly to the north, a large building
+lies in ruins, its roof caved in many years earlier, and the rubble is
+now overgrown with vegetation.  A small section of the rubble is clear to
+the north, the vegetation has been cleared out, providing a resting spot.
+A ranger mark of safe passage has been carved into a tree stump.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247880 3 9 0
+D0
+~
+~
+0 -1 4226 10 10 5
+D1
+~
+~
+0 -1 4230 10 10 5
+D3
+~
+~
+0 -1 4223 10 10 5
+E
+building ruins rubble vegetation~
+Running rampantly over the partially tumbledown walls, hardy vines curl
+about the stones, creating gaps in the masonry where their tendrils grasp
+at the weather-beaten remains, evicting the mortar that keeps the
+structure standing.  Scattered about the inside of the ruin, the roof and
+upper portions of the walls bury the floor beneath a thick layer of
+rubble.
+~
+A
+look~
+trees forest~
+acode( find_room( 4201 ), 1 );
+~
+!
+0 0 0
+-1
+S
+
+#4226
+Inside a Ruined Home~
+A clearing has been dregged in the mounds of rubble left from the collaps
+of a sizable building.  Some of the stones have been spread in a
+semi-circle around an often-used campfire, their smooth surfaces forming
+hard but servicaable seats.  A deer trail winds south from the clearing,
+its sides lined with immature pine trees.
+~
+[Yrna] Done.
+[Guin] Done.
+[Zuig] servicaable becomes Serviceable
+[Jydan] dregged -> dragged
+~
+167247880 2 9 0
+D2
+~
+~
+0 -1 4225 10 10 5
+E
+stones campfire seats~
+The rubble that once was a building lies scattered about the area.  Five
+larger pieces of stone have been placed in a semi-circle, all of them
+fairly regular in shape but worn down by weather and time.
+~
+A
+~
+stones seats rubble~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #pebble, ch );
+  act_notchar( #rpebble, ch, obj, mob, sight );
+  obj_to_char( oload( 78 ), ch );
+}
+else
+  act_tochar( #none, ch );
+~
+E
+pebble~
+@cYou select a nice pebble to take with you.@n
+~
+E
+rpebble~
+@cIdly searching through a pile of rubble, $n picks up one of the
+pebbles.@n 
+~
+E
+none~
+@WAnything of interest must have already been taken.@n
+~
+!
+9 0 0
+755 17 1509949540 -2 0
+2593 9 1509949540 3 0
+-1
+S
+
+#4227
+Amidst Forested Ruins~
+Towering pine trees encircle a shelf of rock, the middle dipping down to
+form a basin of water.  Animal tracks have churned the ground around the
+stone, the pool obviously forming an important source of water for the
+forest animals.  A trickling stream dances through the grasping tree
+roots to the south, the flow keeping the waterhole at a high level
+without overflowing it.  Immature papyrus and a handful of maidenhair
+ferns grow around the streams edge.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 4228 10 10 5
+D3
+~
+~
+0 -1 4221 10 10 5
+1690 17 1509949540 -2 0
+1519 17 1509949540 -2 0
+-1
+S
+
+#4228
+Amidst Forested Ruins~
+Giant toadstools, over a foot across, gather around the stump of a pine
+tree; the enormous fungi's bright purple caps warning of their poisonous
+nature.  A mound of rotting branches and pine needles has been stacked
+against a crumbling wall of stone, the refuse an ideal home for snakes. 
+The stonework of bridge foundations rise from a five-foot trench to the
+east, the wooden planks long since crumbled to dust.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D2
+~
+~
+0 -1 4229 10 10 5
+D3
+~
+~
+0 -1 4227 10 10 5
+A
+~
+~
+send_to_room( #rustle, room );
+~
+E
+rustle~
+@gSomething rustles in the mound of needles and branches.@n
+~
+!
+2 150 0
+A
+search~
+mound needles branches~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #lizard, ch );
+  act_notchar( #rlizard, ch, obj, mob, sight );
+}
+else
+act_tochar( #naah, ch );
+~
+E
+lizard~
+@YAs you search through the mound of branches and needles, you spot a
+thin, reptilian tail disappearing into the undergrowth.@n
+~
+E
+rlizard~
+@YDisturbed by $n's searching of the mound, a small lizard disappears
+into the undergrowth.@n 
+~
+E
+naah~
+@gThe mound has clearly been searched already.@n
+~
+!
+0 0 0
+2593 9 1509949540 3 0
+-1
+S
+
+#4229
+Amidst Forested Ruins~
+A hollowed out tree trunk backs onto the crumbling stone of a ruined
+building, the interior of the trunk lined with bracken and dried moss. 
+Outside the opening a cold campfire has been partially covered with pine
+needles.  A collection of gnarled on bones lies in a neat stack beside
+the ruin; most from animals, however, a scattering of more humanoid
+looking bones feature amongst them.
+~
+[Yrna] Needs some extras. Perhaps for this trunk and the bones?
+[Yrna] Could be a home for Carth's ferret
+[Carth] done
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 4228 10 10 5
+D2
+~
+~
+0 -1 4230 10 10 5
+E
+tree trunk bracken moss~
+It appears that the hollowed trunk has become the home of a smallish
+woodland creature.  Bracken and moss have carefully been arranged to form
+a soft nest as far back from the opening as possible.  Clumps of matted
+fur have been caught on the rough bark on either side of the aperture,
+presumably where the inhabitant has rubbed itself in order to remove
+thick knots as they form in the hairy coat.
+~
+E
+gnarled bones stack~
+It is hard to discern where all these came from, but in any event, they
+appear to have been collected, most likely by the inhabitant of the tree
+trunk, as a food source.  Most of the bones are dry and brittle, though a
+few appear to be recently discarded, their lengths riddled with tiny
+puncture marks made by sharp teeth.
+~
+A
+search~
+hole log~
+act_tochar( #look, ch );
+act_notchar( #look_room, ch, obj, mob, sight );
+
+if( rflag( reset0, room ) ) {
+  if( !mob_in_room( 361, room ) ) {
+    act_tochar( #leap, ch );
+    act_notchar( #leap_room, ch, obj, mob, sight );
+    mob = mload( 361, room );
+    interpret( mob, "bounce" );
+    interpret( mob, "bounce" );
+    interpret( mob, "bounce" );
+    init_attack( mob, ch );
+    remove_rflag( reset0, room );
+  }
+  else {
+    act_tochar( #notfound, ch );
+  }
+}
+else {
+  act_tochar( #notfound, ch ); 
+}
+~
+E
+look~
+@GYou bend down to look in to the hollow log.@n
+~
+E
+look_room~
+@R$n bends down to look in the hollow log.@n
+~
+E
+leap~
+@GSuddenly a large red creature dashes out of the hole and throws itself
+upon you!@n 
+~
+E
+leap_room~
+@GSuddenly a large red creature dashes out of the hole and throws itself
+at $n!@n 
+~
+E
+notfound~
+@rYou find nothing but clumps of fur and a strange smell.@n
+~
+!
+0 0 0
+-1
+S
+
+#4230
+Amidst Forested Ruins~
+Cobbles and tree roots combine to form an undulating forest road that
+cuts in an almost due east-west direction through the mountain woodlands. 
+Intersecting the road is criss-crossing deer trails, the floor of some
+churned by the hooves of many animals.  Wild rose bushes grow amongst the
+pine trees, their thorny tendrils spreading across the lower branches and
+encasing scattering ruins.  A ranger mark of safe passage has been carved
+into a rock.
+~
+[Carth] done
+[Guin] Done.
+~
+167247880 3 9 0
+D0
+~
+~
+0 -1 4229 10 10 5
+D1
+~
+~
+0 -1 4232 10 10 5
+D3
+~
+~
+0 -1 4225 10 10 5
+544 17 1509949540 -2 0
+-1
+S
+
+#4231
+Falling down the side of a cliff~
+AAAIIIEEEEE!!!!
+~
+~
+167247872 8 9 0
+D4
+~
+~
+0 -1 4212 10 10 5
+-1
+S
+
+#4232
+Amidst Forested Ruins~
+Dominating the area is a massive pine that squats at the edge of a broken
+wall, its surface covered in gnarled bark and knotholes that would be
+perfect homes for owls or other forest animals.  The trees branches sweep
+down to almost floor level before spreading a near perfect circumference
+from its trunk.  Pillars rise around the tree like guards protecting
+their king, the white of the stone gleaming against the rich dark green
+of the pine needles.  A ranger mark of safe passage has been scratched
+into a flat rock here.
+~
+[Galstaff] lake connects up with southern east travelling river
+[Guin] Done
+~
+167247880 3 9 0
+D1
+~
+~
+0 -1 4235 10 10 5
+D3
+~
+~
+0 -1 4230 10 10 5
+E
+pillars wall tree trunk~
+Once there was a fine wall here.  Now the stone bricks have been pushed
+aside by the growth of this tree.
+~
+-1
+S
+
+#4234
+Amidst Forested Ruins~
+The broken tip of a tower has tumbled into its base, shattering rocks and
+beams across the ground.  Moss and patchy lichen has launched an assualt
+upon the fallen stones.  Pine trees gather around the ruins, their tall
+trunks and outspread branches doing their best to obsure the construction. 
+Through the fallen needles and old branches patches of a cobbled road
+peek, the smooth stones quickly succumbing to the energic regrowth of the
+woods.
+~
+[Guin] Attaches to 4450 eastward
+[Carth] done
+[Guin] Done.
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 4450 10 10 5
+D2
+~
+~
+0 -1 4235 10 10 5
+-1
+S
+
+#4235
+Amidst Forested Ruins~
+A partially collapsed wall intermixes with the forest trees, moss and
+lichen spread from the fissures in the stone giving them the vague
+appearance of an infected wound.  Wild rose bushes dot the undergrowth
+with bright splashes of color, their blooms forming breaks in the drab
+greens and brown of the woods.  An overgrown roadway weaves between the
+trees its cobbled surface covered in last years needles and fallen
+branches.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 4234 10 10 5
+D3
+~
+~
+0 -1 4232 10 10 5
+544 17 1509949540 -2 0
+2592 9 1509949540 3 0
+-1
+S
+
+#4237
+At the Base of a Tall Waterfall~
+Under Construction.
+~
+~
+167247872 6 9 0
+D5
+~
+~
+98 -1 4213 10 10 5
+-1
+S
+
+#0
+

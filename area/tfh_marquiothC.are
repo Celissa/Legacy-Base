@@ -1,0 +1,1762 @@
+#M2_AREA
+2
+
+Sha'maral'dze~
+Azerin II~
+~
+~
+~
+
+0 0
+0
+1
+#ROOMS
+
+#1200
+A Dark, Shadowy Intersection~
+The streets here become noticeably darker, as if the whole atmosphere of
+the city has changed.  Shadows crowd around, not just in the corners but
+overhead and on all sides as well.  Filth of unimaginable origins line
+the gutters within all nearby site, creating an everpresent, nearly
+offensive stench that wafts through the air.  A road to the north turns
+away abruptly, its length hidden in shadow.  A slightly wider, brighter
+road leads off to the west.
+~
+[Kaelana] Start of Sha'maral'dze, supposed to be one heck of a maze to get through
+[Kaelana] some rooms should have random 'getting lost' acodes
+[Kaelana] west to Sha'rheza
+[Ciani] I've done quite a few rdescs here so far, and I've the words Ive been using to describe the shadows give them a feel of being alive. If this could be kept up throughout the whole zone, thatd be great
+[Ciani] sha'ke'chani is west
+[Ciani] The Warrens are east behind a hidden door, to be opened when the zone is finished
+[Azerin] east was 1214
+~
+200933378 0 9 0
+D0
+~
+~
+0 -1 1201 10 10 5
+D3
+~
+~
+0 -1 1380 10 10 5
+E
+gutters~
+Thin gutters run along each side of the road.  Filled nearly to the brim
+with unidentifiable filth and rubbish, they release a scent that would,
+in polite company, be considered nasty.
+~
+-1
+S
+
+#1201
+A Narrow, Shadowy Street~
+The dirty cobbles underfoot stretch north and southwards.  Sharp, shadowy
+corners branch away in both directions.  Flickering tongues of darkness
+reach across the narrow street, as if reaching out to grasp passersby. 
+Faint scuffling sounds drift over from around the north corner, almost
+like rats skittering along hard stone.  The walls of the tunnels seem to
+be huddling together, closing in tight, almost squeezing.
+~
+~
+200933378 0 9 0
+D0
+~
+~
+0 -1 1202 10 10 5
+D2
+~
+~
+0 -1 1200 10 10 5
+E
+tunnel wall~
+Carved out of solid rock by unknown craftsmen, this narrow tunnel has
+been worn smooth by countless passing masses.
+~
+-1
+S
+
+#1202
+A Wider Intersection~
+The oppressive caverns ease back here, as a large tunnel joins with the
+narrow ones.  The faint sounds of moving water drift in from the north,
+accompanied by the smell of human wastes.  A slight breeze stirs the
+stifling air, although the air is not particularly fresh.  The caverns
+close back upon themselves to the east and south, the shadows reaching
+between walls to effectively obscure anything in those directions. 
+~
+[Kaelana] north will go to Sha'darci and the docks
+[Ciani] If the docks are nearby, itd make sense to have a lot of street vendors clustered around here, hawking wares to newly arrived travelers and suchlike
+[Guin] don't see vyans welcoming 'travelers' with open arms.
+[Azerin] area north use to connect to 1300
+~
+200933378 0 9 0
+D1
+~
+~
+0 -1 1203 10 10 5
+D2
+~
+~
+0 -1 1201 10 10 5
+-1
+S
+
+#1203
+A Tight, Shadowy Passageway~
+The tight, constricting tunnels open up somewhat to the west, although a
+large cavern is present nearby.  The lower walls around this section of
+road are scuffed and scratched, as if constantly brushing against very
+sharp objects.  Shadows flick across the roadway, almost as if grasping
+for something.  A crack has formed in the south wall, and some faint
+noises emanate from within.
+~
+[Ciani] need an acode for search crack, makes a rat pop up and attack player
+~
+200933382 0 9 0
+D1
+~
+~
+0 -1 1204 10 10 5
+D3
+~
+~
+0 -1 1202 10 10 5
+A
+search~
+crack~
+act_tochar( #begin, ch );
+act_notchar( #nbegin, ch );
+wait( 1 );
+act_room( #rat, ch );
+~
+E
+begin~
+You reach a hand into the crack in the south wall.
+~
+E
+nbegin~
+@n reaches a hand into the crack in the south wall.
+~
+E
+rat~
+@CA rat leaps from the crack!@n
+~
+!
+0 0 0
+-1
+S
+
+#1204
+A Tight, Shadowy Passageway~
+The tunnel curves sharply here, so the road has no option other than to
+follow the narrow pathway dictated by the cavern walls.  Shadows play
+along the walls and ceiling of the stone tunnels, leering across the
+passageway.  The tunnel widens very slightly just south of here.  The air
+here is stifling; it is musty and damp and very, very still.  A low and
+narrow tunnel seems to branch off this part of the passage just a little
+further south.
+~
+~
+200933382 0 9 0
+D2
+~
+~
+0 -1 1205 10 10 5
+D3
+~
+~
+0 -1 1203 10 10 5
+-1
+S
+
+#1205
+Tight, Shadowed Intersection~
+Two tunnels, one stretching north, the other winding east, merge together
+to form a small alcove in the southwest corner of this spacious cavern. 
+At the intersection, it is possible to discern two different types of
+rock, one much older and darker than the other.  Obviously the tunnels
+were formed aeons apart, and only by sheer coincidence did they join
+together.
+~
+[Ciani] maybe have a street vendor with a little cart here?
+~
+200933382 0 9 0
+D0
+~
+~
+0 -1 1204 10 10 5
+D1
+~
+~
+0 -1 1285 10 10 5
+-1
+S
+
+#1206
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D1
+~
+~
+0 -1 1208 10 10 5
+-1
+S
+
+#1207
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D1
+~
+~
+0 -1 1278 10 10 5
+-1
+S
+
+#1208
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D2
+~
+~
+0 -1 1209 10 10 5
+D3
+~
+~
+0 -1 1206 10 10 5
+-1
+S
+
+#1209
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D0
+~
+~
+0 -1 1208 10 10 5
+D1
+~
+~
+0 -1 1210 10 10 5
+D3
+~
+~
+0 -1 1211 10 10 5
+-1
+S
+
+#1210
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D0
+~
+~
+0 -1 1243 10 10 5
+D2
+~
+~
+0 -1 1241 10 10 5
+D3
+~
+~
+0 -1 1209 10 10 5
+-1
+S
+
+#1211
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D1
+~
+~
+0 -1 1209 10 10 5
+D2
+~
+~
+0 -1 1213 10 10 5
+D3
+~
+~
+0 -1 1212 10 10 5
+-1
+S
+
+#1212
+A Narrow, Shadowy Street~
+The shadows part slightly to the east as a somewhat wider tunnel branches
+off the one running north and south.  They slink across the floor and
+reach up the rough-hewn walls, grasping ineffectively at passerby and
+cloaking the area in shade.  Underfoot, the floor has been worn smooth by
+countless passing feet and stained by numerous unidentifiable substances.
+~
+~
+200933382 0 9 0
+D0
+~
+~
+0 -1 1214 10 10 5
+D1
+~
+~
+0 -1 1211 10 10 5
+D2
+~
+~
+0 -1 1215 10 10 5
+-1
+S
+
+#1213
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D0
+~
+~
+0 -1 1211 10 10 5
+D2
+~
+~
+0 -1 1232 10 10 5
+-1
+S
+
+#1214
+A Narrow, Shadowy Street~
+Shadows rise up along the walls of this room, and flick along the floor
+with insubstantial fingers.  They veil the twisting tunnel in translucent
+shade, preventing one from seeing more than a few feet in any direction. 
+Gouges and scratches cover the lower third or so of the walls, as if left
+by a sharp edged weapon.  A faint smell of mustiness permeates the area,
+and the air is heavy and still.
+~
+[Azerin] w
+~
+200933378 0 9 0
+D2
+~
+~
+0 -1 1212 10 10 5
+-1
+S
+
+#1215
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D0
+~
+~
+0 -1 1212 10 10 5
+D2
+~
+~
+0 -1 1216 10 10 5
+D3
+~
+~
+0 -1 1217 10 10 5
+-1
+S
+
+#1216
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D0
+~
+~
+0 -1 1215 10 10 5
+D1
+~
+~
+0 -1 1232 10 10 5
+-1
+S
+
+#1217
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D1
+~
+~
+0 -1 1215 10 10 5
+D3
+~
+~
+0 -1 1218 10 10 5
+-1
+S
+
+#1218
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D0
+~
+~
+0 -1 1219 10 10 5
+D1
+~
+~
+0 -1 1217 10 10 5
+D2
+~
+~
+0 -1 1221 10 10 5
+D3
+~
+~
+0 -1 1220 10 10 5
+-1
+S
+
+#1219
+a shop~
+Under Construction.
+~
+~
+200933382 0 9 0
+D2
+~
+~
+0 -1 1218 10 10 5
+-1
+S
+
+#1220
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D1
+~
+~
+0 -1 1218 10 10 5
+D2
+~
+~
+0 -1 1222 10 10 5
+-1
+S
+
+#1221
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D0
+~
+~
+0 -1 1218 10 10 5
+D2
+~
+~
+0 -1 1225 10 10 5
+-1
+S
+
+#1222
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D0
+~
+~
+0 -1 1220 10 10 5
+D3
+~
+~
+0 -1 1223 10 10 5
+-1
+S
+
+#1223
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D1
+~
+~
+0 -1 1222 10 10 5
+D2
+~
+~
+0 -1 1224 10 10 5
+-1
+S
+
+#1224
+shop~
+Under Construction.
+~
+~
+200933382 0 9 0
+D0
+~
+~
+0 -1 1223 10 10 5
+-1
+S
+
+#1225
+tavern~
+Under Construction.
+~
+~
+200933382 0 9 0
+D0
+~
+~
+0 -1 1221 10 10 5
+D1
+~
+~
+0 -1 1227 10 10 5
+D3
+~
+~
+0 -1 1226 10 10 5
+-1
+S
+
+#1226
+tavern~
+Under Construction.
+~
+~
+200933382 0 9 0
+D1
+~
+~
+0 -1 1225 10 10 5
+-1
+S
+
+#1227
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D1
+~
+~
+0 -1 1229 10 10 5
+D2
+~
+~
+0 -1 1228 10 10 5
+D3
+~
+~
+0 -1 1225 10 10 5
+-1
+S
+
+#1228
+shop or something~
+Under Construction.
+~
+~
+200933382 0 9 0
+D0
+~
+~
+0 -1 1227 10 10 5
+-1
+S
+
+#1229
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D2
+~
+~
+0 -1 1230 10 10 5
+D3
+~
+~
+0 -1 1227 10 10 5
+-1
+S
+
+#1230
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D0
+~
+~
+0 -1 1229 10 10 5
+D2
+~
+~
+0 -1 1231 10 10 5
+-1
+S
+
+#1231
+shop or something~
+Under Construction.
+~
+~
+200933382 0 9 0
+D0
+~
+~
+0 -1 1230 10 10 5
+-1
+S
+
+#1232
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D0
+~
+~
+0 -1 1213 10 10 5
+D1
+~
+~
+0 -1 1233 10 10 5
+D2
+~
+~
+0 -1 1234 10 10 5
+D3
+~
+~
+0 -1 1216 10 10 5
+-1
+S
+
+#1233
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D0
+~
+~
+0 -1 1239 10 10 5
+D2
+~
+~
+0 -1 1240 10 10 5
+D3
+~
+~
+0 -1 1232 10 10 5
+-1
+S
+
+#1234
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D0
+~
+~
+0 -1 1232 10 10 5
+D2
+~
+~
+0 -1 1235 10 10 5
+-1
+S
+
+#1235
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D0
+~
+~
+0 -1 1234 10 10 5
+D1
+~
+~
+0 -1 1236 10 10 5
+D2
+~
+~
+0 -1 1237 10 10 5
+-1
+S
+
+#1236
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D3
+~
+~
+0 -1 1235 10 10 5
+-1
+S
+
+#1237
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D0
+~
+~
+0 -1 1235 10 10 5
+D1
+~
+~
+0 -1 1238 10 10 5
+-1
+S
+
+#1238
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D3
+~
+~
+0 -1 1237 10 10 5
+-1
+S
+
+#1239
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D1
+~
+~
+0 -1 1241 10 10 5
+D2
+~
+~
+0 -1 1233 10 10 5
+-1
+S
+
+#1240
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D0
+~
+~
+0 -1 1233 10 10 5
+D1
+~
+~
+0 -1 1260 10 10 5
+-1
+S
+
+#1241
+Nothing~
+Under Construction.
+~
+[Kaelana] south should be a big sculpture of something amusing
+~
+200933382 0 9 0
+D0
+~
+~
+0 -1 1210 10 10 5
+D1
+~
+~
+0 -1 1242 10 10 5
+D3
+~
+~
+0 -1 1239 10 10 5
+-1
+S
+
+#1242
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D2
+~
+~
+0 -1 1249 10 10 5
+D3
+~
+~
+0 -1 1241 10 10 5
+-1
+S
+
+#1243
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D1
+~
+~
+0 -1 1244 10 10 5
+D2
+~
+~
+0 -1 1210 10 10 5
+-1
+S
+
+#1244
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D2
+~
+~
+0 -1 1245 10 10 5
+D3
+~
+~
+0 -1 1243 10 10 5
+-1
+S
+
+#1245
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D0
+~
+~
+0 -1 1244 10 10 5
+D1
+~
+~
+0 -1 1246 10 10 5
+-1
+S
+
+#1246
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D2
+~
+~
+0 -1 1247 10 10 5
+D3
+~
+~
+0 -1 1245 10 10 5
+-1
+S
+
+#1247
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D0
+~
+~
+0 -1 1246 10 10 5
+D2
+~
+~
+0 -1 1248 10 10 5
+-1
+S
+
+#1248
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D0
+~
+~
+0 -1 1247 10 10 5
+D1
+~
+~
+0 -1 1251 10 10 5
+D3
+~
+~
+0 -1 1249 10 10 5
+-1
+S
+
+#1249
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D0
+~
+~
+0 -1 1242 10 10 5
+D1
+~
+~
+0 -1 1248 10 10 5
+D2
+~
+~
+0 -1 1250 10 10 5
+-1
+S
+
+#1250
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D0
+~
+~
+0 -1 1249 10 10 5
+D1
+~
+~
+0 -1 1252 10 10 5
+D2
+~
+~
+0 -1 1257 10 10 5
+-1
+S
+
+#1251
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D0
+~
+~
+0 -1 1265 10 10 5
+D3
+~
+~
+0 -1 1248 10 10 5
+-1
+S
+
+#1252
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D1
+~
+~
+0 -1 1253 10 10 5
+D3
+~
+~
+0 -1 1250 10 10 5
+-1
+S
+
+#1253
+tavern or guild or shrine~
+Under Construction.
+~
+~
+200933382 0 9 0
+D1
+~
+~
+0 -1 1255 10 10 5
+D3
+~
+~
+0 -1 1252 10 10 5
+-1
+S
+
+#1254
+tavern guild or shrine~
+Under Construction.
+~
+~
+200933382 0 9 0
+D2
+~
+~
+0 -1 1255 10 10 5
+-1
+S
+
+#1255
+tavern guild or shrine~
+Under Construction.
+~
+~
+200933382 0 9 0
+D0
+~
+~
+0 -1 1254 10 10 5
+D1
+~
+~
+0 -1 1258 10 10 5
+D2
+~
+~
+0 -1 1256 10 10 5
+D3
+~
+~
+0 -1 1253 10 10 5
+-1
+S
+
+#1256
+tavern guild or shrine~
+Under Construction.
+~
+~
+200933382 0 9 0
+D0
+~
+~
+0 -1 1255 10 10 5
+-1
+S
+
+#1257
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D0
+~
+~
+0 -1 1250 10 10 5
+D1
+~
+~
+0 -1 1261 10 10 5
+D3
+~
+~
+0 -1 1259 10 10 5
+-1
+S
+
+#1258
+tavern guild or shrine~
+Under Construction.
+~
+~
+200933382 0 9 0
+D3
+~
+~
+0 -1 1255 10 10 5
+-1
+S
+
+#1259
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D0
+~
+~
+0 -1 1260 10 10 5
+D1
+~
+~
+0 -1 1257 10 10 5
+-1
+S
+
+#1260
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D2
+~
+~
+0 -1 1259 10 10 5
+D3
+~
+~
+0 -1 1240 10 10 5
+-1
+S
+
+#1261
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D2
+~
+~
+0 -1 1262 10 10 5
+D3
+~
+~
+0 -1 1257 10 10 5
+-1
+S
+
+#1262
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D0
+~
+~
+0 -1 1261 10 10 5
+D1
+~
+~
+0 -1 1263 10 10 5
+D3
+~
+~
+0 -1 1264 10 10 5
+-1
+S
+
+#1263
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D3
+~
+~
+0 -1 1262 10 10 5
+-1
+S
+
+#1264
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D1
+~
+~
+0 -1 1262 10 10 5
+-1
+S
+
+#1265
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D1
+~
+~
+0 -1 1266 10 10 5
+D2
+~
+~
+0 -1 1251 10 10 5
+-1
+S
+
+#1266
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D0
+~
+~
+0 -1 1267 10 10 5
+D3
+~
+~
+0 -1 1265 10 10 5
+-1
+S
+
+#1267
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D1
+~
+~
+0 -1 1269 10 10 5
+D2
+~
+~
+0 -1 1266 10 10 5
+D3
+~
+~
+0 -1 1268 10 10 5
+-1
+S
+
+#1268
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D0
+~
+~
+0 -1 1270 10 10 5
+D1
+~
+~
+0 -1 1267 10 10 5
+-1
+S
+
+#1269
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D0
+~
+~
+0 -1 1294 10 10 5
+D3
+~
+~
+0 -1 1267 10 10 5
+-1
+S
+
+#1270
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D0
+~
+~
+0 -1 1271 10 10 5
+D2
+~
+~
+0 -1 1268 10 10 5
+D3
+~
+~
+0 -1 1272 10 10 5
+-1
+S
+
+#1271
+shop~
+Under Construction.
+~
+~
+200933382 0 9 0
+D2
+~
+~
+0 -1 1270 10 10 5
+-1
+S
+
+#1272
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D0
+~
+~
+0 -1 1273 10 10 5
+D1
+~
+~
+0 -1 1270 10 10 5
+-1
+S
+
+#1273
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D2
+~
+~
+0 -1 1272 10 10 5
+-1
+S
+
+#1274
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D0
+~
+~
+0 -1 1276 10 10 5
+D3
+~
+~
+0 -1 1275 10 10 5
+-1
+S
+
+#1275
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D1
+~
+~
+0 -1 1274 10 10 5
+D3
+~
+~
+0 -1 1277 10 10 5
+-1
+S
+
+#1276
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D1
+~
+~
+0 -1 1279 10 10 5
+D2
+~
+~
+0 -1 1274 10 10 5
+-1
+S
+
+#1277
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D1
+~
+~
+0 -1 1275 10 10 5
+D2
+~
+~
+0 -1 1278 10 10 5
+-1
+S
+
+#1278
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D0
+~
+~
+0 -1 1277 10 10 5
+D3
+~
+~
+0 -1 1207 10 10 5
+-1
+S
+
+#1279
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D2
+~
+~
+0 -1 1280 10 10 5
+D3
+~
+~
+0 -1 1276 10 10 5
+-1
+S
+
+#1280
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D0
+~
+~
+0 -1 1279 10 10 5
+D1
+~
+~
+0 -1 1281 10 10 5
+-1
+S
+
+#1281
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D1
+~
+~
+0 -1 1282 10 10 5
+D3
+~
+~
+0 -1 1280 10 10 5
+-1
+S
+
+#1282
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D0
+~
+~
+0 -1 1283 10 10 5
+D3
+~
+~
+0 -1 1281 10 10 5
+-1
+S
+
+#1283
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D2
+~
+~
+0 -1 1282 10 10 5
+-1
+S
+
+#1284
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D1
+~
+~
+0 -1 1292 10 10 5
+-1
+S
+
+#1285
+Before The Black Gate~
+The street ends abruptly in a tiny cul-de-sac drowned in shadow. 
+Underfoot, the road is thickly smeared with some dark dried substance
+crusted into the cracks and splattered along the lower parts of the walls. 
+A few footprints are patterned in the dried area, and dark prints lead
+away from the main concentration of darkness.  Next to the footprints is
+a wide, streaked path, as though something heavy was dragged away from
+the middle of the pool when it was still wet.  A black stone door marked
+with a crescent moon lurks in the eastern shadows, the moon gleaming
+faintly.
+~
+[Azerin] east is assassin guild
+[Azerin] Monk/theif goblin hangout
+~
+200933382 0 9 0
+D1
+crescent moon door~
+~
+131 -1 1286 10 10 5
+D3
+~
+~
+0 -1 1205 10 10 5
+-1
+S
+
+#1286
+Guild of The Crescent Moon~
+Under Construction.
+~
+~
+200933382 0 9 0
+D0
+~
+~
+0 -1 1287 10 10 5
+D1
+~
+~
+0 -1 1288 10 10 5
+D2
+~
+~
+0 -1 1289 10 10 5
+D3
+crescent moon door~
+~
+131 -1 1285 10 10 5
+-1
+S
+
+#1287
+Guild of The Crescent Moon~
+Under Construction.
+~
+~
+200933382 0 9 0
+D2
+~
+~
+0 -1 1286 10 10 5
+D3
+~
+~
+0 -1 1291 10 10 5
+-1
+S
+
+#1288
+Guild of The Crescent Moon~
+Under Construction.
+~
+~
+200933382 0 9 0
+D3
+~
+~
+0 -1 1286 10 10 5
+-1
+S
+
+#1289
+Guild of The Crescent Moon~
+Under Construction.
+~
+~
+200933382 0 9 0
+D0
+~
+~
+0 -1 1286 10 10 5
+D3
+~
+~
+0 -1 1290 10 10 5
+-1
+S
+
+#1290
+Guild of The Crescent Moon~
+Under Construction.
+~
+~
+200933382 0 9 0
+D1
+~
+~
+0 -1 1289 10 10 5
+-1
+S
+
+#1291
+Guild of The Crescent Moon - Quiet Chamber~
+~
+~
+200933382 0 9 0
+D1
+~
+~
+0 -1 1287 10 10 5
+E
+dark dried substance pool~
+No description.
+~
+-1
+S
+
+#1292
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D2
+~
+~
+0 -1 1293 10 10 5
+D3
+~
+~
+0 -1 1284 10 10 5
+-1
+S
+
+#1293
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D0
+~
+~
+0 -1 1292 10 10 5
+D3
+~
+~
+0 -1 1294 10 10 5
+-1
+S
+
+#1294
+Nothing~
+Under Construction.
+~
+~
+200933382 0 9 0
+D1
+~
+~
+0 -1 1293 10 10 5
+D2
+~
+~
+0 -1 1269 10 10 5
+D3
+~
+~
+0 -1 1295 10 10 5
+-1
+S
+
+#1295
+shop~
+Under Construction.
+~
+~
+200933382 0 9 0
+D1
+~
+~
+0 -1 1294 10 10 5
+-1
+S
+
+#0
+

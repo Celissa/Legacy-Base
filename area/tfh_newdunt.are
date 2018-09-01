@@ -1,0 +1,6384 @@
+#M2_AREA
+2
+
+Dun Tathaig~
+Usiel Eliza~
+~
+~
+~
+
+0 0
+4
+1
+#ROOMS
+
+#8100
+Judgement Gate - Dun Tathaig~
+The towering gates of Dun Tathaig rise over thirty feet in height and
+twice that across.  Heavy wooden beams have been bound with a latice of
+spiked steel, their tips gleaming in the torch light.  Encircling the
+massive city is the great wall, its stones hewn by the dwarves of old
+before their decline reach well over two hundred feet in height. 
+Reinforced with elvish and humanic magics the fortifications have stood
+against many foes without breach.  Watch towers rise from the walls top,
+roadways connecting each of the towers.  Fluttering from countless flag
+poles are blue flags adorned with twin headed ravens, the symbol of the
+free peaople of Dun.
+~
+[Eliza] if you're going to have gates that are able to be swung, they would be iron-banded wood and a more thin metal portcullis. The iron-banded wood gates would be locked together by a fairly traditional sliding beam.
+[Eliza] Old room 839
+[Guin] Main light city.
+~
+33030144 1 6 0
+D2
+~
+~
+0 -1 8101 10 10 5
+-1
+S
+
+#8101
+Gallows Road - Dun Tathaig~
+Gallows road cuts through the massive wall on its journey through Dun
+Tathaig, its surface cobbled but well worn with the eons of merchant
+traffic.  A stout door has been set into the walls side the east, its
+surface flush with the stone.  Southwards the road climbs slightly as it
+heads deeper into the city, the famed gallows that give the road its name
+just visible from here.  Crows swirl through the narrow alleys that form
+between the multi-storied shops and houses that form the bulk of the
+cities buildings.
+~
+[Eliza] Cauldron
+[Eliza] Rm 838
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8100 10 10 5
+D1
+~
+~
+0 -1 8102 10 10 5
+D2
+~
+~
+0 -1 8103 10 10 5
+-1
+S
+
+#8102
+Guard House - Judgement Gate~
+Under Construction.
+~
+[Eliza] Rm 952
+~
+66584581 0 5 0
+D3
+~
+~
+0 -1 8101 10 10 5
+-1
+S
+
+#8103
+Gallows Road - Dun Tathaig~
+Nestled against the towering walls lie the rough cast houses of poor and
+lowly merchants.  The jumble of wood and stone lean in a haphazard
+fashion that lends both to quick collaps and fire hazard.  Weaving
+through the miriad of houses runs the gallows road, its journey taking it
+from the northern wall towards the merchant quarters.  Crows and rooks
+line the out-hanging gables and tower tops their harsh cries calling for
+more to join the gallows.
+~
+[Eliza] Cauldron
+[Eliza] Rm 822
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8101 10 10 5
+D2
+~
+~
+0 -1 8104 10 10 5
+-1
+S
+
+#8104
+Gallows Road - Dun Tathaig~
+Under Construction.
+~
+[Eliza] Cauldron
+[Eliza] Rm 627
+[Azerin] gallows here
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8103 10 10 5
+D1
+~
+~
+0 -1 8105 10 10 5
+D2
+~
+~
+0 -1 8107 10 10 5
+D3
+~
+~
+0 -1 8106 10 10 5
+-1
+S
+
+#8105
+Black Halls~
+Under Construction.
+~
+[Eliza] Rm 937
+~
+66584581 0 5 0
+D3
+~
+~
+0 -1 8104 10 10 5
+-1
+S
+
+#8106
+The Hangman's Rest~
+Under Construction.
+~
+[Eliza] 442
+~
+66584581 0 5 0
+D1
+~
+~
+0 -1 8104 10 10 5
+-1
+S
+
+#8107
+Gallows Road Junction~
+Under Construction.
+~
+[Eliza] Cauldron
+[Eliza] Rm 823
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8104 10 10 5
+D3
+~
+~
+0 -1 8108 10 10 5
+-1
+S
+
+#8108
+Mumble Road - Dun Tathaig~
+Under Construction.
+~
+[Eliza] Old room 824
+[Eliza] Labyrinth
+[Eliza] should probably have some warning here for those that might not want to venture into the labyrinth.
+[Eliza] here or maybe east.
+~
+33030144 1 6 0
+D1
+~
+~
+0 -1 8107 10 10 5
+D3
+~
+~
+0 -1 8109 10 10 5
+-1
+S
+
+#8109
+Thieves' Market~
+Wide in comparison to the narrow streets of the Labyrinth, the market
+square is a bustle of activity...traders selling their wares with prices
+and quality geared towards the "practical" residents of the city's
+poorest district.  Hard-packed dirt surrounds the muddy trenches of wagon
+ruts, encircling the market's center to the northwest.  Along the uneven
+southern row of houses and petty shops, one in particular proudly displays
+all of its glass windows intact.
+~
+[Eliza] Old room 827
+[Eliza] Labyrinth
+[Eliza] rdesc and extras done.
+[Eliza] need leaving/randoms
+~
+33030145 1 6 0
+D0
+~
+~
+0 -1 8113 10 10 5
+D1
+~
+~
+0 -1 8108 10 10 5
+D2
+glass-paned door~
+~
+131 -1 8112 10 10 5
+D3
+~
+~
+0 -1 8110 10 10 5
+E
+1 south shop windows~
+Its stablizing poles decorated by none-too-expensive rugs and clothes,
+the modest shop to the south offers only a glimpse of cluttered goods. 
+The sign above the door simply says "Bouvre's".
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou open the glass-paned door and enter the building to the $d.@n
+~
+E
+to_room~
+@c$n opens the glass-paned door and enters the building to the $d.@n
+~
+!
+3 0 4
+-1
+S
+
+#8110
+Thieves' Market~
+Under Construction.
+~
+[Eliza] Old room 829
+[Eliza] Labyrinth
+[Usiel] Like the streets of the labyrinth, the Thieve's Market has a barely discernable shape... shops and houses staggered around the edges of an uneven square.
+[Usiel] The side of the southern building has papers posted on it.. advertisements, warrants, calls for adventuring... and city news for those who can read. (one of several IC posting sites)
+[Usiel] West, seedy but noisy tavern.. sign says "Raerdo's Song and Swill" with the image of a flask.
+[Usiel] Extra: the walls with the papers, obviously.
+[Eliza] Tavern references go outside of 8137
+~
+33030145 1 6 0
+D0
+~
+~
+0 -1 8128 10 10 5
+D1
+~
+~
+0 -1 8109 10 10 5
+D2
+~
+~
+0 -1 8162 10 10 5
+D3
+~
+~
+0 -1 8111 10 10 5
+-1
+S
+
+#8111
+Bucklebrass Lane~
+Under Construction.
+~
+[Usiel] 855
+[Eliza] Labyrinth
+[Usiel] A small intersection of streets is overshadowed by the imposing gaze of a wooden animal head, perched majestically above the door of a boarded shop. Bucklebrass Lane spills out into a bustling market to the east, winding off into the murky enclosure of the Labyrinth further west.
+[Usiel] Aglow with flickering torches, lanterns and rows of soft candles, the street to the north is bathed in a low, inviting red.
+[Usiel] animal head wooden shop - A mighty boar guards the portal of what can only be a butchers place of business. Whether closed for the season, or permanently, the wooden planks about the windows offer no illumination.
+~
+33030144 1 6 0
+D1
+~
+~
+0 -1 8110 10 10 5
+D2
+~
+~
+0 -1 8133 10 10 5
+-1
+S
+
+#8112
+Bouvre's Odds and Sods~
+Under Construction.
+~
+[Eliza] Old room 646
+[Usiel] Shopkeeper is an old man who repeats everything to his wife in the back
+[Usiel] Sells assorted things... general stuff like lights, bags, and the occasional low-quality lock-pick
+[Usiel] AND crappy clothjing
+~
+66588677 0 5 0
+D0
+~
+~
+131 -1 8109 10 10 5
+5451 9 1509949540 3 0
+26 17 1509949540 -1 0
+-1
+S
+
+#8113
+Thieves' Market~
+Under Construction.
+~
+[Eliza] Old room 830
+[Eliza] Labyrinth
+[Usiel] Cart salesman here, claiming to be an alchemist.. trying to sell potions to cure plagues.
+[Usiel] Unless we're doing night and day descs, which apparently we aren't, this guy and his calls will have to be done with a mob and acoding, nothing in the desc... since he'll disappear in the dead of night.
+[Eliza] I have a problem with disappearing mobs.. mainly because the time between night and day is 20 minutes.. that means he's going to popping up like a jack in the box.
+[Eliza] Night and day descs aren't feasible at this time nor do we have the code to handle them.
+~
+33030145 1 6 0
+D0
+~
+~
+0 -1 8114 10 10 5
+D2
+~
+~
+0 -1 8109 10 10 5
+D3
+~
+~
+0 -1 8128 10 10 5
+-1
+S
+
+#8114
+Carras Way~
+The worn and mud-drowned cobbles here are haplessly strewn with hay, from
+a small and relatively unkempt @ystable@n to the east.  The doors are
+wide and the beam slide used as a locking mechanism is formidably thick,
+as is prudent for businesses in the Labyrinth.  The windows of the nearby
+houses seem rarely used, not surprising due to the wretched stench of
+quartered steeds.
+~
+[Eliza] Old room 832
+[Eliza] Labyrinth
+[Eliza] Done.
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8115 10 10 5
+D1
+pair of old wooden doors~
+~
+131 -1 8351 10 10 5
+D2
+~
+~
+0 -1 8113 10 10 5
+E
+1 east door stables~
+Shoddy in appearance, the warped brown wood of the stable's walls is old
+and worn, strengthened by bands of iron at the doors.  Above, a small
+ledge and narrow door provide access to the hayholt.
+~
+A
+~
+~
+i = 1d10;
+if( i == 1 )
+send_to_room( #mud, room );
+if( i == 2 )
+send_to_room( #rnan, room );
+~
+E
+mud~
+@cA horseman trots by.  Paying little heed to the muddy road, he passes
+through a puddle, throwing mud in all directions.@n 
+~
+E
+rnan~
+@cA dull-looking man sits outside the stables, filing away at a horseshoe... 
+work less tiresome but much more expensive if left to a smith.@n 
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou pass through the gaping stable doorway.@n
+~
+E
+to_room~
+@c$n passes through the gaping stable doorway.@n
+~
+!
+3 0 2
+-1
+S
+
+#8115
+Carras Way~
+Even amidst the subtly exotic display of culture, the feel of shadowed
+monotony is ever present, a feel that only adds to danger of the
+Labyrinth's streets.  Carras Way bends gently to the west and south,
+beneath dangling ropes and tightly shut windows.  The scent of burning
+wood and poorly handled trash hangs like a haze over the narrow homes of
+the city's less prosperous.
+~
+[Eliza] Old room 833
+[Eliza] Labyrinth
+[Eliza] Think this needs an extra.. not sure yet which.
+[Eliza] added extra here.. see what you think.. maybe we can do something with it.. like steal a piece of the laundry or something. *shrug*
+[Eliza] added random.
+~
+33030144 1 6 0
+D2
+~
+~
+0 -1 8114 10 10 5
+D3
+~
+~
+0 -1 8116 10 10 5
+E
+ropes windows~
+The houses rise close together here in this old part of the city; the
+upper floors, merely a few feet apart, cast deep shadows along the roads. 
+Some paned and others boarded over with ancient scraps of weathered wood,
+the windows remain shut tight, locked and barred in all seasons of the
+year.  Stretching across the road from house to house, ropes have been
+affixed to the sills and sport a variety of laundry of all shapes, sizes
+and states of repair.
+~
+A
+~
+~
+send_to_room( #stench,room );
+~
+E
+stench~
+@yThe stench of rotting food drifts along the street, its source
+unidentifiable.@n 
+~
+!
+2 150 0
+-1
+S
+
+#8116
+Carras Way~
+Worn and weathered cobbles peek through the dirt of the winding street,
+bathed in the sweet smoky mist of ovens and firepits.  The buildings
+crowding the southern side of the road boast colorful awnings, stretching
+out from the front, held aloft by simple wooden pikes - a jarring note
+among the otherwise stoic structures.  Further to the east, the street
+narrows slightly, the colors growing darker and more drab, while
+northward, the houses seem to sprawl out in muted, sandy-hued tones.  The
+road bends to follow the slope of the city wall, anchored by a large and
+well-tended house at the southwest corner...walls weathered but still
+warm with the color of red sandstone.
+~
+[Eliza] Labyrinth
+[Eliza] Extras done.
+[Eliza] combined 862 and 863
+[Eliza] Done.
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8117 10 10 5
+D1
+~
+~
+0 -1 8115 10 10 5
+E
+Awnings pikes buildings 1 south~
+Lengths of canvas cloth, the sort used for tent making, seem to have been
+ripped from larger bolts of the same material.  The colors, although
+still bright, are fading gradually to muted shades more in tune with the
+tenor of the street.  Frayed edges and worn patches in the fabric
+indicate the awnings were placed here long ago, supported on stout wooden
+pikes jabbed securely into the ground.
+~
+E
+House sandstone southwest~
+Perhaps a patron of the local community, or a remnant of a more glorious
+past, this residence is alive with color and thoughtful design.  A garden
+tries valiantly to grow in the temperate climate, full of fruits and
+plants usually only seen in the city's caravan markets.
+~
+A
+~
+~
+i = 1d10;
+i = random( 1, 2 );
+if( i == 1 )
+  send_to_room( #bray, room );
+if( i == 2 )
+  send_to_room( #oldman, room );
+~
+E
+bray~
+@cA braying sound drifts in from the north, as if there were a makeshift
+stable hidden amidst the throng of houses.@n 
+~
+E
+oldman~
+@yAn old man sits on a crate at the entrance to a dark alley next to a
+few foot-high bunches of straw scattered nearby.  He watches with seeming
+disinterest, glancing occasionally over his shoulder at something behind
+him.@n 
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+to_room~
+@g$n continues $d along the worn cobbled road.@n
+~
+E
+to_char~
+@gYou continue $d along the worn cobbled road.@n
+~
+!
+3 0 3
+-1
+S
+
+#8117
+Carras Way~
+Wooden shutters carved in imaginative and ornate designs cover the
+windows of these otherwise meager two-story houses.  Oiled wooden
+shingles provide gently sloping roofs, supported at the eaves by beams of
+sturdy timber reaching out just far enough to protect from the driving
+coastal rains.  Several boxes block the alley to the northeast, which
+ends at a grand, circular turret of the city wall.
+~
+[Usiel] 864
+[Eliza] Labyrinth
+[Eliza] extras done.
+Eliza] Leaving done.
+~
+33030144 1 6 0
+D2
+~
+~
+0 -1 8116 10 10 5
+D3
+~
+~
+0 -1 8119 10 10 5
+E
+shutters ornate houses~
+The houses have a distinctive style, most likely suited to a warm and dry
+climate but adapted for the temperate and sometimes-rainy weather of the
+western coast.  At times it seems as though the windows were designed to
+provide the best angle for archers, a reminder that the borders of the
+Duke's influence were not always so far away.
+~
+E
+wall~
+Constructed of vast blocks of chiseled grey stone, the wall stands
+anywhere from thirteen to fifteen yards high and approximately two yards
+thick, with rectangular-shaped buttresses spaced at regular distances to
+strengthen it.  Circular guard towers appear at forty-foot intervals, a
+wooden catwalk linking them all together.  Still solid and strong, the
+ancient fortification remains in good condition, with only a few patches
+of lighter stone marking areas of repair.
+~
+E
+boxes crates~
+Several uneven stacks of boxes and crates clog the entrance to the
+northeastward lying alleyway, making access into the dark and narrow
+passage impossible.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gAvoiding ancient mounds of trash, your work your way to the $d.@n
+~
+E
+to_room~
+@gAvoiding the ancient mounds of trash, $n works $s way to the $d.@n 
+~
+!
+3 0 12
+-1
+S
+
+#8118
+TO BE USED LATER!!!~
+Under Construction.
+~
+~
+66584581 0 5 0
+D0
+~
+~
+0 -1 8334 10 10 5
+-1
+S
+
+#8119
+Carras Way~
+The hint of gaudy colors, now faded with time and weather, add to the
+exotic design of the houses that line the city's northernmost street.  A
+combination of wood, clay and other elements produce a wide variety of
+structures, sprawling low to the south or rising up against the looming
+wall to the north.  Wafting out upon the otherwise unpleasant wind are
+the odors of active kitchens, a reminder of the ancient diversity of
+cultures.
+~
+[Usiel] 865
+[Eliza] Labyrinth
+[Eliza] extras done.
+[Eliza] random added
+[Eliza] could add leaving.
+~
+33030144 1 6 0
+D1
+~
+~
+0 -1 8117 10 10 5
+D3
+~
+~
+0 -1 8120 10 10 5
+E
+1 north wall~
+The city wall is strong and broad, as grand in design and appearance as
+it is in defense...at least it was the last time it was tested by
+invasion, several centuries ago.  Turrets and towers are spaced evenly
+along its length, and the guards gaze inward upon the dark streets of the
+Labyrinth as often as they do out at the grasslands.
+~
+E
+Houses colors wood clay structures~
+The houses come in all shapes and sizes, from tall and narrow ones to
+low, sprawling ones.  The styles of construction vary greatly as well;
+some of the structures are built of wood, others of stone, and others a
+combination of both.  Each shares a common trait; muted traces of the
+brilliant colors that adorned the buildings at the time of their creation.
+~
+A
+~
+~
+i = 1d10;
+i = random( 1, 2 );
+if( i == 1 )
+send_to_room( #action1, room );
+if( i == 2 )
+send_to_room( #action2, room );
+~
+E
+action1~
+@cA grimy waif watches you solemn-eyed curiosity from the northern side
+of the street.@n 
+~
+E
+action2~
+@cGaunt to the point of emaciation, a stray dog digs through a mound of
+trash, searching in vain for a scrap of cast off food.@n 
+~
+!
+2 150 0
+-1
+S
+
+#8120
+Carras Way~
+A shallow murky puddle dominates the center of this spiritless street,
+reflecting the cast shadows of its surroundings.  Old and tired, humble
+houses huddle against the solidity of the grey stone wall, standing tall
+on the northern edge of the city.  Not far to the west, the street ends
+in a quiet cul-de-sac, as the fortifications circle the foot of Kergan's
+Hill.
+~
+[Usiel] 866
+[Eliza] Labyrinth
+[Eliza] add search puddle for a silver coin or some other minor item.
+[Eliza] extras done.
+[Eliza] Need leaving and entering codes all along this street.
+[Eliza] added leaving.. do some search in the puddle.
+~
+33030144 1 6 0
+D1
+~
+~
+0 -1 8119 10 10 5
+D2
+~
+~
+0 -1 8121 10 10 5
+D3
+~
+~
+0 -1 8332 10 10 5
+E
+houses~
+The houses here beneath the city wall remain inhabited, yet the trials of
+time and weather have left them but pale shadows of their original beauty. 
+Brilliantly colored trims and doors have faded to softer, more muted hues
+and the stone-crafted walls are coated with soot and hints of pale green
+moss.  Thatched roofs and shake-shingled ones alike, show signs of wear
+and rot.
+~
+E
+puddle center~
+A shallow puddle of murky water surrounds the worn and weathered
+cobblestones of Carras Way.  Reflected in its stagnant surface, the solid
+grey stone of the city wall seems dark and foreboding...the houses
+misleadingly dismal and grim.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou skirt the puddle as you continue along the street to the $d.@n
+~
+E
+to_room~
+@g$n skirts the puddle, as $e continues along the street to the $d.@n
+~
+!
+3 0 10
+A
+~
+~
+continue;
+~
+E
+to_char~
+@BYou slip into the darkness of the shadows on the south side of the
+road.@n 
+~
+E
+to_room~
+@B$n disappears into the darkness of the shadows along the south side of
+the road.@n 
+~
+!
+3 0 4
+-1
+S
+
+#8121
+Dark Alleyway~
+Shadow-shrouded even at the height of day, a narrow alleyway sneaks
+between two rows of ramshackle buildings, seeking to hide its existence
+from the world.  Further constricting the cramped passage, a healthy
+scattering of boxes and crates huddle against the back wall of the
+structure to the west, very few of them left intact.  The darkness is
+nearly complete here, the only light the wan glow of a candle seeping
+through gaps in a boarded up window lying eastward.
+~
+[Eliza] Old Room 860
+[Eliza] Labyrinth
+[Eliza] What about having the door to the shop on the east basically hidden to all but thieves? Or I can add it to the rdesc. Your choice.
+[Eliza] leaving/randoms/extras.
+[Eliza] add some search of the boxes?
+[Eliza] reset east to closed..would like to make that exit a tricky one to find.
+[Eliza] rats scurryiny noises.. oven some large rats reset here?
+[Eliza] need extra for look east, depending on how its handled.
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8120 10 10 5
+D1
+~
+~
+131 -1 8122 10 10 5
+D2
+~
+~
+0 -1 8123 10 10 5
+E
+boxes crates back wall~
+No description.
+~
+E
+light glow candle gaps boarded window~
+No description.
+~
+-1
+S
+
+#8122
+Honest Lago's Lock and Key~
+Confining and close, the meager little shop boasts no ornate shelving, no
+rows or neat stacks of viable goods.  Instead, cheaply made crates and
+boxes hold an odd assortment of wires and a selection of two or three
+different types of simple locks and keys.  A single candle affords the
+only light in the room, its wan, flickering flame doing little to
+illuminate the shadowy corner where the shopkeeper remains most of the
+time.  On the western wall, a boarded up window flanks a rickety wooden
+door, leading out to a narrow alleyway.
+~
+[Eliza] Have Usiel look at item types for him to buy.
+[Eliza] Old room 945
+[Eliza] Needs mresets, fight code, mprogs
+[Mirkassa] Lago's desc should be who knows when.
+~
+66584621 0 5 0
+D3
+rickety wooden door~
+~
+131 -1 8121 10 10 5
+E
+1 west rickety door~
+Lying to the west, a door constructed of warped and weathered planks
+leads to the alleyway outside.  The egress is narrow and low and not
+particularly sturdy; little supports it save the cross strapping nailed
+from corner to corner across the boards.
+~
+E
+crates boxes assortment wires locks keys~
+Several rickety crates, stacked together, create a makeshift counter at
+the mid-point of the shop.  Aligned in rows, a variety of simple locks
+and assorted keys lie atop the temporary structure, next to a sampling of
+thread-like wires of different lengths.  Several other of the flimsy
+boxes line the back wall of the room, tossed there in haphazard piles.
+~
+E
+candle flame~
+A fat, irregularly shaped tallow candle perches atop a counter-like
+affair, a series of crates stacked two high and two wide.  Melted wax pools
+at the base of the half-burnt taper, its dull flame creating a circle of
+pale light in the center of the meager shop, leaving the corners veiled
+in shadows.
+~
+E
+window~
+A poorly framed opening flanks the shop's door, its oil-parchment
+covering long since stripped away.  Now, the window is boarded over with
+mismatched lengths of warped and weathered wood, leaving spaces through
+which light and sound escape out into the alleyway.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou leave the shop, exiting through the open doorway toward the
+alley.@n 
+~
+E
+to_room~
+@c$n leaves the shop, exiting through the opened door toward the alley.@n 
+~
+!
+3 0 8
+A
+~
+~
+send_to_room( #candle, room );
+~
+E
+candle~
+@gThe guttering candle sends a wisp of oily smoke into the air.@n
+~
+!
+2 150 0
+5321 9 1509949540 3 0
+128 17 1509949540 -1 0
+127 17 1509949540 -1 0
+-1
+S
+
+#8123
+Kergan's Run~
+A winding, craggy pathway, Kergan's Way hardly deserves to be dubbed a
+road.  Paving stones, dim reminders of a forgotten past, are cracked and
+broken, the way itself twisted and tortuous, only generally moving to the
+west and east across the city.  Dilapidated buildings cram their way onto
+the strange bends, displaying a lack of care with their construction, the
+beaten-down houses interspersed with ragged shops...dark establishments
+with little to offer.  The atmosphere is heavy with an air of
+hopelessness, broken people matching the broken streets.
+~
+[Usiel] 859
+[Eliza] Labyrinth
+[Eliza] need extras/randoms/leaving.
+[Eliza] Hrm, idea for nother exit.
+[Eliza] wonder if we could have a disappearing exit, based on search skill or wis check?
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8121 10 10 5
+D1
+~
+~
+0 -1 8124 10 10 5
+D3
+~
+~
+0 -1 8129 10 10 5
+E
+paving stones~
+No description.
+~
+-1
+S
+
+#8124
+Street of Silk Veils~
+Under Construction.
+~
+[Usiel] 858
+~
+33030144 1 6 0
+D1
+~
+~
+0 -1 8125 10 10 5
+D2
+~
+~
+0 -1 8126 10 10 5
+D3
+~
+~
+0 -1 8123 10 10 5
+-1
+S
+
+#8125
+Ambrosia House~
+Under Construction.
+~
+[Usiel] 950
+[Eliza] *laugh* just had this idea.. If someone asks to see a girl, have the 'madam' say, I'm sorry but all the girls are tied up at the moment. *snicker* tongue in cheek innuendo.
+[Eliza] not a shop really, just an npc that might add some fun.
+[Eliza] need lots of ideas for put downs for the HNG - horny net geeks.;)
+[Tyrone] think of a  different name...Pandora has alot of things tied with it ;)
+[Tyrone] cute..shes a he or is it supposed to be a he or a she? :P
+~
+66584581 0 5 0
+D3
+~
+~
+0 -1 8124 10 10 5
+5325 9 1509949540 3 0
+-1
+S
+
+#8126
+Street of Silk Veils~
+Under Construction.
+~
+[Usiel] 857
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8124 10 10 5
+D1
+~
+~
+0 -1 8128 10 10 5
+D3
+~
+~
+0 -1 8127 10 10 5
+-1
+S
+
+#8127
+Black Whip~
+Under Construction.
+~
+[Usiel] 951
+[Eliza] have no clue what to do here.
+[Eliza] I vote for a pimp.
+[Eliza] Mean nasty bastard that beats the women.:)
+[Eliza] j/k.
+[Usiel] Why just kidding? That sounds about right. :P
+[Eliza] Front for the Black Hand, perhaps?
+~
+66584581 0 5 0
+D1
+~
+~
+0 -1 8126 10 10 5
+-1
+S
+
+#8128
+Thieves' Market~
+Under Construction.
+~
+[Eliza] Old room 828
+[Eliza] Labyrinth
+[Usiel] high small balcony on the wooden house to the north. Candlemaker has a small stall built out of the front of a house (acodes, if anything). mob here... to be added later.
+~
+33030145 1 6 0
+D1
+~
+~
+0 -1 8113 10 10 5
+D2
+~
+~
+0 -1 8110 10 10 5
+D3
+~
+~
+0 -1 8126 10 10 5
+-1
+S
+
+#8129
+Kergan's Run~
+Little more than a twisted and craggy ruined street winding a path around
+ramshackle buildings, Kergan's Way follows a torturous journey through
+the city.  Dark, frowning structures force their way into the bends of
+the road, unoiled portals often creaking open to eject dim rag-garbed
+creatures, all hurrying on their way as if anxious to be done and safe
+behind warped doors again.  Here and there, a crumbling stone wall
+reveals itself, small segments of a larger wall rendered unusable by time. 
+The broken shapes slowly melt into aging constructions, even the most
+recent tottering and sagging under the weight of years.  Oppression
+hovers in the air like an ancient, dusty shroud.
+~
+[Usiel] 875
+[Eliza] Labyrinth
+[Eliza] rdesc done.. need extras/randoms/leaving.
+~
+33030144 1 6 0
+D1
+~
+~
+0 -1 8123 10 10 5
+D2
+~
+~
+0 -1 8130 10 10 5
+E
+stone wall segments~
+No description.
+~
+-1
+S
+
+#8130
+Kergan's Run~
+A row of dismal houses borders the southern side of this straight stretch
+of Kergan's Way.  Ancient beyond reckoning, warped boards form the grey
+and weathered walls of these pitiful dwelling places, and what roofs
+remain intact are hole-filled, offering little protection from the
+climate.  Only a few random buildings lie on the road's northern edge, as
+if people are shunning the tree-covered rise of Kergan's Hill and the
+abandoned abbey roosting at the crest.
+~
+[Usiel] 877
+[Eliza] Labyrinth
+[Eliza] randoms/leaving/extras.
+[Eliza] random hill rise abbey crest
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8129 10 10 5
+D3
+~
+~
+0 -1 8131 10 10 5
+E
+hill rise abbey crest~
+No description.
+~
+-1
+S
+
+#8131
+Kergan's Run~
+A grim, winding street weaves a sparsely populated pathway through the
+Labyrinth, a palpable hush underscoring the postures of oppression
+present in the stance of the locals.  Open spaces in the pitiful clumps
+of people reveal a craggy, untended roadbed, piles of muck and trash
+heaped up against the shadowed walls of depressed shanties.  The
+structures bordering the twisting way are as drab as their surroundings,
+only the occasional shop boasting a faded and beaten sign suspended above
+a sagging door.  In the distance to the north, emerging above the huddled
+roofs, a tall hill makes its presence felt.  Known nowadays simply as
+'Kergan's Hill', it's the site of the ruin of an abandoned abbey
+dedicated to some long-forgotten god.
+~
+[Eliza] Old room 878
+[Eliza] Labyrinth
+[Eliza] need extras/leaving/randoms.
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8132 10 10 5
+D1
+~
+~
+0 -1 8130 10 10 5
+D2
+~
+~
+0 -1 8138 10 10 5
+E
+walls shanties structures shops sign~
+No description.
+~
+E
+1 north hill abbey~
+No description.
+~
+-1
+S
+
+#8132
+At the Foot of Kergan's Hill~
+The twists and turns of Kergan's Way finally meet their end here at the
+base of a rising hill, almost out of place among the ramshackle tenements
+and decaying walls, remnants of a forgotten past.  A trail of sorts
+wanders up the slope of the mound, an oft untraveled path leading to the
+crest and the ruined archway looming there.  The hill itself rises above
+the roofs of the Labyrinth, a grass and tree covered monument to some
+forgotten god.  A few fickle buildings cling to the sides of the roadway
+here, and odd brickwork ruins give a backdrop to the dismal structures, a
+line that disappears into the distance to the west and east.
+~
+[Eliza] Old Room 894
+[Eliza] Labyrinth
+[Eliza] Abbey ruins and old graveyard will go atop the hill. Use transfer.
+[Eliza] need extras/leaving/randoms.
+[Eliza] room 6600
+[Guin] Connects to Abbey on the Hill..northish
+~
+33030144 1 6 0
+D2
+~
+~
+0 -1 8131 10 10 5
+E
+train 1 north path~
+No description.
+~
+E
+crest archway~
+~
+-1
+S
+
+#8133
+Bucklebrass Lane~
+Under Construction.
+~
+[Usiel] 926
+[Usiel] Lane swerves to the northeast, and straigthens to the west.Southeast an old bearded man sits in a rickety chair,surrounded by barrels...in front of a smoke-filled shop. Sells Surv's Whiskey...very strong, random interprets, code later. Also weak tobacco (fake?). Tobacco leaves a very long lasting negative affect nowadays.. only use if player buys and takes it voluntarily.
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8111 10 10 5
+D3
+~
+~
+0 -1 8134 10 10 5
+-1
+S
+
+#8134
+Buckle Brass Lane~
+Under Construction.
+~
+[Usiel] 852
+[Eliza] Labyrinth
+[Usiel] Oppressive quiet, houses of warped wood, seem to be leaning in towards the street. A post for tying horses, now broken... some empty boxes stacked in an alley to the south, alley is closed though. Dog here would be good.
+[Usiel] Add here the typo from 927 about the adventuring house, to the north
+sign that says "Durgan's Hilt". There are doors to a stable, but both they and the front door are locked (acode). Maybe add something for thieves here down the road.
+[Eliza] street doesn't bend to the southwest.. I assume that should be changed.
+~
+33030144 1 6 0
+D1
+~
+~
+0 -1 8133 10 10 5
+D3
+~
+~
+0 -1 8135 10 10 5
+-1
+S
+
+#8135
+Bucklebrass Lane~
+Under Construction.
+~
+[Usiel] 853
+[Eliza] Labyrinth
+[Usiel] Worn wooden houses, and an occasional petty shop with a front stall. Shutters on second story windows are often broken and dangling. Not alot of front doors.. just dark windows, often closed with wooden shutters, no glass.
+[Usiel] entering room- 5 second delay, to_char only... a man is breaking up a box in a dark alley. When he sees you, he frowns and turns away into the shadows.
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8137 10 10 5
+D1
+~
+~
+0 -1 8134 10 10 5
+D3
+~
+~
+0 -1 8136 10 10 5
+-1
+S
+
+#8136
+Bucklebrass Lane~
+Under Construction.
+~
+[Usiel] 854
+Eliza] Labyrinth
+[Usiel] A wooden plank serves as an awning extending along the southwest house.
+[Usiel] Can start to smell the river and the distant scent of salt and fish. The house at the northeast corner is burnt out, shards of wood protruding where the heat warped the frames. It's still standing and uninhabited, and it looks like the fire happened some time ago.
+[Usiel] mob here, Griun. Responds to all questions with either staring, smoking a dirty pipe, or snorting quietly. Could leave him out for a while until he has some factional purpose.
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8138 10 10 5
+D1
+~
+~
+0 -1 8135 10 10 5
+-1
+S
+
+#8137
+Raerdo's Song and Swill Tavern - Labyrinth~
+Under Construction.
+~
+[Usiel] shop 410
+[Usiel] typical rowdy joint. Some tables, a bar, a few wenches.. and a corner devoted to musicians. Certainly not a high class establishment, but a simple place with some entertainment, not dominated by the underworld.
+[Usiel] Also because this market needed more than one place linked off of it. Otherwise it might as well just be a street.
+[Usiel] To be added later: CG plant wench, Table of Silence. Neutral ground.
+[Eliza] hrm.. what does this note mean?
+[Eliza] this place was already placed off of...
+~
+66584581 0 5 0
+D2
+~
+~
+0 -1 8135 10 10 5
+-1
+S
+
+#8138
+Bucklebrass Lane~
+Under Construction.
+~
+[Usiel] 596
+[Eliza] Labyrinth
+[Usiel] Bucklebrass bends west and south, while Kurgan's Way goes up to the northeast. River is visible to the west. East is a closed-up fish market.. but it still smells like dead rotten fish.
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8131 10 10 5
+D2
+~
+~
+0 -1 8136 10 10 5
+D3
+~
+~
+0 -1 8139 10 10 5
+-1
+S
+
+#8139
+Bucklebrass Lane~
+River Road merges into Bucklebrass Lane, delving into the depths of the
+city between tightly packed rows of dreary buildings.  Some of the worn
+out structures serve as homes for the poverty-plagued masses; the larger,
+two-storied ones confiscated and gutted for use as stopgap warehouses. 
+The roadbed itself shows signs of wear, the old cobblestones cracked and
+broken, but mostly still in place.
+~
+[Usiel] 883
+[Eliza] Labyrinth
+[Usiel] Cobbles, not quite upkept... road is a labyrinth thoroughfare from the docks to the riverfront road into the old neighborhood
+[Usiel] Buildings are mostly one-two story.. some old warehouse-oriented
+[Eliza] which road is a labyrinthine thoroughfare? Bucklebrass or River Road?
+[Eliza] Bleargh. I still hate this but I guess it'll pass for want of anything better..
+[Eliza] need randoms, extras, leaving.
+~
+33030144 1 6 0
+D1
+~
+~
+0 -1 8138 10 10 5
+D3
+~
+~
+0 -1 8140 10 10 5
+E
+rows buildings structures homes warehouses~
+No description.
+~
+E
+roadbed cobblestones~
+No description.
+~
+-1
+S
+
+#8140
+Bucklebrass Junction~
+The rutted dirt road bends south along a crumbling stone wall, parallel
+to the river, winding east among the most beggarly of dwellings. 
+Shanties, lean-tos, even tents make up the majority of the homes,
+although here and there the wreck of a ruined cottage can be seen,
+setting a good way off the eroded path.  The River Duil flows languidly
+to the west, its banks low and muddy at this point in its course.  Far in
+the distance, the city wall and the northern river towers loom stark
+against the horizon.
+~
+[Usiel] 885
+[Eliza] Labyrinth
+[Usiel] mob : fisherman
+[Usiel] random: fisherman casting line into the shallows to the west.
+[Eliza] need extras/leaving/randoms.
+[Eliza] do you want an actual mob here?
+[Eliza] if so, rather than a random, you could do that on an mpc, enterring code.
+[Eliza] use mob, disappearing at night.
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8141 10 10 5
+D1
+~
+~
+0 -1 8139 10 10 5
+D2
+~
+~
+0 -1 8146 10 10 5
+E
+wall brick rocks bank stonework~
+No description.
+~
+E
+towers jetty~
+No description.
+~
+-1
+S
+
+#8141
+Fagan's Bend~
+A string of one-room cottages, all in a dreary state of repair, line the
+landward edge of the road that devolves from worn cobbles in the south
+into hard-packed rutted dirt where it continues northward.  Opposite the
+row of dismal houses, a grey-brick wall stands above the sharp rocks
+along the bank of the River Duil.  An old and unnecessary fortification
+since the construction of the grim grey towers on the jetty several yards
+out, the wall is in desperate need of repair, its crumbling stonework
+leaving large gaps in the span.  One structure, slightly larger than the
+rest and in somewhat better repair, boasts a sign above the door.
+~
+[Usiel] 884
+[Eliza] Labyrinth
+[Usiel] East is the shop.. none too spiffy, but larger than the other houses.
+[Eliza] add extra sign - One-Eyed Finn's Leather Shoppe
+[Eliza] extras, leaving, randoms.
+[Eliza] need you to do extra here for towers/jetty.. #3 atm.
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8142 10 10 5
+D1
+solid wood door~
+~
+131 -1 8144 10 10 5
+D2
+~
+~
+0 -1 8140 10 10 5
+E
+wall brick stonework rocks~
+No description.
+~
+E
+sign~
+No description.
+~
+E
+tower jetty~
+No description.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cLeaving the roadway, you enter the shop to the east.@n
+~
+E
+to_room~
+@cLeaving the roadway, $n enters the shop to the east.@n
+~
+!
+3 0 2
+-1
+S
+
+#8142
+Fagan's Bend~
+The rock-strewn rutted road extends to the west, littered by cramped and
+shuttered houses and shanties on either side.  There is little vegetation
+here, only tired-looking trees and scattered patches of ragged grass
+growing in the stone-hard soil.  The poverty in this small section of the
+city is almost palpable, coloring everything within sight.  The
+occasional sound of shouts or laughter rings out above the constant
+lapping of the river's languid waters against the shore.
+~
+[Usiel] 888
+[Eliza] Labyrinth
+[Usiel] Mob: mutt
+[Usiel] random: dog stops, watches, sniffs around houses
+[Eliza] Put Black Padre's due East.
+[Eliza] need extras, randoms, leaving.
+[Eliza] leaving east done.
+~
+33030144 1 6 0
+D1
+weathered wooden door~
+~
+131 -1 8330 10 10 5
+D2
+~
+~
+0 -1 8141 10 10 5
+D3
+~
+~
+0 -1 8143 10 10 5
+E
+rutted road~
+No description.
+~
+E
+houses shanties shuttered~
+No description.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou make your way into the tavern, lying eastward.@n
+~
+E
+to_room~
+@y$n makes $s way into the tavern, lying eastward.@n
+~
+!
+3 0 2
+-1
+S
+
+#8143
+The Bottoms~
+The ground falls sharply before leveling out along the bank, the
+resultant backdrop of loose dirt providing shelter of sorts for the
+dismal place the poorest of the poor call home.  Between here and the
+Duil, a flat shelf of land holds tents, crates and half-built shanties, a
+central campfire providing the only comfort from the dank air of the
+nearby river.  Pools of dark water fill the low places in the soft soil,
+deposited there by the surging river at high tide.  Off in the distance,
+the gray stone walls of a broad tower rise against the horizon.
+~
+[Usiel] 890
+[Eliza] need randoms, extras, leaving.. explore dwellings via extra.
+[Eliza] add cooking code for campfire.
+[Eliza] Usiel - tower extra #2.
+[Eliza] How to handle campfire and cooking code - Ask Ty.
+[Eliza] think Campfire extra should be on the object.
+[Eliza] could add some sort of search in this room.. perhaps in the pools of water.. if that's done, I'll do an extra for the pools
+~
+33030144 1 6 0
+D1
+~
+~
+0 -1 8142 10 10 5
+E
+tents crates shanties~
+A variety of makeshift tents, weathered crates and shoddily constructed
+shanties encircle a low-burning campfire, the only warmth in the
+otherwise dank air so close to the Duil.  The tents, some made of old
+blankets supported by sticks, others actual tarpaulins with sturdy,
+straight poles, perch directly on the damp soil of the river bank,
+providing a chilly bed.  The crates, upright in the daytime, are
+overturned at night to create meager protection for sleeping.  Gathered
+wood, both cut timbers and untrimmed branches, fashion the paper-roofed
+walls of the shanties...the best of these dismal dwellings, yet still
+scant refuge from the weather.
+~
+E
+tower walls stone~
+No description.
+~
+-1
+S
+
+#8144
+One-eyed Finn's Leather Shoppe~
+Although at first appearances the shop seems somewhat larger than the
+other nearby structures, it is still quite cramped and confining, the
+mustiness overshadowed by the scent of new-tanned leather and old sweat. 
+Everywhere there are signs of the leatherworker's trade...awls,
+heavy-bladed knives, long sharp needles whose eyes are threaded through
+with rawhide thongs for piecing the items together.  Low but wide
+shelving covers two of the weathered walls, their shelves filled with
+stacks of all sorts of leather goods, from drinking skins to armor.  A
+nearly illegible sign has been pegged to one wall close to the squeaking
+door.
+~
+[Usiel] Shop 969
+[Eliza] pouches, waterskins, backpacks, belts, leather armor.. not the good custom stuff.
+[Eliza] Leaving, randoms, extras.
+[Rikahn] rigid leather armor added
+[Eliza] this armor needs to be elsewhere too.
+[Eliza] combine extra 1 and 2
+[Eliza] need mresets
+[Eliza] This armor needs to reset elsewhere in the city too, because many of these shops are going to be thief accessible only.
+~
+66584581 0 5 0
+D3
+solid wood door~
+~
+131 -1 8141 10 10 5
+E
+shelving walls leather goods skins armor~
+No description.
+~
+E
+sign~
+No description.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou step through the door into the roadway.@n
+~
+E
+to_room~
+@c$n steps through the door into the roadway.@n
+~
+!
+3 0 8
+5221 9 1509949540 3 0
+-1
+S
+
+#8145
+Riverfront Road~
+The grey stone wall follows the line of the river, falling into ruin now
+that other means of defense provide protection to the city.  Underfoot,
+the roadbed is hard-packed, with a number of the cobblestones still in
+place, standing their ground against wear and tear and lack of care. 
+Eastward, the hulking shell of old weathered warehouse casts lurking
+shadows over the road, its wide double doors securely locked and barred
+against intrusion.
+~
+[Usiel] 597
+[Eliza] Labyrinth
+[Eliza] Warehouse off stage for now.. possibly something later for thieves.
+[Eliza] need extras/leaving/randoms.
+[Eliza] Change warehouse direction or no? There is one west now.
+[Eliza] east one is offstage
+~
+33030144 1 6 0
+D2
+~
+~
+0 -1 8150 10 10 5
+D3
+~
+~
+0 -1 8146 10 10 5
+E
+wall ruin~
+No description.
+~
+E
+roadbed cobblestones~
+No description.
+~
+E
+1 east eastward shell warehouse doors~
+No description.
+~
+E
+river~
+No description.
+~
+-1
+S
+
+#8146
+Riverfront Road~
+Under Construction.
+~
+[Usiel] 593
+[Eliza] Labyrinth
+[Eliza] need extras, leavings, randoms.
+[Eliza] trebuchet extra added.
+[Usiel] This room needs to reflect the docks to the west and warehouses to the south...  it should also incorporate some of the descs in the unused rooms along this road.
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8140 10 10 5
+D1
+~
+~
+0 -1 8145 10 10 5
+D2
+~
+~
+0 -1 8149 10 10 5
+D3
+~
+~
+0 -1 8147 10 10 5
+-1
+S
+
+#8147
+Docks~
+Under Construction.
+~
+[Eliza] Docks I assume or something else? Perhaps Black Padre's.
+~
+33030144 1 6 0
+D1
+~
+~
+0 -1 8146 10 10 5
+D2
+~
+~
+0 -1 8148 10 10 5
+-1
+S
+
+#8148
+Docks~
+Under Construction.
+~
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8147 10 10 5
+-1
+S
+
+#8149
+Warehouses~
+Under Construction.
+~
+[Eliza] this has no corresponding room on the old map?
+~
+66584581 0 5 0
+D0
+~
+~
+0 -1 8146 10 10 5
+-1
+S
+
+#8150
+Riverfront Road~
+Under Construction.
+~
+[Usiel] 560
+[Eliza] Labyrinth
+[Eliza] sign should have bed over a skull and crossbones..
+[Eliza] need extras, leaving, randoms.
+[Eliza] desc for 560 won't work here.. find another
+[Eliza] or tweak 560's.
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8145 10 10 5
+D1
+~
+~
+0 -1 8151 10 10 5
+D2
+~
+~
+0 -1 8152 10 10 5
+-1
+S
+
+#8151
+Seasick Parrot~
+Under Construction.
+~
+[Usiel] 955
+[Eliza] no notes from old.
+~
+66584581 0 5 0
+D3
+~
+~
+0 -1 8150 10 10 5
+-1
+S
+
+#8152
+Riverfront Road~
+Under Construction.
+~
+[Eliza] Does this have a corresponding room number?
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8150 10 10 5
+D1
+~
+~
+0 -1 8153 10 10 5
+D3
+~
+~
+0 -1 8154 10 10 5
+-1
+S
+
+#8153
+Falouth Street~
+Under Construction.
+~
+[Eliza] ditto
+~
+33030144 1 6 0
+D1
+~
+~
+0 -1 8155 10 10 5
+D3
+~
+~
+0 -1 8152 10 10 5
+-1
+S
+
+#8154
+Riverfront Road~
+Under Construction.
+~
+[Eliza] No corresponding room number?
+~
+33030144 1 6 0
+D1
+~
+~
+0 -1 8152 10 10 5
+D2
+~
+~
+0 -1 8191 10 10 5
+-1
+S
+
+#8155
+Falouth Street~
+Under Construction.
+~
+[Eliza] Ditto
+~
+33030144 1 6 0
+D1
+~
+~
+0 -1 8156 10 10 5
+D3
+~
+~
+0 -1 8153 10 10 5
+-1
+S
+
+#8156
+Stavers Bend~
+Under Construction.
+~
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8157 10 10 5
+D2
+~
+~
+0 -1 8183 10 10 5
+D3
+~
+~
+0 -1 8155 10 10 5
+-1
+S
+
+#8157
+Barrow Street~
+Under Construction.
+~
+~
+33030144 1 6 0
+D1
+~
+~
+0 -1 8159 10 10 5
+D2
+~
+~
+0 -1 8156 10 10 5
+D3
+~
+~
+0 -1 8158 10 10 5
+-1
+S
+
+#8158
+Axehand's Weapons~
+Under Construction.
+~
+[Usiel] Shop 965
+~
+33030144 0 5 0
+D1
+~
+~
+0 -1 8157 10 10 5
+5217 9 1509949540 3 0
+-1
+S
+
+#8159
+Barrow Street~
+Under Construction.
+~
+~
+33030144 1 6 0
+D1
+~
+~
+0 -1 8164 10 10 5
+D3
+~
+~
+0 -1 8157 10 10 5
+-1
+S
+
+#8160
+Nylak's Fine Armor~
+Under Construction.
+~
+[Eliza] This room corresponds to 477
+[Rikahn] chainmail armor is created here
+~
+66584581 0 5 0
+D4
+~
+~
+0 -1 8329 10 10 5
+2079 9 1509949540 3 0
+-1
+S
+
+#8161
+Kynes Road~
+Under Construction.
+~
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8164 10 10 5
+D1
+~
+~
+0 -1 8165 10 10 5
+D3
+dark oak door~
+~
+407 -1 8163 10 10 5
+-1
+S
+
+#8162
+Selm Row~
+Under Construction.
+~
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8110 10 10 5
+D2
+~
+~
+0 -1 8164 10 10 5
+-1
+S
+
+#8163
+Wolves' Den~
+Under Construction.
+~
+[Usiel] shop 670
+[Usiel] Later.. after economy and factions and that stuff
+[Eliza] Mercs.
+~
+66584581 0 5 0
+D1
+dark oak door~
+~
+407 -1 8161 10 10 5
+-1
+S
+
+#8164
+Old Gate~
+Under Construction.
+~
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8162 10 10 5
+D2
+~
+~
+0 -1 8161 10 10 5
+D3
+~
+~
+0 -1 8159 10 10 5
+-1
+S
+
+#8165
+Kynes Road~
+Under Construction.
+~
+~
+33030144 1 6 0
+D2
+~
+~
+0 -1 8166 10 10 5
+D3
+~
+~
+0 -1 8161 10 10 5
+-1
+S
+
+#8166
+Kynes Road~
+Under Construction.
+~
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8165 10 10 5
+D1
+~
+~
+0 -1 8167 10 10 5
+D2
+~
+~
+0 -1 8170 10 10 5
+-1
+S
+
+#8167
+Horse Market~
+Under Construction.
+~
+~
+33030145 1 6 0
+D0
+~
+~
+0 -1 8348 10 10 5
+D1
+~
+~
+0 -1 8169 10 10 5
+D3
+~
+~
+0 -1 8166 10 10 5
+-1
+S
+
+#8168
+TO BE USED LATER!!!~
+Under Construction.
+~
+~
+66584581 0 9 0
+D0
+~
+~
+0 -1 8173 10 10 5
+-1
+S
+
+#8169
+Horse Gate~
+Under Construction.
+~
+~
+33030145 1 6 0
+D0
+~
+~
+0 -1 8333 10 10 5
+D3
+~
+~
+0 -1 8167 10 10 5
+-1
+S
+
+#8170
+Kynes Road~
+Under Construction.
+~
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8166 10 10 5
+D2
+~
+~
+0 -1 8171 10 10 5
+-1
+S
+
+#8171
+Pfennig Square~
+Under Construction.
+~
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8170 10 10 5
+D1
+~
+~
+0 -1 8172 10 10 5
+D2
+~
+~
+0 -1 8344 10 10 5
+D3
+~
+~
+0 -1 8176 10 10 5
+-1
+S
+
+#8172
+Caravan Street~
+Under Construction.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 8346 10 10 5
+D1
+~
+~
+0 -1 8174 10 10 5
+D2
+~
+~
+0 -1 8335 10 10 5
+D3
+~
+~
+0 -1 8171 10 10 5
+-1
+S
+
+#8173
+TO BE USED LATER!!!~
+Under Construction.
+~
+~
+66584581 0 9 0
+D1
+~
+~
+0 -1 8179 10 10 5
+D2
+~
+~
+0 -1 8168 10 10 5
+-1
+S
+
+#8174
+Caravan Gate~
+Under Construction.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 8336 10 10 5
+D2
+~
+~
+0 -1 8175 10 10 5
+D3
+~
+~
+0 -1 8172 10 10 5
+-1
+S
+
+#8175
+Guard Barracks - Caravan Gate~
+Under Construction.
+~
+~
+66584581 0 5 0
+D0
+~
+~
+0 -1 8174 10 10 5
+-1
+S
+
+#8176
+Caravan Street~
+Under Construction.
+~
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8177 10 10 5
+D1
+~
+~
+0 -1 8171 10 10 5
+D2
+~
+~
+0 -1 8238 10 10 5
+D3
+~
+~
+0 -1 8178 10 10 5
+-1
+S
+
+#8177
+Market Garden~
+Under Construction.
+~
+[Usiel] Shop 947
+[Eliza] fresh veggies, fruit, bread, cheeses, milk.. anything that can be a farm product.
+[Eliza] grains of all sorts.
+[Eliza] this mob could go home at night.
+~
+33030145 1 6 0
+D2
+~
+~
+0 -1 8176 10 10 5
+5212 9 1509949540 3 0
+-1
+S
+
+#8178
+Caravan Street~
+Under Construction.
+~
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8233 10 10 5
+D1
+~
+~
+0 -1 8176 10 10 5
+D3
+~
+~
+0 -1 8180 10 10 5
+-1
+S
+
+#8179
+TO BE USED LATER!!!~
+Under Construction.
+~
+~
+66584581 0 9 0
+D1
+~
+~
+0 -1 8334 10 10 5
+D3
+~
+~
+0 -1 8173 10 10 5
+-1
+S
+
+#8180
+Caravan Market~
+Under Construction.
+~
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8182 10 10 5
+D1
+~
+~
+0 -1 8178 10 10 5
+D3
+~
+~
+0 -1 8181 10 10 5
+-1
+S
+
+#8181
+Caravan Street~
+Under Construction.
+~
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8185 10 10 5
+D1
+~
+~
+0 -1 8180 10 10 5
+D2
+~
+~
+0 -1 8186 10 10 5
+-1
+S
+
+#8182
+Market Street North~
+Under Construction.
+~
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8183 10 10 5
+D2
+~
+~
+0 -1 8180 10 10 5
+-1
+S
+
+#8183
+Market Street North~
+Under Construction.
+~
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8156 10 10 5
+D1
+~
+~
+0 -1 8184 10 10 5
+D2
+~
+~
+0 -1 8182 10 10 5
+-1
+S
+
+#8184
+Maegwyn's Stitchery~
+Under Construction.
+~
+[Usiel] Shop 966
+[Eliza] Az's custom vest goes here.
+~
+66584581 0 5 0
+D3
+~
+~
+0 -1 8183 10 10 5
+5205 9 1509949540 3 0
+-1
+S
+
+#8185
+Caravan Street~
+Under Construction.
+~
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8192 10 10 5
+D2
+~
+~
+0 -1 8181 10 10 5
+D3
+~
+~
+0 -1 8187 10 10 5
+-1
+S
+
+#8186
+Stonebridge Road~
+Under Construction.
+~
+[Usiel] road bends north
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8181 10 10 5
+D1
+~
+~
+0 -1 8200 10 10 5
+D3
+~
+~
+0 -1 8196 10 10 5
+-1
+S
+
+#8187
+Caravan Street~
+Under Construction.
+~
+~
+33030144 1 6 0
+D1
+~
+~
+0 -1 8185 10 10 5
+D3
+~
+~
+0 -1 8188 10 10 5
+-1
+S
+
+#8188
+Caravan Street~
+Under Construction.
+~
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8190 10 10 5
+D1
+~
+~
+0 -1 8187 10 10 5
+D2
+~
+~
+0 -1 8193 10 10 5
+D3
+~
+~
+0 -1 8189 10 10 5
+-1
+S
+
+#8189
+Woodbridge Plaza East~
+Under Construction.
+~
+[Eliza] River due west
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8191 10 10 5
+D1
+~
+~
+0 -1 8188 10 10 5
+D3
+~
+~
+0 -1 8239 10 10 5
+-1
+S
+
+#8190
+Merchant's Bank~
+Under Construction.
+~
+[Usiel] shop 944
+[Eliza] Set up for Banking.
+~
+66586671 0 5 0
+D2
+~
+~
+0 -1 8188 10 10 5
+-1
+S
+
+#8191
+Riverfront Road~
+Under Construction.
+~
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8154 10 10 5
+D2
+~
+~
+0 -1 8189 10 10 5
+-1
+S
+
+#8192
+MacDuff's Armory~
+Under Construction.
+~
+[Usiel] shop 967
+[Rikahn] Apprentice - Makes bronze pieces for other armors
+~
+66584581 0 5 0
+D2
+~
+~
+0 -1 8185 10 10 5
+D3
+~
+~
+0 -1 8340 10 10 5
+D4
+~
+~
+0 -1 8341 10 10 5
+D5
+~
+~
+0 -1 8319 10 10 5
+5370 9 1509949540 3 0
+-1
+S
+
+#8193
+Lyre Street~
+Under Construction.
+~
+~
+33030145 1 6 0
+D0
+~
+~
+0 -1 8188 10 10 5
+D1
+~
+~
+0 -1 8195 10 10 5
+D2
+~
+~
+0 -1 8197 10 10 5
+D3
+~
+~
+0 -1 8194 10 10 5
+-1
+S
+
+#8194
+Lyre Street Theatre~
+Under Construction.
+~
+[Usiel] 932
+~
+66584581 0 5 0
+D1
+~
+~
+0 -1 8193 10 10 5
+-1
+S
+
+#8195
+Allegro's~
+Mullioned windows and a blue-stained door create an airy lightness within
+the interior of the small cramped shop, filled from ceiling to floor with
+tall oak shelves.  Stacked with all the smaller items important to the
+musicians' profession, the cases give way to racks and stands holding a
+wide variety of the goods offered in Allegro's - all manner of musical
+instruments - those plucked or strummed, blown upon or beaten.  Burnished
+hardwood floors, pristinely clean, reflect back creamy colored walls,
+neither with a trace of dust or dirt on them.  Stuck to a hook on the
+wall, a piece of yellowed parchment serves as a @esign@n.
+~
+[Usiel] shop 931
+[Eliza] need extras/leaving/reset/shopkeeper
+~
+66584581 0 5 0
+D3
+~
+~
+0 -1 8193 10 10 5
+E
+sign~
+A worn, yellowed parchment has been stuck to a hook mounted on the wall
+near the door.  Scrawled on the parchment...
+
+@IBuy - @CBuys an item from the store.@n
+@IList - @CShows the store's selection.@n
+@IValue - @CLists the value of an item and the repair cost.@n
+@ISell - @CSells an item.@n
+~
+E
+items shelves~
+from gut strings and metal stops to narrow-lined parchment and fine-pointed quills...
+~
+E
+windows door 1 west~
+No description.
+~
+E
+instruments~
+No description.
+~
+-1
+S
+
+#8196
+Stonebridge Road~
+Under Construction.
+~
+~
+33030144 1 6 0
+D1
+~
+~
+0 -1 8186 10 10 5
+D2
+~
+~
+0 -1 8199 10 10 5
+D3
+~
+~
+0 -1 8197 10 10 5
+-1
+S
+
+#8197
+Plaza of Troubadours~
+Under Construction.
+~
+~
+33030145 1 6 0
+D0
+~
+~
+0 -1 8193 10 10 5
+D1
+~
+~
+0 -1 8196 10 10 5
+D3
+~
+~
+0 -1 8198 10 10 5
+-1
+S
+
+#8198
+Stonebridge Plaza East~
+Under Construction.
+~
+[Eliza] River due west.
+~
+33030144 1 6 0
+D1
+~
+~
+0 -1 8197 10 10 5
+D2
+~
+~
+0 -1 8202 10 10 5
+D3
+~
+~
+0 -1 8268 10 10 5
+-1
+S
+
+#8199
+Guildhall of Entertainers~
+Under Construction.
+~
+[Usiel] shop 919
+[Eliza] Guildhall only.
+~
+66584581 0 5 0
+D0
+~
+~
+0 -1 8196 10 10 5
+-1
+S
+
+#8200
+Seamus Bend~
+Under Construction.
+~
+~
+33030144 0 9 0
+D2
+~
+~
+0 -1 8201 10 10 5
+D3
+~
+~
+0 -1 8186 10 10 5
+-1
+S
+
+#8201
+Dwarrow Commons~
+Under Construction.
+~
+[Usiel] Linear and particularly tidy, this expansive junction is lined with tightly-laid pale greystone blocks and flattened cobbles. Houses sit low and sturdy, some with high foundations of stone brick, others bearing walls of exquisitely-crafted monolithic slabs, cut to perfection.
+[Usiel] Stairs descend into alleys and doorways, as though the street were merely the covering for labyrinthine caves. Sprouting from the fields of stone is a small, circular well.
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8200 10 10 5
+D1
+~
+~
+0 -1 8328 10 10 5
+D2
+~
+~
+0 -1 8210 10 10 5
+-1
+S
+
+#8202
+Carillon Street~
+Under Construction.
+~
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8198 10 10 5
+D1
+~
+~
+0 -1 8203 10 10 5
+D2
+~
+~
+0 -1 8204 10 10 5
+-1
+S
+
+#8203
+Curlieu's Outfitters~
+Under Construction.
+~
+[Usiel] shop 939
+[Eliza] General store type place.
+~
+66584581 0 5 0
+D3
+~
+~
+0 -1 8202 10 10 5
+5247 9 1509949540 3 0
+-1
+S
+
+#8204
+Carillon Street~
+Under Construction.
+~
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8202 10 10 5
+D1
+~
+~
+0 -1 8205 10 10 5
+-1
+S
+
+#8205
+Carillon Street~
+Under Construction.
+~
+~
+33030144 1 6 0
+D1
+~
+~
+0 -1 8206 10 10 5
+D2
+~
+~
+0 -1 8211 10 10 5
+D3
+~
+~
+0 -1 8204 10 10 5
+-1
+S
+
+#8206
+Zvarden Street~
+Under Construction.
+~
+~
+33030144 1 6 0
+D1
+~
+~
+0 -1 8208 10 10 5
+D2
+~
+~
+0 -1 8207 10 10 5
+D3
+~
+~
+0 -1 8205 10 10 5
+-1
+S
+
+#8207
+The Writ~
+Under Construction.
+~
+[Usiel] 642
+[Usiel] shop
+[Eliza] scribe supplies, blank scrolls, quills and inkpots.
+[Eliza] put a gnome here?
+[Squeed] the charcoal reset here is to be in shop inventory please :)
+[Usiel] mob name: Gedrin
+[Usiel] Tall man, thin spectacles, a few wisps of hair. He has a large nose, which he looks down with mild disdain.
+~
+66584581 0 5 0
+D0
+~
+~
+0 -1 8206 10 10 5
+5037 9 1509949540 3 0
+7311 17 1509949540 -1 0
+-1
+S
+
+#8208
+Zvarden Street~
+Under Construction.
+~
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8209 10 10 5
+D1
+~
+~
+0 -1 8210 10 10 5
+D3
+~
+~
+0 -1 8206 10 10 5
+-1
+S
+
+#8209
+Dambrosi's Apothecary~
+Under Construction.
+~
+[Usiel] shop 655
+some little dark shop here, something intellectual...
+[Eliza] Apothecary.
+[Usiel] Mostly reagents.
+[Eliza] I think you intended this to be something other than a place to buy reagents. If you'll look at the note you left at the top and the name, I think you'll see what I mean.
+[Eliza] apothecary is usually somewhere that you buy medicines.
+[Eliza] Would it be cool to have a few rechargeable wands/staves?
+~
+66584581 0 5 0
+D2
+~
+~
+0 -1 8208 10 10 5
+5317 9 1509949540 3 0
+-1
+S
+
+#8210
+Grommet Street~
+Under Construction.
+~
+[Usiel] Clustering together like the fingers of Tytan's Reach, the houses
+that straddle this stretch of Grommet Street are low and wide at the base,
+wood upon stacked and reinforced stone foundations.
+[Usiel] Deceptive in their proximity, the sunken doors and blocked alleys hint at large basement dwellings, as though the earth had reached up and pulled them down into the soil.
+[Usiel] A side street winds off to the west, narrow and dark.
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8201 10 10 5
+D2
+~
+~
+0 -1 8236 10 10 5
+D3
+~
+~
+0 -1 8208 10 10 5
+-1
+S
+
+#8211
+Carillon Street~
+Under Construction.
+~
+[Eliza] University west
+[Usiel] 610
+[Eliza] Academicium
+[Usiel] The University to the west is a magnificent structure of reaching spires, straight and often spiraling. Some say it was created in mimicry of Sorceror's Isle. A statue to the west, amidst the grassy and stone paths, of Rombard, the first Ducal Minister of Preservation... who commissioned the university
+and Library late in the first century AC.
+[Usiel] East is houses and petty shops.
+[Usiel] Carillon street continues north and south. South is the giant bell tower.
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8205 10 10 5
+D2
+~
+~
+0 -1 8213 10 10 5
+D3
+~
+~
+0 -1 8212 10 10 5
+-1
+S
+
+#8212
+University~
+Under Construction.
+~
+[Usiel] 643
+[Eliza] Expand
+~
+66584581 0 5 0
+D1
+~
+~
+0 -1 8211 10 10 5
+-1
+S
+
+#8213
+Carillon Street~
+Under Construction.
+~
+[Usiel] 612
+[Eliza] Academicium
+[Usiel] The street continues north to south.
+[Usiel] Well-placed cobbles form the street bed, though carriages are infrequent, as are horses. Small two or one-story houses and shops line the eastern row, while the university sprawls along the west. The outer wall allows a gated entrance to a grassy garden
+Rbug [Usiel] in which scholars roam to think and speak in nature's fresh air.
+[Usiel] Clock tower high above, far south.
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8211 10 10 5
+D1
+~
+~
+0 -1 8215 10 10 5
+D2
+~
+~
+0 -1 8216 10 10 5
+D3
+~
+~
+0 -1 8214 10 10 5
+-1
+S
+
+#8214
+Grass~
+Under Construction.
+~
+[Usiel] 613
+[Eliza] needs better rname.
+[Eliza] Academicium
+[Usiel] The corner of the university's walls forms a natural bend in the grassy garden path. Stone benches rest at intervals, and a small wooden platform rests prior to the wall, just to the west.
+A little funny coded thing, where one can practice oration. Those who perform poorly will be pelted by onlookers, even those at the windows above, with small fruit. If we get around to it.
+~
+33030144 1 6 0
+D1
+~
+~
+0 -1 8213 10 10 5
+-1
+S
+
+#8215
+Magick Shoppe~
+Under Construction.
+~
+[Usiel] shop 644
+some items, scrolls, mebbe a few potions, a custom (not reagents)
+[Eliza] Academicium
+[Eliza] human shopkeep - Verastides?
+[Eliza] lights reset here but only the new glow globes.
+[Eliza] low level wands
+[Eliza] some staves - low level.
+~
+66584581 0 5 0
+D3
+~
+~
+0 -1 8213 10 10 5
+5313 9 1509949540 3 0
+-1
+S
+
+#8216
+Tower Plaza~
+Under Construction.
+~
+[Usiel] 647 and 652
+[Usiel] The square is spacious and angular, with several monuments to thought and the written tradition. Clerks with bundles of parchment trudge back and forth, along
+[Usiel] Carillon Street to the north, and the Lumistrada to the east. To the south, the looming doors to the city's grand bell tower, which towers above some 80 feet.
+[Eliza] Academicium
+[Usiel] Constructed from sparkling granite, the streets of the Lumistrada glitter from the light of the (sun/streetlamps). To the south, the Great Library of Dun Tathaig rises like a cathedral, buttressed between high and finely-crafted windows. Lions guard the den of knowledge, positioned around the mid-height
+[Usiel] To the north, Several houses line the street... some with small supply shops below and rooming above for the students and academics that abound.
+[Usiel] At intervals along the street are large and grandoise streetlamps, with glittering brass to reflect the light of their oil-pot candles.
+[Usiel] The center of the road, for carriages, is cobbles... the sides are slabs or granite, polished smooth for walking.
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8213 10 10 5
+D1
+~
+~
+0 -1 8217 10 10 5
+-1
+S
+
+#8217
+Lumistrada~
+Under Construction.
+~
+[Usiel] 653 and 668
+[Eliza] Academicium
+[Usiel] A grand archway announces the entrace to the Great Library to the south, with stone-wrought scholars flanking the doors holding tablets with ancient creeds and runes. Giant marble-slab steps lead from
+the granite walk to the iron-banded oak doors. To the north, houses for lodging. The Lumistrada runs east to west, cobble in the middle, glittering granite slabs to the sides. The lamps.
+[Usiel] The library looms to the south, lions and all that. TO the north, an iron fence with lovely designs, covered with vines, protects an open field behind the houses that follow the street. A path cuts in
+to the north, just to the east. The cobbles in the middle, the granite slabs on the sides,
+[Usiel] mind the streetlamps etc.
+~
+33030144 1 6 0
+D1
+~
+~
+0 -1 8218 10 10 5
+D3
+~
+~
+0 -1 8216 10 10 5
+-1
+S
+
+#8218
+Lumistrada~
+Under Construction.
+~
+[Usiel] 667
+[Eliza] Academicium
+[Usiel] (Need insignia for the God of Knowledge... on top of gate entrance)
+[Usiel] Iron gates open to a small road to the north, with willowed trees.. a light escape tucked behind the row of houses.
+[Usiel] Library south, etc.
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8219 10 10 5
+D1
+~
+~
+0 -1 8220 10 10 5
+D3
+~
+~
+0 -1 8217 10 10 5
+-1
+S
+
+#8219
+Tree-lined Lane~
+Under Construction.
+~
+[Usiel] 672
+[Eliza] Entrance to Temple of Hamaskus
+[Eliza] Doors to the temple - His emblem is that of an open book, banded in blue, with an hourglass emblazoned on the left hand page, and several paragraphs of illegible script on the right.
+~
+33030144 1 6 0
+D1
+~
+~
+1 -1 8337 10 10 5
+D2
+~
+~
+0 -1 8218 10 10 5
+-1
+S
+
+#8220
+Lumistrada~
+Under Construction.
+~
+[Usiel] 665
+[Usiel] North, houses line the street. South, the library. A man sitting on the southern side, reading aloud from a book... almost senile.
+[Eliza] Library south.
+~
+33030144 1 6 0
+D1
+~
+~
+0 -1 8221 10 10 5
+D3
+~
+~
+0 -1 8218 10 10 5
+-1
+S
+
+#8221
+Junction - Grommet and Lumistrada~
+Under Construction.
+~
+[Usiel] The glittering dusted walks of the Lumistrada fade away into dull grey bricks.
+[Usiel] Weren't you putting the Vines here?
+[Eliza] Yes, but I was confused about what The Vines was.
+[Eliza] We can go ahead and add it in if you like.
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8224 10 10 5
+D2
+~
+~
+0 -1 8222 10 10 5
+D3
+~
+~
+0 -1 8220 10 10 5
+-1
+S
+
+#8222
+South Gate - Dun Tathaig~
+Under Construction.
+~
+[Eliza] South Gate
+[Usiel] Adorned with smoothstone carvings in what was once a ritual for apprentice craftsman, the city's South Gate is an otherwise simple affair. Anchored by four large pillars, a pair within and without, the archway consists of a simple portcullis and iron-banded doors.
+[Usiel] A small staircase leads up to the east, to the great wall's parapet; at its base, the doorway to the gatehouse and borough watch, adorned with a friendly wreath.
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8221 10 10 5
+D1
+~
+~
+0 -1 8223 10 10 5
+-1
+S
+
+#8223
+Guard Barracks - South Gate~
+Under Construction.
+~
+[Eliza] 935
+~
+66584581 0 5 0
+D3
+~
+~
+0 -1 8222 10 10 5
+-1
+S
+
+#8224
+Grommet Street~
+Under Construction.
+~
+[Usiel] For cart alone the street here remains flatly cobbled, lined on either side by spacious, but not extravagant, houses and gardens. Intricately twining patterns of white wood form a delicate archway to the east, clothed in snaking vines and several budding flowers.
+[Usiel] Like a path through the forest, the eastern street twists away among the trees that veil the not-so-distant city wall.
+~
+33030145 1 6 0
+D0
+~
+~
+0 -1 8234 10 10 5
+D1
+~
+~
+0 -1 8225 10 10 5
+D2
+~
+~
+0 -1 8221 10 10 5
+-1
+S
+
+#8225
+Vayra Lane~
+Under Construction.
+~
+[Usiel] Their roots sheltered beneath a flutter of bushes, two thin Ksaia
+trees twine together at their branches to the west, expertly groomed by a race as
+skilled with living wood as others are at crafting it in death. 
+Accompanying this beautiful archway is a vanguard of drooping trees, 
+[Usiel] creating the illusion to those looking in that this quiet corner of the city is as deep as the forest's heart.
+[Usiel] Nestled among the trees to the north is a simple house, built by hand but styled almost imperceptibly as though to look like it were carved from an enormous tree stump. Several skins are draped from a wooden beam at the edge of a small balcony, just high enough to be out of reach for even the tallest of thieves
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8227 10 10 5
+D1
+~
+~
+0 -1 8226 10 10 5
+D3
+~
+~
+0 -1 8224 10 10 5
+-1
+S
+
+#8226
+Vayra Lane~
+Under Construction.
+~
+[Usiel] The lane bends to the north and west, dirt almost free of wheel ruts and the signs of horses. Southward, clumps of trees litter the grassy fields, growing thicker at the edges of the city wall. Remnants of earlier years are nearly swallowed by bush and weed,
+[Usiel] target stands and broken lancing slings resting undisturbed, a reminder of the city's largest expansion when the Duke's soldiers once trained upon these sloping greens.
+[Usiel] Houses of sturdy, angling wood are relatively clustered at the bend, as compared to the overall sparity of the lane. A large front face and universal sign to the east mark the entrance to a shop, the glitter of assorted goods flashing in the wide, shutter-framed window.
+[Eliza] remove shop reference.. move one north.
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8228 10 10 5
+D3
+~
+~
+0 -1 8225 10 10 5
+-1
+S
+
+#8227
+Fur, Feathers and Scales~
+Under Construction.
+~
+[Usiel] shop 936
+[Eliza] Furrier.
+[Usiel] Uses crushed flowers and burn sweetwood to disguise smell of furs and skin.
+~
+66584581 0 5 0
+D2
+~
+~
+0 -1 8225 10 10 5
+5310 9 1509949540 3 0
+-1
+S
+
+#8228
+Vayra Lane~
+Under Construction.
+~
+[Usiel] Serene and placid, Vayra Lane has forgotten the bustle of one of the continent's largest cities, hearing only the occasional ring of a distant forge. Several paths branch off and around the pockets of trees, houses rejecting the formula of straight lines.
+[Usiel] At its eastern edge, under the shade of looming and gnarled oak, a rock stack bubbles with cool, clear water. With no stream, no sloping aqueducts in sight, the source of the water is somehow less important than its obvious purity.
+[Usiel] Fountain here.
+A large front face and universal sign to the east mark the entrance to a shop, the glitter of assorted goods flashing in the wide, shutter-framed window.
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8230 10 10 5
+D1
+~
+~
+0 -1 8229 10 10 5
+D2
+~
+~
+0 -1 8226 10 10 5
+-1
+S
+
+#8229
+The Outlands Adventurer~
+Under Construction.
+~
+[Usiel] shop 970
+[Eliza] General Store.
+~
+66584581 0 5 0
+D3
+~
+~
+0 -1 8228 10 10 5
+5307 9 1509949540 3 0
+-1
+S
+
+#8230
+Vayra Lane~
+Under Construction.
+~
+[Usiel] As the lane bends to the west and south, the crest of a wall tower is barely visible beyond the trees. Several rows of bushes line winding paths, meticulously groomed. Unusually straight and logical, the large house to the east is also strangely built...
+[Usiel] as though the architecture began down one ingenius route and abruptly jumped to another. Tinted windows are set low to the ground, and a doorway is barely visible at the end of a slanting path.
+~
+33030144 1 6 0
+D2
+~
+~
+0 -1 8228 10 10 5
+D3
+~
+~
+0 -1 8231 10 10 5
+-1
+S
+
+#8231
+Vayra Lane~
+Under Construction.
+~
+[Usiel] A quiet lane winds southeast into the trees, small houses haphazardly placed along its path. To the north, the garden slowly dissipates, as buildings begin to form rows once more. n
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8232 10 10 5
+D1
+~
+~
+0 -1 8230 10 10 5
+-1
+S
+
+#8232
+Puddlerump Arc~
+Under Construction.
+~
+[Usiel] Short, squat houses dominate the simple triangle junction, as befitting a population of shorter stature. Gnomes, halflings and the occasional dwarf mingle with humans and elves as the Outlands meets the commerce of the Eastern Corridor.
+[Usiel] Among a few sparse shops, the weaponsmith's sign dangles before a door to the east, its frame slightly larger than the norm.
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8238 10 10 5
+D1
+~
+~
+0 -1 8338 10 10 5
+D2
+~
+~
+0 -1 8231 10 10 5
+D3
+~
+~
+0 -1 8328 10 10 5
+-1
+S
+
+#8233
+A Keener Edge - East Corridor~
+Under Construction.
+~
+[Usiel] shop 964
+[Eliza] weaponsmith
+[Eliza] medium to good quality weapons, midlevel customs.
+~
+66584581 0 5 0
+D2
+~
+~
+0 -1 8178 10 10 5
+5216 9 1509949540 3 0
+-1
+S
+
+#8234
+Grommet Street~
+Under Construction.
+~
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8235 10 10 5
+D2
+~
+~
+0 -1 8224 10 10 5
+D3
+~
+~
+0 -1 8236 10 10 5
+-1
+S
+
+#8235
+The Vines~
+Under Construction.
+~
+[Eliza] 954
+[Eliza] [Eliza] tavern, inn, coffee shop.
+~
+66584581 0 5 0
+D2
+~
+~
+0 -1 8234 10 10 5
+-1
+S
+
+#8236
+Grommet Street~
+Under Construction.
+~
+[Usiel] The farthest tendrils of worn and sunken cobbles encroach from the bending road to the east, while northward the more narrow street descends into a linear garden of squat structures. Wooden houses here are often rounded, whether by design or afterthought, as though definitive corners were never a serious considera
+[Usiel] consideration. A simple shop, one of few to rise above one story, quietly bears the swinging sign of a threaded needle... made more impressive by the vibrant colors of the curtains that adorn all three front windows.
+[Usiel] Through the alley to the south, between thatched rooves, the crest of the temple rises majestically at a modest distance above the greystone wall that protects its grounds.
+[Usiel] Extra for the temple: The sloping sides of the roof meet at an angle and are absorbed by the central square of the temple. Rising almost as a beacon of enlightenment, a rounded spire offers several windows and a walkway high above the city. The stone varies in color, from pale and glittering white to
+[Usiel] the dull black of the statues of arched creatures that defend their perch.
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8210 10 10 5
+D1
+~
+~
+0 -1 8234 10 10 5
+D3
+~
+~
+0 -1 8237 10 10 5
+-1
+S
+
+#8237
+Cautious Thom's Cloth-Weavers~
+Under Construction.
+~
+[Usiel] shop 793
+[Usiel] Outlands clothing shop.. custom clothes for all sizes... decent variety, though nothing spectacular in quality.
+[Usiel] Tom is a halfling, called Cautious because he is jittery and has a terrible tendency to prick his fingers with his needle.
+[Usiel] as a result he is usually wearing some sort of tiny bandage with leaves to aid the healing
+~
+66584581 0 5 0
+D1
+~
+~
+0 -1 8236 10 10 5
+5323 9 1509949540 3 0
+-1
+S
+
+#8238
+Well Street~
+Under Construction.
+~
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8176 10 10 5
+D2
+~
+~
+0 -1 8232 10 10 5
+-1
+S
+
+#8239
+Woodbridge East~
+Under Construction.
+~
+[Eliza] Bridge
+~
+33030144 1 6 0
+D1
+~
+~
+0 -1 8189 10 10 5
+D3
+~
+~
+0 -1 8240 10 10 5
+-1
+S
+
+#8240
+Woodbridge East~
+Under Construction.
+~
+~
+33030144 1 6 0
+D1
+~
+~
+0 -1 8239 10 10 5
+D3
+~
+~
+0 -1 8241 10 10 5
+-1
+S
+
+#8241
+Citadel Crossing - Woodbridge East~
+Under Construction.
+~
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8242 10 10 5
+D1
+~
+~
+0 -1 8240 10 10 5
+-1
+S
+
+#8242
+Citadel Crossing~
+Under Construction.
+~
+~
+33030144 1 6 0
+D2
+~
+~
+0 -1 8241 10 10 5
+D3
+~
+~
+0 -1 8243 10 10 5
+-1
+S
+
+#8243
+Odiferous Stall - Citadel Crossing~
+Under Construction.
+~
+[Usiel] 416
+[Usiel] Alchemist stall, south side.
+[Eliza] Owain's Reagents
+[Usiel] Owain is constantly arguing with another man, even during transactions.. about various topics relating to magic, reagents, chemicals, .... those who listen carefully might find a hint as to the rumored location of rareties.. though only a rare rumor is true.
+[Usiel] North, grassy field, walls of C
+[Eliza] walls of the citadel off in the distance, looming over the horizon.
+[Eliza] scrawled on a weathered plank of wood, the name Owain's Reagents blah blah.
+~
+33030145 1 6 0
+D1
+~
+~
+0 -1 8242 10 10 5
+D2
+~
+~
+0 -1 8270 10 10 5
+D3
+~
+~
+0 -1 8244 10 10 5
+5318 9 1509949540 3 0
+-1
+S
+
+#8244
+Citadel Crossing~
+Under Construction.
+~
+[Usiel] 403
+[Usiel] Fabric stall, south side of street.
+[Eliza] A single stall stands to the south of the road, huddled between two trees. The road is rutted, grassy patches appearing in several places. Northward, an open field  can be seen, a scattering of stone and wood structures visible around the perimeter.
+[Usiel] can see the northern festival and tourne
+[Eliza] Some odd sorts of clothing and some fabric.
+[Usiel] Fabric stall, south side of street.
+[Eliza] A single stall stands to the south of the road, huddled between two trees. The road is rutted, grassy patches appearing in several places. Northward, an open field  can be seen, a scattering of stone and wood structures visible around the perimeter.
+[Usiel] can see the northern festival and tour
+[Eliza] Some odd sorts of clothing and some fabric.
+~
+33030145 1 6 0
+D0
+~
+~
+0 -1 8245 10 10 5
+D1
+~
+~
+0 -1 8243 10 10 5
+D3
+~
+~
+0 -1 8247 10 10 5
+-1
+S
+
+#8245
+Road to Citadel~
+Under Construction.
+~
+[Eliza] Room 439
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8246 10 10 5
+D2
+~
+~
+0 -1 8244 10 10 5
+-1
+S
+
+#8246
+Before the Gate - Citadel Keep~
+Under Construction.
+~
+[Eliza] Room 440
+~
+33030144 1 6 0
+D2
+~
+~
+0 -1 8245 10 10 5
+-1
+S
+
+#8247
+Citadel Crossing~
+Under Construction.
+~
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8249 10 10 5
+D1
+~
+~
+0 -1 8244 10 10 5
+D2
+~
+~
+0 -1 8250 10 10 5
+D3
+~
+~
+0 -1 8248 10 10 5
+-1
+S
+
+#8248
+Citadel Crossing - Woodbridge West~
+Under Construction.
+~
+[Eliza] River West
+~
+33030144 1 6 0
+D1
+~
+~
+0 -1 8247 10 10 5
+D3
+~
+~
+0 -1 8310 10 10 5
+-1
+S
+
+#8249
+Cerdwick's Armor and Leather Goods~
+Under Construction.
+~
+[Usiel] shop 452
+[Eliza] we still need to come to terms on armorers etc.
+[Rikahn] rigid leather armor goes here.
+~
+66584581 0 5 0
+D2
+~
+~
+0 -1 8247 10 10 5
+5245 9 1509949540 3 0
+-1
+S
+
+#8250
+Brightly-Colored Tent - Agora Bend~
+Under Construction.
+~
+[Eliza] Room 424
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8247 10 10 5
+D2
+~
+~
+0 -1 8252 10 10 5
+D3
+~
+~
+0 -1 8251 10 10 5
+-1
+S
+
+#8251
+Ranulf's Quality Weapons - Trade Isle~
+Within the darkened interior of the tent, the gloom broken only by
+pin-holes of light seeping through flawed canvas walls, an array of
+swords lie side-by-side on the heavy table that serves as a counter.  To
+either end of that same table, a variety of smaller knives - daggers and
+dirks - stand upright, buried nearly to the hilt in the dark-grained wood. 
+Leaning against a weapons rack at the back are spears and polearms of
+different lengths and weights, and suspended overhead, a strip of rawhide
+strung across the tent holds an assortment of sheathes and scabbards.
+~
+[Eliza] Old Room 431
+[Eliza] acode done, leaving done, inventory set.
+[Eliza] mob desc'd, shop done.
+[Eliza] mresets done.
+[Eliza] Mob needs fight code, mprogs.
+~
+33030144 0 9 0
+D1
+~
+~
+0 -1 8250 10 10 5
+E
+sign~
+A hastily crafted axe, crudely formed with an unhoned edge serves as a
+sign.  Etched into the dull, flat blade: 
+
+@IBuy - @CBuys an item from the store.@n
+@IList - @CShows the store's selection.@n
+@IValue - @CLists the value of an item and the repair cost.@n
+@ISell - @CSells an item.@n
+~
+E
+table wood~
+Supported at either end by a pair of crudely formed crates, the table has
+never been anything more than a solid slab of rough-hewn wood.  The grain
+of the hand-thick plank is dark, the wood burnished and rich with the
+patina of age.  Scars and gouges mar the surface of the makeshift
+counter, where half a score of daggers and dirks have been buried upright
+to the hilt.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou duck out of the tent through the low opening.@n
+~
+E
+to_room~
+@c$n ducks out of the tent through the low opening.@n
+~
+!
+3 0 2
+A
+~
+~
+i = 1d10;
+if( i == 1 )
+  send_to_room( #ran1, room );
+if( i == 2 )
+  send_to_room( #ran2, room );
+~
+E
+ran1~
+@cThe shopkeeper wipes a fingerprint from a longsword with a half-clean
+cloth, straightening it on the table when he's finished.@n 
+~
+E
+ran2~
+@cThe shopkeeper sizes you up, his narrowed, piercing eyes assessing your
+strengths and weaknesses.@n 
+~
+!
+2 150 0
+5079 9 1509949540 3 0
+1053 17 1509949540 -1 0
+968 17 1509949490 -1 0
+935 17 1509949530 -1 0
+7168 17 1509949515 -1 0
+1052 17 1509949540 -1 0
+7434 17 1509949490 -1 0
+7183 17 1509949450 -1 0
+744 17 1509949450 -1 0
+-1
+S
+
+#8252
+Agora Bend~
+Under Construction.
+~
+[Usiel] Shop 426
+[Usiel] Food cart, one north one south mobility.
+[Eliza] Shops can't be moved.
+[Eliza] a large cart, tantalizing aroma of meat pies and thick hunter's stew wafting outward from it.
+[Usiel] dirty shacks and such west and east, boxes...
+[Usiel] Tent to the east, blocking view of the festival grounds... a festival tent that is.
+[Eliza] this old gal needs a long_s and long_p.
+[Eliza] back of tent?
+~
+33030145 1 6 0
+D0
+~
+~
+0 -1 8250 10 10 5
+D2
+~
+~
+0 -1 8253 10 10 5
+5213 9 1509949540 3 0
+-1
+S
+
+#8253
+Duke's Crossing~
+Under Construction.
+~
+[Eliza] River west
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8252 10 10 5
+D1
+~
+~
+0 -1 8257 10 10 5
+D2
+~
+~
+0 -1 8254 10 10 5
+D3
+~
+~
+0 -1 8256 10 10 5
+-1
+S
+
+#8254
+Old Road to the Ruins~
+Under Construction.
+~
+[Eliza] Room 441
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8253 10 10 5
+D2
+~
+~
+0 -1 8255 10 10 5
+-1
+S
+
+#8255
+Before the Ruins of South Keep~
+The hint of ancient road, winding between the sparsely grown trees, ends
+at rock-strewn field of half-dead weeds and grass sprinkled with a
+smattering of bright-hued flowers.  Clearly seen to the east and west,
+the torpid waters of River Duil roll sluggishly by on a journey to the
+sea.  Rising starkly up from the far southern spit of land, a jumble of
+broken stone and destroyed walls mark what was once South Keep, ancestral
+home of a long-extinct clan.
+~
+[Eliza] Room 795
+[Eliza] need extras, randoms, leaving.
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8254 10 10 5
+-1
+S
+
+#8256
+Duke's Crossing - Stonebridge West~
+Under Construction.
+~
+~
+33030144 1 6 0
+D1
+~
+~
+0 -1 8253 10 10 5
+D3
+~
+~
+0 -1 8272 10 10 5
+-1
+S
+
+#8257
+Open Stall - Duke's Crossing~
+Under Construction.
+~
+[Usiel] 427
+[Usiel] Exotic items Stall, west side of this room.
+[Eliza] what is sold here?
+[Usiel] Exotic junk.. stuff for tourist. Fake gems. .. occasionally a real one. Will buy stuff like jewels
+[Usiel] Road bends back around to the north and east, with the stall on the west side with a section of the wall in the background. Dirty men play dice on crates at the southern side of the road.
+[Eliza] need to code dice.
+[Eliza] I'm thinking uncut gems would be what he would buy.
+[Squeed] would like the ring reset here to be a custom (remember to remove reset!), cost 10, ingredient a platinum coin.
+~
+33030145 1 6 0
+D1
+~
+~
+0 -1 8265 10 10 5
+D2
+~
+~
+0 -1 8258 10 10 5
+D3
+~
+~
+0 -1 8253 10 10 5
+7400 17 1509949540 -2 0
+-1
+S
+
+#8258
+Well-Worn Path Among the Trees~
+The path is barely wide enough for one, its course winding between
+close-growing trees until it opens out into a spacious clearing. 
+Underfoot, the trail is cushioned by the years' accumulation of fallen
+leaves, dropped by the deciduous oaks that flourish here at the southern
+end of the island.  Sparse patches of grass and arching, lacy-leafed
+ferns draw life from the somewhat rocky soil; beneath their shaded fronds
+a handful of dew-coated daisies struggle to grow.
+~
+[Eliza] Old room 445
+[Eliza] Need randoms, leaving, extras.
+[Eliza] add search code for pick daisy? Fluff stuff.
+~
+33030145 0 6 0
+D0
+~
+~
+0 -1 8257 10 10 5
+D1
+~
+~
+0 -1 8264 10 10 5
+D2
+~
+~
+0 -1 8259 10 10 5
+E
+clearing 1 south~
+No description.
+~
+E
+oaks trees~
+No description.
+~
+E
+grass ferns soil~
+No description.
+~
+E
+daisies~
+No description.
+~
+A
+~
+~
+send_to_room( #smoke, room );
+~
+E
+smoke~
+@cDrifting northward, the smell of woodsmoke scents the air.@n
+~
+!
+2 150 0
+-1
+S
+
+#8259
+Heart of the Camp~
+Between the road dubbed Duke's Crossing and the grim ruins of South Keep
+lies a standing gypsy camp, semi-permanent home to the Wandering Folk, a
+tribe of dark-haired, dark-eyed beauties and swarthy, well- built men
+clad in the colorfully embroidered clothing customarily worn by these
+people.  Less than a score of wagons, some on blocks and some still
+wheeled, form the perimeter of a vast circle; brightly painted wooden and
+canvas-covered wagons drawn by the elegant horses of the golden plains. 
+Dominating the center of the open area, a large campfire burns day and
+night, creating a communal gathering place for the Folk - a shared place
+for life and love and song.
+~
+[Eliza] Old Room 449
+[Eliza] random done.
+[Eliza] need extras.
+[Eliza] need leaving.
+[Eliza] add search for charred stick? or some other reagent that fits the theme of the room?
+~
+33030145 2 6 0
+D0
+~
+~
+0 -1 8258 10 10 5
+D1
+~
+~
+0 -1 8260 10 10 5
+E
+wagon painted canvas block wheeled~
+No description.
+~
+E
+horses~
+No description.
+~
+E
+campfire~
+No description.
+~
+E
+clothing embroidered~
+No description.
+~
+E
+circle camp area~
+No description.
+~
+A
+~
+~
+i = 1d10;
+if( i == 1 )
+  send_to_room( #crackle, room, sight );
+if( i == 2 )
+  send_to_room( #laughter, room, sound );
+if( i == 3 )
+  send_to_room( #horse, room, sound );
+if( i == 4 )
+  send_to_room( #bead, room, sound );
+if( i == 5 )
+  send_to_room( #skirt, room, sight );
+~
+E
+crackle~
+@RThe blazing fire crackles and spits, throwing a shower of flying embers
+into the air.@n 
+~
+E
+laughter~
+@gThe lilt of gentle laughter drifts through the clearing, the direction
+of its orgin unknown.@n 
+~
+E
+horse~
+@CNearby, a proud stallion lifts his fine head to the wind, whickering
+softly across the clearing toward a delicate raven black mare.@n 
+~
+E
+bead~
+@cJust above the edge of sound, the distant tinkling of a beaded curtain
+can be heard, as someone enters or leaves a wagon.@n 
+~
+E
+skirt~
+@cIn a swirl of bright blue skirt, an exquisite young girl dances around
+the fire, only to disappear behind the back of a nearby wagon.@n
+~
+!
+2 1000 0
+-1
+S
+
+#8260
+Blue and Green Wagon - Trade Isle~
+Not far from the fire, a solid wood wagon rests atop fire hardened
+blocks, a permanent part of the settlement.  Stained and decorated in
+random patterns of blue and vibrant green, the trim is brilliant yellow
+the color of the sun.  The surrounding area is well-tended, the grass
+cropped short by the grazing mare and few possessions stacked neatly on
+the wagon's seat.  A stand of old oaks edges the clearing to the south,
+circling around to the east where the ruins of an crumbling wall peek
+between the trees.
+~
+[Eliza] room 447
+[Eliza] add earring and ribbon objects. Possibly used in some custom.
+[Eliza] will be bard trainer
+[Eliza] add extra for possessions, which include various and sundry things inside of an upside down tambourine.
+[Eliza] need randoms, extras, leaving.
+[Eliza] dam is correct in the mare's mdesc.
+~
+33030145 2 6 0
+D0
+~
+~
+0 -1 8264 10 10 5
+D1
+~
+~
+0 -1 8261 10 10 5
+D3
+~
+~
+0 -1 8259 10 10 5
+E
+possession seat~
+No description.
+~
+E
+solid wood wagon blocks patterns blue green yellow~
+No description.
+~
+E
+stand oaks 1 south trees~
+No description.
+~
+E
+ruins 1 east wall~
+No description.
+~
+5162 9 1509949540 3 0
+2380 9 1509949540 3 0
+-1
+S
+
+#8261
+Gypsy Camp - Trade Isle~
+A pair of box-shaped wagons nestle among the trees, one with a sigil of
+warding scribed upon its flimsy door, the other portal hung with a beaded
+and belled curtain.  From behind the draped closure, odd aromas drift
+outward, a pungent but tangy melange of sweet and spicy scents.  An
+enormous yellow dog lazes beneath a wagon, his head resting between two
+massive paws.  Underfoot, a thick stand of grass grows up to the base of
+a crumbling wall, where a gap in the ancient ruins offers a open way to
+the water.
+~
+[Eliza] Room 450
+[Eliza] acode for lapping water, extras wall/ruin, door/sigil, portal/curtain
+[Eliza] extra dog.
+[Eliza] leaving?
+[Eliza] add dog mob
+~
+33030145 2 6 0
+D0
+~
+~
+0 -1 8263 10 10 5
+D1
+~
+~
+0 -1 8262 10 10 5
+D3
+~
+~
+0 -1 8260 10 10 5
+E
+box-shaped wagons~
+No description.
+~
+E
+sigil warding door~
+No description.
+~
+E
+portal beaded belled curtain~
+No description.
+~
+E
+grass base wall crumbling gap ruins~
+No description.
+~
+E
+1 east river~
+No description.
+~
+-1
+S
+
+#8262
+Down at the River's Edge - Trade Isle~
+Running nearly to the river's edge, the stand of trees gives way to a
+strip of rocky ground, sloping downward slightly to the slow-surging
+river.  Some of the stones forming the shore have been disturbed, pushed
+aside to clear a path to the water, where the gypsies lead their horses
+to drink.  The Duil is crystal clear here and wide, its only color
+derived from that which reflects within it.  Far across the water toward
+the east, the buildings of Dun Tathaig rise proud against the horizon,
+their outlines blurred and dimmed by distance.
+~
+[Eliza] Room 451
+[Eliza] need extras, randoms, leaving.
+[Eliza] extras for river/water/duil, path/stones/rocky ground, east/building/Dun T.
+[Eliza] no more than 3 randoms here.
+[Eliza] code for slipping on the rocks and falling into shallow water?
+[Usiel] Might make mention of the bridge in the desc
+[Eliza] add search for something.
+~
+33030144 12 6 0
+D3
+~
+~
+0 -1 8261 10 10 5
+E
+river waters Duil~
+No description.
+~
+E
+1 east building Dun Tathaig horizon~
+No description.
+~
+E
+rocky ground path stones shore~
+No description.
+~
+-1
+S
+
+#8263
+Gypsy Camp - Trade Isle~
+The largest of the gypsy conveyances rests here, the canvas fabric
+covering it stained a berry-bright red, and a belled curtain conceals the
+interior.  Still wheeled, a line of horses is tethered to a rough hempen
+rope, stretching from a crude hook affixed to the wagon's bed to tie
+around strong, thick branch.  Visible through the trees, the sparkling
+water of the Duil flows slowly toward the sea, its sluggish waves
+lapping at the rocky shore.  Vestiges of a once-great wall lie eastward,
+the gray stone tumbled to the ground in disarray.
+~
+[Eliza] Old room 448
+[Eliza] Men are talking loudly, tho not in argument, more in good humor, their coversation broken on occasion by laughter
+[Eliza] Tending to the tethered horses, a youngish lad with a shock of coal black hair dangling in his eyes.
+[Eliza] horse trader/trainer
+[Eliza] horse dealer but quest only.. special custom horses.
+[Eliza] bleah..second sentence is yucky.
+[Eliza] need randoms, leaving, extras.
+~
+33030145 2 6 0
+D2
+~
+~
+0 -1 8261 10 10 5
+D3
+~
+~
+0 -1 8264 10 10 5
+E
+horses line rope hook bed~
+No description.
+~
+E
+conveyances fabric covering~
+No description.
+~
+E
+belled curtain~
+No description.
+~
+E
+water Duil waves shore~
+No description.
+~
+E
+vestiges wall 1 east eastward stone gray~
+No description.
+~
+2385 9 1509949540 3 0
+-1
+S
+
+#8264
+Gypsy Camp - Trade Isle~
+The trees grow close together, shading this northern side of the clearing. 
+Here, there are three smaller-sized wagons, all on fire-hardened blocks,
+forming the permanent part of the camp.  The sights and sounds of
+life...newly washed clothes hanging from a branch, the quiet
+concentration of two men bent over some sort of dice game...prevail in
+this out of the way area at the back of the campsite.  One of the wagons
+has faded in color, as though untended in recent times.
+~
+[Eliza] Old room 446
+[Eliza] Random done.
+[Eliza] need extras for trees/1 north, wagons/faded, clothes/branch
+[Eliza] Need leaving.
+~
+33030145 2 6 0
+D1
+~
+~
+0 -1 8263 10 10 5
+D2
+~
+~
+0 -1 8260 10 10 5
+D3
+~
+~
+0 -1 8258 10 10 5
+E
+wagon faded blocks untended~
+No description.
+~
+E
+clothes branch~
+No description.
+~
+E
+men dice game~
+Fiercely focused on their pastime, the two men are oblivious to any of
+the activities surrounding them.  Their game of skill and chance has them
+so completely absorbed that even the noisy playing of some rag-tag
+children and their game of chase fails to disturb them.
+~
+E
+trees 1 north~
+No description.
+~
+E
+1 east~
+No description.
+~
+E
+1 west~
+No description.
+~
+A
+~
+~
+I = 1d10;
+i = random( 1, 3 );
+if( i == 1 )
+send_to_room( #action1, room );
+if( i == 2 )
+send_to_room( #action2, room );
+if( i == 3 )
+send_to_room( #action3, room );
+~
+E
+action1~
+@cFaintly, the sounds of slow-moving water lapping at a shore underscore
+the noisy life song of the gypsies.@n 
+~
+E
+action2~
+@cThe sweet lilting tones of a hunting gypsy melody caress the clearing
+with song.@n 
+~
+E
+action3~
+@gA dirty-faced gypsy child scampers across the clearing, a yipping puppy
+close upon his heels.@n 
+~
+!
+2 150 0
+-1
+S
+
+#8265
+Duke's Crossing~
+Under Construction.
+~
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8269 10 10 5
+D1
+~
+~
+0 -1 8266 10 10 5
+D3
+~
+~
+0 -1 8257 10 10 5
+-1
+S
+
+#8266
+Duke's Crossing - Stonebridge East~
+Under Construction.
+~
+~
+33030144 1 6 0
+D1
+~
+~
+0 -1 8267 10 10 5
+D3
+~
+~
+0 -1 8265 10 10 5
+-1
+S
+
+#8267
+Stonebridge East~
+Under Construction.
+~
+[Eliza] River east
+[Eliza] Bridge
+~
+33030144 1 6 0
+D1
+~
+~
+0 -1 8268 10 10 5
+D3
+~
+~
+0 -1 8266 10 10 5
+-1
+S
+
+#8268
+Stonebridge East~
+Under Construction.
+~
+~
+33030144 1 6 0
+D1
+~
+~
+0 -1 8198 10 10 5
+D3
+~
+~
+0 -1 8267 10 10 5
+-1
+S
+
+#8269
+Hawker's Hobble~
+Under Construction.
+~
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8270 10 10 5
+D1
+~
+~
+0 -1 8271 10 10 5
+D2
+~
+~
+0 -1 8265 10 10 5
+-1
+S
+
+#8270
+Hawker's Hobble~
+Under Construction.
+~
+[Usiel] 409
+[Eliza] Food stall here.
+[Eliza] roast game, mushroom pies, meat stew.. commoner's types of food.
+[Usiel] A large colored tent blocks any view into the festival grounds to the west. The lass is to the eastern side of the road.. perhaps a few sitting around having some of her food.
+[Eliza] crouched in a group to the side of the stall perhaps a group of hungry men and dirty-faced urchin.
+~
+33030145 1 6 0
+D0
+~
+~
+0 -1 8243 10 10 5
+D2
+~
+~
+0 -1 8269 10 10 5
+5215 9 1509949540 3 0
+-1
+S
+
+#8271
+Lazar's Thrift Shoppe~
+Dust motes dance in the light of sunbeams streaming through the opened
+doorway of this cluttered shop.  Musty air assaults the nose as eyes
+adjust to take in the darkened corners, where cobwebs attach themselves
+to the various goods stacked there.  A small swept spot in the center of
+the hardwood floor indicates that the shopkeeper has made some small
+attempt at cleaning, but dust still shows thick most places, including
+the counter of age-darkened wood.  A wizened stooped old man, perhaps
+Lazar, peers at you, asking in a gravelly voice, "Buying or selling
+today?" and with a wave of his hand he indicates the used wares he's
+selling...from clothing to tents, weapons to lutes, lanterns to dog-eared
+books.
+~
+[Usiel] 453
+[Eliza] need extras, random, leaving.
+[Eliza] General store.
+~
+66584581 0 5 0
+D3
+~
+~
+0 -1 8269 10 10 5
+5308 9 1509949540 3 0
+-1
+S
+
+#8272
+Great Stonebridge~
+Under Construction.
+~
+~
+33030144 1 6 0
+D1
+~
+~
+0 -1 8256 10 10 5
+D3
+~
+~
+0 -1 8273 10 10 5
+-1
+S
+
+#8273
+Stonebridge Plaza West~
+Under Construction.
+~
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8307 10 10 5
+D1
+~
+~
+0 -1 8272 10 10 5
+D3
+~
+~
+0 -1 8274 10 10 5
+-1
+S
+
+#8274
+Rothshire Street~
+Under Construction.
+~
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8275 10 10 5
+D1
+~
+~
+0 -1 8273 10 10 5
+D2
+~
+~
+0 -1 8276 10 10 5
+D3
+~
+~
+0 -1 8304 10 10 5
+-1
+S
+
+#8275
+Johanna's Fine Baked Goods~
+Under Construction.
+~
+[Usiel] shop 961
+[Eliza] Pastries - nothing with a country name like Danishes. Cakes, pies, croissants, breads, sweet rolls.
+~
+66584581 0 5 0
+D2
+~
+~
+0 -1 8274 10 10 5
+5211 9 1509949540 3 0
+-1
+S
+
+#8276
+Walken Street~
+Under Construction.
+~
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8274 10 10 5
+D1
+~
+~
+0 -1 8277 10 10 5
+D2
+~
+~
+0 -1 8278 10 10 5
+-1
+S
+
+#8277
+Kyrano's Fine Weapons~
+Under Construction.
+~
+[Usiel] 962
+[Eliza] High quality, higher level, less common sorts of weapons. High level customs should go here.
+~
+66584581 0 5 0
+D3
+~
+~
+0 -1 8276 10 10 5
+5214 9 1509949540 3 0
+-1
+S
+
+#8278
+Gilden Way~
+Under Construction.
+~
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8276 10 10 5
+D1
+~
+~
+0 -1 8280 10 10 5
+D2
+~
+~
+0 -1 8279 10 10 5
+D3
+~
+~
+0 -1 8299 10 10 5
+-1
+S
+
+#8279
+Daniel Cuddahy - Factor~
+Under Construction.
+~
+[Usiel] Shop 960
+[Eliza] Money Lender
+[Eliza] ugh.. out of ideas for mob appearances atm.
+~
+66584581 0 5 0
+D0
+~
+~
+0 -1 8278 10 10 5
+-1
+S
+
+#8280
+Riverfront Road West~
+Under Construction.
+~
+~
+33030144 1 6 0
+D2
+~
+~
+0 -1 8281 10 10 5
+D3
+~
+~
+0 -1 8278 10 10 5
+-1
+S
+
+#8281
+Riverfront Road West~
+Under Construction.
+~
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8280 10 10 5
+D1
+~
+~
+0 -1 8282 10 10 5
+D2
+~
+~
+0 -1 8283 10 10 5
+-1
+S
+
+#8282
+The Glimmering Coin~
+Under Construction.
+~
+[Usiel] 444
+[Eliza] Restaurant, gambling establishment
+~
+66584581 0 5 0
+D3
+~
+~
+0 -1 8281 10 10 5
+-1
+S
+
+#8283
+Before the Keep's Gate - Riverfront Road West~
+Under Construction.
+~
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8281 10 10 5
+D2
+~
+~
+0 -1 8284 10 10 5
+D3
+~
+~
+0 -1 8285 10 10 5
+-1
+S
+
+#8284
+At the Gate~
+Under Construction.
+~
+[Eliza] Duke's Keep south
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8283 10 10 5
+-1
+S
+
+#8285
+Valcassian Green~
+Under Construction.
+~
+~
+33030144 1 6 0
+D1
+~
+~
+0 -1 8283 10 10 5
+D2
+~
+~
+0 -1 8286 10 10 5
+-1
+S
+
+#8286
+Glendalough Road~
+Under Construction.
+~
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8285 10 10 5
+D3
+~
+~
+0 -1 8287 10 10 5
+-1
+S
+
+#8287
+Glendalough Road~
+Under Construction.
+~
+~
+33030144 1 6 0
+D1
+~
+~
+0 -1 8286 10 10 5
+D3
+~
+~
+0 -1 8288 10 10 5
+-1
+S
+
+#8288
+Glendalough Road~
+Under Construction.
+~
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8293 10 10 5
+D1
+~
+~
+0 -1 8287 10 10 5
+D2
+~
+~
+0 -1 8289 10 10 5
+-1
+S
+
+#8289
+Glendalough Road~
+Under Construction.
+~
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8288 10 10 5
+D3
+~
+~
+0 -1 8290 10 10 5
+-1
+S
+
+#8290
+Shield Gate - Dun Tathaig~
+Under Construction.
+~
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8291 10 10 5
+D1
+~
+~
+0 -1 8289 10 10 5
+D2
+~
+~
+0 -1 8292 10 10 5
+-1
+S
+
+#8291
+Shield Gate Stables~
+Under Construction.
+~
+~
+66584581 0 5 0
+D2
+~
+~
+0 -1 8290 10 10 5
+-1
+S
+
+#8292
+Guard Barracks - Shield Gate~
+Under Construction.
+~
+~
+66584581 0 5 0
+D0
+~
+~
+0 -1 8290 10 10 5
+-1
+S
+
+#8293
+Morghaen Lane~
+Under Construction.
+~
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8296 10 10 5
+D1
+~
+~
+0 -1 8294 10 10 5
+D2
+~
+~
+0 -1 8288 10 10 5
+D3
+~
+~
+0 -1 8295 10 10 5
+-1
+S
+
+#8294
+Bounty Office~
+Under Construction.
+~
+[Usiel] shop 971
+[Eliza] this shop will have to be special code.
+~
+66584581 0 5 0
+D3
+~
+~
+0 -1 8293 10 10 5
+5309 9 1509949540 3 0
+-1
+S
+
+#8295
+Killian's Rare and Imported Gems~
+Under Construction.
+~
+[Usiel] shop 975
+~
+66584581 0 5 0
+D1
+~
+~
+0 -1 8293 10 10 5
+5319 9 1509949540 3 0
+-1
+S
+
+#8296
+Pontestrada~
+Under Construction.
+~
+~
+33030144 1 6 0
+D1
+~
+~
+0 -1 8298 10 10 5
+D2
+~
+~
+0 -1 8293 10 10 5
+D3
+~
+~
+0 -1 8297 10 10 5
+-1
+S
+
+#8297
+Shallow Niche Beside the Road~
+Under Construction.
+~
+[Usiel] don't know what was to go here.
+[Eliza] what is this?
+[Eliza] place shrine here?
+[Eliza] Could be just a place to stop and rest, with a fountain.
+~
+33030145 1 6 0
+D1
+~
+~
+0 -1 8296 10 10 5
+-1
+S
+
+#8298
+Pontestrada~
+Under Construction.
+~
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8299 10 10 5
+D3
+~
+~
+0 -1 8296 10 10 5
+-1
+S
+
+#8299
+Before the Hall of All Guilds~
+Under Construction.
+~
+~
+33030145 1 6 0
+D0
+~
+~
+0 -1 8300 10 10 5
+D1
+~
+~
+0 -1 8278 10 10 5
+D2
+~
+~
+0 -1 8298 10 10 5
+-1
+S
+
+#8300
+Pontestrada~
+Under Construction.
+~
+~
+33030144 0 9 0
+D2
+~
+~
+0 -1 8299 10 10 5
+D3
+~
+~
+0 -1 8301 10 10 5
+-1
+S
+
+#8301
+Pontestrada~
+Under Construction.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 8303 10 10 5
+D1
+~
+~
+0 -1 8300 10 10 5
+-1
+S
+
+#8302
+Nylak's Fine Armor~
+Under Construction.
+~
+[Eliza] This room corresponds to 475
+[Rikahn] reinforced leather armor created here
+~
+66584581 0 5 0
+D5
+~
+~
+0 -1 8329 10 10 5
+5374 9 1509949540 3 0
+-1
+S
+
+#8303
+Galden Junction~
+Under Construction.
+~
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8305 10 10 5
+D1
+~
+~
+0 -1 8304 10 10 5
+D2
+~
+~
+0 -1 8301 10 10 5
+-1
+S
+
+#8304
+Rothshire Street~
+Under Construction.
+~
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8306 10 10 5
+D1
+~
+~
+0 -1 8274 10 10 5
+D3
+~
+~
+0 -1 8303 10 10 5
+-1
+S
+
+#8305
+Sanyeard Street~
+Under Construction.
+~
+~
+33030144 1 6 0
+D2
+~
+~
+0 -1 8303 10 10 5
+D3
+~
+~
+0 -1 8326 10 10 5
+-1
+S
+
+#8306
+Mardetti's Fine Jewelry~
+Under Construction.
+~
+[Usiel] shop 949
+[Eliza] whine. I want gold alley.
+[Eliza] Top notch place
+~
+66584581 0 5 0
+D2
+~
+~
+0 -1 8304 10 10 5
+5220 9 1509949540 3 0
+-1
+S
+
+#8307
+Believer's Lane~
+Under Construction.
+~
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8308 10 10 5
+D2
+~
+~
+0 -1 8273 10 10 5
+-1
+S
+
+#8308
+Before a Great Temple~
+Under Construction.
+~
+[Eliza] Temple to Halina
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8309 10 10 5
+D2
+~
+~
+0 -1 8307 10 10 5
+-1
+S
+
+#8309
+Woodbridge Plaza West~
+Under Construction.
+~
+~
+33030144 1 6 0
+D1
+~
+~
+0 -1 8310 10 10 5
+D2
+~
+~
+0 -1 8308 10 10 5
+D3
+~
+~
+0 -1 8311 10 10 5
+-1
+S
+
+#8310
+Woodbridge West~
+Under Construction.
+~
+~
+33030144 1 6 0
+D1
+~
+~
+0 -1 8248 10 10 5
+D3
+~
+~
+0 -1 8309 10 10 5
+-1
+S
+
+#8311
+Commerce Street~
+Under Construction.
+~
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8312 10 10 5
+D1
+~
+~
+0 -1 8309 10 10 5
+D3
+~
+~
+0 -1 8315 10 10 5
+-1
+S
+
+#8312
+Lazero Place~
+Under Construction.
+~
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8314 10 10 5
+D1
+~
+~
+0 -1 8313 10 10 5
+D2
+~
+~
+0 -1 8311 10 10 5
+-1
+S
+
+#8313
+Ghen-Bradyn Trading Company~
+Under Construction.
+~
+[Usiel] shop 671
+[Usiel] Front for the Consortium.. aka the Black Hand.
+[Usiel] The clerk here will be coded to respond to list and other shop commands, but this will not be a shop.
+[Usiel] He will prompt characters for items of interest, pretend to write it down on a piece of parchment.. tell them to check back in a few days... and as they're leaving, he'll toss it into the trash.
+[Eliza] Do you want to use Vrenko here? I think it would be cool.
+~
+66584581 0 5 0
+D3
+~
+~
+0 -1 8312 10 10 5
+-1
+S
+
+#8314
+Arturo's Fine Imports~
+Under Construction.
+~
+[Usiel] shop 674
+[Usiel] sells nice stuff, some furnishings. Some very expensive fabric, perhaps.
+~
+66584581 0 5 0
+D2
+~
+~
+0 -1 8312 10 10 5
+5324 9 1509949540 3 0
+-1
+S
+
+#8315
+Commerce Street~
+Under Construction.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 8339 10 10 5
+D1
+~
+~
+0 -1 8311 10 10 5
+D2
+~
+~
+0 -1 8316 10 10 5
+D3
+~
+~
+0 -1 8317 10 10 5
+-1
+S
+
+#8316
+MacArdell's House of Banking~
+A tasteful office, decorated in subdued shades of gray, occupies the
+front room of MacArdell's House of Banking.  Just inside the door an oak
+railing runs the length of the room, separating a waiting area from the
+desks of clerk, busily scratching away in voluminous ledgers.  Tall, but
+narrow windows provide some light on sunny days, while lamps resting atop
+the desks give light in cloudy weather or near dusk.  Off to the left, an
+oak door leads into the private office of the financier, head of the
+establishment, and at the back of the room, an iron door, securely
+locked, leads into a vault.
+~
+[Usiel] shop 788
+[Eliza] set up for banking
+[Eliza] need extras/leaving/randoms.
+~
+66586671 0 9 0
+D0
+~
+~
+0 -1 8315 10 10 5
+-1
+S
+
+#8317
+Commerce Street~
+Under Construction.
+~
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8318 10 10 5
+D1
+~
+~
+0 -1 8315 10 10 5
+D3
+~
+~
+0 -1 8321 10 10 5
+-1
+S
+
+#8318
+Finner's Run~
+Under Construction.
+~
+~
+33030144 1 6 0
+D2
+~
+~
+0 -1 8317 10 10 5
+D3
+~
+~
+0 -1 8320 10 10 5
+-1
+S
+
+#8319
+MacDuff's Armory~
+Under Construction.
+~
+[Rikahn] studded and banded armor here
+[Eliza] corresponds to 465
+[Eliza] set up material type.
+~
+66584581 0 5 0
+D4
+~
+~
+0 -1 8192 10 10 5
+5372 9 1509949540 3 0
+-1
+S
+
+#8320
+Nilman's Pawn and Supply~
+Under Construction.
+~
+[Usiel] shop 815
+[Eliza] need flags set item types.
+~
+66584581 0 5 0
+D1
+~
+~
+0 -1 8318 10 10 5
+5306 9 1509949540 3 0
+-1
+S
+
+#8321
+Spinnaker Square~
+Under Construction.
+~
+~
+33030144 1 6 0
+D1
+~
+~
+0 -1 8317 10 10 5
+D2
+~
+~
+0 -1 8324 10 10 5
+D3
+~
+~
+0 -1 8322 10 10 5
+-1
+S
+
+#8322
+Copper Gate - Dun Tathaig~
+Under Construction.
+~
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8323 10 10 5
+D1
+~
+~
+0 -1 8321 10 10 5
+-1
+S
+
+#8323
+Guard Barracks - Copper Gate~
+Under Construction.
+~
+~
+66584581 0 5 0
+D2
+~
+~
+0 -1 8322 10 10 5
+-1
+S
+
+#8324
+Sanyeard Street~
+Under Construction.
+~
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8321 10 10 5
+D1
+~
+~
+0 -1 8325 10 10 5
+D2
+~
+~
+0 -1 8326 10 10 5
+-1
+S
+
+#8325
+The Rune and Sigil - Sanyeard Street~
+Under Construction.
+~
+[Usiel] shop 959
+[Eliza] West Corridor
+[Usiel] wands, potions, magical items and customs. This should be the main magical equipment store.. aside from some reagents. Reagents would be the afterthought, since there are shops for that specifically.
+[Usiel] try to mix it up so that this place doesn't offer what the place down the street offers.
+~
+66584581 0 5 0
+D3
+~
+~
+0 -1 8324 10 10 5
+5315 9 1509949540 3 0
+-1
+S
+
+#8326
+Sanyeard Street~
+Under Construction.
+~
+~
+33030144 1 6 0
+D0
+~
+~
+0 -1 8324 10 10 5
+D1
+~
+~
+0 -1 8305 10 10 5
+D2
+~
+~
+0 -1 8327 10 10 5
+-1
+S
+
+#8327
+Sanyeard Heights Fine Clothiers~
+Under Construction.
+~
+[Usiel] shop 791
+[Usiel] Stanzia is the fine seamstress in charge of this elegant shop, which caters to the wealthy.. those that don't have special tailors brought to them.
+~
+66584581 0 5 0
+D0
+~
+~
+0 -1 8326 10 10 5
+5322 9 1509949540 3 0
+-1
+S
+
+#8328
+Puddlerump Row~
+Under Construction.
+~
+[Usiel] Huddled at street level, as though the ground were a sanctuary, the small houses that line the row bear gnarled wooden frames and diminutive doorway arches, often rounded and non-linear. Three dusty stone steps lead down to the northern entrance of a wide shop to the north, a proud and formal armorsmith's mark
+[Usiel] at its crest. The sounds of steady, repetitive hammering waft out like the smoke from the two chimneys.
+~
+33030144 1 6 0
+D0
+sturdy wooden door~
+~
+131 -1 8329 10 10 5
+D1
+~
+~
+0 -1 8232 10 10 5
+D3
+~
+~
+0 -1 8201 10 10 5
+E
+1 north wooden north~
+A sturdy wooden door gives entrance to and egress from the shop.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@RYou pass through the door to the east, into the forge.@n
+~
+E
+to_room~
+@RThe heat of the forge filters from the shop as $n enters it.@n
+~
+!
+3 0 1
+-1
+S
+
+#8329
+Nylak's Fine Armor~
+Heat hangs in the air 'neath smoke-blackened rafters in the moderately
+sized shop, whose glowing forge is centered near the back wall.  Tools of
+the trade...hammer, anvil and a trough filled with water...are placed
+symmetrically around the room.  Various types of helms and other assorted
+headgear, all well made and proudly displayed, hang from hooks spaced
+evenly along the walls.
+~
+[Usiel] Shop 968
+[Eliza] extras done
+[Eliza] leaving code
+[Eliza] Mob needs code.
+[Eliza] Mob needs mresets.
+[Eliza] Need inventory.
+[Rikahn] Iron apprentice - custom pieces
+[Usiel] Change internal room names to "Back Room" instead of street name.
+[Eliza] needs expanding - tell Rik
+[Eliza] This room corresponds with room 968
+~
+66584581 0 5 0
+D2
+sturdy wooden door~
+~
+131 -1 8328 10 10 5
+D4
+~
+~
+0 -1 8302 10 10 5
+D5
+~
+~
+0 -1 8160 10 10 5
+E
+1 south door wooden~
+A sturdy wooden door gives entrance to and egress from the shop.
+~
+E
+forge anvil hammer tools~
+Centered near the back wall, the smoke from the forge is vented through a
+brick chimney that does little to alleviate the heat in the shop. 
+Various tools and anvils set around the room, obviously well-used and
+cared for.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CThe heat from the forge follows you, as you leave to the $d.@ 
+~
+E
+to_room~
+@CThe heat of the forge escapes into the street as $n exits the shop.@n
+~
+!
+3 0 4
+5373 9 1509949540 3 0
+-1
+S
+
+#8330
+Black Padre's~
+Under Construction.
+~
+[Usiel] 953
+[Usiel] Usiel will deal with this later.. this place it going to be one hell of a hoot. Want thieves from around the realm to know the name of Black Padre's
+[Usiel] descs from haven would be cool too
+[Eliza] right now, I only have the cellar which really needs to be a part of it.
+[Eliza] will get this from Jake. Hopefully he'll have the game up some day next week.
+[Eliza] leaving codes done
+~
+66584581 0 5 0
+D3
+weathered wooden door~
+~
+131 -1 8142 10 10 5
+D5
+~
+~
+0 -1 8331 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou climb the old worn ladder, descending into the cellar below.@n
+~
+E
+to_room~
+@y$n climbs the old worn ladder, descending into the cellar below.@n 
+~
+!
+3 0 32
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou leave the tavern, exiting through an old weathered door.@n
+~
+E
+to_room~
+@y$n leaves the tavern, exiting through an old weathered door.@n
+~
+!
+3 0 8
+-1
+S
+
+#8331
+Cellar - Black Padre's~
+The stairwell descends into the damp gloom of the cellar beneath Black
+Padre's.  In the dim light, casks of ale and racks of wine, festooned
+with cobwebs, stand against hard-packed earthen walls.  Likewise, the
+floor here is of hard-packed earth, muddied in one corner where some
+hidden water source makes its way through the grate, set high in one dark
+corner, to trickle slowly down the wall.  A closer look reveals the signs
+of vermin...a hole chewed in a grain sack...gnawed wood on the corner of
+a crate...a wheel of cheese with the distinct markings of rat teeth.  The
+air is musty with the same sweet, cloying scent that permeates the
+tavern, adding to an inherent sense of danger 
+~
+[Eliza] 425
+[Eliza] On Haven, the grate was a hidden passage into and out of the cellar.
+[Eliza] need extra's leaving random.
+[Eliza] Leaving done.
+~
+66584581 0 5 0
+D4
+~
+~
+0 -1 8330 10 10 5
+E
+casks ale racks wine cobwebs~
+No description.
+~
+E
+floor walls~
+No description.
+~
+E
+corner muddied grate water~
+No description.
+~
+E
+signs vermin hole sack wood crate wheel cheese teeth~
+No description.
+~
+E
+stairwell~
+No description.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou climb the old worn ladder, ascending into the tavern above.@n 
+~
+E
+to_room~
+@y$n climbs the old worn ladder, ascending into the tavern above.@n
+~
+!
+3 0 16
+-1
+S
+
+#8332
+Carras Way~
+In relative seclusion, the old and quiet street comes to an end at the
+foot of a gentle and weed-strewn incline.  The high and imposing city
+wall extends to the east and west, a majestic backdrop to the
+unremarkable dwellings that line Carras Way.  At the very terminal of the
+road, simple and unadorned, a home formed of wood and rich river clay
+rests beneath the rough green rise of Kergan's Hill, spanning the gap
+that might have extended the street ages ago.
+~
+[Eliza] 867
+[Eliza] Labyrinth
+[Usiel] The house is the residence of Harahn, a man in his mid to late 40's who was once a members only.er of an assassin cult in the Eastern Desert city. He is the Dun Tathaig underworld's trainer and faction contact for assassination type quests. He also will sell some assassin's tools. All of this, of course, to faction members only.
+[Eliza] Extra done.
+[Eliza] random done.
+~
+33030144 1 6 0
+D1
+~
+~
+0 -1 8120 10 10 5
+E
+home wood clay~
+A sprawling house constructed of sun-dried bricks and aged wood rises to
+the west, effectively blocking the continuance of Carras Way.  Old beyond
+reckoning, the sturdy structure shows few traces of its original vibrant
+colors, the red of the clay fading to tawny rose, the weathered timbering
+now muted gray.  A pair of windows flanks the unpainted front door, many
+of their thick-glassed panes cracked or broken.  The yard surrounding the
+building is untended, overgrown with weeds and scattered stands of grass
+gone to seed.
+~
+A
+~
+~
+send_to_room( #scent, room );
+~
+E
+scent~
+@MThe sweet fragrance of new-blooming roses follows in the wake of a
+lightly blown wind.@n
+~
+!
+2 150 0
+-1
+S
+
+#8333
+Guard Barracks - Horse Gate~
+Under Construction.
+~
+[Usiel] 941
+~
+66584581 0 5 0
+D2
+~
+~
+0 -1 8169 10 10 5
+-1
+S
+
+#8334
+TO BE USED LATER!!!~
+Under Construction.
+~
+~
+66584581 0 9 0
+D2
+~
+~
+0 -1 8118 10 10 5
+D3
+~
+~
+0 -1 8179 10 10 5
+-1
+S
+
+#8335
+Widow Bupke's Boarding House~
+Under Construction.
+~
+[Usiel] Shop 963
+~
+66584581 0 5 0
+D0
+~
+~
+0 -1 8172 10 10 5
+5320 9 1509949540 3 0
+-1
+S
+
+#8336
+Caravan Gate Stables~
+Under Construction.
+~
+[Usiel] 978
+~
+66584581 0 5 0
+D2
+~
+~
+0 -1 8174 10 10 5
+-1
+S
+
+#8337
+Temple to Hamaskus~
+Under Construction.
+~
+[Usiel] 934
+~
+66584581 0 5 0
+D3
+~
+~
+1 -1 8219 10 10 5
+-1
+S
+
+#8338
+Grummeltuppers Gadgets~
+The soft and diluted glow of candlelight reflects against the quartered
+windows, illuminating the shop with the help of the crackling fire
+burning in the hearth.  Long oak tables divide the quaint shop and
+shelves line the walls, cluttered with oddities of various sizes and
+shapes.  A series of pipes, levers and small chains runs haphazardly
+along the wood-beam ceiling, congregating at the wall beside the front
+door.  A shining flower of radiant purple sways lazily in the mild
+breeze, flowing gently from the open funnel, descending from a web of
+dull copper above.  Along the northern wall, an antique wooden desk and
+countertop draw the attention of the room, a large oil lamp glowing
+softly even in the day, casting a yellow hue to the bundles of scrolls
+and parchments that rest atop it.  To one side, a small workbench holds a
+few metal tools and a thin film of sawdust.
+~
+[Usiel] Shop 946
+[Eliza] Outlands
+[Eliza] add Ring me acode per desk extra.
+[Eliza] add black box object that sets off a random when you push the button?
+[Eliza] add some spammy randoms for this shop.
+[Eliza] need leaving/randoms.
+[Eliza] Skurva's mechanical toy customs should reset here.
+[Eliza] need to see if they can be made to work.
+~
+66584581 0 5 0
+D3
+~
+~
+0 -1 8232 10 10 5
+E
+shelves oddities~
+Tall oak shelves cover the walls from ceiling to floor, cluttered with a
+series of oddities...all manner of switches, gears and levers, and even a
+smattering of toys' body parts...arranged it seems, more to suit the
+owner's fancy than to draw the customer's eye.
+~
+E
+desk oil lamp scrolls parchments~
+This large oak desk provides the counter necessary for all good shops,
+though it's quite evident the space is used as much for thought and
+design as for the transfer of money.  Large scrolls of various colors sit
+in piles, some bound with string, others lying open to reveal exquisite
+sketches of models that elude the common understanding.  A large oil lamp
+hangs from a peg behind the counter, casting a blanket of warm, yellow
+light upon the entire area.  Among the scattered papers, tools, and tiny
+items of display, two books show evidence of recent use.  One, a simple,
+string-bound journal, contains some of the recent contracts, creations
+and transactions of the shop's owner...though the writing is almost
+indecipherable.  The other, a hard bound volume with a sizable number of
+pages, is titled: "Politics, the Mechanical Nature of Society." Atop the
+desk sits a small, black box, and on it...a button.  A small note pinned
+to the wood reads: "@eRing Me@n." 
+~
+E
+pipes levers chains ceiling wall~
+Behind the front door, spread upon the wall like metal vines, is a
+contraption of intricate beauty.  A gleaming cube with small, depressible
+buttons rests upon a cylindrical axle, a host of complimentary and
+inverted levers interpreting the press of a key, and reacting with dozens
+of movements.  To the side, further down the axle, a similar host awaits
+silently, with a series of weighted bars to guide the intended shift's
+descent.  A few of the levers and gears extend to a small box above the
+door, and disappear into the frame.  There seems to be some sort of code
+within the design of this creation, but it remains buried far within the
+mesh structure.
+~
+E
+flower purple copper funnel~
+Within this sea of intriguing sculpture, an occasional movement catches
+the eye...the squeaking rotation of a large gear, the swing of a
+pendulum...the turning of a doll's eyes to follow your passing, it's
+impish smile almost too real to be mimicry.
+~
+5207 9 1509949540 3 0
+-1
+S
+
+#8339
+MacDonnell's Fine Armory~
+Under Construction.
+~
+[Usiel] shop 651
+[Eliza] Brogan MacDonnell
+[Rikahn] steel apprentice here
+~
+66584581 0 5 0
+D2
+~
+~
+0 -1 8315 10 10 5
+D4
+~
+~
+0 -1 8342 10 10 5
+D5
+~
+~
+0 -1 8343 10 10 5
+5375 9 1509949540 3 0
+-1
+S
+
+#8340
+MacDuff's Armory~
+Under Construction.
+~
+[Eliza] Corresponds to 454
+[Eliza] [Rikahn] bronze/iron/steel ringmail here
+~
+66584581 0 5 0
+D1
+~
+~
+0 -1 8192 10 10 5
+5371 9 1509949540 3 0
+-1
+S
+
+#8341
+MacDuff's Armory~
+Under Construction.
+~
+[Eliza] Corresponds to 474
+[Rikahn] bronze/iron/steel scale mail here
+~
+66584581 0 5 0
+D5
+~
+~
+0 -1 8192 10 10 5
+5218 9 1509949540 3 0
+-1
+S
+
+#8342
+MacDonnell's Fine Armory~
+Under Construction.
+~
+[Rikahn] plate armor here
+[Eliza] corresponds to 495
+[Eliza] material types need setting.
+~
+66584581 0 5 0
+D5
+~
+~
+0 -1 8339 10 10 5
+5085 9 1509949540 3 0
+-1
+S
+
+#8343
+MacDonnell's Fine Armory~
+Under Construction.
+~
+[Rikahn] platemail armor here
+[Eliza] corresponds to 489
+[Eliza] material type needs to be set.
+~
+66584581 0 5 0
+D4
+~
+~
+0 -1 8339 10 10 5
+5376 9 1509949540 3 0
+-1
+S
+
+#8344
+Padraig's Pets~
+Under Construction.
+~
+[Usiel] Shop 979
+[Eliza] must have down room for pet holding area otherwise the shop won't work.
+[Eliza] numbers must be sequential with the holding area the higher number
+[Eliza] East Corridor
+down exit must be hidden.
+[Eliza] pet shop resets must go in the connecting room.
+~
+66592773 0 5 0
+D0
+~
+~
+0 -1 8171 10 10 5
+D5
+~
+~
+319 -1 8345 10 10 5
+5311 9 1509949540 3 0
+-1
+S
+
+#8345
+Padraig's Pets - Back Room~
+Pet Storage for 8344.
+~
+~
+33042433 0 9 0
+D4
+~
+~
+319 -1 8344 10 10 5
+115 9 1509949540 3 0
+-1
+S
+
+#8346
+Three-Tick Thodo's Exotic Bestiary~
+Under Construction.
+~
+[Usiel] shop 981
+[Eliza] code Thodo to pose counting with his three-fingered hand
+[Eliza] must have down room for pet shops to work and must be sequential.
+[Eliza]  - make that a random.
+[Eliza] exit down is holding room for pets.
+~
+66592773 0 5 0
+D2
+~
+~
+0 -1 8172 10 10 5
+D5
+~
+~
+447 -1 8347 10 10 5
+5312 9 1509949540 3 0
+-1
+S
+
+#8347
+Three-Tick Thodo's Exotic Bestiary - Back Room~
+Under Construction.
+~
+~
+33034241 0 9 0
+D4
+~
+~
+447 -1 8346 10 10 5
+115 9 1509949540 3 0
+-1
+S
+
+#8348
+Ayberra's Exquisite Equines~
+Under Construction.
+~
+[Eliza] Down is for pet storage for horses to be sold
+[Usiel] shop 972
+[Eliza] Dillan Dillon Delon.
+[Eliza] Down room MUST be here.
+~
+66584581 0 6 0
+D0
+~
+~
+0 -1 8350 10 10 5
+D2
+~
+~
+0 -1 8167 10 10 5
+D5
+~
+~
+0 -1 8349 10 10 5
+-1
+S
+
+#8349
+Ayberra's Exquisite Equines~
+Under Construction.
+~
+~
+66584581 0 6 0
+D4
+~
+~
+0 -1 8348 10 10 5
+-1
+S
+
+#8350
+Ayberra's Stables~
+Under Construction.
+~
+~
+66584581 0 6 0
+D2
+~
+~
+0 -1 8348 10 10 5
+-1
+S
+
+#8351
+Nevyn's Stables~
+The interior of the structure, as well as the exterior, are long past
+their prime, the wood of the walls and stalls dry and weathered with age
+and lack of attention.  A narrow aisle, separating two rows of cramped
+stalls, is nothing more than hard-packed, straw-strewn dirt.  Against the
+back wall of the room, a half dozen grain sacks and a moderate-sized
+mound of hay lay side by side, a rusty pitchfork jabbed upright in dirt
+beside them.  The resident beasts of the shelter are less than quality
+animals, most of them showing at least one noticeable conformation defect.
+~
+[Eliza] Old room 976
+[Eliza] sells a few less nice horses, and mules.. pony or two..
+[Eliza] No saddlery, harnesses or other trappings.
+[Eliza] maybe a poke in the butt if they have a smart mouth.
+[Eliza] This mob wields a pitchfork.. which needs to be coded but is reset on the mob.
+[Eliza] we have to have at least a sway-backed nag here..
+[Eliza] Add needle search in hay.
+[Eliza] Room is done except for shop inventory and hay search.
+~
+33038336 0 5 0
+D3
+pair of old wooden doors~
+~
+131 -1 8114 10 10 5
+D5
+~
+~
+447 -1 8352 10 10 5
+E
+stalls rows cramped~
+Two rows of narrow stalls line the walls of the stable on either side of
+hard dirt aisle.  The enclosures are cramped, just wide enough to hold a
+full size horse, a feed bin and a half-rusted water bucket full of murky,
+day old water.  Strewn across the floor of each, several forkfuls of hay
+have been scattered, giving off a musty scent as if in need of changing.
+~
+E
+hay grain sacks mound~
+Set against the back wall of the stable, a dozen burlap sacks filled with
+grain and a low mound of hay rest alongside each other.  One of the sacks
+lies on its side, grain spilling from a hole near the top.  The hay emits
+a musty scent, as if old or damp.
+~
+E
+pitchfork~
+The pitchfork, buried halfway up tines in the earthen stable floor, has a
+simple wooden handle worn smooth with use and stained with sweat and dirt. 
+The fork portion of the implement shows signs of rust, save for the tines
+which have been filed free of corrosion and tapered to a sharp point.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou pass through the gaping doorway into the street.@n
+~
+E
+to_room~
+@c$n passes through the gaping doorway into the street.@n
+~
+!
+3 0 8
+A
+~
+~
+send_to_room( #stable, room );
+~
+E
+stable~
+@yDrifting from the depths of the stable, the sounds of whickering horses
+and the stamping of hooves can be heard.@n 
+~
+!
+2 150 0
+5448 9 1509949540 3 0
+-1
+S
+
+#8352
+Nevyn's Stables~
+Pet storage for 8351.
+~
+~
+66592773 0 5 0
+D4
+~
+~
+447 -1 8351 10 10 5
+119 9 1509949540 3 0
+975 9 1509949540 3 0
+-1
+S
+
+#0
+

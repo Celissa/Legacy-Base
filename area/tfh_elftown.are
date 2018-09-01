@@ -1,0 +1,605 @@
+#M2_AREA
+2
+
+Western grassland~
+Azerin~
+~
+~
+~
+
+0 0
+0
+1
+#ROOMS
+
+#14000
+Trail Across the Grasslands~
+Green-leaved nettles flourish at the edge of a trickling stream, their
+leaves and stems covered in fine thorns that deliver an upleasant sting. 
+Most of the stream bed is dry and filled with water-smooth rocks and
+patches of dried water weeds.  In its heart, the seasonal stream still
+splashes, the water a muddy brown from silt and sand dredged from the
+grasslands.  At the stream's edge, the ground has been churned up,
+perhaps from animals seeking some refreshments.
+~
+[Guin] possible block of rooms for a western grasslands
+[Guin] Done.
+~
+167247880 2 9 0
+D1
+~
+~
+0 -1 2280 10 10 5
+D3
+~
+~
+0 -1 14001 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou follow the trail to the west, into the heart of the grasslands.@n
+~
+E
+to_room~
+@y$n follows the path westward, into the heart of the grasslands.@n
+~
+!
+3 0 8
+3993 17 1509949540 -2 46
+-1
+S
+
+#14001
+Trail Across the Grasslands~
+The trail continues onward through the expansive sea of yellow-brown
+grasses, following the line of a half-dry streambed.  Underfoot, a random
+scattering of worn cobblestones indicate a fair-sized road once ran here
+but time and neglect have taken their toll upon it.  The surrounding
+terrain is featureless with nothing to be seen but endless miles of
+prairielands.
+~
+[Guin] Done.
+~
+167247872 2 9 0
+D1
+~
+~
+0 -1 14000 10 10 5
+D3
+~
+~
+0 -1 14002 10 10 5
+A
+poke~
+~
+send_to_room( #flight, room, sight );
+~
+E
+flight~
+@yOff in the distance to the north and west, a half-dozen vultures circle
+something on the ground below, their black shapes stark against the vast
+skies of the grasslands.@n 
+~
+!
+2 150 0
+A
+~
+~
+~
+!
+0 0 0
+3993 17 1509949540 -2 46
+587 17 1509949540 -2 0
+176 9 1509949540 3 0
+-1
+S
+
+#14002
+Trail Across the Grasslands~
+The trail runs straight to the east and west, varying little except to
+skirt a bush here, a thicker stand of grass there.  The land has
+completely reclaimed an ancient road, a single cobblestone poking through
+a mound of dried mud the only evidence of its existence.  A drying
+streambed lies just off to the south, a mere trickle of water flowing
+along the bottom.
+~
+[Guin] Done.
+~
+167247872 2 9 0
+D1
+~
+~
+0 -1 14001 10 10 5
+D3
+~
+~
+0 -1 14003 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou continue on through the endless miles of featureless grasslands.@n
+~
+E
+to_room~
+@y$n continues through the endless miless of featureless grassland.@n
+~
+!
+3 0 10
+3993 17 1509949540 -2 0
+2233 9 1509949540 3 0
+-1
+S
+
+#14003
+Trail Across the Grasslands~
+Grass, grass and more grass as far as the eye can see...endless miles of
+swaying stalks and ripened seedheads.  The drying streambed curves away
+to the south, a tall cottonwood tree stretching skyward at the bend.  A
+half-dozen worn cobblestones burdgeon their way through the roadbed,
+unyielding to the encroaching weeds.
+~
+[Guin] Done.
+~
+167247872 2 9 0
+D1
+~
+~
+0 -1 14002 10 10 5
+D3
+~
+~
+0 -1 14004 10 10 5
+E
+cottonwood tree~
+A grand old tree, this cottonwood reaches nearly ninety feet in height,
+its vast trunk nearly five feet across.  Its thick gnarly branches split
+near the bole's base, creating a broad canopy of irregularly shaped
+leaves that twist and spend in rythm with the wind.
+~
+A
+~
+~
+send_to_room( #flurry, room, sight );
+~
+E
+flurry~
+@CA flurry of white cottony puffs float through the air, fallen from the
+nearby cottonwood tree.@n 
+~
+!
+2 150 0
+2582 9 1509949540 3 0
+-1
+S
+
+#14004
+Trail Across the Grasslands~
+The cobbled road dissipates into a sea of grass, dirt and broken stones,
+the ruination of the good trail appearing somewhat deliberate; some of
+the stones were obviously cracked and split by pick and hammer.  A
+handful of rabbit digs churn up the earth around the road's remains,
+adding to the overall dilapidation.  Eastward, the road appears in much
+better condition, the cobbles visible under the sea of grass.
+~
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 14005 10 10 5
+D1
+~
+~
+0 -1 14003 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou follow the trail $dward, giving the thorn tree a wide birth.@n
+~
+E
+to_room~
+@y$n follows the trail $dward, giving the thorn tree a wide birth.@n
+~
+!
+3 0 3
+358 17 1509949540 -2 0
+217 9 1509949540 3 0
+-1
+S
+
+#14005
+Trail Across the Grasslands~
+A rough stone wall rises upon a slight bank to the north and east, the
+rocks coated in lichen, dried moss and mice nests.  Beyond the wall a
+clutter of rubble-strewn ruins intermingle with the spreading grasslands,
+the rocks pitted and cracked with age and the harsh winters.  A muddy
+trail heads westwards from the wall, heading deeper into the grass and
+ruins.  A road in a much better condition cuts southwards, leaving the
+desolate plain behind.
+~
+[Guin] Add search nest here for 3961 - 25%, 281 - 25% - nothing 50%.
+[Guin] Done.
+~
+167247872 2 9 0
+D2
+~
+~
+0 -1 14004 10 10 5
+D3
+~
+~
+0 -1 14006 10 10 5
+E
+mice nest~
+A half-dozen mice nests lie at the base of the old stone wall. 
+Constructed of short pieces of dried grass, bits of paper, feathers and
+any other found objects they could appropriate, its impossible to
+determine if the nests are abandoned or not.
+~
+A
+~
+nest~
+act_tochar( #start_search, ch );
+act_notchar( #rstart_search, ch, obj, mob, sight );
+if( !rflag( reset0, room ) ) {
+  act_tochar( #already, ch );
+  end;
+}
+i = random( 1, 4 );
+if( i == 1 )
+  obj = oload( 3961 );
+else if( i == 2 )
+  obj = oload( 281 );
+if( obj ) {
+  act_tochar( #found, ch, obj );
+  act_notchar( #rfound, ch, obj, mob, sight );
+  obj_to_char( obj, ch );
+}
+else {
+  act_tochar( #nada, ch );
+  act_notchar( #rnada, ch, obj, mob, sight );
+}
+~
+E
+already~
+The insides of the nest have been overturned already.
+~
+E
+found~
+You find $p secreted away in the nest.
+~
+E
+rfound~
+$n finds $p in $s searches through the nest.
+~
+E
+nada~
+You find nothing of interest.
+~
+E
+rnada~
+$n finds nothing of interest.
+~
+E
+start_search~
+You begin picking through the nest, looking for anything interesting.
+~
+E
+rstart_search~
+$n begins picking through the nest, looking for anything interesting.
+~
+!
+9 0 0
+176 9 1509949540 3 0
+-1
+S
+
+#14006
+Trail Across the Grasslands~
+Husky-headed wheat bends low under the ripening seedheads, the grains
+attracting flocks of birds.  Under the watchful eye of the sparrows and
+other avians, the roadway runs in an east and west direction, its rutted
+surface filled with muddy pools and a scattering of rocks.  Thorn trees
+grow about the plains, their dark-green foliage an ideal shelter for the
+birdlife and other grain eaters.
+~
+[Guin] Done.
+~
+167247872 2 9 0
+D1
+~
+~
+0 -1 14005 10 10 5
+D3
+~
+~
+0 -1 14007 10 10 5
+A
+~
+~
+send_to_room( #flock, room, sight );
+~
+E
+flock~
+@CWith wings flapping, a flock of birds takes flight, startled by
+something hidden among the dense vegetation.@n 
+~
+!
+2 150 0
+-1
+S
+
+#14007
+Trail Across the Grasslands~
+Grass and thistles intermingle across the plains, the wild barley and
+wheat swaying in time to the blustering western wind.  Far to the east,
+rolling hills transform into high mountains, their tall peaks covered in
+heavy snow.  Thorn trees grow into tangled copses to the west, the near
+endless grasslands briefly parting under the determined roots of the
+trees.
+~
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 14008 10 10 5
+D1
+~
+~
+0 -1 14006 10 10 5
+E
+thorn trees~
+The squat trees thrive in the dry conditions, layers of sharp thorns
+preventing most grazing animals from feasting on their dark green leaves.
+~
+A
+~
+~
+send_to_room( #gust, room, sight_sound );
+~
+E
+gust~
+@CA strong gust of wind whistles through the thorn trees, rattling their
+branches like brittle old bones.@n 
+~
+!
+2 150 0
+176 9 1509949540 3 0
+-1
+S
+
+#14008
+Trail Across the Grasslands~
+Clusters of thorn trees gather to the south and north of the roadway, the
+dark green leaves a welcome respite from the dusky-brown grass.  A dried
+creekbed winds between the stands, perhaps a seasonal stream.  It is dry
+and rocky now, not even a stagnate pool visible in the dusty bottom. 
+Westward the land begins to rise, forming a rolling front of hills, the
+highest one covered in ruins.
+~
+[Guin] Done.
+[Jydan] stagnate stagnant
+~
+167247872 2 9 0
+D2
+~
+~
+0 -1 14007 10 10 5
+D3
+~
+~
+0 -1 14009 10 10 5
+E
+ruin~
+A near intact building rises out of the clusters of broken buildings atop
+of the hill, its dark spires cloaked in menacing clouds.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou follow the trail, winding through the shadows within the copse of
+trees.@n 
+~
+E
+to_room~
+@c$n follows the trail, winding through the shadows within the copse of
+trees.@n 
+~
+!
+3 0 12
+-1
+S
+
+#14009
+Trail Across the Grasslands~
+Grass spreads out in all directions, the grains only interupted by a
+scattering of thorn trees and spires of broken rock.  The roadway cuts
+east,ward through the swaying grass and northward toward more ruins and
+rolling hills.  Far to the east, the massive Everwinter range rises
+toward the sky, the mountains' frozen caps and forested flanks home to
+untold danger.
+~
+[Guin] Done.
+[Jydan] east,ward -> eastward
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 14010 10 10 5
+D1
+~
+~
+0 -1 14008 10 10 5
+3998 17 1509949540 -2 0
+217 9 1509949540 3 0
+-1
+S
+
+#14010
+Trail Across the Grasslands~
+Rabbit holes litter the dried grasslands, mounds of fresh dirt scattered
+out in front of them.  Thistles and rubble vie for second place in the
+clutter the landscape race, each one causing its own unique menace to a
+would-be traveler.  Avoiding many of the hazards, a dusty road heads
+southward into a mixture of grass and thorn trees and west toward what
+appears to be a sizeable ruin.
+~
+[Guin] Done.
+~
+167247872 2 9 0
+D2
+~
+~
+0 -1 14009 10 10 5
+D3
+~
+~
+0 -1 14011 10 10 5
+-1
+S
+
+#14011
+Trail Through The Grass~
+Bending around a low stone wall, the grassland trail wanders along without
+any clear destination.  Far to the north, hills begin to rise from the
+plains, one in particular shrouded within a gloomy cloud.  More stone ruins
+rise out of the golden grains around the road, the lichen-covered rock
+all that remains of what must have been a reasonably large township.
+~
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 14012 10 10 5
+D1
+~
+~
+0 -1 14010 10 10 5
+E
+lichen-covered rock~
+Bits of buildings, arches and roadways lie scattered throught the
+grasslands, the grains swamping them under a sea of swaying leaves.  The
+place must have been a huge city in its heyday, but now only sad whispers
+remain of its former glory.
+~
+-1
+S
+
+#14012
+Trail Through The Grass~
+Three cracked and broken pillars rise to the west of the grassland trail
+where the remains of some sprawling construction once stood.  Scattered
+through the wheat and barely grass lie the remnants of walls, buildings
+and foundations of what appears to have been a vast settlement.  The path
+follows what is left of a cobbled roadway, the stones mostly obscured by
+dirt and thriving weeds.  A broad-canopied tree lies in the shadows of
+the northernmost of the pillars, providing some sparse shade in this
+section of the countryside.
+~
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 14013 10 10 5
+D2
+~
+~
+0 -1 14011 10 10 5
+E
+weeds~
+Plantine and thistles grow together through the rocks, their broad leaves
+soaking up the sun.
+~
+2614 9 1509949540 3 0
+545 17 1509949515 -1 0
+-1
+S
+
+#14013
+At the Gates of a Ruined Abbey~
+A rubble-covered road peeks out from under the swaying grasses, its
+cracked surface flecked with lichen and dirt.  Weeds poke through the
+gaps between the cobbles as nature slowly reclaims the broken remains of
+a sizable ruin.  A hill rises to the north, a solitary building perched
+on its dark side.  The decaying walls are surrounded by brooding clouds
+that cling unnaturally to the sky above it.  The wrecked iron-wrought
+gate that once sealed the ruin's entrance, hangs askew now, its hinges
+bent and rusted.
+~
+[Guin] Done.
+[Guin] Connects to 6600 north.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 6600 10 10 5
+D2
+~
+~
+0 -1 14012 10 10 5
+E
+iron-wrought gate hinges~
+Strangly the gate does not appear to have been created at the same time
+as the ruin, the hindges have been set into half a crumbling wall, as if
+they were to keep something inside the dark abbey rather than out. 
+Either way they are now torn, twisted and ruined.
+~
+A
+~
+~
+send_to_room( #screech, room, sight_sound );
+~
+E
+screech~
+@RThe rusty iron-wrought gate creaks on its hinges, set swinging by a
+strong gust of wind.@n 
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou work past the wrecked iron gate, entering the ruins of the
+buildings to the north.@n 
+~
+E
+to_room~
+@c$n works past the wrecked iron gate, entering the ruins of the
+buildings to the north.@n 
+~
+!
+3 0 1
+-1
+S
+
+#0
+

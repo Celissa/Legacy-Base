@@ -1,0 +1,20 @@
+<html>
+<body>
+Your "saving throws", or resistances, are listed when you use the<br>
+score command.  They are displayed as a percentage value, with 0%<br>
+being the hypothetical "average" human's resistance versus a particular<br>
+element.  Negative values imply an increased susceptiblity to that type<br>
+of damage, while a positive number indicates that you will take that<br>
+percent less damage.<br>
+<br>
+The resistances and their abbreviations displayed on score include:<br>
+<br>
+Mag: General magic<br>
+Fir: Fire<br>
+Col: Cold<br>
+Ele: Electricity<br>
+Min: Mind<br>
+Aci: Acid<br>
+Pos: Poison<br>
+</html>
+</body>

@@ -1,0 +1,1634 @@
+#M2_AREA
+2
+
+Dulthor's Hold~
+Azerin Ko'sec~
+Dulthor's Hold~
+~
+~
+
+0 0
+0
+0
+#ROOMS
+
+#36500
+Before A Fishing Village~
+Spreading out before the beach are solid wooden houses, their structures
+long and narrow, often exceeding fifty feet in length.  The walls and
+entrances have been made from thick planks of wood, lashed together with
+bands of rope.  An archway of curved beams form a church-like spire at
+each doorway, their apexes carved with fantastical gargoyles and dragons'
+heads.  Outside the long houses fishing nets and ship sails dry on
+driftwood stands, the ground around them covered with stout ropes.  At the
+water's edge, single person boats lie lashed together, their sails furled
+and anchor stones lowered.  A weatherworn dock juts into the misty sea,
+the very end of it obscured by a pervasive fog bank.  Rising above the
+village, a squat watchtower of dwarven construction, stands dutiful guard
+over this section of the shoreline.
+~
+[Guinafaer] Done
+~
+167248897 12 6 0
+D0
+~
+~
+0 -1 36501 10 10 5
+D2
+~
+~
+0 -1 33073 10 10 5
+E
+house spire narrow long wooden~
+The long houses are constructed primarily from pine logs.  They are
+lashed together with thick ropes and for the most part sealed tightly. 
+At the entrance to each house a spire extends, often made to represent an
+animal or monster of some type.
+~
+E
+shore boats~
+A dozen or more one man boats line up along the shore.  They are long and
+narrow with small masts.  You can barely make out some odd carvings on
+the boats through the thick fog.  Although the marks can not be clearly
+seen through the fog, you can see a picture of a crane and snake on one.
+~
+E
+1 north watchtower~
+A tall dark omnipotent watchtower has been built close to shore.  The
+tower, the most visible structure of the town, rises above the
+everpresent fog.  The quaint village surrounds the stolid,
+dwarven-constructed tower.
+~
+E
+fishing net sails~
+Low piles of haggered sails and fishing nets are strewn about.  The
+fishing nets are made from a thin black rope tied together and are
+entangled in large chunks of seaweed.  The sails about the path were
+once white but are now stained a greenish brown hue.
+~
+A
+~
+~
+act_tochar( #leav, ch );
+act_notchar( #rleav, ch );
+continue;
+~
+E
+leav~
+@GThe stones crunch underfoot as you walk along the trail.@n
+~
+E
+rleav~
+@GThe stones crunch loudly as $n walks down the path.@n
+~
+!
+3 0 1
+2431 9 1509949540 3 0
+-1
+S
+
+#36501
+Mist-Shrouded Village~
+Tendrils of mist obscure the edge of the village, muting the long houses'
+colors and merging one building into the next.  A scattering of smoky
+torches give off a ruddy glow, their efforts to illuminate almost
+completely overrun by the fog.  Sand and pebbles blend together underfoot
+with a generous amount of rotting seaweed.  Barely percievable through
+the cloak of white, a stone watchtower rises towards the north.  To the
+west, weatherworn steps lead up to the entrance to a house.
+~
+[Guinafaer] Done.
+~
+167248897 12 6 0
+D0
+~
+~
+0 -1 36505 10 10 5
+D2
+~
+~
+0 -1 36500 10 10 5
+D3
+~
+~
+0 -1 36502 10 10 5
+E
+1 north tower stone~
+All that is visible to the west is some weatherworn steps and the house
+rising above them.  The stairs are constructed of pine logs and have
+begun to rot.  Nothing beyond the stairs can be seen because of the dense
+fog.
+~
+E
+north tower~
+To the north, a tall stone tower protrudes from out of the fog.  The
+tower illuminates its surroundings, a haunting red amber glow seeping
+from the windows and archer holes.
+~
+E
+torches ruddy glow~
+Oil-soaked torches sit forelornly in rusted metal brackets affixed next
+to the door of most of the nearby houses.  The flickering flames burn
+dully, emitting dark grey smoke into the air.
+~
+A
+~
+~
+send_to_room( #wave, room );
+~
+E
+wave~
+@cThe sound of breaking waves echoes through the fog, the unseen beach
+lying some distance to the east.@n
+~
+!
+2 150 0
+A
+~
+~
+act_tochar( #creak, ch );
+act_notchar( #rcreak, ch );
+continue;
+~
+E
+creak~
+@yThe stairs creak and groan as you stride up them to the long house.@n
+
+~
+E
+rcreak~
+@yThe rough stairs creak and groan under $n as $e clambers up to the long
+house.@n 
+~
+!
+3 0 8
+A
+~
+~
+act_tochar( #leaving, ch );
+continue;
+~
+E
+leaving~
+@yYou leave the small village.
+~
+!
+3 0 4
+A
+~
+~
+act_tochar( #sand, ch );
+continue;
+~
+E
+sand~
+@yThe soft sand cushions your footfall as you amble northwards.@n 
+~
+!
+3 0 1
+182 9 1509949540 3 0
+-1
+S
+
+#36502
+Before a Longhouse~
+The glaring figurehead of a dragon leers over the entrance to the long
+house.  The surface of the pine trunks have been covered in carvings of
+sea monsters and three masted ships, all awash in a terrible storm at sea. 
+A curtain of fishing net and damaged sail lies draped over a driftwood
+stand to the left of the doorway, the cloth reeking of brine and fish. 
+Dense fog obscures much of the landscape beyond the doorway, only the
+torch lit watchtower perceivable from any distance.
+~
+[Guinafaer] Done
+~
+167248905 12 6 0
+D1
+~
+~
+0 -1 36501 10 10 5
+D3
+stout pine door~
+~
+131 -1 36503 10 10 5
+E
+stand fish net sails~
+A small stand has been constructed from pieces of bleached out driftwood
+and scraps of ruined sails and fishing nets are draped across them.  The
+stand reeks of brine and is strung together by pieces of seaweed.
+~
+E
+pine logs pictures~
+A large battle scene has been carved into the logs of the house.  Many
+three masted dwarven battle ships can be seen to the left side of the
+door.  To the right of the door you can see a pod of sea serpents forming
+a line parallel to the dwarven battle ships.
+~
+E
+dragon figurehead~
+A dragon head protrudes from the wall above the house.  It seems to leer
+at you with empty eye sockets.  On its forehead you can see a celtic knot
+in the form of a snake.
+~
+A
+~
+~
+if( !can_fly( ch ) ) {
+act_tochar( #char, ch );
+act_notchar( #notchar, ch );
+continue;
+}
+else {
+act_tochar( #charfly, ch );
+act_notchar( #notcharfly, ch );
+continue;
+}
+~
+E
+char~
+@yYou descend the pine stairs to the east.@n
+~
+E
+notchar~
+@y$n climbs down the pine stairs to the east.@n 
+~
+E
+charfly~
+@yYou float down the stairs to the east.@n
+~
+E
+notcharfly~
+@y$n floats down the steps to the east.@n
+~
+!
+3 0 2
+-1
+S
+
+#36503
+Entrance Room~
+Woodsmoke hangs heavy in the air, the smell of cooked meat and unwashed
+bodies carried with it.  Redwood beams have been lashed together to form
+the foor and walls of the room, their surfaces polished, perhaps to
+protect them somewhat against the dank conditions.  A scattering of
+torches line the walls, giving the house a cavern-like feel.  Stairs lead
+downwards to the west, into a poorly lit sleeping chamber.  Set into the
+east wall is a stout wooden door, a mound of old furs lying beside it.
+~
+[Guinafaer] Done.
+~
+167248897 0 5 0
+D1
+stout pine door~
+~
+131 -1 36502 10 10 5
+D3
+~
+~
+0 -1 36504 10 10 5
+E
+floor redwood beams~
+The floor is made of a polished redwood.  The floor is unmarred and
+free from dirt, as if well-cared for.
+~
+E
+1 east wooden door mound old furs~
+To the east a wooden door has been set into the wall.  Three runic sygils
+have been carved into the center of it.  To the right of the door is a
+pile of old furs.  The furs are comprised mainly of fox but also a few
+mink and squirrel have been added to the pile.
+~
+A
+~
+~
+act_tochar( #step, ch );
+act_notchar( #rstep, ch );
+continue;
+~
+E
+step~
+@yYou descend the short flight of steps.@n
+~
+E
+rstep~
+@y$n heads westwards, descending the short flight of steps with ease.@n
+
+~
+!
+3 0 8
+368 9 1509949540 3 0
+-1
+S
+
+#36504
+Sleeping Chamber~
+The embers of a fire burn in a firepit in the chambers center.  Mounds of
+furs and woolen blankets lie scattered around it, despite the attempt to
+warm the hall, the room is little warmer than outside.  Carved beams of
+wood rise from the floor at each side of the room, a lattice of wood
+forming providing support for the ceiling.  Above the fire, a narrow
+opening allows some of the smoke to escape.  Steps to the east lead
+upward and into another chamber, a door in the far east the only way out
+of the house.  Stacks of gleaming bones, spare sails and nets rest
+against the west wall.
+~
+[Guinafaer] Done
+[Hoel] There should be rdescs for the bones etc in this room.
+~
+167248897 0 5 0
+D1
+~
+~
+0 -1 36503 10 10 5
+E
+firepit fire embers center~
+The firepit is set into a shallow depression in the floor.  Around it,
+large rocks have been placed to prevent the fire from spreading to the
+house.  The embers in the fireplace are red hot and seem to be well fed. 
+The large fire doesn't provide much heat to the rest of the hall but is
+intense when up close.
+~
+E
+furs mounds blankets woolen bed~
+A few beds have been made out of furs and blankets around the fireplace. 
+The largest of the beds is on the west side and has a deeper pile of furs.
+~
+E
+ceiling lattice wood beams carved~
+Four large beams protrude from the floor.  Runic designs have been carved
+into the poles, all with a common theme depicting a fierce dwarven
+warrior in battle with uncounted enemies.  A lattice work of wood has
+been constructed on top of the poles providing a ceiling for the house. 
+In the center of the ceiling, an opening allows the smoke to escape.
+~
+A
+search~
+bones sails nets piles~
+act_tochar( #fail, ch );
+act_notchar( #fails, ch );
+~
+E
+fail~
+@yYou search through the piles of bones, sails, and nets but find nothing.
+~
+E
+fails~
+@y$n searchs through the piles of bones, sails, and nets but comes up
+empty handed.
+~
+!
+0 0 0
+A
+~
+~
+act_tochar( #leav, ch );
+act_notchar( #rleav, ch );
+continue;
+~
+E
+leav~
+@yYou leave eastwards, ascending the worn steps.@n
+~
+E
+rleav~
+@y$n leaves eastwards, ascending the worn steps.@n
+~
+!
+3 0 2
+-1
+S
+
+#36505
+Mist-Shrouded Village~
+Sand and stone fragments have been strewn across the ground with broken
+seashells to form a path through the fog.  The white vapours cling to
+draped nets and ropes that cover driftwood frames to the east.  The
+grey stone walls of the watchtower rise to the north, their surface
+coated in dew.  The roadway bends westward around the tower and heads
+into the mist, its destination obscured.
+~
+[Guinafaer] Done.
+~
+167248897 12 6 0
+D2
+~
+~
+0 -1 36501 10 10 5
+D3
+~
+~
+0 -1 36506 10 10 5
+E
+path~
+The trail has been constructed from bits of broken seashells and worn
+down crumbled rocks.  Every so often you can see a broken crab or turtle
+shell identifiable among the mixture.
+~
+E
+tower north~
+To the north, you can see a large gray stone tower.  Archer holes have
+been placed in the tower which would provide great protection if it were
+to be attacked.
+~
+A
+~
+~
+send_to_room( #bird, room );
+~
+E
+bird~
+@YThe shrill call of a sea bird echoes from above.@n 
+~
+!
+2 150 0
+A
+~
+~
+act_tochar( #turn, ch );
+continue;
+~
+E
+turn~
+@yYou turn round the corner of the path.
+~
+!
+3 0 8
+180 9 1509949540 3 0
+-1
+S
+
+#36506
+Seashell Trail - Mist-Shrouded Village~
+Surrounded by decaying seaweed and torn fishing nets, the roadway winds
+through the mist.  The grey-hued watchtower rises out of the fog to the
+north, smoldering torches dully illuminating its top.  Barely visible
+through the mist, a long house streches southward, a few wispy tendrils
+of woodsmoke adding to the haze.
+~
+[Guinafaer] Done.
+~
+167248897 12 6 0
+D1
+~
+~
+0 -1 36505 10 10 5
+D3
+~
+~
+0 -1 36507 10 10 5
+E
+seaweed fish nets~
+Small bits of fishnet have been discarded to the side of the trail, the
+pieces of seaweed still attached to them giving off a foul stench.
+~
+E
+long house longhouse 1 south~
+To the south, you can see a wooden longhouse.  Puffs of smoke drift in
+wispy tendrils from the chimney situated on the western side of the house. 
+Flickers of light seep through the window, lighting the surrounding area
+dimly.
+~
+A
+search~
+fishing net~
+if( rflag( reset0, room ) ) {
+  if( random( 1, 15 ) == 15 ){
+    act_tochar( #hook, ch );
+    act_notchar( #NChook, ch );
+    obj_to_char( oload( 3641 ), ch );
+    }
+  else {
+    act_tochar( #nohook, ch );
+    act_notchar( #NCnohook, ch );
+    }
+  remove_rflag( reset0, room );
+  }
+~
+E
+hook~
+@cYou search the nets and find an old rusty fishing hook tangled in
+them.@n 
+~
+E
+NChook~
+@c$n searches through the fishing net and finds somthing hooked on it.@n
+~
+E
+nohook~
+You search through the fishing net but find nothing of value.
+~
+E
+NCnohook~
+$n searches through the fishing net and finds nothing of value.
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou continue along the shell strewn path.@n
+~
+E
+to_room~
+@y$n continues along the shell-strewn path.@n
+~
+!
+3 0 10
+-1
+S
+
+#36507
+Seashell Trail - Mist-Shrouded Village~
+The seashell covered trail forks at a smooth greenstone boulder; a trail
+meanders northward and an narrow track winds westward.  Torchlight
+reflects off the grey stones of the watchtower, the soft light dancing
+across the filigrees of mist.  Distorted by dank, low-lying clouds, the
+size of the village is hard to perceive.
+~
+[Guinafaer] Ddone.
+[Guinafaer] Done.
+~
+167248897 12 6 0
+D0
+~
+~
+0 -1 36511 10 10 5
+D1
+~
+~
+0 -1 36506 10 10 5
+D3
+~
+~
+0 -1 36508 10 10 5
+E
+green stone greenstone boulder~
+A massive boulder perches in the fork of the path, its smooth surface
+shot through with streaks of dark green and rusty red.
+~
+E
+watch tower watchtower grey stones~
+To the northeast, a towering grey stone watchtower looms over the
+village, the scattering of flickering torches only illuminating it near
+the base.  The silence surrounding the tower is deafening, as if nothing
+had moved in our around it since its creation.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gSkirting the intrusive boulder, you contnue along the path.@n
+~
+E
+to_room~
+@gSkirting the intrusive boulder, $n continues along the path.@n
+~
+!
+3 0 9
+A
+~
+~
+send_to_room( #fog, room );
+~
+E
+fog~
+@cTendrils of translucent fog curl around your ankles, veiling the path
+for a brief moment.@n 
+~
+!
+2 150 0
+182 9 1509949540 3 0
+-1
+S
+
+#36508
+Narrow Trail Through The Mist~
+The seashell trail winds among the low sand dunes and grass in a
+westerly direction, a scattering of boulders flanking it to the north. 
+Beyond the stones, a longhouse rises, most of its features obscured by
+the encompassing mist.  Flanking the entrance of the structure, two
+carved pine trunks stand upright, winged horses crafted at the apex of
+each.  The muted sound of the sea sings softly from the east, the
+breaking ocean invisible beyond the fog.
+~
+[Azerin] jewler/crafter north
+[Azerin] shaman/herbalist west
+[Guinafaer] Done
+~
+167248897 12 6 0
+D0
+~
+~
+0 -1 36509 10 10 5
+D1
+~
+~
+0 -1 36507 10 10 5
+D3
+~
+~
+0 -1 36513 10 10 5
+E
+path trail seashell sea shell~
+The path's surface is covered with broken seashells, their pearlescent
+and pink hues easily defined against the sand.
+~
+E
+boulders 1 north~
+The boulders seem to form an obscured trail to the north leading up to a
+longhouse.
+~
+E
+pillars wing horses~
+Two large pine pillars have been erected to the north.  At the apex of
+each pillar is a large winged horse carved with intricate detail.
+~
+A
+~
+~
+send_to_room( #bird, room );
+~
+E
+bird~
+@CYou hear a sharply pitched call from somewhere to the north.@n
+~
+!
+2 150 0
+-1
+S
+
+#36509
+Before a Longhouse~
+Mounds of sail cloth and yards of rope lie beside the carved archway of
+the long house, their dew-soaked surfaces reeking of old fish and brine. 
+Steps lead off the wooden porch and into a garden of stones and sand, a
+scattering of ice plants the only visible vegetation.  Most of the
+landscape has been blanketed by the dense fog, only the top of an eastern
+watchtower remaining free.
+~
+[Guinafaer] Done.
+~
+167248897 12 6 0
+D0
+stout wooden door~
+~
+131 -1 36510 10 10 5
+D2
+~
+~
+0 -1 36508 10 10 5
+E
+sail cloth rope~
+To the east of the longhouse's door, sail cloth lies in piles with coiled
+hempen rope stacked atop them.
+~
+E
+ice plants vegetation~
+The slender spikes of the succulent thrive in the salt and sand loam that
+makes up the majority of the village.  Bright pink sunbursts of flowers
+dot their green foliage.
+~
+-1
+S
+
+#36510
+Gamilgibbilson's Gems~
+Two barrels and several beams of timber have been lashed together to form
+a makeshift counter in the room, jewelry and bronzework hang from a veil
+of netting across the northern wall.  The polished floor and walls have
+been mostly cleared of sand and seaweed, evidence that the owners may be
+courting business from other people.  Behind the fishnetting, a curtained
+opening leads into the private quarters of the long house.
+~
+[Azerin] jewler/crafter house
+[Guinafaer] Done.
+~
+200803335 0 5 0
+D2
+stout wooden door~
+~
+131 -1 36509 10 10 5
+E
+barrels timber counter~
+Two barrels have been lashed together side by side to form a support for
+the beams, forming a makeshift counter for the shop.
+~
+E
+jewelry bronzework viel netting~
+Several fine pieces of jewelry, and bronze have been hung on a piece of
+netting on the northern wall.  A thin curtain of netting also hangs in
+front of the jewelry, acting as a sort of protected display.
+~
+2426 9 1509949540 3 0
+983 17 1509949540 -1 0
+1114 17 1509949540 -1 0
+-1
+S
+
+#36511
+Seashell Trail - Entrance To The Watchtower~
+The seashell trail cuts through the sand dunes on a northerly course, its
+final destination obscured by the blanket of fog, clinging to the village. 
+Iron sconces thrust from the stone walls of the eastern watchtower, their
+flickering flame illuminating an iron-bound door.  Shadowy arrow slots
+look down from the tower, giving any would-be archers a far view of the
+surrounding land.  The sound of crashing waves drifts upon the wind, the
+unseen ocean some way to the east.
+~
+[Guinafaer] Done.
+~
+167248897 12 6 0
+D1
+iron-bound door~
+~
+131 -1 36512 10 10 5
+D2
+~
+~
+0 -1 36507 10 10 5
+E
+sconces watchtower iron bound door~
+The aging watchtower rises to the east, its entrance blocked by a sturdy
+iron-bound door surrounded by a frame of jutting stones.  At the top of
+the tower are arrow slots, giving archers in the tower a deadly advantage.
+~
+A
+~
+~
+act_tochar( #torch, ch );
+~
+E
+torch~
+A large torch @Rsputters@n and @Rflickers@n for a moment, nearly doused
+by a tendril of fog, but continues to @Rburn@n.
+~
+!
+2 150 6
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou enter the stone-formed tower through the iron-bound door.@n 
+~
+E
+to_room~
+@y$n enters the stone-formed tower through the iron-bound door.@n
+~
+!
+3 0 2
+-1
+S
+
+#36512
+Dulthor's Hold - Entrance Chamber~
+The stones of the square chamber have been encrusted with engravings of
+battle.  Dwarven warriors face countless foes across the walls and floor,
+each time the stout heros sending their enemy fleeing.  An iron-bound
+door lies in the west wall, the keystone carved into a grinning dragon. 
+To the east, a narrow hallway leads into another chamber, the flickering
+light of torches casting illumination across the surface of a long table
+nearby.
+~
+[Azerin] general merchant - bags, water, foodstuff set
+[Guinafaer] Done.
+[Hazen] This mob powers the horn call in room 52501.
+[Hazen] If you move him, that code willb reak.
+~
+200807435 0 6 0
+D1
+~
+~
+0 -1 36515 10 10 5
+D3
+iron-bound door~
+~
+131 -1 36511 10 10 5
+E
+engravings battle dwarven warriors countless foes walls floors~
+On the bricks of the walls and floors are pictures of battle.  The
+pictures have a wide variety of storys dealing with how they defeated the
+enemies.  The only item common to each of the drawings is a large tower
+which is protected by the dwarves.
+~
+E
+west door iron-bound keystone dragon~
+The basalt stone has been wrought into the image of a snarling draconian,
+burnished copper talons and teeth gleam from the rock, their edge
+gleaming in the light.  Around the keystone a swirling pattern of runes
+have been carved, the flowing script forming an interlocking circle. 
+Underneath the arch an ironbound door has been set, its simple workings
+in stark contrast to the exquisite carving above.
+~
+A
+~
+~
+if( !is_open( room, west ) )
+send_to_room( #torch, room );
+else
+send_to_room( #open_door, room );
+~
+E
+torch~
+@YThe torches splutter as a chilling breeze slips under the doorway.@n 
+~
+E
+open_door~
+@YThe torches splutter as a chilling breeze passes through the open doorway.@n
+~
+!
+2 300 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou leave the tower through the iron-bound door.@n
+~
+E
+to_room~
+@y$n leaves the tower through the iron-bound door.@n
+~
+!
+3 150 8
+2418 9 1509949540 3 0
+55 17 1509949540 -1 0
+6 17 1509949540 -1 0
+3648 17 1509949540 -1 0
+-1
+S
+
+#36513
+Narrow Trail Through The Mist~
+The trail ends at the edge of a circle of standing stones.  Each of the
+moss covered monoliths stretching well over ten feet in height.  Three
+long houses face the stonehenge, their wooden entrances guarded by
+grinning gargoyles.  Pale torchlight flickers through the fog to the
+east, the sputtering flames the only visible sign of life.
+~
+[Guinafaer] Done.
+~
+167248897 12 6 0
+D1
+~
+~
+0 -1 36508 10 10 5
+D3
+~
+~
+0 -1 36514 10 10 5
+E
+stonehenge monolith moss~
+Rising from the mist is an encirling stand of stones.  Lichen and moss
+coat the monoliths in a blanket of dappled green and olive.  In the rings
+center an altar rests, its base encased in ivy.
+~
+A
+~
+~
+act_tochar( #leaving, ch );
+continue;
+~
+E
+leaving~
+@yYou continue down the seashell trail.
+~
+!
+3 0 10
+1383 17 1509949540 -2 0
+-1
+S
+
+#36514
+Center of The Stonehenge~
+A slab of weatherworn stone lies across two equally worn boulders to form
+a altar in the center of the stonehenge.  Lush grass and golden-hued ivy
+flourish within the circle, their verdant growth ending at the circle's edge.
+Three longhouses face into the ring, their hearths guarded by squat,
+grinning gargolyes.  A narrow path leads from the holy site and winds
+eastwards, the dense fog quickly swallowing it up.
+~
+[Azerin] altar
+[Azerin] druid
+[Guinafaer] Done.
+[Phule] look altar - no altar
+[Hoel] Why cant you look at the flower in the acode?
+[Belgar] ask druid flower -> bounty has no final period
+~
+167249027 12 6 0
+D0
+~
+~
+0 -1 36523 10 10 5
+D1
+~
+~
+0 -1 36513 10 10 5
+D2
+~
+~
+0 -1 36521 10 10 5
+D3
+~
+~
+0 -1 36522 10 10 5
+E
+altar weatherworn slab stone boulders stonehenge~
+An altar, constructed of two flat stones with a crosspiece and centered
+in the circle of standing stones, shows the signs of aging caused by ages
+upon ages of weather and use.
+~
+E
+grass ivy~
+Lush grass flourishes with the circle of stones, and long golden-hued
+vines of ivy curl and coil their way up the standing stones.
+~
+A
+~
+~
+mob = mob_in_room( 2422, room );
+if( mob )
+send_to_room( #druid, room );
+~
+E
+druid~
+@CThe young maiden touches an ivory flower and its blossom begins to
+unfurl.@n 
+~
+!
+2 350 0
+A
+~
+~
+act_tochar( #leaving, ch );
+act_notchar( #leaving2, ch );
+continue;
+~
+E
+leaving~
+@yYou leave the circle, moving toward a longhouse in the distance.@n
+~
+E
+leaving2~
+@y$n leaves the circle, moving toward a longhouse in the distance.@n
+~
+!
+3 0 13
+2422 9 1509949540 3 0
+-1
+S
+
+#36515
+Dulthor's Hold - Great Hall~
+A thirty foot table dominates the center of the room, its surface covered
+in scars, the timbers polished from countless years of use.  A coat of
+arms - two crossed axes and a gold coin - has been embroidered upon a
+scarlet tapestry against the east wall, its aging threads worn and
+tattered in spots.  An archway leads to a spiral stairway to the north.
+~
+[Guinafaer] Done.
+~
+167248897 0 7 0
+D0
+~
+~
+0 -1 36516 10 10 5
+D3
+~
+~
+0 -1 36512 10 10 5
+E
+table scared center~
+The large table is about thirty feet long and six feet across.  Two long
+benches flank the table on each side.  The wood of the table and benches
+has been harshly, with large indentures and cut marks.
+~
+A
+~
+~
+send_to_room( #bang, room );
+~
+E
+bang~
+@YThe echo of metal striking metal sounds through the hall.@n
+~
+!
+2 350 0
+-1
+S
+
+#36516
+Stairwell~
+A smooth stone banister hugs the central column of the staircase as it
+ascends into the darkness.  At the base, a spluttering torch struggles to
+cast light further than a candle.  An opening to the south, leads into a
+great hall, a well worn table dominating the chamber's center.  Carved
+into each of the worn steps is an emblem of two battle axes, crossed at
+the haft, a moon or coin centered above the heads.
+~
+[Guinafaer] Done
+~
+167248901 0 5 0
+D2
+~
+~
+0 -1 36515 10 10 5
+D4
+~
+~
+0 -1 36517 10 10 5
+E
+banister torch sconce staircase~
+The stone-crafted banister is carved with entertwining snakes, their
+mouths around the tail of the other.  The wrought sconce holding the
+torch, is crafted into the shape of a dragon, its thrown-back and open
+mouth supporting the flaming brand.
+~
+A
+~
+~
+act_tochar( #up, ch );
+act_notchar( #rup, ch );
+continue;
+~
+E
+up~
+@BGrabbing the smooth stone banister, you ascend the worn stairwell.@n 
+~
+E
+rup~
+@BGrabbing the smooth stone banister for support, $n ascends the worn
+stairwell.@n 
+~
+!
+3 0 16
+A
+~
+~
+send_to_room( #wind, room );
+~
+E
+wind~
+The @Bwind@n howls as it whips past the tower's windows.
+~
+!
+2 350 0
+-1
+S
+
+#36517
+Stairwell~
+Torch-filled brackets jut from the smooth-stone walls of the stairwell,
+their smoldering flames casting a reasonable amount of illumination on
+the steps and southern room.  Well worn, the stairwell has become
+rounded, each stair worn down from countless footfalls.  An archway to
+the south leads into a sizable tapestry-lined room.
+~
+[Guinafaer] Done
+~
+167248901 0 5 0
+D2
+~
+~
+0 -1 36518 10 10 5
+D5
+~
+~
+0 -1 36516 10 10 5
+E
+torch brackets illumination wall~
+Iron brackets are affixed to the wall at six-step intervals.  The torches
+held within them are relatively new, as if they were changed on a regular
+basis.  The walls and floor are stone-crafted, the shallow depressions
+underfoot a sign of eons of wear.
+~
+A
+~
+~
+act_tochar( #down, ch );
+act_notchar( #rdown, ch );
+continue;
+~
+E
+down~
+@BWith ease you descend the worn stairwell to the floor below.@n
+~
+E
+rdown~
+@B$n strides down the worn stairwell and out of sight.@n 
+~
+!
+3 0 32
+A
+~
+~
+send_to_room( #south, room );
+~
+E
+south~
+@yA ruddy amber glow lights the room to the south.@n
+~
+!
+2 350 0
+-1
+S
+
+#36518
+Dulthor's Hold - Central Chamber~
+Tapestries drape from the four walls of the central chamber.  Embroidered
+across the scarlet stitchery are crossed battle axes, a golden coin set
+above them.  Pillars rise from the edges of the hall, their sculptured
+surfaces depicting stormy seas and dragon fglow.  An iron-bound door lies
+in the eastern wall, the bottem of a tapestry dangling over its archway. 
+Ruddy glow seeps from the western opening where a circular forge lights
+the room.
+~
+[Guinafaer] Done.
+~
+167248901 0 6 0
+D0
+~
+~
+0 -1 36517 10 10 5
+D1
+iron-bound door~
+~
+131 -1 36520 10 10 5
+D3
+~
+~
+0 -1 36519 10 10 5
+E
+tapestries walls crossed battle axes golden coin coat of arms~
+Dwarven coats of arms have been embroidered into the grand tapestries. 
+The most common is of two battle axes crossed at the haft with a golden
+coin above them.  The axes each have an intricate design, one with a
+serpent in a runic coil and the other an etched lion rearing on its hind
+legs.
+~
+E
+sculptured pillars~
+The pillars of stone have been sculpted with pictures of sea and dragons. 
+A large picture on the middle of one of the pillars depicts a fight
+between a dwarven fishing boat and a giant sea serpent.
+~
+E
+iron-bound east~
+The door centered in the eastern wall is bound by straps of iron.  Each
+strap is engraved with picutres of lions, tigers, bears, snakes, rabbits,
+and cranes.  At the ends of each band a few celtic markings have been
+placed.
+~
+A
+~
+~
+send_to_room( #burning, room );
+~
+E
+burning~
+The @Rruddy@n glow of torchlight flares then flickers in the room to the
+west.
+~
+!
+2 200 11
+A
+~
+~
+send_to_room( #wind, room );
+~
+E
+wind~
+@CThe tapestries move slightly, blown by a drifting breeze swirling in
+from the north.@n 
+~
+!
+2 150 0
+-1
+S
+
+#36519
+Smithy - Dulthor's Hold~
+A circular forge stands in the center of the room, mounds of coals
+blazing in its middle.  Anvils and smithing hammers of various sizes lie
+stacked against the western wall, a solid wooden tressle allowing many
+other tools to be hung above the floor.  Bits of metal castings and
+stacks of iron and bronze wire sit in piles to the north.  A copper flute
+hangs over the forge, its wide mouth catching the majority of smoke that
+wisps from the ruddy coals.
+~
+[Guinafaer] Done.
+~
+167252999 0 5 0
+D1
+~
+~
+0 -1 36518 10 10 5
+E
+forge anvils smithing hammers tressel~
+A large forge has been constructed in the middle of the room.  Through
+the opening on the western side you can see bright red coals.  Anvils and
+smithing hammers have been placed by the western wall in a half circle
+Near the center of the room near the door, a tressel has been constructed
+and contains the plans for a new metal piece.
+~
+E
+flut scrap metal castings molds~
+On the northern side of the wall, bits of scrap metal have stacked into a
+pile near some castings and molds.  Above the opening to the forge, you
+see a bronze flut with a wide mouth to catch most of the smoke.
+~
+A
+~
+~
+mob = mob_in_room( 2419, room );
+if( mob )
+send_to_room( #hammer, room );
+~
+E
+hammer~
+The dwarven smith hammers at a piece of metal on the anvil, spreading
+@Ysparks@n everywhere.
+~
+!
+2 200 2
+A
+~
+~
+send_to_room( #spark, room );
+~
+E
+spark~
+@RThe coals send out a shower of sparks and smoke.@n
+~
+!
+2 350 0
+2419 9 1509949540 3 0
+930 17 1509949540 -1 0
+3021 17 1509949540 -1 0
+3540 17 1509949540 -1 0
+-1
+S
+
+#36520
+Dulthor's Hold - Library~
+Lining the walls of the circular room, rows of shelves filled with books
+and scrolls.  A ghostwood table sits against the eastern wall, stacks of
+books and empty vials of ink covering it.  A comforatble-looking chair
+leans against it, the coverings a rich royal blue.  An iron-bound door in
+the western wall appears to be the only exit from the chamber.
+~
+[Guinafaer] Done
+[Phule] ask dulthor tome - he knows nothing
+[Azerin] have added clues
+~
+167252999 0 5 0
+D3
+iron-bound door~
+~
+131 -1 36518 10 10 5
+E
+shelves books scrolls tomes~
+Shelves constructed from fine maple wood have been constructed along the
+walls.  Covering the shelves are ancient tomes with thick parchment pages
+scribed with runic script, scrolls of varying shapes and sizes, and a mere
+handful of newer books, finely preserved.
+~
+E
+ghostwood table vials ink comfortable chair royal blue~
+The table has been constructed of a pale ghostwood.  Stacks of books have
+been piled across the table's surface, and near the back an inkwell and
+its attending quills.  At the back of Centered on the surface, lies a
+parchment with a quill on top of it.  A comfortable royal blue chair
+leans up against the table.  Large cushions have been placed upon the
+chair to provide comfort for extended periods of use.
+~
+A
+~
+~
+mob = mob_in_room( 2420, room );
+if( mob )
+send_to_room( #dust, room );
+~
+E
+dust~
+@YWith a burst of vigorous cleaning, the ancient dwarf sends up a
+shower of dust.@n
+~
+!
+2 400 0
+A
+get~
+vial book tome scroll parchment~
+act_tochar( #fiz, ch );
+act_notchar( #fix, ch );
+~
+E
+fiz~
+You reach to grab it but you hand is reflected by an invisible barrier.
+~
+E
+fix~
+$n reaches for something but his hand is reflected by an invisible barrier.
+~
+!
+0 350 0
+2420 9 1509949540 3 0
+1025 17 1509949540 -1 0
+871 17 1509949540 -1 0
+1000 17 1509949540 -1 0
+-1
+S
+
+#36521
+Edge of the Henge - Before a Longhouse~
+The skeletal remains of a wagon-sized fish lie outside the long house
+entrance, its bleached white bones picked clean of any meat.  A
+scattering of fishnets lie drying across the ribcage, the reek of brine
+wafting from them.  Crude half-trunks of pine have been formed into rough
+stairs up to the doorway, their surfaces worn smooth by use rather than
+design.  A dilapidated carving of a mermaid juts from the roof's arch,
+the head sadly absent.  A henge of stone rises to the north, its center
+lush with verdant grass and golden-hued ivy.
+~
+[Guinafaer] Done.
+~
+167249027 12 6 0
+D0
+~
+~
+0 -1 36514 10 10 5
+D2
+wooden door~
+~
+131 -1 36525 10 10 5
+E
+skeleton fish remains bones bleached white~
+The skeletal bones, bleached white by the weather, lie in an indentation
+in the ground.  Large fishnets and small, are draped across the skeleton
+like skin and smell strongly of the briny sea.
+~
+E
+carving mermaid roof arch~
+The mermaid, once painted in bright hues, has faded with time.  The
+delicate figure is missing its head, the place where it should have been
+worn smooth by the weather.
+~
+E
+henge stone north~
+The stones of the henge and cool gray, shot through with rusty red
+streaks and the cyan ones of oxidation.  Within the rough circle,
+golden-hued ivy clings to the stones and grass, the emerald green of
+spring, forms a lush carpet.
+~
+-1
+S
+
+#36522
+Edge of the Henge - Before a Longhouse~
+Rising from the mist-shrouded land like fangs of some great beast are the
+jagged stones of the henge, their moss-blanketed surfaces beaded in dew. 
+In the center of the stone ring a simple basalt grey altar rests, the
+ground around it blanketed in ivy and grass.  Slate steps lead up to a
+long house to the west, unlike others of the village the lower portions
+have been built with stone and mortar.  Jutting out above the doorway is
+a carved gryphon, its wings stretched back in full flight.
+~
+[Guinafaer] Done.
+~
+167249027 12 6 0
+D1
+~
+~
+0 -1 36514 10 10 5
+D3
+iron-bound door~
+~
+131 -1 36526 10 10 5
+E
+jagged stone henge~
+The dull gray rocks of the henge protrude from the mist like the fangs of
+a giant beast.  Small patches of moss cover the stones, creating a slick
+surface impossible to climb.
+~
+E
+slate steps~
+The slate stones look like they are part of the terrain, their surfaces
+worn flat over the years from use and the harsh northern clime.
+~
+E
+carved gryphon~
+A large carved gryphon has been built into the front wall of the house. 
+The carving on the gryphon exquisitely done with the utmost care.
+~
+-1
+S
+
+#36523
+Edge of the Henge - Before a Longhouse~
+The pine beams use to contruct the longhouse have been carfully bound in
+colored leather, the craftship far superior to a normal house.  Carved
+steps lead up to the house's entrance, twin pillars flanking each side. 
+Upon the poles tops, dragons in flight have been carved, their bat-like
+wings spread wide.  Beyond the frontage, the house slips into the
+obscuring mist; half shapes of other buildings flicker in and out of
+vision.  To the south, a stonehenge rises, about thirty standing stones
+ring a central altar.
+~
+[Guinafaer] Done.
+~
+167249027 12 6 0
+D0
+wooden door~
+~
+131 -1 36524 10 10 5
+D2
+~
+~
+0 -1 36514 10 10 5
+E
+twin pillars dragons~
+The twin pillars, have been fashioned from carfully carved pine logs. 
+Atop each of of the pillars, two large dragons face each other with their
+long bat-like wings spread to their full span.  Their eyes are locked
+locked together, as if engaged in combat since the beginning of time.
+~
+E
+stonehenge altar south~
+Visible beyond the mist to the south, over thirty standing stones form a
+vast circle.  Centered within the henge, an altar has been formed with
+three rocks, the two larger ones serving as support for the third flat
+crosspiece.
+~
+-1
+S
+
+#36524
+Ultha's Weapons~
+A dense bear pelt lies across the wooden floor of the antechamber; across
+the walls trophies of animals have been mounted, their empty sockets
+staring into the room.  A simple wooden door has been set into the
+southern wall, the head of a lion carved above it.  Eight foot-long ivory
+tusks frame a curtained opening in the north.
+~
+[Guinafaer] Done.
+~
+167253135 0 5 0
+D2
+wooden door~
+~
+131 -1 36523 10 10 5
+E
+bear pelt trophies animal heads~
+A rough-furred bear pelt, thrown casually on the floor, serves as a rug
+for the room.  Other trophies adorn the walls, sightless heads staring
+blankly into space.  The most noticeable of these are the majestic lion's
+head head above the door and the giant ivory tusks around the curtain.
+~
+E
+tusk~
+Nearly as long as an ogre is tall, slightly curved ivory tusks frame the
+doorway into the chamber beyond.
+~
+2421 9 1509949540 3 0
+1249 17 1509949540 -1 0
+3005 17 1509949540 -1 0
+3006 17 1509949540 -1 0
+3007 17 1509949540 -1 0
+3008 17 1509949540 -1 0
+3023 17 1509949540 -1 0
+-1
+S
+
+#36525
+Entrance Chamber~
+A layer of sand has been spread into a circle in the room's center, a
+tattered rope looped around it to hold it in place.  Racks of staves line
+the eastern wall, clusters of drying flowers and herbs hanging above them. 
+A door to the south opens into a empty room, not even a spec of debris
+visible upon its stone floor.  Incense burns in a brass brazier that sits
+upon a low stone dias to the west, a painting of a flock of cranes
+hanging above it.
+~
+[Azerin] not sure what this guy does
+[Guinafaer] Done.
+~
+200803459 0 6 0
+D0
+wooden door~
+~
+131 -1 36521 10 10 5
+D2
+~
+~
+0 -1 36527 10 10 5
+E
+sand circle center~
+The sand is pure white in color, its surface perfectly smooth.  A coiled
+rope surrounds it, serving as a border to hold it in place.
+~
+E
+staves racks~
+The staves have been securly placed into the rack.  The rack has been
+intricately decorated in runic designs of cranes, tigers, and bears.  The
+staves within the rack are finely crafted and each is carefully wrapped
+with cloth in three places.
+~
+E
+cranes flock painting~
+The painting, measuring approximately six feet wide and three feet tall,
+is beautifully done and depicts cranes in flight over glistening water at
+sunset.  On the right side of the artwork you see a dwarf sitting in a
+well-used fishing boat and in the bottom right corner, the name Donnar.
+~
+E
+incense brass urn~
+The small incense burner is made of brass and sits upon a small flat rock. 
+The top of the burner has runic markings carved through it, allowing the
+scent to flow easily out.
+~
+2423 9 1509949540 3 0
+-1
+S
+
+#36526
+Within The Stonework Long House~
+Heavy slabs of rock have been set with lavish layers of mortar to build a
+stout defence against the elements.  An iron-bound door has been set in
+the eastern wall, its archway built from a creamy colored stone.  A
+window in the western wall has been framed with iron bars, leaving just
+enough space for any equipment to be passed through.  Beside the window a
+solid wooden door has been set into the wall, a brass lock sealing the
+room.
+~
+[Guinafaer] Done.
+~
+200805511 0 5 0
+D1
+iron-bound door~
+~
+131 -1 36522 10 10 5
+E
+iron-bound door archway~
+The portal has been constructed from a flat slabs of stone.  The door,
+itself, has been bound and hinged to the wall with iron.  The archway for
+the door has been made out of a cream colored stone.
+~
+E
+brass lock wooden door~
+The door has been made from five large wooden planks.  A small brass
+locking mechanism has been constructed in the wall and securely locks the
+door.
+~
+2425 9 1509949540 3 0
+2424 9 1509949540 3 0
+-1
+S
+
+#36527
+Bare Room~
+The stone slabs underfoot have been polished until they reflect like a
+mirror.  The walls and ceiling have been constructed from white pine and
+beech timber, each panel has been encrusted with details of animals,
+many of them cranes.  A flax bed roll has been tucked against the
+northern wall, the thin materal barely better than sleeping upon the
+stone floor.
+~
+~
+167249027 0 6 0
+D0
+~
+~
+0 -1 36525 10 10 5
+E
+animals~
+Snakes, tigers and bears spread across the panels, each one surounded by
+a runic mark, perhaps their name in an unknown language.
+~
+E
+Crane~
+Many cranes are depicted upon the pannels in varying stances.  Each crane
+has a different runic mark by it, however they appear very similar in
+shape.
+~
+E
+flax bed roll~
+The bedroll has a dry and husky texture to it.  The bedroll is tucked
+against the northern wall, and looks as if it would provide little or no
+comfort.
+~
+-1
+S
+
+#0
+

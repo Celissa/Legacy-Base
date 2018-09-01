@@ -1,0 +1,101 @@
+#M2_AREA
+2
+
+Dungeon of Howling Rocks~
+Azerin II~
+(null)~
+~
+~
+
+0 538976288
+3
+1
+#ROOMS
+
+#80250
+Dungeon of Howling Rocks~
+The jagged edged shelf of rock thrusts out from the circular chamber at a
+forty-five degree angle.  Ice-coated its tilt makes it dangerous to make
+any hasty moves without risk of tumbling off into the vast abyss below. 
+Above the remnants of stairs shadow the rock, their edge equally unstable
+and broken.  Stalactites of ice rain droplets of freezing cold water upon
+the ledge, adding to the discomfort.
+~
+[Azerin] jump down to new ledge
+~
+33030144 0 9 0
+D4
+~
+~
+0 -1 39785 10 10 5
+D5
+~
+~
+0 -1 80251 10 10 5
+-1
+S
+
+#80251
+Dungeon of Howling Rocks~
+No more than a few yards across, the stone ledge formed when the
+surrounding stairs crumbled away.  The iron beams that reinforce it were
+stout enough to prevent this section from the same fate.  Across an
+uncomfortably wide gap to the west another slender ledge juts, a black
+stone corridor leading from it.  Mounds of snow sparkle from another
+ledge below, their softness hopefully cushioning anyone who fell from
+here.  Above another similar ledge thrust from the wall, its edge coated
+with a slick layer of ice.
+~
+[Azerin] jump down and jump west
+[Azerin] west leads to lower lvl of ice wyrms, down is further into howling rock
+~
+33030144 0 9 0
+D3
+~
+~
+0 -1 80252 10 10 5
+D4
+~
+~
+0 -1 80250 10 10 5
+D5
+~
+~
+0 -1 80253 10 10 5
+-1
+S
+
+#80252
+Dungeon of Howling Rocks~
+Under Construction.
+~
+[Azerin] west is ice wyrm - dwarven road, that will lead onwards to dwarven city one day
+[Azerin] east is howling rock entrance
+~
+33030144 0 9 0
+D1
+~
+~
+0 -1 80251 10 10 5
+D3
+~
+~
+0 -1 39816 10 10 5
+-1
+S
+
+#80253
+Dungeon of Howling Rocks~
+Under Construction.
+~
+~
+33030144 0 9 0
+D4
+~
+~
+0 -1 80251 10 10 5
+-1
+S
+
+#0
+

@@ -1,0 +1,31 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+help [topic_name]<br>
+<br>
+<h1> Description </h1>
+<br>
+help [topic_name] - This will print out an information file for the given<br>
+topic.  <br>
+<br>
+The following is some information which will help you understand the<br>
+format the help files are written in: <br>
+<br>
+When you see the "#" symbol, insert a number in its place.<br>
+<br>
+When you see an item in "[]", do not type the characters "[]", but insert<br>
+a word or item in its plce.  i.e.  [topic_name] is asking you type in a<br>
+word like language or race.  <br>
+<br>
+Anything not in "[]" or the "#" should be typed literally.  i.e. "#-#"<br>
+should be typed as 1-3.  <br>
+<br>
+PC is short for player character<br>
+<br>
+NPC is short for non-player character<br>
+<br>
+The "|" symbol represents the word "or" i.e.  [object|PC|mob] is asking<br>
+you to insert the name of an object, a PC or a mob.  <br>
+</html>
+</body>

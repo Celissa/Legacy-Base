@@ -1,0 +1,2075 @@
+#M2_AREA
+2
+
+Dal'Entil Village~
+Phobos~
+Dal'Entil Village~
+~
+~
+
+10 0
+0
+0
+#ROOMS
+
+#59000
+A Narrow Mountain Pass~
+The mountains separate, forming a sharp, narrow pass of unnatural making. 
+Sliced stone and rubble lie in shattered heaps at the base of the
+declivity's walls, seemingly torn from smooth rock by some cataclysmic
+force.  Clinging to the walls, patches of pale, green moss are separated
+by large blocks of scorched and jagged rock.  The schism is narrow but it
+may be possible to squeeze through the gap.  Easier travel is available
+to the west.
+~
+[Guinafaer] Done.
+~
+167247872 5 6 0
+D3
+~
+~
+0 -1 33083 10 10 5
+D5
+~
+~
+234 -1 59001 10 10 5
+E
+pass 1 down schism gap~
+The pass is hewn from the stone in deep, jagged slices.  Small tatters of
+cloth, both weathered and new, are caught fast on the craggy outcroppings. 
+The characteristics of the carven surfaces are vaguely familiar.  Upon
+closer examination, it appears as though you might be able to @Center@n
+the @Cpass@n.
+~
+E
+moss~
+The moss is patchy, pale green and sere.  Large patches have been torn
+away baring wide splotches of rough, brown stone.
+~
+A
+3 enter 3 squeeze~
+pass 1 down~
+act_tochar( #go, ch );
+act_notchar( #rgo, ch );
+transfer( ch, find_room( 59001 ) );
+act_notchar( #there, ch );
+loop( followers ) {
+  ch = rch;
+  acode( room, 1 );
+  }
+~
+E
+go~
+You carefully navigate the pass, avoiding the sharp juts of rock.
+~
+E
+rgo~
+$n carefully enters the pass.
+~
+E
+there~
+$n pulls $mself out of the pass.
+~
+!
+0 0 0
+A
+1 down~
+~
+act_tochar( #blocked, ch );
+~
+E
+blocked~
+The narrow pass looks difficult to walk through.  Perhaps you ought to
+examine it further.
+~
+!
+0 0 0
+-1
+S
+
+#59001
+Atop a Narrow Mountain Pass~
+A moist breeze washes over the jagged rocks of this vantage point,
+drifting lazily down the northward mountain path.  The rising walls fall
+away to reveal a surprisingly large valley, edged in by low, tree covered
+cliffs to the east and west, and the rugged foot of mountains to the
+north.  Down below, a pure sea of mist rests calmly within the bowl of
+the landscape, blanketing the valley floor...  pierced only occasionally
+by the shadow of a treetop.  To the south the path continues through a
+narrow pass, strewn with rubble but carpeted by a slippery green moss.
+~
+[Guinafaer] Reviewed.
+~
+167247880 5 6 0
+D0
+~
+~
+0 -1 59002 10 10 5
+D4
+~
+~
+234 -1 59000 10 10 5
+E
+pass~
+The pass is a sharp, narrow rip in the mountain.  It looks like you might
+be able to @Center@n it.
+~
+E
+valley mist down~
+The valley stretches out and to the north, enclosed by low cliffs to the
+sides and surrounded by the forests of the Cairn Mountains.  Farther to
+the north, the mountains begin to rise from out of the mist, towering in
+the distance and glittering with the eternal winter of their snowy peaks. 
+The path winds down the incline of moss-covered rocks, descending
+northward into the mist.
+~
+E
+rubble moss green~
+The rocks that have tumbled from the narrow pass are overgrown with a
+vibrant green moss, flourishing in the moist jets of air that rise from
+the misty valley below.  They also make getting one's footing a cautious
+exercise.
+~
+A
+enter~
+pass 1 up~
+act_tochar( #go, ch );
+act_notchar( #rgo, ch );
+transfer( ch, find_room( 59000 ) );
+act_notchar( #there, ch );
+loop( followers ) {
+  ch = rch;
+  acode( room, 1 );
+  }
+~
+E
+go~
+You carefully squeeze through the narrow pass.
+~
+E
+rgo~
+$n carefully pulls $mself into the pass to the south.
+~
+E
+there~
+$n pulls $mself out of the north pass.
+~
+!
+0 0 0
+A
+1 up~
+~
+act_tochar( #blocked, ch );
+~
+E
+blocked~
+The pass is difficult to walk through.  Perhaps you should examine it
+closer.
+~
+!
+0 0 0
+A
+~
+~
+acode( find_room( 59003 ), 1);
+continue;
+~
+!
+1 0 63
+A
+~
+~
+acode( find_room( 59003 ), 2);
+continue;
+~
+!
+3 0 63
+A
+~
+~
+send_to_room( #hawk, room );
+~
+E
+hawk~
+@cCircling overhead in ever-widening circles, a hawk disappears beyond
+the distant peaks.@n 
+~
+!
+2 150 0
+-1
+S
+
+#59002
+A Path Down the Mountain~
+A veil of mist can be seen to the north, blocking visibility along the
+path.  The trail winds down the mountain to the north into a valley
+below, or south, back up the mountain, to what appears to be a narrow
+pass.  Patches of burnt grass are clumped everywhere, carpeting the
+ground in browns and blacks.  Stacks of dried, dead flowers and vines
+clutter the area.  Small piles of dirt rest in freshly-dug clumps,
+filling the spaces between the rotting vegetation.
+~
+[Guinafaer] Done.
+~
+167247872 5 6 0
+D0
+~
+~
+0 -1 59003 10 10 5
+D2
+~
+~
+0 -1 59001 10 10 5
+E
+flowers dead vines path stacks~
+Dead and dried flowers, mostly an oddly-formed genus of daisy, litter the
+path.  In appearance they take on the caricature of a miniature doll with
+delicate arms and legs, as though someone had forefully pulled them into
+this shape.
+~
+E
+patches burnt grass~
+The grass looks old and dead, as though it were burned a few weeks ago or
+more.
+~
+E
+dirt piles clumps~
+The ground around the dirt is crumbling, as though someone came through
+this area and uprooted several plants.
+~
+E
+veil mist~
+A shifting veil of mist undulates around and among the shadowy shapes
+lying to the north and blankets the onward crawling path.
+~
+A
+~
+~
+acode( find_room( 59003 ), 1);
+continue;
+~
+!
+1 0 63
+A
+~
+~
+acode( find_room( 59003 ), 2);
+continue;
+~
+!
+3 0 63
+-1
+S
+
+#59003
+A Cloudy Path Down the Mountain~
+The path winds west, further down into the valley below, or south, up the
+mountain.  The area is thick with dense clouds of fog that obscure
+visibility in all directions.  Green ichor is smeared against the granite
+rock in macabre, almost intentional patterns.  Treetops emerge through
+the low hanging fog, splashes of green amid a sea of white.
+~
+[Guinafaer] Done.
+~
+167247872 5 6 0
+D2
+~
+~
+0 -1 59002 10 10 5
+D3
+~
+~
+0 -1 59004 10 10 5
+E
+clouds fog~
+The clouds are hanging in place in quite an unnatural fashion, despite a
+slow breeze drifting through the area.
+~
+E
+ichor smear patterns~
+Smears of green mixed with brown splatter the walls of the mountain here. 
+Bits of shredded plant cling to small outcroppings in the rock.
+~
+A
+~
+~
+if( !is_player( ch ) ) 
+  if( race( ch ) == plant )
+  act_notchar( #in, ch );
+continue;
+~
+E
+in~
+$n takes root.
+~
+!
+1 0 63
+A
+~
+~
+if( !is_player( ch ) )
+  if( race( ch ) == plant )
+  act_notchar( #in, ch );
+continue;
+~
+E
+in~
+$n pulls up $s roots.
+~
+!
+3 0 63
+1642 9 1509949540 3 0
+-1
+S
+
+#59004
+The Bottom of the Path~
+A short, dirt path winds northward, toward what appears to be a desolate
+and abandoned valley.  Partially obscured by thick, cloudy haze, are wide
+areas of vine and shrubs, broken only by the shifting outline of what
+appear to be trees.  Drifting from the north, a faint rustling can be
+heard, though the source of the sound isn't readily discernible.  The
+dark gash of the pass to the southeast finds its base here.
+~
+[Guinafaer] Done.
+~
+167247872 4 6 0
+D0
+~
+~
+0 -1 59005 10 10 5
+D1
+~
+~
+0 -1 59003 10 10 5
+E
+valley vines shrubs~
+The valley is wide, its vegetation scorched and dry as though recently a
+fire had surge through it.  Vines and shrubs grow side by side,
+intermingled in no apparent pattern.  Curled and soot-blackened, the vine's
+tendrils curl about themselves in tortuous twists.  The shrubs, leaves
+still clinging to charred branches, appear and disappear, within
+the rolling haze.
+~
+E
+haze~
+The hanging haze blankets the valley in a grey-white shroud, wisping out
+from the deep of the forest.  Tendrils of mist reach out along the
+contours of the sloping hill, growing thin as they strive to climb the
+winding path.
+~
+A
+~
+~
+acode( find_room( 59003 ), 1);
+continue;
+send_to_room( #river, room );
+~
+E
+river~
+@cThe sound of rushing water echoes just at the edge of sound.@n
+~
+!
+1 0 63
+A
+~
+~
+acode( find_room( 59003 ), 2);
+continue;
+~
+!
+3 0 63
+-1
+S
+
+#59005
+A Dirt Path~
+The dirt path winds down from the mountains, heading northwest toward the
+valley below.  The plant life here is sparse, and what little there is
+appears near death or dead.  The soil on the path is itself very dry and
+dusty.  A glance to the west reveals massive scarring in the valley, as
+if it were once fertile but has been ravaged beyond repair.
+~
+[Guinafaer] Done.
+~
+167247872 4 7 0
+D0
+~
+~
+0 -1 59006 10 10 5
+D2
+~
+~
+0 -1 59004 10 10 5
+E
+soil~
+The soil is blackened, as if set to the torch.  A reflective glint can be
+seen, peeking between clumps of dirt.
+~
+E
+valley~
+The valley looks as though it should be sheltered and protected by the
+mountains, but the state it is in would seem to indicate otherwise. 
+Where there should be strong, green trees, there are patches of grey
+earth.  Large burned circles mark the terrain, leaving brown holes in the
+scenery and giving the valley a very sparse look.  It appears that there
+may be a village at the southern end of the valley.
+~
+E
+glint~
+Grains of reflective black sand seem to be scattered throughout the soil. 
+They appear to be giving the earth its scorched look.
+~
+A
+~
+~
+acode( find_room( 59003 ), 1);
+continue;
+~
+!
+1 0 63
+A
+~
+~
+acode( find_room( 59003 ), 2);
+continue;
+~
+!
+3 0 63
+1642 9 1509949540 3 0
+1642 9 1509949540 3 0
+-1
+S
+
+#59006
+The Foot of the Valley~
+The air is quite chill here from winds buffeting against the mountainside. 
+A dirt path winds south, up the mountain and out of sight, while the
+valley opens to the west.  Grass grows in pale, sickly patches, huddled
+together in withering clumps.  Much of the ground is composed of black
+sand where no plant or grass as taken root, leaving it stark and barren.
+~
+[Guinafaer] Add search for glass shard here?
+[Guinafaer] Reviewed.
+~
+167247872 2 9 0
+D2
+~
+~
+0 -1 59005 10 10 5
+D3
+~
+~
+0 -1 59007 10 10 5
+E
+sand black~
+The black sand is grainy and full of small, crystalline speckles.  The
+soil around it is rife with the glass-like particles, and small pieces of
+dead vegetable matter clutter the densest areas of the sand.
+~
+E
+path grass particles~
+The path, narrow and winding, is little more than a ribbon of bare earth
+littered with particles of glittering, black sand and clumps of pale,
+sickly grass whose blades seem to cling together as though for protection
+from some unknown source.
+~
+A
+~
+~
+acode( find_room( 59003 ), 1);
+continue;
+~
+!
+1 0 63
+A
+~
+~
+acode( find_room( 59003 ), 2);
+continue;
+~
+!
+3 0 63
+A
+~
+~
+send_to_room( #wind, room );
+~
+E
+wind~
+@yThe wind gusts against the mountain, gathering swirling sands in its
+wake.@n 
+~
+!
+2 100 0
+-1
+S
+
+#59007
+Atop a Small Cliff~
+The ground collapses a few feet to the west, forming a fairly short cliff. 
+It looks like the cliff can be jumped down, but climbing back up may be a
+bit of a chore.  A thin layer of dust covers the dead soil, leaving no
+visible signs of plant life here.  Sickly black sand is mixed in with the
+soil.  The path slopes down sharply to the south, and heads back towards
+the mountains in the east.
+~
+[Guinafaer] Add dex check for south exit and other side north one. Dex > 9
+[Guinafaer] Reviewed.
+~
+167247872 2 9 0
+D1
+~
+~
+0 -1 59006 10 10 5
+D2
+~
+~
+0 -1 59008 10 10 5
+E
+cliff~
+You don't think you can climb back up the cliff if you jump it, but you
+could jump down fairly safely.
+~
+A
+jump~
+west w cliff~
+act_tochar( #go, ch );
+act_notchar( #rgo, ch );
+transfer( ch, find_room( 59010 ) );
+act_tochar( #land, ch );
+act_notchar( #rland, ch );
+i = 1d20+5;
+dam_message( ch, i, "the fall" );
+inflict( ch, mob, i, "falling off a cliff" );
+~
+E
+go~
+You jump off the cliff.
+~
+E
+rgo~
+$n jumps off the cliff.
+~
+E
+land~
+You land at the foot of the cliff.
+~
+E
+rland~
+$n jumps down from the cliff.
+~
+!
+0 0 0
+A
+west w~
+~
+act_tochar( #nope, ch );
+~
+E
+nope~
+You cannot go any further west unless you jump off the cliff.
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cHeading down the slope, you slip and slide toward the south.@n
+~
+E
+to_room~
+@cHeading down the slope, $n slips and slides southward.@n
+~
+!
+3 0 4
+-1
+S
+
+#59008
+The Bottom of the Hill~
+The hills roll lazily to the northeast from here, edging up slowly until
+they become a part of the mountains.  The slope to the north looks too
+treacherous and steep to climb, although grooves of dirt show that
+someone or something has descended it.  A wall of adobe brick stands to
+the south, blocking that direction.  The wall runs east into the mountain
+face, and west towards what looks like a make-shift gate.
+~
+[Guinafaer] Reviewed.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 59007 10 10 5
+D3
+old rickety gate~
+~
+131 -1 59009 10 10 6
+E
+adobe~
+The adobe is odd in that instead of being made of straw and mud, it
+appears to not have any signs at all of any sort of vegetable matter in
+it.  The wall is composed entirely of sun-dried mud.  The adobe wall is
+built against the mountain, blocking any travel further south.
+~
+E
+gate 1 west~
+A half-dozen weathered boards are banded together with strips of leather
+to form a rickety gate.  A thin strip of rawhide wraps around a wooden
+peg to form a latch of sorts.
+~
+E
+slope 1 north grooves~
+A set of grooves, spaced a wagon's width apart, lead down the slope to the
+north.  Another pair of ruts, narrower in span, lie inside the others, as
+is some smaller vehicle had made its way along the hill.
+~
+A
+1 south~
+*~
+act_tochar( #nope, ch );
+~
+E
+nope~
+The adobe wall blocks any further travel south.
+~
+!
+0 0 0
+A
+~
+~
+acode( find_room( 59003 ), 1);
+continue;
+~
+!
+1 0 63
+A
+~
+~
+acode( find_room( 59003 ), 2);
+continue;
+~
+!
+3 0 63
+A
+~
+~
+i = random( 1, 18 );
+if( find_stat( ch, dex ) < i ) { 
+  act_tochar( #climb, ch );
+  act_notchar( #rclimb, ch );
+  end;
+}
+transfer( ch, find_room( 59007 ) );
+~
+E
+rclimb~
+$n tries to climb north, but the incline is too great.
+~
+E
+climb~
+You try to climb north, but the incline is too great.
+~
+!
+3 0 1
+1648 1161 1509949540 3 0
+1648 1161 1509949540 3 0
+-1
+S
+
+#59009
+A Burnt-out Field~
+A large, blackened field spreads out over much of the valley here.  The
+ground looks like a combination of black soot and sand.  A large cliff
+face looms to the north, while to the northeast, a rolling hill climbs up
+and meets the mountains.  In the corner of the field, a thick adobe wall
+has been built, visible to the southeast and winding south toward a
+makeshift gate.
+~
+[Guinafaer] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 59010 10 10 5
+D1
+~
+~
+131 -1 59008 10 10 5
+D2
+~
+~
+0 -1 59011 10 10 5
+E
+gate makeshift~
+A half-dozen weathered boards are banded together with strips of leather
+to form a rickety gate.  A thin strip of rawhide wraps around a wooden
+peg to form a latch of sorts.
+~
+E
+wall adobe~
+The wall doesn't hinder your travel here, as it just lines the
+southeastern area.  It is crumbling in places and shows signs of being
+intentionally damaged.
+~
+E
+ground sand soot sand black~
+The ground here has been destroyed.  This field was clearly once
+prosperous, but someone set fire to it and ruined it.  Small speckles of
+white and black dust glint oddly when any light reflects off them.
+~
+E
+speckles glint~
+There are small particles of sand and salt strewn around this field. 
+They are responsible for the reflective glint that is hidden in the soil.
+~
+1648 9 1509949540 3 0
+-1
+S
+
+#59010
+At the Bottom of a Small Cliff~
+This small alcove at the bottom of the cliff is sheltered from the
+surrounding terrain.  The ground has thick foliage covering it, and the
+verdant grass grows quite tall.  A looming cliff face to the east
+obscures all but the peaks of the mountains.  Small piles of black sand
+have been brushed in from the south.  A few sharp juts of rock on the
+cliff make it look like it might be possible to climb up.
+~
+[Guinafaer] Done.
+~
+167247872 2 6 0
+D2
+~
+~
+0 -1 59009 10 10 5
+E
+cliff~
+You can't climb up the cliff unaided, as it is too risky, but it looks
+like there are vines here that you can use.
+~
+E
+rope~
+The rope is strong and sturdy, and can be used for climbing.  Rusty but
+sturdy metal pitons attach the rope to the cliff.
+~
+A
+climb~
+cliff u up e east~
+act_tochar( #nope, ch );
+act_notchar( #rnope, ch );
+i = 3d4;
+dam_message( ch, i, "The fall" );
+inflict( ch, mob, i, "slipping while climbing a cliff" );
+~
+E
+nope~
+You try to climb the cliff but it is too slippery.  You slide and fall.
+~
+E
+rnope~
+$n tries to climb the cliff, loses $s grip, and falls.
+~
+!
+0 0 0
+A
+climb~
+rope~
+act_tochar( #go, ch );
+act_notchar( #rgo, ch );
+transfer( ch, find_room( 59007 ) );
+act_notchar( #there, ch );
+~
+E
+go~
+You pull yourself up the cliff using the sturdy length of rope.
+~
+E
+rgo~
+$n pulls $mself up the cliff using the sturdy length of rope.
+~
+E
+there~
+$n pulls $mself up onto the ledge from the west.
+~
+!
+0 0 0
+A
+~
+~
+acode( find_room( 59003 ), 1);
+continue;
+~
+!
+1 0 63
+A
+~
+~
+acode( find_room( 59003 ), 2);
+continue;
+~
+!
+3 0 63
+A
+climb~
+vine~
+act_tochar( #vine, ch );
+act_notchar( #rvine, ch );
+~
+E
+vine~
+You try to climb the vine, but a piece of it rips in your hands, and you
+slip.  Enough of the vines are moved aside to reveal a sturdy rope
+attached to the cliff.
+~
+E
+rvine~
+$n tries to use a vine to climb the cliff, but the vine breaks.
+~
+!
+0 0 0
+1650 9 1509949540 3 0
+1653 137 1509949540 3 0
+-1
+S
+
+#59011
+Outside a Small Village~
+The path narrows here to a small opening, enclosed by the towering
+mountains.  A long adobe wall lines the south, leading east towards what
+appears to be a hut of bone and fur.  Clearly visible against the
+primitive background is a shiny makeshift metal gate.  It is blocking any
+furthur travel to the south.  The hilly valley gives way to desolate,
+blackened fields in the north.  A rusted metal gong is suspended next to
+the gate, with a pile of rocks to its side.
+~
+[Starshine] willow tree (1655): use summon bonsai tree, instead of mload? see kobold chief
+[Starshine] otherwise, change wording to "bonsai tree appears out of nowhere." also, might want to check to make sure you don't end up loading lots of bonsai trees due to people who flee.
+[Sleack] furthur - further
+~
+167247873 2 6 0
+D0
+~
+~
+0 -1 59009 10 10 5
+D1
+~
+~
+0 -1 59012 10 10 5
+D2
+shiny gate~
+gate shiny door~
+131 -1 59013 10 10 5
+E
+gong~
+The gong looks like it is made of brass, and has many dinks and dents in
+it from use.
+~
+E
+hut bone fur~
+The hut looks small, and is composed entirely of the fur and bones of
+some large animal.
+~
+E
+rocks pile~
+The rocks are just the right shape and size to bang on a gong.
+~
+E
+gate~
+The gate is very shiny and glints in even the smallest amount of light. 
+It looks polished as though it were brand new.
+~
+E
+field valley blackened~
+The fields to the north are blackened and badly damaged, but the
+destruction looks deeper than just mere fire scorching.  The ground
+itself, even from this distance, appears to be dried out and worthless.
+~
+A
+bang pound~
+gong~
+act_tochar( #gong, ch );
+act_notchar( #rgong, ch );
+wait( 1 );
+act_room( #agong, ch );
+act_area( #agong, ch );
+wait( 1 );
+if( !is_open( room, south ) ) {
+  open( room, south );
+  act_room( #open, ch );
+  send_to_room( #open, find_room( 59013 ) );
+  } else {
+close( room, south );
+send_to_room( #close, find_room( 59011 ) );
+send_to_room( #close, find_room( 59013 ) );
+}
+~
+E
+gong~
+You grab a rock, hoist it high, and smash it down on the brass gong!
+~
+E
+rgong~
+$n grabs a rock, hoists it high, and smashes it down on the brass gong!
+~
+E
+agong~
+A deep, brassy gong resonates across the valley.
+~
+E
+open~
+The shiny gate swings open.
+~
+E
+close~
+The shiny gate swings closed.
+~
+!
+0 0 0
+A
+open~
+gate shiny 1 south door~
+act_tochar( #nope, ch );
+~
+E
+nope~
+It doesn't seem like you can open the gate from this side.
+~
+!
+0 0 0
+A
+throw~
+rocks~
+act_tochar( #tgong, ch );
+act_notchar( #trgong, ch );
+wait( 1 );
+act_room( #tagong, ch );
+act_area( #taagong, ch );
+wait( 1 );
+if( !is_open( room, south ) ) {
+  open( room, south );
+  act_room( #topen, ch );
+  send_to_room( #topen, find_room( 59013 ) );
+  } else {
+close( room, south );
+send_to_room( #tclose, find_room( 59011 ) );
+send_to_room( #tclose, find_room( 59013 ) );
+}
+~
+E
+tgong~
+You pick up a rock and throw it at the brass gong!
+~
+E
+trgong~
+$n picks up a rock and throws it at the brass gong!
+~
+E
+tagong~
+A deep, brassy gong resonates across the valley as the rock smashes into
+the gong!
+~
+E
+topen~
+The shiny gate swings open.
+~
+E
+tclose~
+The shiny gate swings closed.
+~
+E
+taagong~
+A deep, brassy gong resonates across the valley.
+~
+!
+0 0 0
+1655 9 1509949540 3 0
+-1
+S
+
+#59012
+A Small Guard Post~
+Several long femurs, fabricated into long poles, have been planted into
+the ground, with thick furry animal skins stretched out between them,
+forming a makeshift roof.  An odd metal gate is clearly visible to the
+west.  Black sand is scattered around the ground here, giving the
+otherwise dusty brown soil a speckled appearance.  A niche has been
+built in the shade of the adobe wall.  The wall itself surrounds this
+area, and blocks all the paths but west.
+~
+[Guinafaer] Done
+~
+167247872 2 5 0
+D3
+~
+~
+0 -1 59011 10 10 5
+E
+femur~
+This leg bone looks like it is from massive humanoid, such as an ogre or
+a troll.
+~
+E
+sand~
+The black sand looks like it might possibly have been something else that
+has been burned to a crisp.
+~
+E
+wall adobe~
+The wall protects this niche nicely.  Interestingly, the wall is
+crumbling, but the mud looks newish.  It appears that no straw was used
+to make these bricks.
+~
+A
+n north s south e east~
+~
+act_tochar( #nope, ch );
+~
+E
+nope~
+The adobe wall, crumbling though it may be, blocks that direction.
+~
+!
+0 0 0
+A
+~
+~
+acode( find_room( 59003 ), 1);
+continue;
+~
+!
+1 0 63
+A
+~
+~
+acode( find_room( 59003 ), 2);
+continue;
+~
+!
+3 0 63
+1656 9 1509949540 3 0
+-1
+S
+
+#59013
+Entrance to the Village~
+At first glance, these fields look like a small peasant farmstead.  There
+are rows of tilled earth, a well in the distance, and the bubbling sound
+of what may be a brook.  You can also make out several adobe houses in the
+distance, to the south.  A fenced-off area is beyond a field in the east,
+but the plantlife within is fairly visible from here.  A shiny metal gate
+stands to the north, blocking the only hole in the long east-west running
+adobe wall.  Patches of the ground are scarred and burnt, and piles of
+dead branches rest in the corner, near the wall.
+~
+[Guinafaer] Done
+~
+167247872 2 9 0
+D0
+shiny gate~
+shiny gate~
+131 -1 59011 10 10 5
+D1
+~
+~
+0 -1 59014 10 10 5
+D2
+~
+~
+0 -1 59015 10 10 5
+E
+piles dead branches~
+The branches are long and spindly, with tufts of green leaves at one end.
+~
+E
+plant life~
+The plantlife in the area east of here looks lush and green.
+~
+A
+search~
+branches pile~
+if( !rflag( reset0, room ) ) {
+  act_tochar( #nope, ch );
+  act_notchar( #rnope, ch );
+  }
+else {
+  if( random( 1, 10 ) > 4 ) {
+    remove_rflag( reset0, room );
+    act_tochar( #sliz, ch );
+    act_notchar( #rsliz, ch );
+    act_room( #liz, ch );
+    obj = oload( 2326 );
+    obj_to_room( obj, room );
+    }
+  else {
+    act_tochar( #nope, ch );
+    act_notchar( #rnope, ch );
+    }
+  }
+~
+E
+nope~
+You rummage through the branches and get sap on yourself.
+~
+E
+rnope~
+$n rummages through the branches and gets sap on $mself.
+~
+E
+liz~
+A small lizard panics and runs from the branches, leaving a tail behind!
+~
+E
+sliz~
+You rummage through the branches.
+~
+E
+rsliz~
+$n rummages through the pile of branches.
+~
+!
+0 0 0
+A
+~
+~
+acode( find_room( 59003 ), 1);
+continue;
+~
+!
+1 0 63
+A
+~
+~
+acode( find_room( 59003 ), 2);
+continue;
+~
+!
+3 0 63
+1666 9 1509949540 3 0
+-1
+S
+
+#59014
+A Barren Field~
+This field has long, torn trenches in it.  The upturned dirt makes it
+look like it was once used for crops, but everything is dusty, dry, and
+old.  Water can be heard to the south, and small streams of it have
+seeped a little into this dusty plain to form mud.  A large adobe wall
+runs along the north here from the west, ending in the mountain to the
+east.
+~
+[Guinafaer] Done.
+~
+167247872 2 9 0
+D2
+~
+~
+0 -1 59016 10 10 5
+D3
+~
+~
+0 -1 59013 10 10 5
+E
+trenches~
+These deep slices gouge the earth, forming short, deep lines in the
+fields.  Rocks support the walls of the trenches and water and grass
+clutter the bottoms.
+~
+E
+wall adobe~
+The wall is old and crumbling, and looks like it has taken a lot of
+damage lately.
+~
+A
+n north~
+~
+act_tochar( #nope, ch );
+~
+E
+nope~
+An adobe wall blocks the way north.
+~
+!
+0 0 0
+1648 9 1509949540 3 0
+1669 9 1509949540 3 0
+-1
+S
+
+#59015
+Next to the Dirt Well~
+The village spreads out here into a larger field with a well centered in
+it.  Pipes run off to the east into what appears to be an irrigated field. 
+The valley rises to the south, lifting up into a small hill, on top of
+which are some adobe houses.  From this point, you can see the long adobe
+wall, protecting the north side of the village.
+~
+[Guinafaer] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 59013 10 10 5
+D1
+~
+~
+0 -1 59016 10 10 5
+D2
+~
+~
+0 -1 59019 10 10 5
+E
+well~
+The well is little more than a hole in a rock that water is pouring out
+of.  It forms a small pond that has pipes leading east.
+~
+E
+pipes~
+The pipes are made of some strange, bone-like material, held together
+with mud and skins pulled taut between them.
+~
+A
+~
+~
+acode( find_room( 59003 ), 1);
+continue;
+~
+!
+1 0 63
+A
+~
+~
+acode( find_room( 59003 ), 2);
+continue;
+~
+!
+3 0 63
+82 17 1509949540 -2 0
+1669 9 1509949540 3 0
+-1
+S
+
+#59016
+An Irrigated Field~
+This field is a lot more vibrant and green than the surrounding
+grasslands.  A system of irrigation runs throught the area from a well in
+the west, flowing through long bone pipes to the garden lying directly to
+the east.  Two small adobe houses can be seen south of here on top of a
+grassy hillock.
+~
+[Guinafaer] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 59014 10 10 5
+D1
+~
+~
+0 -1 59017 10 10 5
+D2
+~
+~
+0 -1 59022 10 10 5
+D3
+~
+~
+0 -1 59015 10 10 5
+E
+pipes~
+These pipes look like they are made of bone, carefully sealed together.
+~
+A
+~
+~
+acode( find_room( 59003 ), 1);
+continue;
+~
+!
+1 0 63
+A
+~
+~
+acode( find_room( 59003 ), 2);
+continue;
+~
+!
+3 0 63
+A
+~
+~
+send_to_room( #pipes, room );
+continue;
+~
+E
+pipes~
+You hear bubbling as water rushes through the irrigation pipes.
+~
+!
+2 300 0
+1665 9 1509949540 3 0
+-1
+S
+
+#59017
+Entrance to the Youth Gardens~
+A lush garden opens up before you.  Everything is very green and vibrant
+here.  The ground is slightly damp, and the soil gives the air a slightly
+husky, healthy smell.  The rock face to the east is oddly reflective, and
+aims down slightly.  The gardens continue to the north.  To the east, a
+small path leads out next to a long system of bone pipes.
+~
+[Guinafaer] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 59018 10 10 5
+D3
+~
+~
+0 -1 59016 10 10 5
+E
+ground soil~
+The soil is dark brown and is very damp.  It feels healthy.
+~
+E
+pipes~
+A long series of bone pipes pump water into this garden.  They appear to
+have a source somewhere to the west.
+~
+E
+rock face~
+The rock face looks like it is meant to concentrate sunlight on the
+ground plants.
+~
+A
+~
+~
+acode( find_room( 59003 ), 1);
+continue;
+~
+!
+1 0 63
+A
+~
+~
+acode( find_room( 59003 ), 2);
+continue;
+~
+!
+3 0 63
+1658 9 1509949540 3 0
+-1
+S
+
+#59018
+The Youth Gardens~
+This lush field has several tiers, separated by rows of rocks.  Each tier
+has slightly larger and more robust plants growing on it.  Water babbles
+away in small brooks flowing from the south into a crack in the mountain. 
+The air here is cool and refreshing.  The mountains surround this garden
+on the north and east, while a long fence blocks off the western border.
+~
+[Guinafaer] Done.
+~
+167247872 2 9 0
+D2
+~
+~
+0 -1 59017 10 10 5
+E
+crack mountain water~
+The water flows in from the southern gardens without the use of pipes to
+guide it, giving hint to how well irrigated this area is.  What water
+doesn't get claimed by the field for growth is flows away into a jagged
+crack in the mountain.
+~
+E
+fence~
+The fence appears to be made of polished bone, rather than wood.  It
+separatess the barren field to the west from this lush paradise.
+~
+A
+~
+~
+acode( find_room( 59003 ), 1);
+continue;
+~
+!
+1 0 63
+A
+~
+~
+acode( find_room( 59003 ), 2);
+continue;
+~
+!
+3 0 63
+1659 9 1509949540 3 0
+1659 9 1509949520 3 0
+1660 9 1509949540 3 0
+1660 9 1509949520 3 0
+1660 9 1509949490 3 0
+1659 9 1509949490 3 0
+-1
+S
+
+#59019
+Next to an Altar~
+On the lower end of this hill there is an altar.  The hill itself lazily
+climbs to the east, and a small adobe house rests atop it.  A larger clay
+and mud building is to the south, and is guarded by two clay statues.  A
+small adobe shack stands to the west in a state of disrepair.  The fields
+open up to the north, where you spy a well.
+~
+[Guinafaer] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 59015 10 10 5
+D1
+~
+~
+0 -1 59022 10 10 5
+D2
+~
+~
+0 -1 59025 10 10 5
+D3
+~
+~
+0 -1 59020 10 10 5
+E
+altar~
+This altar is built from stone, one of the few such constructs in the
+entire village.  It stands above the ground atop a wide flat stone slab,
+and has a few weeds strewn across the top.
+~
+E
+statue clay south~
+The statues are of trees, large thick-barked, leafy beings with fierce
+countenances.  They appear to be wielding some form of spear.
+~
+E
+spear~
+The spears the tree statues wield look as if they are primitive stone
+weapons.
+~
+E
+weeds~
+The weeds have small pools of sticky sap holding them to the altar.
+~
+A
+~
+~
+acode( find_room( 59003 ), 1);
+continue;
+~
+!
+1 0 63
+A
+~
+~
+acode( find_room( 59003 ), 2);
+continue;
+~
+!
+3 0 63
+1648 9 1509949540 3 0
+1642 9 1509949540 3 0
+-1
+S
+
+#59020
+A Crumbling Adobe Hut~
+This adobe shack is falling apart.  The walls are crumbling and have
+piles of gravel at the bottom.  There isn't even any roof to protect this
+area from the elements.  Quite a few small jars litter the floor, and a
+small cot with a hole in the middle sits on the far end of the room.  The
+ground has soil scattered over it.  To the west, you see a more protected
+end of this shack, with a roof and sturdy walls.  Eastward is a rising
+hillside and an altar.
+~
+[Guinafaer] Done.
+~
+167247872 0 5 0
+D1
+~
+~
+0 -1 59019 10 10 5
+D3
+~
+~
+0 -1 59021 10 10 5
+E
+gravel~
+The piles of gravel are made of thin, light brown soil that has crumbled
+off the walls.
+~
+E
+jars~
+The jars are made of clay, and are all empty, except for dust and dirt.
+~
+E
+cot hole~
+The cot doesn't look like it has been cleaned for years.  It is moldy and
+smelly, and has a small pile of dirt underneath it.
+~
+E
+soil dirt~
+Most of the soil strewn around here looks new and fresh, as though a
+plant were recently uprooted.
+~
+A
+~
+~
+acode( find_room( 59003 ), 1);
+continue;
+~
+!
+1 0 63
+A
+~
+~
+acode( find_room( 59003 ), 2);
+continue;
+~
+!
+3 0 63
+1661 9 1509949540 3 0
+-1
+S
+
+#59021
+The Sick Room~
+This large room in the adobe hut is protected from the weather by thick,
+adobe walls and furry bear skins.  The roof has long furs stretched out
+to cover it as well.  Dark mounds of soil are piled everywhere, giving
+the impression that someone walked through here and uprooted most of the
+plants.  Patches of yellowish moss are growing on the walls, shedding
+their light to softly illuminate the room.  The only visible exit is to
+the east, back into the crumbling end of the shack.
+~
+[Guinafaer] done
+~
+167247877 0 5 0
+D1
+~
+~
+0 -1 59020 10 10 5
+E
+roof furs~
+The furs seem to be hides of a moose or bear and look to have been soaked
+in mud, to give a more stable roof.
+~
+E
+soil dark piles~
+Unlike most of the soil in this valley, this earth is fresh and healthy. 
+A plant would thrive if planted here.
+~
+E
+patches moss~
+This moss is an odd variant that tends to grow in underground caverns. 
+It moves slightly when you get close to it, twitching away from you.
+~
+A
+~
+~
+acode( find_room( 59003 ), 1);
+continue;
+~
+!
+1 0 63
+A
+~
+~
+acode( find_room( 59003 ), 2);
+continue;
+~
+!
+3 0 63
+A
+~
+~
+if( mob_in_room( 1663, find_room( 59021 ) ) ) {
+  if( mob_in_room( 1662, find_room( 59021 ) ) ) {
+    send_to_room( #nurse, room );
+    end;
+  }
+  end;
+}
+~
+E
+nurse~
+@GThe old oak wanders over to tend to the wilting bonsai here.@n
+~
+!
+2 150 0
+1662 9 1509949540 3 0
+1662 9 1509949460 3 0
+1663 9 1509949540 3 0
+-1
+S
+
+#59022
+A Small Hill~
+From atop this small hillock, the entire village and valley can be seen. 
+Two adobe huts are here, one to the east, and a large, longer
+construction to the southwest.  To the northeast it looks like there is a
+garden, while the middle area in the village is well irrigated and farmed. 
+The hill slumps down to the west, where another adobe stands.  A long,
+adobe wall blocks the north side of the village, separating it from a
+trail that leads up into the mountains.
+~
+[Guinafaer] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 59016 10 10 5
+D1
+~
+~
+0 -1 59023 10 10 5
+D3
+~
+~
+0 -1 59019 10 10 5
+A
+~
+~
+acode( find_room( 59003 ), 1);
+continue;
+~
+!
+1 0 63
+A
+~
+~
+acode( find_room( 59003 ), 2);
+continue;
+~
+!
+3 0 63
+1653 9 1509949540 3 0
+-1
+S
+
+#59023
+A Thickly Built Adobe Hut~
+It is cool and damp inside this adobe hut.  The walls are thick and
+reinforced with rock.  A great boulder, with a great worn spot on it,
+rests in the corner.  A dark pit is open on the ground, with a flimsy
+grill covering it.  There is no door here, just an open exit westward. 
+The roof of this hut is curiously not thatched, as are most mud
+dwellings, but rather is composed of stretched-out animal hides.
+~
+[Guinafaer] Done.
+~
+167247876 0 5 0
+D3
+~
+~
+0 -1 59022 10 10 5
+D5
+rusty grill~
+grill rusty~
+131 -1 59024 10 10 5
+E
+boulder spot worn~
+The boulder looks like it has been used for a bed or seat.
+~
+E
+pit~
+You can't see much of the pit from up here.
+~
+E
+grill~
+The grill is very flimsy and easily removed.  It doesn't look like it was
+ever meant to cover this particular pit, rather, it seems as if it was
+taken from somewhere else for use here.  It is very rusty and worn.
+~
+E
+hides animal roof~
+The hides that make up the roof seem to come from something large, such
+as a moose or a bear.  They are old and smell of manure.
+~
+A
+~
+~
+acode( find_room( 59003 ), 1);
+continue;
+~
+!
+1 0 63
+A
+~
+~
+acode( find_room( 59003 ), 2);
+continue;
+~
+!
+3 0 8
+A
+1 down~
+~
+continue;
+~
+E
+to_char~
+@yYou slip down into the darkness of the pit.@n
+~
+E
+to_room~
+@y$n slips down into the darkness of the pit.@n
+~
+!
+3 0 32
+1666 137 1509949540 3 0
+-1
+S
+
+#59024
+The Pit~
+This shallow pit is barely large enough for a man-sized prisoner.  A
+shallow bowl rests on the ground with dust kicked around it.  Overhead, a
+rusty grill covers the opening from the hole, blocking it off.  The walls
+of the pit are thick and dirty, with shallow spiny roots poking out from
+them.
+~
+[Guinafaer] Done.
+~
+167378948 11 5 0
+D4
+rusty grill~
+rusty grill~
+131 -1 59023 10 10 5
+E
+grill rusty above~
+The grill is almost falling apart, and doesn't seem to be an adequate way
+to close the pit.
+~
+E
+walls roots~
+The tiny ends of countless roots poke out of the walls, making them look
+hairy.  The entire pit seems to undulate.
+~
+A
+get take yank~
+root~
+if( !rflag( reset0, room ) ) {
+  act_tochar( #no, ch );
+  end;
+  }
+else {
+  if( random( 1, 10 ) > 3 ) {
+    remove_rflag( reset0, room );
+    act_tochar( #last, ch );
+    act_notchar( #rlast, ch );
+    obj_to_char( oload( 2311 ), ch );
+    end;
+    }
+  else {
+    act_tochar( #get, ch );
+    act_notchar( #rget, ch );
+    obj_to_char( oload( 2311 ), ch );
+    }
+  }
+~
+E
+no~
+You can't find any roots here, just thin spiny tendrils that break when
+you pull them.
+~
+E
+last~
+You yank the last root from the wall.
+~
+E
+rlast~
+$n yanks the last root from the wall.
+~
+E
+get~
+You yank a root right out of the wall.
+~
+E
+rget~
+$n yanks a root right out of the wall.
+~
+!
+0 0 0
+1664 9 1509949540 3 0
+158 17 1509949540 -2 16
+-1
+S
+
+#59025
+A Sturdy Adobe House~
+This large adobe hut could almost be called luxurious, as far as anything
+made of clay and dirt could be a luxury.  The floor has bearskins
+covering it, right up to within a foot of the walls.  Long rifts of
+turned up dirt line the walls.  Ritualistic paintings decorate the
+otherwise barren clay.  The roof is covered with thick hides of some
+creature, and is also decorated with paintings.  The east wall, in
+particular, has a primitive mosaic inlay upon it.  The hall in this large
+adobe leads south, while the opening, shielded by a dangling fur, leads
+north into the valley floor.
+~
+[Guinafaer] Done.
+~
+167247877 0 5 0
+D0
+~
+~
+0 -1 59019 10 10 5
+D2
+~
+~
+0 -1 59026 10 10 5
+E
+floor bearskins~
+These skins are those of the mighty grizzly, the deadly predator that
+roams the forests of the land.
+~
+E
+rifts dirt~
+The dirt along the walls is very fresh and rich.  It looks as though
+someone has uprooted a lot of plants here, or tilled the soil with a hoe.
+~
+E
+paintings~
+The painting depicts a crude image of several humanoid beings attacking a
+forest.  The forest appears to be fighting back, in what you can assume
+to possibly be a metaphorical sense.
+~
+E
+roof hides~
+The roof is made of stretched hides.  A painting on the hides depicts a
+towering oak tree wielding a might spear.
+~
+E
+wall mosaic 1 east~
+The mosaic is a carefully created image of a very detailed vyan male's
+face.  He looks extremely diabolical, even more so than your typical
+run-of-the-mill vyan.  The mosaic is not yet completed.
+~
+A
+~
+~
+acode( find_room( 59003 ), 1);
+continue;
+~
+!
+1 0 63
+A
+~
+~
+acode( find_room( 59003 ), 2);
+continue;
+~
+!
+3 0 63
+1666 137 1509949540 3 0
+-1
+S
+
+#59026
+The Throne Room~
+A large throne, with a pile of dirt at the base, is the most prominent
+feature in this part of the adobe structure.  Plain furs line the walls,
+with clumps of fresh soil beneath them.  The roof here is made of clay
+and mud, probably supported by stone.  The only exit is into a highly
+decorative room to the north.  A narrow opening can be seen in ceiling
+above the throne, allowing light into the primitive chamber 
+~
+[Guinafaer] Done.
+~
+167247877 0 5 0
+D0
+~
+~
+0 -1 59025 10 10 5
+D2
+hidden door~
+hidden door~
+235 -1 59027 10 10 5
+E
+throne~
+Oddly, the throne's seat is mostly made up of a declivity.  The arms are
+concave, with small pools of water in them.  One of the arms has an
+strange-looking lump beneath it.
+~
+E
+declivity~
+The hole in the throne has a pile of dirt in it.
+~
+E
+arms lump~
+There is a small mechanical lever under the arm of the throne.
+~
+E
+furs~
+The furs on the walls are light tan and short-haired.  They're roughly
+take the shape of a young deer or fawn.
+~
+A
+pull~
+lever arm~
+if( mob_in_room( 1668, room ) ) {
+  act_tochar( #stop, ch );
+  act_notchar( #rstop, ch );
+  } else {
+if( !is_open( room, south ) ) {
+  act_tochar( #do, ch );
+  act_notchar( #rdo, ch );
+  send_to_room( #there, find_room( 59027 ) );
+  open( room, south );
+  }
+else {
+  act_tochar( #close, ch );
+  act_notchar( #rclose, ch );
+  send_to_room( #aclose, find_room( 59027 ) );
+  close( room, south );
+  }
+}
+~
+E
+do~
+You pull the lever and a secret door to the south flies open.
+~
+E
+rdo~
+$n fiddles with the arm of the throne and a door in the south wall opens!
+~
+E
+there~
+The door to the north silently opens.
+~
+E
+close~
+You pull the lever and the south door closes.
+~
+E
+rclose~
+$n fiddles with the arm of the throne and the south door closes!
+~
+E
+aclose~
+The door to the north silently closes.
+~
+E
+stop~
+@CThe oak king frowns and waves his branches angrily as you attempt to
+approach the throne.@n 
+~
+E
+rstop~
+@CThe oak king frowns and waves his branches angrily as $n attempts to
+approach the throne.@n 
+~
+!
+0 0 0
+A
+~
+~
+acode( find_room( 59003 ), 1);
+continue;
+~
+!
+1 0 63
+A
+~
+~
+acode( find_room( 59003 ), 2);
+continue;
+~
+!
+3 0 63
+1668 9 1509949540 3 0
+-1
+S
+
+#59027
+The Treasure Room~
+This largish chamber, hidden inside the thick back walls of the adobe
+house, has rich soil littering the floor.  It looks like it is used as a
+storage facility.  Crude stone shelves line the walls.  The north wall is
+dusty, but large circular prints can clearly be seen in it.
+~
+[Guinafaer] Fix chest resets.
+[Guinafaer] Reviewed.
+~
+167247876 0 5 0
+D0
+~
+~
+235 -1 59026 10 10 5
+E
+prints 1 north wall~
+It looks like someone has been pressing on the wall for some reason.
+~
+E
+shelf shelves~
+The shelves are made of adobe rock and are built into the walls.
+~
+E
+rich soil~
+The soil is grouped in several piles and clumps, and some of the larger
+piles have scoops of it missing, signs that someone has been taking the
+dirt.
+~
+A
+press~
+wall north~
+if( !is_open( room, north ) ) {
+  act_tochar( #do, ch );
+  act_notchar( #rdo, ch );
+  open( room, north );
+  send_to_room( #there, find_room( 59026 ) );
+  }
+else 
+  act_tochar( #not, ch );
+~
+E
+do~
+You press the north wall gently and it flies open.
+~
+E
+rdo~
+$n presses the north wall gently and it flies open.
+~
+E
+there~
+A hidden door on the south wall flies open!
+~
+E
+not~
+The wall is standing open, and pressing it does nothing.
+~
+!
+0 0 0
+2337 49 1509949540 -2 0
+2 81 1509949535 -2 0
+2 81 1509949505 -2 0
+3653 81 1509949445 -2 0
+304 81 1509949460 -2 0
+3562 81 1509949446 -2 0
+-1
+S
+
+#0
+

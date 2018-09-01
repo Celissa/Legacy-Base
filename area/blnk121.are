@@ -1,0 +1,124 @@
+#M2_AREA
+2
+
+High Mountain Lakes~
+teleute azerin aegrim~
+~
+~
+~
+
+1 0
+3
+0
+#ROOMS
+
+#64500
+Lake's Edge~
+Sparkling waves lap serenely towards the shore, the intense blue of the
+lake receding into the distance like an immense azure jewel.  Smooth grey
+boulders subside into rocks then pebbles as they near the water.  A brown
+tea-stain-like residue has crept along the water-facing parts of the
+rocks - a slow, slithering, sliming of their surface.
+~
+[Aegrim] I had an idea, but its somewhere else, probably nowhere
+[Teleute] extras done
+[Guin] Addon to Aegrim's Zone? Possible Tarn referred to elsewhere.
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 64501 10 10 5
+D3
+~
+~
+0 -1 64502 10 10 5
+E
+waves lake azure jewel~
+Dazzling to behold, the icy-cold water seems to entice you
+to enter into its mysterious blue depths.
+~
+E
+smooth grey boulders rocks pebbles~
+A millenia of nature's forces has worn these rocks smooth, revealing
+their fine, grainy texture and the occasional quartz line threaded through
+the grey.
+~
+A
+random~
+~
+send_to_room( #ripple, room );
+~
+E
+ripple~
+@mAn unseen force sends waves rippling towards the shore.@n
+~
+!
+2 150 0
+3575 17 1509949540 -2 0
+-1
+S
+
+#64501
+Stream-Mouth~
+A small mountain stream converges gently into an icy, blue lake.  Clumps
+of tawny tussock line both sides of the creekbed, mountain daisies making
+an occasional appearance between them.  A cheerful trickle initially, the
+stream-water undergoes a subtle change as it becomes swallowed by the
+deeper, darker, more sinister waters of the lake.
+~
+~
+33030145 3 9 0
+D2
+~
+~
+0 -1 64500 10 10 5
+D3
+~
+~
+0 -1 64503 10 10 5
+A
+~
+~
+send_to_room( #rock, room );
+~
+E
+rock~
+@mWith a sharp clatter, a fist-sized rock tumbles downstream.@n 
+~
+!
+2 50 0
+3577 17 1509949540 -2 0
+3577 17 1509949510 -2 0
+3577 17 1509949490 -2 0
+-1
+S
+
+#64502
+Lake's Edge~
+Under Construction.
+~
+~
+33030145 3 9 0
+D1
+~
+~
+0 -1 64500 10 10 5
+-1
+S
+
+#64503
+This is Somewhere Too~
+Under Construction.
+~
+~
+33030145 3 9 0
+D1
+~
+~
+0 -1 64501 10 10 5
+-1
+S
+
+#0
+

@@ -1,0 +1,29 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+request              : lists pending requests - Imm only command<br>
+request imm [reason] : requests an imm<br>
+request ava [reason] : requests an avatar<br>
+request cancel       : cancel all requests by you<br>
+<br>
+<h1> Description </h1>
+<br>
+This command is for mortals to request the attention of an avatar or<br>
+immortal.  Please make your reasons as precise as possible.  In simple<br>
+cases hopefully removing any need for conversation.<br>
+<br>
+PLEASE: When using request don't type "request immortal I have a<br>
+question" Type in the question.<br>
+<br>
+When an immortal has helped you please type request cancel to clear it.<br>
+<br>
+When using this command, asking the question in the request is a good<br>
+idea.  i.e.  request imm the goblin spearman is blinding himself is far<br>
+better than: request imm problem with mob <br>
+<br>
+Examples of BAD Requests:<br>
+I found a bug!<br>
+I lost my corpse in a crash!<br>
+</html>
+</body>

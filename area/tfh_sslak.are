@@ -1,0 +1,3023 @@
+#M2_AREA
+2
+
+Sslak~
+Skurva Nox~
+~
+~
+~
+
+0 0
+2
+1
+#ROOMS
+
+#6100
+Road to Sslak~
+Churning liquid mud foams at the shores of the twin rivers, slowly
+washing out to the sea with the rest of the silt.  The delta is visible
+in the distance; a slimy, clay-colored smear against the cobalt blue of
+the open waters.  The two rivers join into one large jumble of water
+headed towards the delta, forming a wide expanse of fast-moving liquid. 
+Headed away from the delta, a slippery road follows the smaller river
+upstream.  Covered in silt and debris, this road shows little signs of
+traffic.  At the intersection between rivers and road the vegetation has
+been cut away in a neat circle around a polished brass statue of a
+lizardman on a stone pedastal.
+~
+Lizardmen that should not be changed:
+K'lzerik Tul (2384) (Naga Zone) 
+Ka'ssiliss 2333 - (Training Grounds) 
+[Skurva] Set custome for serpentine spear somewhere..:) for Azerin...
+[Nox] is this where the docks will be?
+[Skurva] This, I was thinking, would be the continuation of whatever water this entrance came from
+~
+33030144 14 9 0
+D0
+~
+~
+0 -1 6101 10 10 5
+D1
+~
+~
+0 -1 6102 10 10 5
+E
+polished brass statue stone pedastal~
+The gleaming statue has clearly been kept up better than the road, having
+a neat circle of no vegetation around its base and no signs of tarnish on
+its surface.  It depicts a lizardman, sleek of snout and of delicate
+features, facing to the south.  Posed in balance on top of a smooth black
+boulder, the statue clutches an intricately worked spear which it is
+using for balance as it scowls towards the delta.  A necklace has been
+carved around its brass neck, a thick cord with a spherical rock set in
+the center, and a fine-wrought robe covers it from neck to knee, but no
+other decoration can be seen.
+~
+-1
+S
+
+#6101
+Road to Sslak~
+Moving from the delta below to the controlled irrigation above.  Note the
+streams that the boats travel down.
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 6104 10 10 5
+D1
+~
+~
+0 -1 6103 10 10 5
+D2
+~
+~
+0 -1 6100 10 10 5
+-1
+S
+
+#6102
+Road to Sslak~
+The two rivers should meet here and this should be the delta of those
+rivers see the rdesc west 
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 6103 10 10 5
+D3
+~
+~
+0 -1 6100 10 10 5
+-1
+S
+
+#6103
+Road to Sslak~
+Moving from the delta to the south to the controlled irrigation above
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 6105 10 10 5
+D2
+~
+~
+0 -1 6102 10 10 5
+D3
+~
+~
+0 -1 6101 10 10 5
+-1
+S
+
+#6104
+Road to Sslak~
+Travelling further into controlled swamland , surrounded by uncontrolled
+swamp 
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 6107 10 10 5
+D1
+~
+~
+0 -1 6105 10 10 5
+D2
+~
+~
+0 -1 6101 10 10 5
+-1
+S
+
+#6105
+Road to Sslak~
+The first signs of the city, perhaps a distant view of the temple of the
+Lizzies, or the first smells of the farmlands.
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 6106 10 10 5
+D2
+~
+~
+0 -1 6103 10 10 5
+D3
+~
+~
+0 -1 6104 10 10 5
+-1
+S
+
+#6106
+Road to Sslak~
+At this point the river is a nice parallel banked entity with full
+control, or as much as a swamp can get.  The signs of civilization should
+be stronger, with sightings of lizardfolk.  Maybe add a first towns-liz
+here?
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 6109 10 10 5
+D2
+~
+~
+0 -1 6105 10 10 5
+D3
+~
+~
+0 -1 6107 10 10 5
+-1
+S
+
+#6107
+Road to Sslak~
+Signs of civilization, less controlled then to the east, but not wild.
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 6108 10 10 5
+D1
+~
+~
+0 -1 6106 10 10 5
+D2
+~
+~
+0 -1 6104 10 10 5
+-1
+S
+
+#6108
+Road to Sslak~
+Signs of the farm life in a swmap.  Perhaps the decomposition tamed
+animals or signs of anti-alligator attack gear?
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 6111 10 10 5
+D1
+~
+~
+0 -1 6109 10 10 5
+D2
+~
+~
+0 -1 6107 10 10 5
+-1
+S
+
+#6109
+Road to Sslak~
+Start the farmland descs, with perhaps this being the harvest wastes or
+vats with tamed swamp animals.
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 6110 10 10 5
+D2
+~
+~
+0 -1 6106 10 10 5
+D3
+~
+~
+0 -1 6108 10 10 5
+-1
+S
+
+#6110
+Road to Sslak~
+Begin the farm swamp crops and such, perhaps put animals and grazing on
+some spaces and plant crops on the other side/ 
+~
+~
+33030144 12 9 0
+D1
+~
+~
+0 -1 6114 10 10 5
+D2
+~
+~
+0 -1 6109 10 10 5
+D3
+~
+~
+0 -1 6111 10 10 5
+-1
+S
+
+#6111
+Road to Sslak~
+The first true farm-land.  Show a crop of choice and the regular vices
+therein.  Perhaps put the first of the swamp-farm mobs here.
+~
+~
+33030144 12 9 0
+D1
+~
+~
+0 -1 6110 10 10 5
+D2
+~
+~
+0 -1 6108 10 10 5
+D3
+~
+~
+0 -1 6112 10 10 5
+-1
+S
+
+#6112
+Road to Sslak~
+Dock up ahead, and the farmland port also, Lots of sunken farm boats,
+alligator attacks and other fun stuff.
+~
+~
+33030144 12 9 0
+D1
+~
+~
+0 -1 6111 10 10 5
+D3
+~
+~
+0 -1 6113 10 10 5
+-1
+S
+
+#6113
+Farmland dock~
+The other dock for boats.  A less organized dock, less fancy boats that
+hold less people.  Add a random alligator attack.  Mob popping up and all.
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 6117 10 10 5
+D1
+~
+~
+0 -1 6112 10 10 5
+D3
+~
+~
+0 -1 6118 10 10 5
+-1
+S
+
+#6114
+Sslak Dock~
+The dock for the boats.  Add a boathouse here as well as the ability to
+purchase and launch boats.
+~
+[Nox] I want to put tiny clusters of tents/boats around this area, where the nomad tribes like to hang out. Is there a code for boarding a boat not yours?
+~
+33030144 12 9 0
+D1
+~
+~
+0 -1 6115 10 10 5
+D3
+~
+~
+0 -1 6110 10 10 5
+-1
+S
+
+#6115
+Farmlands~
+Under Construction.
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 6116 10 10 5
+D3
+~
+~
+0 -1 6114 10 10 5
+-1
+S
+
+#6116
+Farmlands~
+Under Construction.
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 6142 10 10 5
+D2
+~
+~
+0 -1 6115 10 10 5
+-1
+S
+
+#6117
+Farmlands~
+Under Construction.
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 6120 10 10 5
+D2
+~
+~
+0 -1 6113 10 10 5
+-1
+S
+
+#6118
+Farmlands~
+The food side of the farmlands.
+~
+~
+33030144 12 9 0
+D1
+~
+~
+0 -1 6113 10 10 5
+D3
+~
+~
+0 -1 6119 10 10 5
+-1
+S
+
+#6119
+Farmlands~
+Farmlands - food/ crops.
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 6129 10 10 5
+D1
+~
+~
+0 -1 6118 10 10 5
+-1
+S
+
+#6120
+Farmlands~
+Under Construction.
+~
+~
+33030144 12 9 0
+D1
+~
+~
+0 -1 6121 10 10 5
+D2
+~
+~
+0 -1 6117 10 10 5
+-1
+S
+
+#6121
+Farmlands~
+Under Construction.
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 6123 10 10 5
+D1
+~
+~
+0 -1 6122 10 10 5
+D3
+~
+~
+0 -1 6120 10 10 5
+-1
+S
+
+#6122
+Farmlands~
+Under Construction.
+~
+~
+33030144 12 9 0
+D2
+~
+~
+0 -1 6124 10 10 5
+D3
+~
+~
+0 -1 6121 10 10 5
+-1
+S
+
+#6123
+Farmlands~
+Under Construction.
+~
+~
+33030144 12 9 0
+D2
+~
+~
+0 -1 6121 10 10 5
+D3
+~
+~
+0 -1 6125 10 10 5
+-1
+S
+
+#6124
+Food Stand~
+Another shop to sell food, like the roadside cherry dstands..;)
+~
+[ Skuvra ] and your whole empire comes crashing down all because of one.. 
+little..  cherry...
+
+Food types to sell here..
+This would be the food shack that sells the meat of farm-raised and
+swamp caught animals.  The other food stand sells the produce..:)
+Food created for this food stand:
+alligator steak 1494
+python meat 1502
+huge slab of bear meat 1504
+pile of raw insects 1514
+pair of swamp frog legs 1534
+swamp snake steak 1516
+turtle meat 1524
+raw dead feeding mouse 1527
+mealworm 1533
+Create some soups later, with the bowl being "left over" from the meal.
+Food being used that was already created:
+trout fillet - 129, toad legs - 349, fish fillet - 720
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 6122 10 10 5
+-1
+S
+
+#6125
+Farmlands~
+Under Construction.
+~
+~
+33030144 12 9 0
+D1
+~
+~
+0 -1 6123 10 10 5
+D3
+~
+~
+0 -1 6126 10 10 5
+-1
+S
+
+#6126
+Farmlands~
+Under Construction.
+
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 6131 10 10 5
+D1
+~
+~
+0 -1 6125 10 10 5
+D2
+~
+~
+0 -1 6127 10 10 5
+-1
+S
+
+#6127
+Farmlands~
+Under Construction.
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 6126 10 10 5
+D3
+~
+~
+0 -1 6128 10 10 5
+-1
+S
+
+#6128
+Farmlands~
+Under Construction.
+~
+~
+33030144 12 9 0
+D1
+~
+~
+0 -1 6127 10 10 5
+D2
+~
+~
+0 -1 6129 10 10 5
+-1
+S
+
+#6129
+Farmlands~
+farmland food crops, maybe an attcking snake or two?
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 6128 10 10 5
+D1
+~
+~
+0 -1 6130 10 10 5
+D2
+~
+~
+0 -1 6119 10 10 5
+-1
+S
+
+#6130
+Food Stand~
+~
+This stand is for the produce and mosses and fungi.  The other stand has
+the sales of the meat products.
+Food to be created...
+mosses, algae, kelp, seaweeds, fungi, mushrooms, mangrove plants, maybe
+some nice food preparation items like spoons, bowls, and chopsticks?
+~
+33030144 12 9 0
+D3
+~
+~
+0 -1 6129 10 10 5
+-1
+S
+
+#6131
+Farmlands~
+Under Construction.
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 6132 10 10 5
+D2
+~
+~
+0 -1 6126 10 10 5
+-1
+S
+
+#6132
+Farmlands~
+Under Construction.
+~
+~
+33030144 12 9 0
+D1
+~
+~
+0 -1 6133 10 10 5
+D2
+~
+~
+0 -1 6131 10 10 5
+-1
+S
+
+#6133
+Farmlands~
+Under Construction.
+~
+~
+33030144 12 9 0
+D1
+~
+~
+0 -1 6134 10 10 5
+D3
+~
+~
+0 -1 6132 10 10 5
+-1
+S
+
+#6134
+Farmlands~
+Portal to the temple ground, big dramatic view of the temple from
+here..:) (and a view back to the entire farmlands.
+~
+[Skurva] Reminder: Fix the help file for lizardfolk
+[Nox] perhaps we should have liz guides who can take you through the farmlands to the city, for cash of course. Is there a code for players to follow a mob?
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 6146 10 10 5
+D1
+~
+~
+0 -1 6135 10 10 5
+D3
+~
+~
+0 -1 6133 10 10 5
+-1
+S
+
+#6135
+Farmlands~
+Under Construction.
+~
+~
+33030144 12 9 0
+D2
+~
+~
+0 -1 6136 10 10 5
+D3
+~
+~
+0 -1 6134 10 10 5
+-1
+S
+
+#6136
+Farmlands~
+Under Construction.
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 6135 10 10 5
+D1
+~
+~
+0 -1 6137 10 10 5
+-1
+S
+
+#6137
+Farmlands~
+Under Construction.
+~
+~
+33030144 12 9 0
+D1
+~
+~
+0 -1 6138 10 10 5
+D3
+~
+~
+0 -1 6136 10 10 5
+-1
+S
+
+#6138
+Farmlands~
+Under Construction.
+~
+~
+33030144 12 9 0
+D2
+~
+~
+0 -1 6139 10 10 5
+D3
+~
+~
+0 -1 6137 10 10 5
+-1
+S
+
+#6139
+Farmlands~
+Under Construction.
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 6138 10 10 5
+D2
+~
+~
+0 -1 6140 10 10 5
+D3
+~
+~
+0 -1 6141 10 10 5
+-1
+S
+
+#6140
+Farmlands~
+Under Construction.
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 6139 10 10 5
+D1
+~
+~
+0 -1 6142 10 10 5
+-1
+S
+
+#6141
+Hermit Hut~
+Under Construction.
+~
+[Skurva] Great place to put the cryptic mob that gives quests, has odd
+customs, and that sort of thing, Like Old Gwen from Pennan..  that sort
+of mob..;) 
+~
+33030144 12 9 0
+D1
+~
+~
+0 -1 6139 10 10 5
+-1
+S
+
+#6142
+Farmlands~
+Under Construction.
+~
+~
+33030144 12 9 0
+D1
+~
+~
+0 -1 6143 10 10 5
+D2
+~
+~
+0 -1 6116 10 10 5
+D3
+~
+~
+0 -1 6140 10 10 5
+-1
+S
+
+#6143
+Farmlands~
+Under Construction.
+~
+~
+33030144 12 9 0
+D1
+~
+~
+0 -1 6144 10 10 5
+D3
+~
+~
+0 -1 6142 10 10 5
+-1
+S
+
+#6144
+Farmlands~
+Under Construction.
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 6145 10 10 5
+D3
+~
+~
+0 -1 6143 10 10 5
+-1
+S
+
+#6145
+Training House~
+Under Construction.
+~
+For the apprentice painter
+~
+33030144 12 9 0
+D2
+~
+~
+0 -1 6144 10 10 5
+-1
+S
+
+#6146
+Sslak Holy Ground~
+As requested, here you go, Nox.:)
+This holy place of worship, the most sacred spot in the city, is totally
+devoted to the High Priest of the old clan, Locnar.  Statues of this
+heroic red lizardman twenty feet tall ring the perimeter of the holy
+area, covered in beaten gold and decorated with fresh flowers newly
+picked each morning.  Wreaths of delicate vines have been draped around
+the necks of the statues, woven by multitudes of admirers who every day
+pray at the feet of the main statue in hopes of becoming like the Great
+One himself.
+Doesn't everyone want to be just like Locnar?
+Um..  only if you add a Silas temple too..;)
+~
+[Nox] I'll change this later.
+[Skurva] You silly lizzie!
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 6147 10 10 5
+D2
+~
+~
+0 -1 6134 10 10 5
+-1
+S
+
+#6147
+Sslak Guardbooth~
+The place where we check for bodypoaint before you can eneter the city. 
+You can go to the apprentice bodypainter in the farmlands to get it, but
+gotta have it!  It is a matter of knowing where you stabnd in the city
+before you can enter.  All must be shown to be a certain standing with
+the lizardpeople if they are in the holy city temple.
+~
+[Nox] Oh, thought of bodypaint colors/ideas. I've been reading Brave New World...
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 6148 10 10 5
+D2
+~
+~
+0 -1 6146 10 10 5
+-1
+S
+
+#6148
+Temple Road~
+City beginning.  temple entrnace and grandeous overview of life in here.
+Maybe some models o the city and some neat propaganda statues?
+~
+Fountain has been placed here...;)
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 6153 10 10 5
+D1
+~
+~
+0 -1 6149 10 10 5
+D2
+~
+~
+0 -1 6147 10 10 5
+D3
+~
+~
+0 -1 6150 10 10 5
+1 17 1509949540 -2 0
+-1
+S
+
+#6149
+Sslak Temple Perimeter~
+Under Construction.
+~
+~
+33030144 12 9 0
+D1
+~
+~
+0 -1 6212 10 10 5
+D3
+~
+~
+0 -1 6148 10 10 5
+-1
+S
+
+#6150
+Sslak Temple Perimeter~
+Under Construction.
+~
+[Nox] I swear, the next lizaman I make will be named Rstat
+[Skurva] I understand fully. rstat and his briother rbug and redit
+~
+33030144 12 9 0
+D1
+~
+~
+0 -1 6148 10 10 5
+D3
+~
+~
+0 -1 6151 10 10 5
+-1
+S
+
+#6151
+Sslak Temple Perimeter~
+Under Construction.
+~
+~
+33030144 12 9 0
+D1
+~
+~
+0 -1 6150 10 10 5
+D3
+~
+~
+0 -1 6152 10 10 5
+-1
+S
+
+#6152
+Sslak Temple Perimeter~
+Under Construction.
+~
+~
+33030144 12 9 0
+D1
+~
+~
+0 -1 6151 10 10 5
+D3
+~
+~
+0 -1 6184 10 10 5
+-1
+S
+
+#6153
+Fountain~
+Central city, this is the loop that gets to the stores, and leads to the
+undercaverns.
+~
+~
+33030144 12 9 0
+D1
+~
+~
+0 -1 6154 10 10 5
+D2
+~
+~
+0 -1 6148 10 10 5
+D3
+~
+~
+0 -1 6155 10 10 5
+-1
+S
+
+#6154
+Sslak Road~
+Under Construction.
+~
+~
+33030144 12 9 0
+D1
+~
+~
+0 -1 6156 10 10 5
+D3
+~
+~
+0 -1 6153 10 10 5
+-1
+S
+
+#6155
+Sslak Road~
+Under Construction.
+
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 6169 10 10 5
+D1
+~
+~
+0 -1 6153 10 10 5
+-1
+S
+
+#6156
+Sslak Road~
+Under Construction.
+~
+~
+33030144 12 9 0
+D1
+~
+~
+0 -1 6157 10 10 5
+D3
+~
+~
+0 -1 6154 10 10 5
+-1
+S
+
+#6157
+Sslak Road~
+Under Construction.
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 6159 10 10 5
+D1
+~
+~
+0 -1 6158 10 10 5
+D3
+~
+~
+0 -1 6156 10 10 5
+-1
+S
+
+#6158
+Sslak Armory~
+Armory here, forge is above in the trees though, melting only at the
+forge!
+No melting here, as the water going up and down stops that sort of thing.
+~
+~
+33030144 12 9 0
+D3
+~
+~
+0 -1 6157 10 10 5
+-1
+S
+
+#6159
+Sslak Road~
+Under Construction.
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 6160 10 10 5
+D2
+~
+~
+0 -1 6157 10 10 5
+-1
+S
+
+#6160
+Sslak Road~
+Under Construction.
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 6161 10 10 5
+D2
+~
+~
+0 -1 6159 10 10 5
+-1
+S
+
+#6161
+Sslak Road~
+Under Construction.
+
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 6162 10 10 5
+D2
+~
+~
+0 -1 6160 10 10 5
+D3
+~
+~
+0 -1 6163 10 10 5
+-1
+S
+
+#6162
+Sslak Weaponry~
+No melting here!  Stuff is made at the forge above, only sold here.
+~
+~
+33030144 12 9 0
+D2
+~
+~
+0 -1 6161 10 10 5
+-1
+S
+
+#6163
+Sslak Road~
+Under Construction.
+~
+~
+33030144 12 9 0
+D1
+~
+~
+0 -1 6161 10 10 5
+D3
+~
+~
+0 -1 6164 10 10 5
+-1
+S
+
+#6164
+Sslak Road~
+Under Construction.
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 6178 10 10 5
+D1
+~
+~
+0 -1 6163 10 10 5
+D3
+~
+~
+0 -1 6165 10 10 5
+-1
+S
+
+#6165
+Sslak Road~
+Under Construction.
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 6180 10 10 5
+D1
+~
+~
+0 -1 6164 10 10 5
+D3
+~
+~
+0 -1 6166 10 10 5
+-1
+S
+
+#6166
+Sslak Road~
+Under Construction.
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 6167 10 10 5
+D1
+~
+~
+0 -1 6165 10 10 5
+D2
+~
+~
+0 -1 6168 10 10 5
+-1
+S
+
+#6167
+Sslak Pets~
+Mmm... lizardman pets.
+~
+~
+33030144 12 9 0
+D2
+~
+~
+0 -1 6166 10 10 5
+-1
+S
+
+#6168
+Sslak Road~
+Under Construction.
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 6166 10 10 5
+D2
+~
+~
+0 -1 6169 10 10 5
+D3
+~
+~
+0 -1 6181 10 10 5
+-1
+S
+
+#6169
+Sslak Road~
+The entrance to the undercaverns is east...
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 6168 10 10 5
+D1
+~
+~
+0 -1 6170 10 10 5
+D2
+~
+~
+0 -1 6155 10 10 5
+-1
+S
+
+#6170
+Sslak Road~
+Under Construction.
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 6175 10 10 5
+D1
+~
+~
+0 -1 6171 10 10 5
+D3
+~
+~
+0 -1 6169 10 10 5
+-1
+S
+
+#6171
+Sslak Road~
+Under Construction.
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 6174 10 10 5
+D1
+~
+~
+0 -1 6172 10 10 5
+D3
+~
+~
+0 -1 6170 10 10 5
+-1
+S
+
+#6172
+Sslak Road~
+Under Construction.
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 6173 10 10 5
+D3
+~
+~
+0 -1 6171 10 10 5
+-1
+S
+
+#6173
+Downward Stairwell~
+Down to the Museum.Zoo. Historical preserve area.
+~
+~
+33030144 12 9 0
+D2
+~
+~
+0 -1 6172 10 10 5
+D5
+~
+~
+0 -1 6176 10 10 5
+-1
+S
+
+#6174
+Downward Stairwell~
+Down to the fungus farm and albino monestary.
+~
+~
+33030144 12 9 0
+D2
+~
+~
+0 -1 6171 10 10 5
+D5
+~
+~
+0 -1 6177 10 10 5
+-1
+S
+
+#6175
+Downward Stairwell~
+Down to the catacombs and graveyard.
+~
+~
+33030144 12 9 0
+D2
+~
+~
+0 -1 6170 10 10 5
+D5
+~
+~
+0 -1 6179 10 10 5
+-1
+S
+
+#6176
+Undercaverns~
+Under Construction.
+Underwater
+~
+~
+33030144 12 9 0
+D4
+~
+~
+0 -1 6173 10 10 5
+-1
+S
+
+#6177
+Undercaverns~
+Under Construction.
+underwater
+~
+~
+33030144 12 9 0
+D4
+~
+~
+0 -1 6174 10 10 5
+-1
+S
+
+#6178
+Sslak Forge~
+Stuff is actualy made here, not at the armor/weapon shops.  NOnly metling
+here.  Also, make darn sure that the rdesc has this on a slightly raised
+ground and also explude this room from the tide up and down timer.
+~
+[Nox] Darn sure...ok :)
+~
+33030144 12 9 0
+D2
+~
+~
+0 -1 6164 10 10 5
+-1
+S
+
+#6179
+Undercaverns~
+Under Construction.
+underwater
+~
+~
+33030144 12 9 0
+D4
+~
+~
+0 -1 6175 10 10 5
+-1
+S
+
+#6180
+Sslak Tannery~
+Leatherworks and such.  Good place for customs
+~
+~
+33030144 12 9 0
+D2
+~
+~
+0 -1 6165 10 10 5
+-1
+S
+
+#6181
+Sslak Road~
+Under Construction.
+~
+~
+33030144 12 9 0
+D1
+~
+~
+0 -1 6168 10 10 5
+D3
+~
+~
+0 -1 6182 10 10 5
+-1
+S
+
+#6182
+Sslak Road~
+Under Construction.
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 6183 10 10 5
+D1
+~
+~
+0 -1 6181 10 10 5
+-1
+S
+
+#6183
+Sslak Linguist~
+Under Construction.
+~
+~
+33030144 12 9 0
+D2
+~
+~
+0 -1 6182 10 10 5
+-1
+S
+
+#6184
+Sslak Temple Perimeter~
+Under Construction.
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 6185 10 10 5
+D1
+~
+~
+0 -1 6152 10 10 5
+-1
+S
+
+#6185
+Sslak Temple Perimeter~
+Under Construction.
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 6186 10 10 5
+D2
+~
+~
+0 -1 6184 10 10 5
+D3
+~
+~
+0 -1 6187 10 10 5
+-1
+S
+
+#6186
+Sslak Temple Perimeter~
+Under Construction.
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 6189 10 10 5
+D2
+~
+~
+0 -1 6185 10 10 5
+-1
+S
+
+#6187
+Upward Rope~
+Under Construction.
+~
+~
+33030144 12 9 0
+D1
+~
+~
+0 -1 6185 10 10 5
+D4
+~
+~
+0 -1 6188 10 10 5
+-1
+S
+
+#6188
+Arial Huts~
+Under Construction.
+~
+~
+33030144 12 9 0
+D1
+~
+~
+0 -1 6251 10 10 5
+D5
+~
+~
+0 -1 6187 10 10 5
+-1
+S
+
+#6189
+Sslak Temple Perimeter~
+Under Construction.
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 6190 10 10 5
+D2
+~
+~
+0 -1 6186 10 10 5
+-1
+S
+
+#6190
+Sslak Temple Perimeter~
+Under Construction.
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 6191 10 10 5
+D2
+~
+~
+0 -1 6189 10 10 5
+D3
+~
+~
+0 -1 6193 10 10 5
+-1
+S
+
+#6191
+Sslak Temple Perimeter~
+Under Construction.
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 6192 10 10 5
+D2
+~
+~
+0 -1 6190 10 10 5
+-1
+S
+
+#6192
+Sslak Temple Perimeter~
+Under Construction.
+~
+~
+33030144 12 9 0
+D1
+~
+~
+0 -1 6195 10 10 5
+D2
+~
+~
+0 -1 6191 10 10 5
+-1
+S
+
+#6193
+Upward Rope~
+Under Construction.
+~
+~
+33030144 12 9 0
+D1
+~
+~
+0 -1 6190 10 10 5
+D4
+~
+~
+0 -1 6194 10 10 5
+-1
+S
+
+#6194
+Arial Hut~
+Under Construction.
+~
+~
+33030144 12 9 0
+D1
+~
+~
+0 -1 6256 10 10 5
+D5
+~
+~
+0 -1 6193 10 10 5
+-1
+S
+
+#6195
+Sslak Temple Perimeter~
+Under Construction.
+~
+~
+33030144 12 9 0
+D1
+~
+~
+0 -1 6196 10 10 5
+D3
+~
+~
+0 -1 6192 10 10 5
+-1
+S
+
+#6196
+Sslak Temple Perimeter~
+Under Construction.
+~
+~
+33030144 12 9 0
+D1
+~
+~
+0 -1 6197 10 10 5
+D3
+~
+~
+0 -1 6195 10 10 5
+-1
+S
+
+#6197
+Sslak Temple Perimeter~
+Under Construction.
+~
+~
+33030144 12 9 0
+D1
+~
+~
+0 -1 6198 10 10 5
+D3
+~
+~
+0 -1 6196 10 10 5
+-1
+S
+
+#6198
+Sslak Temple Perimeter~
+Under Construction.
+~
+~
+33030144 12 9 0
+D1
+~
+~
+0 -1 6199 10 10 5
+D3
+~
+~
+0 -1 6197 10 10 5
+-1
+S
+
+#6199
+Sslak Temple Perimeter~
+Under Construction.
+~
+~
+33030144 12 9 0
+D1
+~
+~
+0 -1 6200 10 10 5
+D3
+~
+~
+0 -1 6198 10 10 5
+-1
+S
+
+#6200
+Sslak Temple Perimeter~
+No Description.
+~
+~
+33030144 0 9 0
+D1
+~
+~
+0 -1 6201 10 10 5
+D3
+~
+~
+0 -1 6199 10 10 5
+-1
+S
+
+#6201
+Sslak Temple Perimeter~
+Under Construction.
+~
+~
+33030144 0 9 0
+D1
+~
+~
+0 -1 6202 10 10 5
+D3
+~
+~
+0 -1 6200 10 10 5
+-1
+S
+
+#6202
+Sslak Temple Perimeter~
+Under Construction.
+~
+~
+33030144 0 9 0
+D1
+~
+~
+0 -1 6203 10 10 5
+D3
+~
+~
+0 -1 6201 10 10 5
+-1
+S
+
+#6203
+Sslak Temple Perimeter~
+Under Construction.
+~
+~
+33030144 0 9 0
+D2
+~
+~
+0 -1 6204 10 10 5
+D3
+~
+~
+0 -1 6202 10 10 5
+-1
+S
+
+#6204
+Sslak Temple Perimeter~
+Under Construction.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 6203 10 10 5
+D2
+~
+~
+0 -1 6205 10 10 5
+-1
+S
+
+#6205
+Sslak Temple Perimeter~
+Under Construction.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 6204 10 10 5
+D1
+~
+~
+0 -1 6215 10 10 5
+D2
+~
+~
+0 -1 6206 10 10 5
+-1
+S
+
+#6206
+Sslak Temple Perimeter~
+Under Construction.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 6205 10 10 5
+D2
+~
+~
+0 -1 6207 10 10 5
+-1
+S
+
+#6207
+Sslak Temple Perimeter~
+Under Construction.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 6206 10 10 5
+D2
+~
+~
+0 -1 6208 10 10 5
+-1
+S
+
+#6208
+Sslak Temple Perimeter~
+Under Construction.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 6207 10 10 5
+D1
+~
+~
+0 -1 6213 10 10 5
+D2
+~
+~
+0 -1 6209 10 10 5
+-1
+S
+
+#6209
+Sslak Temple Perimeter~
+Under Construction.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 6208 10 10 5
+D3
+~
+~
+0 -1 6210 10 10 5
+-1
+S
+
+#6210
+Sslak Temple Perimeter~
+Under Construction.
+~
+~
+33030144 0 9 0
+D1
+~
+~
+0 -1 6209 10 10 5
+D3
+~
+~
+0 -1 6211 10 10 5
+-1
+S
+
+#6211
+Sslak Temple Perimeter~
+Under Construction.
+~
+~
+33030144 0 9 0
+D1
+~
+~
+0 -1 6210 10 10 5
+D3
+~
+~
+0 -1 6212 10 10 5
+-1
+S
+
+#6212
+Sslak Temple Perimeter~
+Under Construction.
+~
+~
+33030144 0 9 0
+D1
+~
+~
+0 -1 6211 10 10 5
+D3
+~
+~
+0 -1 6149 10 10 5
+-1
+S
+
+#6213
+Upward Ropes~
+Under Construction.
+~
+~
+33030144 0 9 0
+D3
+~
+~
+0 -1 6208 10 10 5
+D4
+~
+~
+0 -1 6214 10 10 5
+-1
+S
+
+#6214
+Arial Hut~
+Under Construction.
+~
+~
+33030144 0 9 0
+D3
+~
+~
+0 -1 6220 10 10 5
+D5
+~
+~
+0 -1 6213 10 10 5
+-1
+S
+
+#6215
+Upward Rope~
+Under Construction.
+~
+~
+33030144 0 9 0
+D3
+~
+~
+0 -1 6205 10 10 5
+D4
+~
+~
+0 -1 6216 10 10 5
+-1
+S
+
+#6216
+Arial Hut~
+Under Construction.
+~
+~
+33030144 0 9 0
+D3
+~
+~
+0 -1 6217 10 10 5
+D5
+~
+~
+0 -1 6215 10 10 5
+-1
+S
+
+#6217
+Arial Hut~
+Under Construction.
+~
+~
+33030144 0 9 0
+D1
+~
+~
+0 -1 6216 10 10 5
+D3
+~
+~
+0 -1 6218 10 10 5
+-1
+S
+
+#6218
+Vine Pathways~
+Under Construction.
+~
+~
+33030144 0 9 0
+D1
+~
+~
+0 -1 6217 10 10 5
+D3
+~
+~
+0 -1 6219 10 10 5
+-1
+S
+
+#6219
+Vine Pathways~
+Under Construction.
+~
+~
+33030144 0 9 0
+D1
+~
+~
+0 -1 6218 10 10 5
+D2
+~
+~
+0 -1 6226 10 10 5
+-1
+S
+
+#6220
+Vine Pathways~
+Under Construction.
+~
+~
+33030144 0 9 0
+D1
+~
+~
+0 -1 6214 10 10 5
+D3
+~
+~
+0 -1 6221 10 10 5
+-1
+S
+
+#6221
+Vine Pathways~
+Under Construction.
+~
+~
+33030144 0 9 0
+D1
+~
+~
+0 -1 6220 10 10 5
+D2
+~
+~
+0 -1 6229 10 10 5
+D3
+~
+~
+0 -1 6222 10 10 5
+-1
+S
+
+#6222
+Vine Pathways~
+Under Construction.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 6223 10 10 5
+D1
+~
+~
+0 -1 6221 10 10 5
+-1
+S
+
+#6223
+Vine Pathways~
+Under Construction.
+~
+~
+33030144 0 9 0
+D1
+~
+~
+0 -1 6224 10 10 5
+D2
+~
+~
+0 -1 6222 10 10 5
+D3
+~
+~
+0 -1 6235 10 10 5
+-1
+S
+
+#6224
+Vine Pathways~
+Under Construction.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 6225 10 10 5
+D3
+~
+~
+0 -1 6223 10 10 5
+-1
+S
+
+#6225
+Sky Temple~
+Under Construction.
+~
+~
+33030144 0 9 0
+D1
+~
+~
+0 -1 6227 10 10 5
+D2
+~
+~
+0 -1 6224 10 10 5
+D3
+~
+~
+0 -1 6226 10 10 5
+-1
+S
+
+#6226
+Vine Pathways~
+Under Construction.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 6219 10 10 5
+D1
+~
+~
+0 -1 6225 10 10 5
+-1
+S
+
+#6227
+Sky Temple~
+Under Construction.
+~
+~
+33030144 0 9 0
+D2
+~
+~
+0 -1 6228 10 10 5
+D3
+~
+~
+0 -1 6225 10 10 5
+-1
+S
+
+#6228
+Sky Temple~
+Under Construction.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 6227 10 10 5
+-1
+S
+
+#6229
+Vine Pathways~
+Under Construction.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 6221 10 10 5
+D2
+~
+~
+0 -1 6230 10 10 5
+-1
+S
+
+#6230
+Vine Pathways~
+Under Construction.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 6229 10 10 5
+D1
+~
+~
+0 -1 6231 10 10 5
+-1
+S
+
+#6231
+Vine Pathways~
+Under Construction.
+~
+~
+33030144 0 9 0
+D2
+~
+~
+0 -1 6232 10 10 5
+D3
+~
+~
+0 -1 6230 10 10 5
+-1
+S
+
+#6232
+Vine Pathways~
+Under Construction.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 6231 10 10 5
+D2
+~
+~
+0 -1 6233 10 10 5
+-1
+S
+
+#6233
+Vine Pathways~
+Under Construction.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 6232 10 10 5
+D1
+~
+~
+0 -1 6234 10 10 5
+-1
+S
+
+#6234
+Master Painter Hut~
+Under Construction.
+~
+~
+33030144 0 9 0
+D3
+~
+~
+0 -1 6233 10 10 5
+-1
+S
+
+#6235
+Vine Pathways~
+Under Construction.
+~
+~
+33030144 0 9 0
+D1
+~
+~
+0 -1 6223 10 10 5
+D2
+~
+~
+0 -1 6236 10 10 5
+D4
+~
+~
+0 -1 6262 10 10 5
+-1
+S
+
+#6236
+Vine Pathways~
+Under Construction.
+
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 6235 10 10 5
+D3
+~
+~
+0 -1 6237 10 10 5
+D4
+~
+~
+0 -1 6260 10 10 5
+-1
+S
+
+#6237
+Vine Pathways~
+Under Construction.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 6238 10 10 5
+D1
+~
+~
+0 -1 6236 10 10 5
+D4
+~
+~
+0 -1 6259 10 10 5
+-1
+S
+
+#6238
+Vine Pathways~
+Under Construction.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 6239 10 10 5
+D2
+~
+~
+0 -1 6237 10 10 5
+D3
+~
+~
+0 -1 6244 10 10 5
+D4
+~
+~
+0 -1 6261 10 10 5
+-1
+S
+
+#6239
+Vine Pathways~
+Under Construction.
+~
+~
+33030144 0 9 0
+D1
+~
+~
+0 -1 6240 10 10 5
+D2
+~
+~
+0 -1 6238 10 10 5
+-1
+S
+
+#6240
+Vine Pathways~
+Under Construction.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 6241 10 10 5
+D3
+~
+~
+0 -1 6239 10 10 5
+-1
+S
+
+#6241
+Vine Pathways~
+Under Construction.
+~
+~
+33030144 0 9 0
+D2
+~
+~
+0 -1 6240 10 10 5
+D3
+~
+~
+0 -1 6242 10 10 5
+-1
+S
+
+#6242
+Vine Pathways~
+Under Construction.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 6243 10 10 5
+D1
+~
+~
+0 -1 6241 10 10 5
+-1
+S
+
+#6243
+Mage Shop~
+Under Construction.
+
+~
+~
+33030144 0 9 0
+D2
+~
+~
+0 -1 6242 10 10 5
+-1
+S
+
+#6244
+Vine Pathways~
+Under Construction.
+~
+~
+33030144 0 9 0
+D1
+~
+~
+0 -1 6238 10 10 5
+D2
+~
+~
+0 -1 6246 10 10 5
+D3
+~
+~
+0 -1 6245 10 10 5
+-1
+S
+
+#6245
+Vine Pathways~
+Under Construction.
+~
+~
+33030144 0 9 0
+D1
+~
+~
+0 -1 6244 10 10 5
+D3
+~
+~
+0 -1 6247 10 10 5
+-1
+S
+
+#6246
+Library~
+Under Construction.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 6244 10 10 5
+D3
+~
+~
+0 -1 6252 10 10 5
+-1
+S
+
+#6247
+Vine Pathways~
+Under Construction.
+~
+~
+33030144 0 9 0
+D1
+~
+~
+0 -1 6245 10 10 5
+D3
+~
+~
+0 -1 6248 10 10 5
+-1
+S
+
+#6248
+Vine Pathways~
+Under Construction.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 6253 10 10 5
+D1
+~
+~
+0 -1 6247 10 10 5
+D2
+~
+~
+0 -1 6249 10 10 5
+-1
+S
+
+#6249
+Vine Pathways~
+Under Construction.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 6248 10 10 5
+D1
+~
+~
+0 -1 6250 10 10 5
+D3
+~
+~
+0 -1 6251 10 10 5
+-1
+S
+
+#6250
+Library~
+Under Construction.
+~
+~
+33030144 0 9 0
+D1
+~
+~
+0 -1 6252 10 10 5
+D3
+~
+~
+0 -1 6249 10 10 5
+-1
+S
+
+#6251
+Vine Pathways~
+Under Construction.
+~
+~
+33030144 0 9 0
+D1
+~
+~
+0 -1 6249 10 10 5
+D3
+~
+~
+0 -1 6188 10 10 5
+-1
+S
+
+#6252
+Library~
+Under Construction.
+~
+~
+33030144 0 9 0
+D1
+~
+~
+0 -1 6246 10 10 5
+D3
+~
+~
+0 -1 6250 10 10 5
+-1
+S
+
+#6253
+Vine Pathways~
+Under Construction.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 6254 10 10 5
+D2
+~
+~
+0 -1 6248 10 10 5
+-1
+S
+
+#6254
+Vine Pathways~
+Under Construction.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 6255 10 10 5
+D2
+~
+~
+0 -1 6253 10 10 5
+D3
+~
+~
+0 -1 6256 10 10 5
+-1
+S
+
+#6255
+Vine Pathways~
+Under Construction.
+~
+~
+33030144 0 9 0
+D1
+~
+~
+0 -1 6257 10 10 5
+D2
+~
+~
+0 -1 6254 10 10 5
+-1
+S
+
+#6256
+Vine Pathways~
+Under Construction.
+~
+~
+33030144 0 9 0
+D1
+~
+~
+0 -1 6254 10 10 5
+D3
+~
+~
+0 -1 6194 10 10 5
+-1
+S
+
+#6257
+Vine Pathways~
+Under Construction.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 6258 10 10 5
+D3
+~
+~
+0 -1 6255 10 10 5
+-1
+S
+
+#6258
+Alchemist Hut~
+Under Construction.
+~
+~
+33030144 0 9 0
+D2
+~
+~
+0 -1 6257 10 10 5
+-1
+S
+
+#6259
+Dragon~
+Under Construction.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 6261 10 10 5
+D1
+~
+~
+0 -1 6260 10 10 5
+D5
+~
+~
+0 -1 6237 10 10 5
+-1
+S
+
+#6260
+Dragon~
+Under Construction.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 6262 10 10 5
+D3
+~
+~
+0 -1 6259 10 10 5
+D5
+~
+~
+0 -1 6236 10 10 5
+-1
+S
+
+#6261
+Dragon~
+Under Construction.
+~
+~
+33030144 0 9 0
+D1
+~
+~
+0 -1 6262 10 10 5
+D2
+~
+~
+0 -1 6259 10 10 5
+D5
+~
+~
+0 -1 6238 10 10 5
+-1
+S
+
+#6262
+Dragon~
+Under Construction.
+~
+~
+33030144 0 9 0
+D2
+~
+~
+0 -1 6260 10 10 5
+D3
+~
+~
+0 -1 6261 10 10 5
+D5
+~
+~
+0 -1 6235 10 10 5
+-1
+S
+
+#0
+

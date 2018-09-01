@@ -1,0 +1,594 @@
+#M2_AREA
+2
+
+Everwinter Hills~
+Azerin~
+~
+~
+~
+
+0 0
+0
+1
+#ROOMS
+
+#2300
+Road at the Forest's Edge~
+A narrow road winds its way through the shadows of the hills, its aged
+surface covered in scars and potholes.  Rising to the north, a viridian
+pine woodland stretches a reasonable way to the west until it reaches the
+valley's cliffside edge.  Beyond the forest, the snow covered flanks of a
+massive mountain range climbs thousands of feet into the air.  Southward,
+the roadway continues toward the hollow's end before beginning the
+descent toward the far distant sea.  There is a new-looking @Rsign@n
+planted beside the road.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 7999 10 10 5
+D1
+~
+~
+0 -1 4202 10 10 5
+D2
+~
+~
+0 -1 2301 10 10 5
+E
+1 west woodland pine~
+Spindly pine trees spread across the gentle below-alpine slopes that form
+the wide valley.  The slender tree trunks stand in a haphazard formation
+leaving plenty of space between each other.  Very few shrubs and bushes
+litter the ground amidst the sparsely growing pines.
+~
+E
+sign~
+The sign, newly-made from unseasoned wood, is covered with red writing. 
+It reads: 
+
+@RDare not to go eastward, young adventurer.  The beasties there are
+fearsome and deadly to those of you inexperienced in the ways of
+combat.@n 
+~
+-1
+S
+
+#2301
+Roadway Across the Valley~
+The road winds beside the crumbling edge of an old rock quarry leading
+both to the north and south.  Some fifty feet below the trailway, the
+dark sheen of water spreads across the quarry's bottom, its surface
+smooth as glass.  Bleached white bones, reminders of those unfortunate
+enough to have fallen to their deaths, rim the water's edge.  To the
+north, the expanse of an ancient forest rises at the feet of the
+mountains, the tall pines hazy blue in the distance.  There is a
+new-looking @Rsign@n planted beside the road.
+~
+[Azerin] quarry west - zone to be done
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 2300 10 10 5
+D1
+~
+~
+0 -1 4203 10 10 5
+D2
+~
+~
+0 -1 2794 10 10 5
+E
+forest feet mountains pines~
+Beginning at the feet of the Everwinters, a primeval forest covers the
+mountainsides, growing dense and dark up to the treeline.  Beyond the
+trees, pristine white snow blankets the slopes up to the peaks.  The old
+pines are hazy blue, faded by the distance.
+~
+E
+quarry water bones~
+Littered by mutilated and shattered bones, bleached a stark white from
+exposure to the sun, the dark glossy water ebbs gently in the deep pit of
+the rough-hewn quarry, not a ripple stirring its surface.  Great chunks
+of rock lie protruding through the smooth surface of the pool, looking
+like haphazard pebbles in a shallow puddle far, far below.
+~
+E
+sign~
+@RDare not to go eastward, young adventurer.  The beasties there are
+fearsome and deadly to those of you inexperienced in the ways of
+combat.@n 
+~
+-1
+S
+
+#2302
+At the Valley Edge~
+The crystal clear air from the cliff's edge offers a panoramic view of
+the rolling hills that run to the sandy shores of the Moonfall Sea.  The
+cobbled roadway descends sharply down the mountain side, heading in a
+southwesterly direction.  A low wall runs against the road's edge, the
+gray-white stones held in place by dried mud mortar.  The remains of a
+watchtower lie to the west of the road, little more than the circular
+foundation stones left.
+~
+was north to 2301
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 2799 10 10 5
+D3
+~
+~
+0 -1 2312 10 10 5
+D5
+~
+~
+0 -1 2303 10 10 5
+E
+wall road edge mortar~
+A knee-high wall abuts the road erected from the natural stones of the
+surrounding mountains.  The barrier, not of new construction, is held
+together with sun-dried mud used as mortar.  Some of the mud is still
+damp-looking, as if recently replaced and in other places, the mortar is
+completely missing.
+~
+E
+watchtower 1 west foundation stones~
+Lying just off the road to the west, the crumbled remnants of an ancient
+watchtower still guards the road.  Little more than the foundation is
+left of the old tower, the fallen stones littering the surrounding ground
+both inside and outside the circle of its walls.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yDespite the steepness of the descent, you make your way down the path
+with little difficulty@n.
+~
+E
+to_room~
+@yDespite the steepness of the descent, $n make $s way down the path with
+little difficulty@n.
+~
+!
+3 0 32
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yStepping over and around the fallen stones, you head west into the
+tower ruins.@n 
+~
+E
+to_room~
+@yStepping over and around the fallen stones, $n heads west into the
+tower ruins.@n 
+~
+!
+3 0 8
+2505 9 1509949540 3 0
+-1
+S
+
+#2303
+Cliffside Road~
+Carved into the gray stone cliffs the roadway allows access to the high
+mountains to the north and the lowlands to the south.  An overhang of
+rock shelters the path from some of the weather, allowing for a more
+comforatable journey.  Far to the south the white-capped waves break on a
+sandy shore, and a rolling cloud of fog hides what lies on the distant
+horizon.  A circle of standing stones lies to the east, a path winding
+between the boulders leading into its center.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 2305 10 10 5
+D3
+~
+~
+0 -1 2304 10 10 5
+D4
+~
+~
+0 -1 2302 10 10 5
+E
+overhang~
+A wide overhang spans the path, a loosely joined slab of stone that give
+shelter to the ancient road.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yDespite the steepness of the ascent, you make your way up the path with
+little difficulty@n.
+~
+E
+to_room~
+@yDespite the steepness of the ascent, $n makes $s way up the path with
+little difficulty@n.
+~
+!
+3 0 16
+366 9 1509949540 3 0
+-1
+S
+
+#2304
+Roadway Along the Cliffside~
+The ruins of an ancient road cut across the cliff face, snaking between
+colossal boulders cast down by an avalanche long ago.  Eastward, the road
+undulates up and over the mountains, the view blocked by hard gray stone. 
+To the south, the path winds down an incline toward a sheltered hamlet,
+nestled among the great dunes that border the Moon Fall Sea.  Beyond the
+shoreline, a rolling cloud of fog veils the blue green water and whatever
+might be seen there.
+~
+[Guin] Done.
+[Tarion] Fourth line in rdesc toward a shelterd hamlet,, - one comma.
+[Snarp] double commas on line 4.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 2303 10 10 5
+D5
+~
+~
+0 -1 78764 10 10 5
+205 9 1509949540 3 0
+204 9 1509949540 3 0
+-1
+S
+
+#2305
+Stone Circle~
+Poised majestically upon a green-swept plateau, jutting out from the
+uneven rocky rise, a circle of standing stones watches the cold southern
+coast in all the glory with which it was intended.  Curved, wide seams of
+gleaming black are tightly held in stark contrast to the bright grey
+stones, perfectly aligned about a central slab and with no apparent ruin. 
+Grass grows abundantly...  life harmoniously surrounding, rather than
+conquering, the stoic remnants of past knowledge.
+~
+[Mad Murdo] Need acodes to simulate look portal, only when portal open. If the F***ING THING EVER WORKS!!!
+~
+167247880 12 9 0
+D3
+~
+~
+0 -1 2303 10 10 5
+E
+circle stones seams black~
+Though worn by years of mountain breezes and coastal storms, the
+finely-etched runes upon these standing stones are predominantly intact,
+snaking their way down, around and across in masterful patterns.  Seams
+of hard black rock curve down around the center of each upright stone and
+across each lintel, as though carved and sealed into perfectly fitted
+gaps in the structures themselves.
+~
+E
+central slab~
+Buried into the sparse soil and nearly overrun with vibrant mountainside
+grass, this circular slab is riddled with etched runes emanating outward
+with perfect symmetry from the center.  Therein rests a circle of pure,
+smooth black stone...  almost metallic in feel...  fitted perfectly
+inside the slab's inner mold.
+~
+A
+~
+~
+if( random( 1, 2 ) == 1 )
+  send_to_room( #breeze1, room );
+else
+  send_to_room( #breeze2, room );
+~
+E
+breeze1~
+@BA cool wind cascades down the side of the mountain, briefly shrouding
+the cliffs in a light mist.@n 
+~
+E
+breeze2~
+@BThe wind shifts, and a breeze blows in from the southern coast... 
+chill, but bearing the salty smell of the sea.@n 
+~
+!
+2 50 0
+A
+trace draw touch~
+runes etched rock black~
+if( get_integer( find_room( 52671 ), "/Murdo/portal/open" ) == 1 ) {
+  act_tochar( #already, ch );
+  end;
+}
+act_tochar( #trace, ch );
+act_notchar( #otrace, ch, obj, mob, sight );
+wait( 2 );
+if( get_integer( find_room( 52671 ), "/Murdo/portal/open" ) == 1 )
+  end;
+set_integer( find_room( 52671 ), "/Murdo/portal/open", 1 );
+act_room( #open, ch, obj, mob, sight );
+wait( 2 );
+act_room( #open2, ch, obj, mob, sight );
+acode( find_room( 52671 ), 6 );
+act_area( #equalize, ch, obj, mob, sight );
+wait( 10 );
+set_integer( find_room( 52671 ), "/Murdo/portal/open", 0 );
+acode( find_room( 2305 ), 7 );
+acode( find_room( 52671 ), 5 );
+~
+E
+already~
+@WYou extend your hand and trace the winding runes upon the stone, but
+with no result...the portal is quite obviously already open.@n 
+~
+E
+trace~
+@WYou trace your fingers along the etched runes, winding about the
+black-seamed stones.@n 
+~
+E
+otrace~
+$n brushes $s fingers along the runes of the stone.
+~
+E
+open~
+@WThe sygils glow, softly at first...and like fire the light spreads from
+rune to rune, following incomphrehensible paths as it snakes about the
+stone onto the slab at the center of the monument.  Light glints off the
+surface of the large metallic rock that anchors the stone circle, and the
+glow spreads outward to all the other stone structures like tendrils,
+hopping from one rune to another.@n 
+~
+E
+equalize~
+@cLike a breath from the gods, the winds gust suddenly...  as though
+rushing to fill a void.@n 
+~
+E
+close~
+@WIt begins with a ripple, like a pebble thrown into a pond...and the
+world beyond the portal is suddenly lost in a glare of light, replaced by
+the cliff's edge watching over the misty coast.@n
+~
+E
+open2~
+@WA blinding flash of light shoots out from the southernmost triad,
+accompanied almost instantly by a thundering BANG like the rending of the
+air itself.  Between the two stones, from ground to lintel, the foggy
+southern coast below has been replaced by a rocky, mist-shrouded island. 
+@n 
+~
+!
+0 0 0
+A
+enter go~
+portal triad gate gateway stones south s~
+if( get_integer( find_room( 52671 ), "/Murdo/portal/open" ) == 0 ) {
+  act_tochar( #nogo, ch );
+  act_notchar( #onogo, ch, obj, mob, sight );
+  end;
+}
+act_tochar( #enter, ch );
+act_notchar( #oenter, ch, obj, mob, sight );
+wait( 1 );
+loop( followers ) {
+  i = 0;
+  if( is_mob( rch ) )
+    i = 1;
+  transfer( rch, find_room( 52671 ) );
+  if( i == 1 )
+    act_notchar( #arrive, rch, obj, mob, sight );
+}
+transfer( ch, find_room( 52671 ) );
+act_notchar( #arrive, ch, obj, mob, sight );
+~
+E
+nogo~
+@MYou step adventurously through the southern arch, and right to the edge
+of the cliff.  At such a dangerous altitude, these are perhaps not the
+best stones to be frolicking about.@n 
+~
+E
+onogo~
+@M$n tramps about beneath one grouping of stones and teeters dangerously
+at the edge of the cliff.@n 
+~
+E
+enter~
+@MYou hesitantly step through the stone portal, still glowing with
+dazzling patterns of runes, squinting from the sudden gusts of wind.@n
+
+~
+E
+oenter~
+@M$n steps through the portal and emerges into the world beyond.@n
+~
+E
+arrive~
+@M$n emerges from the portal...looking somewhat startled by $s recent
+experience.@n 
+~
+!
+0 0 0
+A
+~
+~
+if( get_integer( room, "/Murdo/portal/open" ) == 1 )
+  send_to_room( #flicker, room );
+~
+E
+flicker~
+@BThe glowing runes upon the stone circle rise and dim like embers to a
+breath, and an occasional blue flicker dances around the inside of the
+portal..  whether the product of magic or the frictional clash of coastal
+air between two normally distant places.@n 
+~
+!
+2 350 0
+A
+~
+~
+act_area( "Blah blah blah", ch );
+~
+!
+0 0 0
+A
+~
+~
+ch = rand_player( find_room( 2305 ) );
+if( ch ) {
+  act_room( #open, ch, obj, mob, sight );
+  act_area( #equalize, ch, obj, mob, sight );
+}
+~
+E
+open~
+@WA blinding flash of light shoots out from the southernmost triad,
+accompanied almost instantly by a thundering BANG like the rending of the
+air itself.  Between the two stones, from ground to lintel, the foggy
+southern coast below has been replaced by a rocky, mist-shrouded
+island.@n 
+~
+E
+equalize~
+@cLike a breath from the gods, the winds gust suddenly...  as though
+rushing to fill a void.@n 
+~
+!
+0 0 0
+A
+~
+~
+ch = rand_player( find_room( 2305 ) );
+if( ch )
+  act_room( #close, ch, obj, mob, sight );
+~
+E
+close~
+@WIt begins with a ripple, like a pebble thrown into a pond...  and the
+world beyond the portal is suddenly lost in a glare of light, replaced by
+the cliff's edge watching over the misty coast.@n 
+~
+!
+0 0 0
+A
+1 look~
+3 portal~
+if( get_integer( find_room( 52671 ), "/Murdo/portal/open" ) == 1 )
+  act_tochar( #portal, ch );
+if( get_integer( find_room( 52671 ), "/Murdo/portal/open" ) == 0 )
+  act_tochar( "Portal? You mean the stones?", ch );
+~
+E
+portal~
+@BThe glowing runes upon the stone circle rise and dim like embers to a
+breath, and an occasional blue flicker dances around the inside of the
+portal..  whether the product of magic or the frictional clash of coastal
+air between two normally distant places.  Beneath this stone archway, the
+portal is most definitely open.@n 
+~
+!
+0 0 0
+-1
+S
+
+#2312
+Ruins of an Ancient Tower~
+A tumbledown pile of rocks, blackened by a raging fire from years gone
+by, is all that remains of what was once a prominent watchtower.  The
+crumbling foundations give only a meagre indication of the tower's
+original size; the weatherbeaten stone slabs lie no more than four high,
+and then it is a rarity to see them in even a shadow of their former
+glory.  The charred end of a torch lies splintered amidst the tower's
+rubble, its braced length snapped like an inconsequential twig.  Standing
+in the centre of the windswept debris, a solitary pine grows with
+desperate hope for a time when the scars of this land will be healed by
+nature.
+~
+[Guin] Possibly addition of a zone here later.
+[Guin] This mob pops the key to Ebon Citadel
+[Guin] Done.
+[Tarion] ... lie no more than four <something?> high, <fourth line in rdesc.>
+~
+167247880 12 9 0
+D1
+~
+~
+0 -1 2302 10 10 5
+E
+rubble debris~
+A thick covering of fine rock fragments lie scattered about the
+foundations of the decrepit tower.  Hidden in amongst the chipped rock,
+rusted arms and armour lie exposed to the bitter winds, their once shiny
+surfaces now the colour of deep ochre.
+~
+E
+foundations crumbling stone slab rocks~
+Blistering scorch marks cover the surfaces of the pale grey stones from
+which the tower was constructed.  Now an angry black, the sterile
+remains of the watchtower gradually ebb into the ever-increasing growth
+of the resilient lichen, their mournful days slowly coming to an end as
+the wild begins to crawl back into this place.
+~
+A
+~
+~
+send_to_room( #shadow, room );
+~
+E
+shadow~
+@cA small dark shadow skitters across the ground and disappears among the
+fallen stones@.
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yStepping over and around the fallen stones, you leave the ruins for the
+path beyond.@n 
+~
+E
+to_room~
+@yStepping over and around the fallen stones, $n leaves the ruins for the
+path beyond.@n 
+~
+!
+3 0 2
+69 137 1509949540 3 0
+-1
+S
+
+#0
+

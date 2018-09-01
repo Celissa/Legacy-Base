@@ -1,0 +1,242 @@
+#M2_AREA
+2
+
+Cliff Side~
+~
+~
+~
+~
+
+70 0
+0
+1
+#ROOMS
+
+#38750
+Cliffside Trail~
+The wind picks up as you cross a narrow cliffside trail.  The harbour is
+much closer now, so close, in fact, that you can make out the names of
+the boats that are moored there.  The smell of the ocean is strong now,
+heavily laden with the scent of salt and brine.  The trail narrows to the
+east, where it reaches the base of a towering cliff.
+~
+~
+167247875 12 5 0
+D1
+~
+~
+32 -1 9462 10 10 5
+D3
+~
+~
+0 -1 38751 10 10 5
+-1
+S
+
+#38751
+Cliffside Trail~
+There is a large comfortable-looking boulder off to one side of the trail
+here. The sea is so close now that the cry of the sea-gulls is almost
+deafening, and you can see the beach right below you, the waves lapping
+at the sandy shore.  The smell of the ocean is strong now, heavily laden
+with the scent of salt and brine.
+~
+~
+167247875 12 9 0
+D1
+~
+~
+0 -1 38750 10 10 5
+D3
+~
+~
+0 -1 38752 10 10 5
+-1
+S
+
+#38752
+Cliffside Trail~
+The trail is slightly wider here, and there are less rocks scattered
+about. The salty air fills your nostrils, indicating the ocean is
+quickly drawing closer. The cry of gulls is never far away with several of
+the large white birds circling around and looking for food.  To the east
+the trail winds on, continuing down the rocky cliff.
+~
+~
+167247875 12 9 0
+D1
+~
+~
+0 -1 38751 10 10 5
+D3
+~
+~
+0 -1 38753 10 10 5
+-1
+S
+
+#38753
+Cliffside Trail~
+Scattered rocks cover the narrow trail in an irregular pattern, To the
+south you can just make out a large harbour with several large sea-going
+boats tied up to a long wooden pier.  The wind whistles in your ears as
+it races by you.  The cry of gulls is never far away with several of the
+large white birds circling around and looking for food.  To the east the
+trail winds on, continuing down the rocky cliff.
+~
+~
+167247875 12 9 0
+D0
+~
+~
+0 -1 38754 10 10 5
+D1
+~
+~
+0 -1 38752 10 10 5
+-1
+S
+
+#38754
+Cliffside Trail~
+Off to the north of the trail, you see water bubbling up out of the
+ground and wonder if it is a mirage.  But as you approach it, you realise
+it is not.  All manner of plant life appears to thrive here, cactuses and
+shrubs of all types are growing with flowers blooming yellow, red and
+white.
+~
+~
+167247875 12 9 0
+D0
+~
+~
+0 -1 38759 10 10 5
+D2
+~
+~
+0 -1 38753 10 10 5
+D3
+~
+~
+0 -1 38755 10 10 5
+-1
+S
+
+#38755
+Cliffside Trail~
+Several shrubs and cactuses of varying shades of brownish-green line the
+sides of the trail here, looking greener and more alive the farther east
+you go.  Small insects, and some not so small scurry around on the ground
+at your feet.  The harsh desert sun beats down on you as you walk along
+the trail and the sea is so far away now that it is merely a speck in the
+distance.
+~
+~
+167247875 12 9 0
+D1
+~
+~
+0 -1 38754 10 10 5
+D3
+~
+~
+0 -1 38756 10 10 5
+-1
+S
+
+#38756
+Cliffside Trail~
+A large sandy colored boulder juts out of the ground here, looking like a
+semi-comfortable place to rest.  Several dead-looking shrubs grow beside
+the path here, barely clinging to life.  Large clouds of dust are
+churned up at your passing.
+~
+[Agnukshmi] please make the boulder an object
+[Ariellen] Added, as I always like to give treats to good little boys and girls.
+~
+167247875 12 9 0
+D1
+~
+~
+0 -1 38755 10 10 5
+D2
+~
+~
+0 -1 38757 10 10 5
+4294 17 1509949540 -2 0
+-1
+S
+
+#38757
+Cliffside Trail~
+The trail leads onward, curving to the north, and is only faintly
+discernable from the rest of the ground.  There is less sand covering the
+ground here, and the rocks are slightly larger and more jagged.  Dying
+vegetation grows here and there, looking quite pathetic.  The massive
+hulk of something that may have been a cactus at one time juts from the
+ground, and several small birds land on it every once and a while.  The
+sea draws farther and farther away into the distance, the sounds from it
+slowly fading.
+~
+~
+167247875 12 9 0
+D0
+~
+~
+0 -1 38756 10 10 5
+D3
+~
+~
+0 -1 38758 10 10 5
+-1
+S
+
+#38758
+Cliffside Trail~
+The trail winds sharply down the jagged rocks of the cliff here, twisting
+and turning, until finally it leads back down to the ground.  Sand and
+rock cover the trail here, the same brownish-white color as the ground. 
+If you listen closely you can hear little things scurrying around in dark
+holes.  In the distance, the sea can be seen, and you can hear the
+faintest whisper of the tide going out and rolling back in.  To the west
+the crumbling remains of once elegant pillars and graceful arches can
+barely be seen due to the winding nature of the trail.
+~
+[Jydan] could use some description of what hte ruins to the west look like - all of a sudden I'm inside when I go west
+[Ariellen] Done.
+~
+167247875 12 9 0
+D1
+~
+~
+0 -1 38757 10 10 5
+D3
+~
+~
+0 -1 38000 10 10 5
+-1
+S
+
+#38759
+Strange Oasis~
+Water bubbles out of the ground here, a deep bluish color.  Surrounding
+the oasis is all manner of lush plant life.  Cactuses and shrubs of all
+sort are here, colors ranging from lush green to a dark, almost sandy
+colored brown.  Many of these plants are in full bloom, with flowers that
+are green, red and white.  There are also many types of palm trees that
+grow here, some bearing fruit, other not.
+~
+[Azerin] maybe have a sand effreet here taht has caused hte strange desert to appear
+[Agnukshmi] make oasis fillable/drinkable?
+~
+167247875 10 9 0
+D2
+~
+~
+0 -1 38754 10 10 5
+2525 17 1509949540 -2 0
+-1
+S
+
+#0
+

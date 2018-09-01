@@ -1,0 +1,56 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+color                 : display settings and options<br>
+color [term_type]     : sets terminal type<br>
+color [item] [format] : sets color of different items<br>
+color lines [# lines] : sets size of window<br>
+<br>
+<h1> Description </h1>
+<br>
+So to set your terminal to ansi type 'color ansi' then to make room names<br>
+appear in bold type 'color room_name bold'.  To have a status bar type<br>
+'option status'.  Note though for any of the colors to work you need to<br>
+have your term_type set to something other than dumb.  The possible<br>
+formats for the various groups are listed by typing just 'color'.<br>
+The colors such as red/green/yellow only work in ansi mode as vt100 does<br>
+not support these colors.  <br>
+   <br>
+    <br>
+Color Options:<br>
+       <br>
+default : the color of your default text.<br>
+room.name : the color the room name is displayed in.<br>
+tell : the color you will receive tells in.<br>
+say : the color you will see what people say in.<br>
+gossip : the color you will receive gossips in.<br>
+players : <br>
+mobs :<br>
+objects : <br>
+unused : (think about it)<br>
+titles : are titles... on score, who, etc.<br>
+ctell : clan tell color.<br>
+chat : color you will see chat in.<br>
+gtell : color you will see group tells in.<br>
+auction : color you will see auction information in.<br>
+info : color info (logins/deaths/etc, see help info) is in.<br>
+to.self : color you see when mob does damage to you.<br>
+to.group : color you see when group member takes dmg.<br>
+by.self : color you see when doing dmg to a mob.<br>
+by.group : color you see dmg done to mob by group members.<br>
+mild.emphasis : for the @e setting in help color_codes<br>
+strong.emphasis : for the @E setting in color_codes<br>
+black : what color you will view black text as.<br>
+red : what color you will view red text as.<br>
+green : what color you will view green text as.<br>
+yellow : what color you will view yellow text as.<br>
+blue : what color you will view blue text as.<br>
+magenta : what color you will see magenta text as.<br>
+cyan : what color you will see cyan text as.<br>
+white : what color you will view white text as.<br>
+  <br>
+Several of the more common settings can be reviewed by viewing help<br>
+color_codes.<br>
+</html>
+</body>

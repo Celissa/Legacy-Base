@@ -1,0 +1,16 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+homepage [url]<br>
+<br>
+<h1> Description </h1>
+<br>
+The homepage command is used to change the URL of your homepage as<br>
+displayed using the WHOIS command.<br>
+<br>
+Example:   homepage http://www.whatever.com/mypage/<br>
+<br>
+To clear the homepage field from whois, you can type "homepage none."<br>
+</html>
+</body>

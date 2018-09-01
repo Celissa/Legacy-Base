@@ -1,0 +1,1549 @@
+#M2_AREA
+2
+
+Portal Island~
+Void Skurva Eliza Tyrone Rikahn Loiosh Nox~
+Portal Island~
+~
+~
+
+1 0
+0
+0
+#ROOMS
+
+#52500
+Misty Path Along the Shore~
+Tendrils of misty fog reclaim the hint of a path that skirts the
+close-lying shoreline.  Seaward, the fog thickens, veiling the grey cold
+waters from sight.  Underfoot, the ground is coarse and pebbly, the small
+stones and broken chips deposited by rock fall from the lower reaches of
+the Cairns.  Larger remnants of those same landslides remain, undisturbed
+by nothing more than the affects of time and weather and the battering of
+stormy seas.  The almost invisible path takes a turn to the north,
+disappearing behind a giant grey-stone boulder.
+~
+[Eliza] done
+~
+167247873 3 9 0
+D0
+~
+~
+0 -1 52501 10 10 5
+D3
+~
+~
+0 -1 33073 10 10 5
+E
+shoreline waters~
+Not too far away, beyond a slender stretch of rough, gravelly beach, lies
+the the rock-strewn coast of the northern sea.  Cold and grey the salty
+waters lap against the shore, sending a light spray of near-freezing mist
+into the fog.
+~
+E
+ground stones chips~
+Underfoot the ribbon-thin path winds along the beach, its surface made of
+a dense layer of rubble and stone chips worn smooth by the passing years
+and storm blown tides.
+~
+E
+boulder~
+A giant gray stone boulder stands blocking the path, forcing movement
+around it.  Covered in grey-green lichen and a velvety carpet of moss,
+the massive rock is the one constant in the shifting, ever-changing
+fog-mantled world.
+~
+A
+~
+~
+send_to_room( #fog, room );
+~
+E
+fog~
+@cA dense fog bank rolls across the water, shrouding the land in a cold,
+grey mist.@n 
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou follow the narrow path, taking the turn northward around a massive
+boulder.@n 
+~
+E
+to_room~
+@c$n follows the path, taking the turn northward around a massive
+boulder.@n 
+~
+!
+3 0 1
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou make your way along the path toward the west.@n
+~
+E
+to_room~
+@c$n makes $s way along the path toward the west.@n
+~
+!
+3 0 8
+-1
+S
+
+#52501
+Shore - Near an Old Pier~
+Ever-shifting clouds of grey-white fog envelop this flat stretch of land,
+obscuring vision more than a hand's span away.  Familiar sounds - waves
+lapping gently against a shoreline, the raucous cry of gull and osprey,
+the faint scurryings of small creatures across wet sand - underscore the
+presence of a large body of water.  Peeking through the thick haze, the
+beginnings of a wide pier lie nearby, its weathered, nearly rotten,
+boards creaking in protest of the water's weight against ancient pilings.
+~
+[Guin] Boat Ride starts in 52501 and goes to 52502, 52503, 52593, 52504,
+52511 and 52505 
+[Guin] Done.
+~
+167247883 16 9 0
+D0
+~
+~
+64 -1 52506 10 10 5
+D2
+~
+~
+0 -1 52500 10 10 5
+E
+clouds fog~
+The fog lays heavy on the land, drifting inward from the chill waters of
+the northern sea.  Like a death shroud, the grey mist muffles sound and
+sight, shifting and moving to offer the briefest glimpses of mysterious
+shapes.
+~
+E
+pier board pilings~
+What little can be seen of the pier's construction shows long oaken
+planks, badly warped and weathered with age.  Its width suggests it could
+easily be large enough to dock a fair-sized craft.
+~
+A
+enter climb~
+skiff boat~
+mob = mob_in_room( 1324, find_room( 52502 ) );
+if( mob ) {
+  if( players_room( find_room( 52502 ) ) == 3 ) {
+    act_tochar( #full, ch );
+    end;
+  }
+  if( find_stat( ch, level ) < 10 )
+    act_tochar( #warning, ch, obj, mob )
+  act_tochar( #climb, ch );
+  act_notchar( #climb1, ch );
+  transfer( ch, find_room( 52502 ) );
+  act_notchar( #arrive, ch );
+  acode( find_room( 52502 ), 1 );
+  end;
+}
+else
+  act_tochar( #noship, ch );
+~
+E
+noboat~
+There is no boat here. Try the horn.
+~
+E
+climb~
+You clamber into the skiff.
+~
+E
+climb1~
+$n clambers into the skiff.@n
+~
+E
+noship~
+There is no skiff here. Try blowing the horn!
+~
+E
+arrive~
+$n climbs aboard the skiff.
+~
+E
+full~
+The skiff has as many people as can be fitted into it comfortably.
+~
+E
+warning~
+$N looks at you then says, @R"I be warnin' ye $n, if ye coome across, ye
+be askin' fer a one way trip.  There not be many with yer lack of
+experience who coome back from that place."@n 
+~
+!
+0 0 0
+A
+~
+~
+if( random( 1, 10 ) == 4 ) {
+  act_tochar( #creak, ch );
+  act_notchar( #rcreak, ch );
+  }
+continue;
+~
+E
+creak~
+@cThe old boards creak in protest as you step onto the pier.@n
+~
+E
+rcreak~
+@cThe old boards creak in protest as $n steps onto the pier.@n
+~
+!
+1 0 4
+A
+blow~
+horn~
+mob = mob_in_room( 1324, find_room( 52593 ) );
+if( mob ) {
+  if( players_room( find_room( 52505 ) ) == 0 ) {
+    if( get_integer( room, "/Cayln/HornHasBeenBlown" ) == 0 ) {
+      set_integer( room, "/Cayln/HornHasBeenBlown", 1 );
+      act_tochar( #blow, ch );
+      act_notchar(#pblow,ch );
+      act_area( #toot, ch );
+      wait( 1 );
+      act_room(#noise,ch );
+      wait( 1 );
+      act_tochar(#spine,ch );
+      wait( 1 );
+      act_room(#arrive, ch );
+      wait( 1 );
+      act_room(#arrive1, ch );
+      wait( 1 );
+      act_room(#arrive3,ch );
+      transfer( mob, find_room( 52502 ) );
+      set_integer( room, "/Cayln/HornHasBeenBlown", 0 );
+      end;
+    }
+  }
+}
+else if( mob_in_room( 1324, find_room( 52502 ) ) ) {
+  act_area( #toot, ch );
+  act_tochar( #already_summoned, ch );
+  end;
+}
+act_tochar( #nope, ch );
+act_area( #toot, ch );
+~
+E
+blow~
+@cLifting the curved horn, you place it against your lips and blow
+gustily into the mouthpiece.@n 
+
+~
+E
+pblow~
+@cLifting the curved horn, $n places it against $s lips and blows gustily
+into the mouthpiece.@n 
+~
+E
+noise~
+@cThe sounds from the horn, deep and full in tone, resonate out across
+the water.@n 
+~
+E
+spine~
+@cEchoing eerily, the sound fades away into the fog.@n
+~
+E
+arrive~
+@cA stiff breeze blows inland, parting the fog.@n
+~
+E
+arrive1~
+@cA skiff emerges from out of the fog, white sail billowing.@n
+~
+E
+arrive3~
+@cThe skiff, steered by an impossibly old boatman, glides to a stop next
+to the sea-battered dock.@n 
+~
+E
+already_summoned~
+The boat has already been summoned.
+~
+E
+nope~
+You blow the horn with all your might, but it only echoes hollowly out
+over the water.
+~
+E
+rnope~
+$n blows the horn with all $s might, but it only echoes hollowly out over
+the water.
+~
+E
+toot~
+@cThe low tones of a blowing horn echo hollowly in the distance.@n
+~
+!
+0 0 0
+A
+~
+~
+mob = mob_in_room( 1324, find_room( 52502 ) );
+if( players_room( find_room( 52501 ) ) == 0 )
+  if( players_room( find_room( 52502 ) ) == 0 )
+  if( mob )
+  transfer( mob, find_room( 52593 ) );
+~
+!
+2 500 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou head back to the south toward the path.@n
+~
+E
+to_room~
+@c$n heads back to the south toward the path.@n
+~
+!
+3 0 4
+A
+~
+~
+if( rflag( reset0, room ) ) {
+  act_tochar( #netting, ch, obj, mob );
+  end;
+}
+continue;
+~
+E
+netting~
+There is some netting blocking the way to the boat to Calidar.
+~
+!
+3 0 1
+A
+move cut push chop~
+3 netting wire~
+if( !rflag( reset0, room ) ) {
+  act_tochar( #already, ch, obj, mob );
+  end;
+}
+remove_rflag( reset0, room );
+act_tochar( #cut_netting, ch, obj, mob );
+act_notchar( #rcut_netting, ch, obj, mob, sight );
+~
+E
+already~
+The netting has already been disposed of.
+~
+E
+cut_netting~
+You begin moving the netting out of the way, after a bit of effort you
+clear the way to the boat to Calidar.
+~
+E
+rcut_netting~
+$n moves the netting away for the boat to Calidar.
+~
+!
+0 0 0
+2753 17 1509949540 -2 0
+2658 9 1509949540 3 0
+-1
+S
+
+#52502
+Next to a Battered Dock~
+The old battered boat bobs up and down as the water laps against the
+decrepit dock.  A dingy sail rises toward the center of the skiff, wispy
+remnants of the surrounding fog curled around the mast.  The sea-going
+craft is long and narrow, with room for only a limited few passengers.  A
+pair of weary oars lean drunkenly in opposing oarlocks, dry blades a foot
+or more above the briny sea.
+~
+[Guin] Done.
+~
+167247904 0 5 0
+A
+~
+~
+act_tochar( #enter, ch );
+wait( 1 );
+act_tochar( #oklevel, ch );
+~
+E
+enter~
+The boatman looks in your direction and bows his head.
+~
+E
+oklevel~
+The boatman stretches out one of his claw-like hands and whispers
+hoarsely, "Fer the price o' one o' them gilded coins I will take ye to
+an island far across the sea." 
+~
+E
+notlevel~
+The boatman peers at you with his one good eye and says, "Ye donna look
+like ye belong here.  The journey is filled with danger.  Be gone wit'
+ye!" 
+~
+!
+0 0 0
+A
+climb~
+jetty pier dock out 1 up~
+act_tochar( #clamber, ch );
+act_notchar( #clamber2, ch );
+wait( 1 );
+transfer( ch, find_room( 52501 ) );
+act_notchar( #welcome, ch );
+loop( followers ) {
+  ch = rch;
+}
+~
+E
+clamber~
+You clamber up onto the pier.
+~
+E
+clamber2~
+You see $n clamber up onto the pier.
+~
+E
+welcome~
+$n climbs onto the pier.
+~
+!
+0 0 0
+-1
+S
+
+#52503
+Somewhere on the Moonfall Sea~
+Wispy fingers of fog twine sinuously around the boat and its mast as the
+journey continues interminably onward, building to dense low-lying clouds
+against the far off horizons.  There are no landmarks...no clues to a
+possible destination...only the clear grey water of the slow-rolling sea. 
+Likewise, no sounds can be heard save the lap of undulating swells
+against the weathered wood of the skiff.
+~
+~
+167247905 0 9 0
+-1
+S
+
+#52504
+Somewhere on the Moonfall Sea~
+Wispy fingers of fog twine sinuously around the boat and its mast as the
+journey continues interminably onward, building to dense low-lying clouds
+against the far off horizons.  There are no landmarks...no clues to a
+possible destination...only the clear grey water of the slow-rolling sea. 
+Likewise, no sounds can be heard save the lap of undulating swells
+against the weathered wood of the skiff.
+~
+~
+167247905 0 9 0
+-1
+S
+
+#52505
+Landfall~
+A narrow and shallow strip of sloping beach, covered with fine pebbles
+worn smooth by the constant battering of a surging sea, provides a safe
+landing for seafaring craft that safely navigate the treacherous gauntlet
+of boulders lying just offshore.  Several massive rocks of various sizes
+take shelter at the base of the gray-stone cliff, the predominant feature
+of the modest-sized isle; an old rotting post leans crookedly against one
+of the larger stones, a curved horn hanging from a leather strip affixed
+to it.  A natural path takes a serpentine course toward a low flat ledge
+near the bottom of the cliff face.
+~
+[Guin] Roat ride is rooms 52502, 52503, 52593, 52504, 52511, 52505, 52501
+[Guin] Done.
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 52510 10 10 5
+E
+cliff ledge path rocks~
+Rising sharply from the meagre amount of rocky beach, the towering cliff
+dominates the coastal front.  Winding hither and thither amongst the
+broken boulders and stones a small, seldom-used path leads towards the
+bottom of the craggy rock face.  At the base of the cliff, a narrow ledge
+lies half sheltered from the blustering onshore winds, which buffet the
+wild island.
+~
+A
+blow~
+horn~
+mob = mob_in_room( 1324, find_room( 52593 ) );
+if( mob ) {
+  act_tochar( #blow, ch );
+  act_notchar( #pblow, ch, obj, mob, sight );
+  wait( 1 );
+  send_to_room( #noise,room, sight );
+  wait( 1 );
+  send_to_room( #spine, room, sight );
+  wait( 1 );
+  send_to_room( #arrive, room, sight );
+  wait( 1 );
+  send_to_room( #arrive1, room, sight );
+  wait( 1 );
+  send_to_room( #arrive3,room, sight );
+  transfer( mob, find_room( 52511 ) );
+  end;
+}
+else if( mob_in_room( 1324, find_room( 52511 ) ) ) {
+  act_tochar( #already_summoned, ch );
+  end;
+}
+act_tochar( #nope, ch );
+act_notchar( #rnope, ch );
+~
+E
+blow~
+@cLifting the curved horn, you place it against your lips and blow
+gustily into the mouthpiece.@n 
+~
+E
+pblow~
+@cLifting the curved horn, $n places it against $s lips and blows gustily
+into the mouthpiece.@n 
+~
+E
+noise~
+@cThe sounds from the horn, deep and full in tone, resonate out across
+the water.@n 
+~
+E
+spine~
+@cEchoing eerily, the sound fades away into the fog.@n
+~
+E
+arrive~
+@cA stiff breeze blows inland, parting the fog.@n
+~
+E
+arrive1~
+@cA skiff emerges from out of the fog, white sail billowing.@n
+~
+E
+arrive3~
+@cThe skiff, steered by an impossibly old boatman, glides to a stop next
+to the sea-battered dock.@n 
+~
+E
+already_summoned~
+The boat has already been summoned.
+~
+E
+nope~
+You blow the horn with all your might, but it only echoes hollowly out
+over the bay.
+~
+E
+rnope~
+$n blows the horn with all $s might, but it only echoes hollowly out over
+the bay.
+~
+!
+0 0 0
+A
+climb enter~
+boat skiff~
+mob = mob_in_room( 1324, find_room( 52511 ) );
+if( mob ) {
+  if( players_room( find_room(52511 ) ) == 3 ) {
+    act_tochar( #full, ch );
+    end;
+  }
+  act_tochar( #climb, ch );
+  act_notchar( #climb1, ch );
+  transfer( ch, find_room( 52511 ) );
+  act_notchar( #arrive, ch );
+  acode( find_room( 52511 ), 1 );
+  end;
+}
+else
+  act_tochar( #noship, ch );
+~
+E
+full~
+The skiff has as many people as can be fitted into it comfortably.
+~
+E
+climb~
+You clamber into the skiff.
+~
+E
+climb1~
+$n clambers into the skiff.@n
+~
+E
+arrive~
+$n climbs aboard the skiff.
+~
+E
+noship~
+There is no skiff here. Try blowing the horn!
+~
+!
+0 0 0
+A
+~
+~
+mob = mob_in_room( 1324, find_room( 52511 ) );
+if( players_room( find_room( 52505 ) ) == 0 )
+  if( players_room( find_room( 52511 ) ) == 0 )
+  if( mob )
+  transfer( mob, find_room( 52593 ) );
+~
+!
+2 500 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou make your way along the beach toward the cliff rising to the north.@n
+~
+E
+to_room~
+$n makes $s way along the beach toward the cliff to the north.@n
+~
+!
+3 0 1
+A
+~
+~
+send_to_room( #crash, room );
+~
+E
+crash~
+@CA wave shatters against a stalwart boulder just off the shore, sending
+a spray of fine mist washing over the rocky beach.@n
+~
+!
+2 150 0
+2753 17 1509949540 -2 0
+-1
+S
+
+#52506
+Shore - Near an Old Pier~
+The tall masts of the ship have been furled as it rests at dock, heavy
+ropes tethering the slowly rocking vestal to the pier.  Sailors scuttle
+over the masts and riggings of the ship reading it for another sea voyage.
+~
+~
+167247883 16 9 0
+D2
+~
+~
+64 -1 52501 10 10 5
+A
+~
+~
+set_rflag( reset0, find_room( 52501 ) );
+act_tochar( #enter, ch );
+wait( 3 );
+act_tochar( #start, ch );
+wait( 3 );
+transfer( ch, find_room( 9689 ) );
+act_tochar( #start2, ch );
+wait( 2 );
+transfer( ch, find_room( 9688 ) );
+wait( 2 );
+transfer( ch, find_room( 9687 ) );
+wait( 2 );
+transfer( ch, find_room( 9686 ) );
+wait( 2 );
+transfer( ch, find_room( 9685 ) );
+wait( 2 );
+transfer( ch, find_room( 9684 ) );
+wait( 2 );
+transfer( ch, find_room( 9683 ) );
+act_tochar( #stuff, ch );
+wait( 2 );
+transfer( ch, find_room( 9682 ) );
+wait( 2 );
+transfer( ch, find_room( 9681 ) );
+wait( 2 );
+transfer( ch, find_room( 9680 ) );
+wait( 2 );
+transfer( ch, find_room( 9679 ) );
+wait( 2 );
+transfer( ch, find_room( 9678 ) );
+wait( 2 );
+transfer( ch, find_room( 9677 ) );
+wait( 2 );
+transfer( ch, find_room( 9676 ) );
+wait( 2 );
+act_tochar( #stuff, ch );
+transfer( ch, find_room( 9675 ) );
+wait( 2 );
+transfer( ch, find_room( 9674 ) );
+wait( 2 );
+transfer( ch, find_room( 9673 ) );
+wait( 2 );
+transfer( ch, find_room( 9672 ) );
+wait( 2 );
+transfer( ch, find_room( 9671 ) );
+wait( 2 );
+transfer( ch, find_room( 9670 ) );
+wait( 2 );
+transfer( ch, find_room( 9669 ) );
+act_tochar( #stuff, ch );
+wait( 2 );
+transfer( ch, find_room( 9668 ) );
+wait( 2 );
+transfer( ch, find_room( 9667 ) );
+wait( 2 );
+transfer( ch, find_room( 9666 ) );
+act_tochar( #end, ch );
+wait( 2 );
+transfer( ch, find_room( 9665 ) );
+act_tochar( #end2, ch );
+~
+E
+enter~
+@yYou climb the plank up into the large wooden boat and prepare for the
+long journey ahead.
+~
+E
+start~
+@yThe crew rushes madly about, casting off moorings as the boat moves
+slowly away from the pier.
+~
+E
+start2~
+@CAs the boat pulls out of the mouth of the harbour, the crew unfurl the
+sails and a crisp wind fills them, pushing the boat north.
+~
+E
+stuff~
+@CThe wind picks up, speeding the boat onwards to your journeys end.
+~
+E
+end~
+@yThe boats sails are pulled in you slow down, gliding towards a long
+wooden pier.
+~
+E
+end2~
+@yThe boat come to rest against the pier, and the crew scuttle about
+tying mourings.  Your journey is at an end.
+~
+!
+1 0 4
+-1
+S
+
+#52510
+Beach Path~
+Well hidden amidst the debris that litters the waterfront, a narrow
+trail, barely more than a long unused animal track, zigzags throughout
+the rocks and boulders, which mark the high tide line on the stony beach. 
+Sparsely scattered in the slightly more sheltered areas, a handful of
+shrubs and grasses wearily grasp at the salty ground, their straggly
+network of roots thin and sickly as they leech poisoned nutrients from
+the meagre amount of sandy soil.  Along the north-eastern horizon, the
+crest of the island's highest hill is crowned by the ruins of an ancient
+stone structure, the great pillars which formed the building's base all
+but fallen down.
+~
+[Guin] Done.
+~
+167247872 10 9 0
+D2
+~
+~
+0 -1 52505 10 10 5
+D4
+~
+~
+0 -1 52666 10 10 5
+E
+structure building pillars~
+Dominating the north-eastern horizon, the great pillars stand tall, their
+impressive size silhouetted against the dramatic oceanic sky.  Reflecting
+the former glory of the structure, the now weather-beaten stone slabs
+keep a dignified formation, not allowing themselves to be overcome by the
+forces of nature.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou pick your way along the sloping incline to the cliff above.@n
+~
+E
+to_room~
+@g$n picks $s way along the sloping incline to the cliff above.@n.
+~
+!
+3 0 16
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yLeaving the cliff base, you make your way to the water's edge@n.
+~
+E
+to_room~
+@yLeaving the cliff base, $n makes $s way to the water's edge@n.
+~
+!
+3 0 4
+50 9 1509949540 3 0
+-1
+S
+
+#52511
+Somewhere On the Moonfall Sea~
+The old battered boat bobs up and down as the water laps against the
+decrepit dock.  A dingy sail rises toward the center of the skiff, wispy
+remnants of the surrounding fog curled around the mast.  The sea-going
+craft is long and narrow, with room for only a limited few passengers.  A
+pair of weary oars lean drunkenly in opposing oarlocks, dry blades a foot
+or more above the briny sea.
+~
+~
+167247872 0 9 0
+A
+~
+~
+act_tochar( #enter, ch );
+wait( 1 );
+act_tochar( #oklevel, ch );
+~
+E
+enter~
+The boatman looks in your direction and bows his head.
+~
+E
+oklevel~
+The boatman stretches out one of his claw-like hands and whispers
+hoarsely, "Fer the price o' one o' them silver coins I will take ye to an
+island far across the sea." 
+~
+E
+notlevel~
+The boatman peers at you with his one good eye and says, "Ye donna look
+like ye belong here.  The journey is filled with danger.  Be gone wit'
+ye!" 
+~
+!
+0 0 0
+A
+climb~
+pier dock jetty out up~
+act_tochar( #clamber, ch );
+act_notchar( #clamber2, ch );
+wait( 1 );
+transfer( ch, find_room( 52505 ) );
+act_notchar( #welcome, ch );
+loop( followers ) {
+  ch = rch;
+}
+~
+E
+clamber~
+You clamber up onto the pier.
+~
+E
+clamber2~
+You see $n clamber up onto the pier.
+~
+E
+welcome~
+$n climbs onto the pier.
+~
+!
+0 0 0
+-1
+S
+
+#52593
+Somewhere on the Moonfall Sea~
+A brief break in the dense fog bank reveals a mist-shrouded stand of
+blue-grey stone, rising up from the surging sea.  Even at this distance,
+it is clear the stones cluster to form rocky plateau its peak veiled a
+gathering of fluffy white clouds.  The sounds of shore birds...gulls and
+terns and pelicans...can be heard at the edge of sound, echoing from the
+shore.
+~
+~
+167247905 0 9 0
+1324 9 1509949540 3 0
+-1
+S
+
+#52610
+Along the Shore - Moonfall Sea~
+The beach curves around to the northeast, ending at a rickety old jetty
+that serves the hamlet as a boat dock.  Scatterings of stones, some small
+and jagged, others larger and smooth litter the beach, and the carcass of
+a driftwood log lies near the water's edge.  A tidewater pool, reminder
+of the last high tide, lies among the rocks halfway along the beach.
+~
+[Guin] Done.
+~
+167247872 10 9 0
+D0
+~
+~
+0 -1 78775 10 10 5
+D1
+~
+~
+0 -1 52611 10 10 5
+E
+driftwood~
+A log, bleached white from the salt sea, rests on the beach near the
+water's edge.  Old and twisted, the wood is pitted and riddled with holes.
+~
+E
+tidewater pool~
+A shallow pool, tidewater left from the last high tide, lies among the
+stones on the beach, its sandy bottom hiding anything that lies within it.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou move eastward along the beach, picking your through the stones to
+the water's edge.@n 
+~
+E
+to_room~
+@c$n moves eastward along the beach, picking $s way through the stones
+to the water's edge.@n 
+~
+!
+3 0 2
+A
+2 dig~
+3 pool~
+act_tochar( #search, ch );
+act_notchar( #rsearch, ch );
+wait( 1 );
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  i = random( 1, 100 );
+  if( i < 6 ) {
+    obj = oload( 7088 );
+    if( !can_handle( ch, obj ) )
+      junk_obj( obj );
+    else {
+      act_tochar( #found, ch, obj );
+      act_notchar( #rfound, ch, obj );
+      obj_to_char( obj, ch );
+      end;
+    }
+  }
+  else if( i < 30 ) {
+    mob = mload( 1331, room );
+    act_tochar( #mobfound, ch, obj, mob );
+    act_notchar( #rmobfound, ch, obj, mob );
+    damage( mob, ch, 1d8, physical, "bite" );
+    end;
+  }
+}
+act_tochar( #nothing, ch );
+act_notchar( #rnothing, ch );
+~
+E
+search~
+@CYou search through the tidewater pool, looking for something
+interesting within the depths.@n 
+~
+E
+rsearch~
+@C$n searches through the tidewater pool, looking for something
+interesting within the depths.@n 
+~
+E
+found~
+@bYou find $p in the tidewater pool.@n
+~
+E
+rfound~
+@b$n finds $p in the tidewater pool.@n
+~
+E
+nothing~
+You find nothing of interest.
+~
+E
+rnothing~
+$n finds nothing of interest.
+~
+E
+mobfound~
+@cYou find $N in the tidewater pool.@n
+~
+E
+rmobfound~
+@c$n finds $N in the tidewater pool.@n
+~
+!
+9 0 0
+50 9 1509949540 3 0
+50 9 1509949540 3 0
+-1
+S
+
+#52611
+Beach's End - Moonfall Sea~
+A tumble of sharp, grey-white rocks marks the end of the beach, spilling
+quietly into the onslaught of the tides.  To the north and east, the
+jagged stones give way to wave-washed sand and rising dunes before
+butting up against a stoic cliff face, staring impassively toward the
+surging waters of the Moonfall Sea.  A cluster of driftwood cottages
+peeks shyly out from behind one of the taller dunes, their chimney stacks
+belching woodsmoke to taint the salt-spray air.
+~
+[Guin] Done.
+~
+167247872 10 9 0
+D3
+~
+~
+0 -1 52610 10 10 5
+E
+black stone rock~
+Battered relentlessly by an angry sea, chipped and broken rock litters
+the beach, cradled in places by beds of sand frozen solid by the chill
+northern air and the frigid sea.
+~
+E
+cliff sand dune cottages~
+Beyond undulating dunes and wisps of smoke rising from driftwood cottages
+hiding behind them, a black rock precipice towers upward.  Split in twain
+by a narrow road, the cliff offers formidable protection for what lies
+beyond.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou move westward along the beach, picking your way through the
+scattering of jagged stones.@n 
+~
+E
+to_char~
+@c$n moves westward along the beach, picking $s way through the
+scattering of jagged stones.@n 
+~
+!
+3 0 8
+A
+~
+~
+send_to_room( #bird, room );
+~
+E
+bird~
+@cBirds soar skyward, gliding effortlessly through the chill salt-sea
+air@n.
+~
+!
+2 150 0
+78 17 1509949515 -2 0
+78 16 1509949465 -2 0
+1974 17 1509949490 -2 0
+1324 17 1509949490 -2 0
+5488 41 1509949540 3 0
+5487 73 1509949540 3 0
+-1
+S
+
+#52666
+Path Up a Rocky Incline~
+Beneath a meager canopy of nearly leafless branches, a stunted tree's
+roots grasp desperately at the rocky slope.  The path, somewhat overgrown
+with grass, bends gently to the east as it winds further up the incline
+towards a curved wall of bright grey stone.  Below and to the south,
+nestled amidst two rugged curves of the island's coastline, an
+unpretentious beach is sheltered from the harshest of the breaking waves.
+~
+[Guin] Done.
+~
+167247872 10 9 0
+D1
+~
+~
+0 -1 52667 10 10 5
+D5
+~
+~
+0 -1 52510 10 10 5
+E
+stunted tree roots branches~
+With scarcely a handful of soil on the brazen slope, the desperately
+spreading network of roots seek out what minimal stability they can from
+the barren ground.  Withered by malnutrition and battered by the harsh
+elements, the hardy tree somehow manages to extend a meek canopy, which
+reflects the bleakness of its environment.
+~
+A
+~
+~
+i = 1d2;
+if( i == 1 )
+send_to_room( #gulls, room );
+if( i == 2 )
+send_to_room( #waves, room );
+~
+E
+gulls~
+@cDark against the horizon, a cluster of sea gulls circles above the
+breaking waves.@n 
+~
+E
+waves~
+@cThe crash of breaking waves echoes hollowly from the distant shore.@n
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou pick your way carefully down the sloping incline toward the beach.@n
+~
+!
+3 0 32
+-1
+S
+
+#52667
+Ruins Atop the Summon~
+This high point of the island provides a majestic view of the vast
+northern sea.  Several miles to the south, not quite hidden by the fog
+that sinks into the cool waters, the coast stretches off towards distant
+mountains in each direction.  Rising from the wind-blown hill is the
+ruins of what must have been a tower.  The fragments of surprisingly
+bright grey stones remain scattered about the base like leaves fallen
+from a tree, some barely visible nestled into the ledges below to the
+south.  A vast circle of standing stones dominates the northernmost point
+of the island.
+~
+[Guin] Done.
+~
+167247872 10 9 0
+D0
+~
+~
+0 -1 52668 10 10 5
+D3
+~
+~
+0 -1 52666 10 10 5
+E
+ruin stones grey tower~
+A section of the large base is crumbled, no doubt due to the erosion of
+the hillside inflicted by winds and frequent rain over countless years.. 
+or even lifetimes.  The stones are worn and rounded by the
+elements...bearing vague and winding designs that may or may not owe
+their origin to the countless tracks of trickling water.
+~
+50 9 1509949540 3 0
+50 9 1509949540 3 0
+-1
+S
+
+#52668
+Clifftop Path~
+Tufts of grass bend and sway along the gentle southern rise toward the
+island's summit, growing more scarce amidst the jagged stones and near
+the stalwart grey stone cliffs.  Embedded in the mist-swept earth, worn
+and weathered stones are pocked with natural pools of rainwater.  Atop a
+shallow rise to the north, the sillouhette of tall, slim rock formations
+stands in contrast to the colorful northern sky.
+~
+[Guin] Done.
+[Belgar] silhouette
+~
+167247872 10 9 0
+D0
+~
+~
+0 -1 52671 10 10 5
+D1
+~
+~
+0 -1 52669 10 10 5
+D2
+~
+~
+0 -1 52667 10 10 5
+E
+rise 1 north silhouette rock formation~
+Standing in a circular formation, the large rocks encompass the summit of
+the small hillock.  Many of the rocks have been mysteriously balanced on
+one end, their full length reaching over ten feet tall.  The giant
+pillars are topped with great slabs, which are lying horizontally,
+forming a blocky archway into the centre of this strangely formed circle.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yDescending along the gentle slope, you reach the eastern cliff face.@n
+~
+E
+to_room~
+@yDescending along the gentle slope, $n reaches the eastern cliff face.@n
+~
+!
+3 0 2
+587 17 1509949540 -2 0
+244 9 1509949540 3 0
+244 9 1509949540 3 0
+-1
+S
+
+#52669
+East Side Cliff Top~
+Descending into tumbled rocks and slipping soil, the eastern slope of the
+island is less dramatic than the cliffs that forever face the heart of
+the sea and the northwestern winds.  The waters swirl about the barest of
+beaches below, unreachable but for the gulls who cry out their claim to
+the treasure of shelled creatures in the shallow pools.
+~
+[Guin] Done.
+~
+167247872 10 9 0
+D3
+~
+~
+0 -1 52668 10 10 5
+E
+slope beach 1 east~
+Deeply undercut by the slow process of erosion, the abruptly ending
+ground gives way to the sea far below.  Thinning out completely, the
+brown grasses and tussocks surrender to the barren masses of sand, shells
+and rock fragments.  A steady on shore breeze from the sea assaults the
+senses with an invigorating saline energy.
+~
+A
+~
+~
+send_to_room( #wave, room );
+~
+E
+wave~
+@cFar below, the frigid waters of the Moonfall Sea sigh softly as they
+break against the rocky shore.@n 
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yNavigating the gentle slope, you return to the island's center.@n
+~
+E
+to_room~
+@y@yNavigating the gentle slope, $n returns to the island's center.@n
+~
+!
+3 0 8
+1324 17 1509949490 -2 0
+50 9 1509949540 3 0
+50 9 1509949540 3 0
+50 9 1509949540 3 0
+-1
+S
+
+#52671
+The Stone Circle~
+Rising from the thin soil of the plateau, a loose and tumbled collection
+of standing stones reaches toward the clouded sky like the fingertips of
+a desperate titan.  Worn, weathered by rain and wind, the large grey
+markers are arrayed in what was once a series of circles, pierced by
+several small columns which point seemingly aimlessly beyond the misted
+coast and mountains of the southern horizon. At the northernmost edge,
+several rugged boulders haplessly cling to the clifftops above the cold
+and raging sea.  A very large moss-covered rock juts from the water
+twenty yards out, splotches of green nested in its grooves above where
+the waves relentlessly crash.
+~
+[Mad Murdo] Need something in library with clues about commands, mebbe a little background.
+~
+167247880 10 9 0
+D2
+~
+~
+0 -1 52668 10 10 5
+E
+stones collection standing runes~
+Veins of ore, uncommonly black, riddle the stones of the inner circle;
+runic patterns dance around them, winding about in a manner too precise
+to be natural...too entropic for a hand's intention.  Wisps of
+mist-formed fog seep in and around the stones, winding sinuously toward
+the ruined circle's center.
+~
+E
+boulders clifftop sea 1 north~
+The northward view is breathtaking...the seemingly endless sea blows her
+misting breath up toward the cloud-shrouded stars.
+~
+A
+~
+~
+send_to_room( #wind, room );
+~
+E
+wind~
+@cStrong gusts of wind howl forlornly as they swirl over the lip of the
+cliff and around and between the standings stones, carrying the salt-tang
+scent of the chill, northern sea.@n 
+~
+!
+2 50 0
+A
+trace draw touch~
+runes etched rock black~
+if( get_integer( find_room( 52671 ), "/Murdo/portal/open" ) == 1 ) {
+  act_tochar( #already, ch );
+  end;
+}
+act_tochar( #trace, ch );
+act_notchar( #otrace, ch, obj, mob, sight );
+wait( 2 );
+if( get_integer( find_room( 52671 ), "/Murdo/portal/open" ) == 1 )
+  end;
+set_integer( find_room( 52671 ), "/Murdo/portal/open", 1 );
+act_room( #open, ch, obj, mob, sight );
+wait( 2 );
+act_room( #open2, ch, obj, mob, sight );
+acode( find_room( 2305 ), 6 );
+act_area( #equalize, ch, obj, mob, sight );
+wait( 10 );
+set_integer( find_room( 52671 ), "/Murdo/portal/open", 0 );
+acode( find_room( 52671 ), 5 );
+acode( find_room( 2305 ), 7 );
+~
+E
+already~
+@WYou extend your hand and trace the winding runes upon the stone, but
+with no result...the portal is quite obviously already open.@n
+~
+E
+trace~
+@WYou trace your fingers along the etched runes, winding about the
+black-seamed stones.@n 
+~
+E
+otrace~
+$n brushes $s fingers along the runes of the stone.
+~
+E
+open~
+@WThe sygils glow, softly at first...and like fire the light spreads
+from rune to rune, following incomphrehensible paths as it snakes about
+the stone onto the slab at the center of the monument.  Light glints off
+the surface of the large metallic rock that anchors the stone circle, and
+the glow spreads outward to all the other stone structures like tendrils,
+hopping from one rune to another.@n 
+~
+E
+equalize~
+@cLike a breath from the gods, the winds gust northward suddenly..  as
+though rushing to fill a void.@n 
+~
+E
+close~
+@WIt begins with a ripple, like a pebble thrown into a pond...and the
+world beyond the portal is suddenly lost in a glare of light, replaced by
+the solemn boulders watching over the sea.@n 
+~
+E
+open2~
+@WA blinding flash of light shoots out from the northmost triad,
+accompanied almost instantly by a thundering BANG like the rending of
+the air itself.  Between the two stones, from ground to lintel, the
+northern sea has been replaced by the towering and majestic visage of
+snow-capped mountains and jagged cliffs.@n 
+~
+!
+0 0 0
+A
+~
+~
+if( get_integer( room, "/Murdo/portal/open" ) == 1 )
+  send_to_room( #flicker, room );
+~
+E
+flicker~
+@BThe glowing runes upon the stone circle rise and dim like embers to a
+breath, and an occasional blue flicker dances around the inside of the
+portal..  whether the product of magic or the frictional clash of coastal
+air between two normally distant places.@n
+~
+!
+2 350 0
+A
+closeitup~
+~
+set_integer( room, "/Murdo/portal/open", 0 );
+act_room( "Closing", ch );
+~
+!
+0 0 0
+A
+~
+~
+ch = rand_player( find_room( 52671 ) );
+if( ch )
+  act_room( #close, ch, obj, mob, sight );
+~
+E
+close~
+@WIt begins with a ripple, like a pebble thrown into a pond...and the
+world beyond the portal is suddenly lost in a glare of light, replaced by
+the solemn boulders watching over the sea.@n 
+~
+!
+0 0 0
+A
+~
+~
+ch = rand_player( find_room( 52671 ) );
+if( ch ) {
+  act_room( #open, ch, obj, mob, sight );
+  act_area( #equalize, ch, obj, mob, sight );
+}
+~
+E
+open~
+@WA blinding flash of light shoots out from the southernmost triad,
+accompanied almost instantly by a thundering BANG like the rending of the
+air itself.  Between the two stones, from ground to lintel, the foggy
+southern coast below has been replaced by a rocky, mist-shrouded
+island.@n 
+~
+E
+equalize~
+@cLike a breath from the gods, the winds gust suddenly...  as though
+rushing to fill a void.@n 
+~
+!
+0 0 0
+A
+enter go~
+portal triad 4 gateway  stones 1 south~
+if( get_integer( room, "/Murdo/portal/open" ) == 0 ) {
+  act_tochar( #nogo, ch );
+  act_notchar( #onogo, ch, obj, mob, sight );
+  end;
+}
+act_tochar( #enter, ch );
+act_notchar( #oenter, ch, obj, mob, sight );
+wait( 1 );
+loop( followers ) {
+  ch = rch;
+  acode( room, 7 );
+}
+transfer( ch, find_room( 2305 ) );
+act_notchar( #arrive, ch, obj, mob, sight );
+set_integer( ch, "/Cayln/NewCont/PortalFound", 1 );
+~
+E
+nogo~
+@MYou step adventurously through the northmost stones, and right into a
+muddy patch of grass.  Disgusting, yes...  but you did manage to get a
+better view of the sea.@n 
+~
+E
+onogo~
+@M$n tramps about beneath one grouping of stones, stopping to stare
+sourly at $s feet.@n 
+~
+E
+enter~
+@MYou hesitantly step through the stone portal, still glowing with
+dazzling patterns of runes, squinting from the sudden gusts of wind.@n 
+~
+E
+oenter~
+@M$n steps through the portal and emerges into the world beyond.@n
+~
+E
+arrive~
+@M$n emerges from the portal...looking somewhat startled by $s recent
+experience.@n 
+~
+!
+0 0 0
+A
+1 look~
+portal porta port por~
+if( get_integer( find_room( 52671 ), "/Murdo/portal/open" ) == 1 )
+  act_tochar( #portal, ch );
+if( get_integer( find_room( 52671 ), "/Murdo/portal/open" ) == 0 )
+  act_tochar( "Portal? You mean the stones?", ch );
+~
+E
+portal~
+@BThe glowing runes upon the stone circle rise and dim like embers to a
+breath, and an occasional blue flicker dances around the inside of the
+portal..  whether the product of magic or the frictional clash of coastal
+air between two normally distant places.  Beneath this stone archway, the
+portal is most definitely open.@n
+~
+!
+0 0 0
+961 9 1509949540 3 0
+961 9 1509949540 3 0
+-1
+S
+
+#0
+

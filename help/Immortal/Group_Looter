@@ -1,0 +1,14 @@
+<html>
+<body>
+Syntax:<br>
+<br>
+group looter [person]<br>
+<br>
+Description:<br>
+<br>
+The leader of the group can appoint a person to do all the looting for<br>
+the group - uses that person's autoloot and autoskin options for all<br>
+corpses.  Mobs like ghosts, that do not have corpses, will still need to<br>
+be looted manually.<br>
+</html>
+</body>

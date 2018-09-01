@@ -1,0 +1,26 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+leech: This shows the status of your spells.<br>
+leech #: This stops the spell from leaching power from you.<br>
+   <br>
+<h1> Description </h1>
+  <br>
+Some spells have no set duration but will continue until the spellcaster<br>
+stops them by cutting off the power going to the spell.  LEECH is the<br>
+command that allows him to do this.  Typing leech alone will bring up a<br>
+list of all the spells that the spellcaster has running.  The 'Max Mana:<br>
+xxx (yyy max)' is your maximum amount of mana the xxx part is the maximum<br>
+available and the yyy part is your total amount of mana.  the 'Regen. <br>
+Rate: xx (yy) is how fast you will regain your energy once again the xx<br>
+is your current regen and the yy is your total.  The 'Num' column is the<br>
+spell number, this is the number that you would use to stop the spell<br>
+from drawing energy from you.  The 'Spell' column is the name of the<br>
+spell.  The 'Regen' column shows the amount that the spell is draining<br>
+from your Regen.  Rate.  The 'Max' column is the amount of mana a spell<br>
+drains from your max mana.  And the 'Character' column shows who the<br>
+spell is cast on.<br>
+ <br>
+</html>
+</body>

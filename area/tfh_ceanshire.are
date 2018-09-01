@@ -1,0 +1,2991 @@
+#M2_AREA
+2
+
+Ceanshire~
+Tiene Epiphany Kashita~
+~
+~
+~
+
+0 0
+4
+1
+#ROOMS
+
+#10250
+A Willow-Lined Cart Path~
+Wide-branching willows drape themselves lazily along the western side of
+the road.  Their pale leaves idly flutter in the light breezes that move
+across the way, and the long sweetweed and clover grasses that grow on
+either side of the grooved cart path bend gracefully, nodding slowly to
+the rhythm of the hay-scented air.  The worn roadway stretches unevenly
+to the north, and to the south you see the faint outlines of farmhouses
+and fencelines.
+~
+[Tiene] rdesc complete
+[Tiene] added rextras - complete
+~
+33030144 12 9 0
+D2
+~
+~
+0 -1 10251 10 10 5
+E
+willows wide-branching branching leaves~
+The pale grey of weathered bark peeks out from behind the swaying,
+drooping branches of these graceful trees.  Just beyond them, you see the
+faint silver flash of water of a small stream.
+~
+E
+road cart path roadway~
+Years of wagon traffic has resulted in ruts that stretch out in tandem,
+flanked by tall sweetweed and long grasses.  The middle of the road is
+dotted with clumps of short clover, untouched and untrampled.
+~
+E
+long sweetweed clover grasses weeds~
+Dark green clover and pale orchid-colored flowers dot the pathway,
+punctuating the grassy area between the ruts and lining up in drowsy
+attention along the side of the road.
+~
+E
+south s outlines farmhouses fencelines~
+You see the shadowy outlines of farmhouses and fencelines far to the
+south, all of them gathering together in what looks to be a peaceful
+assortment of village homesteads.
+~
+E
+silver flash water small stream~
+From between the trees you catch glimpses of a slow-moving little stream. 
+The willows bend almost protectively over their source of water, with
+long branches dipping into the surface of the creek.
+~
+-1
+S
+
+#10251
+A Willow-Lined Cart Path~
+The graceful line of sleepy willows along this worn roadway tapers off as
+the fenced fields of Ceanshire begin.  Between the willows to the west
+you see the faint silver slash of a slow creek cutting through the richly
+colored grasses.  The softly drifting breezes coming across the fields to
+the southeast are scented with the heavy, musky smell of freshly turned
+earth and the lighter tang of wildflowers and new-mown hay.  The split
+rail fences of the small hamlet to the south stand in weathered sentinel
+lines, marking the beginning of smallholdings and rich farmland.
+~
+[Tiene] rdesc complete
+[Tiene] added rextras - complete
+~
+33030152 12 9 0
+D0
+~
+~
+0 -1 10250 10 10 5
+D2
+~
+~
+0 -1 10252 10 10 5
+E
+willows line worn roadway~
+The willows along the western side of the road are spaced erratically,
+their wide-branched and graceful limbs swaying gently in the breezes.  To
+the north, along this same road, you see they grow closer together, but
+here where you stand they seem to be stretching themselves lazily to fill
+in any gaps.
+~
+E
+faint silver slash slow creek~
+A thin slice of near-white color just beyond the treeline alerts you to
+the presence of a small stream as it slowly and calmly drifts its way
+southward.
+~
+E
+split rail fences ceanshire fields smallholdings farmland~
+Greying with age and exposure to the elements, the rough wooden rails of
+the fences seem to almost hold the rich land in check, as if the fragrant
+grasses just beyond them were too wild to let grow freely.  Beyond them,
+standing in chaotic groupings, are the stolid homes and outbuildings of
+Ceanshire.
+~
+-1
+S
+
+#10252
+A Well-Worn Cart Path~
+Bumpy and rutted from the passing of countless hay wagons, the road
+stretches north into a willow-lined way and south into the waiting arms
+of the small hamlet of Ceanshire.  Split rail fences mark the boundaries
+between the farmlands and the rolling grasslands beyond them, while the
+small haphazard groups of buildings and shops stand serenely to the south. 
+You hear the clanging of a blacksmith's hammer and the sounds of farmers
+calling to their draught animals, sounds of work and industry that typify
+life in this tiny settlement.
+~
+[Tiene] rdesc complete
+[Tiene] added rextras - complete
+[Tiene] added acode - ambience sound
+[Tiene] added acode - ambience sound2
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 10251 10 10 5
+D2
+~
+~
+0 -1 10253 10 10 5
+E
+1 north~
+Graceful old willows drape themselves in a lazy row down the western side
+of the road ahead.
+~
+E
+1 south~
+The small farming community to the south looks busy from here, with
+people coming and going in and out of houses and outbuildings.
+~
+E
+fences split rail farmlands grasslands~
+Grey with age and weathering, the rough-hewn rails of the fences around
+the fields seem to be hugging their rich crops, protecting them from the
+wild, rolling grasslands.
+~
+E
+groups buildings shops~
+Brightly-painted houses stand quietly, observing the inhabitants of
+Ceanshire as they go about their daily tasks.  The houses look like a set
+of child's building blocks, with roofs that are thatched and rounded; the
+outbuildings are many-tiered and round, a collection of silos and drying
+sheds for the locally grown grains.
+~
+E
+road willow-lined way hamlet ceanshire~
+Gracefully arched willow trees line the road to the north, which leads
+away from the small hamlet to the south.  The road has seen constant
+traffic, as the wagon ruts cut deep lines into the ground.  The cozy
+farming community of Ceanshire rests in the midst of rolling grasslands
+and fields, inviting visitors and residents alike into its kindly arms.
+~
+A
+~
+~
+send_to_room( #sounds, room );
+~
+E
+sounds~
+@gClang!  Clang!@n
+~
+!
+2 100 0
+A
+~
+~
+send_to_room( #sound2, room );
+~
+E
+sound2~
+@g"Hai!  Gee!"@n
+~
+!
+2 100 0
+-1
+S
+
+#10253
+A Well-Worn Cart Path~
+Here at the border of Ceanshire you find yourself surrounded by a green
+and gold land, with wildflower fields and great expanses of sun-drenched
+wheat and barley stretching off in every direction.  The musky scent of
+freshly-ploughed earth hangs in the air, as does the sharp, sweet scent
+of fresh grasses and growing grain crops.  Brightly-painted houses with
+rounded, thatched roofs stand in small groups of twos and threes, their
+rounded outbuildings gathered nearby.
+~
+[Tiene] rdesc complete
+[Tiene] added rextras - complete
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 10252 10 10 5
+D1
+~
+~
+0 -1 10272 10 10 5
+D2
+~
+~
+0 -1 10254 10 10 5
+D3
+~
+~
+0 -1 10268 10 10 5
+E
+land fields expanses wheat barley~
+Gently rolling hills span out on either side of you, blanketed with
+fields of grain and untamed grasses.
+~
+E
+houses roofs outbuildings~
+Rounded grain silos and drying sheds are sprinkled between the
+cheerful-colored houses.  All of the buildings have thatched roofs, the
+dried grass bundles giving off a rich, sun-warmed scent.
+~
+E
+wildflower grasses earth~
+Rich expanses of land stretch out in all directions.  Fields of green
+grasses cover the ground, with wildflowers of every color sprinkled about. 
+Large plots of dark brown mark areas lovingly turned, freshly-ploughed
+and awaiting the seed that will make the land bountiful.
+~
+-1
+S
+
+#10254
+Mead Row - North End~
+Wildflowers line both sides of the worn cart path, their long stalks
+lazily drooping under the weight of the sweet-smelling flowers.  Twin
+grooves from the passing of countless wagons loaded with grains and trade
+goods have been pushed into the ground.  Between the ruts grow small
+clumps of clover, seemingly in defiance of the cart wheels that pass by
+them and smash the other less-brave grasses.  To either side of the road
+stretch fields of wild grasses and, beyond them, the wide fields of crops.
+~
+[Tiene] rdesc complete
+[Rikahn] needs rextras
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 10253 10 10 5
+D1
+~
+~
+0 -1 10273 10 10 5
+D2
+~
+~
+0 -1 10255 10 10 5
+D3
+~
+~
+0 -1 10281 10 10 5
+-1
+S
+
+#10255
+Mead Row - North End~
+Tidy yards and cobbled walkways branch off from the hard-packed dirt
+lane, leading from the town's main thoroughfare to brightly-painted
+houses and shops.  The smell of cut hay and drying grains floats on the
+cooling breezes that pass between the buildings.  A small wooden house,
+painted a cheerful daffodil color, stands to the east, and to the west
+you face one of the sides of another L-shaped house, this one stained a
+muted violet shade.
+~
+[Tiene] Yellow house to east
+[Tiene] rdesc complete
+[Rikahn] needs rextras
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 10254 10 10 5
+D1
+heavy pine door~
+heavy pine door~
+131 -1 10274 10 10 5
+D2
+~
+~
+0 -1 10256 10 10 5
+A
+1 west~
+~
+act_tochar( #house, ch );
+~
+E
+house~
+Perhaps you should find the front door instead.
+~
+!
+0 0 0
+-1
+S
+
+#10256
+Mead Row - North End~
+The pungent smell of rosemary and basil softly rides on the shade-cooled
+air long this quaint little road.  An herb garden to the east nearly
+spills over into the road, and a small cobbled pathway can only barely be
+seen leading through it to the buildings beyond.  To the west stands an
+L-shaped building painted a warm violet hue; climbing vines of roses
+adorn the yard, creeping their way up the building's walls and enwrapping
+the @mshop sign@n hanging above the door.
+~
+[Tiene] cart path
+[Tiene] Bolqa's  Custom Leather Goods west. Building is violet
+[Tiene] needs extras. please leave "shop sign 1 west" as it is now
+[Tiene] rdesc complete
+[Rikahn] needs rextras - sign added
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 10255 10 10 5
+D1
+~
+~
+0 -1 10285 10 10 5
+D2
+~
+~
+0 -1 10257 10 10 5
+D3
+leather-hinged door~
+~
+131 -1 10282 10 10 5
+E
+shop sign 1 west~
+@W+------------------------------+@n
+@W|@n @mBolqa's Custom Leather Goods@n @W|@n
+@W|@n    @mBolqa Tinik, Proprietor@n   @W|@n
+@W+------------------------------+@n
+
+
+~
+-1
+S
+
+#10257
+Intersection of Northern Mead Row and Knotgrass Lane~
+Under Construction.
+~
+[Tiene] cart path
+[Tiene] market square south
+[Tiene] potion shop west
+[Tiene] farmhouse west + south
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 10256 10 10 5
+D1
+~
+~
+0 -1 10258 10 10 5
+D2
+~
+~
+0 -1 10305 10 10 5
+D3
+~
+~
+0 -1 10288 10 10 5
+-1
+S
+
+#10258
+Knotgrass Lane~
+Under Construction.
+~
+[Tiene] cart path
+[Tiene] market square south
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 10285 10 10 5
+D1
+~
+~
+0 -1 10259 10 10 5
+D2
+~
+~
+0 -1 10306 10 10 5
+D3
+~
+~
+0 -1 10257 10 10 5
+-1
+S
+
+#10259
+Knotgrass Lane~
+Under Construction.
+~
+[Tiene] cart path
+[Tiene] general store south
+~
+33030144 12 9 0
+D1
+~
+~
+0 -1 10260 10 10 5
+D2
+~
+~
+0 -1 10307 10 10 5
+D3
+~
+~
+0 -1 10258 10 10 5
+-1
+S
+
+#10260
+Knotgrass Lane~
+Under Construction.
+~
+[Tiene] cart path
+~
+33030144 12 9 0
+D1
+~
+~
+0 -1 10261 10 10 5
+D3
+~
+~
+0 -1 10259 10 10 5
+-1
+S
+
+#10261
+Intersection of Knotgrass Lane and Southern Mead Row~
+Under Construction.
+~
+*** FENCE EAST ***
+[Tiene] cart path
+[Tiene] hops field east
+~
+33030144 12 9 0
+D1
+~
+~
+0 -1 10312 10 10 5
+D2
+~
+~
+0 -1 10262 10 10 5
+D3
+~
+~
+0 -1 10260 10 10 5
+A
+1 east~
+~
+act_tochar( #fence, ch );
+~
+E
+fence~
+There seems to be a fence in your way.
+~
+!
+0 0 0
+A
+climb hop cross~
+fence split-rail rail e ea eas east~
+act_tochar( #fence, ch );
+act_notchar( #rmfence, ch );
+transfer( ch, find_room( 10312 ) );
+act_notchar( #arrive, ch );
+loop( followers ){
+  ch = rch;
+  acode( room, 5 );
+  }
+~
+E
+fence~
+You hoist yourself over the top rail of the fence.
+~
+E
+rmfence~
+$n hoists $mself over the top rail of the fence.
+~
+E
+arrive~
+$n climbs over the fence and joins you inside the field.
+~
+!
+0 0 0
+-1
+S
+
+#10262
+Mead Row - South End~
+Under Construction.
+~
+*** FENCE WEST ***
+[Tiene] Hops field east
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 10261 10 10 5
+D1
+~
+~
+0 -1 10314 10 10 5
+D2
+~
+~
+0 -1 10263 10 10 5
+A
+1 east~
+~
+act_tochar( #fence, ch );
+~
+E
+fence~
+There seems to be a fence in your way.
+~
+!
+0 0 0
+A
+climb hop cross~
+fence split-rail rail e ea eas east~
+act_tochar( #fence, ch );
+act_notchar( #rmfence, ch );
+transfer( ch, find_room( 10314 ) );
+act_notchar( #arrive, ch );
+loop( followers ){
+  ch = rch;
+  acode( room, 5 );
+  }
+~
+E
+fence~
+You hoist yourself over the top rail of the fence.
+~
+E
+rmfence~
+$n hoists $mself over the top rail of the fence.
+~
+E
+arrive~
+$n climbs over the fence and joins you inside the field.
+~
+!
+0 0 0
+-1
+S
+
+#10263
+Mead Row - South End~
+Under Construction.
+~
+[Tiene] cart path
+[Tiene] house west
+[Tiene] Brewery east
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 10262 10 10 5
+D1
+violet-painted door~
+~
+131 -1 10318 10 10 5
+D2
+~
+~
+0 -1 10264 10 10 5
+D3
+~
+~
+0 -1 10309 10 10 5
+-1
+S
+
+#10264
+Mead Row - South End~
+Under Construction.
+~
+[Tiene] cart path
+[Tiene] Human house, berry garden and barn east
+[Tiene] Blacksmith west
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 10263 10 10 5
+D1
+~
+~
+0 -1 10319 10 10 5
+D2
+~
+~
+0 -1 10265 10 10 5
+D3
+~
+~
+0 -1 10316 10 10 5
+-1
+S
+
+#10265
+Mead Row - South End~
+Bumpy and rutted from the passing of countless hay wagons, the road
+stretches south into a dark stand of pines and north into the
+industrious-looking little settlement of Ceanshire.  Split-rail fences
+mark the boundaries between the farmlands and the rolling grasslands
+beyond them, while the small haphazard groups of buildings and shops
+stand serenely to the north.
+~
+[Tiene] rdesc complete
+[Tiene] added rextras - complete
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 10264 10 10 5
+D2
+~
+~
+0 -1 10266 10 10 5
+E
+bumpy rutted road~
+Commerce has given this road its character.  Many a wagon has passed on
+its rutted surface, having left parallel grooves that run deep.  Clumps
+of hay and straw serve as a precursor to the small community to the north.
+~
+E
+south dark strand pines~
+The road continues south, cutting through a strand of strong pines, their
+thick trunks and waving needles marking the southern border of Ceanshire
+lands.
+~
+E
+north industrious-looking little settlement Ceanshire groups buildings shops~
+To the north, the road leads to the honest community of Ceanshire.  Small
+buildings welcome visitors, their shingled roofs topping their colorfully
+painted walls.
+~
+E
+split-rail fences boundaries farmlands rolling grasslands~
+The farmlands illustrate these people's industrious, hard-working nature. 
+Their careful attention to the land has payed off, provided rich, fertile
+fields in return for their ministrations.  Beyond the farmlands are
+split-rail fences, grayed from exposure to the elements and spotted from
+worms, the fences serving as a marker between farmlands and the rolling
+green hills beyond.
+~
+-1
+S
+
+#10266
+A Well-Worn Cart Path~
+The short and wide-branched pines that follow along this worn roadway
+taper off as the fenced fields of Ceanshire begin.  The long grasses of
+the surrounding wild fields grow tall and straight, bending only for the
+hay-scented breezes coming across the gently rolling hills.  The heavy,
+musky smell of freshly turned earth and new-mown hay fills the air.  From
+this distance, the calls of fieldhands as they work their crops sound
+faint and dreamlike.  The split-rail fences of the small hamlet to the
+north stand in weathered sentinel lines, marking the beginning of
+smallholdings and rich farmland.
+~
+[Tiene] rdesc complete
+[Tiene] added rextras - complete
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 10265 10 10 5
+D2
+~
+~
+0 -1 10267 10 10 5
+E
+guarding pines line worn roadway~
+The pines along either side of the road taper off, their steady march
+having ended as Ceanshire appears over the next gentle hill.  To the
+south, along this same road, you see they grow closer together, but here
+where you stand they seem to be hesitating before the watchful fences of
+Ceanshire.
+~
+E
+cart path pathway~
+Years of wagon traffic has resulted in ruts that stretch out in tandem,
+flanked by tall sweetweed and long grasses.  The middle of the road is
+dotted with clumps of shorter grass and pine needles blown over from the
+nearby conifers.
+~
+E
+long sweetweed grasses weeds~
+Dark-bladed grass dots the pathway, growing sturdily between the ruts
+caused by wagon wheels.  Longer grasses line up in bright attention along
+the sides of the road, growing tall and straight here where no farmer's
+scythe will reach them.
+~
+E
+1 north outlines farmhouses fencelines~
+You see the shadowy outlines of farmhouses and fencelines far to the
+north, all of them gathering together in what looks to be a peaceful
+assortment of village homesteads.
+~
+-1
+S
+
+#10267
+A Well-Worn Cart Path~
+Twin rows of squat, sturdy pine trees follow on either side of the
+roadway; the trees are set back some distance from the cart path, but
+still they give the appearance of coaxing it along.  Their needles flash
+alternately silver and dark green with the motion of their branches as
+the gentle winds course over the farmlands of Ceanshire.  Long sweetweed
+grasses grow rampant nearer to the road, nodding slowly to the rhythm of
+the pine-scented air.  The worn roadway stretches unevenly to the south,
+and to the north you see the faint outlines of farmhouses and fencelines.
+~
+[Tiene] cart path leading out of hamlet
+[Tiene] rdesc complete
+[Tiene] added rextras - complete
+[Guin] Will connect to the world here. Lies north of main east/west road between Tar and Talidar
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 10266 10 10 5
+E
+rows squat sturdy pine trees~
+Stout pines trees, having stood the test of time, now stand a little ways
+off the path, greeting those who pass between them.  They begin to thin
+to the north, becoming less sparse as if deciding not to upset the color
+and balance of the cozy shire you begin to see hints of to the north.
+~
+E
+needles flash silver green branches~
+The soft winds that blow through the branches make for a beautiful,
+though subtle, dance of color as the sharp needles catch and reflect
+whatever light it can.  Their dark green flash silver then return to
+normal, only to perform their dance once again.
+~
+E
+sweetweed grasses road~
+A carpet of dark grasses wave between the pines and the road.  Deep wagon
+ruts along the road attest to the traffic in and out of the farmlands,
+though the grasses between the ruts grow unfettered.
+~
+E
+north faint outlines farmhouses fencelines~
+In the distance to the north, hints of a small farming community begin to
+take form, as the faint outlines of small farmhouses and their fences
+come in to view.
+~
+-1
+S
+
+#10268
+By Talisandre Creek~
+The quiet murmur of the small creek is carried to you on a gentle breeze. 
+Long grasses and small, thirsty silver-leafed trees grow on the banks of
+the shallow stream.  Here and there grow small clumps of clover grow,
+punctuating the creekbank with their violet flowers and rounded leaves.
+The bank slopes upward from the water, carpeted with close-cropped grass
+that ends at the roadway to the east.
+~
+[Tiene] creek and grass
+[Tiene] Vanilla.  Put some sparkle in it, Ti-ti.
+[Tiene] extras for creek stream grasses silver-leafed trees clumps clover flowers leaves bank roadway
+[Tiene] needs "entering creek" action of some sort.
+[Tiene] rdesc complete
+[Rikahn] needs rextras
+Needs rextra for clover, trees, bank, creek, grass, And maybe the flowers
+~
+33030144 2 9 0
+D1
+~
+~
+0 -1 10253 10 10 5
+D2
+~
+~
+0 -1 10281 10 10 5
+D3
+~
+~
+0 -1 10269 10 10 5
+E
+clover~
+~
+-1
+S
+
+#10269
+In Talisandre Creek~
+Large, round rocks of varying shades of grey line the bottom of this
+shallow, tree-lined stream.  Light sparkles uncertainly on the surface of
+the slow-moving water, reflecting it back up to the undersides of the
+leaves dancing in the breeze.  The quiet burble of the water as it rolls
+through a narrow, slate-lined trough makes it seem as if the stream is
+chuckling at mankind's attempt to divert its waters to the barley field
+on the west bank.
+~
+[Tiene] needs extras. leave trough as-is.
+[Tiene] need a crawdad/crayfish mob here, maybe a minnow-type fish as well. Something level 1 with an edible corpse.
+needs creekbank action/leave-room
+[Tiene] rdesc complete
+[Rikahn] needs rextras - one started
+~
+33030144 13 9 0
+D1
+~
+~
+0 -1 10268 10 10 5
+D2
+~
+~
+0 -1 10270 10 10 5
+E
+trough slate-ligned narrow~
+A small trough of darker slate stone is set into the west bank of the
+creek, with a small sluce heading out to the waiting, thirsty barley
+field behind.  While not a masterpiece of engineering, this simple
+mechanism allows the farmer to irrigate his grain field as needed during
+the drier seasons.
+~
+-1
+S
+
+#10270
+In Talisandre Creek~
+The small trees and shrubs lining the creek lean greedily over the
+slow-moving waters, cooling it with their shade even while feeding upon
+it.  Large rocks, slate and shale of varying grey hues, create a sturdy
+creekbed, while years of idle erosion has worn away part of the banks and
+caused silt and mud to build up in some areas.  Westward lies a golden
+field of grain, barley by the look of it, and from the southeast you can
+hear the whinnying of draft horses and the clang on a hammer and anvil
+floating through the little gathering of town buildings.
+~
+needs creekbank action/leave-room
+[Tiene] rdesc complete
+[Rikahn] needs rextras
+~
+33030144 13 9 0
+D0
+~
+~
+0 -1 10269 10 10 5
+D1
+~
+~
+0 -1 10281 10 10 5
+D2
+~
+~
+0 -1 10271 10 10 5
+-1
+S
+
+#10271
+In Talisandre Creek~
+Cutting a silver line between two sloped banks of dark grass, Talisandre
+Creek's waters run idly by.  The creek bends sharply to the west,
+twisting away from the healthy fields and the tidy buildings of Ceanshire. 
+South of here, atop a stone reinforced bank, grows a large vegetable
+garden.  Rows upon rows of green sprout up in ordered design.
+~
+*** FENCE SOUTH ***
+[Tiene] creek leaves to west
+[Tiene] veggie garden is south. needs fence
+[Tiene] leathersmith's house is east (connected to workshop)
+needs creekbank action/leave-room
+needs an rextra for fence
+fence needs to be wooden not mithril
+[Kashita] Rextra for a fence is done.
+~
+33030144 13 9 0
+D0
+~
+~
+0 -1 10270 10 10 5
+D2
+~
+~
+0 -1 10284 10 10 5
+E
+fence~
+The fence stretches across the path, blocking the exit to the south.  It
+is made of an old oaken wood, and nailed to many posts that are buried
+deep into the soil.  It looks to stand no more than four feet high 
+~
+A
+climb hop cross~
+1 south fence rail split-rail~
+act_tochar( #fence, ch );
+act_notchar( #rmfence, ch );
+transfer( ch, find_room( 10284 ) );
+act_notchar( #arrive, ch );
+loop( followers ){
+  ch = rch;
+  acode( room, 5 );
+  }
+~
+E
+fence~
+You hoist yourself over the top rail of the garden fence.
+~
+E
+rmfence~
+$n hoists $mself over the top rail of the garden fence.
+~
+E
+arrive~
+$n climbs over the fence and joins you inside the garden.
+~
+!
+0 0 0
+A
+1 south~
+~
+act_tochar( #fence, ch );
+~
+E
+fence~
+There seems to be a fence in your way.
+~
+!
+0 0 0
+-1
+S
+
+#10272
+Wildflower Field~
+Shepherd's purse and periwinkle flowers grow in bright profusion amongst
+the long, dark grasses that surround you on all sides.  A split-rail
+fence cuts you off from a hayfield to the east, protectively guarding its
+crop from deer and other large grazing animals.  Small clumps of clover
+and foxglove have begun to come up all around the posts of the fence, and
+morning glory and ivies ambitiously twine their way along the length of
+the weathered wooden rails.
+~
+*** FENCE EAST ***
+[Tiene] rdesc complete
+[Tiene] added rextras - complete
+[Tiene] added acode - walking east
+[Tiene] added acode - climb fence
+~
+33030144 2 9 0
+D1
+~
+~
+0 -1 10277 10 10 5
+D2
+~
+~
+0 -1 10273 10 10 5
+D3
+~
+~
+0 -1 10253 10 10 5
+E
+shepherd's purse periwinkle flowers~
+Dark green and with spindly stalks, the wiry shepherd's purse plants have
+flourished here.  Pale violet periwinkles spread unevenly around the
+field, growing in small stands.
+~
+E
+hayfield field crop~
+Long clovers and tall grasses spread eastward, a thick carpet of green
+and violet covering the gently rolling hillside.
+~
+E
+split-rail rails fence posts~
+Flowers and vines cling delicately to the grey weathered posts and rails
+of this old fence.  Intended to keep large grazing animals out of the
+hayfield, this fence has become symbolic of the slow-growing beauty
+covering this area.
+~
+A
+climb hop cross~
+1 east fence split-rail rail~
+act_tochar( #fence, ch );
+act_notchar( #rmfence, ch );
+transfer( ch, find_room( 10277 ) );
+act_notchar( #arrive, ch );
+loop( followers ) {
+  ch = rch;
+  acode( room, 5 );
+  }
+~
+E
+fence~
+You hoist yourself over the top rail of the fence.
+~
+E
+rmfence~
+$n hoists $mself over the top rail of the fence.
+~
+E
+arrive~
+$n climbs over the fence and joins you inside the field.
+~
+!
+0 0 0
+A
+1 east~
+~
+act_tochar( #fence, ch );
+~
+E
+fence~
+It seems there is a fence in the way.
+~
+!
+0 0 0
+-1
+S
+
+#10273
+Wildflower Field~
+Periwinkle shines its bright violet colour from between the tall blades
+of the dark green grasses of this field, with mimicking echoes of the
+same violet given by the low-growing clovers dotting the field.  A
+split-rail fence, grey with age and weather, supports vines of morning
+glory and ivy as they wend their way across the beams.  Beyond the fence
+to the east you see high-reaching hay and the taller clovers that, when
+dried, provide food for cattle and horses.  The grassy field of
+wildflowers ends abruptly at a saffron-colored farmhouse.
+~
+*** FENCE EAST ***
+[Tiene] rdesc complete
+[Rikahn] needs rextras
+[Tiene] added acode - climb fence
+[Tiene] added acode - walking east
+[Tiene] added acode - walking south
+~
+33030144 2 9 0
+D0
+~
+~
+0 -1 10272 10 10 5
+D1
+~
+~
+0 -1 10280 10 10 5
+D3
+~
+~
+0 -1 10254 10 10 5
+A
+climb hop cross~
+1 east fence rail split-rail~
+act_tochar( #fence, ch );
+act_notchar( #rmfence, ch );
+transfer( ch, find_room( 10280 ) );
+act_notchar( #arrive, ch );
+loop( followers ){
+  ch = rch;
+  acode( room, 5 );
+  }
+~
+E
+fence~
+You hoist yourself over the top rail of the fence.
+~
+E
+rmfence~
+$n hoists $mself over the top rail of the fence.
+~
+E
+arrive~
+$n climbs over the fence and joins you inside the field.
+~
+!
+0 0 0
+A
+1 east~
+~
+act_tochar( #fence, ch );
+~
+E
+fence~
+There seems to be a fence in your way.
+~
+!
+0 0 0
+A
+1 south~
+~
+act_tochar( #house, ch );
+~
+E
+house~
+The bright-yellow farmhouse blocks your movement in that direction. 
+Perhaps you should enter the house through its door instead of its wall.
+~
+!
+0 0 0
+-1
+S
+
+#10274
+A Pine-Timbered Farmhouse~
+Inside the small one-room farmhouse, the smoothly planed pine plank walls
+are unvarnished, giving off a fresh, spicy scent that mingles with the
+savoury smells of a recent meal.  A few rough benches are pushed under a
+simple table, enough seating for the farmer and his workers during their
+noonday dinner.  Quilts lie folded and stacked atop the plain bed, and
+you see the small trundle bed under it waiting to come into usefulness
+again this evening.  While no decorations hang on the walls or rest on
+the mantelpiece, you can see the pride of the owner evidenced in the
+careful craftsmanship of the furniture and the spotless hearth.
+~
+[Tiene] extras for: trundle bed, hearth/mantel
+[Tiene] extra for quilt
+[Tiene] rdesc complete
+[Rikahn] needs rextras - some added
+~
+66584589 0 5 0
+D1
+back door~
+back door~
+131 -1 10275 10 10 5
+D3
+heavy pine door~
+heavy pine door west~
+131 -1 10255 10 10 5
+E
+pine plank walls~
+The amber and brown shadings of the unvarnished wood lend their warm
+colors to the house and emit a spicy scent of pine.  The graceful whorls
+of the wood's grain seem to serve as wall decorations themselves, doing
+what no hanging ornament could without being at odds with the bare
+simplicity of this clean little home.
+~
+E
+rough benches simple table~
+The wooden benches are wide, with broad legs and splaying legs to sturdy
+them.  While simple and uncomplicated in decoration, they are perfectly
+in harmony with the room around them and they serve their purpose well. 
+The table is of butcherblock design, a thick slab of wood planed to a
+smooth, serviceable surface, so heavily and sensibly made that it appears
+it will outlast its owner.
+~
+-1
+S
+
+#10275
+Herb Garden~
+A small pathway of wooden planks zigzags through a sweet-smelling garden
+of herbs.  Rosemary grows in long-stemmed clumps at the corner of the
+garden, releasing a pungent aroma that is meant to keep larger grazing
+animals such as deer far from the rest of the cultivated plot.  Tidy rows
+of many herbs, including fennel, basil, and chive, span the garden, small
+stakes with the names of each herb painted on them for pure vanity's
+sake; it is obvious from the careful planning of this garden that the
+owner knows exactly what he is doing and needs no reminders.
+~
+*** FENCE NORTH ***
+[Tiene] ack, comma attack.  *flee* Add extras 
+[Tiene] rdesc complete
+[Rikahn] needs rextras
+~
+33030144 1 9 0
+D0
+~
+~
+1 -1 10280 10 10 5
+D1
+~
+~
+0 -1 10276 10 10 5
+D2
+~
+~
+0 -1 10286 10 10 5
+D3
+back door~
+back door~
+131 -1 10274 10 10 5
+A
+1 north~
+~
+act_tochar( #fence, ch );
+~
+E
+fence~
+There seems to be a fence in your way.
+~
+!
+0 0 0
+A
+climb hop cross~
+fence rail split-rail~
+act_tochar( #fence, ch );
+act_notchar( #rmfence, ch );
+transfer( ch, find_room( 10280 ) );
+act_notchar( #arrive, ch );
+loop( followers ){
+  ch = rch;
+  acode( room, 5 );
+  }
+~
+E
+fence~
+You hoist yourself over the top rail of the fence.
+~
+E
+rmfence~
+$n hoists $mself over the top rail of the fence.
+~
+E
+arrive~
+$n climbs over the fence and joins you inside the field.
+~
+!
+0 0 0
+-1
+S
+
+#10276
+Herb Garden~
+The small pathway of wooden planks evens out here, ending at a simple,
+wide wooden gate that interrupts the split rail fence to the north. 
+Beyond the fence grows the fragrant clovers and sweetweeds that are cut
+and dried to produce the best quality hay in the lands.  The savouries
+and herbs stretch out in ordered rows for some small distance to either
+side of the pathway, ending to the east at a grassy expanse that leads
+out to a field of high-topped wheat.
+~
+[Tiene] herbalist to the south
+[Tiene] rdesc complete
+[Rikahn] needs rextras
+~
+33030144 1 9 0
+D0
+simple wooden gate~
+~
+131 -1 10279 10 10 5
+D3
+~
+~
+0 -1 10275 10 10 5
+-1
+S
+
+#10277
+In A Hayfield~
+Tall grasses and clover spread across this field, a thick blanket of
+green, gold and violet that covers the rolling hillside.  Fences surround
+the field, and it seems as if they are holding the fragrant plants in
+check lest they overrun the settlement.  From time to time a gentle
+breeze causes the long stalks and slender plants to bend with a
+whispering sound.
+~
+*** FENCE WEST ***
+[Tiene] fenceline supported by acode so player can see what's outside of fence but not walk there unless they use the gate
+[Tiene] fence west
+[Tiene] rdesc complete
+~
+33030144 2 9 0
+D1
+~
+~
+0 -1 10278 10 10 5
+D2
+~
+~
+0 -1 10280 10 10 5
+D3
+~
+~
+0 -1 10272 10 10 5
+A
+climb hop cross~
+fence split-rail rail w we wes west~
+act_tochar( #fence, ch );
+act_notchar( #rmfence, ch );
+transfer( ch, find_room( 10272 ) );
+act_notchar( #arrive, ch );
+loop( followers ) {
+  ch = rch;
+  }
+~
+E
+fence~
+You hoist yourself over the top rail of the fence.
+~
+E
+rmfence~
+$n hoists $mself over the top rail of the fence.
+~
+E
+arrive~
+$n climbs over the fence and joins you outside the field.
+~
+!
+0 0 0
+A
+w we wes west~
+~
+act_tochar( #fence, ch );
+~
+E
+fence~
+There seems to be a fence in your way.
+~
+!
+0 0 0
+-1
+S
+
+#10278
+In A Hayfield~
+At the crest of a small rise in the land, you are able to scan the
+surrounding fields and hills.  The smell of sun-soaked grasses rises in
+the warm air, a crisp and clean scent that bespeaks of life and growth. 
+Clover flowers dapple the dark green field with violet hues, and the
+drone of bees can be heard over the whisper of grasses bending under the
+gentle caress of the breeze.
+~
+[Tiene] rdesc complete
+[Rikahn] needs rextras
+~
+33030144 2 9 0
+D2
+~
+~
+0 -1 10279 10 10 5
+D3
+~
+~
+0 -1 10277 10 10 5
+-1
+S
+
+#10279
+In A Hayfield~
+The enclosed field stretches northward, over a small rise that ends at
+the outer limit of Ceanshire's smallholdings.  A short distance to the
+west lies the wagon path that cuts through the small settlement.  Gentle
+breezes bend the slender stalks of the long grasses with a whispering
+sound, and the smells of life and growth rise from the very ground to
+enfold you with their rich and warm scents.
+~
+[Tiene] gate south
+[Tiene] rdesc complete
+[Rikahn] needs rextras
+~
+33030144 2 9 0
+D0
+~
+~
+0 -1 10278 10 10 5
+D2
+simple wooden gate~
+~
+131 -1 10276 10 10 5
+D3
+~
+~
+0 -1 10280 10 10 5
+-1
+S
+
+#10280
+In A Hayfield~
+Scented air, warm and moist from the sun and rich soil, rises to join the
+soft breezes blowing across the gently rolling hillside.  Slender grasses
+nod drowsily, and bright-faced flowers peek cheerfully from behind tall
+clumps of sweetweed and alfalfa.  A weather-worn old wooden fence hems
+you in from the west and south.  Beyond the southern fence you see the
+full leaves and tidy rows of an herb garden.
+~
+*** FENCE SOUTH ***
+*** FENCE WEST ***
+[Tiene] fenceline supported by acode so player can see what's outside of fence but not walk there unless they use the gate
+[Tiene] fence west
+[Tiene] fence south
+[Tiene] Needs extras.
+~
+33030144 2 9 0
+D0
+~
+~
+0 -1 10277 10 10 5
+D1
+~
+~
+0 -1 10279 10 10 5
+D2
+~
+~
+1 -1 10275 10 10 5
+D3
+~
+~
+0 -1 10273 10 10 5
+A
+climb hop cross~
+w we wes west~
+act_tochar( #fence, ch );
+act_notchar( #rmfence, ch );
+transfer( ch, find_room( 10273 ) );
+act_notchar( #arrive, ch );
+loop( followers ){
+  ch = rch;
+  acode( room, 5 );
+  }
+~
+E
+fence~
+You hoist yourself over the top rail of the fence.
+~
+E
+rmfence~
+$n hoists $mself over the top rail of the fence.
+~
+E
+arrive~
+$n climbs over the fence and joins you outside the field.
+~
+!
+0 0 0
+A
+1 west~
+~
+act_tochar( #fence, ch );
+~
+E
+fence~
+There seems to be a fence in your way.
+~
+!
+0 0 0
+A
+climb hop cross - fence split-rail rail~
+fence split-rail rail~
+act_tochar( #which, ch );
+~
+E
+which~
+Which fence do you mean -- the fence to your west or the fence to your
+south?
+~
+!
+0 0 0
+A
+climb hop cross~
+s so sou sout south~
+act_tochar( #fence, ch );
+act_notchar( #rmfence, ch );
+transfer( ch, find_room( 10275 ) );
+act_notchar( #arrive, ch );
+loop( followers ){
+  ch = rch;
+  acode( room, 5 );
+  }
+~
+E
+fence~
+You hoist yourself over the top rail of the fence.
+~
+E
+rmfence~
+$n hoists $mself over the top rail of the fence.
+~
+E
+arrive~
+$n climbs over the fence and joins you inside the herb garden.
+~
+!
+0 0 0
+A
+1 south~
+~
+act_tochar( #fence, ch );
+~
+E
+fence~
+There seems to be a fence in your way.
+~
+!
+0 0 0
+-1
+S
+
+#10281
+By Talisandre Creek~
+Small trees line the quiet stream; small shrubs and clumps of grass
+huddle at their roots, protected by the wide, leafy branches above them. 
+The water runs calmly by at the bottom of a gently-sloping bank, and
+beyond it to the west you see a large expanse of fields framed by
+treelines and windbreaks.  The sounds of villagers at work drifts to you
+on an easy wind that is heavily laced with the smell of freshly-turned
+earth and drying hay.
+~
+[Tiene] creek bank. road to east.
+[Tiene] needs extras
+[Tiene] needs "entering creek" action of some sort.
+[Epiphany] Extra added - small shrubs clumps grass
+[Tiene] rdesc complete
+~
+33030144 2 9 0
+D0
+~
+~
+0 -1 10268 10 10 5
+D1
+~
+~
+0 -1 10254 10 10 5
+D3
+~
+~
+0 -1 10270 10 10 5
+E
+small shrubs clumps grass~
+Short, leafy bushes and small patches of green hide here, happily growing
+in the protection afforded them by the trees.
+~
+-1
+S
+
+#10282
+Bolqa's Custom Leather Goods~
+Thick planks of smoothly-planed pine form the shelves that hug the
+southern wall, each shelf showcasing leatherwork of various types.  The
+smell of leather hangs heavily in the air, a rich scent tinged with just
+the faintest traces of the herbal dyes used to stain the finished pieces. 
+Unlike most other shops, there is no counter upon which to conduct
+business.  Instead, a square, low-set workbench takes up most of the room
+in the center of the store.
+~
+[Tiene] rdesc complete
+[Rikahn] needs rextras
+~
+33034243 0 9 0
+D0
+thin pine door~
+~
+131 -1 10283 10 10 5
+D1
+leather-hinged door~
+~
+131 -1 10256 10 10 5
+D3
+back door~
+~
+131 -1 10284 10 10 5
+5287 9 1509949540 3 0
+-1
+S
+
+#10283
+Bolqa Tinik's House~
+Placed just off of his main workshop, Bolqa Tinik's living area is simply
+decorated and free of the clutter of his trade.  Two large leather-backed
+chairs sit against the wall on either side of a rough-hewn stone
+fireplace.  A short-legged bed only large enough for one halfling rests
+against the other wall, and the thick quilted coverlet upon it has been
+smoothed down and tucked in beneath the mattress.  At the foot of the
+bed, on the floor, is a pile of old blankets that forms a sort of bed for
+a pet; some old leather scraps tied together and bearing teeth marks lie
+scattered around the pile.
+~
+[Tiene] Bolqa Tinik's House
+[Tiene] B.T. has a big dog.  Not sure what kind yet.  Big.  Furry.  With teeth, most likely.
+[Tiene] Need to create a pet dog mob/NPC/routined critter.  I also need to make a new set of chairs -- may take the chairs out of the rdesc and load the objects instead.
+[Tiene] rdesc complete
+[Rikahn] needs rextras
+~
+33030145 0 9 0
+D2
+thin pine door~
+~
+131 -1 10282 10 10 5
+-1
+S
+
+#10284
+Vegetable Garden~
+The orderly rows of garden vegetables are marked with small wooden
+stakes, each stake bearing a small strip of leather onto which the name
+of the plant is stitched in black cord.  Tomato plants grow tall, their
+leafy mass spilling over the shorter tops of carrots and celery.  A small
+bucket of onions and old coal hopper piled high with freshly-dug potatoes
+sit by the back door.  The garden is protected by a split-rail fence;
+north of the fence, the land slopes downward gently to meet the
+slow-moving waters of Talisandre Creek.
+~
+*** FENCE NORTH ***
+[Tiene] needs fence north
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 10271 10 10 5
+D1
+back door~
+~
+131 -1 10282 10 10 5
+A
+climb hop cross~
+1 north fence rail split-rail~
+act_tochar( #fence, ch );
+act_notchar( #rmfence, ch );
+transfer(ch, find_room( 10271 ) );
+act_notchar( #arrive, ch );
+loop( followers ){
+  ch = rch;
+  acode( room, 5 );
+  }
+~
+E
+fence~
+You hoist yourself over the top rail of the fence.
+~
+E
+rmfence~
+$n hoists $mself over the top rail of the fence.
+~
+E
+arrive~
+$n climbs over the garden fence and joins you in the shallow waters of
+the creek.
+~
+!
+0 0 0
+A
+1 north~
+~
+act_tochar( #fence, ch );
+~
+E
+fence~
+There seems to be a fence in your way.
+~
+!
+0 0 0
+-1
+S
+
+#10285
+Herb Garden~
+Under Construction.
+~
+[Tiene] Terrain set to town street because of small pathway leading through garden.
+~
+33030144 1 9 0
+D1
+~
+~
+0 -1 10286 10 10 5
+D2
+~
+~
+0 -1 10258 10 10 5
+D3
+~
+~
+0 -1 10256 10 10 5
+-1
+S
+
+#10286
+Herb Garden~
+Under Construction.
+~
+[Tiene] Terrain set to town street because of small pathway leading through garden
+~
+33030144 1 9 0
+D0
+~
+~
+0 -1 10275 10 10 5
+D1
+weathered pine door~
+~
+131 -1 10287 10 10 5
+D3
+~
+~
+0 -1 10285 10 10 5
+-1
+S
+
+#10287
+The Herbatorium~
+Under Construction.
+~
+[Tiene] Check the room name. Can't remember what the silly word is.
+[Tiene] Herbalist shop
+~
+33034243 0 9 0
+D3
+weathered pine door~
+~
+131 -1 10286 10 10 5
+5286 9 1509949540 3 0
+-1
+S
+
+#10288
+A Flower-Lined Walkway~
+Flowers nod lazily in the slow breezes filtering between the village
+buildings.  Ivy climbs over the ground on both sides of the dark brick
+walkway, sinuous ropes of greenery twisting between clumps of daisies,
+marigolds and lilies, all of them shades of brightest yellow.  A small
+green building sits to the west, a @gpainted wooden shingle@n hanging
+just above the door.  The door itself is covered in small charms of wire
+and twigs that hang from small nails.  A wood-framed farmhouse with
+red-tinged plaster sits just south of here.
+~
+[Tiene] set terrain to town street because of cobbled walkway
+[Tiene] walkway leads west to charm shop and south to farmhouse
+[Tiene] Charm shop (west) is green
+[Tiene] Red-painted farmhouse to south
+[Tiene] rdesc complete
+[Rikahn] needs rextras - partially done
+~
+33030144 1 9 0
+D1
+~
+~
+0 -1 10257 10 10 5
+D2
+farmhouse door~
+~
+131 -1 10290 10 10 5
+D3
+charm-studded door~
+~
+131 -1 10289 10 10 5
+E
+1 west painted wooden shingle~
+@G+-----------------+@n
+@G|@n @gDierle's Charms@n @G|@n
+@G|@n   @gand Potions@n   @G|@n
+@G+-----------------+@n
+~
+E
+flowers clumps daisies marigolds lilies yellow~
+Growing out of the dark green ivy covering the ground, bright-topped
+flowers of cheerful yellow stand and nod in the slow breeze.
+~
+-1
+S
+
+#10289
+Dierle's Charms and Potions~
+Bright and cheerful needlework samplers hang from the green-painted
+wooden walls of this little shop.  Between the framed stitchwork hang a
+collection of small amulets and charms, all of them dangling from the
+sort of nails and tack hooks found in any barn in the town.  Small
+bottles and boxes are displayed on the rear-wall shelves, and a large
+white cupboard rests against the north wall.
+~
+[Tiene] small shop to custom potions and other small items. more for fun and color than a real purpose.  ideas: love potion (actually makes them drunk as a pope or do a silly emote), money potion (opcode can randomly load/junk a few coppers in their inventory), etc.
+[Tiene] Dierle: NPC, young female halfling, very cork-brained, saw a hedge wizard once and found her true "calling". Filled with funny stories and anecdotes about townsmen. Incorrigible gossip. Bakes cookies. Plays bridge. You know the type.
+[Tiene] Have a race check on Dierle's "entering" mpcode.  I doubt she'd welcome a goblin the same way she'd welcome an elf.
+[Tiene] rdesc complete
+[Rikahn] needs rextras
+~
+33034247 0 9 0
+D1
+charm-studded door~
+~
+131 -1 10288 10 10 5
+A
+none~
+~
+if( mob_in_room( 5008, room ) )
+  send_to_room( #smooth, room ) ;
+~
+E
+smooth~
+Dierle reaches up and smooths her hair, nervously fidgeting as you
+inspect her wares.
+~
+!
+2 100 0
+5008 9 1509949540 3 0
+7420 17 1509949540 -1 0
+-1
+S
+
+#10290
+Large Farmhouse~
+Under Construction.
+~
+~
+66584581 1 9 0
+D0
+farmhouse door~
+~
+131 -1 10288 10 10 5
+D3
+lean-to door~
+~
+0 -1 10291 10 10 5
+D4
+~
+~
+0 -1 10292 10 10 5
+-1
+S
+
+#10291
+A Small, Tidy Lean-To~
+Under Construction.
+~
+~
+66584580 1 9 0
+D1
+lean-to door~
+~
+0 -1 10290 10 10 5
+D3
+~
+~
+0 -1 10293 10 10 5
+-1
+S
+
+#10292
+Large Farmhouse~
+Under Construction.
+~
+~
+66584581 1 9 0
+D5
+~
+~
+0 -1 10290 10 10 5
+-1
+S
+
+#10293
+Above A Root Cellar~
+Under Construction.
+~
+*** FENCE SOUTH ***
+[Tiene] fenceline to south leading to horse field
+[Tiene] fenceline to west and north to protect small garden here (western boundary of area.
+~
+33030144 1 9 0
+D1
+~
+~
+0 -1 10291 10 10 5
+D2
+~
+~
+0 -1 10295 10 10 5
+D5
+old, heavy door~
+~
+131 -1 10294 10 10 5
+A
+climb hop cross~
+1 south fence split-rail rail~
+act_tochar( #fence, ch );
+act_notchar( #rmfence, ch );
+transfer( ch, find_room( 10295 ) );
+act_notchar( #arrive, ch );
+loop( followers ){
+  ch = rch;
+  acode( room, 5 );
+  }
+~
+E
+fence~
+You hoise yourself over the top rail of the fence.
+~
+E
+rmfence~
+$n hoists $mfself over the top rail of the fence.
+~
+E
+arrive~
+$n climbs over the fence and joins you inside the field.
+~
+!
+0 0 0
+A
+1 south~
+~
+act_tochar( #fence, ch );
+~
+E
+fence~
+There seems to be a fence in your way.
+~
+!
+0 0 0
+-1
+S
+
+#10294
+In The Root Cellar~
+Under Construction.
+~
+~
+66715648 1 9 0
+D4
+old, heavy door~
+~
+131 -1 10293 10 10 5
+-1
+S
+
+#10295
+In A Large, Grassy Field~
+Under Construction.
+~
+[Rikahn] needs fence code for north
+~
+33030144 2 9 0
+D0
+~
+~
+0 -1 10293 10 10 5
+D1
+~
+~
+0 -1 10297 10 10 5
+D2
+~
+~
+0 -1 10296 10 10 5
+A
+climb hop~
+1 north fence rail split-rail~
+act_tochar( #fence, ch );
+act_notchar( #rmfence, ch );
+transfer( ch, find_room( 10293 ) );
+act_notchar( #arrive, ch );
+loop( followers ){
+  ch = rch;
+  acode( room, 5 );
+  }
+~
+E
+fence~
+You hoist yourself over the top rail of the fence.
+~
+E
+rmfence~
+$n hoists $mself over the top rail of the fence.
+~
+E
+arrive~
+$n climbs over the fence and joins you outside the field.
+~
+!
+0 0 0
+-1
+S
+
+#10296
+In A Large, Grassy Field~
+Under Construction.
+~
+~
+33030144 2 9 0
+D0
+~
+~
+0 -1 10295 10 10 5
+D1
+~
+~
+0 -1 10298 10 10 5
+-1
+S
+
+#10297
+In A Large, Grassy Field~
+Under Construction.
+~
+~
+33030144 2 9 0
+D2
+~
+~
+0 -1 10298 10 10 5
+D3
+~
+~
+0 -1 10295 10 10 5
+-1
+S
+
+#10298
+In A Large, Grassy Field~
+Under Construction.
+~
+~
+33030144 2 9 0
+D0
+~
+~
+0 -1 10297 10 10 5
+D1
+~
+~
+0 -1 10299 10 10 5
+D3
+~
+~
+0 -1 10296 10 10 5
+-1
+S
+
+#10299
+In A Large, Grassy Field~
+Under Construction.
+~
+~
+33030144 2 9 0
+D1
+paddock gate~
+~
+131 -1 10300 10 10 5
+D3
+~
+~
+0 -1 10298 10 10 5
+-1
+S
+
+#10300
+Freiwe's Stables~
+Under Construction.
+~
+~
+66584589 2 9 0
+D0
+heavy sliding door~
+~
+131 -1 10303 10 10 5
+D3
+paddock gate~
+~
+131 -1 10299 10 10 5
+5288 9 1509949540 3 0
+-1
+S
+
+#10301
+In A Barley Field~
+Under Construction.
+~
+[Tiene] fences west and south. gate east.
+[Tiene] west is the side of the stables
+[Tiene] east is some other building.  cant' very well go through the bloomin' wall.
+~
+66584576 2 9 0
+D0
+~
+~
+0 -1 10302 10 10 5
+-1
+S
+
+#10302
+In A Barley Field~
+Under Construction.
+~
+*** FENCE NORTH ***
+*** FENCE WEST ***
+[Tiene] fences north, east and west
+[Tiene] west is the stableyard
+~
+66584576 2 9 0
+D0
+~
+~
+0 -1 10306 10 10 5
+D2
+~
+~
+0 -1 10301 10 10 5
+D3
+~
+~
+0 -1 10303 10 10 5
+A
+1 west~
+~
+act_tochar( #fence, ch );
+~
+E
+fence~
+There seems to be a fence in your way.
+~
+!
+0 0 0
+A
+climb hop cross~
+fence rail split-rail~
+act_tochar( #whichfence, ch );
+~
+E
+whichfence~
+Which fence do you mean - the north fence or the west fence?
+~
+!
+0 0 0
+A
+1 north~
+~
+act_tochar( #fence, ch ) ;
+~
+E
+fence~
+There seems to be a fence in your way.
+~
+!
+0 0 0
+A
+climb hop cross~
+1 west~
+act_tochar( #fence, ch );
+act_notchar( #rmfence, ch );
+transfer( ch, find_room( 10303 ) );
+act_notchar( #arrive, ch );
+loop( followers ){
+  ch = rch;
+  acode( room, 5 );
+  }
+~
+E
+fence~
+You hoist yourself over the top rail of the fence.
+~
+E
+rmfence~
+$n hoists $mself over the top rail of the fence.
+~
+E
+arrive~
+$n climbs over the fence and joins you outside the field.
+~
+!
+0 0 0
+A
+climb hop cross~
+1 north~
+act_tochar( #fence, ch );
+act_notchar( #rmfence, ch );
+transfer( ch, find_room( 10306 ) );
+act_notchar( #arrive, ch );
+loop( followers ){
+  ch = rch;
+  acode( room, 5 );
+  }
+~
+E
+fence~
+You hoist yourself over the top rail of the fence.
+~
+E
+rmfence~
+$n hoists $mself over the top rail of the fence.
+~
+E
+arrive~
+$n climbs over the fence and joins you outside the field.
+~
+!
+0 0 0
+-1
+S
+
+#10303
+A Small Stableyard~
+A @Ybright yellow sign@n hangs above the wide, sliding double doors of
+the stables south of here.  From within, you hear the whickers and snorts
+of horses and the muted stamping of their feet.  A small building of
+bright periwinkle blue sits to your west, the door closed and bearing a
+@Cleather-framed wooden sign@n.
+~
+*** FENCE EAST ***
+[Tiene] fence to east into barley field
+[Tiene] need to code fence in, ditzball
+[Tiene] tack/harness shop west
+[Tiene] stables south
+[Tiene] Tack shop is bright cyan, stables are bright yellow
+[Tiene] rdesc complete
+[Rikahn] needs rextras - partially done
+~
+66584581 2 9 0
+D0
+~
+~
+0 -1 10305 10 10 5
+D1
+~
+~
+0 -1 10302 10 10 5
+D2
+heavy sliding door~
+~
+131 -1 10300 10 10 5
+D3
+thick nail-studded door~
+~
+131 -1 10304 10 10 5
+E
+bright yellow~
+@y+---------------------------------+@n
+@y|@n         @YFreiwe's Stables@n        @y|@n
+@y|@n   @YDraft Horses, Riding Horses@n   @y|@n
+@y|@n       @YBreeding fine animals@n     @y|@n
+@y|@n          @Ysince 997 N.A.@n         @y|@n
+@y+---------------------------------+@n
+~
+E
+leather-framed framed wooden~
+@c+------------------------------------+@n
+@c|@n @CMarson's Tack and Harness Emporium@n @c|@n
+@c|@n      @CCustom Leathers for the@n       @c|@n
+@c|@n       @CDescriminating Equine@n        @c|@n
+@c+------------------------------------+@n
+~
+A
+climb hop cross~
+1 east fence rail split-rail~
+act_tochar( #fence, ch );
+act_notchar( #rmfence, ch );
+transfer( ch, find_room( 10302 ) );
+act_notchar( #arrive, ch );
+loop( followers ){
+  ch = rch;
+  acode( room, 5 );
+  }
+~
+E
+fence~
+You hoist yourself over the top rail of the fence.
+~
+E
+rmfence~
+$n hoists $mself over the top rail of the fence.
+~
+E
+arrive~
+$n climbs over the fence and joins you inside the field.
+~
+!
+0 0 0
+A
+1 east~
+~
+act_tochar( #fence, ch );
+~
+E
+fence~
+There seems to be a fence in your way.
+~
+!
+0 0 0
+A
+look~
+sign~
+act_tochar( #which, ch );
+~
+E
+which~
+Which sign -- the @Ybright yellow sign@n or the @Cleather-framed sign@n?
+~
+!
+0 0 0
+-1
+S
+
+#10304
+Marson's Tack And Harness Emporium~
+Under Construction.
+~
+~
+66588679 2 9 0
+D1
+thick nail-studded door~
+~
+131 -1 10303 10 10 5
+5289 9 1509949540 3 0
+-1
+S
+
+#10305
+Ceanshire Market Square - West Side~
+Under Construction.
+~
+[Tiene] random shops on different days. to be implemented after timed event code.
+[Tiene] stables south
+[Tiene] Add water trought and pump. Make trough reset empty; "pump water" will fill it til next reset.
+~
+66584581 2 9 0
+D0
+~
+~
+0 -1 10257 10 10 5
+D1
+~
+~
+0 -1 10306 10 10 5
+D2
+~
+~
+0 -1 10303 10 10 5
+-1
+S
+
+#10306
+Ceanshire Market Square - East Side~
+Under Construction.
+~
+*** FENCE SOUTH ***
+[Tiene] random shops on different days. to be implemented after timed event code.
+~
+66584581 2 9 0
+D0
+~
+~
+0 -1 10258 10 10 5
+D1
+~
+~
+0 -1 10307 10 10 5
+D2
+~
+~
+0 -1 10302 10 10 5
+D3
+~
+~
+0 -1 10305 10 10 5
+A
+climb hop cross~
+1 south fence split-rail rail~
+act_tochar( #fence, ch );
+act_notchar( #rmfence, ch );
+transfer( ch, find_room( 10302 ) );
+act_notchar( #arrive, ch );
+loop( followers ){
+  ch = rch;
+  acode( room, 5 );
+  }
+~
+E
+fence~
+You hoist yourself over the top rail of the fence.
+~
+E
+rmfence~
+$n hoists $mself over the top rail of the fence.
+~
+E
+arrive~
+$n climbs over the fence and joins you inside the field.
+~
+!
+0 0 0
+A
+1 south~
+~
+act_tochar( #fence, ch );
+~
+E
+fence~
+There seems to be a fence in your way.
+~
+!
+0 0 0
+-1
+S
+
+#10307
+A Small, Well-Kept Yard~
+Under Construction.
+~
+~
+33030144 2 9 0
+D0
+~
+~
+0 -1 10259 10 10 5
+D2
+simple wooden door~
+~
+131 -1 10308 10 10 5
+D3
+~
+~
+0 -1 10306 10 10 5
+-1
+S
+
+#10308
+Shop: General Store/Grocer~
+Under Construction.
+~
+[Tiene] can't go up unless halfling. shopkeeper's wife is up there and will treat halflings to a meal
+~
+33034247 0 9 0
+D0
+simple wooden door~
+~
+131 -1 10307 10 10 5
+D4
+~
+~
+0 -1 10311 10 10 5
+5290 9 1509949540 3 0
+-1
+S
+
+#10309
+In A Tidy Vegetable Garden~
+Under Construction.
+~
+~
+33030144 0 9 0
+D0
+simple wooden door~
+~
+131 -1 10310 10 10 5
+D1
+~
+~
+0 -1 10263 10 10 5
+-1
+S
+
+#10310
+House~
+Under Construction.
+~
+~
+33030149 0 9 0
+D2
+simple wooden door~
+~
+131 -1 10309 10 10 5
+-1
+S
+
+#10311
+Shopkeeper's Living Quarters~
+Under Construction.
+~
+[Tiene] halflings are the only ones allowed up here. shopkeeper's wife is NPC that provides players with a meal and conversation
+~
+33030149 0 9 0
+D5
+~
+~
+0 -1 10308 10 10 5
+5291 9 1509949540 3 0
+-1
+S
+
+#10312
+In A Hops Field~
+Under Construction.
+~
+*** FENCE WEST ***
+[Tiene] fence north in room desc, real fence coded west
+~
+33030144 2 9 0
+D1
+~
+~
+0 -1 10313 10 10 5
+D2
+~
+~
+0 -1 10314 10 10 5
+D3
+~
+~
+0 -1 10261 10 10 5
+A
+1 west~
+~
+act_tochar( #fence, ch );
+~
+E
+fence~
+There seems to be a fence in your way.
+~
+!
+0 0 0
+A
+climb hop cross~
+fence split-rail rail w we wes west~
+act_tochar( #fence, ch );
+act_notchar(#rmfence, ch );
+transfer( ch, find_room( 10261 ) );
+act_notchar( #arrive, ch );
+loop( followers ){
+  ch = rch;
+  acode( room, 5 );
+  }
+~
+E
+fence~
+You hoist yourself over the top rail of the fence.
+~
+E
+rmfence~
+$n hoists $mself over the top rail of the fence.
+~
+E
+arrive~
+$n climbs over the fence and joins you outside the field.
+~
+!
+0 0 0
+-1
+S
+
+#10313
+In A Hops Field~
+Under Construction.
+~
+[Tiene] rdesc fences north and east -- is corner of zone, no extension
+~
+33030144 2 9 0
+D2
+~
+~
+0 -1 10315 10 10 5
+D3
+~
+~
+0 -1 10312 10 10 5
+-1
+S
+
+#10314
+In A Hops Field~
+Under Construction.
+~
+*** FENCE WEST ***
+[Tiene] fence east. building south (entrance on east side)
+~
+33030144 2 9 0
+D0
+~
+~
+0 -1 10312 10 10 5
+D1
+~
+~
+0 -1 10315 10 10 5
+D3
+~
+~
+0 -1 10262 10 10 5
+A
+1 west~
+~
+act_tochar( #fence, ch );
+~
+E
+fence~
+There seems to be a fence in your way.
+~
+!
+0 0 0
+A
+climb hop cross~
+fence rail split-rail w we wes west~
+act_tochar( #fence, ch );
+act_notchar( #rmfence, ch );
+transfer( ch, find_room( 10262 ) );
+act_notchar( #arrive, ch );
+loop( followers ){
+  ch = rch;
+  acode( room, 5 );
+  }
+~
+E
+fence~
+You hoist yourself over the top rail of the fence.
+~
+E
+rmfence~
+$n hoists $mself over the top rail of the fence.
+~
+E
+arrive~
+$n climbs over the fence and joins you outside the field.
+~
+!
+0 0 0
+-1
+S
+
+#10315
+In A Hops Field~
+Under Construction.
+~
+[Tiene] rdesc fence east, building south (entrance on south side)
+~
+33030144 2 9 0
+D0
+~
+~
+0 -1 10313 10 10 5
+D3
+~
+~
+0 -1 10314 10 10 5
+-1
+S
+
+#10316
+A Cobbled Garden Walkway~
+Old river rock has been laid in a perfectly-fitted fashion to form a
+small pathway leading westward from the village lane.  The cobbled
+walkway curves in a graceful arc, ending at the front door of a blue
+building covered over with twining morning glory vines and ivies.  Along
+either side of the walkway grow carefully-tended plants and small trees,
+and you see that a young quince tree has been coaxed to bend itself
+around a decorative iron rail; the tree now forms a sturdy, living rail
+along one side.  Smoke billows from a wide stone chimney atop the
+structure to the west, and intricate metalwork adorns the door and
+shutters of the large building.  An @Biron-wraught sign@n hangs before
+the door.
+~
+[Tiene] needs extras. please leave quince tree extra the way it is.
+[Tiene] aedit revisions: once NPCs are made, make sure the clanging doesn't happen if the blacksmith isn't there.  if( find_mob( ) ); stuff.
+[Tiene] rdesc complete
+[Rikahn] needs rextras - partially done
+~
+33030144 1 9 0
+D1
+~
+~
+0 -1 10264 10 10 5
+D3
+iron-banded door~
+~
+131 -1 10317 10 10 5
+E
+young quince rail side~
+An intricately-worked iron rail can barely be seen beneath the fluttering
+leaves of the quince tree.  The talented gardener coaxed this tree as a
+sapling into bending and wrapping itself around the rail.  It has grown
+sturdily over the years, and is now thick-leafed and bearing fruit.
+~
+E
+iron-wraught sign~
+@b+-------------------------+
+@b|      @BHwad's Smithy@n      @b|
+@b|@n    @BFine Iron Designs@n    @b|
+@b|@n   @BCustom Metalworking@n   @b|
+@b+-------------------------+@n
+~
+A
+~
+~
+send_to_room( #clang, room );
+~
+E
+clang~
+@BFrom the west, you hear the metallic clang of a hammer striking an
+anvil.@n 
+~
+!
+2 300 0
+-1
+S
+
+#10317
+Hwad's Smithy~
+Under Construction.
+~
+[Tiene] act_area when players pump bellows: "A sudden puff of smoke is seen rising from the chimney of a house" or somesuch.
+~
+33034247 0 9 0
+D1
+iron-banded door~
+~
+131 -1 10316 10 10 5
+5296 9 1509949540 3 0
+-1
+S
+
+#10318
+The Ceanshire Brewing Cooperative~
+Under Construction.
+~
+~
+33030149 0 9 0
+D3
+violet-painted door~
+~
+131 -1 10263 10 10 5
+5297 9 1509949540 3 0
+-1
+S
+
+#10319
+Overgrown Walkway~
+Under Construction.
+~
+[Tiene] Walkway leads to berry garden (north) and human house/barn
+~
+33030144 2 9 0
+D1
+~
+~
+0 -1 10320 10 10 5
+D3
+~
+~
+0 -1 10264 10 10 5
+-1
+S
+
+#10320
+Overgrown Walkway~
+The walkway stretches between overgrown shrubs and flowers, untidy but
+not unpleasant growth spilling over the path leading east and west. 
+Barrel rings lie stacked all over here, along with plain planks and
+unfinished barrels.  The disarray seems even worse to the east, where an
+old house and barn huddle together amongst the scattered materials for
+the town's barrelmaker.
+~
+[Tiene] Walkway leads to berry garden (north) and human house/barn
+[Tiene] Needs extras
+~
+33030144 2 9 0
+D0
+~
+~
+0 -1 10323 10 10 5
+D1
+~
+~
+0 -1 10321 10 10 5
+D3
+~
+~
+0 -1 10319 10 10 5
+-1
+S
+
+#10321
+Barrel-Strewn Lawn~
+More barrels are scattered here, grouped in twos and threes with some
+lying on their sides.  A pile of planks sits stacked near the front door
+of a haphazardly-constructed house of unfinished wood.  The building, and
+its roof, are unlike anything else in this tidy little settlement, having
+straighter edges and a roof of shale rock instead of the usual thatching. 
+To the south sits an old barn, also unpainted and somewhat different than
+the rest of Ceanshire's outbuildings.
+~
+[Tiene] Human house north (human is the barrel-maker and tapper at the brewery), old barn south (small 6-room barn zone: two cats, handful of mice, barn dog, old mule in a stall)
+[Tiene] Needs extras.
+~
+33030144 2 9 0
+D0
+simple wooden door~
+~
+131 -1 10322 10 10 5
+D2
+unpainted sliding door~
+~
+131 -1 10324 10 10 5
+D3
+~
+~
+0 -1 10320 10 10 5
+-1
+S
+
+#10322
+A Shabby-Looking Farmhouse~
+The wood plank walls are warped, with old, oily rags shoved into the gaps
+and knotholes to stop the draft from entering.  A few dirty tin plates
+lie stacked on the floor next to a grimey wooden bucket half-filled with
+scummy water, and a single tin cup hangs on a hook just above a miniature
+iron well pump.  The table is cluttered with pieces of chain, rusted
+nails, what looks like a few broken hinges, and a pile of dirty clothing. 
+There is no bed here that you can see, unless you count the bedroll
+half-wrapped and standing on end in the corner.  The whole house looks
+more like a squatter's cabin than a real home, especially when compared
+to nearby village houses.
+~
+[Tiene] The one human house in town, hence the shabbiness.
+[Tiene] needs extras
+[Tiene] House belongs to the human barrel-maker and tapper at the brewery.
+~
+33030149 2 9 0
+D2
+simple wooden door~
+~
+131 -1 10321 10 10 5
+-1
+S
+
+#10323
+A Small Berry Garden~
+Under Construction.
+~
+[Tiene] blackberry trees, raspberry bushes, gooseberry bushes, other things to flavour the mead
+[Tiene] boysenberry bushes, blueberry
+~
+33030144 2 9 0
+D2
+~
+~
+0 -1 10320 10 10 5
+-1
+S
+
+#10324
+Inside The Old Barn~
+Thick beams of old, greyed wood criss-cross overhead to form the
+structure of this building's roof.  Uncut trunks of straight-grown pine
+support the high-arching room, and a large hayloft opens on either side
+of the second level.  Small planks of wood are nailed against the rear
+wall, forming a ladder that leads up into the loft, and other odds and
+ends of wood held together with old rope and rusty nails form a stall
+gate.  The dirt floor is uneven and stray stalks of straw lie scattered
+across it.
+~
+[Tiene] Needs extras
+[Tiene] Barn dog should wander around here and/or the room north of here.
+~
+33030148 0 9 0
+D0
+unpainted sliding door~
+~
+131 -1 10321 10 10 5
+D1
+stall gate~
+~
+131 -1 10327 10 10 5
+D3
+~
+~
+0 -1 10326 10 10 5
+D4
+~
+~
+0 -1 10325 10 10 5
+-1
+S
+
+#10325
+In The Hayloft~
+Under Construction.
+~
+~
+33030148 0 9 0
+D1
+~
+~
+0 -1 10329 10 10 5
+D3
+~
+~
+0 -1 10328 10 10 5
+D5
+~
+~
+0 -1 10324 10 10 5
+-1
+S
+
+#10326
+Inside The Old Barn~
+Under Construction.
+~
+~
+33030148 0 9 0
+D1
+~
+~
+0 -1 10324 10 10 5
+-1
+S
+
+#10327
+Inside The Old Barn - Mule Stall~
+Soiled with manure and spilled grain, the straw covering the dirt floor
+has been pushed around unevenly by the tenant of this small box stall. 
+The wooden gate to the west seems to be barely held together by bits of
+old rope and rusted nails, but it serves its purpose despite its
+inelegant construction.  Two empty buckets hang from the walls, one
+obviously for food and the other for water.
+~
+[Tiene] Needs funny mule mob to make faces at them and sometimes kick them/step on their toes.
+[Tiene] Needs extras
+~
+33030148 0 9 0
+D3
+stall gate~
+~
+131 -1 10324 10 10 5
+A
+get take~
+two empty buckets food water~
+act_tochar( #bucket, ch );
+~
+E
+bucket~
+You probably shouldn't take the buckets, since they are what the mule
+eats and drinks from.
+~
+!
+0 0 0
+-1
+S
+
+#10328
+In The Hayloft~
+Under Construction.
+~
+~
+33030148 0 9 0
+D1
+~
+~
+0 -1 10325 10 10 5
+-1
+S
+
+#10329
+In The Hayloft~
+Under Construction.
+~
+~
+33030148 0 9 0
+D3
+~
+~
+0 -1 10325 10 10 5
+-1
+S
+
+#0
+

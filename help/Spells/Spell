@@ -1,0 +1,18 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+spell [spell_name] : eg, "spell create food", or "spell ogre strength"<br>
+<br>
+<h1> Description </h1>
+<br>
+This command will give you background information on the particular spell<br>
+you are looking up.  Information in the file should include energy cost,<br>
+number of turns to cast, a brief description on the effects, and a listing<br>
+of any reagents needed to complete the spell.<br>
+<br>
+To see a listing of the spells available to any class, look in help<br>
+abilities.  Other useful help files pertaining to magic include leech and<br>
+magic.<br>
+</html>
+</body>

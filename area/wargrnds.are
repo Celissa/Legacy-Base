@@ -1,0 +1,2961 @@
+#M2_AREA
+2
+
+War Grounds~
+Morros~
+~
+~
+~
+
+0 0
+3
+1
+#ROOMS
+
+#13750
+Fork in the Road~
+The traveled, dirt road comes to a fork here, each branch cutting through
+the forest in a different direction.  Each path seems to create its own
+setting while leaving this spot.  An empty, ground-dug hole, the home of
+a fire at one time, evidence that a camp once lie in this room, but long
+ago abandoned.  Small markings lay in the dirt, map-like symbols drawn
+but unlegible and the ability to make out what it once read is impossible.
+~
+~
+100139008 12 9 0
+D0
+~
+~
+0 -1 13752 10 10 5
+D1
+~
+~
+0 -1 13751 10 10 5
+D2
+~
+~
+0 -1 13754 10 10 5
+D3
+~
+~
+0 -1 13753 10 10 5
+E
+1 north~
+The path leaving north gives a unsettle feeling, nothing but silence
+itself seems to come from this direction.  The path descends down a hill
+and into a misty fog, which coats the area.  A small, whipping breeze
+seems to arrive from this direction, the cut-down trees halting none of
+it.
+~
+E
+1 south~
+Chirping birds and the rustle of leaves follows this path.  The trees
+interlocked with one another making the path tight, but traversable.  The
+path itself degrades from piled dirt to just trampled grass, a clear
+direction given, but seeing far off into the distance of where the trail
+may lead is rather difficult, if not impossible.
+~
+E
+1 east~
+The path heading this way isn't much more than just a path.  The piled
+dirt zig-zagging its way through the forest and to no apparent end. 
+Flocks of birds scatter from spot to spot as predators hunt for food.  In
+the fair distance, a slight glint of white can be seen protruding from
+the earth, what it is or may be can not be determined from here.
+~
+E
+markings dirt map-like symbols~
+Scrambled in the dirt, illegible letterings and symbols map out a small
+area.  The map that once lie has been stepped on and smeared, the only
+thing even legible is the small star noted as, "here", located in the
+center of the map with branches leading in different directions.
+~
+-1
+S
+
+#13751
+Well-traveled Path~
+The well-travled dirt path zig-zags its way east and west, dodging
+through trees with an occasional one cut down.  The sound of water echoes
+in the trees, sounding like a huge flood on its way.  Further to the
+east, more trees have been cut down and a small clearing is present,
+small blocks of white barely visable.  Following the path to the east, it
+gradually descends, barely even noticable, if not for the trees in the
+proceeding area to look shorter.
+~
+~
+100139008 12 9 0
+D1
+~
+~
+0 -1 13755 10 10 5
+D3
+~
+~
+0 -1 13750 10 10 5
+E
+clearing blocks white~
+Small chunks of white can be scarcely seen in the eastern distance.  The
+blocks lie in a clearing, only but a few trees evident in the area.  As
+the sun hits the open-area, small rays reflect back, something refracting
+the light and sending it this way.
+~
+-1
+S
+
+#13752
+Dirt Path~
+The trail, littered with fallen dead tree limbs and leaves, runs in a
+north-south fashion.  Inclining slightly up a hill to the south, the
+trail turns to a fork in the road while declining down the hill to the
+north, a misty fog arises.  Few trees even grow remotely descent as
+little to no care was given to them; even half a dozen stumps, evidence
+of long-gone trees, can be seen with jagged roots protruding from the
+earth.
+~
+~
+100139008 12 9 0
+D0
+~
+~
+0 -1 13788 10 10 5
+D2
+~
+~
+0 -1 13750 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cStep by step, you beging declining down the hill and into a heavier
+mist of fog.@n 
+~
+E
+to_room~
+@c$n dissappears into the dense fog as $e declines down the northern
+hill.@n 
+~
+!
+3 0 1
+-1
+S
+
+#13753
+Fork in the Road~
+Under Construction.
+~
+~
+100139008 12 9 0
+D1
+~
+~
+0 -1 13750 10 10 5
+-1
+S
+
+#13754
+Grassy Trail~
+Barely visable, a leaf-trampled path weaves through the dense forest. 
+Trees protrude from the earth up in every direction, massive roots sprout
+as well creating many obstacles to continue along the path.
+~
+~
+100139008 12 9 0
+D0
+~
+~
+0 -1 13750 10 10 5
+D2
+~
+~
+0 -1 13828 10 10 5
+-1
+S
+
+#13755
+Well-traveled Path~
+Meager, stone-white blocks of granite coat the area, signs of the
+wreckings lying to the east.  Faint, dried puddles of blood lie from spot
+to spot followed by broken swords, bows, and other items of defense.  A
+nation flag, smeared with blood and torn from battle, is wrapped around
+one of the trees, most likely once proudly hung to the shattered keep to
+the east, nothing but mockery left on the flag to prove the keep did come
+down.  The path, while distorted from battle, still weaves its way east
+and west, collapsed ruins lying to the east.
+~
+[Morros] Needs a good weapon reset at 1%
+~
+100139008 12 9 0
+D1
+~
+~
+0 -1 13756 10 10 5
+D3
+~
+~
+0 -1 13751 10 10 5
+E
+flag~
+Faded blue with a symbolic depiction in the middle, the flag used to have
+a meaning, but now smeared and torn.  Wrapped and pinned around the tree,
+the flag will always be a reminder to those who once built the keep to
+the east.
+~
+E
+stone-white white granite blocks~
+The blocks, once proudly constructed forming a keep, now coat the area in
+bits and pieces with the fortress in shambles.
+~
+E
+swords bows items defense puddles blood~
+Belonging to the past owners, puddles of blood and broken weapons lie
+scattered upon the area.  No corpses present, but the path stained with
+crimson-red blood leading east.  As the sun beats down, light bends and
+shimmers off the rusted metal creating a blinding effect.
+~
+A
+~
+broken swords bows items~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  i = random( 1, 100 );
+  if( i == 1 ) {
+    obj_to_char( oload( 255 ), ch ); // Temporary
+  }
+  else {
+    act_tochar( #bad, ch, obj, mob, sight );
+  }
+}
+~
+E
+bad~
+None of the weapons are worth taking.
+~
+!
+9 0 0
+-1
+S
+
+#13756
+Ruin in Shambles~
+White, granite blocks blown to pieces cover the field.  Off into the
+east, a wall of human corpses strung togethor form a gate.  Whatever
+corpses remained were tossed into a hole in the northern path, abnoxious
+fumes emitting from it.  Hanging from a tree painted in white, from the
+blast, a human carcass hangs, used for a practice dumby.  The decaying
+carcass is, now, a food source for the preying vultures, the body mangled
+long ago and left to watch his associates die.  Set into the ground in
+the center of the room, a shattered fountain, barely standing, holds a
+crimson-red liquid, most likely that of blood.
+~
+~
+100139008 12 9 0
+D0
+~
+~
+0 -1 13757 10 10 5
+D1
+human gate~
+~
+3 -1 13759 10 10 5
+D2
+~
+~
+0 -1 13758 10 10 5
+D3
+~
+~
+0 -1 13755 10 10 5
+E
+gate 1 east wall~
+Pinned togethor through rope and sticks, a wall of human corpses form a
+gate.  A foul odor of death and decay protrudes from the bodies but the
+only way east is to travel past them.  The gate section of the wall,
+laying in the center, uses a human hand, nearly omitted of all skin and
+flesh, as a handle to open or close the gate.
+~
+E
+hole 1 northern~
+Ten feet wide and deep, the pit consumes the lost souls of the battle. 
+Flies, vultures, and an assortment of other bugs have taken a liking to
+the place as they devour what is left of the bodies.  The hole is
+impassable but with a good run and leap, one would be able to jump over
+the hole, provided they could bare the stench of death for long enough.
+~
+E
+tree noble human carcass dumby~
+Battle-torn and stripped of any valuables, this once-human carcass must
+have been of some value.  Most likely the captain of the keep that was
+once here, now nothing more than a pile of rubble.  Only food for
+vultures and other meat scrappers, the corpse is nothing more than
+another dead body in the area.
+~
+E
+fountain crimson-red red liquid blood~
+The only structure left standing, the granite fountain leaks a
+crimson-red liquid.  Slightly overflowing, streaks of red stain the once
+near-perfect white surface.
+~
+A
+close~
+1 east gate~
+if( is_open( room, east ) ) {
+  act_tochar( #close, ch, obj, mob, sight );
+  act_notchar( #close2, ch, obj, mob, sight );
+  close( room, east );
+}
+else {
+  act_tochar( #close3, ch, obj, mob, sight );
+}
+~
+E
+open~
+@CGrabbing the hand as a handle, you open the gate to the east.@n 
+~
+E
+open2~
+@C$n grabs the hand and pulls on the gate opening it.@n 
+~
+E
+close~
+@CYou deliver a swift kick sending the gate back to its original
+position.@n 
+~
+E
+close2~
+@C$n gives the gate a swift kick sending it back to its original
+position.@n 
+~
+E
+close3~
+The gate is already closed.
+~
+!
+0 0 0
+A
+open~
+gate 1 east~
+if( !is_open( room, east ) ) {
+  act_tochar( #open, ch, obj, mob, sight );
+  act_notchar( #open2, ch, obj, mob, sight );
+  open( room, east );
+}
+else {
+  act_tochar( #open3, ch, obj, mob, sight );
+}
+~
+E
+open~
+@CGrabbing the hand as a handle, you open the gate to the east.@n 
+~
+E
+open2~
+@C$n grabs the hand and pulls on the gate opening it.@n 
+~
+E
+open3~
+How much more open would you like it?
+~
+!
+0 0 0
+A
+~
+~
+act_tochar( #no, ch, obj, mob, sight );
+~
+E
+no~
+Perhaps jumping would be better?
+~
+!
+3 0 1
+A
+1 jump~
+1 north~
+act_tochar( #jump, ch );
+act_notchar( #jump2, ch );
+transfer( ch, find_room( 13757 ) );
+act_notchar( #arrival, ch );
+loop( followers )
+  if( is_standing( rch ) ) {
+  act_tochar( #jump, rch );
+  act_notchar( #jump2, rch, obj, mob, sight );
+  transfer( rch, find_room( 13757 ) );
+  act_notchar( #arrival, rch, obj, mob, sight );
+}
+~
+E
+jump~
+@CTaking a deep breath, you leap over the pile of dead bodies.@n 
+~
+E
+jump2~
+@C$n takes a deep breath and launches $mself over the bodies.@n 
+~
+E
+arrival~
+@C$n arrives from a monstrous jump and almost lands on top of you.@n
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@MEach step is followed with a *crunch* - the sound of rubble beneathe
+your feet.@n 
+~
+E
+to_room~
+@M*crunch* follows as each step $n takes.@n 
+~
+!
+3 0 14
+A
+~
+~
+i = random( 1, 4 );
+if( i == 1 )
+  send_to_room( #stink, room, sight );
+if( i == 2 )
+  send_to_room( #vulture, room, sight );
+if( i == 3 )
+  send_to_room( #snap, room, sight );
+if( i == 4 )
+  send_to_room( #gurgle, room, sight );
+~
+E
+stink~
+@GA horrible stench arrives from the pile of carcasses.@n 
+~
+E
+vulture~
+@RA vulture swoops down from the skies scavenging for anything.@n 
+~
+E
+snap~
+@gA *snap* of a branch echoes in the forest.@n 
+~
+E
+gurgle~
+@RThe fountain spits and sputters just as some of the liquid shoots out
+of the fountain spraying you with the mist.@n 
+~
+!
+2 150 0
+-1
+S
+
+#13757
+Cut Through the Woods~
+A path torn through the woods steadily declines down a hill and into a
+misty fog to the northwest.  Divided into halves, the eastern side of the
+path filled with lucious, growing trees while the western either chopped
+down or dying from lack of care.  Buried in the dirt path, a few bones
+poke from the ground up, perhaps once a burial for dead soldiers was once
+here as the ground is even soft to tred on.  Off to the south, a
+body-filled pit emits abnoxious odors, many humans and few elves and
+dwarves in the hole.
+~
+~
+100139008 12 9 0
+D0
+~
+~
+0 -1 13860 10 10 5
+D2
+~
+~
+0 -1 13756 10 10 5
+-1
+S
+
+#13758
+Ruin in Shambles~
+Under Construction.
+~
+~
+100139008 12 9 0
+D0
+~
+~
+0 -1 13756 10 10 5
+-1
+S
+
+#13759
+Well-traveled Path~
+Small chunks of white blocks cloak the area, the bigger pieces on the
+western side, just before a gate of dead bodies.  Beyond the gate, a pile
+of rubble, the reminisce of an old keep of some kind.  The vegetation
+here grows much more wildly than the rest of the forest, vines wrapping
+around the oak trees, even the dirt path has signs of plant-life starting
+to break through.  A small trickle of tainted crimson-red liquid weaves
+its way down the outskirts of the path, streaming downhill from the west.
+~
+~
+100139008 12 9 0
+D1
+~
+~
+0 -1 13760 10 10 5
+D3
+human gate~
+~
+3 -1 13756 10 10 5
+E
+chunks white blocks pieces~
+Scattered about the room like an unattended child's bedroom, chunks of
+white granite fill the area.  The bigger portions farther to the west and
+as the path of powder continues to the east, each piece gradually
+decreasing in size and eventually nothing more than a spec of white here
+and there.
+~
+E
+gate 1 west~
+Pinned togethor through rope and sticks, a wall of human corpses form a
+gate.  A foul odor of death and decay protrudes from the bodies but the
+only way east is to travel past them.  The gate section of the wall,
+laying in the center, uses a human hand, nearly omitted of all skin and
+flesh, as a handle to open or close the gate.
+~
+E
+rubble keep trickle tainted crimson-red red liquid~
+Just beyond the horrifying gate of bodies, a pile of rubble, nothing
+more, paints the scenery in the clearing to the west.  A gouge offset on
+the path allows for a red liquid to follow the path downhill and steadly
+descending down the slope to the east.
+~
+A
+open~
+gate 1 west~
+if( !is_open( room, west ) ) {
+  act_tochar( #open, ch, obj, mob, sight );
+  act_notchar( #open2, ch, obj, mob, sight );
+  open( room, west );
+}
+else {
+  act_tochar( #open3, ch, obj, mob, sight );
+}
+~
+E
+open~
+@CUsing the skeletal hand as a handle, you push open the gate to the
+west.@n 
+~
+E
+open2~
+@C$n grabs the skeletal hand and pushes the western human gate open.@n
+
+~
+E
+open3~
+How much more open would you like it?
+~
+!
+0 0 0
+A
+~
+~
+send_to_room( #spook, room, sight );
+~
+E
+spook~
+@GA small, white rabbit skurries across the path, obviously spooked by
+something.@n 
+~
+!
+2 150 0
+-1
+S
+
+#13760
+Well-traveled Path~
+The dirt path, running in an east-west fashion, begins to thicken and the
+dirt is much more compact.  The vegetation wraps its vines around the
+surrounding trees, as if trying to stangle all life from them.  The trees
+sprout from the ground like mushrooms and fold over with leaves that give
+the appearance of dangling iciciles, nearly each branch swooping to touch
+the ground.  The trees are painted a myriad of colors, each tree in the
+staging process from one color to the next.  The trees do seem to part
+ways in the southern part of the room, yet no dirt path seen, a clear
+passage is evident.  The small stream that followed the path comes to an
+abrupt end, soakening the roots of an enormous tree.
+~
+~
+100139008 12 9 0
+D1
+~
+~
+0 -1 13777 10 10 5
+D2
+~
+~
+0 -1 13761 10 10 5
+D3
+~
+~
+0 -1 13759 10 10 5
+E
+vegetation vines~
+Arising from the ground and wrapping all the trees, vines of vegetation
+look to cut all life off from the trees, swallowing them whole.  Racing
+around the tree like the stripes of a candycane, the vines leap from tree
+to tree, cutting off any passage other than through the path and parting
+trees to the south.
+~
+E
+stream roots enormous tree~
+The roots, painted red from the small stream of red liquid, create a
+hazardous walk through the forest; the tree itself, nearly as round as it
+is tall, reaches farther than the encircling trees, making it quite
+distinct.  Half the tree is bare of any leaves, while the other half has
+a droopy appearance, as each stem of branches seems to fall toward the
+ground.
+~
+A
+~
+~
+send_to_room( #whine, room, sight );
+~
+E
+whine~
+@RA shriek-like whine echoes inside the surrounding trees, each rumble
+slightly shakes the ground.@n 
+~
+!
+2 150 0
+-1
+S
+
+#13761
+Small Forest~
+Trees leap in every which direction, minus the small path which the grass
+has been treaded on to show.  A pine tree here, an oak tree there, and
+various other trees, some even unrecognizable from all the moss covering
+them.  The vegetation here seems almost non-exhistant if not for the
+vines dangling from the willow tree in the north.  Scattered throughout
+the floor, a few feathers and broken arrows lie upon the floor, perhaps
+signs of a previous battle.
+~
+[Morros] No.mob to keep forest 'wanders' in the forest.
+[Morros] Custom part for a bow or arrow with a search ground acode perhaps?
+~
+100139016 12 9 0
+D0
+~
+~
+0 -1 13760 10 10 5
+D2
+~
+~
+0 -1 13762 10 10 5
+E
+trees pine oak willow~
+In every direction, a new breed of tree sprouts from the ground, either
+with leaves dangling like daggers or branches reaching for the sun,
+absorbing every tid-bit of sun there is to give.
+~
+E
+feathers broken arrows floor~
+A few feathers of various colors, some even more deterioated than others,
+lie scattered about the room.  Broken arrows with dull heads follow the
+chaotic appearance of feathers.
+~
+-1
+S
+
+#13762
+Small Forest~
+The forest continues to mark its way through the surrounding area, a few
+broken branches tossed about the room.  Little to no sunlight penetrates
+the ground here, which creates a dark, unsettle feeling.  The dirt is
+very fertile and soft to the touch, each step is slightly sunk into the
+loose soil.  A little distance off to the south, an enormous tree can
+vaugely be seen; with the lack of light, it's very hard to make out what
+kind of tree it is, but the monstrosity of size is well noted.
+~
+~
+100139008 12 9 0
+D0
+~
+~
+0 -1 13761 10 10 5
+D1
+~
+~
+0 -1 13764 10 10 5
+D2
+~
+~
+0 -1 13765 10 10 5
+D3
+~
+~
+0 -1 13763 10 10 5
+E
+branches floor~
+Fallen, broken and dead branches litter the floor, leaves long-gone from
+the branches.  Although not very big in size, still an obstacle to
+overcome while traveling from one area to another.
+~
+E
+enormous 1 south tree~
+Off into the dark distance, a wide, gigantic tree stands above the rest,
+like a mountain just past a grassy field.
+~
+-1
+S
+
+#13763
+Small Forest~
+Massive, redwood trees planted to the north, wrapping to the west, paint
+scenery here, Interlocked and woven togethor like that of a knitted
+quilt, the branches create a wall of earth, disallowing any passage. 
+Even the roots form a hazard for any movement from place to place as they
+protrude up to six feet from the ground.  A few bird's nest can be seen
+up in the branches, but much to high to even reach.  The sound of
+gurgling water can be heard echoing off the dense, enormous trees,
+magnifying the sound.
+~
+~
+100139008 12 9 0
+D1
+~
+~
+0 -1 13762 10 10 5
+D2
+~
+~
+0 -1 13767 10 10 5
+E
+roots trees branches~
+Interlocked and grown togethor, the trees form a barricade disallowing
+any travel to the north and any to the west as they continue to wrap that
+way.  The massive roots reach as tall as a man and as wide as an ogre,
+the signs of life these trees have lived and will continue to live with
+such fertile ground.
+~
+E
+nest~
+Stalks of straw strewn in corners of huge branches create a bird's nest
+here and there.  The nests lie at least twenty feet off the ground and
+not even nearly half the length of the trees.
+~
+-1
+S
+
+#13764
+Small Forest~
+Just before a flwoing river, small, muddied rocks cradle the stream.  A
+few bushes grow like weeds, the soft, flooded soil good grounds to grow. 
+Beyond the river, the forest continues, the flowing river much to extreme
+to pass by swimming means.  Spun between a few trees, a spider web, no
+more than the size of softball, acts as a net, grabbing a few insects. 
+The constant chatter of tree-infested rodents disturbs the silence and
+beauty of the area itself.
+~
+~
+100139008 12 9 0
+D2
+~
+~
+0 -1 13766 10 10 5
+D3
+~
+~
+0 -1 13762 10 10 5
+E
+rocks weeds stream river~
+A small yet powerful stream gushes hear, the current declining to the
+east.  For such a small stream, the noise booms throughout the crowded
+forest.  Just before the river, dwarf-sized rocks lie buried into the
+earth, a barrier disallowing anyone foolish enough to step into the
+stream.  A few bushes with ripe fruit lie just before the boulders and
+cradle the trampled grass path.
+~
+E
+web~
+Spun with impossibly fine thread, this web is no more than a six inches
+wide and long, nearly a perfect polygon.  The web's owner no where to be
+seen but many insects lie trapped and cacooned in the web, victims of
+long ago.
+~
+A
+~
+~
+i = random( 1, 2 );
+if( i == 2 )
+send_to_room( #gush, room, sight );
+else if( i == 2 )
+send_to_room( #chatter, room, sight );
+~
+E
+gush~
+@CThe stream gurgles and splashes as it slightly overflows and runs into
+the neighboring boulders.@n 
+~
+E
+chatter~
+@RThe chatter of rodents high above the trees trails off as they leap
+from tree to tree.@n 
+~
+!
+0 150 0
+-1
+S
+
+#13765
+Before an Enormous Tree~
+Sprouting from the center of the room, an enormous, moss-covered tree
+reaches for the sky.  The formation of the tree appears like two hands
+with fingers pointed straight in the air and slowly curving back
+togethor, as if cradling something in the very heart of the tree.  A few
+of the trees in here seem to have worn or even the bark torn off, most
+likely a deer or larger animal rubbing up against the tree, wearing the
+bark down.  A slight rumble emits from the surrounding trees, each tone a
+deeper than the last until a dead silence breaks for several moments and
+then the pattern continues.
+~
+[Morros] Climb acode
+~
+100139008 12 9 0
+D0
+~
+~
+0 -1 13762 10 10 5
+D1
+~
+~
+0 -1 13766 10 10 5
+D2
+~
+~
+0 -1 13768 10 10 5
+D3
+~
+~
+0 -1 13767 10 10 5
+D4
+~
+~
+32 -1 13779 10 10 5
+-1
+S
+
+#13766
+Small Forest~
+Flowing in from the north and leaving to the southeast, a small, yet
+powerful, river passes by.  A few earth-dug holes just before the river,
+a home for some animal or another.  Various colors of leaves, fallen and
+blew from around, cover the once green floor.  The strong growth of
+bushes and various other vegetation develop near the river, the flooded
+soil a great source of growth.  Across the river, the forest continues
+its majestic form, trees and plants abundant; getting to them to
+impossible as the current of the stream is much to extreme to swim pass.
+~
+~
+100139008 12 9 0
+D0
+~
+~
+0 -1 13764 10 10 5
+D1
+~
+~
+0 -1 13771 10 10 5
+D2
+~
+~
+0 -1 13775 10 10 5
+D3
+~
+~
+0 -1 13765 10 10 5
+2538 9 1509949540 3 0
+-1
+S
+
+#13767
+Small Forest~
+Wild flowers, everywhere the eye can see, give the area a bit of color
+and smell, no one flower the same nor packed in the same area.  The
+leaves rustle as squirrels leap from tree to tree, few leaves even
+flutter to the ground from above.  With the lack of sun penetrating the
+roof of the trees, a damp, humid affect is given to the area, seeing so
+many flowers growing is quite a feat itself.
+~
+~
+100139008 12 9 0
+D0
+~
+~
+0 -1 13763 10 10 5
+D1
+~
+~
+0 -1 13765 10 10 5
+D2
+~
+~
+0 -1 13774 10 10 5
+D3
+~
+~
+0 -1 13769 10 10 5
+2408 9 1509949540 3 0
+-1
+S
+
+#13768
+Small Forest~
+The aroma of the forest hangs heavy here, the smell of pine, oak, and
+various other trees, mixed with the tangy scent of ripe berries as a
+small, light breeze steals the fragrance and carries it spiraling into
+the air above.  The trees wrap and wind upwards as each branch reaches
+for every last ray of sunlight available, an epic, never-ending battle of
+trees reaching for light creating the biggest of trees in the surrounding
+area.
+~
+~
+100139008 12 9 0
+D0
+~
+~
+0 -1 13765 10 10 5
+D1
+~
+~
+0 -1 13775 10 10 5
+D2
+~
+~
+0 -1 13776 10 10 5
+D3
+~
+~
+0 -1 13774 10 10 5
+-1
+S
+
+#13769
+Small Forest~
+The row of redwood trees continue to paint the path of impassable terrain
+as they halt any travel but the way you came.  The slouching leaf-filled
+branches seem to ooze sap, a few droplets here and there falling to the
+floor with a dripping noise.  A few bushes sprout from the ground here
+and there, holes dug beneathe them serving as a home for an animal of
+some sort, long ago abandoned, as the depression slightly filled back in
+with dirt and roots.
+~
+~
+100139008 12 9 0
+D1
+~
+~
+0 -1 13767 10 10 5
+-1
+S
+
+#13770
+Well-traveled Path~
+Under Construction.
+~
+~
+100139008 12 9 0
+-1
+S
+
+#13771
+Before a Waterfall~
+The growth of the water has met its peak, as the water cascades from a
+cliff down to a gorge below, the waterfall a magnificent wonder to watch. 
+The heavy-growth of vegetation continues until the drop of the water,
+then bare, green grass meanders the rest of the way of the, now, cliff. 
+The wind seems to whistle more here with the lack of trees halting the
+strength of it.  The surrounding trees do seem to have a better growth,
+as they absorb more of the sun here than deeper in the small forest.
+~
+~
+100139008 12 9 0
+D3
+~
+~
+0 -1 13766 10 10 5
+-1
+S
+
+#13772
+Well-traveled Path~
+Under Construction.
+~
+~
+100139008 12 9 0
+-1
+S
+
+#13773
+Well-traveled Path~
+Under Construction.
+~
+~
+100139008 12 9 0
+-1
+S
+
+#13774
+Small Forest~
+The forest continues to spring sky-scraping trees as the area here, much
+like the surrounding, promotes wild growth of vegetation.  Patches of
+mushrooms grow up and on the trees, stealing any unabsorbed water the
+trees do not use; ripe to the eye, the mushrooms could very easily be
+picked.  The majestic row of redwoods continue to disallow any passage to
+the west or south, as they work their way in that direction.
+~
+~
+100139008 12 9 0
+D0
+~
+~
+0 -1 13767 10 10 5
+D1
+~
+~
+0 -1 13768 10 10 5
+-1
+S
+
+#13775
+Small Forest~
+Caving in from the northeast, the cliff continues to cut path off to the
+east and, wrapping its way around, to the south.  Hugging the canyon
+cliff, trees grow immensely, the extra sunlight promoting better growth. 
+Each step, sound, or whistle of the wind is magnified five times with the
+constant echo of the canyon below, even the splash of the waterfall to
+the west can be heard extremely well.  A swarm of bees cluster a nest
+farther up in one of the oaken trees, honey oozing and dripping out of it.
+~
+~
+100139008 12 9 0
+D0
+~
+~
+0 -1 13766 10 10 5
+D3
+~
+~
+0 -1 13768 10 10 5
+-1
+S
+
+#13776
+Well-traveled Path~
+Towering oak and pine trees intertwined with one another mar any passage
+to the west, the knots between the trees almost appear to create new
+trees themselves.  Below the cliff to the east, the pond slowly running
+out of energy as it washes up onto a beach, occasionally knocking a fish
+ashore.  Fallen leaves and snapped, dead twigs coat the floor, minus a
+small path which leads north and south.
+~
+[Morros] No.mob to keep the forest 'wanders' in the forest.
+~
+100139016 12 9 0
+D0
+~
+~
+0 -1 13768 10 10 5
+D2
+~
+~
+0 -1 13853 10 10 5
+-1
+S
+
+#13777
+Well-traveled Path~
+Just faintly seen through the thick crowd of trees, a stone-white tower
+can be seen as it towers above the trees.  The dirt path grows much more
+dense with many a print pounded in the dirt, mostly that of horses, but
+the solid foot of man clearly evident on the outskirts of the path.  The
+area appears as it has seen heavy warfare, a few trees with scorch marks,
+broken weapons strewn about, and the occasional trail of blood.
+~
+~
+100139008 12 9 0
+D1
+~
+~
+0 -1 13807 10 10 5
+D3
+~
+~
+0 -1 13760 10 10 5
+-1
+S
+
+#13778
+Well-traveled Path~
+Under Construction.
+~
+~
+100139008 12 9 0
+-1
+S
+
+#13779
+Among the Trees~
+Vines tied from tree branch to tree branch provide a railing for walking
+in every-which direction.  Leaves lashed togethor with vines provide a
+small deck and make passage from place to place much easier than a climb
+would be.  Leaves sprout in every which direction, as if a paintbrush had
+went through and dotted each area as one spot will consist with solid
+shades of red and another with yellow, no two spots look alike.  The wall
+of color continues as high as the eye can see, however the travel to the
+very top of the trees near impossible as the branches used for climbing
+are much weaker and more likely to snap as each ascension is made.
+~
+[Morros] All rooms in this area no.scan as the density of leaves would make it rather hard to see.
+~
+133693504 12 9 0
+D0
+~
+~
+0 -1 13780 10 10 5
+D1
+~
+~
+0 -1 13782 10 10 5
+D2
+~
+~
+0 -1 13783 10 10 5
+D3
+~
+~
+0 -1 13781 10 10 5
+D5
+~
+~
+32 -1 13765 10 10 5
+-1
+S
+
+#13780
+Among the Trees~
+Under Construction.
+~
+~
+133693504 12 9 0
+D1
+~
+~
+0 -1 13785 10 10 5
+D2
+~
+~
+0 -1 13779 10 10 5
+D3
+~
+~
+0 -1 13784 10 10 5
+-1
+S
+
+#13781
+Among the Trees~
+The leaf-fastened path comes to a T-intersection, the vine railings leave
+north, south and east.  Just to the north, faintly seen through the dense
+mass of leaves, a small hovel-like can be seen.  A small opening in the
+western sky of tree-tops allows the sun to shine here, as if a ritual
+spot or the likes, as it seems that such sunshine in a dense forest would
+be impractical by nature means.  The continuation of long, hardened
+redwood trees sprouting like weeds can be seen in the west.  Their
+callous, rigid bark the most prominent attribute noticable about them.
+~
+~
+133693504 12 9 0
+D0
+~
+~
+0 -1 13784 10 10 5
+D1
+~
+~
+0 -1 13779 10 10 5
+D2
+~
+~
+0 -1 13786 10 10 5
+-1
+S
+
+#13782
+Among the Trees~
+Growing on a slanted eastern fashion, the trees give an unbalancing
+affect but the footing is rather stable.  Below, the ground has
+completely vanquished from sight, and only the lake below can be seen,
+along with the falling water from the waterfall to the east.  Vines
+lashed togethor with branches guide the walk through the tree tops,
+leaves sprouting in every which way to cause a chaotic beauty.  Off to
+the north, a dwarf-sized hole in the trunk of the tree can be seen, most
+likely that a home for a very large owl.
+~
+~
+133693504 12 9 0
+D0
+~
+~
+0 -1 13785 10 10 5
+D2
+~
+~
+0 -1 13787 10 10 5
+D3
+~
+~
+0 -1 13779 10 10 5
+-1
+S
+
+#13783
+Among the Trees~
+Vines lashed togethor, like a sturdy rope, guide a simple walk through
+the area.  Yellows, greens, reds, and even oranges fill the sky, leaves
+crunched, bunched, and even some falling to the ground with a slight tug
+of the wind.  Very little light passes the mammoth trees, creating a very
+damp and musty enviroment, the smell of plant-life very strong.  Just
+below and a little beyond the forest, the trees seem to grow apart,
+forming a small path, while the ability to see from here very clear, down
+below probably much more difficult.
+~
+~
+133693504 12 9 0
+D0
+~
+~
+0 -1 13779 10 10 5
+D1
+~
+~
+0 -1 13787 10 10 5
+D3
+~
+~
+0 -1 13786 10 10 5
+-1
+S
+
+#13784
+In a Small Hovel~
+After passing through a mass of leaves, vines, and countless other
+vegetation, a small hovel, beyond the massive outbreak of vegetation,
+lies.  The walls constructed of straw-like material, perhaps even vines
+but much more durable as they stand quite firm and durable as they
+disallow any growth past them.  The same material builds a bookcase in
+the northern wall; parchments, scrolls, and other means of necessary
+writing located inside the case.  The roof, an even larger amount of
+leaves tied togethor through vines reaching to a center, is a mark of
+true nature, the hovel itself seems like it could have just been grown
+here, but with necessary growing utensils to guide growth from one spot
+to another.
+~
+~
+133693512 12 9 0
+D1
+~
+~
+0 -1 13780 10 10 5
+D2
+~
+~
+0 -1 13781 10 10 5
+2537 9 1509949540 3 0
+2537 9 1509949540 3 0
+-1
+S
+
+#13785
+Among the Trees~
+The splash of water, a loud crash into the lake below, echoes in the
+cavern below, magnifying the sound.  The waterfall's best view can be
+seen from here, foaming on the outside, while split in parts as roots and
+protrusions in the cliff cleave the waterfall.
+~
+~
+133693504 12 9 0
+D2
+~
+~
+0 -1 13782 10 10 5
+D3
+~
+~
+0 -1 13780 10 10 5
+-1
+S
+
+#13786
+Among the Trees~
+Leaves, damp to the touch, ooze with water as droplets fall to what lies
+below.  The lack of sunlight has created a misty feeling, and wild
+vegetation has taken a liking to the setting as it grows rampant in all
+directions.  A mushroom-like fungus growth has claimed a home upon the
+south-western trees.  Painted in a white gelatin with only patches of
+brown bark evident, the trees continue their majestic form.  The vine
+railing, which lead here, takes a sharp ninety degree turn, one heading
+north and the other east.
+~
+~
+133693504 12 9 0
+D0
+~
+~
+0 -1 13781 10 10 5
+D1
+~
+~
+0 -1 13783 10 10 5
+-1
+S
+
+#13787
+Among the Trees~
+The rampant growth of vegetation continue from the west and begins to
+fade, the cliff to the east halting the growth.  Deep into the cliff, a
+waterfall can be seen, and even heard with a thunder-like crash as the
+falling water smacks the lake below.  The path of vines continue its way
+here, doubled up on the east side to ensure safety while passing through. 
+Rays of light beam in from the east, no trees to block the way, which
+keeps the area abit more warm, as well as giving even more color to the
+plants and trees around.
+~
+~
+133693504 12 9 0
+D0
+~
+~
+0 -1 13782 10 10 5
+D3
+~
+~
+0 -1 13783 10 10 5
+-1
+S
+
+#13788
+Dirt Path~
+The misty fog picks up in density here, barely anything can be seen in
+the north other than the beginning of a small marshland.  Less and less
+trees and much more chopped down or dying trees are seen here, their
+branches and leaves littering the floor.  The smell of death lingers in
+the air, a strong stench rolls in from the swamp with each bone-chilling
+wind breaking through.
+~
+~
+100139008 12 9 0
+D0
+~
+~
+0 -1 13789 10 10 5
+D2
+~
+~
+0 -1 13752 10 10 5
+-1
+S
+
+#13789
+Boggy Grounds~
+Shrouded in fog and cloaked in darkness, the swampy ground emits a damp,
+unsettle feeling.  The murky green water bubbles occasionally as each
+gust of wind sends the water into small waves.  Fallen branches jut from
+the swampy ground; like claws reaching reaching out, their jagged ends
+bare of any leaves.  A few skulls of various races lie above water-level
+ground, cracked and decaying with age.
+~
+[Morros] Beginning of the swamp.
+~
+100139008 14 9 0
+D0
+~
+~
+0 -1 13790 10 10 5
+D1
+~
+~
+0 -1 13792 10 10 5
+D2
+~
+~
+0 -1 13788 10 10 5
+D3
+~
+~
+0 -1 13791 10 10 5
+-1
+S
+
+#13790
+Boggy Grounds~
+Small waves of murky-green swamp water rolls in crashing on the shore of
+this small island.  A vine infested tree slowly withers away, branches
+bare of leaves and diving towards the swamp.  The roots, like stepping
+stones, stem across the water, the dry bark slowly dwindling away.  The
+fog lies heavy here, slightly above the water with the mixture of steam
+rolling in forming a wall of humidity.
+~
+~
+100139008 0 9 0
+D0
+~
+~
+0 -1 13803 10 10 5
+D1
+~
+~
+0 -1 13796 10 10 5
+D2
+~
+~
+0 -1 13789 10 10 5
+D3
+~
+~
+0 -1 13798 10 10 5
+-1
+S
+
+#13791
+Boggy Grounds~
+Fallen elder trees lie scattered amongst the murky green water, the barky
+tips barely poking through the surface.  Fog seems to roll in and out as
+the whistling wind zips through, also sending leaves scurrying through
+the air.  Tangled weeds serve as the major growth force as they blockade
+any travel beyond them to the south.  Gusts of steam emit from bubbles
+that erupt from the murky water, the smell alone enough to kill all
+living things.
+~
+~
+100139008 14 9 0
+D0
+~
+~
+0 -1 13798 10 10 5
+D1
+~
+~
+0 -1 13789 10 10 5
+D3
+~
+~
+0 -1 13793 10 10 5
+-1
+S
+
+#13792
+Boggy Grounds~
+The water level drastically increases, nearly capable of swalling a dwarf
+hole.  Fallen limbs and dead trees make for good handles while passing
+through.  An enormous, dying oak tree lies to the south; its bark singed
+on one half while branches lay charred and broken off, not a sign of life
+present.  Small water creatures skurry through the water, sending small
+ripples through the water, along with the sound of splashing water every
+so often.
+~
+~
+100139008 14 9 0
+D0
+~
+~
+0 -1 13796 10 10 5
+D1
+~
+~
+0 -1 13794 10 10 5
+D3
+~
+~
+0 -1 13789 10 10 5
+-1
+S
+
+#13793
+Boggy Grounds~
+Tangled masses of weeds wrap around the south and continue to the west
+and swallowing dead or dying trees, tossing them into the green water. 
+The foul stench lingers in the air, each gust of wind throwing a new
+scent in the area.  The leaf and muck-filled water slightly bubbles as
+steam arises from it.  Peculiar plants seem to grow rapidly atop small
+islands in the swamp.
+~
+~
+100139008 14 9 0
+D0
+~
+~
+0 -1 13797 10 10 5
+D1
+~
+~
+0 -1 13791 10 10 5
+-1
+S
+
+#13794
+Boggy Grounds~
+Wild vegetation wraps around the southern end and continues east;
+swallowing any green life once present.  The croak of a frogs echoes in
+the near distance; no one sound alike.  Fallen limbs float in the
+leaf-filled water; the bark stained in a red-crimson color.  Beyond the
+weeds to the east, a small path is evident; climbing out of this swamp
+from here would be a unmanagable task.  The stench of dying animals fills
+the air, a carcass or two at the bottom of the marsh would be no suprise.
+~
+~
+100139008 14 9 0
+D0
+~
+~
+0 -1 13795 10 10 5
+D3
+~
+~
+0 -1 13792 10 10 5
+-1
+S
+
+#13795
+Boggy Grounds~
+The water bubbles enthusiastically as steam rises and foamy green water
+splashes amongst the shore to the east.  A few rising rocks peek through
+the green water, enough of a hand hold to help passage through the water
+much easier.  Noxious fumes linger in the air, the smell of charred
+corpses.  Few plants grow on scattered, foot-sized island, their stemmy
+vines shooting in every direction.
+~
+~
+100139008 14 9 0
+D0
+~
+~
+0 -1 13801 10 10 5
+D1
+~
+~
+0 -1 13864 10 10 5
+D2
+~
+~
+0 -1 13794 10 10 5
+D3
+~
+~
+0 -1 13796 10 10 5
+-1
+S
+
+#13796
+Boggy Grounds~
+Rocky surface makes travel from one point to another a dangerous, but
+plausible, journey.  A small assortment of junk floats through
+swampy-water, circling around like a mild whirlpool.  The wind whistles
+as it zips by, sending the water in small waves.  The sound of gurgling
+can be heard in distance, like that of a feeble waterfall.
+~
+~
+100139008 14 9 0
+D0
+~
+~
+0 -1 13802 10 10 5
+D1
+~
+~
+0 -1 13795 10 10 5
+D2
+~
+~
+0 -1 13792 10 10 5
+D3
+~
+~
+0 -1 13790 10 10 5
+-1
+S
+
+#13797
+Boggy Grounds~
+Massly tangled vines and weeds arise to the west and leap over the swamp
+like shooting stars as they reach for an island to the east; the stalks
+of great use in making passage through the murky-green water.  Coming
+from the north, waves of foam and bubbles arrive, sending forth steam and
+a dreadful stench into the air.  A small pile of bones, mostly crushed
+into a powder, slowly begin to form as they draw more heavily in size
+following the shore to the north.
+~
+~
+100139008 14 9 0
+D0
+~
+~
+0 -1 13805 10 10 5
+D1
+~
+~
+0 -1 13798 10 10 5
+D2
+~
+~
+0 -1 13793 10 10 5
+-1
+S
+
+#13798
+Boggy Grounds~
+The sound of gushing water echoes loudly, the murky-green water flowing
+at a much more rapid pace.  Tree limbs and rotted roots are withered down
+to sharp, jagged points as the water slowly corrodes them away.  Vines
+dangle from above, like green cloth woven into the sky above.  Clumps of
+bubbles and foam run in a southeastern current, each pile shooting off
+steam into the air.
+~
+~
+100139008 14 9 0
+D0
+~
+~
+0 -1 13804 10 10 5
+D1
+~
+~
+0 -1 13790 10 10 5
+D2
+~
+~
+0 -1 13791 10 10 5
+D3
+~
+~
+0 -1 13797 10 10 5
+-1
+S
+
+#13799
+Well-traveled Path~
+Under Construction.
+~
+~
+100139008 12 9 0
+-1
+S
+
+#13800
+Well-traveled Path~
+Under Construction.
+~
+~
+100139008 12 9 0
+-1
+S
+
+#13801
+Boggy Grounds~
+Masses of vegetation stream from the eastern edge of the swamp and wrap
+around to the north along with the increase in land-level, keeping the
+tained swamp water in the shallow brook.  Rough footings in the
+floor-level create a dangerous walk, each step to be taken with cuation
+as to not land and be swallowed by the swamp.  The remains of a few
+humanoid skeletons lie tangled in the masses of weeds to the east, the
+flesh devoid long ago.
+~
+~
+100139008 14 9 0
+D2
+~
+~
+0 -1 13795 10 10 5
+D3
+~
+~
+0 -1 13802 10 10 5
+-1
+S
+
+#13802
+Boggy Grounds~
+Fog rolls in from the north, coating the area in a thick blanket.  Trees
+beyond the murky, green-water bare of any leaves, dying with age. 
+Jagged, broken tree limbs protrude from the water, long fallen from past
+trees, now nothing more than an obstacle to overcome in the water.  The
+sound of washing waves slightly bellow as they crash into the northern
+shore.
+~
+[Morros] End of swamp.
+~
+100139008 14 9 0
+D0
+~
+~
+0 -1 13806 10 10 5
+D1
+~
+~
+0 -1 13801 10 10 5
+D2
+~
+~
+0 -1 13796 10 10 5
+D3
+~
+~
+0 -1 13803 10 10 5
+-1
+S
+
+#13803
+Boggy Grounds~
+Small ripples of murky-green water dance along the water tops as they are
+sent eastward.  Weeds, vines, and other wild green vegetation lines the
+northern end of the swamp, each stem nearly as wide as a tree.  The sound
+of water splashing echoes faintly as small critters dance along the top. 
+An enormous, green and red-hued plant grows suprisingly well considering
+the conditions.
+~
+~
+100139008 14 9 0
+D1
+~
+~
+0 -1 13802 10 10 5
+D2
+~
+~
+0 -1 13790 10 10 5
+D3
+~
+~
+0 -1 13804 10 10 5
+-1
+S
+
+#13804
+Boggy Grounds~
+Shattered shards of broken weapons lie at the bottom of the murky water,
+some of the pices still boasting a razor-like edge.  Wild vegetation
+grows immensely to the north; vines, leaves, and weeds leaping over the
+swamp, some across completely while others to an descent sized island to
+the south east.  Like stepping stones, few high levels of earth protrude
+from the swampy water.
+~
+~
+100139008 14 9 0
+D1
+~
+~
+0 -1 13803 10 10 5
+D2
+~
+~
+0 -1 13798 10 10 5
+D3
+~
+~
+0 -1 13805 10 10 5
+-1
+S
+
+#13805
+Boggy Grounds~
+Diving in from the north west, a steady stream spills into the swampy
+land; a small waterfall, yet weak enough to wade through.  Bushes and
+wild plant-life grows rapidly at the edges of the marsh, their prickly
+vines disallowing any journey beyond them.  The mruky, leaf-filled water
+ripples in a circular, southeastern fashion as the oncoming water sends
+it into waves.
+~
+~
+100139008 14 9 0
+D1
+~
+~
+0 -1 13804 10 10 5
+D2
+~
+~
+0 -1 13797 10 10 5
+-1
+S
+
+#13806
+Dirt Path~
+Jagged stumps and lifeless trees encroarch the dirt, pebble-infested path. 
+Bunched in small groups, half-grown bushes seem to grow, bits and pieces
+bare of nothing more than twigs.  The eery silence is shattered by the
+occasional hoot of an owl as they seem to be awake nearly all day here,
+the rays of light unable to penetrate this diseased forest.  Off into the
+south, a dense cloud of fog and humidity sets above a musty swamp, the
+smell washes in from the southern breeze.
+~
+~
+100139008 12 9 0
+D1
+~
+~
+0 -1 13865 10 10 5
+D2
+~
+~
+0 -1 13802 10 10 5
+-1
+S
+
+#13807
+Well-traveled Path~
+Under Construction.
+~
+~
+100139008 12 9 0
+D1
+~
+~
+0 -1 13808 10 10 5
+D3
+~
+~
+0 -1 13777 10 10 5
+-1
+S
+
+#13808
+Well-traveled Path~
+Under Construction.
+~
+[Morros] Neutral tower north.
+~
+100139008 12 9 0
+D0
+~
+~
+0 -1 13809 10 10 5
+D1
+~
+~
+0 -1 13821 10 10 5
+D3
+~
+~
+0 -1 13807 10 10 5
+-1
+S
+
+#13809
+Stone Tower~
+Under Construction.
+~
+~
+100139008 12 9 0
+D0
+~
+~
+0 -1 13810 10 10 5
+D2
+~
+~
+0 -1 13808 10 10 5
+-1
+S
+
+#13810
+Stone Tower~
+Under Construction.
+~
+~
+100139008 12 9 0
+D1
+~
+~
+0 -1 13811 10 10 5
+D2
+~
+~
+0 -1 13809 10 10 5
+-1
+S
+
+#13811
+Stone Tower~
+Under Construction.
+~
+~
+100139008 12 9 0
+D2
+~
+~
+0 -1 13812 10 10 5
+D3
+~
+~
+0 -1 13810 10 10 5
+-1
+S
+
+#13812
+Stone Tower~
+Under Construction.
+~
+~
+100139008 12 9 0
+D0
+~
+~
+0 -1 13811 10 10 5
+D4
+~
+~
+0 -1 13813 10 10 5
+-1
+S
+
+#13813
+Stone Tower~
+Under Construction.
+~
+~
+100139008 12 9 0
+D0
+~
+~
+0 -1 13814 10 10 5
+D5
+~
+~
+0 -1 13812 10 10 5
+-1
+S
+
+#13814
+Stone Tower~
+Under Construction.
+~
+~
+100139008 12 9 0
+D2
+~
+~
+0 -1 13813 10 10 5
+D3
+~
+~
+0 -1 13815 10 10 5
+-1
+S
+
+#13815
+Stone Tower~
+Under Construction.
+~
+~
+100139008 12 9 0
+D1
+~
+~
+0 -1 13814 10 10 5
+D2
+~
+~
+0 -1 13816 10 10 5
+-1
+S
+
+#13816
+Stone Tower~
+Under Construction.
+~
+~
+100139008 12 9 0
+D0
+~
+~
+0 -1 13815 10 10 5
+D4
+~
+~
+0 -1 13817 10 10 5
+-1
+S
+
+#13817
+Stone Tower~
+Under Construction.
+~
+~
+100139008 12 9 0
+D0
+~
+~
+0 -1 13818 10 10 5
+D1
+~
+~
+0 -1 13819 10 10 5
+D5
+~
+~
+0 -1 13816 10 10 5
+-1
+S
+
+#13818
+Stone Tower~
+Under Construction.
+~
+~
+100139008 12 9 0
+D1
+~
+~
+0 -1 13820 10 10 5
+D2
+~
+~
+0 -1 13817 10 10 5
+-1
+S
+
+#13819
+Stone Tower~
+Under Construction.
+~
+~
+100139008 12 9 0
+D0
+~
+~
+0 -1 13820 10 10 5
+D3
+~
+~
+0 -1 13817 10 10 5
+-1
+S
+
+#13820
+Stone Tower~
+Under Construction.
+~
+~
+100139008 12 9 0
+D2
+~
+~
+0 -1 13819 10 10 5
+D3
+~
+~
+0 -1 13818 10 10 5
+-1
+S
+
+#13821
+Well-traveled Path~
+Under Construction.
+~
+~
+100139008 12 9 0
+D2
+~
+~
+0 -1 13822 10 10 5
+D3
+~
+~
+0 -1 13808 10 10 5
+-1
+S
+
+#13822
+Well-traveled Path~
+Under Construction.
+~
+~
+100139008 12 9 0
+D0
+~
+~
+0 -1 13821 10 10 5
+D1
+~
+~
+0 -1 13823 10 10 5
+-1
+S
+
+#13823
+Well-traveled Path~
+Under Construction.
+~
+~
+100139008 12 9 0
+D0
+~
+~
+0 -1 13824 10 10 5
+D3
+~
+~
+0 -1 13822 10 10 5
+-1
+S
+
+#13824
+Well-traveled Path~
+Under Construction.
+~
+~
+100139008 12 9 0
+D1
+~
+~
+0 -1 13825 10 10 5
+D2
+~
+~
+0 -1 13823 10 10 5
+-1
+S
+
+#13825
+Well-traveled Path~
+Under Construction.
+~
+[Morros] Bridge.
+~
+100139008 12 9 0
+D1
+~
+~
+0 -1 13826 10 10 5
+D3
+~
+~
+0 -1 13824 10 10 5
+-1
+S
+
+#13826
+Well-traveled Path~
+Under Construction.
+~
+[Morros] Bridge.
+~
+100139008 12 9 0
+D1
+~
+~
+0 -1 13827 10 10 5
+D3
+~
+~
+0 -1 13825 10 10 5
+-1
+S
+
+#13827
+Well-traveled Path~
+Under Construction.
+~
+[Morros] Path leads to neutral castle.
+~
+100139008 12 9 0
+D3
+~
+~
+0 -1 13826 10 10 5
+-1
+S
+
+#13828
+Grassy Trail~
+Under Construction.
+~
+~
+100139008 12 9 0
+D0
+~
+~
+0 -1 13754 10 10 5
+D2
+~
+~
+0 -1 13829 10 10 5
+-1
+S
+
+#13829
+Grassy Trail~
+Under Construction.
+~
+~
+100139008 12 9 0
+D0
+~
+~
+0 -1 13828 10 10 5
+D3
+~
+~
+0 -1 13830 10 10 5
+-1
+S
+
+#13830
+Grassy Trail~
+Under Construction.
+~
+~
+100139008 12 9 0
+D1
+~
+~
+0 -1 13829 10 10 5
+D2
+~
+~
+0 -1 13831 10 10 5
+-1
+S
+
+#13831
+Grassy Trail~
+Under Construction.
+~
+~
+100139008 12 9 0
+D0
+~
+~
+0 -1 13830 10 10 5
+D1
+~
+~
+0 -1 13832 10 10 5
+D2
+~
+~
+0 -1 13842 10 10 5
+-1
+S
+
+#13832
+Grassy Trail~
+Under Construction.
+~
+~
+100139008 12 9 0
+D1
+~
+~
+0 -1 13833 10 10 5
+D2
+~
+~
+0 -1 13841 10 10 5
+D3
+~
+~
+0 -1 13831 10 10 5
+-1
+S
+
+#13833
+Grassy Trail~
+Under Construction.
+~
+~
+100139008 12 9 0
+D1
+~
+~
+0 -1 13834 10 10 5
+D2
+~
+~
+0 -1 13840 10 10 5
+D3
+~
+~
+0 -1 13832 10 10 5
+-1
+S
+
+#13834
+Grassy Trail~
+Under Construction.
+~
+~
+100139008 12 9 0
+D2
+~
+~
+0 -1 13835 10 10 5
+D3
+~
+~
+0 -1 13833 10 10 5
+-1
+S
+
+#13835
+Grassy Trail~
+Under Construction.
+~
+~
+100139008 12 9 0
+D0
+~
+~
+0 -1 13834 10 10 5
+D1
+~
+~
+0 -1 13836 10 10 5
+D2
+~
+~
+0 -1 13845 10 10 5
+D3
+~
+~
+0 -1 13840 10 10 5
+-1
+S
+
+#13836
+Grassy Trail~
+Under Construction.
+~
+~
+100139008 12 9 0
+D2
+~
+~
+0 -1 13846 10 10 5
+D3
+~
+~
+0 -1 13835 10 10 5
+-1
+S
+
+#13837
+Grassy Trail~
+Under Construction.
+~
+~
+100139008 12 9 0
+-1
+S
+
+#13838
+Grassy Trail~
+Under Construction.
+~
+~
+100139008 12 9 0
+-1
+S
+
+#13839
+Grassy Trail~
+Under Construction.
+~
+~
+100139008 12 9 0
+-1
+S
+
+#13840
+Grassy Trail~
+Under Construction.
+~
+~
+100139008 12 9 0
+D0
+~
+~
+0 -1 13833 10 10 5
+D1
+~
+~
+0 -1 13835 10 10 5
+D2
+~
+~
+0 -1 13844 10 10 5
+D3
+~
+~
+0 -1 13841 10 10 5
+-1
+S
+
+#13841
+Grassy Trail~
+Under Construction.
+~
+~
+100139008 12 9 0
+D0
+~
+~
+0 -1 13832 10 10 5
+D1
+~
+~
+0 -1 13840 10 10 5
+D2
+~
+~
+0 -1 13843 10 10 5
+D3
+~
+~
+0 -1 13842 10 10 5
+-1
+S
+
+#13842
+Grassy Trail~
+Under Construction.
+~
+~
+100139008 12 9 0
+D0
+~
+~
+0 -1 13831 10 10 5
+D1
+~
+~
+0 -1 13841 10 10 5
+-1
+S
+
+#13843
+Grassy Trail~
+Under Construction.
+~
+~
+100139008 12 9 0
+D0
+~
+~
+0 -1 13841 10 10 5
+D1
+~
+~
+0 -1 13844 10 10 5
+-1
+S
+
+#13844
+Grassy Trail~
+Under Construction.
+~
+~
+100139008 12 9 0
+D0
+~
+~
+0 -1 13840 10 10 5
+D1
+~
+~
+0 -1 13845 10 10 5
+D2
+~
+~
+0 -1 13850 10 10 5
+D3
+~
+~
+0 -1 13843 10 10 5
+-1
+S
+
+#13845
+Grassy Trail~
+Under Construction.
+~
+~
+100139008 12 9 0
+D0
+~
+~
+0 -1 13835 10 10 5
+D1
+~
+~
+0 -1 13846 10 10 5
+D2
+~
+~
+0 -1 13851 10 10 5
+D3
+~
+~
+0 -1 13844 10 10 5
+-1
+S
+
+#13846
+Grassy Trail~
+Under Construction.
+~
+~
+100139008 12 9 0
+D0
+~
+~
+0 -1 13836 10 10 5
+D1
+~
+~
+0 -1 13847 10 10 5
+D2
+~
+~
+0 -1 13848 10 10 5
+D3
+~
+~
+0 -1 13845 10 10 5
+-1
+S
+
+#13847
+Grassy Trail~
+Under Construction.
+~
+~
+100139008 12 9 0
+D1
+~
+~
+0 -1 13853 10 10 5
+D2
+~
+~
+0 -1 13852 10 10 5
+D3
+~
+~
+0 -1 13846 10 10 5
+-1
+S
+
+#13848
+Grassy Trail~
+Under Construction.
+~
+~
+100139008 12 9 0
+D0
+~
+~
+0 -1 13846 10 10 5
+D1
+~
+~
+0 -1 13852 10 10 5
+D2
+~
+~
+0 -1 13855 10 10 5
+D3
+~
+~
+0 -1 13851 10 10 5
+-1
+S
+
+#13849
+Grassy Trail~
+Under Construction.
+~
+~
+100139008 12 9 0
+-1
+S
+
+#13850
+Grassy Trail~
+Under Construction.
+~
+~
+100139008 12 9 0
+D0
+~
+~
+0 -1 13844 10 10 5
+D1
+~
+~
+0 -1 13851 10 10 5
+-1
+S
+
+#13851
+Grassy Trail~
+Under Construction.
+~
+~
+100139008 12 9 0
+D0
+~
+~
+0 -1 13845 10 10 5
+D1
+~
+~
+0 -1 13848 10 10 5
+D2
+~
+~
+0 -1 13854 10 10 5
+D3
+~
+~
+0 -1 13850 10 10 5
+-1
+S
+
+#13852
+Grassy Trail~
+Under Construction.
+~
+~
+100139008 12 9 0
+D0
+~
+~
+0 -1 13847 10 10 5
+D2
+~
+~
+0 -1 13856 10 10 5
+D3
+~
+~
+0 -1 13848 10 10 5
+-1
+S
+
+#13853
+Grassy Trail~
+Under Construction.
+~
+~
+100139008 12 9 0
+D0
+~
+~
+0 -1 13776 10 10 5
+D3
+~
+~
+0 -1 13847 10 10 5
+-1
+S
+
+#13854
+Grassy Trail~
+Under Construction.
+~
+~
+100139008 12 9 0
+D0
+~
+~
+0 -1 13851 10 10 5
+D1
+~
+~
+0 -1 13855 10 10 5
+-1
+S
+
+#13855
+Grassy Trail~
+Under Construction.
+~
+~
+100139008 12 9 0
+D0
+~
+~
+0 -1 13848 10 10 5
+D1
+~
+~
+0 -1 13856 10 10 5
+D2
+~
+~
+0 -1 13857 10 10 5
+D3
+~
+~
+0 -1 13854 10 10 5
+-1
+S
+
+#13856
+Grassy Trail~
+Under Construction.
+~
+~
+100139008 12 9 0
+D0
+~
+~
+0 -1 13852 10 10 5
+D2
+~
+~
+0 -1 13858 10 10 5
+D3
+~
+~
+0 -1 13855 10 10 5
+-1
+S
+
+#13857
+Grassy Trail~
+Under Construction.
+~
+~
+100139008 12 9 0
+D0
+~
+~
+0 -1 13855 10 10 5
+D1
+~
+~
+0 -1 13858 10 10 5
+-1
+S
+
+#13858
+Grassy Trail~
+Under Construction.
+~
+~
+100139008 12 9 0
+D0
+~
+~
+0 -1 13856 10 10 5
+D2
+~
+~
+0 -1 13859 10 10 5
+D3
+~
+~
+0 -1 13857 10 10 5
+-1
+S
+
+#13859
+Grassy Trail~
+Under Construction.
+~
+[Morros] Good-aligned castle south of here.
+~
+100139008 12 9 0
+D0
+~
+~
+0 -1 13858 10 10 5
+-1
+S
+
+#13860
+Cut Through the Woods~
+Under Construction.
+~
+~
+100139008 12 9 0
+D1
+~
+~
+0 -1 13861 10 10 5
+D2
+~
+~
+0 -1 13757 10 10 5
+-1
+S
+
+#13861
+Cut Through the Woods~
+Under Construction.
+~
+~
+100139008 12 9 0
+D0
+~
+~
+0 -1 13862 10 10 5
+D3
+~
+~
+0 -1 13860 10 10 5
+-1
+S
+
+#13862
+Cut Through the Woods~
+Under Construction.
+~
+~
+100139008 12 9 0
+D0
+~
+~
+0 -1 13863 10 10 5
+D2
+~
+~
+0 -1 13861 10 10 5
+-1
+S
+
+#13863
+Cut Through the Woods~
+Under Construction.
+~
+~
+100139008 12 9 0
+D2
+~
+~
+0 -1 13862 10 10 5
+D3
+~
+~
+0 -1 13864 10 10 5
+-1
+S
+
+#13864
+Cut Through the Woods~
+Under Construction.
+~
+~
+100139008 12 9 0
+D1
+~
+~
+0 -1 13863 10 10 5
+D3
+~
+~
+0 -1 13795 10 10 5
+-1
+S
+
+#13865
+Dirt Path~
+Rubble and long-forgotten tarnished and broken weapons lie scattered
+across the path creating a half-hazardous passage.  An enormous, well
+rounded oak tree lies to the north, its roots spreading like wild fire as
+they hug the path and halt any journey beyond.  However, the oak tree is
+nothing more than huge, not a sign of life evident as sap even oozes down
+the craggy surface of the tree.  A trench has been dug to the south, no
+more than a dwaf-sized deep, but clearly marks of man made as the roots
+protruding have been shaved off.
+~
+~
+100139008 12 9 0
+D1
+~
+~
+0 -1 13866 10 10 5
+D3
+~
+~
+0 -1 13806 10 10 5
+-1
+S
+
+#13866
+Dirt Path~
+The path seems to tighten up here as it leaves east, the loose pebbles
+growing much numerous and could nearly be considered a stone walk-way. 
+Trenches, as deep as a dwarf, have been dug on each side of the path,
+their excavation of recent doing.  Trees stumps and lifeless bushes patch
+in the dying forest, the surrounding trees unable to grow with lack of
+light and supply of water.  A breezy wind zips through, the leaf-less
+trees doing little to prevent the bone chilling wind.
+~
+~
+100139008 12 9 0
+D1
+~
+~
+0 -1 13867 10 10 5
+D3
+~
+~
+0 -1 13865 10 10 5
+-1
+S
+
+#13867
+Dirt Path~
+The dirt path is no more than pebbles strewn across the ground in an
+orderly fashion pointing to a dark and musty cave entrance.  Trenches on
+opposite sides of the trail hug the path, the deep and dark hole perfect
+for ambushing parties.  Torn and cut down trees lie stacked upon one
+another as they rest against the cavern wall, bare of any leaves and
+branches.
+~
+[Morros] Cave leading to evil-aligned castle.
+~
+100139008 12 9 0
+D3
+~
+~
+0 -1 13866 10 10 5
+D5
+~
+~
+0 -1 13868 10 10 5
+-1
+S
+
+#13868
+Dirt Path~
+Under Construction.
+~
+~
+100139008 12 9 0
+D4
+~
+~
+0 -1 13867 10 10 5
+-1
+S
+
+#0
+

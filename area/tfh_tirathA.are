@@ -1,0 +1,1066 @@
+#M2_AREA
+2
+
+Tirath Regnus~
+Glynis~
+~
+~
+~
+
+0 0
+3
+1
+#ROOMS
+
+#4100
+TIRATH REGNUS NOTES~
+Entire area is built near an underground river which dumps into a lake. 
+The primary falls fall right out of the mountain into a lake outside. 
+There are secondary falls, an underground waterfall, which the dwarves
+use to power certain machinery in their city.  Through river redirections
+and such, the dwarves manipulate the river to their needs.
+~
+~
+33030148 11 9 0
+D5
+~
+~
+0 -1 4101 10 10 5
+-1
+S
+
+#4101
+Behind A Waterfall~
+Under Construction.
+~
+[Glynis] Secret Door North - Lake South - Ridge Along Lake East and West
+[Glynis] Rock Wall North - Exists along the entire North end of the lake
+~
+33030152 12 9 0
+D0
+~
+~
+0 -1 4102 10 10 5
+D4
+~
+~
+0 -1 4100 10 10 5
+-1
+S
+
+#4102
+Carved Stone Cavern~
+Under Construction.
+~
+[Glynis] Lifter Type Device North
+~
+33030148 11 9 0
+D0
+~
+~
+0 -1 4103 10 10 5
+D2
+~
+~
+0 -1 4101 10 10 5
+-1
+S
+
+#4103
+Lifter Type-Thing~
+Under Construction.
+Lifter is powered by the waterfall and dragged up a spiral path to the
+top.  Drops players at level with the underground river feeding the
+waterfall.
+~
+~
+33030148 11 9 0
+D2
+~
+~
+0 -1 4102 10 10 5
+D4
+~
+~
+0 -1 4104 10 10 5
+-1
+S
+
+#4104
+Top Of Lifter-Type Thing~
+Under Construction.
+~
+[Glynis] top of lifter
+~
+33030148 11 9 0
+D0
+~
+~
+0 -1 4105 10 10 5
+D5
+~
+~
+0 -1 4103 10 10 5
+-1
+S
+
+#4105
+Rock Ledge Near Underground River~
+Under Construction.
+~
+[Glynis] this is the main entry path
+~
+33030148 11 9 0
+D1
+~
+~
+0 -1 4106 10 10 5
+D2
+~
+~
+0 -1 4104 10 10 5
+-1
+S
+
+#4106
+Rock Ledge Near Underground River~
+Under Construction.
+~
+[Glynis] carved stone statue of dwarf east - river northwest
+~
+33030148 11 9 0
+D0
+~
+~
+0 -1 4107 10 10 5
+D3
+~
+~
+0 -1 4105 10 10 5
+-1
+S
+
+#4107
+Rock Ledge Near Underground River~
+Under Construction.
+~
+[Glynis] carved stone statue southeast - river northwest
+~
+33030148 11 9 0
+D1
+~
+~
+0 -1 4108 10 10 5
+D2
+~
+~
+0 -1 4106 10 10 5
+-1
+S
+
+#4108
+Rock Ledge Near Underground River~
+Under Construction.
+~
+[Glynis] statue south and east - river northwest
+~
+33030148 11 9 0
+D0
+~
+~
+0 -1 4109 10 10 5
+D3
+~
+~
+0 -1 4107 10 10 5
+-1
+S
+
+#4109
+Rock Ledge Near Underground River~
+Under Construction.
+~
+[Glynis] statue southeast northeast - archway and light east
+[Glynis] river northeast
+~
+33030148 11 9 0
+D1
+~
+~
+0 -1 4110 10 10 5
+D2
+~
+~
+0 -1 4108 10 10 5
+-1
+S
+
+#4110
+Before A Great Jeweled Archway~
+Under Construction.
+~
+[Glynis] statues north and south
+[Glynis] main gate to city - Tirath East
+~
+33030148 11 9 0
+D1
+~
+~
+0 -1 4111 10 10 5
+D3
+~
+~
+0 -1 4109 10 10 5
+-1
+S
+
+#4111
+Beyond The Archway~
+Under Construction.
+Can see lights of lamps flickering in the darkness, illuminating the
+cavern in a warm orange glow.
+Huge cavern, part natural, part carved... all decorated.
+~
+[Glynis] stairway south wraps around, takes players to ledge on southern wall
+[Glynis] large square, ornatly tiled in red and yellow stone
+[Glynis] possible cool acode lifter type device to take players to ledge
+~
+33030148 11 9 0
+D0
+~
+~
+0 -1 4116 10 10 5
+D1
+~
+~
+0 -1 4114 10 10 5
+D2
+~
+~
+0 -1 4112 10 10 5
+D3
+~
+~
+0 -1 4110 10 10 5
+A
+~
+stairs south up~
+act_tochar( #climb, ch );
+act_notchar( #nclimb, ch );
+transfer( ch, find_room( 1412 ) );
+~
+E
+climb~
+No description.
+~
+E
+nclimb~
+No description.
+~
+!
+0 0 0
+-1
+S
+
+#4112
+Ledge Above Central Regnus Square~
+Under Construction.
+~
+[Glynis] stair takes characters to room 1411
+[Glynis] stone carved engraved rail north, runs length of ledge
+~
+33030148 11 9 0
+D0
+~
+~
+0 -1 4111 10 10 5
+D1
+~
+~
+0 -1 4113 10 10 5
+A
+climb~
+stairs down west~
+act_tochar( #climb, ch );
+act_notchar( #nclimb, ch );
+transfer( ch, find_room( 1411 ) );
+~
+E
+climb~
+No description.
+~
+E
+nclimb~
+No description.
+~
+!
+0 0 0
+-1
+S
+
+#4113
+Tirath Regnus, <Road Name>~
+Under Construction.
+~
+[Glynis] ledge above Tirath's ceremonial square, shops south
+[Glynis] ornate carved stone rail engemmed, etc north, runs length of ledge
+~
+33030148 11 9 0
+D3
+~
+~
+0 -1 4112 10 10 5
+-1
+S
+
+#4114
+Southern End of Ceremonial Square~
+Under Construction.
+~
+[Glynis] carved rock wall south
+[Glynis] wooden door leading into shop carved out of rock south
+~
+33030148 11 9 0
+D0
+~
+~
+0 -1 4117 10 10 5
+D1
+~
+~
+0 -1 4115 10 10 5
+D3
+~
+~
+0 -1 4111 10 10 5
+-1
+S
+
+#4115
+South of Ceremonial Square - Before a Stair~
+Under Construction.
+~
+[Glynis] stair east (possible lifter-type thing)
+[Glynis] stair wraps around to a ledge on the east wall of the cavern
+[Glynis] rock wall south with wooden door leading to shop
+~
+33030148 11 9 0
+D0
+~
+~
+0 -1 4118 10 10 5
+D3
+~
+~
+0 -1 4114 10 10 5
+D4
+~
+~
+0 -1 4124 10 10 5
+-1
+S
+
+#4116
+West Wall of Cavern - Fountain~
+Under Construction.
+~
+[Glynis] small fountain on the ground, fed by a pillar of falling water
+[Glynis] water falls out of a hole in the ceiling
+[Glynis] rock wall west
+~
+33030148 11 9 0
+D0
+~
+~
+0 -1 4120 10 10 5
+D1
+~
+~
+0 -1 4117 10 10 5
+D2
+~
+~
+0 -1 4111 10 10 5
+-1
+S
+
+#4117
+Center of Ceremonial Square, Between Small and Large Fountain~
+Under Construction.
+~
+[Glynis] small fountain northwest, large fountain northeast
+[Glynis] both fed by holes in the ceiling which drop water into pools
+[Glynis] large platinum urns burn brightly at the four corners of the large fountain
+~
+33030148 11 9 0
+D0
+~
+~
+0 -1 4121 10 10 5
+D1
+~
+~
+0 -1 4118 10 10 5
+D2
+~
+~
+0 -1 4114 10 10 5
+D3
+~
+~
+0 -1 4116 10 10 5
+-1
+S
+
+#4118
+Center of Square, Btw Large and Small Fountain~
+Under Construction.
+~
+[Glynis] large platinum urn burns at the 4 corners of the large fountain
+[Glynis] large fountain northeast, sm fountain northwest
+~
+33030148 11 9 0
+D0
+~
+~
+0 -1 4122 10 10 5
+D1
+~
+~
+0 -1 4119 10 10 5
+D2
+~
+~
+0 -1 4115 10 10 5
+D3
+~
+~
+0 -1 4117 10 10 5
+-1
+S
+
+#4119
+West End of Square - Before the Machine Room~
+Under Construction.
+~
+[Glynis] stairway south accessible from 1415
+[Glynis] if stair is mechanized, machine room carved from the rocks east
+~
+33030148 11 9 0
+D0
+~
+~
+0 -1 4123 10 10 5
+D3
+~
+~
+0 -1 4118 10 10 5
+-1
+S
+
+#4120
+NW Corner of Cavern - Shops~
+Under Construction.
+NW Corner - Shops
+~
+[Glynis] shops north and east
+[Glynis] small fountain to the se
+~
+33030148 11 9 0
+D1
+~
+~
+0 -1 4121 10 10 5
+D2
+~
+~
+0 -1 4116 10 10 5
+-1
+S
+
+#4121
+Before A Great Arch - North Wall~
+Under Construction.
+~
+[Glynis] large platinum urn burns overhead, hanging from the ceiling by heavy chains
+[Glynis] large archway to the north - leads to the palace
+[Glynis] small fountain sw and large fountain se
+[Glynis] rock wall to the north, archway is jeweled and carved and it's set into it.
+~
+33030148 11 9 0
+D0
+~
+~
+0 -1 4129 10 10 5
+D1
+~
+~
+0 -1 4122 10 10 5
+D2
+~
+~
+0 -1 4117 10 10 5
+D3
+~
+~
+0 -1 4120 10 10 5
+-1
+S
+
+#4122
+North Wall - Between Fountains~
+Under Construction.
+~
+[Glynis] large fountain sw, small fountain se
+[Glynis] Rock wall north, wooden door with sign above built into wall
+[Glynis] legde above with jeweled rail
+[Glynis] large platinum urn hanging from chains suspended from ceiling
+[Glynis] fire burinng in the urn
+~
+33030148 11 9 0
+D1
+~
+~
+0 -1 4123 10 10 5
+D2
+~
+~
+0 -1 4118 10 10 5
+D3
+~
+~
+0 -1 4121 10 10 5
+-1
+S
+
+#4123
+Northeast Corner  - Rock Wall, Shops~
+Under Construction.
+~
+[Glynis] small fountain sw
+[Glynis] rock walls east and north - wooden doors with signs above
+[Glynis] rock ledge above with ornate railing
+[Glynis] machine room east if stairs are mechanincal
+~
+33030148 11 9 0
+D2
+~
+~
+0 -1 4119 10 10 5
+D3
+~
+~
+0 -1 4122 10 10 5
+-1
+S
+
+#4124
+Above The Square - East Wall~
+Under Construction.
+~
+[Glynis] ornate carved railing follows ledge north
+[Glynis] stair south takes players to 4115
+[Glynis] stair may be automated
+~
+33030148 11 9 0
+D0
+~
+~
+0 -1 4125 10 10 5
+D5
+~
+~
+0 -1 4115 10 10 5
+-1
+S
+
+#4125
+Above The Square - East Wall~
+Under Construction.
+~
+~
+33030148 11 9 0
+D0
+~
+~
+0 -1 4126 10 10 5
+D2
+~
+~
+0 -1 4124 10 10 5
+-1
+S
+
+#4126
+Upper NE Side, Carved Stone Archway~
+Under Construction.
+~
+[Glynis] archway north, carved and engemmed as other arches
+[Glynis] archway leads to more remote shops/houses
+[Glynis] ornate railing covers the ledge south and west
+[Glynis] this is a rock ledge above the ne side of the city square
+~
+33030148 11 9 0
+D0
+~
+~
+0 -1 4141 10 10 5
+D2
+~
+~
+0 -1 4125 10 10 5
+D3
+~
+~
+0 -1 4127 10 10 5
+-1
+S
+
+#4127
+Above the Square - North Wall - Near an Archway~
+Under Construction.
+~
+[Glynis] ornate railing south
+~
+33030148 11 9 0
+D1
+~
+~
+0 -1 4126 10 10 5
+D3
+~
+~
+0 -1 4128 10 10 5
+-1
+S
+
+#4128
+Above the Square - North Wall - Brazier~
+Under Construction.
+~
+[Glynis] ornate railing south
+[Glynis] rock wall north, wooden door in wall, sign above
+[Glynis] on a ledge above the ne urn - city square below
+~
+33030148 11 9 0
+D1
+~
+~
+0 -1 4127 10 10 5
+-1
+S
+
+#4129
+Beneath The Arch, Tunnel~
+Under Construction.
+~
+~
+33030148 11 9 0
+D0
+~
+~
+0 -1 4130 10 10 5
+D2
+~
+~
+0 -1 4121 10 10 5
+-1
+S
+
+#4130
+Curve In The Tunnel~
+Under Construction.
+~
+~
+33030148 11 9 0
+D2
+~
+~
+0 -1 4129 10 10 5
+D3
+~
+~
+0 -1 4131 10 10 5
+-1
+S
+
+#4131
+Before A Bridge - End of Tunnel~
+Under Construction.
+~
+~
+33030148 11 9 0
+D1
+~
+~
+0 -1 4130 10 10 5
+D3
+~
+~
+0 -1 4132 10 10 5
+-1
+S
+
+#4132
+Bridge Over Underground River~
+Under Construction.
+~
+[Glynis] action finished
+~
+33030148 11 9 0
+D1
+~
+~
+0 -1 4131 10 10 5
+D3
+~
+~
+0 -1 4133 10 10 5
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 ) {
+  send_to_room( #wet, room );
+  send_to_room( #wet, find_room( 4133 ) );
+  }
+if( i == 2 ) {
+  send_to_room( #chain, room );
+  send_to_room( #chain, find_room( 4133 ) );
+  }
+if( i == 3 ) {
+  send_to_room( #flow, room );
+  send_to_room( #flow, find_room( 4133 ) );
+  }
+~
+E
+wet~
+@CA fine, cold mist born of the waterfall to the north, fills the air. 
+The moisture soaks the wooden planks of the drawbride.@n 
+~
+E
+chain~
+@wThe great linked chains supporting the drawbride creak softly as a
+draft from the waterfall floats by.  @n 
+~
+E
+flow~
+@BThe roar of the great waterfall resonates throughout the cavern.  All
+sounds quieter than a shout are drown beneath it.@n 
+~
+!
+2 500 0
+-1
+S
+
+#4133
+Bridge Over Underground River~
+Under Construction.
+~
+~
+33030148 11 9 0
+D1
+~
+~
+0 -1 4132 10 10 5
+D3
+~
+~
+0 -1 4134 10 10 5
+-1
+S
+
+#4134
+Before A Scarred Stone Wall~
+Under Construction.
+~
+[Glynis] ramparts above, carved from the stone
+[Glynis] down to smithy
+~
+33030148 11 9 0
+D1
+~
+~
+0 -1 4133 10 10 5
+D5
+~
+~
+0 -1 4135 10 10 5
+-1
+S
+
+#4135
+Natural Stone Cavern, Smithy~
+Unlike most of Tirath Regnus, this small room beside the <xx> is lit
+entirely by torches.  Any sparks from a forge or the worker's hammers
+could easily ignite any oil lamps present and cause an explosion. 
+Elaboratly carved stone gargoyles grasp the torches in hand, keeping them
+from tumbling to the floor.  Spiraling up to an unseen landing above are
+stairs made from sturdy oaken struts and heavy stone slabs.  A forge
+burns north of here and casts a soft orange glow upon the floor.  Carved
+from the smoothe stone floor is a two-dwarf-step wide groove which
+carries overflow water back to the river.  Wooden pallets lay across the
+channel for pedestrians.
+~
+[Glynis] smithy is operated by machinery breif desc follows
+[Glynis] underground waterfall north, buckets are strung on pully system
+[Glynis] buckets can hold two dwarves (size)
+[Glynis] buckets catch water from falls, water weight turns pully
+[Glynis] buckets are dumped down a tube which lead to troughs in the smithy
+[Glynis] troughs are kept full of clean cool water this way
+[Glynis] water automatically drains off back into the river
+[Glynis] pullys also turn fans which fan fires, eliminating the need for bellows
+~
+33030148 11 9 0
+D0
+~
+~
+0 -1 4136 10 10 5
+D2
+~
+~
+0 -1 4140 10 10 5
+D4
+~
+~
+0 -1 4134 10 10 5
+E
+torches~
+These torches are small oak branches whose tops are wrapped with a cloth
+soaked in lamp oil.  They are about waist-high on a dwarf, and thick as
+an adult grass snake.  All the bark has been whittled away and sanded
+down making for a smooth outter surface.  Occasionally, small bits of ash
+ride a draft up to the ceiling leaving a glowing spiral trail behind.
+~
+E
+stone gargoyles carved~
+The work of a master stonecutter, these gargoyles are carved with such
+intricacy that they are easily mistaken for the real thing.  Crimson
+gems, the size of a perfect skipping stone and flawlessly cut, are inset
+between their eyelids.  Rather unlike traditional gargoyles, the faces on
+these are carved in a less than evil manner -- most are yawning or
+grinning happily.  Each is about the size of a troll's fist and set at
+dwarf eye level on the cavern wall.
+~
+E
+stairs spiral oaken~
+Green-streaked blocks of grey stone have been chiseled into dwarf-sized
+steps.  Oaken struts, adorned with jagged decorative carvings, support
+the heavy stones.  They swirl up around a heavily polished pillar of
+marble.
+~
+-1
+S
+
+#4136
+Natural Stone Cavern, Smithy~
+Under Construction.
+SHOP - Crimson/Ceruelan Mithril Ring
+The heat from the forge mingles with spray from the river.
+~
+[Glynis] trough west, river east
+[Glynis] forge north
+[Glynis] shopkeepers are twins (west is other)
+~
+33030148 11 9 0
+D2
+~
+~
+0 -1 4135 10 10 5
+D3
+~
+~
+0 -1 4137 10 10 5
+5390 9 1509949540 3 0
+-1
+S
+
+#4137
+Natural Stone Cavern, Smithy~
+SHOP - Blackened/Blood Stained Mithril Ring
+A thin curtain of smoke hangs in the air.
+Lining the walls is a staggering array
+~
+[Glynis] finished random acode
+~
+33030148 11 9 0
+D1
+~
+~
+0 -1 4136 10 10 5
+D2
+~
+~
+0 -1 4138 10 10 5
+A
+~
+~
+i = random( 1, 3 );
+if( mob_in_room( 5389, room ) ) {
+  send_to_room( #cart, room );
+  send_to_room( #actarea, find_room( 4140 ) );
+  send_to_room( #actarea, find_room( 4139 ) );
+  send_to_room( #actarea, find_room( 4138 ) );
+  send_to_room( #actarea, find_room( 4136 ) );
+  send_to_room( #actarea, find_room( 4135 ) );
+  send_to_room( #actarea, find_room( 4134 ) );
+  wait( 1 );
+  send_to_room( #cart2, room );
+  wait( 1 );
+  if( i == 1 )
+    send_to_room( #happy, room );
+  if( i == 2 )
+    send_to_room( #angry, room );
+  if( i == 3 )
+    send_to_room( #tired, room );
+  wait( 1 );
+  send_to_room( #unload, room );
+  wait( 1 );
+  send_to_room( #organize, room );
+  wait( 1 );
+  send_to_room( #finished, room );
+  wait( 1 );
+  send_to_room( #bye, room );
+  send_to_room( #actwest, find_room( 4137 ) );
+  send_to_room( #actwest, find_room( 4138 ) );
+  }
+~
+E
+cart~
+@YAccompanied by a symphony of screeching metal, a mine cart rolls in on
+its rails.@n 
+~
+E
+dwarf~
+@YWith a grunt, the blacksmith turns his squat little body and glances at
+the arrival.@n 
+~
+E
+happy~
+@WBuril says: "Aye!  There be me shipment of ore.  S'cuse me fer a bit,
+lads."@n 
+~
+E
+angry~
+@WBuril says: "Bah!  The D.L.U.  always be makin' me deliveries late. 
+Keep yer filty paws to yerself 'till I return."@n 
+~
+E
+tired~
+@WBuril says: "Another load?  Me thinks me needs to take on an apprentice. 
+I'll be with ye lads in a bit."@n 
+~
+E
+unload~
+@YThe blacksmith hobbles over to the cart, reaches in and unloads several
+sheets of a refined silver ore.@n 
+~
+E
+organize~
+@YBuril meticulously arranges his delivery on the sturdy wooden shelves
+lining the north wall.@n 
+~
+E
+finished~
+@YHaving finished unloading, the stubby dwarf gets up on his toes and
+pushes, with his arms outstretched above his head, a wooden lever taller
+than he is.  After resisting for a few seconds the lever shifts
+southward, releasing the metal clamps keeping the mine cart in place.  @n
+~
+E
+bye~
+@YThe cart begins to roll southward.  It disappears through a tunnel in
+the south wall, taking its entorage of grinding metal along for the
+ride.@n 
+~
+E
+cart2~
+@YSmall metal hooks on the inside of each rail clink loudly as they
+connect with the metal axle of the mine cart, stopping it in its track.@n
+~
+E
+actarea~
+@YThe ground rumbles slightly, and the sound of metal grinding against
+metal echoes through the cavern.@n 
+~
+E
+actwest~
+@YAccompanied by the sound a grinding metal, a small mine cart rumbles
+down its track to the west and disappears through a tunnel in the south
+wall.@n 
+~
+!
+2 10 0
+5389 9 1509949540 3 0
+-1
+S
+
+#4138
+Natural Stone Cavern, Smithy~
+Under Construction.
+~
+[Glynis] ore delivery rail to the west
+~
+33030148 11 9 0
+D0
+~
+~
+0 -1 4137 10 10 5
+D2
+~
+~
+0 -1 4139 10 10 5
+-1
+S
+
+#4139
+Natural Stone Cavern, Smithy~
+Under Construction.
+~
+[Glynis] ore delivery rail west, tunnel south
+[Glynis] apprentice here.
+~
+33030148 11 9 0
+D0
+~
+~
+0 -1 4138 10 10 5
+D1
+~
+~
+0 -1 4140 10 10 5
+-1
+S
+
+#4140
+Natural Stone Cavern, Smithy~
+Under Construction.
+~
+~
+33030148 11 9 0
+D0
+~
+~
+0 -1 4135 10 10 5
+D3
+~
+~
+0 -1 4139 10 10 5
+-1
+S
+
+#4141
+Stonemasons Passage~
+Under Construction.
+~
+~
+33030148 11 9 0
+D2
+~
+~
+0 -1 4126 10 10 5
+-1
+S
+
+#0
+

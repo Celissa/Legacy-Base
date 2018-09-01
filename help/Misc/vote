@@ -1,0 +1,38 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+vote [poll] [category]<br>
+<br>
+WHAT ITS ABOUT<br>
+<br>
+Occasionally, a change will be such that we (the immortals) can't decide<br>
+a proper direction to take, so the vote system was implemented.  Your<br>
+votes may very well affect the course the mud takes.<br>
+<br>
+Examples<br>
+<br>
+vote (with no arguments brings up a list of polls, their results, and<br>
+whether they are still open or not.<br>
+<br>
+vote [pollname] (no category argument) brings up the list of categories<br>
+you can vote for <br>
+<br>
+vote [pollname] [category] will register your vote, you only get one vote<br>
+per poll.<br>
+<br>
+So take the poll Shield.Spells for example.<br>
+vote Shield.Spells will bring up a list of these categories and how to do<br>
+it.<br>
+<br>
+It will list these options:<br>
+Allow.Similar.but.No.Opposites<br>
+No.Similar.or.Opposites<br>
+Allow.Only.One.Shield.at.Time<br>
+<br>
+So say you want to vote for the one.shield.at.time option<br>
+You would input:<br>
+<br>
+vote shield.spells Allow.Only.One.Shield.at.Time<br>
+</html>
+</body>

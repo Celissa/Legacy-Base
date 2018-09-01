@@ -1,0 +1,67 @@
+<html>
+<body>
++-----------------------------------------------------------------------------+<br>
+|                                                                             |<br>
+|                          Help File:  Abilities                              |<br>
+|                                                                             |<br>
++-----------------------------------------------------------------------------+<br>
+<br>
+                 Ability Classes:    Weapon<br>
+                                     Language<br>
+                                     Spell<br>
+                                     Physical<br>
+<br>
+   Abil w         : See your current weapon skills<br>
+   Abil w [class] : See the potential weapon skills for a particular class<br>
+   Abil l         : See your current language skills<br>
+   Abil l [class] : See the potential language skills for a particular class<br>
+   Abil s         : See your current spell skills<br>
+   Abil s [class] : See the potential spell skills for a particular class<br>
+   Abil p         : See your current physical skills<br>
+   Abil p [class] : See the potential physical skills for a particular class<br>
+<br>
+NOTE: To get the listing by level rather than alphabetically use:<br>
+      abil - l [abilitytype] [class] - example: abil -l spell mage<br>
+<br>
+<br>
+   Class being Warrior, Paladin, Cleric, Thief, Ranger, Monk, etc.<br>
+<br>
+  *   Examining your skill statistics will display:<br>
+      -  What skills your character is capable of learning for your level<br>
+      -  What skills you already know, and at what skill level (0-10)<br>
+      -  What it would cost (in cp) to learn one skill level of a skill.<br>
+      -  What it would cost (in practs) to learn one skill level of a skill.<br>
+      -  What pre-requisites a particular skill requires before you can learn<br>
+         it.  (ie:  You must learn to crawl before you can walk)<br>
+<br>
+  *   Examining the potential skills for a particular class will display:<br>
+      -  What skills a [class] character can achieve at all levels.<br>
+      -  What it would cost (in practs) to learn one skill level of a skill.<br>
+      -  What level the character could potentially learn the skill.<br>
+      -  What pre-requisites the skill requires.<br>
+<br>
+HOW TO LEARN NEW SKILLS OR IMPROVE EXISTING ONES<br>
+<br>
+Improving skills through instruction uses up practice points, and costs money.<br>
+You receive a certain amount of practice points, in decreasing amounts, every<br>
+time you level until you are level 10.  These are 'free' practice points.<br>
+For the rest of your life, you only receive practices randomly when you use<br>
+your skills or cast spells.  You can also randomly improve a skill level<br>
+through real-world experience in using a particular skill/spell.  How smart<br>
+you are (intelligence and wisdom) contributes to how often you gain practice<br>
+points or improves.<br>
+<br>
+Some skills will require you to be proficient in a lesser skill before you may<br>
+be taught an advanced skill.  (ie:  You must learn to crawl before you can<br>
+walk)  Pre-requisites are displayed when examining ability lists.<br>
+<br>
+To increase your skill level in a particular ability, you must find someone<br>
+who teaches that particular ability.  Most teachers can be found in towns,<br>
+although some advanced skills might require a quest or task to locate the<br>
+teacher or else receive his/her instruction.  Type 'practice' to find out<br>
+what someone is capable of teaching you.  If the person teaches the skill you<br>
+wish to learn, type 'practice [skill]' to attempt to learn that skill.<br>
+<br>
++-----------------------------------------------------------------------------+<br>
+</html>
+</body>

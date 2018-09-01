@@ -1,0 +1,25 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+high : displays the high score list<br>
+high # : displays the high score list starting with that #<br>
+high [class] : sorts by class<br>
+high [race] : sorts by race<br>
+high [class] [race] : sorts by class and race<br>
+<br>
+<h1> Description </h1>
+<br>
+The high score list allows you to compare your level of experience with<br>
+other players.  The command displays two columns of lists.  On the left,<br>
+the top ten characters in the entire mud will be listed, while the right<br>
+column displays your current position and the players nearest your level<br>
+of experience.<br>
+<br>
+Entering "high #" will have the list start at that number.  It will<br>
+display that number and the next 19 characters in order of experience.<br>
+<br>
+Any players who have the incognito option set appear as ???  in the<br>
+lists, thereby preserving their anonymity.<br>
+</html>
+</body>

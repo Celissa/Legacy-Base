@@ -1,0 +1,3105 @@
+#M2_AREA
+2
+
+Clerical Training Ground~
+Adakar Azerin~
+Clerical - The Training Grounds~
+~
+~
+
+70 0
+4
+1
+#ROOMS
+
+#77000
+Before a Mithril Door~
+A mithril door set into the southern wall dominates the entirety of this
+room, only the Ebon Citadel sigil on the northern wall diminishes its
+eloquence.  This chamber appears to have been hollowed out from a single
+mammoth sized slab of marble, the same silver veined black marble as the
+rest of the temple proper.  No natural cracks are evident anywhere on its
+undamaged surface, save for a trapdoor set in the center of this empty
+room.  A small lever rests directly beside the expensive mithril door,
+obviously the means of opening it and allowing egress from the room.
+~
+[Guin] Add on to TTG.
+[Guin] Code to get out of this mithril door is is correct. Need low str to make it work successfully.
+~
+33161229 11 9 0
+D2
+mithril door~
+mithril door~
+407 -1 47342 10 10 5
+D5
+metal trapdoor~
+metal trapdoor~
+407 -1 77002 10 10 5
+E
+mithril door~
+The massive mithril door has withstood the rigors of the ages,
+maintaining both it's shine and sturdiness.  Incredibly detailed runes
+run along the borders of the door, with each symbol connected with those
+around it.
+~
+E
+runes rune symbol~
+The language these symbols spoke is long dead.  You cannot understand them.
+~
+E
+small lever~
+Rust nearly covers the entirety of the small metal lever.  A sharp tug
+would probably snap it, forever sealing the mithril door.
+~
+E
+sigil~
+The sigil for the training grounds winds throughout itself with such
+complexity that it confuses the eye, making it difficult to follow a
+particular line for any amount of time.
+~
+E
+trapdoor~
+Heavily pitted and covered with rust, this ancient iron trapdoor appears
+about to collapse.  The metal ring attached to it's surface is beginning
+to flake away, but easily rotates in it's loop.
+~
+A
+1 look~
+rusty lever~
+if( rflag( reset2, room ) )
+act_tochar( #lever, ch );
+else
+act_tochar( #lever2, ch );
+~
+E
+lever~
+Rust nearly covers the entirety of the small metal lever.  A sharp tug
+would probably snap it, forever sealing the mithril door.
+~
+E
+lever2~
+The rusty lever has been snapped off!
+
+The remaining peice is to short to actually grab ahold of.
+~
+!
+0 0 0
+A
+pull~
+rusty lever~
+if( !is_open( room, south ) ) {
+  if( rflag( reset2, room ) ) {
+    act_tochar( #tug, ch );
+    act_notchar( #tug2, ch );
+    if( find_stat( ch, str ) >= 12 ) {
+      act_tochar( #snap, ch );
+      act_notchar( #snap2, ch );
+      remove_rflag( reset2, room );
+      obj_to_char( oload( 7082 ), ch );
+      }
+    else {
+      act_tochar( #tug3, ch );
+      act_notchar( #tug4, ch );
+      unlock( room, south );
+      open( room, south );
+      wait( 3 );
+      close( room, south );
+      lock( room, south );
+      room = find_room( 77000 );
+      send_to_room( #return, room );
+      send_to_room( #close, room );
+      room = find_room( 47342 );
+      send_to_room( #close, room );
+      }
+    }
+  else
+    act_tochar( #nolev, ch );
+  }
+else
+  act_tochar( #no, ch );
+~
+E
+tug~
+You reach out and grab ahold of the rusty lever.
+~
+E
+tug2~
+$n reaches out and grabs ahold of the rusty lever.
+~
+E
+snap~
+@YAs you give the lever a sharp tug, it suddenly snaps off in your hand!@n
+~
+E
+snap2~
+@YWith a loud click, $n snaps the small lever off into his hand.@n
+~
+E
+tug3~
+You gently pull on the small lever.
+
+*click*
+
+The mithril door opens without a sound.
+~
+E
+tug4~
+$n gently pulls on the small lever.
+
+*click*
+
+The mithril door opens without a sound.
+~
+E
+no~
+The mithril door is already open, there is no reason to pull on the lever again.
+~
+E
+nolev~
+The small lever has already been broken off!
+~
+E
+return~
+The small lever returns to it's original position.
+~
+E
+close~
+The mithril door closes without a noise.
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+You climb down the rusty steel ladder, arriving in a roughly dug out room.
+~
+E
+to_room~
+$n climbs down the rusty steel ladder.
+~
+!
+3 0 32
+A
+~
+~
+if( is_open( room, south ) ) {
+  act_room( #close, ch );
+  close( room, south );
+  lock( room, south );
+  }
+~
+E
+close~
+The mithril door closes without a sound.
+~
+!
+1 0 4
+-1
+S
+
+#77001
+blank~
+~
+[Adakar] for now...  leaving this blank, may or may not be used to house
+a secret trainer..  something undying though.
+[Adakar] Doubt this room will ever be used for a trainer... maybe a chest.. or something.
+~
+33161221 11 9 0
+-1
+S
+
+#77002
+Rough-hewn Chamber~
+This rough-hewn stone room is certainly an oddity, perfectly square, with
+a rusting metallic door set in the exact center of each wall including
+the ceiling.  This chamber appears to have been hollowed out and left
+unfinished, the rock still shows scars from the digging process, and a
+small amount of rubble covers the outer edges of the floor where it meets
+the walls.  A small altar-like setup sits just slightly off center in the
+middle of the room, positioned as such to not interfere with the rusty
+ladder leading to the trapdoor in the ceiling.  The altar-like setup has
+small circular devices and at least six levers on its surface; their
+purpose a mystery.
+~
+[Adakar] silver lever, white lever, black lever, red lever, green lever, blue lever
+[Adakar] black button, red button, silver button, white button, blue button, green button
+[Adakar] black crank
+[Adakar] crank is visible only upon closer inspection.
+[Adakar] 'stealing' the resets from each connecting room to make this bitch work
+[Adakar] push/pull levers -- depress buttons -- commands need to be written into altar extra
+[Tyrone] shortened acode #22, put ends in the final action parts, not sure you actually want or if the 'last' case here can happen as well as the first case
+[Adakar] re-wrote the acodes, 22-30 <pant> works as it needs to now.
+[Adakar] acodes are complete, gotta removed the act_rooms and add all the penalties for failures, but they work
+~
+33161229 11 9 0
+D0
+rusty metal door~
+rusty metal door~
+407 -1 77003 10 10 5
+D1
+rusty metal door~
+rusty metal door~
+407 -1 77005 10 10 5
+D2
+rusty metal door~
+rusty metal door~
+407 -1 77006 10 10 5
+D3
+rusty metal door~
+rusty metal door~
+407 -1 77004 10 10 5
+D4
+rusty metal trapdoor~
+rusty metal trapdoor~
+407 -1 77000 10 10 5
+E
+trapdoor~
+The trapdoor in the ceiling looks as if it is about to collapse due to
+the sheer amount of rust that permeates the metal.  A simple bronze
+handle is loosely bolted to it, allowing it to be pushed upwards.
+~
+E
+rusty metal door~
+Pitted with rust, the metal door seems about ready to fall off it's
+hinges.  More of the odd symbols decorate the door, covering the face in
+a mass of squirming lines that are impossible to follow.
+~
+E
+silver white black red green blue~
+Which are you trying to look at the buttons or the levers?
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+You climb up the rusty steel ladder, leaving this deadly room behind.
+~
+E
+to_room~
+$n climbs up the rusty steel ladder.
+~
+!
+3 0 16
+A
+1 look~
+levers~
+act_notchar( "$n carefully takes note of each levers position." );
+room = find_room( 77004 );
+if( rflag( reset0, room ) )
+  act_tochar( "the silver lever is up.", ch );
+else
+  act_tochar( "the silver lever is down.", ch );
+room = find_room( 77003 );
+if( rflag( reset0, room ) )
+  act_tochar( "the white lever is up.", ch );
+else
+  act_tochar( "the white lever is down.", ch );
+room = find_room( 77005 );
+if( rflag( reset0, room ) )
+  act_tochar( "the black lever is up.", ch );
+else
+  act_tochar( "the black lever is down.", ch );
+room = find_room( 77006 );
+if( rflag( reset0, room ) )
+  act_tochar( "the red lever is up.", ch );
+else
+  act_tochar( "the red lever is down.", ch );
+room = find_room( 77000 );
+if( rflag( reset0, room ) )
+  act_tochar( "the green lever is up.", ch );
+else
+  act_tochar( "the green lever is down.", ch );
+room = find_room( 77002 );
+if( rflag( reset0, room ) )
+  act_tochar( "the blue lever is up.", ch );
+else
+  act_tochar( "the blue lever is down.", ch );
+~
+!
+0 0 0
+A
+1 look~
+buttons~
+act_notchar( "$n carefully takes note of each buttons position." );
+room = find_room( 77005 );
+if( rflag( reset1, room ) )
+  act_tochar( "the silver button is up.", ch );
+else
+  act_tochar( "the silver button is depressed.", ch );
+room = find_room( 77006 );
+if( rflag( reset1, room ) )
+  act_tochar( "the white button is up.", ch );
+else
+  act_tochar( "the white button is depressed.", ch );
+room = find_room( 77004 );
+if( rflag( reset1, room ) )
+  act_tochar( "the black button is up.", ch );
+else
+  act_tochar( "the black button is depressed.", ch );
+room = find_room( 77003 );
+if( rflag( reset1, room ) )
+  act_tochar( "the red button is up.", ch );
+else
+  act_tochar( "the red button is depressed.", ch );
+room = find_room( 77000 );
+if( rflag( reset1, room ) )
+  act_tochar( "the green button is up.", ch );
+else
+  act_tochar( "the green button is depressed.", ch );
+room = find_room( 77002 );
+if( rflag( reset1, room ) )
+  act_tochar( "the blue button is up.", ch );
+else
+  act_tochar( "the blue button is depressed.", ch );
+~
+!
+0 0 0
+A
+pull~
+silver~
+room = find_room( 77004 );
+if( rflag( reset0, room ) ) {
+  act_tochar( "You pull the silver lever.", ch );
+  act_notchar( "$n pulls the silver lever.", ch );
+  remove_rflag( reset0, room );
+  }
+else {
+  act_tochar( "You try and pull on the silver lever but it will go no further.", ch );
+  act_notchar( "$n tries to pull on the silver lever but it will not budge.", ch );
+  }
+~
+!
+0 0 0
+A
+pull~
+white~
+room = find_room( 77003 );
+if( rflag( reset0, room ) ) {
+  act_tochar( "You pull the white lever.", ch );
+  act_notchar( "$n pulls the white lever.", ch );
+  remove_rflag( reset0, room );
+  }
+else {
+  act_tochar( "You try and pull on the white lever but it will go no further.", ch );
+  act_notchar( "$n tries to pull on the white lever but it will not budge.", ch );
+  }
+~
+!
+0 0 0
+A
+pull~
+black~
+room = find_room( 77005 );
+if( rflag( reset0, room ) ) {
+  act_tochar( "You pull the black lever.", ch );
+  act_notchar( "$n pulls the black lever.", ch );
+  remove_rflag( reset0, room );
+  }
+else {
+  act_tochar( "You try and pull on the black lever but it will go no further.", ch );
+  act_notchar( "$n tries to pull on the black lever but it will not budge.", ch );
+  }
+~
+!
+0 0 0
+A
+pull~
+red~
+room = find_room( 77006 );
+if( rflag( reset0, room ) ) {
+  act_tochar( "You pull the red lever.", ch );
+  act_notchar( "$n pulls the red lever.", ch );
+  remove_rflag( reset0, room );
+  }
+else {
+  act_tochar( "You try and pull on the red lever but it will go no further.", ch );
+  act_notchar( "$n tries to pull on the red lever but it will not budge.", ch );
+  }
+~
+!
+0 0 0
+A
+pull~
+green~
+room = find_room( 77000 );
+if( rflag( reset0, room ) ) {
+  act_tochar( "You pull the green lever.", ch );
+  act_notchar( "$n pulls the green lever.", ch );
+  remove_rflag( reset0, room );
+  }
+else {
+  act_tochar( "You try and pull on the green lever but it will go no further.", ch );
+  act_notchar( "$n tries to pull on the green lever but it will not budge.", ch );
+  }
+~
+!
+0 0 0
+A
+pull~
+blue~
+room = find_room( 77002 );
+if( rflag( reset0, room ) ) {
+  act_tochar( "You pull the blue lever.", ch );
+  act_notchar( "$n pulls the blue lever.", ch );
+  remove_rflag( reset0, room );
+  }
+else {
+  act_tochar( "You try and pull on the blue lever but it will go no further.", ch );
+  act_notchar( "$n tries to pull on the blue lever but it will not budge.", ch );
+  }
+~
+!
+0 0 0
+A
+push~
+silver~
+room = find_room( 77004 );
+if( !rflag( reset0, room ) ) {
+  act_tochar( "You push the silver lever.", ch );
+  act_notchar( "$n pushes the silver lever.", ch );
+set_rflag( reset0, room );
+  }
+else {
+  act_tochar( "You try and push on the silver lever but it will go no further.", ch );
+  act_notchar( "$n tries to push on the silver lever but it will not budge.", ch );
+  }
+~
+!
+0 0 0
+A
+push~
+white~
+room = find_room( 77003 );
+if( !rflag( reset0, room ) ) {
+  act_tochar( "You push the white lever.", ch );
+  act_notchar( "$n pushes the white lever.", ch );
+  set_rflag( reset0, room );
+  }
+else {
+  act_tochar( "You try and push on the white lever but it will go no further.", ch );
+  act_notchar( "$n tries to push on the white lever but it will not budge.", ch );
+  }
+~
+!
+0 0 0
+A
+push~
+black~
+room = find_room( 77005 );
+if( !rflag( reset0, room ) ) {
+  act_tochar( "You push the black lever.", ch );
+  act_notchar( "$n pushes the black lever.", ch );
+  set_rflag( reset0, room );
+  }
+else {
+  act_tochar( "You try and push on the black lever but it will go no further.", ch );
+  act_notchar( "$n tries to push on the black lever but it will not budge.", ch );
+  }
+~
+!
+0 0 0
+A
+push~
+red~
+room = find_room( 77006 );
+if( !rflag( reset0, room ) ) {
+  act_tochar( "You push the red lever.", ch );
+  act_notchar( "$n pushes the red lever.", ch );
+  set_rflag( reset0, room );
+  }
+else {
+  act_tochar( "You try and push on the red lever but it will go no further.", ch );
+  act_notchar( "$n tries to push on the red lever but it will not budge.", ch );
+  }
+~
+!
+0 0 0
+A
+push~
+green~
+room = find_room( 77000 );
+if( !rflag( reset0, room ) ) {
+  act_tochar( "You push the green lever.", ch );
+  act_notchar( "$n pushes the green lever.", ch );
+  set_rflag( reset0, room );
+  }
+else {
+  act_tochar( "You try and push on the green lever but it will go no further.", ch );
+  act_notchar( "$n tries to push on the green lever but it will not budge.", ch );
+  }
+~
+!
+0 0 0
+A
+push~
+blue~
+room = find_room( 77002 );
+if( !rflag( reset0, room ) ) {
+  act_tochar( "You push the blue lever.", ch );
+  act_notchar( "$n pushes the blue lever.", ch );
+  set_rflag( reset0, room );
+  }
+else {
+  act_tochar( "You try and push on the blue lever but it will go no further.", ch );
+  act_notchar( "$n tries to push on the blue lever but it will not budge.", ch );
+  }
+~
+!
+0 0 0
+A
+depress~
+black~
+room = find_room( 77004 );
+if( rflag( reset1, room ) ) {
+  act_tochar( "You depress the black button.", ch );
+  act_notchar( "$n depresses the black button.", ch );
+  remove_rflag( reset1, room );
+  }
+else {
+  act_tochar( "You depress the black button returning it to it's original position.", ch );
+  act_notchar( "$n depresses the black button, returning it to it's original position.", ch );
+  set_rflag( reset1, room );
+  }
+~
+!
+0 0 0
+A
+depress~
+red~
+room = find_room( 77003 );
+if( rflag( reset1, room ) ) {
+  act_tochar( "You depress the red button.", ch );
+  act_notchar( "$n depresses the red button.", ch );
+  remove_rflag( reset1, room );
+  }
+else {
+  act_tochar( "You depress the red button returning it to it's original position.", ch );
+  act_notchar( "$n depresses the red button, returning it to it's original position.", ch );
+  set_rflag( reset1, room );
+  }
+~
+!
+0 0 0
+A
+depress~
+silver~
+room = find_room( 77005 );
+if( rflag( reset1, room ) ) {
+  act_tochar( "You depress the silver button.", ch );
+  act_notchar( "$n depresses the silver button.", ch );
+  remove_rflag( reset1, room );
+  }
+else {
+  act_tochar( "You depress the silver button returning it to it's original position.", ch );
+  act_notchar( "$n depresses the silver button, returning it to it's original position.", ch );
+  set_rflag( reset1, room );
+  }
+~
+!
+0 0 0
+A
+depress~
+white~
+room = find_room( 77006 );
+if( rflag( reset1, room ) ) {
+  act_tochar( "You depress the white button.", ch );
+  act_notchar( "$n depresses the white button.", ch );
+  remove_rflag( reset1, room );
+  }
+else {
+  act_tochar( "You depress the white button returning it to it's original position.", ch );
+  act_notchar( "$n depresses the white button, returning it to it's original position.", ch );
+  set_rflag( reset1, room );
+  }
+~
+!
+0 0 0
+A
+depress~
+blue~
+room = find_room( 77000 );
+if( rflag( reset1, room ) ) {
+  act_tochar( "You depress the blue button.", ch );
+  act_notchar( "$n depresses the blue button.", ch );
+  remove_rflag( reset1, room );
+  }
+else {
+  act_tochar( "You depress the blue button returning it to it's original position.", ch );
+  act_notchar( "$n depresses the blue button, returning it to it's original position.", ch );
+  set_rflag( reset1, room );
+  }
+~
+!
+0 0 0
+A
+depress~
+green~
+room = find_room( 77002 );
+if( rflag( reset1, room ) ) {
+  act_tochar( "You depress the green button.", ch );
+  act_notchar( "$n depresses the green button.", ch );
+  remove_rflag( reset1, room );
+  }
+else {
+  act_tochar( "You depress the green button returning it to it's original position.", ch );
+  act_notchar( "$n depresses the green button, returning it to it's original position.", ch );
+  set_rflag( reset1, room );
+  }
+~
+!
+0 0 0
+A
+~
+~
+// mob 148 needs references changed to 5024
+// mob 148 needs references changed to 5024
+mob = mob_in_room( 148, find_room( 77001 ) );
+act_tochar( #turn, ch );
+act_notchar( #turn2, ch );
+if( !rflag( reset0, find_room( 77004 ) ) )
+  if( !rflag( reset1, find_room( 77004 ) ) )
+  if( rflag( reset0, find_room( 77003 ) ) )
+  if( rflag( reset1, find_room( 77003 ) ) )
+  if( rflag( reset0, find_room( 77005 ) ) )
+  if( rflag( reset1, find_room( 77005 ) ) )
+  if( rflag( reset0, find_room( 77006 ) ) )
+  if( rflag( reset1, find_room( 77006 ) ) )
+  if( rflag( reset0, find_room( 77000 ) ) )
+  if( rflag( reset1, find_room( 77000 ) ) )
+  if( rflag( reset0, room ) )
+  if( rflag( reset1, room ) ) {
+  act_room( #openw, ch );
+  unlock( room, west );
+  open( room, west );
+  end;
+  }
+if( rflag( reset0, find_room( 77004 ) ) )
+  if( rflag( reset1, find_room( 77004 ) ) )
+  if( !rflag( reset0, find_room( 77003 ) ) )
+  if( !rflag( reset1, find_room( 77003 ) ) )
+  if( rflag( reset0, find_room( 77005 ) ) )
+  if( rflag( reset1, find_room( 77005 ) ) )
+  if( rflag( reset0, find_room( 77006 ) ) )
+  if( rflag( reset1, find_room( 77006 ) ) )
+  if( rflag( reset0, find_room( 77000 ) ) )
+  if( rflag( reset1, find_room( 77000 ) ) )
+  if( rflag( reset0, room ) )
+  if( rflag( reset1, room ) ) {
+  act_room( #openw, ch );
+  unlock( room, north );
+  open( room, north );
+  end;
+  }
+if( rflag( reset0, find_room( 77004 ) ) )
+  if( rflag( reset1, find_room( 77004 ) ) )
+  if( rflag( reset0, find_room( 77003 ) ) )
+  if( rflag( reset1, find_room( 77003 ) ) )
+  if( !rflag( reset0, find_room( 77005 ) ) )
+  if( !rflag( reset1, find_room( 77005 ) ) )
+  if( rflag( reset0, find_room( 77006 ) ) )
+  if( rflag( reset1, find_room( 77006 ) ) )
+  if( rflag( reset0, find_room( 77000 ) ) )
+  if( rflag( reset1, find_room( 77000 ) ) )
+  if( rflag( reset0, room ) )
+  if( rflag( reset1, room ) ) {
+  act_room( #opene, ch );
+  unlock( room, east );
+  open( room, east );
+  end;
+  }
+if( rflag( reset0, find_room( 77004 ) ) )
+  if( rflag( reset1, find_room( 77004 ) ) )
+  if( rflag( reset0, find_room( 77003 ) ) )
+  if( rflag( reset1, find_room( 77003 ) ) )
+  if( rflag( reset0, find_room( 77005 ) ) )
+  if( rflag( reset1, find_room( 77005 ) ) )
+  if( !rflag( reset0, find_room( 77006 ) ) )
+  if( !rflag( reset1, find_room( 77006 ) ) )
+  if( rflag( reset0, find_room( 77000 ) ) )
+  if( rflag( reset1, find_room( 77000 ) ) )
+  if( rflag( reset0, room ) )
+  if( rflag( reset1, room ) ) {
+  act_room( #opens, ch );
+  unlock( room, south );
+  open( room, south );
+  end;
+  }
+if( rflag( reset0, find_room( 77004 ) ) )
+  if( rflag( reset1, find_room( 77004 ) ) )
+  if( rflag( reset0, find_room( 77003 ) ) )
+  if( rflag( reset1, find_room( 77003 ) ) )
+  if( rflag( reset0, find_room( 77005 ) ) )
+  if( rflag( reset1, find_room( 77005 ) ) )
+  if( rflag( reset0, find_room( 77006 ) ) )
+  if( rflag( reset0, find_room( 77006 ) ) )
+  if( !rflag( reset0, find_room( 77000 ) ) )
+  if( !rflag( reset1, find_room( 77000 ) ) )
+  if( rflag( reset0, room ) )
+  if( rflag( reset1, room ) ) {
+  act_room( #openu, ch );
+  unlock( room, up );
+  open( room, up );
+  end;
+  }
+else
+  act_room( "fail", ch );
+~
+E
+openw~
+@CWith a faint click and a low grinding noise, the door to the west
+opens.@n 
+~
+E
+openw~
+@Cwith a faint click and a low grinding noise, the door to the north
+opens.@n 
+~
+E
+opene~
+@Cwith a faint click and a low grinding noise, the door to the east
+opens.@n 
+~
+E
+opens~
+@Cwith a faint click and a low grinding noise, the door to the south
+opens.@n 
+~
+E
+openu~
+@Cwith a faint click and a low grinding noise, the trapdoor above
+opens.@n 
+~
+E
+turn~
+You reach down and turn the crank, throwing your weight into it to start it moving.
+~
+E
+turn2~
+Throwing $s weight into the crank, $n begins to turn it.
+~
+E
+click~
+@R*click*@n
+~
+E
+click1~
+You see a small hatch open up, knowing this cannot be good you begin to
+back up.
+~
+E
+click2~
+$n begins backing up from the small altar, a timid look on $s face.
+~
+E
+portal~
+Set just above the small alter, a quivering black portal suddenly appears.
+~
+E
+quiver~
+A visible wave of energy radiates out in all directions from the altar.
+~
+!
+0 0 0
+A
+~
+~
+if( is_open( room, up ) ) {
+  close( room, up );
+  lock( room, up );
+  act_room( #bang, ch );
+  room = find_room( 77000 );
+  send_to_room( #bang2, room );
+  room = find_room( 47342 );
+  send_to_room( #torch, room );
+  set_rflag( reset0, room );
+  }
+~
+E
+bang~
+@cThe trapdoor slams shut above you with a resounding bang!@n
+~
+E
+bang2~
+@cThe trapdoor slams shut below you with a sounding bang!@n
+~
+E
+torch~
+The shiny sconce turns of its own accord to an upright position.
+
+*click*
+~
+!
+1 0 16
+A
+~
+~
+mob = mob_in_room( 148, find_room( 77001 ) );
+act_tochar( #turn, ch );
+act_notchar( #turn2, ch );
+room = find_room( 77004 );
+if( !rflag( reset0, room ) ) {
+  if( !rflag( reset1, room ) ) {
+    room = find_room( 77003 );
+    if( rflag( reset0, room ) ) {
+      if( rflag( reset1, room ) ) {
+        room = find_room( 77005 );
+        if( rflag( reset0, room ) ) {
+          if( rflag( reset1, room ) ) {
+            room = find_room( 77006 );
+            if( rflag( reset0, room ) ) {
+              if( rflag( reset1, room ) ) {
+                room = find_room( 77000 );
+                if( rflag( reset0, room ) ) {
+                  if( rflag( reset1, room ) ) {
+                    room = find_room( 77002 );
+                    if( rflag( reset0, room ) ) {
+                      if( rflag( reset1, room ) ) {
+                        act_room( #openw, ch );
+                        unlock( room, west );
+                        open( room, west );
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+room = find_room( 77004 );
+if( rflag( reset0, room ) ) {
+  if( rflag( reset1, room ) ) {
+    room = find_room( 77003 );
+    if( !rflag( reset0, room ) ) {
+      if( !rflag( reset1, room ) ) {
+        room = find_room( 77005 );
+        if( rflag( reset0, room ) ) {
+          if( rflag( reset1, room ) ) {
+            room = find_room( 77006 );
+            if( rflag( reset0, room ) ) {
+              if( rflag( reset1, room ) ) {
+                room = find_room( 77000 );
+                if( rflag( reset0, room ) ) {
+                  if( rflag( reset1, room ) ) {
+                    room = find_room( 77002 );
+                    if( rflag( reset0, room ) ) {
+                      if( rflag( reset1, room ) ) {
+                        act_room( #openw, ch );
+                        unlock( room, north );
+                        open( room, north );
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+room = find_room( 77004 );
+if( rflag( reset0, room ) ) {
+  if( rflag( reset1, room ) ) {
+    room = find_room( 77003 );
+    if( rflag( reset0, room ) ) {
+      if( rflag( reset1, room ) ) {
+        room = find_room( 77005 );
+        if( !rflag( reset0, room ) ) {
+          if( !rflag( reset1, room ) ) {
+            room = find_room( 77006 );
+            if( rflag( reset0, room ) ) {
+              if( rflag( reset1, room ) ) {
+                room = find_room( 77000 );
+                if( rflag( reset0, room ) ) {
+                  if( rflag( reset1, room ) ) {
+                    room = find_room( 77002 );
+                    if( rflag( reset0, room ) ) {
+                      if( rflag( reset1, room ) ) {
+                        act_room( #opene, ch );
+                        unlock( room, east );
+                        open( room, east );
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+room = find_room( 77004 );
+if( rflag( reset0, room ) ) {
+  if( rflag( reset1, room ) ) {
+    room = find_room( 77003 );
+    if( rflag( reset0, room ) ) {
+      if( rflag( reset1, room ) ) {
+        room = find_room( 77005 );
+        if( rflag( reset0, room ) ) {
+          if( rflag( reset1, room ) ) {
+            room = find_room( 77006 );
+            if( !rflag( reset0, room ) ) {
+              if( !rflag( reset1, room ) ) {
+                room = find_room( 77000 );
+                if( rflag( reset0, room ) ) {
+                  if( rflag( reset1, room ) ) {
+                    room = find_room( 77002 );
+                    if( rflag( reset0, room ) ) {
+                      if( rflag( reset1, room ) ) {
+                        act_room( #opens, ch );
+                        unlock( room, south );
+                        open( room, south );
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+room = find_room( 77004 );
+if( rflag( reset0, room ) ) {
+  if( rflag( reset1, room ) ) {
+    room = find_room( 77003 );
+    if( rflag( reset0, room ) ) {
+      if( rflag( reset1, room ) ) {
+        room = find_room( 77005 );
+        if( rflag( reset0, room ) ) {
+          if( rflag( reset1, room ) ) {
+            room = find_room( 77006 );
+            if( rflag( reset0, room ) ) {
+              if( rflag( reset1, room ) ) {
+                room = find_room( 77000 );
+                if( !rflag( reset0, room ) ) {
+                  if( !rflag( reset1, room ) ) {
+                    room = find_room( 77002 );
+                    if( rflag( reset0, room ) ) {
+                      if( rflag( reset1, room ) ) {
+                        act_room( #openu, ch );
+                        unlock( room, up );
+                        open( room, up );
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+room = find_room( 77004 );
+if( rflag( reset0, room ) ) {
+  if( rflag( reset1, room ) ) {
+    room = find_room( 77003 );
+    if( rflag( reset0, room ) ) {
+      if( rflag( reset1, room ) ) {
+        room = find_room( 77005 );
+        if( rflag( reset0, room ) ) {
+          if( rflag( reset1, room ) ) {
+            room = find_room( 77006 );
+            if( rflag( reset0, room ) ) {
+              if( rflag( reset1, room ) ) {
+                room = find_room( 77000 );
+                if( rflag( reset0, room ) ) {
+                  if( rflag( reset1, room ) ) {
+                    room = find_room( 77002 );
+                    if( rflag( reset0, room ) ) {
+                      if( rflag( reset1, room ) ) {
+                        act_room( #click, ch );
+                        act_tochar( #click1, ch );
+                        act_notchar( #click2, ch );
+                        do_spell( prismic missile, mob, ch );
+                        do_spell( prismic missile, mob, ch );
+                        do_spell( prismic missile, mob, ch );
+                        do_spell( prismic missile, mob, ch );
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+room = find_room( 77004 );
+if( !rflag( reset0, room ) ) {
+  if( rflag( reset1, room ) ) {
+    room = find_room( 77003 );
+    if( rflag( reset0, room ) ) {
+      if( rflag( reset1, room ) ) {
+        room = find_room( 77005 );
+        if( rflag( reset0, room ) ) {
+          if( rflag( reset1, room ) ) {
+            room = find_room( 77006 );
+            if( rflag( reset0, room ) ) {
+              if( rflag( reset1, room ) ) {
+                room = find_room( 77000 );
+                if( rflag( reset0, room ) ) {
+                  if( rflag( reset1, room ) ) {
+                    room = find_room( 77002 );
+                    if( rflag( reset0, room ) ) {
+                      if( rflag( reset1, room ) ) {
+                        act_room( #click, ch );
+                        act_room( #portal, ch );
+                        mload( 2097, room );
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+~
+E
+turn~
+No description.
+~
+E
+turn2~
+No description.
+~
+E
+openw~
+No description.
+~
+E
+opene~
+No description.
+~
+E
+opens~
+No description.
+~
+E
+openu~
+No description.
+~
+E
+click~
+No description.
+~
+E
+click1~
+No description.
+~
+E
+click2~
+No description.
+~
+E
+portal~
+No description.
+~
+!
+0 0 0
+A
+turn~
+crank~
+act_room( "acode 25", ch );
+if( !rflag( reset0, find_room( 77004 ) ) && !rflag( reset1, find_room( 77004  ) ) )
+  if( rflag( reset0, find_room( 77003 ) ) && rflag( reset1, find_room( 77003  ) ) )
+  if( rflag( reset0, find_room( 77005 ) ) && rflag( reset1, find_room( 77005  ) ) )
+  if( rflag( reset0, find_room( 77006 ) ) && rflag( reset1, find_room( 77006  ) ) )
+  if( rflag( reset0, find_room( 77000 ) ) && rflag( reset1, find_room( 77000  ) ) )
+  if( rflag( reset0, find_room( 77002 ) ) && rflag( reset1, find_room( 77002 ) ) )
+  acode( room, 22 );
+else
+  acode( room, 26 );
+else
+  acode( room, 26 );
+else
+  acode( room, 26 );
+else
+  acode( room, 26 );
+else
+  acode( room, 26 );
+else
+  acode( room, 26 );
+~
+!
+0 0 0
+A
+~
+~
+act_room( "acode 26", ch );
+if( !rflag( reset0, find_room( 77003 ) ) && !rflag( reset1, find_room( 77003  ) ) )
+  if( rflag( reset0, find_room( 77004 ) ) && rflag( reset1, find_room( 77004  ) ) )
+  if( rflag( reset0, find_room( 77005 ) ) && rflag( reset1, find_room( 77005  ) ) )
+  if( rflag( reset0, find_room( 77006 ) ) && rflag( reset1, find_room( 77006  ) ) )
+  if( rflag( reset0, find_room( 77000 ) ) && rflag( reset1, find_room( 77000  ) ) )
+  if( rflag( reset0, find_room( 77002 ) ) && rflag( reset1, find_room( 77002 ) ) )
+  acode( room, 22 );
+else
+  acode( room, 27 );
+else
+  acode( room, 27 );
+else
+  acode( room, 27 );
+else
+  acode( room, 27 );
+else
+  acode( room, 27 );
+else
+  acode( room, 27 );
+~
+!
+0 0 0
+A
+~
+~
+act_room( "acode 27", ch );
+if( !rflag( reset0, find_room( 77005 ) ) && !rflag( reset1, find_room( 77005  ) ) )
+  if( rflag( reset0, find_room( 77003 ) ) && rflag( reset1, find_room( 77003  ) ) )
+  if( rflag( reset0, find_room( 77004 ) ) && rflag( reset1, find_room( 77004  ) ) )
+  if( rflag( reset0, find_room( 77006 ) ) && rflag( reset1, find_room( 77006  ) ) )
+  if( rflag( reset0, find_room( 77000 ) ) && rflag( reset1, find_room( 77000  ) ) )
+  if( rflag( reset0, find_room( 77002 ) ) && rflag( reset1, find_room( 77002 ) ) )
+  acode( room, 22 );
+else
+  acode( room, 28 );
+else
+  acode( room, 28 );
+else
+  acode( room, 28 );
+else
+  acode( room, 28 );
+else
+  acode( room, 28 );
+else
+  acode( room, 28 );
+~
+!
+0 0 0
+A
+~
+~
+act_room( "acode 28", ch );
+if( !rflag( reset0, find_room( 77006 ) ) && !rflag( reset1, find_room( 77006  ) ) )
+  if( rflag( reset0, find_room( 77003 ) ) && rflag( reset1, find_room( 77003  ) ) )
+  if( rflag( reset0, find_room( 77004 ) ) && rflag( reset1, find_room( 77004  ) ) )
+  if( rflag( reset0, find_room( 77005 ) ) && rflag( reset1, find_room( 77005  ) ) )
+  if( rflag( reset0, find_room( 77000 ) ) && rflag( reset1, find_room( 77000  ) ) )
+  if( rflag( reset0, find_room( 77002 ) ) && rflag( reset1, find_room( 77002 ) ) )
+  acode( room, 22 );
+else
+  acode( room, 29 );
+else
+  acode( room, 29 );
+else
+  acode( room, 29 );
+else
+  acode( room, 29 );
+else
+  acode( room, 29 );
+else
+  acode( room, 29 );
+~
+!
+0 0 0
+A
+~
+~
+act_room( "acode 29", ch );
+if( !rflag( reset0, find_room( 77000 ) ) && !rflag( reset1, find_room( 77000  ) ) )
+  if( rflag( reset0, find_room( 77003 ) ) && rflag( reset1, find_room( 77003  ) ) )
+  if( rflag( reset0, find_room( 77004 ) ) && rflag( reset1, find_room( 77004  ) ) )
+  if( rflag( reset0, find_room( 77005 ) ) && rflag( reset1, find_room( 77005  ) ) )
+  if( rflag( reset0, find_room( 77006 ) ) && rflag( reset1, find_room( 77006  ) ) )
+  if( rflag( reset0, find_room( 77002 ) ) && rflag( reset1, find_room( 77002 ) ) )
+  acode( room, 22 );
+else
+  acode( room, 30 );
+else
+  acode( room, 30 );
+else
+  acode( room, 30 );
+else
+  acode( room, 30 );
+else
+  acode( room, 30 );
+else
+  acode( room, 30 );
+~
+!
+0 0 0
+A
+~
+~
+act_room( "Failure -- Acode 30", ch );
+~
+!
+0 0 0
+7081 17 1509949540 -2 0
+-1
+S
+
+#77003
+Realm of Bones -- Stone Corridor~
+A high arched corridor continues into the darkness northwards and
+southwards.  The walls and floor are made from earthen-colored bricks
+held together with a gray mortar.  Towards the northern end of the
+corridor strange outcrops of bone begin to occur.  Several skeletal limbs
+reach out of the walls and the exposed bleached ribcages of several
+bodies can be seen have buried in the cobbled floor.
+~
+[Azerin] extras done
+~
+33161221 11 9 0
+D0
+~
+~
+0 -1 77016 10 10 5
+D2
+~
+~
+407 -1 77002 10 10 5
+E
+walls floor bricks earther-colored skeletal remains limbs~
+Built from many earthen-colored bricks, the floor and walls show little
+sign of age.  The tightly packed stones have been sealed in with a dull
+gray mortar.  The roof appears to been hacked out of natural rock, its
+gloom enshrouded surface much rougher than the surrounding stone work. 
+Thrusting out of the walls and floor in several locations are the
+skeletal remains of humanoids.  How they were imbedded in the walls is
+unclear, however with closer inspection they appear to have melded with
+the rock.
+~
+E
+arched~
+Sprouting out of the ground like a petrified tree, the stone work around
+the arch has been carved into four intertwined ropes.  At the keystone of
+each archway a circular stone has been imbedded, a black skull painted
+across it.
+~
+5120 9 1509949540 3 0
+-1
+S
+
+#77004
+Twisted Metal -- Narrow Hallway~
+Rising out of the darkness are walls made from all manners of man-made
+weapons; jagged shards of swords, axes, glaives and many others are all
+evident.  The ground itself here is an enemy to anyone walking this dank
+and deadly path, covered as it is in the sharp implements of death.  This
+passageway appears to have taken quite a long to create, as rust and the
+forces of entropy are ravaging the metal used in the original
+construction of these weapons.  A faint mist, reminiscent of diluted acid
+wafts through the tunnel, obviously encroaching from the west.
+~
+~
+33161221 11 9 0
+D1
+~
+~
+407 -1 77002 10 10 5
+D3
+~
+~
+0 -1 77007 10 10 5
+E
+wall weapons jagged shards swords axes glaives blades~
+Upon closer inspection of the walls, the weapon fragments appear to be a
+new addition.  Beneath these killing implements appears to be a layer of
+fine black marble, speckled slightly with crimson.
+~
+E
+ground sharp implements death~
+Hundreds of thousands of shards of a variety of metals have been shoved
+into the ground.  However, none of the metal pieces have been bent or
+stressed in any way, almost as if they had somehow been eased into the
+floor gently, rather than forced.
+~
+E
+faint mist diluted acid~
+The virulently yellow mist slowly flows across the floor, following
+ancient ruts cut inot the metal and marble beneath it.  It has a sickly
+sweet smell, much like the scent of dissolving flesh. 
+~
+A
+~
+~
+act_room( #bang, ch );
+~
+E
+bang~
+@cThe sound of metal ringing upon metal radiates through the air.@n 
+~
+!
+2 150 0
+A
+push~
+button~
+acode( room, 1 );
+~
+!
+0 0 0
+5511 9 1509949540 3 0
+-1
+S
+
+#77005
+Reflections -- Open Hallway~
+A perfectly smooth archway of gleaming, unflawed obsidian heralds both
+ends of this exquisite hallway.  The walls of this open hallway soar so
+far skyward that the ceilings, if there are any are lost in the perputal
+darkness that hangs above.  The walls are almost to beautiful to be
+manmade, shined and polished to the point of reflection and yet they seem
+to absorb any light striking there surface.  Not a single blemish mars
+the surface of these glistening barriers, nor is their hint of dust or
+cobweb in this east-west hall.
+~
+[Adakar] needs extras as always.
+~
+33161221 11 9 0
+D1
+~
+~
+0 -1 77027 10 10 5
+D3
+~
+~
+407 -1 77002 10 10 5
+5094 9 1509949540 3 0
+-1
+S
+
+#77006
+Corrupted Nature -- Hall of Thorns~
+Strange black tendrils grow from out of the stone walls, spreading across
+the stonework of the passageway.  Thick slat colored thorns sprout from
+the vines, needle-sharp and ready to rip into soft flesh.  The scattered
+remains of birds and animals lie in amongst the twisted vines, some of
+the vines growing through and around their skeletons, perhaps having some
+hand in the creature's deaths.
+~
+~
+33161221 11 9 0
+D0
+~
+~
+407 -1 77002 10 10 5
+D2
+~
+~
+0 -1 77036 10 10 5
+5498 9 1509949540 3 0
+-1
+S
+
+#77007
+Twisted Metal -- Cross Roads~
+Neatly aligned, row upon row of sword blades protrude from the walls in
+this drafty room.  The floor has been covered in sharp metal studs
+aligned in a starburst pattern flowing from the exact center of the room,
+each no more than two inches high.  The ceiling here, though rough and
+set with holes does not have a single metal adornment, appearing to be
+naked when compared to the rest of the stone walls.  A faint mist,
+reminiscent of diluted acid wafts through the room, thicker and more
+dense towards the west.
+~
+[Adakar] south door - fading depiction of a cleric in battle -- now
+impaled with blades and bleeding 
+[Glynis] Added extra for door/south
+~
+33161221 11 9 0
+D0
+Hidden door~
+hidden door~
+431 -1 77008 10 10 5
+D1
+~
+~
+0 -1 77004 10 10 5
+D2
+bladed door~
+bladed door~
+391 -1 77010 10 10 5
+D3
+~
+~
+0 -1 77009 10 10 5
+E
+door south~
+Now jutted with fragments of sword hilts and spears, flanged mace held
+high and, clad in amber-colored chain armor beneath flowing white outer
+robes, the portrait of a cleric once graced this door.  Dried blood is
+smeared beneath the jagged metal protrusions where they pierce the cleric.
+~
+E
+starbust starburst floor sharp metal studs~
+Each of the sharp metal studs in the pattern has been carefully carved
+with intricate runes, running the length and width of them.  Each symbol
+flows neatly from one to the next, even crossing over between studs.  The
+lines of the starburst align with the 8 directions, with 1 stretching to
+each wall, and one to each corner of the room.
+~
+E
+faint mist diluted acid~
+The virulently yellow mist slowly flows across the floor, following
+ancient ruts cut inot the metal and marble beneath it.  It has a sickly
+sweet smell, much like the scent of dissolving flesh.
+~
+E
+runes symbol rune~
+The runes are carved in a long dead language, you cannot understand them.
+~
+E
+row sword blade wall walls blades~
+Each of the sword blades embedded into the walls points to the door to
+the south, as if someone had thrust them towards the door through the
+wall...
+~
+-1
+S
+
+#77008
+Twisted Metal -- Altar Setup~
+Crafted out of the same night-colored stone as the walls, a raised dais
+takes up the entirety of the center of the room.  Not appearing to be
+part of the original construction, sickly looking hooked, metallic spikes
+cover the entire altar setup and floor alike.  Accompanying the spikes
+are row upon row of blades protruding from the walls, each seemingly
+reaching out toward the altar as if they were a living creation.  A small
+incense burner hangs crookedly on the northern wall, skewered directly
+through the center by a curved blade; a sickly smell, sharp and acrid
+drifts from the resin that was once part of sweet myrrh stored within its
+confines.
+~
+[Isam] who was this altar originally dedicated to?  Would help for the rextras
+[Adakar] ummm.... <blink> I guess I should know this.. eh?
+~
+33162245 11 9 0
+D2
+~
+~
+431 -1 77007 10 10 5
+-1
+S
+
+#77009
+Twisted Metal -- Pool of Acid~
+Gurgling and spewing forth noxious fumes, a pool of greenish liquid
+dominates the center of the room.  The pool itself is recessed in the
+floor, a serrated ledge of metal surrounding it in a jagged mesh of
+glinting steel.  Many violent tools of war protrude from the walls at
+various angles; swords and axe blades, most with small pits from acidic
+residue point towards the center of the room.  A thick mist dissipates up
+off of the suface of the pool, expanding outward toward the open chambers
+to the north and east.
+~
+[Glynis] Need a comma after 'residue' in line 11.
+[Adakar] acidic slime here
+~
+33161221 11 5 0
+D0
+~
+~
+0 -1 77014 10 10 5
+D1
+~
+~
+0 -1 77007 10 10 5
+E
+pool greenish liquid~
+Roiling and bubbling like a witch's cauldron, the pool ebbs and surges against the edge of the pool.
+~
+E
+ledge metal jagged mesh~
+No description.
+~
+E
+noxious fumes mist~
+The virulently yellow mist slowly flows across the floor, following
+ancient ruts cut into the metal and marble beneath it.  It has a sickly
+sweet smell, much like the scent of dissolving flesh.
+~
+5511 9 1509949540 3 0
+-1
+S
+
+#77010
+Twisted Metal -- Before a Grisly Door~
+Quiet sentinals to the ages, literally thousands of metallic weapons have
+been enbedded into the walls and floor.  The killing surfaces on these
+implements of death positioned in such a fashion as to be deadly to
+anyone taking a misstep through the room.  A once majestic door to the
+north, now inset with the most heinous of bladed torturing devices,
+reveals a glimpse into the original construction of the walls.
+~
+[Adakar] can still see parts of the original door
+~
+33161221 11 5 0
+D0
+grisly door~
+grisly door~
+391 -1 77007 10 10 5
+D3
+~
+~
+0 -1 77011 10 10 5
+A
+~
+~
+if( is_open( room, north ) )
+act_room( #waft, ch );
+~
+E
+waft~
+@GA noxious green mist begins to drift into the room through the open
+grisly door.@n 
+~
+!
+2 150 0
+5511 9 1509949540 3 0
+-1
+S
+
+#77011
+Twisted Metal -- T-Junction~
+Protruding from the walls at every conceivable angle are literally
+thousands of jagged shards of metal.  The metal debris embedded in the
+wall are remnants of ancient and newly forged weapons alike, their only
+possible purpose being an attempt at visual terror.  The cave splits into
+a three-way junction here, all appearing to be vaguely similiar with
+glinting metal flickering in the available light.  An oppresive heat
+radiates out from the west.
+~
+~
+33161221 11 5 0
+D1
+~
+~
+0 -1 77010 10 10 5
+D2
+~
+~
+0 -1 77043 10 10 5
+D3
+~
+~
+0 -1 77012 10 10 5
+-1
+S
+
+#77012
+Twisted Metal -- Before a Jagged Door~
+Jutting out at insane angles, twisted shards of metal reach out from the
+walls, floor and ceiling in an attempt to snag any passerby.  With the
+addition of these metallic accoutrements, the actual open space within
+this tunnel-like cave is very narrow.  A large metallic door, radiates an
+aura of heat from each of the rusting blades that have been sunk into its
+surface.  The path is clear to the east, through a jungle of glinting
+steel thirsty for warm blood.
+~
+[Adakar] door itself will damage players
+~
+33161221 11 9 0
+D0
+large jagged door~
+large jagged door~
+391 -1 77013 10 10 5
+D1
+~
+~
+0 -1 77011 10 10 5
+5511 9 1509949540 3 0
+-1
+S
+
+#77013
+Twisted Metal -- Before a Great Forge~
+Brightly shining shards and rusty, tarnished fragments of weapon blades
+have been combined in a hodgepodge of visual terror to create the walls
+of this stifling room.  Every inch of the walls, the domed celing and the
+floor has been covered with these implements of torture and death.  With
+even the slightest light source striking these oddly angled metallic
+adornments, shadows jump and writhe across the room as if they were a
+living entity.  The only available exit from the forge room is toward the
+south and away from the heat of the forge.
+~
+[Adakar] first draft
+[Adakar] need extras/objects/mobs and acodes <pant>
+[Adakar] add attack code to dwarf, make him non-aggro
+[Adakar] add extra for water bucket
+~
+33161221 11 9 0
+D2
+large jagged door~
+large jagged door~
+391 -1 77012 10 10 5
+A
+~
+~
+i = random( 1, 4 );
+room = find_room( 77012 );
+if( i == 1 )
+  send_to_room( #fire, room );
+if( i == 2 )
+  send_to_room( #shadows, room );
+if( i == 3 )
+  send_to_room( #bang, room );
+if( i == 4 )
+  send_to_room( #hiss, room );
+~
+E
+fire~
+No description.
+@R
+~
+E
+shadows~
+No description.
+~
+E
+bang~
+No description.
+~
+E
+hiss~
+No description.
+~
+!
+0 0 0
+3536 17 1509949540 -2 0
+5124 9 1509949540 3 0
+-1
+S
+
+#77014
+Twisted Metal -- Swinging Pendulum~
+Jutting out of the wall at every conceivable angle, are thousands of
+sharp, slender pieces of steel.  Dominating the rest of the room, a
+vicious looking arch leads off toward the west.  A constantly moving
+axe-like pendulum swings back and forth within the arch, nearly
+preventing any access to what lies beyond.  As if attempting to prod
+bystanders away, every shard of metal protruding from the floor points
+away from the arch.  The aligned weapons make it very difficult to move
+in that direction without serious bodily injury.  A faint mist,
+reminiscent of diluted acid wafts through the room, drifting in on the
+air currents from the south.
+~
+[Adakar] axe will allow small race under with no damage, human size half
+damage and ogre size full damage.
+[Glynis] Need a comma after 'acid' in line 17.
+[Glynis] Comma after 'room' on line 17 is unecessary.
+~
+33161221 11 9 0
+D0
+~
+~
+0 -1 77024 10 10 5
+D2
+~
+~
+0 -1 77009 10 10 5
+D3
+~
+~
+0 -1 77015 10 10 5
+E
+axe pendulum arch~
+No description.
+~
+A
+~
+~
+act_room( #swing, ch );
+~
+E
+swing~
+@RAs if an arm of death itself, the axe-like pendulum swings back and
+forth, stirring up the @Gnoxious gas@N @Rin the room.@n 
+~
+!
+2 150 0
+A
+push~
+button~
+acode( room, 1 );
+~
+!
+0 0 0
+5511 9 1509949540 3 0
+-1
+S
+
+#77015
+Twisted Metal -- Marble Pillar~
+Hinting at the age of the weapons protruding from the walls, the forces
+of entropy have nearly destroyed every exposed surface of metal in the
+room, leaving the once vicious wall adornments nothing more than rusty
+shadows of their former selves.  A constantly moving axe-like pendulum
+swings back and forth within the arch, nearly preventing any egress from
+this small room.  A marble pillar stands in front of the western wall,
+the jagged shards of metal protruding from the floor surrounding it like
+a menacing guard.  Thick, black sludge oozes out of the single crack in
+the surface of the pearlescent marble, as if the stone were bleeding.  A
+faint noxious mist wafts into the room, stirred by the passage of the
+pendulum to the east.
+~
+~
+33161221 11 5 0
+D1
+~
+~
+0 -1 77014 10 10 5
+E
+floor~
+Slivers of fragmented metal jut menacingly out of the floor, arranged in
+concentric semi-circles radiating from the pillar.  Further inspection
+reveals the protrusions are arranged by material.  Closest to the pillar
+are the rusty orange iron implements, followed by tarnished turquoise
+steel and green-grey stained bronze.
+~
+E
+ooze crack marble pillar~
+The dull black substances oozes down the pillar, coalescing into a puddle
+on the floor.  Having nowhere else to go, it seeps through the cracked
+stone which lies beneath the sharp protrusions.
+~
+E
+axe pendulum arch~
+No description.
+~
+5511 9 1509949540 3 0
+-1
+S
+
+#77016
+Realm of Bones -- Three Way Junction~
+At the junction of three-passage way the bone hallway opens up into a
+domed room.  Four gigantic humanoid skeletons form into tall pillars
+giving support to the gloom-enshrouded ceiling.  A black stone archway
+surrounds a large alcove in the northern wall.  Footing is treacherous,
+bones in the floor creak and crack at the slightest weight, sending
+shards of needle-sharp bone and choking dust into the air.
+~
+[Azerin] extras done
+[Azerin] acode for enter alcove and read runes
+~
+33161221 11 9 0
+D1
+~
+~
+0 -1 77018 10 10 5
+D2
+~
+~
+0 -1 77003 10 10 5
+D3
+~
+~
+0 -1 77017 10 10 5
+E
+pillars gigantic humanoid skeletons~
+Wrapped in tattered cloth and bound together with dull iron bands the
+huge skeletons have been built into pillars.  Their arms spread out
+across the roof, fingers of each just touching in the center, forming a
+bone cross.  In each of the eye sockets a silver coin has been placed,
+and the mouths have been bound closed with a plate of iron, perhaps a
+strange burial ritual.
+~
+E
+black stone archway large alcove wall~
+Surrounding the large alcove is a black stone archway, its surface
+covered in a spider web of silvery runes.  The alcove has been cut deep
+into the northern wall; larger than a horse it is almost a separate room
+in its self.
+~
+E
+runes silvery~
+Glowing softly the runes cover the black stones.
+~
+-1
+S
+
+#77017
+Realm of Bones -- Twisted Tunnels~
+At the intersection of several twisted-bone tunnels, the cavern opens up
+into a domed chamber.  The entire area has been made from intertwined
+skeletons, their bones twisted and molded together.  A single towering
+pillar rises from the center of the room, fanning out into bifurcated
+branches that gives support to the high roof.
+~
+[Azerin] extras done
+~
+33161221 11 9 0
+D0
+~
+~
+0 -1 77019 10 10 5
+D1
+~
+~
+0 -1 77016 10 10 5
+D3
+~
+~
+0 -1 77023 10 10 5
+E
+intertwined skeletons bones~
+Dust and debris rise from the area as the twisted bones slowly crumble
+under the onslaught of time hand heavy tread.  Malformed and misaligned
+skeletons form the bases for all the room, from its bleached walls to the
+gloom-shrouded roof.  The macabre building material seems to have some
+how captured an essence of agony that can be felt when the structures are
+gaze upon.  A dry rustling like the wind through trees can be heard
+echoing around the room.
+~
+E
+pillar branches~
+Squat and ugly the bones have been distorted out of shape to form the
+melted-looking pillars.  Feelings of revulsion oozes out of the columns
+and fill the air with a bitter taste.  At the pillars apex it bifurcates
+into branches that stretch across the roof, like a crude tree.
+~
+5120 9 1509949540 3 0
+-1
+S
+
+#77018
+Realm of Bones -- Long Hall~
+The entire room has been made from thousands of interwove humanoid bones. 
+In the center of the room twisted bones have been woven into grotesques
+humanoid shapes as if to parody their once natural form.  The floor is
+covered in spilt and razor sharp pieces of bone shrapnel.  Midnight black
+tapestries drape the eastern wall.  Devoid of any picture the darkness
+oozes malevolence that tears at the sanity.
+~
+[Azerin] look tapestries to be an acode
+[Azerin] extras done
+[Azerin] leaving codes for bone shards
+~
+33161221 11 9 0
+D0
+~
+~
+0 -1 77021 10 10 5
+D3
+~
+~
+0 -1 77016 10 10 5
+E
+bones~
+The amount of bones here is staggering.  Literally thousands of humanoid
+remains have been twisted into each other to form the walls and ceiling
+of the room.  Bleached bones glow with a pale unnatural light, residual
+of the foul magic use to craft them.
+~
+5120 9 1509949540 3 0
+-1
+S
+
+#77019
+Realm of Bones -- Grand Hall~
+Running down the center of the room is a large table woven from the
+backbones of a massive serpent.  Plates, cups and even cutlery have been
+crafted from bones, their maker as skilled as they were demented. 
+Tumbling down the walls of the vaulted chamber are four black tapestries,
+dark as midnight, embroidered with a skull burning with white-fire.
+~
+need to make some bone stuff for here
+perhaps a acode for a search table
+[Isam] extras done
+~
+33161221 11 9 0
+D1
+~
+~
+0 -1 77020 10 10 5
+D2
+~
+~
+0 -1 77017 10 10 5
+E
+backbones table serpent~
+Woven much like the odd runic carvings adorning the doors in this
+madman's maze, this table is constructed from the intertwined skeletons
+of reptiles from all across the globe.  Each leg is a braiding of three
+distinct serpent remains, with the heads spread out at the base to form
+the feet.  Scattered across the top are a variety of cups, and cutlery,
+carved from bone into exquisitely beautiful shapes.
+~
+E
+skull fire~
+The skull in the tapestry could almost pass for human, if it were not for
+the elongated fangs projecting from it's lower jaw.  The white flames
+seem to undulate slightly, almost as if they were burning even now.
+~
+E
+tapestries tapestry~
+Woven from the deepest shade of black, these tapestries absorb all light. 
+Directly in the center is a giant skull, encased in a glowing nimbus of
+white fire.  Something seems rather odd about the skull though...
+~
+-1
+S
+
+#77020
+Realm of Bones -- Storage Room~
+Filling the large cavern are thousands and thousands of skeletal remains. 
+Mounds upon mounds, piles upon piles stretching out of sight in all
+directions.  A road of twisted bone runs in a northerly direction,
+winding around many piles before disappearing from view.  To the west a
+grand arch of bleached bones frames a large shadowy opening.
+~
+[Azerin] thinking of having a dracolich here, any objections ?
+[Azerin] hidden of corse, leaps out to have a fun time with people
+[Isam] extras done
+~
+33161221 11 9 0
+D0
+~
+~
+0 -1 77025 10 10 5
+D3
+~
+~
+0 -1 77019 10 10 5
+E
+skeletal remains mounds piles~
+The incredulous number of remains is simply staggering, running the
+gambit of possibilities.  While with time, you could conceiveably search
+them all, such an endeavor would take an extraordinary amount of time, 
+perhaps lifetimes.
+~
+E
+road twisted~
+In a sick display of insanity, the road has been constructed entirely
+from the skeletal feet of the dead.  Remains from all known races are
+represented here, from the slender arched feet of the elves, to the broad
+and heavy feet of the trolls.
+~
+E
+arch grand bleached~
+rising up from within the earth itself, giant bones curve gracefully to
+form the archway to the west.  More sigils have been carved into each
+side of the archway, twisting and looping numerous times until meeting in
+one enormous symbol at the apex of the arch.
+~
+5054 9 1509949540 3 0
+-1
+S
+
+#77021
+Realm of Bones -- Broken Ground~
+A mantel of darkness hangs on the walls like a tapestry of pure night. 
+Rising out of the perpetual gloom are walls made from interwoven bones. 
+Thrusting out of the ground are shards of broken skeletal remains,
+although brittle to the touch they seem to snag and tear at the feet of
+the unwary.
+~
+[Isam] extras done
+[Isam] made the skeletal remains into hooked fingerbones.  Perhaps searchable for a ring of some sort?
+~
+33161221 11 9 0
+D0
+~
+~
+0 -1 77022 10 10 5
+D1
+~
+~
+0 -1 77052 10 10 5
+D2
+~
+~
+0 -1 77018 10 10 5
+E
+bones walls~
+With hundreds of bones intertwined in unbelieveably complex patterns, it
+is difficult to keep track of the numerous whorls and twists that make up
+the walls.  Dozens of skulls are scattered throughout, somehow managing
+to project an expression of pain and suffering without flesh.
+~
+E
+broken skeletal remains~
+At first glance, these remains appear to simply be shattered bones from
+uncountable skeletons.  On closer inspection however, each shard is in
+actuality a fingerbone, carefully hooked in order to catch and trip the
+unwary.
+~
+5120 9 1509949540 3 0
+-1
+S
+
+#77022
+Realm of Bones -- Bloody Pool~
+With a sickening gurgle and splash, narrow troughs of blood run from the
+corners of the room and empty their dark-red liquid into a large pool
+made from the interwoven bones of hundreds of humanoids.  Torches
+splutter and smoke from the walls, held in place by skeletal hands.  Lazy
+wisps of steam rise from the pool to mingle with the smoke from the
+torches, leaving the noxious smell of burnt pitch and boiling blood to
+permeate the room.
+~
+need a pool of blood
+[Isam] extras done, unless you would like one for the bowl of blood.
+[Adakar] blood beast here
+[Adakar] think this room should be lengthened
+[Adakar] <drool> love the trough extra
+~
+33161221 11 9 0
+D2
+~
+~
+0 -1 77021 10 10 5
+E
+skeletal hands~
+Long and slender hands firmly hold each torch in place about the pool,
+the forearm sunk into the wall behind it.  Each hand is missing the top
+digit of it's ring finger, placing it even with the smallest.
+~
+E
+narrow troughs~
+Assembled completely from what appears to be miniature femurs, it soon
+becomes apparant that they once were attached to various children of the
+realms.  Each bone grows steadily smaller as it approaches the bowl, 
+beginning with sturdy leg of an ent, and ending with the delicate bone of
+a halfling.
+~
+-1
+S
+
+#77023
+Realm of Bones -- Unstable Passageway~
+Chunks of rubble lie scattered in amongst broken and splinted bones.  A
+large section of the roof above has collapsed into the room, partially
+blocking the passageway.  Warped and split pillars jut out at odd angles
+from the walls barely offering any support to the unstable roof.  A huge
+humanoid skeleton has been embedded into the western wall from hips up... 
+set in the center of its bleached white ribcage is a well camouflaged
+door, seemingly also crafted out of pure bone.
+~
+[Isam] extras written
+~
+33161221 11 9 0
+D1
+~
+~
+0 -1 77017 10 10 5
+D3
+bone door~
+bone door~
+407 -1 77024 10 10 5
+E
+bone door~
+Constructed entirely from the spine of the giant skeleton embedded in the
+western wall, each vertebre seems to have been pressed flat in some
+manner, without causing any splintering or cracks in the bone.  Inset
+into the door are hundreds of tiny shards" of metal, making it extremely
+dangerous to touch.
+~
+E
+huge humanoid skeleton~
+Embedded to the hips, and turn ninety degrees up at the waist, the
+skeleton has huge curling horns upon it's skull, and enormous canines. 
+It's ribcage has been somehow bent apart without splintering the bones in
+any way, framing the door in the west wall.  The corpse's arms reach out
+imploringly, almost as if it had been embedded in the wall while still
+living...
+~
+-1
+S
+
+#77024
+Realm of Bones -- Twisted Metal~
+Hideous and revolting, the walls, ceiling and floor are obviously the
+work of a madman.  The walls seem made of pure bone, skeltal limbs
+reaching out toward the center of the room, and down from the ceiling;
+seemingly to be from all manner of beast, though humanoid appendages are
+obviously evident.  Thrusting out and through many of the bones are
+shards from all types of weapons, sword and blade alike bite into the
+bone wall, leaving a fine layer of bleach-white dust on the ground. 
+Crafted in the appearence of a gargantuan maw, the eastern wall bears a
+door set directly in its center.  The metal accoutraments of death
+protruding outward as if it had been tortured and destroyed from inside
+out.
+~
+[Adakar] this room will need a new name, but its the mixuture of the two here.
+[Isam] extras done
+~
+33161221 11 9 0
+D1
+bone and metal door~
+bone metal door~
+407 -1 77023 10 10 5
+D2
+~
+~
+0 -1 77014 10 10 5
+E
+gargantuan maw eastern~
+Meticulously carved to resemble the head of an enormous dragon, this
+entryway is a wonder to behold.  The detail is exquisite, with the
+smallest scale rendered in exacting detail.  Marring the enchanting
+sculpture are dozens of weapon blades, ranging from minature stillettos
+to halberd blades, each appearing to have been thrust from within the
+sculpture.
+~
+-1
+S
+
+#77025
+Realm of Bones -- Bridge of Bones~
+The ground splits and cracks into a large fissure, the floor around the
+open maw is uneven, filled with crumbling rocks and broken bones.  A
+twisted bridge crafted from tortured bone spans the gap, allowing passage
+westwards.  To the south caverns continue into the darkness.  High above
+the vaulted chamber's roof is shrouded in gloom.  Piercing the shadows
+are three huge stalactites, constructed from the twisted bones and molded
+skeletal remains.
+~
+crossing bridge screaming out for acodes and some pain
+[Azerin] extras done
+~
+33161221 11 9 0
+D2
+~
+~
+0 -1 77020 10 10 5
+D3
+~
+~
+0 -1 77026 10 10 5
+E
+splits cracks fissures floor~
+Spiraling into an abyssal maw, the fissure depth fills the area with the
+promise of a long screaming death.  Jagged splinters of bone thrust from
+its sides filling the darkness with glinting shadowy spikes; ready to
+impale any unfortunate's who fall from the slender bridge.
+~
+E
+rocks bones~
+Ogre sized chunks of rock mix with the shattered remains of several large
+creatures carpeting the floor in a landscape of shards and rubble.  The
+origin of the rocks is unclear, certainly there are only countless bones
+here.
+~
+E
+bridge~
+The slender bridge is barely a foot wide, without any guardrail it forms
+a perfect arch across the large fissure.  Twisted bones have been molted
+and melted to form a slick, smooth finish guaranteed to make traversing
+it a difficult task.
+~
+5120 9 1509949540 3 0
+-1
+S
+
+#77026
+Realm of Bones -- Throne Room~
+The huge chamber is dominated by a massive throne of bones, supported on
+the backs of four skeletal elephants.  Across the floor several stitched
+skins have been spread.  The bone walls have been woven from thousands of
+complete skeletons, their forms twisted in grotesques fashion.  Before
+the throne a black brazier burns, clouds of choking ash fall from it,
+settling across the ground.
+~
+titans throne room
+hmm adakar want to make the skeletal elephants come to life?
+[Adakar] if skeletons came to life, then the rdesc would not make sense either during the time they were walking around or after they were destroyed
+hehe spectres of elephant honor guards? :)
+[Azerin] extras done
+[Adakar] titan could summon up the spectres in his attack code.
+[Adakar] or animate one with greater animation.
+~
+33161221 11 9 0
+D1
+~
+~
+0 -1 77025 10 10 5
+E
+throne skeletal elephants stiched skins~
+With empty eye sockets staring out the four huge skeleton elephants fill
+the room with their presence.  Across the backs of the elephant's spine
+rest the great bone throne, formed from the interweaving of many humanoid
+bones, twisted and grossly deformed.  Across the bones is a rug of
+stitched flesh, perhaps human in origin.  It is unclear whether it is for
+comfort or if it has another more diabolic use.  Simmilar stiched-skin
+rugs have been spread out, covering the floor.
+~
+E
+braziers~
+Hot coals glow in the black steel brazier, fur and bones have been heaped
+on it, the smoke and ash from their combustion fills the room.
+~
+E
+ash~
+The greasy white ash smells of sulfur and burnt fur, it sticks to
+clothing and hair, gets in your eyes and mouth.  The foul smell makes it
+difficult to breathe.
+~
+5497 9 1509949540 3 0
+-1
+S
+
+#77027
+Reflections -- Junction~
+The polished obsidian walls of this juntion point are nearly lost in the
+darkness, as all light cast forth is absorbed by shadow and rock alike. 
+The ceiling is cloaked in perpetual darkness, height combined with light
+absorbtion makes it impossible to catch even a glimpse of its surface. 
+Four passageways branch off from this sterile room, in each of the
+cardinal directions...  though the corridor towards the east is
+especially dark.
+~
+[Adakar] needs extras
+[Adakar] Command East - bonk
+~
+33161221 11 9 0
+D0
+~
+~
+0 -1 77028 10 10 5
+D2
+~
+~
+0 -1 77029 10 10 5
+D3
+~
+~
+0 -1 77005 10 10 5
+-1
+S
+
+#77028
+Reflections -- Curving Hall~
+Perfectly carved and showing not a hint of a corner, the western wall
+sweeps around toward the north effectivly blocking all movement in both
+of those directions.  Shined to a mirror-like state the sweeping wall
+distorts the light within this room even as it absorbs it; effectivly
+disorienting anyone trying to banish the darkness with a small light. 
+The small tunnel of darkness continues to both the east and south, each
+direction heralded by identical, pefectly smooth archways.
+~
+[Adakar] acodes for disorientation, use light function if it can be added.
+~
+33161221 11 9 0
+D1
+~
+~
+0 -1 77030 10 10 5
+D2
+~
+~
+0 -1 77027 10 10 5
+5094 9 1509949540 3 0
+-1
+S
+
+#77029
+Reflections -- Dead End~
+Paralleling archways are evident to both the north and south; this
+chamber is small enough so that the deception is visible.  A perfect
+reflection of the only gateway, oddly, the obsidian seems to ooze almost
+as if it were wet.  The midnight black carved obsidian has been shined to
+an unworldly state, creating the endless reflections.  The stone absorbs
+all light tossed about by globe and candle alike, the size of the room
+prevents the absorbtion from being absolute.  The ceiling is visible,
+albeit barely...  A perfectly carved slab of obsidian, shined as brightly
+as the walls, depicts a scene of what can only be called apocolyptic
+proportions.
+~
+[Adakar] needs extras
+[Adakar] ceiling....  as light strikes, shows a scene of destrucion( city
+being destroyed...  maybe med...  ) 
+[Adakar] south will be the expansion...  check all 4 acodes scattered
+about to verify completion of each section.
+~
+33161221 11 5 0
+D0
+~
+~
+0 -1 77027 10 10 5
+D2
+~
+~
+447 -1 77053 10 10 5
+5094 9 1509949540 3 0
+-1
+S
+
+#77030
+Reflections -- Twin Pillars~
+Beyond merely dominating this blackened room, twin carved pillars
+flanking the gateway to the north define it.  Unlike the surrounding
+walls, these pillars are not shined to a mirror-like state, instead they
+stand a muted sheen of midnight darkness against the shiny black backdrop. 
+Though perfectly smooth, the pillars are undeniably un-natural creations,
+perfectly round and situated to either side of the gateway to the north,
+they appear to be rather new additions.  The reflections of the twin
+pillars in the southern wall make it incredibly obvious that the evident
+passageway there is simply a reflection of its northern counterpart,
+leaving only three darkened tunnels available to travel.
+~
+~
+33161221 11 9 0
+D0
+~
+~
+0 -1 77050 10 10 5
+D1
+~
+~
+0 -1 77031 10 10 5
+D3
+~
+~
+0 -1 77028 10 10 5
+-1
+S
+
+#77031
+Reflections -- Curving Hall~
+Perfectly carved and showing not a hint of a corner, the eastern wall
+sweeps around toward the north effectivly blocking all movement in both
+of those directions.  Shined to a mirror-like state the sweeping wall
+distorts the light within this room even as it absorbs it; effectivly
+disorienting anyone trying to banish the darkness with a small light. 
+The small tunnel of darkness continues to both the west and south, each
+direction heralded by identical, pefectly smooth archways.
+~
+~
+33161221 11 9 0
+D2
+~
+~
+0 -1 77032 10 10 5
+D3
+~
+~
+0 -1 77030 10 10 5
+5094 9 1509949540 3 0
+-1
+S
+
+#77032
+Reflections -- Three way Junction~
+Perfectly mimicked on the eastern wall, a stylized arch of brilliant
+silver stands out as the only color struggling against the sea of
+midnight black that is the walls, floor and ceiling of this chamber.  The
+black obsidian walls have been shined to a near-mirror like state giving
+the impression of fathomless depths as they literally absorb the
+available light.  Dark passages branch off in all directions, save east
+where the reflective wall almost fools the unwary into believing they
+have one other means of escape.
+~
+~
+33161221 11 9 0
+D0
+~
+~
+0 -1 77031 10 10 5
+D2
+~
+~
+0 -1 77035 10 10 5
+D3
+~
+~
+0 -1 77033 10 10 5
+5094 9 1509949540 3 0
+-1
+S
+
+#77033
+Reflections -- Mushroom Pillar~
+Rising forth from the smooth floor is an elaborate and yet primitive
+obsidian pillar.  Standing a mere three feet off of the ground, this
+small mushroom shaped, carved piece of obsidian is actually a fragile
+throne.  This seat of power must have once been a natural formation that
+was crafted to look like it's present state; evidenced by the perfect
+seamless connection with the dark floor.  The throne is set with its back
+towards the northwest, allowing it a commanding view of both of the halls
+to the south and east.
+~
+[Adakar] blahblah done and needs extras
+[Adakar] elfie will be here, she'll be sooo sweet <halo>
+~
+33161221 11 9 0
+D1
+~
+~
+0 -1 77032 10 10 5
+D2
+~
+~
+0 -1 77034 10 10 5
+7042 17 1509949540 -2 0
+5123 9 1509949540 3 0
+-1
+S
+
+#77034
+Reflections -- Hallway~
+This hallway is beautiful in its simplicity.  The walls, ceilings and
+floor are all made up of the same midnight black, perfectly shined
+obsidian.  This glass is so dark and so spotless that its absorbs almost
+all light within in this hall.  The blackness of this chamber is so
+extreme that the walls appear to not be as such, and it looks as if one
+could travel in any direction forever.  Instead the hallway continues
+only to the south and north, both directions the passage disappears into
+muted darkness.
+~
+~
+33161221 11 9 0
+D0
+~
+~
+0 -1 77033 10 10 5
+D2
+~
+~
+0 -1 77049 10 10 5
+5094 9 1509949540 3 0
+-1
+S
+
+#77035
+Reflections -- Dead End~
+The hallway spills into a vast, domed chamber.  Dark as a raven's wing,
+the entire room is encased in polished obsidian stone, as if a
+black-skinned giant clutched it in one meaty paw.  The mirror-like
+finish, reflecting back upon itself again and again and yet again,
+creates the illusion of infinite moonless night, whose lightlessness is
+utterly and totally complete.  No imperfections mar the glass-like
+surfaces here, the walls, floor and ceiling all faultlessly smooth and
+cold.
+~
+[Adakar] nether fiend here
+~
+33161221 11 9 0
+D0
+~
+~
+0 -1 77032 10 10 5
+5510 9 1509949540 3 0
+-1
+S
+
+#77036
+Corrupted Nature -- Slaughter House~
+The gruesome remains of animals lie rotting in heaps on the black stone
+floor.  Mounds of skins and bones@n floor.  Mounds of skins and bones
+have been ripped from them and left to rot.  Feasting on their corpses
+are swarms of black flies and the putrid flesh churns with maggots. 
+Large hooks swing from iron chains attached to the ceiling, a few
+tattered scraps of meat sticking to their serrated surface.  The stench
+of decay is choking.
+~
+[Azerin] action for leaving south added, needs damage code
+~
+33161221 11 9 0
+D0
+~
+~
+0 -1 77006 10 10 5
+D1
+~
+~
+0 -1 77037 10 10 5
+D2
+~
+~
+0 -1 77038 10 10 5
+A
+~
+~
+if( find_stat( ch, dex ) > random( 10, 20 ) ) {
+  act_tochar( #dodge, ch );
+  act_notchar( #rdodge, ch );
+  continue;
+}
+else {
+  act_tochar( #hit, ch );
+  act_notchar( #rhit, ch );
+  mob = mob_in_room( 5006, find_room( 4554 ) );
+  i = 3d7+20;
+  dam_message( ch, i, "the maelstrom of steel" );
+  inflict( ch, mob, i, "the maelstrom of steel" );
+  continue;
+}
+~
+E
+dodge~
+@rAs you move southwards, the hooked chains come to life, you narrowly
+avoid being torn on the maelstrom of swirling steel!@n 
+~
+E
+rdodge~
+@rAs $n moves southwards, the hooked chains come to life and $e narrowly
+avoids being torn on the maelstrom of swirling steel!@n 
+~
+E
+hit~
+@rAs you move southwards, the hooked chains come to life, the maelstrom
+of steel ripping and tearing across you!@n 
+~
+E
+rhit~
+@rAs $n moves southwards, the hooked chains come to life, a maelstrom of
+steel hooks that rip and tear across $m!@n 
+~
+!
+3 0 4
+-1
+S
+
+#77037
+Corrupted Nature -- Trophy Room~
+Racks and racks of skins and ivory have been displayed along the
+black-stone walls of the room.  Sprouting out of the center of the floor
+is a black vine, its tendrils almost invisible against the stones, the
+slate leaves and thorns giving the best indication as to where it has
+crept.
+~
+~
+33161221 11 9 0
+D3
+~
+~
+0 -1 77036 10 10 5
+5498 9 1509949540 3 0
+-1
+S
+
+#77038
+Corrupted Nature -- Circular Room~
+Sitting in the center of the circular room is a rough table has been
+crafted form the bones of various animals, stitched together with strips
+of hide.  Large pelts of some scaled creature have been scattered across
+the stone floor.  Across the walls crude stick figures hunting creatures
+have been painted, some of the creatures appear to be vaguely humanoid.
+~
+~
+33161221 11 9 0
+D0
+~
+~
+0 -1 77036 10 10 5
+D3
+~
+~
+0 -1 77039 10 10 5
+5498 9 1509949540 3 0
+-1
+S
+
+#77039
+Twisted Metal -- Corrupted Nature~
+Rising out of the stone floor are several ash-covered petrified trees. 
+The room is filled with a ruddy light, cast from a large crevices that
+opens in the rooms center.  The smell of sulfur and waves of heat fill
+the air making breathing laborious.  Around the northern opening row upon
+row of blades thrust from the wall, like the teeth of a metallic
+creature, ready to devour its next victim.  At about halfway along the
+walls tangled black vines sprout and spread along the wall.  Where the
+tendrils meet the blades a struggle for wall space has left several
+broken shards and severed vines lie at the walls base.  A wooden door,
+petrified by time and now hard as stone has been set into the northen
+wall, almost as an afterthought and directly in the center of the strange
+metallic blades.
+~
+[Adakar] made the room longer <cough>
+~
+33161221 11 9 0
+D0
+petrified wooden door~
+petrified wooden door~
+407 -1 77040 10 10 5
+D1
+~
+~
+0 -1 77038 10 10 5
+D2
+~
+~
+0 -1 77041 10 10 5
+-1
+S
+
+#77040
+Twisted Metal -- Bend in the Hallway~
+Literally thousands of fragments of mortal weapons have been driven into
+the stone walls; not a single inch of which has been left unmolested by
+the uncaring metal.  As if an attempt at some misguided psycological
+warfare technique, every jagged shard of twisted metal protruding from
+the walls points towards the south.  Buried deep within the jungle of
+metal adorning the ceiling is a single perfectly cylindrical mithril rod,
+gleaming as light bounces around the reflective surfaces in the room.  An
+oppressive heat rolls about the room, a physically heavy force, seemingly
+in greater intensity to the south.  A petrified wooden door, fraught with
+blades has been set into the southern opening appearing to be an addition
+to the room rather than an original conceptionalized design.
+~
+~
+33161221 11 9 0
+D2
+bladed wooden door~
+bladed wooden door~
+407 -1 77039 10 10 5
+D3
+~
+~
+0 -1 77042 10 10 5
+5511 9 1509949540 3 0
+-1
+S
+
+#77041
+Corrupted Nature -- Petrifide Landscape~
+The petrified remains of animals fill the large cavern.  Stalagmites and
+stalactites rise and fall like gray trees.  Stone deer and rabbits,
+snakes and birds have been placed beside a river of ash and a forest of
+petrified trees in a strange parody of nature.
+~
+~
+33161221 11 9 0
+D0
+~
+~
+0 -1 77039 10 10 5
+D1
+~
+~
+0 -1 77044 10 10 5
+E
+remains animals stone deer rabbits snakes birds~
+An peaceful forest scene has been perverted and made reality here.  The
+petrified animals here all appear to be in varying stages of decay.  Much
+of the wildlife has been reduced to mere piles of stone and petrified
+body parts.  It isn't only the crumbling stone that is decaying, however,
+as several of the animals display severe decomposition.  Despite this,
+there are still a few that appear fairly recent and whole.
+~
+E
+stalagmites stalactites~
+The stalagmites and stalactites here protrude from the cavern's ceiling
+and floor like the massive teeth of some great beast.  In fact, a handful
+of the stalagmites actually do seem to have thrust their way through the
+cavern floor; many of them are adorned with the petrified remains of
+animals.
+~
+E
+river ash~
+A slow moving river of heated ash cuts east-west through the tortured
+landscape.  The river appears to originate from the western rock wall of
+the cavern.  Chunks of pumice and stoney-gray bones bob along the surface
+of the ash as they make their way slowly to the east.  The ash emenates
+large amounts of heat and sulfurous stench.
+~
+E
+forest trees~
+The petrified trees are of the needled variety.  They are numbingly
+colorless save for a lifeless gray.  They do appear to be in far better
+condition than the various animals in the area, though.  Strangely
+enough, the area below each tree is covered with a soft bed of petrified
+needles.
+~
+E
+1 north~
+The lifeless landscape stretches further to the north, where the
+occasional metallic glint of light can be seen.
+~
+E
+1 east~
+The twisted landscape continues to the east, following the churning river
+of ash.
+~
+5498 9 1509949540 3 0
+-1
+S
+
+#77042
+Twisted Metal -- Long Hallway~
+Gleaming, jagged shards of metal protrude out from the walls like the
+teeth of an angry beast intent on maiming its prey.  Every inch of
+available space on the walls and ceiling are covered in these implements
+of death, making travel through the room possible only by the extremely
+careful.  The floor is even more bizarre; covered in criss-crossing lines
+of half-circle curved and serrated blades, their sole purpose to make
+travel near to impossible in this vermiculated room.  Dominating the
+center of the room is a single circular blade sunk into the stone, based
+on its size it would be capable of splitting the largest oak in twain.
+~
+[Adakar] acode for air moving through the hall, hot to the northwest hot
+to the southeast -- air should move alot.
+[Eliza] add comma after half-circle I think.
+~
+33161221 11 9 0
+D1
+~
+~
+0 -1 77040 10 10 5
+D3
+~
+~
+0 -1 77043 10 10 5
+-1
+S
+
+#77043
+Twisted Metal -- Bend in the Hallway~
+Bending, curving, glinting steel makes the walls themselves difficult to
+focus upon.  Emerging from the walls at every twisted angle are the
+remnants of thosands of weapons; sword and axe, glaive and mace, dagger
+and morningstar.  The ground is coverd in the remains of hundreds of
+spiked balls, once proud ends of deadly flails, their spikes learing up
+into the air waiting...  The ceiling here is surprisingly sterile,
+leaving an ancient mural untouched by the otherwise omni-present metallic
+intrusions.  An oppressive heat radiates through the room, carried on the
+air currents from the north.
+~
+~
+33161221 11 9 0
+D0
+~
+~
+0 -1 77011 10 10 5
+D1
+~
+~
+0 -1 77042 10 10 5
+5511 9 1509949540 3 0
+-1
+S
+
+#77044
+Corrupted Nature -- Beside a River of Ash~
+Winding in an east-west direction is a slow moving river of gray ash. 
+Floating on its swirling surface are chunks of pumice.  Alongside the
+river runs a narrow path of black stones, getting unpleasantly close to
+the crumbling riverbank.  Belching forth in great bursts from the river
+are clouds of sulfuric dust, it clings to clothing and irritates exposed
+skin and eyes.  The stench and ash make breathing difficult.
+~
+~
+33161221 11 9 0
+D1
+~
+~
+0 -1 77045 10 10 5
+D3
+~
+~
+0 -1 77041 10 10 5
+E
+river ash~
+No description.
+~
+E
+chunks pumice~
+No description.
+~
+E
+path black stones~
+No description.
+~
+E
+crumbling riverbank~
+No description.
+~
+E
+clouds sulfuric dust~
+No description.
+~
+-1
+S
+
+#77045
+Corrupted Nature -- Lake of Ash~
+The churning river of gray ash dumps into a wide ash lake that fills up
+most of this huge cavern.  The shoreline of the lake is littered with
+pumice and the occasional bone.  Larger bones rise from the shallows,
+ribcages of some long dead aquatic creature.  A huge column of rock
+thrusts up out of the center of the lake, its top invisible from here.
+~
+huntmaster on top of column, not sure how people get there, perhaps jumping
+from ribcage to ribcage :)
+south is rooms for transfer
+~
+33161221 11 9 0
+D0
+~
+~
+0 -1 77046 10 10 5
+D3
+~
+~
+0 -1 77044 10 10 5
+E
+river ash lake~
+No description.
+~
+E
+shoreline pumice~
+No description.
+~
+E
+bones ribcages~
+No description.
+~
+E
+rock column~
+No description.
+~
+5500 9 1509949540 3 0
+-1
+S
+
+#77046
+Corrupted Nature -- Black Ashen Hallway~
+The obsidian walls curve around in a near perfect circle to the west,
+creating a tunnel-like hallway; obviously an intended effect.  The smooth
+obsidian shows not a hint of scratch or mar from tooling or its creation... 
+though obviously this was done quite some time ago as the walls are now
+almost entirely covered in a putrid and filthy ash.  A churning sound,
+remeniscent of sluggishly moving water drifts into the room from the
+south, the tunnel seemingly dumping into a large cavern in that direction. 
+The tunnel-like hallway continues to the west, continuing its cramped,
+yet smooth construction in that direction.
+~
+~
+33161221 11 9 0
+D1
+~
+~
+0 -1 77047 10 10 5
+D2
+~
+~
+0 -1 77045 10 10 5
+5498 9 1509949540 3 0
+-1
+S
+
+#77047
+Corrupted Nature -- Black Ashen Hallway~
+The obsidian walls curve around in a near perfect circle, creating a
+tunnel-like hallway; obviously an intended effect.  The smooth obsidian
+shows not a hint of scratch or mar from tooling or its creation... 
+though obviously this was done quite some time ago as the walls are now
+mostly covered in a putrid and filthy ash.  Only a few sporadic spots on
+the walls are ash free, the majority of the wall space is so heavilly
+cacked with this ash that it is nearly impossible to even tell its makeup. 
+This dirty hallway continues to both the east and west; a sulfuric
+rotting smell drifts into the room from the west, remeniscent of death
+and decay.
+~
+~
+33161221 11 9 0
+D1
+~
+~
+0 -1 77048 10 10 5
+D3
+~
+~
+0 -1 77046 10 10 5
+-1
+S
+
+#77048
+Corrupted Nature -- Reflections~
+The eastern obsidian wall curves gently towards the south as the hallway
+ends and another begins.  The walls here, though showing some evidence of
+once having been shined to a mirror-like state are covered in a putrid
+and filthy ash.  Ash covers the smooth floor making footing trecherous
+and leaving a visible record of those who have walked through this room
+in the past; appearing to be mostly spidery like tracks.  A scent of
+sulfur and rot wafts into the room from the west, doubltless something
+has died in that direction in the not-so-distant past.
+~
+[Adakar] spots on the walls are mirror-like, while the rest is covered;
+mob --> actively shining 
+~
+33161221 11 9 0
+D0
+rusty ash-covered obsidian door~
+rusty ash-covered obsidian door~
+407 -1 77049 10 0 5
+D3
+~
+~
+0 -1 77047 10 10 5
+7178 17 1509949540 -2 0
+5498 9 1509949540 3 0
+-1
+S
+
+#77049
+Reflections -- Hallway~
+Dark and quiet, this hallway has been flawlessly carved out of pure
+obsidian.  The walls are shined to a mirror-like state allowing them to
+absorb rather than reflect ambient light in this passageway.  The ceiling
+disappears into darkness; no light strong enough to penetrate its gloomy
+heights.  The perfect smoothness of the walls makes it appear as if they
+did not really exist and that the chamber continued on forever into
+oblivion.  However that is not the case; instead the hallway continues to
+only the north and presumably the south.  A faint smell of dust and ash
+wafts into the room from beneath the obsidian door to the south.
+~
+~
+33161221 11 9 0
+D0
+~
+~
+0 -1 77034 10 10 5
+D2
+gleaming obsidian door~
+gleaming obsidian door~
+407 -1 77048 10 10 5
+5094 9 1509949540 3 0
+-1
+S
+
+#77050
+Reflections -- Realm of Bones~
+Thrusting forth from the shined obsidian walls are a dozen seemingly
+intact skeletons, each twisted in their own grotesque death throes.  The
+skeletons do not encompass the entierety of the room, instead they seem
+relegated to a small portion in the northern half of the room.  The
+bleached white bones prove an odd contrast to the monatony of the pure
+darkness of the light-absorbing obsidian walls; though certainly they are
+an odd wall decoration.  An obsidian door, itself covered in the same
+bones as the northern half of the room, appears to have been recently
+added to the north.
+~
+~
+33161221 11 9 0
+D0
+Bone covered obsidian door~
+Bone covered obsidian door~
+407 -1 77051 10 10 5
+D2
+~
+~
+0 -1 77030 10 10 5
+5094 9 1509949540 3 0
+-1
+S
+
+#77051
+Realm of Bones -- Battlefield~
+It appears as if a battle has been fought over the cavern floor.  Scraps
+of metal from armor and splintered shards from weapons litter the ground. 
+Although no bodies remain, the stench of death fills the air.  To the
+south, heading towards the bone covered door, the passage slopes sharply
+downwards.  Closer to the door the ground has been split and cracked and
+multitudes of bone shards thrust from the floor, making passage difficult. 
+Westwards the passageway continues into the chilling darkness.
+~
+search for stuff here
+leaving south should cause some pain :)
+[Isam] extras done
+~
+33161221 11 9 0
+D2
+Bone covered obsidian door~
+Bone covered obsidian door~
+407 -1 77050 10 10 5
+D3
+~
+~
+0 -1 77052 10 10 5
+E
+metal armor scraps~
+Strewn about with reckless abandon are the scraps and chunks of armor
+from a thousand soldiers.  Every one has been rent into jagged pieces by
+horrendous force, torn apart by some enormous beast.
+~
+E
+splintered shards weapons~
+Scattered across the ground in haphazard pattern are the shards and
+fragments of various weapons.  Some of them seem to have been grounded
+and snapped, while others appear as if they had struck an immovable
+object, and shattered into a thousand pieces.
+~
+5120 9 1509949540 3 0
+-1
+S
+
+#77052
+Realm of Bones -- Field of Spears~
+The passageway opens up onto a nightmare scene of blood and death. 
+Impaled on thrusting spears of bones are hundreds of creatures.  The
+smell of death is overwhelming and the sounds of buzzing flies fill the
+air.  In the precise center of the room is a gigantic mound of skulls,
+each exactingly placed to form a perfect pyramid.
+~
+[Adakar] can this room be elaborated on?
+[Isam] I added a pyramid of skulls to the center of the room.
+Perhaps disturbing it could anger the spirits of the place,
+resulting in a skull golem, or some such?
+[Isam] Extras done
+~
+33161221 11 9 0
+D1
+~
+~
+0 -1 77051 10 10 5
+D3
+~
+~
+0 -1 77021 10 10 5
+E
+bones spears creatures~
+Row upon row of small skeletons are impaled upon the spears, to small
+even for a halfling.  The bones are all exceedingly slender and delicate,
+perhaps elven or vyan.  No elf or vyan is ever that short however, not
+since they were children...
+~
+E
+gigantic mound skulls pyramid~
+Each meticulously placed, every skull of this tetrahedral pyramid is
+dwarven in origin.  A malevolent presence seems to be housed within
+the pyramid, seething with rage.
+~
+-1
+S
+
+#77053
+Circular Chamber~
+Under Construction.
+~
+~
+33161221 11 9 0
+D0
+~
+~
+447 -1 77029 10 10 5
+-1
+S
+
+#0
+

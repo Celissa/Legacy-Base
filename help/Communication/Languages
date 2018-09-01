@@ -1,0 +1,21 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+language [language_name]<br>
+abil l<br>
+<br>
+<h1> Description </h1>
+<br>
+.  Languages are an integral part of the culture of each race.  Every<br>
+distinct race has its own language, and there are ten total.  In order<br>
+for a member of one race to communicate with another, both the speaker<br>
+and listener of the chosen language must have a good working knowledge of<br>
+the language.  A lack of language ability on either the speaker's or the<br>
+listener's part will make communications difficult if not impossible.  <br>
+<br>
+language [language_name] - Chooses the language you will currently speak.<br>
+<br>
+abil l - Lists how well you know the languages.<br>
+</html>
+</body>

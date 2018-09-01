@@ -1,0 +1,16 @@
+<html>
+<body>
+These are the values for reputation:<br>
+<br>
+       [ -1000   abhorred<br>
+-1000 to -599    despised<br>
+ -600 to -399    hated<br>
+ -400 to -199    wanted<br>
+ -200 to -1      suspect<br>
+    0 to 49      dubious<br>
+   50 to 199     accepted<br>
+  200 to 399     credible<br>
+  400 to 599     reputable<br>
+  600+           esteemed<br>
+</html>
+</body>

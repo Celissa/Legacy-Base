@@ -1,0 +1,29 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+repair [object]   : has the shopkeeper repair the object<br>
+<br>
+<h1> Description </h1>
+<br>
+Players are able to preview the cost of the repair, but not all stores will<br>
+repair the weapon to perfect condition.<br>
+<br>
+The cost of a repair depends upon several factors: the skill of the shop<br>
+performing the repair, the value of the item being repaired, the complexity<br>
+or rarity of such an item, and the condition of the item.<br>
+<br>
+The abbreviations listed under condition are described below:<br>
+<br>
+wls = worthless<br>
+dmg = damaged<br>
+vwn = very worn<br>
+wrn = worn<br>
+vsc = very scratch<br>
+scr = scratched<br>
+rea = reasonable<br>
+goo = good<br>
+vgo = very good<br>
+exc = excellent<br>
+</html>
+</body>

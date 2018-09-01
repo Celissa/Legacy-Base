@@ -1,0 +1,31 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+pets                   : lists your pets and where each is<br>
+pets abandon #         : abandons your pet<br>
+name [pet] [name]      : names your pet - Do NOT use numbers as a pet name<br>
+order [pet] [command]  : order pet to attempt to do the command<br>
+put [item] on [pet]    : make pet wear something<br>
+remove [item] from [pet] : to remove an item from a pet<br>
+name [oldname] [newname] : Renames your pet. (See Below)<br>
+<br>
+<br>
+<h1> Description </h1>
+<br>
+One may buy pets in pet shops, which are located in various towns.  Only<br>
+two pets are allowed at the same time, which explains the need for the<br>
+abandon option.<br>
+<br>
+NOTE: When naming your pet, do not use numbers or anything other than<br>
+letters and don't name it anything even remotely resembling your name.It<br>
+can cause all sorts of problems.<br>
+ <br>
+NOTE: Be very careful when using the abandon command.  Abandoning<br>
+aggressive pets in areas where they aren't normally found, is highly<br>
+frowned upon by the staff, especially if that area is a place frequented<br>
+by newbies.<br>
+<br>
+See also: grouping, order, whistle<br>
+</html>
+</body>

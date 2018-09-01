@@ -1,0 +1,36 @@
+<html>
+<body>
+Color Codes for DESCRIPTIONs/attacks and what not<br>
+<br>
+All colors are pretty self explanatory:<br>
+@R -  red<br>
+@r -  red<br>
+@B -  blue<br>
+@b -  blue<br>
+@W -  white<br>
+@C -  cyan<br>
+@c -  cyan<br>
+@G -  green<br>
+@g -  green<br>
+@M -  magenta<br>
+@m -  magenta<br>
+@Y -  yellow<br>
+@y -  yellow<br>
+<br>
+Lowercase codes are color1 in your color preferences.  Uppercase codes<br>
+are color2 in your color preferences.<br>
+<br>
+Bold Highlight and Underline:<br>
+<br>
+@e - mild emphasis<br>
+@h - highlight<br>
+@u - underline<br>
+@E - strong emphasis<br>
+<br>
+Use the colors with emphasis, highlight, and underline (if it works) for<br>
+other colors/effects.<br>
+<br>
+Use @n to return the text to normal.<br>
+@I will indent the text as on done this line.<br>
+</html>
+</body>

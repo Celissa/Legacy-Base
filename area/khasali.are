@@ -1,0 +1,1757 @@
+#M2_AREA
+2
+
+Ruins of Kah'slai~
+AzerinII~
+The Ruins of Kah'slai~
+~
+~
+
+20 0
+0
+1
+#ROOMS
+
+#38000
+The Ruins of Kah'slai~
+The crumbling remains of elegant pillars and graceful arches lie slumped
+under the weight of the fractured ceiling.  Roots of trees and grass poke
+through the cracks in the stonework, their burrowing further hastening
+the ruins decay.  Stairs lead downwards into the cluttered halls and
+beyond, a soft scraping noise from further in indicating not all is at
+peace within this dark crypt.
+~
+[Azerin] extra added
+[Azerin] extra done
+~
+167247883 2 5 0
+D1
+~
+~
+0 -1 38758 10 10 5
+D5
+~
+~
+0 -1 38001 10 10 5
+E
+elegant pillars graceful arches~
+The peach colored pillars have been carved into the likeness of bamboo
+entwined with lotus petals.  Across each archway a sunburst and full moon
+have been engraved, the faint glint of gold gilding still clinging to the
+deep grooves of the design.
+~
+-1
+S
+
+#38001
+The Ruins of Kah'slai~
+A white-stone stairwell ascends in the eastern wall, its worn steps caked
+in clay and rubble.  Twin pillars rise up beside the stairs, their arches
+shattered off about mid span.  Chunks of rock from the fractured ceiling
+and walls lies scattered across the room.  An ornately framed door sits
+in the north and south walls, the pair nearly identical in make, size and
+coloration 
+~
+[Azerin] extra added
+[Azerin] extra done
+[Jydan] mid span -> mid-span
+~
+167247877 0 5 0
+D0
+white oak door~
+~
+131 -1 38002 10 10 5
+D2
+white oak door~
+~
+131 -1 38004 10 10 5
+D4
+~
+~
+0 -1 38000 10 10 5
+E
+ornately framed door~
+White oak doors have been framed with elvish scripts and songs
+proclaiming the joy of spring and nature.  Silver gilding coats much of
+the writings, the metal gleaming in the light.
+~
+-1
+S
+
+#38002
+The Ruins of Kah'slai~
+Frescoes of forests, icy mountains and spreading plains adorn the
+crumbling walls of the circular chamber.  A white-stone door leads out of
+the room to the west whilst an ornately framed stone door leads to the
+south.  A sunburst pattern spans out from the chambers centre, its
+flicking pattern made from tiny flakes of orange gems.  A draping of
+cobwebs decorates the room's edges, a thick layer of dust upon them.
+~
+[Azerin] elf reset
+[Azerin] pry gems
+[Azerin] get handful of crushed gems
+[Azerin] vn 4004
+[Azerin] extra addded
+[Azerin] extra done
+[Eccles] pry/get gems acode complete
+[Jydan] deep gills are missing a final period in appearance
+~
+167247877 0 5 0
+D2
+white oak door~
+~
+131 -1 38001 10 10 5
+D3
+white-stone door~
+~
+131 -1 38003 10 10 5
+E
+frescoes forest icy mountains plains walls~
+From sweeping mountain peaks to sylvan forests the frescoes show the
+lands through the eyes of their elven artist.  Breathtakingly beautiful
+and exquisitely detailed it is clearly the work of a great master.
+~
+A
+pry get~
+gems~
+if( rflag( reset0, room ) ) {
+  if( random( 1, 10 ) == 1 ) {
+    act_tochar( #gem, ch );
+    act_notchar( #gem2, ch );
+    obj_to_char( oload( 4004 ), ch );
+    remove_rflag( reset0, room );
+  }
+  else {
+    act_tochar( #none, ch );
+    act_notchar( #none2, ch );
+    remove_rflag( reset0, room );
+  }
+}
+else {
+  act_tochar( #none, ch );
+  act_notchar( #none2, ch );
+}
+~
+E
+gem~
+@CYou pry at the gems, managing to work some loose.
+~
+E
+gem2~
+@C$n prys at the gems for a while, managing to work some loose.
+~
+E
+none~
+@CYou pry at the gems for a while without any luck.
+~
+E
+none2~
+@C$n prys at the gems for a while without any luck.
+~
+!
+0 0 0
+2680 9 1509949540 3 0
+-1
+S
+
+#38003
+The Ruins of Kah'slai~
+Black stone walls have been inset with bands of blue coral-like pillars,
+which act as decoration rather than any structural support.  Frescoes of
+stars and moons have been worked into the floor, many of the tiny cobbles
+now broken.  At even intervals ribbons of copper spiral from the dark
+walls, the swirling metal forming delicate sconces where torches would
+have illuminated the corridor.
+~
+[Azerin] minion reset
+[Azerin] extra added
+[Azerin] extra done
+~
+167247877 0 5 0
+D1
+white-stone door~
+~
+131 -1 38002 10 10 5
+D3
+~
+~
+0 -1 38014 10 10 5
+E
+ribbons copper spiral sconces~
+The flowing copper artwork has been covered with swirling musical scores;
+unfortunately much of the spidery writing has worn away in the eons since
+the sconces were first crafted.
+~
+2681 9 1509949540 3 0
+-1
+S
+
+#38004
+The Ruins of Kah'slai~
+Clumps of red clay poke through the fractures in the walls of the damp
+corridor, the earth forcing its way into the passage as it attempts to
+reclaim the ruins for its own.  Muddy pools of stagnate water fill
+shallow depressions in the floor where cobbles have crumbled away. 
+Ornately crafted sconces spiral out of the walls, the copper beaten into
+fine ribbons that reflect the elves love of art and movement.
+~
+[Azerin] coridor now
+[Azerin] spec reset
+[Azerin] extras done
+[Jydan] stagnate -> stagnant
+~
+167247877 0 5 0
+D0
+white oak door~
+~
+131 -1 38001 10 10 5
+D3
+~
+~
+0 -1 38005 10 10 5
+E
+ornately crafted sconces ribbons~
+The flowing copper artwork has been covered with swirling musical scores;
+unfortunately much of the spidery writing has worn away in the eons since
+the sconces were first crafted.
+~
+2680 9 1509949540 3 0
+-1
+S
+
+#38005
+The Ruins of Kah'slai~
+A sparse tunnel lead onwards into the dark, its shapeless walls cut from
+the rock with little care or finish.  Strangely crude for the elven ruins
+its floor undulates so much that running would be hazardous along its
+winding path.  V-shaped openings have been hacked into the walls; the
+charged remains of torches still wedges into the gaps.
+~
+[Azerin] passageway
+[Azerin] no extras
+[Jydan] wedges -> wedge
+~
+167247877 0 5 0
+D0
+~
+~
+0 -1 38007 10 10 5
+D1
+~
+~
+0 -1 38004 10 10 5
+-1
+S
+
+#38007
+The Ruins of Kah'slai~
+A rubble filled corridor winds into the darkness, the remnants of
+collapsed pillars and brickwork spilling into its already narrow confine. 
+A slender passage runs through the chaotic rock fall, the rubble cleared
+enough to allow movement in a single file.  Rotting seaweed and driftwood
+lie scattered across the rubble, a strange decoration considering the
+ruins location 
+~
+[Azerin] passage
+[Azerin] extra done
+~
+167247877 0 5 0
+D2
+~
+~
+0 -1 38005 10 10 5
+D3
+~
+~
+0 -1 38008 10 10 5
+E
+rotting seaweed driftwood~
+The stinking pile of seaweed clutters up the corridor, the pungent aroma
+worsens as the vegetation rots into a puddle of greasy slime.  A few bits
+of driftwood mingle with the oozing plants to form an unpleasant looking
+nest.
+~
+-1
+S
+
+#38008
+The Ruins of Kah'slai~
+Gangrenous rot spreads out through the once fine furniture that decays in
+the room's interior.  The mould and fungi over runs much of the walls and
+ceiling of the chamber, a haze of black spoors filling the air.  A rotten
+door leans beside black stone archway; the edges of the door have
+disintegrated away, bubbling ooze consuming the wood.  Corridors flee
+from the decay in all directions, the narrow pathways disappearing into
+the darkness.
+~
+[Azerin] room
+[Azerin] spec reset
+[Azerin] minion reset
+[Azerin] extra added
+[Azerin] extra done
+~
+167247877 0 5 0
+D0
+~
+~
+0 -1 38014 10 10 5
+D1
+~
+~
+0 -1 38007 10 10 5
+D2
+~
+~
+0 -1 38009 10 10 5
+D3
+~
+~
+0 -1 38013 10 10 5
+E
+mould fungi black spoor cloud~
+Sending clouds of black spoors skyward the fungi eats away at the wood
+with ravenous hunger, the tiny parasitic plants consuming a great amount
+of beams, furniture as well as three of the four doors that once enclosed
+the room.
+~
+2680 9 1509949540 3 0
+2681 9 1509949540 3 0
+-1
+S
+
+#38009
+The Ruins of Kah'slai~
+The stench of rotting fish chokes the air in the chamber; the source of
+the foul aroma appears to be a cluster of broken yellow-shelled eggs.  A
+clammy layer of kelp spills across the room's floor; a foot or so in
+depth the seaweed appears to have been a nest for the now hatched eggs. 
+Across the walls a faint elven frescoes is just visible under the layer
+of grime, the artwork depicting noble elves mounted upon white steeds.
+~
+[Azerin] room
+[Azerin] extra added
+[Azerin] extra done
+~
+167247877 0 5 0
+D0
+~
+~
+0 -1 38008 10 10 5
+D3
+~
+~
+0 -1 38010 10 10 5
+E
+broken yellow-shelled eggs~
+A sticky mass of egg yoke dribbles from the leathery shells of the eggs,
+the yellow yokes left over from the hatching or perhaps all that remains
+of some egg hunters meal.  Now rotten, the stench rivals that of a
+goblins armpit, enough to stun a small animal and make a grown dwarf pale.
+~
+E
+artwork frescoes noble mounted~
+Although badly damaged the elven artwork is clearly of a group of mounted
+nobles dressed in fine armor.  They appear to be on a hunt or war party a
+group of hounds wind around their horse's hooves.
+~
+-1
+S
+
+#38010
+The Ruins of Kah'slai~
+A deep pool of swirling water washes through the chambers center, a
+narrow walkway skirts its edges, the cobbles slick with the damp
+conditions.  The air is bitterly cold, the dark waters drinking the
+entire warm from the room.  Archways of blue stone lead from each compass
+point, their keystones decorated with dried kelp and seashells.  A strong
+smell of fish permeates the room, the unpleasant aroma strong enough to
+make the faint hearted gag.
+~
+[Azerin] passage
+[Azerin] down is underwater part to most of zone
+[Azerin] will need to add some pearl/seashell braclets for waterbreathing
+[Azerin] guard reset
+[Azerin] extra done
+[Azerin] extra done
+~
+167247877 0 5 0
+D0
+~
+~
+0 -1 38013 10 10 5
+D1
+~
+~
+0 -1 38009 10 10 5
+D2
+~
+~
+0 -1 38011 10 10 5
+D3
+~
+~
+0 -1 38012 10 10 5
+D5
+~
+~
+0 -1 38017 10 10 5
+E
+dried kelp seashells~
+The fish-smelling kelp forms a crude attempt at a curtain; the lack of
+strength and the shrinking as it dries has left a good foot clear of the
+floor.  A studding of oyster shells coats the weed, most of them cracked
+and chipped by the careless crafter.
+~
+2679 9 1509949540 3 0
+-1
+S
+
+#38011
+The Ruins of Kah'slai~
+Deep scars run through the southern wall where the earth has slumped
+down, collapsing the roof and shattering the stonework.  The broken
+remnants of robe-wearing statues lie in pieces upon the floor.  A mound
+of drying kelp has been thrust into the gaps of rock, perhaps as storage
+or some creature's crude attempt to seal the fractures.
+~
+[Azerin] room
+[Azerin] spectre reset
+[Azerin] extra added
+[Azerin] extra done
+~
+167247877 0 5 0
+D0
+~
+~
+0 -1 38010 10 10 5
+E
+robe-wearing statues~
+The slender toes of an elf poke out from beneath the robes.
+~
+2680 9 1509949540 3 0
+-1
+S
+
+#38012
+The Ruins of Kah'slai~
+Gnawed bones and off cast armor lie in heaps upon the broken cobbled
+floor, the meal and armor apparently from the same source.  Bleached
+goblin skulls have been stacked against the southern wall, each one's
+frontal lobe missing.  An archway to the east leads into a circular
+chamber, a pool of swirling water set in its centre.
+~
+[Azerin] room
+[Azerin] search skulls
+[Azerin] extras added
+[Azerin] extra added
+[Azerin] extra done
+~
+167247877 0 5 0
+D1
+~
+~
+0 -1 38010 10 10 5
+E
+gnawed bones off cast armor~
+The bones of victims litter the ground, most appear goblinoid although a
+few are clearly human.  The scraps of armor lie in rent tatters, none of
+it any value.
+~
+E
+goblin skulls~
+The shattered skulls appear to be some kind of trophy wall; about a
+hundred goblins gave their lives to build it.
+~
+-1
+S
+
+#38013
+The Ruins of Kah'slai~
+Surrounded by mounds of seaweed, three shallow pools of salt-water have
+been dug into the stonework of the room.  Soft yellow-shelled eggs have
+been laid in the pools, each one about a foot in length and half a foot
+in diameter.  Stacks of cobbles and earth lie at the base of the southern
+opening, the rubble partially blocking the exit.  Another clearer
+corridor meanders eastwards, heading further into the ruins.
+~
+[Azerin] room
+[Azerin] elf spec reset
+[Azerin] get egg - stuck with the poo-goo
+[Azerin] extras added
+[Azerin] extras done
+[Jydan] look egg, 'no description.' at start of desc
+~
+167247877 0 5 0
+D1
+~
+~
+0 -1 38008 10 10 5
+D2
+~
+~
+0 -1 38010 10 10 5
+E
+mounds seaweed~
+Forming disgusting smelling nests, the rotting kelp has been shored up
+with old bits of driftwood and stolen timbers from the ruins.
+~
+E
+yellow-shelled eggs~
+No description.  The foot long egg is oval and shape and appears leathery
+like a snake egg.  Submerged in the salt water they appear to be held in
+place by brown sticky goo.
+~
+2680 9 1509949540 3 0
+-1
+S
+
+#38014
+The Ruins of Kah'slai~
+The walls and floor of the dusty corridor are covered with the faded
+remains of an elegant mosaic of rampant lions and bears in battle with
+orcs and trolls.  Swirling copper ribbons spiral out from the walls at
+even spaces to form sconces, a few crumbling flakes of wood all that
+remain of the torches.
+~
+[Azerin] passage
+[Azerin] extra done
+~
+167247877 0 5 0
+D0
+~
+~
+0 -1 38015 10 10 5
+D1
+~
+~
+0 -1 38003 10 10 5
+D2
+~
+~
+0 -1 38008 10 10 5
+D3
+~
+~
+0 -1 38016 10 10 5
+E
+elegant mosaic rampant lions bears battle orcs trolls~
+The warriors of nature, druids, bears and lions have been portrayed
+massacring a force of slavering orcs and trolls, the blood from the
+carnage forming a red river that swirls through the mosaics.
+~
+E
+ribbons copper spiral sconces~
+The flowing copper artwork has been covered with swirling musical scores;
+unfortunately much of the spidery writing has worn away in the eons since
+the sconces were first crafted.
+~
+-1
+S
+
+#38015
+The Ruins of Kah'slai~
+The four walls of the chamber had been coated in fine tapestries; the
+years buried under the red clay of the savannah have eroded the art works
+until only a greasy stain remains across the wall.  A fine layer of dust
+and detritus scatter across the floor, much of it fallen from the
+fractured stone ceiling.  Broken archways of white stone lean haphazardly
+against openings in the south, the doors long since rotted away.
+~
+[Azerin] room
+[Azerin] added extras
+[Azerin] finished extras
+~
+167247877 0 5 0
+D2
+~
+~
+0 -1 38014 10 10 5
+E
+archway white stone~
+Carved with seahorses and seashells the artwork on the crumbled pillars
+has begun to chip away from the years of neglect and damp conditions. 
+Faint golden gilding still remains in some of the deeper grooves.
+~
+-1
+S
+
+#38016
+The Ruins of Kah'slai~
+Much of the frescoes have been hacked off the walls and replaced by an
+encrusting of seashells and coral patterns, lumps of seaweed lies drying
+at their base, the mounds reeking with decay as they rot away.  Copper
+bowls have been set on wrought iron stands at the doorway, the basins
+filled with water, a layer of salt crystals forming around the rim of
+each one.
+~
+[Azerin] room
+[Azerin] wizard reset
+[Azerin] extras done
+~
+167247877 0 5 0
+D1
+~
+~
+0 -1 38014 10 10 5
+E
+frescoes walls seashells coral~
+The faint remnants of forest scenes have been mostly hacked out or buried
+under a thick layer of crude coral and seashells.  The shell and coral
+artwork is dubious at best and totally mindless at worst.
+~
+E
+copper bowls iron stands basins salt crystal~
+Undrinkable brine floats in the bottom of each tarnished bowl, the
+withered remains of what might be petals lie withered around its rim.  A
+dusting of salt crystals sparkles from the basins edge.
+~
+2682 9 1509949540 3 0
+-1
+S
+
+#38017
+The Ruins of Kah'slai~
+The icy-cold rippling currents swirling through the underwater corridor
+the moving water churning up bottom scum which obscures all sight beyond
+a few feet.  The crumbling remains of a stairwell lie at the room's
+floor, the delicate elven craftwork now cloaked in seashells and newly
+sprouted kelp.  Corridors run from the room towards the north and west
+while above a crack in the roof allows a swimmer to exit the murky waters 
+~
+[Azerin] underwater
+~
+167378949 7 5 0
+D0
+~
+~
+0 -1 38019 10 10 5
+D3
+~
+~
+0 -1 38018 10 10 5
+D4
+~
+~
+0 -1 38010 10 10 5
+E
+stairwell delicate elven craftwork seashells kelp~
+Covered in the sea's embrace the spiral staircase leads only a few feet
+from the ground before breaking off into a crumbling ruin.
+~
+1388 17 1509949540 -2 0
+-1
+S
+
+#38018
+The Ruins of Kah'slai~
+Coral and seashells have been set into the crumbling walls of the
+water-filled corridor, the sea decorations replacing the broken frescoes
+that once adorned them.  Humanoid bones litter the muddy bottom, most
+cracked and ages from years of water damage.  A few rusted scraps of
+armor hang in tatted ribbons from them, the leather swishing to and fro
+in the tides.
+~
+[Azerin] tiger shark reset
+[Azerin] search bones
+[Azerin] extra done
+~
+167247877 7 5 0
+D0
+~
+~
+0 -1 38020 10 10 5
+D1
+~
+~
+0 -1 38017 10 10 5
+E
+coral seashells walls~
+Although much of the seashells appear to now be growing on the walls,
+many empty shells and broken bits have been afixed with a green motar.
+~
+E
+frescoes~
+Shattered remnants of the once-fine frescoes still lurk behind the coral
+and shell, what the art work was however is long lost.
+~
+E
+humanoid bones bottom~
+The fallen remains of elven defenders now lie buried in their armor.
+~
+A
+~
+bones~
+if( rflag( reset0, room ) ) {
+  if( random( 1, 10 ) == 1 ) {
+    act_tochar( #bone, ch );
+    act_notchar( #bone2, ch );
+    obj_to_char( oload( 3960 ), ch );
+    remove_rflag( reset0, room );
+  }
+  else {
+    act_tochar( #none, ch );
+    act_notchar( #none2, ch );
+    remove_rflag( reset0, room );
+  }
+}
+else {
+  act_notchar( #none2, ch );
+  act_tochar( #none, ch );
+}
+~
+E
+bone~
+You search the bones, finding something.
+~
+E
+bone2~
+$n searches through the bones, finding something.
+~
+E
+none~
+You search through the bones but come up empty handed.
+~
+E
+none2~
+$n searches throught the bones but comes up empty handed.
+~
+!
+9 0 0
+2673 9 1509949540 3 0
+1388 17 1509949540 -2 0
+-1
+S
+
+#38019
+The Ruins of Kah'slai~
+The years beneath the salt water have eaten away at the softer rocks and
+tiles of the walls, leaving great scar marks, some of them a yard or so
+deep.  Young kelp grows in the mud of the floor, most of the earth swept
+into the ruins by the swirling tide.  An opening in the south leads from
+the room, its waters made murky by the stirred silt.
+~
+[Azerin] gill reset
+~
+167247877 7 5 0
+D2
+~
+~
+0 -1 38017 10 10 5
+2674 9 1509949540 3 0
+1388 17 1509949540 -2 0
+-1
+S
+
+#38020
+The Ruins of Kah'slai~
+Corridors branch of from the circular chamber in each direction; the tide
+swirling in from the west brings with it an icy bite.  Kelp grows across
+the rubble strewn floor, the aquatic plants growing beside the potted
+remains of ash and beech saplings.  A sunburst pattern of tiles adorns
+the roof, a shell, encrusted copper bowl floating from its centre.
+~
+[Azerin] tiger shark reset
+[Azerin] extra done
+~
+167247877 7 5 0
+D0
+~
+~
+0 -1 38021 10 10 5
+D2
+~
+~
+0 -1 38018 10 10 5
+D3
+~
+~
+0 -1 38022 10 10 5
+E
+kelp~
+The tall seaweed bends and sways in the quick current, its dense branches
+obscure much of the already poor vision in the water.
+~
+E
+sunburst tiles~
+Once the attractive decoration for the corridors light fittings the
+sunburst pattern has begun to fade away under the watery grave it finds
+it self in, 
+~
+2673 9 1509949540 3 0
+1388 17 1509949540 -2 0
+-1
+S
+
+#38021
+The Ruins of Kah'slai~
+The fragments of silk curtains swish in the tide, the ribbons barely
+clinging to ornately carved rails across the southern opening.  Rotting
+furniture lies in a broken mess at the bed of the room, small crustaceans
+dance over it, using the wood as cover from larger predators.  The
+northern section of roof has collapsed in; shattering an archway in the
+process and sealing of what would have been a corridor onwards.
+~
+[Azerin] 2 gill
+[Azerin] extra done
+~
+167247877 7 5 0
+D2
+~
+~
+0 -1 38020 10 10 5
+E
+silk curtains~
+Only fragments of the once fine curtains remain, their rich velvet faded
+in the ocean current.
+~
+E
+rotting furniture wood~
+Fast becoming a pile of goo the furniture was once fine enough to be set
+for a king, a faint outlight of carved deer and foxes still can be seen
+across the legs and surface.
+~
+2674 9 1509949540 3 0
+2674 9 1509949540 3 0
+1388 17 1509949540 -2 0
+-1
+S
+
+#38022
+The Ruins of Kah'slai~
+Walls of kelp rise up from the floor to frame the three corridors that
+head off from the chamber towards the north, south and east.  Sea
+anemones and shellfish grow in the broken statues of elven warriors that
+litter the rooms floor, a small collection of spiny starfish move slowly
+over the rubble, hunting for any unfortunate crab or unwary sea creature.
+~
+[Azerin] reset gill
+[Azerin] extra done
+~
+167247877 7 5 0
+D0
+~
+~
+0 -1 38023 10 10 5
+D1
+~
+~
+0 -1 38020 10 10 5
+D2
+~
+~
+0 -1 38024 10 10 5
+E
+anemones shellfish broken statues elven warriors~
+Growing across the ruins of fine statues and crumbling artwork the patchs
+of sea plants thrive in the murky waters of the submerged elven ruin.
+~
+E
+spiny starfish~
+The starfish move across the ruins, their bright orange strips and black
+thorns alerting creatures that they are unpleasant to eat.
+~
+2674 9 1509949540 3 0
+1388 17 1509949540 -2 0
+-1
+S
+
+#38023
+The Ruins of Kah'slai~
+Chunks of masonry have collapsed in from the top walls, constricting the
+corridor into a narrow pyramid shaped passage.  Splintered rock and mud
+line the bottom, a scattering of scampy move across the wreckage, picking
+at morsels of food as they forage.  Southwards the tunnel opens up into a
+room while to the west it appears to constrict further making for a
+difficult swim.
+~
+~
+167247877 7 5 0
+D2
+~
+~
+0 -1 38022 10 10 5
+D3
+~
+~
+0 -1 38026 10 10 5
+E
+scampy~
+The tiny shrimps dart about the runes, picking away at scraps of food
+while desperatly trying to avoid becoming food for any number of larger
+creatures.
+~
+1388 17 1509949540 -2 0
+-1
+S
+
+#38024
+The Ruins of Kah'slai~
+Stretching about a hundred feet in length and half that across the room
+is set like a grand hall.  Twin stone tables run down its middle before
+ending at a higher table set across them.  The remains of chairs rot
+around the tables, a few broken bits of crockery scattered amongst them. 
+Shell-coated chandeliers sway in the current, their crystals now forming
+a safe haven for tiny fish and other marine life.
+~
+[Azerin] search for misc stuff
+[Azerin] extras done
+~
+167247877 7 5 0
+D0
+~
+~
+0 -1 38022 10 10 5
+D3
+~
+~
+0 -1 38025 10 10 5
+E
+shell-coated chandeliers~
+The encrusted chandeliers once dangled from the halls roof, now the
+submerged lightings have been swarmed by seashells and other clinging
+creatures.  Schools of tiny fish dark amonst their branches, the
+creatures using it as a safe haven.
+~
+1388 17 1509949540 -2 0
+-1
+S
+
+#38025
+The Ruins of Kah'slai~
+Water rushes in from the east tunnel and surges through the room, the
+powerful undertow sucking down swimmers as it races.  Billowing clouds of
+muck and stones fill the water, reducing visibility to near nothing.  A
+fracture runs from the floor and up the west wall, a cascade of rubble
+spilling from it at each tidal wash.  Flotsam and jetsam float against
+the south wall, cast there by the swirling water.
+~
+~
+167247877 7 5 0
+D1
+~
+~
+0 -1 38024 10 10 5
+1388 17 1509949540 -2 0
+-1
+S
+
+#38026
+The Ruins of Kah'slai~
+Constricted by a cave-in the passage struggles to be navigable, a narrow
+sliver has been left between the rocks, the tidal forces keeping the way
+clear but also making for an arduous swim.  The noise of crashing water
+booms through the tunnel as the undercurrents move rocks and earth in an
+incessant effort to tear a way onwards.
+~
+~
+167247877 7 5 0
+D1
+~
+~
+0 -1 38023 10 10 5
+D2
+~
+~
+0 -1 38027 10 10 5
+1388 17 1509949540 -2 0
+-1
+S
+
+#38027
+The Ruins of Kah'slai~
+Light filters through the tunnel from a rent in the ceiling and forms
+bands of illumination through the murky water that briefly increase
+visibility a few more yards.  Warm water bubbles up from a narrow cleft
+in the floor that appears to have formed when this room was sundered.  A
+partially collapsed tunnel leads northwards while a shelf of rock to the
+west has shifted to expose another narrow swim-way.
+~
+[Azerin] reset gill
+~
+167247877 7 5 0
+D0
+~
+~
+0 -1 38026 10 10 5
+D3
+~
+~
+0 -1 38028 10 10 5
+2674 9 1509949540 3 0
+1388 17 1509949540 -2 0
+-1
+S
+
+#38028
+The Ruins of Kah'slai~
+A heavy iron portcullis has been lowered to block the western tunnel, a
+collection of driftwood; rocks and other debris have collected behind it. 
+Tidal water rushes through the bars in foamy waves before pounding
+against the walls and roof of the room.  The broken remains of a
+stairwell lead upwards a few feet from the ground before severing into
+jagged pieces.  Overhead a circular opening appears to lead out of the
+crashing water.
+~
+[Azerin] extra done
+~
+167247877 7 5 0
+D1
+~
+~
+0 -1 38027 10 10 5
+D4
+~
+~
+0 -1 38029 10 10 5
+E
+heavy iron portcullis~
+Although rusted from its aquatic location, the heavy iron portcullis
+remains in enough of a state to block further swimming onwards.
+~
+1388 17 1509949540 -2 0
+-1
+S
+
+#38029
+The Ruins of Kah'slai~
+The chamber is about twenty feet across, the center dominated by a wide
+pool of foaming water.  The air hangs heavy with the smell of the ocean,
+salt, sand and decay all mixed into one.  An archway of blue stone set
+into the west, north and south walls lead onwards from the room, a pair
+of graceful swans in flight adorns their keystones.  Underfoot cobbles
+make the journey easy, although many now have begun to crack and split
+away.
+~
+[Azerin] down is underwater
+[Azerin] gill reset
+~
+167247877 0 5 0
+D0
+~
+~
+0 -1 38030 10 10 5
+D2
+~
+~
+0 -1 38031 10 10 5
+D3
+~
+~
+0 -1 38032 10 10 5
+D5
+~
+~
+0 -1 38028 10 10 5
+2674 9 1509949540 3 0
+-1
+S
+
+#38030
+The Ruins of Kah'slai~
+The corridor leads onwards into the ruins, slender lamps of white stone
+rising at even spaces along its way.  Mounds of seaweed form nests across
+the cobbled floor, a scattering of gnawed fish bones mixed amongst them. 
+The smell of decay and saltwater fills the damp passage.  Openings in the
+east and west lead into long abandoned shops, their signs and glasswork
+shattered.
+~
+[Azerin] tombs
+[Azerin] gill reset
+[Azerin] extra done
+~
+167247877 0 5 0
+D0
+~
+~
+0 -1 38034 10 10 5
+D1
+~
+~
+0 -1 38033 10 10 5
+D2
+~
+~
+0 -1 38029 10 10 5
+D3
+~
+~
+0 -1 38035 10 10 5
+E
+mounds seaweed nests gnawed fish bones~
+The stinking pile of kelp has been dragged into a sizable nest, offcast
+remains of fish meals lie scattered through it, adding to the pungent
+aroma.
+~
+2674 9 1509949540 3 0
+-1
+S
+
+#38031
+The Ruins of Kah'slai~
+Winding through the abandoned merchants houses and shops the cobbled
+roadway continues onwards into the gloom.  Lampposts of blue stone rise
+at even intervals along the thoroughfare, a few of them showing cracks
+and splitters as the years take their toll.  Doorways lead of the
+wagon-wide road, heading into abandoned houses and shops.
+~
+[Azerin] tomb
+[Azerin] gill reset
+~
+167247877 0 5 0
+D0
+~
+~
+0 -1 38029 10 10 5
+D1
+~
+~
+0 -1 38036 10 10 5
+D2
+~
+~
+0 -1 38037 10 10 5
+D3
+~
+~
+0 -1 38038 10 10 5
+2674 9 1509949540 3 0
+-1
+S
+
+#38032
+The Ruins of Kah'slai~
+The passage way heads in an east-west direction, its sides lined by
+statues of elves, many of them without arms or heads.  Mounds of kelp and
+driftwood have been bundled between each statue, the decaying mounds
+forming dank nests.  Broken yellow shells have been scattered without any
+care across the floor.  To the east the room opens into a chamber, an
+opening in the floor filled with sloshing water.
+~
+[Azerin] guard reset
+[Azerin] gill reset
+~
+167247877 0 5 0
+D1
+~
+~
+0 -1 38029 10 10 5
+D3
+~
+~
+0 -1 38039 10 10 5
+2679 9 1509949540 3 0
+2674 9 1509949540 3 0
+-1
+S
+
+#38033
+The Ruins of Kah'slai~
+The wooden racks and rusting iron anvil mark this room as a weapon or
+armor smiths, a smattering of off cast metal lie upon the dusty floor,
+all that remain of the crafters work.  Empty racks line the walls their
+goods long since looted.  A scarred wooden bench rests against the east
+wall, a broken bucket collapsed beside it.  An opening in the west leads
+back into the ruin.
+~
+[Azerin] tomb
+[Azerin] extra done
+~
+167247877 0 5 0
+D3
+~
+~
+0 -1 38030 10 10 5
+E
+wooden racks~
+Stained with use, the wooden racks are unfortunatly empty.
+~
+-1
+S
+
+#38034
+The Ruins of Kah'slai~
+Strips of leather lie in stacks upon the floor, their surface cracked and
+split from the years.  Rusting tools used to craft hide have been
+scattered across a heavy oak bench, the instruments coated in a layer of
+dust and cobwebs.  Half finished boots have been shoved against the west
+wall, their cut and fine workings clearly that of an elf cobblers.  A
+single door leads out of the shop back on to the cobbled path.
+~
+[Azerin] tomb
+[Azerin] extra done
+~
+167247877 0 5 0
+D2
+~
+~
+0 -1 38030 10 10 5
+E
+rusting tools~
+Now rusted together the tools would have been used by the leather smith
+to craft fine armor for his or her customers.
+~
+-1
+S
+
+#38035
+The Ruins of Kah'slai~
+A faint smell of fruit and spices still cling to the wooden shelves of
+the small shop, its goods long since looted or rotten away.  A broken
+sign rests against the door, the flaking painting that of a loaf of bread
+and an apple.  Wicker baskets have been piled against the west wall, a
+carpet of mildew spreading across them.  Against south wall a wine rack
+still contains a few dusty bottles of wine, most appearing to have lost
+their cork in the years of damp conditions.
+~
+[Azerin] tomb
+[Azerin] extra done
+~
+167247877 0 5 0
+D1
+~
+~
+0 -1 38030 10 10 5
+E
+wicker baskets~
+The woven baskets would have once stored fruit and grains, now all they
+contain is a fine collection of dust and mould.
+~
+-1
+S
+
+#38036
+The Ruins of Kah'slai~
+Wooden wheels and rusted iron bands litter the floor of the workshop, a
+handful of tarnished tools lie in amongst them, most of them well beyond
+use.  A bench runs the length of the shop, its surface coated in scars
+and dents from years of work.  An opening in the west leads out on to the
+street, the door absent from its hinges.
+~
+[Azerin] tomb
+[Azerin] extra done
+~
+167247877 0 5 0
+D3
+~
+~
+0 -1 38031 10 10 5
+E
+handful tools~
+Broken chisels and worm-eaten wooden hammers lie scattered through the
+rusting iron bands and wagon wheels.
+~
+A
+~
+tools wheels bands floor~
+act_tochar( #rummage, ch, obj, mob, sight );
+act_notchar( #rrummage, ch, obj, mob, sight );
+if( rflag( reset0, room ) ) {
+  if( random( 1, 100 ) <= 40 )
+    obj = oload( 4289 );
+  remove_rflag( reset0, room );
+}
+wait( 1 );
+if( obj ) {
+  act_tochar( #found, ch, obj, mob, sight );
+  act_notchar( #rfound, ch, obj, mob, sight );
+  obj_to_char( obj, ch );
+}
+else {
+  act_tochar( #nada, ch, obj, mob, sight );
+  act_notchar( #rnada, ch, obj, mob, sight );
+}
+~
+E
+rummage~
+You rummage through the old tools in search of anything of value.
+~
+E
+rrummage~
+$n rummages about in the rusted tools.
+~
+E
+found~
+After some time you discover $p!
+~
+E
+rfound~
+After some time searching $n discovers $p!
+~
+E
+nada~
+You search about but find nothing.
+~
+E
+rnada~
+$n searches the tools but comes up empty handed.
+~
+!
+9 0 0
+-1
+S
+
+#38037
+The Ruins of Kah'slai~
+Wooden shelves lie in a heap across the floor where they have been
+thrown, either by looter or by the cataclysm that hit the elven township. 
+A rent in the southern wall splits the wall into two levels, the roof
+partially collapsed under the strain of the shift.  Broken glass and
+pottery lie scattered about, a few paintings of cranes and swans still
+visible on them.
+~
+[Azerin] tomb
+[Azerin] extras done
+~
+167247877 0 5 0
+D0
+~
+~
+0 -1 38031 10 10 5
+E
+pottery cranes paintings~
+Although clearly fine work, the broken pottery would be of little value
+now.  The faint outline of birds in flight grace their cracked surfaces.
+~
+-1
+S
+
+#38038
+The Ruins of Kah'slai~
+A scene of destruction surrounds the entrance to the ruined shop, the
+broken and scattered remnants of shelves and wooden furniture lie spilt
+across the floor.  The dusky-brown bones of humanoids lie stacked up
+neatly against the west wall, the grim remains of at least thirty
+unfortunates intermingled to form the pile.
+~
+[Azerin] tomb
+[Azerin] search bones for shard/something
+[Azerin] extra done
+~
+167247877 0 5 0
+D1
+~
+~
+0 -1 38031 10 10 5
+E
+dusky-brown bones humanoids~
+The bones have been dried out and split down the middle, each one
+carefully arranged to form the neat stack.
+~
+-1
+S
+
+#38039
+The Ruins of Kah'slai~
+A low wall surrounds a circular pool in the chambers heart, a spiral
+pattern of ivy and crescent moons swirl out from it.  The broken bones of
+countless elves lie in tattered piles across the floor, rent arms and
+armor lying throughout them.  By the number it appears that a pitch
+battle was fought here, although it is not clear what the elves were
+fighting.
+~
+[Azerin] down more water
+[Azerin] extra done
+~
+167247877 0 5 0
+D1
+~
+~
+0 -1 38032 10 10 5
+D5
+~
+~
+0 -1 38040 10 10 5
+E
+broken bones arms armor~
+The once-ornate scale armor has rusted away into a stained heap, a few
+bits of bone and skull fragments poke through the rent armor.  Large
+remains of bones lie scattered about where the unfortunates appear to
+have been torn appart.
+~
+-1
+S
+
+#38040
+The Ruins of Kah'slai~
+Tidal waters wash in and out of the room in a steady rhythm that brings
+with it icy cold saltwater to mix with the cloudy mire of the ruin.  A
+forest of kelp grows amongst the broken beams and rotting timbers of the
+tunnel.  In the chambers middle a stairwell rises a few feet before
+ending abruptly in shattered ruin.  A corridor heads westwards, the
+strong undertows making for a difficult swim.  A grill in the east wall
+sucks water through while preventing rocks, driftwood and swimmers to
+continue in that direction.
+~
+[Azerin] underwater
+~
+167247877 7 5 0
+D3
+~
+~
+0 -1 38041 10 10 5
+D4
+~
+~
+0 -1 38039 10 10 5
+1388 17 1509949540 -2 0
+-1
+S
+
+#38041
+The Ruins of Kah'slai~
+The rumble of shifting rock and rushing incoming tide races through the
+narrow tunnel as the waters surge powerfully into the ruins.  Uncut, the
+passage appears to be a natural aquatic tunnel, formed by years of the
+seas crashing waves.  Walls of hardy kelp cling to the floor, the
+vegetation swaying in the current.  Eastwards the tunnel opens into a
+murky room, the silt and foaming water making visibility extremely
+limited, while to the north the sea tunnel continues onwards.
+~
+~
+167247877 7 5 0
+D0
+~
+~
+0 -1 38042 10 10 5
+D1
+~
+~
+0 -1 38040 10 10 5
+1388 17 1509949540 -2 0
+-1
+S
+
+#38042
+The Ruins of Kah'slai~
+Oversize starfish and foot-long shellfish cling to the broken edge of the
+shattered northern rock face.  Huge rent zigzags through the black stone
+where the ground has torn itself apart in a cataclysmic event.  Broken
+pillars of blue stone lie split upon the ground, the details obscured by
+a swarm of encrusting barnacles.
+~
+[Azerin] gill reset
+[Azerin] extra added
+[Azerin] pry shellfish to get a pearl
+~
+167247877 7 5 0
+D2
+~
+~
+0 -1 38041 10 10 5
+D3
+~
+~
+0 -1 38043 10 10 5
+E
+starfish~
+The bright orange starfish slide across the rubble in search of skampy
+and other prey, their thorny bodys protecting them from larger preditors
+attacks.
+~
+2674 9 1509949540 3 0
+1388 17 1509949540 -2 0
+-1
+S
+
+#38043
+The Ruins of Kah'slai~
+Water rushes in from a stygian opening below, the force of the water
+turning the room into a maelstrom of foam, waves and terrifying currents. 
+A whirlpool spins through the centre of the room, its twisting body
+dancing around the crumbling remnants of an elven stairwell.  The
+thunderous roar of cascading water sends ripples thought he stones,
+occasionally splintering chunks of the fractured rock off.
+~
+[Azerin] will add down with "the force of water is too strong to proceed" message
+~
+167247877 7 5 0
+D1
+~
+~
+0 -1 38042 10 10 5
+D4
+~
+~
+0 -1 38044 10 10 5
+1388 17 1509949540 -2 0
+-1
+S
+
+#38044
+The Ruins of Kah'slai~
+Blue stone pillars rise up in the shape of trees along the cobbled
+laneway, their branches spreading across and join to form an archway. 
+Copper loops jut from the arch's apex, a delicate brass lantern dangling
+from each one.  The broken statues of elven warriors guard the start of
+the roadway, their heads decapitated by a bladed weapon or similar tool.
+~
+[Azerin] down under water
+[Azerin] ruined city now
+[Azerin] guard reset
+[Azerin] extra added
+[Azerin] extra done
+~
+167247877 0 5 0
+D3
+~
+~
+0 -1 38045 10 10 5
+D5
+~
+~
+0 -1 38043 10 10 5
+E
+delicate brass lantern copper loops~
+Each of the lanterns sides has been crafted into the shape of an oak leaf. 
+A faint stub of a wick still dangles from the dried bowl in its center.
+~
+2679 9 1509949540 3 0
+-1
+S
+
+#38045
+The Ruins of Kah'slai~
+A statue of an elf maiden lies beside a stagnate fountain, like most of
+the statues through the ruins she has suffered decapitation as well as
+some general vandalism.  The roadway of stone tress leads onwards in
+south and east directions, the brass lanterns all unlit and covered in a
+fine layer of dust and cobwebs.  The strong smell of salt water permeates
+even the stones of the ancient city.
+~
+[Azerin] extra added
+[Azerin] extra done
+~
+167247877 0 5 0
+D1
+~
+~
+0 -1 38044 10 10 5
+D2
+~
+~
+0 -1 38046 10 10 5
+E
+statue elf maiden fountain~
+Once the statue would have poured sparkling water into the fountain, now
+only a oozing slime dribbles from its broken limbs.  A faint outline of
+seahorses adorn the outter edges of the fountain, the decorations
+dissapearing quickly in the years since the elves were outcast from their
+home.
+~
+-1
+S
+
+#38046
+The Ruins of Kah'slai~
+Long graceful arches rise up from the floor to the cieling, their
+surfaces coated in carvings of forests.  Exits lead off from the
+courtyard into the private rooms of the elven royals, statues of warriors
+and potted ash trees cluster around each entrance.  Crystals in the roof
+glow softly, the ilumination flickering like a torch.
+~
+[Azerin] kappa deep gill reset
+[Azerin] extras added
+[Azerin] extras done
+~
+167247877 0 5 0
+D0
+~
+~
+0 -1 38045 10 10 5
+D1
+~
+~
+0 -1 38047 10 10 5
+D2
+~
+~
+0 -1 38049 10 10 5
+D3
+~
+~
+0 -1 38048 10 10 5
+E
+statues warriors~
+Graceful elven warriors guard the entrances to the royal chambers, their
+longswords raised ready to strike any foes.
+~
+E
+ash trees~
+The dead remains of the ash trees sit without a single leaf upon their
+twisted branches, the soil around their roots appears to be rock solid,
+the gardener who tended the plants long since dust.
+~
+2674 9 1509949540 3 0
+-1
+S
+
+#38047
+The Ruins of Kah'slai~
+Statues of scaled medusas coil around the room, their sinewy tails
+linking together to form an unbroken circle.  A stinking mound of seaweed
+has been thrown about the middle of the ring, the rotting remains of fish
+and gnawed bones scattered about it.  A brass mirror has been set into
+the eastern wall, deep scratch marks surrounding its frame where something
+has attempted to claw it out.
+~
+[Azerin] extra added
+[Azerin] reset something here
+[Azerin] brood master reset
+[Azerin] extras done
+~
+167247877 0 7 0
+D3
+~
+~
+0 -1 38046 10 10 5
+E
+brass mirror~
+The smooth brass mirror reflects a slightly warpped immage across its
+surface.  A few scratches and scars around its edge show where looters
+have attempted to remove it.
+~
+2676 9 1509949540 3 0
+-1
+S
+
+#38048
+The Ruins of Kah'slai~
+The smiling statues of twin cats peer through narrow eye slits from the
+back of the chamber.  Beaten copper bowls rest at the paws of the
+felines, a scattering of dried rose petals remaining in each.  Silk
+drapes cascade down from each wall, the delicate cloth showing some water
+and mildew damage.  A kappa nest rots in the room's center, the decaying
+seaweed and driftwood covered in bits of bones and fish scales.
+~
+[Azerin] extra done
+[Azerin] extra e
+~
+167247877 0 5 0
+D1
+~
+~
+0 -1 38046 10 10 5
+E
+kappa nest~
+The foul-smelling nest has been crafted by throwing layers of rotting
+seaweed into a hap-hazard pile.  The remains of old fish heads and gnawed
+bones add to its appeal.
+~
+2675 9 1509949540 3 0
+-1
+S
+
+#38049
+The Ruins of Kah'slai~
+Intricately patterned tiles form a swirling mosaic scene of coral reefs
+and underwater shipwrecks.  Three mermaids swim around the centre of the
+artwork, their aquamarine tails touching.  Archways of amber stone rise
+around the courtyard, each one draped with the tattered remnants of once
+fine silk curtains.  Beyond the arches lie the rooms of the nobles of the
+city.
+~
+[Azerin] kappa deep gill reset
+~
+167247877 0 5 0
+D0
+~
+~
+0 -1 38046 10 10 5
+D1
+~
+~
+0 -1 38051 10 10 5
+D2
+~
+~
+0 -1 38050 10 10 5
+D3
+~
+~
+0 -1 38052 10 10 5
+2674 9 1509949540 3 0
+-1
+S
+
+#38050
+The Ruins of Kah'slai~
+The room has been lavishly decorated with coral and rainbow-coloured
+shells, the artwork plastered across the top of elven frescoes depicting
+faded pictures of sleek warships gliding through the ocean.  A huge mound
+of fresh seaweed has been piled against the south wall to make a pungent
+nest that the kappas obviously use to sleep in.  A stack of statues heads
+line the east, each of their eyes have been carefully chipped out,
+leaving dark stone sockets to stare into the room.
+~
+[Azerin] royals room
+[Azerin] extra added
+[Azerin] storm mistress reset
+[Azerin] extra done
+~
+167247877 0 5 0
+D0
+~
+~
+0 -1 38049 10 10 5
+E
+statues heads~
+The rows of statue heads have been severed from the ruined ones across
+the elven city, why someone would wish to decapitate the statues is
+unclear.
+~
+2678 9 1509949540 3 0
+-1
+S
+
+#38051
+The Ruins of Kah'slai~
+Apricot-colored pillars support a vaulted ceiling in the large chamber,
+each of the columns has been draped with fine silks, most however appear
+to be in various stages of decay, their beauty marred by the years of
+neglect.  A blue stone altar sits against the eastern wall, mounds of
+seaweed piled up against 
+~
+[Azerin] extra done
+[Azerin] royal reset
+~
+167248005 0 5 0
+D3
+~
+~
+0 -1 38049 10 10 5
+E
+mounds seaweed~
+The stench of the kappa nest assults the room, the pungent aroma a
+mixture of rotting fish and decaying kelp.
+~
+2677 9 1509949540 3 0
+-1
+S
+
+#38052
+The Ruins of Kah'slai~
+Mounds of rock and earth fill much of the western room from where the
+roof has caved in crushing the delicate statues and shattering marble
+pillars.  Beside the carnage mounds of seaweed rot, a scattering of
+splintered egg shells cast about them.  Twin statues of rampant stags
+remain to guard the eastern opening, their spreading antlers forming an
+arch.
+~
+[Azerin] extra done
+~
+167247877 0 5 0
+D1
+~
+~
+0 -1 38049 10 10 5
+E
+mounds rock earth statues marble~
+The left overs from an acient earthquake or simillar event, the rubble
+has buried a collection of once-fine statues.
+~
+2677 9 1509949540 3 0
+-1
+S
+
+#0
+

@@ -1,0 +1,36 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+message : lists the message flags and their settings<br>
+message [name] : toggles message flag on/off<br>
+<br>
+<h1> Description </h1>
+<br>
+This is used to toggle certain familiar messages on/off - removing the<br>
+max_mana message for warriors, etc.<br>
+   <br>
+MESSAGES AND MEANINGS<br>
+   <br>
+Autosave       : lets you see when autosave occurs.<br>
+Bleeding       : alerts you when you are badly hurt and bleeding.<br>
+Damage.Mobs    : gives info when players damage mobs.<br>
+Damage.Players : gives info when mobs damage players.<br>
+Followers      : shows followers when the group leader moves.<br>
+Hungry         : alerts you when you are hungry.<br>
+Max.Hit        : alerts you when you are at maximum hit points.<br>
+Max.Energy     : alerts you when you are at maximum energy.<br>
+Max_move       : alerts you when you are at maximum moves.<br>
+Misses         : lets you see misses in combat.<br>
+Queue          : shows when things are queued.<br>
+Spell.Counter  : lets you know how many spells are prepared each time you<br>
+                 prepare a new spell.<br>
+Thirsty        : alerts you when you are thirsty.<br>
+Weather        : alerts you to changes in the weather. (not implemented)<br>
+Multiple.Items : lets you see a list of items or simply "gets several<br>
+ items." <br>
+Long.Names     : lets you see the appearance and name of players<br>
+<br>
+See also iflag and options.<br>
+</html>
+</body>

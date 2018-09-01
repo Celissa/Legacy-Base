@@ -1,0 +1,1360 @@
+#M2_AREA
+2
+
+Yellow Desert Dragons~
+Florian~
+none~
+~
+~
+
+0 0
+0
+0
+#ROOMS
+
+#78050
+Underground Lair~
+A vast underground cavern with polished walls of limestone surrounds you. 
+At one time, there must have been stalactites projecting from the
+ceiling, but they have been sheared off by some force.  The floor of the
+cavern is covered with a loose sifting of sand. Every now and again, a
+trickle of sand falls from cracks in the ceiling.  Extending to the
+south, the cavern opens up into an extremely tall but narrow cavern.
+~
+~
+167247884 11 7 0
+D2
+~
+~
+0 -1 78051 10 10 5
+D4
+~
+~
+235 -1 48041 10 10 5
+E
+walls limestone polished~
+The limestone walls here have been carefully polished until they almost
+gleam they are so smooth.  In rare circumstances, erosion by wind and
+sand can duplicate the polishing affects seen here.  But there is neither
+enough sand nor even a breeze flowing through this chamber.  Thus,
+someone has went to great length to smooth out this cavern.
+~
+E
+ceiling stalactites~
+At one time, five stalactites, each about four feet in diameter,
+projected down from the ceiling though the cavern.  One by one, they have
+been removed and their bases ground down, until very little remains of
+their presence.
+~
+E
+cracks~
+Most of the cracks are little more than two or three inch fissures that
+cascade through the ceiling rock like miniature rivers and waterfalls. 
+However, there is one crack in the ceiling that looks quite large. 
+Currently, a packing of hard sand is blocking the passage through the
+wider fissure.
+~
+E
+sifting sand~
+Particles of sand sift through the cracks in the ceiling of the chamber,
+drifting down until they come to rest on the floor of the cavern.  Most
+of the sand is tan in color.  All manner of tracks and foot prints have
+been made along the sandy bottom of the cavern, all of which look as far
+from humanoid as possible.
+~
+A
+clear clean dig excavate~
+fissure sand hard-packed~
+if( !is_open( room, up ) ) {
+  act_tochar( #clears, ch );
+  act_notchar( #rclears, ch );
+  open( room, up );
+}
+else
+  act_tochar( #already, ch );
+~
+E
+clears~
+Jumping up and down, you manage to clear the fissure of rocks and sand,
+revealing the desert above.
+~
+E
+rclears~
+After much jumping about, $n manages to clear the fissure in the
+ceiling of rocks and debris.
+~
+E
+already~
+The fissure in the ceiling has already been cleared and the way to the
+desert above opened.
+~
+!
+0 0 0
+A
+look~
+fissures~
+if( !is_open( room, up ) )
+act_tochar( #open, ch );
+else
+act_tochar( #notopen, ch );
+~
+E
+notopen~
+Through the fissure in the ceiling, you can see the desert above.
+~
+E
+open~
+A fairly long and wide fissure runs through the ceiling.  However, an
+abundance of rock and sand fills the fissure.
+~
+!
+0 0 0
+A
+~
+~
+act_tochar( #climb, ch );
+~
+E
+climb~
+The ceiling is too high to reach.  You must find some other way out or
+try climbing.
+~
+!
+3 0 16
+A
+climb~
+1 up ceiling handholds walls~
+if( is_open( room, up ) ) {
+  if( is_pet( ch ) ) {
+    act_tochar( #climbs, ch );
+    act_notchar( #rclimbs, ch );
+    transfer( ch, find_room( 48041 ) );
+    act_notchar( #carr, ch );
+  }
+  if( !can_fly( ch ) ) {
+    if( find_skill( ch, climb ) >= random( 1, 10 ) ) {
+      act_tochar( #climbs, ch );
+      act_notchar( #rclimbs, ch );
+      transfer( ch, find_room( 48041 ) );
+      act_notchar( #carr, ch );
+    }
+    else {
+      act_tochar( #trouble, ch );
+      act_notchar( #cant, ch );
+    }
+  }
+  else {
+    act_tochar( #floatup, ch );
+    act_notchar( #rfloatup, ch );
+    transfer( ch, find_room( 48041 ) );
+    act_notchar( #farr, ch );
+  }
+}
+else
+  act_tochar( #notclear, ch );
+loop( followers ) {
+  ch = rch;
+  acode( room, 4 );
+}
+~
+E
+climbs~
+Using the natural hand holds, you climb out of the cavern, through a
+fissure in the ceiling.
+~
+E
+rclimbs~
+$n climbs up a set of natural hand holds, disappearing out the fissure
+in the ceiling.
+~
+E
+trouble~
+Try as you might, you are not as adept at climbing as you thought.
+~
+E
+floatup~
+With ease, you float up through the fissure.
+~
+E
+rfloatup~
+$n floats up through the fissure in the ceiling.
+~
+E
+notclear~
+You cannot make your way through the fissure.  Rocks and sand block it.
+~
+E
+cant~
+$n falls down as $e tries climbing up.
+~
+E
+carr~
+$n climbs out from a hole in the ground.
+~
+E
+farr~
+$n floats up from below, emerging from a hole in the ground.
+~
+!
+0 0 0
+2942 17 1509949540 -2 0
+-1
+S
+
+#78051
+Extremely Tall Cavern~
+Like a hall in some grand palace, a greatly elevated cavern extends to
+the east.  The walls of the cavern, here, are of green limestone and have
+been polished to a perfect sheen.  Aside from a few deep, gouging marks
+along the walls and floor, there is nothing remarkable about the lofty
+cavern, except a tunnel opening into a southern chamber.  A foul smell
+emanates from that direction.
+~
+*CF
+~
+167247876 11 7 0
+D0
+~
+~
+0 -1 78050 10 10 5
+D1
+~
+~
+0 -1 78054 10 10 5
+D2
+~
+~
+0 -1 78052 10 10 5
+E
+gouge gouging claw marks~
+If you didn't know better, you would think some cat had been using the
+walls as a scratching post.  Deep gouges have been cut into the stone,
+some of which are a foot long and several inches in depth.  Of course,
+for scratches of this magnitude, the cat would need be about three times
+the size of a horse.
+~
+E
+1 south tunnel opening~
+A tall and wide tunnel leads to the south, into another cavern.  From it,
+you smell the scent of rotten meat and scorched flesh.  Not usually a
+good sign.
+~
+E
+polished walls green limestone~
+Polished until they are smoother than a swindler's tongue, the walls of
+the cavern have been painstakingly hand buffed.  You can see no
+particular reason for this attention to detail, other than it makes the
+walls nearly as reflective as mirrors.
+~
+1529 9 1509949540 3 0
+-1
+S
+
+#78052
+Foul Smelling Den~
+The first thing you notice as you step into this average-sized cavern is
+the horrendous stench of not only of death but of rotting meat.  And sure
+enough, discarded here and there, in several piles, are half-eaten and
+some totally untouched carcasses.  In the southwest corner of the lava
+flow cavern, there are veins of obsidian running down through the walls. 
+Two tunnels formed by the passage of molten rock branch off from the
+sides of the cavern.  One tunnel leads northward and the other leads
+eastward.  Both are roughly the same size and are perfectly circular in
+shape.  The tunnel to the east, though, has deeper interior ridges.
+~
+*CF
+~
+167247876 11 7 0
+D0
+~
+~
+0 -1 78051 10 10 5
+D1
+~
+~
+0 -1 78053 10 10 5
+E
+obsidian~
+Veins of obsidian, a rare, volcanic glass, run through the walls of this
+chamber, in a most unusual fashion.  Most of the obsidian is black in
+color, which is the most common shade of the mineral.  But a few of the
+smaller veins are of green obsidian, which is thought to be much harder
+than the rest.  With the right equipment, you could probably extract a
+piece of the volcanic rock.
+~
+E
+carcasses half-eaten ~
+Without pattern or reason, half-eaten corpses of every size and shape lie
+scattered about the room.  A few lizards here.  A couple of humans there. 
+Even a gnome are among the ranks of the mauled and mostly devoured
+corpses.  Only one carcass lies completely untouched.  It is a bloated
+corpse of a brown hatchling dragon.
+~
+E
+rusty iron chain remains~
+Bolted to the floor lie the twisted remains of a length of iron 
+chain. The iron is thoroughly rusted, a mark of its age, and 
+stretched. Apparently, the chain had been used to imprison the 
+hatchling brown dragon. Before dying, it seems the dragon won its freedom. 
+~
+E
+bloated corpse brown hatchling dragon~
+The brown hatchling dragon has been dead just long enough for its
+interior to decompose and create a build up of gases within the creature,
+bloating it.  Its eyes are a milky-grey color and its scaly, particularly
+those around its neck, are shredded thin.  Seemingly, this baby dragon
+was captured or lured here and subsequently died.  It looks as though no
+attempt has been made to eat the bloated carcass.  Which is just as well. 
+One swift kick would probably explode the little thing into a gory mess
+anyway.  Next to the bloated corpse, there are the rusty remains of an
+iron chain.
+~
+A
+kick~
+bloated hatchling corpse brown dragon~
+if( rflag( reset0, room ) ) {
+  act_tochar( #kick, ch );
+  act_notchar( #rkicks, ch );
+  wait( 1 );
+  act_room( #explodes, ch );
+  remove_rflag( reset0, room );
+  loop( all_in_room ) {
+    poison( rch );
+  }
+}
+else
+  act_tochar( #notwise, ch );
+~
+E
+kick~
+You give the bloated corpse a good, solid kick with your foot.
+~
+E
+rkicks~
+$n gives the bloated corpse a good, solid kick.
+~
+E
+explodes~
+The bloated corpse explodes in a gory mess as the gases within the
+decaying body are released!  Bits of flesh and organs cover you.
+~
+E
+notwise~
+It probably wouldn't be a very good idea to kick the corpse again.
+~
+!
+0 0 0
+A
+mine excavate take get~
+volcanic glass obsidian~
+if( has_obj( 2589, ch ) ) {
+  act_tochar( #not, ch );
+  end;
+}
+i = random( 1, 12 );
+if( rflag( reset1, room ) )
+  if( has_obj( 1632, ch ) ) 
+  if( i < 3 ) {
+  act_tochar( #mine, ch );
+  act_notchar( #rmine, ch );
+  obj_to_char( oload( 2137 ), ch );
+  remove_rflag( reset1, room );
+}
+else if( i == 5 ) {
+  act_tochar( #mine2, ch );
+  act_notchar( #rmine2, ch );
+  obj_to_char( oload( 2137 ), ch );
+  obj_to_char( oload( 2138 ), ch );
+  remove_rflag( reset1, room );
+}
+else {
+  act_tochar( #nothing, ch );
+  act_notchar( #rnothing, ch );
+  remove_rflag( reset1, room );
+}
+else
+  act_tochar( #needtool, ch );
+else
+  act_tochar( #minedout, ch );
+~
+E
+mine~
+With your trusty pickaxe, you dig at the vein of obsidian until at last
+you knock out a chunk of the black volcanic rock.
+~
+E
+rmine~
+With $s trusty pickaxe, $n digs at the vein of obsidian
+until at last $e knocks out a chunk of the black volcanic rock.
+~
+E
+mine2~
+With your trusty pickaxe, you dig at the vein of obsidian until at last
+you knock out both a chunk of the black volcanic rock and a chunk of
+rare, green obsidian.
+~
+E
+rmine2~
+With $s trusty pickaxe, $n digs at the vein of obsidian
+until at last $e knocks out two chunks of the volcanic rock.
+~
+E
+minedout~
+The veins of obsidian look completely played out.
+~
+E
+needtool~
+You do not have the proper tool with which to dig.  Try a pickaxe.
+~
+E
+nothing~
+As you dig and dig, you find no pieces of obsidian worth keeping.  Just
+flakes.
+~
+E
+rnothing~
+$n mines for obsidian for awhile, but gives up.
+~
+E
+not~
+That pickaxe is much too small to dig here with.
+~
+!
+0 0 0
+-1
+S
+
+#78053
+Hot Springs~
+The smell of sulfur rises up to assail your nostrils as you enter this
+large, rectangular cavern.  Unlike the rest of this underground series of
+small caverns linked together by connecting tunnels, this cavern is of
+natural limestone and has not witnessed the passage of lava descending
+through and over its surfaces.  Along the back of the cavern, steam rises
+up off a spring of water, which is obviously fed from a deep, more
+underground source and somehow brought to a boil through some hidden,
+geothermal event.  The gurgling waters of the spring reek of sulfur. 
+From this cavern, there lies a den of sorts to the west and the
+beginnings of an extremely lofty chamber to the north.
+~
+*CF
+*Reset to acid once oprogs work.
+~
+167247876 11 7 0
+D0
+~
+~
+0 -1 78054 10 10 5
+D3
+~
+~
+0 -1 78052 10 10 5
+E
+spring water~
+A hot spring gurgles and gushes towards the back of the chamber.  Though
+clear, the spring's waters are a rich, yellow color and smells of rotten
+eggs.  Perhaps it wouldn't be such a good idea to drink from the pool,
+given its color and the amount of steam rising off the top of it. 
+Mineral deposits encircle the edges of the spring.
+~
+E
+sulfur rim chunks~
+Large chunks of the mineral lie along the outer rim of the hot spring. 
+Perhaps you can get close enough to take a piece.
+~
+E
+edges ridges~
+The edges of the spring are lined with deposits of a bright yellow 
+mineral. You suspect that the mineral has something to do with the 
+acrid stench assailing the chamber. Chunks of the mineral lie 
+loosely around its outer rim.
+~
+A
+get take~
+sulfur yellow powder sediment~
+i = random( 1, 10 );
+if( rflag( reset0, room ) )
+  if( i == 10 ) {
+  act_tochar( #gets, ch );
+  act_notchar( #rgets, ch );
+  obj_to_char( oload( 1269 ), ch );
+  remove_rflag( reset0, room );
+}
+else {
+  act_tochar( #tooclose, ch );
+  remove_rflag( reset0, room );
+}
+else
+  act_tochar( #tooclose, ch );
+~
+E
+gets~
+From the edge of the hot spring, you retrieve a bit of sulfur.
+~
+E
+rgets~
+$n retrieves a bit of yellow powder from the edge of the
+hot spring.
+~
+E
+tooclose~
+The only sulfur you see lies far too close to the hot spring to grab.
+~
+!
+0 0 0
+A
+~
+~
+loop( all_in_room ) {
+  if( !has_obj( 2014, rch ) ) {
+    act_tochar( #choke, rch );
+    i = 2d6;
+    inflict( rch, mob, i, "asphyxiation" );
+    }
+  else if( random( 1, 4 ) > 2 ) {
+    act_tochar( #lucky, rch );
+    act_notchar( #cloth, rch );
+    }
+  }
+~
+E
+choke~
+You choke and gag on the sulfuric vapors rising from the hot spring.
+~
+E
+lucky~
+With the strip of gauze firmly pressed against your mouth, you avoid the
+toxic fumes rises up off the hot spring.
+~
+E
+cloth~
+$n places a strip of gauze over $s face.
+~
+!
+2 300 0
+1529 9 1509949540 3 0
+2989 17 1509949540 -2 22
+-1
+S
+
+#78054
+Extremely Tall Cavern~
+A grandiose chamber of limestone runs east to west beneath the sands of
+the Naraki Desert.  Like a hallway in a fairy tale castle, the ceiling is
+vaulted and sparkles due to its well-polished surface.  The ground, which
+is also composed of pale green limestone, bears a similar smooth finish. 
+An acrid, sulfurous odor issues forth from a southern side passage.
+~
+*CF
+~
+167247876 11 7 0
+D1
+~
+~
+0 -1 78055 10 10 5
+D2
+~
+~
+0 -1 78053 10 10 5
+D3
+~
+~
+0 -1 78051 10 10 5
+E
+ceiling~
+Cut and polished beams of limestone arc upwards, supporting the vaulted
+ceiling which rises high above.  A giant could walk through these
+corridors without a thought to height restrictions.  The ceiling itself
+has also been hand buffed.  Not a single inch of roughness remains along
+the pale green stone's surface.  All that the ceiling lacks is a crystal
+chandelier to be worthy of a king's palace.
+~
+E
+walls ground floor~
+Like the vaulted ceiling above, the ground and walls of the chamber, both
+of which are composed of pale green limestone, have been polished to
+perfection.  One interesting thing about both, though, are that there are
+no cracks or fissures in either.  It is as though these caverns have been
+worked over by a great artisan or a skilled stone mason.  At the base of
+the northern wall, where floor meets wall, there is an etched message.
+~
+A
+look read~
+message~
+if( find_skill( ch, slisp ) > 6 )
+act_tochar( #message, ch );
+else
+act_tochar( #nomessage, ch );
+~
+E
+message~
+The etched message, obviously written in a dialect of slisp, says:
+   " Beware the ways of the master. All it not as it seems. "
+~
+E
+nomessage~
+As you gaze down upon the etched message, you cannot read it. 
+~
+!
+0 0 0
+-1
+S
+
+#78055
+Extremely Large Cavern~
+Five tree-sized stalactites project down from the ceiling of the cavern. 
+Five equally as large stalagmites rise up from the floor to meet the
+limestone formations, point to point.  In the middle of the limestone
+cavern, at the center of the pentagon formed by the stalactites and
+stalagmites, there is a natural, bowl-like depression.  Piles of dried,
+desert grass have been placed in the depression, to create a nest of
+sorts.  The cavern extends to the north.
+~
+~
+167247884 11 7 0
+D0
+~
+~
+0 -1 78056 10 10 5
+D3
+~
+~
+0 -1 78054 10 10 5
+E
+stalactites~
+Bright while limestone, a welcome change from the ordinary green stone
+that composes most of the caverns, here, protrudes from the ceiling in
+the form of five large stalactites.  Each stalactites tapers to a
+needle-sharp point as it barely touches the tip of a corresponding
+stalagmite.
+~
+E
+stalagmites~
+Formed from milky-white limestone, these five dripstone pillars stand
+about twenty feet high.  Like the teeth of a giant desert wyrm, these
+stalagmites spiral and twist as they ascend and taper into fine points.
+~
+E
+cavern 1 north~
+To the north, you can just see past the connecting tunnel and into the
+cavern beyond.  And what you see is, at the very least, quite disturbing. 
+Keeping in mind your view is limited by distance, you think that the
+entire cavern to the north is filled, from floor to ceiling, with bones.
+~
+E
+bones~
+It is possible that your eye sight is playing tricks on you, but from
+what you can see, nothing but bones and skeletons lie to the north.
+~
+E
+piles desert grass nest~
+Situated at the center of the pentagon formed by the milky white drip
+stones is a nest of grass.  Bunches of green and brown desert grass have
+been gathered and piled in the center of the chamber, to form a nest.
+~
+A
+~
+nest grasses desert~
+i = random( 1, 20 );
+act_tochar( #search, ch );
+act_notchar( #rsearch, ch );
+wait( 2 );
+if( num_in_room( room ) < 9 ) {
+  if( rflag( reset0, room ) )
+    if( i == 1 ) {
+    act_tochar( #find1, ch );
+    act_notchar( #rfind1, ch );
+    obj_to_room( oload( 89 ), room );
+    remove_rflag( reset0, room );
+    end;
+    }
+  else if( i < 6 ) {
+    act_tochar( #find2, ch );
+    act_notchar( #rfind2, ch );
+    obj_to_room( oload( 70 ), room );
+    remove_rflag( reset0, room );
+    }
+  else if( i < 10 ) {
+    act_tochar( #findh1, ch );
+    act_notchar( #rfindh1, ch );
+    mob = mload( 1493, room );
+    remove_rflag( reset0, room );
+    }
+  else if( i < 15 ) {
+    act_tochar( #findh2, ch );
+    act_notchar( #rfindh2, ch );
+    mob = mload( 1493, room );
+    mob = mload( 1493, room );
+    remove_rflag( reset0, room );
+    }
+  else if( i == 20 ) {
+    act_tochar( #findh3, ch );
+    act_notchar( #rfindh3, ch );
+    mob = mload( 1493, room );
+    mob = mload( 1493, room );
+    mob = mload( 1493, room );
+    remove_rflag( reset0, room );
+    }
+  else {
+    act_tochar( #empty, ch );
+    remove_rflag( reset0, room );
+    }
+  else
+    act_tochar( #already, ch );
+  }
+else {
+  act_tochar( #empty, ch );
+  remove_rflag( reset0, room );
+  }
+~
+E
+already~
+The grass within the nest of grass has been heavily disturbed, suggesting
+that someone or something has already searched through it.
+~
+E
+empty~
+After much searching, you find nothing within the nest of grass.
+~
+E
+find1~
+After much searching, you discover a mithril ring lying in the nest of
+grass!
+~
+E
+rfind1~
+$n finds a ring of some type in the grass nest!
+~
+E
+find2~
+Though a bit rusty, you find an iron ring in the nest of desert grass.
+~
+E
+rfind2~
+$n finds a ring of some type in the grass nest!
+~
+E
+findh1~
+As you dig through the nest, you find a very angry and frightened yellow
+dragon hatchling.
+~
+E
+rfindh1~
+$n draws back $s hand as a very angry and frightened yellow 
+dragon hatchling jumps out of the nest.
+~
+E
+findh2~
+As you dig through the nest, you find two very angry and frightened
+dragon hatchlings.
+~
+E
+rfindh2~
+$n draws back $s hand as two very angry and frightened yellow 
+dragon hatchlings jumps out of the nest.
+~
+E
+findh3~
+As you dig through the nest, you find three very angry and frightened
+yellow dragon hatchlings.
+~
+E
+rfindh3~
+$n draws back $s hand as three very angry and frightened yellow 
+dragon hatchlings jumps out of the nest.
+~
+E
+search~
+Reaching into the nest of grass, you begin searching through it, blade by
+blade.
+~
+E
+rsearch~
+$n reaches into the nest of grass, looking for something.
+~
+!
+9 0 0
+1528 9 1509949540 3 0
+1493 9 1509949540 3 0
+-1
+S
+
+#78056
+Bone Littered Cavern~
+Never before have you seen such a gross display of discarded life.  Not
+even in a cemetery or mausoleum could there be more bones.  Stacked and
+piled and accumulated and heaped all over the lava-shaped cavern, in
+short, tall, crooked and swaying masses are hundreds of thousands of
+bones.  It is difficult to pick out their origins, there are so many. 
+The most unusual thing about this chamber of bone is that you see no
+skulls whatsoever in the chamber.  Two lava flow tubes lead out of the
+chamber: one to the west and one to the south.
+~
+~
+167247876 11 7 0
+D2
+~
+~
+0 -1 78055 10 10 5
+D3
+~
+~
+0 -1 78057 10 10 5
+E
+stacks~
+Stacked as carefully and in the fashion of building a log cabin, there
+are several pillars of nothing but femurs, which rise nearly to the
+ceiling.  The femurs vary in size and length, as though they belong to
+more than one species.
+~
+E
+piles~
+Some cracked, some broken, some melted?, countless vertebrae lies in neat
+yet chaotically strewn piles throughout the cavern chamber.  Most of the
+vertebrae are about the size of human vertebrae but some are big enough
+to have come from a dragon.
+~
+E
+heaps~
+In several heaps along the floor of the cavern, there are masses of hand
+and feet bones.  Most of which are not in the least fully intact.  Both
+the flesh and in some cases the marrow has been stripped off or out of
+the slender bones.
+~
+E
+accumulations~
+Gathered in large accumulations about the chambers are masses of rib
+cages.  Each rib cage has either been cracked or bashed in, scorched or
+shattered.  Most look to have been roughly humanoid, at least in size, at
+one time.
+~
+E
+lava flow tubes~
+Formed by the passage of lava or another source of great heat, two melted
+tunnels lead out of the chamber to the east and to the south.
+~
+A
+~
+heap hand feet~
+i = random( 1, 10 );
+if( rflag( reset0, room ) )
+  if( is_player( ch ) )
+  if( i == 1 ) {
+  remove_rflag( reset0, room );
+  act_tochar( #search, ch );
+  act_notchar( #rsearch, ch );
+  wait( 2 );
+  act_tochar( #finds, ch );
+  act_notchar( #rfinds, ch );
+  obj_to_char( oload( 975 ), ch );
+  end;
+  }
+else {
+  act_tochar( #search, ch );
+  act_notchar( #rsearch, ch );
+  }
+else {
+  act_tochar( #notplayer, ch );
+  end;
+  }
+else {
+  act_tochar( #already, ch );
+  end;
+  }
+remove_rflag( reset0, room );
+wait( 2 );
+act_tochar( #nothing, ch );
+~
+E
+search~
+Being careful not to knock over the heap of bones, you begin searching
+through them.
+~
+E
+rsearch~
+$n begins searching through the heap of bones.
+~
+E
+finds~
+Remarkably, among the bones you find something!
+~
+E
+rfinds~
+$n lets loose a little squeal of joy as $e finds something
+in the heap of bones.
+~
+E
+notplayer~
+You refuse to search through the heap of bones.  What if it fell on you?
+~
+E
+nothing~
+After much searching, you find nothing in the heap of bones worth keeping.
+~
+E
+already~
+The heap of bones lies all over the place.  It would seem someone else
+has already searched through it.
+~
+!
+9 0 0
+A
+~
+rib cages accumulations~
+i = random( 1, 15 );
+if( rflag( reset1, room ) )
+  if( is_player( ch ) )
+  if( i == 1 ) {
+  remove_rflag( reset1, room );
+  act_tochar( #search, ch );
+  act_notchar( #rsearch, ch );
+  wait( 2 );
+  act_tochar( #finds, ch );
+  act_notchar( #rfinds, ch );
+  obj_to_char( oload( 1063 ), ch );
+  end;
+  }
+else {
+  act_tochar( #search, ch );
+  act_notchar( #rsearch, ch );
+  }
+else {
+  act_tochar( #notplayer, ch );
+  end;
+  }
+else {
+  act_tochar( #already, ch );
+  end;
+  }
+remove_rflag( reset1, room );
+wait( 2 );
+act_tochar( #nothing, ch );
+~
+E
+search~
+Being careful not to knock over the accumulation of bones, you begin
+searching through them.
+~
+E
+rsearch~
+$n begins searching through the accumulation of bones.
+~
+E
+finds~
+Remarkably, among the bones you find something!
+~
+E
+rfinds~
+$n lets loose a little squeal of joy as $e finds something in the 
+accumulation of  bones.
+~
+E
+notplayer~
+You refuse to search through the accumulation of bones.  What if it fell
+on you?
+~
+E
+nothing~
+After much searching, you find nothing in the accumulation of bones worth
+keeping.
+~
+E
+already~
+The accumulation of bones lies all over the place.  It would seem someone
+else has already searched through it.
+~
+!
+9 0 0
+A
+~
+vertebrae piles~
+i = random( 1, 15 );
+if( rflag( reset2, room ) )
+  if( is_player( ch ) )
+  if( i == 1 ) {
+  remove_rflag( reset2, room );
+  act_tochar( #search, ch );
+  act_notchar( #rsearch, ch );
+  wait( 2 );
+  act_tochar( #finds, ch );
+  act_notchar( #rfinds, ch );
+  obj_to_char( oload( 706 ), ch );
+  end;
+  }
+else {
+  act_tochar( #search, ch );
+  act_notchar( #rsearch, ch );
+  }
+else {
+  act_tochar( #notplayer, ch );
+  end;
+  }
+else {
+  act_tochar( #already, ch );
+  end;
+  }
+remove_rflag( reset2, room );
+wait( 2 );
+act_tochar( #nothing, ch );
+~
+E
+search~
+Being careful not to knock over the pile of bones, you begin searching
+through them.
+~
+E
+rsearch~
+$n begins searching through the pile of bones.
+~
+E
+finds~
+Remarkably, among the bones you find something!
+~
+E
+rfinds~
+$n lets loose a little squeal of joy as $e finds something in the 
+pile of  bones.
+~
+E
+notplayer~
+You refuse to search through the pile of bones.  What if it fell on you?
+~
+E
+nothing~
+After much searching, you find nothing in the pile of bones worth keeping.
+~
+E
+already~
+The pile of bones lies all over the place.  It would seem someone else
+has already searched through it.
+~
+!
+9 0 0
+A
+~
+stacks femurs~
+i = random( 1, 10 );
+if( rflag( reset2, room ) ) {
+  remove_rflag( reset2, room );
+  if( is_player( ch ) ) {
+    if( i == 1 ) {
+      act_tochar( #search, ch );
+      act_notchar( #rsearch, ch );
+      wait( 2 );
+      act_tochar( #finds, ch );
+      act_notchar( #rfinds, ch );
+      obj_to_char( oload( 641 ), ch );
+      end;
+      }
+    else {
+      act_tochar( #search, ch );
+      act_notchar( #rsearch, ch );
+      }
+    }
+  else {
+    act_tochar( #notplayer, ch );
+    end;
+    }
+  }
+else {
+  act_tochar( #already, ch );
+  end;
+  }
+wait( 2 );
+act_tochar( #nothing, ch );
+~
+E
+search~
+Being careful not to knock over the stack of bones, you begin searching
+through them.
+~
+E
+rsearch~
+$n begins searching through the stack of bones.
+~
+E
+finds~
+Remarkably, among the bones you find something!
+~
+E
+rfinds~
+$n lets loose a little squeal of joy as $e finds something in the 
+stack of  bones.
+~
+E
+notplayer~
+You refuse to search through the stack of bones.  What if it fell on you?
+~
+E
+nothing~
+After much searching, you find nothing in the stack of bones worth
+keeping.
+~
+E
+already~
+The stack of bones lies all over the place.  It would seem someone else
+has already searched through it.
+~
+!
+9 0 0
+1529 9 1509949540 3 0
+-1
+S
+
+#78057
+Lair of the Yellow Dragon~
+Unlike the other parts of the cavern, this room is rectangular in shape. 
+The walls meet the ceiling and floor in crisp, right angles and are
+constructed from polished grey marble and not limestone.  Inset into the
+walls are triangular niches, filled top to bottom with skulls of every
+shape, size, and origin.  Towards the back of the chamber, against the
+western wall, is a throne fashioned completely of bone.  A tunnel leads
+out of the east into another cavern chamber.
+~
+[Silas] With a snap of his bug, a yellow dragon...
+~
+167247884 11 7 0
+D1
+~
+~
+0 -1 78056 10 10 5
+E
+triangular niches~
+Carved into the marble walls of this cavern are four feet tall triangular
+niches.  As the niches circle the walls, they alternate their
+orientations between their top point being down or up.  Skulls, stacked
+together without thought to species, fill each niche from bottom to top. 
+At once, you are reminded of a great trophy room, where hunter might
+display his or her greatest kills.
+~
+E
+skulls~
+Inside each triangular niche are a variety of skulls.  Among all of them,
+you can recognize numerous human, gnomen, elven, serpentmen, dwarven, and
+halfling skulls.  To a lesser degree, you spot much larger skulls of a
+more reptilian nature filling the inset alcoves.
+~
+E
+bone throne~
+The focus of the chamber appears to be this throne.  Fashioned from
+femurs, tibias, and the skulls of many creatures, most of which you
+cannot place or name, the throne stands out as a macabre display towards
+the irreverence of life.  The back of the throne curves outward and up
+and is capped with the horned skull of a dragon.  Each of the throne's
+arms has an actual arm in its construction, with a clawed hand to the
+left and a human hand to the right.  Only the seat of the throne differs
+in composition.  Brown hide with a scaly texture has been strung taut
+across it.
+~
+E
+walls marble~
+Hewn from giant slabs of grey marble, the walls themselves present quite
+a mystery.  Not only are they not what you would expect at the heart of a
+series of cavern, but they also look well polished and smoothed, as
+though great care has been taken to construct this chamber.  Carved into
+the walls are triangular niches.
+~
+A
+~
+throne bones finger~
+j = 1d4;
+if( is_player( ch ) )
+  if( !rflag( reset0, room ) )
+  if( rflag( reset1, room ) )
+  if( random( 1, 5 ) == 1 )
+  if( j == 1 ) {
+  act_tochar( #roll, ch );
+  act_notchar( #rroll, ch );
+  obj_to_room( oload( 1015 ), room );
+  remove_rflag( reset1, room );
+}
+else if( j == 2 ) {
+  act_tochar( #getfinger, ch );
+  act_notchar( #rgetfinger, ch );
+  obj_to_char( oload( 2151 ), ch );
+  remove_rflag( reset1, room );
+}
+else {
+  act_tochar( #nothing, ch );
+  remove_rflag( reset1, room );
+}
+else
+  act_tochar( #nothing, ch );
+else
+  act_tochar( #already, ch );
+else {
+  act_tochar( #setsoff, ch );
+  act_notchar( #rsetsoff, ch );
+  damage( mob, ch, 5d20+10, fire, "an enormous gout of flame" );
+  remove_rflag( reset1, room );
+}
+else
+  act_tochar( #notplayer, ch );
+~
+E
+getfinger~
+During the course of your search, you accidentally break off a skeletal finger from
+the arm of the throne.
+~
+E
+rgetfinger~
+$n searches the throne thoroughly.
+~
+E
+setsoff~
+As you search the throne, you hear a faint *click* and a burst of flame
+issues forth from the eyes of the great dragon skull mounted on the
+throne.
+~
+E
+rsetsoff~
+As $n searches the throne, you hear a faint *click* and a burst of
+flame issues forth from the eyes of the great dragon skull mounted on the
+throne.
+~
+E
+already~
+It looks as though anything of value or interest on the throne has
+already been taken.
+~
+E
+notplayer~
+Some basic, primal instinct tells you to leave the throne alone.
+~
+E
+nothing~
+You find nothing hidden in the throne.
+~
+E
+roll~
+As you search the throne, something rolls out from under it.
+~
+E
+rroll~
+As $n searches the throne, something rolls out from under it.
+~
+!
+9 0 0
+A
+untrap~
+throne silk strand trap~
+i = random( 1, 6 );
+if( rflag( reset0, room ) )
+  if( find_skill( ch, untrap ) > 3 ) 
+  if( i == 6 ) {
+  act_tochar( #untraps, ch );
+  act_notchar( #runtraps, ch );
+  remove_rflag( reset0, room );
+  end;
+  }
+else {
+  act_tochar( #tries, ch );
+  act_notchar( #rtries, ch );
+  }
+else {
+  act_tochar( #notenough, ch );
+  act_notchar( #rtries, ch );
+  }
+else {
+  act_tochar( #already, ch );
+  end; 
+  }
+wait( 1 );
+act_room( #gouts, ch );
+damage( mob, ch, 5d20+10, fire, "an enormous gout of flame" );
+~
+E
+gouts~
+You hear a faint *click* and suddenly, gouts of flame shoot directly out
+of the eyes of the dragon skull mounted to the back of the throne.
+~
+E
+untraps~
+With precision and skill, you deftly deactivate the fire tap on the
+throne by cutting a strand of spider silk leading from the arm of the
+throne to the dragon skull.
+~
+E
+runtraps~
+You hear a faint *click* as $n successfully disarms a trap on the 
+~
+E
+tries~
+You try to cut the trigger mechanism on the trap, a strand of spider
+silk, but instead you end up setting off the trap!
+~
+E
+rtries~
+You hear a faint *click* as $n accidentally sets off a trap on the throne.
+~
+E
+already~
+The fire tap on the throne has already been deactivated.
+~
+E
+notenough~
+Though the trap looks too complex for you to disarm, you try anyway. 
+Soon, you hear a faint *click* as you ineptly spring the trap.
+~
+!
+0 0 0
+A
+inspect~
+throne bone~
+if( random( 1, 4 ) == 1 )
+  if( find_skill( ch, inspect ) > 2 )
+  act_tochar( #finds, ch );
+else
+  act_tochar( #nofind, ch );
+else
+  act_tochar( #nofind, ch );
+~
+E
+finds~
+You find a fire trap on the throne.  A strand of spider silk leads up
+from one of the throne's arms to the base of the dragon skull mounted to
+the back of the throne.
+~
+E
+nofind~
+There does not seem to be a trap on the throne.
+~
+!
+0 0 0
+A
+sit~
+throne bone~
+act_tochar( #nsit, ch );
+act_notchar( #onsit, ch );
+if( rflag( reset0, room ) ) {
+  act_tochar( #flame, ch );
+  act_notchar( #oflame, ch );
+  damage( mob, ch, 5d10+10, fire, "enormous gout of flame" );
+}
+~
+E
+nsit~
+You attempt to sit upon the throne but get up immediately as you find it
+much too uncomfortable to sit upon.
+~
+E
+flame~
+As you rise from the throne, @ra gout of flame suddenly toasts you@n!
+~
+E
+oflame~
+As $n gets up from the throne, @ra gout of flame suddenly toasts $m@n!
+~
+E
+onsit~
+$n attempts to sit upon the throne but gets up immediately, $s face
+wrinkling with displeasure.
+~
+!
+0 0 0
+1527 9 1509949540 3 0
+-1
+S
+
+#0
+

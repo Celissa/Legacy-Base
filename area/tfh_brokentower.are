@@ -1,0 +1,1034 @@
+#M2_AREA
+2
+
+Broken Tower~
+Galstaff~
+Broken Tower~
+~
+~
+
+0 0
+0
+1
+#ROOMS
+
+#4326
+Before a Rotted Drawbridge~
+Directly to the east a ruined stone keep rises out of the forest, its
+walls smashed and remains covered in ivy.  Over time, a small moat has
+become overgrown and filled in with decaying leaves and broken branches,
+making the transition from road to ruin little more than a careful step. 
+The remains of a large drawbridge rot on the ground, any stability it
+once had lost with time and weather.  The gatehouse is more intact than
+the walls and, as a result of the vegetation, looks the easiest means of
+entry to the ruins beyond.
+~
+[Eliza] Will attach to 13343
+Notes for the area:
+Randoms are punctuated by @R coor
+Has unique level 3 vine mob in hidden room roomnum 4331 
+[Mad Murdo] Reviewed
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 4327 10 10 5
+D3
+~
+~
+0 -1 13343 10 10 5
+E
+1 east ruined stone keep walls vegetation ivy~
+The walls have fallen down in most parts, but in places where the
+structure is still intact, it reaches up to about twenty feet in height. 
+Ivy covers a large area of the ruined walls, holding much of the aging
+structure in place, and providing a verdant root for the vegetation to
+overwhelm the ruins.  The top story of the gatehouse has collapsed, and
+the area is strewn with its rubble.
+~
+E
+moat leaves branches~
+A moat looks like it used to surround the ruined keep, but at its best
+looks only six feet wide.  The water has completely drained over time,
+and the surrounding forest has littered its leaves and branches down to
+fill the moat to an almost even footing.
+~
+E
+drawbridge~
+The remains of the tattered drawbridge lay across the now defunct moat,
+rotted nearly all the way through.
+~
+A
+~
+moat leaves branches~
+if( find_skill( ch, searching ) > 3 ) {
+  if( rflag( reset0, room ) ) {
+    if( random( 1, 3 ) == 1 ) {
+      if( random( 1, 2 ) == 1 ) {
+        send_to_char( #founddagger, ch );
+        obj_to_char( oload( 3028 ), ch );
+      }
+      else {
+        send_to_char( #foundcoin, ch );
+        obj_to_char( oload( 14 ), ch );
+      }
+      act_notchar( #roomfound, ch );
+      remove_rflag( reset0, room );
+    }
+    else { 
+      remove_rflag( reset0, room );
+      send_to_char( #notfind, ch );
+      act_notchar( #roomnotfind, ch );
+    }
+  }
+  else {
+    send_to_char( #notfind, ch );
+    act_notchar( #roomnotfind, ch );
+  }
+}
+else {
+  send_to_char( #notfind, ch );
+  act_notchar( #roomnotfind, ch );
+}
+~
+E
+founddagger~
+Scrabbling through the moat's vegetation, you find a bronze dagger wedged
+between two roots.
+~
+E
+roomfound~
+$n searchs through the moat's vegetation, and looks to have found
+something.
+~
+E
+notfind~
+You search through the rubble and vegetation, but don't find anything of
+interest.
+~
+E
+roomnotfind~
+$n searches through the moat's rubble and vegetation, but doesn't seem to
+find anything.
+~
+E
+foundcoin~
+Moving some vines out of the way, you find a silver coin amidst a pile of
+rotting wood.
+~
+!
+9 0 0
+A
+~
+~
+i = 1d5;
+if( i == 1 )
+  send_to_room( #birdcall, room );
+elseif( i == 2 )
+  send_to_room( #babycry, room );
+elseif( i == 3 )
+  send_to_room( #wind, room );
+elseif( i == 4 )
+  send_to_room( #fall, room );
+~
+E
+birdcall~
+@RA bird cries out in the ruins to the east.@n
+~
+E
+babycry~
+@RThe sound of crying echoes out from the ruins to the east, but ends
+abrubtly.@n 
+~
+E
+wind~
+@RThe wind shifts to the east suddenly, bringing dust to the eyes, and
+the smell of rotting vegetation to the nose, before shifting direction
+again.@n 
+~
+E
+fall~
+@RThe sound of crashing timber erupts from the ruins to the east, sending
+a flock of birds into the air.@n 
+~
+!
+2 150 0
+-1
+S
+
+#4327
+Inside a Ruined Gatehouse~
+Despite a fairly stable roof above, the gatehouse offers minimal
+protection from the elements as chill winds sweep in from the gaping
+portal to the west, passing triumphantly over the rotted remains of the
+drawbridge.  Twisting this way and that around the seams of the stones,
+ivy climbs the walls from one side to the other, blanketing the dark
+stains that mark the passages of rainwater down to the dank, moss-covered
+corners.  To the east, a slightly smaller portal opens out into a small
+courtyard.
+~
+[Guin] Done.
+~
+167247872 12 7 0
+D1
+~
+~
+0 -1 4328 10 10 5
+D3
+~
+~
+0 -1 4326 10 10 5
+E
+drawbridge 1 west~
+Out to the west, a ruined drawbridge lay marred by large scars and
+patches of rot.  A road winds off into the distance.
+~
+E
+walls moss ivy cracks~
+Rainwater must enter from the ceiling and run down the wall here, as the
+moss grows along dark water stains on either wall of the gatehouse.  In
+places ivy has begun to grow into the area, extending from the walls to
+the west.
+~
+E
+1 up ceiling roof~
+The ceiling is covered in cracks and gaps where the stone has fallen or
+broken from the gatehouse structure.  Through some larger gaps you can
+clearly see the sky above the forest, but there is just enough shelter
+here to take cover during a rainstorm.
+~
+A
+~
+~
+i = 1d10;
+if( i == 1 )
+  send_to_room( #rock, room );
+if( i == 2 )
+  send_to_room( #rock, room );
+~
+E
+rock~
+@RA chunk of rock falls from the ceiling, widening a crack above you.@n
+~
+E
+dust~
+@RA dust cloud falls from the ceiling, obscuring the view of the area.@n
+~
+!
+2 200 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou head west out from under the gatehouse, heading towards the rotting
+drawbridge.@n 
+~
+E
+to_room~
+@g$n $t $T towards the rotting drawbridge.@n
+~
+!
+3 0 8
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou leave east, abandoning the shelter of the gatehouse.@n 
+~
+E
+to_room~
+@g$n leaves east, entering the overgrown courtyard.@n
+~
+!
+3 0 2
+2509 9 1509949540 3 0
+-1
+S
+
+#4328
+Courtyard of a Ruined Keep~
+The crumbled remains of walls and buildings lay in rubble across this
+expansive courtyard, slowly giving way to the flourishing weeds and
+vegetation.  To the west sits a nearly-broken gatehouse, the most
+significant structure to remain intact, resembling more an archway than a
+building.  Almost overgrown, several paths wind through the sprouting
+grass and bush to the east and south, passing around the broken walls of
+a small stone well, while a sturdy wall encloses the courtyard to the
+north.
+~
+[Galstaff] down goes to 4332
+[Guin] Done.
+[Yuilden] The climb down the well shaft is to difficult for you to manage. - should be too
+~
+167247872 2 9 0
+D1
+~
+~
+0 -1 4329 10 10 5
+D2
+~
+~
+0 -1 4330 10 10 5
+D3
+~
+~
+0 -1 4327 10 10 5
+D5
+~
+~
+0 -1 4332 10 10 5
+E
+rubble weeds vegetation plants~
+Strewn around the courtyard lie pieces of broken walls, the chunks of
+stone looking alien amidst the rampant vegetation which has overtaken
+much of the keep.  Plants of various kinds compete with weeds for light
+and water amidst the ruins, giving the entire area an ambience similar to
+a burial site.
+~
+E
+well 1 down~
+Time has conspired to dry up the well, its bottom strewn with rubble and
+weeds.  A smashed bucket and tangled rope lie right at the bottom,
+nestled alongside a rat skeleton.
+~
+E
+gatehouse 1 west~
+Directly to the west, the gatehouse is still fairly intact...  but the
+top story has collapsed to the ravages of time, and the steps winding up
+around the outside are shattered and strewn with rubble.
+~
+E
+1 north walls~
+Rising out of the vegetation to the north, the wall still looks quite
+solid and impassable.
+~
+E
+1 east~
+Amidst the ruins and trees to the east, the broken rubble of a building
+can be seen.
+~
+E
+1 south~
+Entering a thicker part of the forest, the south path vanishes behind a
+series of trees and piles of rubble.
+~
+E
+paths~
+Heading south and east, paths have been trampled in the vegetation by
+many feet, indicating that this ruined area is still regularly explored.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou leave west, moving under the shelter of the gatehouse.@n 
+~
+E
+to_room~
+@g$n leaves west, moving beneath the shelter of the gatehouse.@n
+~
+!
+3 0 8
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gMoving down the narrow path in the vegetation, you make your way east.@n
+~
+E
+to_room~
+@gMoving down the narrow path in the vegetation, $n makes $s way east.@n
+~
+!
+3 0 2
+A
+~
+~
+i = 1d3;
+if( i == 1 )
+  send_to_room( #birdcall, room );
+if( i == 2 )
+  send_to_room( #bush, room );
+~
+E
+birdcall~
+@RA songbird cries out its tune to the world from an unseen vantage
+point.@n 
+~
+E
+bush~
+@RA bush twitches slightly as a bird moves through it, looking for
+bugs.@n 
+~
+!
+2 150 0
+A
+climb~
+down well~
+if( find_skill( ch, climb ) > 2 ) {
+  send_to_char( #clidown, ch );
+  act_notchar( #roomclidown, ch );
+  transfer( ch, find_room( 4332 ) );
+  act_notchar( #sendmess, ch );
+  }
+else {
+  send_to_char( #lookhard, ch );
+  act_notchar( #roomlookhard, ch );
+  }
+~
+E
+clidown~
+Using the many grooves inside the well, you climb down to the bottom.
+~
+E
+roomclidown~
+$n climbs over the edge of the well, and vanishes from sight.
+~
+E
+sendmess~
+$n arrives from above.
+~
+E
+lookhard~
+The climb down the well shaft is to difficult for you to manage.
+~
+E
+roomlookhard~
+$n moves over to the well, and peers down the shaft.
+~
+!
+0 0 0
+A
+~
+down~
+send_to_char( #nogo, ch );
+~
+E
+nogo~
+Looking over the edge, you realise it would be safer to climb down the
+well.
+~
+!
+3 0 32
+755 9 1509949540 3 0
+-1
+S
+
+#4329
+Amidst the Ruins of a Church~
+Vegetation has overwhelmed these ruins, enclosed by tumbled stone walls. 
+Brush and shrubs grow wildly between the rotted remains of benches and
+pews, and from beneath the shattered pieces of a stone column, a stiff,
+weathered hand stretches up towards the sky.  Several feet from the
+moss-covered southern wall, a thin tree rises from the soil and casts a
+sparse bit of shade..  evidence that the structure has been service to
+little but animals for many years.  A narrow path cuts tenuously through
+the brush to the west.
+~
+[Guin] Done.
+~
+167247874 3 6 0
+D3
+~
+~
+0 -1 4328 10 10 5
+E
+vegetation brush shrubs trees growth~
+The wilderness of the forest has grown into the ruins here, overtaking
+the broken stone with its verdant expansion.  Very few flowering plants
+have taken root here, much of the invading plant life consists of weeds
+and shrubberies.
+~
+E
+pews benches~
+Lying in ruin, the rotting pews are providing a fertile ground for the
+vegetation to grow into.  None of the pews look solid enough to support
+weight, and do not look salvagable.
+~
+E
+path 1 west~
+Vegetation has been trampled to the ground in a thin line heading to the
+west, serving as a path through the ruin.  The trail leads to a
+courtyard, beyond which can be seen more of the ruins.
+~
+E
+hand~
+Worn and discolored, this arm is all that seems to remain of a venerable
+statue, hand held palm-down in a pious, blessing fashion.  The rest may
+be shattered, buried..  perhaps even carted off by particularly tasteful
+looters in the distant past.
+~
+A
+~
+~
+i = 1d10;
+if( i == 1 )
+  send_to_room( #bush,room );
+elseif( i == 2 )
+  send_to_room( #quiet, room );
+~
+E
+bush~
+@RA bush thrashes in the vegetation as a bird takes to the air.@n
+~
+E
+quiet~
+@RThe wind becomes still for a moment, and at the edge of audial
+perception an eerie keening can be heard.@n 
+~
+!
+2 200 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou head west along the trampled path.@n
+~
+E
+to_room~
+@g$n heads west along the trampled path.@n
+~
+!
+3 0 8
+473 9 1509949540 3 0
+203 9 1509949540 3 0
+2616 9 1509949540 3 0
+-1
+S
+
+#4330
+Before a Ruined Tower~
+Directly to the south lay the remains of a fallen tower, crumbled almost
+all the way to the ground.  The forest rises up to either side, slowly
+and calmly seeking to envelope the ruins as it has other less noticeable
+structures barely visible through the thick foliage.  The path is overrun
+with weeds and vines, twisting desperately away to the north and the
+courtyard beyond.
+~
+[Guin] Done.
+~
+167247872 3 7 0
+D0
+~
+~
+0 -1 4328 10 10 5
+D2
+~
+~
+251 -1 4331 10 10 5
+E
+forest vegetation 1 east 1 west~
+Thick vegetation blocks all passage through the forest to the east and
+west.  Thick vines and brush grow on all sides, leaving a narrow path on
+which a carpet of ferns and leaves has been trampled into the ground.
+~
+E
+path 1 north~
+To the north, towards an open space, a courtyard can be seen.  Ruined
+walls and heavy plant growth dominate the area.
+~
+E
+1 south tower~
+Fallen amongst a particularly large growth of brambles, the rubble of the
+tower blocks all passage to the south.  Brush and vegetation grow all
+around the ruin, but amongst the tangled mess, a smashed hole in the
+tower ruin can be clearly seen.
+~
+E
+hole mess~
+Covered in a tangle of matted vines, an undersized hole has been blasted
+into the ruined tower's one remaining intact wall.
+~
+A
+~
+~
+i = 1d5;
+if( i == 1 )
+  send_to_room( #bird, room );
+if( i == 2 )
+  send_to_room( #scurries, room );
+~
+E
+bird~
+@CBursting from the vegetation, a red robin takes to the air with a
+flurry of wings.@n 
+~
+E
+scurries~
+@RSomething scurries through the undergrowth, marking its passage with
+the sound of rustling leaves.@n 
+~
+!
+2 150 0
+A
+climb enter~
+hole south~
+act_tochar( #no, ch, obj );
+~
+E
+no~
+@gThe hole would probably be large enough to enter, if only it wasn't for
+the tangled mess of vines covering it...@n 
+~
+!
+0 0 0
+A
+clear cut move~
+mass vines~
+if( !is_open( room, south ) ) {
+  act_tochar( #clear, ch, obj );
+  act_notchar( #rclear, ch, obj, mob, sight );
+  open( room, south );
+}
+else
+  act_tochar( #already, ch );
+~
+E
+clear~
+@GYou pull at the vines and creepers, eventually uncovering the hole that
+lies behind them.@n 
+~
+E
+rclear~
+@G$n pulls at the vines and creepers, working to clear the entrance to
+the south.@n 
+~
+E
+already~
+@gYou could, indeed, clear some more of the tangled mess, but why waste
+the time?  The hole is already uncovered.@n 
+~
+!
+0 0 0
+755 9 1509949540 3 0
+-1
+S
+
+#4331
+Inside a Ruined Tower~
+With only one exit and a sagging roof of nearly rotted wood and cracked
+stone, this room as an oppressive ambience.  Vines and plant growth have
+climbed the short walls, adding to the slight rise in humidity and
+further enriching the soil.
+~
+[Mad Murdo] Reviewed
+[Guin] Done.
+~
+167378948 0 8 0
+D0
+~
+~
+251 -1 4330 10 10 5
+E
+exit hole 1 north~
+Covered in a tangle of matted vines, an undersized hole has been blasted
+into the ruined tower's one remaining intact wall.
+~
+E
+roof 1 up~
+Overhead the roof sags ominously, vines and roots dangling at
+head height.
+~
+E
+vines plant vegetation~
+Covering the walls and much of the floor, vegetation has grown in
+abundance here.  Vines form a lattice work over the ruins, while plants
+grow on the fertile dirt floor.  However, the thick plant life has yet to
+cling and root itself to the piles of rubble on the sides of the room.
+~
+E
+rubble~
+The rubble is piled quite high in places, and in others is balanced
+precariously against unstable looking walls.  Here and there in the mess
+of rock, you can see glints of metal.
+~
+A
+climb enter~
+hole out~
+if( is_open( room, north ) )
+  act_tochar( #why, ch, obj );
+else
+  act_tochar( #vine, ch, obj, mob, sight );
+~
+E
+leaving~
+@RYou climb out of the hole, gripping surrounding roots and vines for leverage.@n
+~
+E
+nleaving~
+@Y$n exits through the hole in the northern wall, and disappears from
+view.@n 
+~
+E
+emerges~
+@Y$n emerges from a hole in the ruins to the south.@n
+~
+E
+toobig~
+The hole is too small for you to climb into.
+~
+E
+pettoobig~
+$n tries to enter the hole, but is too big for it.
+~
+E
+why~
+@gWhy climb when you could just walk out?@n
+~
+E
+vine~
+@gYou can't climb out, the vine is in the way.@n
+~
+!
+0 0 0
+A
+~
+rubble ruin vines~
+if( is_player( ch ) ) {
+  if( rflag( reset0, room ) ) {
+    remove_rflag( reset0, room );
+    if( find_skill( ch, searching ) > 3 ) {
+      if( random( 1, 2 ) == 2 ) {
+        obj = oload( 14 );
+        if( can_handle( ch, obj ) ) {
+          act_tochar( #foundcoin, ch );
+          act_notchar( #roomfoundsomething, ch );
+          obj_to_char( obj, ch );
+        }
+        else {
+          act_tochar( #canthandle, ch );
+          act_notchar( #roomcanthandle, ch );
+          obj_to_room( obj, room );
+        }
+      }
+      else {
+        act_tochar( #findnothing, ch );
+        act_notchar( #roomfindnothing, ch );
+      }
+    }
+    else {
+      act_tochar( #findnothing, ch );
+      act_notchar( #roomfindnothing, ch );
+    }
+  }
+  else {
+    act_tochar( #findnothing, ch );
+    act_notchar( #roomfindnothing, ch );
+  }
+}
+i = 1d3;
+if( i == 1 ) {
+  wait( 1 );
+  act_tochar( #roofcavein, ch );
+  act_notchar( #roomroofcavein, ch );
+  j = 1d5;
+  dam_message( ch, j, "the falling debris" );
+  inflict( ch, mob, j, "the falling rocks" );
+}
+~
+E
+findnothing~
+@RYou search through the rubble and vines in the room, but don't find
+anything of value.@n
+~
+E
+roomfindnothing~
+@Y$n rummages through the rubble but doesn't seem to find anything.@n
+~
+E
+foundcoin~
+@RRummaging through the rubble, you find a silver coin wedged beneath a rock!@n
+~
+E
+roomfoundsomething~
+@Y$n searches through the rubble, and emerges holding something.@n
+~
+E
+roofcavein~
+@RYour searching disrupts something and parts of the ceiling fall down on
+you!@n
+~
+E
+roomroofcavein~
+@Y$n starts rummaging around looking for something, but $s searching
+brings parts of the roof down!@n
+~
+E
+canthandle~
+You find a coin amidst the rubble, but lacking a place to put it you drop
+it on the ground.
+~
+E
+roomcanthandle~
+$n finds something small amidst the rubble, but drops it on the ground
+after a moment.
+~
+!
+9 0 0
+A
+~
+~
+if( is_mob( ch ) )
+  continue;
+else {
+  act_tochar( #leave, ch );
+  act_notchar( #rleave, ch, obj, mob, sight );
+  continue;
+}
+~
+E
+leave~
+@GYou clamber out of the hole using the vines for handholds.@n
+~
+E
+rleave~
+@G$n clambers out of the hole, using the vines for handholds.@n
+~
+!
+3 0 1
+A
+~
+~
+ch = rand_player( room );
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  wait( 2 );
+  if( !mob_in_room( 5450, room ) ) {
+    i = random( 1, 3 );
+    if( i == 1 ) {
+      mob = mload( 5450, room );
+      act_tochar( #vineattack, ch, obj, mob );
+      act_notchar( #rvineattack, ch, obj, mob, sight );
+      init_attack( mob, ch );
+    }
+    else if( i == 2 ) {
+      act_tochar( #charSpin, ch );
+      act_notchar( #roomSpin, ch, obj, mob, sight );
+    }
+    else {
+      act_tochar( #dirtfall, ch );
+      act_notchar( #roomdirtfall, ch, obj, mob, sight );
+    }
+  }
+}
+~
+E
+vineattack~
+@GA long dark shape separates itself from the shadows overhead, and
+slithers quietly in your direction.@n 
+~
+E
+rvineattack~
+@GA long dark shape separates itself from the shadows overhead, and
+slithers quietly toward $n.@n 
+~
+E
+charSpin~
+@GSomething lightly touches you on the back of your neck.  Spinning
+around, you only see a dangling vine.@n 
+~
+E
+roomSpin~
+@G$n spins around and bats a vine away from $s neck.@n
+~
+E
+dirtfall~
+@GSomething dark passes briefly in front of your eyes.  Looking up, you
+realize a patch of dirt has fallen from the roots overhead.@n 
+~
+E
+roomdirtfall~
+@Y$n looks startled for a second, and peers into the shadows briefly.@n
+~
+!
+1 0 1
+A
+clear cut move~
+vine mass~
+if( !is_open( room, north ) ) {
+  act_tochar( #clear, ch, obj );
+  act_notchar( #rclear, ch, obj, mob, sight );
+  open( room, north );
+}
+else
+  act_tochar( #already, ch );
+~
+E
+clear~
+@GYou pull at the vines and creepers, eventually uncovering the hole that
+lies behind them.@n
+~
+E
+rclear~
+@G$n pulls at the vines and creepers, working to clear the entrance to
+the south.@n 
+~
+E
+already~
+@gYou could, indeed, clear some more of the tangled mess, but why waste
+the time?  The hole is already uncovered.@n 
+~
+!
+0 0 0
+-1
+S
+
+#4332
+At the Bottom of a Dry Well~
+Dusty rubble provides an unstable floor at the bottom of this well, where
+a handful of small weeds grasp at the dry rocks, sustained only by the
+occasional rainfall.  The sides of the well are jagged and pocked, and
+should provide little difficulty in climbing.  Several rodent skeletons
+litter the bottom amidst the broken remains of a rotted wooden bucket.
+~
+[Mad Murdo] reviewed
+[Guin] Done.
+~
+167247872 2 6 0
+D4
+~
+~
+0 -1 4328 10 10 5
+E
+rubble floor~
+Underfoot the rubble lies in large chunks of stone, having lain in the
+same spot since falling there.  The area is absent of ivy or plant
+growth, indicating that this is quite a dry shaft.
+~
+E
+wall sides well~
+The walls are grooved, scarred and pitted from years of erosion.  It
+looks like people have often used the grooves as handholds in
+exploration, as some are the perfect depth for a human hand.
+~
+E
+skeleton bucket rodents~
+Scattered through the rubble, the rotting remains of a broken bucket is
+interspersed with the white bones of rodent skeletons.
+~
+A
+climb~
+up well wall~
+if( find_skill( ch, climb ) > 2 ) {
+  send_to_char( #cliup, ch );
+  act_notchar( #roomcliup, ch );
+  transfer( ch, find_room( 4328 ) );
+  act_notchar( #sendmess, ch );
+  }
+else
+  send_to_char( #lowskill, ch );
+~
+E
+cliup~
+Using the grooves on the walls, you climb up to the surface.
+~
+E
+roomcliup~
+$n grabs grooves in the walls, and climbs upwards to the surface.
+~
+E
+sendmess~
+$n arrives from below, climbing out of the well shaft.
+~
+E
+lowskill~
+Looking upwards, you judge the climb to be too hard.
+~
+!
+0 0 0
+A
+~
+~
+send_to_room( #rockshift, room );
+~
+E
+rockshift~
+@RA piece of stone tumbles down the well shaft, stopping amidst the
+rubble.@n 
+~
+!
+2 150 0
+A
+~
+~
+send_to_char( #noup, ch );
+~
+E
+noup~
+Looking up the well shaft, it looks like climbing out might be the best
+option.
+~
+!
+3 0 16
+A
+~
+skeletons rodent bones rubble~
+if( !rflag( reset0, room ) ) {
+  act_tochar( #nothing, ch );
+  act_notchar( #roomnothing, ch );
+  end;
+}
+remove_rflag( reset0, room );
+i = random( 1, 3 );
+if( can_handle( ch, oload( 2 ) ) ) {
+  act_tochar( #findcoin, ch );
+  act_notchar( #roomfindcoin, ch );
+  obj_to_char( oload( 2 ), ch );
+}
+else {
+  act_tochar( #canthandle, ch );
+  act_notchar( #rcanthandle, ch );
+  obj_to_room( oload( 2 ), room );
+}
+~
+E
+nothing~
+You search through the skeletons remains, but don't find anything of
+interest.
+~
+E
+roomnothing~
+$n searches through the skeletons remains, but doesn't seem to find
+anything of interest.
+~
+E
+findcoin~
+Searching through the skeletons remains, you come across a gold coin!
+~
+E
+roomfindcoin~
+$n searches through the skeletons remains and finds something small!
+~
+E
+canthandle~
+Searching the room, you find a coin but are unable to find room for it,
+and drop it on the ground.
+~
+E
+rcanthandle~
+$n searches through the skeletons, and finds something small, but drops
+it on the ground after a moment.
+~
+!
+9 0 0
+-1
+S
+
+#0
+

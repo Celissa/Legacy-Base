@@ -1,0 +1,22 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+group [player] : add/remove [player] to current group<br>
+group all      : groups everyone following you<br>
+group          : display the group you are in<br>
+group pets     : groups and ungroups pets<br>
+<br>
+<h1> Description </h1>
+<br>
+To add a player to your group have them follow you then group [player]. <br>
+When in a group you share experience with the other members of the group. <br>
+When you have the auto_assist option turned on, you will automatically<br>
+assist those in your group in battle.<br>
+<br>
+The group pets command groups and ungroups your pets.  The message is<br>
+seen only by the group leader and works from anywhere on the game.<br>
+<br>
+See the help file for group looter.<br>
+</html>
+</body>

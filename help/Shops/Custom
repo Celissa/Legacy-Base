@@ -1,0 +1,23 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+custom          : lists items shopkeeper can make<br>
+custom [item]   : hands shopkeeper ingredients and requests item<br>
+<br>
+<h1> Description </h1>
+<br>
+Some shopkeepers are able to manufacture rare, special items that often<br>
+have magical properties.  To see if this is possible in any given shop type<br>
+"custom".  If you see an item there you want, you will need to find the<br>
+required ingredients.  Then have them in your inventory and type "custom<br>
+[item]" at the shop, and the item will be created for you.<br>
+<br>
+EXAMPLE<br>
+<br>
+To custom a bronze plate armor breastplate when at the appropriate<br>
+shopkeeper, type:<br>
+custom bronze breastplate or<br>
+custom bronze plate armor breastplate<br>
+</html>
+</body>

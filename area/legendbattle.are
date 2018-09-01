@@ -1,0 +1,2036 @@
+#M2_AREA
+2
+
+Legendary Battlefield~
+Larken~
+~
+~
+~
+
+0 0
+3
+1
+#ROOMS
+
+#65000
+Ancient Pine Forest~
+The path is of clay here and has been grooved into the earth, made use of
+by countless creatures.  Small patches of rainwater have accumulated
+making the clay mushier underfoot and dirtying your footwear.  Pine
+needles line the dirt path quieting the footsteps of any who travel here. 
+The path leads west to a dwarven roadway and north deeper into the forest.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 65001 10 10 5
+D3
+~
+~
+0 -1 9557 10 10 5
+A
+~
+~
+send_to_room( #stuff, room, sight );
+~
+E
+stuff~
+@bThe soft call of a song bird gently floats to your ears.@n
+~
+!
+2 5 0
+A
+~
+~
+//cleans the rooms on repop
+loop( all_in_room ){
+  if( is_mob( rch ) ){
+    junk_mob( rch );
+  }
+}
+~
+!
+16 0 0
+-1
+S
+
+#65001
+Ancient Pine Forest~
+The branches of the giant pines stretch overhead forming a natural tunnel
+through the forest. The path rises slightly to the east as it passes over a
+small rise and leads deeper into the forest. To the south you can see the path
+take a gentle turn toward the west. The sounds of small forest life drift in
+from all directions filling you with a feeling of tranquility.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 65002 10 10 5
+D2
+~
+~
+0 -1 65000 10 10 5
+A
+~
+~
+//cleans the rooms on repop
+loop( all_in_room ){
+  if( is_mob( rch ) ){
+    junk_mob( rch );
+  }
+}
+~
+!
+16 0 0
+29 0 1509949540 -2 0
+-1
+S
+
+#65002
+Ancient Pine Forest~
+The forest opens a little to the south allowing one to travel between the trees
+in that direction as well as along the path to the east and west. To the west
+you can see the path take a gentle turn to the south and lead deeper into the
+forest while to the east the path leads into a light scrub land. The sounds of
+a great battle roar in from the east drowning out all sounds of life within the
+forest. The path here is well worn from the passing of many boots.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 65007 10 10 5
+D2
+~
+~
+0 -1 65003 10 10 5
+D3
+~
+~
+0 -1 65001 10 10 5
+A
+~
+~
+send_to_room( #battle, room );
+~
+E
+battle~
+@rThe roar of battle swirls in from the east.@n
+~
+!
+2 3 0
+A
+~
+~
+//cleans the rooms on repop
+loop( all_in_room ){
+  if( is_mob( rch ) ){
+    junk_mob( rch );
+  }
+}
+~
+!
+16 0 0
+-1
+S
+
+#65003
+Ancient Pine Forest~
+The forest thins out a little here allowing one to travel between the great
+trees with ease. To the north lies a small foot path. To the east the trees
+open up more into a small strip of scrub land. More than a few of the pines
+here have been cut down. Their stripped limbs litter the ground and drag marks
+along the ground indicate that they were take east towards the roar of battle.
+~
+need a look pine acode
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 65002 10 10 5
+D1
+~
+~
+0 -1 65006 10 10 5
+D2
+~
+~
+0 -1 65004 10 10 5
+E
+pine limb~
+Looking closely at the pines you see that many of them have been cut down
+by axes the limbs striped and then the bare trunks drug east toward the
+dine of battle.
+~
+A
+~
+~
+//cleans the rooms on repop
+loop( all_in_room ){
+  if( is_mob( rch ) ){
+    junk_mob( rch );
+  }
+}
+~
+!
+16 0 0
+-1
+S
+
+#65004
+Ancient Pine Forest~
+You find yourself in a small clearing in the forest. To your west and south the
+great pine trees grow so close that there is no way you could travel between
+them. To the north the trees have been thined enough that it is possible to
+travel that way. To the east the forest seems to fade into a narrow strip of
+scrub land. A small stream gruggles through here though it is hard to hear it
+over the roar you can hear to the east.
+~
+need stream here
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 65003 10 10 5
+D1
+~
+~
+0 -1 65005 10 10 5
+A
+~
+~
+send_to_room( #stream, room, sight );
+~
+E
+stream~
+@BThe soft gurgle of the stream can barely be heard above the sounds of
+battle to the west.@n
+~
+!
+2 3 0
+A
+~
+~
+//cleans the rooms on repop
+loop( all_in_room ){
+  if( is_mob( rch ) ){
+    junk_mob( rch );
+  }
+}
+~
+!
+16 0 0
+398 17 1509949441 -2 29
+398 17 1509949540 -2 0
+-1
+S
+
+#65005
+The Forest Edge~
+To your east and west are two very different environments. To the west lies the
+peaceful calm of an ancient pine forest. To the west lies the noisy confusion
+of open battle. The cries of the wounded and dieing are mingled with the
+metallic clash of weapons. Looking across the field you can see that this
+appears to be a battle between the races of light and darkness. The races of
+light appear to be in good control of the southern side of the field while the
+races of darkness appear to be controlling the northern side. From this vantage
+point it appears that neither side has a clear advantage in the battle.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 65006 10 10 5
+D1
+~
+~
+0 -1 65010 10 10 5
+D3
+~
+~
+0 -1 65004 10 10 5
+A
+~
+~
+//cleans the rooms on repop
+loop( all_in_room ){
+  if( is_mob( rch ) ){
+    junk_mob( rch );
+  }
+}
+~
+!
+16 0 0
+31 0 1509949445 -2 0
+-1
+S
+
+#65006
+The Forest Edge~
+This narrow strip of scrub land that continues a little ways north and south of
+here appears to be all that separates the two distinctly different landscapes
+to your east and west. To you west lies an ancient pine forest its trees
+offering the quiet security of the forest. To the east lies a great battlefield.
+Looking across the fighting you can see a great mountain rising into the sky.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 65007 10 10 5
+D1
+~
+~
+0 -1 65009 10 10 5
+D2
+~
+~
+0 -1 65005 10 10 5
+D3
+~
+~
+0 -1 65003 10 10 5
+A
+~
+~
+send_to_room( #arrow, room, sight );
+~
+E
+arrow~
+@yWhistling sharply a stray arrow flies overhead from the east.@n
+~
+!
+2 3 0
+A
+~
+~
+//cleans the rooms on repop
+loop( all_in_room ){
+  if( is_mob( rch ) ){
+    junk_mob( rch );
+  }
+}
+~
+!
+16 0 0
+-1
+S
+
+#65007
+The Forest Edge~
+You now find yourself at a place where two very separate landscapes seem to
+collide. To the west stretches the great calm of an ancient pine forest. The
+great trees tower over the landscape their branches offering safety to those
+who should seek it. To the east you see a great field of chaos. The sounds of a
+pitched battle roar in your ears. It appears that there are thousands battling
+each other on this field.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 65008 10 10 5
+D2
+~
+~
+0 -1 65006 10 10 5
+D3
+~
+~
+0 -1 65002 10 10 5
+A
+~
+~
+//cleans the rooms on repop
+loop( all_in_room ){
+  if( is_mob( rch ) ){
+    junk_mob( rch );
+  }
+}
+~
+!
+16 0 0
+0 0 1509949441 -2 0
+-1
+S
+
+#65008
+Legendary Battlefield~
+You are on the outskirts of a great battlefield.  To your west lies the
+quiet of an ancient pine forest.  In every other direction the choas of
+battle surrounds you.  The battle surges back and forth endlessly.  The
+bodies of the dead are trampled by the living as they struggle to remain
+alive.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 65013 10 10 5
+D2
+~
+~
+0 -1 65009 10 10 5
+D3
+~
+~
+0 -1 65007 10 10 5
+E
+bodies~
+The bodies of many dead have been trambled into the ground.  Some bones
+of those who died long ago stick up through the bodies of the recently
+slain.  The forces of light and dark lie side beside, at peace in death.
+~
+A
+~
+~
+//loads evil army
+i = get_integer( room, "/Larken/Battlefield/totallevelgood" );
+i = random( mult( -1, i, 2 ), i );
+if( i > 0 )
+  act_room( #evil, ch );
+if( i >= 80 ){
+  loop( i > 80 ){
+    j = random( 1, 3 );
+    if( j == 1 ){
+      mload( 2766, room );
+      i = add(i, -80);
+    }
+    if( j == 2 ){
+      mload( 2767, room );
+      i = add(i, -80);
+    }
+    if( j == 3 ){
+      mload( 2768, room );
+      i = add(i, -80);
+    }
+  }
+}
+if( i >= 60 ){
+  loop( i > 60 ){
+    mload( 2721, room );
+    i = add(i, -40);
+  }
+}
+if( i >= 40 ){
+  loop( i > 40 ){
+    mload( 2720, room );
+    i = add(i, -20);
+  }
+}
+if( i >= 10 ){
+  loop( i > 10 ){
+    mload( 2719, room );
+    i = add(i, -5);
+  }
+  if( i >= 1 ){
+    loop( i > 0 ){
+      mload( 2718, room );
+      i = add( i, -2 );
+    }
+  }
+}
+
+//loads good army
+i = get_integer( room, "/Larken/Battlefield/totallevelevil" );
+i = random( mult( -1, i, 2 ), i );
+if( i > 0 )
+  act_room( #good, ch );
+if( i >= 80 ){
+  loop( i > 80 ){
+    j = random( 1, 3 );
+    if( j == 1 ){
+      mload( 2765, room );
+      i = add(i, -80);
+    }
+    if( j == 2 ){
+      mload( 2764, room );
+      i = add(i, -80);
+    }
+    if( j == 3 ){
+      mload( 2753, room );
+      i = add(i, -80);
+    }
+  }
+}
+if( i >= 60 ){
+  loop( i > 60 ){
+    mload( 2726, room );
+    i = add(i, -40);
+  }
+}
+if( i >= 40 ){
+  loop( i > 40 ){
+    mload( 2725, room );
+    i = add(i, -20);
+  }
+}
+if( i >= 10 ){
+  loop( i > 10 ){
+    mload( 2724, room );
+    i = add(i, -5);
+  }
+}
+if( i >= 1 ){
+  loop( i > 0 ){
+    mload( 2723, room );
+    i = add( i, -2 );
+  }
+}
+
+//loads neutered army
+i = get_integer( room, "/Larken/Battlefield/totallevelneut" );
+if( i > 0 )
+  act_room( #neutered, ch );
+i = random( mult( -1, i, 2 ), i );
+if( i >= 80 ){
+  loop( i > 80 ){
+    j = random( 1, 3 );
+    if( j == 1 ){
+      mload( 2744, room );
+      i = add(i, -80);
+    }
+    if( j == 2 ){
+      mload( 2746, room );
+      i = add(i, -80);
+    }
+    if( j == 3 ){
+      mload( 2747, room );
+      i = add(i, -80);
+    }
+  }
+}
+if( i >= 60 ){
+  loop( i > 60 ){
+    mload( 2730, room );
+    i = add(i, -40);
+  }
+}
+if( i >= 40 ){
+  loop( i > 40 ){
+    mload( 2729, room );
+    i = add(i, -20);
+  }
+}
+if( i >= 10 ){
+  loop( i > 10 ){
+    mload( 2728, room );
+    i = add(i, -5);
+  }
+}
+if( i >= 1 ){
+  loop( i > 0 ){
+    mload( 2727, room );
+    i = add( i, -2 );
+  }
+}
+set_integer( room, "/Larken/Battlefield/highlevel", 0 );
+set_integer( room, "/Larken/Battlefield/totallevelevil", 0 );
+set_integer( room, "/Larken/Battlefield/totallevelgood", 0 );
+set_integer( room, "/Larken/Battlefield/totallevelneut", 0 );
+~
+E
+evil~
+@RSeeing you enter a vyan commander screams an order at some nearby
+troops to handle you.@n 
+~
+E
+good~
+As you enter a small army of the side of light rush to engage you.
+~
+E
+neutered~
+@YSmiling excitedly a small band of neutral fighters scramble to attack
+you.@n 
+~
+!
+0 0 0
+A
+~
+~
+//cleans the rooms on repop
+loop( all_in_room ){
+  if( is_mob( rch ) ){
+    junk_mob( rch );
+  }
+}
+~
+!
+16 0 0
+A
+~
+~
+if( is_player( ch ) ){
+  //counts up level of all players entering room
+  //sets the size of the armies
+  if( is_evil( ch ) ){
+    i = get_integer( room, "/Larken/Battlefield/totallevelevil" );
+    i += find_stat( ch, level );
+    set_integer( room, "/Larken/Battlefield/totallevelevil", i );
+  }
+  
+  if( is_good( ch ) ){
+    i = get_integer( room, "/Larken/Battlefield/totallevelgood" );
+    i += find_stat( ch, level );
+    set_integer( room, "/Larken/Battlefield/totallevelgood", i );
+  }
+  
+  if( is_neutral( ch ) ){
+    i = get_integer( room, "/Larken/Battlefield/totallevelneut" );
+    i += find_stat( ch, level );
+    set_integer( room, "/Larken/Battlefield/totallevelneut", i );
+  }
+  
+  j = get_integer( room, "/Larken'Battlefield/highlevel" );
+  if( find_stat( ch, level ) > j ) {
+    j = find_stat( ch, level );
+    set_integer( room,  "/Larken/Battlefield/highlevel", j );
+  }
+  
+  if( leader( ch ) != ch )
+    end;
+  wait( 1 );
+  acode( find_room( 65008 ), 1 );
+}
+~
+!
+1 0 15
+-1
+S
+
+#65009
+Legendary Battlefield~
+You find yourself at the swirling edge of a choatic battle.  The forces
+of good and evil deal death and destruction all around you.  To the west
+stands an acient pine forest its once thickly packed trees disappearing
+as they are cut down and used in this great battle.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 65008 10 10 5
+D1
+~
+~
+0 -1 65012 10 10 5
+D2
+~
+~
+0 -1 65010 10 10 5
+D3
+~
+~
+0 -1 65006 10 10 5
+A
+~
+~
+acode(find_room( 65008 ), 1 );
+~
+!
+0 0 0
+A
+~
+~
+acode(find_room( 65008 ), 2 );
+~
+!
+16 0 0
+A
+~
+~
+acode(find_room( 65008 ), 3 );
+~
+!
+1 0 15
+-1
+S
+
+#65010
+Legendary Battlefield~
+A scrub strip of scub land seperates you from a pine forest to the west. 
+That appears to be the only refuge you see from the great battle that
+rages in every other direction.  The dead have been piled to the south so
+high and wide as to make it impossible to continue that way.  The sound
+of running water trickles just beyond the pile.
+~
+maybe a search pile here for something if i have time
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 65009 10 10 5
+D1
+~
+~
+0 -1 65011 10 10 5
+D3
+~
+~
+0 -1 65005 10 10 5
+A
+~
+~
+acode(find_room( 65008 ), 1 );
+~
+!
+0 0 0
+A
+~
+~
+acode(find_room( 65008 ), 2 );
+~
+!
+16 0 0
+A
+~
+~
+acode(find_room( 65008 ), 3 );
+~
+!
+1 0 15
+-1
+S
+
+#65011
+Legendary Battlefield~
+A small skirmish has transpired here, a small force of archers has been smashed
+by a group of heavily armored foot soldiers. The Archers are sprawled in a wide
+arc, having attempted to flee from the engaging troops. A solitary Knight,
+thrown from his horse lies broken, his horse scored by a quiver of arrows. In
+the distance you can see a small cavalry throwing up heavy clods of dirt as
+they gallop to engage the main body.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 65012 10 10 5
+D1
+~
+~
+0 -1 65020 10 10 5
+D2
+~
+~
+0 -1 65015 10 10 5
+D3
+~
+~
+0 -1 65010 10 10 5
+A
+~
+~
+acode(find_room( 65008 ), 1 );
+~
+!
+0 0 0
+A
+~
+~
+acode(find_room( 65008 ), 2 );
+~
+!
+16 0 0
+A
+~
+~
+acode(find_room( 65008 ), 3 );
+~
+!
+1 0 15
+-1
+S
+
+#65012
+Legendary Battlefield~
+Arrows fly overhead into massed troops while on either side fresh troops surge
+forward to close ranks on the enemy. Orders are barked out to reform the lines
+and for the archers to fire at will. The forces of good and evil clash in a
+choatic swirl of death and destruction. Here and there neutral forces and been
+seen indiscriminately dealing death to all that fall within their reach.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 65013 10 10 5
+D1
+~
+~
+0 -1 65019 10 10 5
+D2
+~
+~
+0 -1 65011 10 10 5
+D3
+~
+~
+0 -1 65009 10 10 5
+A
+~
+~
+acode(find_room( 65008 ), 1 );
+~
+!
+0 0 0
+A
+~
+~
+acode(find_room( 65008 ), 2 );
+~
+!
+16 0 0
+A
+~
+~
+acode(find_room( 65008 ), 3 );
+~
+!
+1 0 15
+-1
+S
+
+#65013
+Legendary Battlefield~
+At some point in the conflict a supply train was smashed, sprawled about
+are corpses of peons clutching whatever weapons were at hand.  A couple
+of carts have been upturned perhaps as an attempt to form a barricade
+against a charge.  The dirt has been churned with smashed wood and
+supplies scattered recklessly.  What remains of the barricade blocks any
+travel to the north.
+~
+sear cart
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 65014 10 10 5
+D1
+~
+~
+0 -1 65018 10 10 5
+D2
+~
+~
+0 -1 65012 10 10 5
+D3
+~
+~
+0 -1 65008 10 10 5
+A
+~
+cart~
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  i = random( 0, 4 );
+  if( i == 0 ) {
+    send_to_char( #true_char, ch );
+    act_notchar( #true_room, ch );
+    obj_to_char( oload( 1687 ), ch );
+    end;
+  }
+  if( i == 1 ) {
+    send_to_char( #true_char, ch );
+    act_notchar( #true_room, ch );
+    obj_to_char( oload( 4099 ), ch );
+    end;
+  }
+  if( i == 2 ) {
+    send_to_char( #true_char, ch );
+    act_notchar( #true_room, ch );
+    obj_to_char( oload( 3667 ), ch );
+    end;
+  }
+  if( i == 3 ) {
+    send_to_char( #true_char, ch );
+    act_notchar( #true_room, ch );
+    obj_to_char( oload( 2119 ), ch );
+    end;
+  }
+  if( i == 4 ) {
+    send_to_char( #true_char, ch );
+    act_notchar( #true_room, ch );
+    obj_to_char( oload( 4298 ), ch );
+    end;
+  }
+}
+send_to_char( #false_char, ch );
+act_notchar( #false_room, ch );
+~
+E
+true_char~
+@y After searching through a tangle of wagon and body parts you come up
+with something that might be usefull.@n 
+~
+E
+true_room~
+@Y After searching through a tangle of wagon and body parts $N comes up
+with something that might be useful.@n 
+~
+E
+false_char~
+@R After searching for what seems forever you give up having found
+nothing.@n 
+~
+E
+false_room~
+@R After searching for what seems forever $N gives up having found
+nothing.@n 
+~
+!
+9 0 0
+A
+~
+~
+acode(find_room( 65008 ), 1 );
+~
+!
+0 0 0
+A
+~
+~
+acode(find_room( 65008 ), 2 );
+~
+!
+16 0 0
+A
+~
+~
+acode(find_room( 65008 ), 3 );
+~
+!
+1 0 15
+-1
+S
+
+#65014
+Legendary Battlefield~
+This site is the head of the snake so to speak.  It is the command center
+for all the forces of evil.  One large black silk tent dominates the
+landscape.  Large enough to hide a sea going boat it is a grand structure
+indeed.  The reminates of once living beings litter the ground showing
+that more than once the force of light have tried and failed to seize
+this location.  Curriers dash to and fro, some leaping on to the backs of
+waiting mounts to carry orders to troop commanders across the battlefield.
+The standards of all the dark gods stand before the command tent.
+~
+need a search or get acode to load the standards
+evil command center
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 65016 10 10 5
+D2
+~
+~
+0 -1 65013 10 10 5
+A
+~
+~
+acode(find_room( 65008 ), 1 );
+~
+!
+0 0 0
+A
+~
+~
+acode(find_room( 65008 ), 2 );
+~
+!
+16 0 0
+A
+~
+~
+acode(find_room( 65008 ), 3 );
+~
+!
+1 0 15
+-1
+S
+
+#65015
+Legendary Battlefield~
+The earth here has been gouged by a charge of heavily armoured troops, arrows
+litter the area like a nest of twigs. The wreckage of battle litters the area.
+Machines of war lie smashed and scattered across the landscape with the bodies
+of the dead and wounded. To the north the sun glints off armor and pike as a
+phalanx of evil forces approaches. To the south a small river flows preventing
+travel in that direction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 65011 10 10 5
+D1
+~
+~
+0 -1 65021 10 10 5
+A
+~
+~
+acode(find_room( 65008 ), 1 );
+~
+!
+0 0 0
+A
+~
+~
+acode(find_room( 65008 ), 2 );
+~
+!
+16 0 0
+A
+~
+~
+acode(find_room( 65008 ), 3 );
+~
+!
+1 0 15
+-1
+S
+
+#65016
+Legendary Battlefield~
+Fires burn in the background casting a eiry reddish glow on the otherwise
+dark landscape.  Fragments of metal and bones greyed with age liter the
+area in testament to an earlier battle.  A rotting log lies in black
+stagnant water, with an exhausted, bloodied combatant clinging to it for
+dear life.  You judge the water about a foot deep, but would rather not
+test that theory, no telling if there are hidden depths.  On the shore
+are some gray stalked reeds, long since expired.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 65017 10 10 5
+D1
+~
+~
+0 -1 65027 10 10 5
+D2
+~
+~
+0 -1 65018 10 10 5
+D3
+~
+~
+0 -1 65014 10 10 5
+A
+~
+~
+acode(find_room( 65008 ), 1 );
+~
+!
+0 0 0
+A
+~
+~
+acode(find_room( 65008 ), 2 );
+~
+!
+16 0 0
+A
+~
+~
+acode(find_room( 65008 ), 3 );
+~
+!
+1 0 15
+-1
+S
+
+#65017
+Legendary Battlefield~
+Murky Brackish water has seemingly overwhelmed a lone mangrove tree it
+stands here, a silent sentinel grey and forlorn.  The mangrove's roots
+surround the area, the twigish appendatures rising from the water crackle
+underfoot.  Bubbles of gas rise from bellow, making popping noises as
+they hit the surface.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 65028 10 10 5
+D2
+~
+~
+0 -1 65016 10 10 5
+A
+~
+~
+acode(find_room( 65008 ), 1 );
+~
+!
+0 0 0
+A
+~
+~
+acode(find_room( 65008 ), 2 );
+~
+!
+16 0 0
+A
+~
+~
+acode(find_room( 65008 ), 3 );
+~
+!
+1 0 15
+-1
+S
+
+#65018
+Legendary Battlefield~
+The battle seems thickest here, neither side seems to be making headway
+but both are locked in a deadly game of attrition.  The ground is stained
+red with blood.  The salt in the blood has forever ruined this land of
+being able to sustain any life.  It seems all it will ever be good for is
+the continuation of this battle.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 65016 10 10 5
+D1
+~
+~
+0 -1 65026 10 10 5
+D2
+~
+~
+0 -1 65019 10 10 5
+D3
+~
+~
+0 -1 65013 10 10 5
+A
+~
+~
+acode(find_room( 65008 ), 1 );
+~
+!
+0 0 0
+A
+~
+~
+acode(find_room( 65008 ), 2 );
+~
+!
+16 0 0
+A
+~
+~
+acode(find_room( 65008 ), 3 );
+~
+!
+1 0 15
+-1
+S
+
+#65019
+Legendary Battlefield~
+You find yourself at the bottom of a large crater.  Gloomier than the
+surrounding area, the air is still with a faint smell of sulfur carried
+by a thin mist.  The sides of the crater are treacherous, lined with fist
+sized rocks which tumble down on contact.  Pockmarked with cavernous
+holes left by explosions or maybe larger boulders lining the crater
+bottom.  The clash of blades echoes louder here amplified by the crater
+walls.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 65018 10 10 5
+D2
+~
+~
+0 -1 65020 10 10 5
+D3
+~
+~
+0 -1 65012 10 10 5
+A
+~
+~
+acode(find_room( 65008 ), 1 );
+~
+!
+0 0 0
+A
+~
+~
+acode(find_room( 65008 ), 2 );
+~
+!
+16 0 0
+A
+~
+~
+acode(find_room( 65008 ), 3 );
+~
+!
+1 0 15
+-1
+S
+
+#65020
+Legendary Battlefield~
+A concerted push has broken the line erupting into chaos as soldiers are
+cut off from the army army into small groups.  The shout 'REFORM THE
+LINE' can be heard and indecision can be seen on several soldiers, given
+a moments choice to flee or fight on.  From behind the sound of
+reinforcments can be heard as they rush to shore up the gap.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 65019 10 10 5
+D1
+~
+~
+0 -1 65025 10 10 5
+D2
+~
+~
+0 -1 65021 10 10 5
+D3
+~
+~
+0 -1 65011 10 10 5
+A
+~
+~
+acode(find_room( 65008 ), 1 );
+~
+!
+0 0 0
+A
+~
+~
+acode(find_room( 65008 ), 2 );
+~
+!
+16 0 0
+A
+~
+~
+acode(find_room( 65008 ), 3 );
+~
+!
+1 0 15
+-1
+S
+
+#65021
+Legendary Battlefield~
+A strategist's dream or nightmare - the river divides the field of war,
+brown from blood and heaved silt.  A little over knee high it would be a
+nightmarish place to be caught up in battle, a fall from arrow of blade
+would mean a certain death, drowned by armor or overrun by ally or foe. 
+Scores of bodies bob slowly in the water, animated by the slow current. 
+The river continues its flow to the east and curves south west from here.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 65020 10 10 5
+D1
+~
+~
+0 -1 65024 10 10 5
+D2
+~
+~
+0 -1 65022 10 10 5
+D3
+~
+~
+0 -1 65015 10 10 5
+A
+~
+~
+acode(find_room( 65008 ), 1 );
+~
+!
+0 0 0
+A
+~
+~
+acode(find_room( 65008 ), 2 );
+~
+!
+16 0 0
+A
+~
+~
+acode(find_room( 65008 ), 3 );
+~
+!
+1 0 15
+-1
+S
+
+#65022
+Legendary Battlefield~
+Protected some what by the river to the north a battery of siege engines
+is grouped here rainging fire and stone across the field of battle.  An
+Engineer brays loudly, berating an elven soldier for having miscalibrated
+one of the siege engines.  Stacked around you are boulders piles of
+grapefruit sized rocks, pitch, logs and nearly anything else that could
+be hurled for damage.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 65021 10 10 5
+D1
+~
+~
+0 -1 65023 10 10 5
+A
+~
+~
+acode(find_room( 65008 ), 1 );
+~
+!
+0 0 0
+A
+~
+~
+acode(find_room( 65008 ), 2 );
+~
+!
+16 0 0
+A
+~
+~
+acode(find_room( 65008 ), 3 );
+~
+!
+1 0 15
+-1
+S
+
+#65023
+Legendary Battlefield~
+Here is the headquarters of the army of light.  The standards of all the
+gods of good wave proudly before a small stone building.  Mounts of all
+kinds stand tethered outside the building waiting to take riders to
+deliver orders to troops across the battlefield.  A couple hospital tents
+stand behind the stone building.  Wounded and weary soilders lie on the
+ground around the tents.  The pool of putrid water to the north help to
+protect this spot from enemy attacks, but the bodies and bones that
+litter the ground are evidence that it isn't enough protection.
+~
+good headquaters
+need acode for standard search/get
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 65024 10 10 5
+D3
+~
+~
+0 -1 65022 10 10 5
+A
+~
+~
+acode(find_room( 65008 ), 1 );
+~
+!
+0 0 0
+A
+~
+~
+acode(find_room( 65008 ), 2 );
+~
+!
+16 0 0
+A
+~
+~
+acode(find_room( 65008 ), 3 );
+~
+!
+1 0 15
+-1
+S
+
+#65024
+Legendary Battlefield~
+You find yourself standing hip deep in a pool of putrid water.  To the
+east a great water fall crashes off the mountain side.  The fresh water
+from the water fall does little but stir up the pool.  A small river runs
+from the pool west.  Blood of many years has seeped its way across the
+battlefield and into the pool.  Bodies of those who have attempted this
+crossing both from the north and south bob up and down in little pieces
+across the pool.  Not even the flies and scavenger birds always near a
+battlefield will touch the bodies here.
+~
+pool of plague water
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 65025 10 10 5
+D2
+~
+~
+0 -1 65023 10 10 5
+D3
+~
+~
+0 -1 65021 10 10 5
+A
+~
+~
+acode(find_room( 65008 ), 1 );
+~
+!
+0 0 0
+A
+~
+~
+acode(find_room( 65008 ), 2 );
+~
+!
+16 0 0
+A
+~
+~
+acode(find_room( 65008 ), 3 );
+~
+!
+1 0 15
+1388 17 1509949540 -2 47
+-1
+S
+
+#65025
+Legendary Battlefield~
+A few corpses can be seen here and there, all looking to have been stuck
+down by a volley of arrows.  Only a few soldiers remain here, clinging to
+the their last ounce of life after being impaled with thousands upon
+hundreds of arrows.  The ground is covered in blood and gore.  The
+shrubery here has been but completely destroyed.  The frenzy of
+gruesome-sounding battle can be seen and heard to the west, while the
+east looks a bit more tame.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 65031 10 10 5
+D2
+~
+~
+0 -1 65024 10 10 5
+D3
+~
+~
+0 -1 65020 10 10 5
+A
+~
+~
+acode(find_room( 65008 ), 1 );
+~
+!
+0 0 0
+A
+~
+~
+acode(find_room( 65008 ), 2 );
+~
+!
+16 0 0
+A
+~
+~
+acode(find_room( 65008 ), 3 );
+~
+!
+1 0 15
+-1
+S
+
+#65026
+Legendary Battlefield~
+More corpses lie scattered about, some struck down by blade, others by
+arrow.  The air here carries the strong scent of blood, and the defening
+sound of a waging war.  You can see a great deal of soldiers to the west,
+all engaged in a battle of life and death.  Very little life can be seen
+here, only the circling vultures overhead.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 65027 10 10 5
+D1
+~
+~
+0 -1 65029 10 10 5
+D3
+~
+~
+0 -1 65018 10 10 5
+A
+~
+~
+acode(find_room( 65008 ), 1 );
+~
+!
+0 0 0
+A
+~
+~
+acode(find_room( 65008 ), 2 );
+~
+!
+16 0 0
+A
+~
+~
+acode(find_room( 65008 ), 3 );
+~
+!
+1 0 15
+-1
+S
+
+#65027
+Legendary Battlefield~
+The swamp has receded here as the ground rises, in it's wake a large
+expanse of mudflat has been left.  The stench of sulfur and rotting
+vegetable matter and now several corpses are a tad nauseating.  Scored
+with footprints at the edge, they trail off as the mud becomes deeper. 
+Someone has tried to make the beginnings of a rough path, branches logs
+and other debris being placed on the surface.  To your left water has
+drained into a pool, clear but for the patchy green slime floating on its
+surface.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 65028 10 10 5
+D2
+~
+~
+0 -1 65026 10 10 5
+D3
+~
+~
+0 -1 65016 10 10 5
+A
+~
+~
+acode(find_room( 65008 ), 1 );
+~
+!
+0 0 0
+A
+~
+~
+acode(find_room( 65008 ), 2 );
+~
+!
+16 0 0
+A
+~
+~
+acode(find_room( 65008 ), 3 );
+~
+!
+1 0 15
+-1
+S
+
+#65028
+Legendary Battlefield~
+Strangely the battle has not touched this small patch of clover on a
+gently sloping mound.  The battle may yet swing in this direction but for
+now it offers a brief respite where you are able to observe the clamor of
+battle from a detached perspective.  A lone soldier struggles to reach
+this place, his life force clearly ebbing bringing the reality of war
+back.
+~
+no army code here...
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 65027 10 10 5
+D3
+~
+~
+0 -1 65017 10 10 5
+A
+~
+~
+//cleans the rooms on repop
+loop( all_in_room ){
+  if( is_mob( rch ) ){
+    junk_mob( rch );
+  }
+}
+~
+!
+16 0 0
+-1
+S
+
+#65029
+Legendary Battlefield~
+Various patches of earth here is covered in a light layer of dried blood,
+as well are many small rocks.  Very little, if not any plant-life can be
+seen here, except for a few small shrubs that look to have been trampled. 
+A few corpses of battle-fallen soldiers lie to the east, all looking to
+have met a grizzly end.  One corpse in particular draws your attention. 
+The poor soldier's armor is different from the others', in color, as well
+as decor.  The faint smell of smoke is carried through the air here, as
+well as the foul smell of rotting corpses and blood.
+~
+north part of camp
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 65030 10 10 5
+D3
+~
+~
+0 -1 65026 10 10 5
+A
+~
+~
+acode(find_room( 65008 ), 1 );
+~
+!
+0 0 0
+A
+~
+~
+acode(find_room( 65008 ), 2 );
+~
+!
+16 0 0
+A
+~
+~
+acode(find_room( 65008 ), 3 );
+~
+!
+1 0 15
+-1
+S
+
+#65030
+Legendary Battlefield~
+This room seems to be a meeting place of some sort.  There is an old
+green tent sitting on the soft soil by the campfire.  The campfire is
+still burning bright, as if it was just lit.  There are many small
+blankets lying on the ground for people to rest their aching bodies.
+~
+neutral camp
+need acode for standard search/get
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 65029 10 10 5
+D1
+~
+~
+0 -1 65032 10 10 5
+D2
+~
+~
+0 -1 65031 10 10 5
+A
+~
+~
+acode(find_room( 65008 ), 1 );
+~
+!
+0 0 0
+A
+~
+~
+acode(find_room( 65008 ), 2 );
+~
+!
+16 0 0
+A
+~
+~
+acode(find_room( 65008 ), 3 );
+~
+!
+1 0 15
+2689 17 1509949540 -2 0
+-1
+S
+
+#65031
+Legendary Battlefield~
+Unlike the rest of the surrounding areas, this place looks somewhat
+peaceful.  Indentations, human and hourse alike, litter the ground here,
+all looking to head westward.  Several large trees burst from the earth
+here, casting shade in the light.  Looking closely, you spy a tiny bird's
+nest adorning one of the tree's branches.  You can see what appears to be
+a camp of sorts to the north, and hear the distinct sounds of battle to
+the far west.
+~
+south part of camp
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 65030 10 10 5
+D3
+~
+~
+0 -1 65025 10 10 5
+A
+~
+~
+acode(find_room( 65008 ), 1 );
+~
+!
+0 0 0
+A
+~
+~
+acode(find_room( 65008 ), 2 );
+~
+!
+16 0 0
+A
+~
+~
+acode(find_room( 65008 ), 3 );
+~
+!
+1 0 15
+-1
+S
+
+#65032
+Small Path up the Moutian~
+The small path here leads a way east and west through the boulders that have
+fallen from the mountain side. To the west a great plain stretches between the
+mountain and an ancient pine forest. A massive battle rages across the plain.
+Thousands of mortals battle for their lives on the field before you. To the
+east the small path leads to the base of a grand staircase that leads steeply
+up the mountian side.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 65033 10 10 5
+D3
+~
+~
+0 -1 65030 10 10 5
+-1
+S
+
+#65033
+Base of the Great Stairs~
+You find yourself at the base of a grand staircase. It hand carved steps lead
+steeply up the mountianside. Only a person of great determination and will will
+be able to make it up. To the west a small gravel path leads through the
+boulders that lay in cluttered piles at the base of the mountain and out into
+an open field. The sounds of a pitched battle roar in from beyond the boulders.
+~
+~
+33030144 12 9 0
+D3
+~
+~
+0 -1 65032 10 10 5
+D4
+~
+~
+0 -1 65034 10 10 5
+-1
+S
+
+#65034
+Great Stairs~
+You are standing of the first landing of the grand staircase. The steps
+continue down the mountain side from here or north a little before continuing
+their way up. The mountain around you is dark and sinister. Black rivers of
+stone seem to flow from its precipice and pool at its base. The smell of sulfur
+drifts in on the wind from the mountain top.
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 65035 10 10 5
+D5
+~
+~
+0 -1 65033 10 10 5
+-1
+S
+
+#65035
+Great Stairs~
+You are on the lower steps of a great stair case. The steps appear to be hand
+carved out of some dark stone. Small holes cover the stones surface making it
+hard at times to keep you footing. Looking up at the long climb it is obvious
+that only someone with a great will and determination will be able to make it
+to the top.
+~
+~
+33030144 12 9 0
+D2
+~
+~
+0 -1 65034 10 10 5
+D4
+~
+~
+0 -1 65036 10 10 5
+-1
+S
+
+#65036
+Great Stairs~
+The great staircase continues both above and below you.  You appear to be
+halfway up the mountain side.  Both the mountain top and the plane below
+look SO far away.
+~
+~
+33030144 12 9 0
+D4
+~
+~
+0 -1 65037 10 10 5
+D5
+~
+~
+0 -1 65035 10 10 5
+-1
+S
+
+#65037
+Great Stairs~
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 65038 10 10 5
+D5
+~
+~
+0 -1 65036 10 10 5
+-1
+S
+
+#65038
+Great Stairs~
+Under Construction.
+~
+~
+33030144 12 9 0
+D2
+~
+~
+0 -1 65037 10 10 5
+D4
+~
+~
+0 -1 65039 10 10 5
+-1
+S
+
+#65039
+Great Stairs~
+~
+~
+33030144 12 9 0
+D4
+~
+~
+0 -1 65040 10 10 5
+D5
+~
+~
+0 -1 65038 10 10 5
+-1
+S
+
+#65040
+Top of the Great Stairs~
+You find yourself at the top of a grand staircase.  Below you the stairs
+lead down the mountian side to the open plane below.  Looking across the
+plane you see what appears to be a great battle that rages back and forth. 
+From this hight it almost looks like hundreds of ants in a great
+choreographed dance.  A small cobbled path leads to the north from here.
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 65041 10 10 5
+D5
+~
+~
+0 -1 65039 10 10 5
+-1
+S
+
+#65041
+Short Cobbled Path~
+This short cobbled path spans the distance between the grand staircase to
+the south and the massive stone structure to the north.  The stones that
+make up the path appear to be recently lain with little or no vegitation
+growing in the cracks.
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 65042 10 10 5
+D2
+~
+~
+0 -1 65040 10 10 5
+-1
+S
+
+#65042
+Before the Stronghold~
+The short cobbled path that leads from the staircase to the south ends
+here at the gate of a great stronghold.  The stone walls of the
+stronghold lead to the east and west.  Directly in front of you a great
+ironwood gate appears to be the only way to gain access to the stronghold. 
+Pitter patter of feet along the wall top is the only evidence of life
+within the stronghold walls.
+~
+no.mob
+need open gate acode
+~
+33030152 12 9 0
+D0
+~
+~
+130 -1 7225 10 10 5
+D2
+~
+~
+0 -1 65041 10 10 5
+-1
+S
+
+#65043
+Legendary Battlefield~
+-=Evil Army=-
+2718 - goblin warrior
+2719 - orc thug
+2720 - troll captian
+2721 - vyan spellweaver
+2766 - sorc (S'Jaz)
+2767 - thief (Tasard)
+2768 - cleric (Mizak)
+-=Good Army=-
+2723 - elven soldier
+2724 - ent magling
+2725 - halfling fighter
+2726 - dwarven champion
+2765 - warrior (Rakus)
+2764 - pallie (Isty)
+2753 - mage (Sythus)
+-=Neut Army=-
+2727 - human Merc
+2728 - lizard swashbuckler
+2729 - human enchanter
+2730 - lizard monk
+2747 - blade (Tam)
+2746 - monk (Qia)
+2744 - druid (Larkina)
+~
+~
+33030144 3 9 0
+2718 9 1509949540 3 0
+2719 9 1509949540 3 0
+2720 9 1509949540 3 0
+2721 9 1509949540 3 0
+2723 9 1509949540 3 0
+2724 9 1509949540 3 0
+2725 9 1509949540 3 0
+2726 9 1509949540 3 0
+2727 9 1509949540 3 0
+2728 9 1509949540 3 0
+2729 9 1509949540 3 0
+2730 9 1509949540 3 0
+2744 9 1509949540 3 0
+2746 9 1509949540 3 0
+2747 9 1509949540 3 0
+2753 9 1509949540 3 0
+2764 41 1509949540 3 0
+2765 9 1509949540 3 0
+2766 9 1509949540 3 0
+2767 9 1509949540 3 0
+2768 9 1509949540 3 0
+-1
+S
+
+#0
+

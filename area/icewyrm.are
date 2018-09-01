@@ -1,0 +1,3358 @@
+#M2_AREA
+2
+
+Ice Wyrms~
+AzerinII~
+ice wyrm~
+~
+~
+
+80 0
+0
+1
+#ROOMS
+
+#39753
+A Rent In The Wall~
+A jagged scar has rent through the frozen cavern, exposing a scree slope
+of ice-blocks and snow.  Roughly hewn steps lead downwards into the
+darkness a gusting wall of snow blinding any vision of what dangers lie
+below.  A terrible three-clawed scar has been gouged into the southern
+wall, a strong metallic aroma-hanging heavy in the air around the mark. 
+Westwards a short passageway leads out of the icy cave and back into the
+Everwinter Mountains.
+~
+[Azerin] extras added
+~
+167247885 11 9 0
+D1
+~
+~
+0 -1 39754 10 10 5
+D3
+~
+~
+0 -1 12476 10 10 5
+E
+jagged scar rent~
+A feral scent hangs on the still air around the rent, its source frozen
+green ichors that appears to have oozed from the creature that made the
+opening.
+~
+E
+steps downwards~
+Cut from ice and rock the rough steps would suit a giant sized creature,
+those of smaller stature forced to clamber down them with much more
+effort.
+~
+A
+leaving~
+~
+send_to_room( #snow, room );
+continue;
+~
+E
+snow~
+@bSnow flakes tumble down as they are disturbed by the movement.@n 
+~
+!
+3 0 2
+-1
+S
+
+#39754
+Cavern Of The Ice Wyrn - Ice Steps~
+The crumbling stairs end at a yawning maw of darkness, the edge shattered
+by many blows from a large bladed weapon. Entombed in the northern wall is
+the grotesque figure of a dead frost giant, it's internal organis spilling
+around it's ice-covered boots. With over a foot of ice between it and the
+stairs it appears to have been encased for many years.  A sinewy tail
+winds round the giants left leg, the white scales appearing vaguely
+draconic. Far below, a mountain of snow and ice fills the bottom of a
+wide ice cave, the tumbling sleet from above spiralling into its gloomy
+depths.
+~
+[Azerin] need jump/climb down code, ill need to look it up
+[Azerin] will need a pry boots acode, god im demanding!
+[Azerin] extras added
+[Azerin] --
+[Azerin] 7 [Azerin] -- Rbugs for codes
+[Azerin] Climb code requires mithril spikes or climb 10 and very lucky roll
+[Belgar] 'Ice wyrn -> ice wyrm
+~
+167247877 11 9 0
+D3
+~
+~
+0 -1 39753 10 10 5
+D5
+~
+~
+0 -1 39755 10 10 5
+E
+dead frost giant organs~
+The disembowelled giant has been contorted by the violence of its death
+and the imprisonment of ice.  Just visible through the distorting ice is
+the dismembered tail of a snow-hued reptile, probably the creature that
+slew this giant.
+~
+E
+snow-hued reptile~
+Embraced around the giant in its death throes the massive creature
+resembles a gigantic spined snake. Deep axe wounds mark its head and
+nape, perhaps the killing blows.
+~
+E
+boots~
+The giant-sized boots remain in reasonable condition, their encasement in
+ice hindering their decay.  A fair amount of internal viscera would be
+dragged out with them should one wish to procure the pair.
+~
+A
+climb~
+down~
+if( can_fly( ch ) ) {
+  act_tochar( #fly, ch, obj, mob, sight );
+  act_notchar( #r_fly, ch, obj, mob, sight );
+  transfer( ch, find_room( 39755 ) );
+  act_notchar( #f_arrive, ch, obj, mob, sight );
+  loop( followers ) {
+    if( !is_resting( rch ) ) {
+      ch = rch;
+      acode( room, 1 );
+    }
+  }
+  end;
+}
+if( has_obj( 2341, ch ) ) {
+  if( is_standing( ch ) ) {
+    act_tochar( #clid, ch, obj, mob, sight );
+    act_notchar( #clid2, ch, obj, mob, sight );
+    wait( 1 );
+    transfer( ch, find_room( 39755 ) );
+    act_notchar( #arrive, ch, obj, mob, sight );
+    loop( followers ) {
+      ch = rch;
+      if( is_standing( rch ) )
+        acode( room, 1 );
+    }
+  }
+}
+else if( find_skill( ch, climb ) == 10 ) {
+  if( is_standing( ch ) ) {
+    act_tochar( #clid3, ch, obj, mob, sight );
+    act_notchar( #clid4, ch, obj, mob, sight );
+    wait( 1 );
+    transfer( ch, find_room( 39755 ) );
+    act_notchar( #arrive, ch, obj, mob, sight );
+    loop( followers ) {
+      ch = rch;
+      if( is_standing( rch ) )
+        acode( room, 1 );
+    }
+  }
+}
+else {
+  act_tochar( #fall, ch, obj, mob, sight );
+  wait( 1 );
+  act_notchar( #fall2, ch, obj, mob, sight );
+  transfer( ch, find_room( 39757 ) );
+  act_notchar( #fallarrive, ch, obj, mob, sight );
+  damage( mob, ch, 25d10+325, physical, "falling off a cliff", "falling off a cliff" );
+  position( ch, 6 );
+}
+~
+E
+clid~
+Using using a set of climbing spikes, you carefully make your way down
+the icy cliff face.
+~
+E
+clid2~
+Sporting a chunky set of climbing spikes, $n steps up to the icy cliff
+face and begins the long climb to the bottom.
+~
+E
+clid3~
+With a confident grin you slip over the cliff edge and begin the
+treacherous climb completely unaided.
+~
+E
+clid4~
+Wearing a confident grin $n begins the treacherous climb completely
+unaided.
+~
+E
+fall~
+Filled with confidence in your climbing expertise you step up to the
+cliff face.  Suddenly you find yourself slipping and with a muffled curse
+you tumble over the edge!
+~
+E
+fall2~
+As $n steps bravely to the cliff face $s foot slips from under $m, and
+with a muffled curse and much flailing of arms $e goes tumbling over the
+edge!
+~
+E
+arrive~
+With a sigh of relief, $n climbs in from above.
+~
+E
+fallarrive~
+$n falls screaming in from above, landing in a crumpled heap.
+~
+E
+fly~
+You take flight, and make your way down the side of the nearly vertical
+cliff face.
+~
+E
+r_fly~
+$n takes flight, and heads down the side of the nearly vertical cliff
+face.
+~
+E
+f_arrive~
+$n has just flown down from above, having circumvented climbing the sheer
+cliff face.
+~
+!
+0 0 0
+A
+~
+~
+act_tochar( #nocli, ch );
+~
+E
+nocli~
+The cliff looks too steep, perhaps try climbing?
+~
+!
+3 0 32
+-1
+S
+
+#39755
+Cavern Of The Ice Wyrn - Ice Cliff~
+Although rediculously difficult it is not impossible to climb the
+icy-coated wall.  A scattering of handholds allows the very skilled or
+lucky to scramble up or down the cliff.  Below, the climb does not appear
+to improve, the same icy rock and near invisible handholds waiting for a
+would-be climber.  Above spreads the remains of a stairwell, unfotunately
+its shattered remains are of little use for anyone wishing for an easier
+passage.
+~
+blank connecting room
+[Azerin] -- Rbugs for codes
+[Azerin] Climb down requires mithril spikes or climb 10
+[Azerin] check is flying
+[Azerin] extra done
+~
+167247885 11 9 0
+D4
+~
+~
+0 -1 39754 10 10 5
+D5
+~
+~
+0 -1 39756 10 10 5
+E
+1 down wall~
+The jagged wall of ice spirals downwards into the darkness, if at all
+possible, it would be a highly dangerous climb.
+~
+A
+~
+~
+act_tochar( #noup, ch );
+~
+E
+noup~
+Looks too steep, perhaps try climbing?
+~
+!
+3 0 48
+A
+climb~
+up~
+if( can_fly( ch ) ) {
+  act_tochar( #fly, ch, obj, mob, sight );
+  act_notchar( #r_fly, ch, obj, mob, sight );
+  transfer( ch, find_room( 39754 ) );
+  act_notchar( #f_arrive, ch, obj, mob, sight );
+  loop( followers ) {
+    if( !is_resting( rch ) ) {
+      ch = rch;
+      acode( room, 2 );
+    }
+  }
+  end;
+}
+if( find_skill( ch, climb ) == 10 ) {
+  act_tochar( #cli1, ch, obj, mob, sight );
+  act_notchar( #cli2, ch, obj, mob, sight );
+  wait( 1 );
+  transfer( ch, find_room( 39754 ) );
+  act_notchar( #arrive, ch, obj, mob, sight );
+  loop( followers ) {
+    ch = rch;
+    if( is_standing( rch ) )
+      acode( room, 2 );
+  }
+}
+else if( has_obj( 2341, ch ) ) {
+  act_tochar( #cli1, ch, obj, mob, sight );
+  act_notchar( #cli2, ch, obj, mob, sight );
+  wait( 1 );
+  transfer( ch, find_room( 39754 ) );
+  act_notchar( #arrive, ch, obj, mob, sight );
+  loop( followers ) {
+    ch = rch;
+    if( is_standing( rch ) )
+      acode( room, 2 );
+  }
+}
+~
+E
+cli1~
+You continue your climb up the cliff.
+~
+E
+cli2~
+$n continues $s climb up the cliff.
+~
+E
+arrive~
+$n climbs in from below, breathing heavily with exertion.
+~
+E
+fly~
+You take flight, and make your way up the side of the nearly verticle
+cliff face.
+~
+E
+r_fly~
+$n takes flight, and heads up the side of the nearly vertical cliff face.
+~
+E
+f_arrive~
+$n has just flown up from below, circumventing climbing the sheer cliff
+face.
+~
+!
+0 0 0
+A
+climb~
+down~
+if( can_fly( ch ) ) {
+  act_tochar( #fly, ch, obj, mob, sight );
+  act_notchar( #r_fly, ch, obj, mob, sight );
+  transfer( ch, find_room( 39756 ) );
+  act_notchar( #f_arrive, ch, obj, mob, sight );
+  loop( followers ) {
+    if( !is_resting( rch ) ) {
+      ch = rch;
+      acode( room, 3 );
+    }
+  }
+  end;
+}
+if( find_skill( ch, climb ) == 10 ) {
+  act_tochar( #cli1, ch, obj, mob, sight );
+  act_notchar( #cli2, ch, obj, mob, sight );
+  wait( 1 );
+  transfer( ch, find_room( 39756 ) );
+  act_notchar( #arrive, ch, obj, mob, sight );
+  loop( followers ) {
+    ch = rch;
+    if( is_standing( rch ) )
+      acode( room, 3 );
+  }
+}
+else if( has_obj( 2341, ch ) ) {
+  act_tochar( #cli1, ch, obj, mob, sight );
+  act_notchar( #cli2, ch, obj, mob, sight );
+  wait( 1 );
+  transfer( ch, find_room( 39756 ) );
+  act_notchar( #arrive, ch, obj, mob, sight );
+  loop( followers ) {
+    ch = rch;
+    if( is_standing( rch ) )
+      acode( room, 3 );
+  }
+}
+~
+E
+cli1~
+You continue your climb down the cliff.
+~
+E
+cli2~
+$n continues $s climb down the cliff.
+~
+E
+arrive~
+With a sigh of relief, $n climbs in from above.
+~
+E
+fly~
+You take flight, and make your way down the side of the nearly verticle
+cliff face.
+~
+E
+r_fly~
+$n takes flight, and heads up the side of the nearly vertical cliff face.
+~
+E
+f_arrive~
+$n has just flown up from below, having circumvented climbing the sheer
+cliff face.
+~
+!
+0 0 0
+-1
+S
+
+#39756
+Cavern Of The Ice Wyrm - Ice Cliff~
+The shattered remains of broken steps jut from the frozen wall, their
+battered and chipped surfaces ready to fall at any time. Ripples of ice
+cover the surface; their edges sharp and gleaming like a polished blade.
+Below, the floor is just visible in the distance, covered in fissures and
+ice chunks it appears as unwelcoming as the climb has been.
+~
+blank connecting room
+[Azerin] Climb down requires mithril spikes or climb 10
+[Azerin] extra done
+~
+167247885 11 9 0
+D4
+~
+~
+0 -1 39755 10 10 5
+D5
+~
+~
+0 -1 39757 10 10 5
+E
+1 down~
+Below, the broken ice and snow spreads out into a sizable cave, a shadowy
+movement flickering in from the south.
+~
+A
+climb~
+up~
+if( can_fly( ch ) ) {
+  act_tochar( #fly, ch, obj, mob, sight );
+  act_notchar( #r_fly, ch, obj, mob, sight );
+  transfer( ch, find_room( 39755 ) );
+  act_notchar( #f_arrive, ch, obj, mob, sight );
+  loop( followers ) {
+    if( !is_resting( rch ) ) {
+      ch = rch;
+      acode( room, 1 );
+    }
+  }
+  end;
+}
+if( find_skill( ch, climb ) == 10 ) {
+  act_tochar( #cli1, ch, obj, mob, sight );
+  act_notchar( #cli2, ch, obj, mob, sight );
+  wait( 1 );
+  transfer( ch, find_room( 39755 ) );
+  act_notchar( #arrive, ch, obj, mob, sight );
+  loop( followers ) {
+    ch = rch;
+    if( is_standing( rch ) )
+      acode( room, 1 );
+  }
+}
+else if( has_obj( 2341, ch ) ) {
+  act_tochar( #cli1, ch, obj, mob, sight );
+  act_notchar( #cli2, ch, obj, mob, sight );
+  wait( 1 );
+  transfer( ch, find_room( 39755 ) );
+  act_notchar( #arrive, ch, obj, mob, sight );
+  loop( followers ) {
+    ch = rch;
+    if( is_standing( rch ) )
+      acode( room, 1 );
+  }
+}
+~
+E
+cli1~
+You continue your climb up the icy cliff.
+~
+E
+cli2~
+$n continues $s climb up the icy cliff.
+~
+E
+arrive~
+$n climbs in from below, breathing heavily with exertion.
+~
+E
+fly~
+You take flight, and make your way up the side of the nearly verticle
+cliff face.
+~
+E
+r_fly~
+$n takes flight, and heads up the side of the nearly vertical cliff face.
+~
+E
+f_arrive~
+$n has just flown up from below, circumventing climbing the sheer cliff
+face.
+~
+!
+0 0 0
+A
+climb~
+down~
+if( can_fly( ch ) ) {
+  act_tochar( #fly, ch, obj, mob, sight );
+  act_notchar( #r_fly, ch, obj, mob, sight );
+  transfer( ch, find_room( 39757 ) );
+  act_notchar( #f_arrive, ch, obj, mob, sight );
+  loop( followers ) {
+    if( !is_resting( rch ) ) {
+      ch = rch;
+      acode( room, 2 );
+    }
+  }
+  end;
+}
+if( find_skill( ch, climb ) == 10 ) {
+  act_tochar( #cli1, ch, obj, mob, sight );
+  act_notchar( #cli2, ch, obj, mob, sight );
+  wait( 1 );
+  transfer( ch, find_room( 39757 ) );
+  act_notchar( #arrive, ch, obj, mob, sight );
+  loop( followers ) {
+    ch = rch;
+    if( is_standing( rch ) )
+      acode( room, 2 );
+  }
+}
+if( has_obj( 2341, ch ) ) {
+  act_tochar( #cli1, ch, obj, mob, sight );
+  act_notchar( #cli2, ch, obj, mob, sight );
+  wait( 1 );
+  transfer( ch, find_room( 39757 ) );
+  act_notchar( #arrive, ch, obj, mob, sight );
+  loop( followers ) {
+    ch = rch;
+    if( is_standing( rch ) )
+      acode( room, 2 );
+  }
+}
+~
+E
+cli1~
+You continue your climb down the icy cliff.
+~
+E
+cli2~
+$n continues $s climb down the icy cliff.
+~
+E
+arrive~
+With a sigh of relief, $n climbs in from above.
+~
+E
+fly~
+You take flight, and make your way down the side of the nearly verticle
+cliff face.
+~
+E
+r_fly~
+$n takes flight, and heads down the side of the nearly vertical cliff
+face.
+~
+E
+f_arrive~
+$n has just flown down from above, having circumvented climbing the sheer
+cliff face.
+~
+!
+0 0 0
+A
+~
+~
+act_tochar( #noup, ch );
+~
+E
+noup~
+The cliff looks too steep, perhaps try climbing?
+~
+!
+3 0 48
+-1
+S
+
+#39757
+Cavern Of The Ice Wyrm - Before the Ice Steps.~
+Gleaming hills of snow loom across the icy floor of the massive cavern,
+some of the snowy slopes reaching over fifty feet in height and at least
+three times as wide.  Deep fissures riddle the floor making for a
+difficult and dangerous journey across the glacial cave.  Hundred-foot
+pillars rise to the south, their sleek sides flicking with light as if
+they had captured thousands of fireflies within their folds.  The remnant
+of a stone stairwell winds up the western wall, its shattered steps
+ending about thirty feet from the floor.
+~
+[Azerin] extras done
+[Azerin] fall does 500dam
+[Azerin] should keep some lowbies out
+[Azerin] or at least its a newbie weightloss program with great results
+[Azerin] this room not safe
+~
+704118789 11 9 0
+D2
+~
+~
+0 -1 39758 10 10 5
+D4
+~
+~
+0 -1 39756 10 10 5
+E
+fissure~
+The jagged rents have been torn across the floor by some unknown force,
+perhaps an earthquake or glacial movement.  Spires of rock thrust through
+some of the cracks, their rough surfaces cloaked in gleaming ice.
+~
+E
+stone stairwell~
+Crafted by the previous inhabitants, the stone stairwell would have
+allowed access to a ledge about fifty feet above the icy ground.  Carved
+into the ice-clad stone are crossed battleaxes.
+~
+A
+~
+~
+act_tochar( #noup, ch );
+~
+E
+noup~
+Looks too steep, perhaps try climbing.
+~
+!
+3 0 16
+A
+climb~
+up~
+if( can_fly( ch ) ) {
+  act_tochar( #fly, ch, obj, mob, sight );
+  act_notchar( #r_fly, ch, obj, mob, sight );
+  transfer( ch, find_room( 39756 ) );
+  act_notchar( #f_arrive, ch, obj, mob, sight );
+  loop( followers ) {
+    if( !is_resting( rch ) ) {
+      ch = rch;
+      acode( room, 2 );
+    }
+  }
+  end;
+}
+if( find_skill( ch, climb ) == 10 ) {
+  act_tochar( #cli, ch, obj, mob, sight );
+  act_notchar( #cli2, ch, obj, mob, sight );
+  wait( 1 );
+  transfer( ch, find_room( 39756 ) );
+  act_notchar( #arrive, ch, obj, mob, sight );
+  loop( followers ) {
+    ch = rch;
+    if( is_standing( rch ) )
+      acode( room, 2 );
+  }
+}
+else
+if( has_obj( 2341, ch ) ) {
+  act_tochar( #spike, ch, obj, mob, sight );
+  act_notchar( #spike2, ch, obj, mob, sight );
+  wait( 1 );
+  transfer( ch, find_room( 39756 ) );
+  act_notchar( #arrive, ch, obj, mob, sight );
+  loop( followers ) {
+    ch = rch;
+    if( is_standing( rch ) )
+      acode( room, 2 );
+  }
+}
+else {
+  act_tochar( #slip, ch, obj, mob, sight );
+  act_notchar( #slip2, ch, obj, mob, sight );
+  position( ch, 6 );
+}
+~
+E
+cli~
+Finding enough hand and footholes to suit your consumate climbing skill,
+you begin the long climb up the icy cliff face.
+~
+E
+cli2~
+With consumate skill, $n begins to climb up the nearly verticle cliff face.
+~
+E
+spike~
+With the aid of a set of climbing spikes, you begin the long climb up the
+icy cliff face.
+~
+E
+spike2~
+Using a set of climbing spikes, $n begins to haul $mself up the icy cliff
+face.
+~
+E
+slip~
+Attemping to scale the cliff without aid, your foot slips and you land
+heavily on your rump.
+~
+E
+slip2~
+You watch with ammusment as $n attempts to climb the cliff unaided, only
+to slip and fall heavily on $s rump!
+~
+E
+arrive~
+$n climbs in from below, breathing heavily with exertion.
+~
+E
+fly~
+You take flight, and make your way up the side of the nearly verticle
+cliff face.
+~
+E
+r_fly~
+$n takes flight, and heads up the side of the nearly vertical cliff face.
+~
+E
+f_arrive~
+$n has just flown up from below, circumventing climbing the sheer cliff
+face.
+~
+!
+0 0 0
+2586 9 1509949540 3 0
+-1
+S
+
+#39758
+Cavern Of The Ice Wyrm - Winter Cloaked Landscape~
+Blocks of ice the size of small buildings have been shattered across the
+caverns floor, a collection of the frozen chunks scrapped up into a mound
+in the room's center forming a frosty nest.  Bits of gnawed giant bones
+lie scattered throughout the chamber, a dense layer of frost and snow
+coating much of the remains.  Wispy tendrils of mist form swirling clouds
+over the floor.
+~
+[Azerin] extras done
+[Azerin] search nest acode
+[Azerin] head west without getting amulet from dwarf and lich sends you off to bound point
+[Azerin] so need to check if lich popped and if have amulet
+[Azerin] wall of force blocks lich
+[Azerin] -- rbug for coders
+[Azerin] amulet is gained from mob 2590, as is quest for lich head, giant head
+[Azerin] will need to check if has amulet to get past the wall of force
+[Azerin] when going west "a mysterious force blocks your way, the air crackling with magic"
+[Azerin] Once past wall of force amulet is destroyed, no fleeing from that battle
+[Eccles] acode done, char requires ammy to move west...this may block followers if they dont also have an ammy...
+~
+167247877 11 9 0
+D0
+~
+~
+0 -1 39757 10 10 5
+D1
+~
+~
+0 -1 39760 10 10 5
+D3
+~
+~
+0 -1 39759 10 10 5
+E
+nest blocks ice~
+The massive chunks of ice and hard packed snow have been scraped into a
+mound.  Bits of broken metal, bones and stone dot the nest, perhaps the
+remains of the occupants last meal.
+~
+E
+giant bones~
+The huge bones have been split and gnawed upon in an effort to suck the
+juicy marrow from their core.
+~
+A
+~
+~
+if( has_obj( 4063, ch ) ) {
+  act_tochar( #passwall, ch );
+  act_notchar( #passwall2, ch );
+  junk_obj( has_obj( 4063, ch ), 1 );
+  continue;
+}
+else {
+  act_tochar( #nopass, ch );
+  act_notchar( #nopass2, ch );
+  rch = leader( ch );
+  if( rch != ch )
+    act_tochar( #nofollow, rch, obj, ch );
+  end;
+}
+~
+E
+passwall~
+@GYou feel a slight tingle slide over your skin as you push through the
+barrier to the west.
+~
+E
+passwall2~
+@GYou see $n push through the magic barrier to the west.
+~
+E
+nopass~
+@GTrying to move west you bounce off a mysterious barrier, the air
+crackling with magic energy.
+~
+E
+nopass2~
+@GTrying to move west, $n bounces of a mysterious barrier crackling with magic.
+~
+E
+nofollow~
+$N is blocked by the barrier and unable to follow you.
+~
+!
+3 0 8
+2586 9 1509949540 3 0
+2586 9 1509949480 3 0
+2587 9 1509949465 3 0
+2588 9 1509949450 3 0
+-1
+S
+
+#39759
+Cavern Of The Ice Wyrm - Entombed~
+Ice and snow encircle the chamber with walls of bitter cold.  A single
+archway has been torn into it, allowing the brave to wander onwards. 
+Giant bones and tattered armor lies across the floor, much of the
+remnants partially entombed in the ice floor.  Overhead a fissure lets
+through filtered light, whisps of mist tendrils dancing within the
+illumination.
+~
+[Azerin] acode - get metal - the metal is fused within the ice and unreachable.
+[Azerin] lich reset
+[Azerin] need an acode, if lich pops load his pet
+[Azerin] extra done
+[Azerin] on enter amulet destroyed and wall of force back
+[Eccles] metal acode complete
+[Esh] Lich is hitting the summoned dead with the rotting flesh attack.
+~
+167247885 11 9 0
+D1
+~
+~
+0 -1 39758 10 10 5
+E
+giant bones tattered armor~
+Torn apart during or after their death, the cracked and splintered
+remains of at least ten frost giants lie across the snowy floor.  Bits of
+iron and steel lie froze in the ice, the bitter cold preventing rust from
+touching much of the metal.
+~
+A
+get~
+metal steel iron~
+act_tochar( #noget, ch );
+~
+E
+noget~
+The metal is fused within the ice and unreachable.
+~
+!
+0 0 0
+2584 9 1509949540 3 0
+2585 9 1509949540 3 0
+-1
+S
+
+#39760
+Cavern Of The Ice Wyrm - Wind Forged Chamber~
+Howling winds have shaped the cavern into a swirling structure of
+honeycomb walls and vaulted ceiling; the apex of the chamber split with
+a jagged seam that oozes a soft light across the high roof.  Underfoot,
+the floor is a slick layer of ice, banks of snow gathered around their
+edges.  Snow billows in from the rent in the southern wall, the heavy
+fall forming a curtain of white.
+~
+[Azerin] need random
+[Azerin] extra done
+~
+167247877 11 9 0
+D1
+~
+~
+0 -1 39762 10 10 5
+D2
+~
+~
+0 -1 39761 10 10 5
+D3
+~
+~
+0 -1 39758 10 10 5
+E
+honeycomb walls~
+Carved by the blustering winds, the soft ice has been warped into a
+honeycomb structure like the hive of a bee.  Strangely hexagonal the
+walls raise the wind into a melodious tune as it whistles by them.
+~
+2586 9 1509949540 3 0
+2586 9 1509949480 3 0
+2587 9 1509949465 3 0
+2588 9 1509949450 3 0
+-1
+S
+
+#39761
+Caverns Of The Ice Wyrm - Stairs of ice~
+A plateau of ice and snow banks around the slick edge of a deep valley. 
+The blue-white blanket of winter has been thrown across the landscape;
+its heavy mantle obscures the underlining dwarven ruins.  A zigzag of
+stairs descends some way into the ravine before disappearing into an
+icicle-lined cavern.
+~
+[Azerin] west branch
+[Azerin] leaving decend the spiral stairs
+[Azerin] note for coders
+[Azerin] climb check down, or slip and be sitting in room below - vn 39781
+[Azerin] extra done
+[Eccles] climb down acode done
+~
+167247873 5 9 0
+D0
+~
+~
+0 -1 39760 10 10 5
+D5
+~
+~
+0 -1 39781 10 10 5
+E
+dwarven ruins~
+The ancient stone work has been entombed by the ice, the bitter cold of
+the caverns unnatural in its ferocity.  Dwarven crafts-person runes mark
+the center of each of the flagstones, proudly declaring their masters
+work.
+~
+A
+climb~
+down~
+if( can_fly( ch ) ) {
+  send_to_char( #fly, ch );
+  act_notchar( #r_fly, ch );
+  transfer( ch, find_room( 39781 ) );
+  act_notchar( #f_arrive, ch );
+  loop( followers ) {
+    ch = rch;
+    acode( room, 1 );
+  }
+  end;
+}
+if( find_skill( ch, climb ) >= 7 ) {
+  if( is_standing( ch ) ) {
+    act_tochar( #clid, ch );
+    wait( 1 );
+    transfer( ch, find_room( 39781 ) );
+    act_notchar( #arrive, ch, obj, mob, sight );
+    loop( followers ) {
+      ch = rch;
+      acode( room, 1 );
+    }
+  }
+}
+else {
+  act_tochar( #fall, ch );
+  act_notchar( #fall2, ch );
+  wait( 1 );
+  position( ch, 6 );
+  transfer( ch, find_room( 39781 ) );
+  act_notchar( #fallarrive, ch, obj, mob, sight );
+}
+~
+E
+clid~
+Finding enough handholds, you scramble down the slope.
+~
+E
+fall~
+Attempting the difficult climb, your foot slips and you tumble down the
+slope.
+~
+E
+fall2~
+As $n begins the difficult climb, $s foot slips and $e tumbles over the
+edge.
+~
+E
+arrive~
+$n scrambles down the slope from above.
+~
+E
+fallarrive~
+With a yelp, $n tumbles down the slope from above.
+~
+E
+fly~
+You fly downward over the edge of the steep slope.
+~
+E
+r_fly~
+$n flys down, heading down the steep slope.
+~
+E
+f_arrive~
+$n arrives from above, having flown down the steep slope.
+~
+E
+no_mount~
+You cannot traverse the steep slope on a mount.
+~
+!
+18 0 0
+A
+down~
+~
+act_tochar( #nomove, ch );
+~
+E
+nomove~
+Looks as though you might have to try climbing.
+~
+!
+0 0 0
+-1
+S
+
+#39762
+Cavern Of The Ice Wyrm - Black Ice~
+Shards of jet-black stone rise from their icy entombment to form pillars
+that hold aloft the vaulted chamber's roof. The ice in close proximity to
+the stones appears to have absorbed some of the stygian color, turning to
+a shadowy hue.  Barely perceivable through the ice sheet are stonework
+walls and floor.
+~
+[Azerin] east branch
+[Azerin] extra done
+~
+167247877 11 9 0
+D0
+~
+~
+0 -1 39763 10 10 5
+D1
+~
+~
+0 -1 39764 10 10 5
+D3
+~
+~
+0 -1 39760 10 10 5
+E
+ice stonework floor walls dwarf dwarves~
+The frozen corpses of dwarves in armor lie encased in the stone and ice
+that make up the chamber's floor, their grim remains melted into the rock
+by some hideous form of magic.
+~
+2586 9 1509949445 3 0
+2588 9 1509949540 3 0
+-1
+S
+
+#39763
+Cavern Of The Ice Wrym - Graveyard in the Snow Mounds~
+Frost-coated giant bones spread across the floor and against the icy
+walls of the cavern, many of the remains gnawed upon.  Splinted armor and
+shattered weapons lie in mounds around the corpses.  Against the northern
+wall a giant skull has been carved into a crude throne, the frontal bone
+removed and the gap draped with steel blue scales.
+~
+[Azerin] add frost giant lord
+[Azerin] twist tooth to open stairs down into dwarven city - when i do the dwarven city
+[Azerin] atm twist, get, pry tooth says "although it gives a bit, the tooth fails to come free."
+[Azerin] extras done
+[Azerin] get cloak, % to get a torn section of scale.
+[Eccles] what %?, and I cant find the scale you want to load here in the object files
+[Azerin] 5% pop of vn 4064 :)
+[Eccles] tooth acode done
+[Eccles] cloak acode done, although there seems to be no cloak in room desc so might be a tough one for the plebs to work out.
+~
+167247877 11 9 0
+D2
+~
+~
+0 -1 39762 10 10 5
+E
+frost giant bones~
+Hacked by hundreds of axe blows to their shins and feet, the remains
+appear to have died in a bloody battle with the dwarven defenders.
+~
+E
+armor weapons~
+Frozen into a solid mass the dwarven weapons and armor have rusted untill
+unuseable.
+~
+E
+giant skull throne~
+The mid section of the frontal bone has been hacked out to form a crude
+chair, perhaps a dwarf's revenge upon the giant attackers.  A scaly blue
+cloak has been draped across the bones, its surface coated with ice.
+~
+A
+twist, get, pry~
+tooth~
+act_tochar( #nogood, ch );
+~
+E
+nogood~
+@CAlthough it gives a bit, the tooth fails to come free.
+~
+!
+0 0 0
+A
+get~
+cloak~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  i = random( 1, 20 );
+  if( i == 20 ) {
+    act_tochar( #gotit, ch );
+    act_notchar( #gotit2, ch );
+    obj_to_char( oload( 4064 ), ch );
+  }
+  else {
+    act_tochar( #nogo, ch );
+    act_notchar( #nogo2, ch );
+  }
+}
+else
+  act_tochar( #null, ch );
+~
+E
+gotit~
+In attempting to get the cloak, you manage to tear off a small piece of
+fabric.
+~
+E
+gotit2~
+$n grabs at the cloak and tears off a small piece of fabric.
+~
+E
+nogo~
+You reach for the cloak but it falls apart.
+~
+E
+nogo2~
+$n grabs at the cloak but it falls apart in $s hands.
+~
+E
+null~
+You see no cloak here to try and get.
+~
+!
+0 0 0
+2587 9 1509949540 3 0
+2587 9 1509949490 3 0
+2587 9 1509949470 3 0
+2586 9 1509949540 3 0
+2591 9 1509949520 3 0
+2595 8 1509954560 3 0
+-1
+S
+
+#39764
+Cavern Of The Ice Wyrm - Blue Flame Forge~
+Sitting in the chamber's heart is a fifteen-foot wide forge, a massive
+brass flute hanging above its now snow-covered coals.  Patterns of frost
+dance across the metal and stone, their icy-white crystals sparkling like
+clusters of diamonds.  Stalactites and stalagmites of ice rise and fall
+throughout the cavern, some of the older ones meet in the middle to form
+hourglass-shaped pillars.  Around the walls are snow-covered empty weapon
+racks and armor stands.
+~
+[Azerin] forge room
+[Azerin] yuck yuck
+[Azerin] this forge was to melt frost-coated armor etc, not sure if it should have a smith(tm)
+[Azerin] extra done
+~
+167247877 11 9 0
+D1
+~
+~
+0 -1 39765 10 10 5
+D3
+~
+~
+0 -1 39762 10 10 5
+E
+empty weapon racks armor stands~
+The stone racks and stands would have held enough weapons and armor to
+equip a sizable force.  Now all they hold is snow and ice, everything
+else stripped by looters or perhaps at the dwarven guard's last battle.
+~
+E
+forge~
+Mounds of snow pile up into the stone-ringed forge, its coals having long
+turned cold through the lack of use.
+~
+2586 9 1509949540 3 0
+1602 17 1509949540 -2 0
+-1
+S
+
+#39765
+Cavern Of The Ice Wyrm - Domed Chamber~
+Ice clings to the stone-worked walls and floor of the domed chamber, the
+fractured ice spreading like a spider's web.  The remains of a spiral
+staircase descend in the room's center, the steps covered in rubble and
+chunks of ice and snow.  The frost-coated remains of dwarven warriors lie
+scattered amongst the debris, their torn and rent armor indicating they
+died in battle.  Beyond their frozen corpses a simple stone door has been
+set in the wall, its outer edges coated in ice.
+~
+[Azerin] search loads 2 ice-dwarfs
+[Azerin] extra done
+[Eccles] search what? whats the mob number of durfy you want to load here?
+[Azerin] mob number 2589
+[Azerin] "As you rumage about the remains some of them begin to rise!"
+[Eccles] search acode complete
+~
+167247877 11 9 0
+D1
+stone door~
+~
+131 -1 39766 10 10 5
+D2
+~
+~
+0 -1 39767 10 10 5
+D3
+~
+~
+0 -1 39764 10 10 5
+E
+staircase rubble~
+The buried stairwell descends a few feet down before becoming completly
+sealed by heavy rocks, some of the stones showing burn marks as if a
+massive explostion closed the tunnel.
+~
+E
+dwarven warriors armor~
+Entombed in ice, the brave dwarven defenders died trying to halt the flow
+of invaders into their cold halls.  Their broken weapons and rent armor
+testament to the ferocity of the war.
+~
+A
+search~
+debris, dwarven, warriors, remains~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #supprise, ch );
+  act_notchar( #supprise2, ch );
+  mob = mload( 2589, room );
+  mload( 2589, room );
+  init_attack( mob, ch );
+}
+else
+  act_tochar( #rummage, ch );
+~
+E
+supprise~
+@YAs you rumage about some of the dwarven remains begin to rise!
+~
+E
+supprise2~
+@YAs $n rumages about some of the dwarven remains begin to rise!
+~
+E
+rummage~
+You rumage around but find nothing interesting.
+~
+!
+0 0 0
+2586 9 1509949495 3 0
+-1
+S
+
+#39766
+Cavern Of The Ice Wyrm - Gate To Below~
+Pillars of frosted stone rise up from squat bases to support the low
+ceiling of the circular chamber.  An arched doorway thrusts from the
+eastern wall, each stone over a yard square.  The door they frame has
+been crafted from burnished-iron with fist-sized rivets covering its
+surface.  A single [Y] rune has been carved into the doors keystone.  A
+smaller doorway leads westwards from the room, the snow-coated floor
+covered in strange reptilian footprints.
+~
+[Azerin] east isnt openeable its another way into durf city, yeah ill get to it one day
+[Azerin] extra added
+[Azerin] extra done
+[Azerin] east is to the dungeon of howling stones.
+~
+167247877 11 5 0
+D1
+runic door~
+~
+471 -1 39785 10 10 5
+D3
+stone door~
+~
+131 -1 39765 10 10 5
+E
+reptilian footprints~
+Human-sized, yet ending in obviously clawed toes, the footprints lead up
+to and then away from the door, the heavy snow already beginning to
+obscure them.
+~
+-1
+S
+
+#39767
+Cavern Of The Ice Wyrm - Icefall~
+The chamber spreads out in a crescent from the entrance, encircling a
+massive ravine that carves through most of the room.  Cascading down the
+southern wall is a sizable waterfall of ice, snow and slush - the river
+barely able to keep running under the arctic conditions.  A single span
+bridge braves the maw to the east, the frost-coated stones gleaming with
+ice and freezing dew.  Guarding the mouth of the fall are two crouched
+dwarven statues, their battleaxes draped low.
+~
+[Azerin] extra done
+~
+167247877 11 9 0
+D0
+~
+~
+0 -1 39765 10 10 5
+D1
+~
+~
+0 -1 39768 10 10 5
+E
+crouched dwarven statues battleaxes~
+Their backs bent as if under a heavy load, the dwarven statues stare out
+with typical stout expressions: resistance to their burden without falter. 
+Their frost-coated axes are raised ready for battle, the stone weapons
+gleaming in the light.
+~
+-1
+S
+
+#39768
+Caverns Of The Ice Wyrm - Kings Chamber~
+Four dwarven heroes have been carved into the squat pillars of the
+circular chamber.  Frost and snow lie piled beneath their armored feet,
+the ice crystals sparkling in the light cast from spluttering torches set
+in high sconces.  A rent in the southern wall looks out upon a spiralling
+drop, hundreds, if not thousands, of feet into the icy darkness.  The
+remnants of a stone bridge cling to its broken edge.  An intact bridge of
+similar construction spans westwards, the roar and rumble of fast flowing
+water echoing from the opening.
+~
+[Azerin] extra done
+~
+167247877 11 5 0
+D1
+~
+~
+0 -1 39769 10 10 5
+D2
+~
+~
+0 -1 39770 10 10 5
+D3
+~
+~
+0 -1 39767 10 10 5
+E
+dwarven heroes squat pillars~
+With axes in hand and bristling beards the dwarven honor guard watch over
+the kings chamber.  A rampant bear has been etched into their stone
+breastplates, three crowns carved above its snarling mouth.
+~
+1602 17 1509949540 -2 0
+-1
+S
+
+#39769
+Caverns Of The Ice Wyrm - Dry Cave~
+Strangely devoid of any ice or snow, the cavern appears to have been a
+natural cave expanded by the dwarfs into a sizable room.  Carved pillars
+rise up in two rows down the sides of the chamber, the faces of dwarven
+woman featuring on many of them.  A simple stone throne rests against the
+eastern wall, the carved head of a dragon in flight lording over it.
+~
+[Azerin] extra added
+[Azerin] need a sit throne code
+[Azerin] if dwarf bless if not curse
+[Azerin] safe
+[Azerin] extra done
+[Eccles] sit throne acode added, adata needs to be added
+[Eccles] adata complete
+~
+-369491953 11 5 0
+D3
+~
+~
+0 -1 39768 10 10 5
+E
+throne dragon~
+Crafted from blocks of orange stone, the throne has been designed to fit
+the size and bulk of an armored dwarf.  The draconic head looks out from
+the top of the throne, its blood-red eyes made from clusters of rough
+gems.
+~
+A
+sit~
+throne~
+if( race( ch ) == dwarf ) {
+  act_tochar( #bless, ch );
+  act_notchar( #2bless, ch );
+  do_spell( bless, ch, ch );
+}
+else {
+  act_tochar( #curse, ch );
+  act_notchar( #2curse, ch );
+  do_spell( curse, ch, ch );
+}
+~
+E
+bless~
+@CAs you sit on the throne a sense of well being suffuses your body, and
+for a split second you sense an approving and benevolent force touch
+minds with you.
+~
+E
+2bless~
+@C$n sits on the throne, and for a brief moment is surrounded by an
+ethereal glow.
+~
+E
+curse~
+@RAs you sit on the throne you feel the touch of a not all together
+friendly force.
+~
+E
+2curse~
+@R$n sits on the throne, and for a brief moment is surrounded by a
+red-tinged glow.
+~
+!
+0 0 0
+-1
+S
+
+#39770
+Caverns Of The Ice Wyrm - Narrow Ledge~
+The crumbling edge of a deep fissure slices through the cavern to the
+south, the ice-clad ledge sending clumps of snow spiralling into the
+darkness below.  A stone bridge spans the maw, allowing the adventurous
+to continue onwards: half way across the three hundred foot structure
+rise two towers, a walkway interconnecting them above the bridge.
+~
+[Azerin] extra done
+~
+167247877 11 5 0
+D0
+~
+~
+0 -1 39768 10 10 5
+D1
+~
+~
+0 -1 39771 10 10 5
+E
+deep fissure~
+Perhaps formed by an earthquake or eruption, the deep fissure spirals
+below; the walls jagged and ready to tear apart anyone unfortunate to
+fall into their grasp.  A handful of slush-filled streams tumble down the
+caverns side, their splashing waters wearing smooth troughs through the
+gray stone.
+~
+-1
+S
+
+#39771
+Caverns Of The Ice Wyrm - Bridge Across The Fissure~
+A solid stone bridge reaches from the narrow ledge and arcs across the
+massive maw southwards; at its centre two bridge towers rise.  The deep
+darkness of the cavern prevents much sight beyond the dark towers. 
+Westwards a dangerously thin lip skirts around the massive cavern, its
+edge draped in slender icicles.
+~
+[Azerin] extra added
+[Azerin] extra done
+~
+167247877 11 5 0
+D2
+~
+~
+0 -1 39772 10 10 5
+D3
+~
+~
+0 -1 39770 10 10 5
+E
+towers bridge~
+Twin watchtowers guard the mid span of the huge bridge, their roofs
+capped with slender icicles.  Although hard to make out much detail from
+here, the towers appear to be connected by a high walkway.
+~
+1602 17 1509949540 -2 0
+-1
+S
+
+#39772
+Caverns Of The Ice Wyrm - Before the Bridge Towers~
+Guard towers rise to the left and right of the bridge, their smooth
+stones caked in layers of frost and draped with icicles.  Stout ironbound
+doors allow access to each tower, the leering head of a gargoyle watching
+from their arched keystones.  Overhead, a walkway connects the towers
+enabling guards to rain down attacks upon the bridge in times of war.
+~
+[Azerin] extra done
+~
+167247877 11 5 0
+D0
+~
+~
+0 -1 39771 10 10 5
+D1
+east tower door~
+~
+131 -1 39773 10 10 5
+D2
+~
+~
+0 -1 39778 10 10 5
+D3
+west tower door~
+~
+131 -1 39777 10 10 5
+E
+towers frost icicles~
+The tendrils of frost spread like a crystalline ivy across the black
+stones of the towers, despite the cold they appear to have made little
+impression upon the tower's surface.  The icicles dangle from the tower's
+roof and walkway like the vicious teeth of a fangorious dragon, a few of
+them reaching a foot in length.
+~
+-1
+S
+
+#39773
+Eastern Tower Ground Floor~
+The circular tower floor has been filled with a clutter of broken boxes,
+chests and crates.  Dented armor and weapons lie scattered amongst mounds
+of ice, the metal warped by the cold.  A frost-covered flight of stairs
+winds up into the second story, the stones worn by use.  An iron bound
+door has been set in the western wall, the remains of a solid wooden bar
+propped beside it.
+~
+[Azerin] leaving up
+[Estrella] extras done
+~
+167247877 11 5 0
+D3
+tower door~
+~
+131 -1 39772 10 10 5
+D4
+~
+~
+0 -1 39774 10 10 5
+E
+floor boxes crates chests~
+Shattered timbers and twisted lengths of metal lie scattered across the
+floor, accumulating in the less disturbed parts of the tower.  A few
+latches are still firmly locked although the chest to which they had been
+attached is now thoroughly broken.
+~
+E
+armor dented weapons mounds~
+Lost amidst the debris that clutters the floor, a myriad of arms and
+armor lay intermingled with the scraps of storage containers.  Badly
+dented and bent out of shape, the vast majority of these items would be
+of no more use in battle than a red herring.
+~
+2589 9 1509949540 3 0
+-1
+S
+
+#39774
+Eastern Tower Second Floor~
+Bits of broken armor and scattered ice-coated bones lie around the
+chamber, the corpses showing that a battle appears to have been fought
+between a reasonable force of dwarven soldiers and goblinoids.  A blanket
+of snow encases much of the bodies, burying them within its soft, cold
+embrace.  A rent and twisted door lies against an opening in the west, a
+frost coated walkway leading across to the western tower.  Set into the
+eastern wall is spiralling stairs that descend into the floor below.
+~
+[Azerin] leaving down
+[Estrella] extra done
+~
+167247877 11 5 0
+D3
+~
+~
+0 -1 39775 10 10 5
+D5
+~
+~
+0 -1 39773 10 10 5
+E
+bodies corpses~
+Preserved in ice, the mangled and twisted corpses lie at the feet of
+frozen warriors, still standing and brandishing ice-capped weapons.  It
+appears that the ice formed without warning, indicating that this is not
+the natural state of the dwarven hold.
+~
+-1
+S
+
+#39775
+Tower Walkway~
+Blustering winds stir the snow across the narrow walkway, the slippery
+surface made more difficult by the gusts.  The scattered bones of fallen
+orcs lie buried under a layer of ice, their bodies twisted in death. 
+Below, the bridge runs in a north-south direction; its surface mostly
+clear of winters grasp.
+~
+[Azerin] jump down to bridge
+[Eccles] acode done, adata to be completed
+[Eccles] adata complete
+~
+167247877 11 5 0
+D1
+~
+~
+0 -1 39774 10 10 5
+D3
+~
+~
+0 -1 39776 10 10 5
+E
+orcs bones fallen~
+The corpses that lie beneath the glass-like layer of ice have been
+perfectly preserved; if it weren't for the chill surroundings to put a
+damper on scene, it would have been possible to smell the blood from
+their gaping battle wounds and severed limbs.
+~
+A
+jump~
+down~
+act_tochar( #jump, ch );
+act_notchar( #2jump, ch );
+transfer( ch, find_room( 39772 ) );
+loop( followers ) {
+ch = rch;
+acode( room, 1 );
+}
+~
+E
+jump~
+Taking no small risk, you leap down to the bridge below.
+~
+E
+2jump~
+$n leaps bravely off the walkway.
+~
+!
+0 0 0
+-1
+S
+
+#39776
+Western Tower Second Floor~
+Sitting on a chest, surrounded by the shattered corpses of orcs, is a
+lone dwarven longbeard.  His steel plate has been torn and dented in
+countless places, pierced by spear and arrow.  The broken half of a runic
+axe lies with his death grip, the head of the once grand weapon missing. 
+A walkway leads from the carnage across the bridge, a deep layer of snow
+and ice covering the stones.
+~
+[Azerin] as long as duroth is here then cant search chest
+[Azerin] if hes killed then chest is empty
+[Azerin] if quest to kill lich is done then chest can be looted with stuff
+[Azerin] but only reset good chest when lich dies
+[Azerin] need temp pflag to say done quest this repop or something
+[Azerin] to get half for axe need head of lich and head of lord giant.
+[Azerin] =================
+[Azerin] leaving down
+[Azerin] extra done
+[Eccles] acode at the moment stops char from messing with chest as long as durdoth is in the room, not sure about temp pflags etc.
+[Azerin] axe half is 3945
+[Azerin] made safe for ease of building
+[Azerin] amulet is 4116
+~
+167247879 11 5 0
+D1
+~
+~
+0 -1 39775 10 10 5
+D5
+~
+~
+0 -1 39777 10 10 5
+E
+shattered corpse orcs~
+The orcs paid a heavy toll for the dwarven hero's death; at least thirty
+black skinned creatures lie decayed at his heavy booted feet.
+~
+E
+runic axe dwarven dwarf longbeard~
+The mighty dwarven warrior has been impaled by countless arrows and
+vicious hack marks cut deep into his skin, leaving his once proud armor
+rent and ruined.  A long frost-coated beard still falls from his skeletal
+chin, the red hairs waving slightly in a cool breeze.  The remains of an
+axe is gripped firming at his death, the fine weapons head nowhere to be
+seen.
+~
+A
+2 pick 2 open inspect untrap~
+chest, frost-coated, steel~
+mob = mob_in_room( 2590, room );
+if( mob ) {
+  act_tochar( #dude, ch, obj, mob );
+}
+else
+  continue;
+~
+E
+dude~
+The chest is being guarded rather closely by $N at the moment.
+~
+!
+0 0 0
+2590 9 1509949540 3 0
+4062 17 1509949540 -2 0
+-1
+S
+
+#39777
+Western Tower Ground Floor~
+The remnants of dwarven warriors lie interspersed with fallen orcs in
+frozen scene of death.  A dusting of frost coats the twisted corpses, as
+if winter had tried to decorate the mutilations.  Worn stairs wind up the
+western wall, a fallen dwarven warrior sitting upon them, his breastplate
+pierced with orc arrows.  A door to the east leads back to the bridge, a
+few axe marks scaring its iron bound surface.
+~
+[Azerin] leaving up - dislodge chunks of snow as you stride up the stairs
+~
+167247877 11 5 0
+D1
+tower door~
+~
+131 -1 39772 10 10 5
+D4
+~
+~
+0 -1 39776 10 10 5
+E
+remnants dwarven warriors orcs~
+Axe, spear and arrow have torn apart the bitter foes, often combatants
+dying with their weapons and arms locked together.  The entombment of ice
+has preserved the scene long after the battle has ended.
+~
+E
+stairs~
+The blood soaked stairs have been hacked at by a few random weapon blows,
+some of the impacts shattering the top surface of the stone.  Ice, turned
+black from the mixture of water and blood, coat the chilling room.
+~
+2589 9 1509949540 3 0
+-1
+S
+
+#39778
+Caverns Of The Ice Wyrm - Bridge Across The Fissure~
+An imposing rift has torn apart the land to the north, the jagged fissure
+spiralling down hundreds of feet until it is swallowed by the darkness. 
+Blocks of shattered ice lay spread across the cliff face, some the
+remnants of giant stalagmites and stalactites that have formed in the
+constant winter.  A wagon-wide bridge spans the great divide its middle
+guarded by two linked towers.
+~
+[Estrella] extras done
+~
+167247877 11 5 0
+D0
+~
+~
+0 -1 39772 10 10 5
+D2
+~
+~
+0 -1 39779 10 10 5
+E
+rift jagged fissure~
+Disappearing into the gloom, the cliff face soon fades out of sight, the
+bottom lost within the reaches of darkness.  Covering the stone, a layer
+of chill blue ice gleams on every surface, the angular shards and
+particles glistening with a dry coldness.
+~
+E
+bridge towers~
+Spanning the vast chasm, a wide stonework bridge stretches northwards,
+its end barely discernable in the gloom.  Standing in the center of the
+bridge, two great towers rise above the roadway with a short bridge
+linking the upper rooms.
+~
+2589 9 1509949540 3 0
+-1
+S
+
+#39779
+Caverns Of The Ice Wyrm - Gates of Kha-Dun~
+Statues of dwarfs guard the passageway, each of the warriors carved out
+of a pale marble, their weapons and armor showing incredible amounts of
+details.  Massive doors dominate the southern wall, their black iron
+surface encrusted with runes and wards.  Lacking a key or even handle the
+doors appear to be designed to open from the other side, perhaps through
+magic or a hidden mechanical means.  Towards the north, the passage winds
+to the edge of a great fissure, a wagon-wide dwarven bridge crossing the
+expanse.  A dangerously slender walkway cuts from the room westwards, the
+shelf never over a foot across.
+~
+[Azerin] some extras in
+[Azerin] zone end for now
+[Azerin] south door no open
+[Estrella] extras done
+~
+167247877 11 5 0
+D0
+~
+~
+0 -1 39778 10 10 5
+D2
+iron gate~
+~
+407 -1 39780 10 10 5
+D3
+~
+~
+0 -1 39810 10 10 5
+E
+doors 1 southern iron runes wards~
+In common tongue a message has been etched into the black iron - Hail the
+gates of Khara-dun.
+~
+E
+statues dwarfs marble~
+Each of the five-foot warriors has been brought crafted from blocks of
+cream marble; not native to these mountains, the rocks would have been
+brought here for the artisan to work with.
+~
+E
+walkway 1 westwards shelf~
+Little more than ledge, this narrow walkway follows the precipice of the
+cliff around to the west.  Shards of ice and a thick layer of crystalline
+frost cover the surface, making it treacherous to tread.
+~
+2589 9 1509949540 3 0
+1602 17 1509949540 -2 0
+-1
+S
+
+#39780
+Caverns Of The Ice Wyrm - Gates of Kha-Dun~
+Under Construction.
+~
+[Azerin] this may be a zone one day
+~
+167247877 11 9 0
+D0
+~
+~
+407 -1 39779 10 10 5
+-1
+S
+
+#39781
+Caverns Of The Ice Wyrm - Frost-lined tunnel~
+The ice-clad tunnel cuts through a wall of stone and frost before opening
+again into a snow covered chamber, swirling winds forming snow devils in
+its center.  Fangs of ice line the northern opening, reminiscent of the
+maw of a dragon, a spiralling tongue of stairs winding from its mouth.  A
+jagged scar slashes through the southern wall, the rent allowing the bold
+to continue onwards.
+~
+[Azerin] leaving, acend the spiral stair
+[Azerin] climb up check if fail slip back here on your butt
+[Azerin] extra done
+[Eccles] climb up acode done
+[Aldric] needs to show group arriving
+~
+167247877 11 9 0
+D2
+~
+~
+0 -1 39782 10 10 5
+D4
+~
+~
+0 -1 39761 10 10 5
+E
+spiral stair~
+Cut for a small stride, the stairway rises through the ice-coated dragon
+mouth, the sculpture's life like teeth slightly alarming.
+~
+A
+~
+up~
+if( is_mounted( ch ) ) {
+  wait( 1 );
+  act_tochar( #no_mount, ch, obj, mob, sight );
+  end;
+}
+if( can_fly( ch ) ) {
+  send_to_char( #fly, ch );
+  act_notchar( #r_fly, ch );
+  transfer( ch, find_room( 39761 ) );
+  act_notchar( #f_arrive, ch );
+  loop( followers ) {
+    ch = rch;
+    acode( room, 1 );
+  }
+  end;
+}
+if( is_standing( ch ) ) {
+  if( find_skill( ch, climb ) >= 7 ) {
+    if( is_standing( ch ) ) {
+      act_tochar( #clid, ch );
+      wait( 1 );
+      transfer( ch, find_room( 39761 ) );
+      act_notchar( #arrive, ch, obj, mob, sight );
+      loop( followers ) {
+        ch = rch;
+        acode( room, 1 );
+      }
+    }
+  }
+}
+else {
+  act_tochar( #slip, ch );
+  act_notchar( #fall2, ch );
+  position( ch, 6 );
+}
+~
+E
+slip~
+Attempting to climb up, you slip and land heavily on your rump.
+~
+E
+clid~
+Finding enough handholds, you scramble up the slope.
+~
+E
+fall2~
+You suppress a snicker as you watch $n attempt to climb up only to fall
+heavily on $s rump.
+~
+E
+arrive~
+$n scrambles up from below.
+~
+E
+fly~
+You soar upwards, over the slope.
+~
+E
+r_fly~
+$n flys upwards, gliding over the face of the slope.
+~
+E
+f_arrive~
+$n arrives, having flown over the edge of the steep slope.
+~
+E
+no_mount~
+You cannot get up the slope while mounted.
+~
+!
+18 0 0
+A
+up~
+~
+act_tochar( #noclimb, ch );
+~
+E
+noclimb~
+The slope looks too slippery to walk up, you may have to try climbing.
+~
+!
+0 0 0
+-1
+S
+
+#39782
+Caverns Of The Ice Wyrm - Howling Cavern~
+Buffeting wind encircles the chamber, billowing snow and ice with it; the
+gale spins out spiralling tornadoes that dance across the frozen stone
+floor.  A rent in the roof allows the constant winds to escape in and
+out, howling as it rushes through the gap.  A fissure in the northern
+wall allows the wearying winds to leave the swirling chamber, while a
+short flight of steps in the southern wall leads the traveller onwards.
+~
+[Azerin] extra done
+~
+167247877 11 9 0
+D0
+~
+~
+0 -1 39781 10 10 5
+D2
+~
+~
+0 -1 39783 10 10 5
+E
+snow ice~
+Spinning into soft banks, the snow is constantly renewed from the jagged
+opening in the roof.  As it settles the snow turns icy and then finally
+hardens to become part of the ice layer that coats the stones and steps
+of the frigid land.
+~
+-1
+S
+
+#39783
+Caverns Of The Ice Wyrm - Passageway Through The Ice~
+Whorls of multi-hued colors spiral through the ice lined tunnel,
+appearing as though a rainbow had been encased in the frozen slabs. 
+About eight feet in diameter, the passageway appears to have been a
+secondary exit from the dwarven hold, perhaps an escape tunnel in times
+of need.  Partially blocking the passage is the crumbling remains of a
+wagon, the skeletal corpse of a handful of dwarves scatted about it, the
+timbers and remaining cloth charred from a fire.
+~
+[Azerin] extra in
+[Azerin] extra done
+~
+167247877 11 9 0
+D0
+~
+~
+0 -1 39782 10 10 5
+D3
+~
+~
+0 -1 39784 10 10 5
+E
+wagon corpse dwarves chard timbers~
+The huddled corpses cling together in their charred wagon; by their size it
+would appear that several of the bodies were children.  The faint smell
+of wood smoke hangs in the air round the remains.
+~
+-1
+S
+
+#39784
+Caverns Of The Ice Wyrm - Above a Sea Of Ice~
+A frozen wasteland of ice, snow and rocks spreads out below the massive
+peaks of the Everwinter range, the glaciers and ice-clad vales in the grip
+of a permanent winter.  The harsh climate and constantly gusting winds
+have warped and twisted some of the lesser peaks until they have become
+pockmarked with holes and rents like a fine gnomish cheese.  A river of
+ice carves a gorge out of the mountains to the southeast, perhaps a
+skilled explore might find a passage down into the tundra and glaciers
+below.
+~
+[Azerin] rbug for coders
+[Azerin] at some point in my grand scheme a ranja could find a way down here
+[Azerin] when a tundra zone is in
+[Azerin] extra done
+~
+167247877 11 9 0
+D1
+~
+~
+0 -1 39783 10 10 5
+E
+river ice gorge 1 southeast~
+The winding glacier has spent seasons upon seasons slowly grinding
+through the mountainside; the smooth gorge walls have become lined with
+dirt and powered rock that stains the snow ochre.
+~
+-1
+S
+
+#39785
+Cavern Of The Ice Wyrm - Gate To Below~
+Bands of frost and iron interlace to form a cage around the walls of the
+icy chamber.  Behind the webbing lie bound corpses, their faces covered
+with ceramic death masks.  Towards the east a pair of dwarven sentinels
+guard stairs that spiral downwards.  The first few steps appear stout but
+only a few yards down they break and fall away leaving a drop into
+whatever lurks below.
+~
+~
+167247877 11 9 0
+D3
+~
+~
+471 -1 39766 10 10 5
+D5
+~
+~
+0 -1 80250 10 10 5
+-1
+S
+
+#39786
+Cavern Of The Ice Wyrm - Icy Cliff~
+Arctic conditions have worked upon the rock cliff, wearing at the stone
+until it splits and cracks into layers of sharp shale.  Their unstable
+nature and icy covering make for an extremely challenging climb, the
+consequences of a wrongly judged handhold or move is a plummet down into
+the dark depths of the yawning abyss.  Upwards, the climb finishes at the
+icicle-lined rim of a narrow ledge, the overhanging rocks slightly
+obscuring what lies beyond it.  Below, the cliff face spirals into
+darkness in what is seemingly an insane climb towards certain death.
+~
+[Azerin] no.mob
+[Estrella] have random damage done by falling icicles :)
+[Estrella] lots o'dam says Guin ;)
+[Estrella] extra added
+[Eccles] room damage acode complete
+~
+167247885 11 9 0
+D4
+~
+~
+0 -1 39811 10 10 5
+D5
+~
+~
+0 -1 39787 10 10 5
+E
+icicle-lined icicle lined rim~
+Razor-sharp jagged stalactites hang from the underside of the narrow
+ledge, the vicious spikes reminiscent of a fangorious dragon's malicious
+maw.  In some places, the brittle ice has cracked and the glistening
+teeth await only the slightest disturbance to free them from their frozen
+stance.
+~
+A
+~
+~
+i = 10d20;
+loop( all_in_room ) {
+  act_tochar( #icicle, rch );
+damage( ch, rch, i, cold, "Falling ice", "Falling ice" );
+}
+~
+E
+icicle~
+@BFalling icicles crash down from above!
+~
+!
+2 1000 0
+-1
+S
+
+#39787
+Cavern Of The Ice Wyrm - Icy Cliff~
+The sound of a roaring watercourse echoes from the blackness below, the
+shattered rocks of the ice-cliff shuddering in time to the low booms. 
+Although ample handholds present themselves to a would-be climber, on
+closer inspection many appear ready to shatter and crumble under the
+slightest weight, plummeting a careless unfortunate into the darkness. 
+The cliff face appears to deteriorate as it rises, making the next
+hundred feet or so worse than this jagged portion of the face.
+~
+[Estrella] extra added
+~
+167247885 11 9 0
+D4
+~
+~
+0 -1 39786 10 10 5
+D5
+~
+~
+0 -1 39788 10 10 5
+E
+handholds~
+Many handholds have formed inadvertently in the crevices that riddle the
+iced surface, the edges worn smooth over use and time.
+~
+-1
+S
+
+#39788
+Cavern Of The Ice Wyrm - Before The Sunless Sea~
+Twin columns of ice-encrusted rock spire out of the sunless sea before a
+beach of black pebbles.  Twin dwarven warriors have been carved into
+their side, each sculpture at least thirty feet in height.  Great rusted
+rings of iron drape from the base of their feet; remnants of a wood-
+beamed wharf stretches between them, the stone pillars worn and warped by
+the ocean waves.
+~
+[Azerin] beach, frozen sea (outta) massive cavern - ancient ruins
+[Azerin] waterfall lands here
+[Azerin] river east
+[Estrella] extras done
+~
+167247877 11 9 0
+D0
+~
+~
+0 -1 39792 10 10 5
+D1
+~
+~
+0 -1 39790 10 10 5
+D2
+~
+~
+0 -1 39791 10 10 5
+D3
+~
+~
+0 -1 39789 10 10 5
+D4
+~
+~
+0 -1 39787 10 10 5
+E
+warriors dwarven sculptures~
+No detail has been neglected on these two oversized dwarven statues;
+every wiry strand of beard, and every wrinkle along their broad foreheads
+have been etched into the ice-spangled rock.  The gruff expressions on
+their large faces stare across the Sunless Sea.
+~
+E
+rings wharf pillars~
+As thick as an ogres arm, these rings cradle the waterlogged remains of
+the wooden pier.  At regular intervals solid pillars of stone brave the
+chill waters, their waterworn girths riddled with holes and crevices.
+~
+1602 17 1509949540 -2 0
+-1
+S
+
+#39789
+Cavern Of The Ice Wyrm - Before The Sunless Sea~
+The pebble beach ends in a collection of water-smoothed rocks, each one
+jumbled precariously upon another to form a pancake-like stack of stones;
+the frozen sea breaks into icy foam across them making passage further
+westward impossible. A deep groove has been dug from the shoreline
+where something has dragged itself out of the water.  Southwards, the
+fractured ice coating undulates with unseen waves, the entire flotilla
+creaking and groaning.
+~
+[Azerin] beach ends
+[Estrella] extra added
+[Azerin] walrus is lvl 80 pet so needs the funkey pet codes in it
+~
+167247877 11 9 0
+D1
+~
+~
+0 -1 39788 10 10 5
+E
+groove shoreline deep~
+Swishing from side to side, the deep groove looks to have been used many
+times and the channel seems to be a natural part of the landscape now.  A
+few lesser whorls meander on either side, the ice-spangled patterns less
+developed than the main trench.
+~
+2546 9 1509949500 3 0
+-1
+S
+
+#39790
+Cavern Of The Ice Wyrm - Before The Sunless Sea~
+A river rushes in from a low-roofed cavern to the north, its course awash
+with overflow; pebbles on the beach tumble in and out of the surging and
+abating water in a constant flux of clattering stones.  A drier beach
+cuts along the western edge of the sea, much of it free from swelling
+waves.  The overhanging cliffs drop away somewhat, making it possible for
+a skilful climber to clamber up their cracked surface.
+~
+[Azerin] river exits from north here
+[Azerin] can climb up
+[Estrella] extras added
+[Eccles] climb up acode added
+~
+167247877 11 9 0
+D3
+~
+~
+0 -1 39788 10 10 5
+D4
+~
+~
+0 -1 39803 10 10 5
+E
+river course water pebbles~
+As the force of the gushing river hits the stony beach, the smaller
+pebbles jostle over each other as they are scattered to either side of
+the course, clattering as they bound across the larger stones.
+~
+E
+cracked overhanging cliffs~
+Many cracks and crevices riddle the surface of the overhanging cliff, the
+fissures creating plentiful hand and foot holds.
+~
+A
+climb~
+up~
+act_tochar( #cli, ch );
+transfer( ch, find_room( 39803 ) );
+loop( followers ) {
+ch = rch;
+acode( room, 1 );
+}
+~
+E
+cli~
+You clamber up.
+~
+!
+0 0 0
+A
+up~
+~
+act_tochar( #nocli, ch );
+~
+E
+nocli~
+Try climbing.
+~
+!
+0 0 0
+-1
+S
+
+#39791
+Cavern Of The Ice Wyrm - Frozen Edge of The Sunless Sea~
+Stone pillars rise out of the frozen waters of the Sunless Sea, the rocks
+worn and warped by the constant waves that crash upon them and the
+pebbled beach northwards.  Two massive pillars rise out of the water to
+overshadow the partially frozen sea each of their sides carved with
+dwarven warriors brandishing axes ready for battle.  Rusted iron rings
+jut from below their feet, the rotting remnants of heavy rope dangling
+from them.
+~
+[Azerin] ice clad ocean, massive pillars 1000 of feet high, trapped skeletal remains of water creatures
+[Azerin] south is icy sea - will inflict much cold leads to new zone me thinks
+[Azerin] maybe do a check state, if flying can go south but hey
+[Azerin] south will require a ranja to find a passage across the ice
+[Estrella] extras done
+~
+167247877 11 9 0
+D0
+~
+~
+0 -1 39788 10 10 5
+D2
+~
+~
+0 -1 39809 10 10 5
+E
+pillars dwarven warriors~
+Detailed likenesses of fearsome dwarven warriors decorate the sides of
+each pillar, the battle-ready carvings armoured in heavy chainmail and
+each brandishing a weighty stone battleaxe.  The grim expressions on
+their etched faces give them a lifelike appearance.
+~
+E
+iron rings rotting rope~
+Mostly frayed, this rope scarcely manages to stay attached to the rusting
+iron rings at the feet of the dwarven statues.  Soaked through and
+through with chilling water the rope has slowly started to untwine, each
+strand curled slightly.
+~
+A
+~
+~
+act_tochar( #cold, ch );
+act_notchar( #rcold, ch, obj, mob, sight );
+end;
+~
+E
+cold~
+@bYou test the icy waters finding them too cold to consider a dip.@n
+~
+E
+rcold~
+@b$n tests the waters of the icy sea but finds them too cold for their liking.@n
+~
+!
+3 0 4
+-1
+S
+
+#39792
+Cavern Of The Ice Wyrm - Deep Caverns~
+A scattering of black pebbles lies strewn across the frosty floor, most
+of the stones frozen into the ground.  The roar of the ocean sends
+shudders through the tunnels; with each crashing wave a trickle of
+stone-dust falls from the ceiling.  Passages lead from the room south,
+towards the dark ocean; east, through the ice-clad tunnels; or west,
+where a gusting wind brings a bitter chill to the air.
+~
+[Azerin] underdark kinda place
+[Azerin] roadway
+[Estrella] extras added
+~
+167247877 11 9 0
+D1
+~
+~
+0 -1 39794 10 10 5
+D2
+~
+~
+0 -1 39788 10 10 5
+D3
+~
+~
+0 -1 39793 10 10 5
+E
+ceiling stone-dust stone dust~
+Riddled with haphazard cracks and fissures, the ceiling is a maze of
+fragmented rock.  A fine dust mists down from the ceiling, scattering
+fine particles of stone across the pebbled floor.
+~
+2542 9 1509949540 3 0
+2542 9 1509949540 3 0
+-1
+S
+
+#39793
+Cavern Of The Ice Wyrm - Deep Caverns~
+The cave extends out for a cluster of pillars at its southwestern wall.
+Unlike much of the deep caverns this chamber appears muddy and wet, the
+ice failing to cling to its earthen walls.  Deep cuts from pick or
+similar tool cover the base of several pillars, apparently they held
+something of value at some stage.  Barely perceivable under the layer of
+muck is a cobbled roadway, the remains of the dwarven settlement.
+~
+[Azerin] roadway
+[Estrella] extra added
+~
+167247877 11 9 0
+D0
+~
+~
+0 -1 39795 10 10 5
+D1
+~
+~
+0 -1 39792 10 10 5
+E
+pillars cluster cuts~
+Not much can be discerned from the scratches and gouges that mar the
+bases of several pillars; whatever had lain within the bed of cold rock
+was carefully removed, leaving no trace or hint of what it might have
+been.  Other than the scars at the foot of the pillars, the towering
+columns rise into darkness overhead, their ends masked within the gloom.
+~
+2542 9 1509949540 3 0
+-1
+S
+
+#39794
+Cavern Of The Ice Wyrm - Water-Filled Grotto~
+Sparkling crystals of quartz and slick limestone have melded together to
+create an underground garden of stone.  Rising slightly as it heads
+northwards, a narrow ledge of rock is all that stands between would-be
+explorers and the raging waters, of an underground river.  The noise is
+overwhelming; the rush and crash of the wake slamming against the rocks
+becomes a physical force that takes some effort to overcome.  Misty
+clouds of water are hurtled skywards where they cling to the caverns roof
+for a few moments before returning to earth in a showering rain.  A cleft
+in the ceiling lurks above the turbulent waters, the opening unreachable
+from here.
+~
+[Azerin] crystal guardens, rocks and limestone shapes with deep pool
+[Azerin] feed from northern river
+[Azerin] jump in swept south to 39790
+[Azerin] up is a jump in from above caves
+[Azerin] no go up there from ehre
+[Estrella] extra added
+~
+167247877 11 6 0
+D0
+~
+~
+0 -1 39800 10 10 5
+D3
+~
+~
+0 -1 39792 10 10 5
+D4
+~
+~
+0 -1 39804 10 10 5
+E
+sparkling crystals quartz slick limestone garden~
+Unintentionally, the elements of time, water and vast amounts of
+pressure, have caused the quartz and limestone to form a bizarre parody
+of a garden.  Clusters of gleaming quartz form angular, luminescent
+foliage; the soft limestone has been eroded into a mockery of gnarled
+trunks, the minute channels caused by erosion eerily portraying withered
+bark.
+~
+A
+up~
+~
+act_tochar( #nogo, ch );
+~
+E
+nogo~
+The cleft is out of your reach.
+~
+!
+0 0 0
+2542 9 1509949540 3 0
+-1
+S
+
+#39795
+Cavern Of The Ice Wyrm - Deep Caverns~
+Cavernous tunnels spiral from the main room as if giant worms had chewed
+their way from the central chamber.  The walls are slick, without seam or
+mar and, like most of the tunnels in the deep caverns, coated with a
+heavy layer of frost.  Freezing drafts of air bluster from the western
+opening, the ice around its edge particularly thick.  Underfoot, a
+cobbled roadway cuts in a north-south direction, the gaps between the
+stones sealed with gleaming ice crystals.
+~
+[Azerin] roadway
+[Estrella] extra added
+~
+167247877 11 9 0
+D0
+~
+~
+0 -1 39798 10 10 5
+D1
+~
+~
+0 -1 39799 10 10 5
+D2
+~
+~
+0 -1 39793 10 10 5
+D3
+~
+~
+0 -1 39796 10 10 5
+E
+roadway cobbled stones ice crystals~
+Like a thin sheet of glazing, the ice spills out over the rough cobbles,
+infilling the gaps between each flagstone.  Delicate crystals are visible
+through the clear pane of ice, the shards gleaming like diamonds.
+~
+-1
+S
+
+#39796
+Cavern Of The Ice Wyrm - Before A Gate Of Ice~
+If possible, this room is even colder than the surrounds, ice and frost
+drip from every surface bar a single slab of rock in the west wall.  A
+bitter chill emanates from the stone so that the air around it shimmers
+in a bleary haze.  In a far warmer condition, the dwarven roadway heads
+eastwards from the room, its cracked cobblestones coated in a sparkling
+dusting of ice.
+~
+[Azerin] str check to move the door
+[Estrella] extra added
+[Eccles] acode done, strength test 18
+~
+167247877 11 9 0
+D1
+~
+~
+0 -1 39795 10 10 5
+D3
+giant ice door~
+~
+391 -1 39797 10 10 5
+E
+slab rock 1 west wall~
+The icy temperatures that emanate from the smooth slab of rock are so
+cold that any moisture that dares to even approach the stonework is
+frozen before it can touch the inclement wall, drifting silently down to
+the ice-covered ground.
+~
+A
+open~
+giant ice door 1 west~
+if( !is_open( room, west ) ) {
+  if( find_stat( ch, str ) > 18 ) {
+    act_tochar( #open, ch );
+    open( room, west );
+  }
+  else {
+    act_tochar( #nogo, ch );
+  }
+}
+else
+  act_tochar( #open2, ch );
+~
+E
+open~
+Your muscles bulge, as you open the door to the west.
+~
+E
+nogo~
+You strain, but cant seem to open the door to the west.
+~
+E
+open2~
+The door to the west is already open.
+~
+!
+0 0 0
+-1
+S
+
+#39797
+Cavern Of The Ice Wyrm - Frozen Chamber~
+Spikes of blue-ice thrust from the rough stone floor of the room, each
+one several yards in length.  The icicles form a radiating pattern around
+a swirling orb of white light.  Freezing vapour erupts from the orbs
+center, sending crackling frost through the brutally cold air.  To the
+east, a slab of stone remains semi-clear of the permafrost, an iron rung
+affixed to its middle.
+~
+[Azerin] Frozen Chamber
+[Azerin] here be the lord of ice - holds Ixaracs the frozen shard of world stone
+[Azerin] each pulse the room does 100 cold damage
+[Azerin] str check to move the door
+[Azerin] get orb summons the lord of ice
+[Estrella] extra added
+[Eccles] orb acode complete
+~
+167247877 11 9 0
+D1
+giant ice door~
+~
+391 -1 39796 10 10 5
+E
+orb white light swirling~
+Strongly resembling a howling blizzard, the orb's center swirls about in
+a constant state of flux.  Looking closely, minute particles of ice can
+been seen twisting and writhing in a circular pattern; it almost seems as
+though some arcane magic is influencing the behaviour of this ice-cold
+orb.
+~
+A
+~
+~
+if( players_room( room ) == 0 )
+  continue;
+send_to_room( #burst, room );
+loop( all_in_room ) {
+  if( !is_mob( rch ) ) {
+    damage( mob, rch, 5d20+100, cold, "the ice blast", "ice blast" );
+  }
+}
+~
+E
+burst~
+@BWith a shudder, the crysal blasts out a radiant burst of freezing cold!@n
+~
+!
+2 500 0
+A
+get~
+orb~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  mob = mload( 2606, room );
+  act_tochar( #reach, ch );
+  act_tochar( #mob, ch );
+  act_notchar( #mob, ch );
+  victim = ch;
+  attack_weapon( mob, victim, 10d8+50, "charge" );
+}
+~
+E
+mob~
+@GIxaracs charges from the shadows!
+~
+E
+reach~
+You reach out, trying to get the swirling orb...
+~
+!
+0 0 0
+-1
+S
+
+#39798
+Cavern Of The Ice Wyrm - Deep Caverns~
+A massive cave-in seals the northern end of the cavern, mounds of
+wagon-sized boulders spill out across the floor.  The room's floor slopes
+down towards the rubble, the slight depression filled with now-frozen
+water.  Fracture lines mar the walls and ceiling, some of the rock
+sagging outwards under the pressure of the weight from above.  The
+remains of a cobbled roadway heads northward, until it becomes buried
+beneath the tons of rock, or southward, into the dark caverns of the deep
+caves.
+~
+[Estrella] extra added
+~
+167247877 11 9 0
+D2
+~
+~
+0 -1 39795 10 10 5
+E
+cave-in boulders rubble~
+Varying in size from fist-sized rocks, to large boulders that would
+overshadow an ogre, the rubble that lies strewn across the ground buries
+the cobbled roadway, blocking all access to the north.
+~
+1602 17 1509949540 -2 0
+-1
+S
+
+#39799
+Cavern Of The Ice Wyrm - Deep Caverns~
+The thunderous roar of a river crashes to the east, its torrents sending
+shuddering rumbles through the rocks.  Shallow ice-coated pools lie in a
+semi-frozen state across the floor, their edges completely sealed in frost. 
+Glow-worms offer a soft illumination as they dangle sticky strands from
+the ceiling, their ambient light attracting a small cluster of moths and
+beetles.
+~
+[Azerin] glowworm extra done
+~
+167247877 11 9 0
+D1
+~
+~
+0 -1 39800 10 10 5
+D3
+~
+~
+0 -1 39795 10 10 5
+E
+glow worms glow-worms~
+Tiny dewdrops of light flicker along the ceiling of the cave; the
+glow-worms attract a small cluster of moths and beetles with their barely
+perceptible illumination.  Fine tendrils of sticky fibres dangle from the
+ceiling, the silken threads adhering to whatever they come in contact
+with.
+~
+2542 9 1509949540 3 0
+-1
+S
+
+#39800
+Cavern Of The Ice Wyrm - River Through The Deep~
+A river-worn tunnel cuts through the rock, its stones coated with a heavy
+layer of frost and icicles.  A narrow walkway runs along the left side of
+the dark river, its ledge smooth and lined with slush and ice. Southwards,
+the tunnel opens up, the waters swriling out into a wider chamber.
+Northwards, the tunnel twists along beside the river, its destination
+unclear.
+~
+[Azerin] underground river
+[Estrella] extra added
+~
+167247877 11 5 0
+D0
+~
+~
+0 -1 39801 10 10 5
+D2
+~
+~
+0 -1 39794 10 10 5
+D3
+~
+~
+0 -1 39799 10 10 5
+E
+icicles frost ice slush~
+Honed spears of ice hang from the ceiling of the river-carved tunnel as
+tiny particles of frost glitter upon the floor; some more adventurous
+shards of ice have embedded themselves within the cracks in the rock
+walls.  Some of the frost on the ground has been churned into slush by
+countless footfalls.
+~
+-1
+S
+
+#39801
+Cavern Of The Ice Wyrm - River Through The Deep~
+A roaring river races beside the sliver of rock ledge, the force of the
+colliding waters sending thunderous rumblings through the rock.  Towards
+the east the rivers course narrows, causing the waters to foam and crash
+down in mini-waterfalls. Several black stone columns rise from the middle
+of the stream, the rock solid enough to withstand the waters onslaught.
+~
+[Azerin] underground river
+[Estrella] extra added
+~
+167247877 11 5 0
+D1
+~
+~
+0 -1 39802 10 10 5
+D2
+~
+~
+0 -1 39800 10 10 5
+E
+river waters foam mini-waterfalls waterfalls~
+Gushing in its course, the foaming waters spray a fine layer of moisture
+across the rock ledge.  Torrid currents rumble in the darkened channel;
+as the water tumbles over the angular rocks, it forms miniature
+waterfalls that disrupt the smooth flowing of the water.
+~
+2542 9 1509949540 3 0
+-1
+S
+
+#39802
+Cavern Of The Ice Wyrm - River Through The Deep~
+As the tunnel cuts northwards the ceiling drops sharply until the rushing
+waters and rock meet to seal the passageway from further progress.  The
+narrow shelf leads westwards along the turbulent waters, its river-soaked
+surface covered in icy slush.  Mid stream, a broken pillar rises, cutting
+the flow of water in twain.
+~
+[Azerin] maybe later this goes north to new zone - no passage till then :)
+[Estrella] extra added
+~
+167247877 11 5 0
+D3
+~
+~
+0 -1 39801 10 10 5
+E
+broken pillar~
+Crumbling into antiquity, the pillar used to reach up to the vaulted
+ceiling, now all that is visible is the fractured lower portion of the
+column.  As the waters crash and swirl about the base of the column,
+small shards of rock are dislodged from the cracked stone, inexorably
+wearing away what remains of the pillar.
+~
+1602 17 1509949540 -2 0
+-1
+S
+
+#39803
+Cavern Of The Ice Wyrm - Ledge Above The Sunless Sea~
+The smell of salt water hangs in the icy air; below, the churning mass of
+an underground sea washes icy floatsom against a pebble beach.  A ledge of
+rock extends out above the ocean, its frozen edge lined with
+sharp-pointed icicles.  Northwards, a natural cavern has been worn out of
+the rock by eons of water flow, its smooth surface now coated in frost.
+~
+[Azerin] only here by climb
+[Estrella] extra added
+[Eccles] climb down acode added
+~
+167247877 11 9 0
+D0
+~
+~
+0 -1 39804 10 10 5
+D5
+~
+~
+0 -1 39790 10 10 5
+E
+icicles sharp-pointed sharp pointed~
+Like the incisors of a fangorious dragon, the honed icicles form a spiked
+maze with which to pass through.  A few cracks have appeared on the
+longer ones, the weight prying them from their frozen holds.
+~
+A
+climb~
+down~
+act_tochar( #cli, ch );
+transfer( ch, find_room( 39790 ) );
+loop( followers ) {
+ch = rch;
+acode( room, 1 );
+}
+~
+E
+cli~
+You clamber down.
+~
+!
+0 0 0
+A
+down~
+~
+act_tochar( #nocli, ch );
+~
+E
+nocli~
+Try climbing.
+~
+!
+0 0 0
+2542 9 1509949540 3 0
+-1
+S
+
+#39804
+Cavern Of The Ice Wyrm - Beginning of a Dwarven Roadway~
+The natural cavern ends suddenly in a circular chamber; with an arched
+opening that has clearly been carved by dwarven hands leading out the
+western wall.  The northeast side of the room has collapsed into a slick
+sinkhole, the smooth edge dangerous to be close to.  Adding its own twist
+to the danger is a fine layering of ice that coats the floor in a
+gleaming frost.
+~
+[Azerin] jump down into groto , big splash acode etc, then swept out as per typo in that room
+[Estrella] extra added
+[Eccles] acode added, leap/jump down
+~
+167247877 11 9 0
+D2
+~
+~
+0 -1 39803 10 10 5
+D3
+~
+~
+0 -1 39805 10 10 5
+D5
+~
+~
+0 -1 39794 10 10 5
+E
+sinkhole floor frost ice~
+Many years of erosion has smoothed the edges of this sinkhole until they
+offer no grip whatsoever.  The freezing temperature and beguiling sheen
+on the floor of the cavern indicates that, although barely perceptible,
+other treacheries also make the passage more dangerous to traverse.
+~
+A
+jump, leap~
+down~
+act_tochar( #jump, ch );
+wait( 1 );
+transfer( ch, find_room( 39794 ) );
+act_tochar( #splash, ch );
+wait( 1 );
+act_tochar( #swept, ch );
+transfer( ch, find_room( 39790 ) );
+loop( followers ) {
+ch = rch;
+acode( room, 1 );
+}
+~
+E
+jump~
+@BYou leap blindly into the grotto!
+~
+E
+splash~
+You land in a river making an enormous @BSPLASH!
+~
+E
+swept~
+The swiftly moving river sweeps you southwards!
+~
+!
+0 0 0
+A
+down~
+~
+act_tochar( #nodown, ch );
+~
+E
+nodown~
+You see no easy way down, you might have to resort to a leap of faith!
+~
+!
+0 0 0
+-1
+S
+
+#39805
+Cavern Of The Ice Wyrm - Dwarven Roadway~
+Frozen cobwebs dangle from the arched ceiling, their builders long since
+scattered from the freezing realm.  Pillars support the roadway as it
+winds north and eastwards, their carved surfaces showing dwarven warriors
+dressed in heavy armor.  The ice-covered remains of orcs lie entombed
+against the southwestern wall, their faces set in permanent agony.
+~
+[Azerin] all this is dwarven ruins
+~
+167247877 11 9 0
+D0
+~
+~
+0 -1 39806 10 10 5
+D1
+~
+~
+0 -1 39804 10 10 5
+E
+cobwebs ceiling~
+Bedecking the arched ceiling with strand upon strand of ice-dewdrop
+jewels, the intricate weavings left here by arachnida that have long
+since found a warmer clime.
+~
+E
+orcs remains~
+It appears that these orcs were frozen alive, the expressions of
+mortification on their faces a clear indication of the agony they went
+through.  Through their icy entombment, crystals of a sickly green hue
+are visible, the blood obviously frozen as it seeped from their savage
+wounds.
+~
+-1
+S
+
+#39806
+Cavern Of The Ice Wyrm - Dwarven Roadway~
+Under a surface of ice, the stonework walls of the passage show signs
+of charring, a few shattered stones fused in place by the heavy frost.
+Carved pillars brace the ceiling, ensuring that the roof remains sturdy
+despite the passing of time.  The cobbled roadway heads northwards into a
+gloomy chamber, and southwards into an equally gloomy passageway.
+~
+[Estrella] extra added
+~
+167247877 11 5 0
+D0
+~
+~
+0 -1 39807 10 10 5
+D2
+~
+~
+0 -1 39805 10 10 5
+E
+carved pillars~
+Stout dwarven warriors have been etched into the towering pillars, the
+masonry of a standard that only a stone-dweller could manage.  Bracing
+the ceiling with their great warhammers, the warriors scowl down from
+their lofty heights.
+~
+-1
+S
+
+#39807
+Cavern Of The Ice Wyrm - Lower Gate~
+A brutal battle once took place in the wide chamber; the remains of frost
+giants, dwarves, orcs and wyrms lie frozen into the floor, walls and
+pillars of the room, the grizzly remains entombed in what appeared to be
+a sudden blast of undoubtedly powerful magics. Weapons and armor, rent and
+worthless, lie in frosted mounds around the walls.  Twin gates rise
+against the northern wall, the majority of dwarven corpses surrounding it.
+~
+[Azerin] other entrance into durf keep, no go atm
+[Estrella] extra added
+~
+167247877 11 9 0
+D0
+lower gate~
+~
+471 -1 39808 10 10 5
+D2
+~
+~
+0 -1 39806 10 10 5
+E
+grizzly remains giants dwarves orcs wyrms~
+Like a vision into the past, the frozen scene appears to have captured
+and immortalised the most ferocious onslaught of the battles that were
+engaged this far under the surface.  Corpses from each faction have been
+sealed in a casing of ice where they lay, the entombment in frost
+preventing the touch of time from easing the bodies into perpetual rest. 
+Unseeing eyes glower from beneath heavy-set brows, the enmity between
+each combatant showing clearing on the paralysed faces.
+~
+-1
+S
+
+#39808
+Cavern Of The Ice Wyrm - Lower Gate~
+Twin iron bound gates block the southern exit from the chamber, a large
+amount of frost coated corpses surrounding its base.  Ice and snow pile
+through the room, coating the dead in ghostly white burial mounds.  The
+corpse of a frost giant leads against the western wall, its armor rent
+from countless axe blows and punctured by scores of crossbow bolts. 
+Through the graveyard the dwaren road runs, its unbroken cobbles standing
+as witness to the art of its creators.
+~
+~
+167247885 11 9 0
+D0
+~
+~
+0 -1 39816 10 10 5
+D2
+lower gate~
+~
+471 -1 39807 10 10 5
+-1
+S
+
+#39809
+Cavern Of The Ice Wyrm - Frozen Edge of The Sunless Sea~
+Under Construction.
+~
+~
+167247885 11 9 0
+D0
+~
+~
+0 -1 39791 10 10 5
+-1
+S
+
+#39810
+Caverns Of The Ice Wyrm - Narrow Ledge~
+A sliver of a stone lip allows the brave or maybe foolhardy to work their
+way around the massive cavern.  Frost and ice coat the broken stones,
+increasing the danger ten fold, a wrong step would lead to a long fall
+into the blackness below.  A safer passage lies eastwards, where the
+dwarves have excavated a roadway, which leads towards a northern bridge
+that spans the great cavern.  Twin watchtowers rise in its centre
+enabling the defenders to watch approaching danger from both directions.
+~
+[Estrella] extras added
+~
+167247877 11 9 0
+D1
+~
+~
+0 -1 39779 10 10 5
+D3
+~
+~
+0 -1 39811 10 10 5
+E
+lip sliver ledge~
+Not more than a foot wide, this hazardous ledge encircles the entire
+cavern.  In several places, gaping sections of the shelf have fallen
+away, leaving near impassable intervals.
+~
+E
+roadway bridge watchtowers~
+Leading down a safer path, the broad roadway skirts the edge of the
+cavern before veering north across a well-constructed dwarven bridge. 
+About halfway along the bridge, twin watchtowers rise, one on either side
+of the roadway, a lesser viaduct links these two towers high above the
+main causeway.
+~
+-1
+S
+
+#39811
+Caverns Of The Ice Wyrm - Narrow Ledge~
+The slender ledge widens a fraction cutting under an icicled overhang as
+it heads east and west along the edge of the great cavern.  The normally
+lush layers of snow and ice have been swept off by the gusting wind,
+making for a partially clear passage along.  A strange set of drag marks
+lead off the edge of shelf and into the darkness below, perhaps where an
+unfortunate has fallen to their doom.
+~
+[Azerin] ranja might spot climb down
+[Estrella] extra added
+~
+167247877 11 9 0
+D1
+~
+~
+0 -1 39810 10 10 5
+D3
+~
+~
+0 -1 39812 10 10 5
+D5
+~
+~
+0 -1 39786 10 10 5
+E
+drag marks~
+It appears that whatever creature made these marks spent the last moments
+of its existence trying desperately to scramble back onto the ledge. 
+Little by little, the patterns creep closer and closer to the jagged edge
+of the ice-clad shelf, perhaps the creature did not lose its grip on the
+ledge, it might have been that the ledge could no longer support its
+weight.
+~
+-1
+S
+
+#39812
+Caverns Of The Ice Wyrm - Narrow Ledge~
+Fissures line the brittle rocks of the ledge, some of the stones only
+held firm by the icy coating that encases them.  The wall slopes slightly
+outwards, increasing the difficulty of passage, its rough surface catching
+on hair, skin and clothing of those who wish to pass.  Below, the darkness
+stretches into the infinite, a few gusts of frigid wind escaping the
+black abyss.  Far westwards, a tower stands, its walls high and drawbridge
+raised, its shadowy windows almost as uninviting as the cataclysmic maw
+below.
+~
+[Estrella] extra added
+~
+167247877 11 9 0
+D1
+~
+~
+0 -1 39811 10 10 5
+D2
+~
+~
+0 -1 39813 10 10 5
+E
+abyss~
+Following the downward, the impenetrable darkness soon engulfs the
+ice-clad rock as it descends into the depths of the abyss.  A bitterly
+cold, baying wind lashes up from the stygian chasm, a haunting howl, as
+mournful as it is ominous, carries on the updraft.
+~
+-1
+S
+
+#39813
+Caverns Of The Ice Wyrm - Narrow Ledge~
+Weaving along the deadly drop, the ledge cuts a dangerous path against
+the icy cliff.  Westwards, a great tower rises against the wall, its
+surface coated in melted stone or ice.  Northwards, the crumbling edge
+appears to be ready to collapse, several sizable cracks cover the fragile
+rocks surface.  Slender icicles dangle from its edge, their tips raining
+droplets of water into the dark maw below.
+~
+[Estrella] extras added
+~
+167247877 11 9 0
+D0
+~
+~
+0 -1 39812 10 10 5
+D3
+~
+~
+0 -1 39814 10 10 5
+E
+slender icicles~
+Despite the freezing temperature, a few droplets of water still manage to
+roll down the surface of the icicles, falling silently into the abyss
+below.
+~
+E
+ledge cliff~
+Clinging to the cliff-side, the narrow ledge disappears into each
+fissure, following the shape of the wall.  Shards of ice and rock lay
+scattered across the treacherous pathway, making passage slightly more
+unstable.
+~
+-1
+S
+
+#39814
+Caverns of the Ice Wyrm - Forlorn Tower~
+Jutting from the ice-clad wall rises a circular tower of several hundred
+feet, its roof only a few yards shy of the caverns shadowy ceiling.  A
+drawbridge of stone has been retracted into a gatehouse, leaving an imposing
+gap of over thirty yards between the narrow walkway and its ramparts. 
+The outer stones have been drenched in bat guano, in several places the
+droppings so thick as to imitate the dripping wax of a candle.  Brooding
+darkness encases its arrow slits in a menacing blanket, no life stirs
+within its solid walls.
+~
+[Azerin] hehe nother mini zone cough
+[Azerin] the last durfs held up here before being betrayed and over run with ice orcs, now the orcs own this land
+[Azerin] will link back to other exit from zone
+[Estrella] extra added
+~
+167247877 11 9 0
+D1
+~
+~
+0 -1 39813 10 10 5
+E
+tower drawbridge gatehouse~
+Braced by the ice covered walls, the tower extends out towards the
+gatehouse that guards the only entrance into and out from the keep. 
+Great winches are visible on either side of the gatehouse, presumably
+used to extend the drawbridge, however, due to lack of use and the
+freezing temperatures, it would be sheer luck if the mechanisms still
+operated properly.
+~
+-1
+S
+
+#39815
+Caverns Of The Ice Wyrm - Stairs of ice~
+Under Construction.
+~
+~
+167247873 5 9 0
+-1
+S
+
+#39816
+Cavern Of The Ice Wyrm - Bridge Of Aul'Dur~
+Towering above the bridges entrance is a statue of a dwarven warrior.  A
+long flowing beared runs down his stout chest in typical dwarven fashion,
+its ends capped with beard rings.  At his base a brass plaque proclaims
+him to be Aul'Dur defender of Ngual.  A wide ravine spreads out to the
+north, the slender bridge arching across it.  From below a misty cloud
+rises the chilling white obscuring any vision of what lies on the north
+bank.
+~
+~
+167247885 11 9 0
+D0
+~
+~
+0 -1 39817 10 10 5
+D1
+~
+~
+0 -1 80252 10 10 5
+D2
+~
+~
+0 -1 39808 10 10 5
+-1
+S
+
+#39817
+Cavern Of The Ice Wyrm - Bridge Of Aul'Dur~
+Tendrils of mist swirl around the frosted stones of the bridge, the
+clouds obscuring vision beyond a few feet.  Bitterly cold the clouds seem
+to suck the life out of anything they touch.
+~
+~
+167247885 11 9 0
+D2
+~
+~
+0 -1 39816 10 10 5
+-1
+S
+
+#0
+

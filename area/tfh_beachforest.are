@@ -1,0 +1,1636 @@
+#M2_AREA
+2
+
+Beech Forest~
+Azerin Squeed Druscilla~
+Beech Forest~
+~
+~
+
+5 0
+0
+1
+#ROOMS
+
+#2200
+Nothing~
+~
+deal with naga
+gem tables
+~
+167247873 0 9 0
+7537 17 1509949540 -2 0
+-1
+S
+
+#2201
+Beech Forest - Sheltered Glade~
+The narrow path opens into a sheltered glade.  Bluebell and daffodil
+blooms grow in large clumps, their sweet scent filling the air.  To the
+north an ancient beech tree dwarfs its younger neighbours.  It has been
+hollowed out to form an arch of wood through which the path disappears. 
+The sounds of the wind stirring the woodlands and the drone of countless
+small insects form together into a natural melody.
+~
+bee sting added.  note to self....must add some rumur facility to newbie
+town to teach of such things 
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 2202 10 10 5
+D3
+~
+~
+0 -1 5390 10 10 5
+E
+path glade~
+The path has been covered in broken shells and crushed white rock. 
+Against the dark greens and browns of the forest, it seems to glow. 
+Beside the path the forest floor is covered in a lush grassy carpet, with
+a few dandelions and daisies flowering amongst the sea of green.  Further
+afield the landscape is dotted with masses of bluebells and daffodils,
+their bright blooms attracting scores of buzzing insects.
+~
+E
+bluebells daffodils dandelions daises~
+The flowers grow wild here.  Most are smaller than the garden varieties,
+but what they lack in size they make up for in sheer numbers.  The
+delicate bell-shaped flowers of the bluebells cluster on long stems,
+growing beside the taller trumpet-shaped flowers of the daffodils. 
+Around the path the golden clusters of dandelions and the white-petaled
+daisies grow, adding to the colors.
+~
+E
+trees beech~
+The tall trees reach to over sixty feet in height, their countless
+branches stretching skywards.  Covering their white bark is a dusty black
+coating; perhaps a fungi of sorts.  Thrusting out of the fungi are
+thousands of tiny dew-covered strands, attracting wasps and other insects
+to feed upon them.  The tiny serrated leaves of the trees seem free of
+the fungi, and despite this infection, the trees appear to be healthy.
+~
+E
+arch large~
+The archway leads into a wooden tunnel, carved from the living tree. 
+Around the edges the bark is blackened with scorch marks that a fire or
+lightning strike might have inflicted.
+~
+A
+~
+~
+if( can_fly( ch ) == 0 ) {
+  act_tochar( #leave, ch, obj, mob );
+  act_notchar( #isleave, ch, obj, mob );
+  }
+continue;
+~
+E
+leave~
+@WYou head downwards into the arch of wood, the shells on the path
+crunching as you walk.@n
+~
+E
+isleave~
+@W$n heads downwards into the arch of wood, the shells on the path
+crunching as $e walks.@n
+~
+!
+3 0 1
+A
+pick~
+flowers bluebell daffodil~
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  act_tochar( #get, ch, obj, mob );
+  act_notchar( #isget, ch, obj, mob );
+  obj_to_char( oload( 7376 ), ch );
+  end;
+  }
+act_tochar( #noget, ch, obj, mob );
+~
+E
+get~
+@gYou carefully pick several of the bright flowers.@n
+~
+E
+isget~
+@g$n picks several brightly colored flowers from one of the clumps.@n
+~
+E
+noget~
+There are too few flowers left to pick a decent bunch.
+~
+!
+0 0 0
+A
+smell sniff~
+bluebells daffodils flowers~
+act_tochar( #sniff, ch, obj, mob );
+act_notchar( #issniff, ch, obj, mob );
+~
+E
+sniff~
+You take the time to smell the flowers.  Their aroma is as pleasant to
+your nose as they are to you eyes.
+~
+E
+issniff~
+$n bends down and gently sniffs the beautiful flowers.  $e smiles
+cheerfully, obviously content with the world.
+~
+!
+0 0 0
+-1
+S
+
+#2202
+Beech Forest - Tunnel Through a Beech Tree~
+Surprising in its length, the wooden tunnel has been carved out of the
+massive tree, somehow without killing it in the progress.  Across the
+floor broken seashells have been spread, appearing to glow against the
+dark wood.  Intricate murals adorn the walls and roof of the tunnel. 
+From the north, the sound of buzzing insects fills the air, mixing with
+the sweet smell of flowers in full bloom.
+~
+[Guin] Done.
+~
+167247872 0 5 0
+D0
+~
+~
+0 -1 2203 10 10 5
+D2
+~
+~
+0 -1 2201 10 10 5
+E
+seashells~
+Countless tiny seashells and white-colored stones have been broken up and
+scattered on the dirt path to form a glowing carpet of white.
+~
+E
+carved murals~
+Swirls and knots have been carved in the wood forming links without
+beginning or end.  The murals cover all the available surface of the
+dark-grained wood.
+~
+E
+tunnel~
+Hewn from the center of an ancient beech, the tunnel is low-roofed and
+wide.  Underfoot, a shell-strewn path glows faintly in the gloomy
+half-light of the tree's interior.  Enclosing walls bear the patina of
+age proudly, the patterns of the wood's grain broken only by an
+intricately wrought runic script.
+~
+A
+~
+seashells~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 0, 4 ) == 0 ) {
+    act_tochar( #shell, ch, obj, mob );
+    act_notchar( #isshell, ch, obj, mob );
+    obj_to_char( oload( 1324 ), ch );
+    }
+  }
+act_tochar( #noshell, ch, obj, mob );
+act_notchar( #isshell, ch, obj, mob );
+~
+E
+shell~
+Sifting through the carpet of broken shells you find one intact.
+~
+E
+isshell~
+$n sifts through the carpet of shells obviously looking for something.
+~
+E
+noshell~
+After a quick search you give up on finding anything of interest amongst
+the broken shells.
+~
+!
+9 0 0
+5038 9 1509949540 3 0
+-1
+S
+
+#2203
+Beech Forest - Fork in the Path~
+Rising around a shallow pool are myriad young beech trees, their branches
+shading the waters.  The narrow shell-covered path leads up to the pool,
+then forks into two, one heading west the other east.  To the south the
+trail heads down a small dip and enters the hollowed out center of a huge
+beech tree.  Carpeting the forest floor, a blanket of bluebells and
+daffodils offer up their strong sweet scent to a passing breeze.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 2204 10 10 5
+D2
+~
+~
+0 -1 2202 10 10 5
+D3
+~
+~
+0 -1 2211 10 10 5
+E
+beech trees~
+With slender branches shading the small pool, the adolescent beeches seem
+to thrive in the warm, sunny growing conditions.  Covering their
+countless branches, the small serrated leaves grow green with a faint
+reddish tinge.  Attached to the trees' bark is a black sooty mold; tiny
+hairs poke through it, their tips bedewed with a drop of bee-attracting
+nectar.
+~
+E
+shell-covered path~
+A layer of broken shells coats the narrow paths, giving them a creamy glow
+against the predominantly brown coloration of the forest.
+~
+E
+blanket bluebells daffodils~
+Clustered around the slender beeches, the bright wildflowers grow lush
+here beneath the trees, spreading out in luxurious carpets across the
+forest floor.  The gold of the daffodils intermingles with the blues of
+the bluebells, creating a picturesque scene that not only looks good but
+smells wonderful too.
+~
+A
+~
+~
+if( can_fly( ch ) == 0 ) { act_tochar( #leave, ch, obj, mob );
+act_notchar( #isleave, ch, obj, mob ); } continue; 
+~
+E
+leave~
+@WThe broken shells crunch beneath your feet as you head southwards under
+the wooden arch.@n
+~
+E
+isleave~
+@WThe broken shells crunch beneath $n's feet as $s heads southwards, under
+the wooden arch.@n
+~
+!
+3 0 4
+A
+randome~
+~
+send_to_room( #bird, room );
+~
+E
+bird~
+@CA pair of wood pigeons passes overhead, their gray-blue wings outspread
+as they harness the warm western winds to carry them across the beech
+forest.@n
+~
+!
+2 50 0
+A
+randoma~
+~
+send_to_room( #leaf, room );
+~
+E
+leaf~
+@ySeveral brown leaves skitter across the path, blown there by the gentle
+winds.@n 
+~
+!
+2 150 0
+5010 9 1509949540 3 0
+3552 17 1509949540 -2 0
+-1
+S
+
+#2204
+Beech Forest - Shell-Strewn Path~
+The trees huddle together in small copses, leaving travel throughout the
+woods clearer than might be expected.  In the countless glades that
+speckle the woods, bluebells and daffodils bloom, adding a bright splash
+of color to the deep green of the trees.  A shell-strewn path heads
+westwards into denser woods and bends northwards between two tight stands
+of trees.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 2205 10 10 5
+D3
+~
+~
+0 -1 2203 10 10 5
+E
+trees copses glades~
+The tall beech trees grow in small copses surrounded by clumps of
+bluebells and daffodils.  The symmetry of the area makes it seem as
+though the trees might have been planted rather than natural grown.  The
+sheer amount of work that this would entail, however, makes it very
+unlikely.
+~
+E
+bluebells daffodils bloom~
+Surrounding the trees in a wall of yellow and blue, the flowers add a
+splash of color to the otherwise brown and green forest.  Bees and other
+insects dance between the blooms, collecting nectar for their hives.
+~
+E
+shell path~
+Countless thousands of broken shells have been strewn across the path,
+giving it a curious white glow.  Far from the sea, it's odd that someone
+would take the time and effort to do such a thing.
+~
+A
+~
+~
+if( random( 0, 9 ) == 0 ) {
+  if( is_player( ch ) ) {
+    if( rflag( reset0, room ) ) {
+      remove_rflag( reset0, room );
+      act_tochar( #bee, ch, obj, mob );
+      act_notchar( #isbee, ch, obj, mob );
+      mload( 5010, room );
+      }
+    }
+  }
+~
+E
+bee~
+@YUpon entering the room you accidentally disturb a bee from its
+gathering among the bluebells.@n 
+~
+E
+isbee~
+@YAs $n enters $e disturbs a small bee busy gathering pollen among the
+bluebells.@n 
+~
+!
+1 0 3
+5038 9 1509949540 3 0
+-1
+S
+
+#2205
+Beech Forest - Tangled Undergrowth~
+The forest seems to lose some of its gentle nature here; under the close
+trees, thorny bushes take root, sending their prickly stems groping
+across the shell-covered path.  Several of the beech trees here seem to
+be dying, their branches drooping and their leaves tinged with brown. 
+The sounds of running water can be heard faintly from the north.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 2206 10 10 5
+D2
+~
+~
+0 -1 2204 10 10 5
+E
+trees beech~
+Several of the dying beech trees seem to be encased in blood-red thorns;
+the long thorns have impaled themselves into the bark.  The ground around
+them is dry and cracked, as as if under the affect of a drought, although
+the rest of the woodlands seems to be fine.
+~
+E
+thorny bushes stems~
+Blood-red thorns spread out over the forest floor, entangling saplings
+and the bases of the larger trees in a prickly coating.  The skeletal
+remains of several birds and small animals lie amongst the thorns, some
+of the spiny tendrils growing through the bones.
+~
+E
+shell path~
+Made from countless seashells, the narrow path winds its way through the
+woodlands like a slender white serpent.
+~
+A
+~
+~
+if( can_fly( ch ) == 0 ) {
+act_notchar( #isleave, ch, obj,mob );
+act_tochar( #leave, ch, obj,mob );
+}
+continue;
+~
+E
+leave~
+@BPlunging into the cool waters of the stream, you wade north and clamber
+up the bank beyond.@n 
+~
+E
+isleave~
+@B$n plunges into the cool waters of the stream, wading north, then up
+the bank beyond.@n 
+~
+!
+3 0 1
+A
+~
+~
+if( can_fly( ch ) == 0 )
+act_notchar( #wet, ch, obj, mob );
+~
+E
+wet~
+$n climbs up the muddy bank, looking wet, cold and miserable.
+~
+!
+1 0 1
+A
+pick~
+thorn~
+act_tochar( #try, ch, obj, mob );
+wait( 1 );
+if( rflag( reset0, room ) ) {
+  if( random( 0, 2 ) == 0 )
+    remove_rflag( reset0, room );
+  if( random( 0, 2 ) == 0 ) {
+    act_tochar( #get, ch, obj, mob );
+    act_notchar( #isget, ch, obj, mob );
+    obj_to_char( oload( 2376 ), ch );
+    }
+  }
+act_tochar( #hurt, ch, obj, mob );
+act_notchar( #ishurt, ch, obj, mob );
+i = 1d6;
+inflict( ch, mob, i, "the prickling of their thumbs" );
+dam_message( ch, i, "the thorns prick" );
+~
+E
+try~
+Reaching into the spiney undergrowth, you try to pick one of the thorns.
+~
+E
+get~
+You manage to pick one of the thorns.
+~
+E
+isget~
+$n plucks one of the thorns from the spiney underbrush.
+~
+E
+hurt~
+While searching for the perfect thorn, you prick your hand.
+~
+E
+ishurt~
+While searching for a thorn, $n pricks $mself on the hand.
+~
+!
+0 0 0
+-1
+S
+
+#2206
+Beech Forest - Banks of Small Stream~
+The path winds to the bank of a small muddy stream.  Around the
+watercourse, brambles and thorn bushes have grown, spreading their thorny
+shoots across the forest floor.  The beech trees appear to be dying;
+withered branches and rotting leaves are littered around their roots.  On
+the northern bank, the path continues onwards, winding in a westerly
+direction.
+~
+[Guin] Done
+~
+167247872 3 9 0
+D2
+~
+~
+0 -1 2205 10 10 5
+D3
+~
+~
+0 -1 2207 10 10 5
+E
+path~
+A thick coating of shells intermingles with the mud of the stream bank to
+give a speckled affect.  Whoever constructed the path must have gone to
+some lengths to carry and spread the countless shells.
+~
+E
+beech trees withered branches rotting leaf litter termites insects~
+Coating the beech trees is a layer of dusty-black fungus that appears to
+be the cause of the tree's ill health.  Completely covered branches have
+snapped off, and lie rotting in the leaf litter around the dying forest. 
+Exploiting the rotting wood are many termites and other insects, their
+appetite seemingly endless as they bore away into the decaying matter.
+~
+A
+~
+~
+if( can_fly( ch ) == 0 )
+act_notchar( #wet, ch, obj, mob );
+~
+E
+wet~
+$n climbs up the muddy bank, looking wet, cold and miserable.
+~
+!
+1 0 4
+A
+~
+~
+if( can_fly( ch ) == 0 ) {
+act_notchar( #isleave, ch, obj, mob );
+act_tochar( #leave, ch, obj, mob );
+}
+continue;
+~
+E
+leave~
+@BPlunging into the cool waters of the stream, you wade south and clamber
+up the bank beyond.@n 
+~
+E
+isleave~
+@B$n plunges into the cool waters of the stream, wading south, then up the
+bank beyond.@n
+~
+!
+3 0 4
+7181 17 1509949540 -2 46
+-1
+S
+
+#2207
+Beech Forest - Besides a Muddy Brook~
+A muddy brook gently flows through the beech forest, its grassy banks
+speckled with wild flowers and the occasional berry bush.  The trees
+overhead crowd around the watercourse, dipping their roots into the cool
+liquid.  Around the base of several of the trees, piles of leaves have
+collected.  Atop of a few, brightly capped toadstools grow.
+~
+[Eliza] reviewed
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 2206 10 10 5
+D2
+~
+~
+0 -1 2208 10 10 5
+D3
+~
+~
+0 -1 2209 10 10 5
+E
+bank wild flowers~
+Covering the grassy bank are several large clumps of wildflowers. 
+Daises, violets and foxgloves bloom, their sweet perfume filling the air. 
+Growing in the muddy waters are several large bulrushes and flax, their
+dark green leaves draped into the swirling waters.
+~
+E
+trees roots leaf litter~
+Red and black beech trees grow together besides the waterway.  The only
+noticeable difference between the two species is the size of the serrated
+leaves, the red beech having larger and broader ones than the black.  A
+tangle of roots spreads out into the water, a collection of twigs and
+leaf litter snagged in them.
+~
+E
+toadstools~
+The woody stems of the bloated toadstools are speckled with dull orange
+spots.  Some of the caps are huge, over a foot in diameter, their bright
+red coloration warning of their poisonous nature.
+~
+A
+~
+~
+send_to_room( #brook, room );
+~
+E
+brook~
+@yThe muddy brook waters swirl as a @Wsilvery @yfin breaks the surface,
+then disappears below, leaving a rippling wake.@n 
+~
+!
+2 250 0
+A
+~
+~
+if( can_fly( ch ) == 0 ) {
+act_tochar( #leave, ch, obj, mob );
+act_notchar( #isleave, ch, obj, mob );
+}
+continue;
+~
+E
+leave~
+You wade across the @ymuddy@n brook, sending a churning mass of weeds
+downstream.
+~
+E
+isleave~
+$n wades across the @ymuddy@n brook, sending a churning mass of weeds
+downstream.
+~
+!
+3 0 4
+2441 17 1509949540 -2 25
+7181 17 1509949540 -2 25
+-1
+S
+
+#2208
+Beech Forest - Poplar Trees~
+A grove of tall poplars to the west stands out against the predominantly
+beech forest.  Not a native of this area, perhaps the seeds have been
+borne from afar on the westerly winds to find a resting-place here.  A
+glade of bluebells and foxgloves spreads out in a carpet of color before
+them, almost like a welcoming mat.
+~
+[Eliza] reviewed
+~
+167247872 3 5 0
+D0
+~
+~
+0 -1 2207 10 10 5
+E
+poplars~
+Reaching skyward, the tall sender trees stand out against the
+predominately beech forest.  Their green leaves are pale green to almost
+yellow.  Most of the poplars' narrow branches cluster around their main
+trunk, making them very narrow for their height.  The ground around the
+trees is bare earth, without a speck of vegetation.
+~
+E
+bluebells foxgloves flowers~
+The tiny velvet flowers of the bluebells sparkle with droplets of dew, a
+few cobwebs, similarly coated gleaming among them.  Towering over them
+are the flower-ladened stems of the foxgloves.  Endless color
+combinations rise up in a riotous display.  The drone of bees a multitude
+of bees and wasps fill the air, adding their own unique music to the
+sounds of the forest.
+~
+A
+~
+~
+if( can_fly( ch ) == 0 ) {
+  act_tochar( #leave, ch, obj, mob );
+  act_notchar( #isleave, ch, obj, mob );
+  }
+continue;
+~
+E
+leave~
+You wade across the @ymuddy@n brook, sending a churning mass of weeds
+downstream.
+~
+E
+isleave~
+$n wades across the @ymuddy@n brook, sending a churning mass of weeds
+downstream.
+~
+!
+3 0 1
+5010 9 1509949540 3 0
+-1
+S
+
+#2209
+Beech Forest - Foxgloves and Ferns~
+Beside the muddy stream a shell-strewn path starts, marked by two
+whitewashed stones.  Intermixed with the predominate beech trees are a
+smattering of exotics, elms and poplars, birch and lace woods.  The
+forest floor is covered in bright forest flowers, bluebells and
+daffodils, while near to the murky brook foxgloves and maidenhair ferns
+flourish.
+~
+[Eliza] reviewed
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 2207 10 10 5
+D2
+~
+~
+0 -1 2210 10 10 5
+E
+shell path~
+Thousands of broken shells have been strewn across the path, giving it an
+curious white glow.  Far from the sea, it's odd that someone would take
+the time and effort to do such a thing.
+~
+E
+white washed stones~
+Nestled amongst the ferns and flowers, the white-stones have been worn
+smooth by the passing of time.  A few yellow patches of lichen grow on
+their surface. 
+~
+E
+beech trees exotics elms poplars birch lace~
+The mixture of trees is quiet surprising considering, the lack of
+variation throughout most of the woodlands.  The exotic trees are all
+ancient and gnarled; they seem to be growing only in this area, perhaps
+the last vestige of an older forest.
+~
+E
+bluebells daffodils~
+Clustered around the tall trees, the bright wildflowers seem to enjoy the
+growing conditions, spreading out in large carpets across the forest
+floor.  Gold of the daffodils intermixes with the blues of the bluebells,
+creating a picturesque scene, that looks as good as it smells.
+~
+E
+foxgloves maidenhair ferns~
+The woody stems of the foxgloves reach over six feet in height, and are
+covered with long trumpet-shaped flowers.  The variation of the blooms is
+stunning; reds, yellows and speckled pinks mix with blues and violets to
+create a riot of colors.  Nestled against the bank of the brook, the
+delicate, lacy maidenhair ferns seem dull in comparison, their dark green
+fronds spread out in an umbrella 
+~
+A
+~
+~
+send_to_room( #for, room );
+~
+E
+for~
+The wind blows through the woods, sending leaves dancing and
+ripples across the stream.
+~
+!
+2 150 0
+A
+~
+~
+send_to_room( #strm, room );
+~
+E
+strm~
+A @Wsilvery@n fin breaks the brook's surface then disappears with a splash
+back into the muddy waters.
+~
+!
+2 50 0
+A
+~
+~
+if( can_fly( ch ) == 0 ) {
+act_notchar( #isleave, ch, obj, mob );
+act_tochar( #leave, ch, obj, mob );
+}
+continue;
+~
+E
+leave~
+With a small leap you cross the bubbling brook and continue southwards 
+~
+E
+isleave~
+$n jumps across the brook and continues southwards.
+~
+!
+3 0 4
+7181 17 1509949490 -2 25
+4241 17 1509949540 -2 0
+-1
+S
+
+#2210
+Beech Forest - Shell Covered Path~
+A shell-strewn path winds through the shady trees in a north-south
+direction.  To the north, the path crosses a shallow, muddy brook before
+disappearing into countless flower-carpeted glades that fill the beech
+forest.  Southward the path takes a sharp turn to the west where it ends
+in a white wood gate built into a low stone wall.  Throughout the woods,
+wispy smoke drifts, an indication that civilization may be close by.
+~
+[Eliza] reviewed
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 2209 10 10 5
+D2
+~
+~
+0 -1 2211 10 10 5
+E
+shell path~
+The white shell path ends at the small brook.  At the water's edge it
+becomes churned up with the mud, giving it a speckled look.
+~
+E
+shady trees~
+The trees to the north appear to be taller and older than their southern
+kin, being clearer of the countless smaller saplings that grow to the
+south.  Closer to the path, some of the beech trees show signs of fire
+damage, charred branches lie at their base and several have warped and
+split trunks.  The trees themselves seem to have barely survived the
+inferno.
+~
+E
+flower glades~
+Around the path and in amongst the forest lands are countless glades of
+flowers.  The majority of the plants are bluebells and daffodils with a
+few wild roses and foxgloves intermixed.  The intensity of colors is
+quite stunning, the myriad of swarming insects dancing around them
+testifying to their attractive properties.  The industrious creatures are
+harvesting nectar for their hives.
+~
+E
+white wood gate stone wall~
+Made from stacking quartz-streaked gray stones stacked one on top of the
+other without a lick of mortar in between, it's a wonder the wall has
+stood the test of time.  The ivy that grows across most of the wall may
+have something to do with its stability.  The wooden gate has been lashed
+together out of fallen beech branches, its rustic look not affecting its
+working condition at all.
+~
+A
+~
+~
+send_to_room( #whisp, room );
+~
+E
+whisp~
+@cA hazy cloud of wood smoke billows across the path, obscuring the forest
+for an instant.@n
+~
+!
+2 150 0
+A
+~
+~
+if( can_fly( ch ) == 0 ) {
+act_notchar( #isleave, ch, obj, mob );
+act_tochar( #leave, ch, obj, mob );
+}
+continue;
+~
+E
+leave~
+You wade across the muddy brook and continue northwards.
+~
+E
+isleave~
+$n wades across the brook churning up its muddy bottom.
+~
+!
+3 0 1
+-1
+S
+
+#2211
+Beech Forest - Before a Small Cottage~
+Surrounded by a low stone wall, the wattle and thatch cottage nestles in
+amongst the beech trees, a narrow shell-covered path leading up to it
+through a white wooden gate.  Foxgloves, daisies and wallflowers grow
+beside the wall and house, their bright flowers attracting a score of
+tiny bees.  From out of the red clay chimney, rising wisps of smoke can
+be seen drifting skyward.
+~
+[Eliza] reviewed
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 2210 10 10 5
+D1
+~
+~
+0 -1 2203 10 10 5
+D3
+~
+~
+0 -1 2212 10 10 5
+E
+stone wall wooden gate~
+Built from quartz-flecked gray stones stacked one atop the other with no
+sign of mortar in between, perhaps the low wall is held together by the
+interlacing vines and the climbing roses that grow across it.  A
+white-washed gate of wood is set into the wall where it crosses the shell
+strewn path.  From the rust on the hinges you guess it is perpetually
+open.
+~
+E
+thatched wattle cottage~
+Overgrown with ivy and jasmine, the tiny cottage blends into with the
+surrounding forests; if not for its relatively clear front wall, it might
+look like a unpretentious hillock rather than a house.  Sprouting from
+the thatched roof, a few slender beech saplings indicate the length of
+time the place has been without proper care.  Despite its ramshackle
+appearance, all the structure seems intact, and a wispy column of smoke
+rises from the clay chimney, announcing the presence of occupants.
+~
+E
+beech trees~
+Around the cottage the beech forest continues, the tall trees stretching
+skywards.  The trees here are much closer together than in the northern
+part of the forest.  Long shadows reach across the path, giving the area
+a look of twilight regardless of the time of day.
+~
+E
+foxgloves daisies wallflowers flowers~
+Originally the flowers were planted in flower boxes, however they have
+spread steadily across the front yard until most if it has disappeared
+beneath the waves of colors.  The taller foxgloves' woody stems are
+covered in soft-yellow and white flowers, attracting swarms of buzzing
+insects.  The wallflowers grow mostly against the stone wall and the
+cottage veranda, where they enjoy the extra warmth that the shelter
+provides.  Almost lost within the riot of color, tiny daisy plants are
+covered in velvet-blue and black flowers.
+~
+-1
+S
+
+#2212
+Beech Forest - Small Cottage~
+The picturesque cottage looks cozy and warm from the outside.  The
+woodwork has been washed with lime, giving it a ghostly white finish,
+although much of the wash has faded, leaving boards exposed to the
+elements.  A half-dozen gaps in the roof show where thatching is due for
+replacement.  A wooden veranda runs along the front, and shallow steps
+lead up to the main door.  Flanking the door are shuttered windows, their
+sills formed into flower boxes planted with daisies and violets.  Roughly
+carved pillars support the roof above the veranda, the wood spilt and
+cracked from the weather.  A low stone wall runs around the house,
+separating the yard and cottage from the surrounding beech forest.  A
+path of broken shells leads out of the yard through a white wood gate in
+the wall.
+~
+[Guin] Done.
+~
+167249920 2 9 0
+D1
+~
+~
+0 -1 2211 10 10 5
+D3
+cottage door~
+~
+391 6004 2213 10 10 5
+E
+veranda pillars roof~
+The pale wood of the veranda is overgrown with a tangled mass of ivy and
+jasmine, using the pillars and woodwork as a climbing frame.  Around the
+veranda, several mounds of dead and dying leaves huddle in deserted
+corners, blown there by the wind.  The heady scent of the jasmine fills
+the air, almost overpowering in its strength.  Dry rot and termite damage
+is clearly visible in some of the pillars, where the years of neglect are
+beginning to take their toll.  Overhead, the thatching is slowly
+disappearing under the rampant growth of the plants.  Atop the roof, a
+few beech saplings grow, having found root in the decaying thatch.
+~
+E
+beech forest~
+Younger than the northern forests, the beech trees grow around the burned
+stumps of older trees.  A fire must have raged through here some years
+ago, miraculously sparing the cottage and garden from its destructive
+flames.
+~
+E
+flowers boxes daisies violets~
+The boxes are about two feet in length and firmly attached to the cottage
+wall.  A mixture of white-petaled daisies and rich, velvet-petaled
+violets fill them, although several weeds also make their home in the
+boxes.  Even though the limewash on them has mostly faded away, the faint
+outline of scribed flowers and forest animals can just be made out across
+the woodwork.
+~
+E
+ivy jasmine~
+The climbing plants wind across the veranda and sprawl along the roof. 
+Clusters of long and thin, white jasmine flowers fill the air with a
+heavy, sweet perfume.  Variagated ivy leaves offer their own beauty,
+their mottled greens and gold seeming richer in color against the
+snow-colored jasmine.
+~
+E
+stone wall gate wooden~
+Built from quartz-flecked gray stones stacked one atop the other with no
+sign of mortar in between, perhaps the low wall is held together by the
+interlacing vines and the climbing roses that grow across it.  A
+white-washed gate of wood is set into the wall where it crosses the shell
+strewn path.  From the rust on the hinges you guess it is perpetually
+open.
+~
+A
+~
+flower box~
+if( random( 0, 2 ) == 0 ) {
+  if( rflag( reset0, room ) ) {
+    act_tochar( #key, ch, obj, mob );
+    act_notchar( #issearch, ch, obj, mob );
+    obj_to_char( oload( 6004 ), ch );
+    remove_rflag( reset0, room );
+    end;
+    }
+  }
+act_tochar( #nokey, ch,obj, mob );
+act_notchar( #issearch, ch, obj, mob );
+~
+E
+key~
+You sift through the soil, disrupting a few flowers.  Your fingers
+encounter a hard object, you've uncovered a hidden key!
+~
+E
+issearch~
+$n searches around in the flower box, uprooting several beautiful flowers. 
+@gWhat a waste!@n
+~
+E
+nokey~
+@yTwo very dirty hands and many uprooted flowers later, you decide
+there is nothing of interest in the flower box.@n 
+~
+!
+9 0 0
+A
+pick~
+flowers daisy violet~
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  act_tochar( #get, ch, obj, mob );
+  act_notchar( #isget, ch, obj, mob );
+  obj_to_char( oload( 7376 ), ch );
+  end;
+  }
+act_tochar( #noget, ch, obj, mob );
+~
+E
+get~
+@gYou carefully pick several of the brightly colored flowers.@n 
+~
+E
+isget~
+@g$n picks several brightly colored flowers from the box.@n 
+~
+E
+noget~
+There are too few flowers left to pick a decent bunch.
+~
+!
+0 0 0
+5038 9 1509949540 3 0
+5010 9 1509949540 3 0
+-1
+S
+
+#2213
+Small Cottage - Living Room~
+Dust coats the creaking floorboards of the small cottage.  In the center
+of the room sits a large oak table, its surface smooth and worn, with a
+hint of worm rot in its legs.  Cobwebs hang from every available surface
+of the walls, having captured more dust than insects.  A large bookcase
+has been pushed against the southern wall, its shelves filled with
+rotting and decaying books and scrolls.  The smell of damp and mold hangs
+heavy in the air.  A wooden door set into the eastern walls leads out
+into the yard, and the windows in that wall have had their shutters
+latched shut.  In the northern wall, an archway has been hung with a
+curtain that conceals what lies beyond.  To the west an open archway
+leads into a small room; the jumble of pots and pans you see there
+indicate it opens into a kitchen.
+~
+[Eliza] reviewed
+~
+167247872 0 5 0
+D0
+~
+~
+0 -1 2216 10 10 5
+D1
+cottage door~
+~
+391 6004 2212 10 10 5
+D3
+~
+~
+0 -1 2214 10 10 5
+E
+floor~
+A thin layer of hazy dust covers the floor, some of it kicked up into
+little puffs by your footsteps.  The tired scent of mold and decay hangs
+heavily here on drafts of stale air that lightly brush the cobwebs
+hanging from the walls.
+~
+E
+large oak table surface worm rot legs~
+The oaken table's wide-spanning surface has been rubbed smooth over the
+years, and the grain of the wood still shows clearly under the thin coat
+of dust.  Its legs are simple, plain and stocky, with little
+embellishment.  The dark stains of mildew and the diminutive tell-tale
+holes of worm rot mar the sanded surface, giving the piece of furniture
+an old, neglected look.
+~
+E
+large bookcase southern shelves rotting decaying books scrolls~
+Tall enough to scrape the ceiling, the old bookcase shelves are nearly
+buckling under the weight of a collection of tomes and scrolls.  Dust,
+ever-present in this house, coats the uncovered surface of the shelves
+and creates a haze over the scroll labels and book spines.  Bookworms and
+mildew have taken their toll on several of the volumes, causing bindings
+to loosen and pages to curl.
+~
+E
+wooden door eastern yard windows shutters~
+The heavy door sits in the middle of the eastern wall, with wood-framed
+windows on either side.  The shutters on the windows have been latched
+shut, the simply metal stays tarnished with age and disuse.
+~
+E
+archway 1 northern~
+An old curtain hangs in the northern archway, obscuring your view into
+the room beyond.
+~
+E
+1 western~
+The archway yawns open, giving you a clear view of the room beyond.  A
+large brick fireplace takes up most of the view, but an assortment of
+broken crockery and old pans can be seen as well.
+~
+A
+look~
+archway~
+act_tochar( #which, ch );
+~
+E
+which~
+Which archway do you mean -- the northern archway or the western archway?
+~
+!
+0 0 0
+A
+~
+floorboards~
+// object 3028 needs references changed to 3028
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 0, 2 ) > 0 ) {
+    act_tochar( #get, ch, obj, mob );
+    act_notchar( #issearch, ch, obj, mob );
+    if( random( 0, 4 ) == 0 ) {
+      obj_to_char( oload( 3028 ), ch );
+      end;
+      }
+    obj_to_char( oload( 14 ), ch );
+    end;
+    }
+  }
+act_tochar( #noget, ch, obj, mob );
+act_notchar( #issearch, ch, obj, mob );
+~
+E
+get~
+Bending down to scrutinize the floor further, you find something wedged
+between the floorboards.
+~
+E
+noget~
+Searching the floor briefly, you can see nothing but dust.
+~
+E
+issearch~
+$n stoops over and peers carefully at the floor, maybe $e is searching
+for footprints.
+~
+!
+9 0 0
+A
+~
+bookcase~
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  if( random( 0, 2 ) > 0 ) {
+    i = random( 0, 4 );
+    if( i == 0 )
+      obj = oload( 1019 );
+    if( i == 1 )
+      obj = oload( 1010 );
+    if( i > 1 )
+      obj = oload( 1000 );
+    act_tochar( #get, ch, obj, mob );
+    act_notchar( #issearch, ch, obj, mob );
+    obj_to_char( obj, ch );
+    end;
+    }
+  }
+act_tochar( #noget, ch, obj, mob );
+act_notchar( #issearch, ch, obj, mob );
+~
+E
+get~
+You discover $p tucked behind the bookcase.
+~
+E
+issearch~
+$n searches the old bookcase, displacing crumbling books and dusty
+scrolls.
+~
+E
+noget~
+You rummage around but find nothing of value remaining in the bookcase.
+~
+!
+9 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+You push aside the curtain and head northward.
+~
+E
+to_room~
+$n pushes aside the curtain and heads northward.
+~
+!
+3 0 1
+5044 9 1509949540 3 0
+5044 9 1509949540 3 0
+-1
+S
+
+#2214
+Small Cottage - Kitchen~
+Filled with rusted pots and pans, this tiny kitchen has barely enough
+space in which to move.  A wide brick fireplace in the west wall is
+filled with ash and embers, still smoking.  Against the north wall are
+dust-covered shelves, filled with broken bits of crockery.  A large
+cauldron of black iron rests in an alcove in the southern wall, clear of
+the normal layers of dust.
+~
+[Azerin] acode for cauldron plus its desc if required
+holding off on search fireplace.  theres already a couple of things in
+this room.  it is on the list of possible places for future placement of
+custom pieces 
+note to self think of something sensible...stir cauld..erm need water from stream...bee corpses and spoon? but why?
+ahhh i know. a recipe found in the fireplace! right ho
+not bee corpses. bee stingers....in theme, am thinking maybe of some sort of "first aid kit" this concoction could be a component...will progress with this in talidars and other surrounding areas
+put on hold. is a longterm project and already have plans...will end up one of many parts of a custom item
+[Eliza] reviewed
+~
+167247872 0 5 0
+D1
+~
+~
+0 -1 2213 10 10 5
+D5
+trapdoor~
+~
+139 -1 2215 10 10 5
+E
+rusted pots pans~
+Old, disused pans lie on the floor in neglected heaps, stacked upon one
+another in a rusty, dust-covered mound that takes up most of the
+available walking space in this small kitchen.
+~
+E
+brick fireplace ash embers~
+Cracked bricks, covered with many years' worth of grime and ash, form the
+hearth and chimney of the old fireplace.  Wispy tendrils of smoke still
+rise from the last few crimson embers and ash, slowly drifting upward
+into the gaping maw of the chimney itself.
+~
+E
+1 north dust-covered covered shelves broken bits crokery~
+A broken pitcher rests uneasily along the edge of a dust-covered wooden
+shelf, and the powdered remains of other crockery items lie strewn on the
+floor below.
+~
+E
+iron cauldron~
+Untouched by the passage of time, the iron cauldron has been wedged into
+an alcove with some force, leaving a collection of fine scrape marks
+across its rim.  Wrapped around the cauldron's handle is a rusty chain
+that ends in a broken link, where something was once attached.  Just
+below the lip of the cauldron are several engraved pictures of wasps or
+bees.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+You grab hold of the wooden ladder, hoping it will hold, and carefully
+climb down.
+~
+E
+to_room~
+$n grabs hold of the wooden ladder and carefully climbs down.
+~
+!
+3 0 32
+A
+move~
+pots~
+if( !is_open( room, down ) ) {
+  act_tochar( #pots, ch, obj, mob );
+  act_notchar( #ispots, ch, obj, mob );
+  open( room, down );
+  end;
+  }
+act_tochar( #wotpots, ch, obj, mob );
+~
+E
+pots~
+Sweeping aside a heap of old pots, they clatter to the ground noisily
+revealing a trapdoor in the floor.  A wooden ladder leads downwards.
+~
+E
+ispots~
+Sweeping aside a heap of old pots, $n reveals a trapdoor in the floor.  A
+wooden ladder leads downwards into the darkness.
+~
+E
+wotpots~
+The pots have already been moved aside.
+~
+!
+9 0 0
+A
+~
+shelves broken crockery~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #fail, ch, obj, mob );
+  act_notchar( #rummage, ch, obj, mob );
+  end;
+  }
+act_tochar( #nuthun, ch, obj, mob );
+~
+E
+fail~
+Despite your exhaustive search of the countless piles of junk on the
+shelves, you fail to find anything of interest.
+~
+E
+rummage~
+$n spends several minutes searching the countless mounds of junk that
+fill the shelves, but appears to be unable to find anything of value.
+~
+E
+nuthun~
+The shelves have already been well searched.
+~
+!
+9 0 0
+-1
+S
+
+#2215
+Small Cottage - Root Cellar~
+The walls and floor have been hacked out of the dark earth, leaving them
+rough and pitted.  A narrow-runged ladder leads upward to a trapdoor in
+the flat wooden roof.  The place is cloaked in dust and cobwebs, although
+the western wall seems free from both trappings.  Empty barrels and
+broken crates litter the floor; intermingled amongst them are dried roots
+and grain husks.
+~
+[Eliza] reviewed
+~
+167247872 0 5 0
+D4
+trapdoor~
+~
+139 -1 2214 10 10 5
+E
+walls floor dark earth~
+The earth of the walls and floor appear to have been dug quickly.  Bumpy
+in some places and bearing deep gouges in others, the dried and
+hard-packed dirt floor also shows faint scratch marks near the western
+wall.
+~
+E
+1 western cobwebs dust~
+While every other surface in this cellar shows the same coatings of dust
+and cobweb as the rest of the house, the western wall is clear and the
+floor before it shows small scratches, as if from claws.
+~
+E
+scratches~
+Just before the western wall, small scratches have been gouged into the
+dried and packed dirt floor.
+~
+E
+narrow rung ladder trapdoor wooden roof~
+Pitted with age and rust rust, the narrow rungs of the old iron ladder
+are closely-spaced and sturdy-looking.  The ladder is bolted into place
+near the wooden trapdoor above your head.
+~
+E
+empty barrels broken crates dried roots grain husks~
+An empty barrel lies on its side, nearly hidden by the large wooden crate
+before it.  The lid of the crate has been splintered, and one side
+smashed down; it would seem that someone was in a hurry to access
+whatever was inside.  All that remains of the original stores of the
+cellar are some old rat-eaten corncobs and a mouldy grain scoop with some
+rotting oats still sticking to it.
+~
+A
+leaving~
+up~
+continue;
+~
+E
+to_char~
+You grab hold of the wooden ladder and carefully climb up out of the root
+cellar.
+~
+E
+to_room~
+$n carefully climbs up the wooden ladder out of the root cellar.
+~
+!
+3 0 16
+A
+~
+crate wooden~
+if( rflag( reset0, room ) ) {
+  if( random( 0, 4 ) > 1 ) {
+    act_tochar( #get, ch, obj, mob );
+    act_notchar( #issearch, ch, obj, mob );
+    remove_rflag( reset0, room );
+    obj_to_char( oload( 7389 ), ch );
+    end;
+    }
+  }
+act_tochar( #nuthun, ch, obj, mob );
+act_notchar( #issearch, ch, obj, mob );
+~
+E
+get~
+Peering inside to see what might be hidden, you discover a cast iron spoon!
+~
+E
+issearch~
+$n peers inside a crate to see what might be inside.
+~
+E
+nuthun~
+The crate is totally empty but for dust and shadows.
+~
+!
+9 0 0
+A
+2 open 2 push~
+3 trapdoor 1 up~
+if( !is_open( room, up ) ) {
+  act_tochar( #opensezme, ch, obj, mob );
+  act_notchar( #opensezhim, ch, obj, mob );
+  open( room, up );
+  end;
+  }
+act_tochar( #youcrazy, ch, obj, mob );
+~
+E
+opensezme~
+After several attempts you manage to push the trapdoor open.  The sounds
+of clattering pots fills the chamber.
+~
+E
+opensezhim~
+$n pushes at the underside of the trapdoor until it swings open upwards.
+~
+E
+youcrazy~
+How much more open would you like it?
+~
+!
+0 0 0
+5044 9 1509949540 3 0
+5044 9 1509949540 3 0
+-1
+S
+
+#2216
+Small Cottage - Bedroom~
+Shattered furniture has been strewn across the floor, chairs and a modest
+table reduced to ruin.  A rough-looking bed rests against the northern
+wall, its wooden frame seeming almost skeletal.  On the southern wall, a
+broken mirror hangs, cracked and splintered glass lying beneath it.  A
+shuttered window besides it has been sealed with bound strips of iron, an
+oddly strong lock for a humble cottage.  To the south, an alcove has been
+hung with a heavy canvas cloth that blocks the view of what lies beyond.
+~
+[Eliza] reviewed
+~
+167247872 0 5 0
+D2
+~
+~
+0 -1 2213 10 10 5
+E
+furniture chairs table~
+The remains of old furniture lie in shattered bits across the floor. 
+Looking at the wood, it would appear that it had been destroyed with an
+axe or similar heavy blade, as large cuts cover much of its surface.  The
+purpose of the destruction is unclear, perhaps a blind rage or perhaps
+someone was looking for something, and wasn't too worried about subtlety.
+~
+E
+shard mirror~
+The frame of the mirror was once gilded, a few tiny scraps of the golden
+metal remaining in some of the deeper cracks of the wood.  A few shards
+of glass remain; the rest ground into tiny pieces upon the floor.
+~
+E
+shuttered window~
+Bound with strips of iron the shutters offer stout protection, odd in
+comparison to the rest of the cottage.  Cobwebs and dust cover most
+surfaces, clear only on the windowsill, where a faint draught stirs it up.
+~
+E
+archway curtain 1 south~
+The southern arch has been hung with a dirty canvas cloth.  Although
+stained and ripped in several places, it still manages to block any view
+of what lies beyond.
+~
+A
+get take~
+glass~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 0, 3 ) == 0 ) {
+    act_tochar( #get, ch, obj, mob );
+    act_notchar( #isget, ch, obj, mob );
+    obj_to_char( oload( 210 ), ch );
+    end;
+    }
+  }
+act_tochar( #noget, ch, obj, mob );
+act_notchar( #isnoget, ch, obj, mob );
+~
+E
+get~
+@CSifting through the broken glass, you find a shard large enough to
+carry.@n 
+~
+E
+isget~
+@C$n kneels and sifts through the glass, coming away with a small
+shard.@n 
+~
+E
+noget~
+You search for a moment but only find tiny splinters.
+~
+E
+isnoget~
+$n searches through the broken glass but comes up empty handed.
+~
+!
+9 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+You move aside the curtain and head southward.
+~
+E
+to_room~
+$n moves aside the curtain and heads southward.
+~
+!
+3 0 4
+A
+~
+~
+continue;
+~
+E
+to_char~
+$t : The curtain blocks your view.
+~
+!
+17 0 8
+-1
+S
+
+#0
+

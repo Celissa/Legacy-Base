@@ -1,0 +1,17 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+fill [container] [source]<br>
+<br>
+<h1> Description </h1>
+<br>
+Fill is used to fill a container with a liquid (usually water).  You can<br>
+also use the command to transfer one liquid from one container to another<br>
+container.<br>
+<br>
+Example:<br>
+fill waterskin fountain : fills your waterskin from the local fountain.<br>
+fill cup waterskin : would fill a cup with the contents of a waterskin.<br>
+</html>
+</body>

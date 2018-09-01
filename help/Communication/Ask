@@ -1,0 +1,15 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+ask [mob] [topic] : askes the mob about the topic<br>
+OR<br>
+ask [mob] about [topic]<br>
+<br>
+<h1> Description </h1>
+<br>
+Ask is used if you want to ask a mob about a subject.  For example, in<br>
+Chiiron you would ask the bartender about the boulder to the east of<br>
+town, by typing 'ask barkeep boulder'.  <br>
+</html>
+</body>

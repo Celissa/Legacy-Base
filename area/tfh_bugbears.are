@@ -1,0 +1,4057 @@
+#M2_AREA
+2
+
+Bugbear Camp~
+Rikahn~
+bugbear camp~
+~
+~
+
+15 0
+0
+1
+#ROOMS
+
+#4030
+Bottom of a Towering Cliff~
+The trail through the forest comes to an abrupt end at a towering cliff
+of gray stone shot through with twisted veins of deep black ore.  Various
+granite boulders sit on the ground at the base of the cliff, having
+tumbled down from the unstable reaches high above.  Ancient elm trees
+flank both sides of the trail, though most of their branches and leaves
+have been forcefully snapped off by the falling rocks.  The only visible
+trail is back towards the dark forest to the north.
+~
+[Rikahn] Boulder blocking entrance, requires 14 str to move.  Search
+[Eliza] Bugbear Camp
+[Guin] Done I think.
+~
+200802313 3 9 0
+D0
+~
+~
+0 -1 6729 10 10 5
+D2
+granite boulder~
+granite boulder~
+399 -1 4031 10 10 5
+E
+cliff gray stone trail~
+Its vegetation stripped from repeated use, a dusty trail leads right up
+to a cliff to the south.  Pale granite faces shot through with dusky ore
+rise upwards almost vertically, hollow pits marring its surface from
+erosion.  A tangled mess of leafy branches snapped from their trees lie
+upon the ground, sheared off by falling rocks that have embedded
+themselves into the earth.
+~
+E
+twisted veins deep black ore~
+Standing out against the pale gray rock, veins of black ore are exposed
+along the cliff face like a charred and blackened spiderweb.  Flecks of
+silver are visible within the dusky minerals, although not in any
+mineable quantities.
+~
+E
+granite boulders ground base~
+Gargantuan boulders have toppled down from their lofty perches at the top
+of the cliff, embedding themselves into the earth with considerable
+force.  Stripping some of the tree trunks as they fell from above, a
+messy pile of broken branches and leaves are strewn along the ground.
+~
+E
+ancient elm trees branches leaves forest~
+Surrounded by a forest of fully grown elm and oak trees, the ground is
+littered with broken branches and fallen leaves.  Snapped off of their
+trunks by a torrent of sharp rocks broken away from the cliffs to the
+south, the amount of debris which has collected on the ground is
+considerable.
+~
+A
+examine observe 3 search 1 look~
+granite boulders 1 south~
+if( is_open( room, south ) ) {
+  act_tochar( #already2, ch );
+  end;
+  }
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #search, ch );
+  act_notchar( #search2, ch );
+  end;
+  }
+act_tochar( #already1, ch );
+~
+E
+search~
+After examining the boulders, you notice that one of them is covering up
+the entrance to a cave.
+~
+E
+search2~
+After examining the boulders, $n notices that one of them is covering up
+the entrance to a cave.
+~
+E
+already1~
+The granite boulder is still blocking the cave entrance.
+~
+E
+already2~
+The granite boulder that was blocking the cave entrance has already been
+moved aside.
+~
+!
+0 0 0
+A
+move push pull shove~
+granite boulder~
+if( !rflag( reset0, room ) ) {
+  if( rflag( reset1, room ) ) {
+    if( find_stat( ch, str ) > random( 12, 15 ) ) {
+      remove_rflag( reset1, room );
+      act_tochar( #move, ch );
+      act_notchar( #move2, ch );
+      open( room, south );
+      end;
+      }
+    act_tochar( #weak, ch );
+    end;
+    }
+  act_tochar( #no, ch );
+  end;
+  }
+act_tochar( #no2, ch );
+~
+E
+move~
+Your brow dripping with sweat from the strain, you manage to move the
+granite boulder out of the way.  The entrance to a cave is revealed.
+~
+E
+move2~
+Straining with all of $s might, $n manages to move the granite boulder
+out of the way, revealing a cave entrance.
+~
+E
+weak~
+You heave and push and pull, but cannot manage to move the boulder.
+~
+E
+no~
+The boulder has already been moved out of the way, and there is no way to
+gain enough leverage to push it back.
+~
+E
+no2~
+Whatever that is trying to move it does nothing interesting.
+~
+!
+0 0 0
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 ) {
+  send_to_room( #action1, room );
+  end;
+  }
+if( i == 2 ) {
+  send_to_room( #action2, room );
+  end;
+  }
+if( i == 3 ) {
+  send_to_room( #action3, room );
+  end;
+  }
+~
+E
+action1~
+@CThe sound of surging water can be heard from beyond the cliffs.@n
+~
+E
+action2~
+@RA few pebbles descend from the cliff above, striking the ground with a
+clattering sound.@n 
+~
+E
+action3~
+@GWhat few leaves remain on the tree branches rustle as a brief gust of
+wind blows alongside the cliff.@n 
+~
+!
+2 200 0
+A
+~
+~
+if( find_stat( ch, level ) > 91 )
+  continue;
+if( is_open( room, south ) ) {
+  act_tochar( #open, ch );
+  act_notchar( #open2, ch );
+  continue;
+  }
+if( rflag( reset0, room ) ) {
+  act_tochar( #noexit, ch );
+  end;
+  }
+act_tochar( #mustmove, ch );
+~
+E
+open~
+@cTaking a deep breath, you step into the dark, musty cave.@n
+~
+E
+open2~
+@cTaking a deep breath, $n steps into the dark, musty cave.@n
+~
+E
+noexit~
+You see no exit to the south.
+~
+E
+mustmove~
+You cannot walk through the boulder.  Maybe you should move it out of the
+way first?
+~
+!
+3 0 4
+A
+1 south~
+~
+if( find_stat( ch, level ) > 91 )
+  continue;
+if( is_open( room, south ) )
+  continue;
+act_tochar( #mustmove, ch );
+~
+E
+mustmove~
+You cannot walk through the boulder.  Maybe you should move it out of the
+way first?
+~
+!
+0 0 0
+A
+1 open 1 close~
+granite boulder 1 south 1 west 1 north 1 east~
+act_tochar( #no, ch );
+~
+E
+no~
+There is no door or wall there.
+~
+!
+0 0 0
+-1
+S
+
+#4031
+Inside of a Dark Cave~
+The surfaces of this cave inside of the mountain are worn smooth,
+although lines of residue rise up the walls, indicating the one-time
+presence of an underground river.  Now completely drained, scores of
+footprints mark the dusty floor, leading both deeper into the dark tunnel
+and right up to the rock wall to the north.  A square patch of wood lies
+in the ceiling overhead, although no rings or handles are visible in
+order to open it.  The subterranean passageway curves to the west, where
+the sound of dripping water can be heard echoing softly.
+~
+[Rikahn] trapdoor above only one-way, coming down
+[Eliza] No need to worry about tracking skill for this level zone. 
+Players won't have it yet.
+[Eliza] Done.
+~
+200933380 11 5 0
+D0
+granite boulder~
+granite boulder~
+399 -1 4030 10 10 5
+D3
+~
+~
+0 -1 4032 10 10 5
+E
+surface cave walls lines residue sides~
+The chamber's walls have been worn smooth on all sides along the full
+length of the passage.  Evidently an underground river conduit, a thin
+layer of dried residue clings to the walls up to waist height.
+~
+E
+scores footprints floor~
+Hundreds of footprints seem to converge here at the end of the tunnel,
+most of them resembling bear tracks in the sandy floor.  Some of the
+tracks appear to run right under the wall to the north.
+~
+E
+square patch wood ceiling trapdoor~
+A misshapen square of wood sits directly overhead in the center of the
+chamber's ceiling.  Two massive hinges have been mounted directly into
+the rock, but no handle or knob is apparent on its surface.
+~
+A
+~
+~
+if( find_stat( ch, level ) > 91 )
+  continue;
+if( is_open( room, north ) ) {
+  act_tochar( #open, ch );
+  act_notchar( #open2, ch );
+  continue;
+  }
+if( rflag( reset0, room ) ) {
+  act_tochar( #noexit, ch );
+  end;
+  }
+act_tochar( #mustmove, ch );
+~
+E
+open~
+@cYou exit the tunnel, stepping out into the forest.@n
+~
+E
+open2~
+@c$n exits the tunnel, stepping out into the forest.@n
+~
+E
+noexit~
+You see no exit to the north.
+~
+E
+mustmove~
+You cannot walk through the boulder.  Maybe you should move it out of the
+way first?
+~
+!
+3 0 1
+A
+examine observe 3 search 1 look~
+granite boulders 1 north~
+if( is_open( room, north ) ) {
+  act_tochar( #already, ch );
+  end;
+  }
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #search, ch );
+  act_notchar( #search2, ch );
+  end;
+  }
+act_tochar( #duh, ch );
+~
+E
+search~
+Looking intently at the rock wall, you notice that a boulder blocks
+another passage!
+~
+E
+search2~
+After looking intently to the north, $n notices something!
+~
+E
+already~
+The boulder has already been moved aside.
+~
+E
+duh~
+The boulder is still blocking the way.
+~
+!
+0 0 0
+A
+move push pull shove~
+granite boulder~
+if( !rflag( reset0, room ) ) {
+  if( !is_open( room, north ) ) {
+    if( find_stat( ch, str ) > 13 ) {
+      act_tochar( #move, ch );
+      act_notchar( #move2, ch );
+      open( room, north );
+      end;
+      }
+    act_tochar( #weak, ch );
+    end;
+    }
+  act_tochar( #no, ch );
+  end;
+  }
+act_tochar( #no2, ch );
+end;
+~
+E
+move~
+Straining with all your might, you push the boulder out of the way.
+~
+E
+move2~
+Straining with all $s might, $n pushes the boulder out of the way.
+~
+E
+weak~
+You are too weak to move the boulder out of the way.
+~
+E
+no~
+The boulder has already been moved out of the way, and there is no way to
+gain enough leverage to push it back into place.
+~
+E
+no2~
+Whatever that is trying to move it does nothing interesting.
+~
+!
+0 0 0
+A
+1 up~
+~
+if( find_stat( ch, level ) > 91 )
+  continue;
+if( is_open( room, up ) ) {
+  act_tochar( #jump, ch );
+  act_notchar( #jump2, ch );
+  end;
+  }
+act_tochar( #closed, ch );
+~
+E
+jump~
+You jump up and down, but can't reach the opening in the ceiling.
+~
+E
+jump2~
+$n jumps up and down, but can't reach the opening in the ceiling.
+~
+E
+closed~
+The trapdoor is closed.
+~
+!
+0 0 16
+A
+unlock open~
+trapdoor ceiling 1 up~
+act_tochar( #nope, ch );
+~
+E
+nope~
+The trapdoor is out of reach.
+~
+!
+0 0 0
+A
+open close~
+granite boulder 1 north 1 east 1 west 1 south~
+act_tochar( #no, ch );
+~
+E
+no~
+There is no door or wall there.
+~
+!
+0 0 0
+5039 9 1509949540 3 0
+-1
+S
+
+#4032
+Subterranean Tunnel~
+The stone walls of this tunnel are smooth, with olive-green stains up to
+about waist-high down the entirety of its length.  Evidently created by
+the flowing of an underground river, the tunnel twists and turns to the
+east and south, guided by erosion-resistant deposits of rock.  Every
+sound reverberates through the tunnel segments, growing slightly quieter
+with every subsequent echo.
+~
+[Eliza] Done.
+~
+200933380 11 5 0
+D1
+~
+~
+0 -1 4031 10 10 5
+D2
+~
+~
+0 -1 4033 10 10 5
+E
+stone walls smooth olive-green stains~
+Worn smooth through the eons by the continuous battering of an
+underground river, this tunnel weaves its way through the earth around
+deposits of denser, erosion-resistant rock.  Rising up to waist-height, a
+thin layer of dried fungus clings to the sides of the passageway, lending
+a moldy odor to the air.
+~
+E
+erosion-resistant deposit rock~
+Striped layers of dense, erosion-resistant rock shape the direction in
+which the underground tunnel was formed over the ages.  Standing out in
+vertical sheets and columns, the gray and black stone has a texture
+similar to marble, yet much sturdier in composition.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou walk further underground to the south, towards the sound of
+dripping water.@n 
+~
+E
+to_room~
+@G$n walks south, towards the sound of dripping water.@n
+~
+!
+3 0 4
+5065 9 1509949540 3 0
+5065 9 1509949540 3 0
+-1
+S
+
+#4033
+Subterranean Tunnel~
+A rippling pool has collected in the bottom of this circular tunnel
+inside of the mountain.  Every few seconds a drop of water falls from a
+small crack in the ceiling, causing a loud *plop* to echo through the
+tunnel.  Walls worn smooth by the long ago surging of an underground
+river bear ragged gaps, scars where the exposed veins of ore were pried
+loose and carted away.  The tunnel bends north and east around a vertical
+deposit of granite, leading into darkness in both directions.
+~
+[Eliza] Done
+~
+200933380 11 5 0
+D0
+~
+~
+0 -1 4032 10 10 5
+D1
+~
+~
+0 -1 4034 10 10 5
+E
+rippling pool ground~
+Spread out within a depression in the ground, a murky pool of water has
+collected over time.  Fed by droplets that fall from a jagged fissure in
+the ceiling, circular ripples spread out like miniature waves across the
+pool every time a drip hits its surface.
+~
+E
+drop crack ceiling~
+A thin rivulet of water trickles down from a spiderwebbed crack in the
+ceiling, running alongside a narrow stalactite which hangs from the roof
+of the chamber.  Tiny droplets fall intermittently from the tip of the
+spire, hitting the surface of a murky pool with a loud *plop*.
+~
+E
+walls worn smooth ragged gaps ore veins~
+Slash marks, like those an enormous dragon would make with its talons, mar
+the sides of the otherwise smooth tunnel walls where veins of ore have
+been mined out and carted away.
+~
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 ) {
+  send_to_room( #action1, room );
+  end;
+  }
+if( i == 2 ) {
+  send_to_room( #action2, room );
+  end;
+  }
+if( i == 3 ) {
+  send_to_room( #action3, room );
+  end;
+  }
+~
+E
+action1~
+@cA fat drop of water drips from the crack in the ceiling, hitting the
+pool of water with a loud *plop*.@n 
+~
+E
+action2~
+@cA strong gust of wind blows through the tunnel, howling through the
+confined space.@n 
+~
+E
+action3~
+@cOverflow from the shallow pool forms a thread-like stream of water that
+trickles down to the east.@n 
+~
+!
+2 200 0
+1519 17 1509949540 -2 31
+5118 9 1509949540 3 0
+5065 9 1509949540 3 0
+-1
+S
+
+#4034
+Subterranean Tunnel~
+Twisting and turning repeatedly, this dried-up underground river passage
+bends around denser sections of granite that resisted the years of
+eroding water.  A thin band of water flows in from the west, running
+along the sloped floor to the south.  A round hole has been mined from
+the east side of the tunnel, where a solitary sconce has been jammed to
+provide a raised position for a torch.  The sound of dripping water can
+be heard from the west, echoing down the tunnel with annoying repetition. 
+At the south end of the tunnel, a barricade of tree trunks blocks passage
+deeper into the mountain.
+~
+[Eliza] Done
+~
+200409100 11 5 0
+D2
+~
+~
+0 -1 4035 10 10 5
+D3
+~
+~
+0 -1 4033 10 10 5
+E
+thin band water ground floor~
+Trickling in from the west, a thin band of water runs along the convex
+bottom of the tunnel's floor, weaving around pebbles and sand before
+continuing on to the south.  Traces of sediment are visible in the murky
+water, carried along the light current and swept away.
+~
+E
+round hole sconce torch~
+Shoved into a hole hacked from the side of the chamber's wall, a solitary
+sconce provides a resting place for a torch.  Its iron ring is heavily
+rusted, with dents and scratches along its outer edge, indicating it has
+been used in other locations before.
+~
+E
+barricade tree trunks south~
+Still covered in bark and branch stumps, vast trunks from ancient elms
+have been cut down and stacked atop one another to create a crude yet
+effective barricade.  Used to thwart attackers who may have discovered
+the bugbear's temporary lair, it makes travel deeper into the tunnel
+system difficult at best.
+~
+E
+denser sections granite~
+Bulbous columns jut out from the walls, where sections of pinkish-white
+granite resisted erosion better than the surrounding rock.  Shallow pits
+cover the surface of the tunnel, where tiny mineral deposits were pried
+away.
+~
+A
+climb scale~
+barricade tree trunks 1 south~
+i = random( 1, 10 );
+if( i == 6 ) {
+  act_tochar( #stuck, ch );
+  act_notchar( #stuck2, ch );
+  end;
+  }
+act_tochar( #climb, ch );
+act_notchar( #climb2, ch );
+transfer( ch, find_room( 4035 ) );
+act_notchar( #arrive, ch );
+end;
+~
+E
+climb~
+@GYou climb over the barricade and head further into the tunnel.@n
+~
+E
+climb2~
+@G$n climbs over the barricade and heads further into the tunnel.@n
+~
+E
+stuck~
+@MYou attempt to climb over the barriade, but cannot get a good grip.@n
+~
+E
+stuck2~
+@M$n attempts to climb over the barricade, but cannot get a good grip.@n
+~
+E
+arrive~
+@G$n climbs over the barricade from the other side.@n
+~
+!
+0 0 0
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 ) {
+  send_to_room( #action1, room );
+  end;
+  }
+if( i == 2 ) {
+  send_to_room( #action2, room );
+  end;
+  }
+if( i == 3 ) {
+  send_to_room( #action3, room );
+  end;
+  }
+~
+E
+action1~
+@cThe sound of dripping water echoes resoundingly through the tunnel.@n
+
+~
+E
+action2~
+@cTiny pieces of debris float on the trickle of water, drifting away
+below the barricade.@n 
+~
+E
+action3~
+@cA fine cloud of dust rains down from the unstable ceiling.@n
+~
+!
+2 200 0
+A
+get search steal take grab~
+solitary sconce jammed torch~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  i = random( 1, 4 );
+  if( i == 3 ) {
+    act_tochar( #torch, ch );
+    act_notchar( #torch2, ch );
+    obj_to_char( oload( 26 ), ch );
+    end;
+    }
+  }
+act_tochar( #nope, ch );
+~
+E
+torch~
+You pluck a usable torch from the sconce on the wall.
+~
+E
+torch2~
+$n plucks a usable torch from the sconce on the wall.
+~
+E
+nope~
+There is no torch within the sconce.
+~
+!
+0 0 0
+A
+~
+~
+set_rflag( reset0, room );
+if( mob_in_room( 5039, find_room( 4035 ) ) )
+  remove_rflag( reset0, room );
+if( !rflag( reset0, room ) ) {
+  send_to_room( #lob, find_room( 4034 ) );
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( !is_fighting( rch ) ) {
+        i = random( 1, 3 );
+        if( i == 2 ) {
+          i = 5d6;
+          dam_message( rch, i, "the thrown spear" );
+          inflict( rch, mob, i, "a thrown spear" );
+          }
+        }
+      }
+    }
+  }
+~
+E
+lob~
+@YA shout erupts from behind the barricade, and a barrage of spears comes
+hurtling through the air!@n 
+~
+!
+2 4000 0
+A
+~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+A barricade of fallen trees prevents you from walking in that direction.
+~
+!
+3 0 4
+5043 9 1509949540 3 0
+5118 9 1509949540 3 0
+-1
+S
+
+#4035
+Subterranean Tunnel~
+Zigzagging along the tunnel floor, a trickle of water flows from the
+north underneath a wooden barricade and into a gaping fissure in the
+earth.  The blockade consists of tree trunks stacked on top of each
+other, lashed together with lengths of rope.  A few spears stand against
+one wall, presumably used to defend this underground lair from anybody
+who might discover its hidden entrance.  The tunnel continues unabated to
+the east, leading further into the mountain.
+~
+[Eliza] Done.
+~
+200933380 11 5 0
+D0
+~
+~
+0 -1 4034 10 10 5
+D1
+~
+~
+0 -1 4036 10 10 5
+E
+floor ground trickle water gaping fissure earth~
+Emerging from beneath the wooden barricade, a tiny stream of water flows
+along the tunnel's floor and into an open fissure in the ground. 
+Disappearing into darkness, the silence of the falling water is ominous
+indeed.
+~
+E
+blockade barricade tree trunks stacked lengths rope~
+Thick tree trunks lashed together with hemp rope form a primitive, yet
+effective, guard post deep inside this tunnel system.  Some of the
+branches still protrude from the sides of the trunks, although most have
+been hacked away for firewood.  Although the barricade looks formidable,
+it could be carefully navigated.
+~
+E
+spears wall~
+Numerous spears stand against one wall, left as a backup weapons cache in
+case someone was attacking the guard post.  The bugbears must not have
+expected anyone to discover their lair, as most of the spears are old or
+broken.
+~
+A
+climb scale~
+wooden barricade trees 1 north~
+i = random( 1, 10 );
+if( i == 4 ) {
+  act_tochar( #stuck, ch );
+  act_notchar( #stuck2, ch );
+  end;
+  }
+act_tochar( #climb, ch );
+act_notchar( #climb2, ch );
+transfer( ch, find_room( 4034 ) );
+act_notchar( #arrive, ch );
+end;
+~
+E
+stuck~
+@MYou attempt to climb over the barricade, but cannot get a good grip.@n
+~
+E
+stuck2~
+@M$n attempts to climb over the barricade, but cannot get a good grip.@n
+~
+E
+climb~
+@GYou climb over the barricade, clear of the guard post.@n
+~
+E
+climb2~
+@G$n climbs over the barricade, clear of the guard post.@n
+~
+E
+arrive~
+@G$n climbs over the barricade from the other side.@n
+~
+!
+0 0 0
+A
+~
+~
+send_to_room( #action1, room );
+~
+E
+action1~
+@cWater trickles from the north into a gaping maw of a hole that opens up
+in the middle of the tunnel's floor.@n 
+~
+!
+2 200 0
+A
+get take search grab steal~
+spears~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  i = random( 1, 20 );
+  if( i == 4 ) {
+    act_tochar( #spear, ch );
+    act_notchar( #spear2, ch );
+    obj_to_char( oload( 7165 ), ch );
+    end;
+    }
+  if( i == 8 ) {
+    act_tochar( #spear, ch );
+    act_notchar( #spear2, ch );
+    obj_to_char( oload( 3007 ), ch );
+    end;
+    }
+  if( i == 14 ) {
+    act_tochar( #spear, ch );
+    act_notchar( #spear2, ch );
+    obj_to_char( oload( 7169 ), ch );
+    end;
+    }
+  act_tochar( #broken, ch );
+  act_notchar( #broken2, ch );
+  end;
+  }
+act_tochar( #nospear, ch );
+~
+E
+spear~
+Rummaging among the spears on the wall, you find one in good condition.
+~
+E
+spear2~
+Rummaging among the spears on the wall, $n finds one in good condition.
+~
+E
+broken~
+You grab a spear from the wall, but its shaft falls apart in your hands.
+~
+E
+broken2~
+$n grabs a spear from the wall, but its shaft breaks apart in $s hands.
+~
+E
+nospear~
+None of the spears on the wall are worth taking.
+~
+!
+0 0 0
+A
+~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+A barricade of fallen trees prevents you from walking in that direction.
+~
+!
+3 0 1
+5039 9 1509949540 3 0
+-1
+S
+
+#4036
+Subterranean Tunnel~
+Rubble litters the floor, leftover from a partial cave-in that dropped in
+from above.  Thick elm trunks shore up the unstable ceiling, although
+some are bowed enough to wonder how much longer they will remain standing. 
+The walls of ths underground tunnel are smooth and covered with a thin
+layer of dried algae up to waist height, both created by a channel of
+water that once rushed through this passage.
+~
+[Eliza] Done.
+~
+200933380 11 5 0
+D0
+~
+~
+0 -1 4037 10 10 5
+D3
+~
+~
+0 -1 4035 10 10 5
+E
+rubble floor ground~
+Broken rocks of varying sizes lie scattered along the floor, showered
+down from a partial cave-in of the tunnel.  Sturdy elm trunks with their
+bark still intact help keep the remaining boulders from tumbling,
+although the way they are bowed indicates a collapse is imminent.
+~
+E
+thick elm trunks shore bowed~
+Elm trunks the size of ogres have been drug in from the forest outside
+and stood upright to prevent this portion of the passageway from
+collapsing.  Though thick and strong, the sheer amount of weight bearing
+down has caused them to bend at unnatural angles.  Occasionally the heavy
+rocks shift, causing the wood to groan from the strain.
+~
+E
+walls smooth dried algae~
+Once hanging like a curtain of slimy emerald strings, a layer of dried
+algae clings in clumps to the tunnel's rock surface up to waist height. 
+Wavy strands create a moire pattern, dazzling to the eye, although many of
+the dessicated clumps have flaked off to the ground.
+~
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 ) {
+  send_to_room( #action1, room );
+  end;
+  }
+if( i == 2 ) {
+  send_to_room( #action2, room );
+  end;
+  }
+if( i == 3 ) {
+  send_to_room( #action3, room );
+  i = random( 1, 10 );
+  if( i == 1 )
+    obj_to_room( oload( 78 ), room );
+  if( i == 2 )
+    obj_to_room( oload( 1857 ), room );
+  end;
+  }
+~
+E
+action1~
+@cA creepy groan emanates from the elm trunks shoring up the ceiling,
+visibly bending a little more.@n 
+~
+E
+action2~
+@cMiniscule pieces of dried algae flake off and drift to the chamber
+floor.@n 
+~
+E
+action3~
+@cTiny pebbles drop to the floor with a clatter, falling from the
+unstable ceiling.@n 
+~
+!
+2 200 0
+A
+get search grab take steal~
+dried algae~
+act_tochar( #noalgae, ch );
+~
+E
+noalgae~
+You attempt to get a patch of algae off the wall, but it crumbles into
+fine dust in your hand.
+~
+!
+0 0 0
+A
+~
+rubble~
+act_tochar( #search, ch );
+~
+E
+search~
+You search through the rubble but find nothing of interest.
+~
+!
+9 0 0
+7556 17 1509949506 -2 0
+5118 9 1509949540 3 0
+-1
+S
+
+#4037
+Subterranean Tunnel~
+An iron cauldron rests in the middle of the tunnel's floor, filled with a
+warm brown soup of meat, floating in a thin broth.  Scores of wooden
+bowls and spoons lie on the ground next to the cauldron, enough to feed
+an army.  A cloud of steam rises from the warm pot, and the scent of the
+rudimentary meal drifts through the air.  The smooth passageway continues
+to the east and south, both directions cloaked in darkness.
+~
+[Eliza] Done
+~
+200933380 11 5 0
+D1
+~
+~
+0 -1 4038 10 10 5
+D2
+~
+~
+0 -1 4036 10 10 5
+E
+large iron cauldron~
+The cauldron is a huge heavy iron pot.  It is designed to be left over
+the fire for hours on end to keep its contents warm.  Inside you can see
+a brownish soup that appears bland, yet smells delicious.
+~
+E
+warm brown soup meat broth~
+Simmering within the huge iron cauldron is a vapid soup of cooked meat,
+floating in a watery brown broth.  Although the fire beneath the cauldron
+has been extinguished for some time, the soup is still quite hot, sending
+wisps of aromatic steam in all directions.
+~
+E
+scores wooden bowls spoons~
+Chipped bowls, most of them glistening with the remnants of an already
+eaten meal, sit stacked on the ground in haphazard fashion next to a pile
+of wooden spoons.  Worn with repeated use, the hand-carved implements are
+just voluminous enough to properly feed a hungry person.
+~
+E
+cloud steam~
+Drifting upward in lazy trails, aromatic steam rises from the still-hot
+cauldron of insipid soup.
+~
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 ) {
+  send_to_room( #action1, room );
+  end;
+  }
+if( i == 2 ) {
+  send_to_room( #action2, room );
+  end;
+  }
+if( i == 3 ) {
+  send_to_room( #action3, room );
+  end;
+  }
+~
+E
+action1~
+@cHazy wisps of aromatic steam rise from the pot of soup, drifting
+towards the ceiling.@n 
+~
+E
+action2~
+@cThe scent of the hearty soup titillates the senses, making your mouth
+water.@n 
+~
+E
+action3~
+@cThe hot soup continues to bubble, even though its fire has
+extinguished.@n 
+~
+!
+2 200 0
+A
+get take search grab steal~
+wooden bowls spoons~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  i = random( 1, 10 );
+  if( i == 3 ) {
+    act_tochar( #take, ch );
+    act_notchar( #take2, ch );
+    obj_to_char( oload( 1639 ), ch );
+    end;
+    }
+  if( i == 7 ) {
+    act_tochar( #take, ch );
+    act_notchar( #take2, ch );
+    obj_to_char( oload( 7565 ), ch );
+    end;
+    }
+  }
+act_tochar( #no, ch );
+~
+E
+take~
+Rummaging through the wooden implements, you find one that isn't covered
+in leftover food.
+~
+E
+take2~
+$n rummages through the wooden implements and finds one that isn't
+covered in leftover food.
+~
+E
+no~
+The remaining bowls and spoons are too disgusting to take.
+~
+!
+0 0 0
+A
+get take search grab steal~
+large huge iron cauldron~
+act_tochar( #no, ch );
+~
+E
+no~
+The huge iron cauldron full of soup is much to heavy to pick up.
+~
+!
+0 0 0
+A
+push move tip pull spill overturn~
+large huge iron cauldron soup~
+act_tochar( #no, ch );
+~
+E
+no~
+The combination of widespread metal nubs extending from the bottom of the
+cauldron and its immense weight make it unshakable.
+~
+!
+0 0 0
+460 17 1509949540 -2 16
+5043 9 1509949540 3 0
+5492 9 1509949540 3 0
+-1
+S
+
+#4038
+Subterranean Tunnel~
+A myriad of weapons lay in piles on the ground, most in some state of
+disrepair.  Cracked axe handles and nicked blades await rejuvenation,
+stacked side by side in order of importance.  A flat anvil sits to one
+side, used in the attempted restoration of these ancient weapons.  A
+burning bed of coals glows within a brazier resting in the center of the
+tunnel, used to heat metal until it is malleable.  The water-worn
+passageway begins a wider arc to the south, and also makes a short bend
+to the west.
+~
+[Eliza] Done.
+~
+200933380 11 5 0
+D2
+~
+~
+0 -1 4039 10 10 5
+D3
+~
+~
+0 -1 4037 10 10 5
+E
+myriad weapons piles~
+Battle-worn weapons lie on the ground, waiting to be restored by whomever
+repairs weapons for this haggard crew of bugbears.  Broken axe handles
+sit next to nicked and dented swords, most so heavily damaged it would
+take a miracle to return them to service.
+~
+E
+cracked axe handles nicked blades~
+Axe handles by the dozen sit side by side next to nicked sword blades
+needing immediate repairs.  Scavenged from past battles, most of the
+weapons look like a lost cause for any chance at rejuvenation.
+~
+E
+brazier~
+A rectangular sheet of thin metal, hammered into a boxy shape with raised
+sides and stubby rods for legs.  Nestled in the center of its bottom
+panel is a bed of glowing coals which cast off a wave of intense heat.
+~
+A
+get take grab steal~
+painted tool box all~
+if( obj_in_room( 7547, room ) ) {
+  if( rflag( reset0, room ) ) {
+    remove_rflag( reset0, room );
+    i = random( 1, 10 );
+    if( i == 5 )
+      continue;
+    act_tochar( #nope, ch );
+    act_notchar( #nope2, ch );
+    junk_obj( obj_in_room( 7547, room ) );
+    end;
+    }
+  }
+continue;
+~
+E
+nope~
+The painted box and its contents fall apart in your hands.
+~
+E
+nope2~
+The painted box and its contents fall apart in $n's hands.
+~
+!
+0 0 0
+A
+sit rest meditate~
+anvil~
+act_tochar( #ouch, ch );
+act_notchar( #ouch2, ch );
+damage( mob, ch, 5d4, fire, "the hot anvil" );
+~
+E
+ouch~
+@RAs you begin to rest your weary bones on the hot anvil, a burning
+sensation causes you to jump to your feet.@n 
+~
+E
+ouch2~
+@RAs $n begins to rest $s weary bones on the hot anvil, $s eyes go wide
+and $e jumps to $s feet with a yelp.@n 
+~
+!
+0 0 0
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 ) {
+  send_to_room( #action1, room );
+  end;
+  }
+if( i == 2 ) {
+  send_to_room( #action2, room );
+  end;
+  }
+if( i == 3 ) {
+  send_to_room( #action3, room );
+  end;
+  }
+~
+E
+action1~
+@cA trail of smoke rises from the brazier, drifting towards the
+ceiling.@n 
+~
+E
+action2~
+@cThe glowing surface of the anvil dims slightly as it begins to cool.@n
+
+~
+E
+action3~
+@cOne of the axe handles falls to the floor with a loud clatter.@n 
+~
+!
+2 200 0
+A
+get take grab search steal~
+brazier~
+act_tochar( #no, ch );
+~
+E
+no~
+You can't take a brazier.
+~
+!
+0 0 0
+A
+get take search grab steal~
+cracked axe handles~
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  i = random( 1, 30 );
+  if( i == 19 ) {
+    act_tochar( #success, ch );
+    act_notchar( #success2, ch );
+    obj_to_char( oload( 382 ), ch );
+    end;
+    }
+  }
+act_tochar( #failure, ch );
+act_notchar( #failure2, ch );
+~
+E
+success~
+You manage to find an intact axe handle among the cracked ones.
+~
+E
+success2~
+$n manages to find an intact axe handle among the cracked ones.
+~
+E
+failure~
+You root through the axe handles, but they are all cracked.
+~
+E
+failure2~
+$n roots through the axe handles, but finds none worth keeping.
+~
+!
+0 0 0
+A
+get take search grab steal~
+nicked blades~
+if( rflag( reset2, room ) ) {
+  remove_rflag( reset2, room );
+  i = random( 1, 30 );
+  if( i == 24 ) {
+    act_tochar( #success, ch );
+    act_notchar( #success2, ch );
+    obj_to_char( oload( 281 ), ch );
+    end;
+    }
+  }
+act_tochar( #failure, ch );
+act_notchar( #failure2, ch );
+~
+E
+success~
+You find a sword which has already been repaired amongst the broken ones.
+~
+E
+success2~
+$n manages to find a repaired sword amongst the broken ones.
+~
+E
+failure~
+All of the swords are in serious need of repair.
+~
+E
+failure2~
+$n searches through the swords but finds none worth taking.
+~
+!
+0 0 0
+2733 17 1509949540 -2 0
+7416 17 1509949540 -2 0
+7547 49 1509949540 -2 0
+7158 81 1509949445 -2 0
+3020 80 1509949450 -2 0
+890 80 1509949485 -2 0
+1924 81 1509949490 -2 0
+5492 9 1509949540 3 0
+5118 9 1509949540 3 0
+-1
+S
+
+#4039
+Subterranean Tunnel~
+Sweeping in a prominent eastward arc, this portion of the underground
+tunnel curves around two magnanimous deposits of granite.  Shaping the
+waterflow of this ancient conduit for centuries, both sections of
+crystalline rock bear crustaceous layers of pink residue deposited by
+the mineral-rich water.  A scarcely detectable imbalance in the level of
+the ground leads downward to the north, where the passageway begins to
+ease back to the west.  To the south, an insipid-looking continuation of
+the tunnel drifts into darkness.
+~
+[Eliza] Done
+~
+200933380 11 5 0
+D0
+~
+~
+0 -1 4038 10 10 5
+D2
+~
+~
+0 -1 4040 10 10 5
+E
+rock deposits granite~
+Pale gray in color with layers of pink and white streaking throughout its
+layers, these two granite deposits have withstood the ravages of nature
+for centuries.  Helping shape the direction of flow of this ancient water
+conduit, patches of pink residue and exposed crystals are visible along
+its surface.
+~
+E
+crystalline pink residue~
+A powdery layer of feldspar coats the sides of the tunnel, evaporated
+from the rushing water that once swept through this conduit system. 
+Jagged white, blue, and black crystals poke out from the tough rock at
+various points, passed over by miners searching for valuable metals.
+~
+A
+get take steal grab search pry~
+crystals~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #yes, ch );
+  act_notchar( #yes2, ch );
+  i = random( 1, 9 );
+  if( i < 4 ) {
+    obj_to_char( oload( 2139 ), ch );
+    end;
+    }
+  if( i > 6 ) {
+    obj_to_char( oload( 7571 ), ch );
+    end;
+    }
+  obj_to_char( oload( 7569 ), ch );
+  end;
+  }
+act_tochar( #no, ch );
+~
+E
+yes~
+Wiggling it repeatedly, you manage to pry one of the crystals from the
+granite.
+~
+E
+yes2~
+Wiggling it repeatedly, $n manages to pry one of the crystals from the
+granite.
+~
+E
+no~
+None of the crystals are loose enough to pry from the solid stone.
+~
+!
+0 0 0
+A
+get take steal grab search~
+pink feldspar~
+act_tochar( #no, ch );
+~
+E
+no~
+Vigorously rubbing the thin layer of feldspar residue against the wall,
+all you manage to do is turn your hands pink.
+~
+!
+0 0 0
+5118 9 1509949540 3 0
+-1
+S
+
+#4040
+Subterranean Tunnel~
+Arcing around a column of solid granite, this dark passageway leads off
+in two directions.  A gentle incline can be detected as the tunnel
+progresses to the west, where a single pinpoint of light is barely
+visible through the inky blackness.  A finely-grained bed of sediment has
+collected along the tunnel floor, with swirling patterns along its
+surface pointing down the conduit to the north.
+~
+[Eliza] Done.
+~
+200933380 11 5 0
+D0
+~
+~
+0 -1 4039 10 10 5
+D3
+~
+~
+0 -1 4041 10 10 5
+E
+column solid granite~
+A circular column of granite, many handbreadths across, protrudes out
+from the softer layers of rock that were slowly eroded away from around
+its circumference.  Helping guide the direction in which the water once
+flowed, the intensely dense rock has withstood the ravages of mother
+nature with aplomb.
+~
+E
+gentle incline single pinpoint light 1 west~
+The tunnel to the west slopes upward ever so slightly, barely detectable
+underground.  A single pinpoint of light winks dimly from afar, too
+distant to shed sufficient light into this chamber to see well.
+~
+E
+finely-grained bed sediment swirling patterns~
+A wide swath of fine dirt and sand lines the center of the floor,
+deposited by the ancient waterflow that once rushed through these tunnels. 
+Tiny pinpricks of light shine out from the otherwise dull gray dirt.
+~
+A
+get take grab search steal~
+finely-grained bed sediment sand~
+if( rflag( reset0, room ) ) {
+  i = random( 1, 3 );
+  if( i == 2 )
+    remove_rflag( reset0, room );
+  act_tochar( #sand, ch );
+  act_notchar( #sand2, ch );
+  obj_to_char( oload( 1410 ), ch );
+  end;
+  }
+act_tochar( #nosand, ch );
+~
+E
+sand~
+A single sparkling grain of sand catches your eye, so you pick it up.
+~
+E
+sand2~
+$n picks up a grain of sand from the bed of sediment.
+~
+E
+nosand~
+Sifting through the grainy dirt, all you manage to do is get dusty.
+~
+!
+0 0 0
+5065 9 1509949540 3 0
+5065 9 1509949540 3 0
+-1
+S
+
+#4041
+Subterranean Tunnel~
+Rolled-up hides serve as bedding for the bugbear denizens, stacked up in
+neat precision against the tunnel's walls.  Running east and west, this
+passage has been hollowed out of the earth by an ancient flow of water,
+leaving streaks of dried algae and minerals encrusted on top of the stone.
+Jagged stalactites hang down from the ceiling, formed from sediment-rich
+trickles of water that once ran down in rivulets from cracks in the rock. 
+Piles of luminescent moss are scattered about the floor, enabling the
+bugbears to make their way around without bumping into anything.
+~
+[Eliza] Done.
+~
+200933381 11 5 0
+D1
+~
+~
+0 -1 4040 10 10 5
+D3
+~
+~
+0 -1 4042 10 10 5
+E
+rolled-up hides bedding~
+Trimmed with tufts of fur, tanned hides from a variety animals have been
+sewn together to make a rudimentary sleeping mat for the bugbear denizens.
+Many of the mats are barely holding together, evidently used repeatedly
+during their previous raids.
+~
+E
+streaks dried algae minerals encrusted stone~
+Deposited halfway up the walls of the tunnel, patches of grayish-white
+minerals and emerald green algae were leftover when the ancient
+underground river ran dry.  Flaking off in miniscule sheets, the dried
+materials drift languidly through the air before settling to the ground.
+~
+E
+jagged stalactites~
+Spikes of rock hang down from above, formed over a long period of time by
+mineral-rich water dripping from cracks in the ceiling.  A cream-colored
+layer coats the outside of the jagged spires, glistening in the weak
+light.
+~
+E
+piles luminescent moss~
+Clumps of glowing red moss have been carefully placed at strategic points
+along the floor, providing a dim yet adequate light source for this
+section of the bugbear barracks.  The clusters of delicate moss glow with
+their own inner light, waxing and waning in a slow, regular cycle.
+~
+A
+get take steal grab search~
+dried algae minerals~
+if( rflag( reset0, room ) ) {
+  i = random( 1, 3 );
+  if( i == 2 )
+    remove_rflag( reset0, room );
+  act_tochar( #algae, ch );
+  act_notchar( #algae2, ch );
+  obj_to_char( oload( 7528 ), ch );
+  end;
+  }
+act_tochar( #noalgae, ch );
+~
+E
+algae~
+You manage to scrape a patch of algae off of the wall
+~
+E
+algae2~
+$n manages to scrape a patch of algae off of the wall.
+~
+E
+noalgae~
+You attempt to get a patch of algae off of the wall, but it crumbles into
+fine dust in your hand.
+~
+!
+0 0 0
+A
+get take steal grab search~
+rolled-up hides bedding sleeping mat~
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  i = random( 1, 10 );
+  if( i < 6 ) {
+    act_tochar( #yes, ch );
+    act_notchar( #yes2, ch );
+    obj_to_char( oload( 7554 ), ch );
+    end;
+    }
+  act_tochar( #fallapart, ch );
+  act_notchar( #fallapart2, ch );
+  end;
+  }
+act_tochar( #no, ch );
+~
+E
+yes~
+Foraging through the rolled-up hides, you find one that appears usable.
+~
+E
+yes2~
+Foraging through the rolled-up hides, $n finds one that appears usable.
+~
+E
+fallapart~
+The mat you pick up falls into tatters during the rigorous inspection.
+~
+E
+fallapart2~
+The mat $n picks up falls into tatters during $s rigorous inspection.
+~
+E
+no~
+None of the remaining hides are worth taking.
+~
+!
+0 0 0
+A
+get take steal grab search~
+piles luminescent moss~
+if( rflag( reset2, room ) ) {
+i = random( 1, 2 );
+  if( i == 1 )
+    remove_rflag( reset2, room );
+  act_tochar( #yes, ch );
+  act_notchar( #yes2, ch );
+  obj_to_char( oload( 1529 ), ch );
+  end;
+  }
+act_tochar( #no, ch );
+act_notchar( #no2, ch );
+~
+E
+yes~
+You pick up a clump of moss.
+~
+E
+yes2~
+$n picks up a clump of moss.
+~
+E
+no~
+As you pick up a clump of moss, it comes apart in your hands, sparkles of
+glowing light trickling to the ground like a group of shooting stars.
+~
+E
+no2~
+As $n picks up a clump of moss, it falls apart in $s hands, leaving a
+sparkling trail of glowing shreds that drift to the ground.
+~
+!
+0 0 0
+5043 9 1509949540 3 0
+5492 9 1509949540 3 0
+-1
+S
+
+#4042
+Subterranean Tunnel~
+Slightly constricting as it continues to the east, this subsurface
+channel has been converted into a temporary barracks.  Fur-lined sleeping
+mats lie sprawled out on the ground, each one seemingly skinned from a
+different animal.  Primitive sacks of shrubbery and leaves serve as
+pillows, with small stems and branches poking through in every direction. 
+The hazy glow of a lantern deeper into the tunnel to the west brings some
+visibility to the basic bedchamber, though shadows still cloak much of
+the area in secrecy.
+~
+[Eliza] Done.
+~
+200933381 11 5 0
+D1
+~
+~
+0 -1 4041 10 10 5
+D3
+~
+~
+0 -1 4043 10 10 5
+E
+fur-lined sleeping mats~
+Trimmed with tufts of fur, tanned hides from various animals have been
+sewn together to make a rudimentary sleeping mat for the bugbear warriors. 
+Many of the mats are barely holding together, evidently used repeatedly
+during their previous raids.
+~
+E
+primitive sacks shrubbery leaves pillows stems branches~
+Common burlap bags, tattered and worn through in many places are stuffed
+with twigs and branches from the nearby forest to create a primitive yet
+effective pillow of sorts.  Bits of shrubbery stick out in many places,
+but look like they would provide a better place to rest one's head than
+on the bare ground.
+~
+E
+hazy glow lantern shadows~
+A dim beam of light shines weakly from a brass lantern hanging high above
+the ground further down the passageway to the west.  Occasionally the
+lantern flickers, causing deep shadows to rise up from the ground like
+black ghosts, before collapsing as the lantern flares up again.
+~
+A
+get take search grab steal~
+fur-lined sleeping mats~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  i = random( 1, 100 );
+  if( i < 21 ) {
+    act_tochar( #mat, ch );
+    act_notchar( #mat2, ch );
+    obj_to_char( oload( 7554 ), ch );
+    end;
+    }
+  if( i == 69 ) {
+    act_tochar( #mat, ch );
+    act_notchar( #mat2, ch );
+    obj_to_char( oload( 7555 ), ch );
+    end;
+    }
+  act_tochar( #badmat, ch );
+  act_notchar( #badmat2, ch );
+  end;
+  }
+act_tochar( #nomat, ch );
+~
+E
+mat~
+You find an acceptable specimen among the sprawled-out mats.
+~
+E
+mat2~
+$n examines the sleeping mats and finds one to $s liking.
+~
+E
+badmat~
+You pick up one of the sleeping mats, but its rotten hide falls apart in
+your hands.
+~
+E
+badmat2~
+$n picks up one of the sleeping mats, but its rotten hide falls apart in
+$s hands.
+~
+E
+nomat~
+The remaining mats are obviously rotten and worthless.
+~
+!
+0 0 0
+A
+get take search grab steal~
+primitive sacks shrubbery leaves pillows~
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  act_tochar( #no, ch );
+  act_notchar( #no2, ch );
+  obj_to_room( oload( 805 ), room );
+  obj_to_room( oload( 805 ), room );
+  obj_to_room( oload( 7066 ), room );
+  end;
+  }
+act_tochar( #nada, ch );
+~
+E
+no~
+As you pick up a makeshift pillow, its contents spill to the ground.
+~
+E
+no2~
+As $n picks up a makeshift pillow, its contents spill to the ground.
+~
+E
+nada~
+None of the remaining pillows are holding together well enough to pick up.
+~
+!
+0 0 0
+5118 9 1509949540 3 0
+-1
+S
+
+#4043
+Subterranean Tunnel~
+Sculpted by the ravages of nature, this conduit twists around a caved-in
+intersection to the south, then leads off down an open passageway to the
+east.  Tons of rubble litter the ground, scattered by the cataclysmic
+collapse of the adjacent tunnel.  Most of the debris has been pushed
+aside in order to ease access, much of it converted into makeshift seats
+and tables.  A solitary lantern illuminates the area, sitting in an
+eroded nook high above the ground.
+~
+[Eliza] Done.
+~
+200933381 11 5 0
+D0
+~
+~
+0 -1 4044 10 10 5
+D1
+~
+~
+0 -1 4042 10 10 5
+D2
+~
+~
+471 -1 4057 10 10 5
+E
+caved-in intersection massive enormous boulders 1 south~
+Enormous boulders have come tumbling down from the crumbling ceiling high
+above, their displacement massive in size.  The edges of a tunnel system
+to the south are barely visible behind the rubble, whatever secrets
+contained within sealed forever.
+~
+E
+rubble ground debris seats tables~
+Scattered along the floor are pieces of stone in various sizes that
+tumbled to the ground when the tunnel to the south collapsed.  Most of
+the pieces still sit where they fell, although some have been arranged
+into primitive stone chairs and tables.
+~
+E
+lantern nook~
+A tarnished brass lantern rests in an eroded cranny near the ceiling,
+brightening an otherwise pitch-black passageway.  Its mantels are thin
+and worn, shedding just enough light to see by.
+~
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 ) {
+  send_to_room( #action1, room );
+  end;
+  }
+if( i == 2 ) {
+  send_to_room( #action2, room );
+  end;
+  }
+if( i == 3 ) {
+  send_to_room( #action3, room );
+  end;
+  }
+~
+E
+action1~
+@cThe lantern flickers as it begins to run out of oil.@n
+~
+E
+action2~
+@cA deep moan emanates from behind the rockslide to the south.@n
+~
+E
+action3~
+@cShadows dance along the walls, cast by the flickering lantern.@n
+~
+!
+2 200 0
+A
+get take steal grab search~
+solitary lantern nook~
+act_tochar( #nope, ch );
+~
+E
+nope~
+The nook the lantern rests in is too high off of the ground.
+~
+!
+0 0 0
+A
+push pull move~
+massive enormous boulders rubble 1 south~
+act_tochar( #no, ch );
+~
+E
+no~
+The boulders are much too heavy to move out of the way.  The tunnel
+appears to be sealed for all time.
+~
+!
+0 0 0
+A
+pick untrap~
+massive enormous boulders rubble 1 south~
+act_tochar( #duh, ch );
+~
+E
+duh~
+Somehow you get the feeling that that won't work very well.
+~
+!
+0 0 0
+A
+open close~
+massive enormous boulders rubble 1 south~
+act_tochar( #duh, ch );
+~
+E
+duh~
+The boulders have sealed off the tunnel and are too heavy to move.
+~
+!
+0 0 0
+A
+unlock~
+massive enormous boulders rubble 1 south~
+act_tochar( #no, ch );
+~
+E
+no~
+There is no door there.
+~
+!
+0 0 0
+A
+south~
+~
+act_tochar( #south, ch );
+~
+E
+south~
+You cannot walk through the massive pile of boulders.
+~
+!
+0 0 0
+3199 17 1509949506 -2 0
+7556 17 1509949473 -2 0
+78 17 1509949515 -2 0
+5492 9 1509949540 3 0
+5065 9 1509949540 3 0
+-1
+S
+
+#4044
+Subterranean Tunnel~
+Water rushing downward at breakneck speed long ago eroded a shallow
+depression in the cavern floor, which rises upwards to the south. 
+Variant shades of dried algae coat the chamber like an emerald rainbow,
+swirling together to form a black band of residue near the bottom-most
+layer.  A gaping maw stretches overhead where the dried-up subterranean
+river once flowed, its upper reaches accessible through the use of the
+rope rope ladder, dangling alongside the eastern wall.  Bundles of
+supplies sit uncovered in one corner, the thin hides that once protected
+them from the weather in tatters.
+~
+[Rikahn] room above is 4058, top of passage is 4045.
+[Eliza] Done.
+~
+200933444 11 5 0
+D2
+~
+~
+0 -1 4043 10 10 5
+D4
+~
+~
+0 -1 4058 10 10 5
+E
+shallow depression cavern floor~
+A teardrop-shaped depression sinks into the tunnel's floor, sloping
+upwards to the south.  Bits of debris have collected in the deepest
+portion, pushed to the center when the rope ladder and supplies were
+brought here.
+~
+E
+shades dried algae emerald~
+A beautiful moire of algae strands clings to the sides of the tunnel in
+various shades of green.  Growing darker as the layers thicken near the
+base of the wall, the algae has dried and flaked off in many places.
+~
+E
+gaping maw overhead 1 up~
+A circular opening high above gapes like a giant mouth, leading into more
+passageways where a subterranean river once ran freely.  Side passages
+are visible next to the roof of the vast maw, accessible via a rope
+ladder that dangles down from above along the eastern wall.
+~
+E
+rope ladder wall~
+Dangling against the eastern wall, a simple ladder of knotted ropes
+provides access to the upper reaches of this underground system of
+passageways.  The ladder hangs loosely, though a quick tug confirms that
+the ladder has been firmly secured at its summit.
+~
+E
+bundled supplies uncovered corner thin hides tatters~
+All manner of stored supplies lie in the northwestern corner of the
+chamber, their bundles ripped apart in haste.  Strewn about the floor in
+messy piles are various foodstuffs, weapons, and survival gear.  Most of
+the gear looks scavenged and worthless, though a few pieces might be
+salvageable.
+~
+A
+get take search grab steal~
+dried algae~
+if( rflag( reset0, room ) ) {
+  i = random( 1, 3 );
+  if( i == 2 )
+    remove_rflag( reset0, room );
+  act_tochar( #algae, ch );
+  act_notchar( #algae2, ch );
+  obj_to_char( oload( 7528 ), ch );
+  end;
+  }
+act_tochar( #noalgae, ch );
+~
+E
+algae~
+You manage to scrape a patch of algae off of the wall.
+~
+E
+algae2~
+$n manages to scrape a patch of algae off of the wall.
+~
+E
+noalgae~
+You attempt to get a patch of algae off of the wall, but it crumbles into
+fine dust in your hand.
+~
+!
+0 0 0
+A
+get take search grab steal~
+bundles supplies~
+if( rflag( reset1, room ) ) {
+  i = random( 1, 3 );
+  if( i == 3 )
+    remove_rflag( reset1, room );
+  i = random( 1, 30 );
+  if( i == 1 ) {
+    act_tochar( #found, ch );
+    act_notchar( #found2, ch );
+    obj_to_char( oload( 7198 ), ch );
+    end;
+    }
+  if( i == 2 ) {
+    act_tochar( #found, ch );
+    act_notchar( #found2, ch );
+    obj_to_char( oload( 2081 ), ch );
+    end;
+    }
+  if( i == 3 ) {
+    act_tochar( #found, ch );
+    act_notchar( #found2, ch );
+    obj_to_char( oload( 211 ), ch );
+    end;
+    }
+  if( i == 4 ) {
+    act_tochar( #found, ch );
+    act_notchar( #found2, ch );
+    obj_to_char( oload( 1563 ), ch );
+    end;
+    }
+  if( i == 5 ) {
+    act_tochar( #found, ch );
+    act_notchar( #found2, ch );
+    obj_to_char( oload( 230 ), ch );
+    end;
+    }
+  if( i == 26 ) {
+    act_tochar( #found, ch );
+    act_notchar( #found2, ch );
+    obj_to_char( oload( 34 ), ch );
+    end;
+    }
+  if( i == 27 ) {
+    act_tochar( #found, ch );
+    act_notchar( #found2, ch );
+    obj_to_char( oload( 2101 ), ch );
+    end;
+    }
+  if( i == 28 ) {
+    act_tochar( #found, ch );
+    act_notchar( #found2, ch );
+    obj_to_char( oload( 54 ), ch );
+    end;
+    }
+  if( i == 29 ) {
+    act_tochar( #found, ch );
+    act_notchar( #found2, ch );
+    obj_to_char( oload( 26 ), ch );
+    end;
+    }
+  if( i == 30 ) {
+    act_tochar( #found, ch );
+    act_notchar( #found2, ch );
+    obj_to_char( oload( 7554 ), ch );
+    end;
+    }
+  act_tochar( #bad, ch );
+  act_notchar( #bad2, ch );
+  end;
+  }
+act_tochar( #no, ch );
+~
+E
+found~
+After rummaging through the bundled supplies, you find something worth
+keeping.
+~
+E
+found2~
+After rummaging through the bundled supplies, $n finds something worth
+keeping.
+~
+E
+bad~
+You lift something from the bundled supplies, but it disintegrates in
+your hand.
+~
+E
+bad2~
+$n lifts something from the bundled supplies, but it disintegrates in $s
+hand.
+~
+E
+no~
+There is nothing left worth salvaging among the bundled supplies.
+~
+!
+0 0 0
+A
+1 up~
+~
+act_tochar( #no, ch );
+end;
+~
+E
+no~
+The walls are quite smooth and vertical.  Perhaps you should look for
+another method of getting up there?
+~
+!
+0 0 0
+A
+climb scale~
+rope ladder 1 up~
+if( !is_resting( ch ) ) {
+  if( !is_sleeping( ch ) ) {
+    if( !is_fighting( ch ) ) {
+      act_tochar( #climb, ch );
+      act_notchar( #climb2, ch );
+      transfer( ch, find_room( 4045 ) );
+      act_notchar( #arrive, ch );
+      end;
+      }
+    act_tochar( #fight, ch );
+    end;
+    }
+  act_tochar( #sleep, ch );
+  end;
+  }
+act_tochar( #rest, ch );
+end;
+~
+E
+climb~
+@GYou climb up the rope ladder.@n
+~
+E
+climb2~
+@G$n climbs up the rope ladder.@n
+~
+E
+arrive~
+@G$n comes climbing up the rope ladder.@n
+~
+E
+fight~
+You cannot do that while fighting.
+~
+E
+sleep~
+You cannot do that while sleeping.
+~
+E
+rest~
+You cannot do that while resting.
+~
+!
+0 0 0
+A
+~
+~
+if( mob_in_room( 5118, room ) ) {
+  mob = mob_in_room( 5118, room );
+  if( !is_fighting( mob ) ) {
+    if( !is_sleeping( mob ) ) {
+      if( random( 1, 3 ) == 2 ) {
+        send_to_room( #warrior, room );
+        transfer( mob, find_room( 4045 ) );
+        send_to_room( #warrior2, find_room( 4045 ) );
+        end;
+        }
+      }
+    }
+  }
+if( mob_in_room( 5492, room ) ) {
+  mob = mob_in_room( 5492, room );
+  if( !is_fighting( mob ) ) {
+    if( !is_sleeping( mob ) ) {
+      if( random( 1, 3 ) == 2 ) {
+        send_to_room( #corrival, room );
+        transfer( mob, find_room( 4045 ) );
+        send_to_room( #corrival2, find_room( 4045 ) );
+        end;
+        }
+      }
+    }
+  }
+if( mob_in_room( 5065, room ) ) {
+  mob = mob_in_room( 5065, room );
+  if( !is_fighting( mob ) ) {
+    if( !is_sleeping( mob ) ) {
+      if( random( 1, 3 ) == 2 ) {
+        send_to_room( #raider, room );
+        transfer( mob, find_room( 4045 ) );
+        send_to_room( #raider2, find_room( 4045 ) );
+        end;
+        }
+      }
+    }
+  }
+if( mob_in_room( 5043, room ) ) {
+  mob = mob_in_room( 5043, room );
+  if( !is_fighting( mob ) ) {
+    if( !is_sleeping( mob ) ) {
+      if( random( 1, 3 ) == 2 ) {
+        send_to_room( #servant, room );
+        transfer( mob, find_room( 4045 ) );
+        send_to_room( #servant, find_room( 4045 ) );
+        end;
+        }
+      }
+    }
+  }
+~
+E
+warrior~
+@GA bugbear warrior climbs up the rope ladder.@n
+~
+E
+corrival~
+@GA bugbear corrival climbs up the rope ladder.@n
+~
+E
+raider~
+@GA bugbear raider climbs up the rope ladder.@n
+~
+E
+servant~
+@GA bugbear servant climbs up the rope ladder.@n
+~
+E
+warrior2~
+@GA bugbear warrior comes climbing up the rope ladder.@n
+~
+E
+corrival2~
+@GA bugbear corrival comes climbing up the rope ladder.@n
+~
+E
+raider2~
+@GA bugbear raider comes climbing up the rope ladder.@n
+~
+E
+servant2~
+@GA bugbear servant comes climbing up the rope ladder.@n
+~
+!
+2 300 0
+A
+~
+~
+~
+!
+3 0 16
+A
+~
+~
+if( !rflag( reset0, find_room( 4050 ) ) ) {
+  if( mob_in_room( 5118, room ) ) {
+    ch = mob_in_room( 5118, room );
+    acode( find_room( 4044 ), 4 );
+    }
+  if( mob_in_room( 5043, room ) ) {
+    ch = mob_in_room( 5043, room );
+    acode( find_room( 4044 ), 4 );
+    }
+  if( mob_in_room( 5492, room ) ) {
+    ch = mob_in_room( 5492, room );
+    acode( find_room( 4044 ), 4 );
+    }
+  if( mob_in_room( 5065, room ) ) {
+    ch = mob_in_room( 5065, room );
+    acode( find_room( 4044 ), 4 );
+    }
+  }
+~
+!
+2 4000 0
+5039 9 1509949540 3 0
+-1
+S
+
+#4045
+Vortex Into Darkness~
+A three-foot ledge encircles a bowl-shaped chamber, with a gaping hole at
+the base of the cavity that progresses into iniquity.  A knotted rope
+ladder is tied around a stubby stalagmite, then draped down into the
+chasm, with no way of knowing whether or not it reaches the bottom. 
+Circular passageways lead off to the east and west, though what might be
+found within them is unclear.
+~
+[Rikahn] room below is 4058, bottom of passage is 4044.
+[Eliza] Done.
+~
+200933444 11 5 0
+D1
+~
+~
+0 -1 4046 10 10 5
+D3
+~
+~
+0 -1 4051 10 10 5
+D5
+~
+~
+0 -1 4058 10 10 5
+E
+three-foot ledge bowl-shaped chamber~
+A narrow ledge winds its way around the perimeter of this chamber, with a
+bowl-shaped depression in the middle of its floor.  At the center of the
+sinkhole is a vertical shaft that seemingly disappears into oblivion. 
+Created by a whirlpool of raging water, the angled wall between the ledge
+and hole is smooth to the touch.  One loose step would result in an
+extremely painful tumble to the bottom.  A basic rope ladder dangles down
+one side of the shaft, possibly leading all of the way down.
+~
+E
+knotted rope ladder stubby stalagmite~
+A basic ladder consisting of multiple lengths of rope knotted together at
+regular intervals dangles down the gaping hole, though it is difficult to
+tell whether or not it makes it all of the way down the vertical shaft. 
+Looped around the base of a thick stalagmite, it appears reasonably safe
+to use.
+~
+E
+gaping hole cavity 1 down~
+Treacherously vertical, a gaping hole yawns like the maw of an immense
+beast.  Water-worn smooth walls with no visible means of gaining purchase
+to climb, sparkle with unreachable mineral deposits lying exposed.  A
+rope ladder dangles down one side of the shaft, though from this dizzying
+height it is difficult to tell whether it makes it all of the way to the
+bottom.
+~
+A
+~
+~
+if( mob_in_room( 5118, room ) ) {
+  mob = mob_in_room( 5118, room );
+  if( !is_fighting( mob ) ) {
+    if( !is_sleeping( mob ) ) {
+      if( random( 1, 3 ) == 2 ) {
+        send_to_room( #warrior, room );
+        transfer( mob, find_room( 4044 ) );
+        send_to_room( #warrior2, find_room( 4044 ) );
+        end;
+        }
+      }
+    }
+  }
+if( mob_in_room( 5492, room ) ) {
+  mob = mob_in_room( 5492, room );
+  if( !is_fighting( mob ) ) {
+    if( !is_sleeping( mob ) ) {
+      if( random( 1, 3 ) == 2 ) {
+        send_to_room( #corrival, room );
+        transfer( mob, find_room( 4044 ) );
+        send_to_room( #corrival2, find_room( 4044 ) );
+        end;
+        }
+      }
+    }
+  }
+if( mob_in_room( 5065, room ) ) {
+  mob = mob_in_room( 5065, room );
+  if( !is_fighting( mob ) ) {
+    if( !is_sleeping( mob ) ) {
+      if( random( 1, 3 ) == 2 ) {
+        send_to_room( #raider, room );
+        transfer( mob, find_room( 4044 ) );
+        send_to_room( #raider2, find_room( 4044 ) );
+        end;
+        }
+      }
+    }
+  }
+if( mob_in_room( 5043, room ) ) {
+  mob = mob_in_room( 5043, room );
+  if( !is_fighting( mob ) ) {
+    if( !is_sleeping( mob ) ) {
+      if( random( 1, 3 ) == 2 ) {
+        send_to_room( #servant, room );
+        transfer( mob, find_room( 4044 ) );
+        send_to_room( #servant, find_room( 4044 ) );
+        end;
+        }
+      }
+    }
+  }
+~
+E
+warrior~
+@GA bugbear warrior climbs down the rope ladder.@n
+~
+E
+corrival~
+@GA bugbear corrival climbs down the rope ladder.@n
+~
+E
+raider~
+@GA bugbear raider climbs down the rope ladder.@n
+~
+E
+servant~
+@GA bugbear servant climbs down the rope ladder.@n
+~
+E
+warrior2~
+@GA bugbear warrior comes climbing down the rope ladder.@n
+~
+E
+corrival2~
+@GA bugbear corrival comes climbing down the rope ladder.@n
+~
+E
+raider2~
+@GA bugbear raider comes climbing down the rope ladder.@n
+~
+E
+servant2~
+@GA bugbear servant comes climbing down the rope ladder.@n
+~
+!
+2 300 0
+A
+down~
+~
+act_tochar( #no, ch );
+end;
+~
+E
+no~
+Jumping down from this height would probably hurt.  Perhaps you should
+look for another method of getting down there?
+~
+!
+0 0 0
+A
+climb scale~
+rope ladder 1 down~
+if( !is_resting( ch ) ) {
+  if( !is_sleeping( ch ) ) {
+    if( !is_fighting( ch ) ) {
+      act_tochar( #climb, ch );
+      act_notchar( #climb2, ch );
+      transfer( ch, find_room( 4044 ) );
+      act_notchar( #arrive, ch );
+      end;
+      }
+    act_tochar( #fight, ch );
+    end;
+    }
+  act_tochar( #sleep, ch );
+  end;
+  }
+act_tochar( #rest, ch );
+end;
+~
+E
+climb~
+@GYou climb down the rope ladder.@n
+~
+E
+climb2~
+@G$n climbs down the rope ladder.@n
+~
+E
+arrive~
+@G$n comes climbing down the rope ladder.@n
+~
+E
+fight~
+You cannot do that while fighting.
+~
+E
+sleep~
+You cannot do that while sleeping.
+~
+E
+rest~
+You cannot do that while resting.
+~
+!
+0 0 0
+A
+~
+~
+~
+!
+3 400 32
+-1
+S
+
+#4046
+Subterranean Tunnel Junction~
+The ravages of mother nature have taken their toll on this underground
+chamber.  A lengthy battle over the water-flow's direction has eroded the
+southern wall to the point of almost being another cavern by itself.  The
+wall eventually curves back into two passageways to the east and west,
+but numerous gashes and pock-marks, where softer ore resided, make it a
+haggard sight.  A wider tunnel extends to the north, once perhaps the
+source of the river that wound its way through these ancient conduits.
+~
+[Eliza] clever leaving code.
+[Eliza] Done.
+~
+200933380 11 5 0
+D0
+~
+~
+0 -1 4049 10 10 5
+D1
+~
+~
+0 -1 4047 10 10 5
+D3
+~
+~
+0 -1 4045 10 10 5
+E
+wall gashes pock-marks 1 south~
+Ragged gashes and eroded pits cover the southern wall, as if some
+long-raging battle once took place across its surface.  Softer clumps of
+mineral-rich ore have been swept away from their hideaways in the
+granite, leaving the various openings exposed.  Very little ore remains
+visible, and what pieces remain are either too small or too common to be
+worth mining.
+~
+E
+wider tunnel 1 north~
+Widening slightly as it continues to the north, this particular conduit
+looks like the source of the raging river that carved out the maze of
+underground tunnels.  Thick sections of granite are covered with a chalky
+mineral residue, streaked towards the south as the water evaporated.  A
+slight breeze blows in from the tunnel, extremely humid and smelling of
+fresh water.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GAfter appraising the three tunnels, you choose the one to the $T.@n 
+~
+E
+to_room~
+@G$n travels down the tunnel to the $T.@n
+~
+!
+3 0 11
+5065 9 1509949540 3 0
+5065 9 1509949540 3 0
+-1
+S
+
+#4047
+Subterranean Tunnel Junction~
+Pebbles and broken stones line the corridor, strewn about in chaotic
+fashion.  Trails of dirt and debris cascade across the floor from a
+ragged hole in the southern wall, leading into a cramped chamber.  The
+sound of dripping water and a rotting stench drift in from the north,
+where the passageway slightly narrows.  A wider tunnel is visible to the
+west, where a maze of conduits lead off in several directions.
+~
+[Eliza] Done.
+~
+200933380 11 5 0
+D0
+~
+~
+0 -1 4048 10 10 5
+D2
+~
+~
+0 -1 4055 10 10 5
+D3
+~
+~
+0 -1 4046 10 10 5
+E
+pebbles broken stones dirt debris~
+Dirt and debris lie scattered on the tunnel floor, spreading out in a
+fan-shaped pattern from a ragged hole in the southern wall.  Pawprints
+are visible in the dirt, left by the bugbears marching through the
+corridors.
+~
+E
+ragged hole cramped chamber 1 south~
+A ragged hole leads into a cramped chamber to the south, its outer edge
+visibly chipped away so creatures the size of the bugbears can squeeze
+through.  The smell of blood drifts in from the cave, cloying and coppery.
+~
+E
+wider tunnel 1 west maze conduits~
+A maze of corridors leads off into multiple directions, both from this
+intersection and others just to the west.  The tunnel system grows wider
+as it travels to the west, evidently closer to the source of the ancient
+waterway.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GBarely squeezing through the tight opening, you enter the cramped
+chamber.@n 
+~
+E
+to_room~
+@GBarely squeezing through the tight opening, $n enters the cramped
+chamber.@n 
+~
+!
+3 0 4
+A
+~
+pebbles broken stones dirt debris~
+if( rflag( reset0, room ) ) {
+  if( random( 1, 3 ) == 2 )
+    remove_rflag( reset0, room );
+  act_tochar( #pebble, ch );
+  act_notchar( #pebble2, ch );
+  obj_to_char( oload( 78 ), ch );
+  end;
+  }
+act_tochar( #nothing, ch );
+end;
+~
+E
+pebble~
+You search through the debris and find a nice-looking pebble.
+~
+E
+pebble2~
+$n finds something among the debris!
+~
+E
+nothing~
+There is nothing of interest within the pile of debris.
+~
+!
+9 0 0
+5492 9 1509949540 3 0
+-1
+S
+
+#4048
+Subterranean Tunnel~
+This curving passageway leads in from the south, coming to a dead-end at
+the edge of a rancid pool of water within the chamber to the east. 
+Infested with algae, the dusky green water releases a bitter stench like
+mold and mildew.  Oblong stepping stones allow access to an oval island
+in the center of the pool, each stone within leaping distance of the
+other.  The sound of dripping water echoes throughout the tunnels,
+growing weaker with each repetition.
+~
+[Eliza] done
+~
+200933380 11 5 0
+D1
+~
+~
+0 -1 4054 10 10 5
+D2
+~
+~
+0 -1 4047 10 10 5
+E
+rancid pool water algae dusky green~
+A murky pool, infested with a heavy concentration of algae, lies to the
+east, a green morass in an otherwise dried up system of ancient waterways. 
+Strands of the aquatic plant sway as fresh water droplets fall from
+cracks in the ceiling, sending ripples along the pool's surface.
+~
+E
+oblong stepping stones~
+Rounded boulders that peek above the water's surface are interspersed
+throughout the pool, allowing access to an oval island in the center of
+the chamber.  The stepping stones appear to be stable, and are far enough
+out of the water to stay dry and algae-free.
+~
+E
+oval island center~
+Rising up from the moldy-smelling water, this plot of dry land in the
+center of the chamber has become the home for a bugbear in search of
+solitude.  Some objects are strewn about its surface, although what they
+might be is difficult to determine from this distance.  A series of
+stepping stones provides a pathway to the island, each one's surface just
+bigger than your foot.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou gingerly walk across the stepping stones to the safety of the
+island.@n 
+~
+E
+to_room~
+@G$n gingerly crosses the stepping stones to the safety of the island.@n
+
+~
+!
+3 0 2
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 ) {
+  send_to_room( #action1, room );
+  end;
+  }
+if( i == 2 ) {
+  send_to_room( #action2, room );
+  end;
+  }
+if( i == 3 ) {
+  send_to_room( #action3, room );
+  end;
+  }
+~
+E
+action1~
+@cThe sound of water droplets, striking the pool to the east, echoes
+regularly through the tunnels.@n 
+~
+E
+action2~
+@cThe skittering echo of dirt and pebbles, falling from cracks in the
+ceiling, heightens fear of a cave-in.@n 
+~
+E
+action3~
+@cA series of circular ripples race across the water's surface, ebbing as
+they head towards the edges of the pool.@n 
+~
+!
+2 200 0
+5118 9 1509949540 3 0
+-1
+S
+
+#4049
+Subterranean Tunnel~
+This wide tunnel pitches downward to the south, where a maze of
+passageways begin to form.  Coated in layers of dried lichen, the walls
+bear the scars of nature's wrath.  Veins of ore lie exposed by erosion,
+and a fine silt coats the floor to ankle depth.  Widening slightly as it
+continues to the north, the chamber's ceiling is covered in cracks,
+indicating a cave-in might be imminent.
+~
+[Eliza] Done
+~
+200933380 11 5 0
+D0
+~
+~
+0 -1 4050 10 10 5
+D2
+~
+~
+0 -1 4046 10 10 5
+E
+coated layers dried lichen~
+A thin layer of dried algae clings to the walls, leftover from when this
+underground waterway stopped flowing.  Wavy lines of the green plant
+overlap each other in a pattern that would be beautiful if not for
+sections flaking off and falling to the ground.
+~
+E
+veins ore exposed~
+Long veins of black ore lie sandwiched between layers of pinkish-white
+granite, like oversized dragon's claw marks.  Uncovered when the raging
+water eroded the softer rock away, the veins are untouched by a miner's
+pick.
+~
+E
+fine silt floor 1 down~
+A fine layer of dirt and sand covers the floor, deposited from sediment
+that once was carried along by the ancient waterflow.  Sparkles reflect
+from the bed, where miniscule bits of minerals glint in the light. 
+Bugbear paw prints line the soft silt, heading in both directions.
+~
+E
+ceiling cracks cave-in~
+A chain of thin cracks runs along the ceiling's length, shaped around the
+rock layers, lying exposed to the humid air.  A single rock tumbling from
+its perch might cause a chain reaction of disastrous implications,
+sealing the tunnel off forever.
+~
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 ) {
+  send_to_room( #action1, room );
+  end;
+  }
+if( i == 2 ) {
+  send_to_room( #action2, room );
+  end;
+  }
+if( i == 3 ) {
+  send_to_room( #action3, room );
+  end;
+  }
+~
+E
+action1~
+@cA slight breeze drifts in from the north, stirring up a light cloud of
+dust.@n 
+~
+E
+action2~
+@cThe sound of dripping water echoes repeatedly from all directions.@n 
+~
+E
+action3~
+@cA tiny pebble drops from the ceiling with a clatter.@n
+~
+!
+2 200 0
+5039 9 1509949540 3 0
+-1
+S
+
+#4050
+Subterranean Tunnel~
+Nestled in the center of this chamber is an oak throne, carved from a
+single tree trunk.  Idyllic symbols have been seared into its surface,
+overlapping in an ornate fashion.  This portion of the underground tunnel
+runs a straight course, swirled mineral deposits encrusted on the wall
+indicating the ancient waterflow once rushed to the south.  A cabin of
+stacked, notched logs stands to the north, the amount of fresh-cut debris
+underfoot, a sign it was recently erected.  Dangling from a lever that
+juts forth from the cabin is a black banner with an embroidery of a brown
+bear paw visible in its center.
+~
+[Rikahn] trapdoor works only downward to exit zone quickly
+[Eliza] Done.
+~
+200933380 11 5 0
+D0
+wooden door~
+wooden door~
+391 7575 4056 10 10 5
+D2
+~
+~
+0 -1 4049 10 10 5
+E
+oak throne trunk idyllic symbols~
+Carved out of a single tree trunk, this solid oak throne is plain yet
+functional.  A high back and sturdy legs make this throne as solid and
+stable as the tree it came from.  Blazing-hot instruments have seared
+numerous nature symbols into its surface, mostly depicting trees and fish. 
+A bushy branch sits in the middle of the throne as a basic cushion.
+~
+E
+swirled mineral deposits encrusted wall~
+Patches of powdered pink and white minerals are encrusted on the walls
+from when the ancient river dried up.  Set in a thin layer, swirls in the
+minerals indicate the waterflow used to run to the south.
+~
+E
+cabin stacked notched logs 1 north~
+Tree trunks the side, of a man in diameter lie stacked upon one another,
+their branches and bark stripped away and held in place by overlapping
+notches cut near their ends.  No windows or openings are visible on this
+side, except for a single wooden door held in place by two rusty hinges. 
+Wood chips and other debris from its construction coat the entire floor
+in a dusty mess.
+~
+E
+debris floor 1 down~
+A heavy layer of wood chips, bark, and leaves coat the ground in a dusty
+mess, obscuring most of the tunnel floor.  Barely visible through the
+debris is the square outline of a door in the floor, though no handle can
+be found on its surface.
+~
+E
+lever black banner embroidery brown bear paw~
+Stitches of brown thread depict a bear paw with long claws in the center
+of a black banner.  Hanging from a lever that protrudes from the side of
+the log cabin, it appears to be the bugbear battle standard.
+~
+A
+push pull~
+lever~
+if( !mob_in_room( 5040, room ) ) {
+  if( !is_fighting( ch ) ) {
+    if( !is_resting( ch ) ) {
+      if( !is_sleeping( ch ) ) {
+        send_to_room( #trapdoor, find_room( 4031 ) );
+        act_tochar( #dump, ch );
+        act_notchar( #dump2, ch );
+        act_tochar( #dumped, ch );
+        act_notchar( #dumped2, ch );
+        transfer( ch, find_room( 4031 ) );
+        act_tochar( #arrive2, ch );
+        act_notchar( #arrive, ch );
+        i = random( 5, 40 );
+        dam_message( ch, i, "the fall" );
+        inflict( ch, mob, i, "falling a great distance." );
+        loop( all_in_room ) {
+          act_tochar( #dumped, rch );
+          act_notchar( #dumped2, rch );
+          transfer( rch, find_room( 4031 ) );
+          act_tochar( #arrive2, rch );
+          act_notchar( #arrive, rch );
+          i = random( 5, 40 );
+          dam_message( ch, i, "the fall" );
+          inflict( ch, mob, i, "falling a great distance" );
+          }
+        end;
+        }
+      act_tochar( #sleep, ch );
+      end;
+      }
+    act_tochar( #rest, ch );
+    end;
+    }
+  act_tochar( #fight, ch );
+  end;
+  }
+act_tochar( #chief, ch );
+end;
+~
+E
+dump~
+@CYou open the trapdoor, dropping everyone through the hole!@n
+~
+E
+dump2~
+@C$n opens the trapdoor, dropping everyone through the hole!@n
+~
+E
+arrive~
+@C$n comes tumbling down from above.@n
+~
+E
+trapdoor~
+@RThe trapdoor in the ceiling opens!@n
+~
+E
+sleep~
+You cannot do that while sleeping.
+~
+E
+rest~
+You cannot do that while resting.
+~
+E
+fight~
+You cannot do that while fighting.
+~
+E
+chief~
+The bugbear chief quickly prevents you from opening the trapdoor.
+~
+E
+dumped~
+@cYou go tumbling down the hole.@n
+~
+E
+dumped2~
+@c$n goes tumbling down the hole.@n
+~
+E
+arrive2~
+@cYou land on the hard ground with a thump.@n
+~
+!
+0 0 0
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 ) {
+  send_to_room( #action1, room );
+  end;
+  }
+if( i == 2 ) {
+  send_to_room( #action2, room );
+  end;
+  }
+if( i == 3 ) {
+  send_to_room( #action3, room );
+  end;
+  }
+~
+E
+action1~
+@cA slight breeze blows in from the north, ruffling the dangling banner.@n
+~
+E
+action2~
+@cThe leaves and wood chips on the floor crackle and snap with every
+footstep.@n 
+~
+E
+action3~
+@cThe sound of rushing water can be heard off in the distance to the
+north.@n 
+~
+!
+2 200 0
+A
+get take search grab steal~
+black banner~
+act_tochar( #no, ch );
+~
+E
+no~
+The unfurled banner is securely attached to the lever.
+~
+!
+0 0 0
+A
+get take search grab steal~
+swirled mineral deposits~
+act_tochar( #no, ch );
+~
+E
+no~
+The mineral deposits are not thick enough to collect a sample.
+~
+!
+0 0 0
+A
+get take search grab steal~
+debris chips leaves~
+act_tochar( #search, ch );
+act_notchar( #search2, ch );
+if( rflag( reset1, room ) ) {
+  i = random( 1, 3 );
+  if( i == 3 )
+    remove_rflag( reset1, room );
+  i = random( 1, 10 );
+  if( i < 4 ) {
+    act_tochar( #leaf, ch );
+    act_notchar( #leaf2, ch );
+    obj_to_char( oload( 805 ), ch );
+    end;
+    }
+  if( i > 7 ) {
+    act_tochar( #stick, ch );
+    act_notchar( #stick2, ch );
+    obj_to_char( oload( 7066 ), ch );
+    end;
+    }
+  }
+act_tochar( #zip, ch );
+act_notchar( #zip2, ch );
+end;
+~
+E
+search~
+@MYou begin to rummage around through the debris on the floor.@n
+~
+E
+search2~
+@M$n begins to rummage around through the debris on the floor.@n
+~
+E
+leaf~
+@mAll you manage to come up with is an intact leaf.@n
+~
+E
+leaf2~
+@mAll $n manages to come up with is an intact leaf.@n
+~
+E
+stick~
+@mAll you manage to come up with is an unbroken stick.@n
+~
+E
+stick2~
+@mAll $n manages to come up with is an unbroken stick.@n
+~
+E
+zip~
+@mYou find nothing of value within the debris.@n
+~
+E
+zip2~
+@m$n finds nothing of value within the debris.@n
+~
+!
+0 0 0
+A
+~
+~
+if( !rflag( reset0, find_room( 4050 ) ) ) {
+  if( mob_in_room( 5118, find_room( 4044 ) ) ) {
+    ch = mob_in_room( 5118, find_room( 4044 ) );
+    acode( find_room( 4044 ), 4 );
+    }
+  if( mob_in_room( 5043, find_room( 4044 ) ) ) {
+    ch = mob_in_room( 5043, find_room( 4044 ) );
+    acode( find_room( 4044 ), 4 );
+    }
+  if( mob_in_room( 5492, find_room( 4044 ) ) ) {
+    ch = mob_in_room( 5492, find_room( 4044 ) );
+    acode( find_room( 4044 ), 4 );
+    }
+  if( mob_in_room( 5065, find_room( 4044 ) ) ) {
+    ch = mob_in_room( 5065, find_room( 4044 ) );
+    acode( find_room( 4044 ), 4 );
+    }
+  }
+~
+!
+2 4000 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou cross the threshhold of the log cabin, curious to see what is
+inside.@n 
+~
+E
+to_room~
+@G$n crosses the threshhold of the log cabin, curious to see what is
+inside.@n 
+~
+!
+3 0 1
+5040 9 1509949540 3 0
+7576 17 1509949540 -2 0
+5043 9 1509949540 3 0
+-1
+S
+
+#4051
+Subterranean Tunnel~
+A maze of stalactites droops down from the ceiling, many of them dangling
+almost to the floor where stubby stalagmites sprawl out along the ground. 
+Formed over the ages from rivulets of mineral-rich water that trickles
+from gaps in the roof, the conical spires glisten with a thin layer of
+moisture.  A well-traveled path winds its way around the obstructions,
+leading off to the south and the east into other chambers.
+~
+[Eliza] Done.
+~
+200933380 11 5 0
+D1
+~
+~
+0 -1 4045 10 10 5
+D2
+~
+~
+0 -1 4052 10 10 5
+E
+maze stalactites ceiling 1 up~
+Staggered along the ceiling are dozens of rounded stalactites, many of
+them nearly touching the short stalagmites rising up from below. 
+Milky-white and shimmering with moisture, the hanging rock spires detract
+from the otherwise bland view of the underground cavern.
+~
+E
+stubby stalagmites floor 1 down~
+Bulbous formations of mineral deposits rise up from the chamber's floor
+directly below hanging stalactites.  Still evolving at a snail's pace,
+each nubbed column shines with a layer of humidity.
+~
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 ) {
+  send_to_room( #action1, room );
+  end;
+  }
+if( i == 2 ) {
+  send_to_room( #action2, room );
+  end;
+  }
+if( i == 3 ) {
+  send_to_room( #action3, room );
+  end;
+  }
+~
+E
+action1~
+@cBeads of moisture slowly trickle down the sides of the stalactites.@n
+~
+E
+action2~
+@cDroplets of water rain down from the tips of the stalactites, falling
+to the ground.@n 
+~
+E
+action3~
+@cThe humidity within the chamber clings to your skin, forming beads of
+sweat.@n 
+~
+!
+2 200 0
+5492 9 1509949540 3 0
+5492 9 1509949540 3 0
+-1
+S
+
+#4052
+Subterranean Tunnel~
+The scent of cooked meat drifts through the air, almost maddeningly
+appetizing.  The source of the scent seems to be located to the west,
+where the smell grows stronger as one walks in that direction.  Spires of
+condensed minerals rise up from the floor, interspersed with broken cones
+of rock that have broken off and dropped to the ground from above.  The
+only other available exit from this gloomy chamber lies to the north,
+where the tunnel twists and turns into inky blackness.
+~
+[Eliza] Extra two is fine.
+[Eliza] Done.
+~
+200933380 11 5 0
+D0
+~
+~
+0 -1 4051 10 10 5
+D3
+~
+~
+0 -1 4053 10 10 5
+E
+spires condensed minerals~
+Twisting mineral spires rise up from the ground in a conical formation,
+deposited over immense periods of time.  Smooth to the touch and
+glistening with a damp layer of moisture that clings tenaciously to the
+sides, each stalagmite is a natural work of art.
+~
+E
+broken cones rock~
+Once equally beautiful as the spires formed on the ground, cone-shaped
+pieces of rock have fallen from their perches on the ceiling and
+shattered into pieces on the floor.  Mineral-rich droplets of water run
+down the stubby bases of each stalactite that hang down from the roof of
+the chamber, beginning the sluggish growth process once more.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou step into the chamber to the west, towards the smell of cooking
+meat.@n 
+~
+E
+to_room~
+@G$n steps into the chamber to the west, towards the smell of cooking
+meat.@n 
+~
+!
+3 0 8
+5118 9 1509949540 3 0
+-1
+S
+
+#4053
+Dead-End Passageway~
+This circular tunnel comes to an abrupt end at a solid wall of granite. 
+Propped in the center of the room is a bubbling cauldron of stew,
+simmering over a blazing campfire.  The scent of the stew drifts through
+the air, tantalizing the senses.  Meat scraps and vegetable peelings
+litter the floor, strewn about by the cook during the meal preparation. 
+A black iron ladle is chained to one of the handles of the cauldron,
+though containers to scoop the food into are nowhere to be seen.
+~
+[Eliza] Done.
+~
+200933380 11 5 0
+D1
+~
+~
+0 -1 4052 10 10 5
+E
+solid wall granite~
+A sheer wall of granite rises up to the west, terminating one of the
+paths in this underground network of tunnels.  Layers of pink feldspar
+mingle with the off-white granite, and specks of black minerals are
+intermixed throughout.  Evidently resistant to the erosion that created
+the passageways, very few imperfections are visible in the smooth stone.
+~
+E
+bubbling cauldron beef stew~
+Shaped like a ball with its top cut off, this cauldron sits above a
+blazing campfire on stubby legs that protrude out at regular intervals. 
+Covered with multiple layers of rust, the heavy cauldron appears to have
+been used countless times to prepare whatever bulky meals the bugbears
+require.  A thin stew of meat and vegetables float in a sea of brown
+sauce, bubbling rapidly because of the direct heat.  Wafts of steam rise
+from its surface, and the scent of the simmering meat drifts through the
+air.
+~
+E
+meat scraps vegetable peelings floor~
+Fatty cuts of meat have been carelessly dropped on the floor along with
+the skins from various vegetables, slowly rotting away on the dirty
+ground.  As primally crude as the bugbears seem to be, their cook appears
+to be quite capable of making a sumptuous meal.
+~
+E
+black iron ladle chain handles~
+Dangling from the side of the cauldron, a blackened iron ladle is
+attached to one of the cauldron's handles by a thick metal chain. 
+Whether the ladle is secured to the pot for security purposes or merely
+to prevent it being lost is unknown, but its handle is piping hot,
+hanging so close to the blazing campfire.
+~
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 ) {
+  send_to_room( #action1, room );
+  end;
+  }
+if( i == 2 ) {
+  send_to_room( #action2, room );
+  end;
+  }
+if( i == 3 ) {
+  send_to_room( #action3, room );
+  end;
+  }
+~
+E
+action1~
+@cThe campfire flares up for a moment, sending a hazy trail of smoke into
+the air.@n 
+~
+E
+action2~
+@cThe simmering cauldron of stew bubbles, smelling delicious.@n
+~
+E
+action3~
+@cSizzling droplets of sauce spatter on your hand as a big bubble of air
+bursts within the stew, stinging your skin for a moment.@n 
+~
+!
+2 200 0
+A
+get take search grab steal~
+black iron ladle~
+act_tochar( #no, ch );
+~
+E
+no~
+The black iron ladle is firmly attached to the cauldron with a thick
+chain.
+~
+!
+0 0 0
+A
+get take search grab steal~
+meat scraps vegetable peelings floor~
+if( rflag( reset0, room ) ) {
+  if( random( 1, 2 ) == 1 )
+    remove_rflag( reset0, room );
+  act_tochar( #found, ch );
+  act_notchar( #found2, ch );
+  i = random( 1, 10 );
+  if( i < 4 ) {
+    obj_to_char( oload( 7483 ), ch );
+    end;
+    }
+  if( i > 7 ) {
+    obj_to_char( oload( 1299 ), ch );
+    end;
+    }
+  obj_to_char( oload( 694 ), ch );
+  end;
+  }
+act_tochar( #no, ch );
+~
+E
+found~
+You find a morsel of food amongst the scraps on the floor.
+~
+E
+found2~
+$n finds a morsel of food amongst the scraps on the floor.
+~
+E
+no~
+All that remains on the floor is rotting peelings, not fit for
+consumption.
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou walk away from the stuffy makeshift kitchen, heading back into the
+network of tunnels.@n 
+~
+E
+to_room~
+@G$n walks away from the stuffy makeshift kitchen, heading back into the
+network of tunnels.@n 
+~
+!
+3 0 2
+5042 9 1509949540 3 0
+2689 17 1509949540 -2 0
+460 17 1660944484 -2 39
+-1
+S
+
+#4054
+A Murky Pool~
+The conduit from the west dead-ends at a deep pool of murky, algae-filled
+water.  Apparently leftover from the ancient river and resupplied by
+droplets that fall from cracks in the ceiling, the stringy foliage lends
+a moldy smell to the air.  Stepping stones peek above the surface at
+random intervals, allowing access to an oval island in the center of the
+craggy chamber.  A sleeping mat is spread out upon the isle, with some
+personal belongings strewn about its hide.
+~
+[Eliza] Done.
+~
+200933380 11 5 0
+D3
+~
+~
+0 -1 4048 10 10 5
+E
+deep murky algae-filled water pool~
+Spread out within a depression in the ground, a murky pool of water has
+collected over time.  Fed by droplets that fall from a jagged fissure in
+the ceiling, circular ripples spread out like miniature waves across the
+pool every time a droplet hits its surface.
+~
+E
+droplets cracks ceiling~
+Cracks spiderweb across the ceiling like black lightning, tracing the
+path of a future cave-in.  A body of water must still lie above these
+chambers, as droplets of water trickle in from the gaping cracks,
+dropping into the rancid pool.
+~
+E
+stepping stones~
+Mid-sized boulders protrude their crests through the surface of the
+brackish pool, with just enough of them present to hop from the edge of
+the tunnel to the island of stone, lying high and dry in the middle of
+the chamber.  Each boulder appears reasonably stable, and their tops are
+flat.
+~
+E
+oval island~
+Spared the ravages of time and erosion, this island of granite stands
+above the murky pool, remaining dry along most of its length.  Apparently
+a bugbear has taken up residence here, as a sleeping mat and personal
+effects have been strewn about its surface.  A chain of stepping stones
+provides a pathway away from the island and back into the tunnels.
+~
+E
+sleeping mat personal belongings hide~
+A tattered hide with ragged tufts of fur around its edge has been spread
+out along a level portion of this oval island.  Barely holding together,
+it probably provides little comfort above sleeping on the bare rock. 
+Strewn about its surface are a number of personal effects, reagents, and
+food supplies.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou hop across the stepping stones and back into the tunnel system.@n 
+~
+E
+to_room~
+@G$n hops across the stepping stones and back into the tunnels.@n
+~
+!
+3 0 8
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 ) {
+  send_to_room( #action1, room );
+  end;
+  }
+if( i == 2 ) {
+  send_to_room( #action2, room );
+  end;
+  }
+if( i == 3 ) {
+  send_to_room( #action3, room );
+  end;
+  }
+~
+E
+action1~
+@cA fat droplet of water strikes the pool, sending a chain of ripples
+across its surface.@n 
+~
+E
+action2~
+@cThe stench of molding algae drifts through the air, irritating your
+nose.@n 
+~
+E
+action3~
+@cThe rippling water laps up along the island's edge, leaving a slimy
+green trail in its wake.@n 
+~
+!
+2 200 0
+A
+jump swim wade enter~
+deep murky algae-filled pool water~
+act_tochar( #water, ch );
+act_notchar( #water2, ch );
+~
+E
+water~
+@CYou jump into the pool, its cold and slimy water lapping up against
+your legs.  Only two feet deep and unremarkable except for its tinge, you
+climb back onto the island, a slimy green coating remaining on your
+clothes that reeks considerably.@n 
+~
+E
+water2~
+@C$n jumps into the pool, getting the rotten water all over $s legs. 
+Only two feet deep across its length, $n walks around for a while before
+climbing back onto the island.  A slimy green layer glistens on $s legs,
+reeking considerably.@n 
+~
+!
+0 0 0
+A
+get take search grab steal~
+sleeping mat~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  i = random( 1, 10 );
+  if( i < 3 ) {
+    act_tochar( #mat, ch );
+    act_notchar( #mat2, ch );
+    obj_to_char( oload( 7554 ), ch );
+    end;
+    }
+  act_tochar( #nomat, ch );
+  act_notchar( #nomat2, ch );
+  end;
+  }
+act_tochar( #tatters, ch );
+~
+E
+mat~
+You pick up the sleeping mat, bits of its hide falling to the ground.@n
+~
+E
+mat2~
+$n picks up the sleeping mat, bits of its hide and its contents spilling to the ground.@n
+~
+E
+nomat~
+You pick up the mat, but it falls apart in your hands.  The objects
+resting on its surface fall to the ground with a clatter.@n 
+~
+E
+nomat2~
+$n picks up the sleeping mat, but it falls apart in $s hands.  The
+objects resting on its surface fall to the ground with a clatter.@n 
+~
+E
+tatters~
+All that remains of the sleeping mat are tatters of hide and fur laying
+on the ground.
+~
+!
+0 0 0
+A
+get take search grab steal~
+personal effects reagents food supplies~
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  i = random( 1, 11 );
+  act_tochar( #grab, ch );
+  act_notchar( #grab2, ch );
+  if( i < 6 ) {
+    obj_to_char( oload( 7008 ), ch );
+    end;
+    }
+  if( i > 6 ) {
+    obj_to_char( oload( 79 ), ch );
+    end;
+    }
+  obj_to_char( oload( 2982 ), ch );
+  end;
+  }
+act_tochar( #no, ch );
+~
+E
+grab~
+You pick up one of the objects lying on the ground.
+~
+E
+grab2~
+$n picks up one of the objects lying on the ground.
+~
+E
+no~
+None of the objects are worth taking.
+~
+!
+0 0 0
+5041 9 1509949540 3 0
+1519 17 1509949540 -2 25
+-1
+S
+
+#4055
+Cavern Hideaway~
+The entrance to this cramped cavern has been chipped away around the
+edges, just broad enough to allow a bugbear to squeeze through without
+getting stuck.  Inside of the chamber, the floor has been cleared of all
+debris, thrown through the hole and into the tunnel to the north.  A
+frenzy of primitive paintings lines all of the walls, painted with fresh
+blood still in the process of drying.  Scenes of fierce hunting, slain
+enemies, and words from an unrecognizable language express immense hatred
+and lack of control.  A dismembered body lies on the ground, its bloody
+form torn apart.
+~
+[Eliza] Done.
+~
+200933380 11 5 0
+D0
+~
+~
+0 -1 4047 10 10 5
+E
+entrance chipped edges~
+Evidently expanded by hand due to the long trails of claw marks around
+its edges, a narrow opening in the northern wall leads back into the
+tunnel system.  Most of the debris from the vicious mining operation has
+been cast through the hole, spread out in disarray on the ground outside.
+~
+E
+frenzy primitive paintings blood~
+Obviously created with great haste and intense insanity, trails of blood
+depict battles, slain animals, and some sort of rambling language on the
+sides of the cavern.  Ichor hangs down from some of the darkly painted
+scenes, still congealing in the still air.  A mutilated corpse lies on
+the floor, evidently the source of the gory mess.
+~
+E
+scenes fierce hunting slain enemies unrecognizable language~
+Bloody lines intersect each other in a primitive series of cave
+paintings, covering all of the walls within the chamber.  Crude drawings
+of bugbears fighting humanoid creatures sit next to repetetive scribbles
+of some unrecognizable language, the sticky gore still running in
+rivulets down the wall.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou scamper through the tight opening, relieved to get away from the
+disturbing scene.@n 
+~
+E
+to_room~
+@G$n scampers through the tight opening, relieved to get away from the
+disturbing scene.@n 
+~
+!
+3 0 1
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 ) {
+  send_to_room( #action1, room );
+  end;
+  }
+if( i == 2 ) {
+  send_to_room( #action2, room );
+  end;
+  }
+if( i == 3 ) {
+  send_to_room( #action3, room );
+  end;
+  }
+~
+E
+action1~
+@cDroplets of blood drip to the ground with a splattering sound.@n
+~
+E
+action2~
+@cThe stench of the drying blood is so heavy it leaves a coppery taste in
+your mouth.@n 
+~
+E
+action3~
+@cTrails of congealing blood slowly ooze down the walls, marring the
+disturbing depictions.@n 
+~
+!
+2 200 0
+5066 9 1509949540 3 0
+757 17 1509949540 -2 0
+-1
+S
+
+#4056
+Inside a Log Cabin~
+Stripped tree trunks are stacked upon one another to form a basic log
+cabin.  A loose pyramid of leafy branches serves as a roof, though wide
+gaps exist between the foliage.  Pale sunlight filters through from
+above, diluted from turns in the vertical passageway that stretches as
+far as the eye can see.  The sound of lapping water echoes through the
+tunnel, as if the edge of a vast lake were just out of sight.  A treasure
+chest rests in the middle of the floor, just a few feet away from a
+wooden door leading out of the cabin.
+~
+[Rikahn] room up is 4059 - Not accessible by mortals.
+[Eliza] Done.
+~
+-335937516 11 5 0
+D2
+wooden door~
+wooden door~
+391 7575 4050 10 10 5
+D4
+~
+~
+0 -1 4059 10 10 5
+E
+stripped tree trunks log cabin~
+Barren logs, stripped of their bark and branches, have rectangular
+notches cut out near their ends, enabling them to be stacked upon one
+another in a regular pattern.  Stretching up about nine feet tall, the
+square walls provide a safe haven for the treasure stored within the
+chest on the floor.  The roof is a loose thatch of branches, and leaves
+with gaps between each of them, allowing a fresh breeze blow through the
+structure.
+~
+E
+loose pyramid leafy branches foliage~
+A framed network of thick branches supports leafy fronds that stretch in
+a pyramid shape towards the center of the roof.  Each frond is covered
+with long, lush leaves, obscuring most of the view of the vertical
+passageway that stretches as far as they eye can see above.
+~
+E
+pale sunlight vertical passageway~
+A vertical shaft of sheer rock rises up as far as the eye can see, with a
+pale beam of sunlight visible at its apex.  A slight breeze drifts down
+from above, the humidity so high a fine mist of dew has collected along
+the walls.  The constant sound of waves lapping against the shore can be
+heard echoing overhead, with the sound of chirping birds overshadowing
+the din on occasion.
+~
+A
+~
+~
+~
+!
+3 0 16
+A
+up~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+The walls of the tunnel are too smooth and vertical to ascend.
+~
+!
+0 0 0
+A
+climb scale~
+1 up~
+act_tochar( #no, ch );
+~
+E
+no~
+The walls of the tunnel are too smooth and vertical to ascend.
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou step through the doorway and back into the tunnel.@n
+~
+E
+to_room~
+@G$n steps through the doorway and back into the tunnel.@n
+~
+!
+3 0 4
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 ) {
+  send_to_room( #action1, room );
+  end;
+  }
+if( i == 2 ) {
+  send_to_room( #action2, room );
+  end;
+  }
+if( i == 3 ) {
+  send_to_room( #action3, room );
+  end;
+  }
+~
+E
+action1~
+@cA humid breeze blows in from above, rustling the thatched roof.@n
+~
+E
+action2~
+@cThe sound of lapping water echoes through the tunnels.@n
+~
+E
+action3~
+@cA faint echo of birds chirping drifts in from above.@n
+~
+!
+2 200 0
+3155 49 1644167268 -2 0
+2 81 1509949540 -2 0
+2 81 1509949473 -2 0
+7208 81 1644167173 -2 0
+7072 81 1509949480 -2 0
+7463 81 1509949455 -2 0
+7411 81 1509949506 -2 0
+5118 9 1509949540 3 0
+5118 9 1509949540 3 0
+5118 9 1509949540 3 0
+-1
+S
+
+#4057
+You Shouldn't Be Here~
+Inaccessible room - If you made it here yell for an immortal.
+~
+[Rikahn] Room created just so exits in the corridor look right
+[Rikahn] room north is 4043
+[Rikahn] If a player made it here let me know, find out how they did it.
+[Rikahn] Do not reimburse pass door phials for snoopy players
+~
+-335937411 11 5 0
+D0
+~
+~
+471 -1 4043 10 10 5
+A
+1 north~
+~
+if( find_stat( ch, level ) > 90 )
+  continue;
+~
+!
+0 0 0
+-1
+S
+
+#4058
+You Shouldn't Be Here~
+Inaccessible Room - Contact an immortal if you are here.
+~
+[Rikahn] room down is 4044
+[Rikahn] room up is 4045
+[Rikahn] If a player made it here let me know, find out how they did it.
+[Rikahn] This room added so exits in other rooms look correct.
+[Rikahn] When the two ends of the passage connected, mobs could move
+up/down, circumventing the acode for 'up'...  Had to add a room inbetween
+and add an acode for leaving room up/down, did the trick.
+~
+200933444 11 5 0
+D4
+~
+~
+0 -1 4045 10 10 5
+D5
+~
+~
+0 -1 4044 10 10 5
+-1
+S
+
+#4059
+The Steep Vertical Wall~
+Inaccessible Room - If you made it here yell for an immortal.
+~
+[Rikahn] room down is 4056
+[Rikahn] If a player got in here let me know, find out how they did it.
+~
+-336068484 11 5 0
+D5
+~
+~
+0 -1 4056 10 10 5
+A
+down~
+*~
+act_tochar( #no, ch );
+~
+E
+no~
+You need to yell for an immortal so they can rescue you.
+~
+!
+0 0 0
+A
+climb scale~
+1 down~
+act_tochar( #no, ch );
+~
+E
+no~
+You need to yell for an immortal so they can rescue you.
+~
+!
+0 0 0
+-1
+S
+
+#0
+

@@ -1,0 +1,2312 @@
+#M2_AREA
+2
+
+Crystal Caves~
+Azerin Teleute Estrelle Ariellen Hephe~
+Crystal Salamanders~
+~
+~
+
+10 0
+0
+1
+#ROOMS
+
+#10500
+Glowing Chamber of Crystal~
+Gossamer strands of crystalline web drape across the cavern to form a
+curtain of woven light.  Dusky-orange clay lines the caverns floor,
+strange swirling marks covering it.  A semi-transparent wall of stones
+lies to the south, a hazy cloud surrounding it.  Overhead, ribbons of
+blue quartz run through the grey rock; multi-faceted surfaces refract the
+light and cast blue-hued patterns across the cavern floor.  A ribbon of
+water flows in from the north and winds out south.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 5 0
+D0
+crystalline web wall~
+~
+511 -1 10501 10 10 5
+D1
+~
+~
+0 -1 10502 10 10 5
+D2
+~
+~
+0 -1 10527 10 10 5
+E
+gossamer crystalline web curtain~
+A fine network of jewelled web forms a shimmering veil of light, which
+contours of the cavern walls.  The dewdrop shaped gems glimmer like a
+sparkling waterfall.
+~
+E
+floor clay marks~
+The soft ochre clay coats the floor of the chamber with a moist, slushy
+surface.  Uncanny patterns ripple on the clayey ground, the curvy marks
+reminiscent of a reptile's swishing tail.
+~
+A
+1 cut smash break crush~
+web north crystal curtain~
+if( is_open( room, north ) )
+  act_tochar( #why_bother, ch );
+else {
+  i = random( 1, 4 );
+  act_tochar( #hands, ch, obj );
+  act_notchar( #rhands, ch, obj, mob, sight );
+  open( room, north );
+  obj_to_room( oload( 7760, i ), room );
+}
+~
+E
+why_bother~
+@yThe webbing has already been smashed.@n
+~
+E
+hands~
+@CYou pull the crystalline web apart, fine particles tinkling as they
+fall on the cavern's floor.@n 
+~
+E
+rhands~
+@C$n pulls the crystalline web apart, fine particles tinkling as they
+fall on the cavern's floor.@n 
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou step through the web curtain heading north.@n
+~
+E
+to_room~
+@G$n steps through the curtain heading north.@n
+~
+!
+3 0 1
+A
+~
+~
+continue;
+~
+E
+to_char~
+@BYou follow the course of the river south.@n
+~
+E
+to_room~
+@B$n follows the course of the river south.@n
+~
+!
+3 0 4
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou pick your way through the loose rocks heading eastward.@n
+~
+E
+to_room~
+@c$n picks $s way through the loose rocks heading eastward.@n
+~
+!
+3 0 2
+5401 9 1509949540 3 0
+5402 9 1509949540 3 0
+-1
+S
+
+#10501
+Glowing Chamber of Crystal~
+Crystalline web drapes across the rough stone walls of the chamber, the
+tiny fragments of gems sparkling.  Narrow tunnels lead from the cavern in
+each direction, the strange webs particulary dense in the north and west. 
+A burbling stream meanders across the red-clay floor of the cave, flowing
+out the southern exit.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 6 0
+D0
+~
+~
+0 -1 10504 10 10 5
+D1
+~
+~
+0 -1 10503 10 10 5
+D2
+crystalline web wall~
+~
+511 -1 10500 10 10 5
+D3
+~
+~
+0 -1 10505 10 10 5
+E
+stream burbling~
+Zigzagging across the cavern floor, the burbling stream merrily trickles
+southwards, its course well worn into the rock Speckled throughout the
+shallow river bed, flecks of multi-coloured crystal gently ebb their way
+along with the current.  In several places where the current does not
+flow, sizeable deposits of the gems have accumulated becoming rather
+dazzling to behold.
+~
+A
+1 cut 2 smash break crush~
+web 1 south~
+if( is_open( room, south ) )
+  act_tochar( #why_bother, ch );
+else {
+  i = random( 1, 4 );
+  act_tochar( #smash, ch, obj );
+  act_notchar( #rsmash, ch, obj );
+  open( room, south );
+  obj_to_room( oload( 7760, i ), room );
+}
+~
+E
+why_bother~
+That way is clear, and easy to go through.
+~
+E
+smash~
+@GSmall pieces of crystal make quite a noise falling on the floor as you
+pull the crystalline web apart.@n 
+~
+E
+rsmash~
+@G@GSmall pieces of crystal chink and tingle falling on the floor as $n
+pulls the crystalline web apart.@n 
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou push through the strange webs and continue $T.
+~
+E
+to_room~
+@G$n pushes through the strange webs and continues $T.
+~
+!
+3 0 13
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CLoose stones rattle down the tunnel as you head towards the cavern to the
+$T.@n
+~
+E
+to_room~
+@CLoose stones rattle down the tunnel as $n heads towards the cavern to
+the $T.@n 
+~
+!
+3 0 2
+5401 9 1509949540 3 0
+-1
+S
+
+#10502
+Crystal Cavern~
+Chunks of emerald colored crystals cover the walls and ceiling of the
+vaulted chamber.  Draped between the tunnels that lead from the room are
+crystalline webs, spun by an unknown weaver.  Underfoot the ground is
+hard packed clay, strange whorls of scratches etched into its surface. 
+Covering the eastern wall are shallow depressions, perhaps where someone
+has mined for the valuable crystals and gemstones.
+~
+[Yrna] Added a 'cut gem' here - can yield 7337, 1023 or 1039.
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 5 0
+D3
+~
+~
+0 -1 10500 10 10 5
+E
+emerald crystal depressions gemstones~
+Gouged into the walls and ceiling of the cavern, angular depressions
+ripple the fractured surfaces.  Deep emerald green crystals flourish like
+a garland, their multi-faceted shapes glinting in the dim light.  Emerald
+dust and fragments lay strewn across the ground, freely available for
+anyone to gather.
+~
+A
+~
+~
+if( is_player( ch ) ) {
+  act_tochar( #west, ch, obj );
+  act_notchar( #rwest, ch, obj, mob, sight );
+  continue;
+}
+else
+  continue;
+~
+E
+west~
+@GBrushing aside the fine webs, you leave west.@n
+~
+E
+rwest~
+@GBrushing aside the fine webs, $n leaves west.@n
+~
+!
+3 0 8
+A
+dig cut~
+emerald crystal gemstones depressions~
+if( rflag( reset0, room ) ) {
+  i = random( 1, 50 );
+  if( i < 2 )
+    obj = oload( 7337 );
+  elseif( i < 6 )
+    obj = oload( 1023 );
+  elseif( i < 20 )
+    obj = oload( 1039 );
+  else {
+    act_tochar( #nogem, ch, obj );
+    act_notchar( #rnogem, ch, obj, mob, sight );
+    remove_rflag( reset0, room );
+  }
+  if( obj ) {
+    act_tochar( #gem, ch, obj );
+    act_notchar( #rgem, ch, obj, mob, sight );
+    obj_to_char( obj, ch );
+  }
+}
+else {
+  act_tochar( #nogem, ch, obj );
+  act_notchar( #rnogem, ch, obj, mob, sight );
+}
+~
+E
+nogem~
+@gYou cut into the small depression, but there are no gems worth taking
+here.@n 
+~
+E
+rnogem~
+@g$n cuts into the depression, but cannot find any gems worth taking.@n
+~
+E
+gem~
+@GYou cut into the depression on the wall, prying a small gem lose!@n
+~
+E
+rgem~
+@G$n manages to pry a small gem lose!@n
+~
+!
+0 0 0
+-1
+S
+
+#10503
+Glowing Chamber of Crystal~
+Fragments of crystal web sway in an unfelt breeze in the chambers center,
+the lattice of stones sending out a faint musical chime as they move. 
+Under the gossamer curtain rest the remnants of a clutch of
+pale-blue eggs, each one over a foot in length.  The red-clay floor
+underfoot slops downward to the west.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 5 0
+D3
+~
+~
+0 -1 10501 10 10 5
+E
+eggs clutch remnants~
+Shattered shell fragments litter the area, their blue colourations
+tainted somewhat by a stringy, almost clear goo.  Attached to some of the
+walls surrounding the clutch, pale blue and green scales, having been
+rubbed off a reptilian creature, glimmer slightly in the dim light.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CSending loose stones down the tunnel, you leave $T.@n
+~
+E
+to_room~
+@CSending loose stones down the tunnel, $n leaves $T.@n
+~
+!
+3 0 8
+A
+~
+~
+send_to_room( #sound, room, sight );
+~
+E
+sound~
+@GFaint tinkling sounds echo through the caves, the pleasant chime
+filling the air with cascading tones.@n 
+~
+!
+2 150 0
+A
+~
+eggs clutch remnants shells~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 5 ) == 3 ) {
+    obj = oload( 2622 );
+    act_tochar( #find, ch, obj );
+    act_notchar( #rfind, ch, obj, mob, sight );
+    obj_to_char( obj, ch );
+  }
+  else {
+    mob = mload( 2529, room );
+    act_tochar( #baby, ch, obj, mob );
+    act_notchar( #rbaby, ch, obj, mob, sight );
+  }
+}
+else
+  act_tochar( #none, ch, obj );
+~
+E
+find~
+@YSearching through the shattered egg shells, you find one egg that
+hasn't hatched yet!@n 
+~
+E
+rfind~
+@Y$n finds an unhatched crystalline egg among shattered egg shells!@Yn
+~
+E
+baby~
+@MYou push some shattered egg shells aside, revealing a pale purple
+salamander!@n 
+~
+E
+rbaby~
+@M$n moves some egg shells aside, revealing a pale purple salamander!@n
+~
+E
+none~
+@yThe eggs have already been searched.@n
+~
+!
+9 0 0
+-1
+S
+
+#10504
+Mist Filled Chamber~
+A dense blanket of mist hangs in the air above a crystal clear pool of
+water in the chamber's center.  The waters move with a swirling current
+which continuously splashes over the pools rim.  A trickling stream runs
+from the overflow.  A small alcove resides in the northern wall, its
+keystone covered in spidery runes.
+~
+[Azerin] enter pool
+[Estrella] extras done
+[Yrna] Done.
+~
+167378948 11 5 0
+D2
+~
+~
+0 -1 10501 10 10 5
+D5
+~
+~
+0 -1 10506 10 10 5
+E
+pool water~
+Swirling downward, the crystal clear water gently pulls at the debris
+floating on the surface.  In places, the water has breached the rim of
+the pool and then, unobstructed, it freely flows southwards.
+~
+E
+alcove keystone stone~
+Hollowed into the northern wall, a shallow alcove disappears into dark
+oblivion.  Marginally illuminated in the shadow of the alcove, a hand
+sized stone rests in the small nook, its textured surface caked with dirt
+and grime.
+~
+E
+runes~
+Try as you might, you cannot decipher the runes.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou dive into the cool waters and swim down.
+~
+E
+to_room~
+@c$n dives into the cool waters and swims down.@n
+~
+!
+3 0 32
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cSplashing through the runoff from the pool, you leave south.@n
+~
+E
+to_room~
+@cSplashing through the runoff from the pool, $n leaves south.@n
+~
+!
+3 0 4
+5402 9 1509949540 3 0
+7918 17 1509949540 -2 0
+-1
+S
+
+#10505
+Glowing Chamber of Crystal~
+Blood-red gems stud the walls and ceiling of the smooth-walled cavern. 
+The slick sides appear to have been worn down by water flow, although the
+red-clay floor is dry and hard packed.  Cut into the northern wall are
+shallow handholds, allowing a gnome-sized creature to climb the wall with
+ease; however the ceiling above the indentations appears to be solid and
+seamless.  A natural fissure in the rock carves an opening in the
+southern wall, the red-clay floor giving way to solid stone.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 5 0
+D1
+~
+~
+0 -1 10501 10 10 5
+D2
+~
+~
+0 -1 10519 10 10 5
+D4
+~
+~
+0 -1 10512 10 10 5
+E
+handholds indentations wall~
+Chiselled into the northern wall, the handholds form a haphazard ladder
+which ends at the ceiling of the cave.  It appears that this pseudo
+ladder leads to a dead end.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou grip the handholds and pull yourself up the wall.@n
+~
+E
+to_room~
+@c$n grips the handholds and pulls $mself up the wall and disappears from
+view.@n 
+~
+!
+3 0 16
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou head along the cavern toward the east.@n
+~
+E
+to_room~
+@c$n heads along the cavern toward the east.@n
+~
+!
+3 0 2
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou enter the natural fissure to the south.@n
+~
+E
+to_room~
+@c$n enters the natural fissure to the south.@n
+~
+!
+3 0 4
+A
+1 look~
+handholds indentations wall 1 up~
+act_tochar( #handhold, ch );
+open( room, up );
+~
+E
+handhold~
+Chiselled into the northern wall, the handholds form a haphazard ladder
+which ends at the ceiling of the cave.  It appears that this pseudo
+ladder leads to a dead end.
+~
+!
+0 0 0
+-1
+S
+
+#10506
+The bottom of The Pool~
+Swirling tendrils of water weed rise up from the muddy bottom of the pool. 
+Between the gaps in the plants bubbling currents rise, the water slightly
+hotter than the rest of the pool.  A cirular tunnel leads out of the
+chamber to the north, the waters completly filling it.  Through the
+distored underwater view the surface above appears to be crystalline and
+covered with rainbows.
+~
+[Estrella] extras done
+[Yrna] Done.
+~
+167379012 7 5 0
+D0
+~
+~
+0 -1 10507 10 10 5
+D4
+~
+~
+0 -1 10504 10 10 5
+E
+tendrils weed plants~
+Swaying restlessly in the aerated currents, the lacy waterweed writhe
+back and forth, their lengthy leaves wavering toward the silvery surface
+of the pool.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou swim through the bubbling waters heading north.@n
+~
+E
+to_room~
+@c$n swims through the bubbling waters heading north.@n
+~
+!
+3 0 1
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou swim to the surface and pull yourself out of the water.@n
+~
+E
+to_room~
+@c$n swims to the surface and pulls $mself out of the water.@n
+~
+!
+3 0 16
+-1
+S
+
+#10507
+A Crystal-studded Tunnel~
+Ribbons of color dance through the crystal clear waters, forming
+scattering patterns upon the gem studded walls.  Tendrils of waterweeds
+flourish on the muddy bottom, their green fronds swaying in the current. 
+Despite the abundant food source the waters appear to be absent of life. 
+Southward the tunnel opens into a large chamber and to the north the
+aquatic passage continues onward into a similar pool.
+~
+[Estrella] extras done
+[Yrna] Done.
+~
+167379012 7 5 0
+D0
+~
+~
+0 -1 10508 10 10 5
+D2
+~
+~
+0 -1 10506 10 10 5
+E
+gem walls studded ribbons~
+Refracting off the sharply cut edges of rainbow-hued gems, a brilliant
+luminescence bespeckles the narrow waterway illuminating the water-filled
+tunnel.  As a result of the multicoloured light it is difficult to tell
+whether the gems are naturally coloured or the light is casing the
+illusion thereof.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou swim along the still, murky water leaving south.@n
+~
+E
+to_room~
+@c$n swims along the still, murky water leaving south.@n
+~
+!
+3 0 4
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou swim north through the waterweeds.@n
+~
+E
+to_room~
+@c$n swims north through the waterweeds.@n
+~
+!
+3 0 1
+5484 9 1509949540 3 0
+5484 9 1509949540 3 0
+-1
+S
+
+#10508
+Bottom of the Pool~
+The swirling waters tug and pull at the lush growth of weeds that
+flourish on the pool's bottom.  Although murky, the surface is still
+visible above, the pool's edge distorting the walls of the chamber.  An
+underwater passageway leads out southward from the pool.  A smooth slab
+of rock sits in the middle of the pool, its surface coated in algae.
+~
+[Estrella] extras done
+[Yrna] Done.
+~
+167379012 7 5 0
+D2
+~
+~
+0 -1 10507 10 10 5
+D4
+~
+~
+0 -1 10509 10 10 5
+E
+slab smooth rock algae~
+Covered with a slick coating of algae the smooth slab creates a low
+tablet about two feet off the floor of the pool.  The top of the stone
+slab barely extends past the height of the waterweed that undulate at is
+sides.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cDisappearing through the weeds, you swim south.@n
+~
+E
+to_room~
+@cDisappearing through the weeds, $n swims south.@n
+~
+!
+3 0 4
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cKicking off from the stone slab, you launch yourself up toward the
+surface of the pool.@n 
+~
+E
+to_room~
+@cKicking off from the stone slab, $n launches $mself up toward the
+surface of the pool.@n 
+~
+!
+3 0 16
+5484 9 1509949540 3 0
+5484 9 1509949540 3 0
+-1
+S
+
+#10509
+Water Filled Chamber~
+A foot of water sloshes about the rim of a deep pool in the cavern's
+center.  Cut into the western wall are slick handholds - about the right
+spacing for climbing up with ease, a jutting ledge its destination. 
+Dripping stalactites rain a constant fresh supply of water into the room,
+some of the limestone structures over five feet in length.
+~
+[Estrella] extras done
+[Yrna] Changed the amber sprite to no.bash. She's flying.
+[Yrna] Changed room size, took out gnomes from rdesc
+[Yrna] Done.
+~
+167378948 13 5 0
+D4
+~
+~
+0 -1 10510 10 10 5
+D5
+~
+~
+0 -1 10508 10 10 5
+E
+stalactite limestone~
+Pale peach-coloured ore deposits form large stalactites that hang from
+the ceiling, a steady drip of mineral-filled water slowly trickling down
+the limestone structures and falling from the honed tip onto the floor of
+the cavern.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cSubmerging yourself in the water, you swim down.@n
+~
+E
+to_room~
+@cSubmerging $mself in the water, $n swims down.@n
+~
+!
+3 0 32
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cDripping with water, you scale the western wall.@n
+~
+E
+to_room~
+@cDripping with water, $n scales the western wall.@n
+~
+!
+3 0 16
+A
+~
+handhold 1 up ledge~
+interpret( ch, "up" );
+continue;
+~
+!
+18 0 0
+287 17 1509949540 -2 0
+-1
+S
+
+#10510
+A Shallow Ledge~
+Jutting out into the valuted chamber, the chunk of rock is barely wide
+enough for a human to stand upon.  A hacked opening in the north allows
+for passage onward.  Below the edge a pool of crystal clear water
+spreads. It might be possible to jump from here and land without to much
+harm below.
+~
+[Guin] Done.
+~
+167378948 11 5 0
+D0
+~
+~
+0 -1 10511 10 10 5
+D5
+~
+~
+0 -1 10509 10 10 5
+E
+pool crystal clear water~
+Sparkling with a rose-hued light the crystal clear pool extends
+throughout most of the cavern below.  Never a ripple playing across its
+satiny surface.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cPeering over the edge, you carefully jump down.@n
+~
+E
+to_room~
+@cPeering over the edge, $n carefully jumps down.@n
+~
+!
+3 0 32
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou head through the opening in the north wall.@n
+~
+E
+to_room~
+@y$n heads through the opening in the north wall.@n
+~
+!
+3 0 1
+A
+jump~
+1 down water pool~
+interpret( ch, "+down" );
+~
+!
+0 0 0
+-1
+S
+
+#10511
+Dry Chamber~
+A fine layer of sand and rock flakes coats the floor, a cloud of dust
+rising from it.  The rock walls are covered in scars where something has
+hacked at them, expanding the natural fissure into a room.  Southward a
+fissure opens into the wall of a sizable cavern, a ledge allowing someone
+to stand at its edge.  An opening in the west allows passageway onward,
+into the gloom.
+~
+[Guin] Done.
+~
+167378948 11 5 0
+D2
+~
+~
+0 -1 10510 10 10 5
+D3
+~
+~
+0 -1 10518 10 10 5
+E
+walls scars fissure~
+Riddling the surface of the walls and ceiling, low gashes extend from one
+end of the chamber to the other.  The broadened dimensions provide room
+for the passage of moderate sized creatures.  Piles of shattered rock
+litter the floor, the only remnants from the excavation.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yCrunching on the debris, you leave south.@n
+~
+E
+to_room~
+@yLoose shards of rock skitter along the tunnel as $n leaves east.@n
+~
+!
+3 0 4
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou move along the tunnel to the west.@n
+~
+E
+to_room~
+@yDisappearing along the tunnel, $n leaves west.@n
+~
+!
+3 0 8
+2397 9 1509949540 3 0
+-1
+S
+
+#10512
+A Tiny Cavern~
+The cramped cavern is barely wide enough for a human to crawl down. 
+Chunks of broken stone litter the dusty floor of the cave, fallen from
+where someone has hacked at the ceiling.  A ribbon of silvery-hued ore
+gleams from the surface of the rough walls.  An opening in the northern
+wall allows a crawl-space onward, while a narrow crack in the
+stone-littered floor opens up to the chamber below.
+~
+[Azerin] acodes for down
+[Estrella] extras done
+[Yrna] made this no.mob
+[Yrna] Added leaving codes
+[Yrna] Done.
+~
+167378956 11 5 0
+D0
+~
+~
+0 -1 10513 10 10 5
+D5
+~
+~
+0 -1 10505 10 10 5
+E
+ribbon silvery ore~
+A fine band of silver ore ripples across the dark grey walls, the
+precious minerals shimmering in the dim light of this miniature cave.  A
+few shallow scratch marks along the ribbons indicates that perhaps
+someone has tried to mine the ore.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou squeeze through the opening in the northern wall.@n
+~
+E
+to_room~
+@c$n squeezes through the opening in the northern wall, disappearing from
+sight.@n 
+~
+!
+3 0 1
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou carefully lower yourself to the cavern below.@n
+~
+E
+to_room~
+@g$n carefully lowers $mself to the cavern below.@n
+~
+!
+3 0 32
+-1
+S
+
+#10513
+Silver Lined Passageway~
+Midnight-black walls of this narrow passageway are netted with fine
+silvery ore, much as web spun inside the rocks themselves.  Scratch
+marks, notches and dents in the walls indicate it is certainly not a
+natural formation.  Flaky chippings and some bigger black chunks litter
+the ground between several stalagmites that glitter in the darkness with
+a faint light of their own.  The passageway opens up into a larger cave
+to the west, while only a narrow fissure can be seen in the southern wall.
+~
+[Guin] Done.
+~
+167378948 11 5 0
+D2
+~
+~
+0 -1 10512 10 10 5
+D3
+~
+~
+0 -1 10514 10 10 5
+E
+stalagmites glitter light~
+Streaked with silvery ore, some raising almost to human height, the
+stalagmites glitter in the darkness with the light of their own.  Not
+giving enough light to see by, they merely indicate their own position in
+the blackness.  Surprisingly warm to the touch, the glimmering rocks make
+this passageway a slightly more pleasant place to be.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@WPicking your way between the stalagmites, you leave $T.
+~
+E
+to_room~
+@W$n carefully picks $s way between the stalagmites, continuing $T.@n
+~
+!
+3 0 12
+2533 9 1509949540 3 0
+-1
+S
+
+#10514
+Silver Lined Chamber~
+Silvery ore lines the pitch black walls of this circular cavern like a
+fine lattice, creating the most unusual effect; almost as if the walls
+are covered with human-made lacework tapestries.  The ore seems to shine
+from within, bathing the chamber in very faint, shimmering light.  The
+floor is littered with black rock chippings and flakes, and amazingly,
+those have none of the silvery ore in them - just midnight-black,
+ordinary stone.  There are narrow openings in both eastern and northern
+wall, leading out of this shimmering chamber.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378949 11 5 0
+D0
+~
+~
+0 -1 10515 10 10 5
+D1
+~
+~
+0 -1 10513 10 10 5
+E
+black rocks walls shimmering lacework tapestries lattice~
+A fine lattice of silvery ore streaks the pitch-black walls and ceiling. 
+The ore seems to glow from within, illuminating the chamber in dim, eerie
+light.  It is almost impossible to look straight at the walls - the
+silvery lace seems to shift and dance, making your eyes water in effort
+to focus.
+~
+A
+~
+~
+send_to_room( #shimmer, room, sight );
+~
+E
+shimmer~
+@WThe lace of silver shifts and dances, shimmering with dim, eerie
+light.@n 
+~
+!
+2 150 0
+2533 9 1509949540 3 0
+2533 9 1509949540 3 0
+-1
+S
+
+#10515
+Silver Lined Passageway - By the Small Pool~
+Gleaming black rocks jut from passageway sides, their surfaces sharp and
+fractured as if cut.  Silvery ore lines the walls, glittering in the
+darkness.  A large stalactite hangs from the ceiling by the western wall,
+slowly dripping with silvery liquid which forms a small, @emilky pool@n
+underneath.  The northern end of the passageway slopes down, creating
+only a narrow opening in that direction, silvery ore almost disappearing
+as it reaches it.  The ore lining thickens to the south, forming a fine
+latticework on the walls as the passageway opens up to a circular chamber.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 5 0
+D0
+~
+~
+0 -1 10516 10 10 5
+D2
+~
+~
+0 -1 10514 10 10 5
+A
+look~
+milky pool liquid~
+act_tochar( #look, ch, obj );
+act_notchar( #rlook, ch, obj, mob, sight );
+set_integer( ch, "Yrna/Salamander/Vision", 1 );
+wait( 1 );
+act_tochar( #vision, ch, obj );
+act_notchar( #rvision, ch, obj, mob, sight );
+wait( 3 );
+act_tochar( #vision2, ch, obj );
+act_notchar( #rvision2, ch, obj, mob, sight );
+wait( 3 );
+act_tochar( #pain, ch, obj );
+act_notchar( #rpain, ch, obj, mob, sight );
+damage( mob, ch, 3d5+10, mind, "the dark vision", "the vision of death" );
+position( ch, 6 );
+wait( 3 );
+act_tochar( #clear, ch, obj );
+set_integer( ch, "Yrna/Salamander/Vision", 0 );
+~
+E
+look~
+@Wyour eyes are drawn to the small, cloudy pool.  The mist forms on its
+surface and swirls around in spirals, going down, ever down ...@n 
+~
+E
+rlook~
+@WBefore you can stop $m, $n looks at the small, milky pool.  As $e
+stares unblinkingly, you realise something is wrong here.@n 
+~
+E
+vision~
+@W...  dragging you with it!  You find youself unable to avert your eyes
+as the mist clears and images of crystal plain fill your mind.@n
+@MCrystal towers,@n @Ccrystal rocks,@n @Gcrystal trees@n @W- everything
+shimmering wildly.@n 
+~
+E
+rvision~
+@W$n seems quite hypnotised by the pool, and doesn't appear to notice $s
+surroundings.  You doubt if $e would notice even if the whole place caved
+in.@n 
+~
+E
+vision2~
+@RThe sky darkens, the winds start ...the earth cracks open and blazing
+fires threaten to swallow everything!  No more glimmering crystals; a
+charred, blackened field is all you can see.  Black armies march led by
+giants and dragons, they clash and strike at each other, enormous demons
+and beasts trampling anything that stands in their way.@n 
+~
+E
+rvision2~
+@WPerfectly still and unblinking, only $n's face reveals strong fear.@n
+~
+E
+pain~
+@RYou realise you stand in the centre of the events!  As you try to back
+off, a dragon swoops down, obscuring your vision and breathing fire in
+your direction!  You feel your skin burn, your whole body is on fire -
+the pain is unbearable!@n 
+~
+E
+rpain~
+@RSuddenly, $n screams, $s eyes wide open, $s face a mask of horror! 
+Clutching $s head, $e staggers backward and falls over.  Whatever just
+happened, it must have hurt!@n 
+~
+E
+clear~
+@WThe vision cleared, you find yourself sitting on the floor among the
+rocks, clutching your head.  That was wierd!@n 
+~
+!
+0 0 0
+A
+~
+~
+if( get_integer( ch, "Yrna/Salamander/Vision" ) == 1 )
+  act_tochar( #no, ch, obj );
+else
+  continue;
+~
+E
+no~
+@GYou are unable to break free from the vision.@n
+~
+!
+3 0 5
+-1
+S
+
+#10516
+Black-Rock Passageway~
+Midnight-black rock of the passageway is streaked in places with silvery
+ore that seems to shine from within.  The rough walls of the chamber lean
+sharply inward forming a triangular passageway that only a gnome would
+find comforatble to traverse; everyone else would have a tight squeeze
+indeed.  Thankfully, the passage opens up toward the north, allowing a
+respite from the cramped conditions.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 5 0
+D0
+~
+~
+0 -1 10517 10 10 5
+D2
+~
+~
+0 -1 10515 10 10 5
+E
+rock wall silvery ore~
+Streaking the triangular walls, silver-lined black rock shines with the
+dim light gliding off its sleek surfaces.  The triangular shape of the
+tunnel makes it a little difficult to pass through as the floor slants
+upward to meet the low, downward-sloping ceiling wall.
+~
+A
+~
+~
+if( is_standing( ch ) ) {
+  if( size( ch ) < 4 ) {
+    act_tochar( #gnome, ch, obj );
+    act_notchar( #rgnome, ch, obj, mob, sight );
+    transfer( ch, find_room( 10515 ) );
+    act_notchar( #arrive_gnome, ch, obj, mob, sight );
+  }
+  else {
+    act_tochar( #big, ch, obj );
+    act_notchar( #rbig, ch, obj, mob, sight );
+    damage( mob, ch, 1d3, physical, "the low ceiling" );
+    transfer( ch, find_room( 10515 ) );
+    act_notchar( #arrive_others, ch, obj, mob, sight );
+  }
+}
+loop( followers ) {
+  ch = rch;
+  acode( room, 1 );
+}
+~
+E
+gnome~
+@Yyou easily pass under the low ceiling and continue south.@n
+~
+E
+rgnome~
+@Y$n easily passes under the low ceiling and continues south.@n
+~
+E
+big~
+@RYou crawl under the low ceiling to the south, but the jutting rocks
+catch your back!@n 
+~
+E
+rbig~
+@R$n crawls under the low ceiling to the south, but the jutting rocks
+catch $m on $s back!.@n 
+~
+E
+arrive_gnome~
+@Y$n arrives from the dim tunnel to the north.@n
+~
+E
+arrive_others~
+@R$n crawls in from the north.@n
+~
+!
+3 0 4
+-1
+S
+
+#10517
+Glowing Chamber~
+The black rock of the cavern appears to be illuminated by countless
+sparkling stars that blink and sway from the roof.  Ripples of movement
+send waves of light across the shiny basalt surface.  Littering the
+floor are the broken shells of beetles and other insects, their corpses
+desiccated.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 5 0
+D1
+~
+~
+0 -1 10518 10 10 5
+D2
+~
+~
+0 -1 10516 10 10 5
+E
+sparkling stars roof~
+Faintly intruding on the encroaching darkness, a myriad of tiny lights
+gently sway on nearly invisible silk strands. The opalescent light
+barely illuminates the dark area with a dim blue phosphorescence.
+~
+E
+floor shells insects corpses~
+Scattered underfoot, the floor is strewn with brown beetle shells and
+dried insect corpses.  The tiny bodies have been picked over, the only
+remnants being the unappetising legs of the insects.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYour footfalls crush the shells and corpses as you wander $T.@n
+~
+E
+to_room~
+@c$n's footfalls crush the shells and corpses as $e wanders $T.@n
+~
+!
+3 0 6
+A
+~
+~
+send_to_room( #lights, room, sight );
+~
+E
+lights~
+@YThe minute lights flicker and fade, only to reappear again a few
+moments later.@n 
+~
+!
+2 150 0
+A
+~
+floor shells insescts corpses beetles~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 4 ) == 1 ) {
+    obj = oload( 37 );
+    act_tochar( #yes, ch, obj );
+    act_notchar( #ryes, ch, obj, mob, sight );
+    obj_to_char( obj, ch );
+  }
+  else {
+    act_tochar( #no, ch, obj );
+    act_notchar( #rno, ch, obj, mob, sight );
+  }
+}
+else
+  act_tochar( #already, ch, obj );
+~
+E
+yes~
+@YYou search the insect remains finding a single uncrushed beetle
+shell!@n 
+~
+E
+ryes~
+@Y$n searches the desiccated remains, finding a single uncrushed beetle
+shell.@n 
+~
+E
+no~
+@yYou rummage through the desiccated remains, but find nothing of
+interest.@n 
+~
+E
+rno~
+@y$n spends some time searching through the dead insects littering the
+floor, but comes up with nothing interesting.@n 
+~
+E
+already~
+@yThe scattered insect remains have obviously been searched thoroughly
+before.@n 
+~
+!
+9 0 0
+-1
+S
+
+#10518
+Narrow Tunnel~
+The oppressive weight of the mountainside pushes in against the fissure
+making the rocks groan and creak constantly.  Piles of rock shards and
+dust line the floor, evidence of the slow destruction that is occuring. 
+Through the broken tunnel a few twisted shards of rock jutt out into the
+limited space, their sharp surfaces easly able to tear exposed flesh.
+~
+[Azerin] dex check or cut
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 5 0
+D1
+~
+~
+0 -1 10511 10 10 5
+D3
+~
+~
+0 -1 10517 10 10 5
+E
+broken shard rock wall~
+Angular and razor sharp, the fractured walls of this narrow tunnel seem
+to claw at any creature that chances to pass through this tunnel.  The
+rock face, being riddled with knife-like vesicles, rusty brown in colour,
+is coated by a thick layer of festering flesh that exudes a foul stench
+in the close surroundings.
+~
+A
+~
+~
+send_to_room( #creak, room, sight );
+~
+E
+creak~
+@YThe rocks creak and groan making it seem the whole place will cave in
+any moment now.@n 
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@wLoose shards of rock skitter along the tunnel as you leave east.@n
+~
+E
+to_room~
+@wLoose shards of rock skitter along the runnel as $n leaves east.@n
+~
+!
+3 0 2
+A
+~
+~
+if( is_player( ch ) ) {
+  if( find_stat( ch, dex ) < random( 12, 16 ) ) {
+    act_tochar( #scratch, ch, obj );
+    act_notchar( #rscratch, ch, obj, mob, sight );
+    damage( mob, ch, 1d5, physical, "The jagged rock's sharp point", "sharp rocks" );
+  }
+}
+continue;
+~
+E
+scratch~
+@CTrying to squeeze past the jagged rocks, you catch your arm on one
+sharp edge.@n 
+~
+E
+rscratch~
+@C$n tries to squeeze past the jagged rocks, but catches $s arm on one
+particularly sharp edge.@n 
+~
+!
+3 0 8
+-1
+S
+
+#10519
+Cobwebed Tunnel~
+A heavy blanket of webs line the tunnel, dust and desiccated animal
+corpses entangled in them.  Ripples of red and yellow minerals run
+through the slate stones, the miniature crystals catching the light in
+their rough facets.  A slashing seam in the north leads into a clay
+floored chamber.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 9 0
+D0
+~
+~
+0 -1 10505 10 10 5
+D3
+~
+~
+0 -1 10520 10 10 5
+E
+blanket webs desiccated animal corpses~
+Semi-hidden under a dense blanket of dusty grey web, the fetid carcasses
+of partially masticated animals emit a most vile, repugnant stench in
+this unventilated, confined area.  A copious layer of festering flesh
+hangs off the tattered corpses with deep lacerations which expose
+grey-white bond and dried, flaking marrow.  The skin has been removed
+from the heads of the animals and dead eyes stare out from a putrid,
+mottled red-brown and yellow face.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yCrushing the desiccated corpses, you head north.@n
+~
+E
+to_room~
+@yCrushing the desiccated corpses, $n leaves north.@n
+~
+!
+3 0 1
+A
+~
+~
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yFollowing the natural curve of the tunnel, you leave west.@n
+~
+E
+to_room~
+@yFollowing the natural curve of the tunnel, $n leaves west.@n
+~
+!
+3 0 8
+5401 9 1509949540 3 0
+5401 9 1509949540 3 0
+-1
+S
+
+#10520
+Fractured Stone~
+A fracture in the stone runs the entire length of the western wall;
+cracked and flaking rocks surround the scar.  The rocks above the crack
+have slipped downward, warping the roof and dislodging a sizable mound of
+dirt and stones.  A tangled mass of tree roots grows through the ceiling,
+holding it in place, obviously offering enough support to prevent a total
+cave in.
+~
+[Estrella] extras done
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 9 0
+D0
+~
+~
+0 -1 10523 10 10 5
+D1
+~
+~
+0 -1 10519 10 10 5
+D3
+~
+~
+0 -1 10521 10 10 5
+E
+tree root ceiling~
+An extensive network of twisted roots span across the ceiling and partway
+down the western wall binding the fragmented rocks in a mesh of fine
+tendrils.  Occasionally the fractured rock has breached the organic
+netting and fallen to the ground.
+~
+E
+fracture scar crack~
+A brutal gash arcs across the western wall with a network of roots
+creating an archway that contains masses of broken rock.  Although well
+contained by the roots, the passage through the scar appears to be
+somewhat unstable.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cStepping through the fracture, you leave west.@n
+~
+E
+to_room~
+@cStepping through the fracture, $n leaves west.@n
+~
+!
+3 0 8
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cTraversing the mound of dirt, you head north.@n
+~
+E
+to_room~
+@cTraversing the mound of dirt, $n heads north.@n
+~
+!
+3 0 1
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cPushing past the root tendrils hanging from above, you continue east.@n
+~
+E
+to_room~
+@cPushing past the root tendrils hanging from above, $n continues east.@n
+~
+!
+3 0 2
+-1
+S
+
+#10521
+Glowing Chamber of Crystal~
+Cutting through the basalt walls and ceiling of the vaulted chamber are
+tendrils of ash-hued crystals.  The tangled roots of trees and plants
+dangle from the roof; obviously the caves are close to the surface here. 
+Clumps of sea-green moss coat some of the caverns floor, growing in the
+soft filtered light that comes in from the eastern opening.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 9 0
+D0
+~
+~
+0 -1 10522 10 10 5
+D1
+~
+~
+0 -1 10520 10 10 5
+D3
+~
+~
+0 -1 10525 10 10 5
+E
+moss roots plants~
+Versatile moss clings to the rocky floor of the cave, barely surviving on
+the minimal nutrients that seep slowly out from the gradually decaying
+rock.  Snaking its way through the fragmented ceiling, thin tendrils of
+plant roots line the roof of the cave struggling to find a sturdy grip on
+the dark rock.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GStepping on the hardy moss, you leave $T.@n
+~
+E
+to_room~
+@GStepping on the hardy moss, $n leaves $T.@n
+~
+!
+3 0 3
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yFollowing the natural tunnel, you leave west.@n
+~
+E
+to_room~
+@yFollowing the natural tunnel, $n leaves west.@n
+~
+!
+3 0 8
+-1
+S
+
+#10522
+Glowing Chamber of Crystal~
+Fissures of silvery-hued ore spread across the pitch black rocks of the
+chambers wall and ceiling.  An opening has been hacked in the south of
+the natural cave, the rubble left in a mound beside the hole.  A slick
+layer of slime lines the base of the walls, the remnants of what appears
+to be waterweeds and algae.  A single pillar rises in the center of the
+room, its smooth surface a pale peach in coloration.  At the pillar's
+apex a cluster of rosy hued crystals stud the roof, their symmetrical
+shape and even spacing an indication perhaps that they have been worked
+by someone.
+~
+[Guin] Done.
+~
+167378948 11 9 0
+D1
+~
+~
+0 -1 10523 10 10 5
+D2
+~
+~
+0 -1 10521 10 10 5
+E
+pillar rosy cluster~
+Etched until smooth, the pale stone pillar rises with intricate patterns
+carved into the peach rock.  At the top of the pillar, where it meets the
+roof of the cavern, neatly placed gems glimmer in the dim light.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GSlipping on the algae, you follow the passageway leaving east.@n
+~
+E
+to_room~
+@GSlipping on the algae, $n follows the passageway leaving east.@n
+~
+!
+3 0 2
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yStumbling across the rubble, you head south.@n
+~
+E
+to_room~
+@yStumbling across the rubble, $n heads south.@n
+~
+!
+3 0 4
+A
+~
+~
+if( !rflag( reset0, room ) ) {
+  act_tochar( #already, ch, obj, mob );
+  act_notchar( #ralready, ch, obj, mob );
+  end;
+}
+act_tochar( #search, ch, obj, mob );
+act_notchar( #rsearch, ch, obj, mob, sight );
+remove_rflag( reset0, room );
+wait( 1 );
+if( random( 1, 20 ) == 4 )
+  obj = oload( 993 );
+if( obj ) {
+  act_tochar( #found, ch, obj );
+  act_notchar( #rfound, ch, obj, mob, sight );
+  if( can_handle( ch, obj ) )
+    obj_to_char( obj, ch );
+  else
+    obj_to_room( obj, room );
+}
+else {
+  act_tochar( #nothing, ch );
+  act_notchar( #rnothing, ch, obj, mob, sight );
+}
+~
+E
+already~
+No description.
+~
+E
+ralready~
+No description.
+~
+E
+search~
+No description.
+~
+E
+rsearch~
+No description.
+~
+E
+found~
+No description.
+~
+E
+rfound~
+No description.
+~
+E
+nothing~
+No description.
+~
+E
+rnothing~
+No description.
+~
+!
+0 0 0
+-1
+S
+
+#10523
+Web Filled Chamber - Above an Air Hole~
+The broken corpses of several sizable creatures lie scattered among the
+rocks on the cavern's floor.  Mostly animal, they appear to have been
+dragged here by a large spider of some sort; the corpses are wrapped in
+thick layers of web and appear desiccated and very brittle.  Draping
+curtains of webs fill the four tunnels leading from the room.  Murky
+darkness lies beyond the veil of gossamer strands.  Overhead the ceiling
+rises to an apex around a cylindrical air hole.
+~
+[Guin] Done.
+~
+167378948 11 9 0
+D0
+~
+~
+0 -1 10524 10 10 5
+D2
+~
+~
+0 -1 10520 10 10 5
+D3
+~
+~
+0 -1 10522 10 10 5
+E
+broken corpse creature desiccated~
+Partially wrapped in thick webbing, a corpse of a mid-sized woodland
+creature lies amongst the jutting rocks.  Completely desiccated, it looks
+almost mummified; dry skin stretched over the bones, traces of flesh
+still visible only around the creatures torso, it is rotting away in the
+darkness.  Clumps of matted fur are caught on the sharp edges of stone
+spikes and speckled with traces of web.
+~
+A
+~
+~
+if( find_stat( ch, level ) < 91 ) {
+ act_tochar( #up, ch );
+ }
+else
+ act_tochar( #imm, ch );
+ continue;
+~
+E
+up~
+@YYou need to be able to find a way to climb up.@n
+~
+E
+imm~
+Imms allowed to pass.
+~
+!
+3 0 16
+A
+1 north~
+~
+if( rflag( reset1, room ) ) {
+  send_to_char( #web, ch );
+  act_notchar( #web_room, ch );
+  end;
+}
+continue;
+~
+E
+web~
+@cThe curtain of webs is so thick that it blocks all atempts at passing
+through them.@n
+~
+E
+to_char~
+@CYou pass under the remnants of the webs.@n
+~
+E
+web_room~
+@c$n tries to make it past the webs to the north, and fails.@n
+~
+E
+to_room~
+@C$n passes under the remnants of the web, and leaves north.@n
+~
+!
+3 0 1
+A
+clear burn move tear rip~
+1 north web~
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  send_to_char( #web, ch );
+  act_notchar( #web_room, ch );
+  }
+else
+ send_to_char( #done, ch );
+~
+E
+web~
+@wWith some difficulty, you clear the thick web to the north.  It's stuck
+all over your weapon and clothes and hair ...  what a mess!@n 
+~
+E
+web_room~
+@w$n clears the webs to the north, getting $mself all tangled up and
+messy.  Yuck!@n 
+~
+E
+done~
+The way north is clear of webs.
+~
+!
+0 0 0
+A
+~
+~
+if( rflag( reset1, room ) )
+  act_tochar( #web, ch, obj );
+else
+  act_tochar( #noweb, ch, obj );
+~
+E
+web~
+Thick curtain of web is stretched over the opening to the north,
+disallowing passage.  Anyone wanting to go that way would have to clear
+the web first.
+~
+E
+noweb~
+Torn strips of web hang from the opening, only a few long strands left
+from what has one been a thick blanket.
+~
+!
+0 0 0
+-1
+S
+
+#10524
+Web Covered Alcove~
+Thick web covers the chamber's floor and walls, almost completely hiding
+the rock underneath.  Only a faint glimmer can be seen reflected off the
+rocky surface between the webs, revealing the position of a crystal vein
+running along the chamber walls.  Scattered around the alcove and hanging
+from the ceiling are bulky clumps of web, much like cocoons, something
+obviously wrapped up thickly and left here.
+~
+[Guin] Possibly add higher level zone below at some point.
+[Guin] Done.
+~
+167378948 11 9 0
+D2
+~
+~
+0 -1 10523 10 10 5
+E
+bluky clumps web cocoon~
+A foot here, a hand there, a nose and an eye in one case, it all points
+to cocoons being humanoid creatures wrapped in thick layers of web. 
+Their race is hard to tell, the remains being completely desiccated and
+devoid of any flesh, only skin stretched thinly over the bones.  The
+fiber that covers the corpses glimmers faintly, obviously not the usual
+spider's web; it looks almost crystalline, if crystal is flexible enough
+to form such a fine netting.
+~
+A
+~
+~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( !mob_in_room( 2532, room ) ) {
+    if( is_player( ch ) ) {
+      mload( 2532, room );
+      act_room( #spider, ch, obj, mob, sight );
+    }
+  }
+}
+~
+E
+spider~
+@RA crystal spider lowers itself from its place among the web, hurrying
+to inspect his latest lunch!@n 
+~
+!
+1 0 4
+-1
+S
+
+#10525
+Above a Stygian Abyss~
+The undulating surface of the cavern shows signs of recent water flow -
+the lower portion of the rock cut away into a smooth crescent shaped
+indentation.  Overhead a scattering of gnarled tree roots thrust through
+the ceiling.  A seam of violet-hued ore runs through the walls and floor. 
+Underfoot a seamless arch of stone spans a gaping maw - the dark depths
+plummeting down as far as the light reaches.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 9 0
+D1
+~
+~
+0 -1 10521 10 10 5
+D3
+~
+~
+0 -1 10526 10 10 5
+E
+seam violet ore~
+A wide band of iridescent violet runs from halfway up one wall, across
+the ceiling, and down the opposing wall, all the way to the floor. 
+Glowing brightly, the seam of ore illuminates the otherwise dingy cavern
+with a pale lilac light.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cCareful not to fall, you cross the seamless arch and continue west.@n
+~
+E
+to_room~
+@cSlowly and carefully, $n crosses the seamless arch and continues
+west.@n 
+~
+!
+3 0 8
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cHeading away from the abyss, you leave east.@n
+~
+E
+to_room~
+@cHeading away from the abyss, $n leaves east.@n
+~
+!
+3 0 2
+-1
+S
+
+#10526
+Glowing Chamber of Crystal~
+Cut into the northern wall are about thirty foot-wide alcoves, each one
+containing a skull or bone of a humanoid creature.  The bleached remains
+gleam in the light, their surfaces polished with a wax till they shine. 
+Each skull's eye sockets have been filled with feathers and bits of bone
+and shell.  The walls have been washed in an ochre colored dye, staining
+them as if they were painted with @Rblood@n.  A stone slab has been set in
+the chamber's center, its surface covered in a lattice of fine scars. 
+Overhead a crack in the ceiling allows for a tangle of roots to spread
+out, a faint light escaping past their knotted grasp.
+~
+[Guin] Done.
+~
+167378956 11 9 0
+D1
+~
+~
+0 -1 10525 10 10 5
+E
+alcove skull remains bones~
+Ghastly heads of bipedal creatures have been set in an ornamental fashion
+in row upon row of chiselled alcoves.  Coated with a thick waxy polish,
+the skulls have been well preserved both inside and out.  The interior of
+each head has been stuffed with feathers, broken shells, chipped bones
+and other pieces of grit.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@RHeading east, you leave this blood-red mausoleum@n.
+~
+E
+to_room~
+@RHeading east, $n leaves this blood-red mausoleum@n.
+~
+!
+3 0 2
+2407 9 1509949540 3 0
+-1
+S
+
+#10527
+Glowing Chamber of Crystal~
+A swirling stream of water splashes across the undulating surface of the
+cavern's floor.  Glittering flecks of minerals sparkle from the
+water-washed stone.  An old web drapes part way across the tunnel, its
+weaver long since abandoning it to gather dust.  Further to the north,
+the cavern spreads out into glimmering caves, the rocks studded with
+crystals and rough gems.
+~
+[Guin] Add search for any of the rough gems here.
+[Guin] #s 3616, 7004, 7023, 7543, 7534, 7538, 7539, 7544, 7545, 7574.
+[Yrna] Done.
+[Guin] Problem with south exit if the zone repops.  If the zone on the
+other side of the exit repops, there's no way to get out of the zone.  We
+need to sort this out.
+[Guin] Reviewed.
+~
+167378948 11 5 0
+D0
+~
+~
+0 -1 10500 10 10 5
+D2
+~
+~
+512 -1 78765 10 10 5
+E
+stream water~
+Moistening the floor of the cavern, a shallow stream of water eddies
+along a gravelly bed, the pitted course causing the stream to burble
+merrily.
+~
+E
+web old dust~
+The tattered remains of a tightly woven web span from ceiling to floor. 
+Long tendrils of the grey-white web dangle limply, their lengthy strands
+coated with grime and dust.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CYou hop across the stream heading north.@n
+~
+E
+to_room~
+@C$n hops across the stream heading north.@n
+~
+!
+3 0 1
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CYou step through the illusory image of the rock-fall.@n
+~
+E
+to_room~
+@C$n steps through the illusory image of the rock-fall.@n
+~
+!
+3 0 4
+A
+~
+gems crystals~
+act_tochar( #search, ch );
+act_notchar( #rsearch, ch, obj, mob, sight );
+if( !rflag( reset0, room ) ) {
+  act_tochar( #already, ch );
+  end;
+}
+remove_rflag( reset0, room );
+i = random( 1, 180 );
+if( i == 1 )
+  obj = oload( 7544 );
+else if( i == 2 )
+  obj = oload( 7023 );
+else if( i < 5 )
+  obj = oload( 7543 );
+else if( i < 7 )
+  obj = oload( 7074 );
+else if( i < 9 )
+  obj = oload( 7534 );
+else if( i < 11 )
+  obj = oload( 7538 );
+else if( i < 15 )
+  obj = oload( 7544 );
+else if( i < 17 )
+  obj = oload( 7545 );
+else if( i < 19 )
+  obj = oload( 7574 );
+if( obj ) {
+  act_tochar( #found, ch, obj );
+  act_notchar( #rfound, ch, obj, mob, sight );
+  obj_to_char( obj, ch );
+}
+else {
+  act_tochar( #nada, ch );
+  act_notchar( #rnada, ch, obj, mob, sight );
+}
+~
+E
+search~
+@cYou start searching along the wall, hoping to find a loose stone.@n 
+~
+E
+rsearch~
+No description.
+~
+E
+found~
+@CYou find a loose $p on the wall, and pry it off.@n
+~
+E
+rfound~
+@C$n finds a loose $p on the wall, and pries it off.@n
+~
+E
+nada~
+@CYou find that none of the stones are loose enough for you to
+retrieve.@n 
+~
+E
+rnada~
+@C$n doesn't find any stones loose enough to remove from the wall.@n 
+~
+E
+already~
+@CBased on the disturbances by the base of the wall, you think that
+someone else has probably found any loose stones.@n 
+~
+!
+9 0 0
+-1
+S
+
+#0
+

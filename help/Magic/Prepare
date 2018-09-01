@@ -1,0 +1,18 @@
+<html>
+<body>
+<h1> Syntax </h1>
+  <br>
+prepare              : Lists all the spells you have prepared for use.<br>
+prepare [spell name] : prepares the reagents you have in your inventory<br>
+                        for future use.<br>
+prepare clear        : Causes you to forget all prepared spells<br>
+<br>
+<h1> Description </h1>
+<br>
+Before you can prepare a spell, it is necessary that you have the<br>
+"reagents" for the spell prior to preparing.  The reagents for a spell<br>
+can be determined by typing "spell [spell name]."<br>
+<br>
+See also: magic, spells, leech, cast<br>
+</html>
+</body>

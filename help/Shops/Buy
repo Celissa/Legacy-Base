@@ -1,0 +1,18 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+buy [object]     : purchases that object<br>
+buy x*[object]   : purchases x number of that object<br>
+<br>
+<h1> Description </h1>
+<br>
+ If you have enough money, and you are or are above the minimum level,<br>
+then you will buy the object from the list.  If you buy x*object, you<br>
+will buy x many of that object only if there are that many in stock. <br>
+(also see syntax) Buying several of the same object before the shop<br>
+has time to restock will cause an increase in that object's price, and<br>
+some objects are not useable by certain classes/races.  With the<br>
+haggle skill, items can be bought for significantly less money.<br>
+</html>
+</body>

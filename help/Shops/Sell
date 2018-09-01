@@ -1,0 +1,18 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+sell [object]     : sells that object to the shopkeeper<br>
+sell x*[object]   : sells x number of objects to the shopkeeper<br>
+<br>
+<h1> Description </h1>
+<br>
+If you are selling an object to the appropriate store, and the<br>
+shopkeeper does already have too many of the object, then the shopkeeper<br>
+will pay a set amount of money in exchange for the object.  If you ask<br>
+the shopkeeper to value this object before you sell it, you can find<br>
+if the shopkeeper will buy it, and if so, how much he will pay.  If<br>
+you are skilled in the haggle skill, then this amount can be raised<br>
+significantly.<br>
+</html>
+</body>

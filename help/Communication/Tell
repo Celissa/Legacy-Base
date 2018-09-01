@@ -1,0 +1,23 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+tell                    : list the most recent tells you have received<br>
+tell [player] [message] : send a private message to a specific player<br>
+<br>
+<h1> Description </h1>
+<br>
+The 'tell' command allows private communication between players.  Unlike<br>
+chat, gossip, and auction, which are all public channels, and<br>
+even grouptell, tell is a private channel which only includes<br>
+yourself and your 'target.' Use of tell thus enables you to have secure<br>
+conversations and helps reduce spam on the public channels.<br>
+<br>
+To list the most recent 'tells' which you have received, type 'tell' with<br>
+no arguments.  Tell is used for out of character (ooc) discussions.<br>
+<br>
+Frequently you will need to share some information or respond to a mob's<br>
+query.  For this, see help to and help ask.<br>
+<br>
+</html>
+</body>

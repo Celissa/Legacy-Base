@@ -1,0 +1,19 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+Bid [slot] [price]       : bids on an item on the auction block<br>
+Bid [slot] [price] [max] : bids on item and includes a raise by proxy<br>
+<br>
+<h1> Description </h1>
+<br>
+This command allows you to bid on an item on the auction block.  You must<br>
+have amount you wish to bid in your bank account for the bid to be<br>
+accepted.  Once you have bid on an item the funds are locked in your<br>
+account and can not be withdrawn until someone makes a higher bid or you<br>
+buy the item.  You may not bid on your own items.  Including an amount<br>
+for max means you will automatically match any bid up to that amount.<br>
+<br>
+See also: Auction<br>
+</html>
+</body>

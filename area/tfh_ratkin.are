@@ -1,0 +1,6425 @@
+#M2_AREA
+2
+
+Ratkin Lair~
+Azerin Squeed Druscilla Galstaff~
+Ratkin Lair~
+~
+~
+
+8 0
+0
+1
+#ROOMS
+
+#1400
+Damp Earthern Tunnel~
+Lined with bits of wood and stone masonry, the earthern tunnel descends
+into the darkness below.  Jutting spear shafts and wagon rims have been
+braced against the walls, forming a tangle of supporting struts. 
+Trickling water oozes down the tunnel sides, staining the wood with a
+grimy slime.  Overhead, the tunnel ends in a rubble filled chamber, the
+gloom shrouded walls covered in dust and cobwebs.
+~
+[Guin] Done.
+~
+167378948 11 5 0
+D4
+~
+~
+0 -1 1461 10 10 5
+D5
+~
+~
+0 -1 1402 10 10 5
+E
+spear shaft wagon rims struts walls~
+A score of spear shafts in various lengths and thicknesses - some with
+points and some without - have been driven upright against the cave walls
+to create makeshift struts for support.  In place of the spears, on spot
+boasts a broken wagon rim, jammed into the dirt for the same purpose.
+~
+-1
+S
+
+#1401
+Damp Earthen Tunnel~
+Viscous black loam has been shored together with bits of twisted twine
+and wire to form a semi-stable tunnel.  Slim pillars constructed out of
+broken spears, driftwood and the occasional pot handle have been braced
+against the walls in an effort to add support.  A faint trickle of
+brackish water oozes out of the walls in several places, dripping into
+the darkness underfoot.  The air smells strongly of damp and decay.
+~
+[Guin] Connects to road here - 7913.
+[Guin] Done.
+~
+167378948 11 5 0
+D0
+~
+~
+0 -1 1457 10 10 5
+D4
+~
+~
+0 -1 7913 10 10 5
+E
+wall loam water~
+The dirt is oily and the consistency of wet clay, only the netting of
+wire and twine and constant maintenance has prevented it from collapsing
+in on itself.  Several paw prints, the size of a small child's hand, have
+been left in its surface by a passing creature, probably a rat.  Dark,
+foul-smelling water oozes out of the walls beside several of the pillars,
+dripping off into the darkness below.
+~
+E
+pillar~
+Woven wire and the odd bit of string have been used to hold the slim
+pillars together.  Their builder didn't seem too fussed about what
+materials to use. Any available and vaguely sturdy item has been
+commandeered, from shattered spear shafts to the rusty handles of old
+pots and pans, as well as a few bits of driftwood and tree branches. 
+Several of the pillars are warped and twisted, perhaps the strain of the
+walls is too much for them to cope with.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gWorking your way north, you avoid what rubble you can.@n
+~
+E
+to_room~
+@g$n works $s way to the north, avoiding what rubble $e can.@n
+~
+!
+3 0 1
+A
+~
+~
+continue;
+~
+E
+to_char~
+@YWith one last effort, you claw your way up and out of the hole.@n
+~
+E
+to_room~
+@YWith one last effort, $n claws $s way up and out of the hole.@n
+~
+!
+3 0 16
+A
+~
+~
+send_to_room( #scurry, room );
+~
+E
+scurry~
+@CThe soft sounds of tiny skittering feet echo down the tunnel.@n 
+~
+!
+2 150 0
+5501 9 1509949540 3 0
+3228 17 1509949470 -2 0
+7893 17 1509949445 -2 0
+7089 17 1509949442 -2 0
+-1
+S
+
+#1402
+Damp Earthen Tunnel~
+Flagstones and very rusty wagon wheel rims cover the wall, held together
+by wire and what appears to be an old fishing net.  Squeezing out from
+the gaps is a foul-smelling black earth, oozing with brackish water that
+leaves a yellow stain as it runs down the wall.  At several points, the
+walls bulge out into a tunnel, a collection of spear shafts, wood, and
+even a few large bones thrusted against it in an attempt to halt the
+wall's complete collapse.  A knotted rope, secured to a bone thrusting
+out of the wall, disappears into a sizable hole in the floor.
+~
+[Guin] Done.
+~
+167378948 11 5 0
+D4
+~
+~
+0 -1 1400 10 10 5
+D5
+~
+~
+0 -1 1403 10 10 5
+E
+flagstones rusty wheel wagon rims~
+Chipped and broken paving stones cover the wall in a haphazard fashion. 
+The primitive mosaic pattern is broken by several mismatched rusty wagon
+wheels.
+~
+E
+wall water brackish~
+Despite the materials used in construction, the walls look sturdy enough. 
+However, the constant erosion of water seeping through the loam would
+necessitate regular maintanence to keep the structure intact.
+~
+E
+fishing net wire~
+Intertwined with the flagstones and wheels is a mass of net and wire,
+providing stability to the whole structure.  Floats still attached to the
+net indicate it was designed for fishing.
+~
+E
+spear shaft collection wood bones~
+Where the wall attempts to encroach on the tunnel, braces have been added. 
+Made from any available cast-off piece of wood and animal bones, the
+construction looks weak.  The wall is sturdy for now, but it wouldn't be
+advisable to remove any of the braces.
+~
+E
+hole floor rope knotted~
+The rope is very damp and slippery.  It disappears down a man-sized hole
+in the floor into the darkness below.
+~
+A
+get take remove move~
+bones spear shaft wood~
+act_tochar( #take, ch, obj, mob );
+act_notchar( #istake, ch, obj, mob );
+~
+E
+take~
+@yAs you begin to dig one of the braces from the wall, the earth begins
+to move.  Not wanting to be buried alive, you leave it be.@n
+~
+E
+istake~
+@y$n starts to pull one of the braces from the wall but thinks better of
+it as the earth shifts towards $m.@n 
+~
+!
+0 0 0
+A
+~
+~
+act_tochar( #fall, ch, obj, mob );
+~
+E
+fall~
+@rFalling down the hole into the darkness is probably a bad idea.@n 
+~
+!
+3 0 32
+A
+~
+rope knotted 1 down~
+if( find_stat( ch, dex ) < random( 2, 14 ) ) {
+  act_tochar( #fall, ch, obj, mob );
+  act_notchar( #isfall, ch, obj, mob );
+  wait( 1 );
+  transfer( ch, find_room( 1403 ) );
+  damage( mob, ch, 1d6, physical, "the difficult landing", "tumbling down a hole" );
+  end;
+}
+act_tochar( #climb, ch, obj, mob );
+act_notchar( #isclimb, ch, obj, mob, sight );
+transfer( ch, find_room( 1403 ) );
+continue;
+~
+E
+climb~
+@gGrasping the rope firmly, you descend into the darkness.@n
+~
+E
+isclimb~
+@g$n grasps ahold of the rope and descends into the hole.@n
+~
+E
+fall~
+@rYou grasp ahold of the rope and begin to descend, but lose your grip!@n
+
+~
+E
+isfall~
+@r$n grasps the rope firmly and begins to descend, but slips and falls.@n
+
+~
+!
+18 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cFirmly placing your foot in a rut in the wall, you heave yourself upwards
+onto the shelf above.@n
+~
+E
+to_room~
+@cSteadying $mself, $n heaves $s body upwards onto the shelf above.@n
+~
+!
+3 0 16
+3228 17 1509949470 -2 0
+7089 17 1509949445 -2 0
+7893 17 1509949442 -2 0
+-1
+S
+
+#1403
+Ancient Warrens - Beneath a City~
+Dark, sludgy flows of foul-smelling liquid ooze along a trough in the
+middle of the corridor.  The walls and floor are made from large stone
+tiles, many now split and cracked.  The ceiling is supported by narrow
+pillars that give the place the appearance of being inside the ribcage of
+some great wyrm.  A narrow walkway follows the trough heading east and
+west.  A hazy glow, emanating from patches of moss that grow on the grimy
+walls, illuminates the area.  Overhead, a knotted rope leads upward into
+a hole that has been ripped in the roof, from which a foul rain of dark
+liquid cascades.
+~
+[Yrna] Done
+[Guin] Done.
+~
+167378949 11 5 0
+D1
+~
+~
+0 -1 1404 10 10 5
+D3
+~
+~
+0 -1 1406 10 10 5
+D4
+~
+~
+0 -1 1402 10 10 5
+D5
+~
+~
+430 -1 1464 10 10 5
+E
+trough liquid~
+The dark water that seeps out of the walls throughout the tunnels
+collects here into a trough.  Flowing from west to east it follows a
+narrow walkway.
+~
+E
+tiles stone large floor~
+Grime-covered and mostly broken, large stone tiles cover the floor and
+walls.  Slippery due to the water and muck flowing through the area,
+your footing is uncertain.
+~
+E
+pillars narrow ceiling~
+At strangely regular intervals, narrow pillars rise from the floor,
+supporting the ceiling.  Although somewhat worse for the wear, these
+appear to have been built by highly skilled artisans.
+~
+E
+moss patches wall~
+Living off the grime that flows down the walls, are patches of moss.  Most
+appear dead and dried but some clumps glow slightly, providing enough
+light to see by.  Only loosely attached, some of the clumps appear to have
+fallen off the wall.
+~
+E
+hole rope~
+Hanging from a hole in the ceiling is a water drenched knotted rope. 
+The hole looks large enough for you to fit through.  The climb might be
+difficult, however, due to the water and muck which covers everything,
+rope included.
+~
+E
+walkway narrow~
+Slippery and rotten in places, a simple walkway runs east and west. 
+Barely more than a few planks placed in the mud, it serves its purpose,
+to keep the worst of the muck off your feet.
+~
+A
+~
+~
+i = random( 0, 2 );
+if( i == 0 ) {
+  send_to_room( #drip, room );
+  end;
+  }
+if( i == 1 ) {
+  send_to_room( #miss, room );
+  end;
+  }
+if( i == 2 ) {
+  send_to_room( #sploosh, room );
+  end;
+  }
+~
+E
+drip~
+@BDark foul smelling water drips through the hole in the ceiling, adding
+to the dampness and covering your clothes with filth.@n 
+~
+E
+miss~
+@RA fist sized rock tumbles out of the darkness above, narrowly missing
+you.@n 
+~
+E
+sploosh~
+@GNothing but ripples disturb the water's surface when a splash sounds
+from the nearby trough.@n 
+~
+!
+2 150 0
+A
+~
+liquid ooze trough~
+act_tochar( #muck, ch, obj, mob );
+act_notchar( #ismuck, ch, obj, mob );
+wait( 2 );
+act_tochar( #muck2, ch, obj, mob );
+act_notchar( #ismuck2, ch, obj, mob );
+~
+E
+muck~
+@yYou plunge your arm to the elbow into the trough of dark sludge.@n
+~
+E
+ismuck~
+@y$n plunges $s arm into the trough of dark sludge and fishes around.@n
+~
+E
+muck2~
+@yFishing around for a few moments, you find nothing but muck.@n
+~
+E
+ismuck2~
+@y$n gives up on the search, coming up with nothing but a smelly arm.@n
+~
+!
+9 0 0
+A
+~
+knotted rope up~
+if( find_stat( ch, dex ) > random( 2, 14 ) ) {
+  act_tochar( #climb, ch, obj, mob );
+  act_notchar( #isclimb, ch, obj, mob );
+  transfer( ch, find_room( 1402 ) );
+  continue;
+}
+act_tochar( #noclimb, ch, obj, mob );
+act_notchar( #isnoclimb, ch, obj, mob );
+end;
+~
+E
+climb~
+@BYou grip firmly onto the knotted rope and climb up out of the hole.@n
+~
+E
+isclimb~
+@B$n grips firmly onto the knotted rope, climbing up out of the hole.@n
+~
+E
+noclimb~
+@rTry as you might, you cannot seem to gain any purchase on the rope.@n
+~
+E
+isnoclimb~
+@r$n cannot seem to grip the rope well enough to climb up.@n
+~
+!
+18 0 0
+A
+~
+~
+act_tochar( "You cannot seem to jump high enough to reach the hole.", ch );
+~
+!
+3 0 16
+A
+~
+~
+if( is_player( ch ) )
+  if( rflag( reset0, room ) ) {
+  if( random( 0, 2 ) == 1 )
+    remove_rflag( reset0, room );
+  send_to_room( #rat, room );
+  mob = mob_in_room( 5501, find_room( 1464 ) );
+  if( mob )
+    transfer( mob, find_room( 1403 ) );
+  loop( all_in_room ) {
+    if( !is_player( rch ) )
+      if( species( rch ) == 5501 )
+      if( num_mob( 5501, room ) > 2 )
+      attack( rch, rand_player( room ), 2d4, "surprise attack" );
+  }
+}
+send_to_room( #skitter, room );
+continue;
+~
+E
+rat~
+@CA furry muck-covered rat scurrries out from a hole in the wall to
+investigate the intruders.@n 
+~
+E
+skitter~
+@CA rat skitters away, narrowly avoiding being stepped on.@n
+~
+!
+1 0 26
+A
+1 get~
+moss wall patches~
+act_tochar( #moss, ch, obj );
+act_notchar( #rmoss, ch, obj, mob, sight );
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 3 ) == 2 )
+    obj = oload( 244 );
+}
+wait( 1 );
+if( obj ) {
+  act_tochar( #found, ch, obj );
+  act_notchar( #rfound, ch, obj, mob, sight );
+  obj_to_char( obj, ch );
+}
+else {
+  act_tochar( #notfound, ch, obj );
+  act_notchar( #rnotfound, ch, obj, mob, sight );
+}
+~
+E
+moss~
+@yYou touch the walls gingerly, looking to free up some moss.@n
+~
+E
+rmoss~
+@y$n touches the walls gingerly, looking for something.@n
+~
+E
+rmoss~
+@y$n touches the walls gingerly, looking for something.@n
+~
+E
+found~
+@GAfter some time, you manage to pull some moss free from the wall.@n
+~
+E
+rfound~
+@G$n picks up some moss from the wall@n.
+~
+E
+notfound~
+@gYou pull some moss free, but dry as it is, it crumbles to dust in your hands.@n
+~
+E
+rnotfound~
+@g$n picks up some moss, but it crumbles to dust in $s hands.@n
+~
+E
+rmoss~
+@y$n touches the walls gingerly, looking for something.@n
+~
+!
+9 0 0
+3228 17 1509949470 -2 0
+7089 17 1509949445 -2 0
+7893 17 1509949442 -2 0
+-1
+S
+
+#1404
+Ancient Warrens - Beneath a City~
+The warrens continue into the darkness to the east and west, following a
+deep, slow moving trough of foul smelling liquid.  Debris and a few
+decaying creatures float amid the river of muck.  Along the wall, pairs
+of supporting pillars rise up and join together in the centre of the
+ceiling.  A few scratch marks have been left in the dirty walls, perhaps
+from a passing creature.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 5 0
+D1
+~
+~
+0 -1 1405 10 10 5
+D3
+~
+~
+0 -1 1403 10 10 5
+E
+trough liquid~
+Foul smelling liquid oozes along the wide stone trough, flowing slowly in
+an easterly direction.  The remains of dead creatures and rotting debris
+fill the channel, forming small dams that create lakes of putrescent
+water.  After a while, the water pressure becomes too great and they burst
+with a gurgling rush.
+~
+E
+debris creatures muck~
+The bloated carcass of a huge rat slowly floats down the channel of filthy
+muck.  Filling the trough are bits of broken leather, leaves and other
+pieces of debris.  Most lay rotting away slowly, half-submerged in
+the goop.  As the waters ooze by, something catches the light, faintly
+sparkling in the murky waters.
+~
+E
+pillars~
+Crafted from a pale, cream-colored stone, the slender pillars rise up and
+meet at keystones set into the roof.  Their bleached appearance gives the
+area the look of being inside the ribcage of a giant serpent.  Carved
+into each of the keystones is a starburst pattern.
+~
+E
+scratch marks walls~
+Under a generous layer of grime, probably splattered from the mucky waters
+of the trough, lie the dusky red clay bricks of the walls.  Scratch marks
+cover several of the bricks in swirling patterns.
+~
+E
+1 east~
+The warrens appear to open out a bit eastwards, however the gloom of the
+area prevents any real detail from being seen from here.
+~
+E
+1 west~
+Westward a faint illumination emanates from the brick walls.  The pale
+glow seems to cast as many shadows as it creates light.  A cord or rope
+dangles from the roof, perhaps a way onwards.  Beyond the rope, the
+tunnel is swallowed up by darkness.
+~
+A
+~
+liquid ooze trough debris muck~
+act_tochar( #muck, ch, obj, mob );
+act_notchar( #ismuck, ch, obj, mob );
+wait( 2 );
+act_tochar( #muck2, ch, obj, mob );
+act_notchar( #ismuck2, ch, obj, mob );
+~
+E
+muck~
+@yYou plunge your arm to the elbow into the trough of dark sludge.@n
+~
+E
+ismuck~
+@y$n plunges $s arm into the trough of dark sludge and fishes around.@n
+~
+E
+muck2~
+@yFishing around for a few moments, you find nothing but muck.@n
+~
+E
+ismuck2~
+@y$n gives up on the search, coming up with nothing but a dirty arm.@n
+~
+!
+9 0 0
+A
+~
+~
+send_to_room( #float, room );
+~
+E
+float~
+@yA particularly large mass of debris floats by, destination unknown.@n
+~
+!
+2 150 0
+3228 17 1509949470 -2 0
+7893 17 1509949445 -2 0
+7089 17 1509949442 -2 0
+5501 9 1509949540 3 0
+-1
+S
+
+#1405
+Ancient Warrens - Meeting of Under Passages~
+In the center of this cavern, four slender stone pillars support the
+convex roof above.  Set into each wall are red brick archways, framing
+troll-sized openings.  Spilling into the cavern from the north and south
+openings are stone troughs filled with burbling water, and from the west
+a slow-moving ditch of sludge and grime.  A square-shaped pool in the
+centre of the cavern forms the nexus for these waterways.  From the pool,
+the now murky waters surge down a narrow but deep channel along the
+center of the eastern tunnel.
+~
+[Eliza] done.
+[Yrna] Done.
+~
+167378948 11 5 0
+D0
+~
+~
+0 -1 1407 10 10 5
+D1
+~
+~
+0 -1 1409 10 10 5
+D2
+~
+~
+0 -1 1408 10 10 5
+D3
+~
+~
+0 -1 1404 10 10 5
+E
+slender pillars convex roof~
+Each pillar stretches elegantly up to the ceiling.  The aged remnants of
+what must have once been a spectacular mural are distinguishable above. 
+What can now be seen, however, are only splashes of form and colour, a
+pale reflection of former splendour.
+~
+E
+red brick archways walls~
+The bricks are stained a dirty brown along the lower sides, as if
+countless creatures have brushed against them.  Higher up, the walls look
+less dirty even though they have a film of grime covering them.
+~
+E
+troughs water~
+Each trough is identical in construction, apart from a symbol at its
+entrance to the room, denoting north or south (the direction from which
+it enters).  The water is relatively clear, revealing the base of each
+duct, worn smooth over many years.
+~
+E
+sludge grime~
+The semi-liquid contents of the ditch emit foul-smelling gasses as they
+creep onwards.  This channel appears to be a sewage outlet, although the
+contents appear even more repulsive than even that would suggest.  The
+noxious fumes really are overwhelming.
+~
+E
+square pool~
+The tiling around the edges of the pool are in poor condition, although
+still of a recognizably pretty design.  Above the water level, the
+sides of the pool are caked in layers of muck, splashed up over many
+years from the turmoil within the pool.
+~
+E
+1 east~
+From the east, the sounds of rushing waters echo.  A hazy mist surounds the
+opening, making it difficult to see much more than a vague outline of the
+narrow tunnel's brick walls.
+~
+E
+1 west~
+To the west the warrens continue in foul-smelling darkness, following
+the sewage upstream.
+~
+E
+1 north~
+Northward a narrow tunnel leads off into the unknown darkness.
+~
+E
+1 south~
+Red brick walls stretch away, forming a tunnel as far as the eye can see. 
+The tunnel is mostly taken up with the trough of fast-moving water coming
+into this room.
+~
+A
+~
+liquid ooze trough water sludge grime pool~
+act_tochar( #muck, ch, obj, mob );
+act_notchar( #ismuck, ch, obj, mob );
+wait( 2 );
+act_tochar( #muck2, ch, obj, mob );
+act_notchar( #ismuck2, ch, obj, mob );
+~
+E
+muck~
+@yYou plunge your arm to the elbow into the trough of dark sludge.@n
+~
+E
+ismuck~
+@y$n plunges $s arm into the trough of dark sludge and fishes around.@n
+~
+E
+muck2~
+@yFishing around for a few moments you find nothing but muck.@n
+~
+E
+ismuck2~
+@y$n gives up on the search, coming up with nothing but a smelly arm.@n
+~
+!
+9 0 0
+A
+~
+~
+send_to_room( #crumble, room );
+~
+E
+crumble~
+@CLoosened over time, a tile falls from the cavern's roof, dropping with
+a splash into the pool below.@n 
+~
+!
+2 150 0
+3228 17 1509949470 -2 0
+7893 17 1509949445 -2 0
+7089 17 1509949442 -2 0
+5501 9 1509949540 3 0
+-1
+S
+
+#1406
+Ancient Warrens - Beneath a City~
+Shrouded in gloom, the chamber is littered with rocks and a scattering of
+shattered bricks.  Under the rubble, the floor is cobbled, although many
+of the stones are missing.  A dull grey archway frames cobweb covered
+openings in each wall.  Oozing foul-smelling liquid bubbles and sloshes
+in a circular pool in the chamber's center, a grime-encrusted trough
+allowing the sludge to flow onward out of the eastern tunnel.  The
+remains of an iron grill lie against the eastern wall, the metal twisted
+and corroded beyond use.
+~
+[Eliza] Done.
+[Yrna] Done.
+~
+167378948 11 5 0
+D0
+~
+~
+0 -1 1419 10 10 5
+D1
+~
+~
+0 -1 1403 10 10 5
+D2
+~
+~
+0 -1 1418 10 10 5
+D3
+~
+~
+0 -1 1420 10 10 5
+E
+rocks broken brick cobbled floor~
+Shattered from the walls, the bricks and rubble lie scattered across the
+dank ground.  Several gouge marks in the wall indicate something struck
+against the bricks with some force.  A layer of foul muck covers most of
+the rubble, obscuring much of the cobbled floor with a carpet of filth.
+~
+E
+pool trough liquid~
+Bubbling liquids surge up from an underground source, causing the central
+pool to bubble and boil.  A foul-smelling cloud of mist hangs over the
+water.  A chisel-marked trough runs eastward, carrying the semi-solid
+liquids from the the chamber.
+~
+E
+iron grill~
+The remaining rust-covered metal appears to have been melted and sundered
+by an unknown force.  The remnants of hinges still jut from the arch
+beside the eastern exit, scrap metal dangling loosely from them.
+~
+A
+search~
+liquid ooze trough~
+act_tochar( #muck, ch, obj, mob );
+act_notchar( #ismuck, ch, obj, mob );
+wait( 2 );
+act_tochar( #muck2, ch, obj, mob );
+act_notchar( #ismuck2, ch, obj, mob );
+~
+E
+muck~
+@yYou plunge your arm to the elbow into the trough of dark sludge.@n
+~
+E
+ismuck~
+@y$n plunges $s arm into the trough of dark sludge and fishes around.@n
+~
+E
+muck2~
+@yFishing around for a few moments, you find nothing but muck.@n
+~
+E
+ismuck2~
+@y$n gives up on the search, coming up with nothing but a smelly arm.@n
+~
+!
+0 0 0
+A
+~
+~
+if( is_player( ch ) )
+  if( rflag( reset0, room ) ) {
+  if( random( 0, 2 ) == 1 )
+    remove_rflag( reset0, room );
+  mob = mob_in_room( 5501, find_room( 1463 ) );
+  if( mob )
+    transfer( mob, find_room( 1416 ) );
+  send_to_room( #rat, room );
+  loop( all_in_room ) {
+    if( !is_player( rch ) )
+      if( species( rch ) == 5501 )
+      if( num_mob( 5501, room ) > 2 ) {
+      victim = rand_player( room );
+      if( victim )
+        if( !is_mob( victim ) )
+        attack( rch, rand_player( room ), 2d4, "surprise attack" );
+    }
+  }
+  end;
+}
+send_to_room( #skitter, room );
+~
+E
+rat~
+@CA furry muck-covered rat scurrries out from a hole in the wall to
+investigate the intruders.@n 
+~
+E
+skitter~
+@CA rat skitters away, narrowly avoiding being stepped on.@n
+~
+!
+1 0 15
+3228 17 1509949470 -2 0
+7893 17 1509949445 -2 0
+7089 17 1509949442 -2 0
+-1
+S
+
+#1407
+Ancient Warrens - Small Chamber~
+Mounds of stone and earth fill the chamber, spilled into the room from
+the collapsed western passageway.  Against the northern wall is a small
+raised dais, half buried in the rubble.  The shattered remains of several
+pillars lie on the ground, cracking the dusky brown flagstones of the
+floor as they fell.  Small, pale fungi sprout on the slip alongside bright
+patches of moss and lichen, an indication that the cave-in is not a
+recent event.  A narrow ditch, filled with brackish liquid, runs in from
+the east and out the southern corridor.
+~
+[Guin] Done.
+~
+167378948 11 5 0
+D1
+~
+~
+0 -1 1412 10 10 5
+D2
+~
+~
+0 -1 1405 10 10 5
+D3
+~
+~
+2446 -1 1438 10 10 5
+E
+mounds stone earth~
+Coated in a lush layer of moss and lichen, it is clear that the mounds of
+earth and rubble have been here some time.  Most of the debris has poured
+in from the collapsed western tunnel, although some appears to have
+fallen from fissures that spread across the roof.
+~
+E
+passageway rock 1 west western~
+Tons of rock and earth have filled the passageway from a cave-in. 
+Several of the lighter rocks at the apex of the mounds look like they
+might be moveable, allowing progress westward.
+~
+E
+dais~
+Cockle and pipi shells adorn the sides of the dais.  Barely over three
+feet in height, a shallow depression, dry and dust covered, has been
+carved into its top.
+~
+E
+dusky brown flagstones floor pillars~
+The collapsing pillars have gouged deep grooves in the cobbled floor. 
+Several areas of flagstones have been shattered beyond recognition.  Even
+the ones that avoided this destruction show signs that time and the dank
+conditions are taking their toll, tendrils of cracks covering most of
+them.  Where the earth has been revealed pale fungi sprout, pushing up
+and cracking the cobbles as they grow.
+~
+E
+pale fungi moss lichen~
+Sprouting across the rubble and floor are a field of fungi.  The delicate
+pale yellow stems are capped with blue-gray umbrellas, dotted with
+cream-colored spots.  At the slightest disturbance, the fungi release a
+cloud of earthen-colored spores.  Around the fungi patches grows a carpet
+of long-fronded sphagnum moss and wrinkled gray lichen.
+~
+E
+ditch liquid~
+About a foot deep, the stone ditch does its best to whisk away the
+putrescent liquid that flows in from the east.
+~
+E
+1 south~
+Southward, the tunnel appears to meet at a gloom-shrouded crossroads.
+~
+E
+1 east~
+Eastward, the tunnels continue, still filled with rocks and debris from
+several cave-ins that have rocked the area.
+~
+A
+get take pick~
+bright moss glowing~
+if( rflag( reset0, room ) ) {
+  i = random( 0, 2 );
+  j = random( 0, 1 );
+  if( i > 0 ) {
+    obj = oload( 244 );
+    remove_rflag( reset0, room );
+    act_tochar( #last, ch, obj, mob );
+    act_notchar( #islast, ch, obj, mob );
+    if( j == 0 ) {
+      obj_to_char( obj, ch );
+      end;
+    }
+    obj_to_char( oload( 7038 ), ch );
+    end;
+  }
+  act_tochar( #get, ch, obj, mob );
+  act_notchar( #isget, ch, obj, mob );
+  if( j == 0 ) {
+    obj_to_char( obj, ch );
+    end;
+  }
+  obj_to_char( oload( 7038 ), ch );
+  end;
+}
+act_tochar( #none, ch, obj, mob );
+act_notchar( #isnone, ch, obj, mob );
+~
+E
+last~
+@GYou scrape the last piece of living moss from the slip.@n
+~
+E
+islast~
+@G$n scrapes the last clump of living moss from the slip.@n
+~
+E
+get~
+@gBending down, you manage to pry a clump of moss from its niche.@n
+~
+E
+isget~
+@gBending down over the rubble, $n manages to pry a clump of moss from
+its niche.@n 
+~
+E
+none~
+@ySearching around, all you can find is dead moss.@n
+~
+E
+isnone~
+@y$n searches likely niches but comes up empty handed.@n
+~
+!
+0 0 0
+A
+dig clear~
+1 west rock earth~
+if( is_open( room, west ) == 1 )
+  act_tochar( #already, ch, obj, mob );
+else {
+  act_tochar( #dig, ch, obj, mob );
+  act_notchar( #isdig, ch, obj, mob );
+  wait( 2 );
+  act_room( #last, ch, obj, mob );
+  open( room, west );
+  }
+~
+E
+already~
+Someone has already cleared most of the rubble.
+~
+E
+dig~
+Getting down on your hands and kneeds, you pry away at the loose rubble.
+~
+E
+isdig~
+Getting down on $s hands and knees, $n tries to shift the loose rubble.
+~
+E
+last~
+One last rock rolls from the pile blocking the west tunnel, causing a
+miniature landslide to reveal a cave beyond.
+~
+!
+0 0 0
+3228 17 1509949470 -2 0
+7893 17 1509949445 -2 0
+7089 17 1509949442 -2 0
+5501 9 1509949540 3 0
+-1
+S
+
+#1408
+Ancient Warrens - Narrow Tunnel~
+Running down the middle of the cobbled floor in this narrow tunnel, a
+wide stone ditch flows with fast moving water.  The walls of the
+passageway have been constructed from a dusky red clay brick, cracked and
+pitted with age.  Spreading across many of the damp cobblestones are
+patches of red and orange lichen, thriving in the dank growing conditions. 
+Another tunnel heads westward into the darkness, it appears to be drier
+than this area.  Southward, the tunnel continues, leading to perhaps the
+source of the waters.
+~
+[Guin] Done.
+~
+167378948 11 5 0
+D0
+~
+~
+0 -1 1405 10 10 5
+D2
+~
+~
+0 -1 1416 10 10 5
+D3
+~
+~
+0 -1 1415 10 10 5
+E
+cobbled floor ditch water~
+Cut from grey stone, the cobbles have been polished smooth by the passing
+years and water spray, so they gleam like marble.  Each cobblestone fits
+perfectly with its neighbour, leaving only a needle-thin gap between each
+pair.  Waters splash across the cobblestones from the burbling ditch,
+channeling water northward.  The foaming liquid comes close to spilling
+over the edge of the ditch and flooding the passageway.
+~
+E
+red orange brick~
+Most of the ancient brickwork shows signs of its now-decrepit nature. 
+Cracks run across the bricks where the pressures of time are eroding the
+clay.  Broken bits of the bricks and piles of red dust rest against the
+walls base, collected from the crumbling structures.
+~
+E
+lichen~
+The lichen spreads out across the damp floor like a red and
+orange-colored carpet.  Fine tendrilss of lichen pry into the cracks and
+crevices between the flagstones and bricks, in an effort to gain some
+nutrients from the thin layer of soil there.
+~
+E
+1 west~
+The tunnel is narrow, with a low arched roof to it.  The walls have been
+constructed from dusky red bricks.  The dry floor is bare of the normal
+lichen and mosses found in the damper areas.
+~
+E
+1 north~
+The tunnel follows the waterway northwards into the gloom.  From further
+along the passageway, the sounds of fast flowing water can be heard.
+~
+E
+1 south~
+It appears that the tunnel begins to widen to the south, although details
+are difficult to see from here.
+~
+3228 17 1509949470 -2 0
+7893 17 1509949445 -2 0
+7089 17 1509949442 -2 0
+5501 9 1509949540 3 0
+-1
+S
+
+#1409
+Ancient Warrens - Sink Hole~
+Foul smelling, brackish liquid flows out of clay pipes in the northern
+and southern walls, combining with a central ditch to form a fast-flowing
+stream.  The tiled floor is slick, covered in slimy algae and pale fungi. 
+The waters rush eastward toward a wide sinkhole, forming a waterfall as
+it tumbles off into the darkness below.  A greasy mist fills the air and
+the rumbling of the water drowns out any other sound.  Across the
+sinkhole, the warrens appear to continue, although the mist obscures much
+of the detail of what lies beyond.
+~
+[Yrna] Done.
+[Guin] Done
+~
+167378948 11 5 0
+D1
+~
+~
+0 -1 1411 10 10 5
+D3
+~
+~
+0 -1 1405 10 10 5
+D5
+~
+~
+0 -1 1410 10 10 5
+E
+clay pipes brackish liquid~
+Although very old, the clay pipes are in reasonably good condition,
+testament to their superior workmanship.  The liquid flows out of them
+unevenly, sluggishly, hinting at all manner of substances hidden in the
+murk.
+~
+E
+tiled floor algae fungi~
+Beneath many layers of grime are the still-discernible marks of a
+complex mosaic.  The footing is uncertain, however, so it would be unwise
+to jeopardize balance for a closer look.
+~
+E
+sinkhole waterfall~
+The walls around the sinkhole are slick with aeons of accumulated slime,
+leaving no possibility for handholds.  The narrow ledge alongside the
+disappearing waterflow is equally hazardous -- passage around the
+sinkhole would be precipitous at best.
+~
+A
+~
+~
+if( random( 0, 10 ) == 5 ) {
+  act_notchar( #blarg, ch, obj, mob );
+  act_tochar( #fall, ch, obj, mob );
+  transfer( ch, find_room( 1410 ) );
+  act_notchar( #enter, ch, obj, mob );
+  }
+else
+  continue;
+~
+E
+blarg~
+@G$n tries to edge past the central sinkhole, only to slip and fall in.@n
+
+~
+E
+fall~
+@GYou try to edge past the sinkhole to continue west, but as you squeeze
+past one of the pipes you slip on the slick floor and tumble into the
+hole.@n 
+~
+E
+to_char~
+@GYou edge past the central sinkhole into the mist beyond.@n
+~
+E
+to_room~
+@G$n edges past the sinkhole, disappearing into the mist beyond.@n
+
+~
+E
+enter~
+@GTumbling in from above, $n lands with a great splash.@n
+~
+!
+3 0 2
+A
+~
+~
+send_to_room( #mist, room );
+~
+E
+mist~
+@yA wave of soaking, foul-smelling mist engulfs you.@n
+~
+!
+2 200 0
+A
+~
+~
+act_tochar( #no, ch, obj, mob );
+~
+E
+no~
+Perhaps it would be prudent to climb down instead.
+~
+!
+3 0 32
+A
+climb~
+down sinkhole hole~
+act_tochar( #climb, ch, obj, mob );
+act_notchar( #isclimb, ch, obj, mob );
+transfer( ch, find_room( 1410 ) );
+act_notchar( #enter, ch, obj, mob );
+position( ch, 6 );
+~
+E
+climb~
+@BUnsure of your footing, you try to climb down the slimy sides of the
+sinkhole, only to slip and fall.@n 
+~
+E
+isclimb~
+@B$n tentatively lowers $mself over the edge of the hole, only to slip
+and fall into the darkness below.@n 
+~
+E
+enter~
+@GTumbling in from above, $n lands with a great splash.@n
+~
+!
+0 0 0
+3228 17 1509949470 -2 0
+7893 17 1509949445 -2 0
+7089 17 1509949442 -2 0
+-1
+S
+
+#1410
+On A Metal Grate~
+With a roar, the waters overhead fall in a whitewater torrent to form a
+wide waterfall.  At floor level, a grate has been constructed, anchored
+to the walls intersecting the flow.  Piles of debris and rubble have been
+snared from the water, caught in the steel net.  Under the grate, the
+cascade falls into the darkness and is lost to view.  From an opening to
+the west, another muddy stream flows to the grate and downward into the
+darkness.
+~
+[Guin] Done.
+~
+167378948 13 5 0
+D3
+~
+~
+0 -1 1431 10 10 5
+D4
+~
+~
+0 -1 1409 10 10 5
+E
+whitewater torrent waterfall~
+The torrential downpour of water sends a dull rumble through the grate and
+surrounding rocks.  Bits of debris flashy by, only to be caught upon the
+iron grill and pounded apart.  The sound of the avalanche of water fills
+the area, drowning out all other sounds.
+~
+E
+grate walls debris rubble steel net~
+Spread across the floor, the iron grill catches all manner of debris that
+the waters have washed down.  Much of the rubble appears to be rocks and
+branches, although under the waterfall a glimmer of metal can just be
+seen.  From here, you can see that iron rungs run up the side of the
+hole; covered in muck and debris, they would be hidden from above.
+~
+E
+darkness downwards~
+The water is quickly lost from view as it cascades through the grating
+and surges into the darkness below.
+~
+E
+muddy stream west~
+Flowing from an opening to the west pours a muddy stream.  It falls
+through the grill and mixes with the torrential waters from above.  Beside
+the opening, iron rungs have been affixed to the wall, making it possible
+to climb.
+~
+A
+~
+~
+if( is_player( ch ) )
+  act_tochar( #no, ch, obj, mob );
+else {
+  act_room( #gone, ch, obj, mob, sight );
+  transfer( ch, find_room( 1409 ) );
+  act_notchar( #climbs, ch, obj, mob, sight );
+}
+~
+E
+no~
+You will need to climb somehow to get out of the hole.
+~
+E
+gone~
+@G$n climbs up the rungs and disappears through the hole above.@n
+~
+E
+climbs~
+@G$n arrives through the sinkhole, covered in muck.@n
+~
+!
+3 0 16
+A
+climb~
+rungs 1 up~
+act_tochar( #climb, ch, obj, mob, sight );
+act_notchar( #isclimb, ch, obj, mob, sight );
+transfer( ch, find_room( 1409 ) );
+act_notchar( #enter, ch, obj, mob, sight );
+~
+E
+climb~
+@YTaking a firm grip on the rungs, you climb up out of the sink hole.@n 
+~
+E
+isclimb~
+@YTaking a firm grip on the rungs, $n climbs up out of the sinkhole.@n 
+~
+E
+enter~
+@yCovered in muck, $n climbs up out of the sink hole.@n
+~
+!
+0 0 0
+A
+~
+steel net grate rubble debris pile~
+act_tochar( #no, ch, obj, mob );
+act_notchar( #isno, ch, obj, mob );
+~
+E
+no~
+@yYou search amongst the rubble and muck, finding nothing but rubble and
+muck.
+~
+E
+isno~
+$n searches around in the rubble caught in the grating.
+~
+!
+9 0 0
+3228 17 1509949470 -2 0
+7893 17 1509949445 -2 0
+7089 17 1509949442 -2 0
+-1
+S
+
+#1411
+Ancient Warrens - Dead End~
+The corridor ends abruptly at a wall of bricks.  Newer than the rest of
+the stone work, it would appear that someone has sealed the way eastward. 
+Underfoot, the tiles are cracked and broken, as if something had impacted
+upon them.  Westward, the passageway opens up into a wide chamber filled
+with soaking mists and the sound of rushing water.
+~
+[Eliza] Done.
+[Yrna] Done.
+~
+167378948 11 5 0
+D3
+~
+~
+0 -1 1409 10 10 5
+E
+wall red clay bricks~
+Although relatively recent, the wall has been here long enough to acquire
+a coating of dust and grime.  The wall is well-constructed, and looks
+impossible to penetrate.
+~
+E
+cracked broken tiles~
+Much older than the red clay bricks, the tiles date from the same era as
+the bulk of the stonework.  Although plain, the tiles are of some quality
+and in good condition, apart from the area around the point of impact.
+~
+E
+1 east sealed eastward~
+Whatever lies eastward, the way through is definitively blocked, any
+attempt to break through would certainly be futile.
+~
+E
+impacted~
+The damage to the tiles spreads out in a wide radius from the point of
+impact.  The area with the most damage is extensive, something at least
+troll-sized must have landed here.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou pick your way through the broken tilework, heading west.@n 
+~
+E
+to_room~
+@G$n picks $s way through the broken tilework, heading west.@n
+~
+!
+3 0 8
+3228 17 1509949470 -2 0
+7893 17 1509949445 -2 0
+7089 17 1509949442 -2 0
+-1
+S
+
+#1412
+Ancient Warrens - Narrow Tunnel T-junction~
+Broken rocks, bits of dirt and flagstones spill out of the northern
+branch of this three-way junction.  Four pillars support the ceiling,
+carved from a dusky brown stone that has been polished smooth, giving
+them a marble finish.  In the center of the tunnel, brackish water flows
+along the bottom of a narrow ditch, its source somewhere to the east.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 5 0
+D0
+~
+~
+0 -1 1414 10 10 5
+D1
+~
+~
+0 -1 1413 10 10 5
+D3
+~
+~
+0 -1 1407 10 10 5
+E
+rocks dirt flagstones~
+Cracked and broken stones spill out across the cobbled floor.  Northward,
+the passageway is partially blocked with rubble, obviously not
+as stable as the warrens here.  Moist dirt and natural rocks mix with the
+flagstones, creating a rock garden for lichen, moss and fungi upon which
+to flourish. 
+~
+E
+pillars dusky brown marble~
+Polished smooth and gleaming, the dusky brown stone pillars appear to be
+constructed from a marble-like rock.  In addition to being decorative,
+they add vital support for the ceiling, making a cave-in far less likely. 
+Although, with the amount of rubble and broken rocks around the floor, it
+seems the lack of maintenance is beginning to take its toll here.
+~
+E
+ditch water~
+Awash with foul-smelling waters, the stone ditch runs in an east-west
+direction.  Beside the ditch are several pools of brackish liquid.
+~
+E
+lichen moss fungi~
+A carpet of red lichen and pale green mosses grows across the mounds of
+dirt and rock.  Thrusting through the blanket are the bright red caps of
+delicate-looking toadstools.
+~
+A
+~
+~
+if( is_player( ch ) )
+  if( rflag( reset0, room ) ) {
+  if( random( 0, 2 ) == 1 )
+    remove_rflag( reset0, room );
+  mob = mob_in_room( 5501, find_room( 1463 ) );
+  if( mob )
+    transfer( mob, find_room( 1416 ) );
+  send_to_room( #rat, room );
+  loop( all_in_room ) {
+    if( !is_player( rch ) )
+      if( species( rch ) == 5501 )
+      if( num_mob( 5501, room ) > 2 ) {
+      victim = rand_player( room );
+      if( victim )
+        if( !is_mob( victim ) )
+        attack( rch, rand_player( room ), 2d4, "surprise attack" );
+    }
+  }
+  end;
+}
+  send_to_room( #skitter, room );
+~
+E
+rat~
+@CA furry muck-covered rat scurries out from a hole in the wall to
+investigate the intruders.@n 
+~
+E
+skitter~
+@CA rat skitters away, narrowly avoiding being stepped on.@n
+~
+!
+1 0 11
+A
+~
+~
+i = random( 0, 2 );
+if( i == 0 )
+  send_to_room( #float, room );
+if( i == 1 )
+  send_to_room( #squeak, room );
+if( i == 2 ) {
+  ch = rand_player( room );
+  if( ch ) {
+    act_tochar( #bug, ch, obj, mob );
+    act_notchar( #hissyfit, ch, obj, mob );
+    }
+  }
+~
+E
+float~
+@BSomething rises to the surface of the ditch momentarily before sinking
+again.@n
+~
+E
+squeak~
+@RThe muffled sounds of scratching catch your attention, possibly coming
+from the southern wall.@n 
+~
+E
+bug~
+@ySomething small drops onto your head from above, and begins to wriggle
+about.  You hurriedly brush it off, trying to remain composed.@n 
+~
+E
+hissyfit~
+@y$n suddenly yelps in alarm, and begins to leap about, slapping at $s
+head frantically.@n 
+~
+!
+2 150 0
+3228 17 1509949470 -2 0
+7893 17 1509949445 -2 0
+7089 17 1509949442 -2 0
+5044 9 1509949540 3 0
+-1
+S
+
+#1413
+Ancient Warrens - Dead End~
+The floor of the chamber is covered with dusky brown flagstones, smeared
+in grime and patches of mold and mildew.  Brackish water flows out of
+several clay pipes in the eastern wall, the liquid running down the walls
+leaving a dark stain.  In the center of the room, most of the water falls
+into a shallow ditch and proceeds to flow out of the chamber westward.
+~
+[Guin] Key in search unlocks a strongbox placed elsewhere in the zone.
+[Guin] Done.
+~
+167378948 11 5 0
+D3
+~
+~
+0 -1 1412 10 10 5
+E
+ditch trough~
+Dank and grime-covered flagstones have been set into the floor.  Several
+of the stones are cracked and split, allowing molds and mildew a place to
+grow.  Shallow pools of brackish water lie beside the trough, their foul
+waters attracting a cloud of midges.
+~
+E
+brackish water clay pipes eastern liquid~
+Pouring out of the semi-blocked clay pipes is a constant river of foul
+smelling water.  The spray from the torrent sends a wet mist into the air. 
+Most of the waters splash into a wide trough and swirl away westward.
+~
+E
+ditch~
+The foot-deep ditch has been carved from the natural rocks that make up
+the floor of the warrens.  Swirling waters wash down the ditch from clay
+pipes set in the eastern wall.
+~
+E
+1 west~
+Westward, the warrens seem to become increasingly full of rocks and rubble.
+~
+E
+cloud midges~
+The swarm of tiny insects hovers above the foul smelling waters.
+~
+A
+~
+~
+send_to_room( #water, room );
+if( !obj_in_room( 2925, room ) )
+  obj_to_room( oload( 2925 ), room );
+~
+E
+water~
+@BThe flow of water spraying out of the pipes fades away to nearly
+nothing, then resumes again accompanied by a foul ball of muck.@n 
+~
+!
+2 150 0
+A
+~
+clay pipes~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 0, 4 ) ) {
+    obj = oload( 7895 );
+    act_tochar( #get, ch, obj, mob );
+    act_notchar( #issearch, ch, obj, mob );
+    obj_to_char( obj, ch );
+    end;
+  }
+}
+act_tochar( #no, ch, obj, mob );
+act_notchar( #issearch, ch, obj, mob );
+~
+E
+get~
+@GFeeling around, you find $p lodged between the base of a pipe and the
+wall.@n 
+~
+E
+issearch~
+@G$n searches the eastern wall to see what secrets it might conceal.@n
+~
+E
+no~
+@gYou find nothing in the pipes.@n
+~
+!
+9 0 0
+3228 17 1509949470 -2 0
+7893 17 1509949445 -2 0
+7089 17 1509949442 -2 0
+-1
+S
+
+#1414
+Ancient Warrens - Rubble-Filled Tunnel~
+The narrow tunnel comes to an abrupt end at the site of another cave in. 
+Slabs of rock and rubble fill the northern passageway completely,
+spilling out to partially block the tunnel here.  Moss and lichen cover
+the stones, an indication that the landslide occurred some time ago. 
+Southward, the narrow tunnel continues, framed by supporting arches that
+appear to still be strong.
+~
+[Guin] Done.
+~
+167378948 11 5 0
+D2
+~
+~
+0 -1 1412 10 10 5
+E
+cave-in slabs rock rubble northern landslide~
+Mounds of rocks and broken stones cascade out from the cave-in that has
+sealed the northern passageway.  The walls on both sides of the tunnel
+show signs of the pressure created by the rocks above, tendrils of cracks
+and fissures dancing across their surface.
+~
+E
+moss lichen~
+Covering much of the rocks and rubble, the lichen and moss are first to
+gain a foothold, often allowing less hardy plants to take root.  The moss
+spreads like a carpet between the rocks, its velvety surface coated in a
+dusting of dew.
+~
+E
+arches 1 south~
+Several red brick arches rise up to the roof, at the apex joining into a
+solid-looking keystone.  White runes have been scrawled across the arches.
+~
+E
+white runes~
+The whitewashed runes coat the surface of the arches, their meaning
+unclear.
+~
+3228 17 1509949470 -2 0
+7893 17 1509949445 -2 0
+7089 17 1509949442 -2 0
+5502 9 1509949540 3 0
+78 17 1509949540 -2 0
+-1
+S
+
+#1415
+Ancient Warrens - Narrow Tunnel~
+The narrow tunnel winds through the darkness in an east-west direction. 
+The walls and floor are crafted from red clay bricks, many of them
+cracked and crumbling.  Several alcoves have been set into the walls,
+empty save for a generous layer of dust.  Across the low ceiling is the
+remains of a fresco, most of it water damaged and caked in grime.
+~
+[Eliza] reviewed
+[Yrna] Done.
+~
+167247876 0 5 0
+D1
+~
+~
+0 -1 1408 10 10 5
+D3
+~
+~
+0 -1 1417 10 10 5
+E
+walls floor red clay bricks~
+Time and lack of care are slowly eroding the brickwork, leaving only the
+crumbled red dust behind.  Tendrils of fine cracks cover most of the
+bricks, an indication that their strength is not as it once was.  The
+cobbled floor is littered with the brick dust that coats the grey-colored
+stones.  Across the dust are countless tracks, left by small clawed
+creatures, most likely the ample rats that are found here.
+~
+E
+alcoves dust~
+Each alcove is only about a foot in size and about as half as deep. 
+Arch-shaped, they appear to have once been used to hold a light source. 
+Smoke stains cover the curved roof and a faint layer of dusty grey ash
+coats the floor.
+~
+E
+fresco ceiling~
+Barely any of the fresco remains, only a few colored tiles in a sea of
+grime.  What their design was is long since lost, only the predominantly
+blue tiles giving some clue that it was of the sea or sky.
+~
+A
+~
+~
+if( is_player( ch ) )
+  if( rflag( reset0, room ) ) {
+  if( random( 0, 2 ) == 1 )
+    remove_rflag( reset0, room );
+  mob = mob_in_room( 5501, find_room( 1463 ) );
+  if( mob )
+    transfer( mob, find_room( 1416 ) );
+  send_to_room( #rat, room );
+  loop( all_in_room ) {
+    if( !is_player( rch ) )
+      if( species( rch ) == 5501 )
+      if( num_mob( 5501, room ) > 2 ) {
+      victim = rand_player( room );
+      if( victim )
+        if( !is_mob( victim ) )
+        attack( rch, rand_player( room ), 2d4, "surprise attack" );
+    }
+}
+    end;
+  }
+  send_to_room( #skitter, room );
+~
+E
+rat~
+@CA furry muck-covered rat scurries out from a hole in the wall to
+investigate the intruders.@n 
+~
+E
+skitter~
+@CA rat skitters away, narrowly avoiding being stepped on.@n
+~
+!
+1 0 10
+-1
+S
+
+#1416
+Ancient Warrens - Narrow Tunnel~
+A circular pool fills the floor of the three way junction.  A torrent of
+murky water cascades out of countless clay pipes on the southern wall
+into the pool.  It swirls around before rushing northward along a wide
+stone ditch that has been constructed in the center of the northern
+tunnel.  Set in each of the four corners of the room, stone gargoyles
+squat atop slender pillars.
+~
+[Guin] Done.
+~
+167378948 11 5 0
+D0
+~
+~
+0 -1 1408 10 10 5
+D1
+~
+~
+0 -1 1421 10 10 5
+D3
+~
+~
+0 -1 1422 10 10 5
+E
+circular pool floor~
+Constructed of stone, the pool's surface has been worn smooth over the
+years from all the water passing through it.  The floor is in disrepair,
+from neglect, however, rather than from use.
+~
+E
+murky water clay pipes southern wall~
+The clay pipes appear to have been built into the wall at the time of
+construction.  The origin of the water flowing out of the pipes is
+difficult to ascertain, but they do not seem to be sewage outlets.
+~
+E
+stone ditch~
+Like the surface of the pool, the stone of the ditch has been worn smooth
+from the passing waters. Ancient these constructions must be, to have
+accumulated so much wear to their surfaces.
+~
+E
+gargoyles slender pillars~
+Each pillar has been intricately carved and is relatively untouched by
+the passage of time.  Patterns of sea creatures are discernible in the
+carvings, petering out towards the top of each pillar.  The gargoyles
+stare balefully into the room from their perches in each corner.  They
+provoke a feeling of being watched, as if still protecting this room
+after their makers have long since disappeared.
+~
+E
+1 north~
+The stone ditch, full of murky water, continues along a narrow tunnel as
+far as the eye can see.
+~
+E
+1 east~
+To the east, a dim glimmer can be picked up, as if from some
+phospherescent fungi in the distance.
+~
+E
+1 west~
+A murky tunnel leads westward, becoming darker as it progresses.
+~
+A
+~
+~
+if( is_player( ch ) )
+  if( rflag( reset0, room ) ) {
+  if( random( 0, 2 ) == 1 )
+    remove_rflag( reset0, room );
+  mob = mob_in_room( 5501, find_room( 1463 ) );
+  if( mob )
+    transfer( mob, find_room( 1416 ) );
+  send_to_room( #rat, room );
+  loop( all_in_room ) {
+    if( !is_player( rch ) )
+      if( species( rch ) == 5501 )
+      if( num_mob( 5501, room ) > 2 ) {
+      victim = rand_player( room );
+      if( victim )
+        if( !is_mob( victim ) )
+        attack( rch, victim, 2d4, "surprise attack" );
+    }
+  }
+  end;
+}
+send_to_room( #skitter, room );
+~
+E
+rat~
+@CA furry muck-covered rat scurries out from a hole in the wall to
+investigate the intruders.@n 
+~
+E
+skitter~
+@CA rat skitters away, narrowly avoiding being stepped on.@n
+~
+!
+1 0 11
+3228 17 1509949470 -2 0
+7893 17 1509949445 -2 0
+7089 17 1509949442 -2 0
+-1
+S
+
+#1417
+Ancient Warrens - Narrow Tunnel~
+Broken bricks and mounds of earth lie scattered across the floor of the
+east-west passageway.  A hole, about the height of a large dog, has been
+dug in the middle of the southern wall.  Tiny scratches cover the
+remaining bricks and floor tiles, indicating the tunnel has been dug with
+claws rather than tools.
+~
+[Guin] Done
+~
+167247876 0 5 0
+D1
+~
+~
+0 -1 1415 10 10 5
+D2
+~
+~
+0 -1 1426 10 10 5
+D3
+~
+~
+0 -1 1418 10 10 5
+E
+1 south hole~
+The excavation of the southern wall has left mounds of rich, dark loam
+and broken bricks scattered across the floor.  Around the hole, the
+ground is mostly clear, enabling passage southward down the freshly dug
+tunnel.
+~
+E
+hole southern wall~
+About the size of a large dog, the hole has been dug at the base of the
+southern wall.  The brickwork of the wall has suffered from this
+onslaught, leaving many cracked and broken ones scattered across the
+floor.  All of the bricks surrounding the hole are cracked and chipped,
+ready to crumble if put under any pressure.
+~
+E
+tiny marks scratches~
+Claws have scratched into the soft bricks of the walls, leaving countless
+scars across their surface.  Several of the older bricks have cracked and
+crumbled under the onslaught, exposing the rich loam that lies beneath
+them.
+~
+A
+~
+~
+if( is_player( ch ) )
+  if( rflag( reset0, room ) ) {
+  if( random( 0, 2 ) == 1 )
+    remove_rflag( reset0, room );
+  mob = mob_in_room( 5501, find_room( 1463 ) );
+  if( mob )
+    transfer( mob, find_room( 1416 ) );
+  send_to_room( #rat, room );
+  loop( all_in_room ) {
+    if( !is_player( rch ) )
+      if( species( rch ) == 5501 )
+      if( num_mob( 5501, room ) > 2 ) {
+      victim = rand_player( room );
+      if( victim )
+        if( !is_mob( victim ) )
+        attack( rch, rand_player( room ), 2d4, "surprise attack" );
+    }
+  }
+  end;
+}
+send_to_room( #skitter, room );
+~
+E
+rat~
+@CA furry muck-covered rat scurries out from a hole in the wall to
+investigate the intruders.@n 
+~
+E
+skitter~
+@CA rat skitters away, narrowly avoiding being stepped on.@n
+~
+!
+1 0 63
+A
+~
+~
+continue;
+~
+E
+hole~
+@RYou crawl through the hole in the south wall.@n
+~
+E
+nhole~
+@R$n crawls through the hole in the south wall.@n
+~
+E
+to_char~
+@RYou crawl through the hole in the south wall.@n
+~
+E
+not_char~
+@R$n crawls through the hole in the south wall.@n
+~
+!
+3 0 4
+-1
+S
+
+#1418
+Ancient Warrens - Narrow Tunnel~
+Barely wide enough for two men to walk abreast, the narrow passageways
+have been constructed from a dusky red brick.  Every five or six paces a
+small alcove, holding small brass sconces, has been set into the wall. 
+Overhead, the ceiling has been hacked from natural stone, a few seams of
+smoky white crystal running across its surface.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 5 0
+D0
+~
+~
+0 -1 1406 10 10 5
+D1
+~
+~
+0 -1 1417 10 10 5
+D2
+~
+~
+0 -1 1425 10 10 5
+D3
+~
+~
+0 -1 1427 10 10 5
+E
+dusky red bricks~
+Baked from a red-brown clay, the uneven bricks have been held together
+for countless years by the greyish colored mortar, liberally spread
+between them.  However, the lack of maintanance has begun to erode their
+support, leaving broken bricks and mortar to collect at the base of the
+wall.
+~
+E
+alcove brass sconces~
+Cut into the walls are several shallow alcoves.  In each of the alcoves
+are small brass scounces, empty but covered in a dusty black soot,
+indication that they have seen some use.  Smoke stains mark the walls
+above the alcoves, some reaching as high as the arched roof above.
+~
+E
+vaulted ceiling stone~
+Hacked from the natural rock, the ceiling has been left bare and
+unadorned.  Running acorss the surface are the glinting seams of a
+smoky white crystal, perhaps quartz.
+~
+E
+seams smoky white crystal~
+The gleaming crystals that make up the seams are hexagonal in shape and
+jut out of the rock in dense clusters.  Smoke-white in colouration, they
+appear to be a stone simillar to quartz.  Fine structural cracks run
+across many of the crystals.
+~
+A
+~
+~
+if( is_player( ch ) )
+  if( rflag( reset0, room ) ) {
+  if( random( 0, 2 ) == 1 )
+    remove_rflag( reset0, room );
+  mob = mob_in_room( 5501, find_room( 1463 ) );
+  if( mob )
+    transfer( mob, find_room( 1416 ) );
+  send_to_room( #rat, room );
+  loop( all_in_room ) {
+    if( !is_player( rch ) )
+      if( species( rch ) == 5501 )
+      if( num_mob( 5501, room ) > 2 ) {
+      victim = rand_player( room );
+      if( victim )
+        if( !is_mob( victim ) )
+        attack( rch, rand_player( room ), 2d4, "surprise attack" );
+    }
+  }
+  end;
+}
+send_to_room( #skitter, room );
+~
+E
+rat~
+@CA furry muck-covered rat scurries out from a hole in the wall to
+investigate the intruders.@n 
+~
+E
+skitter~
+@CA rat skitters away, narrowly avoiding being stepped on.@n
+~
+!
+1 0 63
+A
+get pry~
+quartz crystal smoke white~
+act_tochar( #get, ch, obj );
+act_notchar( #rget, ch, obj, mob, sight );
+~
+E
+get~
+@CYou try to break off some crystals, without much success.@n
+~
+E
+rget~
+@C$n tries to break off some crystals, but fails.@n
+~
+!
+0 0 0
+3228 17 1509949470 -2 0
+7893 17 1509949445 -2 0
+7089 17 1509949442 -2 0
+-1
+S
+
+#1419
+Ancient Warrens - Beneath a City~
+Rocks and mounds of dirt litter the passageway, remnants of the cave-in
+that sealed the eastern one.  In the western wall, an archway of red
+clay bricks opens into a narrow tunnel, leading off from this main one. 
+More debris blocks the northern way, although it is possible to
+squeeze past the rocks and mounds of dirt and continue in that direction. 
+Southward, the warrens seem more clear of the rubble.
+~
+[Guin] Done.
+~
+167378948 11 5 0
+D0
+~
+~
+0 -1 1423 10 10 5
+D2
+~
+~
+0 -1 1406 10 10 5
+D3
+~
+~
+0 -1 1424 10 10 5
+E
+rocks mounds dirt~
+The broken rocks and damp dirt have spilled out of the eastern
+passageway, filling most of the area.  The eastern passage is completely
+blocked with heavy-looking boulders and sharp-edged stones.  At first
+glance, several of the stones seem to be coated in dried blood, however,
+closer inspection reveals that blood-red lichen has made its home across
+their surface.
+~
+E
+east cave-in~
+The eastern passageway has been completely sealed by tons of rock and
+dirt.  It would take a skilled engineer several days to even begin to clear
+the cave-in.
+~
+E
+north~
+A screed of rubble from the eastern tunnel, cave-in has blocked most
+of the northern passageway.  Unlike the eastern tunnel, however, an
+opening between the top of the mound and the roof would allow access
+northward.
+~
+E
+south~
+Southward the warren is more clear from rocks and rubble, allowing ease
+of travel into the darkness.
+~
+E
+lichen~
+The tiny blood-red colored lichen is often the first plant to reclaim the
+bare rocks and rubble.  As it spreads, it allows larger plants a more
+stable surface upon which to take root.
+~
+A
+~
+~
+if( is_player( ch ) )
+  if( rflag( reset0, room ) ) {
+  if( random( 0, 2 ) == 1 )
+    remove_rflag( reset0, room );
+  mob = mob_in_room( 5501, find_room( 1463 ) );
+  if( mob )
+    transfer( mob, find_room( 1416 ) );
+  send_to_room( #rat, room );
+  loop( all_in_room ) {
+    if( !is_player( rch ) )
+      if( species( rch ) == 5501 )
+      if( num_mob( 5501, room ) > 2 ) {
+      victim = rand_player( room );
+      if( victim )
+        if( !is_mob( victim ) )
+        attack( rch, rand_player( room ), 2d4, "surprise attack" );
+    }
+  }
+  end;
+}
+send_to_room( #skitter, room );
+~
+E
+rat~
+@CA furry muck-covered rat scurries out from a hole in the wall to
+investigate the intruders.@n 
+~
+E
+skitter~
+@CA rat skitters away, narrowly avoiding being stepped on.@n
+~
+!
+1 0 63
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cClambering over the rocks and debris, you squeeze past the rubble
+northward.@n
+~
+E
+to_room~
+@cClambering over the rocks and debris, $n disappears past the rubble
+northward.@n
+~
+!
+3 0 1
+3228 17 1509949470 -2 0
+7893 17 1509949445 -2 0
+7089 17 1509949442 -2 0
+-1
+S
+
+#1420
+Ancient Warrens - Beneath a City~
+Piles of stone tiles, chunks of rocks and rotting sacks fill this room. 
+Splintered flakes of rock chips spill out across the cobbled floor. 
+Rusting in a heap beside the stones are a collection of iron spikes and
+chisels, probably used to split and shape the stones into tiles.  In the
+southern wall, a shallow stone basin has been built into the wall.  A
+foul smelling rust-colored liquid fills the basin to just below its lip.
+~
+[Guin] Done.
+~
+167378948 11 5 0
+D1
+~
+~
+0 -1 1406 10 10 5
+E
+stone tiles chunks rocks sacks~
+At one time the stone slabs might have been tools to repair any damage to
+the warrens.  Half-built cobbles lie scattered in piles beside rough and
+uncut rocks.  Several rusting collections of chisels and iron spikes lie
+beside them, tools to shape the hard rocks.  Splintering flakes of stone
+spread out across the grimy floor.
+~
+E
+rusting iron spikes chisels~
+Almost a solid mass of rust and rotting wood, the tools have been
+abandoned for some time.
+~
+E
+shallow basin liquid~
+The semi-circular basin has been built out from the southern wall.  A
+small clay pipe trickles rust-colored liquid into it.  Once white, the
+stones of the basin are stained blood red where the waters overflow, as
+if the stones themselves were bleeding.
+~
+A
+~
+~
+if( is_player( ch ) )
+  if( rflag( reset0, room ) ) {
+  if( random( 0, 2 ) == 1 )
+    remove_rflag( reset0, room );
+  send_to_room( #rat, room );
+  mload( 5501, room );
+  loop( all_in_room ) {
+    if( !is_player( rch ) )
+      if( species( rch ) == 5501 )
+      if( num_mob( 5501, room ) > 4 ) {
+      remove_rflag( reset0, room );
+      attack( rch, rand_player( room ), 2d4, "surprise attack" );
+    }
+  }
+  end;
+}
+send_to_room( #skitter, room );
+~
+E
+rat~
+@CA furry muck-covered rat scurries out from a hole in the wall to
+investigate the intruders.@n 
+~
+E
+skitter~
+@CA rat skitters away, narrowly avoiding being stepped on.@n
+~
+!
+1 0 63
+A
+get~
+chisels iron spikes heap tools~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #get, ch, obj, mob );
+  act_notchar( #isget, ch, obj, mob );
+  wait( 2 );
+  if( random( 0, 4 ) == 0 ) {
+    act_tochar( #got, ch, obj, mob );
+    obj_to_char( oload( 3044 ), ch );
+    end;
+  }
+  act_tochar( #notgot, ch, obj, mob );
+}
+act_tochar( #nuthun, ch, obj, mob );
+~
+E
+get~
+@yYou rummage through the pile of rusty tools in search of something
+useful.@n 
+~
+E
+isget~
+@y$n rummages through the pile of rusty tools in search of something
+useful.@n 
+~
+E
+got~
+@GMuch to your surprise you find something relatively free of rust
+amongst the clutter.@n 
+~
+E
+notgot~
+@gDespite your efforts, nothing of value appears amongst the junk.@n 
+~
+E
+nuthun~
+Nothing of value could possibly be in that pile of junk.
+~
+!
+9 0 0
+3228 17 1509949470 -2 0
+7893 17 1509949445 -2 0
+7089 17 1509949442 -2 0
+-1
+S
+
+#1421
+Ancient Warrens - Dead End~
+Filling the chamber are mounds of rotting canvas and piles of broken
+barrels and boxes.  So much debris has been piled into the room that the
+cobblestone floor underfoot is only visible in a few places.  A garden
+of fungi spreads over everything as it feeds on the decay.  Westward, the
+sound of rushing water can be heard.
+~
+[Guin] Done.
+[Virt] after search box, response contains misspelled word "usefull"
+~
+167378948 11 5 0
+D3
+~
+~
+0 -1 1416 10 10 5
+E
+mounds rotting canvas broken barrels boxes debris~
+Like some kind of underground rubbish dump, this room has obviously been
+set aside for this purpose.  Now empty, the barrels and boxes must have
+once been used to carry goods.  The rotting canvas, the piles of debris,
+all must have been put here in recent years, an indication of the current
+occupation of these ruins.
+~
+E
+garden fungi~
+Patches of fungi glow with a glowing green phosphorescence, filling the
+chamber with an unearthly light.  Some of the plants almost look
+edible in a pinch, despite their origin of decay.
+~
+E
+west~
+The glow of fungi diminishes to the west, swallowed by a dark tunnel and
+the distant sound of rushing waters.
+~
+A
+~
+debris pile barrels boxes~
+act_tochar( #search, ch, obj, mob );
+act_notchar( #rsearch, ch, obj, mob, sight );
+~
+E
+search~
+@gYou search through barrels and boxes, but come up with nothing usefull.@n
+~
+E
+rsearch~
+@g$n rummages through the debris, but comes up empty-handed.@n
+~
+!
+9 0 0
+A
+get~
+green fungi~
+act_tochar( #find, ch, obj );
+act_notchar( #rfind, ch, obj, mob, sight );
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 3 ) == 2 )
+    obj = oload( 3188 );
+}
+wait( 2 );
+if( obj ) {
+  act_tochar( #found, ch, obj );
+  act_notchar( #rfound, ch, obj );
+  obj_to_char( obj, ch );
+}
+else {
+  act_tochar( #notfound, ch, obj );
+  act_notchar( #rnotfound, ch, obj, mob, sight );
+}
+~
+E
+find~
+@yYou kneel down and start carefully examining the fungi.@n
+~
+E
+rfind~
+@g$n kneels down to inspect the fungi, $s lit by an eerie green glow.@n
+~
+E
+found~
+@GAfter careful examination, you pick up a mushroom that looks edible enough.@n
+~
+E
+rfound~
+@GHaving spent some time staring intently at the fungi patches, $n picks
+up only one.  Was that really worth the wait?@n 
+~
+E
+notfound~
+@gYou decide you're not@n @Gthat@n @ghungry afterall.@n
+~
+E
+rnotfound~
+@y$n doesn't appear to like the look of the patchy growth.@n
+~
+!
+9 0 0
+3228 17 1509949470 -2 0
+7893 17 1509949445 -2 0
+7089 17 1509949442 -2 0
+5132 9 1509949540 3 0
+5501 9 1509949540 3 0
+-1
+S
+
+#1422
+Ancient Warrens - Narrow Tunnel~
+Mounds of broken rock lie in irregular heaps, piled up against the
+western wall.  Lichen and velvety moss cover most of the accumulation of
+stone in a speckled, nature-formed carpet.  Several foul smelling pools
+of brackish water spread over the cobblestone floor, their surface abuzz
+with tiny insects.  The sound of rushing water can be heard in the
+distant east.
+~
+[Guin] Done.
+~
+167378948 11 5 0
+D1
+~
+~
+0 -1 1416 10 10 5
+E
+mounds rock western wall lichen moss~
+The roof here has great fractures across it, originating from the western
+wall.  The wall itself has almost completely collapsed, with the mounds
+of stone at the centre of the damage.  A complete cave-in of the tunnel
+beyond has occurred, creating these structural instabilities.  The carpet
+of lichen and moss indicate that the destruction must have occured some
+time ago.
+~
+E
+pools brackish water~
+Although the air here is dank and full of moisture, borrowing vapours
+from the waters heard to the east, the pools are stagnant.  These form
+perfect breeding grounds for the colonies of insects which have found
+their way down here.
+~
+E
+tiny insects~
+Undisturbed by the rushing water to the east, hoards of insects multiply
+in peace.  Together, they create a droning hum that fills the room.
+~
+E
+1 east~
+A tunnel leads of eastward toward the sound of rushing water.  A vague
+lifting of the darkness is perceivable in that direction.
+~
+A
+~
+~
+send_to_room( #buzz, room );
+~
+E
+buzz~
+@MDisturbed by your presence, the insects rise from the water surface,
+their loud buzzing filling the air.@n 
+~
+!
+2 150 0
+3228 17 1509949470 -2 0
+7893 17 1509949445 -2 0
+7089 17 1509949442 -2 0
+5501 9 1509949540 3 0
+-1
+S
+
+#1423
+Ancient Warrens - Beneath a City~
+Shattered rocks and bricks spill out across the floor.  Open fissures in
+the roof and walls have sent a cascade of rubble into the passageway,
+partially blocking the southern and completely sealing the northern
+tunnels.  Several pools of brackish water have been formed by slowly
+trickling ribbons of oozing liquid seeping down the walls.  A layer of
+bright green slime coats much of the lower section of the walls, enjoying
+the dank conditions.
+~
+[Guin] Something could possibly be added to the north?
+[Guin] Room 1423 - Possibly place to add a zone in the future.
+~
+167378948 11 5 0
+D2
+~
+~
+0 -1 1419 10 10 5
+E
+rocks bricks floor~
+Covered with broken slabs or rock and earth fallen from the fissures
+above, the cobbled floor is in danger of vanishing completely.  The force
+of the cave-in split and cracked most of the visible cobblestones,
+reducing some to a collection of chips and fine stone powder.  Several
+pools of brackish water have formed in the shallows left by the
+destruction.
+~
+E
+fissures roof walls~
+Like open wounds, the gapping fissures trickle ribbons of water down
+their fractured surfaces.  Shards of rock thrust out of the walls,
+spear-like and precariously balanced.  Overhead, a latticework of cracks
+dances across the rocks.
+~
+E
+pools brackish water~
+Water trickles down the sides of the walls and forms into shallow pools
+across the rubble strewn floor.  Tendrils of water escape the rubble's
+grasp and wind southward, out of view.
+~
+E
+green slime~
+The green slime coats the lower parts of walls and creeps across the
+floor,  delighting in the dank conditions that would kill most plants.
+~
+E
+south~
+Southwards the tunnel is paritaly blocked by mounds of rocks and rubble. 
+With some effort it would still be possible to clamber over the rubble
+and continue in that direction.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@mYou carefully pick your way over the rubble to the south.@n
+~
+E
+to_room~
+Carefully picking $s way over the rubble, $n crawls south.
+@mCarefully picking $s way over the rubble, $n crawls south.@n
+~
+!
+3 0 4
+3228 17 1509949470 -2 0
+7893 17 1509949445 -2 0
+7089 17 1509949442 -2 0
+5501 9 1509949540 3 0
+5044 9 1509949540 3 0
+-1
+S
+
+#1424
+Ancient warrens - Beneath the city~
+Four slender pillars support the shallow-domed roof of this chamber.  In
+the center of the cobblestone floor, a faded fresco depicts a stormy sea. 
+Across the cupola overhead run ribbons of crystal, set in the stone by
+copper lining, beaten into the shape of forked bolts of lightning.  An
+archway opens into a narrow tunnel westward, while the warrens continue
+to the east.
+~
+[Guin] Done.
+~
+167378948 11 5 0
+D1
+~
+~
+0 -1 1419 10 10 5
+D3
+~
+~
+0 -1 1430 10 10 5
+E
+slender pillars domed roof~
+Each pillar is wreathed in a complicated pattern, reminiscent of waves of
+water.  This pattern seems to have been achieved by infinitely detailed
+carving, yet it creates a very simple effect, soothing yet mesmeric to
+behold.  The roof, supported by these columns, curves upward from the
+walls, giving a heightened feel to the room.
+~
+E
+cobbled stone floor faded fresco sea~
+Each cobble has been precisely placed, fitting next to its neighbours
+almost seamlessly.  Where the fresco in the center of the room begins or
+ends is difficult to tell - it somehow develops naturally from the
+cobbles all around it.  The overall effect is strangely reminiscent of
+witnessing a stormy sea.
+~
+E
+ribbons crystal copper lightning~
+As was intended in the construction, the overall impact of the lightning
+is electric.  The crystal picks out any light in the chamber, capturing
+it in an electrifying display, the red of the copper giving the whole
+depiction a fiery appearance.
+~
+A
+~
+~
+send_to_room( #rat, room );
+~
+E
+rat~
+@YA rat scurries across the floor of the chamber, disappearing into the
+darkness.@n 
+~
+!
+2 150 0
+3228 17 1509949470 -2 0
+7893 17 1509949445 -2 0
+7089 17 1509949442 -2 0
+5501 9 1509949540 3 0
+-1
+S
+
+#1425
+Ancient Warrens - Decaying Mounds~
+Bundles of reeds have been piled up in rotting heaps against the southern
+wall, the pungent aroma of rot and decay hovering in the air.  Broken
+crockery lies scattered around the bundles, ruined beyond repair. 
+Jutting out of the brick walls are slender clay pipes, most plugged with
+long wicks of moss that steadily drip water.
+~
+[Guin] Done.
+~
+167378948 11 5 0
+D0
+~
+~
+0 -1 1418 10 10 5
+E
+bundles reeds rotting heaps south wall~
+The thick, pungent smell of rot and decay rises from the mounds of
+rotting papyrus reeds.  Black oozing liquid trickles from beneath the
+pile, where the reeds have liquified.  Swarms of midges dance over the
+mounds, perhaps feeding on some of the less dessicated stems.
+~
+E
+crockery~
+The shattered remains of fine porcelain vases and pots lie scattered
+amongst the rotting reeds.  Although smashed beyond repair, it is clear
+they were fine pieces when new.  Oceanic themes of waves, ships and sea
+dragons have been engraved on the surface of the majority of them.
+~
+E
+clay pipes moss water~
+Cascading down from the slender clay pipes are the moist wicks of
+pale-green moss.  Most of the trickling waters are caught by the moss,
+the remaining forms into shallow pools across the floor.
+~
+A
+~
+~
+if( is_player( ch ) )
+  if( rflag( reset0, room ) ) {
+  if( random( 0, 2 ) == 1 )
+    remove_rflag( reset0, room );
+  mob = mob_in_room( 5501, find_room( 1463 ) );
+  if( mob )
+    transfer( mob, find_room( 1416 ) );
+  send_to_room( #rat, room );
+  loop( all_in_room ) {
+    if( !is_player( rch ) )
+      if( species( rch ) == 5501 )
+      if( num_mob( 5501, room ) > 2 ) {
+      victim = rand_player( room );
+      if( victim )
+        if( !is_mob( victim ) )
+        attack( rch, rand_player( room ), 2d4, "surprise attack" );
+    }
+  }
+  end;
+}
+send_to_room( #skitter, room );
+~
+E
+rat~
+@CA furry muck-covered rat scurries out from a hole in the wall to
+investigate the intruders.@n 
+~
+E
+skitter~
+@CA rat skitters away, narrowly avoiding being stepped on.@n
+~
+!
+1 0 63
+A
+~
+crockery porcelain vases pots reeds~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #find, ch, obj );
+  act_notchar( #rfind, ch, obj, mob, sight );
+  if( random( 1, 10 ) == 9 ) {
+    obj = oload( 8030 );
+  }
+  wait( 1 );
+  if( obj ) {
+    if( random( 1, 2 ) == 1 ) {
+      i = 1d5;
+      act_tochar( #found1, ch, obj );
+      act_notchar( #rfound1, ch, obj, mob, sight );
+      obj_to_char( obj, ch );
+      dam_message( ch, i, "A sharp piece of crockery" );
+      inflict( ch, mob, i, "broken pot" );
+    }
+    else {
+      act_tochar( #found2, ch, obj );
+      act_notchar( #rfound2, ch, obj, mob, sight );
+      obj_to_char( obj, ch );
+    }
+  }
+  else {
+    if( random( 1, 2 ) == 1 ) {
+      j = 1d5;
+      act_tochar( #nfound1, ch, obj );
+      act_notchar( #rnfound1, ch, obj, mob, sight );
+      dam_message( ch, j, "A sharp piece of crockery" );
+      inflict( ch, mob, j, "broken pot" );
+    }
+    else {
+      act_tochar( #nfound2, ch, obj );
+      act_notchar( #rnfound2, ch, obj, mob, sight );
+    }
+  }
+}
+else {
+  act_tochar( #no, ch, obj );
+}
+~
+E
+find~
+@cYou start sifting through the crockery, hoping to find an unbroken
+piece@n.
+~
+E
+rfind~
+@c$n begins to search through scattered crockery.@n
+~
+E
+found1~
+@RYou find $p in the debris!  Trying to pull it free from the tangle of
+reeds and broken pots, you cut yourself on a particulary sharp piece.@n
+~
+E
+rfound1~
+@RTrying to pull something free from the debris, $n clumsily hurts $s
+hand.@n 
+~
+E
+found2~
+@CYou carefully pull out $p from the debris.@n
+~
+E
+rfound2~
+@CCautiously moving some broken pieces aside, $n manages to pull out $p
+from the tangle of reeds and vases.@n 
+~
+E
+nfound1~
+@MWith all the broken pieces lying around, it's not surprising all you
+manage to do is hurt your hand!@n 
+~
+E
+nfound2~
+@YTry as you might, you can't find a single pot worth taking.  You give
+up the search before you hurt yourself.@n 
+~
+E
+rnfound1~
+@MPlaying with broken pottery can hurt you, as $n just found out.@n
+~
+E
+rnfound2~
+@Y$n doesn't appear to have found anything.  Looking at all the broken
+pieces, you're surprised $e pulls $m hand out unscathed.@n
+~
+E
+no~
+@GYou consider searching through broken pots and vases but decide against
+it.  Someone could get hurt.@n 
+~
+!
+9 0 0
+3228 17 1509949470 -2 0
+7893 17 1509949445 -2 0
+7089 17 1509949442 -2 0
+-1
+S
+
+#1426
+Ancient Warrens - Cluttered Room~
+Mounds of the dying reeds and sacking line the earthern floor of the room. 
+Bits of broken tools, bricks and an occasional bone lie scattered
+amongst the decaying vegetation.  A heavy musk scent permeates
+everything, mixing with the stench of the dying reeds to produce an aroma
+that only a goblin could find pleasant.
+~
+[Guin] Done.
+~
+167247876 0 9 0
+D0
+~
+~
+0 -1 1417 10 10 5
+E
+mounds rotting reeds sacking floor~
+The foul stench, arising from the rotting reeds, hangs heavy in the air. 
+Obviously dragged into the room from some other location, they are
+quickly decomposing in the wet conditions.
+~
+E
+broken tools bricks bone~
+Half-chewed bones mingle with the rusted remains of chisels and picks,
+with no apparent order or reason to them being here.  Sticking out of the
+mounds of reeds are several broken bricks, perhaps once used to hold the
+reed mounds in place.
+~
+5502 9 1509949540 3 0
+-1
+S
+
+#1427
+Ancient Warrens - Narrow Tunnel~
+Barely wide enough for two men to walk abreast, the narrow passageways
+have been constructed from a dusky red brick.  Built into the southern
+wall are three shallow alcoves, each one set with an empty and tarnished
+copper sconce.  To the west the tunnel appears to widen, while to the
+east it continues as a narrow passageway into the darkness.
+~
+[Guin] Done.
+~
+167378948 11 5 0
+D1
+~
+~
+0 -1 1418 10 10 5
+D3
+~
+~
+0 -1 1428 10 10 5
+E
+dusky-red bricks~
+Made from clay, the bricks have been hardened and set into the walls to
+give them some extra support.  A thin line of mortar rests between each
+brick, holding them in place.
+~
+E
+alcoves copper sconce~
+Each of the alcoves has been framed with a white stone arch.  Inside the
+alcove, beaten copper sconces have been set.  Although covered in a light
+dusting of ash, there are no torches placed in the sconces.
+~
+E
+1 east~
+Towards the east there appears to be an intersection of tunnels, although
+the general gloom of the area makes exact details difficult to see from
+here.
+~
+E
+1 west~
+Westward, the narrow tunnel opens up into what appears to be a room of
+sorts.  An archway of bricks surrounds the entranceway.
+~
+A
+~
+~
+if( is_player( ch ) )
+  if( rflag( reset0, room ) ) {
+  if( random( 0, 2 ) == 1 )
+    remove_rflag( reset0, room );
+  mob = mob_in_room( 5501, find_room( 1463 ) );
+  if( mob )
+    transfer( mob, find_room( 1416 ) );
+  send_to_room( #rat, room );
+  loop( all_in_room ) {
+    if( !is_player( rch ) )
+      if( species( rch ) == 5501 )
+      if( num_mob( 5501, room ) > 2 ) {
+      victim = rand_player( room );
+      if( victim )
+        if( !is_mob( victim ) )
+        attack( rch, rand_player( room ), 2d4, "surprise attack" );
+    }
+  }
+  end;
+}
+send_to_room( #skitter, room );
+~
+E
+rat~
+@CA furry muck-covered rat scurries out from a hole in the wall to
+investigate the intruders.@n 
+~
+E
+skitter~
+@CA rat skitters away, narrowly avoiding being stepped on.@n
+~
+!
+1 0 63
+3228 17 1509949470 -2 0
+7893 17 1509949445 -2 0
+7089 17 1509949442 -2 0
+-1
+S
+
+#1428
+Ruined Hallway - Ancient Warrens~
+Slender blue stone pillars rise from the walls on either side of the long
+hall, adding support to the vaulted ceiling.  Hexagonal cobblestones cut
+from a blue-grey stone have been set in the floor, each edge perfectly
+aligned with its neighbour.  Across the walls are the remains of a
+fresco, most of the tiles faded or lost altogether.  An opening in the
+eastern wall leads into a narrow tunnel.  In the northern wall, an arch
+of dusky red bricks frames a blue stone door.
+~
+[Guin] Done.
+~
+167378948 11 5 0
+D0
+stone door~
+~
+131 -1 1429 10 10 5
+D1
+~
+~
+0 -1 1427 10 10 5
+E
+slender pillars vaulted ceiling~
+Slender columns stretch from floor to ceiling, their surface embossed
+with twisting vines of ivy.  At one point in time, the carvings were
+gilded, only a few glinting remains still trapped in the leaves' tips and
+vines' thorns.  The vaulted ceiling overhead looks smooth and unadorned.
+~
+E
+hexagonal cobblestones floor blue-grey~
+Each edge of the hexagonal-shaped cobblestones aligns perfectly with its
+neighbors, giving the floor an almost seamless finish.  The surface of
+the stones has been polished until it gleams.  In the center of each
+tile, a small cross has been engraved, perhaps the crafter's seal.
+~
+E
+fresco walls~
+A faded fresco spreads across the wall, just a few scenes from the
+once-grand picture still intact.  Several show tall-masted ships in
+stormy seas, while others depict a mass exodus of humanoids across a
+tortured landscape.  Most of the frescos are cracked and pale, their
+stories lost.
+~
+E
+1 north arch dusky red bricks~
+Framing the smooth grey stone door, an archway of red-colored bricks lies
+on the northern wall.  Its brightness in contrast with the stone of the
+door gives the grey rocks an almost opaque quality.
+~
+E
+1 east~
+Eastward, a narrow tunnel heads into the darkness.  The walls and floor
+are made from a red-colored brick, while the ceiling appears to be
+natural rock.
+~
+A
+~
+~
+if( is_player( ch ) )
+  if( rflag( reset0, room ) ) {
+  if( random( 0, 2 ) == 1 )
+    remove_rflag( reset0, room );
+  mob = mob_in_room( 5501, find_room( 1463 ) );
+  if( mob )
+    transfer( mob, find_room( 1416 ) );
+  send_to_room( #rat, room );
+  loop( all_in_room ) {
+    if( !is_player( rch ) )
+      if( species( rch ) == 5501 )
+      if( num_mob( 5501, room ) > 2 ) {
+      victim = rand_player( room );
+      if( victim )
+        if( !is_mob( victim ) )
+        attack( rch, rand_player( room ), 2d4, "surprise attack" );
+    }
+  }
+  end;
+}
+send_to_room( #skitter, room );
+~
+E
+rat~
+@CA furry muck-covered rat scurries out from a hole in the wall to
+investigate the intruders.@n 
+~
+E
+skitter~
+@CA rat skitters away, narrowly avoiding being stepped on.@n
+~
+!
+1 0 63
+3228 17 1509949470 -2 0
+7893 17 1509949445 -2 0
+7089 17 1509949442 -2 0
+-1
+S
+
+#1429
+Ancient Warrens - Circular Room~
+Around the walls of this circular chamber are brightly colored frescoes,
+undamaged from the years of neglect.  A shallow basin in the center of
+the room has been carved with reliefs of sea creatures and single masted
+ships, battling each other.  White stone cobbles surround the basin, each
+set with a star-shaped cluster of opaque gems.  Smooth stone doors in
+both the northern and southern walls lead out of the chamber.
+~
+[Guin] Done.
+~
+167378948 11 5 0
+D0
+stone door~
+~
+131 -1 1430 10 10 5
+D2
+stone door~
+~
+131 -1 1428 10 10 5
+E
+frescoes walls~
+Depicting various scenes from battles to ocean views, there seems to be
+no common theme for the frescoes.  In remarkably good condition, their
+beauty stands out amidst the squalor seen elsewhere in this wreck of a
+tunnel.  A few loose tiles are the only flaw in their surface.
+~
+E
+basin shallow~
+Raised up in the centre of the room, the basin is carved from a smooth
+pale grey stone.  The scene of a ship battle, surrounded by fantastic sea
+creatures, flows around its exterior.  A small drain hole lies centered
+in the shallow bowl.
+~
+E
+stone cobbles white~
+Surrounding the basin, white stone cobbles line the floor, creating an
+area just big enough to stand on.  Set into each stone is a cluster of
+gems, forming a five-pointed star pattern.
+~
+E
+star cluster opaque gems~
+Made from five different colored gems, each star is set in the centre of
+a cobblestone.  Mostly still intact, only a few gems are missing.  Either
+they are of little value or simply set too well to be pried loose.
+~
+A
+pry~
+gems star cluster~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 0, 2 ) == 1 ) {
+    i = random( 0, 2 );
+    if( i == 0 )
+      obj = oload( 1039 );
+    if( i == 1 )
+      obj = oload( 7544 );
+    if( i == 2 )
+      obj = oload( 1255 );
+    act_tochar( #get, ch, obj, mob );
+    act_notchar( #isget, ch, obj, mob );
+    obj_to_char( obj, ch );
+    remove_rflag( reset0, room );
+    end;
+  }
+}
+act_tochar( #noget, ch, obj, mob );
+act_notchar( #isnoget, ch, obj, mob );
+~
+E
+get~
+Chipping away at the setting of the gems, you manage to pry $p loose.
+~
+E
+isget~
+Chipping away at the setting of the gems, $n manages to pry $p loose.
+~
+E
+noget~
+The gems just won't budge. They are too firmly set.
+~
+E
+isnoget~
+After a few moments $n gives up on the gems.  They are too firmly set for
+$m to pry loose.
+~
+!
+0 0 0
+A
+search~
+wall frescoes tiles~
+i = random( 0, 3 );
+if( rflag( reset1, room ) ) {
+  if( i == 0 ) {
+    act_tochar( #spider, ch, obj, mob );
+    act_notchar( #isspider, ch, obj, mob );
+    poison( ch );
+    obj_to_char( oload( 81 ), ch );
+    remove_rflag( reset1, room );
+    end;
+    }
+  act_tochar( #trinket, ch, obj, mob );
+  act_notchar( #istrinket, ch, obj, mob );
+  if( random( 0, 2 ) == 0 )
+    obj_to_char( oload( 14 ), ch );
+  else
+    obj_to_char( oload( 3228 ), ch );
+  obj_to_char( oload( 81 ), ch );
+  remove_rflag( reset1, room );
+  end;
+  }
+act_tochar( #nuthun, ch, obj, mob );
+act_notchar( #istrinket, ch, obj, mob );
+~
+E
+spider~
+@MFeeling beneath the loose tiles, you feel a sharp pain.  Jumping back in
+surprise, you see a small furry spider scurry across the wall to another
+hiding place.@n
+~
+E
+isspider~
+@M$n inspects the walls closely, then suddenly leaps back in alarm.@n
+~
+E
+trinket~
+@mPoking around the loose tiles, you find something wrapped up in
+cobwebs.@n 
+~
+E
+istrinket~
+@m$n inspects the wall closely for a moment.@n
+~
+E
+nuthun~
+You can find nothing of interest on the wall.
+~
+!
+9 0 0
+3228 17 1509949470 -2 0
+7893 17 1509949445 -2 0
+7089 17 1509949442 -2 0
+5502 9 1509949540 3 0
+-1
+S
+
+#1430
+Ancient Warrens - Narrow Tunnel~
+A narrow tunnel, built from dusky red brick, heads in a easterly
+direction.  A semi-circular basin juts out from the western wall, filled
+to the lip with a clear liquid.  Along the northern wall are set five
+alcoves, each one containing an empty tarnished copper sconce.  A
+smooth-surfaced door, crafted of blue-grey stone, splits the wall to the
+south, offering entrance and exit in that direction.
+~
+[Eliza] Done.
+[Yrna] Done.
+~
+167378948 11 5 0
+D1
+~
+~
+0 -1 1424 10 10 5
+D2
+smooth stone door~
+~
+131 -1 1429 10 10 5
+E
+dusky-red bricks~
+Made for a vibrant red clay, the bricks have lost little depth of color
+in the many years they have been here.  A few cracks and chips are the
+only indication they were not newly-laid.
+~
+E
+alcoves copper sconce~
+Long unused, the copper sconces are a dull blue-green colour, a result of
+oxidation.  The alcoves where they rest show a light coating of dust, yet
+another sign of their neglect.
+~
+E
+south blue-grey door~
+Set into the brickwork of the southern wall, the blue-grey door appears
+very pale against the bold contrasting reds of the bricks.  Constructed
+from a smooth stone, the door gleams like polished marble.
+~
+E
+1 east~
+Straight and narrow, the tunnel leads eastwards into the gloom of the
+warrens.
+~
+A
+~
+~
+if( is_player( ch ) )
+  if( rflag( reset0, room ) ) {
+  if( random( 0, 2 ) == 1 )
+    remove_rflag( reset0, room );
+  mob = mob_in_room( 5501, find_room( 1463 ) );
+  if( mob )
+    transfer( mob, find_room( 1416 ) );
+  send_to_room( #rat, room );
+  loop( all_in_room ) {
+    if( !is_player( rch ) )
+      if( species( rch ) == 5501 )
+      if( num_mob( 5501, room ) > 2 ) {
+      victim = rand_player( room );
+      if( victim )
+        if( !is_mob( victim ) )
+        attack( rch, rand_player( room ), 2d4, "surprise attack" );
+    }
+  }
+  end;
+}
+send_to_room( #skitter, room );
+~
+E
+rat~
+@CA furry muck-covered rat scurries out from a hole in the wall to
+investigate the intruders.@n 
+~
+E
+skitter~
+@CA rat skitters away, narrowly avoiding being stepped on.@n
+~
+!
+1 0 63
+3228 17 1509949470 -2 0
+7893 17 1509949445 -2 0
+7089 17 1509949442 -2 0
+7894 17 1509949540 -2 0
+-1
+S
+
+#1431
+Flooded Tunnel~
+Slender stone pillars rise up from the flooded floor of the chamber to
+support the vaulted roof.  Swirling waters flow into the room from the
+north, and flow outward, most of the water heading toward the east.  A
+crudely painted rat skull adorns the arch above the western tunnel,
+perhaps a warning of dangers beyond.
+~
+[Eliza] Reviewed.
+[Yrna] Done.
+~
+167378948 13 5 0
+D0
+~
+~
+0 -1 1432 10 10 5
+D1
+~
+~
+0 -1 1410 10 10 5
+D2
+~
+~
+0 -1 1434 10 10 5
+D3
+~
+~
+0 -1 1433 10 10 5
+E
+stone pillars~
+Carved from a pale cream stone, the pillars seem vaguely out of place
+with the crudely finished walls of the room.  Elegantly carved across
+their surfaces are interwined vines, hung with bunches of grapes and
+serrated leaves.
+~
+E
+flooded floor~
+The muddy waters surge in from northern opening and lap against the stone
+pillars, before surging out the other three exits.
+~
+E
+swirling waters~
+Carrying debris and mud, the waters are a dull brown in coloration. 
+Without sunlight to add warmth, the waters are icy cold.
+~
+E
+rat skull arch~
+Painted with a dark red liquid -- perhaps blood -- the rat skull glares
+down from the archway's keystone.
+~
+E
+western tunnel~
+Westward, the flooded tunnel continues into the darkness, the sound of
+running water echoing through its dank halls.
+~
+E
+1 east~
+The thunderous sound of water floods in from the eastern tunnel.  The
+rocks and archway shudder slightly, as if something were pounding upon
+them.
+~
+A
+~
+~
+ch = rand_player( room );
+if( ch )
+act_tochar( #icky, ch, obj, mob );
+~
+E
+icky~
+@RSome mysterious object floats past, brushing against your leg.@n 
+~
+!
+2 150 0
+3228 17 1509949470 -2 0
+7893 17 1509949445 -2 0
+7089 17 1509949442 -2 0
+-1
+S
+
+#1432
+Flooded Tunnel~
+A surge of brackish liquid flows in from the north; over a foot in depth,
+it tugs and pulls at anything in its wake.  Overhead, the rocks of the
+tunnel have been braced by several very rusty iron beams. Bent and warped,
+they lack the strength they once possessed.  A dusting of purple-hued
+mold coats the dank walls, the air filled with a sweet-smelling hazy
+cloud.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 13 5 0
+D0
+~
+~
+0 -1 1436 10 10 5
+D2
+~
+~
+0 -1 1431 10 10 5
+E
+brackish liquid~
+Swirling around the floor, a foot high flow of a dark, viscous liquid
+drifts in from the north.
+~
+E
+rocks overhead iron beams~
+Large areas of rust cover the once-strong iron beams, supporting the
+rocky ceiling.  In places, the beams have been bent entirely out of place,
+needing only a strong shudder to bring down sections from above.  In
+others, the beams still look strong enough to take a lot of battering.
+~
+E
+1 south~
+Looking to the south, you notice the water is flowing in that direction,
+creating a slight swirling effect.
+~
+A
+~
+~
+i = random( 0, 1 );
+if( i == 0 )
+send_to_room( #creak, room );
+else
+send_to_room( #flow, room );
+~
+E
+creak~
+@rCreaking under the strain, the iron beams shift, showering you with rust
+and dirt.@n 
+~
+E
+flow~
+@BA huge chunk of ceiling gives way.  Narrowly missing you, it sends a
+wave through the water, soaking you.@n 
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@BYou almost lose your footing fighting against the steady stream of
+slime as you continue north.@n 
+~
+E
+to_room~
+@BStruggling against the oozing liquid, $n continues north.@n
+~
+!
+3 0 1
+3228 17 1509949470 -2 0
+7893 17 1509949445 -2 0
+7089 17 1509949442 -2 0
+199 9 1509949540 3 0
+-1
+S
+
+#1433
+Flooded Tunnel - Dry Stairs~
+The tunnel walls and ceiling have been hacked from the surrounding dark
+loam, leaving the occasional large stone exposed.  The floor of the
+tunnel is awash with muddy water that seems to swirl about, flowing in
+both directions at once.  Westward, stone steps lead up from the water,
+ending at a small balcony that looks over the passageway.  Eastward, the
+tunnel continues into the darkness.
+~
+[Guin] Done.
+~
+167378948 13 5 0
+D1
+~
+~
+0 -1 1431 10 10 5
+D3
+~
+~
+0 -1 1437 10 10 5
+E
+tunnel walls ceiling~
+The tunnel walls and ceiling are that of stone, moisture seeping through
+in different areas.
+~
+E
+floor muddy water~
+Lack of fresh air has made the waters stale and old, leaving the floors
+beneath to slowly erode away.
+~
+E
+balcony~
+A small balcony has been formed into the rocks overlooking the tunnel.
+Perhaps you could see more of the area if you were at a higher level.
+~
+E
+west~
+A short flight of stairs leads out of the water logged tunnel, a gloomy
+tunnel continuing onward.
+~
+E
+1 east~
+As you peer down the tunnel to the east, you can see nothing but the
+blackness that currently surrounds you.
+~
+A
+~
+~
+continue;
+~
+E
+to_room~
+@C$n climbs up the short flight of stairs onto drier ground.@n
+~
+E
+to_char~
+@CYou climb up the short flight of stairs onto drier ground.@n
+~
+!
+3 0 8
+3228 17 1509949470 -2 0
+7893 17 1509949445 -2 0
+7089 17 1509949442 -2 0
+199 9 1509949540 3 0
+595 9 1509949540 3 0
+-1
+S
+
+#1434
+Flooded Tunnel - Deep Pool~
+A raised walkway surrounds a wide sinkhole in the middle of the tunnel. 
+Seven alcoves, approximately the size of an average human have been
+carved into the surrounding walls.  In the four facing the northern
+tunnel are small stone statues of what appear to be mutated rats...the
+other three are empty.  Brackish water swirls in from the northern
+opening, forming a slow moving whirlpool as it drains down into the
+sinkhole.
+~
+[Yrna] Done.
+[Guin] Room is no.mob probably to prevent mobs from wandering to the floor below.
+[Guin] Done.
+~
+167378956 13 5 0
+D0
+~
+~
+0 -1 1431 10 10 5
+D5
+~
+~
+0 -1 1435 10 10 5
+E
+raised walkway wide sinkhole~
+A walkway of mud-covered stone circles the chamber, its surface just
+inches above a wide sinkhole of similar shape centered here.
+~
+E
+alcoves walls stone statues rats~
+Situated more or less evenly around the chamber, seven roughly square
+alcoves have been carved into the walls.  Four of the niches hold crude
+statues of strange, bipedal rats wielding a variety of weapons.  One
+holds the corpse of a dead rat.  The other three of the alcoves are
+currently empty.
+~
+E
+whirlpool~
+Fed by the rush of water swirling in from the north, the whirlpool is
+half full of none to clean water that slowly drains through a large hole
+in the floor of the chamber.
+~
+A
+~
+~
+send_to_room( #water, room );
+~
+E
+water~
+@yA loud sucking sound echoes through the chamber as the whirlpool
+momentarily forms a vortex.@n 
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CYou manage to slither through the hole in the center of the chamber,
+leading down.@n 
+~
+E
+to_room~
+@c$n manages to slither through the hole in the center of the chamber, leading down.@n
+~
+!
+3 0 32
+3228 17 1509949470 -2 0
+7893 17 1509949445 -2 0
+7089 17 1509949442 -2 0
+-1
+S
+
+#1435
+Deep Pool~
+The bottom of the sinkhole is covered in a lattice of cracks, allowing
+the water to drain out and prevent the entire cave system from flooding. 
+A faint glow emanates from tiny seams of crystals that pocket the walls.
+The current at the bottom stirs up a sediment that turns the water a
+dusky-red color.
+~
+[Guin] Done.
+~
+167378948 7 5 0
+D4
+~
+~
+0 -1 1434 10 10 5
+E
+cracks bottom~
+Underfoot the sinkhole is stands several feet underwater.  There are
+myriad cracks that allow the water to seep slowly from the room,
+preventing flooding.
+~
+A
+~
+bottom cracks~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  i = random( 0, 9 );
+  if( i < 6 )
+    obj = oload( 12 );
+  if( i < 3 )
+    obj = oload( 14 );
+  if( i == 0 )
+    obj = oload( 2 );
+  if( obj ) {
+    act_tochar( #get, ch, obj, mob );
+    obj_to_char( obj, ch );
+    }
+  else
+    act_tochar( #none, ch, obj, mob );
+  }
+else
+  act_tochar( #none, ch, obj, mob );
+~
+E
+get~
+Wedged in one of the cracks you find $p!
+~
+E
+none~
+You find nothing but silt in the cracks.
+~
+!
+9 0 0
+A
+~
+~
+send_to_room( #rush, room );
+~
+E
+rush~
+@BThe water swirls about you, the @ysilt@n @Band@n @ysediment@n
+@Bblocking your vision.  You're not sure you know which way is up.@n 
+~
+!
+2 500 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CYou manage to climb up and out of the sinkhole.@n
+~
+E
+to_room~
+@C$n manages to climb up and out of the sinkhole.@n
+~
+!
+3 0 16
+5036 9 1509949540 3 0
+5036 9 1509949515 3 0
+5036 9 1509949490 3 0
+-1
+S
+
+#1436
+Flooded Tunnel - Rubble Filled Dead End~
+A huge cave-in has sealed the passageway to the north with mounds of
+stone and rubble.  From under the stones, a muddy river of dark liquid
+flows, flooding the corridor in over a foot of water.  Small alcoves in
+the east and west wall hold copper bowls; each have been filled with a
+foul-smelling viscous yellow liquid.
+~
+[Guin] Done.
+[Zuig] Looking at this ooze reminds you at home! - Should be reminds you of home
+~
+167378948 13 5 0
+D2
+~
+~
+0 -1 1432 10 10 5
+E
+north passageway stone rubble~
+The pile of water soaked rock and debris blocking your way north seems to
+have been here for some time.  Algae grow abundantly near the waterline. 
+Though it looks fairly solid, there are some gaps large enough to push
+your hand into.
+~
+A
+~
+wall rubble rocks gaps~
+act_notchar( #issearch, ch, obj, mob );
+act_tochar( #search, ch, obj, mob );
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_room( #leech, ch, obj, mob );
+  mload( 421, room );
+  i = random( 0, 1 );
+  if( i == 0 )
+    mload( 421, room );
+  else {
+    mload( 421, room );
+    mload( 421, room );
+    }
+  }
+~
+E
+issearch~
+@C$n sticks $s arm into a crevice in the rocks, feeling around for
+anything of interest.@n 
+~
+E
+search~
+@CYou stick your arm into a crevice in the rocks, feeling around for
+something interesting.@n 
+~
+E
+leech~
+@yDisturbed from their hiding place, several huge leeches wriggle out into
+the cave.@n 
+~
+!
+9 0 0
+A
+dig clear~
+rubble rock mounds stone~
+act_tochar( #no, ch, obj );
+act_notchar( #rno, ch, obj );
+~
+E
+no~
+@CTry as you might, you are unable to clear the mounds of stone and
+rubble.@n 
+~
+E
+rno~
+@CYou watch $n as $e struggles to clear the rubble pile against the
+northern wall without much success.@n 
+~
+!
+0 0 0
+A
+~
+~
+if( is_sleeping( ch ) || is_resting( ch ) || is_fighting( ch ) )
+  end;
+if( race( rch ) == troll ) {
+  act_tochar( #troll, rch, obj );
+  act_notchar( #rtroll, rch, obj, mob, sight );
+}
+elseif( race( rch ) == gnome ) {
+  act_tochar( #gnome, rch, obj );
+  act_notchar( #rgnome, rch, obj, mob, sight );
+}
+elseif( race( rch ) == goblin ) {
+  act_tochar( #goblin, rch, obj );
+  act_notchar( #rgoblin, rch, obj, mob, sight );
+}
+elseif( race( rch ) == vyan ) {
+  act_tochar( #elfling, rch, obj );
+  act_notchar( #relfling, rch, obj, mob, sight );
+}
+elseif( race( rch ) == elf ) {
+  act_tochar( #elfling, rch, obj );
+  act_notchar( #relfling, rch, obj, mob, sight );
+}
+elseif( race( rch ) == halfling ) {
+  act_tochar( #halfling, rch, obj );
+  act_notchar( #rhalfling, rch, obj, mob, sight );
+}
+elseif( race( rch ) == human ) {
+  act_tochar( #human, rch, obj );
+  act_notchar( #rhuman, rch, obj, mob, sight );
+}
+elseif( race( rch ) == ogre ) {
+  act_tochar( #ogre, rch, obj );
+  act_notchar( #rogre, rch, obj, mob, sight );
+}
+elseif( race( rch ) == orc ) {
+  act_tochar( #orc, rch, obj );
+  act_notchar( #rorc, rch, obj, mob, sight );
+}
+elseif( race( rch ) == ent ) {
+  act_tochar( #ent, rch, obj );
+  act_notchar( #rent, rch, obj, mob, sight );
+}
+else {
+  act_notchar( "$n leaves south.", rch, obj, mob, sight );
+act_tochar( "@RYou splash south.@n", rch, obj );
+}
+transfer( rch, find_room( 1432 ) );
+~
+E
+troll~
+@yYou can't eat it - you ignore it! You wade south.@n
+~
+E
+rtroll~
+@yThe muddy water is obviously inedible because $n ignores it and wades
+south.@n 
+~
+E
+gnome~
+@GTaking advantage of your light weight, speed and agility, you manage to
+virtually skip over the top of the gunge as you scamper toward the
+clearer water.@n 
+~
+E
+rgnome~
+@G$n seems to almost levitate as $e scampers south across the gunge.@n 
+~
+E
+goblin~
+@MLooking at this ooze reminds you at home!  With a happy cry you jump
+into the stream and splash your way south.@n 
+~
+E
+rgoblin~
+@M$n gives a happy cry and starts splashing the thick ooze covering
+everyone in stinking dropplets!@n 
+~
+E
+elfling~
+@BTrying to touch as little as possible and really wishing that you could
+fly, you gingerly pick your way south.@n 
+~
+E
+relfling~
+@BWith a look on $s face like $e has just swallowed a lemon, $n makes $s
+way south trying to touch as little of the muck as possible.@n 
+~
+E
+halfling~
+@CYou start to walk south but the current soon sweeps you off your feet
+and you float the rest of the way on your back.@n 
+~
+E
+rhalfling~
+@C$n starts heading south, but the current is too strong for $s little
+legs and $e is soon swept of $s feet and end up floating down the ooze on
+$s back.@n
+~
+E
+human~
+@gIf the water was any thicker, you could cross it with snowshoes, but it
+isn't, so you just splash your way south.@n 
+~
+E
+rhuman~
+@gWith a resigned look on $s face, $n squelches southward.@n
+~
+E
+ogre~
+@YIf there something to fight in the ooze, it would be halfway
+interesting.  If there was something to eat in there, it would be better
+still.  As there isn't, you head south in search of lunch.@n 
+~
+E
+rogre~
+@Y$n gazes morosely at the water for several moments, then sighs and
+splashes $s way south.@n 
+~
+E
+orc~
+@RMuttering under your breath about having to do goblin's work, you
+splash your way south.@n 
+~
+E
+rorc~
+@RWhilst muttering something about doing a goblin's job, $n makes $s way
+south.@n 
+~
+E
+ent~
+@cBetter water than fire, you think to yourself as you splash your way
+through the ooze.@n 
+~
+E
+rent~
+@cWith a philosophical look upon $s face, $n splashes southward.@n
+~
+!
+0 0 0
+A
+~
+~
+rch = ch;
+acode( room, 3 );
+loop( followers ) {
+  acode( room, 3 );
+}
+~
+!
+3 0 4
+3228 17 1509949470 -2 0
+7893 17 1509949445 -2 0
+7089 17 1509949442 -2 0
+-1
+S
+
+#1437
+Earthen Tunnel~
+A semi-circular balcony looks over a flooded corridor to the east. 
+Leading down from the balcony is a short flight of stairs, the steps worn
+smooth from long years of use.  To the west, the earthen tunnel continues
+into the darkness.  Against the southern wall, a grime-covered tarp
+covers a collection of broken boxes, a fine accumulation of mildew
+blanketing it all.
+~
+[Guin] Reviewed
+[Morros] Done.
+[Guin] Done.
+~
+167378948 11 5 0
+D1
+~
+~
+0 -1 1433 10 10 5
+D3
+~
+~
+0 -1 1439 10 10 5
+E
+balcony corridor~
+The polished stone balcony allows a fine view of the water-soaked tunnels
+that meander eastwards, the view allowing a guard to spot approaching
+danger.
+~
+E
+stairs steps~
+The stone steps lead to the more dry tunnels to the west, a remnant of
+an ancient city. They are mostly clear of the grime and mud that coats
+the natural caves.
+~
+E
+tarp boxes~
+A half-rotted filthy tarpaulin covers a collection of boxes in various
+states of destruction.  A layer of black, musty mildew covers everything
+in the pile.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CYou climb down the short flight of stairs, taking a sharp breath as you
+step into the cool waters.@n
+~
+E
+to_room~
+@C$n climbs down the short flight of stairs, taking a sharp breath as $e
+steps into the cool waters.@n
+~
+!
+3 0 2
+A
+~
+tarp boxes~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  i = random( 1, 50 );
+  if( i == 1 ) {
+    obj_to_char( oload( 16 ), ch );
+    act_tochar( #coin, ch, obj, mob, sight );
+    act_notchar( #coin2, ch, obj, mob, sight );
+  }
+  else if( i > 25 ) {
+    obj_to_char( oload( 3228 ), ch );
+    act_tochar( #poop, ch, obj, mob, sight );
+    act_notchar( #poop2, ch, obj, mob, sight );
+  }
+  else {
+    act_tochar( #nada, ch, obj, mob, sight );
+  }
+}
+else {
+  act_tochar( #again, ch, obj, mob, sight );
+}
+~
+E
+coin~
+@CAfter carefully searching through the collection of boxes, you have
+found a platinum coin.@n 
+~
+E
+coin2~
+@CMoments after searching the covered boxes, $n pockets something.@n
+
+~
+E
+poop~
+@cReaching into the dark-filled box, you scoop up a handful of
+droppings.@n 
+~
+E
+poop2~
+@c$n scoops up something as he searches through the boxes.@n 
+~
+E
+nada~
+You find nothing interesting.
+~
+E
+again~
+How much more do you want to search it?
+~
+!
+9 0 0
+3228 17 1509949470 -2 0
+7893 17 1509949445 -2 0
+7089 17 1509949442 -2 0
+-1
+S
+
+#1438
+Ancient Warrens - Caved-In Tunnel~
+This small pocket of space is all that remains of the passageway that
+once ran in an east-west direction.  Slabs of rock have cascaded down,
+burying everything in their wake under tons of rubble.  Overhead, the
+roof is cracked and split, dangerously unstable.  Scratch marks cover the
+northern wall, where something has attempted to claw their way through
+the stone.
+~
+[Guin] Done.
+~
+167378948 11 5 0
+D1
+~
+~
+2446 -1 1407 10 10 5
+E
+slab rock rubble~
+Tons of rocks and earth have caved in, filling most of the tunnel.  The
+gnome-sized space remaining has an unpleasant feel about it, as if the
+roof were waiting to seal the gap with the unstable rocks overhead.
+~
+E
+roof cracked split~
+Unstable-looking, the cracks cover the roof in a lattice of fine lines. 
+Dust trickles from the cracks, reducing visibility and making breathing
+labourous.
+~
+A
+dig clear~
+1 east rock earth~
+if( is_open( room, west ) == 1 )
+  act_tochar( #already, ch, obj, mob );
+else {
+  act_tochar( #dig, ch, obj, mob );
+  act_notchar( #isdig, ch, obj, mob );
+  wait( 2 );
+  act_room( #last, ch, obj, mob );
+  open( room, west );
+  }
+~
+E
+already~
+Someone has already cleared most of the rubble.
+~
+E
+dig~
+Getting down on your hands and knees, you pry away at the loose rubble.
+~
+E
+isdig~
+Getting down on $s hands and knees, $n tries to shift the loose rubble.
+~
+E
+last~
+One last rock rolls from the pile blocking the east tunnel, causing a
+miniature landslide which reveals a corridor beyond.
+~
+!
+0 0 0
+A
+~
+~
+send_to_room( #rock, room );
+~
+E
+rock~
+@YA pebble falls from the cavern's ceiling adding to the pile of rubble
+already here.@n 
+~
+!
+2 150 0
+3228 17 1509949470 -2 0
+7089 17 1509949445 -2 0
+7893 17 1509949442 -2 0
+3087 49 1509949540 -2 0
+14 81 1509949540 -2 0
+2 81 1509949465 -2 0
+2 81 1509949450 -2 0
+12 81 1509949540 -2 0
+-1
+S
+
+#1439
+Earthen Tunnel~
+The narrow earthen tunnel continues to wind through the darkness.  The
+hard-packed floor shows signs of untold numbers of clawed feet scrabbling
+over it.  Dull light flickers from fading oil lamps that have been set
+into the walls.  Overhead, a latticework of ropes and half-rotted nets
+has been stretched, held in place with all manner of sharp sticks, iron
+pegs and an occasional spearhead.  Boxes and narrow barrels, as well as
+countless iron scraps and cast-offs have been tucked into the webbing,
+forming an unstable-looking storage area.  In the southern wall, a narrow
+wooden door has been set, while the twisting corridors disappear into the
+darkness in all other directions.
+~
+[Guin] Add search boxes/barrels here for item 379
+[Guin] Reviewed.
+[Morros] Done.
+~
+167378948 11 5 0
+D0
+~
+~
+0 -1 1440 10 10 5
+D1
+~
+~
+0 -1 1437 10 10 5
+D2
+small wooden door~
+~
+131 -1 1442 5 10 5
+D3
+~
+~
+0 -1 1441 10 10 5
+E
+tunnel floor feet~
+Drizzled with water, the floor is slick and muddy.
+~
+E
+light lamps walls~
+The dented lanterns send a spluttering illumination across the floor,
+some of their shutters cracked and missing.
+~
+E
+ropes nets sticks pegs spearhead~
+Stout rope entangles the spear heads to form a dubiously balanced
+collection of junk.
+~
+E
+boxes barrels scraps webbing~
+Apparently one person's junk is clearly anothers treasure; the cast-offs
+of broken boxes, barrels and scrap metal have been carefully stowed away
+behind the tangle of netting.
+~
+A
+~
+~
+send_to_room( #flicker, room );
+~
+E
+flicker~
+@RShadows play across the floor as the oil lamps threaten to go out
+completely.@n 
+~
+!
+2 250 0
+A
+~
+boxes barrels~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 20 ) == 1 ) {
+    obj_to_char( oload( 379 ), ch );
+    act_tochar( #find, ch, obj, mob, sight );
+    act_notchar( #find2, ch, obj, mob, sight );
+  }
+  else {
+    act_tochar( #nada, ch, obj, mob, sight );
+  }
+}
+else {
+  act_tochar( #again, ch, obj, mob, sight );
+}
+~
+E
+find~
+@CAfter searching through the storage, you find an old, wooden shaft.@n 
+~
+E
+find2~
+$n searches through the storage and finds something.
+~
+E
+nada~
+@CYou search through the storage, but find nothing interesting.@n 
+~
+E
+again~
+How much more do you want to search it?
+~
+!
+9 0 0
+-1
+S
+
+#1440
+Small Chamber~
+Several mounds of rotted sacking and canvas tarps lie spread over the
+dirt floor.  Bits of broken boxes, beds and scraps of other shattered
+furniture have been piled up against the walls, several of the stacks
+spilling out across the floor.  Dirty-red fungi sprout on several of the
+more decayed mounds, their caps shimmering with a speckled coat of
+moisture, as if someone had recently watered them.  The sickly-sweet
+smell of decay fills the air.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 5 0
+D2
+~
+~
+0 -1 1439 10 10 5
+E
+rotting sacking canvas tarps~
+The stench of decay hangs about the rotting tarps, a vague fish-smell
+oozes from the seeping cloth.  A fine collection of fungi spreads across
+the sodden canvas.
+~
+E
+dirt floor~
+The hard packed earth is covered with debris and rat prints, a few of the
+rodent tracks indicating sizable creatures.
+~
+E
+scraps furniture walls~
+Bits of broken beds, tables and chairs have been piled together into
+mounds of rotting wood.  The brightly capped fungi flourish upon the
+decaying timber.
+~
+E
+fungi fungus mound~
+Mounds of brightly-capped fungi spread across the dank room, their fleshy
+roots eating at the decaying wood and cloth.
+~
+A
+~
+mounds rotting sacking canvas tarps~
+act_tochar( #no, ch, obj, mob );
+~
+E
+no~
+There is nothing here but, decaying and discarded junk.
+~
+!
+9 0 0
+595 9 1509949540 3 0
+-1
+S
+
+#1441
+Sleeping Chamber~
+Rotting bundles of sacking and poorly cured animal skins cover the floor. 
+Scraps of woollen clothing and tattered rags line small holes that have
+been chewed into the mounds, forming foul smelling nests.  A few wooden
+crates have been stacked in the center of the chamber, a ragged sheet
+partialy covering them.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 5 0
+D0
+~
+~
+0 -1 1444 10 10 5
+D1
+~
+~
+0 -1 1439 10 10 5
+D3
+~
+~
+0 -1 1443 10 10 5
+E
+rotting bundles sacking animal skins~
+The uncured hides have become maggot infested, the squirming pale
+creatures oozing through the dripping flesh and skins.
+~
+E
+scraps woollen clothing tattered rags~
+The refuse tip of clothing and rotting rags offers a home to a scuttling
+community of rodents.
+~
+E
+crates sheet~
+The stacked crates have been draped with a dirty yellow sheet, a crude
+stickman drawn in charcoal across its surface.  Dagger marks cover the
+crates and sheet where something has used the drawing as target practice.
+~
+A
+~
+~
+send_to_room( #echo, room );
+~
+E
+echo~
+@GThe sounds of activity somewhere in the tunnel network echo through the
+chamber.@n 
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gWith some difficulty, you squeeze past the pile of crates blocking your
+way and continue $T.@n 
+~
+E
+to_room~
+@gYou watch as $n squeezes past the pile of crates, heading $T.@n
+~
+!
+3 0 9
+287 17 1509949540 -2 0
+-1
+S
+
+#1442
+Narrow Passageway - Before A Small Door~
+Running parallel along the eastern and western walls of the oblong
+chamber are narrow shelves formed from the natural rock.  Their smooth
+surface shows no hint of a tool cut, suggesting that somehow the shelves
+were formed by other means.  Filling the shelves to almost overflowing
+are tins, boxes, crates and a crammed jumble of vases and crockery, all
+shoved in without any semblance of care or apparent order.  Set in the
+northern and southern walls are plain wooden doors, their hinges rusting
+in the damp conditions.
+~
+[Guin] Done.
+~
+167378948 11 5 0
+D0
+small wooden door~
+~
+131 -1 1439 10 10 5
+D2
+wooden door~
+~
+131 -1 1448 10 10 5
+E
+narrow shelves natural rock~
+The narrow shelves have been hewn from the caverns wall, an impressive
+collection of junk fills them to the brink of overflowing.
+~
+E
+tins boxes crates vases crockery~
+Broken, dented and empty boxes and crates fill the shelves, most appears
+to be little more than junk.
+~
+E
+wooden doors hinges rusting~
+The miss-matched doors have been set roughly into the stone walls, the
+wood warped and damaged a clear indication of its second-hand nature.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou continue along the narrow passageway to the $T.
+~
+E
+to_room~
+@y$n continues along the narrow passageway to the $T.@n
+~
+!
+3 0 5
+A
+~
+shelves boxes tins crates vases crockery~
+act_tochar( #toobad, ch, obj );
+act_notchar( #rtoobad, ch, obj, mob, sight );
+~
+E
+toobad~
+@YAfter an extensive search, you are confident the shelves contain
+nothing but junk.@n 
+~
+E
+rtoobad~
+@Y$n searches through piles of junk on the shelves.  You can only hope
+this won't last the whole day!@n 
+~
+!
+9 0 0
+595 9 1509949540 3 0
+595 9 1509949540 3 0
+-1
+S
+
+#1443
+Earthen Tunnel~
+The damp earthen tunnel winds through the darkness, dipping and rising as
+it passes from east to west.  Clumps of loam lie piled in several places,
+perhaps markers or the beginnings of new tunnels.  Overhead, moldy ropes
+and nets have been strung across the ceiling, torn beyond much use; at
+one point in time, they may have added some support to the low roof.
+~
+[Yrna] Done.
+[Guin] Done.
+[Virt] after look net, the desc contains the misspelled word "carfted"
+~
+167378948 11 5 0
+D1
+~
+~
+0 -1 1441 10 10 5
+D3
+~
+~
+0 -1 1445 10 10 5
+E
+clumps loam markers tunnels~
+Apparently dug from the soft earth that layers between the rocks, the
+clumps are unremarkable and not entirely usefull.
+~
+E
+ropes nets~
+The netting has been carfted from hemp ropes, a few look like they have
+been borrowed from a boat.
+~
+A
+~
+~
+send_to_room( #rat, room );
+~
+E
+rat~
+@CSqueeking and sniffing at the air, a sewer rat clambers across an
+overhead rope.@n 
+~
+!
+2 250 0
+-1
+S
+
+#1444
+Cluttered Chamber~
+Every available space in the room has been filled with a clutter of
+boxes, chests and even the ruined remains of wagons and small carts.  A
+narrow path weaves through the stacks and mounds allowing passage onwards
+to the south or west.  Against the southern wall rotting grain sacks have
+been stacked, their contents spilling across the area.
+~
+[Guin] Done.
+~
+167378948 11 5 0
+D2
+~
+~
+0 -1 1441 10 10 5
+D3
+~
+~
+0 -1 1447 10 10 5
+E
+boxes chests wagons carts~
+The ill-gotten loot of a previous raid or two, the broken wagons have
+been badly damaged in either a fight or in moving them here.  The rough
+wood crates have been lashed together with hemp rope, the ends frayed.
+~
+E
+sacks~
+A half dozen mouldy grain sacks were dropped here, some splitting open
+when they fell, others being gnawed open by the local rodent population. 
+The grain, spilled across floor haphazardly, is rotting and foul smelling.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yWeaving your way through the clutter, you head $T.@n
+~
+E
+to_room~
+@yWeaving $s way through the clutter, $n heads $T.@n
+~
+!
+3 0 12
+A
+~
+clutter boxes chests remains wagons carts stacks mounds~
+act_notchar( #issearch, ch, obj, mob );
+act_tochar( #search, ch, obj, mob );
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  wait( 1 );
+  if( random( 0, 4 ) ) {
+    i = random( 0, 4 );
+    if( i == 0 )
+      obj = oload( 7204 );
+    if( i == 1 )
+      obj = oload( 3007 );
+    if( i == 2 )
+      obj = oload( 3001 );
+    if( i == 3 )
+      obj = oload( 3033 );
+    if( i == 4 )
+      obj = oload( 3016 );
+    act_notchar( #isfind, ch, obj, mob );
+    act_tochar( #find, ch, obj, mob );
+    obj_to_char( obj, ch );
+    }
+  else {
+    act_tochar( #none, ch, obj, mob );
+    act_notchar( #isnone, ch, obj, mob );
+    }
+  }
+else {
+  act_notchar( #isnone, ch, obj, mob );
+  act_tochar( #none, ch, obj, mob );
+  }
+~
+E
+issearch~
+@y$n pokes around amongst the mass of decaying supplies, searching for
+anything useful.@n 
+~
+E
+search~
+@yYou pokes around amongst the mass of decaying supplies, searching for
+anything useful.@n 
+~
+E
+isfind~
+@yAfter several moments, $n emerges from the scattered debris having
+found $p.@n 
+~
+E
+find~
+@yAfter several moments searching, you are rewarded with finding $p!@n 
+~
+E
+none~
+@yDespite cracking open several chests and overturning crates, you fail
+to find anything useful.@n 
+~
+E
+isnone~
+@yAfter several moments searching, $n comes up empty handed.@n
+~
+!
+9 0 0
+-1
+S
+
+#1445
+Earthen Tunnel~
+The tunnel ends abruptly at a solid-looking wall of rock.  A glimmering
+vein of quartz runs down the middle of the western wall, some of the
+larger crystals flecked with a purple-hued ore.  Peppering the walls and
+floor are deep scratch marks, where the tunnel's builders have searched
+for a way around the rocky impasse.  Some strange looking shadows appear
+on the wall to the south.
+~
+[Guin] Done.
+~
+167378948 11 5 0
+D1
+~
+~
+0 -1 1443 10 10 5
+D2
+mud-covered door~
+~
+2187 -1 1446 10 10 5
+E
+quartz crystals ore~
+On examination, the tiny purple crystals are buried quite deeply inside
+the quartz.  They glint with the light.  In places, the quartz is a tad
+loose.
+~
+E
+scratch marks rocky impasse wall rock~
+The outcropping has been smashed and chipped with a heavy implement, the
+quartz scarred.  Deep cracks have been chiselled into the crystal,
+particularly towards the left side.
+~
+E
+east~
+The tunnel winds into darkness, the occasional outcrop of rock jutting
+from the earthern walls.
+~
+E
+south~
+The southern wall is caked with cracked mud.  A scattering of dry dirt
+has been trampled into the dirt floor before it.  A faint seam runs
+around the stonework, perhaps allowing the determined a way onwards to
+the south.
+~
+E
+1 south shadow~
+The shadows on the southern wall turn out to be a rectangular shaped
+crack and an indentation in the shape of a handprint.
+~
+A
+~
+vein crystal quartz west~
+if( rflag( reset0, room ) ) {
+  act_tochar( #search, ch, obj, mob, sight );
+  act_notchar( #issearch, ch, obj, mob, sight );
+  }
+else
+  act_tochar( #no, ch, obj, mob, sight );
+~
+E
+search~
+@CUpon closer inspection, you see that one of the crystals appears to be
+loose.@n 
+~
+E
+issearch~
+@C$n leans closer, inspecting the wall.@n
+~
+E
+no~
+@cThe wall looks solid, it doesn't appear as if any of the crystals could
+easily be removed.@n
+~
+!
+9 0 0
+A
+get take pry~
+crystal loose quartz purple~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 0, 9 ) == 0 ) {
+    act_tochar( #get, ch, obj, mob );
+    act_notchar( #isget, ch, obj, mob );
+    obj_to_char( oload( 7065 ), ch );
+  }
+  else
+    act_tochar( #no, ch, obj, mob );
+}
+else
+  act_tochar( #no, ch, obj, mob );
+~
+E
+get~
+@eYou manage to pry one of the loose crystals from the wall.@n 
+~
+E
+isget~
+@e$n manages to pry one of the loose crystals from the wall.@n 
+~
+E
+no~
+The crystal vein is solid, you cannot seem to free any.
+~
+!
+0 0 0
+A
+~
+1 wall south~
+if( random( 0, 5 ) < find_skill( ch, searching ) ) {
+  act_tochar( #reveal, ch, obj, mob );
+  act_notchar( #isreveal, ch, obj, mob );
+  show( ch, room, south );
+  }
+else {
+  act_tochar( #no, ch, obj, mob );
+  act_notchar( #isreveal, ch, obj, mob );
+  }
+~
+E
+reveal~
+@yCloser inspection reveals a rectangular shaped crack running through the
+south wall, and a hand-sized indentation that could be used as a
+handle.@n 
+~
+E
+isreveal~
+@c$n moves closer and stares intently at the south wall for a moment, as
+if searching for something.@n 
+~
+E
+no~
+Whatever you are looking for, searching for it results in nothing
+interesting.
+~
+!
+9 0 0
+5044 9 1509949540 3 0
+5112 9 1509949540 3 0
+-1
+S
+
+#1446
+Stone Chamber~
+Water trickles down the sides of this rough stone chamber, draining away
+through a small crack in the southern wall.  A head-high pile of rocks
+and mud form a barricade to the north, preventing passage in that
+direction.  Beside the door are two alcoves, in each a beaten copper oil
+lamp, their wicks spluttering out a faint light in the damp conditions. 
+The eastern wall is made from packed earth, an archway has been set with
+a rotting wooden door.
+~
+[Guin] Done.
+~
+167378948 11 5 0
+D0
+wooden door~
+~
+2187 -1 1445 10 10 5
+D1
+wooden door~
+~
+407 -1 1456 10 10 5
+E
+water crack~
+A grime covered crack, shallow and drenched in water.  The slow erosion
+around the edges continues as the water runs down its face.  Inside the
+crack, a metallic object glints dully, the approximate shape of a chain
+or large iron cable.
+~
+E
+1 north pile rock mud~
+A pile of rock and mud lies stacked against the northern wall.  It seems
+to be a loose collection of debris and might be moveable.
+~
+A
+pull yank~
+chain cord~
+if( mob_in_room( 149, room ) ) {
+  act_room( #crone, ch, obj, mob, sight );
+  end;
+}
+if( is_open( room, east ) )
+  act_tochar( #silly, ch, obj );
+else {
+  act_tochar( #pull, ch, obj, mob );
+  act_notchar( #ispull, ch, obj, mob, sight );
+  open( room, east );
+  act_room( #open, ch, obj, mob, sight );
+}
+~
+E
+pull~
+@GYou pull the chain, you hear a faint click.@n
+
+~
+E
+ispull~
+@G$n fiddles with something inside a crack in the wall.@n
+~
+E
+open~
+@GThe wooden door to the east opens with a loud creak.@n
+~
+E
+silly~
+@RYou can stop tugging at the chain now, the door to the east is already
+open.@n 
+~
+E
+crone~
+@MThe ratkin crone steps infront of you, pushing the dead mouse in your
+face threateningly.@n 
+~
+!
+0 0 0
+A
+bash~
+rotting wooden east~
+if( find_stat( ch, str ) > random( 12, 25 ) ) {
+  open( room, east );
+  act_tochar( #bash, ch, obj, mob );
+  act_notchar( #isbash, ch, obj, mob );
+  transfer( ch, find_room( 1456 ) );
+  act_notchar( #enter, ch, obj, mob );
+  }
+else {
+  act_tochar( #fail, ch, obj, mob );
+  act_notchar( #isfail, ch, obj, mob );
+  position( ch, 6 );
+  }
+~
+E
+bash~
+@RTaking a short run up you charge shoulder first into the door, flinging
+it open.@n 
+~
+E
+isbash~
+@RTaking a short run up $n charges headlong into the door, nearly taking
+it off its hinges as it flies open.@n 
+~
+E
+fail~
+@RTaking a short run up you charge shoulder first into the door, but
+bounce off.@ 
+~
+E
+isfail~
+@RTaking a short run up $n charges headlong into the door, with a
+sickening thud $e bounces off.@n 
+~
+E
+enter~
+@CThe wooden door flies open and $n charges into the room.@n 
+~
+!
+0 0 0
+A
+~
+~
+send_to_room( #water, room );
+~
+E
+water~
+@BWater trickles through the crack in the southern wall.@n 
+~
+!
+2 150 0
+A
+~
+1 north rock mud~
+if( random( 0, 5 ) < find_skill( ch, searching ) ) {
+  act_tochar( #door, ch, obj );
+  act_notchar( #rdoor, ch, obj, mob, sight );
+  show( ch, room, north );
+}
+else {
+act_tochar( #no, ch, obj );
+act_notchar( #rdoor, ch, obj, mob, sight );
+}
+~
+E
+door~
+@g Running your fingers along the northern wall, you find that portion of
+it looks movable.@n 
+~
+E
+rdoor~
+@g$n runs $s fingers down the northern wall, as if searching for
+something.@n 
+~
+E
+no~
+@cWhatever it was you think you noticed, you can't find it any more.@n
+~
+!
+9 0 0
+149 9 1509949540 3 0
+-1
+S
+
+#1447
+Small Storage Room~
+The smell of old herbs and unrelenting damp fill the air of the room.  At
+one stage, it looks as if it was used for storage or even as a cloakroom. 
+Now, it stores little more than dust.  Several wooden racks line the
+western wall, covered in a thick mantle of dust; they appear to hold
+little more than rags.  A sturdy bookcase stands to the north, the
+tattered remnants of paper and the half-rotted spines of several books
+all that remain on its shelves now.  An opening in the eastern wall leads
+out of the room.
+~
+[Guin] Done.
+~
+167378948 11 5 0
+D1
+~
+~
+0 -1 1444 10 10 5
+E
+wooden racks wall dust rags~
+The wooden racks run the entire length of the western wall, their
+surfaces coated in a half-inch thick layer of dust.  The wood at one
+point was polished and well kept, although now it appears that mildew and
+moisture have got the better of it.  A few musty rags lie in crumpled
+heaps along the racks, the material disintegrating slowly as the years
+pass by.
+~
+E
+bookcase paper books~
+This bookcase appears to be made from the sturdy, dark trees that thrive
+in the raven wood nearby.  Many knots riddle the slats that create the
+shelves of the ebon-hued bookcase.  Yellowed pieces of paper lie in
+haphazard heaps, many jammed between the slowly decaying covers of
+ancient books.  Some of the spines are still partially intact and the
+faint names imprinted upon the disintegrating leather are barely
+discernible.
+~
+A
+~
+~
+send_to_room( #wiff, room );
+~
+E
+wiff~
+@YThe stench of rot and decay is almost overpowering, filling the space
+of the chamber.@n 
+~
+!
+2 150 0
+A
+~
+wooden racks west rags~
+act_tochar( #no, ch, obj, mob );
+~
+E
+no~
+Despite your enthusiasm, there doesn't seem to be anything but useless
+rags.
+~
+!
+9 0 0
+A
+~
+sturdy bookcase north paper spines books~
+act_tochar( #no, ch, obj, mob );
+~
+E
+no~
+Half-rotted pages and moldy spines are all that remain in the bookcase.
+~
+!
+9 0 0
+595 9 1509949540 3 0
+-1
+S
+
+#1448
+Wide Stone Chamber~
+The stone chamber's roof is low and slightly curved so that it is lower
+at the walls than in the center of the room.  The faint remains of
+paintings cover the walls; water damaged and peeling, their details are
+now lost.  Set into each wall is a small door; the southern one crafted
+from grey stone, whilst the others have been built from wood.
+~
+[Yrna] Done.
+[Guin] Done.
+[Guin] Done.
+~
+167378948 11 5 0
+D0
+wooden door~
+north door~
+131 -1 1442 10 10 5
+D1
+wooden door~
+east door~
+131 -1 1449 10 10 5
+D2
+stone door~
+~
+131 -1 1451 10 10 5
+D3
+wooden door~
+west door~
+131 -1 1450 10 10 5
+E
+paintings~
+Although most of their details have been obscured by water damage and
+time, a closer inspection shows many were paints of great war ships
+battling with sea monsters.
+~
+A
+~
+~
+i = random( 0, 1 );
+ch = rand_player( room );
+if( ch ) {
+  if( i == 0 ) {
+    if( mob_in_room( 5163, find_room( 1450 ) ) ) {
+      act_room( #shake, ch, obj, mob, sight );
+    }
+  }
+  else {
+    if( mob_in_room( 5134, find_room( 1451 ) ) ) {
+      act_room( #squeak, ch, obj, mob, sight );
+    }
+  }
+}
+~
+E
+shake~
+@RYou hear a strange rattling noise and high-pitched chanting coming from
+the west.@n
+~
+E
+squeak~
+@MYou hear angry sounding high-pitched barks coming from the south.@n
+~
+!
+2 200 0
+A
+~
+~
+open( find_room( 1448 ), east );
+open( find_room( 1448 ), west );
+open( find_room( 1448 ), south );
+open( find_room( 1448 ), north );
+~
+!
+0 0 0
+5112 9 1509949540 3 0
+5112 9 1509949540 3 0
+-1
+S
+
+#1449
+Circular Room~
+The chamber has been hacked from the natural rock of the cavern; its
+finish is quite smooth, leaving only a few jagged cracks and ridges in an
+otherwise smooth surface.  Around the rising walls, shallow niches have
+been carved with beaten copper bowls affixed to them.  Filled with oil, a
+thin taper burns from each one, illuminating the room.  A plain wooden
+door in the western wall leads from the room.
+~
+[Azerin] vyan theif/mage here, lounging about as the "adviser to the chief"
+[Guin] Possibly a trainer at some point.
+[Guin] Done.
+~
+167378948 11 5 0
+D3
+wooden door~
+~
+131 -1 1448 10 10 5
+E
+jagged cracks ridges~
+Caused by the moving earth, the cracks drip a minute volume of scummy
+water down the rocks.
+~
+E
+niches copper bowls oil taper~
+Shallow niches, hacked into the walls at random intervals, hold tarnished
+copper bowls filled with oil that provide dim, flickering light to the
+room.
+~
+A
+~
+~
+send_to_room( #flick, room );
+~
+E
+flick~
+@RThe flickering flames reflect a copper-hued light from their bowls
+across the room.@n 
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CYou duck through the low doorway into the room beyond.@n
+~
+E
+to_room~
+@C$n ducks through the low doorway into the room beyond.@n
+~
+!
+3 0 8
+5111 9 1509949540 3 0
+-1
+S
+
+#1450
+Shrine Room~
+A wash of blood-red stain covers the rough walls of this long chamber. 
+On the western wall a wooden wagon wheel has been attached by iron
+bands, held fast with heavy spikes.  Hanging from the wheel is the
+remains of a humanoid, so badly decomposed, its exact race is difficult
+to tell.  At the base of the wheel, a small white stone has been placed,
+clear of any mark or stain.  The stench of decay hangs heavy on the air. 
+A small wooden door set in the east wall leads out of the room.
+~
+[Guin] Altar Evil.
+~
+167379076 11 5 0
+D1
+wooden door~
+~
+131 -1 1448 10 10 5
+E
+remains humanoid~
+The heavy stench of decay hangs in the air, surrounding the decomposing
+corpse.  Such is the decay that the exact species is unclear; perhaps its
+human or, at the very least humanoid.  Rusted iron spikes through each
+wrist pin the carcass to the wooden wheel.  The stain of dried blood
+spills across the floor underneath the corpse.
+~
+E
+white stone altar~
+The cube of white stone has been carved with the face of grinning rats,
+the stone scrubbed clean of any dirt or grime.
+~
+A
+~
+~
+send_to_room( #smell, room );
+~
+E
+smell~
+@gThe horrible stench of decay wafts up from the corpse strapped to the
+wheel.@n 
+~
+!
+2 150 0
+A
+move touch~
+altar white stone~
+if( !rflag( reset0, room ) ) {
+  act_room( #noise, ch, obj, mob, sight );
+  end;
+}
+remove_rflag( reset0, room );
+mload( 2282, room );
+act_room( #noise, ch, obj, mob, sight );
+act_room( #rise, ch, obj, mob, sight );
+~
+E
+rise~
+@RThe room fills with smoke and, within smoke, a strange creature
+appears!@n 
+
+@RThe deformed rat waves the mist around and squeeks in a tiny voice:@n
+@C"You will pay for desecrating my altar!"@n 
+~
+E
+noise~
+@RStrange squeeking sound echoes through the room.@n
+~
+!
+9 0 0
+5163 9 1509949540 3 0
+-1
+S
+
+#1451
+Stone Chamber~
+Though bare, this chamber could accommodate a wagon with ease; however in
+its current state it barely has enough room to fit a small pony.  Boxes
+and crates have been piled into a crude throne against the western wall. 
+A rotting tarp, bundles of broken, grime-covered wooden wheels and split
+barrels lie scattered against the eastern wall, interspersed with tangled
+netting and a few bits of smooth driftwood.  Propped against the southern
+corner is an ornate door, its ironwork now badly rusted.  A strong smell
+of rotting fish fills the air.  Set in the northern wall is a stone door,
+whilst to the south a stone passageway continues into the darkness.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 5 0
+D0
+stone door~
+~
+131 -1 1448 10 10 5
+D2
+~
+~
+0 -1 1452 10 10 5
+E
+throne boxes crates barrels~
+Boxes and crates have been lashed together and draped with soiled cloth
+to form a mound that only a rodent would find appealing.  The half-gnawed
+remains of pickled fish lie scattered about it.
+~
+E
+ornate door~
+The door appears to have been stolen from a fine house, the twisted
+remains of its hinges making it impossible to reattach without some work. 
+A lion-headed knocker juts from the ironwork, its details blured by dirt
+and rust.
+~
+A
+~
+~
+send_to_room( #river, room );
+~
+E
+river~
+@BThe faint sound of rushing water echos through the caverns from the
+south.@n 
+~
+!
+2 250 0
+A
+~
+throne boxes crates barrels netting~
+if( rflag( reset0, room ) ){
+  remove_rflag( reset0, room );
+  act_tochar( #jump, ch, obj );
+  act_notchar( #rjump, ch, obj, mob, sight );
+  mload( 199, room );
+}
+else
+  act_tochar( #nomore, ch, obj );
+~
+E
+jump~
+@RPoking around the boxes and crates, you seem to have disturbed their
+occupant.@n 
+~
+E
+rjump~
+@RRummaging through boxes and crates, $n has disturbed something!@n
+~
+E
+nomore~
+@yThere is nothing left to search here.@n
+~
+!
+9 0 0
+5134 9 1509949540 3 0
+5112 9 1509949540 3 0
+-1
+S
+
+#1452
+End of the Stone Corridor~
+A short stone corridor heads northward and opens into a wagon-sized
+chamber.  To the east, the passageway becomes increasingly natural.  The
+stones have a marbled finish to them, slick and smooth; they look as if
+water once flowed through here.  A few columns of rock form further to
+the east as the passage opens up into a cavern and ends at an
+underground river.
+~
+[Guin] Done.
+~
+167378956 11 5 0
+D0
+~
+~
+0 -1 1451 10 10 5
+D1
+~
+~
+0 -1 1453 10 10 5
+E
+cavern underground river~
+Stygian waters surge through the dark, dragging with it earth, rock and
+anything unfortunate to fall within its reach.  As the river tumbles
+through the eastern cavern it sends tremors through the rocks.
+~
+A
+~
+~
+send_to_room( #river, room );
+~
+E
+river~
+@BThe sound of rushing water echos loudly through the chamber.@n 
+~
+!
+2 150 0
+-1
+S
+
+#1453
+Before An Underground River~
+The smooth walls and floor of the cavern have been created by years of
+flowing water, leaving them with a marbled appearance.  Stretching
+eastward, a small stony beach spreads out toward an underground river. 
+Thrust into the stones before the river is a long rusted iron pole. 
+Through a loop at the top of the pole, a grime-covered rope has been tied. 
+At the base of the pole, another rope in similar condition has been
+attached; both ropes disappear across the river, forming a crude bridge. 
+A narrow corridor heads west, two stone columns flanking the opening.
+~
+[Azerin] Acode to cross the rope bridge, if you fall you go to 1454
+[Guin] Done.
+~
+167378948 11 5 0
+D1
+~
+~
+0 -1 1454 10 10 5
+D3
+~
+~
+0 -1 1452 10 10 5
+E
+smooth walls floor flowing water marbled~
+Pounded smooth by the passing waters, the walls have a greenish tinge to
+their basically grey surface.  The dampness has encouraged the growth of
+fungi on the walls, whilst the ceiling lights itself in a myriad of
+blinking rays.  On closer inspection the lights blink out completely with
+only a winged bug in their wake.
+~
+E
+iron pole~
+The rust-coated pole has been bent and warped by use, a rope affixed to
+its top forms the base of a crude bridge.
+~
+A
+~
+~
+act_tochar( #no, ch, obj, mob );
+~
+E
+no~
+@BPerhaps you should cross the bridge.  It would be safer.@n
+~
+!
+3 0 2
+A
+cross~
+bridge east~
+act_tochar( #leave, ch, obj, mob );
+act_notchar( #isleave, ch, obj, mob, sight );
+if( random( 0, 14 ) < find_stat( ch, dex ) ) {
+  transfer( ch, find_room( 1455 ) );
+  act_notchar( #enter, ch, obj, mob, sight );
+}
+else {
+  act_tochar( #fall, ch, obj, mob );
+  transfer( ch, find_room( 1454 ) );
+  act_notchar( #enter2, ch, obj, mob, sight );
+}
+~
+E
+leave~
+@YYou step onto the bridge, carefully making your way across.@n 
+~
+E
+isleave~
+@Y$n steps onto the bridge, carefully making $s way across.@n
+~
+E
+enter~
+@Y$n steps off the bridge onto the riverbank.@n 
+~
+E
+fall~
+@RHalfway across you overbalance, tumbling into the river!@n 
+~
+E
+enter2~
+@R$n plunges into the river headfirst.@n 
+~
+!
+0 0 0
+A
+dive swim~
+river 1 east~
+act_tochar( #dive, ch, obj, mob );
+act_notchar( #isdive, ch, obj, mob );
+transfer( ch, find_room( 1454 ) );
+act_notchar( #enter, ch, obj, mob );
+~
+E
+dive~
+@BYou take a deep breath and dive into the river.@n
+~
+E
+isdive~
+@B$n dives headlong into the river.@n
+~
+E
+enter~
+@R$n plunges into the water headfirst.@n
+~
+!
+0 0 0
+A
+~
+~
+act_notchar( #enter, ch, obj, mob );
+~
+E
+enter~
+@b$n climbs up the bank, soaked to the bone.@n
+~
+!
+1 0 2
+A
+~
+~
+send_to_room( #sway, room );
+~
+E
+sway~
+@yThe rope bridge sways slightly, taken by some phantom breeze.@n 
+~
+!
+2 150 0
+-1
+S
+
+#1454
+An Underground River~
+The swirling dark waters of the underground river churn through a tunnel
+which has been carved out by the river's earlier incarnations.  Flowing
+from the west, it continues speeding along eastward toward an unknown
+destination.  Under the black wash, rocks and hidden whirlpools snag and
+tear at anything that passes within their grasp.
+~
+[Azerin] crossing the rope bridge acode takes you to 1453 if a person
+falls into the river then they arrive here 
+[Guin] Done.
+~
+167378948 8 9 0
+D1
+~
+~
+0 -1 1455 10 10 5
+D3
+~
+~
+0 -1 1453 10 10 5
+E
+swirling dark waters churn speeding~
+Even through the gloom of the tunnel, the water is perceivably murky, full
+of whatever silt and debris it could pick up on its surging journey.
+~
+E
+1 west~
+The source of the torrent, the view to the west is obscured by the gloom
+of the tunnel and the haze produced by the roiling water.
+~
+E
+1 east~
+As far as the eye can see the torrent continues on it's thunderous way,
+hiding it's destination in a fog of mist.
+~
+A
+~
+~
+send_to_room( #river, room );
+~
+E
+river~
+@BThe waters rush by, threatening to wash you away.@n
+~
+!
+2 200 0
+A
+~
+~
+act_tochar( #leave, ch, obj, mob );
+act_notchar( #isleave, ch, obj, mob );
+continue;
+~
+E
+leave~
+@yYou drag youself up out of the water onto the bank.@n
+~
+E
+isleave~
+@y$n drags $sself up out of the water onto the bank.@n
+~
+!
+3 0 10
+A
+~
+~
+i = 1d6;
+loop( all_in_room ) {
+  act_tochar( #oops, rch, obj );
+  dam_message( rch, i, "The jagged rock" );
+  inflict( rch, mob, i, "the jagged rock" );
+}
+~
+E
+oops~
+@BFighting the swirling waters, you get caught in a whirpool and thrown
+against a sharp rock.@n 
+~
+!
+2 200 0
+-1
+S
+
+#1455
+Pebble beach - Before An Underground River~
+The riverbank is covered in countless small stones and drifts of sand,
+dredged up by the river flowing from the west.  A jagged crevice in the
+eastern wall of the cavern appears to open out into natural caves. 
+Thrust into the stone beside the riverbank is a long rusty iron pole. 
+Wrapped around the pole and tied with a looping knot is an old, grimey
+rope; another rope in similar condition has been attached to a loop of
+metal at the top of the pole.  Both ropes stretch across the river,
+barely clearing its surface, forming a very crude bridge.
+~
+[Guin] Done.
+~
+167247876 11 9 0
+D3
+~
+~
+0 -1 1454 10 10 5
+E
+riverbank stones sand~
+Golden sand mixes with smooth pebbles to form a cresent-shaped riverbank. 
+The surging waters of the river send foamy waves across it in a slow
+rythm.
+~
+E
+jagged crevice natural caves~
+Shifting rocks in the far wall have created a small cave-in, leaving a
+crevice.  Barely half a foot wide and less than an arm span in length,
+the gap appears to have a tunnel beyond it.  Filled with shadows, the
+tunnel heads in a north and south direction.  Toward the north, it
+appears to open out into another cave; however, there is no apparent way
+to reach the tunnel from here.
+~
+E
+long rusty iron pole~
+Thrust through the sand and rock, the rusty iron pole is over six feet in
+length and a handspan wide.  Rust and grime coat its surface, leaving it
+with an brittle appearance.  The top of the spike ends in an iron loop,
+into which a waterlogged rope has been fastened.  Another rope has been
+attached to the base of the spike, tied with a large knot.  Both ropes
+stretch westwards across the river, forming a basic rope bridge.
+~
+E
+crude bridge grime-covered rope~
+The wet, grime-covered ropes run parallel to each other, the bottom rope
+barely clearing the river.
+~
+E
+west~
+Beyond the sandy riverbank stretch the dark waters of the swirling river. 
+Two sender ropes span the water, disappearing into the gloom that
+envelopes the opposite side of the river, hiding it from sight.
+~
+A
+cross~
+bridge west~
+act_tochar( #leave, ch, obj, mob );
+act_notchar( #isleave, ch, obj, mob );
+if( random( 0, 16 ) < find_stat( ch, dex ) ) {
+transfer( ch, find_room( 1453 ) );
+  act_notchar( #enter, ch, obj, mob );
+  }
+else {
+  act_tochar( #fall, ch, obj, mob );
+  transfer( ch, find_room( 1454 ) );
+  act_notchar( #enter2, ch, obj, mob );
+  }
+~
+E
+leave~
+@YYou step onto the bridge, carefully making your way across.@n
+~
+E
+isleave~
+@Y$n steps onto the bridge, carefully making $s way across.@n
+~
+E
+enter~
+@Y$n steps off the bridge onto the stone-like beach.@n
+~
+E
+fall~
+@RHalfway across you overbalance, tumbling into the river!@n
+~
+E
+enter2~
+@R$n plunges into the river head first.@n
+~
+!
+0 0 0
+A
+dive swim~
+river 1 west~
+act_tochar( #dive, ch, obj, mob );
+act_notchar( #isdive, ch, obj, mob );
+transfer( ch, find_room( 1454 ) );
+act_notchar( #enter, ch, obj, mob );
+~
+E
+dive~
+@BYou take a deep breath and dive into the river.@n
+~
+E
+isdive~
+@B$n dives headlong into the river.@n
+~
+E
+enter~
+@R$n plunges into the water head first.@n
+~
+!
+0 0 0
+A
+~
+~
+act_tochar( #no, ch, obj, mob );
+~
+E
+no~
+@BPerhaps you should use the bridge. It would be safer.@n
+~
+!
+3 0 8
+A
+~
+~
+act_notchar( #enter, ch, obj, mob );
+~
+E
+enter~
+@b$n climbs up the bank, soaked to the bone.@n
+~
+!
+1 0 8
+A
+~
+~
+send_to_room( #wave, room );
+~
+E
+wave~
+@BThe surging river laps against the shore, the sound of it somehow
+peaceful.@n 
+~
+!
+2 150 0
+A
+~
+jagged crevice~
+i = random( 0, 10 );
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( i < 6 )
+    obj = oload( 78 );
+  else if( i < 9 )
+    obj = oload( 189 );
+  else
+    obj = oload( 7545 );
+}
+if( obj ) {
+  if( vnum( obj ) != 7545 )
+    act_tochar( #bah, ch, obj );
+  else {
+    act_tochar( #yay, ch, obj );
+    act_notchar( #rbah, ch, obj, mob, sight );
+  }
+  obj_to_char( obj, ch );
+}
+else
+  act_tochar( #no, ch, obj );
+~
+E
+bah~
+@YThe hope of finding a gem quickly fades as you search the crevice
+finding only $p.  Must have been a trick of light.@n 
+~
+E
+rbah~
+@Y$n feels around the crevice, greedy look in $s eyes.@n
+~
+E
+yay~
+@GAll that glitters isn't gold - sometimes it's a gem!@n
+~
+E
+no~
+@yWhatever you thought you saw, it's not there any more.@n
+~
+!
+9 0 0
+A
+~
+~
+send_to_room( #glint, room );
+~
+E
+glint~
+@CA faint glimmer in the crevice catches your eye.@n
+~
+!
+2 200 0
+78 17 1509949540 -2 0
+-1
+S
+
+#1456
+Hidden Room~
+Only the size of a cloak room, the walls and floor here are rough and
+unfinished.  A solid stone slab sits in the center of the diminutive
+chamber, dragged here for some unknown reason.  A door set into the
+earthen wall to the west leads out of the chamber, although its hinges
+are so rusted that they might be hard to open.  A rusty-looking chain
+hangs from a hole in the ceiling near the old door.
+~
+[Guin] Done
+~
+167378948 11 5 0
+D3
+wooden door~
+~
+407 -1 1446 10 10 5
+E
+walls floor~
+Cut from the hard earth, the walls and floor, have been left bare and
+unadorned.  Across the hard-packed floor, a lattice of fine cracks run,
+their source a heavy-looking slab of rock that has been dragged into the
+center of the room.  Set into the western wall is a rusted and decrepit
+door, held into the frames by corroding hinges.
+~
+E
+stone slab dragged~
+Grooves in the earthern floor show where the stone has been dragged to
+its final resting spot.  Around the flat slab, a lattice of fine cracks
+spreads out, as if the ground underneath the slab was unsound.  The rock
+itself has been cut from a dirty yellow stone, oddly out of place in the
+muddy room.
+~
+E
+door hinges rusted~
+Woodworms and dry-rot eat away at the planks of the door, leaving it in
+poor condition.  The hinges have been set into a stone arch, built
+directly into the earthern west wall.  Decrepit and rusty, the hinges
+look as if they might break with any movement of the door.
+~
+E
+1 west~
+Set into the earthern wall is a rotting wooden door.  Framing the door is
+a rough stone arch, chisel marks and scratches covering its surface.
+~
+E
+chain~
+An old, rusty-looking chain hangs from a hole in the ceiling right by the
+old door.
+~
+A
+bash~
+rotting wooden door west~
+if( find_stat( ch, str ) > random( 3, 30 ) ) {
+  open( room, east );
+  act_tochar( #bash, ch, obj, mob );
+  act_notchar( #isbash, ch, obj, mob );
+  transfer( ch, find_room( 1446 ) );
+  act_notchar( #enter, ch, obj, mob );
+  }
+else {
+  act_tochar( #fail, ch, obj, mob );
+  act_notchar( #isfail, ch, obj, mob );
+  position( ch, 6 );
+  }
+~
+E
+bash~
+@RTaking a short run up, you charge shoulder first into the door,
+flinging it open.@n 
+~
+E
+isbash~
+@RTaking a short run up, $n charges headlong into the door, nearly taking
+it off its hinges as it flies open.@n 
+~
+E
+fail~
+@RTaking a short run up, you charge shoulder first into the door, but
+bounce off.@ 
+~
+E
+isfail~
+@RTaking a short run up, $n charges headlong into the door; with a
+sickening thud, $e bounces off.@n 
+~
+E
+enter~
+@CThe wooden door flies open and $n charges into the room.@n 
+~
+!
+0 0 0
+A
+drag move~
+stone slab~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  i = random( 0, 15 );
+  if( i < 5 )
+    obj = oload( 1598 );
+  elseif( i < 8 )
+    obj = oload( 78 );
+  elseif( i < 11 )
+    obj = oload( 79 );
+  elseif( i < 13 )
+    obj = oload( 81 );
+  elseif( i < 15 )
+    obj = oload( 246 );
+  else
+    obj = oload( 189 );
+  act_tochar( #find, ch, obj );
+  obj_to_room( obj, room );
+  act_notchar( #rfind, ch, obj, mob, sight );
+}
+else {
+  act_tochar( #back, ch, obj );
+}
+~
+E
+find~
+@GYou move the stone slab revealing $p lying underneath.@n
+~
+E
+rfind~
+@G$n moves a stone slab and finds something hidden under it.@n
+~
+E
+back~
+@gYou think about moving the slab back to where you find it, but it would
+be a pointless exercise.@n 
+~
+!
+0 0 0
+A
+pull yank~
+chain cord~
+if( is_open( room, west ) )
+  act_tochar( #silly, ch, obj );
+else {
+  act_tochar( #pull, ch, obj, mob );
+  act_notchar( #rpull, ch, obj, mob, sight );
+  open( room, west );
+  act_room( #open, ch, obj, mob, sight );
+}
+~
+E
+pull~
+@CYou pull the chain, you hear a faint click.@n
+~
+E
+rpull~
+@CYou hear a faint click as $n tugs at the chain.@n
+~
+E
+open~
+@CThe wooden door creaks loudly as is swings open.@n
+~
+E
+silly~
+@RYou can let go of the chain now, the wooden door to the west is wide
+open.@n 
+~
+!
+0 0 0
+2561 49 1509949540 -2 0
+1598 81 1509949490 -2 0
+690 81 1509949445 -2 0
+16 81 1509949448 -2 0
+2 81 1509949460 -2 0
+2 81 1509949455 -2 0
+2 81 1509949455 -2 0
+5112 9 1509949540 3 0
+-1
+S
+
+#1457
+Damp Earthen Tunnel~
+Dripping tendrils of some viscous liquid run down the oozing mud walls,
+the low ceiling is hung with the roots of dead trees and festooned with
+broken bits of animal bones.  Splintered sections of wagon wheels, spear
+shafts and the occasional block of stone has been forged into the walls,
+in a effort to prevent the tunnel from collapsing.  Rotting fir needles
+lie in piles across the mud-churned floor, the earthy aroma of decay
+filling the air.
+~
+[Guin] Done.
+~
+167378948 11 9 0
+D0
+~
+~
+0 -1 1458 10 10 5
+D2
+~
+~
+0 -1 1401 10 10 5
+E
+wall wagon wheel spear shaft block stone~
+Extremely unstable, the tunnel's creators have used any and all manner of
+tools and debris to prevent the tunnel from collapsing.
+~
+E
+floor fir needle~
+Scattered across the floor in haphazard piles, the pine needles only
+contribute to the air of desolation in the narrow confines of the tunnel.
+~
+A
+~
+~
+if( is_player( ch ) ) {
+  act_tochar( #debris, ch );
+  act_notchar( #rdebris, ch, obj, mob, sight );
+}
+continue;
+~
+E
+debris~
+@gShuffling through the debris, you make your way south.@n
+~
+E
+rdebris~
+@gShuffling through the debris, $n makes $s way south.@n
+~
+!
+3 0 4
+A
+~
+~
+send_to_room( #wjunk, room, sight );
+~
+E
+wjunk~
+@CA ray of light hits the wall, creating a glittering reflection.@n 
+~
+!
+2 150 0
+A
+~
+wall~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #lcoin, ch, obj );
+  act_notchar( #lcoin2, ch, obj, mob, sight );
+  wait( 1 );
+  if( random( 1, 3 ) == 2 ) {
+    obj = oload( 14 );
+    act_tochar( #lcoin4, ch, obj );
+    act_notchar( #lcoin3, ch, obj, mob, sight );
+    obj_to_char( obj, ch );
+  }
+  else {
+    act_tochar( #lcoin5, ch, obj );
+    act_notchar( #lcoin6, ch, obj, mob, sight );
+  }
+}
+else
+  act_tochar( #lcoin7, ch, obj );
+~
+E
+lcoin~
+@cYou begin searching through the dirt of the wall for anything of
+interest.@n 
+~
+E
+lcoin2~
+@c$n sticks $s hands in the dirt of the wall, digging for anything of
+interest.@n 
+~
+E
+lcoin4~
+@cAfter moments of digging, you have found a@n @Csilver coin@c.@n
+~
+E
+lcoin3~
+@cAfter several moments, $n finds something and pockets it.@n
+~
+E
+lcoin5~
+@cAfter a few moments of searching, you come up empty handed.@n
+~
+E
+lcoin6~
+@cAfter several moments of searching, $n gives up.@n
+~
+E
+lcoin7~
+@cThe dirt has already been thoroughly searched.@n
+~
+!
+9 0 0
+-1
+S
+
+#1458
+Damp Earthen Tunnel~
+The dank, muddy tunnel ends at a stone wall; an opening in its side
+allows access to the debris-littered chamber beyond.  The array of old
+planks, branches and netting cover the walls around the stonework; a few
+iron pitons hammered directly into the rocks have been hung with battered
+lanterns.  Southward, the mud-soaked tunnel winds into the darkness, the
+stench of decay hanging in the air.
+~
+[Guin] Done.
+~
+167378948 11 9 0
+D0
+~
+~
+0 -1 1459 10 10 5
+D2
+~
+~
+0 -1 1457 10 10 5
+E
+wall plank branch netting stonework~
+The dirt walls are jammed tight with every available tool, creating a
+make ship support for them.  Still, the ground underfoot is blanketed
+with dirt and gravel, the loosely packed dirt escaping from the bracing
+tools.
+~
+E
+piton lantern~
+A battered, heavy braid rope dangles from the pitons, supporting a rusted
+brass lantern that flickers briefly, as if struggling to stay alight.
+~
+A
+~
+wall wagon planks branches netting~
+act_tochar( #junk, ch, obj );
+act_notchar( #junk2, ch, obj, mob, sight );
+~
+E
+junk~
+@cYou search along the walls but find nothing of interest.@n
+~
+E
+junk2~
+@c$n searches along the walls but finds nothing of interest.@n
+~
+!
+9 0 0
+A
+~
+~
+send_to_room( #lant, room, sight );
+~
+E
+lant~
+@cThe lantern flickers briefly, struggling to stay alive.@n
+~
+!
+2 150 0
+A
+~
+~
+if( is_player( ch ) ) {
+  act_tochar( #debris, ch );
+  act_notchar( #rdebris, ch, obj, mob, sight );
+}
+continue;
+~
+E
+debris~
+@gMaking your way through the debris, you contine southward through the
+ruins.@n 
+~
+E
+rdebris~
+@gAs $n struggles through the debris, $e continues southward through the
+ruins.@n 
+~
+!
+3 0 4
+A
+~
+~
+if( is_player( ch ) ) {
+act_tochar( #debris, ch );
+act_notchar( #rdebris, ch, obj, mob, sight );
+}
+continue;
+~
+E
+debris~
+@gContinuing northward, you nearly trip over the rubble and debris.@n 
+~
+E
+rdebris~
+@gAs $n continues northward, $n nearly trips over the scattered debris.@n
+~
+!
+3 0 1
+-1
+S
+
+#1459
+Under the Ruined City~
+The circular chamber has been constructed of slabs of stone; the roof, a
+tangled conglomeration of beams and rock, barely holds from the building
+above's collapse.  Shattered pillars and debris cover the floor creating
+a sizeable mound of earth and stone that blocks the northern section of
+the room.  The stonework in the southern wall has been pried apart and a
+dank tunnel leading into the darkness lies beyond.  A spiral staircase
+descends from the center of the room; the steps, crumbling from age, are
+covered in broken masonry.
+~
+[Guin] Done.
+~
+167378948 11 9 0
+D2
+~
+~
+0 -1 1458 10 10 5
+D5
+~
+~
+0 -1 1460 10 10 5
+E
+floor debris 1 north pillar~
+The floor is coated with debris and rocks that have fallen from the
+ceiling.  The pillars, shattered and deteriorated from age, bar any
+travel to the north.
+~
+E
+1 down spiral staircase step~
+The spiral staircase, astonishingly enough, holds together and makes its
+way down to the floor below.  Each of the stone steps in covered in rock
+and rubble and looks like its ready to give way at any moment.
+~
+A
+~
+~
+if( is_player( ch ) ) {
+act_tochar( #steps, ch );
+act_notchar( #rsteps, ch, obj, mob, sight );
+}
+continue;
+~
+E
+steps~
+@gHopping from step to broken step to avoid the fallen rock and debris,
+you make your way down the spiral staircase.@n 
+~
+E
+rsteps~
+@g$n makes $s way down the staircase, springing from one step to another
+to avoid the rock and fallen debris.@n 
+~
+!
+3 0 32
+A
+poke~
+~
+send_to_room( #fallrock, room, sight );
+wait( 3 );
+send_to_room( #fallrock2, room, sight );
+wait( 1 );
+rch = rand_player( room );
+if( rch )
+  if( !is_mob( rch ) )
+  if( find_stat( rch, dex ) < 14 ) {
+  act_tochar( #fallrock3, rch, obj, mob, sight );
+  act_notchar( #fallrock4, rch, obj, mob, sight );
+  damage( mob, rch, 2d4, physical, "falling rock", "a falling rock" );
+}
+else {
+  act_tochar( #fallrock5, rch, obj, mob, sight );
+  act_notchar( #fallrock6, rch, obj, mob, sight );
+}
+~
+E
+fallrock~
+@CA faint cracking noise echoes in the distance.@n
+~
+E
+fallrock2~
+@CThe cracking noise grows louder and then abrubtly ends with a
+*pop*.@n 
+~
+E
+fallrock3~
+@gYou look up and to your dismay, a fist-sized rock comes crashing down
+on you.@n 
+~
+E
+fallrock4~
+@gA fist-sized rock comes crashing down from the ceiling, landing on top
+of $n.@n 
+~
+E
+fallrock5~
+@gMoving swiftly, you dodge the falling rock.@n
+~
+E
+fallrock6~
+@g$n reacts quickly and the falling rock misses $m.@n
+~
+!
+2 150 0
+374 9 1509949540 3 0
+-1
+S
+
+#1460
+Under the Ruined City - Spiral Staircase~
+Rocks and broken wooden beams partially block the stairwell, covering the
+decaying, stone stairs to create a slow journey in either direction. 
+Clumps of lichen spread over the walls, giving it a mottled coloration. 
+The stone stair risers become increasingly rubble-filled, the steps
+buried beneath the sea of stone.  The descending stairs appear to end
+a few quick jumps later; a massive cave-in blocks the way.  Hacked from
+the northern wall is a narrow tunnel, allowing further travels under the
+city.
+~
+[Guin] Done.
+[Virt] look stair in this room returns a desc with the msispelled word "abrubtly"
+~
+167378948 11 9 0
+D0
+~
+~
+0 -1 1461 10 10 5
+D4
+~
+~
+0 -1 1459 10 10 5
+E
+stair rock beam~
+The stairs, both descending and ascending, are painted with rubble and
+debris, making it difficult to travel along them.  The stairs abrubtly end
+with a cave-in; enormous, compressed boulders conceal the path below.
+~
+E
+wall lichen mottled~
+The color of the lichen varies from gray to green and even, in places,
+nearly white, creating a patchwork appearance within the starkness of the
+room.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gWeaving through the fallen rock and debris, you make your way up the
+ruins of the spiral staircase.@n 
+~
+E
+to_room~
+@g$n weaves through the rocky debris, finally making an ascent up the
+spiral stairway@n.
+~
+!
+3 0 16
+A
+~
+~
+send_to_room( #rat, room, sight );
+~
+E
+rat~
+@gA small, fuzzy rat emerges from the boulders, peeks around the room and
+quickly scuttles back to his hidey hole.@n 
+~
+!
+2 100 0
+374 9 1509949540 3 0
+374 9 1509949540 3 0
+-1
+S
+
+#1461
+Under the Ruined City~
+Similar to the ruined chamber above, this circular room is mosty filled
+with rubble and debris from the city above.  The shattered remnants of an
+ascending flight of steps lies against the northern wall, the mounds of
+rock above it sealing the stairwell.  Cut from the stone-littered floor
+is an earth-packed hole, the walls fitted with stones and planks in order
+to prevent a cave-in.  Cobwebs and dust cloak the walls and floor, an
+indication that the chamber was sealed for some time.
+~
+[Guin] Done.
+[Virt] upon taking the down exit, get a message that says you dont' go through to the area below, when in fact you do.
+~
+167378948 11 9 0
+D2
+~
+~
+0 -1 1460 10 10 5
+D5
+~
+~
+0 -1 1400 10 10 5
+E
+plank stone wall~
+Packed full of anything that can be found, these walls still hold,
+suprisingly enough.  Concave is evident, however, the floor coated with
+gravel and debris.
+~
+E
+north stairwell mound rock~
+Cracked and withered stairs lay to the north; rocks, debris, wood, and an
+assortment of other objects stop any use of the stairs.
+~
+E
+hole 1 down~
+Small in size, the dirt hole offers travel further inside; less light is
+evident, and a dusky smell follows.
+~
+E
+cobwebs dust floor~
+The whole room, caked in dirt, debris, and dust, shows little use at all. 
+The corners filled with cobwebs and the air filled with mildew.
+~
+A
+~
+plank stone wall~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 3 ) == 2 ) {
+    obj = oload( 856 );
+    act_tochar( #skull, ch, obj );
+    act_notchar( #skull1, ch, obj, mob, sight );
+    obj_to_char( obj, ch );
+  }
+  else {
+    act_tochar( #skull2, ch, obj );
+    act_notchar( #skull3, ch, obj, mob, sight );
+  }
+}
+else
+  act_tochar( #skull4, ch, obj );
+~
+E
+skull~
+@cAfter searching through the earth-filled walls, you have fond a tiny rat skull.@n
+~
+E
+skull1~
+@cAfter moments of searching, $n has found something and pocketed it.@n
+~
+E
+skull2~
+@cYou dig through the wall for anything of interest but come up empty handed.@n
+~
+E
+skull3~
+@c$n digs through the wall, but comes up empty handed.@n
+~
+E
+skull4~
+@cYou have already searched the walls.@n
+~
+!
+9 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gAfter checking the hole wearily, you don't through to the area below.@n
+~
+E
+to_room~
+@gAfter $n eyes the hole carefully, $e jumps down below.@n
+~
+!
+3 0 32
+-1
+S
+
+#1462
+Under the Ruined City~
+Under Construction.
+~
+~
+167378948 11 9 0
+-1
+S
+
+#1463
+Ancient Warrens - Narrow Tunnel~
+Under Construction.
+~
+~
+167378948 11 9 0
+-1
+S
+
+#1464
+Ancient Warrens - Beneath a City~
+Under Construction.
+~
+~
+167378949 11 9 0
+D4
+~
+~
+430 -1 1403 10 10 5
+5501 9 1509949540 3 0
+5501 9 1509949540 3 0
+5501 9 1509949540 3 0
+5501 9 1509949540 3 0
+5501 9 1509949540 3 0
+-1
+S
+
+#0
+

@@ -1,0 +1,3343 @@
+#M2_AREA
+2
+
+Caverns of Tar'ippal~
+Rikahn Adakar Azerin Druscilla Squeed Roxah~
+Caverns of Tar'ippal~
+~
+~
+
+1 0
+0
+1
+#ROOMS
+
+#4700
+Near the Base of the Tar'ippal Spire~
+The product of thousands of years of accumulated limestone, a gigantic
+stalagmite rises through the shadows, the apex of it lost somewhere in
+the darkness overhead.  So wide it all but touches the walls of the
+surrounding cavern, there is little room for the hand-hewn staircase that
+spirals around it.  The first steep step climbs onto the spire from the
+north.
+~
+[Guin] Done.
+~
+167378948 11 8 0
+D3
+~
+~
+0 -1 4701 10 10 9
+D4
+~
+~
+0 -1 5900 10 10 5
+E
+stalagmite limestone steps staircase spire~
+Here at ground level, patterns in the limestone resemble a cascade of
+falling water.  Even the color is reminiscent of water; its pale green
+and yellow hues glow translucently, as if lit from within.  A steep and
+shallow staircase coils around the spire, its workmanship and the runic
+patterns carved upon the steps of dwarven design.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CTentatively, you place your foot on the bottom step of the spiral
+staircase, and begin the long climb upward.@n 
+~
+E
+to_room~
+@CTentatively, $n places $s foot on the bottom step of the spiral
+staircase, and begins the long climb upward.@n 
+~
+!
+3 0 16
+-1
+S
+
+#4701
+Vast Cavern - Near the Spire~
+A vast cave, its ceiling lost within the shadows overhead, sprawls
+outward into the darkness to the east.  Drops of water, heavy with
+limestone residue, have formed into stalagmites over the millennia, the
+needle-like spikes mostly rising along the periphery of the cavern.
+~
+[Guin] Done.
+~
+167378948 10 9 0
+D1
+~
+~
+0 -1 4700 10 10 9
+D3
+~
+~
+0 -1 4702 10 10 9
+A
+~
+~
+send_to_room( #drip, room );
+~
+E
+drip~
+@cThe steady 'drip...drip...drip' of falling water echoes softly through
+the vastness of the cavern.@n 
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+You continue onward into the darkness of the cavern lying to the east.@n
+~
+E
+to_room~
+$n continues onward into the darkness of the cavern lying to the east.@n
+~
+!
+3 0 2
+-1
+S
+
+#4702
+Vast Cavern - Near the Spire~
+This is the western end of a cavern so vast, the ceiling is lost to view
+in the darkness overhead.  The walls are nearly vertical and can boast
+little of note save for the growing forest of infinitely thin stalagmites
+and stalactites formed over countless thousands of years.  The distant
+squeal of wandering bats beckons from the east.  A hole in the floor
+leads to another level of the cave.
+~
+[Guin ] Down to Caverns here.
+[Guin] Done.
+~
+167378956 10 9 0
+D1
+~
+~
+0 -1 4701 10 10 9
+D5
+~
+~
+0 -1 4703 10 10 5
+E
+stalagmites stalactites~
+The living formations, created by the repetitive drip of limestone-laced
+water, nearly touch in some places.  Others, much younger, are less than
+a foot tall or long...just beginning their lives in the dank cavern of
+their birth.
+~
+E
+hole floor~
+The hole underfoot is wide enough to squeeze through, and handholds can
+be seen near the top.  What lies further down is lost to the darkness.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yUsing the handholds for leverage, you lower yourself through the
+hole.@n 
+~
+E
+to_room~
+@yUsing the handholds for leverage, $n lower $mself through the hole.@n
+~
+!
+3 0 32
+-1
+S
+
+#4703
+Columns and Bones~
+Swirls of topaz-colored minerals run through the cavern's limestone walls. 
+In the center of the chamber, a cluster of columns rises, formed by
+ancient stalactites and stalagmites joining.  Centered among the pillars,
+a shallow depression is filled with sparkling liquid.  Across the
+water-smoothed floor, lie the skeletal carcasses of a variety of slain
+amimals, the bones encrusted with minerals and dust.  Metallic-smelling
+water tumbles down from the vaulted, gloom-shrouded ceiling, its source
+unseen.
+~
+[Guin] Up to Road here.
+[Guin] Done.
+~
+167378948 10 9 0
+D3
+~
+~
+0 -1 4704 10 10 5
+D4
+~
+~
+0 -1 4702 10 10 5
+E
+swrils topaz-colored minerals~
+Sparkling in the light, the grains of mineral run throughout the
+limestone walls, their yellow coloration varying from a deep sunburst to
+pale-cream.  At various points, pea-sized crystals have formed upon their
+fractured surfaces sending rainbow patterns across the floor.
+~
+E
+columns~
+Each of the cream-colored pillars has been formed by the joining of
+stalagmites and stalagtites, creating a vaguely hourglass shape.  In the
+center of the columns, a shallow sinkhole has formed a basin that
+collects the dripping water from the ceiling, the constant plop of
+falling drops echoing throughout the chamber.
+~
+E
+skeletal carcasses bones dust minerals~
+Etched with gnaw marks the yellow-stained bones and fur scraps lie
+scattered across the floor.  The jumble must contain over thirty animals
+but their exact spiecies is difficult to tell.  Several carnivor skulls
+rest against the base of the pillars, their eyeless sockets staring
+outward.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yUsing the hand and footholds chiselled into the stone, you lever
+yourself up through the hole in the roof overhead.@n 
+~
+E
+to_room~
+@yUsing the hand and footholds chiselled into the stone, $n levers $mself
+up through the hole in the roof overhead.@n 
+~
+!
+3 0 16
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yThe bones clatter aside as your progress continues to the west.@n
+~
+E
+to_room~
+@yThe bones clatter aside as $n's progress continues to the west.@n
+~
+!
+3 0 8
+A
+~
+bones skeletal carcasses animals~
+if( !rflag( reset0, room ) ) {
+  act_tochar( #already, ch );
+  end;
+}
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 4 ) < find_skill( ch, searching ) )
+    obj = oload( 2, random( 1, 3 ) );
+}
+if( obj ) {
+  act_tochar( #found, ch, obj, mob );
+  act_notchar( #rfound, ch, obj, mob, sight );
+  obj_to_char( obj, ch );
+}
+else {
+  act_tochar( #nada, ch );
+  act_notchar( #rnada, ch, obj, mob, sight );
+}
+~
+E
+already~
+Looking at how the remains have been disturbed, you believe someone has
+already searched them.
+~
+E
+found~
+You find buried beneath the remains $p.
+~
+E
+rfound~
+$n finds buried beneath the remains $p.
+~
+E
+nada~
+You find nothing of interest.
+~
+E
+rnada~
+$n finds nothing of interest.
+~
+!
+9 0 0
+A
+pry 1 get~
+topaz minerals~
+if( !rflag( reset1, room ) )
+  act_tochar( #already, ch );
+else {
+  remove_rflag( reset0, room );
+  act_tochar( #nada, ch );
+  act_notchar( #rnada, ch, obj, mob, sight );
+}
+~
+E
+already~
+Looking at the marking around the topaz, you can't see there being any
+benefit in trying to get more out of it.
+~
+E
+nada~
+You find you are unable to pry any of the topaz from the wall.
+~
+E
+rnada~
+$n finds $mself unable to pry any of the topaz from the wall.
+~
+!
+0 0 0
+5393 9 1509949540 3 0
+1461 9 1509949540 3 0
+1662 17 1509949540 -2 0
+-1
+S
+
+#4704
+Limestone Cavern~
+The combination of a slightly rising floor and the drastically angled
+ceiling form this wedge-shaped chamber.  Trickling waters run down the
+slick, dark-cream walls making the entire area gleam as if polished.  A
+cylindrical mass of stalactites hangs from the roof of the limestone
+cavern, dripping mineral-rich waters onto the floor.  A shelf of rock
+runs along the southern wall, its slightly lipped edge coated with a dark
+green moss.
+~
+[Guin] Done.
+~
+167378948 10 6 0
+D1
+~
+~
+0 -1 4703 10 10 5
+D3
+~
+~
+0 -1 4705 10 10 5
+A
+~
+~
+send_to_room( #bats, room, sight_sound );
+~
+E
+bats~
+@yA swarm of bats swoops from the darkness, their screeching cries
+reverberating through the cavern.@n 
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CYou splash carelessly through the unavoidable puddles and continue on
+to the east.@n 
+~
+E
+to_romo~
+@C$n splashes carelessly through the unavoidable puddles and continues on
+to the east.@n 
+~
+!
+3 0 2
+A
+~
+~
+continue;
+~
+E
+to_char~
+@ySteadying yourself against the limestone wall, you continue westard
+through the sloping cavern.@n 
+~
+E
+to_room~
+@ySteadying $mself against the limestone wall, $n continues westard
+through the sloping cavern.@n 
+~
+!
+3 0 8
+A
+1 get 1 pick~
+moss~
+if( !rflag( reset0, room ) ) {
+  act_tochar( #already, ch );
+  end;
+}
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 3 ) == 1 )
+    obj = oload( 7930 );
+}
+if( obj ) {
+  act_tochar( #found, ch, obj );
+  act_notchar( #rfound, ch, obj, mob, sight );
+  obj_to_char( obj, ch );
+}
+else {
+  act_tochar( #nada, ch );
+  act_notchar( #rnada, ch, obj, mob, sight );
+}
+~
+E
+already~
+The moss has a torn look to it, you won't get anything useful from it right now.
+~
+E
+found~
+You manage to rip $p from the wall.
+~
+E
+rfound~
+$n manages to rip $p from the walls.
+~
+E
+nada~
+You find no moss worthwhile taking.
+~
+E
+rnada~
+$n finds no moss wortwhile taking.
+~
+!
+9 0 0
+78 17 1509949540 -2 0
+1120 9 1509949540 3 0
+1120 9 1509949540 3 0
+-1
+S
+
+#4705
+Limestone and Crystal~
+A raised bench of rock juts out from the west forming a crescent-shaped
+shelf.  A polished pillar of limestone rises near the southern opening, a
+delicate crystalline garden spreading around its base.  Gleaming quartz
+and dark-purple minerals fuse into all manner of strangly shaped
+constructions.  Low, water-smoothed stairs flow out of the northern
+opening, formed by years of trickling water running out of the waist-high
+hole.
+~
+[Guin] North to Tar'ippal. South to Dero.
+[Guin] Done.
+~
+167378948 11 7 0
+D0
+~
+~
+0 -1 4706 10 10 6
+D1
+~
+~
+0 -1 4704 10 10 5
+D2
+~
+~
+0 -1 4734 10 10 5
+E
+crystalline garden pillar limestone~
+Rising from the centre of this crystalline garden, a smooth pillar of
+pale limestone extends upwards into the gloom of the cavern.  Bursting
+with an explosion of colour, the angular shapes that form this strange
+garden gleam in the soft light.  Clusters of white quartz have become
+fused with dark purple minerals, each formation of stone taking on the
+resemblance of an orchid.
+~
+E
+1 north stairs hole~
+These stairs appear to be a natural formation that, over many years of
+water erosion, has had its rough edges smoothed out.  The limestone that
+surrounds the circular hole in the northern wall is marred with sweeping
+whorls that indicate the path of the water in time gone by.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CSqueezing past the pillar, you move south through the darkened
+tunnel.@n 
+~
+E
+to_room~
+@CSqueezing past the pillar, $n moves south through the darkened
+tunnel.@n 
+~
+!
+3 0 4
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CCarefully, you navigate the low, slippery steps.@n
+~
+E
+to_room~
+@CCarefully, $n navigates the low, slippery steps.@n
+~
+!
+3 0 1
+7760 17 1509949540 -2 0
+5393 9 1509949540 3 0
+-1
+S
+
+#4706
+Tar'ippal Caverns~
+Almost perfectly circular, the limestone tunnel appears to have been
+formed by a now absent underground river.  Whorls of rippled indentations
+cover the slick walls, left from years of surging water.  A drizzle of
+water rambles across the floor, all that the remains of the mighty river. 
+Toward the north, the tunnel rises slightly, and becomes increasingly
+narrow.
+~
+[Guin] Add extre re: whorls/indentations/walls
+[Guin] Reviewed.
+~
+167378948 11 6 0
+D0
+~
+~
+0 -1 4764 10 10 5
+D2
+~
+~
+0 -1 4705 10 10 5
+E
+whorls indentations walls~
+Smoothed by countless eons of erosion, the rock faces of this tunnel are
+covered with swirling patterns that have formed as the constant churning
+of water has slowly eaten away at the hard stone.  As the river has
+subsided, the whorls have become lower down on the walls, indicating each
+decrease in water level over an extended period of time.
+~
+-1
+S
+
+#4707
+Tar'ippal Caverns~
+Chunks of broken limestone lie scattered about the dank chamber.  A dark
+fissure in the roof shows where the rocks have tumbled from.  In front of
+the rubble, a shallow sinkhole has formed, its smooth sides rippled with
+glinting blue minerals.  A trickling stream splashes down the southern
+passageway and into the sinkhole.  Through a hole in the western wall, a
+fetid breeze blows gently, barely strong enough to send ribbons of
+movement across the pool.
+~
+[Azerin] search rubble for something appropriately newbie. I can't think of anything atm.
+[Azerin] random splashing stream and gurgling sinkhole
+[Guin] Add extras for sinkhole/sides/blue/mineral
+[Guin] Add extra for the limestone chunks/rubble
+[Guin] Reviewed.
+~
+167378948 11 6 0
+D1
+~
+~
+0 -1 4708 10 10 6
+D2
+~
+~
+0 -1 4764 10 10 6
+D3
+~
+~
+0 -1 4709 10 10 6
+E
+sinkhole sides blue mineral~
+It appears as though the floor has suddenly given way, falling into the
+obscurity of darkness far below.  Fortunately the sinkhole is not wide
+enough to fall through, although it appears from a few scuffmarks around
+the edges that losing footing around the void is quite a common
+occurrence.  Veins of a dark blue mineral have been exposed around the
+inside of the hole, their particles glimmering in the dingy light.
+~
+E
+limestone chunks rubble~
+Through time and use, the rubble has been scattered from one side of the
+chamber to the other; the larger more immovable, chunks of limestone
+lying where they fell.  Smaller clusters of stone have gathered in the
+less used corners, gathering dust and tiny shards of rock as year upon
+year of neglect has left their piles undisturbed.
+~
+A
+~
+rubble~
+if( !rflag( reset0, room ) ) {
+  act_tochar( #nada, ch );
+  act_notchar( #rnada, ch, obj, mob, sight );
+  end;
+}
+remove_rflag( reset0, room );
+i = random( 0, 99 );
+if( i < 5 )
+  obj = oload( 998 );
+else if( i < 20 )
+  obj = oload( 983 );
+else if( i < 50 )
+  obj = oload( 1039 );
+else
+  obj = oload( 78, random( 2, 6 ) );
+if( obj ) {
+  act_tochar( #found, ch, obj );
+  act_notchar( #rfound, ch, obj, mob, sight );
+  if( can_handle( ch, obj ) )
+    obj_to_char( obj, ch );
+  else
+    obj_to_room( obj, room );
+}
+else {
+  act_tochar( #nada, ch );
+  act_notchar( #rnada, ch, obj, mob, sight );
+}
+~
+E
+nada~
+@cYou find nothing of worth in the pile of rubble.@n
+~
+E
+rnada~
+@c$n finds nothing of worth in the pile of rubble.@n
+~
+E
+found~
+@yYou find $p in the rubble.@n
+~
+E
+rfound~
+@y$n finds $p in the rubble.@n
+~
+!
+9 0 0
+1662 17 1509949540 -2 0
+-1
+S
+
+#4708
+Tar'ippal Caverns~
+Hung with countless stalactites, the vaulted chamber stretches in all
+directions, its walls cloaked in shadows.  A sticky layer of brown slime
+spreads across the floor, its greasy surface covered in a strange,
+foul-smelling scum.  In the middle of the cavern a horn of rock rises,
+its top cut flat, forming a crude dais.  Hacked into the limestone walls
+are several holes, where the remains of burnt-out torches rot in the
+sockets.
+~
+[Guin] add extra for slime/brown/greasy/surface/scum
+[Guin] Add search - fake or otherwise for the slime thing.. could pop a gold coin I guess..
+[Guin] Reviewed.
+~
+167378948 11 9 0
+D3
+~
+~
+0 -1 4707 10 10 5
+E
+slime brown greasy surface scum~
+This resin or residue is unlike any other form of algae that develops
+naturally in the darkened parts of the world.  Streaks of beige slime
+grow intermittently through the murky brown scum.  An oily sheen gleams
+off the slick surfaces of the liquescent substance, a putrid odour
+emanating from the greasier patches.
+~
+5393 9 1509949540 3 0
+78 17 1509949540 -2 0
+-1
+S
+
+#4709
+Tar'ippal Caverns~
+Long sticky chains of web dangle from the ceiling, a strange luminous
+glow emanating from their source.  A smoothly bored tunnel stretches
+eastward, its walls covered in whorled patterns left by eons of
+water flow.  Broken chunks of stalactites lie scattered across the
+floor, their surface pitted from something prying at them.
+~
+[Guin] Done.
+~
+167378948 11 9 0
+D0
+~
+~
+0 -1 4710 10 10 5
+D1
+~
+~
+0 -1 4707 10 10 5
+D3
+~
+~
+0 -1 4719 10 10 5
+E
+web glow ceiling~
+Fine tendrils of webbing hang from crevices in the darkened ceiling,
+small glimmers of light faintly illuminating the silken threads.  It is
+difficult to discern exactly what is causing the dim luminescence,
+perhaps a thin vein of quartz that reaches up to the surface of the rock,
+or a cluster of glow-worms sending their pale light along the wispy
+strands.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou pick your way through the rubble toward the $d.@n
+~
+E
+to_room~
+@y$n picks $s way through the rubble toward the $d.@n
+~
+!
+3 0 11
+A
+1 get 1 take 3 gather~
+web~
+if( !rflag( reset0, room ) ) {
+  act_tochar( #none, ch, obj );
+  act_notchar( #rnone, ch, obj, mob, sight );
+  end;
+}
+remove_rflag( reset0, room );
+obj = oload( 81, random( 2, 5 ) );
+act_tochar( #gather, ch, obj );
+act_notchar( #rgather, ch, obj, mob, sight );
+obj_to_char( obj, ch );
+~
+E
+none~
+@CYou find no webs suitable for your purposes.@n
+~
+E
+rnone~
+@C$n finds no webs suitable for $s purpose.@n
+~
+E
+gather~
+@CYou manage to gather $p from the webbing.@n
+~
+E
+rgather~
+@C$n manages to gather $p from the webbing.@n
+~
+!
+9 0 0
+A
+~
+rubble~
+act_tochar( #fake, ch, obj );
+act_notchar( #rfake, ch, obj, mob, sight );
+~
+E
+fake~
+@rYou search through the rubble, but find nothing worthwhile.@n
+~
+E
+rfake~
+@r$n searches through the rubble, but finds nothing worthwhile.@n
+~
+!
+9 0 0
+78 17 1509949540 -2 0
+2741 9 1509949540 3 0
+-1
+S
+
+#4710
+Tar'ippal Caverns~
+Jutting out from the eastern wall are the petrified bones of an
+unidentifiable creature, its remains entombed in the limestone.  Around
+the fossil are countless scratches and pick-marks, as if something has
+attempted to unearth the body.  Broken chunks of stone lie in a pile
+beside the northern opening, a badly eroded torch mounted in the wall
+above it.
+~
+[Guin] Done.
+~
+167378948 11 6 0
+D0
+~
+~
+0 -1 4712 10 10 5
+D2
+~
+~
+0 -1 4709 10 10 5
+D3
+~
+~
+0 -1 4711 10 10 5
+E
+petrified bones 1 east creature fossil~
+Partially exposed from the stone tomb, the fossilised remains of a
+creature of old protrude from their resting place.  Part of the skull,
+elongated and tapering into a curved beak, and one front leg, set with
+massive talons, are all that is visible.  Scratches and gouges on the
+rock surface indicate that someone has attempted to recover the skeleton.
+~
+E
+chunks rock 1 north pile~
+Large fragments of rock have accumulated across the opening in the
+northern wall, the gaps and fissures in-filled with smaller shards. 
+Perhaps the result of a cave-in at some time in the past, the passage is
+well and truly blocked off.
+~
+E
+torch sconce~
+Braced against the angular rock wall, an almost completely burnt torch
+juts out of a narrowing crevice.  It appears that at some point in time,
+an iron sconce had been set onto the wall, but all that remains are a
+rusting bolt and a few inches of the ring that once held the torch in
+place.
+~
+A
+~
+pile rock 1 north~
+act_tochar( #to_char, ch );
+act_notchar( #to_room, ch, obj, mob, sight );
+~
+E
+to_char~
+You search through the pile of rocks, but find nothing worth taking.
+~
+E
+to_room~
+$n searches through the pile of rocks, but finds nothing worth taking.
+~
+!
+9 0 0
+-1
+S
+
+#4711
+Tar'ippal Caverns~
+Hacked out of the limestone, the alcove is just big enough to hold
+something the approximate size of a troll.  Scratch marks on the walls
+and ceiling show where someone has tried their hand at cave art; stick
+figures hacking each other apart seeming to be the dominant theme.  A
+soot-coverd bracket juts out of the southern wall, the remains of a
+burnt-out torch held inside it.
+~
+[Guin] Done.
+~
+167378948 11 5 0
+D1
+~
+~
+0 -1 4710 10 10 5
+E
+marks walls ceiling cave art figures~
+Slightly more detailed than a basic stick figure, the figures are
+proportionate enough to recognize as dwarves and goblins in heated battle. 
+It seems this alcove holds a crude history of the battle for possession
+of the Tar'ippal Caves.
+~
+E
+bracket torch~
+Cradling the stump of a burned-out torch, the bracket is still firmly
+attached to the cave wall.  Although it is covered in soot and grime, its
+easy to see the thing is of dwarven construction and ancient.
+~
+4057 17 1509949540 -2 0
+-1
+S
+
+#4712
+Tar'ippal Caverns~
+Twisting patterns of orange crystals run through the pale cream limestone
+walls of the tunnel, giving it a cork-screw effect.  The floor has been
+worn flat by water, leaving it highly polished.  Grimy marks stain the
+western wall where something has rubbed aginst the soft stone.  A shelf
+of rock juts out just below the curve of the ceiling, a cluster of broken
+rock lying abandoned upon it.
+~
+[Guin] add search shelf/rocks for sliver of quartz - 7760.
+[Guin] Reviewed.
+~
+167378956 11 9 0
+D1
+~
+~
+0 -1 4713 10 10 5
+D2
+~
+~
+0 -1 4710 10 10 5
+E
+stain grimy marks 1 west~
+The limestone of the western tunnel wall is strangely smooth, but much
+darker than the surrounding creamy-hued stone.
+~
+E
+shelf rock cluster ceiling curve~
+A flat stone shelf juts out from the limestone walls, just below the
+ceiling.  Chisel and hack marks mar the underside of the protrusion, and
+a low pile of rocky rubble perches atop it.
+~
+A
+~
+shelf rocks~
+act_tochar( #search, ch, obj );
+act_notchar( #rsearch, ch, obj, mob, sight );
+if( !rflag( reset0, room ) ) {
+  act_tochar( #nada, ch );
+  end;
+}
+remove_rflag( reset0, room );
+obj = oload( 7760, random( 2, 5 ) );
+if( obj ) {
+  act_tochar( #found, ch, obj );
+  act_notchar( #rfound, ch, obj, mob, sight );
+  obj_to_char( obj, ch );
+}
+else {
+  act_tochar( #nothing, ch );
+  act_notchar( #rnothing, ch, obj, mob, sight );
+}
+~
+E
+search~
+You start searching through the shelf of rocks for anything interesting.
+~
+E
+rsearch~
+$n starts searching through the shelf of rocks for anything interesting.
+~
+E
+nada~
+You notice as your searching through the shelf that someone has already
+sprawled things about.
+~
+E
+found~
+You find $p from your search of the shelf.
+~
+E
+rfound~
+$n finds $p from $s search of the shelf.
+~
+E
+nothing~
+You find nothing of interest.
+~
+E
+rnothing~
+$n finds nothing of interest.
+~
+!
+9 0 0
+78 17 1509949540 -2 0
+5393 9 1509949540 3 0
+5394 9 1509949540 3 0
+-1
+S
+
+#4713
+Tar'ippal Caverns~
+The tunnel dips down and doubles in width as it continues in an east-west
+direction.  Cracks in the northern wall let in a trickling of water that
+forms a shallow pool in the tunnel's center.  Bubbles rise from the pool
+where hair-thin fissures in the floor slowly drain the water away. Mounds
+of limestone stalactites rise from the pool, their wet surfaces gleaming.
+~
+[Guin] Done.
+~
+167378948 11 9 0
+D1
+~
+~
+0 -1 4714 10 10 5
+D3
+~
+~
+0 -1 4712 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CContinue to the $d, you skirt the shallow pool in the tunnel floor.@n
+~
+E
+to_room~
+@CContinuing to the $d, $n skirts the shallow pool in the tunnel floor.@n
+~
+!
+3 0 10
+A
+~
+~
+send_to_room( #pop, room, sight_sound );
+~
+E
+pop~
+@CThe faint sounds of popping bubbles issue from the cracks in the
+floor.@n 
+~
+!
+2 150 0
+1662 17 1509949540 -2 0
+5393 9 1509949540 3 0
+-1
+S
+
+#4714
+Tar'ippal Caverns~
+The jumbled remains of several creatures rest against an outcropping of
+rock in the northern wall.  Tattered cloth and rusted scraps of metal
+intermix with the brown-stained bones.  Hammered into the limestone wall
+above the corpses are several rusted iron rings.  A ribbon of water runs
+from under one of the rings and forms a trickling stream that flows
+westward.
+~
+[Guin] Done.
+~
+167378948 11 9 0
+D2
+~
+~
+0 -1 4715 10 10 5
+D3
+~
+~
+0 -1 4713 10 10 5
+5394 9 1509949540 3 0
+-1
+S
+
+#4715
+Tar'ippal Caverns~
+In a sudden break from the natural caverns, the walls of the chamber have
+been cut square and carved with a myriad of patterns.  Beautiful stonework
+ivy and holly leaves adorn the ceiling, their berries coated with flecks
+of red-hued dye.  A narrow vein of burnished-copper mineral forms whorls
+around the chamber's entrance and exit, as if somehow the crafter could
+bend the very stone to their will.
+~
+[Guin] Done.
+~
+167378948 11 5 0
+D0
+~
+~
+0 -1 4714 10 10 5
+D1
+~
+~
+0 -1 4716 10 10 5
+78 17 1509949540 -2 0
+5393 9 1509949540 3 0
+-1
+S
+
+#4716
+Tar'ippal Caverns~
+Ribbons of color dance across the limestone walls from clusters of
+sparkling gems that bedeck the tunnel.  Cut into the natural cavern is an
+arched opening in the west, joining to a chamber beyond.  A handful of
+crude steps have been carved into the cavern floor, allowing passage up
+the slightly rising northern tunnel.
+~
+[Guin] Done.
+~
+167378948 11 9 0
+D0
+~
+~
+0 -1 4717 10 10 5
+D3
+~
+~
+0 -1 4715 10 10 5
+5395 9 1509949540 3 0
+-1
+S
+
+#4717
+Tar'ippal Caverns~
+A mound of broken stalactites fills much of the tunnel, a narrow path
+winding its way around them allowing passage beyond.  The walls and floor
+have been hacked out of the natural limestone cavern, pick and shovel
+marks clearly visible.  Hanging from a chain in the ceiling is a crudely
+constructed copper bowl, a faint glow illuminating the tunnel from its
+center.  A trail of uneven steps leads down the southern passageway,
+their edges crumbling and cracked.
+~
+[Guin] Done.
+~
+167378948 11 9 0
+D0
+~
+~
+0 -1 4718 10 10 5
+D2
+~
+~
+0 -1 4716 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou carefully descend the broken steps leading southward through the
+tunnel.@n 
+~
+E
+to_room~
+@yY$n carefully descends the broken steps leading southward through the
+tunnel.@n 
+~
+!
+3 0 4
+5393 9 1509949540 3 0
+-1
+S
+
+#4718
+Tar'ippal Caverns~
+A brick and mortar wall runs from the side of each limestone wall to the
+middle where a gate-sized gap allows continued passage.  Grit and stones
+lie scattered about the walls and floor of the chamber, most likely the
+remains of eroded stalactites.  At the wall's opening, the stones are
+stained dull red where the missing gate has succumbed to rust.  A few
+cracks in the eastern wall show where someone pried at a cluster of
+stygian stones.  Despite the effort, the black rocks withstood the
+onslaught without scar or scratch.
+~
+[Guin] Done.
+~
+167378948 11 6 0
+D0
+~
+~
+0 -1 2100 10 10 5
+D2
+~
+~
+0 -1 4717 10 10 5
+E
+cracks 1 east~
+A half-dozen cracks of varying sizes can be seen in the eastern tunnel
+wall, some no more than a chisel wide.  One in particular is larger and
+appears to have debris cradled at the bottom.
+~
+A
+~
+crack~
+act_tochar( #search, ch );
+act_notchar( #rsearch, ch, obj, mob, sight );
+if( !rflag( reset0, room ) ) {
+  act_tochar( #dust, ch, obj );
+  end;
+}
+remove_rflag( reset0, room );
+if( random( 1, 20 ) == 3 )
+  obj = oload( 7544 );
+if( obj ) {
+  act_tochar( #found, ch, obj );
+  act_notchar( #rfound, ch, obj, mob, sight );
+  obj_to_char( obj, ch );
+}
+else {
+  act_tochar( #nothing, ch );
+  act_notchar( #rnothing, ch, obj, mob, sight );
+}
+~
+E
+dust~
+From the dust around the crack, it looks like someone else has already
+searched it.
+~
+E
+found~
+You reach into the crack, and manage to snag $p.
+~
+E
+search~
+You stretch your arm into the crack, trying to find anything useful.
+~
+E
+rsearch~
+$n stretches $s arm into the crack.
+~
+E
+rfound~
+$n pulls $p out from the crack.
+~
+E
+nothing~
+You find nothing of interest in the crack.
+~
+E
+rnothing~
+$n finds nothing of interest in the crack.
+~
+!
+9 0 0
+78 17 1509949540 -2 0
+-1
+S
+
+#4719
+Tar'ippal Caverns~
+Thick cobwebs, built up over countless years, edge the stalactite-riddled
+ceiling and cling to the dark rocky walls.  A whorled pattern traces the
+sides of the tunnel, evidence of infinite amounts of water erosion. 
+Underfoot, low mounds of stone-born rubble cover the floor.  Soft noises
+echo through the cavern, coming from the west.  The passage continues
+both to the east and west, disappearing into the darkness in both
+directions.
+~
+[Guin] Add acode re: get/gather web.
+[Guin] Add fake search for rubble.
+[Guin] Can copy codes from the room east.
+[Guin] Add extras for pattern/sides/tunnel
+[Guin] Reviewed.
+~
+167378948 11 9 0
+D1
+~
+~
+0 -1 4709 10 10 5
+D3
+~
+~
+0 -1 4720 10 10 5
+E
+pattern sides tunnel~
+Smoothed by countless eons of erosion, the rock faces of this tunnel are
+covered with swirling patterns that have formed as the constant slither
+of water has slowly eaten away at the hard stone.  Runnels and rivulets
+crease the cavern walls, a few drops of water still sliding down the
+narrow chutes.
+~
+A
+1 get 1 take 3 gather~
+web~
+if( !rflag( reset0, room ) ) {
+  act_tochar( #none, ch, obj );
+  act_notchar( #rnone, ch, obj, mob, sight );
+  end;
+}
+remove_rflag( reset0, room );
+obj = oload( 81, random( 2, 5 ) );
+act_tochar( #gather, ch, obj );
+act_notchar( #rgather, ch, obj, mob, sight );
+obj_to_char( obj, ch );
+~
+E
+none~
+@gYou find no webs usuable for anything here.@n
+~
+E
+rnone~
+@g$n finds no webs usuable for anything here.@n
+~
+E
+gather~
+@cYou gather $p from the surrounding webbing.@n
+~
+E
+rgather~
+@c$n gathers $p from the surrounding webbing.@n
+~
+!
+9 0 0
+A
+search~
+rubble~
+act_tochar( #nada, ch );
+act_notchar( #nada, ch, obj, mob, sight );
+~
+E
+nada~
+@cYou find nothing worthwhile.@n
+~
+E
+rnada~
+@c$n finds nothing worthwhile in the rubble.@n
+~
+!
+0 0 0
+78 17 1509949540 -2 0
+1974 17 1509949490 -2 0
+-1
+S
+
+#4720
+Tar'ippal Caverns~
+The dark stone tunnel bends sharply, the striations in its walls taking a
+new shape as they are twisted to an acute angle.  Cobwebs have
+accumulated along the ceiling and between stalactites suspended there,
+and hold almost as many insects tiny fragments of debris of debris.  Bits
+of rock are scattered across the floor underfoot, encircling the base of
+what have once been a stalagmite.
+~
+[Guin] Location for possible zone addition in the future.
+[Guin] Add acode re: get/gather webs
+[Guin] Add fake search rubble
+[Guin] Add extra for striations/walls/stone/shape
+[Guin] Add extra re: webs - can copy one from the rooms to the east.
+[Guin] Reviewed
+~
+167378948 11 9 0
+D1
+~
+~
+0 -1 4719 10 10 5
+D2
+~
+~
+0 -1 4721 10 10 5
+78 17 1509949540 -2 0
+-1
+S
+
+#4721
+Tar'ippal Caverns~
+The tunnel blooms to the west into a veritable cavern.  Stalagmites frame
+the opening to the gigantic chamber; the fine striations on their shining
+surfaces look like melting ice.  Rocky rubble and dust cover the floor,
+marked by dozens of indistinguishable footprints.  The cavern to the west
+seems to magnify the sounds drifting in from nearby.
+~
+[Guin] Done.
+~
+167378948 11 9 0
+D0
+~
+~
+0 -1 4720 10 10 5
+D3
+~
+~
+0 -1 4722 10 10 5
+E
+1 west cavern~
+Like the rest of the caves and tunnel leading up to this place, the vast
+cavern to the west lies mostly in darkness.  A single torch burns in the
+distance, doing little, if anything, to lift the lightlessness.
+~
+E
+footprints~
+Dust and rubble lie everywhere within this section of the tunnel save on
+the shining stalactites that frame its western opening.  Crisscrossing
+one upon the other, footprint patterns on the rocky floor are so thick
+they defy indentification.
+~
+78 17 1509949540 -2 0
+-1
+S
+
+#4722
+Tar'ippal Caverns~
+This wide circular chamber dwarfs any other chamber within the
+underground network of tunnels.  Every surface has been well-ground and
+polished, the natural quartz deposits looking very marble-like.  A high
+ceiling soars overhead, with a mosaic of gold and silver leaf inlaid
+along the peach-colored dome, ending about ending ten feet off the ground
+where vandals have ripped the valuable metal away and gouged out the rich
+mineral veins within arms reach.  The upper section's floor is a C-shaped
+walkway along the wall, used as an observing deck to the chamber below. 
+The northern half of the walkway leads into a wide stairwell cut from the
+rock itself, spiraling its way downward.  The center of the room is wide
+open, a vertical shaft deeper into the ground.
+~
+[Guin] Do NOT remove this exit. Only entrance currently I can find to Tar.
+[Guin] Done.
+~
+167378957 11 9 0
+D1
+~
+~
+0 -1 4721 10 10 5
+D5
+~
+~
+0 -1 4827 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou carefully walk down the spiral stairway to the chamber below.@n
+~
+E
+to_room~
+@c$n carefully walks down the spiral stairway to the chamber below.@n
+~
+!
+3 0 32
+-1
+S
+
+#4727
+Tar'ippal Caverns~
+Under Construction.
+~
+~
+167378948 10 9 0
+78 17 1509949540 -2 0
+-1
+S
+
+#4729
+Tar'ippal Caverns~
+Under Construction.
+~
+~
+167378948 10 9 0
+78 17 1509949540 -2 0
+-1
+S
+
+#4734
+Purple Crystals~
+Chunks of limestone lie scattered across the floor of the tunnel; cracks
+and holes riddle the stone from which they were ripped.  Several of the
+fist-sized rocks show odd scrapings, as if something...or someone...had
+chewed on them.  Gnaw marks are rife on the stalagmites' bases, some of
+them crumbling under the onslaught.  A vein of purple crystal runs
+through the creamy limestone, its cracked surface scarred by scratch and
+claw marks where attempts to pry at the crystal have been made.
+~
+[Guin] Done.
+~
+167378956 11 6 0
+D0
+~
+~
+0 -1 4705 10 10 5
+D2
+~
+~
+0 -1 4735 10 10 5
+E
+chunk limestone floor tunnel~
+Chunks of creamy-hued limestone, ranging in size from fist-sized to
+little more than tiny shards of gravel, are thick on the tunnel floor. 
+Pockmarked with holes, the walls are of that same limestone, the
+striations of the stone vary in color from nearly white to dark tan.
+~
+E
+vein purple crystal~
+Streaking through the pale walls, a thin vein of violet crystal runs from
+the ceiling to the floor of the cavern.  The surface of the vein is badly
+scratched, where attempts have been made to remove it from the off-white
+limestone walls.
+~
+A
+1 get 1 take~
+chunk limestone~
+act_tochar( #crumble, ch );
+act_notchar( #rcrumble, ch, obj, mob, sight );
+~
+E
+crumble~
+As you pick up the chunk of limestone it crumbles away in your hand.
+~
+E
+rcrumble~
+As $n picks up the chunk of limestone it crumbles away in $s hand.
+~
+!
+0 0 0
+A
+1 get 1 take 1 pry~
+crystal vein~
+if( !rflag( reset0, room ) ) {
+  act_tochar( #attempt, ch );
+  act_notchar( #rattempt, ch, obj, mob, sight );
+  end;
+}
+remove_rflag( reset0, room );
+if( random( 1, 100 ) == 1 )
+  obj = oload( 7039 );
+if( obj ) {
+  act_tochar( #found, ch, obj, mob );
+  act_notchar( #rfound, ch, obj, mob, sight );
+  obj_to_char( obj, ch );
+}
+else {
+  act_tochar( #nada, ch );
+  act_notchar( #rnada, ch, obj, mob, sight );
+}
+~
+E
+attempt~
+You are unable to find any chips of the crystal loose enough to get.
+~
+E
+rattempt~
+$n is unable to pry loose any of the crystals.
+~
+E
+found~
+You manage to pry loose $p.
+~
+E
+rfound~
+$n manages to pry loose $p.
+~
+E
+nada~
+You spend a little while trying to pry loose a crystal, but are unable to
+free any.
+~
+E
+rnada~
+$n spends a little while trying to pry loose a crystal, but gives up in
+frustration.
+~
+!
+9 0 0
+78 17 1509949540 -2 0
+78 17 1509949465 -2 0
+-1
+S
+
+#4735
+Purple Toadstools~
+Three shallow pools of green-tinged water surround a collection of
+limestone pillars in the center of the chamber.  Hanging from the top of
+the pillars is a bundle of egg-shaped rust-colored crystals.  A web of
+fine silvery fibres coat the cluster, and keep them out of reach of the
+ground.  Trickling streams run from the pools and splash westward out a
+water-worn tunnel.  Growing out of the web are clusters of purple capped
+toadstools, their frills releasing tiny clouds of spores into the air.
+~
+[Guin] Done.
+[Faeryl] bugs
+~
+167378948 11 6 0
+D0
+~
+~
+0 -1 4734 10 10 5
+D3
+~
+~
+0 -1 4736 10 10 5
+A
+~
+~
+if( is_mob( ch ) )
+  continue;
+else {
+  act_tochar( #west, ch );
+  act_notchar( #rwest, ch, obj, mob, sight );
+  continue;
+}
+~
+E
+west~
+@BYou splash through the small stream and continue west.@n
+~
+E
+rwest~
+@BSplashing through the small stream, $n leaves west.@n
+~
+!
+3 0 8
+5394 9 1509949540 3 0
+5394 9 1509949540 3 0
+5394 9 1509949540 3 0
+7859 17 1509949540 -2 0
+78 17 1509949540 -2 0
+1662 17 1509949540 -2 31
+398 17 1509949540 -2 0
+-1
+S
+
+#4736
+Crystalline Webs~
+Draped across the limestone walls and floor of the tunnel are fine
+silvery webs of crystals.  Poking through the mass of fibres are
+egg-shaped crystalline bundles.  Under the floor's webbing a fast-flowing
+stream splashes and gurgles on its way northwards.  A few broken
+stalagmites lie stuck to the lattice, their surface covered in gnaw-marks.
+~
+[Yrna] Done.
+[Guin] Done.
+[Guin] Done.
+~
+167378948 11 6 0
+D0
+~
+~
+0 -1 4737 10 10 5
+D1
+~
+~
+0 -1 4735 10 10 5
+E
+crystalline web silvery~
+Thin silvery strands of web-like crystal dangle from one side of the
+tunnel to the other, the fine tendrils woven so closely together that it
+is not possible to pass through, without having to cause them to break. 
+A myriad of colours sparkle out from the crystalline webbing as light
+filters through, refracting each time it hits the opalescent gem-strands.
+~
+A
+~
+~
+send_to_room( #hatch, room, sight );
+~
+E
+hatch~
+@CThe egg-shaped bundle cracks and a small, soft larvae crawls out from
+it, quickly looking for shelter within the crystalline webs.@n 
+~
+!
+2 200 0
+A
+break kick smash~
+egg-shaped cyrstalline bundles~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  obj = oload( 7760, random( 1, 3 ) );
+  act_tochar( #kick, ch, obj );
+  act_notchar( #rkick, ch, obj, mob, sight );
+  obj_to_room( obj, room );
+}
+else
+  act_tochar( #none, ch );
+~
+E
+kick~
+@CYou kick an egg-shaped bundle which shatters into million pieces!@n
+~
+E
+rkick~
+@C$n kicks an egg-shaped bundle which shatters into million pieces!@n
+~
+E
+none~
+@cYou can't reach any more egg-shaped bundles, they're too deep within
+the webs.@n 
+~
+!
+0 0 0
+5394 9 1509949540 3 0
+78 17 1509949540 -2 0
+398 17 1509949540 -2 0
+-1
+S
+
+#4737
+Path Through a Fungal Guarden~
+Covering the entire area is a garden of various shapes and sizes of fungi. 
+A vein of quartz in the roof radiates a soft glowing light, perfect for
+the myriad of mushrooms and toadstools to thrive in.  A clear path winds
+through the growth, enabling passage without damaging the delicate plants. 
+Flowing slowly through the piebald fungi is a green-tinged stream,
+burbling westwards picking up speed as the tunnel begins to slope down. 
+The chamber smells sickly-sweet as clouds of spores fill the air.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378949 11 9 0
+D2
+~
+~
+0 -1 4736 10 10 5
+D3
+~
+~
+0 -1 4738 10 10 5
+E
+fungi garden vein quartz mushrooms toadstools roof~
+Drawing a dimmed light down from the surface far above the cave, the thin
+vein of quartz spreads a very pale yellow luminescence across the wall
+and floor, smattering the area with enough lambency to allow a wide
+variety of fungi to grow.  Extracting nutrients from the slightly fetid
+stream, the toadstools and mushrooms range in colour from an almost
+fluorescent pink to quite a pale orange.  An oddly shaped breed of
+fungus, tawny yellow in colour grows in a cluster to one side of the path. 
+Standing tall in the northeastern corner, a bright blue toadstool,
+surrounded by smaller puce mushrooms, emits a nauseating odour.
+~
+A
+~
+~
+if( !is_mob( ch ) ) {
+  act_tochar( #fungi, ch );
+  act_notchar( #rfungi, ch, obj, mob, sight );
+  continue;
+}
+else
+  continue;
+~
+E
+fungi~
+@MPicking your way through the fungi garden, you continue south.@n
+~
+E
+rfungi~
+@M$n leaves south, picking $s way through the fungi garden.@n
+~
+!
+3 0 4
+A
+~
+~
+continue;
+~
+E
+to_char~
+@BYou splash through the stream and descend into the darkness.@n
+~
+E
+to_room~
+@BFollowing the small stream, $n descends into the darkness.@n
+~
+!
+3 0 8
+A
+search~
+fungi garden mushrooms toadstools~
+act_tochar( #yuck, ch );
+act_notchar( #ryuck, ch, obj, mob, sight );
+~
+E
+yuck~
+@YLooking at the colours of fungi, you decide it may not be a good idea
+to search them afterall.  There is no telling what disfiguring skin
+disease you could catch like that.@n 
+~
+E
+ryuck~
+@Y$n reaches to search the fungi, but changes $s mind for some reason. 
+Looking at the colour of those, it's probably not surprising.@n 
+~
+!
+0 0 0
+5395 9 1509949540 3 0
+5396 9 1509949540 3 0
+7859 17 1509949540 -2 0
+5393 9 1509949540 3 0
+1120 9 1509949540 3 0
+1120 9 1509949540 3 0
+398 17 1509949540 -2 0
+-1
+S
+
+#4738
+Descending Tunnel~
+The tunnel descends sharply as it winds southwards.  The stream of water
+that accompanies it also picks up speed, sending water splashing as it
+gurgles along.  Dripping with water, the limestone walls have the
+appearance of melted wax with great glooping mounds forming smooth
+stalagmites.  A slick green algae covers the floor of the tunnel, making
+for unsteady footing.  Along the ceiling a web of amber-colored crystals
+spread, a few bulbous egg shaped orbs suspended in it.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 5 0
+D1
+~
+~
+0 -1 4737 10 10 5
+D2
+~
+~
+0 -1 4739 10 10 5
+E
+ceiling web amber-colored crystals egg orb~
+Thin strands of crystalline webbing stretch across the ceiling, many of
+them attached to the stalagmites and forming a cradle of sorts.  Well
+protected amongst the webs lie several egg-shaped orbs, pearly white with
+silver streaks, only their tops clearly visible.
+~
+A
+get break touch smash~
+web crystals eggs orbs~
+act_tochar( #no, ch );
+act_notchar( #rno, ch, obj,  mob, sight );
+~
+E
+no~
+@cYou try to reach for the eggs, but they are just too far away.@n
+~
+E
+rno~
+@c$n reaches up towards the strange cradle, but the eggs are just too far
+away.@n 
+~
+!
+0 0 0
+A
+~
+~
+if( is_mob( ch ) )
+  continue;
+else {
+  act_tochar( #struggle, ch );
+  act_notchar( #rstruggle, ch, obj, mob, sight );
+  continue;
+}
+~
+E
+struggle~
+@GYou struggle up the slope, your feet slipping over the slick, green
+algae.@n 
+~
+E
+rstruggle~
+@G$n struggles up the slope, almost losing $s footing on an algae
+patch.@n 
+~
+!
+3 0 2
+398 17 1509949540 -2 0
+-1
+S
+
+#4739
+Crytalline Eggs~
+Hollowed out from countless years of water flow, the tunnel's sides and
+floor are polished smooth.  Splashing in from the north and burbling down
+the centre of the tunnel is a green-tinged stream, its edges lined with
+slimy algae.  Suspended near the roof are crystalline eggs, their amber
+surface covered in fine silvery webbing.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 5 0
+D0
+~
+~
+0 -1 4738 10 10 5
+D2
+~
+~
+0 -1 4740 10 10 5
+E
+roof crystalline eggs silvery webbing~
+Cradled in a thickly woven crib of silvery web, the crystalline eggs are
+suspended just out of reach.  The silken strands crisscross the ceiling
+and form tight cacoons around the fairly sizeable eggs; as light refracts
+about the dimmed cavern, sparkles of multicoloured rays shear off their
+metallic surfaces.
+~
+A
+~
+~
+send_to_room( #splash, room, sight );
+~
+E
+splash~
+@gGreen-tinged waters splash around your feet.@n
+~
+!
+2 150 0
+5394 9 1509949540 3 0
+398 17 1509949540 -2 0
+-1
+S
+
+#4740
+Honeycombed Tunnel~
+Countless holes in the limestone walls give it a honeycomb appearance. 
+Swirling waters stream in from the north and disappear down a shallow
+sinkhole in the center of the room, but their faint rumble is still felt
+through the rocks.  An acrid stench hangs in the air above copious
+amounts of bat guano that spread across the floor.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 9 0
+D0
+~
+~
+0 -1 4739 10 10 5
+D1
+~
+~
+0 -1 4741 10 10 5
+D2
+~
+~
+0 -1 4742 10 10 5
+E
+guano floor~
+Not helped by the swirling waters that swill around the centre of the
+room a few times before disappearing down the sinkhole, the consistency
+of the guano is rather muculent. Forming a quagmire across the floor of
+the cavern, the gelatinous faeces ebb about in concentric circles, the
+unceasing movement causing a rancid odour to hang thickly in the still
+air.
+~
+A
+~
+pile bat poo guano~
+i = random( 1, 12 );
+act_tochar( #searching, ch );
+act_notchar( #rsearching, ch );
+wait( 1 );
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( i == 4 ) {
+    act_tochar( #gotfur, ch );
+    act_notchar( #rgotfur, ch );
+    obj_to_char( oload( 2280 ), ch );
+    end;
+    }
+  if( i < 4 ) {
+    act_tochar( #gotpoo, ch );
+    act_notchar( #rgotpoo, ch );
+    obj_to_char( oload( 7949 ), ch );
+    end;
+    }
+  }
+act_tochar( #nothing, ch );
+act_notchar( #rnothing, ch );
+~
+E
+searching~
+@GYou begin digging through the pile of bat droppings.@n
+~
+E
+rsearching~
+@G$n begins digging through the pile of bat droppings.@n
+~
+E
+gotfur~
+@gCovered in bat excrement, you manage to find a soiled piece of bat
+fur.@n 
+~
+E
+rgotfur~
+@gCovered in bat excrement, $n manages to find a soiled piece of bat
+fur.@n 
+~
+E
+gotpoo~
+@gAfter digging through the stinking heap, you manage to find a sizeable
+chunk of bat droppings.@n 
+~
+E
+rgotpoo~
+@gAfter digging through the stinking heap, $n manages to find a sizeable
+chunk of bat droppings.@n 
+~
+E
+nothing~
+@gHaving searched the entire mound, you come away empty-handed, but
+covered in bat feces.@n
+~
+E
+rnothing~
+@gHaving searched the entire mound, $n comes away empty-handed, but
+covered in bat feces.@n
+~
+!
+9 0 0
+1120 9 1509949540 3 0
+1120 9 1509949540 3 0
+1120 9 1509949540 3 0
+1120 9 1509949540 3 0
+5395 9 1509949540 3 0
+78 17 1509949540 -2 0
+-1
+S
+
+#4741
+Fractured Stalagmites~
+Oozing through the mounds of limestone pillars, a trickling stream runs. 
+Mixtures of richly colored bands run across the walls where water and
+time have exposed glinting minerals.  Fractured stalagmites jut from the
+ground in a semi-circle forming a ridge where some of the running water
+has formed a shallow pool.  Amongst the limestone walls are several
+shadowy holes, created by now absent waterways.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 5 0
+D3
+~
+~
+0 -1 4740 10 10 5
+A
+~
+~
+send_to_room( #screech, room, sight_sound );
+~
+E
+screech~
+@cA piercing bat's screech echoes through the tunnels.@n
+~
+!
+2 200 0
+1120 9 1509949540 3 0
+1662 17 1509949540 -2 0
+-1
+S
+
+#4742
+Tar'ippal Caverns~
+Limestone terraces spread out like creases on tree-bark across the
+southern wall.  Ribbons of water trickle down the terracing, flowing out
+of cracks in the limestone chamber.  Multihued ribbons of quartz run
+through the cavern's ceiling, specks of phosphorescent light glinting off
+them.  Besides the terraces a mound of purple toadstools grow, their
+fleshy trunks and caps covered in mist.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 9 0
+D0
+~
+~
+0 -1 4740 10 10 5
+D1
+~
+~
+0 -1 4743 10 10 5
+D3
+~
+~
+0 -1 4744 10 10 5
+7859 17 1509949540 -2 0
+-1
+S
+
+#4743
+Tar'ippal Caverns~
+Holes and pock marks mar the fractured surface of the cave.  Rubble and
+limestone chunks cover much of the floor.  Bat guano coats the eastern
+portion of the chamber, a jagged fissure in the roof perhaps an exit to
+the surface world.  Gold-leaf moss grows around the crack in the ceiling,
+its damp surface glinting with water.  A few trickles of scum-coated
+water dribble through the rubble and westwards.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 6 0
+D3
+~
+~
+0 -1 4742 10 10 5
+E
+guano~
+Not helped by the meandering waters that slowly trickle westward, the
+consistency of the guano is rather muculent.  Forming a quagmire across
+the eastern portion of the cavern, the gelatinous faeces ebb at the edges
+of the putrescent river, the unceasing movement causing a rancid odour to
+hang thickly in the still air.
+~
+A
+drink~
+water~
+act_tochar( #yuck, ch );
+~
+E
+yuck~
+@yWater mixed with bat guano - do you really want to drink this?@n
+~
+!
+0 0 0
+A
+search~
+guano~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #yuck, ch );
+  act_notchar( #ryuck, ch, obj, mob, sight );
+}
+else
+  act_tochar( #again, ch );
+~
+E
+yuck~
+@yYou search through a guano pile and discover nothing but a foul
+smell that assults your nostrils and turns your stomach.@n
+~
+E
+ryuck~
+@y$n disturbs the guano pile looking for something.  A stomach-turning,
+foul smell assults your nostrils and makes you wish you never came
+here.@n 
+~
+E
+again~
+@YHorrible stench wafts from the freshly disturbed guano, a sure sign of
+someone already searching here recently.@n 
+~
+!
+0 0 0
+A
+~
+~
+if( !rflag( reset0, room ) )
+  send_to_room( #smell, room );
+~
+E
+smell~
+@YA stomach-turning smell of faeces and decay spreads through the chamber.@n
+~
+!
+2 300 0
+1120 9 1509949540 3 0
+1120 9 1509949540 3 0
+-1
+S
+
+#4744
+Tar'ippal Caverns~
+Slabs of cut limestone rest besides the holes they were hacked from. 
+Each of the blocks would weigh a sizeable amount, needing a few strong
+trolls even to budge.  Across the floor drag marks indicate where some of
+the stones have been moved, although they lead both east and west.  The
+rest of the chamber remains mostly untreated, the walls still their
+smooth natural shape.  A few chipmarks are the only sign of possible
+plans to dig into more of the walls.
+~
+[Yrna] Done.
+~
+167378948 11 6 0
+D1
+~
+~
+0 -1 4742 10 10 5
+D3
+~
+~
+0 -1 4745 10 10 5
+-1
+S
+
+#4745
+Tar'ippal Caverns~
+The passage of creatures has left its mark on the limestone floor of the
+cave.  Dirt and scratch marks cover its once smooth surface.  Chunks of
+rock have been cut from the walls, leaving countless indentations.  The
+base of stalagmites and stalactites litter the cavern, the only
+indication that they once covered the chamber.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 6 0
+D1
+~
+~
+0 -1 4744 10 10 5
+D3
+~
+~
+0 -1 4746 10 10 5
+A
+~
+~
+if( is_mob( ch ) )
+  continue;
+else {
+  act_tochar( #echo, ch );
+  act_notchar( #recho, ch, obj, mob, sight );
+  send_to_room( #farecho, find_room( 4744 ) );
+  continue;
+}
+~
+E
+echo~
+@WYour footsteps echo through the caverns as you walk down the tunnel.@n
+~
+E
+recho~
+@W$n's footsteps echo through the caverns as $e walks down the tunnel.@n
+~
+E
+farecho~
+@WFaint footsteps echo through the caverns - looks like you're not alone
+here.@n 
+~
+!
+3 0 8
+A
+~
+~
+if( is_mob( ch ) )
+  continue;
+else {
+  act_tochar( #echo, ch );
+  act_notchar( #recho, ch, obj, mob, sight );
+  send_to_room( #farecho, find_room( 4746 ) );
+  continue;
+}
+~
+E
+echo~
+@WYour footsteps echo through the caverns as you walk down the tunnel.@n
+~
+E
+recho~
+@W$n's footsteps echo through the caverns as $e walks down the tunnel.@n
+~
+E
+farecho~
+@WFaint footsteps echo through the caverns - looks like you are not alone.@n
+~
+!
+3 0 2
+-1
+S
+
+#4746
+Tar'ippal Caverns~
+A spiral fracture in the rock swirls across the grime-covered floor of
+the chamber.  Just over a foot wide, the fissure is easy enough to
+traverse; it is, however, a good indication that the tunnel system is
+becoming unstable.  At one time a wooden plank spanned the narrow
+opening, its rotted remains still staining the ground where it lay.  The
+bases of stalagmites spread over the cave's floor, their shafts hacked
+off and removed.  Bits of silvery web hang from the high ceiling, the
+strands moving as if blown by an unfelt wind.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 9 0
+D1
+~
+~
+0 -1 4745 10 10 5
+D3
+~
+~
+0 -1 4747 10 10 5
+E
+web silvery ceiling strands~
+Fine tendrils of webbing hang from crevices in the darkened ceiling, the
+wispy strands swaying eerily in the air currents.  As a flickering
+luminescence glints off the silken threads, their quivering lengths
+shimmer with a silvery hue.
+~
+A
+~
+~
+send_to_room( #web, room, sight );
+~
+E
+web~
+@CDisturbed by your passage the silvery web sways gently, its gossamer
+strands moved by slightest of air currents.@n 
+~
+!
+2 150 0
+A
+get touch break pick~
+web strand silvery~
+act_tochar( #toofar, ch );
+~
+E
+toofar~
+@WThe web is out of your reach.@n
+~
+!
+0 0 0
+-1
+S
+
+#4747
+Tar'ippal Caverns~
+Tiny particles of stone rain from a crack in the ceiling, the fine grit
+covering the grotto's surface.  Rising through the layers of dust are
+delicate crystal columns that form clusters of glinting gardens.  Across
+the limestone walls, flecks of aquamarine-coloured minerals sparkle with
+a pale light.  Barely visible through the debris are the remains of
+stalactites; the limestone growths hacked off leaving a flat base like a
+stump of a petrified tree behind.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 6 0
+D0
+~
+~
+0 -1 4748 10 10 5
+D1
+~
+~
+0 -1 4746 10 10 5
+E
+crystal columns clusters glinting gardens~
+Bedecked with jagged edges, the narrow columns of crystal penetrate
+through the amassed shards and fragments of pale limestone.  Bursting
+through the debris with an explosion of colour, the angular shapes that
+form this strange garden gleam in the soft light.  Clusters of white
+quartz have become fused with aquamarine minerals, each formation of
+stone taking on the resemblance of an exotic orchid.
+~
+A
+~
+~
+if( is_mob( ch ) )
+  continue;
+else {
+  act_tochar( #crunch, ch );
+  act_notchar( #rcrunch, ch, obj, mob );
+  continue;
+}
+~
+E
+crunch~
+@yTiny stones crunch under your feet as you continue along the tunnel.@n
+~
+E
+rcrunch~
+@YTiny stones crunching under $s feet, $n continues along the tunnel.@n
+~
+!
+3 0 3
+-1
+S
+
+#4748
+Tar'ippal Caverns~
+Carved into the limestone walls of the cavern are statues of dwarven
+warriors, their features eroded by time and some vandalism.  One of the
+two statues lacks its head; however, its beard-covered body and neck
+together with its general stature makes it clearly dwarven.  The other
+statue's axe and right hand are missing, clearly the work of vandals. 
+The floor through the cavern has been carved with hexagonal cobbles - at
+one point they would have been interlocked and seamless, but now most are
+cracked and crumbled.
+~
+[Azerin] maybe a dwarven quest from here, restore the statues honor
+[Estrella] if there is gonna be no quest.. then either delete last sentence of extra or write some funky acode for kneeling before them ;)
+[Yrna] I'm sure there will be quest at some point, so kneeling is cool
+[Guin] Done.
+~
+167378948 11 9 0
+D2
+~
+~
+0 -1 4747 10 10 5
+D3
+~
+~
+0 -1 4751 10 10 5
+E
+statues dwarven warriors~
+Once proud warriors, these statues are clearly dwarven in origin,
+although time has eroded their features and vandalism destroyed the
+honour of the forge-master who created them.  One statue, bearing a great
+axe, stands to the right of the bridge, his helmed head no longer
+present; while the other statue, to the left side, casts an iron gaze
+straight ahead, his right arm, which should have been brandishing a
+mirror axe to that of his companion's, removed at the wrist.  The
+commanding presence of these statues almost compels one to kneel before
+them.
+~
+5395 9 1509949540 3 0
+5393 9 1509949540 3 0
+-1
+S
+
+#4749
+Tar'ippal Caverns~
+Under Construction.
+~
+~
+167378948 10 9 0
+D1
+~
+~
+215 -1 4756 10 10 5
+-1
+S
+
+#4751
+Tar'ippal Caverns~
+A huge fissure cuts into the floor of the chamber, rocks and debris
+dancing down its jagged side and disappearing into the darkness.  A rope
+bridge runs diagonally across the wide gap, its middle dipping down below
+the cavern's edge and into the blackness.  Countless huge stalactites
+drape from the vaulted chambers roof, their surface sparkling with gems
+and minerals.  Towards the east the tunnel continues, leading away from
+the precipice.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 6 0
+D1
+~
+~
+0 -1 4748 10 10 5
+D2
+~
+~
+0 -1 4759 10 10 5
+E
+gems minerals stalactites ceiling~
+Large honing stalactites grow from the vaulted ceiling of this immense
+cavern, their tapering lengths covered with a slightly viscous liquid. 
+Glistening beneath the slimy moisture, some thin veins of minerals have
+been trapped within the limestone spikes.  Clusters of bright gems, deep
+vermilion in colour, appear at random intervals along the slick pale
+surfaces, their sides chipped presumably by attempts to remove them from
+within the stalactites.
+~
+E
+bridge rope~
+Stretching diagonally across the wide fissure, a rope bridge hangs
+suspended by ropes about the thickness of an ogre's arm.  Secured to
+rusted iron pegs that have been hammered into the bedrock, the ropes
+strain under the weight of brittle wooden planks that provide fairly
+shaky footing for those trying to cross the swaying bridge.
+~
+A
+~
+~
+if( is_mob( ch ) )
+  continue;
+else {
+  act_tochar( #cross, ch );
+  act_notchar( #rcross, ch, obj, mob, sight );
+  continue;
+}
+~
+E
+cross~
+@YWith some doubt you step upon the bridge and shuffle slowly forward.@n
+~
+E
+rcross~
+@yWith a look of trepidation on $s face, $n shuffles across the bridge.@n
+~
+!
+3 0 4
+A
+get pry dig~
+gems minerals~
+act_tochar( #no, ch );
+~
+E
+no~
+@WThe ceiling is out of your reach.@n
+~
+!
+0 0 0
+-1
+S
+
+#4753
+Tar'ippal Caverns~
+Rubbish lies scattered across the ground, the cast-offs of a decent sized
+community slowly rot away, filling the huge cavern with a pungent aroma. 
+Bits of wagons, building tiles, rocks and food waste intermingle with
+other less identifiable goop.  Masses of insects swarm over the decay,
+feeding on the refuse.  A stagnant pool of oily water spreads out between
+mounds, its surface coated with squirming aquatic insects.  Brightly
+capped toadstools grow upon much of the garbage, feeding on the waste.
+~
+[Guin] Done.
+~
+167378948 11 9 0
+D3
+~
+~
+0 -1 4754 10 10 5
+E
+rubbish pile refuse~
+If you had the time - and no sense of smell - the chances are you could
+find a broken version of anything in this pile.  The chances of you
+finding anything worth having are slim.  It is pretty obvious that this
+refuse has been here, moldering away, for months or even years.
+~
+A
+search~
+pile rubbish refuse mound~
+act_tochar( #nothing, ch );
+act_notchar( #nothing_room, ch );
+~
+E
+nothing~
+You rummage around a while but find nothing you want to keep.
+~
+E
+nothing_room~
+$n roots around the piles of rubbish but somes up empty handed.
+~
+!
+0 0 0
+7859 17 1509949540 -2 0
+287 17 1509949540 -2 0
+-1
+S
+
+#4754
+Tar'ippal Caverns~
+Bits of broken wagons and food waste lie scattered across the limestone
+floor.  A powerful stench hangs in the air above the waste which stings
+eyes and leaves the mouth dry.  A sizable mound of crystalline eggs has
+been woven into the northern wall, a sheet of slivery web affixing it to
+the rock.  Surprisingly, despite the stench and decay someone or something
+appears to have rummaged through the waste, small gnome-sized footprints
+visible across the muck.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 7 0
+D1
+~
+~
+0 -1 4753 10 10 5
+D2
+~
+~
+0 -1 4755 10 10 5
+E
+wagons broken food waste floor~
+With one wheel split in half on the axle, and the other, while intact,
+lying a few feet away, this wagon has been long deserted by its owner. 
+Spilling out from the back, the produce that was being transported now
+lies in festering heaps on the pale limestone floor, the decaying food
+decomposing with a nauseating odour.
+~
+E
+crystalline eggs 1 northern wall silvery web~
+Cradled in a thickly woven crib of silvery web, the crystalline eggs,
+varying in colour from deep vermilion to pale azure, are held tight
+against the northern wall.  The silken strands crisscross the rock face
+from ceiling to floor forming stringent cacoons around the fairly
+sizeable eggs; as light refracts about the dimmed cavern, sparkles of
+multicoloured rays shear off their metallic surfaces.
+~
+A
+~
+~
+rch = rand_player( room );
+act_tochar( #yuck, rch );
+act_notchar( #ryuck, rch, obj, mob, sight );
+interpret( rch, "cough" );
+~
+E
+yuck~
+@gYou choke on the nauseating smell coming from the mound of decaying food.@n
+~
+E
+ryuck~
+@gNot surprisingly, $n chokes on the nauseating smell coming from the
+mound of decaying food.@n 
+~
+!
+2 250 0
+A
+get pry break~
+egg crystalline~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 2 ) == 2 ) {
+    act_tochar( #try, ch );
+    act_notchar( #rtry, ch, obj, mob, sight );
+  }
+  else {
+    act_tochar( #break, ch );
+    act_notchar( #rbreak, ch, obj, mob, sight );
+    mload( 5395, room );
+  }
+}
+~
+E
+try~
+@CYou push and pull, trying to get leverage on one of the eggs, but to no
+avail - it won't budge.@n 
+~
+E
+rtry~
+@C$n strains $s muscules trying to get one of the crystalline eggs free,
+but has to give up after a while.@n 
+~
+E
+break~
+@MAs you pull onto the crystalline egg, it cracks open revealing a small
+rock beetle larvae.@n 
+~
+E
+rbreak~
+@M$n tries to pry an egg free, but it cracks open revealing a small rock
+beetle larvae.@n 
+~
+!
+0 0 0
+A
+search~
+wagon~
+act_tochar( #already, ch );
+~
+E
+already~
+@yThe wagon looks as if it has been searched already.  They probably
+didn't leave anything worth getting.@n 
+~
+!
+0 0 0
+-1
+S
+
+#4755
+Tar'ippal Caverns~
+Hewn from the limestone walls is a wide, but shallow, basin, its surface
+richly carved with scenes of dwarven mining works and ferocious battles. 
+A half-score of hack marks mar the designs in an attempt to obliterate
+the dwarven crafting.  Two rusted iron sconces jut from the wall above
+the basin, the remains of burnt-out torches held in their grasp.  The
+floor and remaining walls of the chamber are unworked, their surface
+covered with ruts and fissures, giving them the appearance of melted wax.
+~
+[Carth] done
+[Guin] Done.
+~
+167378948 11 9 0
+D0
+~
+~
+0 -1 4754 10 10 5
+D2
+~
+~
+0 -1 4757 10 10 5
+D3
+~
+~
+0 -1 4756 10 10 5
+E
+hack marks designs~
+Deep gouges, reminiscent of those left by a visciously swung axe, scar
+the depictions rendered on the limestone basin.  The blade of the weapon
+cut deep, splitting and even obliterating some of the designs, yet
+leaving others of them mostly intact.
+~
+E
+rust iron sconces torches~
+Poised above the basin, two iron wrought sconces support the skeletal
+remains of a pair of burnt out torches.  The sconces, atypical of other
+metal works found in the underground warren, are intricate...  curves,
+curls, twining vines and delicate leaves forming the pattern.  Sadly, the
+tale of years has left its mark on the crafted pieces; rust is eating
+away at the artisan's designs.
+~
+-1
+S
+
+#4756
+Tar'ippal Caverns~
+The chamber has been crafted from the limestone cavern with considerable
+skill.  Every surface gleams as if polished, the walls sparkling as
+mineral deposits catch the light.  Overhead an iron brazier dangles from
+three chains, a ruddy glow emanating from within its basin.  Set into the
+western wall is a circular iron door, the metal polished till it shines. 
+Flanking the door are four statues of squat, heavily armed and armored
+dwarves.  A few cracks mar their surface, and several are missing their
+noses.
+~
+[Guin] Possible location for a zone at some future time.
+[Azerin] door to another area or just red herring :)
+[Carth] done
+[Guin] Done.
+~
+167378948 11 6 0
+D1
+~
+~
+0 -1 4755 10 10 5
+D3
+circular iron door~
+~
+215 -1 4749 10 10 5
+E
+minerals walls~
+Tiny pieces of mineral glint and flicker with reflected light.
+~
+E
+statues~
+Once quite intricate carvings, these statues have suffered greatly from
+the passage of time and the corrosive atmosphere.  The statues were of
+armoured dwarves standing, axes at the ready, guarding the doorway.
+Now, however, few details can be discerned.  Their weapons have become
+chipped and are hard to make out and their facial features have mostly
+worn off.  In fact, it is only because off the height, build and beard
+that you can tell their species at all.
+~
+A
+get~
+brazier~
+act_tochar( #reach, ch );
+~
+E
+reach~
+Try as you might you cannot reach the brazier.
+~
+!
+0 0 0
+-1
+S
+
+#4757
+Tar'ippal Caverns~
+Heavy-looking slabs of wood brace the ceiling and walls of the cavern.
+Beyond the supports a matrix of fissures spreads across the stone as if
+something impacted against them.  The floor has been set with
+grey-colored hexagonal cobbles although many are broken and lost.  A
+hideous sulfurous stench hangs in the air above a pool of bubbling mud
+that almost blocks the southern tunnel.
+~
+[Carth] done
+[Guin] Done.
+~
+167378948 11 6 0
+D0
+~
+~
+0 -1 4755 10 10 5
+D1
+~
+~
+0 -1 4758 10 10 5
+D2
+~
+~
+0 -1 4762 10 10 5
+E
+mud pool~
+The thick mud in the pool has the consistancy of whipped cream. 
+Occasionally a large bubble forms on the surface, growing to the size of
+a human fist, before popping and filling the air with the smell of
+rotting eggs.
+~
+A
+touch search get~
+mud pool~
+act_tochar( #to_char, ch );
+~
+E
+to_char~
+You try to get near the pool of mud but the heat drives you back.
+~
+!
+0 0 0
+5397 9 1509949540 3 0
+-1
+S
+
+#4758
+Tar'ippal Caverns~
+Ripping through the floor of the limestone cavern is a deep fissure.  The
+edge is covered in cracks and crumbled rock, a constant trickle of earth
+tumbling into the dark maw.  A rope bridge streches diagonally across the
+rift at a narrow point, its middle dipping below the crumbling edge. 
+Ropes about the thickness of a ogre's arm have been tied to rusted iron
+pegs that have been hammered into the rocky ground.  A pile of broken
+planks sits beside the bridge, an indication to the work required to
+maintain the crossing.  From out of the maw a steady wind blows, howling
+through the bridge's plankings and rocking the structure.
+~
+[Guin] Done.
+~
+167378948 11 6 0
+D1
+~
+~
+0 -1 4759 10 10 5
+D3
+~
+~
+0 -1 4757 10 10 5
+E
+rope bridge~
+Stretching diagonally across the wide fissure, a rope bridge hangs
+suspended by ropes about the thickness of an ogre's arm.  Secured to
+rusted iron pegs that have been hammered into the bedrock, the ropes
+strain under the weight of brittle wooden planks that provide fairly
+shaky footing for those trying to cross the swaying bridge.
+~
+E
+plank pile~
+A pile of broken planks lie against one wall, tossed there and forgotten. 
+The planks are of various lengths and widths, replaced by new ones to
+repair the bridge.  Oddly, a round length of wood peeks between two
+boards.
+~
+A
+~
+~
+if( is_mob( ch ) )
+  continue;
+else {
+  act_tochar( #cross, ch );
+  act_notchar( #cross, ch, obj, mob, sight );
+  continue;
+}
+~
+E
+cross~
+@YThe bridge groans under strain as you step on it.@n
+~
+E
+cross~
+@YThe rope bridge groans under strain as $n steps on it.@n
+~
+!
+3 0 2
+A
+~
+pile planks~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 100 ) < 6 )
+    obj = oload( 3949 );
+  if( obj ) {
+    act_tochar( #plank, ch, obj );
+    act_notchar( #rplank, ch, obj, mob, sight );
+    obj_to_char( obj, ch );
+  }
+  else {
+    act_tochar( #nope, ch );
+    act_notchar( #rnope, ch, obj, mob, sight );
+  }
+}
+else
+  act_tochar( #already, ch );
+~
+E
+plank~
+@ySearching through the pile of broken planks, you discover $p that looks
+interesting.@n 
+~
+E
+rplank~
+@y$n takes something from a pile of broken planks.@n
+~
+E
+nope~
+@gYou look through the pile of broken planks, but find nothing
+interesting at all.@n 
+~
+E
+rnope~
+@g$n turns a few planks over, but doesn't take anything.@n
+~
+E
+already~
+By the looks of it, the planks have been recently searched.
+~
+!
+9 0 0
+-1
+S
+
+#4759
+Tar'ippal Caverns - Upon the Bridge~
+Straining ropes and brittle seeming wooden planks form the swaying bridge
+above the fissure below.  Every bit of the structure shakes under a
+constant wind that gusts up from the maw below, the sway making
+traversing the bridge a nerve-wrecking experience.  Huge stalactites, like
+the fangs of a massive dragon, hang from the ceiling high above, their
+surface gleaming with clusters of minerals and crystals.  A ribbon of
+light runs across the apex of the vaulted chamber, its source unclear. 
+Below, the darkness offers no indication as to how far into the bowels of
+the earth the fracture runs.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378956 11 9 0
+D0
+~
+~
+0 -1 4751 10 10 5
+D3
+~
+~
+0 -1 4758 10 10 5
+A
+~
+~
+send_to_room( #creak, room );
+~
+E
+creak~
+@YA gust of wind hits the bridge making the ropes creak and half-rotten
+planks crack under strain.@n 
+~
+!
+2 200 0
+A
+~
+~
+if( is_mob( ch ) )
+  continue;
+else {
+  if( random( 1, 3 ) == 2 ) {
+    act_tochar( #slip, ch );
+    act_notchar( #rslip, ch, obj, mob, sight );
+  }
+  else {
+    act_tochar( #cross, ch );
+    act_notchar( #rcross, ch, obj, mob, sight );
+    continue;
+  }
+}
+~
+E
+slip~
+@RA rotten plank gives way under your weight and you start plummeting
+down!  By sheer luck, you manage to catch one of the ropes and pull
+yourself up.  That was close!@n 
+~
+E
+rslip~
+@RYou watch in horror as a rotten plank breaks under $n and $e plunges
+down into the blackness.  Only by sheer luck does $e catch one of the
+ropes and manages to pull $mself up.@n 
+~
+E
+cross~
+@YA rotten plank you step on creaks a warning.  You hastily withdraw your
+foot, step over it and leave the bridge.@n 
+~
+E
+rcross~
+@YA rotten plank $n steps on creaks ominously, but $e manages to cross
+safely.@n 
+~
+!
+3 0 9
+A
+~
+~
+rch = rand_player( room );
+act_tochar( #fall, rch );
+act_notchar( #rfall, rch, obj, mob, sight );
+damage( mob, rch, 1d4, physical, "sharp planks", "falling through the rotted bridge" );
+~
+E
+fall~
+@RA rotted plank snaps underneath you and you drop down very fast, only
+to be stopped by your hips getting wedged between the planks.  You manage
+to pull yourself up very, very carefully.@n 
+~
+E
+rfall~
+@RA rotted plank snaps underneath $n and $e drops down, only to be
+stopped by $s hips getting wedged between the planks.  Taking great care,
+$e manages to pull $mself up.@n 
+~
+!
+2 300 0
+-1
+S
+
+#4760
+Tar'ippal Caverns~
+Mounds of scree fill the vaulted chambers floor, making traversing the
+chamber difficult.  Most of the rubble appears to have been waterworn,
+perhaps the castings from a mine or riverbed.  Scattered over the piles
+are bits of ore carts and scraps of leather and worn clothing.  Battered
+and broken lanterns hang from rusted chains in the center of the ceiling.
+~
+[Guin] Done
+~
+167378948 11 7 0
+D3
+~
+~
+0 -1 4761 10 10 5
+-1
+S
+
+#4761
+Tar'ippal Caverns~
+Broken chunks of rock and rotted boards litter the cavern's floor.  Old
+ore wagons lie on their side, their metal bindings rusting away.  Much of
+the stonework shows some sign of being worked, edges have been squared
+off and many are a uniform size.  A layering of stone dust coats the
+cavern, probably left from the stonecutting.
+~
+[Guin] Down leeds to Dero.
+[Guin] Done.
+~
+167378948 11 6 0
+D1
+~
+~
+0 -1 4760 10 10 5
+D3
+~
+~
+0 -1 4762 10 10 5
+D5
+stone slab~
+~
+171 -1 6507 10 10 5
+E
+boards rock floor ground~
+You notice that one of the slabs is smoother than the rest and the ground
+around it is cleared of dust almost as if it had been moved recently.
+~
+A
+move~
+slab stone rock~
+if( !is_open( room, down ) ) {
+  act_tochar( #list_char, ch );
+  act_notchar( #list_notchar, ch, obj, mob, sight );
+  open( room, down );
+}
+else {
+  act_tochar( #nomove, ch );
+}
+~
+E
+list_char~
+You grab hold of the edge of the stone and pull hard.  At the point where
+you think your arms will pull away from your body the slab suddenly pulls
+free revealing a hole in the ground!
+~
+E
+list_notchar~
+$n crouches down and starts pulling at one of the slabs on the ground. 
+$e pulls and pulls, $s scrunched up face becoming redder and redder
+until, just when you think $e will injure $sself, the slab suddenly comes
+free revealing a hole in the ground.
+~
+E
+nomove~
+The slab is already moved!
+~
+!
+0 0 0
+-1
+S
+
+#4762
+Tar'ippal Caverns~
+Seeping down the limestone walls are runlets of steaming water, the years
+of flow leaving grooves in the soft rock.  At the base of the wall the
+ground forms a natural basin where the bubbling waters collect. 
+Intestine-shaped minerals form around the outer rim of the pool, their
+slick surface coated in the steaming water.  From the ceiling dripping
+stalactites deposit a rain of warm water that drain away through tiny
+fractures across the cavern's floor.
+~
+[Guin] Done.
+[Belgar] look basin, evaproates -> evaporates
+[Belgar] plus it's -> its
+~
+167378948 11 6 0
+D0
+~
+~
+0 -1 4757 10 10 5
+D1
+~
+~
+0 -1 4761 10 10 5
+E
+stalactites basin pool waters minerals bubbling~
+Centuries or more of water dripping down the stalactites has left the
+pool rich in minerals.  The warm water evaproates leaving behind the
+minerals it has picked up on it's travels to form a crust of crystal
+around the pool.
+~
+A
+drink~
+water pool~
+act_tochar( #drink_self, ch );
+act_notchar( #drink_room );
+damage( mob, ch, random( 1, 3 ), fire, "the searing pain", "drinking boiling water" );
+~
+E
+drink_self~
+The moment your skin touches the water a searing @RPAIN@n shoots through
+you!
+~
+E
+drink_room~
+$n leans forward to touch the water then recoils with a cry of pain!
+~
+!
+0 0 0
+A
+search~
+pool water~
+acode( room, 1 );
+~
+!
+0 0 0
+1662 17 1509949540 -2 31
+-1
+S
+
+#4764
+Tar'ippal Caverns~
+Dipping sharply downward, this tubular-shaped passage winds northward,
+its limestone surface covered in slender ribbons of erosion that form a
+corkscrew.  A dribbling stream follows the tunnel, creating a low
+splashing waterfall as it plunges into the darkness below.  Beside the
+rivulet, pale-yellow moss clings to the stones, its delicate leaves
+glinting with moisture.
+~
+[Guin] Add acode for pick moss.
+[Guin] Add extra for moss.
+[Guin] Reviewed.
+~
+167378948 11 6 0
+D0
+~
+~
+0 -1 4707 10 10 5
+D2
+~
+~
+0 -1 4706 10 10 6
+E
+moss~
+Dew-spangled leaves, little more than fronds, curl out from the delicate
+tendrils that form the root system of this pale yellow moss.  With no
+soil in which to flourish, it appears that the main source of nutrients,
+limited that it may be, is the sluggishly trickling rivulet that meanders
+through the tunnel.
+~
+A
+1 get 1 take~
+moss~
+if( !rflag( reset0, room ) ) {
+  act_tochar( #nada, ch );
+  act_notchar( #rnada, ch, obj, mob, sight );
+  end;
+}
+remove_rflag( reset0, room );
+obj = oload( 2857, random( 2, 4 ) );
+act_tochar( #moss, ch, obj );
+act_notchar( #rmoss, ch, obj, mob, sight );
+if( can_handle( ch, obj ) )
+  obj_to_char( obj, ch );
+else
+  obj_to_room( obj, room );
+~
+E
+nada~
+@yYou find no moss worth taking.@n
+~
+E
+rnada~
+@y$n finds no moss worth taking.@n
+~
+E
+moss~
+@yYou find $p intact enough to take.@n
+~
+E
+rmoss~
+@y$n finds $p in good enough condition to remove.@n
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CYou scrabble down the dip, following the trickling stream northward.@n
+~
+E
+to_room~
+@C$n scrabbles down the dip, following the trickling stream northward.@n
+~
+!
+3 0 1
+398 17 1509949540 -2 0
+-1
+S
+
+#4765
+Tar'ippal Caverns~
+Massive, tool-marked chunks of limestone have been piled into a crude
+staircase here, rising ten feet to the flowstone lip of a ledge to the
+south.  Rust-colored bricks are mortared into a solid wall resting on the
+ledge - it rises from floor to ceiling and wall to wall, with only an
+archway to allow passage.  The lower passage is littered with chipped
+stone, but a pathway has been cleared by constant travel, the pebbles
+reduced to sand.  An opening to the north leads to a lighted cavern
+beyond.
+~
+Slave Pits North
+Attaches to 2724
+[Guin] Done.
+~
+167378956 10 9 0
+D0
+~
+~
+0 -1 2724 10 10 5
+D4
+~
+~
+0 -1 4768 10 10 5
+E
+limestone staircase tool-marked~
+The limestone, haphazardly-formed staircase, smoothed from age and use,
+ascends up the western wall.  A hole in the wall to the north is lit from
+behind, and opens into a cavern beyond.
+~
+E
+brick mortar floor ceiling~
+A rusty-hued brick wall spans the ledge, as if it were trying to hold
+something in or keep something out.
+~
+A
+~
+~
+if( is_player( ch ) )
+  if( find_stat( ch, level ) < 10 ) {
+  act_tochar( #toolittle, ch );
+  act_notchar( #toolittle2, ch );
+}
+~
+E
+toolittle~
+@RA faint cry echoes out from the cavern to the north: "Save yourself
+while you still can!  The overlords will capture someone as inexperienced
+as you for sure!"@n 
+~
+E
+toolittle2~
+@RA faint cry echoes out of the cavern to the north, warning $n to stay
+away from the tunnel to the north lest they be captured or killed while
+still so inexperienced.@n 
+~
+!
+1 0 16
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yPlacing your foot on the old wooden ladder, you begin the ascent to the
+floor above.@n 
+~
+E
+to_room~
+$n places a foot on the old wooden ladder, being the ascent to the floor
+above.@n 
+~
+!
+3 0 16
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou duck through the low gap in the northern wall.@n
+~
+E
+to_room~
+@n ducks through the low gap in the northern wall.@n
+~
+!
+3 0 1
+-1
+S
+
+#4768
+Tar'ippal Caverns~
+There is little to distinguish this short stretch of narrow tunnel from
+the others riddling the surrounding caves.  Back to the west, flickering
+lantern light points the way to Tar'ippal and to the east, it deadends at
+a slab of granite.  Underfoot, an opening in the floor leads to a cavern
+below.
+~
+[Morros] Done.
+[Guin] Done.
+~
+167378956 10 9 0
+D3
+~
+~
+0 -1 4847 10 10 5
+D5
+~
+~
+0 -1 4765 10 10 5
+E
+1 down opening~
+The opening in the tunnel floor, while not very wide, has an old wooden
+ladder affixed to it, providing a way to cavern below.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou gingerly place a foot on the ladder and begin the climb down to the
+cavern below.@n 
+~
+E
+to_room~
+@y$n gingerly places a foot on the ladder and begins the descent.@n
+~
+!
+3 0 32
+-1
+S
+
+#0
+

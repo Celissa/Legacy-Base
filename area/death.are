@@ -1,0 +1,345 @@
+#M2_AREA
+2
+
+Death~
+Greyclaw Caer~
+~
+~
+~
+
+0 0
+0
+0
+#ROOMS
+
+#33750
+** DEATH **~
+You come through the smoke surrounding the entrance and stop dead in your
+tracks in amazement...  You have entered a cavernous room, replete with
+Gothic archways and stained-glass windows depicting battles, hunting
+parties, ocean waves, hangman's gibbets and other scenes where Death may
+appear.  A huge throne of onyx stands before you, and seated upon it is
+the King of the Netherworld himself.  
+@C
+A leather-bound book hovers in midair before you.
+~
+no magic to prevent abuse
+~
+-369622985 15 5 0
+D2
+~
+~
+0 -1 33751 10 10 5
+E
+leather bound book~
+You move toward the book, and it opens on its own.  The pages slowly
+flip over by an unseen hand, and it falls open to a page written in
+elegant script...  
+   
+       The cities of the land are herein recorded:
+   
+             Chiiron
+             Medienne
+             Kha-Da
+             Vaasa
+             Darkhaven
+             Pennan
+             Sos-kul
+             Denab-Knur
+             Voaleth
+             Brithbarad
+      
+{ type: @GTO skeletal <cityname>@n when you have chosen a city }
+~
+A
+get take~
+book~
+send_to_char( #get, ch );
+~
+E
+get~
+You move forward to take the book but one look from Death and you decide
+it would not be wise.  
+~
+!
+0 0 0
+A
+~
+~
+act_tochar( #tap, ch );
+if( ch )
+  ch = rand_player( room );
+~
+E
+tap~
+Death taps you on the shoulder.
+~
+!
+2 100 0
+A
+~
+~
+i = random( 1,15 );
+if( i < 6 ) {
+  act_tochar( #rue, ch );
+  wait( 1 );
+  act_tochar( #deathresponds, ch );
+  }
+~
+E
+rue~
+@ROut of the corner of your eye, you think you see a withered and
+shrunken humanoid pointing at you and laughing at your misfortune.@n
+~
+E
+deathresponds~
+@YDeath looks over to a withered and shrunken humanoid and waves.@n 
+~
+E
+beer~
+@GA large, skeletal figure wrapped in a black-hooded cloak says (in primal):@n
+Hey Rue, we'll grab a beer after I'm done here.
+~
+!
+1 0 4
+A
+1 look~
+leather bound book~
+act_tochar( #book, ch, obj, mob, sight );
+if( get_integer( ch, "/Cayln/NewCont/PortalFound" ) != 0 ) 
+act_tochar( #newbook, ch, obj, mob, sight );
+act_tochar( #instructions, ch, obj, mob, sight );
+~
+E
+book~
+You move toward the book, and it opens on its own.  The pages slowly
+flip over by an unseen hand, and it falls open to a page written in
+elegant script...  
+   
+       The cities of the land are herein recorded:
+   
+             Chiiron
+             Medienne
+             Kha-Da
+             Vaasa
+             Darkhaven
+             Pennan
+             Sos-kul
+             Denab-Knur
+             Voaleth
+             Brithbarad
+      
+~
+E
+newbook~
+The books pages mysteriously turn of their own accord, revealing more names...
+
+@I@I@I@I@I@I Talidar
+@I@I@I@I@I@I Tar'ippal
+
+~
+E
+instructions~
+{ type: @GTO skeletal <cityname>@n when you have chosen a city }
+~
+!
+0 0 0
+462 9 1509949540 3 0
+-1
+S
+
+#33751
+The Path of Death~
+Pain flashes across your consciousness and you writhe under its
+intensity.  You are surrounded by bright light and billows of smoke and
+the sound of screams from millions of dead souls who've come this way
+before...  
+    
+And then there is silence.  And you.
+     
+Still coughing from the smoke, you look around you.  You are on a
+suspended pathway of stone, like a bridge arching from one plane to the
+next.  Billows of white smoke float up on either side of the archway, and
+you see the path stretching before you to the north.  You have no choice
+but to move forward to meet your fate.  
+~
+no_magic to prevent player abuse
+~
+-369622985 15 6 0
+D0
+~
+~
+0 -1 33750 10 10 5
+D2
+~
+~
+511 -1 33755 10 10 5
+A
+1 pray~
+~
+if( is_player( ch ) )
+  if( is_resting( ch ) ) {
+  act_tochar( #nopray, ch );
+  end;
+  }
+continue;
+~
+E
+nopray~
+As you pray you feel a cold chill touch your soul, you doubt there will
+be any aid forthcoming.
+~
+!
+0 0 0
+-1
+S
+
+#33752
+Room of the Shimmering Portal~
+Cold stone rises upward, disappearing into the swirling, shifting mists
+that creep and coil and touch every surface within view, thinning here
+and thickening there to confuse the senses.  Centered amid what can be
+seen of the stone expanse, a portal glows fitfully with pulses of
+multi-hued light, progressing through the spectrum from brightest white
+to darkest red, never remaining one color for more than a handful of
+seconds.  The portal beckons...invites...summons, the words inscribed on
+the arch the key to a chosen destination.
+
+@cType@n @CTO PORTAL <TOWN>@n @cto re-enter the world@n.
+~
+~
+167280695 0 9 0
+A
+1 look 1 qlook~
+portal shimmering~
+act_tochar( #look, ch );
+if( get_integer( ch, "/Cayln/NewCont/PortalFound" ) != 0 )
+act_tochar( #look2, ch, obj, mob, sight );
+~
+E
+look~
+The shimmering portal stands before you, images spinning madly through it. 
+Where one second you saw the flitting image of a Pennan farmhouse, you
+now see the dark grey walls of Medienne streaking by.
+
+Inscribed on the portal, in bold, elegant runes, are the following words:
+
+@C
+@IChiiron   ::   Medienne   ::   Pennan   ::   Kha-Da
+@ISos-Kul   ::   Voaleth    :: Denab-knur ::   Vaasa
+~
+E
+look2~
+@C@ITalidar   ::   Tar'ippal  ::  Zirnath@n
+~
+!
+0 0 6
+123 9 1509949540 3 0
+-1
+S
+
+#33753
+Room of the Bright Portal~
+Cold stone rises upward, disappearing into the swirling, shifting mists
+that creep and coil and touch every surface within view, thinning here
+and thickening there to confuse the senses.  Centered amid what can be
+seen of the stone expanse, a portal glows fitfully with pulses of
+multi-hued light, progressing through the spectrum from brightest white
+to darkest red, never remaining one color for more than a handful of
+seconds.  The portal beckons...invites...summons, the words inscribed on
+the arch the key to a chosen destination.
+
+@cType@n @CTO PORTAL <TOWN>@n @cto re-enter the world@n.
+~
+~
+167280695 0 9 0
+A
+1 look 1 qlook~
+portal shimmering blue~
+act_tochar( #look, ch );
+if( get_integer( ch, "/Cayln/NewCont/PortalFound" ) != 0 )
+  act_tochar( #look2, ch, obj, mob, sight );
+~
+E
+look~
+The shimmering portal stands before you, images spinning madly through it. 
+Where one second you saw the flitting image of a Pennan farmhouse, you
+now see the dark grey walls of Medienne streaking by.
+
+Inscribed on the portal, in bold, elegant runes, are the following words:
+
+@C
+@IChiiron    ::    Medienne    ::    Kha-Da
+@IVaasa      ::    Sos-Kul     ::    Pennan
+~
+E
+look2~
+@C@ITalidar@I@I::@I@IZirnath@n
+~
+!
+0 0 6
+2254 9 1509949540 3 0
+-1
+S
+
+#33754
+Room of the Dark Portal~
+Cold stone rises upward, disappearing into the swirling, shifting mists
+that creep and coil and touch every surface within view, thinning here
+and thickening there to confuse the senses.  Centered amid what can be
+seen of the stone expanse, a portal glows fitfully with pulses of
+multi-hued light, progressing through the spectrum from brightest white
+to darkest red, never remaining one color for more than a handful of
+seconds.  The portal beckons...invites...summons, the words inscribed on
+the arch the key to a chosen destination.
+
+@cType@n @CTO PORTAL <TOWN>@n @cto re-enter the world@n.
+~
+~
+167280663 0 9 0
+A
+1 look 1 qlook~
+portal shimmering black~
+act_tochar( #look, ch );
+if( get_integer( ch, "/Cayln/NewCont/PortalFound" ) != 0 )
+  act_tochar( #look2, ch, obj, mob, sight );
+~
+E
+look~
+The shimmering portal stands before you, images spinning madly through it. 
+Where one second you saw the flitting image of a dark Voaleth cavern, you
+now see the dark grey walls of Medienne streaking by.
+
+Inscribed on the portal, in bold, elegant runes, are the following words:
+
+@C
+@IMedienne   ::  Darkhaven   ::  Sos-kul    ::  Voaleth
+@IDenab-knur ::  Brithbarad  ::  Pennan
+~
+E
+look2~
+@I@CTar'ippal  ::  Zirnath@n
+~
+!
+0 0 6
+2255 137 1509949540 3 0
+-1
+S
+
+#33755
+Druids Cloister~
+This is where a druids body goes when he is shape-changed, do not delete
+this room.  If you are a mortal and can see whats in here, post to bugs
+what happened, Death lies north of here.
+~
+~
+-369622987 15 9 0
+D0
+~
+~
+1 -1 33751 10 10 5
+-1
+S
+
+#0
+

@@ -1,0 +1,27 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+The mail function uses the standard editor commands to write letters.  See<br>
+help editor for the list and description of these.  In addition to the<br>
+standard editor commands, mail also uses :<br>
+<br>
+mail #           : either displays that letter (if not editting),<br>
+                    inserts/deletes that line. (See help editor)<br>
+mail [subject]   : begins editting new letter with subject [subject]<br>
+mail send [name] : sends the mail being editted to [name] <br>
+mail delete      : erases the letter being editted<br>
+mail delete #    : erases that message<br>
+mail delete all  : deletes all mail messages<br>
+mail cc [name]   : sends a copy of mail being edited to [name],<br>
+                    but you continue to edit it.<br>
+mail edit #      : copies the specified message to the mail buffer<br>
+  <br>
+<h1> Description </h1>
+<br>
+Mail is used to send a message to a specific person.  You do not have to be<br>
+introduced to that person; only their name is required to send a letter.<br>
+<br>
+See also: note, tell<br>
+</html>
+</body>

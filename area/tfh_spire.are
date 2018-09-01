@@ -1,0 +1,1164 @@
+#M2_AREA
+2
+
+Talidar's Marsh~
+Azerin Squeed Druscilla Galstaff~
+Talidar's Marsh~
+~
+~
+
+3 0
+0
+1
+#ROOMS
+
+#4300
+Muddy Trail Through the Marsh~
+Dark mud mixes with brackish pools of still water to form a quagmire to
+either side of the trail.  The trail itself is little better, only dead
+clumps of rushes offering firmer footing.  Countless stands of bullrushes
+and flax create walls of green that obscure the path's destination. 
+Northward, rising out of the marsh is a great spire of rock; over a
+hundred feet high, it dominates the horizon.  Eastward, the tops of trees
+can be seen, forming the edge of a great forest.  To the south, the track
+winds deeper into the swamp.
+~
+[Guin] Done.
+~
+167247872 14 9 0
+D0
+~
+~
+0 -1 5432 10 10 5
+D2
+~
+~
+0 -1 4301 10 10 5
+E
+dark mud brackish pools water quagmire~
+The oozing remains of suffocated reeds and seeping mud, the quagmire's
+stench hangs heavy over the bubbling morass.  Under the blanket of
+brackish water, the marshlands spread southward, the liquid lakes
+surrounded by mounds of vegetation.
+~
+E
+trail track path~
+Bound on both sizes by water and quagmire, the trail appears to be
+slightly more solid, several clumps of dead flax forming its base.
+~
+E
+bullrushes flax~
+The mounds of rushes and flax intermix to form a rich wall of vegetation,
+extending throughout the marsh.  Many of the flax leaves have
+crescent-shaped cuts in them, perhaps from some insect pest that finds
+the fiberous leaves edible.  Slender woody stems rise from the mounds, a
+cluster of dusky brown seeds, reminiscent of a lion's tail, attached to
+each one.
+~
+E
+spire rock northward~
+Looming over the marshlands, the spire dominates the northern end of the
+valley.  Pitted and worn cliffs stretch upward, their sides coated in low
+clumps of tussock.  The occasional deep fissure oozes with plant life
+like an open wound, beech saplings, ferns and bracken taking advantage of
+the shelter.
+~
+E
+forest~
+Hung with a mantle of mist, the eastern woods rise out of the swamplands
+and shroud the surounding landscape in shadows.  Mostly beech trees with
+a few teak and other exotics, the forest echos with the sounds of birds
+and other animals.
+~
+A
+~
+~
+i = random( 0, 1 );
+if( i == 0 )
+send_to_room( #wind, room );
+else
+send_to_room( #rustle, room );
+~
+E
+wind~
+@CA sudden gust of wind momentarily replaces the awful stench of the
+swamp with the scents of the forest.  All to soon the wind dies and the
+assault on your nostrils resumes.@n 
+~
+E
+rustle~
+@gA slight breeze blows by, causing the bullrushes to rustle quietly.@n 
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cThe mud of the path slurps and pops underfoot as you head southward.@n
+~
+E
+to_room~
+@cThe path slurps and pops underfoot when $n heads southward.@n
+~
+!
+3 0 4
+2524 9 1509949540 3 0
+2751 9 1509949540 3 0
+-1
+S
+
+#4301
+Muddy Trail - Fork in the path~
+At a sizable pool of stagnant water, the trail splits in two; one branch
+heads westward the other continues around the pool to the south.  Water
+weeds and bullrushes grow from the pool, mixing with a reed-like grass to
+make the footing much more stable than expected.  Southward, a quagmire
+of mud and water spreads out, stands of flax and rushes growing in the
+boggy ground.
+~
+[Guin] Done.
+~
+167247872 14 9 0
+D0
+~
+~
+0 -1 4300 10 10 5
+D2
+~
+~
+0 -1 4310 10 10 5
+D3
+~
+~
+0 -1 4304 10 10 5
+E
+pool stagnat water~
+The brackish, nauseating pool of water has split the path in two.  The
+pool emits foul odors, probably from any decaying objects it may hold.
+~
+E
+weed grass bullrush foot~
+Suprisingly, due to the immense amount of vegetation and life, the
+groundwork is much more traversable than what first catches the eye.
+~
+A
+~
+~
+send_to_room( #plop, room );
+~
+E
+plop~
+@yYou glimpse a dark sleek body as it surfaces momentarily in the pool.@n
+~
+!
+2 150 0
+-1
+S
+
+#4302
+Talidar's Marsh - Muddy Trail~
+The muddy trail leads up to and over an ancient fallen tree.  Most of the
+branches have rotted away, leaving the stout trunk partialy buried in the
+marshy ground.  The roots of the tree still grasp chunks of soil, from
+which swamp grass and moss grow.  A dusty carpet of tiny orange
+toadstools coats the rotting bark, their delicate caps coated with dew. 
+Northward, the trail winds between stands of bullrushes and is lost from
+sight.  The destination of the trail south is blocked by the falling tree.
+~
+[Guin] Done.
+~
+167247872 14 9 0
+D0
+~
+~
+0 -1 4312 10 10 5
+D2
+~
+~
+0 -1 4303 10 10 5
+E
+tree trunk branch~
+Partially submerged, the fallen tree provides travel to the south.  The
+braches, mostly gone from decay, are few in number and consumed by the
+marsh and it's inhabitants.
+~
+E
+toadstool bark~
+The bark, rigid and soft, is crumbling as the toadstools slowly
+deteriorate the rest of it.
+~
+E
+moss grass root~
+The moss covered roots of the dying tree are still intact with the
+ground, but provide little to keep the tree alive.  The swamp grass
+sprouts in clumps around the roots, as if trying to remove any way
+possible this tree could survive.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@YClambering over the rotting trunk, you continue southward.@n 
+~
+E
+to_room~
+@Y$n clambers over the rotting trunk, disappearing from sight further to
+the south.@n 
+~
+!
+3 0 4
+A
+~
+ancient fallen tree trunk~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 0, 4 ) > 2 ) {
+    obj = oload( 7756 );
+    act_tochar( #get, ch, obj, mob );
+    act_notchar( #isget, ch, obj, mob );
+    obj_to_char( obj, ch );
+  }
+  else {
+    act_tochar( #no, ch, obj, mob );
+    act_notchar( #isno, ch, obj, mob );
+  }
+}
+else {
+  act_tochar( #no, ch, obj, mob );
+  act_notchar( #isno, ch, obj, mob );
+}
+~
+E
+get~
+@RDelving deep into the muck surrounding the fallen trunk, you find $p!@n
+~
+E
+isget~
+@R$n plunges $s arms to the elbow into the muck surrounding the fallen
+tree and comes up with $p for $s trouble.@n
+~
+E
+no~
+@RDelving deep into the muck surrounding the fallen trunk, you find
+nothing!@n 
+~
+E
+isno~
+@R$n plunges $s arms to the elbow into the muck surrounding the fallen
+tree and comes up with nothing for $s trouble.@n
+~
+!
+9 0 0
+A
+get pick take~
+tiny orange toadstools~
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  act_tochar( #nup, ch, obj, mob );
+  }
+else
+  act_tochar( #nup2, ch, obj, mob );
+~
+E
+nup~
+@BYou pluck one of the toadstools from the bark, only to drop it into the
+mire.@n 
+~
+E
+nup2~
+There are no more toadstools worthy of picking.
+~
+!
+9 0 0
+A
+get pick take~
+moss~
+act_tochar( #no, ch, obj, mob );
+~
+E
+no~
+@cThe moss crumbles in your hand as your wrench it from the trunk.@n
+~
+!
+9 0 0
+901 9 1509949540 3 0
+-1
+S
+
+#4303
+Talidar's Marsh~
+Brackish pools of water lie across the muddy ground; the trail winds
+between them, heading in a westerly direction.  To the north, a fallen
+tree partially blocks passage, although it appears possible to scramble
+over it and continue onward.  Rushes and flax grow in abundance here,
+forming almost impenetrable walls to the south and east.
+~
+[Guin] Done.
+~
+167247872 14 9 0
+D0
+~
+~
+0 -1 4302 10 10 5
+D3
+~
+~
+0 -1 4305 10 10 5
+E
+brackish pool water~
+The dark pools blanket much of the swamp in a stagnant mixture of mud and
+water, making travel uncomfortable at the best of times.  There is no end
+to the brackish mantle in any direction.
+~
+E
+fallen tree~
+Old and rotting, a tree has fallen across the path to the north, nearly
+blocking any passage offered by the surrounds.  Fortunately, the felled
+trunk has become partially submerged into the brackish water, and moving
+over it should not be a problem.
+~
+E
+rushes flax walls~
+Any passage to the south or east has been completely blocked by dense
+stands of flax and rushes.  Overgrown and at home in the swamp, their
+growth has become rampant, and practically unstoppable.  To the north and
+west, the flax and rushes give way to swampy ground, although a tree
+partially blocks the northern route.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@YEasing yourself over the fallen tree, you head further north.@n
+~
+E
+to_room~
+@YEasing $mself over the fallen tree, $n heads further northward.@n
+~
+!
+3 0 1
+A
+~
+~
+send_to_room( #bubble, room );
+~
+E
+bubble~
+@CThe brackish pools of water bubble then pop, releasing puffs of marsh
+gas into the air.@n 
+~
+!
+2 150 0
+2152 17 1509949540 -2 0
+901 9 1509949540 3 0
+-1
+S
+
+#4304
+Muddy Trail Across the Marsh~
+A lake of muddy water spreads out southward, reeds and pond weeds
+flourishing across it.  The ground around the lake is a quagmire of mud,
+ready to draw the unwary into its clammy grasp.  A trail has been beaten
+through several mounds of flax in a westerly direction.  Eastward, the
+ground appears to be more stable, a path of sorts winding in that
+direction.  Bullrushes and flax form a green wall to the north, blocking
+any movement in that direction.
+~
+[Guin] Done.
+~
+167247872 14 9 0
+D1
+~
+~
+0 -1 4301 10 10 5
+D3
+~
+~
+0 -1 4311 10 10 5
+E
+trail 1 west~
+The prominent plant-life has been beaten down, probably by the swamp
+creatures crawling across it, allowing passage to continue along the
+trail to the west.
+~
+E
+1 east ground path~
+To the east, the path slowly continues to improve; perhaps an ending to
+the marsh is near.
+~
+E
+flax north bullrushes~
+The vegetation halts any traverse to the north.  The flowers and plants
+acting as a wall to keep whatever or whoever is in the marsh, in the
+marsh.
+~
+A
+1 north~
+~
+act_tochar( #no, ch, obj, mob );
+~
+E
+no~
+The wall of vegetation is completely inpenetrable.  You'll have to find a
+way around.
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou slog along the watery trail toward the $T.
+~
+E
+to_room~
+@G$n slogs along the watery trail toward the $T.
+~
+!
+3 0 10
+-1
+S
+
+#4305
+Talidar's Marsh~
+Mounds of swamp grass spread out across the muddy ground, their tangled
+roots helping with footing.  The drone of swarming insects fills the air
+as they dart between pools of stagnant water.  Stands of rushes flourish
+to the west, their fronds waving in the gusting wind, the inescapable
+stench of decay and dank mud carried with it.  An opening between flax
+bushes to the south allows movement in that direction, while the ground
+to the east appears to be navigable.
+~
+[Guin] Done.
+~
+167247872 14 9 0
+D1
+~
+~
+0 -1 4303 10 10 5
+D2
+~
+~
+0 -1 4306 10 10 5
+E
+mounds swamp grass~
+The swatches of grass spread out across the dank ground, their lush green
+leaves contrasting with the dark mud.  Silvery trails of sticky slime
+ooze across much of the vegetation, with sections of the greenery showing
+signs of damage, probably caused by slugs or snails.
+~
+E
+muddy ground roots~
+Half-buried in the sludge of rotting leaves and mire, spread the tangled
+root masses of the swamp grass.  Where they form, the ground becomes more
+stable, easing the burden of traversing the swamp.  Many of the roots
+appear a pale-white coloration, although under a splattering of mud it's
+hard to really tell.
+~
+E
+pools stagnant water~
+Their depths hidden by a layer of speckled green pond weed, the brackish
+pools cover a wide swatch of the swampland.  Ripples and bubbles rise
+from the center of several pools, perhaps a underground source of water
+forcing its way to the surface.
+~
+E
+rushes fronds~
+The leaves of the flax mounds are a dark green, with lines of yellow
+streaked along the middle.  Most have crescent-shaped holes in them,
+where insects have feasted upon their edges.  From many of the clumps
+shoot tall and slender fronds, their tips covered in a mass of tangled
+fur-like seed heads.
+~
+E
+flax~
+A deep crimson in coloration, the flax leaves reach over a yard in length. 
+Clusters of delicate shoots grow in the center of each bush, many appear
+to have cresent-shaped bite marks in them.
+~
+A
+~
+~
+i = random( 0, 1 );
+if( i == 0 )
+  send_to_room( #insect, room );
+else
+  send_to_room( #stench, room );
+~
+E
+insect~
+@mInsects momentarily swarm about you, as if to investigate the
+intruder.@n 
+~
+E
+stench~
+@mA gust of wind brings with it a particularly foul smelling pocket of
+air.@n 
+~
+!
+2 150 0
+5224 9 1509949540 3 0
+189 17 1509949540 -2 0
+-1
+S
+
+#4306
+Talidar's Marsh~
+Flax and bullrushes spread out, encircling the area in a wall of
+vegetation.  A mound of rotting flax and rushes blocks most of the way
+south, the mud around it covered with strange rippling patterns.  A muddy
+trail heads eastward through a narrow gap in the flax.  Northward,
+something has ripped out a section of the plants, allowing passage beyond.
+~
+[Guin] Done.
+~
+167247872 14 9 0
+D0
+~
+~
+0 -1 4305 10 10 5
+D1
+~
+~
+0 -1 4307 10 10 5
+E
+flax bullruses vegetation~
+In various stages of growth, the flax and bullrushes dominate the swamp's
+plant life.  Most appear to be flourishing in the muck and mire, although
+several scraggly bushes appear to have been uprooted to the north, their
+leaves turning a sickly black.
+~
+E
+mound rotten~
+Wisps of steam escape from gaps in the fetted mound of rotting plants,
+swirling mist curling around the base of the mound, obscuring a part of
+the marsh.  Shredded flax and bullrushes lie at the top of the pile,
+their lack of decay an indication they were recently added.
+~
+E
+mud rippling patterns~
+Swirling ribbons of depressions cover the surface of the soft mud, as if
+some creature had recently slithered across the mire.  Many of the trails
+lead up to and around the steaming mound of rotting vegetation.
+~
+E
+1 north~
+Chunks of torn and twisted flax bushes lie scattered about the muddy
+northern trail, roots and stems crushed and exposed in the mud.  The
+cause of the destruction is unclear; the surrounding plants appear mostly
+unscathed.
+~
+E
+1 east~
+Between the stands of lusturous green-leaved flax, the marsh spreads out,
+the trail barely visible in the moors.
+~
+A
+~
+mound rotten flax rushes~
+act_notchar( #issearch, ch, obj, mob );
+act_tochar( #search, ch, obj, mob );
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  wait( 1 );
+  mob = mload( 75, room );
+  act_room( #snake, ch, obj, mob );
+  attack( mob, ch, 2d3+3, "wild lunge" );
+  obj_to_room( oload( 7887 ), room );
+  obj_to_room( oload( 7887 ), room );
+  obj_to_room( oload( 7887 ), room );
+  }
+else {
+  wait( 1 );
+  act_notchar( #isnup, ch, obj, mob );
+  act_tochar( #nup, ch, obj, mob );
+  }
+~
+E
+issearch~
+@C$n frantically digs through the rotted vegetation in search of hidden
+treasure.@n 
+~
+E
+search~
+@CTearing clumps of rotting vegetation away with reckless abandon, you
+endeavor to find what is secreted within.@n 
+~
+E
+snake~
+@RIncensed at the intrusion, $n springs forth to protect its nest.@n
+~
+E
+nup~
+@CHaving now covered yourself in foul smelling muck, you discover nothing
+of value.@n 
+~
+E
+isnup~
+@CHaving now covered $mself in foul smelling muck, $e discovers nothing of
+value.@n 
+~
+!
+9 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou squeeze through the gap in the flax to the east.@n
+~
+E
+to_room~
+@g$n squeezes through the gap in the flax to the east.@n
+~
+!
+3 0 2
+901 9 1509949540 3 0
+-1
+S
+
+#4307
+Talidar's Marsh~
+Brackish pools of stagnant water spread out to the north, dotted with
+stands of flax and marsh grass.  To the east, a solitary copse of beech
+trees rises out of the muck, their lower trunks covered with moss.  The
+ground to the south appears to rises slightly.  Beyond the sea of flax, a
+stone bridge rises; perhaps the southern trail leads to it.
+~
+[Eliza] Reviewed.
+~
+167247872 14 9 0
+D1
+~
+~
+0 -1 4308 10 10 5
+D2
+~
+~
+0 -1 4309 10 10 5
+D3
+~
+~
+0 -1 4306 10 10 5
+E
+pools stagnant water 1 north~
+Fed by some unseen sorce, the pools of stagnant water spread across the
+marshlands, forming isolated lakes.
+~
+E
+flax marsh grass~
+Their roots drinking in the dark waters of the marsh, the reed-like
+grasses spread across the swampland.  The taller flax bushes shade much
+of the grass in mounds of dusky-brown leaves.
+~
+E
+1 east copse beech trees~
+Crowding around a slab of ivy covered rock is a stand of twisted and
+malformed beech trees.  A few leaves sprout from their tangled branches,
+the only indication that they are still alive.
+~
+E
+1 south stone bridge~
+Beyond the walls of southern growth, a white stone bridge spans this end
+of the marsh, its smooth rocks gleaming.
+~
+E
+moss~
+Unable to survive in the mud, the moss clings to the rocks and trees of
+the eastern copse.  Much of the mosses' leaves are tinged with brown,
+slightly wilted as if exposed to heat or too much light.
+~
+A
+~
+~
+send_to_room( #bridge, room );
+~
+E
+bridge~
+@MThe sharp staccato of hooves sounds as someone crosses the bridge to
+the south.@n 
+~
+!
+2 150 0
+5224 9 1509949540 3 0
+5132 9 1509949540 3 0
+-1
+S
+
+#4308
+Copse of Beech Trees - Talidar's Marsh~
+The copse of trees grows upon a slight rise, surrounded by the wetlands
+of the marsh.  In the center of the copse a flat, white stone has been
+set.  Growing around and over the mound, tendrils of variegated ivy coil
+and wind up several of the beeches.  A lush, vast carpet of sphagnum moss
+intermigles with the ivy and encroaches on portions of the stone.  Beyond
+the ring of trees, the ground is a dangerous quagmire; a muddy trail
+leads to the west, the only way to continue onward through the marsh.
+~
+[Guin] Search stone( beneath it) pops a mob 75, aggro.
+[Guin] Reviewed.
+[Samnic] last line want should be way
+~
+167247872 3 9 0
+D3
+~
+~
+0 -1 4307 10 10 5
+E
+trees rise~
+Deep red wood lies under a bandage-like covering of white bark, as if the
+beech trees were drapped in burial cloth.  Lean and twisted branches
+tangle together overhead, forming an umbrella of leaves and twigs that
+shade the knoll from direct sunlight.  From around the muddy roots
+tendrils of ivy grow thickly, the vines spreading over the lower branches
+and trunks.
+~
+E
+flat white stone~
+Not an native to the area, the stone must have been placed here for some
+purpose.  Running through its white pitted surface are swirls of blue
+quartz, pale and clear enough to look like ice.
+~
+E
+variegated ivy tendrels moss~
+Delighting in the damp conditions, the mounds of sphagnum moss form a
+deep and moist blanket underfoot.  Specked green and gold fronds glint
+with dew under the roots of the slender beech trees.  Through the moss
+swarms countless tendrils of variegated red ivy, the whipcord vines
+entangling everything the tendrils can grasp.
+~
+E
+quagmire~
+Slurping and oozing, the molasses-like mud spreads outwards in all
+directions.  A rich brown in coloration, the liquified ground is
+surrounded by swarms of tiny insects.  The fetid stench of decay hangs in
+the air.
+~
+E
+1 west trail~
+Formed by the decaying mounds of flax and toetoe bushes, the muck-covered
+trail heads deeper into the swamp.
+~
+E
+decaying mounds flax toetoe bushes~
+Little remains of the plants, the dank conditons rotting away most of the
+dead vegetaion.  What remain forms a more solid path that leaves the
+knoll and heads westward.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GSlogging through the muck underfoot, you head west into the marsh.@n
+~
+E
+to_room~
+@GSlogging through the muck underfoot, $n heads west into the marsh.@n
+~
+!
+3 0 8
+A
+~
+stone~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( !mob_in_room( 75, room ) ) {
+    mob = mload( 75, room );
+    act_tochar( #snake, ch, obj, mob );
+    act_notchar( #rsnake, ch, obj, mob, sight );
+    init_attack( mob, ch );
+  }
+}
+~
+E
+snake~
+As you search under the stone, $N leaps out to attack you.
+~
+E
+rsnake~
+As $n searches under the stone, $N leaps out to attack $m.
+~
+!
+9 0 0
+7649 17 1509949540 -2 0
+4059 17 1509949540 -2 0
+-1
+S
+
+#4309
+Edge of the Marsh~
+The ground becomes drier as it rises to the south where a causeway leads
+toward a white stone bridge, crossing the muddy stream.  A dense wall of
+flourishing flax and bullrushes appears to block any attempt to reach the
+road.  To the north, a muddy trail heads between mounds of swamp grass
+and into the marsh, disappearing within the thriving vegetation.
+~
+[Eliza] Connects 5469
+[Eliza] Done
+~
+167247880 14 9 0
+D0
+~
+~
+0 -1 4307 10 10 5
+D2
+flax~
+~
+2219 -1 5469 10 10 5
+E
+ground 1 south cause-way~
+Rocks and tufts of grass replace the flax and bullrushes as the ground
+becomes drier towards the south, Beyond the dusty road a wide swath of
+grasslands spreads out towards the horizon.
+~
+E
+grasslands~
+A mixture of wild barley, oats and ryegrass make up the grasslands to the
+south.
+~
+E
+bridge stream~
+The white stone bridge spans a narrow stream that burbles out of the
+marshlands and runs southward, where it disappears into the tall grasses
+of the vale.
+~
+E
+muddy trail 1 north marsh~
+Winding into the boggy ground of the northern marsh, it becomes
+increasingly difficult to differentiate the path from the surounding
+swamp.  Further into the swamp, stands of flax and bullrushes grow,
+surounded by reeds and brackish pools.
+~
+E
+flax bullrushes vegetation~
+The mounds of flax and rushes grow across the marsh, flourishing in the
+dank conditions.  Rising out of the green flax leaves are black, woody
+stems with dull yellow flowers blooming at the tips.  Spear-like in
+shape, the seedheads of the bullrushes bend in the wind, occasionally
+releasing a cloud of fluffy seeds to be carried on the wind.
+~
+E
+pools reed~
+Murky pools of water spread across the marshlands, overgrown with dark
+green swamp grass, their reedy stems bending with any wind.
+~
+A
+1 south~
+~
+if( is_open( room, south ) ) {
+continue;
+end;
+}
+else
+act_tochar( #blah, ch );
+~
+E
+to_char~
+@GYou push through the flax leaves and step out onto the roadway
+beyond.@n 
+~
+E
+to_room~
+@G$n pushes through the flax leaves and steps out onto the road beyond.@n
+~
+E
+blah~
+The flax prevents you from moving south.
+~
+!
+3 0 4
+A
+move push~
+dense flax bullrushes bushes 1 south~
+if( !is_open( room, south ) ) {
+  act_tochar( #move, ch );
+  act_notchar( #move2, ch );
+  open( room, south );
+  end;
+  }
+act_tochar( #already, ch );
+~
+E
+move~
+@GYou sweep the thick flax leaves aside, revealing a clearer path onto
+the causeway.@n 
+~
+E
+move2~
+@G$n sweeps aside the thick flax leaves, revealing a clearer path onto
+the causeway.@n 
+~
+E
+already~
+The flax leaves have already been swept aside.
+~
+!
+0 0 0
+-1
+S
+
+#4310
+Talidar's Marsh~
+The ground becomes increasingly boggy, the smell of decay hanging heavy
+in the air.  Rotting branches and vegetation lie across the muddy ground. 
+A pool of stagnant water to the west attracts a myriad of swarming
+insects.  Northward, the marsh rises and beyond the stands of flax and
+rushes, a towering spire of rock dominates the landscape.  Despite the
+quagmire, it appears possible to wade southward, further into the marsh.
+~
+[Guin] Done.
+~
+167247872 14 9 0
+D0
+~
+~
+0 -1 4301 10 10 5
+D2
+~
+~
+0 -1 4313 10 10 5
+E
+pool water insect stagnant~
+The acrid pool of stagnant water emanates an aroma that, at least, the
+insects and bugs seem to like.  If the insects don't prove to reek enough
+havoc, then perhaps the smell of death in the air will.
+~
+E
+1 north spire rock flax rush~
+Just beyond the wall of vegetation of flax and bullrushes, the spire of a
+rock lunges toward the sky tossing shadows beneath it.  The rock must
+reach a good hundred yards in the air, as the birds are flying around it.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GThe mucky bog swallows your feet to the ankles when you proceed toward
+the south.@n 
+~
+E
+to_room~
+@GAs $n heads south, $e sinks slightly into the bog, leaving a deep track
+behind.@n 
+~
+!
+3 0 4
+-1
+S
+
+#4311
+Muddy Trail Across the Marsh~
+The trail winds beside a quagmire of mud, surrounding a water-weed
+covered lake to the south.  Stands of flax rise up from the lake's
+surface, forming isolated isles of more solid ground.  Beyond the swamp
+to the north, a spire of rock rises high into the air, a forest of beech
+trees covering its lower slopes.  To the east, the trail continues around
+the lake toward the west, the trail's destination is hidden by a wall of
+flax and rushes.
+~
+[Guin] Done.
+~
+167247872 14 9 0
+D1
+~
+~
+0 -1 4304 10 10 5
+D3
+~
+~
+0 -1 4312 10 10 5
+E
+beech spire rock~
+The solid spire of rock reaches a good hundred yards into the air,
+casting shadows and creating a cool and arid shade underneathe all of it. 
+The beech trees growing swiftly around it to grab any and all sunlight
+they can get.
+~
+E
+flax wall rush~
+To the distant west, a wall of flax and rushes cease any hope to an end
+of the trail.  The flax and rushes are in abundance and seem to have
+found a home in this marsh.  To the distant west, a wall of flax and
+rushes halt any hope to an end 
+~
+A
+~
+~
+send_to_room( #birds, room );
+~
+E
+birds~
+@CA flock of pigeons flap noisily overhead, flying towards the spire
+visible to the north.@n 
+~
+!
+2 150 0
+5224 9 1509949540 3 0
+-1
+S
+
+#4312
+Muddy Trail Across the Marsh~
+A stand of slender bamboo grows beside the muddy trail; a few cobwebs are
+spun between their trunks.  The tops of the bamboo are covered with thin
+pale-green leaves, the rest of the plant is bare of any branch or leaf. 
+Southward, flax bushes dominate the swamp, a few dead clumps flattened
+down as if something has made a nest on them.
+~
+[Guin] Done.
+~
+167247872 14 9 0
+D1
+~
+~
+0 -1 4311 10 10 5
+D2
+~
+~
+0 -1 4302 10 10 5
+E
+bamboo cobwebs~
+The impenetrable, packed bamboo isolate any movement to the north or west. 
+The cobwebs spun between each slender stalk show not even the largest of
+creatures in this marsh have managed to penetrate the bamboo.
+~
+E
+flax bush south clump nest~
+A glance to the south shows a multitude of flax plants and rushes, as
+like most of the marsh, although a second glance, portions are torn out,
+like some swamp creature had created a nest in the surrounding area 
+~
+A
+get take~
+bamboo cobwebs~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  obj = oload( 81 );
+  act_tochar( #get, ch, obj, mob );
+  act_notchar( #isget, ch, obj, mob );
+  obj_to_char( obj, ch );
+}
+else
+  act_tochar( #no, ch, obj, mob );
+~
+E
+get~
+@GYou manage to pluck $p intact from the the bamboo trunks.@n
+~
+E
+isget~
+@G$n manages to pluck $p intact from the the bamboo trunks.@n
+~
+E
+no~
+@GYou try to gather a web intact, but it crumbles to dust in your hand.@n 
+~
+!
+9 0 0
+189 17 1509949540 -2 0
+2524 9 1509949540 3 0
+-1
+S
+
+#4313
+Talidar's Marsh~
+Walls of flax and rushes form a barrier in all directions save the north. 
+Because of the tangled mass of plant life here, the ground seems drier and is
+covered in rotting vegetation.  A solitary beech sapling has sprouted in
+the clearing.  Little over six foot in height, its slender branches and
+trunk are covered in a black moss.
+~
+[Guin] done
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 4310 10 10 5
+E
+moss plant~
+Hanging from every available surface of the beseiged sapling is a damp
+black moss.  Seemingly home for many tiny insects and plants, the spongy
+clinging moss is clearly good for supporting life.
+~
+E
+beech sapling~
+This young, moss-covered tree is doing all that it can to survive in the
+marsh.  If any area was available for it inhabit, this would be the spot. 
+Suprisingly, the marsh and it's occupants have not sucked any life from
+it, as if the tree harbors all that is good in the marsh.
+~
+A
+get pick~
+black moss~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  obj = oload( 7886 );
+  act_tochar( #get, ch, obj, mob );
+  act_notchar( #isget, ch, obj, mob );
+  obj_to_char( obj, ch );
+  }
+else
+  act_tochar( #none, ch, obj, mob );
+~
+E
+get~
+@yReaching up into the trees branches you pluck $p from it.@n 
+~
+E
+isget~
+@yReaching up into the branches of the tree $p plucks $p from it.@n
+~
+E
+none~
+There are no patches of moss left big enough to be useful.
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GStepping back off the solid ground into the marsh, you head
+northward.@n 
+~
+E
+to_room~
+@GStepping back off the solid ground into the marsh, $n heads
+northwards.@n 
+~
+!
+3 0 1
+5224 9 1509949540 3 0
+1155 9 1509949540 3 0
+1155 9 1509949540 3 0
+7649 17 1509949540 -2 0
+-1
+S
+
+#0
+

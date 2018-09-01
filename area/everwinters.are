@@ -1,0 +1,4906 @@
+#M2_AREA
+2
+
+Everwinter Mountains~
+Azerin Burne~
+Everwinter Mountains~
+~
+~
+
+1 0
+0
+1
+#ROOMS
+
+#7900
+Stairway to the Basin Land~
+A narrow ledge juts out from the slick shale cliffs.  A crumbling flight
+of broken stairs spiral rapidly downward from the shelf.  Far below, a
+rock-covered basin stretches outward; a raging waterfall tumbling down
+from the other side creates a fast flowing river that cuts through the
+middle of the valley.  Growing beside the river, a smattering of pine
+trees creates light woodlands.  Northward, the Everwinter Mountains rise,
+their majestic peaks capped in gleaming ice.  Dark, brooding clouds hang
+around the snowline, the dull rumbles of thunder echoing though the range. 
+Beyond a scattering of weatherworn boulders, a goat track winds eastward,
+its destination obscured by the steeply rising mountain range.
+~
+[Yrna] Done. I like this :)
+[Guin] Done.
+~
+167510016 12 9 0
+D1
+~
+~
+0 -1 7993 10 10 5
+D2
+~
+~
+0 -1 5915 10 10 5
+D5
+~
+~
+0 -1 7901 10 10 5
+E
+stairs~
+Hacked from the pitted cliff face, the ancient steps allow a hardy soul
+access to the basin land below.  Marred by landslide and eroded by the
+harsh elements, they are begining to fall into ruin.
+~
+E
+basin valley~
+A verdant forest of towering firs spread outward from the base of the
+Everwinters, a scattering of boulders and lesser outcroppings keeping the
+woodlands company.  The silvery-blue hue of the mountain river cuts
+through the greys and greens like the curl of a young girl's ribbon.
+~
+E
+Everwinter Mountains~
+As their name suggests, the massive peaks seem to be in the grip of a icy
+winter.  Gleaming caps of snow and ice sparkle like the spears of an
+army; what lies beyond the peaks is hidden from here.  Thunder clouds
+hang heavy over their magestic crowns, the rumble almost a constant
+companion to those in the range.
+~
+E
+river~
+A fast-flowing mountain river, formed at the base of the tumbling
+waterfall, flows swiftly through the countryside, its churning waters
+cutting a deep gorge through the rocky valley as they rush westward.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou carefully manage your way down the eroded stairs.@n
+~
+E
+to_room~
+@y$n manages $s way down the eroded stairs.@n
+~
+!
+3 0 32
+-1
+S
+
+#7901
+Stairwell Along the Icy Cliff~
+Hacked into the frost-covered stones of the cliff, the narrow flight of
+stairs zigzags downward toward the valley floor.  The top of a mighty
+pine tree reaches to the edge of the stairwell, a bold soul might be able
+to jump to its dense branches if brave or foolish enough.  Flaking rocks
+and crumbling stones rain down upon the stairs, making for an unpleasant
+journey.  Spreading out around fifty feet below the basin is a mixture of
+pine trees and tussock plants scattered between rubble.  Across the
+valley a waterfall tumbles from a mountain lake, a few ruined buildings
+spreading out around it.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 0 9 0
+D4
+~
+~
+0 -1 7900 10 10 5
+D5
+~
+~
+0 -1 7902 10 10 5
+E
+pine tree~
+The ancient pine, gnarled with age and battered by the inclement clime,
+grows to over eighty feet in height from base to uppermost branches.  The
+top, a clustering of willowy limbs bedecked with blue-green needles,
+rises to just above the cliff ledge.  Its possible the old tree might be
+climbable down to the road below, if only a sturdier set of branches can
+be found, but apparently the only way to reach them would be by
+jumping...and its a long way down...
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gWith a groan of effort, you begin to scrabble up the crumbling stairs
+and out of the basin land.@n 
+~
+E
+to_room~
+@gWith a weary look upon $s face, $n continues the climb out of the basin
+land.@n 
+~
+!
+3 0 16
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CCarefully, you continue down the crumbling stairway.@n
+~
+E
+to_room~
+@C$n carefully continues down the crumbling stairway.@n
+~
+!
+3 0 32
+A
+~
+~
+send_to_room( #rocks, room );
+loop( all_in_room ) {
+  if( !is_mob( rch ) )
+    if( random( 1, 3 ) == 2 ) {
+    act_tochar( #bad, rch, obj );
+    act_notchar( #rbad, rch, obj, mob, sight );
+    damage( mob, rch, 1d3, physical, "a shower of small rocks" );
+  }
+  else {
+    act_tochar( #good, rch, obj );
+    act_notchar( #rgood, rch, obj, mob, sight );
+  }
+}
+~
+E
+rocks~
+@cA shower of small rocks rains down on you from above!@n
+~
+E
+bad~
+@RYou run for cover, but one of the small rocks hits you.@n
+~
+E
+rbad~
+@R$n tries to duck out of the way, but one of the small rocks hits $m.@n
+~
+E
+good~
+@CYou skillfully avoid the falling rocks.@n
+~
+E
+rgood~
+@C$n manages to duck under cover, avoiding the falling rocks.@n
+~
+!
+2 150 0
+A
+leap jump~
+pine tree~
+if( find_stat( ch, dex ) < 20 ) {
+  act_tochar( #noway, ch, obj );
+  act_notchar( #rnoway, ch, obj, mob, sight );
+  end;
+}
+elseif( find_stat( ch, level ) < 10 ) {
+  act_tochar( #noway, ch, obj );
+  act_notchar( #rnoway, ch, obj, mob, sight );
+  end;
+}
+if( find_stat( ch, dex ) < random( 20, 26 ) ) {
+  act_tochar( #oops, ch, obj );
+  act_notchar( #roops, ch, obj, mob, sight );
+  transfer( ch, find_room( 7902 ) );
+  damage( mob, ch, 10d30+200, physical, "The FATAL FALL", "fatal fall" );
+  act_notchar( #thud, ch, obj, mob, sight );
+}
+else {
+  act_tochar( #jump, ch, obj );
+  act_notchar( #rjump, ch, obj, mob, sight );
+  transfer( ch, find_room( 7902 ) );
+  act_notchar( #nothud, ch, obj, mob, sight );
+}
+~
+E
+noway~
+@GFor a moment, you consider leaping onto the pine tree; You step back,
+you ran forward to the edge of the cliff and - stop.  It does look
+further away than it did just a moment ago.@n 
+~
+E
+rnoway~
+@G$n takes a deep breath and steps back.  $e takes a few running steps
+towards the edge of the tree, but stops suddenly.  Looks like it's too
+much of a challenge.@n 
+~
+E
+oops~
+@RYou take a deep breath and run toward the tree.  You leap high in the
+air, but your jump falls short ...  you miss the tree by half a foot and
+fall crashing down to the ground, breaking a few longer branches on your
+way!@n 
+~
+E
+roops~
+@RYou watch in horror as $n bravely runs off the edge of the cliff, leaps
+toward the tree and ...  MISSES IT!.  You hear a faint aaaarrrgggh and a
+THUD, before a small cloud of dust raises from below.@n 
+~
+E
+thud~
+@RA loud crashing noise comes from above.  You look up just as $n lands
+beside you with a THUD!@n 
+~
+E
+jump~
+@CYou take a deep breath and run toward the cliff's edge.  Gathering all
+your strength, you leap in the air and make it safely to the other side! 
+With a feeling of relief, you climb down to the ground, your heart still
+pounding hard.@n 
+~
+E
+rjump~
+@CTaking a deep breath, $n runs off the cliff's edge, leaping high in the
+air.  $e makes it to the tree and disappears in its branches.@n 
+~
+E
+nothud~
+@GRustling noise can be heard from the pine tree.  After a while, $n
+climbs down looking very excited indeed.@n 
+~
+!
+0 0 0
+-1
+S
+
+#7902
+Stairwell - Edge of the Valley~
+A narrow flight of stairs zigzags up the side of the hundred foot
+grey-stone cliff, their destination obscured by jutting rocks.  A massive
+pine tree stands tall beside the stairs, a mound of pine needles
+spreading under its gnarled roots.  A badly eroded road winds southward,
+the cobbles broken and cracked.  Tussock and daises grow between rising
+spires of rock to the east, the valley's steep cliffs forming a
+cul-de-sac a few hundred feet in that direction.
+~
+[Guin] Done.
+~
+167247872 4 9 0
+D0
+~
+~
+0 -1 7903 10 10 5
+D1
+~
+~
+0 -1 7905 10 10 5
+D3
+~
+~
+0 -1 7904 10 10 5
+D4
+~
+~
+0 -1 7901 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gWith a brief scan at the crumbling steps, you begin the long ascent out
+of the basin land.@n 
+~
+E
+to_room~
+@g$n scans the landscape before beginning the long ascent out of the
+basin land.@n 
+~
+!
+3 0 16
+A
+~
+~
+send_to_room( #howl, room );
+~
+E
+howl~
+@YThe distant howl of a wolf sends a flock of birds flapping skyward.@n 
+~
+!
+2 150 0
+114 9 1509949540 3 0
+5398 9 1509949540 3 0
+-1
+S
+
+#7903
+Road Through the Basin Land~
+The crumbling road winds across the ice-cracked basin, heading directly
+towards the foaming river.  Pine trees grows beside the road, forming a
+windbreak that offers welcomed shelter from the bitterly cold winds that
+can gust from the high peaks above.  A smattering of purple-spotted
+hemlock grows between the shattered rocks, their clusters of pale white
+flowers coated with icy-dew.
+~
+[Yrna] done.
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 7906 10 10 5
+D2
+~
+~
+0 -1 7902 10 10 5
+A
+~
+~
+act_tochar( #road, ch );
+act_notchar( #rroad, ch );
+continue;
+~
+E
+road~
+@yA scattering of stones crunch beneath your feet as you continue along
+the ancient road.@n 
+~
+E
+rroad~
+@yWith stones crunching under $s feet, $n continues northward.@n 
+~
+!
+3 0 1
+78 17 1509949540 -2 0
+-1
+S
+
+#7904
+Under the Massive Pine~
+Under the branches of the massive pine a dense layer of pine needles
+muffles any footfall.  The gnarled branches overhead form a lattice of
+tangled limbs.  The sweet smell of sap hangs in the air.  The remains of
+a rope ladder dangle from a higher branch, the tattered end about ten
+feet up.  A slender opening in the canopy leads eastwards back into the
+cold basin land.
+~
+Recovery Room
+[Guin] Acode not needed for increased regen, its a terrain setting now.
+[Guin] Done.
+~
+167247872 15 9 0
+D1
+~
+~
+0 -1 7902 10 10 5
+E
+massive pine tree~
+The ancient pine spreads its branches wide, obscuring the view of the sky
+above and offering shelter for a weary traveler.  Its gnarled bark is
+full of knots and ripples, stained with thick golden sap in many places. 
+Thick layers of pine needles, many green and freshly fallen, carpet the
+forest floor, partially hiding the mighty tree's roots which protrude
+from the ground in random locations.  One particulary large root curves
+around slightly, the gap between it and the tree forming a small basin
+filled with needles - an ideal resting place in the wilderness.
+~
+A
+~
+~
+send_to_room( #bird, room, sound );
+~
+E
+bird~
+@GThe sound of birdsong comes from above, breaking the silence, but not the
+peace of this quiet haven beneath the sheltering tree.@n
+~
+!
+2 150 0
+-1
+S
+
+#7905
+Beside the Crumbling Cliffs~
+Huge slabs of rock spread out across the basin land, a scattering of
+tussock plants growing between the stones.  Apart from the tussock, only
+purple-hued lichen appears to be able to flourish upon the rocks. 
+Further eastward, the cliffs stretch up over three hundred feet in
+height, the frost-covered stones gleaming.  Toward the west, the valley
+becomes increasingly navigable, a forest-flanked river flowing through
+the basins centre.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D3
+~
+~
+0 -1 7902 10 10 5
+415 17 1509949540 -2 0
+-1
+S
+
+#7906
+Road Through the Basin Land~
+The broken rocks cluster around the road, forming a narrow ravine as it
+winds northward.  The gleaming waters of a mountain river sparkle to the
+north, a waterfall across the valley floor the water's source.  Westward
+light pine woodlands stretch out into the distance, the smell of sap and
+rotting vegetation filling the air.  A huge tree rises beside the cliffs
+to the south; nearly a hundred feet tall, it dominates the southern view.
+~
+[Azerin] west is the Frostfur woods
+[Azerin] no.mob
+[Yrna] Done.
+[Guin] Done.
+~
+167247880 12 9 0
+D0
+~
+~
+0 -1 7907 10 10 5
+D2
+~
+~
+0 -1 7903 10 10 5
+D3
+~
+~
+0 -1 7914 10 10 5
+E
+broken rocks ravine~
+Worn by the mountain climate, and perhaps a now dry river, the ravine
+winds to the edge of the northern gully.  A scattering of cobbles lie
+upon the ground, an indication of a roadway perhaps.
+~
+E
+waterfall river~
+Tumbling down from the northern cliffs, the sparkling blue waters rush
+through the basin land, the power of their flow churning a deep gouge in
+the hard grey stone.
+~
+E
+pine woodlands~
+The tightly packed woodlands spread through the basin land, the greens
+and browns of its drab canopy hiding many a creature.  Many of the trees
+at the forest's edge are bent and warped by the strong mountain winds.
+~
+E
+tree~
+Stretching upward the towering tree reaches a staggering hieght,
+considering the harsh alpine climate.  Nearing one hundred feet at its
+crown, it lies nestled against the basin cliff.
+~
+A
+~
+~
+send_to_room( #wind, room );
+~
+E
+wind~
+@CA bitter-cold wind howls across the basin land.@n
+~
+!
+2 150 0
+A
+~
+~
+act_tochar( #scrabble, ch, obj, mob, sight );
+act_notchar( #rscrabble, ch, obj, mob, sight );
+continue;
+~
+E
+scrabble~
+@RYou scrabble over the broken rocks and continue onward.@n
+~
+E
+rscrabble~
+@R$n scrabbles over the broken rocks and continues onward.@n
+~
+!
+3 0 8
+-1
+S
+
+#7907
+Road Through the Basin Land~
+The walls of the ravine rise high, almost forming a tunnel above the
+ancient roadway.  A crumbling waystone lies beside the broken cobbles of
+the trail, its fractured surface worn smooth by the passing years.  The
+sound of a river echoes near by, a wall of icy mist splashing down upon
+the roadway when the winds gust from the north.  Toward the south the
+road heads out of the shadowy ravine and heads onward across the basin
+land.  Overhead, the mighty peaks of the Everwinter mountains gleam with
+icy peaks.  Dark, brooding storm clouds nestle around their tops, the
+rumble of distant thunder echoing across the valley.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 12 9 0
+D2
+~
+~
+0 -1 7906 10 10 5
+D3
+~
+~
+0 -1 7908 10 10 5
+A
+~
+~
+send_to_room( #dragon, room );
+~
+E
+dragon~
+A slender lizard pokes it head from beneath one of the cracked boulders,
+tastes the air and disappears back into its hidey hole.
+~
+!
+2 150 0
+-1
+S
+
+#7908
+Road Through the Basin Land~
+The ravine's cracked and pitted walls begin to reduce in height, allowing
+a good view of the spreading pine forest that stretches westward and the
+rushing waters of a mountain river to the north.  Tendrils of frost coat
+the exposed rock surfaces, the icy ribbons gleaming brightly.  The road
+winds northward to a narrow bridge that spans the rushing waters.  Beyond
+the waters, ruins rise out of the basin, the remnants of walls and
+buildings surrounded by a scattering of fir trees.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 7909 10 10 5
+D1
+~
+~
+0 -1 7907 10 10 5
+A
+~
+~
+send_to_room( #river, room );
+~
+E
+river~
+@CThe distant echoes of tumbling waters funnels through the basin land.@n
+~
+!
+2 150 0
+78 17 1509949540 -2 0
+-1
+S
+
+#7909
+Road Through the Basin Land - Mountain river~
+The turbulent waters of the mountain river rush through a steep-cliff
+ravine, which has been gorged out by the fast flowing wake.  The tips of
+water-worn boulders jut from the white-waters.  An ancient, slender stone
+bridge spans the waters, the entire structure shaking with the force of
+the river below.  Beyond the river a crumbling tower rises out of the
+remnants of broken walls and buildings.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 7910 10 10 5
+D1
+~
+~
+0 -1 7916 10 10 5
+D2
+~
+~
+0 -1 7908 10 10 5
+D3
+~
+~
+0 -1 7915 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GWith the rumbling of waters below, you quickly cross the stone
+bridge.@n 
+~
+E
+to_room~
+@G$n steps onto the slender stone bridge and quickly crosses over.@n
+~
+!
+3 0 1
+A
+poke~
+~
+send_to_room( #water, room, sight );
+~
+E
+water~
+@CA large wave hits the bridge, sending a spray of sparkling droplets into
+the air.  A shimmery @Rr@n@ya@n@Yi@n@Gn@n@Cb@n@Bo@n@Mw@n @Cappears, adding a splash of colour
+to the dominant greens of the basin land.@n
+~
+!
+2 150 0
+-1
+S
+
+#7910
+Road Through the Basin Land - Mountain river~
+The remains of buildings rise up between fir trees forming a forest of
+stone and wood.  To the south, a crumbling cliff drops about twenty feet
+into the rushing waters of the mountain river.  The white-waters foam
+and splash as they surge westward.  An ancient looking stone bridge
+spans the narrow ravine, allowing access to the basin lands beyond. 
+Northward the side of the valley rises upward, a waterfall cascading
+down from a high plateau a few hundred feet up.
+~
+No.mob
+[Yrna] Done.
+[Guin] Done.
+~
+167247880 12 9 0
+D0
+~
+~
+0 -1 7911 10 10 5
+D2
+~
+~
+0 -1 7909 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gLeaving the ruins, you cross the ravine and back into the light
+woodlands.@n 
+~
+!
+3 0 4
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yPicking you way around the fallen rubble, you continue further into the
+ruined city.@n 
+~
+E
+to_room~
+$n carfully works around the rubble and heads into the ruined city.@n
+
+~
+!
+3 0 1
+A
+~
+~
+send_to_room( #message, room, sight );
+~
+E
+message~
+@YYou notice a movement further north, amidst the ruins, but whatever it
+was, it's gone now.@n 
+~
+!
+2 150 0
+-1
+S
+
+#7911
+Ruined City - Before a Crumbling Tower~
+Rising out of the fir trees is the remnants of a once-stout watchtower. 
+Encircling the cracked stone walls is a belt of broken wood and
+shattered clay tiles, all that is left of the towers roof and upper story. 
+Despite the loss of the top the tower still stretches over thirty feet in
+height.  An archway opens into the tower to the west, two scraggy fir
+trees lining the way.  Southward the ancient road leads to a single span
+bridge that crosses a narrow ravine.  The northern waterfall drowns out
+most sounds and sends sheets of soaking ice-cold mist into the air.
+~
+[Azerin] ratkin west
+[Azerin] eastern road runs beside river before joining up to road north
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 4 9 0
+D0
+~
+~
+0 -1 7920 10 10 5
+D1
+~
+~
+0 -1 7919 10 10 5
+D2
+~
+~
+0 -1 7910 10 10 5
+D3
+~
+~
+0 -1 7912 10 10 5
+E
+watchtower tower archway~
+Once proud and tall, the watchtower is now a crumbling ruin.  It is hard
+to tell exactly how tall it once stood because the roof and upper story
+are completely gone, leaving only a scattering of stone and wood around
+the tower's base.  An archway is built into the tower's eastern wall, now
+partially blocked by piles of broken wood.  Judging by their looks, they
+must have come from the tower's sturdy door.  In the days long past, the
+watchtower surely offered a good overview of the surrounding area.
+~
+A
+~
+~
+send_to_room( #bird, room );
+~
+E
+bird~
+@MA flurry of crows take flight from the tower's roof, their raucous
+calls echoing through the woods and ruins.@n 
+~
+!
+2 150 0
+-1
+S
+
+#7912
+Ruined Tower - Stairwell~
+The rubble-filled circular chamber is a little over twenty feet across. 
+Two stairwells have been built against the western wall, the upper one
+almost torn from the wall with several of the stone steps missing.  The
+descending staircase appears to be in better condition, only a few cracks
+and fissures upon the stonework.  Rotting stalls fill the northern
+section, mounds of decaying hay piled in each.  An archway leads between
+flanking fir trees into the ruins, the sound of a waterfall clear.
+~
+[Azerin] no mob
+[Guin] Ratkins down.
+[Guin] Done.
+~
+167247880 4 9 0
+D1
+~
+~
+0 -1 7911 10 10 5
+D5
+~
+~
+0 -1 7913 10 10 5
+E
+staircase stairwell~
+The descending staircase spirals into the darkness below and quickly
+disappears from view.  What is visible of it from here appears to be in a
+reasonable condition, somewhat protected from the elements by the
+chamber's walls.  A few cracks and fissures show on the ancient
+stonework, but otherwise its surface is smoothly polished, probably due
+to long-term use.  The upper staircase didn't fare so well; it
+deteriorated through the ages, much the same as the wall it leans against.
+~
+A
+~
+~
+continue;
+~
+E
+@CDescending into the depths below, $n nearly trips over a pile of debris and rubble.@n~
+@CAs you descend into the darkness, you nearly trip over the piles of
+debris and rubble on the staircase.@n 
+~
+E
+to_room~
+@CDescending into the depths below, $n nearly trips over a pile of debris
+and rubble.@n 
+~
+!
+3 0 32
+-1
+S
+
+#7913
+Beneath the Ruined Tower~
+Against the northern wall a crumbling staircase rises out of the dank
+room, much of the stones worn smooth by the passage of feet and time. 
+Broken wagon-sized barrels fill much of the chamber, at one time used for
+distillation of wine or ale; a sharp vinegar smell emanates from the
+stained wood.  A mound of rock and dirt lies piled in the middle of the
+room, its centre, a gloomy hole that leads downwards into the darkness. 
+The remains of torch sconces line the walls, the stonework around each 
+darkened by soot.
+~
+[Guin] Connects to Ratkin here - 1401
+[Guin] Done
+~
+167247872 0 9 0
+D4
+~
+~
+0 -1 7912 10 10 5
+D5
+~
+~
+0 -1 1401 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CYou begin the descent down the ancient staircase.@n
+~
+E
+to_room~
+@C$n begins $s descent down the ancient staircase.@n
+~
+!
+3 0 32
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CYou begin the ascent along the ancient staircase.@n
+~
+E
+to_room~
+@C$n begins $s ascent along the ancient staircase.@n
+~
+!
+3 0 16
+5044 9 1509949540 3 0
+-1
+S
+
+#7914
+Edge of the Frostfur Woods~
+Walls of fir trees grow in a rough crescent shape around a water-filled
+basin of rock.  Mounds of rotting needles line the edge of the pool's
+edge, the brackish water alive with tiny insects that appear to live on
+and around the vegetation.  Beyond the pool the woodlands become
+increasingly dense with brambles and ivy thriving under the canopy.
+~
+[Azerin] 5300 - Frostfur Woods block joins west
+[Guin] Done.
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 7906 10 10 5
+D3
+~
+~
+0 -1 5300 10 10 5
+E
+brambles ivy~
+The tangled mass of immature raspberry and blackberry vines spread out
+beneath the gnarled roots of the fir trees.  Tendrils of ivy rise from
+their thorny masses and drape the lower tree branches in their
+golden-leaves.
+~
+E
+insect~
+The tiny midges dance across the brackish water, perhaps only living for
+a day they seem to be in a frenzy of activity.
+~
+E
+mounds needles~
+Last years pine needles have fallen to decay under the forests canopy,
+their suffocating layers only allowing the hardy ivy and brambles to
+flourish.
+~
+E
+fir trees~
+Clustered together the fir trees form a dense canopy, their high branches
+more than fifty feet above the ground.  To support their bulk, their
+gnarled roots dig deep into the forest loam.
+~
+A
+~
+~
+send_to_room( #bran, room );
+~
+E
+bran~
+@GThe trees creak and groan in the strong wind.@n 
+~
+!
+2 300 0
+A
+drink~
+pool~
+act_tochar( #nodrink, ch );
+~
+E
+nodrink~
+@yThe water doesnt look fit to drink@,
+~
+!
+0 0 0
+134 9 1509949540 3 0
+2410 9 1509949540 3 0
+415 17 1509949515 -2 0
+3881 17 1509949540 -2 0
+7894 17 1509949540 -2 0
+-1
+S
+
+#7915
+Basin Land - Beside the Rushing River~
+Icy-speckled dew coats the exposed cracked and weather-worn rocks. 
+Below, a cliff drops about thirty feet toward a rushing mountain river. 
+The foaming, white waters surge westward, the splashing waves sending a
+cloud of chilling mist skyward.  Fir trees become increasingly common
+toward the west until they form a light forest.  Eastward, a single
+span bridge crosses the river gorge allowing passage to the northern
+bank.  Beyond the ravine, ruins speckle the landscape, the remnants of a
+fairly sizable township lie in the shadows of the Everwinter Mountains. 
+A waterfall cascades down the cliff side from a plateau at least one
+hundred feet above the basin land.
+~
+[Yrna] Added herb reset
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 7909 10 10 5
+E
+single span bridge 1 eastward~
+The stone masonry of the bridge appears to be that of dwarven design -
+its not the immaculately squared-off blocks of granite, nor the
+pedantically curved parabola that arches from one side of the ravine to
+the other, though both of these contribute greatly to the impression of
+dwarven creation.  The most telltale sign of dwarven craftsmanship is the
+signature runes etched onto every other block.  Despite being rather
+weathered, they still seem in very good condition, though the symbols
+appear to be in an archaic form of the language.
+~
+415 17 1509949540 -2 0
+-1
+S
+
+#7916
+Basin Land - Beside the River Gorge~
+Hammered into the fissures of a slab of basalt rock are rusted iron
+pitons, a trail of spikes leading down the edge of the ravine and on to a
+narrow water-drenched ledge at the river edge.  To the east, walls of
+broken rocks rise upward and become the rough base of the high cliffs
+beyond.  The turbulent white-waters of the mountain river surge down from
+a massive northern waterfall and hurtle westward though the valley's basin.
+~
+[Azerin] climb pitons down to rivers edge, make a newbie zone there
+[Guin] Down leads to Grimblnash's Mother Lode.
+[Yrna] done.
+[Guin] Down exit closed for now.
+[Guin] Done.
+~
+167247872 5 9 0
+D3
+~
+~
+0 -1 7909 10 10 5
+D5
+~
+~
+431 -1 7917 10 10 5
+E
+pitons~
+A series of rusty pitons are hammered into the rock here.  The climbing
+implements are so decrepit looking, they would be no use as hand and
+footholds.
+~
+A
+1 climb~
+pitons rocks ledge 1 down~
+act_tochar( #no, ch );
+act_notchar( #rno, ch, obj, mob, sight );
+~
+E
+no~
+@cAs you try to find suitable handgrips to climb down on, you realize
+that none of them will hold your weight.@n 
+~
+E
+rno~
+@c$n tries to find some handgrips to climb down with, but gives up after
+a few fruitless seconds.@n 
+~
+!
+0 0 0
+-1
+S
+
+#7917
+At the River's Edge~
+A little over four feet across, the narrow shelf of rock clings to the
+cliff side just above the roaring white-waters of a rushing mountain river. 
+Hammered into the southern face are rusted iron pitons, allowing for a
+difficult climb out of the ravine.  Beside the pitons, a dark fissure has
+opened in the rocks, a bed of dried moss scattered across its floor. 
+Toward the west a stone bridge spans the river, its supporting pillars
+shuddering under the pressure of the turbulent waters.
+~
+[Azerin] fishing spot
+[Azerin] rdesc checked
+[Azerin] rand add
+[Cayln] spot added to pol
+[Yrna] extra for pitons and fissure? Can be one extra describing both, really
+[Yrna] What's this about fishing?
+[Cayln] what, don't know about fishing..i guess it is mainly a male past time...
+~
+167247872 0 9 0
+D2
+~
+~
+0 -1 7918 10 10 5
+D4
+~
+~
+431 -1 7916 10 10 5
+A
+~
+~
+act_tochar( #cli, ch );
+act_notchar( #rcli, ch );
+continue;
+~
+E
+cli~
+@yYou grab hold of the ample outcrops of rock and scrabble up the
+cliff.@n 
+~
+E
+rcli~
+@y$n grabs a hold of the rocky cliff face and scrabbles up and out of the
+ravine,@n 
+~
+!
+3 0 16
+A
+~
+~
+send_to_room( #fish, room, sight );
+~
+E
+fish~
+@cYou see the shadow of a fish swimming below you in the water, it might
+be a good spot to fish.@n 
+~
+!
+2 200 0
+-1
+S
+
+#7918
+Cave Beside the Mountain River~
+The interior of the natural cave is remarkably dry and snug considering
+the rushing river only feet away.  A layer of sphagnum moss blankets the
+floor, a mound of moss and lichen forming a crude bed against the
+southern wall.  Faint paintings of huge wool-covered animals adorn the
+ceiling, their details poor due to their age.  A lop-sided hole in the
+far back wall opens into a dark passageway.
+~
+[Ciani] Entrance to Gnome Goldmine
+[Azerin] rdesc checked
+~
+167247872 11 8 0
+D0
+~
+~
+0 -1 7917 10 10 5
+D5
+~
+~
+0 -1 7700 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@rYou crawl through the hole in the back of the cave.@n
+~
+E
+not_char~
+@r$n crawls through the hole in the back of the cave.@n
+~
+!
+3 0 32
+-1
+S
+
+#7919
+Ruined City - Ancient roadway~
+Between the crumbling remnants of stone buildings winds the ancient
+cobbled road, rubble and fir saplings covering its pitted surface. 
+Wild flowers grow between the rubble, their surface covered in bright
+blooms.  Further to the east a mist-shrouded ravine splits the basin in
+two, the rushing sound of water echoing from its bottom.  Westward a
+ruined tower rises, by far the highest building still standing.  A
+weatherworn sign hangs in front of a mound of rubble that once was a
+building, the faded image of a sword and shield visible on the wood.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 4 9 0
+D1
+~
+~
+0 -1 7921 10 10 5
+D3
+~
+~
+0 -1 7911 10 10 5
+A
+~
+~
+send_to_room( #river, room );
+~
+E
+river~
+@CThe rushing river to the south sends up a great cloud of mist into the
+air.@n 
+~
+!
+2 300 0
+A
+~
+mound rubble~
+if( !rflag( reset0, room ) ) {
+  act_tochar( #already, ch );
+  end;
+}
+remove_rflag( reset0, room );
+act_tochar( #search, ch );
+act_notchar( #rsearch, ch );
+if( random( 1, 5 ) < 5 )
+  obj = oload( 872, random( 1, 3 ) );
+if( obj ) {
+  act_tochar( #found, ch, obj );
+  act_notchar( #rfound, ch, obj, mob, sight );
+  obj_to_char( obj, ch );
+}
+else {
+  act_tochar( #nothing, ch );
+  act_notchar( #rnothing, ch, obj, mob, sight );
+}
+~
+E
+search~
+@cYou begin searching the mound, looking for anything of interest.@n
+~
+E
+rsearch~
+@c$n begins searching the mound, looking for anything of interest.@n
+~
+E
+found~
+@cYou find from your search through the pile $p.@n
+~
+E
+rfound~
+@c$n finds from $s search through the pile $p.@n
+~
+E
+already~
+From the looks of it, someone has already searched the mound completely.
+~
+E
+nothing~
+You find nothing of interest in the mound.
+~
+E
+rnothing~
+$n finds nothing of interest in the mound.
+~
+!
+9 0 0
+-1
+S
+
+#7920
+Ruined City - Four Way Junction~
+A courtyard of cobblestones spreads out for about thirty feet in each
+direction, ruins of houses and shops scattered about its fringes.  Four
+roads converge upon the clearing, a statue of a dwarven warrior standing
+guard over each one.  Grooves of wagons have been worn into the cobbles,
+most now filled with damp moss and leaf-litter.  Chilling tendrils of
+mist dance between the fir trees and ruins, obscuring details in a
+blanket of white.
+~
+[Azerin] eastern trail winds under falls and heads towards cave/mountain
+zone maybe
+[Azerin] west towards more ruins and then basin land, another bridge
+further downstream
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 7925 10 10 5
+D1
+~
+~
+0 -1 7923 10 10 5
+D2
+~
+~
+0 -1 7911 10 10 5
+D3
+~
+~
+0 -1 7926 10 10 5
+A
+~
+~
+send_to_room( #mist, room );
+~
+E
+mist~
+@CWispy vapours of mist spread their sinuous tendrils across the ruins.@n
+~
+!
+2 200 0
+2528 9 1509949540 3 0
+-1
+S
+
+#7921
+Ruined City - Ancient roadway~
+The road bends northward, following the crumbling edge of a water-filled
+ravine.  Foaming rapids send out chilling clouds of misty spray into the
+air, leaving the area shrouded in perpetual fog.  Remains of buildings hug
+the road, rocks and wood spew from their husks, like the entrails of a
+slaughtered beast.  Rising above the shattered city are the Everwinter
+mountains, their peaks gleaming with ice.
+~
+[Yrna] Done
+[Guin] Done.
+~
+167247872 4 9 0
+D0
+~
+~
+0 -1 7922 10 10 5
+D3
+~
+~
+0 -1 7919 10 10 5
+A
+~
+~
+send_to_room( #wind, room );
+~
+E
+wind~
+@cAn icy squall gusts across the ruins, shaking the forest and chilling
+those unfortunate to be out in the open.@n
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@YWith the sound of the river echoing in your ears, you pick your way
+across the rubble and continue along the ancient road.@n 
+~
+!
+3 0 1
+2528 9 1509949540 3 0
+-1
+S
+
+#7922
+Ruined City - Ancient Roadway~
+Winding beside the crumbling edge of the river-scourged ravine is an
+ancient cobbled road.  The broken shells of buildings rise around the
+trail, some further north appearing to be in better condition that the
+shattered structures that spread here.  Beyond the city, a cascading
+waterfall thunders down from the high cliffs, the surging waters carving
+out a wide swath of rock and rubble before rushing down the narrow ravine.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 7924 10 10 5
+D2
+~
+~
+0 -1 7921 10 10 5
+D3
+~
+~
+0 -1 7923 10 10 5
+A
+~
+~
+send_to_room( #cliff, room, sight );
+~
+E
+cliff~
+@YGrinding and cracking, a sizable section of rocks across the ravine
+tumbles into the swirling waters of the rushing river.@n 
+~
+!
+2 150 0
+-1
+S
+
+#7923
+Ruined City - Road Through the Rubble~
+Mounds of broken bricks, rafters and roofing tiles lie scattered beside
+the ancient road.  A few standing walls reach a little over ten feet
+high, most are weather-worn and dangerously unstable.  Further to the
+north a few buildings appear in better condition; closer to the mountain's
+cliffs they may be sheltered from some of the harsh elements that lash
+the basin land.  Toward the west the road enters a cobbled courtyard,
+exits leaving in all directions.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 7922 10 10 5
+D3
+~
+~
+0 -1 7920 10 10 5
+-1
+S
+
+#7924
+Ruined City - Eastern Gate~
+Twisted metal and shattered stones spill out from the shell of a
+gatehouse to the east, the remnants of a low wall starting from its
+northern wall.  A copse of fir trees clusters around the cobbled road,
+forming a tangled blockage that slows passage to the north.  Southward,
+the ancient road heads back into the rubble-filled city, running beside a
+narrow, river-filled ravine.  Beyond the broken gatehouse, a single span
+bridge has collapsed, dangling by one flimsy rope into the ravine.
+~
+[Azerin] narrow trail leads behind waterfall
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 4 9 0
+D1
+~
+~
+0 -1 7927 10 10 5
+D2
+~
+~
+0 -1 7922 10 10 5
+E
+city 1 south~
+Lying to the south, the ruins of this city lay strewn about the area. 
+Blackened facades, partially destroyed, are the only reminders that a
+township once stood in this desolate place.  There are no apparent signs
+as to who the past occupants of the community might have been, on account
+of the town's destruction being so utterly complete.
+~
+E
+metal stones shell gatehouse gate house 1 east~
+Shards of metal and crushed rock tumble out from the doorway of the
+broken-down gatehouse onto the cobbled road that leads into the ruined
+city.  It is impossible to tell what the metal may have been, as it is
+now twisted and rusted beyond recognition.  Similarly, it is difficult to
+tell where all the stone fragments came from, although it would be fair
+to assume that they used to form the now absent chimney that looks like
+it should fit in the gap of one wall.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou pass under the shadow of the gatehouse and leave the ruined city
+behind.@n 
+~
+!
+3 0 2
+2528 9 1509949540 3 0
+-1
+S
+
+#7925
+Ruined City - Road Through the Rubble~
+Swirling mist mutes sound and obscures the fractured remains of the city
+buildings that crouch beside the road, their squat shells bare and
+exposed.  The soft echo of a distant waterfall dances in the air, half
+whispered voices carried with it.  Further northward, the landscape is
+blanketed in thicker clouds of fog, only the merest details of buildings
+visible within it.  The road winds southward, a firm footing in the
+otherwise faded landscape.
+~
+[Azerin] north to myst fiends
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 0 9 0
+D2
+~
+~
+0 -1 7920 10 10 5
+A
+~
+~
+send_to_room( #stir, room );
+~
+E
+stir~
+@CThe swirling mist billows across the rubble obscuring everything in its
+path.@n 
+~
+!
+2 150 0
+A
+1 north~
+~
+act_tochar( #ob, ch );
+~
+E
+ob~
+@CYou attempt to find you way through the mist, but after several
+attempts find yourself back where you started.@n 
+~
+!
+3 0 1
+5424 9 1509949540 3 0
+-1
+S
+
+#7926
+Ruined City - Road Beside the Tower~
+An ancient cobbled road ambles lazily between the husks of desolate
+buildings.  Rising out of the fir trees to the south are the remains of a
+guard tower, the upper story missing, the shadow-filled windows hiding
+what lies within.  A cloud of mist weaves through the crumbling city,
+obscuring the distant details and blanketing the area in a muffling cloak
+of white.  Gaunt fir trees grow amongst the stonework, their tangled
+roots digging at the city foundations.
+~
+No.mob
+[Yrna] Done.
+[Guin] Done.
+~
+167247880 12 9 0
+D1
+~
+~
+0 -1 7920 10 10 5
+D3
+~
+~
+0 -1 7931 10 10 5
+-1
+S
+
+#7927
+Entrance to the Ruined City~
+The shattered remnants of a gatehouse lie scattered about the cobbled
+road, a slumped section of wall tapering off toward the north.  A few
+scraggy fir trees hug the wall's edge, their fine needles forming rich
+smelling mounds around their roots.  The ancient roadway seems to end at
+the city, a narrow dusty trail winding northward beside the wall,
+heading toward a mighty waterfall that cascades down the steep valley
+cliff some hundred yards away.
+~
+no.mob
+[Guin] Done.
+~
+167247880 12 9 0
+D0
+~
+~
+0 -1 7928 10 10 5
+D3
+~
+~
+0 -1 7924 10 10 5
+E
+gatehouse gate house remnants~
+Splintered lengths of wood lay strewn in front of the decaying wall;
+having succumbed to the ever present dampness that pervades the area, the
+timbers are now warped and distorted.  A partially intact door hangs
+askew from the only remaining hinge that is still attached to the frame
+of the door.  The remains of rickety shutters clatter eerily in their
+frames, the haunting sound amplified by the swathes of mist that seethe
+about the place.
+~
+A
+~
+~
+send_to_room( #spray, room );
+~
+E
+spray~
+@CA damp cloud of mist washes across the ruined city.@n 
+~
+!
+2 200 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yManaging to stir a little cloud of dust you tromp onwards.@n 
+~
+E
+to_room~
+@yKicking up a cloud of dust, $n meanders along the road.@n 
+~
+!
+3 0 9
+-1
+S
+
+#7928
+Trail to the Icewind Falls~
+Winding beside the crumbling city wall, the dusty trail beings to climb
+toward the base of a rushing waterfall.  Northward, swirling mist pours
+from the crashing falls, obscuring the path's exact destination.  Beyond
+the western wall, the scattered ruins of a township spread, a few fir
+trees spotting the landscape.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 7929 10 10 5
+D2
+~
+~
+0 -1 7927 10 10 5
+E
+township ruins 1 west~
+Lying beyond the crumbling wall, the ruins of a small village lay strewn
+about the area.  Blackened facades, partially destroyed, are the only
+reminders that a township once stood in this desolate place.  There are
+no apparent signs as to who the past occupants of the community might have
+been, on account of the town's destruction being so thoroughly complete.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CYou step through the wall of mist and continue north.
+~
+E
+to_room~
+@C$n steps into the swirling mist and disappears from view.@n
+~
+!
+3 0 1
+-1
+S
+
+#7929
+Trail to the Icewind Falls~
+Climbing steadily up the valley side, the dry earth-clad trail begins to
+duck east toward the clouds of mist that hang around the base of
+the waterfall.  A mosaic of ruins spreads across the valley floor below,
+the river's ravine encircling it before heading east along the basin
+land.  Across the valley to the south, a road zigzags up the cliff side. 
+High above the trail the gleaming peaks of the Everwinter range stretch,
+their tips surrounded by stormy clouds.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 7930 10 10 5
+D2
+~
+~
+0 -1 7928 10 10 5
+-1
+S
+
+#7930
+Near Icewind Falls~
+Swirling mist coats the landscape in a mantle of white, the vague
+outlines of the cliff side barely visible.  Underfoot, the trail winds to
+the edge of a burbling pool, the roar of the waterfall pouring into it
+almost deafening.  A rushing river surges southward, carving out a narrow
+ravine from years of flow.  Beyond the pool, the basin land rises sharply
+upward, blocking any further passage.  A white stone monolith rises
+beside the waterfall, the gleaming stone smooth and unadorned.
+~
+[Azerin] so ends the trail, further stuff to be done later
+[Azerin] monolith opens door to undergound route to top of tairn, ill add
+it when i can
+[Yrna] Done.
+[Guin] Need an already open message for acode 2.
+[Guin] Reviewed
+[Azerin] ranger reset
+~
+167247872 3 9 0
+D0
+cliff wall~
+~
+235 -1 7970 10 10 5
+D1
+~
+~
+0 -1 7933 10 10 5
+D3
+~
+~
+0 -1 7929 10 10 5
+E
+monolith white stone tip~
+On closer inspection, the monolith stone is of a very light gray, with
+fine bands of ivory.  The texture is gritty and chill.  The only mark on
+the six-foot stone is a faint crack where the pyramidal tip meets the
+shaft.  Extending around the tip completely, it is too narrow to slip a
+hair into.
+~
+A
+~
+~
+send_to_room( #mist, room );
+~
+E
+mist~
+@CThe torrenting waterfall sends a shower of chilling mist into the cold
+air.@n 
+~
+!
+2 150 0
+A
+turn rotate move~
+tip monolith~
+if( is_open( room, north ) ) {
+  act_tochar( #no, ch );
+  act_notchar( #ono, ch );
+}
+else {
+  act_tochar( #open, ch );
+  act_notchar( #oopen, ch );
+  wait( 2 );
+  send_to_room( #open2, room );
+  send_to_room( #open3, find_room( 7970 ) );
+  open( room, north );
+}
+~
+E
+open~
+@gApplying some force, you grind the stone tip for ninety degrees.@n
+~
+E
+open2~
+@GA section of cliff swings open, its rumbling drowned out by the
+waterfall's hammering.  Revealed is a dark tunnel.@n 
+~
+E
+oopen~
+@g$n puts $s back into rotating the monolith tip with a grind.@n
+~
+E
+no~
+@yThe tip of the monolith will not budge.@n
+~
+E
+ono~
+@y$n tries to move the monolith tip, but fails.@n
+~
+E
+open3~
+@GWith a rumble, a section of the south wall swings open, the sound of
+rushing water breaking the quiet.@n
+~
+!
+0 0 0
+A
+~
+~
+if( is_open( room, north ) ) {
+  send_to_room( #sclose, room );
+  send_to_room( #nclose, find_room( 7970 ) );
+  close( room, north );
+}
+~
+E
+sclose~
+@YThe stone door rumbles closed, forming a perfect fit with the
+cliff-face.@n 
+~
+E
+nclose~
+@YThe stone door to the south swings shut, cutting off the rustle of water
+with a low thump.@n
+~
+!
+2 500 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CThe icy cold waters numb you as you enter the swirling pool.@n
+~
+!
+3 0 2
+2651 9 1509949540 3 0
+-1
+S
+
+#7931
+Ruined City - Road Through the Rubble~
+The distant sound of rushing waters echoes throughout the mist-shrouded
+landscape, the exact sound's source unclear.  The slumped carcasses of
+buildings cluster around the road, most having only external walls
+remaining to identify them as houses and shops.  Westward the shattered
+remnants of a dusty red-brick gatehouse lie scattered across the road. 
+Swirling mist coats the stonework in a chilling dew.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 7926 10 10 5
+D3
+~
+~
+0 -1 7932 10 10 5
+E
+dusty red brick red-brick gate house gatehouse~
+Partially intact, the remnants of thie gatehouse appear to have been
+charred by a ravaging fire.  Many of the red bricks that lie scattered
+across the road are blackened and badly chipped or broken into small
+fragments that have been covered by a thin layer of dirt.  Almost
+charcoal in appearance, the semi-intact wooden door hangs skewed from one
+hinge, the other having been lost presumably in the fire.
+~
+A
+~
+~
+send_to_room( #flock, room );
+~
+E
+flock~
+@YA flock of crows launch from the near by trees and with croaky calls
+circle over head before alighting upon the ruins and trees.@n 
+~
+!
+2 150 0
+-1
+S
+
+#7932
+Ruined City - Before the West Gate~
+A segmented stone wall cuts its way through the thickening fir woods in a
+north-south direction.  The cracked rock face has been pitted with years
+of harsh winters and lack of maintenance; despite this it still reaches
+over twenty feet in hight, the top covered in broken branches and loose
+rubble.  The road leads up to a squat gatehouse, the timbers and
+stonework charred with fire-damage.  Mounds of water-soaked soot spread
+around the building.  Beyond the burnt-out gates the woodlands become
+increasingly dense, the fir trees cluster together with barely an ogres
+width between them.  Eastward the road winds into the shattered remains
+of the city, its cobbles coated in debris from houses and trees.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 7931 10 10 5
+D3
+~
+~
+0 -1 7934 10 10 5
+E
+squat gatehouse timbers stonework fire-damage fire damage~
+Blackened stones and crumbling timbers are all that remain of the stout
+gatehouse.  The interior has been completely gutted by a blazing fire at
+some time in the mist-shrouded past leaving gaping holes in the walls and
+ceiling that now surrender to the forces of nature.  Waterlogged floor
+boards have swollen disproportionately with countless years of constant
+rainfall, causing the wood to warp and distort along the grain. 
+Soot-covered pools form in the shallow dips that ripple the creaking
+floor.
+~
+-1
+S
+
+#7933
+The Icy Pool~
+Turbulent waters churn the pool's surface till it foams; waves crash
+against the rocks sending clouds of chilling mist skyward.  The thundering
+waterfall impacts to the north, the very rocks and water vibrating with
+the force.  Toward the south, over a lip of grey stone, the river rushes
+down into the gorge; anyone unfortunate enough to be caught in the
+river's current would surely drown if they managed to avoid being smashed
+upon the jagged outcrops of partially submerged rocks.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 6 9 0
+D3
+~
+~
+0 -1 7930 10 10 5
+E
+waterfall thundering 1 north~
+Towering several yards overhead, the thundering waterfall rises like a
+monolith to the north.  A great spray of water coats the surrounding
+rocks with cool water; a slippery layer of algae thrives just beneath the
+surface of the moisture.  On rocks that are a little further removed from
+the churning waters of the deep pool, dew spangled moss clings to the
+jagged cliffs.  At the southern end of the pool, the smaller stones have
+been washed together to form a shallow embankment, hidden beneath the icy
+waters, that gives way to a deep cut ravine a little further on.
+~
+A
+drink~
+icy pool water~
+if( find_stat( ch, dex ) < 19 ) {
+  act_tochar( #drink, ch );
+  act_notchar( #drink1, ch );
+}
+else
+  continue;
+~
+E
+drink~
+@CYou bend down to drink from the icy pull, but the harsh waves almost pull
+you in, causing you to jump back.@n
+~
+E
+drink1~
+@C$n bends down to drink from the icy pull, but the harsh waves almost pull
+$m in, causing $m to jump back.@n
+~
+!
+0 0 0
+A
+fill~
+*~
+if( find_stat( ch, dex ) < 19 ) {
+  act_tochar( #fill, ch );
+  act_notchar( #fill1, ch );
+  }
+else
+  continue;
+~
+E
+fill~
+@CYou try to use the icy pool to fill from but the trecherous waters make
+it impossible.@n
+~
+E
+fill1~
+@C$n tries to use the icy pool to fill from but the trecherous waters make
+it impossible.@n
+~
+!
+0 0 0
+A
+~
+~
+loop( all_in_room )
+  if( !is_mob( rch ) )
+  damage( mob, rch, 2d4, cold, "the icy pool" );
+~
+!
+2 10000 0
+7991 17 1509949540 -2 0
+-1
+S
+
+#7934
+Ruined City - Before the West Gate~
+Fir trees grow in dense clusters around the wall of the mountain township. 
+An overgrown cobbled road winds its way westward, further into the
+woodlands.  A fire-damaged building lies directly eastward, the remains
+of a gatehouse. Across ground tendrils of frost spread, their crystalline
+surface gleaming.  Attached to a nearby branch is what appears to be a
+tattered scalp of a goblin or orc, the tufts of black hair tangled with
+bird bones.
+~
+[Azerin] west is frostfur woods, edges are animals, then gnolls
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 7932 10 10 5
+D3
+~
+~
+0 -1 7935 10 10 5
+E
+scalps bone scraps tattered hair bird~
+Tied to a low branch of a nearby fir tree, the splintered bones and
+scalps clatter hauntingly in the wind.  Matted black hair is tangled with
+brittle wing bones from a small avian.  No ceremony has been spent on the
+removal of the scalps from whomever it was that they belonged to: they are
+tattered and torn in many places with chunks of semi-dried flesh hanging
+from them.
+~
+A
+~
+~
+send_to_room( #clatter, room );
+~
+E
+clatter~
+@CThe scraps of bone and scalps clatter together as a gust of wind bends
+the trees.@n 
+~
+!
+2 150 0
+A
+~
+scraps bones scalps~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 15 ) == 15 ) {
+    act_tochar( #yippie, ch, obj );
+    act_notchar( #ryippie, ch, obj, mob, sight );
+    obj_to_char( oload( 2253 ), ch );
+  }
+  else {
+    act_tochar( #nothing, ch, obj );
+    act_notchar( #rnothing, ch, obj, mob, sight );
+  }
+}
+else
+  act_tochar( #nothingleft, ch, obj );
+~
+E
+yippie~
+@GRummaging through the tangled mass of hair and bone, you find
+something.@n 
+~
+E
+ryippie~
+@GRummaging through the pile of bone, $n appears to have found
+something.@n 
+~
+E
+nothing~
+@gSearching through scraps of bone and scalps, you come up emptyhanded.@n
+
+~
+E
+rnothing~
+@g$n searches through the pile of bones, but finding nothing, $e soon
+gives up.@n 
+~
+E
+nothingleft~
+@cSomeone has obviously searched this just recently.@n
+~
+!
+9 0 0
+-1
+S
+
+#7935
+Edge of the Frostfur Woods~
+Mounds of pine needles and bracken spread beneath the tightly packed fir
+trees, their surfaces coated in a light layer of frost.  The cool air is
+suprisingly still, the muffled sound of a river burbling some way to the
+south.  A debris-covered ancient road winds beneath the tangled branches
+of the firs, travellers along its path having to duck and weave to avoid
+the tree limbs.  Overhead the gleaming peaks of the Everwinter mountains
+spread, their icy summits surrounded by storm clouds.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 7936 10 10 5
+D1
+~
+~
+0 -1 7934 10 10 5
+D2
+~
+~
+0 -1 7937 10 10 5
+D3
+~
+~
+0 -1 7938 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GThe fallen pine needles crunch underfoot as you follow the forest path
+$Tward.@n 
+~
+E
+to_room~
+@GThe fallen pine needles crunch underfoot as $n follows the forest path
+$Tward.@n 
+~
+!
+3 0 15
+755 9 1509949540 3 0
+134 9 1509949540 3 0
+-1
+S
+
+#7936
+Edge of the Frostfur Woods~
+Clumps of bracken and hound-tongue ferns grown under the shade of the
+dusky-green fir trees.  The sweet smell of pine sap fills the air, mixing
+with a faint sent of decay.  Patches of frost spread their icy tendrils
+across the shadowy surfaces, a few ice-crystals dangling from the tips of
+fir needles.  The sound of a river filters through the woodlands from the
+south.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 7939 10 10 5
+D2
+~
+~
+0 -1 7935 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CFrost-covered leaves and ferns crunch underfoot as you continue
+$dward.@n 
+~
+E
+to_room~
+@CFrost-covered leaves and ferns crunch underfoot as $n continues
+$dward.@n 
+~
+!
+3 0 5
+205 9 1509949540 3 0
+-1
+S
+
+#7937
+Edge of the Frostfur Woods~
+Running parallel to the eastern wall is a narrow trail, the tangled roots
+of fir trees often obscuring the passageway.  Across the bark of lower
+branches some creature has scraped deep groves, the weeping sap giving
+off a pungent aroma.  A spire of rock juts from the forest floor, rising
+a little over ten feet in hight.  Nestled in its shady base are a swathe
+of stinging nettles and foxfur ferns.  Further southward the tress form
+a tangled wall of growth, blocking any view of what lies beyond.  The
+gurgling sound of rushing waters filter throughout the woodlands.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 4 9 0
+D0
+~
+~
+0 -1 7935 10 10 5
+D2
+~
+~
+0 -1 7940 10 10 5
+D3
+~
+~
+0 -1 7943 10 10 5
+-1
+S
+
+#7938
+The Frostfur Woods~
+Taller fir trees close ranks around the ancient road, creating a
+dwindling pathway to the west.  An earthen bank runs along the roadside,
+its surface coated in lush ferns and woody bracken.  Mounds of needles
+litter the ground, the rich smell of sap and decay hanging heavy in the
+air.  Some way to the south a river can be faintly heard.  Tangled in a
+high branch dangles a goblin scalp, the tattered edges covered in
+blue-black runes.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 7935 10 10 5
+D2
+~
+~
+0 -1 7943 10 10 5
+D3
+~
+~
+0 -1 7948 10 10 5
+215 9 1509949540 3 0
+-1
+S
+
+#7939
+Edge of the Frostfur Woods~
+The woodlands begin to rise upward, heading toward a towering cliff
+face that rises to the north.  Brightly flowering carnations grow in
+patches beside the trees, their smoky green foliage coated in droplets of
+frozen dew.  Through gaps in the trees to the east a crumbling wall
+stretches, the top section covered in loose rocks and branches.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 7950 10 10 5
+D2
+~
+~
+0 -1 7936 10 10 5
+2409 9 1509949540 3 0
+-1
+S
+
+#7940
+Edge of the Frostfur Woods~
+Running through the fir tree forest is a narrow trail.  A speckled
+collection of stones lie scattered across the path, perhaps an attempt to
+mark the often overgrown passage.  Under the boughs of the trees lie
+mounds of pine needles, their surface home to brightly capped toadstools. 
+A spire of rock, a little over ten feet high, rises to the north, its
+surface covered in ferns and bracken.  The trail bends to the west and
+continues deeper into the woods.  The roar of a river echoes from the
+south, the ground underfoot rumbling slightly.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 4 9 0
+D0
+~
+~
+0 -1 7937 10 10 5
+D3
+~
+~
+0 -1 7941 10 10 5
+-1
+S
+
+#7941
+Edge of the Frostfur Woods~
+Southward glimpses of a river gorge flicker through the dense branches of
+the fir trees as they sway in the wind.  Bare grey-stone lies scattered
+across the woodland floor, their surfaces worn smooth by water.  A
+coating of silvery frost spreads under the trees, the tangled roots
+gleaming brightly.  Running through the woodlands is a narrow trail, its
+passage constantly winding around trees and rocky outcrops.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 7943 10 10 5
+D1
+~
+~
+0 -1 7940 10 10 5
+D3
+~
+~
+0 -1 7942 10 10 5
+A
+~
+~
+act_tochar( #ice, ch );
+act_notchar( #rice, ch );
+continue;
+~
+E
+ice~
+@CFrost crunches underfoot as you continue onward.@n
+~
+E
+rice~
+@CWith frost crunching underfoot, $n heads onward.@n
+~
+!
+3 0 3
+-1
+S
+
+#7942
+The Frostfur Woods~
+The gnarled branches of elder fir trees spread across the path reducing
+the visiblity and forcing travellers to duck and weave around them.  The
+woodlands become increasingly dense further to the west, the trail
+disappearing at the base of a particularly stout pine tree.  A withered and
+split fir tree grows against the edge of a crumbling ravine, the mist from
+a mountain river visible at the gourge's bottom.  Bracken and ivy spread
+across the forest floor, their leaves coated with a light dusting of
+frost.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 7941 10 10 5
+D3
+~
+~
+0 -1 7944 10 10 5
+A
+~
+~
+act_tochar( #branch, ch );
+act_notchar( #rbranch, ch );
+continue;
+~
+E
+branch~
+@gPushing some of the branches aside you continue onward.@n 
+~
+E
+rbranch~
+@gPushing aside some of the branches, $n continues onward.@n 
+~
+!
+3 0 10
+2409 9 1509949540 3 0
+-1
+S
+
+#7943
+Edge of the Frostfur Woods~
+Clinging to the lower limbs of the fir trees is a purple-hued ivy, the
+tendrils enveloping several of the small trees.  A scattering of dull
+green grass spreads between the roots and ivy, most of the slender leaves
+spotted with rust.  The distant sound of a river mixes with the
+whispering song of the forest.  Eastward a fern-covered ridge of rock
+rises to about ten feet in height.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 7938 10 10 5
+D1
+~
+~
+0 -1 7937 10 10 5
+D2
+~
+~
+0 -1 7941 10 10 5
+366 9 1509949540 3 0
+366 9 1509949540 3 0
+-1
+S
+
+#7944
+The Frostfur Woods~
+Weaving between the stands of fir trees the narrow trail does its best to
+follow the cracked and pitted edge of the river gorge.  Across the other
+bank the woodlands spread, the ground tangled with branches and shrouded
+in gloom.  A short distance to the west a wooden swing bridge crosses the
+ravine, a rock cairn built beside it.  Beyond the bridge the forest rises
+slightly, becoming increasingly dank and shadow-filled.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 7942 10 10 5
+D3
+~
+~
+0 -1 7945 10 10 5
+A
+~
+~
+send_to_room( #bird, room );
+~
+E
+bird~
+@GA flock of birds takes flight from the fir trees.@n 
+~
+!
+2 150 0
+-1
+S
+
+#7945
+The Frostfur Woods - Before a Swing Bridge~
+Constructed from rope and wooden slats, the narrow bridge swings and
+shakes as if responding to the crashing waters below.  Solid-looking
+spikes have been driven into the rocks, the hemp rope firmly attached to
+these.  Sagging badly, the bridge is little over five feet above the icy
+water at the mid point.  A dirt track leads from the bridge and heads
+eastward, following the river gorge.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 7944 10 10 5
+D2
+~
+~
+0 -1 7946 10 10 5
+A
+~
+~
+act_tochar( #bridge, ch );
+act_notchar( #rbridge, ch );
+continue;
+~
+E
+bridge~
+@YGrabbing the soaking ropes you begin the dangerous journey across the
+swaying bridge.@n 
+~
+E
+rbridge~
+@YWith some concern upon $s face $n begins to cross the swinging
+bridge.@n 
+~
+!
+3 0 4
+A
+~
+~
+send_to_room( #bridge, room, sight );
+~
+E
+bridge~
+@GThe bridge sways and shakes, hemp ropes groaning from tension.@n
+~
+!
+2 200 0
+-1
+S
+
+#7946
+Upon a Swing Bridge~
+Swirling waters rush beneath the swinging bridge, branches and boulders
+carried in the water rushing by.  The hemp rope is saturated with
+chilling water, making gripping the sides difficult.  Underfoot the
+cracked and warped wooden slats groan and shift.  Both ends of the bridge
+are lined with dense fir trees, giving little indication to what lies
+beyond them.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 7945 10 10 5
+D2
+~
+~
+0 -1 7947 10 10 5
+A
+~
+~
+send_to_room( #swing, room );
+~
+E
+swing~
+@YThe bridge sways alarmingly as the rumbling waters below crash through
+the gorge.@n 
+~
+!
+2 150 0
+A
+~
+~
+send_to_room( #spray, room );
+~
+E
+spray~
+@CClouds of spray drench the bridge and surrounding land.@n 
+~
+!
+2 150 0
+-1
+S
+
+#7947
+The Frostfur Woods - Before a Swing Bridge~
+Constructed from hemp rope with wooden slats for the base, the narrow
+swing bridge appears to be unsteady at best.  At this end the rope is
+bound around trees and the lower section hammered into the ground with
+wooden spikes.  Southward the gloomy forest spreads as far as the
+valley's edge.  The river-filled ravine churns westward, the waters
+rushing toward a huge waterfall.  A muddy trail enters from the east,
+its rippled surface coated with a layer of sparkling frost.
+~
+[Azerin] 5311 join east - entrance to Frostfur Woods.
+[Yrna] Done.
+[Guin] Done.
+[Herak] cow
+~
+167247872 4 9 0
+D0
+~
+~
+0 -1 7946 10 10 5
+D1
+~
+~
+0 -1 5311 10 10 5
+D3
+~
+~
+0 -1 7953 10 10 5
+A
+~
+~
+act_tochar( #swin, ch );
+act_notchar( #rswin, ch );
+continue;
+~
+E
+swin~
+@YThe bridge creaks and groans underfoot as you start across it, the
+sodden ropes appearing under considerable strain.@n 
+~
+E
+rswin~
+@YThe bridge creaks and groans as $n begins to head across it.@n 
+~
+!
+3 0 1
+134 9 1509949540 3 0
+-1
+S
+
+#7948
+The Frostfur Woods~
+The dense vegetation and tangled branches make for a difficult passage as
+the forest grows increasingly inhospitable to travelers.  Lush ivy
+entwines around branches and trunks of the gnarled fir trees, the leaves
+a dull purple hue.  The pungent smell of sap oozes from broken tree limbs. 
+As the road heads westward, it begins to rise, a few patches of grass
+clustered round its edges.  The melodic cries of unseen birds mix with
+the distant sounds of a river far to the south.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 4 9 0
+D1
+~
+~
+0 -1 7938 10 10 5
+D3
+~
+~
+0 -1 7949 10 10 5
+78 17 1509949540 -2 0
+-1
+S
+
+#7949
+The Frostfur Woods~
+Apricot-colored leaves spread over a squat deciduous tree that makes its
+home among the taller, evergreen fir trees.  The tangled branches of the
+tree are coated in a paper-like bark, a dull cream in coloration.  A few
+birds' nests lie abandoned in its top foliage, the remains of last
+seasons work.  A dusting of frost coats the surrounding fir roots and
+ferns, however the ground beneath the golden tree appears free of the
+prevailing chill.
+~
+[Guin] Recovery Room.
+[Guin] Done.
+~
+167247872 15 9 0
+D1
+~
+~
+0 -1 7948 10 10 5
+E
+ground tree golden roots~
+A relatively large patch of ground immediately beneath the tree, among
+its rooms, is free of the pervading chill that surrounds this mountain
+forest.  It looks like a good place to rest.
+~
+A
+~
+~
+send_to_room( #warm, room );
+~
+E
+warm~
+@cA soothing warmth emanates from the tree and ground underfoot.@n
+~
+!
+2 150 0
+5044 9 1509949540 3 0
+415 17 1509949540 -2 0
+711 17 1509949540 -2 0
+-1
+S
+
+#7950
+Edge of the Frostfur Woods~
+Honeysuckle spreads across the lower branches and roots of several stout
+fir trees, the pale green leaves almost lost in the dense fir needles. 
+Exposed rocks become increasingly common further to the north, the
+landscape rising steeply in that direction.  Trees begin to thin, giving
+way to brambles and thistles that thrive between the boulders.  High
+above, a road cuts across the cliff face heading in an east-west direction. 
+A blanket of mist cloaks the eastern basin in a veil of white.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 7952 10 10 5
+D2
+~
+~
+0 -1 7939 10 10 5
+D3
+~
+~
+0 -1 7951 10 10 5
+A
+~
+~
+send_to_room( #rumble, room );
+~
+E
+rumble~
+@rThe sound of distant thunder rumbles through the mountains.@n 
+~
+!
+2 150 0
+-1
+S
+
+#7951
+Edge of the Frostfur Woods~
+With outer foliage dipped in a coating of frost, the leaves and ferns of
+the forest sparkle in the light.  Wispy vapours of chilling mist embrace
+the lower limbs of the fir trees.  Fractured chunks of stone spread out
+through the forest, the littered remains of an ancient landslide.  Rising
+upward to the north are the cliffs of the Everwinter mountains, their
+rugged surface bare of life.  Just visible through the dense undergrowth
+are the remnants of a cobbled path.  Through the trees to the west, the
+path descends into a tiny valley.
+~
+[Guin] Water Imps went west.
+[Yrna] Done.
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 7950 10 10 5
+D3
+~
+~
+0 -1 5725 10 10 5
+-1
+S
+
+#7952
+Basin Land - Before a Crumbling Cliff~
+Cut into the cracked and weather-beaten surface of the slate cliff face
+are evenly spaced handholds.  A collection of ragged leafed thistles
+cluster around the cliff base.  Westward a fallen tree leans heavily
+against the cliff, its broken branches forming a tangled wall.  Ferns and
+bracken line a narrow trail that winds along the forest edge, heading
+southward.  Visible through the foliage to the east is a high wall, the
+pitted and cracked masonry still reaching over twenty feet in height.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 4 9 0
+D2
+~
+~
+0 -1 7950 10 10 5
+D4
+~
+~
+0 -1 7964 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gUsing the handholds on the cliff face, you easily climb up.@n
+~
+E
+to_room~
+@gUsing the handholds on the cliff face, $n climbs up.@n
+~
+!
+3 0 16
+-1
+S
+
+#7953
+The Frostfur Woods~
+A narrow trail winds beside the grass lined edge of a narrow ravine. 
+Rushing through the gorge's middle is a torrenting river, the swirling
+waters churned white with the furious rush.  Eastward a narrow swing
+bridge spans the river, allowing travel onward into the northern
+woodlands.  Further to the west the water course reaches the edge of the
+plateau, the mountain river hurtling over the lip in a mighty waterfall. 
+Rising beside the falls is a ruined tower, the broken walls gleaming with
+mist.
+~
+[Azerin] rdesc checked
+[Snorri] gorges gorge's
+[Azerin] rand add
+[Yrna] Done.
+~
+167247872 4 9 0
+D1
+~
+~
+0 -1 7947 10 10 5
+D3
+~
+~
+0 -1 7954 10 10 5
+A
+~
+~
+send_to_room( #spray, room );
+~
+E
+spray~
+@CA wave of mist hurtles from the river, soaking the forest in chilling
+water.@n 
+~
+!
+2 150 0
+-1
+S
+
+#7954
+The Frostfur Woods~
+Running beside the rushing river gorge the grass-lined trail heads in a
+east-west direction.  Clouds of billowing mist rise from the rushing
+waters below, the river hurtling toward a thundering waterfall to the
+west.  Densely packed fir trees cluster close to the edge, their tangled
+roots cover much of the track.  Ferns cling to the cliff side, growing on
+slender fissures that mar the rock.  A delicate coating of frost coats
+the tips of the bracken and ferns that grow under the southern trees, the
+ice gleaming like diamonds.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 4 9 0
+D1
+~
+~
+0 -1 7953 10 10 5
+D3
+~
+~
+0 -1 7955 10 10 5
+A
+~
+~
+send_to_room( #rumble, room );
+~
+E
+rumble~
+@yThe ground shakes underfoot as the force of the surging waters crashes
+against the rocks.@n 
+~
+!
+2 150 0
+A
+~
+~
+send_to_room( #mist, room );
+~
+E
+mist~
+@CSoaking mist covers the ground, hurled up from the thundering waters
+below.@n 
+~
+!
+2 150 0
+-1
+S
+
+#7955
+Edge of the Frostfur Woods - Waterfall~
+Thundering waters from the swallen mountain river rush over the plateau's
+edge and cascade down in a surging waterfall over one hundred feet in
+height.  Far below a lake spreads out, the white-waters spreading waves
+across its blue-green surface.  Clouds of mist rise from the torrent,
+obscuring much of the dank fir forest that clusters near the ravines edge. 
+Brambles and ferns spread under the water-coated trees, their foliage
+coated in a layer of frost.  Cut along the southern cliff side is a narrow
+trail framed by the fall on one side and the dense fir trees on the other. 
+Jutting out on a shelf of rock is the remnants of a crumbling tower, the
+cracked and broken building a few stories high.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 4 9 0
+D1
+~
+~
+0 -1 7954 10 10 5
+D3
+~
+~
+0 -1 7956 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GMindful of the dangerous drop, you continue along the rocky trail.@n
+~
+E
+rleav~
+@G$n carfully makes $s way $dward along the river's edge.@n 
+~
+!
+3 0 10
+215 9 1509949540 3 0
+-1
+S
+
+#7956
+Cliff Side Trail~
+Jutting out into the windswept cliff face the crumbling overhang rumbles
+with the vibrations from the crashing waterfall, mere stone's throw away. 
+A solitary pine tree grows from the shallow earth of the outcrop, the
+branches bent and twisted and mostly bare.  A ruined watchtower rises to
+the south, the three remaining stories pitted and cracked with age. 
+Eastward a trail winds beside the rushing river gorge, heading deep into
+the fir forest.
+~
+[Yrna] Done.
+~
+167247872 4 9 0
+D1
+~
+~
+0 -1 7955 10 10 5
+D2
+~
+~
+0 -1 7957 10 10 5
+5398 9 1509949540 3 0
+-1
+S
+
+#7957
+Cliff Side Trail - Before a Ruined Tower~
+Encircling the base of the crumbling tower is a squat stone wall, the
+boulders cracked and broken.  Built upon a rocky outcrop that juts out
+from the cliff, the tower would offer a great view of the surrounding
+lands.  Clouds of mist swirl up from a rushing waterfall to the
+northeast, the billowing vapours obscuring the woodland and lower portion
+of the tower.  Clusters of fir trees gather around the narrow trail,
+their tangled roots digging into the shallow soil.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 4 9 0
+D0
+~
+~
+0 -1 7956 10 10 5
+D2
+~
+~
+0 -1 7959 10 10 5
+D3
+~
+~
+0 -1 7958 10 10 5
+A
+~
+~
+act_tochar( #change, ch );
+act_notchar( #rchange, ch );
+continue;
+~
+E
+change~
+@CAs you approach the ruined tower, a shimmering cloud seems to lift from
+the landscape, revealing an intact and (by the smoke tumbling from
+several chimneys) occuppied tower!@n 
+~
+E
+rchange~
+@CAs $n approaches the tower, $e looks startled, then confused; with a
+shake of $s head, $e continues into the ruin.@n 
+~
+!
+3 0 8
+-1
+S
+
+#7958
+Tower Beside the Falls~
+A cobbled yard spreads before the tower, the cracks between each brick
+filled with moss and immature ferns and bracken, giving the surface a
+patchwork appearance.  Surrounding the tower and yard is a squat stone
+wall, a little over four feet in height.  Swirling mist rolls over the
+stonework, the chilling clouds obscuring the landscape beyond the tower. 
+The vague outlines of trees spread out eastward, their tall forms moving
+slightly.  The roar of a thundering waterfall rumbles through the rocks,
+the dull vibrations making tiny pebbles dance about.  Beyond a short
+flight of steps, a solid oak and iron-bound door has been set into the
+tower; the keystone above the entrance is carved with twin interlocked
+axes.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 7957 10 10 5
+D3
+iron-bound door~
+~
+131 -1 7990 10 10 5
+E
+door 1 west keystone axes~
+Made from solid oak, this heavy-set door is reinforced with ornate
+wrought iron bracing.  Above the centre of the sturdy door, in the
+masonic framework, lies an expertly chiselled keystone.  Jutting out an
+inch from the smoothed surface of the keystone is a motif of twin
+interlocked axes; the head of each axe faces outward from its mirror on
+the other half of the stone.
+~
+-1
+S
+
+#7959
+Cliff Side Trail~
+Cut into the mountain side is a narrow cave, its mouth draped with
+tangled moss and tree roots that partially obscure it from view.  A
+strong bestial smell emanates from its dark recesses, a smattering of
+bones littering the ground around it.  The narrow trail winds northward
+toward the remains of a watchtower or simillar building, the crumbling
+cliff side dropping down at least one hundred feet to the basin land
+below.  The fir trees that scatter the land form a dense woodland to the
+east, the outer edge coated in a layer of gleaming frost.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 4 9 0
+D0
+~
+~
+0 -1 7957 10 10 5
+D1
+~
+~
+0 -1 7961 10 10 5
+D2
+~
+~
+0 -1 7960 10 10 5
+-1
+S
+
+#7960
+Inside the Cave~
+The walls and floor of the shallow cavern are covered in deep gorged
+claw marks.  The rank stench of musk saturates the air making breathing
+unpleasant.  Rotting bracken has been dragged into a sizeable mound at the
+cave mouth, the chewed remains of animal bones littering the pile.  At
+some point the cave appears to have continued southward, a section of
+the ceiling crashing down to seal the passage.  From the cave mouth the
+edge of the plateau winds northward, a narrow trail following its
+crumbling side.  In the distance a ruined building sits, framed by
+billowing white clouds that swirl around it.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247876 11 9 0
+D0
+~
+~
+0 -1 7959 10 10 5
+A
+~
+~
+act_tochar( #smell, ch );
+continue;
+~
+E
+smell~
+@yWith some relief you leave the dank lair and head back into the
+woods.@n 
+~
+!
+3 0 1
+A
+~
+mound bracken bones~
+if( !rflag( reset0, room ) ) {
+  act_tochar( #already, ch );
+  end;
+}
+remove_rflag( reset0, room );
+if( random( 1, 10 ) < find_skill( ch, searching ) )
+  obj = oload( 2, random( 1, 5 ) );
+if( obj ) {
+  act_tochar( #found, ch, obj );
+  act_notchar( #rfound, ch, obj );
+  obj_to_char( obj, ch );
+}
+else {
+  act_tochar( #nada, ch );
+  act_notchar( #rnada, ch );
+}
+~
+E
+already~
+It looks like someone has already searched through the pile of bones.
+~
+E
+found~
+You find $p in amongst the bones.
+~
+E
+rfound~
+$n finds $p in amongst the bones.
+~
+E
+nada~
+You find nothing of interest.
+~
+E
+rnada~
+$n finds nothing of interest.
+~
+!
+9 0 0
+2500 137 1509949540 3 0
+-1
+S
+
+#7961
+Edge of the Frostfur Woods~
+Cutting into the light woodlands runs a narrow dirt trail.  At its muddy
+border slender grasses spread out, the carpet continuing a way under the
+trees before being replaced by clumps of ferns and bracken.  Westward
+the trail dips downward and begins a perilous journey beside a crumbling
+cliffs edge.  The distant thunder of water drifts through the dense fir
+trees, its exact source unseen.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 4 9 0
+D2
+~
+~
+0 -1 7962 10 10 5
+D3
+~
+~
+0 -1 7959 10 10 5
+415 17 1509949540 -2 0
+-1
+S
+
+#7962
+Edge of the Frostfur Woods~
+Stacks of slivery-hued boulders rise up beside the path, their swirled
+finish gleaming brightly.  Each stone a little larger than a wagon, they
+appear to be finely balanced, with no evidence of mortar or magic aiding
+in their construction.  Beyond the strange boulder stacks mundane
+appearing fir trees spread, forming into a sizable woodland.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 4 9 0
+D0
+~
+~
+0 -1 7961 10 10 5
+D2
+~
+~
+0 -1 7963 10 10 5
+755 9 1509949540 3 0
+5396 9 1509949540 3 0
+2145 9 1509949540 3 0
+5425 9 1509949540 3 0
+7760 17 1509949540 -2 0
+-1
+S
+
+#7963
+Narrow Trail Through the Basin Land~
+A few scraggly pines grow beside the rubble-covered trail.  Spires of
+basalt rock jut from the mountain side to the west, their gleaming
+surfaces reflecting light.  Spread under the trees are a light sprinkling
+of pine needles, their surface coated in tendrils of frost.  An ancient
+cobbled road cuts through the mountainside to the south, the way
+partially blocked by a landslide.  Northward, tall fir gather close
+together, forming a dense woodland.  The distant rumble of a rushing
+river echoes through the basin land.
+~
+[Azerin] south join to 5939
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 7962 10 10 5
+D2
+~
+~
+0 -1 5939 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GSqueezing past the landslide, you follow the rubble-covered road
+south.@n 
+~
+!
+3 0 4
+2145 9 1509949540 3 0
+2145 9 1509949540 3 0
+-1
+S
+
+#7964
+Clinging to a Craggy Cliff~
+Ample handholes make the climb easy despite the patches of frost and ice
+covering the cliff side; the way onward appears to be similar in
+difficulty.  Dew-coated bracken thrusts out from the grey rocks, growing
+in cracks and fissures where enough soil has been trapped.  Overhead the
+cliff appears to cut inward, perhaps reaching a summit.  Below, the
+forest spreads out, the wisps of fog clinging to the pine-trees branches. 
+Far to the east a sparkling river winds, cutting its way through the
+basin land.
+~
+[Azerin] no.mob
+[Guin] Done.
+~
+167247880 5 9 0
+D4
+~
+~
+0 -1 7965 10 10 5
+D5
+~
+~
+0 -1 7952 10 10 5
+E
+dew-coated dew coated bracken~
+Despite the frosty temperature, this hardy plant has managed to survive
+in this predominantly barren landscape.  Small dewdrops barely have time
+to form before the chill turns them into fine ice crystals.  Twisted
+roots are crammed tightly into fissures in the cliff face as they seek out
+the meagre amount of soil that has been trapped within.
+~
+E
+forest pine-trees pine trees river sparkling~
+Spanning out at the foot of the cliff face, a mist-shrouded forest
+spreads across the broad tableland. Cutting through the verdant lands,
+a sparkling river weaves to and fro as it carries the chill mountain
+waters off to the east.  Muted sounds permeate from the wide basin below;
+it almost seems as though the land has been subdued by the chill of
+winter, with most creatures seeking shelter in which to pass the colder
+weather.
+~
+A
+~
+~
+if( random( 1, 2 ) == 1 )
+  send_to_room( #cry, room );
+else
+  send_to_room( #wind, room );
+~
+E
+wind~
+@CAs the wind picks up, the howling gusts threaten to dislodge any loose
+items.@n 
+~
+E
+cry~
+@YThe sound of an animal keening a cry to the world can be heard in the
+distance.@n 
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gCareful not to lose footing, you continue to climb $d.@n
+~
+E
+to_room~
+@gLooking a bit like a large spider on the wall, $n continues to climb
+$d.@n 
+~
+!
+3 0 48
+-1
+S
+
+#7965
+Upon an Ancient Road~
+An ancient cobblestone road cuts into the mountainside, its cracked and
+pock-marked surface barely visible under layers of rocks and patches of
+gleaming snow.  Above the road, a jutting cliffside forms a protective
+overhang against all sorts of inclement weather.  Eastward, the road
+bends around the basin's edge, before disappearing out of sight around a
+crumbling landslide.  To the west, the road is blocked by a recent
+landslide that prevents passage; beyond the slip a glimpse of the road
+can be seen further to the north before it finally disappears from view.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 5 9 0
+D1
+~
+~
+0 -1 7966 10 10 5
+D3
+~
+~
+0 -1 7992 10 10 5
+D5
+~
+~
+0 -1 7964 10 10 5
+A
+~
+~
+send_to_room( #cold, room );
+~
+E
+cold~
+@CAn icy wind blusters from the snow-covered peaks above, catching the
+breath with its fierce wintry bite.@n 
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou lower yourself cautiously over the cliff's edge.  Easily finding
+foothold, you continue to climb down.@n 
+~
+E
+to_room~
+@g $n lowers $mself over the cliff edge and disappears from sight.@n 
+~
+!
+3 0 32
+-1
+S
+
+#7966
+Upon an Ancient Road~
+Winding around the crumbling edge of the basin runs the cobbled road, its
+surface covered in ruts and rubble, evidence of its age apparent.  Below
+the road, the ruins of a township spread, a blanket of mist surrounding
+much of the northern section.  Beyond the ruins, pine tress gather around
+a sparkling river, the trees bending and swaying in the almost constant
+wind.  Further toward the east a thundering waterfall crashes down the
+mountain side, its source somewhere to the north of the roadway. 
+Westward the road follows the valley's edge, its destination unseen.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 7967 10 10 5
+D3
+~
+~
+0 -1 7965 10 10 5
+A
+~
+~
+send_to_room( #sound, room );
+~
+E
+sound~
+@RA surge of wind blows across the road, a hint of moisture in the air.@n
+~
+!
+2 150 0
+-1
+S
+
+#7967
+Upon an Ancient Road~
+Cutting its way through the mountainside winds the cobbled road.  Beside
+the roadway, an alcove has been carved into the stone, forming a
+wagon-sized chamber.  The road continues northward for a few hundred
+meters then bends east, once more.  Below, the ruins of a city spread, a
+dense cloud of mist obscuring much of the rubble.  Further toward the
+east, a river pours from a spreading plateau, the rushing wake tumbling
+off the cliff's edge and forming a thunderous waterfall.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 7969 10 10 5
+D2
+~
+~
+0 -1 7966 10 10 5
+D3
+~
+~
+0 -1 7968 10 10 5
+-1
+S
+
+#7968
+Waystation~
+Carved out of the grey-stone of the mountain the chamber is a little over
+ten feet across.  A partially decayed leather curtain hangs across the
+eastern opening, keeping some of the icy gusts from entering the room. 
+Fine cracks in the ceiling allow for some of the smoke to escape,
+although the stains around the roof show it is often less than ideal. 
+The scattered remains of a bracken filled bed lie against the northern
+wall, the smell of decaying vegetation mixing with woodsmoke to give a
+pungent aroma.
+~
+[Yrna] Done.
+[Guin] Neat search code.
+[Guin] Done.
+~
+167247884 12 5 0
+D1
+~
+~
+0 -1 7967 10 10 5
+E
+bracken bed scattered remains~
+A tangle of decaying bracken and dirty rags lies against the northern
+wall.  Once upon a time it was probably a primitive bed, but right now
+it's rotting pile of vegetation and cloth.  A sharp, pungant smell wafts
+from the pile.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gPushing the leather curtain aside, you step out into the fresh mountain
+air.@n 
+~
+!
+3 0 2
+A
+~
+bed bracken rags dirty decaying cloth~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #search, ch, obj );
+  act_notchar( #rsearch, ch, obj, mob, sight );
+  wait( 2 );
+  i = random( 1, 100 );
+  if( i < 3 )
+    obj = oload( 547 );
+  elseif( i < 13 )
+    obj = oload( 1055 );
+  else {
+    act_tochar( #nada, ch, obj );
+    act_notchar( #rnada, ch, obj, mob, sight );
+  }
+  if( obj ) {
+    act_tochar( #silk, ch, obj );
+    act_notchar( #rsilk, ch, obj, mob, sight );
+    obj_to_char( obj, ch );
+  }
+  wait( 1 );
+  interpret( ch, "e" );
+}
+else
+  act_tochar( #nottwice, ch, obj );
+~
+E
+search~
+@yYou hold your breath as you start searching through the stinky pile of
+bracken and cloth.@n 
+~
+E
+rsearch~
+@yHolding $s breath, $n starts searching through the rotting pile of
+vegetation.@n 
+~
+E
+nada~
+@YAfter a while, you can't hold your breath any more and give up the
+search, finding nothing but dirty rags not worth taking.  You run outside
+for a breath of fresh air!@n 
+~
+E
+rnada~
+@YGoing blue in the face, $n abandons $s search and quickly runs out of
+the alcove to get some fresh air.@n 
+~
+E
+silk~
+@CFeeling around the bracken, you put your hand on something silky.  You
+pull it out for closer inspection, but decide to do it outside - the
+decaying mess you have just disturbed reeks too much.@n 
+~
+E
+rsilk~
+@C$n appears to have found something interesting in the rotting pile, but
+decides to take a closer look at it outside and away from the stench of
+decay.@n 
+~
+E
+nottwice~
+@gThe remains of bed have recently been disturbed and the reeking smell
+offends your senses.  You decide it's best to leave it alone.@n 
+~
+!
+9 0 0
+A
+~
+~
+if( !rflag( reset0, room ) )
+  send_to_room( #stench, room, sight );
+~
+E
+stench~
+@GThe stench of decay coming from the beds remains assaults your senses.
+Someone must have disturbed it recently.@n 
+~
+!
+2 250 0
+-1
+S
+
+#7969
+Upon an Ancient Road~
+Carving its way along the crumbling cliffside runs the ever-narrowing
+cobbled road.  Ogre-sized boulders lie embedded in its surface, their
+impact buckling and breaking much of the road. Descending slightly to the
+east, the road appears to connect to a wide grass-filled plain. 
+Southward the road disappears out of sight as it follows the edge of the
+basin land.  Far below the ruins of a city spread, the rubble filled
+streets and crumbling buildings blanketed in a hazy fog.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 7976 10 10 5
+D2
+~
+~
+0 -1 7967 10 10 5
+-1
+S
+
+#7970
+Passageway Behind the Falls~
+The roaring falls send vibrations through the rocks, the thunderous water
+a distant rumble like a storm in the mountains.  Guarding the corridor
+are two statues of dwarven warriors, their stone axes at their side. 
+Northward, the tunnel appears to open into a gloom-filled chamber. 
+Evenly spaced along each wall are copper sconces, the torches absent from
+them.  A seamless stone slab partially blocks the way to the north.
+~
+[Guin] Entrance for mountain tarn area that lies in the mountains to the
+north and east.
+[Guin] Done.
+~
+167247876 5 9 0
+D0
+~
+~
+260 -1 7971 10 10 5
+D2
+~
+~
+235 -1 7930 10 10 5
+E
+6 statues dwarven dwarf 6 warriors stone 3 axes~
+The dwarven statues stand opposite each other, glaring forward eternally. 
+Each holds a wide-bladed axe in one hand and wears a half-helmet.  One
+thing you note is that the eastern statue has a fine crack circling its
+shoulder - the remainder of the statues are carved from single pieces of
+stone.  It looks like the arm might move.
+~
+E
+5 sconces copper~
+The copper sconces are loops of metal, bolted to the stone walls.  They
+appear normal.
+~
+E
+slab~
+The slab of stone leans drunkenly to one side, partially blocking the
+path to the north.
+~
+A
+pull move twist~
+arm statue dwarf shoulder axe~
+act_tochar( #pull, ch );
+act_notchar( #opull, ch );
+if( !is_open( room, south ) ) {
+  if( rflag( reset0, room ) ) {
+    remove_rflag( reset0, room );
+    wait( 2 );
+    send_to_room( #nopen, room );
+    send_to_room( #sopen, find_room( 7930 ) );
+    open( room, south );
+    set_rflag( reset0, room );
+    end;
+  }
+}
+~
+E
+pull~
+@yYou pull the arm of the statue, which grinds smoothly downward thirty
+degrees before springing back.@n
+~
+E
+opull~
+@y$n pulls on the arm of the statue, which grinds smoothly downward before
+springing back with a dull clunk.@n
+~
+E
+nopen~
+@YWith a rumble, a section of the south wall swings open, the sound of
+rushing water suddenly close.@n
+~
+E
+sopen~
+@YWith a sudden rumble, the monolith grinds briefly and a section of the
+cliff to the north swings open.@n
+~
+E
+nothing~
+@cThe arm of the statue appears to be stuck as you pull on it more.@n
+~
+E
+rnothing~
+@c$n pulls on the arm of the statue, but it appears to not move
+anymore.@n 
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou move northward, squeezing past the huge stone slab.@n
+~
+E
+to_room~
+@y$n moves northward, squeezing past the huge stone slab.@n
+~
+!
+3 0 1
+-1
+S
+
+#7971
+Dwarven Ruins - Stairwell~
+A stone bench runs the length of the western wall, its surface smooth and
+polished.  Set into the wall above the bench are shallow alcoves, each
+one a couple of feet in length.  Copper sconces jut from the walls, a few
+half-burned stumps of torches still within their cups.  An opening in the
+southern wall leads to a downward-sloping corridor, the faint rumble of
+thunder echoing from the gloom-shrouded hall.  A stairwell leads upward
+out of the chamber, a scattering of rocks and debris partially blocking
+its steps.  An arched door lies in the eastern wall, a spider-web painted
+across its surface.
+~
+[Yrna] Done.
+[Guin] Done.
+[Azerin] east connects to new MarQ by a looooong road woot
+~
+167247876 5 5 0
+D1
+stone door~
+~
+471 -1 9641 10 10 5
+D2
+~
+~
+260 -1 7970 10 10 5
+D4
+~
+~
+0 -1 7972 10 10 5
+E
+alcove shallow wall~
+Each alcove curves backward into the stone wall by no more than a foot at
+the deepest point.  Lying scattered across the surfaces are fragments and
+small shards of rock.  It appears that these alcoves have not been used
+for anything in the recent past due to a thick coat of dust that spills
+out over the edge and slowly floats to the ground.
+~
+E
+stone bench 1 western~
+Stretching the full length of the west wall is a wide stone bench that
+stands about two and a half feet tall.  The smooth basalt surface has
+been polished until it gleams like black glass.  Thick blocks, supporting
+the bench at regular intervals, have been hewn into the likeness of
+dwarven warriors, each supporting the polished basalt slab with a carved
+stone war hammer.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cPicking your way around the scattered rocks, you carefully climb the
+stairs.@n 
+~
+E
+to_room~
+@c$n carefully steps around the scattered rocks and climbs the stairwell,
+quickly disappearing from view.@n 
+~
+!
+3 0 16
+A
+~
+~
+act_notchar( #arrive, ch, obj, mob, sight );
+~
+E
+arrive~
+@CAs $n arrives from above, $e almost trips over the rocks covering the
+steps, but manages to retain $s balance.@n
+~
+!
+1 0 16
+A
+~
+alcoves debris rocks~
+if( !rflag( reset0, room ) ) {
+  act_tochar( #already, ch );
+  end;
+}
+remove_rflag( reset0, room );
+i = mult( -1, random( 1, find_skill( ch, searching ) ), 3 );
+if( i != 0 )
+  if( random( 1, 2 ) == 1 )
+  obj = oload( 210, random( 1, i ) );
+if( obj ) {
+  act_tochar( #find, ch, obj );
+  act_notchar( #rfind, ch, obj, mob, sight );
+  obj_to_char( obj, ch );
+}
+else {
+  act_tochar( #nada, ch );
+  act_notchar( #rnada, ch, obj, mob, sight );
+}
+~
+E
+already~
+It looks like someone beat you to it.
+~
+E
+find~
+You find $p in amongst the alcoves and debris.
+~
+E
+rfind~
+$n finds $p amongst the alcoves and debris.
+~
+E
+nada~
+You find nothing of interest.
+~
+E
+rnada~
+$n finds nothing of interest.
+~
+!
+9 0 0
+2395 17 1509949540 -2 0
+-1
+S
+
+#7972
+Stairs Within a Ruin~
+The spiral staircase continues onward, the rubble and broken beams of
+wood making for a tight squeeze at several locations.  Copper sconces jut
+from the walls, a few remnants of torches still held within.  The chill
+permeates the very stone, leaving everything cool to the touch; the musty
+smell of still air hangs over the ruins like a funerary shroud.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247876 5 5 0
+D4
+~
+~
+0 -1 7973 10 10 5
+D5
+~
+~
+0 -1 7971 10 10 5
+E
+spiral staircase~
+The central column of this spiral staircase was, at one time, intricately
+sculptured with statues of dwarven warriors, however they are now in a
+state of disrepair.  The derelict figures stand with broken off noses,
+chipped beards and partially destroyed weapons; many have been
+purposefully defaced at some point in time.  The stairs have been worn
+down by uncountable footfalls, some broken into fragments of rock that
+lay strewn across the steps below.
+~
+E
+rubble beams~
+Scattered across the steps are large fragments of rock and broken wooden
+beams.  The debris has been left to accumulate until it now blocks the
+majority of the staircase making it a little difficult to navigate past. 
+A few hooks jut out from the splintered beams, presumably to hang
+lanterns from, though many are now too bent to be much good for anything.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cSqueezing between two fallen wooden beams you climb $d the spiral
+staircase.@n 
+~
+!
+3 0 48
+A
+~
+~
+act_notchar( #arrive, ch, obj, mob, sight );
+~
+E
+arrive~
+@C$n arrives from the darkness above.@n
+~
+!
+1 0 16
+A
+~
+~
+act_notchar( #arrive, ch, obj, mob, sight );
+~
+E
+arrive~
+@CBreathing heavily due to a long climb, $n arrives from the darkness
+below.@n 
+~
+!
+1 0 32
+-1
+S
+
+#7973
+Within the Ruined Tower~
+In the center of the chamber lies a spiral stairwell.  Despite the amount
+of rubble and debris scattered around, it still allows passage downward
+into the mountain itself.  Stone pillars rise from each of the room's
+corners, three of them reaching the ceiling.  The northeastern one is
+shattered about half-way along its length, the remnants scattered around
+its base.  An opening in the northern wall leads into an entrance room, a
+grassy plateau visible through an open doorway.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247876 5 5 0
+D0
+~
+~
+0 -1 7974 10 10 5
+D5
+~
+~
+0 -1 7972 10 10 5
+E
+stairwell rubble debris~
+Shattered rock, broken beams and decaying leaves have been knocked about
+the room and many have fallen a few steps down the spiral staircase
+partially blocking the entrance downward.  Much of the rubble is crowded
+about the central pillar of the staircase leaving perhaps a foot at the
+outer edge of the stairs clear from debris.
+~
+E
+pillars corners~
+Heavyset stone pillars rise up to meet the ceiling in each corner of the
+room.  Runic hieroglyphs, etched into the smooth stone surfaces, betell of
+the ancestry of this tower, the runes appear to be, for the most part,
+names of dwarves who spent their lives creating this place.  The
+northeastern pillar has been shattered about halfway up; the little that
+remains of it now lies despondently upon the littered stone floor.
+~
+E
+1 north opening plateau~
+Through the northern doorway it is possible to see a wide grassy plateau
+that stretches out beyond the entrance of this derelict tower.  The
+ceiling of the room north from here has collapsed in on itself and a slow
+invasion of moss and lichen has started to creep into the weather-beaten
+room.  Great cracks have formed in the archway to the north, the rock
+slowly succumbing to the bitter elements of nature.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cCautiously picking your way between the scattered stones, you descend
+into the darkness.@n 
+~
+!
+3 0 32
+A
+~
+~
+act_notchar( #arrive, ch, obj, mob, sight );
+~
+E
+arrive~
+@COne hand on the wall to help $m maintain the balance, $n arrives from
+below.@n 
+~
+!
+1 0 32
+5455 9 1509949540 3 0
+-1
+S
+
+#7974
+Within the Ruined Tower~
+Most of the chamber has collapsed upon itself, leaving a narrow walkway
+between the rubble.  An arched opening to the south allows passage into
+a vaulted chamber, its stonework in better condition than here.  Lichen
+and moss grow upon the mounds of rubble, reclaiming the stones slowly but
+surely.  The remnants of iron-bound doors lie scattered beside a northern
+opening.  Beyond the doors, a tussock-filled plateau stretches to the
+edge of a mountain lake, the icy-blue waters sparkling.  A ravine cuts
+through the valley, the churning waters of a mountain river filling its
+bottom.  Surrounding the lake is a dappled forest, the pine trees tightly
+packed around the lake and mountain sides.  Picking its way across the
+grassland is the remains of a cobbled road, barely visible through the
+weeds.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247876 4 5 0
+D0
+~
+~
+0 -1 7975 10 10 5
+D2
+~
+~
+0 -1 7973 10 10 5
+E
+iron-bound doors 1 north~
+At some point, these doors must have been magnificent to behold; the rich
+mahogany wood reinforced by strong wrought iron bracing.  Now, the wood
+has all but decayed and the iron reinforcement has turned orange brown in
+colour as excessive moisture and lack of maintenance has slowly rusted
+the metal.  Lying on the ground next to the decomposing doors are the
+twisted and deformed hinges that used to be attached to either side of
+the doorway, the crumbling stone having surrendered them to the harsh
+elements.
+~
+E
+lichen moss mounds rubble~
+The source of the majority of this rubble is blatantly apparent - the
+ceiling of this room lies upon the floor and many of the walls have found
+a similar fate.  Clinging to the cracks and crevices in the stone rubble,
+dark green moss and lichen thrive upon the damp conditions created by the
+open ceiling.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cPassing through an archway to the north, you leave the darkness behind
+you.@n 
+~
+!
+3 0 1
+-1
+S
+
+#7975
+Mountain Plateau - Beside a Crumbling Tower~
+Broken slabs of rock and crumbling stone rise into the wind-swept spires
+of an ancient tower that prevent passage to the east.  Beyond their
+jagged faces the sound of a raging river echoes, a cloud of spray often
+shooting skyward.  Grass and tussock compete for dominance of the lower
+slopes, but as the valley rises upward a forest begins to take hold. 
+Further north, the splintered edges of the mountains begin to creep
+across the valley.  A lake is visible in the distance, nestled in a high
+pass and surrounded by fir trees.
+~
+[Azerin] join to mountain plateau zone
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 4 9 0
+D0
+~
+~
+0 -1 7979 10 10 5
+D2
+~
+~
+0 -1 7974 10 10 5
+E
+slabs rock stone spires tower~
+Lying despondently upon the ground in front of the crumbling tower are
+broken slabs of stone and rock.  The ancient towers have begun to crumble
+away; their once soaring spires falling to the ground with disrepair. 
+Shards of rock lie scattered across grassy plateau that stretches north
+to the edge of an icy mountain lake.
+~
+E
+edges mountains~
+Perpetually covered with a thick layer of glistening snow, the Everwinter
+Mountains rise to the north, an ever-present chill encroaching down the
+steep slopes to lie heavily on the plateau.  The rugged peaks tower high
+above the mountain pass and its frost-shrouded forest and icy lake.
+~
+2409 9 1509949540 3 0
+-1
+S
+
+#7976
+Upon an Ancient Road~
+Over-shadowed by jutting spires of the broken mountain side runs a narrow
+cobbled road.  Its winding journey takes it around the edge of the basin
+land, ending in a grassy field to the east.  High above the road rise the
+peaks of the Everwinter mountains, their icy flanks sparkling.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 7977 10 10 5
+D3
+~
+~
+0 -1 7969 10 10 5
+11 9 1509949540 3 0
+5398 9 1509949540 3 0
+-1
+S
+
+#7977
+Upon an Ancient Road~
+Bending around the tattered edge of a cliff, the rutted road appears to
+end toward the east.  Toward the south it continues to cut across the
+crumbling mountainside, eventually twisting out of sight.  A grass-filled
+plateau spreads eastward, a crystal-clear lake gleaming at its center. 
+Far to the east a waterfall tumbles from the mountainside, hurtling into
+the basin lands below.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 7978 10 10 5
+D2
+~
+~
+0 -1 7976 10 10 5
+-1
+S
+
+#7978
+End of the Ancient Road - Mountain Plateau~
+The roadway ends at the edge, of a tussock filled plateau, the cobbles
+disappearing under the thick grass.  A weatherworn statue of a dwarven
+warrior guards the roadway, fine cracks covering the stones surface.
+Further to the east lies a crystal-clear lake, a burbling river
+pouring from it and winding across the grasslands before forming a
+torrenting waterfall.  At the falls edge, the ruins of a tower rise, the
+crumbling structure a little over one story high.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 7989 10 10 5
+D3
+~
+~
+0 -1 7977 10 10 5
+205 9 1509949540 3 0
+205 9 1509949540 3 0
+-1
+S
+
+#7979
+Mountain Plateau - Broken Land~
+A rutted goat trail, flanked by spires of rock on one side and grassland
+on the other, flows along the plateau to the north and south.  Under the
+worn surface are the scattered remnants of cobble stones, an indication
+that this was once a major road in this land.  As it heads northward, it
+begins to rise with the terrain, the tussock and grasses being replaced
+by bare rocks and a scattered copse of trees.  Beyond the grassland, a
+mountain pass cuts through the hills, its destination hidden beyond the
+distant horizon.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 4 9 0
+D0
+~
+~
+0 -1 7980 10 10 5
+D2
+~
+~
+0 -1 7975 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CRubble crunches under your feet as you continue $d.@n
+~
+E
+to_room~
+@CDisturbing the natural silence of this mountain pass, rubble crunches
+under $n's feet as $e continues $d.@n 
+~
+!
+3 0 5
+-1
+S
+
+#7980
+Mountain Plateau - Broken land~
+Bending sharply at a rising wall of rock runs a narrow goat-track.  Grass
+and tussock grow at its edge, sometimes spreading across the trail itself. 
+Cut through the stone to the east, a jagged @cfissure@n leaves a dark
+scar on the mountainside.  Overshadowing the entire basin are the massive
+Everwinter Mountains, their surfaces covered in deep ruts and ravines.
+~
+[Guin] Aegrim's zone connects here 46250
+[Yrna] Done.
+[Guin] Done.
+[Virt] oh great, u got it back
+~
+167247880 5 9 0
+D1
+~
+~
+234 -1 46250 10 10 5
+D2
+~
+~
+0 -1 7979 10 10 5
+D3
+~
+~
+0 -1 7981 10 10 5
+E
+fissure jagged 1 east scar mountainside~
+The fissure, a natural occurrence of earthquake or landslide, splits the
+grey stone of the mountainside like an unhealed battle wound.  Its much
+to dark to see what lies beyond the fractured rock.
+~
+A
+enter~
+fissure crack opening 1 east~
+if( is_standing( ch ) ) {
+  act_tochar( #squeeze, ch );
+  act_notchar( #rsqueeze, ch );
+  transfer( ch, find_room( 46250 ) );
+  act_notchar( #appear, ch, obj, mob, sight );
+  loop( followers ) {
+    ch = rch;
+    acode( room, 1 );
+  }
+}
+else
+  act_tochar( #resting, ch, obj, mob, sight );
+~
+E
+squeeze~
+@WYou squeeze between the dark rocks, and head into the deeper darkness.@n
+~
+E
+rsqueeze~
+@W$n squeezes past the rocks and disappears from view.@n
+~
+E
+appear~
+@c$n appears from somewhere to the west.@n
+~
+E
+resting~
+You are resting right now and can't follow.
+~
+!
+0 0 0
+-1
+S
+
+#7981
+Mountain Plateau - Broken land~
+The narrow goat-track continues its journey across the plateau, ducking
+and diving around jutting boulders and an occasional tree in a vaguely
+east-west direction.  A rising wall of stone toward the east forces the
+trail to bend southward, flanked by grass and stone as it goes.
+~
+[Yrna] Added leaving west
+[Guin] Done.
+~
+167247872 5 9 0
+D1
+~
+~
+0 -1 7980 10 10 5
+D3
+~
+~
+0 -1 7982 10 10 5
+A
+~
+~
+send_to_room( #wind, room );
+~
+E
+wind~
+@CA gust of wind sweeps across the landscape, flattening down swathes of
+grass momentarily.@n 
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cPicking your way between the jutting boulders, you continue west.@n
+~
+!
+3 0 8
+-1
+S
+
+#7982
+Mountain Plateau - Broken land~
+A scattering of trees gather together to form woodlands to the west, the
+trail running around its outskirts.  Boulders flank the eastern side of
+the trail, making the going difficult in that direction.  At the southern
+valley edge a ruined tower rises.  A little over twenty feet in height,
+the crumbling structure appears to be deserted.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 5 9 0
+D0
+~
+~
+0 -1 7983 10 10 5
+D1
+~
+~
+0 -1 7981 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cSqueezing between the large boulders in your way, you carry on to the
+east.@n 
+~
+!
+3 0 2
+205 9 1509949540 3 0
+-1
+S
+
+#7983
+Before a Mountain Pass~
+A copse of trees marks a junction in the trail; southward the goat track
+winds beside spires of rock, its destination a crumbling ruin that sits
+perched upon the very edge of the land.  Westward, a similar roadway
+winds across the grassland before joining to a mountain road that zigzags
+across the cliff side.  Far to the north spreads a sparkling lake,
+surrounded by a dense forest.  A few yards further on, sizable landslide
+blocks the start of what appears to be a narrow path that descends
+through the northern hills in that direction.
+~
+[Azerin] north to Ryoshi village or sumthing
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 5 9 0
+D0
+~
+~
+0 -1 12250 10 10 5
+D2
+~
+~
+0 -1 7982 10 10 5
+D3
+~
+~
+0 -1 7984 10 10 5
+-1
+S
+
+#7984
+Trail Through the Pines~
+The pine trees begin to thin a little, some even allowing enough space
+for a sapling to sprout.  Through the tangle of branches and gnarled
+roots winds a narrow trail, its surface coated in withered pine needles. 
+A scattering of bright toadstools flourish around the trees, the red caps
+spotted with dots of white.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 4 9 0
+D1
+~
+~
+0 -1 7983 10 10 5
+D3
+~
+~
+0 -1 7985 10 10 5
+A
+~
+~
+send_to_room( #pine, room, sight );
+~
+E
+pine~
+@GThe treetops sway slightly in the breeze, the smell of pine needles and
+sap filling the air.@n 
+~
+!
+2 200 0
+366 9 1509949540 3 0
+368 9 1509949540 3 0
+-1
+S
+
+#7985
+Trail through the Pines~
+A soft illumination surrounds several of the trees here, their pale green
+most of the nearby trees, the ghostly-shrouded trees have long straight
+most of the trees here, the ghostly-shrouded trees have long straight
+branches, ideal perhaps for the haft of a weapon or sturdy walking staff. 
+Beneath the glow, a blanket of fungi spreads across the ground, their
+black-caps covered with tiny droplets of dew.  Surrounding the tangled
+tree roots are several silvery-frond ferns.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247873 0 9 0
+D1
+~
+~
+0 -1 7984 10 10 5
+D2
+~
+~
+0 -1 7986 10 10 5
+E
+tree ghostly shrouded branch~
+These strange trees glow with pale light, bathing the trail in soft,
+eerie glow.  Unlike normal trees, their branches are perfectly straight
+and smooth, their bark soft and flakey.  Silvery sap oozes from the
+branch tips and, upon closer inspection, it seems to be the source of
+ghostly glow.  Despite their delicate look, the tree trunks are quite
+strong, if flexible, swaying gently in the breeze as they cast their
+light on surrounding area.
+~
+A
+~
+~
+if( random( 1, 2) == 1 )
+  send_to_room( #movement, room );
+else
+  send_to_room( #wind, room );
+~
+E
+wind~
+@RSlight breeze blows through the undergrowth, making the ferns sway and
+the branches overhead creak.@n 
+~
+E
+movement~
+@RSomething stirs in the undergrowth, disturbing bushes and ferns and
+causing a rustling sound in the woods.@n 
+~
+!
+2 150 0
+A
+1 get 1 take~
+branch tree staff haft~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 0, 3 ) == 0 ) {
+    act_tochar( #yes, ch );
+    act_notchar( #oyes, ch );
+    obj_to_char( oload( 7962 ), ch );
+    end;
+  }
+}
+act_tochar( #no, ch );
+act_notchar( #ono, ch );
+~
+E
+yes~
+@YWith a sharp crack, you pull a smooth length of ghostwood from the tree.@n
+~
+E
+oyes~
+@YWith a sharp crack, $n pulls a branch from one of the trees.@n
+~
+E
+no~
+@yYou check around the trees, but don't find any branches worth taking.@n
+~
+E
+ono~
+@y$n fossicks around the odd-looking trees for a moment.@n
+~
+!
+9 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CYou continue your journey $d, glad to be moving away from this eerie
+forest.@n 
+~
+E
+to_room~
+@CWith a look of relief on $s face, $n leaves $d.@n
+~
+!
+3 0 6
+-1
+S
+
+#7986
+With the Pines~
+From the north, a ghostly illumination filters through the woodlands, its
+source a grove of pale trees that cluster around the trail's edge.  More
+mundane woods surround them, the faint light casting shadows across the
+ground.  Beyond the spreading pines, the mountains rise skyward, their
+jagged peaks barren and cold.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 7985 10 10 5
+D3
+~
+~
+0 -1 7987 10 10 5
+A
+~
+~
+if( is_player( ch ) ) {
+  act_tochar( #leave, ch, obj );
+  continue;
+}
+else
+  continue;
+~
+E
+leave~
+@CYour heart grows heavy as you approach the eerie glow to the north.@n
+~
+!
+3 0 1
+A
+~
+~
+send_to_room( #hawk, room );
+~
+E
+hawk~
+@CA wide-winged hawk circles overhead, soaring freely along the
+everpresent wind currents.@n 
+~
+!
+2 0 0
+-1
+S
+
+#7987
+A Sheltered Copes of Pine Trees~
+Huddled close together grow a cluster of gnarled pine trees, their
+twisted branches matting to form a canopy that stops all but the fiercest
+of mountain gales.  Mounds of needles lie decaying between their tangled
+roots, the sickly-sweet aroma of gum filling the air.  A slender trail
+meanders through the woods, the dense vegetation hiding its destination.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 7986 10 10 5
+D2
+~
+~
+0 -1 7988 10 10 5
+-1
+S
+
+#7988
+High Mountain Vale~
+Under a swathe of tundra rise the Everwinter mountains, their craggy
+surfaces becoming increasingly bare the further they stretch.  A
+scattering of trees gather together towards the north, forming a copse of
+sweet smelling pine.  Beyond the trees, the mountains begin to rise until
+they reach the edge of a sparkling lake, the water's illumination
+appearing to come from something within its crystal depths.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 7987 10 10 5
+D2
+~
+~
+0 -1 7989 10 10 5
+1121 9 1509949540 3 0
+-1
+S
+
+#7989
+High Mountain Vale~
+Spreading across the rugged landscape flows a sea of grass and tussock,
+the spreading vegetation only halted by the encroaching mountains. 
+Toward the north a scattering of trees gather around the beginnings of a
+ridge of hills.  Westward, an ancient cobbled road surfaces from the
+grasslands and begins a journey along the rim of the basin land.  Far
+below, mist-shrouded ruins spread, the buildings quickly giving way to a
+dense forest.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 7988 10 10 5
+D3
+~
+~
+0 -1 7978 10 10 5
+-1
+S
+
+#7990
+Inside the Tower~
+A warming fire blazes from the western wall, the fireplace stacked with
+drying logs of wood.  A single arrow-slit window allows view of a
+spectacular scene, the torrenting waters of a huge fall tumbling down
+into the basin land below.  An iron-bound door guards the way out of the
+tower, a simple latch keeping it secure.  A marble stairwell rises from
+the south of the room, allowing access into the upper stories.
+~
+[Yrna] Done.
+[Guin] Could possibly be an innkeeper - safe room up.
+[Guin] Reviewed
+~
+167251983 0 6 0
+D1
+iron-bound door~
+~
+131 -1 7958 10 10 5
+D4
+~
+~
+0 -1 7991 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CYou step onto the pristine marble stairs, ascending to the upper
+floor.@n 
+~
+E
+to_room~
+@C$n steps onto the pristine marble stairs, ascending to the upper
+floor.@n 
+~
+!
+3 0 16
+704 9 1509949540 3 0
+3962 17 1509949540 -1 0
+3967 17 1509949540 -1 0
+3961 17 1509949540 -1 0
+3966 17 1509949515 -1 0
+210 17 1509949540 -1 0
+-1
+S
+
+#7991
+Inside the Tower~
+A clean but cluttered study fills most of the circular chamber.  A walnut
+desk pushed against the stairs entrance gives it a feel more like that of
+a shop than a home.  Stacks of dog-eared parchments lie scattered beyond
+the desk, most bound with ribbons of different colors.  A sturdy oak
+chair lies buried beneath a sea of books in the rooms center, a clear
+space between it and the room being encroached upon by stacks of reeds
+and clay pots.  Just visible behind a velvet curtain in the south is a
+double posted bed, the base stripped and a stack of clean linen piled
+upon it.
+~
+[Yrna] Done.
+[Guin] Done.
+[Azerin] needs quest for kah
+~
+167251975 0 6 0
+D5
+~
+~
+0 -1 7990 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CStepping onto the marble steps you descend into the bottom of the
+tower.@n 
+~
+E
+to_room~
+@CStepping onto the marble steps $n descends into the bottom of the
+tower.@n 
+~
+!
+3 0 32
+A
+4 practice~
+blood bond~
+mob = mob_in_room( 2615, room );
+tell( mob, ch, #stat1 );
+~
+E
+stat1~
+Now uz has da spell of death.  Look in da ancient ruins of Tark toz find
+da queen of death.  She will help you next...if uz worthy.
+~
+!
+0 0 0
+2615 9 1509949540 3 0
+3980 17 1509949540 -1 0
+4001 17 1509949540 -1 0
+3965 17 1509949540 -1 0
+3966 17 1509949540 -1 0
+3961 17 1509949540 -1 0
+4022 17 1509949540 -1 0
+4021 17 1509949540 -1 0
+3967 17 1509949540 -1 0
+210 17 1509949515 -1 0
+-1
+S
+
+#7992
+Upon an Ancient Road~
+Mounds of shale-like rubble have spilled across the road, the leavings of
+an ancient avalanche.  In its rocky wake, the shattered remnants of
+long-felled pines lie broken and shattered.  Stretching for at least
+thirty yards across, it appears to be unstable and impassable.  Below the
+roadway, a fir forest thrives, a cool mist rising from beneath its dark
+canopy.  A glint of water, nestled within a fold in the land, lies some
+distance away toward the southwest.
+~
+Road to shadowmonks would lead west and north?
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 5 9 0
+D1
+~
+~
+0 -1 7965 10 10 5
+5462 9 1509949540 3 0
+-1
+S
+
+#7993
+Pass through the Everwinter Range~
+Little more that a game trail, the roadway shows brief glimpses of its
+former glory with the occasional patch of well-set cobbles.  Loose rocks
+and rubble have buried most of the path, leaving little room to move. 
+Northward, the crumbling edge of a valley spirals downward, the sheltered
+valley below verdant with a lush green forest.  Eastward, the road bends
+around an outcropping of granite and heads southward through the
+mountains.  Toward the west, the roadway is blocked by falling debris. 
+The mountains rise close around, oppressive and grey.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 7994 10 10 5
+D3
+~
+~
+0 -1 7900 10 10 5
+-1
+S
+
+#7994
+Pass through the Everwinter Range~
+A scattering of disloged cobbles lie across the cracked and broken path,
+the remnants of the former roadway.  Scraggly bushes cluster around a
+granite outcropping, their near-leafless branches bent and warped by the
+strong mountain winds.  The road bends around the rock spire and starts
+to descend into a forested valley to the south, the mountains beginning to
+lose their height to become hills.  Far in the distance, the sea spreads
+out, the white tips of waves visible across the green and blue ocean.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D2
+~
+~
+0 -1 7995 10 10 5
+D3
+~
+~
+0 -1 7993 10 10 5
+366 9 1509949540 3 0
+114 9 1509949540 3 0
+-1
+S
+
+#7995
+Old Road Through the Forest~
+A few scattered pines grow beside the ancient roadway, their tangled
+roots upheaving several of the crumbling roads remaining cobbles.  The
+rich, sweet smell of pine gum fills the air, as the copse of trees turns
+into a lush pine forest toward the south.  Rising slightly as it heads
+northward, the road appears to deteriorate until it is little more than a
+goat trail.
+~
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 7994 10 10 5
+D5
+~
+~
+0 -1 7996 10 10 5
+-1
+S
+
+#7996
+Old Road Through the Trees~
+Surrounded by the young pines, the cobbled roadway winds to the north and
+south.  Mounds of pine needles blanket the ground beneath the underbrush,
+effectively preventing much growth except the occasional toadstool.  The
+canopy above becomes increasingly tangled, as the branches interweave
+together.  Toward the north, the towering peaks of ice-capped mountains
+rise against the distant horizon.
+~
+~
+167247872 12 9 0
+D2
+~
+~
+0 -1 7997 10 10 5
+D4
+~
+~
+0 -1 7995 10 10 5
+-1
+S
+
+#7997
+Road Through The Pine Forest~
+The gnarled-barked red pines cluster around the roadway, effectivly
+forming a tunnel of branches and trunks.  Many of the older trees show
+signs of fire damage to their branch tips, the scars of a past blaze. 
+Underfoot, a few cobbles are barely visible through the blanket of
+rotting pine needles.  The overgrown roadway heads northward out of the
+valley and bends westward to continue further into the forest.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 7996 10 10 5
+D2
+~
+~
+0 -1 4201 10 10 5
+D3
+~
+~
+0 -1 7998 10 10 5
+-1
+S
+
+#7998
+Road Through The Pine Forest~
+The stumps of several large trees lie in a small glade to the west.  A
+cobbled trail bends around the clearing, heading southward toward the
+forest's edge and eastward into the denser foliage.  Slender pine
+saplings rise around the perimiter, each one attempting to grow enough to
+block the light.  An ancient road way runs in an east and southerly
+direction, its surface covered in pine needles and branches.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 7997 10 10 5
+D2
+~
+~
+0 -1 7999 10 10 5
+114 9 1509949540 3 0
+-1
+S
+
+#7999
+Roadway at the Forest's Edge~
+The hills rise up around the valley, forming impressive cliffs in all
+directions but southward.  An ancient roadway winds across the valley
+floor skirting the sweeping cliffs.  Beyond the southern rim of the basin
+land, the landscape drops down sharply , descending towards the spreading
+blue-green sea.  Scattered ruins dot the northern forest, their origins
+unknown.  On either side of the road, a thick forest extends out into the
+valley.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 7998 10 10 5
+D1
+~
+~
+0 -1 4201 10 10 5
+D2
+~
+~
+0 -1 2300 10 10 5
+5398 9 1509949540 3 0
+-1
+S
+
+#0
+

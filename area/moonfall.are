@@ -1,0 +1,1365 @@
+#M2_AREA
+2
+
+Moonfall Hamlet~
+Azerin Teleute~
+Moonfall Hamlet~
+~
+~
+
+0 0
+0
+1
+#ROOMS
+
+#78750
+Shoreline - Before a Wooden Jetty~
+The hills begin to decline as the landscape heads towards the spreading
+southern sea.  Tussock and marim grass coat the rolling sides of the
+remaining rises.  A beach of rock and sand lies below, nestled against
+the cliffs.  A ramshackle shack lies to the east, its rough-cast walls
+covered with driftwood and animal hides.  Further to the northeast a
+scattering of houses stand.  A narrow trail leads downwards towards the
+ocean, winding back and forth through the tussock.  Jutting out above the
+beach is a pine beam jetty, its rough timbers lashed together with coarse
+rope.
+~
+[Guin] Done.
+~
+167247872 12 5 0
+D0
+~
+~
+0 -1 78751 10 10 5
+D2
+~
+~
+0 -1 78775 10 10 5
+E
+hills~
+Dusted with forest and ferns the rough hills rise upwards towards the far
+mountains.  Sand dunes and rock collide at the shores edge, a few sea
+caves carved into their basalt sides.
+~
+E
+dunes marim tussock gras~
+The swathe of mottled browns and gold cascades across the near dunes and
+hillocks, the grasses swaying in the blustery winds.
+~
+E
+beach sand shore sea~
+Rocks and sand intermingle at the foaming sea's edge, the sweeping
+waves sending crashing water across the pitted stones, each passing
+stealing a fraction more from the cliffs edge.  Beyond the wild coast the
+sea rises and falls under the blanket of a dense fog, the far reaches of
+the ocean lost to the white clouds.
+~
+E
+ramshackle shack driftwood animal hides houses~
+Thrown together from the seas bounty, the houses narrowly avoid being
+mistaking for mounds of debris.  Deer and rabbit pelts have been woven
+into the gnarled woods, filling some of the larger gaps in the walls. 
+Mounds of thatching and bracken have been piled upon the top, forming a
+reasonably stout roof.
+~
+E
+pine beam jettey rope timbers~
+The solid beams of red pine have been lashed with a tough knotted rope to
+form the sturdy jetty.  The waters crash beneath the structure as the
+deep sea attempts to remove it from its shore.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou step onto the old pier and the old boards of its construction groan
+in protest@n 
+~
+E
+to_room~
+@c$n steps onto the old pier and the old boards of its construction groan
+in protest@n 
+~
+!
+3 0 4
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou slog through the deep sand, heading north toward the hamlet@n.
+~
+E
+to_room~
+@y$n slogs through the deep sand, heading north toward the hamlet@n
+~
+!
+3 0 1
+971 9 1509949540 3 0
+-1
+S
+
+#78751
+Sandy Path Through the Hamlet~
+Sand-coated hills rise around the valley's edge as the landscape nears
+the edge of the sparkling southern sea.  A patchwork of houses dot the
+basin's center, the wisps of woodsmoke hanging in the air.  Northward,
+the hills begin to rise until they reach the forested feet of a towering
+mountain range.
+~
+[Guin] Done.
+~
+167247880 2 6 0
+D1
+~
+~
+0 -1 78752 10 10 5
+D2
+~
+~
+0 -1 78750 10 10 5
+E
+sand-coated hills~
+The rolling dunes stretch out from the coastline unntil they reach the high
+cliffs of the Everwinter Range.
+~
+E
+souther sea~
+The emerald blue of the swirling waters spreads out as far as the eye can
+see.  A blanket of fog hugs the distant waves, obscuring what lies beyond.
+~
+E
+patchwork houses hamlet~
+Crafted from driftwood and stone, the strange houses lean at odd angles,
+apparently ready to fall at any time.
+~
+E
+forested mountain range~
+Dense forests of pine blanket the lower slopes of the massive mountain
+range, their dark green foliage offering ideal shelter from the harsh
+alpine climate.
+~
+-1
+S
+
+#78752
+Sandy Path Through the Hamlet~
+Hills and sand-dunes rise above the hamlet forming the walls of a
+sheltering valley.  The collection of tiny huts lies scattered about the
+valley center.  Southward, the hills give way to a sand and rock beach
+and the great southern sea.  Marmim grass and tussock spread across the
+land, their dusky brown blades swaying in the wind.  Far to the north a
+massive range of mountains rises, their icy peaks gleaming pristine white. 
+The crumbling remnants of a ruined cottage lie to the east, the door
+surprisingly closed.
+~
+[Guin] Done.
+~
+167247872 10 6 0
+D0
+~
+~
+0 -1 78755 10 10 5
+D1
+runestone-topped door~
+~
+131 -1 78754 10 10 5
+D2
+driftwood door~
+~
+131 -1 78753 10 10 5
+D3
+~
+~
+0 -1 78751 10 10 5
+E
+hills sand dunes walls~
+The dunes rise around the sheltered hamlet, the soft golden sand shifting
+daily.
+~
+E
+rock beach southern ocean~
+Seaweed covered rocks hug the edge of the sea, their waterworn surfaces
+forming shallow pools where starfish and crabs can hide for the waiting
+tide.  The great southern sea stretches beyond the shore, its white
+capped waves sending salty spray across the land.  A blanket of fog
+obscures the horizon, hiding what lies beyond.
+~
+E
+marim grass tussock~
+The hardy grasses thrive in the soft sand, able to survive in the salty
+conditions where most plants would wither and die.
+~
+E
+massive mountains range icy peaks~
+Towering mountains rise thousands of feet in the air, their icy peaks
+gleaming like steel in the sun.  Lush pine forests blanket their lower
+slopes, the dark woods blanketed in clouds of mist and fog.
+~
+E
+1 east ruined cottage door~
+A single X runestone has been set into the keystone of the doorway,
+perhaps the reason the door and frame have stood strong when the rest
+of the building fell.
+~
+E
+hamlet~
+The scattered houses have been crafted from driftwood and stone, their
+uneven finish and tilting walls an indication of a hasty construction.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou step up to the door frame, looking into the room beyond@n.
+~
+E
+to_room~
+@y$n steps up to the door frame, looking into the room beyond@n.
+~
+!
+3 0 2
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou step into the shop that lies to the south@n.
+~
+E
+to_room~
+@y$n steps into the shop that lies to the south@n.
+~
+!
+3 0 4
+5246 9 1509949540 3 0
+-1
+S
+
+#78753
+Smith's Hut~
+A collection of stones have been set into a circular ring around a heaped
+fire, forming a crude but effective forge.  Bits of broken metal and
+leather lie scattered across the floor.  Across the southern wall, a
+driftwood rack rests, waiting for any arms and armor to be hung upon it. 
+The stone and wood of the walls are made in simple fashion, using mud and
+straw as a mortar to keep the wind at bay.
+~
+[Guin] Add chat about crystal salamanders here when asked about the skins
+[Guin] Reviewed.
+~
+200806407 0 5 0
+D0
+driftwood door~
+~
+131 -1 78752 10 10 5
+E
+stones ring forge~
+The white stones have been set in a circle around the fire, their inner
+surfaces black and cracked with the heat of the forge.
+~
+E
+fire~
+Smouldering charcoal forms the heart of the fire, its ruddy glow sending
+out waves of staggering heat.
+~
+E
+metal leather~
+Offcuts of iron and bronze lie scattered upon the floor, a few scraps of
+leather intermingled with them.
+~
+E
+driftwood racks~
+Bound with rope the driftwood racks form a crude but servicable stand.
+~
+E
+mud straw mortar~
+Despite its crude construction the mud and straw appears to be doing a
+good job at holding the stones together.
+~
+2440 9 1509949540 3 0
+-1
+S
+
+#78754
+An Abandoned Hut~
+The sides and roof of the hut have collapsed in upon itself, leaving
+little more than standing room beside the western door.  Broken driftwood
+and thatching lie rotting where they have fallen.  Despite the
+destruction, the western wall and door have remained intact, the
+stonework obviously more study than the rest.
+~
+[Guin] add random search for flint/web/shards of glass
+[Guin] Reviewed.
+~
+167247872 0 5 0
+D3
+weathered old door~
+~
+131 -1 78752 10 10 5
+E
+driftwood thatching~
+Rotting quickly away, the straw and wood appears to have collapsed some
+seasons ago.  A layer of sand coats the building, the dunes quick to
+reclaim what man has abandoned.
+~
+E
+stonework~
+A single X rune has been stamped into the keystone of the arch, perhaps
+its enchantments keeping the wall standing when the rest fell.
+~
+A
+~
+debris thatching driftwood~
+act_tochar( #search, ch );
+act_notchar( #rsearch, ch );
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  i = random( 1, 20 );
+  if( i == 1 ) {
+    obj = oload( 2143 );
+    if( !can_handle( ch, obj ) )
+      junk_obj( obj );
+    else {
+      act_tochar( #found, ch, obj );
+      act_notchar( #rfound, ch, obj );
+      obj_to_char( obj, ch );
+    }
+  }
+  else if( i < 10 ) {
+    obj = oload( 210 );
+    if( !can_handle( ch, obj ) )
+      junk_obj( obj );
+    else {
+      act_tochar( #found, ch, obj );
+      act_notchar( #rfound, ch, obj );
+      obj_to_char( obj, ch );
+    }
+  }
+  else {
+    obj = oload( 81, random( 1, 3 ) );
+    if( !can_handle( ch, obj ) )
+      junk_obj( obj );
+    else {
+      act_tochar( #found, ch, obj );
+      act_notchar( #rfound, ch, obj );
+      obj_to_char( obj, ch );
+    }
+  }
+}
+else {
+  act_tochar( #nada, ch );
+  act_notchar( #rnada, ch );
+}
+~
+E
+found~
+@CYou find $p.@n
+~
+E
+rfound~
+@C$n finds $p.@n
+~
+E
+nada~
+You find nothing of interest.
+~
+E
+rnada~
+$n finds nothing of interest.
+~
+E
+search~
+You search through the debris, looking for anything useful.
+~
+E
+rsearch~
+$n searches through the debris, looking for anything useful.
+~
+!
+9 0 0
+-1
+S
+
+#78755
+Town Well~
+The sandy ground is hard-packed, worn smooth by the locals to form a
+wagon-sized commons.  Sand dunes and hills spread on each side of the
+hamlet, forming a wind break against the hash mountain winds.  Houses
+constructed from driftwood and rough stones lie some distance to the east
+and west, rising smoke from their chimneys an indication that they are
+occupied.  A stone well stands here, an old bucket tumbled to the ground
+beside it.
+~
+[Guin] Done.
+[Cayln] randoms for area in this room
+~
+167247872 10 6 0
+D0
+~
+~
+0 -1 78758 10 10 5
+D1
+~
+~
+0 -1 78756 10 10 5
+D2
+~
+~
+0 -1 78752 10 10 5
+D3
+~
+~
+0 -1 78757 10 10 5
+E
+sand dunes hills~
+The golden sand forms rippling mounds that encircle the village, the
+dunes only ending at the foot of the high hills.
+~
+E
+hamlet houses driftwood stone~
+The driftwood houses have been hastily built from available resources,
+their stone, wood and seaweed walls giving them a mottled appearance.
+~
+A
+~
+~
+if( random( 1, 10 ) < 6 )
+send_to_area( #waves, room );
+else
+send_to_area( #birds, room );
+~
+E
+waves~
+@CYou hear the faint sound of waves breaking against a distant shore.@n
+~
+E
+birds~
+@CBirds circle in wind currents high overhead, the sound of their shrill
+screams echoing through the air.@n 
+~
+!
+2 100 0
+3823 17 1509949540 -2 0
+-1
+S
+
+#78756
+Before a Thatched Hut~
+The house to the east has been constructed from the available driftwood,
+pine branches and rough stones.  Despite its mismatched appearance it
+appears sturdy and snug.  A sun-baked clay chimney has been set in the
+thatched roof's center, enabling some smoke to escape from within. 
+Westward, a sand-covered path heads towards the hamlet's commons.  The
+northern landscape is dominated by the striking peaks of the Everwinter
+Mountains, their forested flanks and gleaming ice caps rising thousands
+of feet into the air.
+~
+[Guin] Done.
+~
+167247872 10 6 0
+D1
+driftwood door~
+~
+131 -1 78759 10 10 5
+D3
+~
+~
+0 -1 78755 10 10 5
+E
+houses driftwood pine branches rough stones~
+The single room house has been thrown together in a haphazard fashion,
+leaving countless holes that would allow the bitter winds to cut through
+the building.  In an effort to counter the gales, animal hides have been
+bound to the gaps, their dull brown skins encrusted with sand and salt.
+~
+E
+clay chimney~
+At odds with the rest of the structure, the chimney has been well
+crafted, allowing a reasonable amount of smoke to escape from the
+building.
+~
+E
+sand path~
+The dunes have been worn down by the passage of feet, although all it
+would take for them to reclaim the village is a sizable windstorm.  A few
+tufts of grass bind some of the larger dunes into a more stable hill.
+~
+E
+Everwinter mountains forested ice cap~
+The sparkling mountain range stretches far to the east and north, the
+foothills that encompass the range reaching down to the edge of the
+mighty ocean.  Pine forests cloak the lower flanks, their mottled foliage
+offering the only shelter from the harsh alpine winds.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou duck through the low doorway to the east@n.
+~
+E
+to_char~
+@y$n ducks through the low doorway to the east@n.
+~
+!
+3 0 2
+-1
+S
+
+#78757
+Before a Driftwood Cottage~
+A squat building has been built between two sizeable boulders, its roof
+and walls constructed from pieces of driftwood and thatching.  Someone
+has attempted to patch the assorted gaps with animal hides and clumps of
+mud and straw.  A sand-covered trail winds eastward from the dilapidated
+hut back to the center of the hamlet.
+~
+[Guin] Done.
+~
+167247872 10 6 0
+D1
+~
+~
+0 -1 78755 10 10 5
+D3
+driftwood door~
+~
+131 -1 78760 10 10 5
+E
+squat building driftwood thatching~
+The stone and wood building has been constructed from wood washed up on
+the wild southern coast.  The uneven timbers give the house strangely
+angled walls and roofs.
+~
+E
+animal hides mud straw~
+Deer hides and fox pelts have been cut into strips and mixed with mud and
+straw in an effort, to shore up some of the larger holes in the
+building's side.  With considerable effort, the patching might last
+through a single winter.
+~
+E
+boulder~
+Long ago the boulder would have marked the edge of the sea cliffs, its
+surface worn smooth by tide and winds.  A few remnants of coral cling to
+the rock's base.
+~
+E
+sand trail~
+The sandy trail winds through the hamlet, its surface hardly better than
+that of the surrounding dunes.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou step into the dilapidated hut to the west@n.
+~
+E
+to_room~
+@y$n steps into the the dilapidated hut to the west@n.
+~
+!
+3 0 8
+-1
+S
+
+#78758
+Before a Humble Settlement~
+Snuggled among the tussock-covered hills and undulating sand dunes to the
+south is a scattered hamlet of thatched cottages.  A few wisps of
+woodsmoke rise from the houses, indicating they are occupied.  Northward,
+a sizeable cliff rises upwards, easily over two hundred feet in height. 
+The roadway zigzags steeply up its side into the great northern mountains.
+~
+[Guin] Done.
+~
+167247872 10 9 0
+D0
+~
+~
+0 -1 78761 10 10 5
+D2
+~
+~
+0 -1 78755 10 10 5
+E
+cliff northwards~
+The high cliffs rise above the sand dunes, the stony face cut with a
+steep, zigzagging roadway.
+~
+E
+hamlet~
+The small village nestles against the wild southern coast, its houses
+crafted from driftwood and sand.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yContinuing along the path, you trudge toward the great mountain range
+lying northward@n.
+~
+E
+to_char~
+@yContinuing along the path, $ trudges towrd the great mountain range to
+the north@n.
+~
+!
+3 0 1
+-1
+S
+
+#78759
+Inside a Thatched Hut~
+Animal skins drape across the stone and woodwork of the hut's interior,
+effectively reducing the light and giving some proofing against wind and
+rain.  A firepit sits in the dirt floor's center, a few wisps of smoke
+rising upwards into the rough beam rafters.  Clusters of seaweed and
+driftwood lie beside the fire.  Across the eastern wall, the tattered
+remnants of a tapestry spread, its surface showing water and fire damage. 
+A door to the west leads out of the humble abode.
+~
+[Azerin] trainer
+[Guin] Mob will have history, location chat for players.
+[Guin] Done.
+~
+167247887 0 6 0
+D3
+driftwood door~
+~
+131 -1 78756 10 10 5
+E
+animal skins~
+Cut hides of deer and fox have been stiched together to form a crude but
+servicable wind break.  Despite the best efforts of its occupant, the hut
+allows in a generous amount of air.
+~
+E
+firepit wisps smoke~
+The remnants of a cooking fire lie smoldering in the chamber's middle, a
+collection of fire-blackened stones encircling the ash.  The smell of
+woodsmoke hangs heavy in the air.
+~
+E
+seaweed driftwood~
+The strands of dried and drying seaweed lie in mounds beside the warm
+ash, a few of the olive strips cut into smaller sections, allowing them
+to dry faster.  Mounds of gnarled, water-worn wood lies beside it, ready
+for the next nightly fire.
+~
+E
+tattered tapestry~
+The tapestry, its background a deep midnight blue, depicts a panoramic
+view of a sprawling city divided in half by a lazy blue-green river.  The
+scene, stitched in finest silks, portrays a slight woman standing in
+front of a wide portcullis, a massive grey-stone keep looming behind her. 
+The foreground of the picture, sewn in increasingly more detail, reveals
+an island teeming with life.  Centrally, hastily constructed stalls and
+multi-colored tents surround a vast green field; temporary structures
+erected for what is obviously a fair or festival.  Dancing bears, a
+handful of dogs dressed up as clowns, a roped-off area where two men
+wrestle while a crowd of bystanders cheers them on, people strolling arm
+in arm or singly...these all make up the middle ground of the scene.  At
+the very front of the needlework, against a backdrop of majestic oaks,
+lies a jousting field, two combatants posturing off to either end
+adjacent to the spectator-filled stands.  The work is masterfully
+crafted, although old, signs of wear and frayed threads suggesting its
+age.  Worked in gold thread, at the bottom right corner of the piece, is
+a signature and date: Lady Margalis Ravenhawk, Dun Tathaig, 750AN 
+~
+2436 9 1509949540 3 0
+-1
+S
+
+#78760
+A Cluttered Store~
+Against the western wall, a collection of broken barrels lies tangled
+with old rope, fishing nets and various bits of wood that might once have
+been a boat.  A makeshift bench of driftwood has been set across half of
+the room, effectively cutting it in two.  A firepit lies smoking beside
+the bench, a scattering of half-burnt kindling lying beside it.  Poorly
+stitched animal hides have been stretched across the ample holes in the
+roof and walls, in a desperate attempt to stop some of the bitterly cold
+winds that howl down from the mountains.
+~
+[Guin] Need enterring code for mob greeting arrivals.
+[Guin] Done.
+~
+167251983 0 5 0
+D1
+driftwood door~
+~
+131 -1 78757 10 10 5
+E
+collection broken barrels old rope~
+Salvaged from a ship, the barrels bear the mark of Medienne, perhaps an
+unlucky trader lost its cargo upon the rocks of the southern sea.  The
+hemp ropes are tattered and water-worn, they too salvaged from a lost
+ship.
+~
+E
+fishing nets wood boat~
+The wormwood boards have all but rotted away, only the skeletal frame of
+the boat remaining.  The rank stench of old fish hangs heavy about the
+tangled netting.
+~
+E
+firepit~
+The smoldering logs of driftwood slowly turn from a ruddy glow to soft
+ash as the fire dies away.
+~
+E
+bench~
+Strung together with rope and driftwood, the bench is uneven but
+serviceable.
+~
+2437 9 1509949540 3 0
+4 17 1509949540 -1 0
+55 17 1509949540 -1 0
+3648 17 1509949490 -1 0
+-1
+S
+
+#78761
+A Sheltered Vale~
+The crumbling sides of the white stone cliffs rise far above, their
+surface covered in scars and ravines where erosion has cut into the soft
+stone.  A steeply ascending road zig-zags up the wall, allowing access to
+the mountains beyond.  Slabs of creamy-hued stones lay scattered around
+the base of the cliffs.
+~
+no.mob
+[Guin] Done.
+~
+167247880 5 9 0
+D2
+~
+~
+0 -1 78758 10 10 5
+D4
+~
+~
+0 -1 78762 10 10 5
+E
+white-stone cliffs~
+Stretching above the sand dune hills, the mighty cliffs rise to the feet
+of the mountain range.  A steep but navigable road cuts across its face,
+the surface worn smooth by the years of winter's rain and snow.
+~
+A
+~
+~
+if( !can_fly( ch ) && !is_affected( float, ch ) )
+  if( find_skill( ch, climb ) < random( 1, 4 ) ) {
+  act_tochar( #fail_climb, ch );
+  act_notchar( #rfail_climb, ch );
+  improve_skill( ch, climb );
+  end;
+}
+continue;
+~
+E
+to_char~
+You carefully climb up the path.
+~
+E
+fail_climb~
+You struggle to make it up the path, but fail to find any way to climb up.
+~
+E
+rfail_climb~
+$n struggles to make it up the path, but fails to find a way to climb up.
+~
+E
+to_room~
+$n carefully climbs up the path.
+~
+!
+3 0 16
+-1
+S
+
+#78762
+Cliffside Road - Before an Arched Tunnel~
+An arched stone tunnel cuts into the cliffside, the road continuing into
+its dark recesses.  Overhead the wall juts out, causing a constant shadow
+to lay across the roadway.  Far below a hill-rimmed valley spreads out, a
+scattering of houses clustered in its center.  Beyond the hamlet, the
+land meets the shores of the great Moonfall Sea.
+~
+no.mob
+climb check down
+[Guin] Done.
+~
+167247880 5 9 0
+D0
+~
+~
+0 -1 78763 10 10 5
+D5
+~
+~
+0 -1 78761 10 10 5
+E
+arched stone tunnel~
+The white-stone arch rises twenty feet above the roadway, slabs of
+rune-covered stones forming its edge.  An apparently natural cleft in the
+rocks has been widened to allow a wagon to pass through its gap.
+~
+E
+houses valley~
+Far below the tiny huts gather into a hamlet, a haze of wood smoke
+hanging above them in the chill salt air.
+~
+E
+moonfall sea land~
+The mighty waves of the southern sea crash upon the land below, the
+emerald ocean stretches far to the horizon before disappearing under a
+blanket of fog.
+~
+A
+~
+~
+if( !can_fly( ch ) && !is_affected( float, ch ) )
+  if( find_skill( ch, climb ) < random( 1, 4 ) ) {
+  act_tochar( #fail, ch );
+  act_notchar( #rfail, ch );
+  improve_skill( ch, climb );
+  end;
+}
+continue;
+~
+E
+fail~
+You fail to find a safe way down.
+~
+E
+rfail~
+$n fails to find a safe way down.
+~
+E
+to_char~
+You carefully make your way downward.
+~
+E
+to_room~
+$n carefully makes $s way down.
+~
+!
+3 0 32
+-1
+S
+
+#78763
+Road to the Moonfall Sea - Before a Tunnel~
+The cliffside rises upward around the roadway, forming high walls on all
+sides.  The cobbled trail descends as it runs southward, and heads into a
+tunnel cut into the white stone of the southern hillside.  Monoliths of
+rock rise like tombstones around the path, their surfaces weatherworn and
+pitted from the harsh mountain conditions.
+~
+[Guin] Done.
+~
+167247873 5 9 0
+D0
+~
+~
+0 -1 78764 10 10 5
+D2
+~
+~
+0 -1 78762 10 10 5
+E
+monoliths~
+Carved from a basalt rock, the triangular monoliths rise over fifteen
+feet high, their base half as wide.  Remnants of swirling oghams cover
+their surface, the wind and rain eroding much of their detail.
+~
+E
+tunnel~
+The tunnel of rock has been widened to allow a wagon to pass southward,
+an archway of white stone framing its entrance.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou trudge along the path, moving deeper into the moutains@n.
+~
+E
+to_char~
+@y$n trudges along the path, moving deeper into the moutains@n.
+~
+!
+3 0 1
+-1
+S
+
+#78764
+Winding Road Along the Cliff's Edge~
+Ancient warped beams of wood have been used to brace the crumbling
+mountainside in an attempt to prevent a landslide from blocking the
+roadway.  Southward, the cobbled road descends across a broken rock
+plateau before descending down another cliff.  To the west, a side path
+branches from the main road and appears to deadend at a tumble of fallen
+boulders.
+~
+[Guin] Done.
+~
+167247872 5 9 0
+D2
+~
+~
+0 -1 78763 10 10 5
+D3
+~
+~
+0 -1 78765 10 10 5
+D4
+~
+~
+0 -1 2304 10 10 5
+E
+beams wood brace~
+The pine beams have been set in a cross pattern against the mountain
+side, heavy bracing trunks holding them and the crumbling cliff in place. 
+Despite the attempt, mounds of loose stone lie at the wall's base.
+~
+E
+1 west side path tumble boulders~
+A ribbon-like side path leads west of the main pathway, winding between a
+pair of fallen rocks.  From this perspective it seems to come to a
+deadend at a jumbled pile of boulders...the remains of an ancient
+landslide.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cSqueezing between two boulders, you take the path leading west@n.
+~
+E
+to_room~
+@cSqueezing past two boulders, $n takes the westward path@n.
+~
+!
+3 0 8
+-1
+S
+
+#78765
+Dead-End at a Wall of Rocks~
+Mounds of rubble and rocks lie piled against the northern cliff, sealing
+all but the first few feet of a cavern.  Piles of shale and castings lie
+scattered around the caves opening.  A trickling ribbon of water escapes
+from beneath the cave-in.  The road cuts eastward from the cavern and
+begins the ascent up the crumbling cliff face.
+~
+connects to 10527 north - Crystal Salanmanders
+[Guin] Question mark on map is not an overlap but a one-sided door.
+[Yrna] Done.
+[Guin] Done.
+~
+167247880 5 9 0
+D0
+illusionary rock pile~
+~
+227 -1 10527 10 10 5
+D1
+~
+~
+0 -1 78764 10 10 5
+E
+mounds rubble rock~
+The grey-white stones lie in a mound across the cave mouth.  They appear
+to have been piled there rather than formed through a cave-in.
+~
+E
+road~
+The steep roadway winds across the cliffside, its surface bearing the
+signs of harsh winters.
+~
+E
+cavern~
+Formed from years of running water, the slick cavern floor is awash with
+a burbling stream.  Limestone and black rock form whorls of color across
+its walls.  A sizeable mound of rubble lies across the cave mouth, the
+white stones out of place against the natural rock.
+~
+A
+~
+~
+if( !is_open( room, north ) )
+  send_to_room( #glitter, room, sight );
+~
+E
+glitter~
+@YThe glittering crystal winks brightly from within a pile of shale and
+rocks.@n 
+~
+!
+2 300 0
+A
+~
+~
+if( !is_open( room, north ) )
+  act_tochar( #glitter, ch, obj );
+~
+E
+glitter~
+@YAs you step into this cul-de-sac, a faint glimmer from within a pile of
+rocks catches your eye.@n 
+~
+!
+1 0 2
+A
+clear dig move shift~
+mounds rubble rock stones pile~
+if( !is_open( room, north ) ) {
+  act_tochar( #start, ch, obj );
+  act_notchar( #rstart, ch, obj, mob, sight );
+  wait( 2 );
+  act_tochar( #more, ch, obj );
+  act_notchar( #rmore, ch, obj, mob, sight );
+  wait( 2 );
+  act_tochar( #moremore, ch, obj );
+  act_notchar( #rmoremore, ch, obj, mob, sight );
+  wait( 2 );
+  act_tochar( #ohno, ch, obj );
+  act_notchar( #rohno, ch, obj, mob, sight );
+}
+else
+  act_tochar( #why, ch );
+~
+E
+start~
+@yYou start working on clearing out the piles of rocks to the north.@n
+~
+E
+rstart~
+@y$n starts clearing out the piles of rock and slate.@n
+~
+E
+more~
+@yYou work tirelessly, picking up the rocks and throwing them on the
+side.@n 
+~
+E
+rmore~
+@y$n works tirelessly, picking up the rocks and throwing them aside.@n
+~
+E
+moremore~
+@yAfter you shift some more rocks, something occures to you - you have
+been shifting rocks on another pile, and yet, there is no other pile!@n
+~
+E
+rmoremore~
+@yYou watch $n trying to clear the rubble, but $e doesn't appear to be
+getting anywhere.  The pile of rocks sealing the entrance is just as large
+now as it was a while ago.@n 
+~
+E
+ohno~
+@YYou finally give up trying to clear the pile - there must be some magic
+at work here.@n 
+~
+E
+rohno~
+@Y$n gives up trying to clear the cave entrance.  It obviously isn't
+working.@n 
+~
+E
+why~
+@WWhy do you want to shift the rocks?@n
+~
+!
+9 0 0
+A
+1 look get~
+crystal glimmer~
+if( !is_open( room, north ) ) {
+  if( random( 1, 3 ) ) {
+    act_tochar( #open, ch, obj );
+    act_notchar( #ropen, ch, obj, mob, sight );
+    wait( 1 );
+    act_tochar( #reallyopen, ch, obj );
+    open( room, north );
+  }
+  else {
+    act_tochar( #not, ch, obj );
+    act_notchar( #rnot, ch, obj, mob, sight );
+  }
+}
+else
+  act_tochar( #already, ch, obj );
+~
+E
+open~
+@GYou stare at the pile of rocks, trying to spot the glittering crystal.@n 
+~
+E
+ropen~
+@G$n stares at the mounds of rubble without blinking.  Looking at it
+yourself, you cannot understand why - rocks are just rocks!@n 
+~
+E
+not~
+@gYou stare at the mounds of rubble, trying to work out where the
+glittering has come from.  It must have been a trick of light, because
+all you can see now is a pile of stone.@n 
+~
+E
+rnot~
+@g$n stares at the piles of rocks sealing the cave's entrance.  After a
+while, $e shakes $s head and looks away.@n 
+~
+E
+already~
+@yThe illusion isn't there any more, and before you is a large crystal
+cave.@n 
+~
+E
+reallyopen~
+@GYour eyes water as the picture distorts and you realise the mound of
+rubble was just an illusion!@n 
+~
+!
+0 0 0
+-1
+S
+
+#78775
+On the Jetty~
+The swirling waters of the ocean surge beneath the jetty, the woodwork
+creaking and groaning as each wave lashes its timbers.  Clusters of
+mussels and limpets cling to the submerged rocks and struts, their
+mottled shells protecting them from the pounding waves.  Rising between
+the northern dunes is a collection of driftwood houses, a few wisps of
+smoke rising from them.  A wall of mist blankets the southern sea,
+preventing a view of what lies beyond.
+~
+[Guin] Done
+[Cayln] start/finish boatride to forgotten isle ehre
+[Cayln] wizard type mob to summon boat
+[Cayln] captain resets in 12806
+~
+167247880 12 9 0
+D0
+~
+~
+0 -1 78750 10 10 5
+D2
+~
+~
+0 -1 52610 10 10 5
+D3
+~
+~
+170 -1 12808 10 10 5
+E
+waters ocean waves~
+Beyond the shoreline the rolling waves disappear under a blanket of fog,
+the sound of the sea muffled and distant.
+~
+E
+shellfish mussels limpets~
+Crafted from a redwood, the strong beams of the jetty are slowly
+crumbling beneath the water's onslaught.  Clusters of mussels and limpets
+grow at the water's edge, the tasty morsels out of reach from here.
+~
+E
+driftwood houses~
+Built from a mixture of driftwood and stone, the strange houses nestle
+amongst the rising dunes.  A few wisps of wood smoke drift from the
+further huts.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou move $T along the jetty, its weathered old boards creaking
+underfoot@n.
+~
+E
+to_room~
+$n moves $T along the jetty, its weathered old boards creaking
+underfoot@n.
+~
+!
+3 0 5
+A
+~
+~
+mob = mob_in_room( 2558, room );
+if( !mob ) {
+  act_tochar( #wheredidhego, ch, obj, mob );
+  end;
+}
+wait( 2 );
+if( !mob )
+  end;
+act_room( #summon, mob, obj, mob, sight );
+wait( random( 2, 4 ) );
+rch = rand_player( room );
+act_tochar( #in_the_distance, rch, obj, mob, sight );
+act_notchar( #rin_the_distance, rch, obj, mob, sight );
+wait( random( 1, 3 ) );
+act_room( #docks, ch, obj, mob, sight );
+wait( 2 );
+if( !mob )
+  end;
+act_room( #plank, ch, obj, mob, sight );
+transfer( mob_in_room( 2575, find_room( 12806 ) ), find_room( 12808 ) );
+~
+E
+summon~
+@C$n wanders about, placidly looking towards the sea.@n
+~
+E
+in_the_distance~
+You see a large sailing vessel approaching the pier to the west.  It is
+too far for you to make out any details, but you point it out to others
+in the room, in case they didn't see it.
+~
+E
+rin_the_distance~
+$n sees something in the distance, after you concentrate on it a bit, you
+think that it is probably a large boat.
+~
+E
+docks~
+A magnificent looking sail boat crests a wave close to the dock, and just
+barely touches the jetty.  Its size astounds you at probably close to one
+hundred feet in height, it also has three triangular shaped sails to move
+it along the ocean.  You have a feeling the captain of the vessel is
+probably very well to do.  On the front of the vessel there is a wooden
+construction that looks like a mermaid.
+~
+E
+plank~
+A wooden plank, about ten feet in length and close to six feet in width
+is placed between the boat and the jetty.
+~
+E
+wheredidhego~
+Where did the old man go?
+~
+E
+already~
+$N looks at you with great concern.  $N then says to you, "Are you
+feeling well $l?  The boat is already here." 
+~
+!
+0 0 0
+A
+1 west~
+*~
+mob = mob_in_room( 2575, find_room( 12808 ) );
+if( mob ) {
+  act_tochar( #plank, ch );
+  act_notchar( #rplank, ch, obj, mob, sight );
+  transfer( ch, find_room( 12808 ) );
+  act_notchar( #cplank, ch, obj, mob, sight );
+  mpcode( mob, 1 );
+}
+else
+  act_tochar( #edge_of_jetty, ch );
+~
+E
+plank~
+@cYou carefully climb onto the plank and cross over to the ship.@n 
+~
+E
+rplank~
+@c$n carefully climbs onto the plank and crosses over to the ship.@n 
+~
+E
+cplank~
+@c$n jumps down to the deck from the plank.@n
+~
+E
+edge_of_jetty~
+@cYou walk up to the edge of the jetty, and look down into the water.@n
+~
+!
+0 0 0
+A
+cross 3 climb~
+plank~
+acode( room, 3 );
+~
+!
+0 0 0
+A
+1 look~
+jetty woodwork struts timbers~
+if( !mob_in_room( 2575, find_room( 12808 ) ) )
+  act_tochar( #jetty, ch );
+else
+  act_tochar( #jetty_plank, ch );
+~
+E
+jetty~
+Crafted from a redwood, the strong beams of the jetty are slowly
+crumbling beneath the water's onslaught.  Clusters of mussels and limpets
+grow at the water's edge, the tasty morsels out of reach from here.
+~
+E
+jetty_plank~
+Crafted from a redwood, the strong beams of the jetty are slowly
+crumbling beneath the water's onslaught.  Clusters of mussels and limpets
+grow at the water's edge, the tasty morsels out of reach from here. 
+Placed almost exactly in the middle of the jetty is a couple inch thick
+piece of wood used as a plank, although it is only barely wide enough for
+you to cross onto the ship with.
+~
+!
+0 0 0
+A
+~
+~
+mob = mob_in_room( 2575, find_room( 12808 ) );
+if( mob )
+  if( players_room( find_room( 12808 ) ) == 0 )
+  if( players_room( find_room( 78775 ) ) == 0 )
+  transfer( mob, find_room( 12806 ) );
+~
+!
+16 0 0
+2558 137 1509949540 3 0
+-1
+S
+
+#0
+

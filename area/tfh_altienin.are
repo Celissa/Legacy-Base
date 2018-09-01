@@ -1,0 +1,5132 @@
+#M2_AREA
+2
+
+Altienin~
+Teircen~
+~
+~
+~
+
+0 0
+3
+1
+#ROOMS
+
+#11500
+The Room of Reflection~
+Smooth, seamless pristine white stone forms the perimeter of this single,
+broad circular room.  The centerpiece of the room, a wide reflecting pool
+no more than a few inches deep, draws all attention to it and away from
+the cares of the world outside.  Almost unnoticed, four sets of stairs
+spiral their way up the inner perimeter of the walls wending their way up
+to a higher room.  Set between each set of stairs, at the ordinal points
+of the compass, four deep arches lined with arcane runes allow a gentle
+breeze in from the world outside.
+~
+This is the base of the ivory spire.
+all 20+ citizens who roam the streets, visit shops, and hang out in
+taverns to gossip can't be added until reset code is confirmed as updated
+or remaining unchanged.
+Really want to know why?  Ask me later, its a long story.  -Teircen
+~
+66584589 0 6 0
+D0
+~
+~
+0 -1 11593 10 10 5
+D1
+~
+~
+0 -1 11594 10 10 5
+D2
+~
+~
+0 -1 11595 10 10 5
+D3
+~
+~
+0 -1 11596 10 10 5
+D4
+~
+~
+0 -1 11501 10 10 5
+E
+refecting pool room 5 centerpiece~
+The pool fills the bulk of the room leaving roughly half the floor space
+available for other use.  The basin of the pool has been colored to a
+midnight black turning the clear water into a nearly perfect mirror
+casting reflections of everything above it back at the viewer.  Fragile
+flower blossoms float lazily upon the pools surface adding delicate
+touches of white and sky-blue to the otherwise crystal-clear water.
+~
+E
+1 north 1 east 1 south 1 west~
+The pristine walls dominate the view for the most part.  The single
+rune-lined arch is set into the wall and a small portion of grass-lined
+courtyard outside can be seen from this angle, but nothing more.
+~
+E
+5 stairs 1 up~
+Each of the four sets of stairs starts just to the right of one of the
+arches leading outside and continues to wind its way up the inside of the
+tower walls in a clockwise direction.  No sign of stone or mortise is
+visible and, like the walls themselves, the stairs appear to be of a
+seamless construction.  Each set of stairs leads upward through an
+opening in the ceiling to a warmly lit room overhead.
+~
+A
+1 look inspect examine~
+arcane 4 runes~
+act_notchar( #looking, ch );
+if( class( ch ) == mage ) {
+  if( race( ch ) == elf )
+    act_tochar( #emage, ch );
+  else
+    act_tochar( #mage, ch );
+  end;
+  }
+if( class( ch ) == cleric ) {
+  if( race( ch ) == elf )
+    act_tochar( #ecleric, ch );
+  else
+    act_tochar( #cleric, ch );
+  end;
+  }
+if( race( ch ) == elf )
+  act_tochar( #elf, ch );
+else
+  act_tochar( #noclue, ch );
+~
+E
+looking~
+$n peers closely at the runes lining one of the arches.
+~
+E
+emage~
+The runes look to be magical in nature, not clerical, and are most
+definitely elven in origin.  Their exact purpose is lost in the
+intricacies of their design but they seem to imply the focusing of
+physical strength upon the nature of the building itself.
+~
+E
+mage~
+The runes appear to be magical in nature, not clerical, and are probably
+elven though you aren't positive about that.  Their exact purpose is lost
+in the intricacies of the design but they seem to imply the focusing of
+strength upon the nature of the building itself.
+~
+E
+ecleric~
+The runes aren't clerical in nature so perhaps they are magical in nature. 
+Its as a fair chance they serve some nature, given their intricate and
+deliberate design.  The only thing you can be certain about is that they
+are elven in origin.
+~
+E
+cleric~
+The runes aren't clerical in nature so perhaps they are magical in nature. 
+It's a fair chance they serve some purpose given their intricate and
+deliberate design.
+~
+E
+elf~
+They certainly look like runes alright.  You can't tell if they are
+magical or clerical or even if they are something wholely unknown to you. 
+The only thing you can be certain of is that they appear elven in origin.
+~
+E
+noclue~
+Would you look at that?  Runes, inscribed on the wall.  Must be magic or
+something.
+~
+!
+0 0 0
+A
+go enter swim~
+reflecting pool water fountain~
+act_notchar( #ridiot, ch );
+act_tochar( #idiot, ch );
+~
+E
+ridiot~
+$n steps into the reflecting pool causing countless ripples to break its
+serene surface.  How Crude!
+
+eit
+~
+E
+idiot~
+You step into the reflecting pool causing countless rippes to break its
+serene surface.  How rude!
+~
+!
+0 0 0
+A
+~
+~
+act_tochar( #leaving, ch );
+act_notchar( #rleaving, ch );
+transfer( ch, find_room( 11510 ) );
+act_notchar( #arr, ch );
+loop( followers ) {
+  if( rch != ch ) {
+    act_tochar( #follow, ch );
+    act_notchar( #rleaving, rch );
+    transfer( rch, find_room( 11510 ) );
+    act_notchar( #arr, rch );
+  }
+}
+~
+E
+leaving~
+You leave the Ivory Spire and enter the plaza.
+~
+E
+rleaving~
+$n leaves the Ivory Spite and enters the plaza.
+~
+E
+arr~
+$n has just exited from the Ivory Spire.
+~
+E
+follow~
+You follow $n from the spire.
+~
+E
+no~
+You can't walk away from a battle - use flee.
+~
+!
+3 0 15
+5517 11 1509949540 3 0
+5518 9 1509949540 3 0
+5368 9 1509949540 3 0
+-1
+S
+
+#11501
+Library~
+Bookshelves dominate the view forming the walls of a wide, circular room
+and reaching from floor to ceiling.  The only break in these immense
+shelves are at the four compass points where an arch leads to stairs
+behind the bookshelves that wind their way up or down to other rooms. 
+Low shelves measuring only three feet tall form five neat aisles that
+meet in the center of the large room like the arms of a star.  At even
+intervals along aisles low benches are set into the floor permitting a
+reader place to read once they find what they seek.
+~
+Lower library of the ivory spire.
+need extras for shelves, books, cardinal directions, and up (up includes
+balls of light at ceiling) 
+~
+66584581 0 6 0
+D4
+~
+~
+0 -1 11502 10 10 5
+D5
+~
+~
+0 -1 11500 10 10 5
+-1
+S
+
+#11502
+Library~
+Bookshelves dominate the view forming the walls of a wide, cirular room
+and reaching from floor to ceiling.  The only break in these immense
+sheves are at the four compass points where an arch leads to stairs
+behind the bookshelves that wind their way up or down to other rooms. 
+Many low shelves, measuring only three feet in height, form the arcs of
+several concentric circles working their way inwards towards the center
+of the wide room.  A circular bench rests in the middle of the room
+permitting readers a convenient place of repose as they study the
+materials they have found.
+~
+Middle library of the ivory spire.
+need extras for shelves, books, cardinal directions, and up (up includes
+balls of light at ceiling) 
+~
+66584581 0 6 0
+D4
+~
+~
+0 -1 11503 10 10 5
+D5
+~
+~
+0 -1 11501 10 10 5
+-1
+S
+
+#11503
+Library~
+Bookshelves dominate the view forming the walls of a wide, cirular room
+and reaching from floor to ceiling.  The only break in these immense
+sheves are at the four compass points where an arch lead out to balconies
+or to stairs behind the bookshelves that wind their way up or down to
+other rooms.  A few low benches are spaced along the rooms edge near the
+massive shelves leaving a raised dais in the center of the room free of
+clutter.  The only thing of note atop the dais, which would be hard to
+miss given teh wide berth of space allotted to it, is a single tome
+resting upon an ornate column measuring a scant three and a half feet in
+height.
+~
+Upper library of the ivory spire.
+need extras for shelves, books, cardinal directions, and up (up includes
+balls of light at ceiling) 
+~
+66584581 0 6 0
+D0
+~
+~
+0 -1 11504 10 10 5
+D1
+~
+~
+0 -1 11505 10 10 5
+D2
+~
+~
+0 -1 11506 10 10 5
+D3
+~
+~
+0 -1 11507 10 10 5
+D4
+~
+~
+0 -1 11508 10 10 5
+D5
+~
+~
+0 -1 11502 10 10 5
+-1
+S
+
+#11504
+Northern Balcony~
+The balcony affords an excellent view of the northern section of the city. 
+Below you and spreading out to the north is a panorama of green rooftops
+sharing the same look and feel as much of the forest around the city. 
+Farther to the north, the Palace stands before a backdrop of ancient
+trees creating a breathtaking tableau of crystaline spires twinkling
+amidst verdant greenery.  Behind you, a smooth arch forms the entrance
+back into the tower library.
+~
+jumping is permitted, if you're stupid enough.  But I wouldn't advise it.
+damage to be modified if a standard occurs.  Tower at this height is 65-70 feet.
+~
+33030144 0 5 0
+D2
+~
+~
+0 -1 11503 10 10 5
+A
+jump leap fall 1 down~
+~
+act_tochar( #really, ch );
+act_notchar( #stop, ch );
+~
+E
+Really~
+Really?  Do you mean you want to @Gjump@n or @Gleap down@n to your
+possibe death?  Or did you have some other idea in mind?  The fall looks
+as if it would be well over 50 feet.
+~
+E
+stop~
+$n stands on the edge of the balcony and peers at the distant ground
+below.  I sure hope they aren't planning to leap to their death.
+~
+!
+0 0 0
+A
+leap jump fall~
+1 down~
+act_tochar( #leap, ch );
+act_notchar( #rleap, ch );
+wait( 1 );
+room = find_room( 11510 );
+transfer( ch, room );
+act_notchar( #arr, ch );
+act_tochar( #ouch, ch );
+i = 70;
+dam_message( ch, i, "the fall" );
+inflict( ch, mob, i, "suicidal leap from a tower" );
+~
+E
+leap~
+You vault over the balcony's perimeter and plunge to the ground below.
+~
+E
+rleap~
+$n vaults over the balcony's edge to the ground far below.
+~
+E
+arr~
+$n falls screaming from the tower overhead to land hard on the ground
+here.
+~
+E
+ouch~
+You land with an audible thud against the hard ground.
+~
+!
+0 0 0
+-1
+S
+
+#11505
+Eastern Balcony~
+The balcony affords an excellent view of the northern section of the city. 
+Below you and spreading out to the north is a panorama of green rooftops
+sharing the same look and feel as much of the forest around the city.  At
+some point in the distance the rooftops and treeline become
+indistinguishable from one another as they blend into one single skyline.
+~
+jumping is permitted, if you're stupid enough.  But I wouldn't advise it.
+damage to be modified if a standard occurs.  Tower at this height is 65-70 feet.
+
+test acode for atmosphere is in this room.
+~
+33030144 0 5 0
+D3
+~
+~
+0 -1 11503 10 10 5
+A
+jump leap fall 1 down~
+~
+act_tochar( #really, ch );
+act_notchar( #stop, ch );
+~
+E
+really~
+Really?  Do you mean you want to @Gjump@n or @Gleap down@n to your
+possibe death?  Or did you have some other idea in mind?  The fall looks
+as if it would be well over 50 feet.
+~
+E
+stop~
+$n stands on the edge of the balcony and peers at the distant ground
+below.  I sure hope they aren't planning to leap to their death.
+~
+!
+0 0 0
+A
+leap fall jump~
+1 down~
+act_tochar( #leap, ch );
+act_notchar( #rleap, ch );
+wait( 1 );
+room = find_room( 11510 );
+transfer( ch, room );
+act_notchar( #arr, ch );
+act_tochar( #ouch, ch );
+i = 70;
+dam_message( ch, i, "the fall" );
+inflict( ch, mob, i, "suicidal leap from a tower" );
+~
+E
+leap~
+You vault over the balcony's perimeter and plunge to the ground below.
+~
+E
+rleap~
+$n vaults over the balcony's edge to the ground far below.
+~
+E
+arr~
+$n falls screaming from the tower overhead to land hard on the ground
+here.
+~
+E
+ouch~
+You land with an audible thud against the hard ground.
+~
+!
+0 0 0
+A
+~
+~
+i = random( 1, 5 );
+if( i == 1 )
+  act_room( "The sound of laugher wafts up from the streets below.", ch );
+if( i == 2 )
+  act_room( "A large bird of prey circles overhead before gliding silently into the forest.", ch );
+if( i == 3 )
+  act_room( "The sound of a book being dropped in the library momentarily startles you.", ch );
+if( i == 4 )
+  act_room( "The life sounds of the forest can be heard all around you.", ch );
+if( i == 5 )
+  act_room( "You hear a lilting birdcall in the distance.", ch );
+~
+E
+street~
+Lilting laughter rings in the streets below.
+~
+E
+bird~
+A large bird of prey circles in the sky overhead before silently gliding
+off into the forest.
+~
+E
+book~
+The sound of a book being accidently dropped in the library startles you
+momentarily.
+~
+E
+forest~
+The life sounds of the forest can be heard all around you.
+~
+E
+bird2~
+You hear a lilting birdcall in the distance.
+~
+!
+4 1000 0
+-1
+S
+
+#11506
+Southern Balcony~
+The balcony affords an excellent view of the northern section of the city. 
+Below you and spreading out to the north is a panorama of green rooftops
+sharing the same look and feel as much of the forest around the city. 
+
+view south
+~
+jumping is permitted, if you're stupid enough.  But I wouldn't advise it.
+damage to be modified if a standard occurs.  Tower at this height is 65-70 feet.
+~
+33030144 0 5 0
+D0
+~
+~
+0 -1 11503 10 10 5
+A
+jump leap fall 1 down~
+~
+act_tochar( #really, ch );
+act_notchar( #stop, ch );
+~
+E
+really~
+Really?  Do you mean you want to @Gjump@n or @Gleap down@n to your
+possibe death?  Or did you have some other idea in mind?  The fall looks
+as if it would be well over 50 feet.
+~
+E
+stop~
+$n stands on the edge of the balcony and peers at the distant ground
+below.  I sure hope they aren't planning to leap to their death.
+~
+!
+0 0 0
+A
+leap fall jump~
+1 down~
+act_tochar( #leap, ch );
+act_notchar( #rleap, ch );
+wait( 1 );
+room = find_room( 11510 );
+transfer( ch, room );
+act_notchar( #arr, ch );
+act_tochar( #ouch, ch );
+i = 70;
+dam_message( ch, i, "the fall" );
+inflict( ch, mob, i, "suicidal leap from a tower" );
+~
+E
+leap~
+You vault over the balcony's perimeter and plunge to the ground below.
+~
+E
+rleap~
+$n vaults over the balcony's edge to the ground far below.
+~
+E
+arr~
+$n falls screaming from the tower overhead to land hard on the ground
+here.
+~
+E
+ouch~
+You land with an audible thud against the hard ground.
+~
+!
+0 0 0
+-1
+S
+
+#11507
+Western Balcony~
+The balcony affords an excellent view of the northern section of the city. 
+Below you and spreading out to the north is a panorama of green rooftops
+sharing the same look and feel as much of the forest around the city. 
+
+view west
+~
+jumping is permitted, if you're stupid enough.  But I wouldn't advise it.
+damage to be modified if a standard occurs.  Tower at this height is 65-70 feet.
+~
+33030144 0 5 0
+D1
+~
+~
+0 -1 11503 10 10 5
+A
+jump fall leap 1 down~
+~
+act_tochar( #really, ch );
+act_notchar( #stop, ch );
+~
+E
+really~
+Really?  Do you mean you want to @Gjump@n or @Gleap down@n to your
+possibe death?  Or did you have some other idea in mind?  The fall looks
+as if it would be well over 50 feet.
+~
+E
+stop~
+$n stands on the edge of the balcony and peers at the distant ground
+below.  I sure hope they aren't planning to leap to their death.
+~
+!
+0 0 0
+A
+leap fall jump~
+1 down~
+act_tochar( #leap, ch );
+act_notchar( #rleap, ch );
+wait( 1 );
+room = find_room( 11510 );
+transfer( ch, room );
+act_notchar( #arr, ch );
+act_tochar( #ouch, ch );
+i = 70;
+dam_message( ch, i, "the fall" );
+inflict( ch, mob, i, "suicidal leap from a tower" );
+~
+E
+leap~
+You vault over the balcony's perimeter and plunge to the ground below.
+~
+E
+rleap~
+$n vaults over the balcony's edge to the ground far below.
+~
+E
+arr~
+$n falls screaming from the tower overhead to land hard on the ground
+here.
+~
+E
+ouch~
+You land with an audible thud against the hard ground.
+~
+!
+0 0 0
+-1
+S
+
+#11508
+the hall of memory~
+The smooth contour of the wall blends just as smoothly with both ceiling
+and floor with bevelled edges that give the room an almost living feel. 
+High windows provide only views of the sky, however, they seem to
+admirably suite their purpose as they allow sunlight in daily to provide
+nourishment for the many plants resting on columns and ledges around the
+room.  Shallow alcoves run the entire perimeter of the circular room
+providing housing for a plethora of tapestries depicting various scenes
+of the woods.  Almost unseen among the carefully sculpted feel of the
+room, sets of stairs wind their way both up and down out of the room.
+~
+need to use acode so each time the tapestries are viewed, a different one
+is seen.
+tapestries depict scenes of both old forest and new one as well as elven life and values.
+~
+66584581 0 6 0
+D4
+~
+~
+0 -1 11509 10 10 5
+D5
+~
+~
+0 -1 11503 10 10 5
+-1
+S
+
+#11509
+Spiral Stairwell~
+Seamless walls of pristine white form the barriers of this long, winding
+stairwell.  The same white stone forms the multitude of stairs that wind
+their way to both the top and bottom of this austere tower.  As you move
+along the stairs shadows form before you only to rapidly move beside, and
+then, behind you as you pass the periodically spaced glowing orbs that
+light this place.
+~
+~
+66584581 0 6 0
+D4
+~
+~
+0 -1 11585 10 10 5
+D5
+~
+~
+0 -1 11508 10 10 5
+E
+glowing 4 balls 5 lights 3 orbs~
+The glowing orbs appear to be the typical sort created by spellcasters,
+only, somehow the caretakers have managed to get these to remain in place
+once they left.
+~
+A
+2 sleep~
+~
+wait( 1 );
+act_tochar( #oops, ch );
+act_notchar( #roops, ch );
+transfer( ch, find_room( 11508 ) );
+act_tochar( #thud, ch );
+act_notchar( #arr, ch );
+i = random( 2, 5 );
+dam_message( ch, i, "a tumble down some stairs" );
+inflict( ch, mob, i, "a tumble down some stairs" );
+~
+E
+oops~
+@MAs you nod off into a deeper sleep, you feel yourself begin to slip off
+your perch.
+~
+E
+roops~
+@Y$n, in $s sleep, rolls over and takes a hard tumble down the stairs!
+~
+E
+thud~
+@RYou are jarred back to consciousness by the solid impact of your body
+hitting the floor.
+~
+E
+arr~
+@C$n comes tumbling down the stairwell to land with an audible thud on the
+floor.
+~
+!
+0 0 0
+A
+get grab take steal~
+ball orb glowing light~
+act_tochar( #no, ch );
+act_notchar( #haha, ch );
+~
+E
+no~
+@CEvery time you reach for one of the gowing orbs, it drifts out of your
+reach, eluding your grasp.
+~
+E
+haha~
+@C$n makes a efw tentative grasps for one of the glowing orbs of light, but
+it manages to drift out of his reach every time.
+~
+!
+0 0 0
+A
+1 up~
+~
+act_tochar( #up, ch );
+continue;
+~
+E
+up~
+@y You finish your climb and exit onto the roof of the tower.
+~
+!
+0 0 0
+-1
+S
+
+#11510
+Plaza of the Spire~
+A @Wwhite tower@n forms the focal point for this large plaza of cobbled
+walkways, manicured grasses and tended shrubs.  With the tower as its
+center, the trimmed grasses are broken only by pathways cobbled with
+water-smoothed stones that lead off to the north, east, south and west. 
+The neatly trimmed shrubs form a series of low hedges that seem to lose
+their obviously planned appearance at a distance and quickly blend in
+with the surrounding foliage.  It would take hours to fully examine all
+the greenery in sufficient detail to appreciate the delicate blend of
+natural harmony and carefully planned aesthetics.
+~
+add size check to entering tower on enter code -talis
+extra for examing greenery
+remember, guards won't be able to get in the tower :(
+[Guin] First room of spire - 11500
+~
+33030144 1 9 0
+D0
+~
+~
+0 -1 11511 10 10 5
+D1
+~
+~
+0 -1 11553 10 10 5
+D2
+~
+~
+0 -1 11562 10 10 5
+D3
+~
+~
+0 -1 11540 10 10 5
+E
+white tower spire~
+The tower forms a pristine spire of white in the midst of the verdant
+forest foliage.  There are no windows near the ground, in fact, the only
+entrances seem to be a series of five foot tall arches in the tower's
+base.  Further up the tower, perhaps a good seventy feet up, a set of
+narrow balconies ring the tower at nearly its mid-way point.  Half again
+higher up the tower, a few wide openings appear to finally be window
+slits.  As their are no doors set in the arches it appears as if it would
+be quite easy to @Genter@n the @Gtower@n.
+~
+A
+enter go~
+ivory spire tower~
+act_tochar( #entering, ch );
+act_notchar( #rentering, ch );
+transfer( ch, find_room( 11500 ) );
+act_notchar( #arr, ch );
+~
+E
+entering~
+You enter the Ivory Spire.
+~
+E
+rentering~
+$n enters the Ivory Spire.
+~
+E
+arr~
+$n has entered the Ivory Spire.
+~
+!
+0 0 0
+5519 9 1509949540 3 0
+5367 9 1509949540 3 0
+-1
+S
+
+#11511
+North Castle Road~
+This north-south cobbled road formed of water-rounded stones is nestled
+amidst a small grove of trees.  The trees appear to be carefully tended,
+forming blinds to the east and west behind which you occasionally can
+make out sides of other buildings.  While there are no buildings with
+entrances accessable to this point in the road, it looks like there are
+intersections both north and south of here that may lead to buildings you
+can reach.
+~
+~
+33030144 1 9 0
+D0
+~
+~
+0 -1 11512 10 10 5
+D2
+~
+~
+0 -1 11510 10 10 5
+-1
+S
+
+#11512
+Intersection of Castle Road and Timber Road~
+Two roads of water-rounded stones intersect here where a spring feeds a
+small fountain.  To the north, a wide archway rests in the smooth white
+stone of what appears to be a keep wall.  Two heavy-set, mithril bound
+oak doors stand ready to be closed in times of trouble, but stand open
+now.  The roads themselves lead off to other parts of town to the east,
+south and west.
+~
+have doors open at day and closed at night?
+relies on time function in acode working again
+~
+33030144 1 9 0
+D0
+Keep Doors~
+4 doors gate keep~
+83 -1 11513 10 10 5
+D1
+~
+~
+0 -1 11535 10 10 5
+D2
+~
+~
+0 -1 11511 10 10 5
+D3
+~
+~
+0 -1 11530 10 10 5
+A
+2 close shut 2 open~
+1 north 4 doors gate castle~
+act_tochar( #no, ch );
+~
+E
+no~
+Those doors would be far too heavy for you to move.
+~
+!
+0 0 0
+A
+~
+~
+open( find_room( 11512 ), north );
+send_to_room( #gates_open, find_room( 11512 ) );
+send_to_room( #gates_open2, find_room( 11513 ) );
+~
+E
+gates_open~
+With a whisper, the huge castle gates to the north open.
+~
+E
+gates_open2~
+With a whisper, the huge castle gates to the south open.
+~
+!
+6 360 0
+A
+~
+~
+close( find_room( 11512 ), north );
+send_to_room( #close, find_room( 11512 ) );
+send_to_room( #close2, find_room( 11513 ) );
+~
+E
+close~
+Which a whisper, the huge castle gates to the north swing shut.
+~
+E
+close2~
+With a whisper, the huge castle gates to the south swing shut.
+~
+!
+6 1140 0
+-1
+S
+
+#11513
+Castle Foregate~
+Smooth walls of seemless white stone form the perimeter of this green,
+growing place that serves as the foregate to a grand castle of flowing
+buttresses and shining spires.  A barely worn path splits the carefully
+tended greenery on either side of you into two even swathes dotted with
+color that offsets the austere castle walls.  Two heavy-set, mithril
+bound oak doors mark the southern exit from the castle.  To the north a
+smaller, but equally grand set of double-doors allow entrance into the
+heart of the castle.
+~
+no.mob, inner and outer gaurds won't be mingling
+maybe 2 castle guards here?
+~
+66584585 1 7 0
+D0
+~
+~
+0 -1 11514 10 10 5
+D2
+Castle Doors~
+4 doors gate castle 1 south~
+83 -1 11512 10 10 5
+A
+~
+~
+send_to_room( #open, find_room( 11513 ) );
+send_to_room( #open, find_room( 11514 ) );
+send_to_room( #open, find_room( 11516 ) );
+send_to_room( #open, find_room( 11517 ) );
+send_to_room( #open, find_room( 11518 ) );
+send_to_room( #open, find_room( 11519 ) );
+send_to_room( #open, find_room( 11520 ) );
+send_to_room( #open, find_room( 11521 ) );
+send_to_room( #open, find_room( 11522 ) );
+send_to_room( #open, find_room( 11523 ) );
+send_to_room( #open, find_room( 11524 ) );
+send_to_room( #open, find_room( 11526 ) );
+send_to_room( #open, find_room( 11526 ) );
+send_to_room( #open, find_room( 11529 ) );
+send_to_room( #open, find_room( 11597 ) );
+~
+E
+open~
+@mA gentle tone sounds announcing an hour until the castle gates open.
+~
+!
+6 300 0
+A
+~
+~
+send_to_room( #close, find_room( 11513 ) );
+send_to_room( #close, find_room( 11514 ) );
+send_to_room( #close, find_room( 11516 ) );
+send_to_room( #close, find_room( 11517 ) );
+send_to_room( #close, find_room( 11518 ) );
+send_to_room( #close, find_room( 11519 ) );
+send_to_room( #close, find_room( 11520 ) );
+send_to_room( #close, find_room( 11521 ) );
+send_to_room( #close, find_room( 11522 ) );
+send_to_room( #close, find_room( 11523 ) );
+send_to_room( #close, find_room( 11524 ) );
+send_to_room( #close, find_room( 11525 ) );
+send_to_room( #close, find_room( 11526 ) );
+send_to_room( #close, find_room( 11529 ) );
+send_to_room( #close, find_room( 11597 ) );
+~
+E
+close~
+@mA soft chime sounds announcing an hour until the castle gates close.
+~
+!
+6 1080 0
+A
+2 close shut 2 open~
+1 south 4 doors gate castle~
+act_tochar( #no, ch );
+~
+E
+no~
+Those doors would be far too heavy for you to move.
+~
+!
+0 0 0
+-1
+S
+
+#11514
+Grand Hall~
+The flowing, white walls are broken by periodally spaced carved rosewood
+beams placed for purely aesthetic purposes.  Between the beams, large,
+colorful tapestries depict scenes of the city life and the forest.  A
+plush, green carpet forms a path leading to a raised dais at the back of
+the hall.  Two high-backed, ornate thrones are centered on the dais with
+a smaller, yet no less ornate, throne on either side.  Two large arches,
+one in the center of the east wall and one in the west, are framed in
+seamless, dark wood.
+~
+King Rutharkand, Queen Glynessa
+Princess Ariandurill, Prince Brynear
+(prince is leader of the elven war host?)
+Captain of the Castle Guard?
+north door to garden should be hidden, concealed, but easily found when
+searching.
+remember to have sentinal royal guards who attack anyone sitting on the
+thrones other than the royal family.
+~
+66584581 0 9 0
+D0
+Small, garden door~
+garden door 1 north~
+2187 -1 11515 10 10 4
+D1
+~
+~
+0 -1 11517 10 10 5
+D2
+~
+~
+0 -1 11513 10 10 5
+D3
+~
+~
+0 -1 11516 10 10 5
+E
+3 tapestry tapestries~
+The tapestries display scense of everyday life in the elven city of
+Altienin and scenes of verdant woodland greenery.  The tapestries do not
+appear to be magical in nature, but they are quite well crafted and the
+images seem almost ready to move, as if you were looking out a window
+rather than at a piece of woven cloth.  The city scenes are a wash of
+bright elven colors set on the backdrop of woodland greens and smooth,
+white elven houses.  The forest scenes are subtle variations of greens,
+browns, golds, and yellows touched with small patches of wold-flower
+colors.  Taken in all together they have been carefully arranged so that
+you could almost believe you stand in the midst of a wall-less buiding
+rather than the great hall of a large castle.
+~
+E
+3 beams~
+The rosewood beams, as seamless as any other bit of elven-constructed
+wood furniture, seems somehow more grand for its carefully smooth surface. 
+No sign of its carefully tended growth remains and it would be easy to
+think it had been planed with tools.  Given that this is the palace of
+the queen and king of all the elves it would be extremely unlikely metal
+would ever be permitted to touch any wood here.
+~
+7900 17 1509949540 -2 0
+7900 17 1509949540 -2 0
+7901 17 1509949540 -2 0
+7901 17 1509949540 -2 0
+-1
+S
+
+#11515
+Castle Garden~
+Under Construction.
+~
+~
+66584577 2 9 0
+D1
+~
+~
+0 -1 11520 10 10 5
+D2
+~
+~
+2187 -1 11514 10 10 5
+D3
+~
+~
+0 -1 11518 10 10 5
+-1
+S
+
+#11516
+Castle Hall~
+Under Construction.
+~
+~
+66584581 0 7 0
+D0
+~
+~
+0 -1 11518 10 10 5
+D1
+~
+~
+0 -1 11514 10 10 5
+D2
+~
+~
+0 -1 11519 10 10 5
+D4
+~
+~
+0 -1 11522 10 10 5
+-1
+S
+
+#11517
+Castle Dining Hall~
+A natural spring from deep in the earth has been channeled upwards until
+it falls like a waterfall from high on the eastern wall.  The burbling
+springwater makes its way down a series of artfully placed troughs and
+rivulets that wind their way along the walls of the entire room,
+Shade-loving plants have been set in little nooks along the wall giving
+the room nearly the feel of a natural forest glade.
+~
+buttler or something here to keep people from stealing chairs?
+~
+66584581 0 7 0
+D0
+~
+~
+0 -1 11520 10 10 5
+D2
+~
+~
+0 -1 11521 10 10 5
+D3
+~
+~
+0 -1 11514 10 10 5
+A
+~
+~
+room = find_room( 11517 );
+wait( 1 );
+if( char_in_room( ch, room ) )
+  act_tochar( #burble, ch );
+~
+E
+burble~
+@BThe burbling sound of a spring and several tiny waterfalls fills the room.@n
+~
+!
+1 500 63
+7904 49 1509949540 -2 0
+7905 17 1509949540 -2 0
+7905 17 1509949540 -2 0
+7905 17 1509949540 -2 0
+7905 17 1509949540 -2 0
+7905 17 1509949540 -2 0
+7905 17 1509949540 -2 0
+7905 17 1509949540 -2 0
+7905 17 1509949540 -2 0
+7905 17 1509949540 -2 0
+7905 17 1509949540 -2 0
+7905 17 1509949540 -2 0
+7905 17 1509949540 -2 0
+-1
+S
+
+#11518
+Castle Room~
+Under Construction.
+~
+~
+66584581 0 7 0
+D1
+~
+~
+0 -1 11515 10 10 5
+D2
+~
+~
+0 -1 11516 10 10 5
+-1
+S
+
+#11519
+Castle Guards' Day Room~
+Under Construction.
+Active Guard Room
+~
+~
+66584581 0 6 0
+D0
+~
+~
+0 -1 11516 10 10 5
+D4
+~
+~
+0 -1 11525 10 10 5
+-1
+S
+
+#11520
+Castle Supply Room~
+Under Construction.
+Castle Storage Room
+~
+~
+66584581 0 6 0
+D2
+~
+~
+0 -1 11517 10 10 5
+D3
+~
+~
+0 -1 11515 10 10 5
+-1
+S
+
+#11521
+Castle Kitchen~
+Under Construction.
+Castle Kitchen
+~
+~
+66584581 0 7 0
+D0
+~
+~
+0 -1 11517 10 10 5
+-1
+S
+
+#11522
+Castle Hall~
+Under Construction.
+~
+~
+66584581 0 6 0
+D0
+~
+~
+0 -1 11529 10 10 5
+D1
+~
+~
+0 -1 11524 10 10 5
+D5
+~
+~
+0 -1 11516 10 10 5
+-1
+S
+
+#11523
+Royal Antechamber~
+Under Construction.
+Royal Ante-chamber with guardsmen
+~
+~
+66584581 0 6 0
+D0
+~
+~
+0 -1 11528 10 10 5
+D1
+~
+~
+0 -1 11598 10 10 5
+D2
+~
+~
+0 -1 11527 10 10 5
+D3
+~
+~
+0 -1 11524 10 10 5
+-1
+S
+
+#11524
+Castle Hall~
+Under Construction.
+~
+~
+66584581 0 6 0
+D0
+~
+~
+0 -1 11597 10 10 5
+D1
+~
+~
+0 -1 11523 10 10 5
+D2
+~
+~
+0 -1 11526 10 10 5
+D3
+~
+~
+0 -1 11522 10 10 5
+-1
+S
+
+#11525
+Castle Barracks~
+Under Construction.
+Caste Guard Barracks
+~
+~
+66584581 0 7 0
+D5
+~
+~
+0 -1 11519 10 10 5
+-1
+S
+
+#11526
+Castle Guest Room~
+Under Construction.
+Guest Bedroom
+~
+~
+66584581 0 7 0
+D0
+~
+~
+0 -1 11524 10 10 5
+-1
+S
+
+#11527
+The Princess's Quarters~
+Under Construction.
+Princess Room
+~
+Princess Ariandurill, Heir to the Shuvana Throne of the Eleint
+~
+66584581 0 8 0
+D0
+~
+~
+0 -1 11523 10 10 5
+-1
+S
+
+#11528
+The Prince's Quarters~
+Under Construction.
+prince room
+~
+Prince Brynear, Captain of the Castle Guard
+~
+66584581 0 8 0
+D2
+~
+~
+0 -1 11523 10 10 5
+-1
+S
+
+#11529
+Castle Guest Room~
+Under Construction.
+Guest Room
+~
+~
+66584581 0 7 0
+D2
+~
+~
+0 -1 11522 10 10 5
+-1
+S
+
+#11530
+West Timber Road~
+This east-west cobbled road formed of water-rounded stones is nestled
+amidst a small grove of trees.  The trees appear to be carefully tended,
+forming blinds to the north and south behind which you can occasionally
+make out the backs or sides of other buildings.  While none of the
+buildings have entrances accessable to this point in the road, it looks
+like other buildings further west and further east do.
+~
+~
+33030144 1 9 0
+D1
+~
+~
+0 -1 11512 10 10 5
+D3
+~
+~
+0 -1 11531 10 10 5
+-1
+S
+
+#11531
+West Timber Road Cul-de-sac~
+You are at the extreme west end of a cobbled road that extends away to
+the east.  Several small, rounded white buildings stand up against the
+street's edge, but only three have entrances available from this point. 
+The building to the north is most notable of the three if only because it
+has a door set in its entry-arch whereas the ones to the west and south
+do not.
+~
+~
+33030144 1 9 0
+D0
+door~
+1 north~
+391 -1 11533 10 10 4
+D1
+~
+~
+0 -1 11530 10 10 5
+D2
+~
+~
+0 -1 11534 10 10 4
+D3
+~
+~
+0 -1 11532 10 10 5
+A
+~
+~
+i = random( 1, 2 );
+if( i == 1 )
+  act_room( #happy, ch );
+if( i == 2 )
+  act_room( #yummy, ch );
+~
+E
+yummy~
+The scent of freshly baked bread wafts from the building to the west.
+~
+E
+happy~
+The sound of merry laughter issues from the west.
+~
+!
+4 150 0
+A
+push~
+button~
+act_room( "this is a test", ch );
+~
+!
+0 0 0
+5516 9 1509949540 3 0
+-1
+S
+
+#11532
+The White Hart Tavern~
+The large, main room is filled with eight broad tables, each with a bench
+lining its long sides.  A curving counter forms a ledge along the far
+wall upon which rests all the ales and brews the barkeep has for sale. 
+Back in one corner a set of stairs is carved into the wall rising quickly
+into a hole cut in the ceiling to a room above.
+~
+I will add a chance that some of the townsfolk pop here as patrons later.
+Also plan on adding some tales for flavor once the city is placed in its
+setting and nearby locations can be included.
+Also will have a story about his scar one ity is placed.
+~
+66584581 0 5 0
+D1
+~
+~
+0 -1 11531 10 10 5
+D4
+~
+~
+0 -1 11586 10 10 5
+7335 17 1509949540 -2 0
+7341 17 1509949540 -2 0
+5226 9 1509949540 3 0
+7820 17 1509949540 -1 2
+7820 17 1509949540 -1 28
+7821 17 1509949540 -1 3
+7821 17 1509949540 -1 15
+7821 17 1509949540 -1 1
+7835 17 1509949540 -1 0
+7834 17 1509949540 -1 0
+7838 17 1509949540 -1 0
+7003 17 1509949540 -1 0
+7003 17 1509949515 -1 0
+1228 17 1509949540 -1 0
+1584 17 1509949540 -1 0
+-1
+S
+
+#11533
+Elven House~
+This single-room structure appears to be the dwelling of a small family. 
+A single table rests against one wall with chairs nearby.  Towards the
+far wall from the door, three pallets are made up for sleeping.  Two are
+larger and one smaller, perhaps indicating the presence of a child.  A
+single chest rests near one of the two larger raised pallets, quite
+probably a place to store things at night.
+~
+Need to make an npc (or link to one) that roams the town who carries the
+key for this dwelling 
+make dwelling keys no.save so pcs can't get infinite repops from one kill.
+~
+66584589 0 4 0
+D2
+door~
+1 south door~
+391 -1 11531 10 10 4
+-1
+S
+
+#11534
+Alchemists Shop~
+Smooth, white walls form the permiter of this simple building that serves
+as both workshop and dwelling for the alchemist.  A sturdy wooden table
+is covered in a perplexing array of beakers, jars, vials and bowls.  A
+small hearth is set into one wall and a low fire burns keeping several
+small cauldrons simmering.  A small pallet in the back looks as if it may
+serve as a resting place for the alchemist on long nights when her
+concoctions require continueous attention.
+~
+~
+66584581 0 4 0
+D0
+~
+~
+0 -1 11531 10 10 4
+A
+~
+~
+if( players_room( room ) ) {
+  i = random( 1, 3 );
+  if( i == 1 )
+    act_room( #bubble, ch );
+  if( i == 2 )
+    act_room( #toil, ch );
+  if( i == 3 )
+    act_room( #trouble, ch );
+  }
+~
+E
+bubble~
+Cuerina rushes over to stir a clay pot that beens to bubble over with a
+green, sweet-smelling ichor.
+~
+E
+toil~
+Cuerina takes a glass jar out from under an apparatus that slowly drips
+blue liquid and replaces it with a new, empty jar.
+~
+E
+trouble~
+Something small and furry hops out of a cauldron to land on the floor
+with a wet, thud.  Cuerina hastily scoops it back up to toss it back in
+the cauldron, leaving a frightful grey smear on the floor.
+~
+!
+2 500 0
+5337 9 1509949540 3 0
+78 17 1509949540 -1 0
+210 17 1509949540 -1 0
+37 17 1509949540 -1 0
+189 17 1509949540 -1 0
+415 17 1509949540 -1 0
+474 17 1509949540 -1 0
+1974 17 1509949540 -1 0
+754 17 1509949442 -1 0
+1064 17 1509949460 -1 0
+1531 17 1509949490 -1 0
+-1
+S
+
+#11535
+East Timber Road~
+This east-west cobbled road formed of water-rounded stones is nestled
+amidst a small grove of trees.  The trees appear to be carefully tended,
+forming blinds to the north and south behind which you can occasionally
+make out the backs or sides of other buildings.  While none of the
+buildings have entrances accessable to this point in the road, it looks
+like other buildings further west and further east do.
+~
+~
+33030144 1 9 0
+D1
+~
+~
+0 -1 11536 10 10 5
+D3
+~
+~
+0 -1 11512 10 10 5
+-1
+S
+
+#11536
+East Timber Road Cul-de-sac~
+You are at the extreme east end of a cobbled road that extends away to
+the west.  Several small, rounded white buildings stand up against the
+street's edge, but only three have entrances available from this point. 
+The building to the east is most notable of the three if only because it
+has a door set in its entry-arch whereas the ones to the north and south
+do not.
+~
+~
+33030144 1 9 0
+D0
+~
+~
+0 -1 11537 10 10 4
+D1
+door~
+1 east door~
+391 -1 11538 10 10 4
+D2
+~
+~
+0 -1 11539 10 10 5
+D3
+~
+~
+0 -1 11535 10 10 5
+5361 9 1509949540 3 0
+-1
+S
+
+#11537
+Benalesk's Baked Goods~
+A central hearth dominates this building making it hot year round.  Small
+ledges around the hearth provide a place for this building's resident
+cook to store pots, pans, kettles and containers.  a few other narrow
+ledges and tables against various walls provide places to set down
+cooling food or to keep uncooked food from the heat.
+~
+~
+66584581 0 4 0
+D2
+~
+~
+0 -1 11536 10 10 4
+A
+~
+~
+room = find_room( 11537 );
+if( mob_in_room( 5338, room ) ) 
+  act_tochar( #yum, ch );
+else
+  act_tochar( #yuck, ch );
+~
+E
+yum~
+@YYou are assailed by the pleasant scent of drying lembas and cooking
+bread as you enter.  @n 
+~
+E
+yuck~
+@RYou are assailed by the stench of burning bread as you enter.  Where
+has the cook gone to?@n 
+~
+!
+1 0 63
+2619 17 1509949540 -2 0
+5338 9 1509949540 3 0
+7003 17 1509949540 -1 0
+743 17 1509949540 -1 0
+236 17 1509949540 -1 0
+7422 17 1509949540 -1 16
+30 17 1509949465 -1 0
+1585 17 1509949540 -1 0
+-1
+S
+
+#11538
+Elven House~
+The ornate workmanship displayed in this dwelling would seem to indicate
+that its owner is a being of means.  A wardrobe stands against one wall,
+its surface covered in fluid curves that form the leaves and branches of
+trees.  Slightly away from the wall opposite the wardrobe a single chair
+stands before a well-organized desk.  Most opulent of all, a bed rests
+within a wooden framework, surrounded by gauzy silk curtains dyed to a
+deep cerulean color.
+~
+necklace 650 currently reseting inside wardrobe is the key.  First,
+however, I need a way to make the wardrobe code check for the key and
+unlock/open itself.  When fixed necklace/key will be moved to owner.
+~
+66584589 0 4 0
+D0
+~
+~
+399 -1 11599 10 10 5
+D3
+Door~
+1 west door~
+391 -1 11536 10 10 4
+7343 49 1509949540 -2 0
+7345 81 1509949540 -2 0
+7346 17 1509949540 -2 0
+2977 17 1509949540 -2 0
+-1
+S
+
+#11539
+Sylvan Savings~
+The austere white walls typical of Altienin buildings are covered here in
+a flowing silver script or arcane runes.  Even the glowing balls of
+magical light are absent from this place, replaced instead by more
+mundane braziers that emit a soft light and subtle scent.  Its almost as
+if something, the runes in the walls perhaps, focus any magic cast here
+towards some other ends.  A note, written in elvish script, rests on the
+only small table here.
+~
+no.magic to keep spam down.
+I'll add response bits to Fenmore when I figure out what people might
+atually ask in a bank.
+~
+66586661 1 4 0
+D0
+~
+~
+0 -1 11536 10 10 5
+A
+1 look read see~
+note~
+if( find_skill( ch, elvish ) < 5 ) { 
+  act_tochar( #cantread, ch );
+  end;
+  }
+if( find_skill( ch, elvish ) < 8 )
+  act_tochar( #readsome, ch );
+else
+  act_tochar( #readall, ch );
+~
+E
+cantread~
+Try as you might, you just don't understand elvish well enough to make
+out the note.
+~
+E
+readsome~
+It seems to be explaining that this is a bank of some sort.  Perhaps you
+can safely store things here?
+~
+E
+readall~
+@CWelcome to the Sylvan Savings.
+You are welcome to store your goods here as needed.
+If you should need assistance, ask and I will aid.
+
+                              - Fenmore @n 
+~
+!
+0 0 0
+5345 9 1509949540 3 0
+-1
+S
+
+#11540
+West Plaza Road~
+A cobbled road of water-rounded stones forms a natural looking walkway
+leading east and west.  To the north, a small, rounded building of
+seamless white stone rests with no door on it to bar entry.  A few small
+trees line either side of the house, their green foliage and its
+green-hued roof blending together in a way that would make it hard to
+spot from above.
+~
+~
+33030144 1 9 0
+D0
+~
+~
+0 -1 11552 10 10 4
+D1
+~
+~
+0 -1 11510 10 10 5
+D3
+~
+~
+0 -1 11541 10 10 5
+A
+1 south~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+You can't go that way, the backside of another building is in the way.
+~
+!
+0 0 0
+-1
+S
+
+#11541
+West Plaza Road~
+This east-west cobbled road formed of water-rounded stones is nestled
+amidst a small grove of trees.  The trees appear to be carefully tended,
+forming blinds to the north and south behind which you occasionally can
+make out the backs or sides of other buildings.  While none of the
+buildings have entrances accessable to this point in the road, it looks
+like other buildings further west and further east do.
+~
+~
+33030144 1 9 0
+D1
+~
+~
+0 -1 11540 10 10 5
+D3
+~
+~
+0 -1 11542 10 10 5
+-1
+S
+
+#11542
+West Plaza Road Cul-de-sac~
+You appear to be at the extreme west end of this cobbed road.  To the
+west, an ornate buiding rises up amidst the branches of the carefully
+tended trees in the area.  To the north and south, rounded white walls of
+seamless stone appear to be houses or small businesses.
+~
+~
+33030144 1 9 0
+D0
+~
+~
+0 -1 11550 10 10 4
+D1
+~
+~
+0 -1 11541 10 10 5
+D2
+door~
+1 south door~
+391 -1 11551 10 10 4
+D3
+~
+~
+0 -1 11543 10 10 5
+5360 9 1509949540 3 0
+-1
+S
+
+#11543
+Temple to Tairae~
+The first thing to grab your attention as you enter will always be the
+magnificent stone altar of Tairae that dominates the back wall of this
+large room.  The image of Tairae, imposed over a crescent moon, coolly
+watches over those who enter his domain.  A gentle, silver glow that
+seems to come from everywhere and nowhere, keeps the temple list and
+shadowless at all times.  The white walls of the building are covered in
+places with magic sript as if the entire room were one, giant written out
+spell for someone with the knowledge to comprehend it all.
+~
+Temple altar is here (altar.good)
+Whole temple is sacred and marked Safe
+
+This is the SHOW temple for visitors and lay folk.
+the REAL temple is further up.
+
+Acodes 3 and 4 for walls and brown require that the cleric response only
+work for members of the religion.
+
+Script/spell on the wall will be part of a big quest for the temple.
+no,mob while I'm working. Make sure NOT no.mob when open.
+~
+66584719 0 6 0
+D0
+~
+~
+0 -1 11544 10 10 5
+D1
+~
+~
+0 -1 11542 10 10 5
+D2
+~
+~
+0 -1 11545 10 10 5
+D4
+~
+~
+0 -1 11546 10 10 5
+E
+altar tairae statue marble back~
+Tairae, depicted in his usual form as a tall, elven man, appears dressed
+in a loose-fitting, flowing silk tunic, smooth breeches, and high, boots,
+stands before a large, silver crescent moon, rimmed with ie and trailing
+a shower of silvery sparks.  A smooth, clear circlet of what appears to
+be actual ice rests upon the silver-veined marble statue's brow, holding
+his straight, shoulder-length hair out of his face.  Just below the icy
+circlet is inscribed a script of runes that give off a faint silvery,
+magical glow.  Tairae's face shows the classic elven aloofness as he
+coolly stares out of his charges, watching over them.
+~
+E
+script runes~
+Which runes?  The runes on the @Wwalls@n or the ones on the statue's @Wbrow@n?
+~
+A
+~
+~
+if( is_hidden( ch ) ) {
+  interpret( ch, "hide" );
+  act_tochar( #cant_hide, ch );
+  act_notchar( #rcant_hide, ch );
+  }
+~
+E
+cant_hide~
+A silver light pervades the entire room casting no shadows for you to
+hide in.
+~
+E
+rcant_hide~
+$n attempts to slip into the temple unseen but is unable to find any
+shadows to hide in here.
+~
+!
+1 0 63
+A
+2 hide~
+~
+act_tochar( #no, ch );
+act_notchar( #rno, ch );
+~
+E
+no~
+You look for someplace to hide but no shadows are cast before the altar
+of Tairae.
+~
+E
+rno~
+$n looks about for a place to hide but no shadows are cast before the
+altar of Tairae.
+~
+!
+0 0 0
+A
+1 look~
+4 walls~
+if( class( ch ) == mage ) {
+  act_tochar( #magic, ch );
+  end;
+  }
+if( class( ch ) == cleric ) {
+  act_tochar( #magic, ch );
+  end;
+  }
+act_tochar( #clueless, ch );
+~
+E
+magic~
+The flowing script on the walls has the look of the fragments of the
+oldest of old-world spells.  Its fluid arcs and graceful symmetry seems
+somehow beyond the level of most spells remaining to the world.  It is a
+thing of ancient beauty and deep mystery that has caused many a mage and
+true follower of Tairae to tremble in awe-filled humility.
+~
+E
+clueless~
+Sort of looks like a really big, magic spell.  While you have no clue
+what it may do it is, at the very least, rather impressive looking.
+~
+!
+0 0 0
+A
+1 look~
+brow~
+if( class( ch ) == mage ) {
+  act_tochar( #mage, ch );
+  end;
+  }
+if( class( ch ) == cleric ) {
+act_tochar( #cleric, ch );
+  end;
+  }
+act_tochar( #clueless, ch );
+~
+E
+mage~
+The script seems to form a single, word in the magical tongue, however,
+it isn't one you've seen used anywhere else.  Perhaps it is some sort of
+spell linked to the statue?  The word it spells out is '@MChimrus@n'.
+~
+E
+cleric~
+You recognize the word as one from the teachins of your faith.  It is a
+magical word that a follower of Tairae, or anyone skilled in the more
+esoteric arts of magic, can use to call forth Tairae's judgement within
+certain temples of his.
+~
+E
+clueless~
+Looks like it may be magical in nature but you can't be certain.  Its a
+pretty good educated guess though since this is the temple to the god of
+magic and the word is written on the brow of a statue of the god of magic.
+~
+!
+0 0 0
+-1
+S
+
+#11544
+Temple Room~
+A silvery light permeates the room casting its shadowless glow over
+~
+need temple priest here, resets with onum 624 
+probably have the cleric quest for symbol here.
+~
+66584583 0 9 0
+D2
+~
+~
+0 -1 11543 10 10 5
+A
+~
+~
+if( is_hidden( ch ) ) {
+  interpret( ch, "hide" );
+  act_tochar( #cant_hide, ch );
+  act_notchar( #rcant_hide, ch );
+  }
+~
+E
+cant_hide~
+A silver light pervades the entire room casting no shadows for you to
+hide in.
+~
+E
+rcant_hide~
+$n attempts to slip into the temple unseen but is unable to find any
+shadows to hide in here.
+~
+!
+1 0 63
+A
+2 hide~
+~
+act_tochar( #no, ch );
+act_notchar( #rno, ch );
+~
+E
+no~
+You look for someplace to hide but no shadows are cast before the altar
+of Tairae.
+~
+E
+rno~
+$n looks about for a place to hide but no shadows are cast before the
+altar of Tairae.
+~
+!
+0 0 0
+-1
+S
+
+#11545
+Temple Room~
+Under Construction.
+~
+need priest here
+~
+66584583 0 9 0
+D0
+~
+~
+0 -1 11543 10 10 5
+A
+~
+~
+if( is_hidden( ch ) ) {
+  interpret( ch, "hide" );
+  act_tochar( #cant_hide, ch );
+  act_notchar( #rcant_hide, ch );
+  }
+~
+E
+cant_hide~
+A silver light pervades the entire room casting no shadows for you to
+hide in.
+~
+E
+rcant_hide~
+$n attempts to slip into the temple unseen but is unable to find any
+shadows to hide in here.
+~
+!
+1 0 63
+A
+2 hide~
+~
+act_tochar( #no, ch );
+act_notchar( #rno, ch );
+~
+E
+no~
+You look for someplace to hide but no shadows are cast before the altar
+of Tairae.
+~
+E
+rno~
+$n looks about for a place to hide but no shadows are cast before the
+altar of Tairae.
+~
+!
+0 0 0
+-1
+S
+
+#11546
+Temple~
+Under Construction.
+~
+only those who worship a'thalina or have completed a temple code may
+enter this point or beyond 
+~
+66584647 0 9 0
+D0
+~
+~
+0 -1 11547 10 10 5
+D2
+~
+~
+0 -1 11548 10 10 5
+D4
+~
+~
+0 -1 11549 10 10 5
+D5
+~
+~
+0 -1 11543 10 10 5
+A
+~
+~
+if( is_hidden( ch ) ) {
+  interpret( ch, "hide" );
+  act_tochar( #cant_hide, ch );
+  act_notchar( #rcant_hide, ch );
+}
+~
+E
+cant_hide~
+A silver light pervades the entire room casting no shadows for you to
+hide in.
+~
+E
+rcant_hide~
+$n attempts to slip into the temple unseen but is unable to find any
+shadows to hide in here.
+~
+!
+1 0 63
+A
+2 hide~
+~
+act_tochar( #no, ch );
+act_notchar( #rno, ch );
+~
+E
+no~
+You look for someplace to hide but no shadows are cast before the altar
+of Tairae.
+~
+E
+rno~
+$n looks about for a place to hide but no shadows are cast before the
+altar of Tairae.
+~
+!
+0 0 0
+-1
+S
+
+#11547
+Temple~
+Under Construction.
+~
+~
+66584647 0 9 0
+D2
+~
+~
+0 -1 11546 10 10 5
+A
+~
+~
+if( is_hidden( ch ) ) {
+  interpret( ch, "hide" );
+  act_tochar( #cant_hide, ch );
+  act_notchar( #rcant_hide, ch );
+}
+~
+E
+cant_hide~
+A silver light pervades the entire room casting no shadows for you to
+hide in.
+~
+E
+rcant_hide~
+$n attempts to slip into the temple unseen but is unable to find any
+shadows to hide in here.
+~
+!
+1 0 63
+A
+2 hide~
+~
+act_tochar( #no, ch );
+act_notchar( #rno, ch );
+~
+E
+no~
+You look for someplace to hide but no shadows are cast before the altar
+of Tairae.
+~
+E
+rno~
+$n looks about for a place to hide but no shadows are cast before the
+altar of Tairae.
+~
+!
+0 0 0
+-1
+S
+
+#11548
+Temple~
+Under Construction.
+~
+~
+66584647 0 9 0
+D0
+~
+~
+0 -1 11546 10 10 5
+A
+~
+~
+if( is_hidden( ch ) ) {
+  interpret( ch, "hide" );
+  act_tochar( #cant_hide, ch );
+  act_notchar( #rcant_hide, ch );
+}
+~
+E
+cant_hide~
+A silver light pervades the entire room casting no shadows for you to
+hide in.
+~
+E
+rcant_hide~
+$n attempts to slip into the temple unseen but is unable to find any
+shadows to hide in here.
+~
+!
+1 0 63
+A
+2 hide~
+~
+act_tochar( #no, ch );
+act_notchar( #rno, ch );
+~
+E
+no~
+You look for someplace to hide but no shadows are cast before the altar
+of Tairae.
+~
+E
+rno~
+$n looks about for a place to hide but no shadows are cast before the
+altar of Tairae.
+~
+!
+0 0 0
+-1
+S
+
+#11549
+The True Temple of Tairae~
+Under Construction
+~
+simple altar, open roof to see the seasons and the moon.  Clear view of the forest beyond.
+only those clerics/paladins dedicated to A'thalina may enter this room.
+
+protected from outside viewers (no.autoscan) by magic.  Feasible this
+being the temple fo the god of maic.
+
+The spiral glyph! Mwuhahaha!!
+~
+66584647 0 9 0
+D5
+~
+~
+0 -1 11546 10 10 5
+A
+~
+~
+if( is_hidden( ch ) ) {
+  interpret( ch, "hide" );
+  act_tochar( #cant_hide, ch );
+  act_notchar( #rcant_hide, ch );
+}
+~
+E
+cant_hide~
+A silver light pervades the entire room casting no shadows for you to
+hide in.
+~
+E
+rcant_hide~
+$n attempts to slip into the temple unseen but is unable to find any
+shadows to hide in here.
+~
+!
+1 0 63
+A
+2 hide~
+~
+act_tochar( #no, ch );
+act_notchar( #rno, ch );
+~
+E
+no~
+You look for someplace to hide but no shadows are cast before the altar
+of Tairae.
+~
+E
+rno~
+$n looks about for a place to hide but no shadows are cast before the
+altar of Tairae.
+~
+!
+0 0 0
+-1
+S
+
+#11550
+Graehatt's Apparel~
+The austere white walls of this place have been brightened with drapes of
+multi-hued cloths in various stages of transformation into fine clothing. 
+In stark contrast to the vibrant cloths, three wardrobes shaded brown so
+dark as to be almost black provide a dust-free environment for the final
+products.  Completing the tableau, a plush carpeting covers the floor in
+a striking safron hue.
+~
+Graehatt will stop anyone from opening the wardrobes while he is alive.
+Once dead, you can "open" them in acode, but will receive a message that
+someone has appearantly already robbed Graehatt.
+~
+66584581 0 9 0
+D2
+~
+~
+0 -1 11542 10 10 4
+E
+3 wardrobes~
+The three wardrobes are all alike.  Each is fabricated from several
+carefully selected planks of wood shaded a brown so dark it would be easy
+to mistake them for black.  Each is easily large enough to hold several
+tunics, blouses, dresses or carefully hung pants or any number of
+accessory items.
+~
+A
+1 open~
+3 wardrobes~
+if( mob_in_room( 5342, room ) )
+  act_tochar( #no, ch );
+else
+  act_tochar( #empty, ch );
+~
+E
+no~
+Graehatt moves to smoothly intervene before you can tamper with his
+wardrobes.
+~
+E
+empty~
+Either the caretaker has already removed all the goods or they have been
+looted by someone else already.
+~
+!
+0 0 0
+5342 9 1509949540 3 0
+7769 17 1509949540 -1 0
+7768 17 1509949540 -1 0
+7770 17 1509949540 -1 0
+7771 17 1509949540 -1 0
+7772 17 1509949540 -1 0
+7782 17 1509949540 -1 0
+7783 17 1509949540 -1 0
+7784 17 1509949540 -1 0
+7785 17 1509949540 -1 0
+7786 17 1509949540 -1 0
+7775 17 1509949540 -1 0
+7776 17 1509949540 -1 0
+7778 17 1509949540 -1 0
+7780 17 1509949540 -1 0
+7781 17 1509949540 -1 0
+7779 17 1509949540 -1 0
+7792 17 1509949540 -1 0
+7793 17 1509949540 -1 0
+7794 17 1509949540 -1 0
+7795 17 1509949540 -1 0
+7796 17 1509949540 -1 0
+2200 17 1509949540 -1 0
+2200 17 1509949540 -1 0
+2200 17 1509949540 -1 0
+-1
+S
+
+#11551
+Elven House~
+The walls of this simple dwelling are as spartan and bare as the dwelling
+itself.  The only item of note within the room is a single, small table
+just large enough for an elf to kneel comfortably before it.  A thick
+layer of dust covers everything, small clouds rising and siring about
+briefly with your movements.
+~
+Abandoned house.  I already have longer-term plans for a quest that
+touches on this domecile.
+~
+66584581 0 4 0
+D0
+door~
+1 north door~
+391 -1 11542 10 10 4
+-1
+S
+
+#11552
+Davien's General Store~
+The first thing to greet visitors as they enter this small shop is a
+small counter used for displaying goods to be purchased or sold.  Beyond
+the counter you can see a chair for the shop keeper to rest in when
+waiting on customers and a small table upon which to set down whatever is
+being worked on in the interim.  Amidst a few storage crates stacked in
+the back of the shop, you can just make out a stairway leading up into a
+room overhead.
+~
+~
+66584581 0 4 0
+D2
+~
+~
+0 -1 11540 10 10 4
+D4
+~
+~
+0 -1 11587 10 10 4
+A
+~
+~
+// mob 5347 needs references changed to 5347
+if( mob_in_room( 5347, room ) ) 
+act_tochar( #no, ch );
+else
+continue;
+~
+E
+no~
+The shop keeper intercedes, politely preventing you from going upstairs.
+~
+!
+3 0 16
+5347 9 1509949540 3 0
+26 17 1509949540 -1 0
+26 17 1509949540 -1 0
+948 17 1509949540 -1 0
+6 17 1509949540 -1 0
+20 17 1509949540 -1 0
+229 17 1509949540 -1 0
+229 17 1509949540 -1 0
+25 17 1509949540 -1 0
+230 17 1509949540 -1 0
+330 17 1509949540 -1 0
+27 17 1509949540 -1 0
+55 17 1509949540 -1 0
+247 17 1509949540 -1 0
+7820 17 1509949540 -1 10
+7820 17 1509949500 -1 10
+-1
+S
+
+#11553
+East Plaza Road~
+A cobbled road of water-rounded stones forms a natural looking walkway
+leading east and west.  To the north, a small, rounded building of
+seamless white stone rests with no door on it to bar entry.  A few small
+trees line either side of the house, their green foliage and its
+green-hued room disapearing amides the branches and leaves in a way that
+makes it hard to spot from above.
+~
+~
+33030144 1 9 0
+D0
+~
+~
+0 -1 11561 10 10 4
+D1
+~
+~
+0 -1 11554 10 10 5
+D3
+~
+~
+0 -1 11510 10 10 5
+A
+1 south~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+You can't go that way, you'd walk into the back of another building.
+~
+!
+0 0 0
+-1
+S
+
+#11554
+East Plaza Road~
+This west-east cobbled road formed of water-rounded stones is nestled
+amidst a small grove of trees.  The trees appear to be carefully tended,
+forming blinds to the north and south behind which you occasionally can
+make out the backs or sides of other buildings.  While none of the
+buildings have entrances accessable to this point in the road, it looks
+like other buildings further east and further west do.
+~
+~
+33030144 1 9 0
+D1
+~
+~
+0 -1 11555 10 10 5
+D3
+~
+~
+0 -1 11553 10 10 5
+-1
+S
+
+#11555
+East Plaza Road Cul-de-sac~
+You are at the extreme east end of this cobbled road.  To the east a
+broad, low building appears to be the amalgamation of three seperate
+buildings that have been joined into one larger building.  A depression
+in the shape of an anvil rests above the doorless archway that is its
+entrance.  To the north and south, rounded white walls of seamess stone
+appear to be the houses or small businesses.
+~
+~
+33030144 1 9 0
+D0
+~
+~
+0 -1 11559 10 10 4
+D1
+~
+~
+0 -1 11556 10 10 4
+D2
+door~
+1 south door~
+391 -1 11560 10 10 4
+D3
+~
+~
+0 -1 11554 10 10 5
+5515 9 1509949540 3 0
+-1
+S
+
+#11556
+The Smithy~
+The typically pristine white walls of Altienin are a sort of off-white
+here, where the smoke of a working forge has to be frequently cleaned
+away.  The forge itself is set into a nook in the back wall with an anvil
+to one side and three troughs of water to the other.  A counter near the
+entrance displays detailed drawings of the merchandise the local smith
+can craft.
+~
+need to add extra for drawing of what is sold once the shop keeper and merchandise are entered.
+
+not sure if/where krynite chunks/ore resets
+quest for vial of unicorn's tears to be added later.
+~
+66584581 0 5 0
+D0
+~
+~
+0 -1 11557 10 10 4
+D2
+~
+~
+0 -1 11558 10 10 4
+D3
+~
+~
+0 -1 11555 10 10 4
+A
+~
+~
+if( random( 1, 2 ) == 2 ) {
+  if( players_room( find_room( 11557 ) ) == 0 ) {
+    i = random( 1, 3 );
+    if( i == 1 )
+      act_room( #north, ch );
+    if( i == 2 )
+      act_room( #north2, ch );
+    if( i == 3 )
+      act_room( #north3, ch );
+  }
+}
+else {
+  if( players_room( find_room( 11558 ) ) == 0 ) {
+    i = random( 1, 3 );
+    if( i == 1 )
+      act_room( #south, ch );
+    if( i == 2 )
+      act_room( #south2, ch );
+    if( i == 3 )
+      act_room( #south3, ch );
+  }
+}
+~
+E
+north~
+@bThe jaring clang of a hammer forging metal rings from the north.@n
+~
+E
+south~
+@bThe jaring clang of a hammer forging metal rings from the south.@n
+~
+E
+north2~
+@bThe rhythmic whoosh of a forge bellows stoking a fire comes from the
+north.@n 
+~
+E
+north3~
+@bThe sudden hiss of hot metal being quenched erupts from the north.@n
+~
+E
+south2~
+@bThe rhythmic whoosh of a forge bellows stoking a fire comes from the
+south.@n 
+~
+E
+south3~
+@bThe sudden hiss of hot metal being quenched erupts from the south.@n
+~
+!
+2 0 0
+A
+1 look~
+5 troughs~
+act_tochar( #looking, ch );
+~
+E
+looking~
+There are three wooden troughs near the forge you can look at.  One seems
+to hold @cfreshwater@n, another @Ysalt water@n, and the final one an
+@yoily water@n mixture.
+~
+!
+0 0 0
+7382 17 1509949540 -2 0
+7383 17 1509949540 -2 0
+7387 17 1509949540 -2 14
+7388 17 1509949540 -2 20
+5349 9 1509949540 3 0
+-1
+S
+
+#11557
+The Armorsmith's Wing~
+The gray walls, normally a pristine white, are a testament to the amound
+of work done at the forge set into the north wall.  Several anvils of
+varying size and shape mark out different work areas in the room, each
+with unfinished bits of armor awaiting completion nearby.  Almost hidden
+behind a cluster of tools and sheets of metal waiting to be forged, you
+can just see a couple troughs used in quenching and tempering the various
+armors made.
+~
+Cerulean armor will custom here.
+hard, green leather will be off the rack.
+I need to know what armors are acceptable for sale (not custom) here.
+~
+66584581 0 5 0
+D2
+~
+~
+0 -1 11556 10 10 4
+E
+5 anvils~
+Some of the anvils are small, obviously meant for small, detailed work. 
+Other anvils in the room range from a mix of sizes all the way up to one
+large one that would probably take two strong vodekyn to even move it. 
+Some of have pritchet holes, used for punching holes through the armor,
+while others have are smooth topped or have shaped surfaces condusive to
+the curves being put into various armors.
+~
+E
+unfinished 3 bits armor~
+None of the unfinished armor bits are in a state to be of use at this
+point.  Most are nothing more than vaguely shaped metal sheets and
+perhaps some did not take well to some aspect of the smithing or
+tempering and are awaiting normalization before they can be reforged. 
+One piece looks vaguely like it will become a kite shield, but a flaw in
+the metal so obvious that even a layman can see it seems to indicate it
+would be of no use either.
+~
+A
+~
+~
+if( random( 1, 2 ) == 2 ) {
+  if( players_room( find_room( 11556 ) ) == 0 ) {
+    i = random( 1, 3 );
+    if( i == 1 )
+      act_room( #south, ch );
+    if( i == 2 )
+      act_room( #south2, ch );
+    if( i == 3 )
+      act_room( #south3, ch );
+  }
+}
+~
+E
+south~
+@bThe jaring clang of a hammer forging metal rings from the south.@n
+~
+E
+south2~
+@bThe rhythmic whoosh of a forge bellows stoking a fire comes from the
+south.@n 
+~
+E
+south3~
+@bThe sudden hiss of hot metal being quenched erupts from the south.@n
+~
+!
+2 0 0
+A
+1 look~
+5 troughs~
+act_tochar( #looking, ch );
+~
+E
+looking~
+There are three wooden troughs near the forge you can look at.  One seems
+to hold @cfreshwater@n, another @Ysalt water@n, and the final one an
+@yoily water@n mixture.
+~
+!
+0 0 0
+7382 17 1509949540 -2 0
+7383 17 1509949540 -2 0
+7387 17 1509949540 -2 14
+7388 17 1509949540 -2 20
+5351 9 1509949540 3 0
+-1
+S
+
+#11558
+The Weaponsmith's Wing~
+The ever-present crackling fire contained in the forge on the south wall
+throws off a thin smoke that has tinted the normally pristine white walls
+a dingier shade.  A variety of tools hang from the walls, some looking
+more ominous than others, but all giving the appearance that every item
+is carefully stowed where it belongs when not in use.  The only items
+seeming, perhaps, out of place may be the metal bars waiting to be shaped
+into swords that lean against one of the anvils.  Leaning against one of
+the troughs near the forge, a single oddly shaped metal with flaring
+edges looks suspiciously like it may be awaiting its turn to become the
+head of a battle-axe.
+~
+I need to know what weapons are acceptable for sale (not custom) here.
+~
+66584581 0 5 0
+D0
+~
+~
+0 -1 11556 10 10 4
+E
+4 tools~
+The tools consist primarily of hammers of varying sizes and shapes,
+although a few of the sharper implements and pincer-like tongs do have a
+more sinister look to them.  Although a person could conceivably learn to
+use them as a weapon, most do not look of a quality to provide anywhere
+near the same level of combat-usage as the items they are being used to
+craft.
+~
+E
+3 bars metal~
+Most are relatively long strips of metal measuring about two-four inches
+across and perhaps an inch thick.  Some have the rudimentary shape of a
+sword tang hammered into them, but none are near enough the completion
+stage to be functional yet.
+~
+E
+battle-axe axe flaring~
+A wide strip of metal unlike the crude sword-shapes, this piece obviously
+isn't awaiting its turn to become a sword.  In this crude form, it is
+obviously far from easily identifiable and its likely the smith hasn't
+even truly begun working on it at all.  The general size and shape,
+however, do lend themselves well to imagination that this may easily
+serve as the starting point for the blades of a battle-axe or, perhaps,
+the head of a polearm.
+~
+A
+~
+~
+if( random( 1, 2 ) == 2 ) {
+  if( players_room( find_room( 11556 ) ) == 0 ) {
+    i = random( 1, 3 );
+    if( i == 1 )
+      act_room( #north, ch );
+    if( i == 2 )
+      act_room( #north2, ch );
+    if( i == 3 )
+      act_room( #north3, ch );
+  }
+}
+~
+E
+north~
+@bThe jaring clang of a hammer forging metal rings from the north.@n
+~
+E
+north2~
+@bThe rhythmic whoosh of a forge bellows stoking a fire comes from the
+north.@b 
+~
+E
+north3~
+@bThe sudden hiss of hot metal being quenched erupts from the north.@n
+~
+!
+2 0 0
+A
+1 look~
+5 troughs~
+act_tochar( #looking, ch );
+~
+E
+looking~
+There are three wooden troughs near the forge you can look at.  One seems
+to hold @cfreshwater@n, another @Ysalt water@n, and the final one an
+@yoily water@n mixture.
+~
+!
+0 0 0
+7382 17 1509949540 -2 0
+7383 17 1509949540 -2 0
+7387 17 1509949540 -2 14
+7388 17 1509949540 -2 20
+5350 9 1509949540 3 0
+-1
+S
+
+#11559
+Helpful Herbs~
+An assortment of drying herbs hang from rafters set into the stone
+ceiling almost giving it the appearance of a garden growing in reverse. 
+Below these hanging herbs, mostly along the walls, several units of
+shelves house bins and bottles of dried herbs and seeds.  A small, stone
+hearth set into the back wall serves for drying herbs and warming salves
+as needed.
+~
+~
+66584581 0 4 0
+D2
+~
+~
+0 -1 11555 10 10 4
+E
+4 herbs 6 rafters ceiling 1 up~
+The herbs hanging from the rafters range in color from the verdant green
+of fresh growth to a faded graying-brown typical of long-dried herbs. 
+Most are common-place herbs that can be found in almost any wood but some
+are unknown to you and their purpose a mystery.
+~
+E
+shelf shelves 3 bins 6 bottles~
+The shelves hold a variety of bins and bottles in many shapes and colors. 
+There are even a few wooden cabinets whose bases, and sometimes even
+their faces, are nothing more then a metal grill made of fine mesh meant
+to dry herbs and catch the seeds as they fall.  If there is a means of
+determining how the herbs have all been sorted, it is not readily
+appearant.
+~
+7352 17 1509949540 -2 0
+5348 9 1509949540 3 0
+249 17 1509949540 -1 0
+1182 17 1509949540 -1 0
+1269 17 1509949540 -1 0
+1246 17 1509949540 -1 0
+210 17 1509949540 -1 0
+189 17 1509949540 -1 0
+1410 17 1509949540 -1 0
+78 17 1509949540 -1 0
+1020 17 1509949490 -1 0
+38 17 1509949450 -1 0
+1025 17 1509949530 -1 0
+-1
+S
+
+#11560
+Elven House~
+This dwelling exhibits the epitomy of orderliness with everything
+precisely in its place.  Four simple beds are evenly aligned along the
+far wall from the entry door.  At the foot of each bed, a small chest
+rests, waiting to hold the day-to-day items carried around by each bed's
+owner.  Nearer the door rests a simple, yet functional, table easily
+large enough to seat five or six elves.  Finally, off to one side of the
+door in the remaining available space, stand two neatly organized desks.
+~
+~
+66584589 0 4 0
+D0
+~
+~
+391 -1 11555 10 10 4
+E
+3 beds~
+The beds are all simply made from rush-stuffed mats.  A slight aromatic
+scent hints that a few other herbs may also be included for aesthetic
+purposes.  Each mat rests on a modest wood and rope framework to keep it
+elevated slightly from the floor.
+~
+E
+5 chests~
+The chests are all made from carefully selected wood and are held
+together with iron cornerpieces to reinforce the bindings.  Each includes
+a hinged lid to keep animals out when things are stored inside.  While
+three of the chests are unadorned, the one on the far right has a simple
+carving etched into its top.
+~
+E
+carving~
+You move over to the chest to examine its carving more clearly.  The
+carving turns out to be a crescent moon with a single liquid drop
+suspended from its lowest point.
+~
+E
+4 desks~
+Both desks are neatly squared away with no odd parchment or quill laying
+atop them out of place.  Both have a single drawer for storing quills and
+paper when not in use.
+~
+A
+search open examine~
+4 desks 5 drawers~
+act_tochar( #checking, ch );
+act_notchar( #rchecking, ch );
+wait( 1 );
+if( rflag( status0, room ) ) {
+  remove_rflag( status0, room );
+  if( random( 1, 4 ) == 1 ) {
+    act_tochar( #findscroll, ch );
+    act_notchar( #rscroll, ch );
+    i = random( 1, 4 );
+    if( i < 3 )
+      obj_to_char( oload( 1005 ), ch );
+    if( i == 3 )
+      obj_to_char( oload( 1008 ), ch );
+    if( i == 4 )
+      obj_to_char( oload( 1006 ), ch );
+    end;
+    }
+  else{
+    act_tochar( #findquill, ch );
+    act_notchar( #rquill, ch );
+    obj_to_char( oload( 7351 ), ch );
+    end;
+    }
+  }
+act_tochar( #nothing, ch );
+act_notchar( #rnothing, ch );
+~
+E
+checking~
+You rifle through the desks looking for anything of interest.
+~
+E
+rchecking~
+$n rifles through the desks looking for anything of interest.
+~
+E
+findscroll~
+You manage to find a scroll!
+~
+E
+rscroll~
+$e extracts a single sheet of curled parchment from the desk.
+~
+E
+findquill~
+Amidst the parchment scraps you find a rather nice quill.
+~
+E
+rquill~
+$e finally pulls out a feathered quill.
+~
+E
+nothing~
+But you find nothing of interest.
+~
+E
+rnothing~
+After a few moments $e gives up and closes the drawers.
+~
+!
+0 0 0
+-1
+S
+
+#11561
+Pendaylen's Clothcuttery~
+Several tables littered with scraps of cloth take up the bulk of the room
+giving it a somewhat cluttered feel.  The remnants of several bolts of
+various colored cloth are leaned against the wall, still wrapped around
+wooden frames used to transport them.  In spite of the clutter, or
+perhaps because of it, the room has a warm, lived-in feel.
+~
+~
+66584581 0 4 0
+D2
+~
+~
+0 -1 11553 10 10 4
+5343 9 1509949540 3 0
+7770 17 1509949540 -1 0
+7773 17 1509949540 -1 0
+7774 17 1509949540 -1 0
+7787 17 1509949540 -1 0
+7788 17 1509949540 -1 0
+7789 17 1509949540 -1 0
+7790 17 1509949540 -1 0
+7791 17 1509949540 -1 0
+2200 17 1509949540 -1 0
+2200 17 1509949540 -1 0
+2201 17 1509949540 -1 0
+2201 17 1509949540 -1 0
+7803 17 1509949540 -1 0
+7802 17 1509949540 -1 0
+7797 17 1509949540 -1 0
+7798 17 1509949540 -1 0
+7799 17 1509949540 -1 0
+7800 17 1509949540 -1 0
+7801 17 1509949540 -1 0
+-1
+S
+
+#11562
+South Castle Road~
+You are on a north-south bound road of water-smoothed cobbled stones. 
+Small growth trees and carefully sculpted shrubbery form a colorful
+display beneath the canopy of the higher trees that would probably
+conceal the view from above.  On either side of the road a small, rounded
+white building rests, however, the one to the east has no door set in its
+entry arch giving it a much more inviting appearance.
+~
+~
+33030144 1 9 0
+D0
+~
+~
+0 -1 11510 10 10 5
+D1
+~
+~
+0 -1 11577 10 10 5
+D2
+~
+~
+0 -1 11563 10 10 5
+D3
+door~
+1 west door~
+391 -1 11576 10 10 4
+A
+push~
+button~
+mob = mob_in_room( 5359, room );
+interpret( mob, "stand" );
+interpret( mob, "west" );
+~
+!
+0 0 0
+-1
+S
+
+#11563
+Intersection of Castle Road and Arbor Lane~
+Two cobbled roads cross here leading off in the four cardinal directions. 
+Four large oaks grow at the corner-peices of the crossroads, shading the
+entire area beneath wide boughs that start high overhead.  At the heart
+of the intersection an ornamental fountain adds the peaceful burbling of
+its trickling waters to the calm of the shaded intersection in the midst
+of this thriving city.
+~
+~
+33030144 1 9 0
+D0
+~
+~
+0 -1 11562 10 10 5
+D1
+~
+~
+0 -1 11571 10 10 5
+D2
+~
+~
+0 -1 11564 10 10 5
+D3
+~
+~
+0 -1 11566 10 10 5
+-1
+S
+
+#11564
+South Castle Road~
+You are on a cobbled road that extends off to both the north and south. 
+Small show-trees with colorful leaves and carefully tended branches dot
+either side of the road forming a festive display for passers-by. 
+Between the small trees, an occasional small, white building can be seen. 
+Two buildings in partiular, one to the east and another to the west with
+an enlarged entrance, are noticable as they have entrances that face the
+street.
+~
+~
+33030144 1 9 0
+D0
+~
+~
+0 -1 11563 10 10 5
+D1
+~
+~
+0 -1 11579 10 10 5
+D2
+~
+~
+0 -1 11565 10 10 5
+D3
+~
+~
+391 -1 11578 10 10 5
+-1
+S
+
+#11565
+South Castle Road~
+A cobbled road formed from broad, flat water-tumbled stones begins just
+south of here and stretches away to the north.  On either side of the
+road stands an ivory-white tower that extends across overhead to meet the
+other, forming an arch that looms over the road.  A rather formidable
+looking portcullis set into the arch shows no signs of rust and every
+sign of careful maintenance, ready to be used in times of trouble. 
+Despite the militant look of the city's defenses, the look and feel of
+the area is softened by the many colorful wildflowers that grow along the
+base of the towers and the frequent sound of bubbling laughter.
+~
+Acodes 1 and 2 are for the city gates once I determine how I want to
+handle them.
+Meaning, should they be opened by levers, should it only be on a timer,
+should the guards check player faction with the race and open gates when
+hailed, etc.
+[Guin] Altienen.
+[Guin] connected south to 6900
+~
+33030144 1 9 0
+D0
+~
+~
+0 -1 11564 10 10 5
+D1
+~
+~
+0 -1 11581 10 10 5
+D3
+~
+~
+0 -1 11580 10 10 5
+A
+~
+~
+send_to_room( #closing_south, find_room( 11565 ) );
+send_to_room( #closing_north, find_room( 6900 ) );
+send_to_room( #closing_chains, find_room( 11584 ) );
+close( find_room( 11565 ), south );
+~
+E
+closing_south~
+@CA heavy portcullis of mirthril-reinforced iron comes down from above,
+closing off the city entrance to the south.@n 
+~
+E
+closing_north~
+@CA heavy portcullis of mirthril-reinforced iron comes down from above,
+closing off the opening to the north.@n 
+~
+E
+closing_chains~
+@CThe heavy, iron chains start to move upwards and a rumbling can be
+heard from the southern wall as the portcullis closes the city
+entrance.@n 
+~
+!
+0 0 0
+A
+~
+~
+send_to_room( #opening_south, find_room( 11565 ) );
+send_to_room( #opening_north, find_room( 6900 ) );
+send_to_room( #opening_chains, find_room( 11584 ) );
+close( find_room( 11565 ), south );
+~
+E
+opening_south~
+@CA heavy portcullis of mirthril-reinforced iron to the south clanks and
+clatters as it raises up into the overhanging arch.@n 
+~
+E
+opening_north~
+@CA heavy portcullis of mirthril-reinforced iron to the north clanks and
+clatters as it raises up into the overhanging arch.@n 
+~
+E
+opening_chains~
+@CThe heavy, iron chains start to move downward and a rumbling can be
+heard from the southern wall as the portcullis raises, opening the city
+entrance.@n 
+~
+!
+0 0 0
+5366 9 1509949540 3 0
+-1
+S
+
+#11566
+West Arbor Lane~
+This east-west cobbled road formed of water-rounded stones is nestled
+amidst a small grove of trees.  The trees appear to be carefully tended,
+forming blinds to the north and south behind which you can occasionally
+make out the backs or sides of other buildings.  While none of the
+buildings have entrances accessable to this point in the road, it looks
+like other buildings further west and further east do.
+~
+~
+33030144 1 9 0
+D1
+~
+~
+0 -1 11563 10 10 5
+D3
+~
+~
+0 -1 11567 10 10 5
+-1
+S
+
+#11567
+West Arbor Lane~
+You are at the extreme west end of a cobbled road that extends away to
+the east.  Several small, rounded white buildings stand up against the
+street's edge, but only three have entrances available from this point. 
+The building to the north is most notable of the three if only because it
+has a door set in its entry-arch whereas the ones to the west and south
+do not.  A broad-boughed oak forms the centerpoint of this cul-de-sac,
+its leafy branches sheltering the buildings from sight overhead.
+~
+~
+33030144 1 9 0
+D0
+door~
+1 north door~
+391 -1 11568 10 10 4
+D1
+~
+~
+0 -1 11566 10 10 5
+D2
+~
+~
+0 -1 11570 10 10 5
+D3
+~
+~
+0 -1 11569 10 10 5
+5358 9 1509949540 3 0
+-1
+S
+
+#11568
+Elven House~
+The smell of fresh heather is strong in this simple dwelling apparently
+coming from the newly stuffed, double-wide wooden pallet resting at the
+base of the northern wall.  A wide wardrobe with four wooden drawers is
+set against the eastern wall, an extravagence in such a simple setting. 
+The only other furniture in the room is a low table set a small distance
+off of the western wall.  Four woven-rush mats rest on the floor about
+the table indicating, along with its low height, that its users are meant
+to be seated on the floor around it rather than in chairs or benches.
+~
+~
+66584589 0 4 0
+D2
+door~
+1 south door~
+391 -1 11567 10 10 4
+E
+double-wide pallet~
+The pallet seems wide enough for two occupants to comfortably rest in. 
+Given the elven nature of spartan homes and their usual custom of
+sleeping on individual pallets, this must have been quite a concession to
+two unusual elves.  The wood of the pallet is still very fresh-looking
+and seamlessly formed of one piece as if grown rather than onstructed. 
+Fresh heather rushes have been used for the bedding and their scent fills
+the room.
+~
+E
+woven-rush rush mats~
+Simple mats woven of rushes to provide a dry, comfortable place for
+someone to sit.  These have been placed around the low, table to provide
+its users a measure comfort while dining or simply whiling away the time
+in discussion.
+~
+7432 49 1509949540 -2 0
+7768 83 1509975060 -2 0
+7787 82 1509975040 -2 0
+7772 82 1509975060 -2 0
+7788 82 1509975040 -2 0
+7770 82 1509975060 -2 0
+7789 82 1509975040 -2 0
+7781 82 1509975060 -2 0
+7433 17 1509949540 -2 0
+-1
+S
+
+#11569
+Tammelyn's Cobblery~
+The smells of cured leather, sticky glues and fresh polishes fill the air
+of this small building.  Set against the white walls are several rows of
+wooden shelves each filled with the scraps of previous works or bits and
+pieces of works in progress.  A wooden counter, its top scarred from
+years of use for tacking soles onto shoes, stands just off center of the
+buildings floor serving as both workplace and display platform for the
+shops proprietor.  Scratches on the floor behind the counter show where
+chairs have rested for years allowing the shop keeper a place to rest or
+work at their craft.
+~
+Acode to have Tammelyn sit in the chair when no customers are present,
+stand when they arrive, and prevent others from using.
+~
+66584581 0 5 0
+D1
+~
+~
+0 -1 11567 10 10 5
+E
+6 bundles drying 4 herbs~
+Despite the plethora of herbs hanging from the ceiling, a closer
+inspection shows them to be common woodland plants of little or no value. 
+They make a fine display but are obviously not the sort of thing a shop
+keeper would worry about having stolen as they have no real value.  The
+real goods of ths shop must be stored elsewhere with these bundles no
+more than a pleasant-looking display for window-dressing.
+~
+E
+counter~
+The surfae of the wooden counter bears thousands of little cris-crossing
+mars from years of choping, slicing, pounding and dicing herbs on its
+surface.  The natural oils of some of the plants have given the ancient
+counter top a lustrous glow.  Several small pottery bowls rest in several
+almost haphazard stacks where they have been discarded between use atop
+the counter.
+~
+E
+hearth~
+The hearth coals are dark and cold right now, unused by the shop
+proprietor.  The small hearth looks just big enough to hold two or three
+small kettles or cauldrons, or perhaps one medium-sized cauldron for
+cooking were the fire ablaze.
+~
+A
+get take~
+chair 3 all.chair~
+if( mob_in_room( 5356, room ) )
+  act_tochar( #no, ch );
+else
+  continue;
+~
+E
+no~
+@cThe cobbler intervenes and prevents you from taking her chair.@n
+~
+!
+0 0 0
+7435 17 1509949540 -2 0
+5356 9 1509949540 3 0
+7802 17 1509949540 -1 0
+7822 17 1509949540 -1 0
+7823 17 1509949540 -1 0
+7824 17 1509949540 -1 0
+7825 17 1509949540 -1 0
+7826 17 1509949540 -1 0
+7827 17 1509949540 -1 0
+7828 17 1509949540 -1 0
+7830 17 1509949540 -1 0
+7831 17 1509949540 -1 0
+7832 17 1509949540 -1 0
+7833 17 1509949540 -1 0
+-1
+S
+
+#11570
+The Wayfarer's Rest~
+Six broad, oaken tables, each with a long bench on either side, fill the
+bulk of the rooms common area spaced evenly around a central hearth.  The
+central hearth, easily measuring four feet across, is a circular
+conglomeration of water-smoothed stones mortared together to hold coals
+for cooking and warmth in colder seasons.  White, stone steps are carved
+into the back wall of the tavern leading up into a shadowy room overhead. 
+Two large tapestries Cover the walls on either side perpendicular to the
+stairs and entrance, one a deep woodland scene, the other a city of some
+kind.
+~
+I want one of the tapestries to have a "map" of one of the main human
+towns on it, but I need to look over the town first.  incomplete map, but
+enough to be recognizable to one who frequents that town.
+Dun T maybe...  need to ask Eliza/Usiel for a layout of map fragment.
+~
+66584581 0 5 0
+D0
+~
+~
+0 -1 11567 10 10 5
+D4
+~
+~
+0 -1 11591 10 10 5
+E
+3 tapestry tapestries~
+There are two tapestries, a @Gwoodland@n tapestry and a @Ycity@n
+tapestry, which would you like to inspect?
+~
+E
+woodland~
+The woodland tapestry depicts a verdant scene typical of the deep forest. 
+Trees of unusually wide girth, shuvana trees, seem to comprise the bulk
+of the forest depicted, dwarfing an ancient oak included sufficiently to
+make it look young by comparison.  In the foreground the image depicts a
+satyr playing pipes before a cadre of nymphs dancing about a
+butterfly-bedecked woodland spring.  It is a joyous scene laden with
+vibrant colors and the imagry of the fae.
+~
+E
+city~
+The city tapestry seems to be depited as if one were standing atop a
+tower overlooking a portion of the city below it.  The city streets,
+sometimes partially obscured by roof tops, are none-the-less fairly easy
+to observe at this angle.  Strange, round-eared people that could only be
+humans walk the streets mingling with each other beneath the brightly
+colored signs of shops in what appears to be a market district.
+~
+2619 17 1509949540 -2 0
+7335 17 1509949540 -2 0
+5357 9 1509949540 3 0
+7820 17 1509949540 -1 1
+7820 17 1509949540 -1 28
+7820 17 1509949540 -1 3
+7820 17 1509949540 -1 18
+7821 17 1509949540 -1 1
+7821 17 1509949540 -1 28
+7821 17 1509949540 -1 3
+7003 17 1509949540 -1 0
+7003 17 1509949515 -1 0
+7834 17 1509949540 -1 0
+7836 17 1509949515 -1 0
+7835 17 1509949530 -1 0
+7837 17 1509949540 -1 0
+1584 17 1509949540 -1 0
+-1
+S
+
+#11571
+East Arbor Lane~
+This east-west cobbled road formed of water-rounded stones is nestled
+amidst a small grove of trees.  The trees appear to be carefully tended,
+forming blinds to the north and south behind which you can occasionally
+make out the backs or sides of other buildings.  While none of the
+buildings have entrances accessable to this point in the road, it looks
+like other buildings further west and further east do.
+~
+~
+33030144 1 9 0
+D1
+~
+~
+0 -1 11572 10 10 5
+D3
+~
+~
+0 -1 11563 10 10 5
+-1
+S
+
+#11572
+East Arbor Lane~
+You are at the extreme east end of a cobbled road that extends away to
+the west.  Three rounded, white buildings stand up against the road's
+edge, their entrances all available to this point.  While the buildings
+to the north and east have simple open arches leading inside, the one to
+the south distinguishes itself with the glitter of gems set above its
+arch.  A broad-boughed maple tree forms the centerpoint of this
+cul-de-sac, its colorful red leaves forming just one of the many splashes
+of color in the woodland canopy overhead.
+~
+~
+33030144 1 9 0
+D0
+~
+~
+0 -1 11573 10 10 4
+D1
+~
+~
+0 -1 11574 10 10 5
+D2
+~
+~
+0 -1 11575 10 10 4
+D3
+~
+~
+0 -1 11571 10 10 5
+E
+1 south gems~
+The arch leading into the southern building is lined with with broad gems
+of sapphire, ruby and emerald in a dazzling display above the arch.  They
+glitter and twinkle, throwing back even the slightest light in a most
+impressive display.
+~
+A
+get take steal pry~
+1 south gems sapphires rubies emeralds~
+act_tochar( #bad_player, ch );
+act_notchar( #haha, ch );
+i = 1d10+10;
+dam_message( ch, i, "the jolt of magic" );
+inflict( ch, mob, i, "a magical ward" );
+~
+E
+bad_player~
+@CAs you reach for the gems you feel a sudden charge jolt through your
+hand, hurling you back away from the arch.  Looks like the gems are
+protected by magic this time.  @n 
+~
+E
+haha~
+@Y$n reaches for the gems above the southern arch only to be hurled back
+in a rainbow of colorful sparks!@n 
+~
+!
+0 0 0
+5359 9 1509949540 3 0
+-1
+S
+
+#11573
+Fiscavien's Fine Clothing~
+Several ledges are the resting place for carefully folded bolts of
+fabric, pots of dye, and other assorted tailoring needs when the shop's
+keeper is present to tend them.  Two racks lean against the far wall,
+unfinished fabrics in various stages of completion awaiting the tailor's
+return.  A rough, dress-makers dummy is bolted to a heavy stand in one
+corner of the building awaiting use during the clothier's next masterful
+task.  Only one section of wall space is cleared leaving room for three
+full-length mirrors that permit customers to view themsleves from head to
+foot.  Hanging just over the mirrors, a small brazier emits a gentle
+floral scent that gives the room a pleasant smell.
+~
+~
+66584581 0 4 0
+D2
+~
+~
+0 -1 11572 10 10 4
+5339 9 1509949540 3 0
+7570 17 1509949540 -1 0
+7668 17 1509949540 -1 0
+7689 17 1509949540 -1 0
+7699 17 1509949540 -1 0
+7720 17 1509949540 -1 0
+7741 17 1509949540 -1 0
+7742 17 1509949540 -1 0
+7743 17 1509949515 -1 0
+7745 17 1509949540 -1 0
+7746 17 1509949540 -1 0
+7747 17 1509949540 -1 0
+7570 17 1509949540 -1 0
+-1
+S
+
+#11574
+The Arbor Inn~
+Several friendly-looking tables and benches stand around the room
+providing customers with a place to set down food and drink and rest.  A
+broad counter stands near one wall, a place for the barkeep and cook to
+work behind as she cooks up food and serves drinks.  A pleasant-looking
+tapestry hangs behind the counter, depicting a forest scene and several
+more like it are spaced on the walls around the room.
+~
+The Arbor Inn, run by Saleena goes here
+Probably give Saleena a couple drink-runners, make a few
+randomizers so that different elves are working each time.
+
+Saleena needs to have an extra for those asking her about the tapestry
+behind her counter depicting the shuvana trees 
+~
+66584581 0 5 0
+D3
+~
+~
+0 -1 11572 10 10 5
+D4
+~
+~
+0 -1 11590 10 10 5
+E
+counter~
+The counter is made from several slabs of carefully crafted and cured
+thick, oak wood.  Years of use have rounded its sharp edges and given it
+an almost homely appearance.  The stains of countless circles form an
+intricately random pattern on its surface where mugs and cups alike have
+rested over the years.
+~
+E
+4 tapestry tapestries~
+The tapestries depict various scenes of the local forest life ranging
+from a nice view to one filled with animals caught in the act of running
+and flying.  The one behind the barkeep's counter depicts a grove of
+large, smooth-barked trees unlike any in the nearby woods.
+~
+7335 17 1509949540 -2 0
+7341 17 1509949540 -2 0
+5355 9 1509949540 3 0
+7820 17 1509949540 -1 2
+7820 17 1509949540 -1 15
+7820 17 1509949540 -1 28
+7821 17 1509949540 -1 1
+7821 17 1509949540 -1 47
+7839 17 1509949540 -1 0
+7839 17 1509949520 -1 0
+7840 17 1509949540 -1 0
+7840 17 1509949520 -1 0
+7835 17 1509949540 -1 0
+7837 17 1509949540 -1 0
+1584 17 1509949540 -1 0
+1584 17 1509949515 -1 0
+-1
+S
+
+#11575
+The Chiming Crystal~
+The pristine white walls only occasionally show through between the
+numerous glass-fronted display cases mounted there.  A large display
+counter runs the length of the room, its glass top lit by several glowing
+magic balls that hover in intricate patterns above it.  A single chair
+sits behind the counter, a place for the custodean to rest between
+customers rests behind the counter.  Behind the chair even, an elegant
+spiral staircase of polished silver metal leads up through a small
+opening in the roof.
+~
+This shop is FAR from complete.  Complete, means it will have MORE
+jewelery as time permits.  I just moved on to get other things done
+before I spend too much time having fun making jewelery.  :) 
+~
+66584581 0 4 0
+D0
+~
+~
+0 -1 11572 10 10 4
+D4
+~
+~
+0 -1 11589 10 10 3
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 ) {
+  if( mob_in_room( 5100, find_room( 11589 ) ) ) {
+    if( mob_in_room( 5344, room ) )
+      act_room( #fairy_jewelry, ch );
+  }
+}
+if( i == 2 ) {
+  if( mob_in_room( 5083, find_room( 11589 ) ) )
+    act_room( #laughter, ch );
+}
+if( i == 3 ) {
+  if( mob_in_room( 5083, find_room( 11589 ) ) )
+    act_room( #anvil, ch );
+}
+~
+E
+fairy_jewelry~
+@bA small bird about the size of a humming-bird but a vibrant shade of
+sapphire blue flies down from above, drops something that glitters into
+Ariella's waiting hands and returns to the attic.@n 
+~
+E
+laughter~
+@cThe merry sound of a high-pitched squealing laugh, like a fairy having
+a fit of meriment, chimes from somewhere above.@n 
+~
+E
+anvil~
+@mThe tinkling sounds of some small bit of metal rhythmically ringing
+against another piece of metal sounds from above.@n 
+~
+!
+2 500 0
+A
+~
+~
+if( mob_in_room( 5344, room ) ) 
+  act_tochar( #no, ch );
+else
+  continue;
+~
+E
+no~
+Ariella intervenes and prevents you from going upstairs.
+~
+!
+3 0 16
+5344 9 1509949540 3 0
+7804 17 1509949460 -1 0
+7814 17 1509949460 -1 0
+7815 17 1509949460 -1 0
+7816 17 1509949460 -1 0
+7817 17 1509949540 -1 0
+7818 17 1509949480 -1 0
+-1
+S
+
+#11576
+Elven House~
+The typically spartan nature of elven decor is far from evident in this
+disheveled domecile.  Two wooden bookshelves stand on either side of a
+cluttered plank that seems to be serving as a desk.  Before the makeshift
+desks stands a simple, sturdy-looking wooden chair.  Pushed to one side
+of the room is a narrow bed, straw sticking out from its coverlets. 
+Getting to any of these things may turn out to be a bit of a chore, given
+the ample mounds of wax and odd chalk runes and symbols covering the
+floor and walls.
+~
+some quest involved here at some future point as well.  -teircen 
+(I have some ideas, but I'm holding off to tie it in to a nice large
+quest) 
+
+Need to add the "browse" and "search" function for these bookshelves.
+As well as several "fluff" books to fill random tales into for space issues.
+An extra for the books will be included in the acode that loads the books.
+~
+66584589 0 4 0
+D1
+door~
+1 east door~
+391 -1 11562 10 10 5
+D5
+hidden trap door~
+hidden trap door 1 down~
+2479 -1 11588 10 0 4
+E
+bed~
+The bed is no more than a simple wooden pallet with a straw-filled
+mattress resting upon it.  It is just about four feet long, big enough
+for an elf, easily, but only about two feet wide.  It doesn't appear to
+get too much attention, as the mattress is very compressed and
+threadbare with straw poking out in several places.
+~
+E
+bookshelf bookshelves~
+The two bookhelves are made of a single piece of wood each and look to be
+quite old.  They are a matched set, readily appearant in the way the vine
+carvings that climb their sides mirror each other.  Each stands an even
+six feet tall and has shelves stuffed full of books in a variety of
+sizes, conditions, and colors.
+~
+E
+symbols runes~
+The symbols and runes are carfeully drawn in a chalky powder but many
+show signs of scuff marks, as if they were older and unused recently. 
+The lumps of wax indicate the usage of candles both inside circles and
+out as well as near and afar from various obscure symbols.  Most of the
+remaining runes appear to have a magical sort of context to them, though
+in their present state you can't really tell what they were to begin with.
+~
+E
+5 mounds wax~
+None of the wax mounds remaining present even the working stub of a
+candle and some actually have small circular depressions in the middle
+where the remains of a candle must have been removed for later use.  Most
+are a shade of green or blue, though there are also occurance of white,
+yellow or a mottled combination of all the colors in various places. 
+Most are encrusted near the sweeping arcs of circles, both within and
+without the circles but some are near the remains of chalky runes left on
+the floor.
+~
+E
+desk~
+The desk is a cluttered mess of mangled quills, hastily scribbled
+illegible parchment, and even a few spilled sand-pots leaving pearlescent
+sands scattered across the workspace.  A blackened cork rests on its side
+in a little puddle of dried ink near an inkwell, long since dried up.  To
+one side, clear of sands and stains, a space has been cleared, as if
+whatever was there was removed after the mess was left behind.  If
+anything of use was here before, it is gone now.
+~
+A
+get take steal~
+6 bookshelf bookshelves bed desk chair~
+act_tochar( #no, ch );
+~
+E
+no~
+That is too large for you to carry about.
+~
+!
+0 0 0
+A
+1 look~
+1 down~
+if( !is_open( room, down ) ) {
+  act_tochar( #runes, ch );
+  end;
+  }
+if( obj_in_room( 7440, find_room( 27440 ) ) )
+  act_tochar( #ladder, ch );
+else
+  act_tochar( #no_ladder, ch );
+~
+E
+runes~
+The floor is covered in chalk lines forming the wide sweeping arcs of
+several incomplete arcs from circles and odd magical-looking runes. 
+Amidst this powdery debris small mounds of wax mark where candles have
+stood at various points in the past.
+~
+E
+ladder~
+The tip of an old rickety ladder can be seen against a wall just below
+the trap door.
+~
+E
+no_ladder~
+The trap door opens into a dark void and you'd have to risk the fall if
+you dropped into the yawning portal.
+~
+!
+0 0 0
+A
+~
+~
+if( !is_open( room, down ) ) {
+  act_tochar( #no, ch );
+  end;
+  }
+if( obj_in_room( 7440, find_room( 27440 ) ) ) {
+  act_tochar( #down, ch );
+  act_notchar( #rdown, ch );
+  transfer( ch, find_room( 27440 ) );
+  act_notchar( #arr, ch );
+  }
+if( !obj_in_room( 7440, find_room( 27440 ) ) ) {
+  act_tochar( #ouch, ch );
+  act_notchar( #rouch, ch );
+  transfer( ch, find_room( 27440 ) );
+  i = 2d5+10;
+  dam_message( ch, i, "the fall" );
+  inflict( ch, mob, i, "a fall through a trap door" );
+  act_notchar( #thud, ch );
+  }
+loop( followers ) {
+  ch = rch;
+  acode( room, 3 );
+  }
+~
+E
+no~
+You see no exit below you.
+~
+E
+down~
+You carefully make your way down the ladder.
+~
+E
+rdown~
+$n carefully makes $s way down a ladder through the trap door.
+~
+E
+arr~
+$n carefully climbs down the ladder from above.
+~
+E
+ouch~
+You drop through the trap door landing hard on the floor below;
+~
+E
+rouch~
+$n drops through the trap door into the darkness below... Thud!
+~
+E
+thud~
+$n comes falling through the trap door, landing hard on the ground.  Thud!
+~
+!
+3 0 32
+7450 17 1509949540 -2 0
+-1
+S
+
+#11577
+Uluvien's Quickie Mart~
+Four aisles are delineated by four foot shelves.  Elves hate these
+shelves as they can't see over them, but the shelves do easily provide
+ample storage space for the plethora of twinkies, ding-dongs, and ho-ho's
+that form the staple of the late night elven gamer.  While most of the
+aisles are at least mostly stocked, the chips aisle is fairly depleted
+and the cheetos are completely gone.  A quick glance at the magically
+refrigerated beverage aisle shows that it has also been hit hard and the
+stock is low.  Must be a game somewhere in elf-town tonight.
+~
+Ok, real room desc is in the extras.  I'll fix it after the area is
+reviewed, just thought you could use some comic relief amidst the boring
+repetition of reviewing the area.  :P.
+~
+66584581 0 5 0
+D3
+~
+~
+0 -1 11562 10 10 5
+E
+real room description~
+Room Name: Uluvien's Fresh Fruit
+
+A variety of bushels and bins are neatly organized to display the
+shop-keepers wares of the day, presumably fresh fruits from the images
+depicted on some of the bushels.  Towards the rear of the shop, a corner
+has been clear for a small table and space enough for a chair to be
+comfortably used to provide a working place for the shop keeper between
+customers.  Unlike many other shops, its apparant the proprietor does not
+live here but, rather, uses this building only for a place of work.  A
+clear indicator that the shop is doing well and the wares of good quality
+if the proprietor can afford two seperate locations, one for living and
+another for selling.
+~
+5354 9 1509949540 3 0
+49 17 1509949540 -1 0
+49 17 1509949515 -1 0
+50 17 1509949540 -1 0
+50 17 1509949515 -1 0
+7567 17 1509949540 -1 0
+7567 17 1509949515 -1 0
+51 17 1509949515 -1 0
+2440 17 1509949540 -1 0
+2440 17 1509949515 -1 0
+2578 17 1509949540 -1 0
+2578 17 1509949515 -1 0
+52 17 1509949520 -1 0
+885 17 1509949540 -1 0
+885 17 1509949540 -1 0
+866 17 1509949540 -1 0
+866 17 1509949515 -1 0
+1198 17 1509949540 -1 0
+1198 17 1509949515 -1 0
+236 17 1509949490 -1 0
+-1
+S
+
+#11578
+Elven House~
+The single wooden pallet in one corner of the room marks this as the
+dwelling of a solitary elf.  The lone occupant, although absent right
+now, seems to retain more the usual elven taste for spartan decor.  A
+slight discoloration at the foot of the pallet marks where a chest
+usually stands but the owner seems to have moved it to a new location
+relatively recently.  The only other furniture in the building is a
+wooden table lacking even a chair for the sake of comfort.
+~
+~
+66584589 1 4 0
+D1
+~
+~
+391 -1 11564 10 10 5
+8026 17 1509949540 -2 0
+7441 17 1509949540 -2 0
+7441 17 1509949540 -2 0
+-1
+S
+
+#11579
+Al'Katriel's General Supply~
+A functional and relatively elegant display counter seems to be the most
+prominent bit of furniture in this building despite its being set to the
+side as you enter.  Set against the far wall, with a clear view of the
+entryway, a workmans bench provides both seat and work area for any
+projects the shop keeper undertakes.  Leaning against the wall next to
+the workbench is a wooden ladder leading up into an overhead room.  Given
+the extra space alloted to this lower room for larger races, such as
+vodekyn, the overhead room can't have much headway.  Its an likely guess
+that it is either a storage room, sleeping space or, perhaps, both.
+~
+need to make sure Al'Katriel doesn't allow people to steal his bench
+~
+66584581 1 5 0
+D3
+~
+~
+0 -1 11564 10 10 5
+D4
+~
+~
+1024 -1 11592 10 10 5
+A
+get take~
+bench workbench 3 all.workbench~
+if( mob_in_room( 5353, room ) )
+  act_tochar( #no, ch );
+else
+  continue;
+~
+E
+no~
+The shop keeper motions you away from the bench when you try and take it,
+explaining "@RSorry, I still need the workbenh and its not for sale@n".
+~
+!
+0 0 0
+7442 17 1509949540 -2 0
+7443 17 1509949540 -2 0
+5353 9 1509949540 3 0
+948 17 1509949540 -1 0
+6 17 1509949540 -1 0
+229 17 1509949540 -1 0
+229 17 1509949540 -1 0
+25 17 1509949540 -1 0
+230 17 1509949540 -1 0
+55 17 1509949540 -1 0
+247 17 1509949490 -1 0
+7160 17 1509949485 -1 0
+-1
+S
+
+#11580
+Guard Tower~
+The tower presents a fairly stark appearance with no tapestries here to
+soften the blank walls.  A tall, arching portal set in the eastern wall
+provides a clear view of the sally port that allows admittance into the
+city making the it easier for the guards to identify friend and foe.  The
+room's plain appearance, lacking even stools for the guards to sit on,
+speaks of its only functional use as a guard tower.  White stone stairs
+are cut into the austere white walls providing passage higher into the
+tower.
+~
+guard should prevent those who have not proven themselves friends of the
+elves from heading up into the guard rooms.
+Will have a quest to be proven a friend of the civil guard for elves. 
+And a pre-quest for non-elves to be proven a friend of the elves first
+perhaps?
+~
+66584581 0 5 0
+D1
+~
+~
+0 -1 11565 10 10 5
+D4
+~
+~
+0 -1 11582 10 10 5
+A
+~
+~
+room = find_room( 11580 );
+if( find_stat( ch, level ) > 90 )
+  continue;
+if( mob_in_room( 5413, room ) )  {
+  act_tochar( #no, ch );
+  end ;
+}
+if( mob_in_room( 5358, room ) || mob_in_room( 5359, room ) || mob_in_room( 5360, room ) ) {
+  act_tochar( #no, ch );
+  end;
+}
+if( mob_in_room( 5515, room ) || mob_in_room( 5516, room ) || mob_in_room( 5361, room ) ) {
+  act_tochar( #no, ch );
+  end;
+}
+if( mob_in_room( 5362, room ) || mob_in_room( 5363, room ) || mob_in_room( 5364, room ) ) {
+  act_tochar( #no, ch );
+  end;
+}
+if( mob_in_room( 5365, room ) || mob_in_room( 5366, room ) || mob_in_room( 5367, room ) ) {
+  act_tochar( #no, ch );
+  end;
+}
+if( mob_in_room( 5517, room ) || mob_in_room( 5518, room ) || mob_in_room( 5519, room ) ) {
+  act_tochar( #no, ch );
+  end;
+}
+if( mob_in_room( 5520, room ) ) {
+  act_tochar( #no, ch );
+  end;
+}
+continue;
+~
+E
+no~
+A guard scowls at you and stops you from going that way.
+~
+!
+3 0 16
+5362 9 1509949540 3 0
+-1
+S
+
+#11581
+Guard Tower~
+The tower presents a fairly stark appearance with no tapestries here to
+soften the blank walls.  A tall, arching portal set in the western wall
+provides a clear view of the sally port that allows admittance into the
+city making the it easier for the guards to identify friend and foe.  The
+room's plain appearance, lacking even stools for the guards to sit on,
+speaks of its only functional use as a guard tower.  White stone stairs
+are cut into the austere white walls providing passage higher into the
+tower.
+~
+guard should prevent those who have not proven themselves friends of the
+elves from heading up into the guard rooms.
+Will have a quest to be proven a friend of the civil guard for elves. 
+And a pre-quest for non-elves to be proven a friend of the elves first
+perhaps?
+~
+66584581 0 5 0
+D3
+~
+~
+0 -1 11565 10 10 5
+D4
+~
+~
+0 -1 11583 10 10 5
+A
+~
+~
+room = find_room( 11581 );
+if( find_stat( ch, level ) > 90 )
+  continue;
+if( mob_in_room( 5413, room ) )  {
+  act_tochar( #no, ch );
+  end ;
+}
+if( mob_in_room( 5358, room ) || mob_in_room( 5359, room ) || mob_in_room( 5360, room ) ) {
+  act_tochar( #no, ch );
+  end;
+}
+if( mob_in_room( 5515, room ) || mob_in_room( 5516, room ) || mob_in_room( 5361, room ) ) {
+  act_tochar( #no, ch );
+  end;
+}
+if( mob_in_room( 5362, room ) || mob_in_room( 5363, room ) || mob_in_room( 5364, room ) ) {
+  act_tochar( #no, ch );
+  end;
+}
+if( mob_in_room( 5365, room ) || mob_in_room( 5366, room ) || mob_in_room( 5367, room ) ) {
+  act_tochar( #no, ch );
+  end;
+}
+if( mob_in_room( 5517, room ) || mob_in_room( 5518, room ) || mob_in_room( 5519, room ) ) {
+  act_tochar( #no, ch );
+  end;
+}
+if( mob_in_room( 5520, room ) ) {
+  act_tochar( #no, ch );
+  end;
+}
+continue;
+~
+E
+no~
+A guard scowls at you and stops you from going that way.
+~
+!
+3 0 16
+5365 9 1509949540 3 0
+-1
+S
+
+#11582
+Guard Tower~
+The stark white walls are broken by evenly spaced tapestries depicting
+scenes of new forest growth in various shades green around the curve of
+the tower.  The central area of the tower is cleared and marked off to
+provide a small sparring area for use during inclement weather.  A wide
+cabinet with two wide doors, carefully constructed to fit the curvature
+of the tower, fills the northern wall.  A rounded arch leads to a larger
+room to the east and a stairwell along the outer wall spirals down into
+the lower recesses of the tower.
+~
+I'd like to have a reputation modifier for anyone stealing from cabinet.
+
+Arms master will have quests added later.
+~
+66584581 0 9 0
+D1
+~
+~
+0 -1 11584 10 10 5
+D5
+~
+~
+0 -1 11580 10 10 5
+E
+4 tapestries tapestry 3 walls lush forest growth~
+The tapestries depict the scenes of forest growth that run in many shades
+of green associated with new forest growth in early to mid spring.  Here
+and there small, colorful wildflowers are woven into the tapestry adding
+subtle touches of color that enhance the overall effect.  While the
+scenes are unspecific enough to bear a resemblance to any specific
+location in a forest, the composition of plants makes it easy to tell
+that these are probably representative of the Sylfaen wood that surrounds
+the city.
+~
+A
+2 open 2 pick~
+2 curved 2 oaken 2 cabinet~
+room = find_room( 11582 );
+if( mob_in_room( 543, room ) )  {
+  act_tochar( #arms_no, ch );
+  end ;
+}
+if( mob_in_room( 5358, room ) || mob_in_room( 5359, room ) || mob_in_room( 5360, room ) ) {
+  act_tochar( #no, ch );
+  end;
+}
+if( mob_in_room( 555, room ) || mob_in_room( 556, room ) || mob_in_room( 536, room ) ) {
+  act_tochar( #no, ch );
+  end;
+}
+if( mob_in_room( 5362, room ) || mob_in_room( 5363, room ) || mob_in_room( 5364, room ) ) {
+  act_tochar( #no, ch );
+  end;
+}
+if( mob_in_room( 5365, room ) || mob_in_room( 5366, room ) || mob_in_room( 5367, room ) ) {
+  act_tochar( #no, ch );
+  end;
+}
+if( mob_in_room( 557, room ) || mob_in_room( 558, room ) || mob_in_room( 559, room ) ) {
+  act_tochar( #no, ch );
+  end;
+}
+if( mob_in_room( 5520, room ) ) {
+  act_tochar( #no, ch );
+  end;
+}
+continue;
+~
+E
+arms_no~
+Glaring at you, the arms masters stops you from doing that.
+~
+E
+no~
+A scowling guard stops you from doing that.
+~
+!
+0 0 0
+5363 9 1509949540 3 0
+5413 137 1509949540 3 0
+7892 49 1509949540 -2 0
+1074 81 671088690 -2 0
+1074 81 503316520 -2 0
+1074 81 335544350 -2 0
+900 81 335544340 -2 0
+7798 81 1509949470 -2 0
+7800 81 1509949470 -2 0
+7801 83 1509975065 -2 0
+7801 82 1509975040 -2 0
+7802 81 1509949470 -2 0
+2201 81 1509949470 -2 0
+7797 81 1509949480 -2 0
+-1
+S
+
+#11583
+Guard Tower~
+The stark white walls are broken by evenly spaced tapestries depicting
+lush green forest growth around the curve of the tower.  Crates stacked
+around the room seem to indicate that this is some sort of storage room,
+however, several have been arranged to double as seats and tables
+indicating that the room also serves the guards in their off duty time. 
+A rounded arch leads to a larger room to the west and a stairwell along
+the outer wall spirals down into the lower recesses of the tower.
+~
+I'd like to add a reputation modifier for anyone stealing from here.
+
+inexpensive items, but still maybe I should add a supply clerk to guard?
+~
+66584581 0 9 0
+D3
+~
+~
+0 -1 11584 10 10 5
+D5
+~
+~
+0 -1 11581 10 10 5
+E
+4 tapestries tapestry 3 walls lush forest growth~
+The tapestries depict the verdant green growth of the forest in the full
+bloom of summer.  While the scenes are unspecific enough to bear a
+resemblance to any specific location in a forest, the composition of
+plants makes it easy to tell that these are probably representative of
+the Sylfaen wood that surrounds the city.
+~
+E
+2 crates~
+Wooden crates, generally all the same size, that have been carefully
+rearranged to act both as storage conainers and impromptu furniture in
+this storage room.  Most of the crates look to be empty but a few may
+hold something inside.
+~
+A
+2 open~
+2 crate~
+room = find_room( 11583 );
+if( mob_in_room( 5413, room ) )  {
+  act_tochar( #no, ch );
+  end ;
+}
+if( mob_in_room( 5358, room ) || mob_in_room( 5359, room ) || mob_in_room( 5360, room ) ) {
+  act_tochar( #no, ch );
+  end;
+}
+if( mob_in_room( 5515, room ) || mob_in_room( 5516, room ) || mob_in_room( 5361, room ) ) {
+  act_tochar( #no, ch );
+  end;
+}
+if( mob_in_room( 5362, room ) || mob_in_room( 5363, room ) || mob_in_room( 5364, room ) ) {
+  act_tochar( #no, ch );
+  end;
+}
+if( mob_in_room( 5365, room ) || mob_in_room( 5366, room ) || mob_in_room( 5367, room ) ) {
+  act_tochar( #no, ch );
+  end;
+}
+if( mob_in_room( 5517, room ) || mob_in_room( 5518, room ) || mob_in_room( 5519, room ) ) {
+  act_tochar( #no, ch );
+  end;
+}
+if( mob_in_room( 5520, room ) ) {
+  act_tochar( #no, ch );
+  end;
+}
+continue;
+~
+E
+no~
+A scowling guard stops you from doing that.
+~
+!
+0 0 0
+5364 9 1509949540 3 0
+7898 49 1509949540 -2 0
+7003 81 1509949455 -2 0
+7003 81 1509949445 -2 0
+236 81 1509949450 -2 0
+236 81 1509949445 -2 0
+1584 81 1509949450 -2 0
+24 81 1509949455 -2 0
+24 81 1509949450 -2 0
+24 81 1509949445 -2 0
+24 81 1509949450 -2 2
+-1
+S
+
+#11584
+Guard Tower~
+The long narrow room looks more like a widened hall then a proper room. 
+Two large chains run, set on the western edge of the south-facing wall
+and one in the eastern edge, run from holes in the floor up further
+through holes in the ceiling, a part of the portcullis mechanism.  Narrow
+windows, nothing more than arrow slits really, are intermittently spaced
+along the north and south walls.  Two large arches allow easy access to
+towers east and west of here.
+~
+~
+66584581 0 9 0
+D1
+~
+~
+0 -1 11583 10 10 5
+D3
+~
+~
+0 -1 11582 10 10 5
+E
+3 windows 4 slits 3 arrow~
+The arrow slits are used as a defensive firing position for archers
+during an invasion.  They are too small to provide much of a view of the
+outside but they do provide enough to see that you are currently in a
+room contained inside the arch that stradles the city's entrance.
+~
+E
+beds~
+A simple, yet sturdy bed made of solid oak wood and a hay-stuffed matt. 
+Blankts have been neatly tucked in atop each bed and a simple stuffed
+pillow s precisely arranged at the head of each bed.
+~
+5520 9 1509949540 3 0
+7899 17 1509949540 -2 0
+7899 17 1509949540 -2 0
+7899 17 1509949540 -2 0
+7899 17 1509949540 -2 0
+7899 17 1509949540 -2 0
+7899 17 1509949540 -2 0
+7899 17 1509949540 -2 0
+7899 17 1509949540 -2 0
+7899 17 1509949540 -2 0
+7899 17 1509949540 -2 0
+7899 17 1509949540 -2 0
+7899 17 1509949540 -2 0
+-1
+S
+
+#11585
+Observatory~
+The tower roof measures a score of feet across, a scant fraction of its
+width at its base.  Acting as the city's focal point, the tower appears
+to stand amidst a small clearing with only an occasional tree nearby. 
+Just outside the city's perimeter the forest proper begins in earnest. 
+Careful planning has allowed this tower to stand just above the level of
+the treeline allowing an unimpeded view of the horizon and the great dome
+of the celestial heavens.  A single trapdoor in the center of the floor
+permits entry back into the tower.
+~
+still need telescope code for what people see while using it
+general: trees, bird
+at night: constalations (check weather first), season output?
+Also need extra desc for the runes on it.
+~
+66584576 0 9 0
+D5
+~
+~
+0 -1 11509 10 10 5
+A
+1 down~
+~
+act_tochar( #down, ch );
+continue;
+~
+E
+down~
+You carefully descend through the trap door onto the stairs below.
+~
+!
+0 0 0
+A
+jump leap fall~
+~
+act_tochar( #really, ch );
+act_notchar( #stop, ch );
+~
+E
+really~
+Really?  Do you mean you want to @Gjump@n or @Gleap down@n to your
+possibe death?  Or did you have some other idea in mind?  The fall looks
+as if it would be well over 150 feet.
+~
+E
+stop~
+$n stands on the edge of the roof and peers at the distant ground
+below.  I sure hope they aren't planning to leap to their death.
+~
+!
+0 0 0
+A
+leap jump fall~
+1 down~
+act_tochar( #leap, ch );
+act_notchar( #rleap, ch );
+wait( 1 );
+room = find_room( 11510 );
+transfer( ch, room );
+act_notchar( #arr, ch );
+act_tochar( #ouch, ch );
+i = 150;
+dam_message( ch, i, "the fall" );
+inflict( ch, mob, i, "suicidal leap from a tower" );
+~
+E
+leap~
+You vault over the roof's edge and plunge to the ground below.
+~
+E
+rleap~
+$n vaults over the roof's edge to the ground far below.
+~
+E
+arr~
+$n falls screaming from the tower overhead to land hard on the ground
+here.
+~
+E
+ouch~
+You land with an audible thud against the hard ground.
+~
+!
+0 0 0
+7040 17 100 -2 0
+-1
+S
+
+#11586
+The White Hart Tavern~
+Dim balls of light cast a soft glow on walls that curve suddenly inward
+to form a dome that crests at a mere six feet from the floor.  Several
+pallets of straw and blankets as well as a few cots form neatly ordered
+rows that would comfortably provide resting places for about sixteen
+people.  A hole in the floor leads to a set of stairs cut from the tavern
+walls and appears to be the only normal way out of here.
+~
+~
+66584581 0 9 0
+D5
+~
+~
+0 -1 11532 10 10 5
+-1
+S
+
+#11587
+The Loft Above Davien's General Store~
+The loft is a rather cramped, little space obviously not meant for people
+to move around in.  Amidst a few crates and containers of various goods
+and supplies, a small pallet drawn up of a pine bough stuffed matt
+provides the shop keeper a place of rest.  The low roof, topping at about
+three feet in height, makes it a rather uncomfortable place for just
+about anyone.
+~
+~
+66584581 0 4 0
+D5
+~
+~
+0 -1 11552 10 10 4
+-1
+S
+
+#11588
+An Eerie Basement~
+Barren white walls form the foundation for whatever structure rests
+overhead through a slim trap-door barely noticable in the roof.  Layers
+of cobwebs hang in loose strands, as if someone had only recently parted
+them.  The shattered remains of thoroughly searched and ravaged wooden
+crates or shelving emits an unclean odor of must giving the impression
+the damage must have all happened long ago.
+~
+I plan to lead this lower to an underground higher-level area.
+ie Once you acquire the key into the house, explore and find the way down
+here you should be big enough to deal with the area.
+~
+66715652 0 4 0
+D4
+trap door~
+trap door 1 up~
+2479 -1 11576 10 0 4
+E
+3 cobwebs~
+They are silky strands of old spiders webs coated in long years of dust. 
+They break apart with little efort, but put up enough resistance that you
+do notice breaking them in passing.  While most are broken now, there are
+so many in residence that there are still several untouched, like veils
+of silk obscuring the darkness behind them.
+~
+A
+~
+~
+if( is_searching( ch ) ) {
+  if( class( ch ) == ranger ) {
+    if( random( 1, 4 ) == 1 ) {
+      act_tochar( #class, ch );
+      wait( 1 );
+      act_tochar( #south, ch );
+      remove_rflag( reset1, room );
+      end;
+      }
+    }
+  if( class( ch ) == thief ) {
+    if( random( 1, 4 ) == 1 ) {
+      act_tochar( #class, ch );
+      wait( 1 );
+      act_tochar( #south, ch );
+      remove_rflag( reset1, room );
+      end;
+      }
+    }
+  if( find_stat( ch, wis ) > 16 ) {
+    if( random( 1, 4 ) == 1 ) {
+      act_tochar( #wise, ch );
+      wait( 1 );
+      act_tochar( #south, ch );
+      remove_rflag( reset1, room );
+      end;
+      }
+    }
+  act_room( #breeze, ch );
+  }
+~
+E
+breeze~
+The cobwebs sway slightly in the stir of your passage.
+~
+E
+wise~
+The cobwebs sway slightly, as if in the stir of your passage, except you
+weren't moving just then.  Its as if some other breeze had stirred them.
+~
+E
+class~
+The cobwebs sway slightly and you become aware of a gentle breeze so
+faint that you could very easily have missed it and nearly did.
+~
+E
+south~
+A moments careful consideration and experimentation suggests that breeze
+may be coming from the south wall.
+~
+!
+2 0 0
+A
+search 2 examine 1 look~
+1 south wall~
+if( is_searching( ch ) ) {
+  if( !rflag( reset1, room ) )
+    act_tochar( #searching, ch );
+  }
+act_tochar( #not_searching, ch );
+~
+E
+searching~
+Searching the south wall, you find a hairline crack, extremely easy to
+miss in the darkness, along the floor.  Trying to see what it is, you
+prize out a slim, midnight blue ribbon attached to something on the other
+side.
+~
+E
+not_searching~
+Whatever that is, searching it results in nothing interesting.
+~
+!
+0 0 0
+A
+get pull yank take~
+ribbon~
+if( !rflag( reset1, room ) ) {
+  act_tochar( #not_yet, ch );
+  set_rflag( reset1, room );
+  }
+else
+  act_tochar( #what_ribbon, ch );
+~
+E
+not_yet~
+You give the ribbon a gentle tug, but it is firmly attached to something
+and when you let go, it slips back under the wall, out of sight.
+~
+E
+what_ribbon~
+You don't see that here.  Wherever it is, it must have slipped away
+somewhere.
+~
+!
+0 0 0
+A
+~
+~
+if( can_fly( ch ) ) {
+  if( is_open( room, up ) ) {
+    act_tochar( #up, ch );
+    act_notchar( #rup, ch );
+    transfer( ch, find_room( 11576 ) );
+    act_notchar( #arr );
+    end;
+  }
+  if( !is_open( room, up ) ) {
+    act_tochar( #closed, ch );
+    end;
+  }
+}
+if( obj_in_room( 7440, room ) ) {
+  if( is_open( room, up ) ) {
+    act_tochar( #climb_up, ch );
+    act_notchar( #rclimb_up, ch );
+    transfer( ch, find_room( 11576 ) );
+    act_notchar( #arr );
+    end;
+  }
+  if( !is_open( room, up ) ) {
+    act_tochar( #closed, ch );
+    end;
+  }
+}
+act_tochar( #how, ch );
+loop( followers ) {
+  ch = rch;
+  acode( room, 4 );
+}
+~
+E
+up~
+You fly up through the trap door into the room above.
+~
+E
+rup~
+$n flies up through the trap door.
+~
+E
+arr~
+$n comes up through a trap door in the floor.
+~
+E
+closed~
+And how do you plan to do that with the trap door closed?
+~
+E
+climb_up~
+You carefully climb up the rickety old ladder.
+~
+E
+rclimb_up~
+$n carefully climbs up the old rickety ladder and through the trap door.
+~
+E
+how~
+And just how were you planning on reach the trap door from down here?
+~
+!
+3 0 16
+A
+open~
+1 up trap door~
+if( is_open( room, up ) ) {
+  act_tochar( #already_open, ch );
+  end;
+}
+if( can_fly( ch ) ) {
+  act_tochar( #open, ch );
+  act_notchar( #ropen, ch );
+  send_to_room( #arropen, find_room( 11576 ) );
+  end;
+}
+if( obj_in_room( 7440, room ) ) {
+  act_tochar( #climb_open, ch );
+  act_notchar( #rclimb_open, ch );
+  send_to_room( #arropen, find_room( 11576 ) );
+  end;
+}
+act_tochar( #how, ch );
+~
+E
+open~
+You fly up and open the trap door.
+~
+E
+ropen~
+$n flies up and opens the trap door.
+~
+E
+arropen~
+A trap door opens in the floor, scattering some of the chalk from the
+runes on the floor.
+~
+E
+climb_open~
+You climb up the rickety ladder and open the trap door.
+~
+E
+rclimb_open~
+$n climbs up the rickety ladder and opens the trap door.
+~
+E
+already_open~
+Its already open.
+~
+E
+how~
+And how were you planning to reach it?  Fly?
+~
+!
+0 0 0
+A
+close~
+1 up trap door~
+if( !is_open( room, up ) ) {
+  act_tochar( #already_close, ch );
+  end;
+}
+if( can_fly( ch ) ) {
+  act_tochar( #close, ch );
+  act_notchar( #rclose, ch );
+  send_to_room( #arrclose, find_room( 11576 ) );
+  end;
+}
+if( obj_in_room( 7440, room ) ) {
+  act_tochar( #climb_close, ch );
+  act_notchar( #rclimb_close, ch );
+  send_to_room( #arrclose, find_room( 11576 ) );
+  end;
+}
+act_tochar( #how, ch );
+~
+E
+already_close~
+The trap door is already closed.
+~
+E
+close~
+You fly up and close the trap door.
+~
+E
+rclose~
+$n flies up and closes the trap door.
+~
+E
+arrclose~
+The trap door in the floor slams shut suddenly.
+~
+E
+climb_close~
+You climb up the rickety ladder and close the trap door.
+~
+E
+rclimb_close~
+$n climbs up the rickety ladder and closes the trap door.
+~
+E
+how~
+And how were you going to reach it to close it?  Fly?
+~
+!
+0 0 0
+A
+climb go~
+rickety ladder 1 up~
+acode( room, 4 );
+~
+!
+0 0 0
+A
+~
+~
+if( obj_in_room( 7440, room ) ) {
+  i = random( 4, 9 );
+  if( num_in_room( room ) > i ) {
+    act_room( #oops, rand_char( room ) );
+    junk_obj( obj_in_room( 7440, room ) );
+    }
+  }
+~
+E
+oops~
+Amidst the bustle of all the people $n shifts $s stance and accidently
+knocks the ladder over, causing it to shatter on the ground.
+~
+!
+2 0 0
+7440 17 1509949480 -2 0
+-1
+S
+
+#11589
+The Fairy Workshop~
+The low ceiling is cramped, even for your average sized dwarves and
+gnomes, but the furniture in side is so small to make the room look
+normal to scale.  Several small wooden benches rest before equally small
+anvils that glitter like mithril, but probably aren't.  Next to each of
+the work-benches stands a single perch, a possible resting place for a
+bird or some other small avian creature.  A single little hearth-forge in
+the center of the room is giving off a strong heat, but little smoke. 
+What little smoke that is created quickly disipates through one of the
+several small windows, too small to do more than look through, around the
+room.  The only other exit is a small, spiral stairwell leading down
+through the floor.
+~
+need to make the attack and hp of fairies and birds meet the mob standards
+
+maybe I should make a perch "chair" object that fits only sizes smaller
+than player races.  -t 
+~
+66584645 0 3 0
+D5
+~
+~
+0 -1 11575 10 10 3
+E
+5 anvils~
+They are a tiny anvil in every respect proportioned to your normal-sized
+ones.  Though they glitter like mithril, polished to a silvery-blue
+sheen, they probably aren't.  In any case, they are securely adhered to
+the floor with glittering nails that could only mean some sort of magic
+is involved as well.
+~
+E
+5 perches~
+The perches are simple constructs of wood with a crosspiece meant for a
+bird, or some similar creature, to perch upon while not in flight.  While
+fine for small birds, the fragile wooden perch would be of no use to
+anyone larger than a small sparrow.
+~
+7384 17 1509949520 -2 0
+5083 9 1509949540 3 0
+5083 9 1509949540 3 0
+5083 9 1509949520 3 0
+5083 9 1509949500 3 0
+5083 9 1509949480 3 0
+5100 9 1509949540 3 0
+5100 9 1509949540 3 0
+5100 9 1509949500 3 0
+5100 9 1509949460 3 0
+-1
+S
+
+#11590
+The Arbor Inn~
+The common sleeping area of the Arbor Inn is typical of most elven
+communal buildings.  Several sleeping pallets are neatly aranged,
+providing a small area of personal space to seperate each of the sleepers. 
+Unlike most elven buildings, however, there are a few larger pallets
+sized to suit even visiting vodekyn.  The simple white walls are muted to
+a near grey from the subdued light cast by the nearly-spent balls of
+magical light that hover near the ceiling.
+~
+~
+66584581 0 5 0
+D5
+~
+~
+0 -1 11574 10 10 5
+-1
+S
+
+#11591
+The Wayfarer's Rest~
+Dim balls of light cast a soft glow on walls that curve suddenly inward
+to form a dome that crests at a mere six feet from the floor.  A stone
+column in the center of the room that feeds heat from the hearth
+downstairs into this sleeping area in cooler months.  A dozen pallets of
+straw and blankets radiate out away from the central hearth-column to
+provide comfortable resting places for occupants of the inn.  A hole in
+the floor leads to a set of stairs cut from the tavern walls and appears
+to be the only normal way out of here.
+~
+~
+66584581 0 4 0
+D5
+~
+~
+0 -1 11570 10 10 5
+-1
+S
+
+#11592
+Al'Katriel's sleeping chamber~
+A low ceiling makes the room cramped, requiring even an elf to hunch over
+a bit.  A straw pallet rests well away from the narrow opening in the
+floor through which a ladder descends.  In one corner near the rooms only
+exit a broken old crate, no longer useful as a container, may serve as a
+sort of small table or perhaps is the only remainder of a sign that the
+room may have once been a storage vault.
+~
+~
+66584580 1 4 0
+D5
+~
+~
+1024 -1 11579 10 10 5
+-1
+S
+
+#11593
+Plaza of the Spire~
+This room is purely for movement purposes and should not be reachable. 
+If you have reached this room, please contact an immortal and let them
+know how you arrived here.
+Thank you.
+~
+~
+66584617 0 4 0
+D2
+~
+~
+0 -1 11500 10 10 5
+-1
+S
+
+#11594
+Plaza of the Spire~
+This room is purely for movement purposes and should not be reachable. 
+If you have reached this room, please contact an immortal and let them
+know how you arrived here.
+Thank you.
+~
+~
+603455529 0 4 0
+D3
+~
+~
+0 -1 11500 10 10 5
+-1
+S
+
+#11595
+Plaza of the Spire~
+This room is purely for movement purposes and should not be reachable. 
+If you have reached this room, please contact an immortal and let them
+know how you arrived here.
+Thank you.
+~
+~
+603455529 0 4 0
+D0
+~
+~
+0 -1 11500 10 10 5
+-1
+S
+
+#11596
+Plaza of the Spire~
+This room is purely for movement purposes and should not be reachable. 
+If you have reached this room, please contact an immortal and let them
+know how you arrived here.
+Thank you.
+~
+~
+603455529 0 4 0
+D1
+~
+~
+0 -1 11500 10 10 5
+-1
+S
+
+#11597
+Castle Guest Room~
+Under Construction.
+Guest Room
+~
+~
+66584581 0 7 0
+D2
+~
+~
+0 -1 11524 10 10 5
+-1
+S
+
+#11598
+The Queen and King's Quarters~
+Under Construction.
+Royal Quarters
+~
+Queen Glynessa and her royal consort King Rutharkand
+~
+66584581 0 8 0
+D3
+~
+~
+0 -1 11523 10 10 5
+-1
+S
+
+#11599
+Elven House~
+Under Construction.
+~
+~
+66584589 0 9 0
+D2
+wardrobe~
+~
+399 -1 11538 10 10 4
+-1
+S
+
+#0
+

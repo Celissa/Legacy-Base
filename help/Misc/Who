@@ -1,0 +1,27 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+who    : lists all visible players on<br>
+<br>
+<h1> Description </h1>
+<br>
+The who list will list all players who are visible and online.  Each player<br>
+is placed in a category according to how well you know them.  The first<br>
+category is self-explanatory: Immortal.  The befriended category will list<br>
+all people who are on that are befriended to you.  The known category lists<br>
+people who you are introduced to but not befriended.  The unknown category<br>
+lists people who you have not been introduced to.  Each player can only<br>
+appear once on the who list, so someone who is befriended will not appear<br>
+in the known category.<br>
+<br>
+DESIGNATOR THINGIES (TM)<br>
+<br>
+You may notice two letters after a player's information, these may be one of:<br>
+[ AV ] Avatar - someone to help you with your description approval<br>
+[ CL ] Clan Leader - person responsible for managing a clan<br>
+[ LD ] Link Dead - this person has lost link and may not get back to you<br>
+<br>
+See also: Last, Whois<br>
+</html>
+</body>

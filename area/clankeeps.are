@@ -1,0 +1,1970 @@
+#M2_AREA
+2
+
+Clan Keeps~
+Gretch~
+~
+~
+~
+
+0 0
+0
+0
+#ROOMS
+
+#51000
+Bone Stronghold~
+You have entered into a small cavern that lies in the face of the cliff. 
+To the east, a crack can be seen from which light enters and serves to
+illuminate this cavern.  To the west, the cavern stretches on into
+darkness, where the sound of running water can be heard.  Also coming
+from the west, you get an uneasy feeling, as if something evil and
+menacing lurks further down this cave.
+~
+[Guinafaer] This is the first room for Clan Keeps.
+[Guin] Room 1
+[Guin] 25000
+[Guin] Climb wall east and otherside.
+[Guin] 15k for climb wall code
+~
+704249856 11 9 0
+D1
+~
+~
+186 -1 12612 10 10 5
+D3
+~
+~
+0 -1 51001 10 10 5
+E
+bushes~
+The thin leaves on the bushes do little to hide the tiny thorns that
+protect the branches.  Small white insects can be seen on closer
+inspection.
+~
+E
+mountain face~
+The mountain face is covered with rocky outcroppings, both large and
+small.  After a closer look, you notice a fair-sized hole near the base
+of the mountain face.
+~
+E
+hole~
+A fair-sized hole tunnels into the mountain face near the ground.  It is
+circular and relatively smooth, as if it was made by a tunneling worm of
+some sort.  It is barely big enough for a large humanoid to squeeze
+through.
+~
+A
+squeeze crawl enter climb~
+hole up~
+act_tochar( #squeeze, ch );
+act_notchar( #squeezes, ch );
+transfer( ch, find_room( 12612 ) );
+act_notchar( #arrives, ch );
+~
+E
+squeeze~
+You squeeze yourself into the hole in the cliff face.
+~
+E
+squeezes~
+$n squeezes $mself into the hole in the cliff face and disappears from
+sight.
+~
+E
+arrives~
+$n squeezes through from the hole to the south.
+~
+E
+toobig~
+You are too big to squeeze into the hole.
+~
+!
+0 0 0
+A
+move~
+bush 1 east~
+if( !is_open( room, east ) ) {
+act_tochar( #move, ch );
+  act_notchar( #moves, ch );
+  open( room, east );
+  }
+else
+  act_tochar( #already, ch );
+~
+E
+move~
+You move the bushes to the east aside, revealing a path.
+~
+E
+moves~
+$n moves the bushes to the east aside, revealing a path.
+~
+E
+already~
+The bushes have already been pulled aside, revealing a path.
+~
+!
+0 0 0
+A
+~
+~
+act_room( #snap, ch );
+close( room, east );
+~
+E
+snap~
+The bushes to the east snap back into place.
+~
+!
+1 0 2
+-1
+S
+
+#51001
+An Underground River~
+Progress through this tunnel is hampered by a swift flowing river which
+cuts through the middle of this tunnel.  To the west, a faint light can
+be made out, but from what source, you have no idea of what it could be. 
+Back to the east, lies your only possible exit from this place, and
+perhaps you're only chance at safety.
+~
+[Ahriman] underground river, have to swim through
+[Guin] Room 2 - 25000
+~
+704249856 13 9 0
+D1
+~
+~
+0 -1 51000 10 10 5
+D3
+~
+~
+0 -1 51002 10 10 5
+324 17 1509949540 -2 0
+-1
+S
+
+#51002
+Before the Gates~
+This room is dominated by a large set of obsidian gates, which block any
+progress to the north.  These gates are easily 20 feet tall and seem to
+absorb any light cast their way.  Beyond these gates, little can be made
+out of what lies beyond them, except for what appears to be a looming
+structure in the darkness, barely lit by what appear to be torches.
+~
+[Ahriman] large obsidian gates
+[Guin] room 3
+[Guin] 50 plat for the room.
+[Guin] Gate code inclusive.
+[Guin] Mob sentry - 50 plat
+~
+704249888 11 9 0
+D0
+obsidian gates~
+~
+407 3852 51003 10 10 5
+D1
+~
+~
+0 -1 51001 10 10 5
+A
+~
+~
+if( is_open( room, north ) ) {
+  act_room( #gate, ch );
+  close( room, north );
+  lock( room, north );
+}
+~
+E
+gate~
+@RBoom! The obsidian gates come crashing down north of you.@n
+~
+!
+1 0 1
+A
+~
+~
+if( is_open( room, north ) ) {
+  if( has_obj( 3852, ch ) )
+    continue;
+  else {
+    mob = mob_in_room( 1949, room );
+    if( mob ) {
+      act_tochar( #cant, ch, obj, mob );
+      act_notchar( #rcant, ch, obj, mob );
+    }
+    else
+      continue;
+  }
+}
+else
+  act_tochar( #notopen, ch );
+~
+E
+to_char~
+You continue on to the north, through the gate.
+~
+E
+to_room~
+$n continue on to the north, through the gate.
+~
+E
+cant~
+The troll templar steps towards you, then says "You cannot enter with the key."
+~
+E
+rcant~
+The troll templar steps towards $n, then says "You cannot enter with the key."
+~
+E
+notopen~
+The obsidian gates to the north is locked, and closed.
+~
+!
+3 0 1
+1949 9 1509949540 3 0
+-1
+S
+
+#51003
+Before a Large Temple~
+The cavern opens up to the north, revealing a large, black obsidian
+temple.  The top of the temple is ringed with torches, which illuminates
+the darkness to some measure, but also seems to make the building even
+more sinister in appearance.  To the south, large, obsidian gates serve
+to block the entrance of any heretics that may wish to come here to
+defile this temple.  As you step closer and closer towards the temple, an
+overwhelming aura of pure, undying evil can be felt radiating from deep
+within the temple.
+~
+[Guin] Room 4
+[Ahriman] underground cavern, before temple
+[Guin] Basic stronghold room 1 - 350000
+~
+704249856 11 9 0
+D0
+~
+~
+0 -1 51005 10 10 5
+D2
+obsidian gates~
+~
+407 3852 51002 10 10 5
+A
+~
+~
+if( is_open( room, south ) ) {
+  act_room( #gate, ch );
+  close( room, south );
+  lock( room, south );
+}
+~
+E
+gate~
+@RThe gates south of you crash closed.@n
+~
+!
+1 0 4
+-1
+S
+
+#51004
+Bone Stronghold~
+Under Construction.
+~
+[Guin] Meditation room.
+~
+704249860 12 9 0
+-1
+S
+
+#51005
+Inside of the Temple~
+Large columns of darkest obsidian rise up from the floor towards the
+ceiling.  Hanging from the ceiling, large tapestries can be seen
+representing different acts of depravation that can hardly be imagined. 
+To the east, a small, sparsely furnished room can be seen.  To the south,
+the exit can be seen, while to the north, the rest of the temple
+continues.
+~
+[Guin] Room 5
+[Ahriman] entrance to the temple, east is a meditiation room
+[Guin] Basic stronghold room 2 - 0
+~
+704249860 12 9 0
+D0
+~
+~
+0 -1 51006 10 10 5
+D1
+~
+~
+0 -1 51007 10 10 5
+D2
+~
+~
+0 -1 51003 10 10 5
+-1
+S
+
+#51006
+Inside of the Temple~
+The space here opens up into the main body of the temple.  All along the
+walls, dimly lit torches flicker dimly and serve to illuminate the
+temple, but only barely so.  The temple seems to be almost completely
+constructed of dark obsidian, which seems to absorb almost all of the
+light reflected upon it.  To the north, a large altar can be seen resting
+upon a raised dais, while to the east, what appears to be some kind of
+storage room can be seen, and to the west, look to be living quarters for
+some of the priests that live here.
+~
+main body of temple
+[Guin] 100000
+~
+704249861 12 9 0
+D0
+~
+~
+0 -1 51010 10 10 5
+D1
+~
+~
+0 -1 51009 10 10 5
+D2
+~
+~
+0 -1 51005 10 10 5
+D3
+~
+~
+0 -1 51011 10 10 5
+E
+columns~
+Large, black obsidian columns serve to support this temple.  All along
+the face of these columns, runes and glyphs are carved into the face of
+it.  Also, deamonic heads appear to be carved into the columns, but as
+you look at them more closely, you could swear that they seem to be alive.
+~
+-1
+S
+
+#51007
+A Small Meditation Room~
+This room is simple in appearance, with only several large mats, which
+appear to be used for meditation taking up space on the floor.  On the
+east wall, a large tapestry can be seen hanging from the wall.  Light is
+provided by a pair of torches, one on the south wall and one on the north
+wall.
+~
+[Ahriman] meditation room
+[Guin] extra room 100plat
+~
+704249861 12 9 0
+D3
+~
+~
+0 -1 51005 10 10 5
+E
+tapestry~
+This is a large tapestry, appearing to be quite old and faded somewhat
+from the passage of time.  The majority of the tapestry appears to be of
+a daemonic invasion and the slaughtering of many what appear to be elves. 
+As you get closer to the tapestry to examine it closer, you could swear
+you could hear the screams of agony from many of the hapless victims.
+~
+-1
+S
+
+#51008
+Bone Stronghold~
+Under Construction.
+~
+[Guin] Resting room
+~
+704249860 12 9 0
+-1
+S
+
+#51009
+The Temple's Storage Room~
+This is where all items important to the temple and its residents are
+kept.  Shelves hold a myriad assortment of items, ranging from the
+mundane to the macabre.  Large chests lie in the corners of the room, and
+look to hold larger items of importance.  The room is very dimly lit by a
+pair of torches, one upon the north wall, and one upon the south.  To the
+west lies the rest of the temple, from which a low, resonant chanting can
+be heard, but the words themselves can not be made out.
+~
+storage room/bank
+[Guin] 200 plat
+~
+704317445 12 9 0
+D3
+~
+~
+0 -1 51006 10 10 5
+-1
+S
+
+#51010
+Before the Altar~
+Resting upon a large raised dais, an enourmous obsidian altar rests.  The
+altar looks to be quite ancient and appears to have been used quite a
+bit, as blood rivulets can be seen running down the sides of the altar. 
+On either side of the altar, large black iron braziers burn brightly.  On
+the north wall, a huge burning @Wskull@n can be seen with eyes gazing evilly
+upon its devoted worshipers.
+~
+[Ahriman] altar
+[Guin] 100 plat - no charge for the altar
+~
+704249989 12 9 0
+D2
+~
+~
+0 -1 51006 10 10 5
+E
+huge burning skull eyes north~
+The huge burning @Wskull@n gazes evily down at you.  The @Rblazing fires
+burning@n in the @Wskull's eye sockets@n cast some light into the room. 
+Flames can also be seen licking greedily inside the skull's open maw. 
+The shadow cast by the skull on the ceiling directly above it creates a
+pool of darkness.
+~
+3854 17 1509949540 -2 0
+-1
+S
+
+#51011
+A Small Priests Room~
+Several rows of simple cots line the wall and this appears to be where
+the majority of the priests that reside here rest.  In front of each cot,
+a small wooden chest rests, where each priest can keep their possessions. 
+On the west wall, a tapestry hangs, with the symbol of Xharax clearly
+emblazoned upon it.
+~
+[Ahriman] priests quarters
+[Guin] basica stronghold room 3 - 0
+~
+704249860 12 9 0
+D1
+~
+~
+0 -1 51006 10 10 5
+-1
+S
+
+#51012
+Undermountain Chamber~
+Wall-mounted lanterns, aflicker with dying flames, barely illuminate the
+chamber and the rocky path that twists and turns its way northward. 
+Great boulders and fallen debris seal the cave's entry to the south;
+small rays of light reach through cracks and crevices in the stony walls. 
+A random scattering of stalagmites and stalactites makes the path
+hazardous, but far from impassable.
+~
+[Guin] VILE
+[Guin] Leadin room 1
+[Guin] 25 plat
+[Guin] Done.
+~
+-1443233788 11 6 0
+D0
+~
+~
+0 -1 51013 10 10 5
+D2
+~
+~
+16 -1 30263 10 10 5
+-1
+S
+
+#51013
+Tunnel Through the Mountain~
+The close, undermountain tunnel branches here, with passageways leading
+in the four cardinal directions.  Low burning lanterns light each way,
+save the one lying to the north where soft blue light illuminates the
+chamber.  Gusty winds blow from the western passage, whistling through
+the intersection as they pass eastward; the sound resonates as it hits
+each crack, crevice or stone, a chilly, yet somehow soothing song. 
+Slick, jagged stalagmites, like razor-sharp teeth in a gaping, slathering
+maw, nearly touch the dangling dagger-like stalactites suspended from the
+roof overhead, generating an eerie feeling in this place.
+~
+[Guin] VILE
+[Guin] Leadin room 2
+[Guin] 25 plat
+[Guin] Done.
+~
+-1443233788 11 6 0
+D0
+~
+~
+0 -1 51014 10 10 5
+D1
+~
+~
+0 -1 51027 10 10 5
+D2
+~
+~
+0 -1 51012 10 10 5
+D3
+~
+~
+0 -1 51015 10 10 5
+A
+~
+~
+send_to_room( #trickle, room );
+~
+E
+trickle~
+@CThe burble of flowing water echoes from the chamber to the north.@n
+~
+!
+2 150 0
+-1
+S
+
+#51014
+Crystal Cave - Dragonspire Mountains~
+A ribbon of icy water flows through the small cave, disappearing into a
+hole in the hard grey stone of the floor.  The cave, like a faerie
+forest, is bedecked with crystalline stalagmites and stalactites in every
+possible shape and size...all polished brilliantly by the rushing
+stream...each faceted edge glittering brightly.  A natural,
+crystal-formed basin lies off to one side, the surface within it as
+smooth as glass.  Patches of luminescent moss cling tenaciously to cracks
+and crevices of the mundane rock walls, providing enough illumination to
+see by.
+~
+[Guin] VILE
+[Guin] Leadin room 50 plat
+[Guin] Need to block 'drink basin' here.
+[Guin] Drinking in here needs to be targeted or they'll be drinking something they shouldn't.
+[Guin] Fountain here.
+[Guin] Done.
+~
+-1443233788 11 6 0
+D2
+~
+~
+0 -1 51013 10 10 5
+398 17 1509949540 -2 0
+-1
+S
+
+#51015
+Branching Corridor to the Arena~
+The grey stone tunnel inclines gradually as it continues to the west, the
+wind growing in strength in that direction.  Wall-mounted lanterns
+flicker and struggle to stay alight, only prevented from going out by the
+protective enclosure around them.  Clusters of knee-high stalagmites make
+for a difficult, but not impossible, passage.
+~
+[Guin] VILE
+[Guin] 50 plat
+[Guin] Done.
+~
+-1443233788 11 6 0
+D1
+~
+~
+0 -1 51013 10 10 5
+D3
+~
+~
+0 -1 51016 10 10 5
+-1
+S
+
+#51016
+Branching Corridor to the Arena~
+Damp, musty air hangs in the stone-formed tunnel that travels around each
+rising rock and into and out of the cave further to the west.  Crude
+depictions, resembling the lines and sworls of prehistoric cave drawings,
+are present on the stone of the walls, but age and erosion have long
+since erased the majority of them.  The gusty breezes are blocked by the
+tall-growing stalagmites, diminishing their power enough to allow the
+wall-mounted lanterns to remain lit.
+~
+[Guin] VILE
+[Guin] 50 plat
+[Guin] Done.
+~
+-1443233788 11 6 0
+D1
+~
+~
+0 -1 51015 10 10 5
+D3
+~
+~
+0 -1 51017 10 10 5
+-1
+S
+
+#51017
+Before an Iron-Wrought Portcullis~
+Rising from floor to ceiling, the iron-wrought gate rises to the west,
+sealing off entrance into the cavern beyond.  Not a single rock,
+stalagmite or stalactite can be seen; pick and shovel signs show where
+some had been removed.  As the wind zips down the tunnel heading
+westward, it chimes melodically through the cracks and crevices, creating
+a chaotic, yet strangely lyrical song.  An excavated, sand-filled
+clearing can be seen through the gaps in the portcullis; two massive
+boulders stand stoically, flanking each side of the gate, like stone
+sentinels guarding their charge.
+~
+[Guin] VILE
+[Guin] 50 plat
+[Guin] Done.
+~
+-1443233788 11 6 0
+D1
+~
+~
+0 -1 51016 10 10 5
+D3
+iron-wrought gate~
+~
+131 -1 51018 10 10 5
+-1
+S
+
+#51018
+Arena~
+The sand-filled lot does little to prevent any disturbances to travel
+from one spot to another.  The gold-hued sand is only marred by a few
+dark crimson stains; each spot like that of an old quilt, mismatched
+patches to repair the holes.  A few stalagmites, no more than dwarf-sized
+high, protrude from the ground, their tips worn down and eroded due to
+time.
+~
+[Guin] VILE
+[Guin] 200plat
+[Guin] Done.
+~
+-1376124924 11 5 0
+D0
+~
+~
+0 -1 51019 10 10 5
+D1
+iron-wrought portcullis~
+~
+131 -1 51017 10 10 5
+D2
+~
+~
+0 -1 51020 10 10 5
+D3
+~
+~
+0 -1 51021 10 10 5
+-1
+S
+
+#51019
+Arena~
+The sand-filled lot does little to prevent any disturbances to travel
+from one spot to another.  The gold-hued sand is only marred by a few
+dark crimson stains; each spot like that of an old quilt, mismatched
+patches to repair the holes.  A few stalagmites, no more than dwarf-sized
+high, protrude from the ground, their tips worn down and eroded due to
+time.
+~
+[Guin] VILE
+[Guin] 200plat
+~
+-1376124924 11 5 0
+D2
+~
+~
+0 -1 51018 10 10 5
+D3
+~
+~
+0 -1 51024 10 10 5
+-1
+S
+
+#51020
+Arena~
+The sand-filled lot does little to prevent any disturbances to travel
+from one spot to another.  The gold-hued sand is only marred by a few
+dark crimson stains; each spot like that of an old quilt, mismatched
+patches to repair the holes.  A few stalagmites, no more than dwarf-sized
+high, protrude from the ground, their tips worn down and eroded due to
+time.
+~
+[Guin] VILE
+[Guin] 200plat
+~
+-1376124924 11 5 0
+D0
+~
+~
+0 -1 51018 10 10 5
+D3
+~
+~
+0 -1 51023 10 10 5
+-1
+S
+
+#51021
+Arena~
+The sand-filled lot does little to prevent any disturbances to travel
+from one spot to another.  The gold-hued sand is only marred by a few
+dark crimson stains; each spot like that of an old quilt, mismatched
+patches to repair the holes.  A few stalagmites, no more than dwarf-sized
+high, protrude from the ground, their tips worn down and eroded due to
+time.
+~
+[Guin] VILE
+[Guin] 200plat
+~
+-1376124924 11 5 0
+D0
+~
+~
+0 -1 51024 10 10 5
+D1
+~
+~
+0 -1 51018 10 10 5
+D2
+~
+~
+0 -1 51023 10 10 5
+D3
+~
+~
+0 -1 51022 10 10 5
+-1
+S
+
+#51022
+Arena~
+The sand-filled lot does little to prevent any disturbances to travel
+from one spot to another.  The gold-hued sand is only marred by a few
+dark crimson stains; each spot like that of an old quilt, mismatched
+patches to repair the holes.  A few stalagmites, no more than dwarf-sized
+high, protrude from the ground, their tips worn down and eroded due to
+time.
+~
+[Guin] VILE
+[Guin] 200plat
+~
+-1376124924 11 5 0
+D0
+~
+~
+0 -1 51026 10 10 5
+D1
+~
+~
+0 -1 51021 10 10 5
+D2
+~
+~
+0 -1 51025 10 10 5
+-1
+S
+
+#51023
+Arena~
+The sand-filled lot does little to prevent any disturbances to travel
+from one spot to another.  The gold-hued sand is only marred by a few
+dark crimson stains; each spot like that of an old quilt, mismatched
+patches to repair the holes.  A few stalagmites, no more than dwarf-sized
+high, protrude from the ground, their tips worn down and eroded due to
+time.
+~
+[Guin] VILE
+[Guin] 200plat
+~
+-1376124924 11 5 0
+D0
+~
+~
+0 -1 51021 10 10 5
+D1
+~
+~
+0 -1 51020 10 10 5
+D3
+~
+~
+0 -1 51025 10 10 5
+-1
+S
+
+#51024
+Arena~
+The sand-filled lot does little to prevent any disturbances to travel
+from one spot to another.  The gold-hued sand is only marred by a few
+dark crimson stains; each spot like that of an old quilt, mismatched
+patches to repair the holes.  A few stalagmites, no more than dwarf-sized
+high, protrude from the ground, their tips worn down and eroded due to
+time.
+~
+[Guin] VILE
+[Guin] 200plat
+~
+-1376124924 11 5 0
+D1
+~
+~
+0 -1 51019 10 10 5
+D2
+~
+~
+0 -1 51021 10 10 5
+D3
+~
+~
+0 -1 51026 10 10 5
+-1
+S
+
+#51025
+Arena~
+The sand-filled lot does little to prevent any disturbances to travel
+from one spot to another.  The gold-hued sand is only marred by a few
+dark crimson stains; each spot like that of an old quilt, mismatched
+patches to repair the holes.  A few stalagmites, no more than dwarf-sized
+high, protrude from the ground, their tips worn down and eroded due to
+time.
+~
+[Guin] VILE
+[Guin] 200plat
+~
+-1376124924 11 5 0
+D0
+~
+~
+0 -1 51022 10 10 5
+D1
+~
+~
+0 -1 51023 10 10 5
+-1
+S
+
+#51026
+Arena~
+The sand-filled lot does little to prevent any disturbances to travel
+from one spot to another.  The gold-hued sand is only marred by a few
+dark crimson stains; each spot like that of an old quilt, mismatched
+patches to repair the holes.  A few stalagmites, no more than dwarf-sized
+high, protrude from the ground, their tips worn down and eroded due to
+time.
+~
+[Guin] VILE
+[Guin] 200plat
+~
+-1376124924 11 5 0
+D1
+~
+~
+0 -1 51024 10 10 5
+D2
+~
+~
+0 -1 51022 10 10 5
+-1
+S
+
+#51027
+Wide Passageway Through the Mountain~
+The stone of the tunnel floor merges with cobblestones here as it
+continues to the east; the pickmarked and pockmarked walls expand outward
+gradually and recent signs of excavation are clearly visible.  The gusty
+breezes present in the western passageway all but disappear, caught on
+the leeward side of countless crevices and crannies.  The wall-mounted
+lanterns burn steadily but low, as if left untended for several days.  A
+strange-shaped but well-formed stalagmite lies some way to the east.
+~
+[Guin] VILE
+[Guin] 50 plat
+[Guin] Done.
+~
+-1443233788 11 6 0
+D1
+~
+~
+0 -1 51028 10 10 5
+D3
+~
+~
+0 -1 51013 10 10 5
+-1
+S
+
+#51028
+Wide Passageway Through the Mountain~
+The well-traveled corridor has turned directly into cobblestone as it
+continues east around an enormous, well-shaped stalagmite.  The
+stalagmite, nearly eight feet high, bears and carved image in bas relief
+of a gleaming black dragon, its wings outspread and claws extended toward
+its prey...the glistening form of a pure white unicorn.  The sculpted
+rock is big enough to split the path in two, each arm wrapping around the
+structure before joining together to continue on to the east.  Just
+faintly, the view of a colossal building can be seen beyond the chiseled
+rock, the light farther past burning fiercely.
+~
+[Guin] VILE
+[Guin] Done.
+~
+-1443233788 11 6 0
+D1
+~
+~
+0 -1 51029 10 10 5
+D3
+~
+~
+0 -1 51027 10 10 5
+-1
+S
+
+#51029
+At the Gates~
+Running from wall to wall and ceiling to floor, a gleaming mithril gate
+seals the tunnel and what lies beyond it to the east.  The cobblestone
+path continues up to and slightly past the gate, ending at a short,
+narrow bridge that spans a rushing underground stream.  Beyond the
+bridge, the ground underfoot turns into blood-stained red stone that
+leads up to the entryway to the keep.  A set of double doors, crafted of
+weathered old wood, seal an opening in the cavern wall to the north, a
+faint, yellow glow fading through cracks keeps the room alight.
+~
+[Guin] VILE
+[Guin] 50 plat
+[Guin] add code here to not allow pets into the sh.
+
+~
+-1443233780 11 6 0
+D0
+old wood double doors~
+~
+147 -1 51036 10 10 5
+D1
+gleaming mithril gate~
+~
+147 -1 51030 10 10 5
+D3
+~
+~
+0 -1 51028 10 10 5
+-1
+S
+
+#51030
+Torch-Lit Entry~
+Wreathed in fire, two stone-polished drakes cradle the grand cave opening
+to the east, vigorous flames spewing from their mouths keeping the
+chamber well lit.  Man-made and rapidly flowing, a stream runs northward
+and southward.  Just west of here, a small wooden bridge leads over it to
+a gleaming, mithril gate.  A cobblestone path, stained in red, leads up
+to the entry, each block laid in the exact same manner as the previous. 
+The cavern here has been clearly excavated, the rocky surfaces sanded
+down to a smooth finish.
+~
+[Guin] VILE
+[Guin] Basic Room 1
+[Guin] Basic rooms 1,2,3 are a total of 350 plat
+~
+-1443233788 11 5 0
+D1
+~
+~
+0 -1 51031 10 10 5
+D3
+mithril gate~
+~
+147 -1 51029 10 10 5
+A
+~
+~
+if( is_mob( ch ) ) {
+  act_notchar( #no, ch, obj, mob, sight );
+  interpret( ch, "west" );
+}
+else if( is_pet( ch ) ) {
+  act_notchar( #no, ch, obj, mob, sight );
+  interpret( ch, "west" );
+}
+~
+E
+no~
+Pets are not allowed into the stronghold, please park them in the stables.
+~
+!
+1 0 8
+-1
+S
+
+#51031
+Great Hall~
+Dying flames burn rapidly upon wall-bolted torches, flank each side of a
+dome-shaped opening in the western wall.  Opposite the arched opening,
+another open doorway leads to a much darker chamber.  The smell of
+burning incense issues from the southern portal; various religious
+symbols are carved there.  If not for the bright, penetrating light from
+the northern exit, that entry might be altogether missed.  Gleaming suits
+of armor are placed in stone-carved niches at each side of the chamber,
+each plate of a different material and boasting its own shine.  A
+staircase rises in the center of the room, swords of various lengths and
+types are mounted upon the rising rock of stairwell.  Built into the
+staircase, an oak bookcase contains a multitude leather-bound tomes. 
+Tapestries, strung from corner to corner, do little to warm the drafty
+chamber; the designs on each of the needlework pieces are stitched in
+dark, dull colors.
+~
+[Guin] VILE
+[Guin] Basic room 2
+[Guin] Done.
+~
+-1443233788 11 5 0
+D0
+~
+~
+0 -1 51032 10 10 5
+D1
+~
+~
+0 -1 51034 10 10 5
+D2
+~
+~
+0 -1 51033 10 10 5
+D3
+~
+~
+0 -1 51030 10 10 5
+D4
+~
+~
+0 -1 51035 10 10 5
+A
+~
+~
+if( find_stat( ch, level ) > 91 )
+continue;
+if( is_in_clan( ch, "VILE" ) ) 
+  continue;
+else 
+  act_tochar( #no, ch, obj, mob, sight );
+~
+E
+no~
+An unseen barrier prevents you from entering the room to the north.
+~
+!
+3 0 1
+-1
+S
+
+#51032
+Clan Vault~
+Two stone steps lead down into this cold but spacious vault.  Its rough
+walls and irregular shape clearly indicate the room has been cut into the
+mountain itself.  Six torches, in total, struggle to illuminate the
+contents of this room, casting soft light throughout.  Just visible in
+the flickering light, there are large, wooden chests along the northern
+wall.  Shelves filled with bags, boxes, and much smaller paraphernalia
+cover the eastern stone wall, while the large, closed cupboards rest on
+the opposite wall.  The lack of heat has created an unsettled feeling, a
+locale not made for long stops.
+~
+VILE
+[Guin] 200 plat
+[Guin] 200 plat
+[Guin] DO NOT PURGE THIS ROOM!!!
+[Cayln] but i want to purge this room
+[Guin] Do and you die.
+~
+-1443166204 11 5 0
+D2
+~
+~
+0 -1 51031 10 10 5
+-1
+S
+
+#51033
+Temple of All Gods~
+The strong aroma of burning incense arises from a sacrificial altar, the
+smoke spiraling as it rises in the air.  The altar, filled with sigils of
+various dark gods and goddesses, is a dull, stone-gray color; two clamps
+protrude from the surface, one used for an incense holder and the other
+for a sacramental dagger.  A strip of fine, elegant carpet is laid from
+the entrance to the altar, the streaks of red-crimson blood dance with
+the bright yellow runes on the carpet.  A gray ball of light dangles from
+the center of the room, just enough light to illuminate the cavern.
+~
+[Guin] VILE
+[Guin] Basic room 3
+~
+-1443233660 11 5 0
+D0
+~
+~
+0 -1 51031 10 10 5
+-1
+S
+
+#51034
+Barracks~
+Flickering flames, tossing shadows off the dark-grey cavern walls, dance
+in wall-hung torch clamps, each torch emitting a slight smoke, which is
+sucked through a cave-hole in the northeastern corner.  Stone-chiseled
+walls, sanded down to a fine touch, rise roughly fifteen feet before
+beams, concealed within the shadows, shoot across the ceiling, a firm
+structure for a second floor.  Soft brown, furry bear skins, nearly ten
+feet long, line the walls, each placed directly proportional to one
+another with added deer skins for warmth.  Adjacent to the wall and the
+animal-skinned bed, a small, oak chest lies, each chest with assorted
+clothing and valuables.  Slabs of grey stone jut from the back wall and
+reach for the floor; stools surround each protruding rock, creating a
+solid table.  Colorful banners and tapestries hug the cavern walls, signs
+of one's previous home and nation to even a few family memoirs.
+~
+[Guin] VILE
+[Guin] 100 plat
+[Guin] Done.
+~
+-1443233788 11 5 0
+D3
+~
+~
+0 -1 51031 10 10 5
+-1
+S
+
+#51035
+Second Floor Landing~
+The stairs open up in a narrow walkway above the great hall, and
+continues on to the floor above.  Looking down, you can still see the
+suits of armour reflecting faint torchlight, guarding the staircase.  A
+dark, wooden bannister lines the walkway, standing between the unwary and
+the quick trip to the hall below.  The floor is carpeted, silver and gold
+threads woven into the midnight-black, creating swirling patterns around
+its edges.  Set into two of the walls are simple wooden doors; the
+northern one is carved with the symbol of Khalmor and the western one is
+inscribed with the sign of Iniara, underlined with with an gleaming axe.
+~
+[Guin] VILE
+[Guin] 100 plat
+~
+-1443233788 11 5 0
+D0
+Khalmor marked door~
+~
+407 -1 51037 10 10 5
+D3
+axe marked door~
+~
+407 3933 51039 10 10 5
+D4
+~
+~
+0 -1 51040 10 10 5
+D5
+~
+~
+0 -1 51031 10 10 5
+-1
+S
+
+#51036
+Stable~
+Rows of uniform-sized stalls line both sides of the stone-hewn cavern,
+with a few odder shaped ones situated along the back wall.  The stalls
+themselves are constructed of weathered grey wood with latched gates
+leading into the straw-covered enclosures, a bucket and feedbag hanging
+from pegs within each one.  Piles of hay have been mounded up in the
+center of the room, pitchforks planted upright in the center of two of
+them.  Oil lanterns hang from iron hooks suspended from the roof
+overhead, lighting the stone chamber with a welcoming yellow glow. 
+Despite its location deep inside a cold dark mountain, the stable is warm
+and comfortable and well tended.
+~
+[Guin] Stables
+[Guin] Done.
+~
+-1443233753 11 6 0
+D2
+stable door~
+~
+147 -1 51029 10 10 5
+-1
+S
+
+#51037
+Tarion's Room~
+The room is eerily cold, even the wall-hung tapestries doing little to
+add warmth to the drafty room.  An oaken wood desk dominates the center
+of the room, a ball of light dangling above it barely illuminating the
+gloom-shrouded corner of the sprawling chamber.  In one corner, a gray
+stone fireplace cradles a dying fire flickering flames reflects off the
+surface of a wall-mounted rapier hung nearby.  A collection of rare and
+valuable books, all leather bound, fills a roughly crafted bookcase
+standing just below the rapier.  Opposite the curtained portal, a thick
+mound of furs and pelts - bear mostly with mink laid atop it for added
+softness and warmth - form a comfortable, inviting bed.
+~
+[Guin] Done.
+~
+-1443233788 11 9 0
+D2
+~
+~
+407 -1 51035 10 10 5
+-1
+S
+
+#51038
+Chambers of the Dark Cleric~
+Swathed in shadows, the large, cold chamber huddles in the torchlit gloom
+awaiting the coming of the witching hour.  A single fireplace, its hearth
+boasting a handful of damp, dank ash, is meant to warm the room, but
+would do little to alleviate the chill in the dark and distant corners. 
+The place is simple and plain; a lone chair and table, holding the stub
+of a half-burned candle, are central to the room.  A pile of furs of the
+most luxuriant softness form a place for sleeping against an inside wall. 
+Finely crafted tapestries, stitched in silk and woolen threads, depict
+images of the goddess Iniara torturing hapless victims, and ward off the
+worst of draughts seeping through the chamber's outer walls.
+~
+[Guin] Vile
+~
+-369489883 11 9 0
+D2
+~
+~
+407 4053 51040 10 10 5
+D3
+~
+~
+0 -1 51052 10 10 5
+-1
+S
+
+#51039
+Khari's Room~
+The flickering flames of the fire cast dull reflections upon the dark,
+purple curtains and drapes hung around the room in bold contrast to the
+pale-white of the yeti-hide rug before the hearth.  The furnishings are
+sparse - a large double bed, a table and a chair in front of the fire -
+all made out of finest mahogany, its rich, dark-red colour blending in
+perfectly into the darkness of the room.  The four-poster bed, hung with
+curtains of darkest purple, has had symbols of Iniara carved upon it
+effect of the pictograms would turn the stomach or instill fear in lesser
+races.  In the far corner of the room stands a plinth of darkest
+mahogany, upon which is arrayed a suit of armour, brightly polished and
+glinting with reflected fire light.  The table is covered in a dark
+purple cloth edged with silvery thread, and has been consecrated as a
+shrine to Iniara with an incense burner billowing purple smoke, a silvery
+chalice and a large, blood-stained axe arranged around the Goddess'
+symbol.
+~
+~
+-1443231740 11 9 0
+D1
+dark purple door~
+~
+407 3933 51035 10 10 5
+-1
+S
+
+#51040
+Third Floor Landing~
+This landing looks much like the floor below, nothing more than a narrow
+walkway offering access to the surrouding rooms.  The stonework here is
+less masterfully crafted that of the great hall, yet still shows signs of
+great detail and workmanship.  A half-dozen torches rest in polished
+sconces, offering flickering yellow light to the circular room.  A door
+carved with the figure of an gangly troll leads off to the west and
+northward, a solid-looking door bears the symbol of Iniara, punctuated
+beneath by delicately inscribed censer.  The door to the east sports a
+carving of a dagger, dripping with blood.
+~
+[Guin] Done.
+~
+-1443233788 11 9 0
+D0
+solid-looking door~
+~
+407 4053 51038 10 10 5
+D1
+~
+~
+407 -1 51041 10 10 5
+D3
+thick wooden door~
+~
+407 4049 51048 10 10 5
+D5
+~
+~
+0 -1 51035 10 10 5
+-1
+S
+
+#51041
+Crin's Room~
+Surrounded by dark, stone walls that are damp and cold to the touch, the
+dank and musty room seems to be more like a cave than a bedchamber.  A
+dim glow tries to fill the area, provided by several flickering torches
+that adorn stone columns that support the high ceiling.  In the centre of
+the room, a high backed chair rests in front of a small fireplace filled
+with ashes.  On closer inspection the chair almost appears to be a
+throne, covered with deep blood red leather and adorned with sparkling
+jewels.  Along each side of the room a myriad of phials and devices
+sprawl across the wall and floor resembling some kind of laboratory. 
+Pungent and acrid odours fill these areas, seemingly coming from the
+various herbs and powders being brewed.  At the far wall of this room an
+old bookcase made of a dark wood is nestled between an exquisite weapons
+rack, and a statue of a goblin head mounted on a mahogany pedestal.
+~
+~
+-1443233788 11 9 0
+D3
+~
+~
+407 -1 51040 10 10 5
+-1
+S
+
+#51042
+Dead End Trail~
+You are on a small trail that reaches its end northward, obstructed by an
+immense marble gate partially covered in ivy.  The grass has grown to
+several feet high here, poorly maintained and overflowing with weeds. 
+Inhabiting the east and west are thickets of underbrush and shrubbery
+that seem to be fighting for every inch of space among them.  A stone
+boulder rests to the south, blocking the entrance to the trail.
+~
+[Guin] Clan Flee
+[Guin] Connects to south to 21311.
+~
+-369623032 11 9 0
+D0
+marble gate~
+~
+147 -1 51044 10 10 5
+D2
+colossal boulder~
+~
+2479 -1 21311 10 10 5
+D3
+stable door~
+~
+131 -1 51043 10 10 5
+A
+~
+~
+if( !is_in_clan( ch, "FLEE" ) ) {
+  act_tochar( #impossible, ch );
+  act_notchar( #rimpossible, ch, obj, mob, sight );
+  end;
+}
+continue;
+~
+E
+impossible~
+@CYou find no way to open the gate.@n
+~
+E
+rimpossible~
+@C$n attempts to open the gate, but finds no way to do so.@n
+~
+!
+8 0 1
+A
+~
+~
+if( !is_follower( ch ) ) {
+  act_tochar( #close, ch );
+  act_notchar( #rclose, ch, obj, mob, sight );
+  close( room, south );
+}
+~
+E
+close~
+@CThe boulder rolls back into place behind you.@n
+~
+E
+rclose~
+@CThe boulder rolls back into place behind $n.@n
+~
+!
+1 0 4
+A
+move push pull~
+boulder colossal 1 south~
+if( is_open( room, south ) ) {
+  act_tochar( #why, ch );
+  act_notchar( #rwhy, ch, obj, mob, sight );
+  end;
+}
+act_tochar( #start, ch );
+act_notchar( #rstart, ch, obj, mob, sight );
+wait( 1 );
+act_tochar( #finish, ch );
+act_notchar( #rfinish, ch, obj, mob, sight );
+open( room, south );
+~
+E
+why~
+@yThe boulder has already been pushed aside.@n
+~
+E
+rwhy~
+@y$n starts to move the boulder but finds its already been moved.@n
+~
+E
+start~
+@YYou lean your shoulder against the boulder, pushing on it.@n
+~
+E
+rstart~
+@Y$n leans a shoulder into the boulder, preparing to move it aside.@n
+~
+E
+finish~
+@GWith a mighty heave, you roll the boulder aside.@n
+~
+E
+rfinish~
+@GWith a mighty heave, $n rolls the boulder aside.@n
+~
+!
+0 0 0
+A
+~
+~
+if( get_integer( ch, "/Cayln/Stronghold/Flee/NCEntrance" ) != 0 ) {
+  act_tochar( #magics, ch, obj, mob );
+  act_notchar( #rmagics, ch, obj, mob, sight );
+  end;
+}
+continue;
+~
+E
+magics~
+A magical field stretches across the southern way, disallowing you to continue.
+Obviously you must go out the way you came in.
+~
+E
+rmagics~
+$n approaches the path to the south, and a magical field comes into
+existence, preventing $m from continuing any further.
+~
+!
+3 0 4
+-1
+S
+
+#51043
+Well Cleaned Stable~
+As you enter this room, you sense the smell and sound of creatures.  The
+first thing you see is a mass of straw and resting places for animals. 
+Wooden booths are occupied with horses and other types of pets in this
+stable, and they all are aware of your presence.  Buckets filled with
+water and troughs filled with oats and other grains fill this nicely kept
+stable as well.
+~
+[Guin] Clan Flee
+~
+-369623036 11 9 0
+D1
+stable door~
+~
+131 -1 51042 10 10 5
+-1
+S
+
+#51044
+Stronghold Foyer~
+You pass through the barrier and into what looks to be a foyer for the
+stronghold.  The room itself is fairly spacious, and sunlight streaming
+through the large bay windows provides plenty of natural light for the
+room.  You notice that the view here is almost as spectacular as the one
+from the balcony of the Eagle Eye Cafe.  Clearly visible through the
+windows is the Sea of Stars, its waters crashing against the rocks off in
+the distance.  All in all, the location and atmosphere of the room
+engender a sense of paradise.  One cannot help but want to sit in this
+room and take a reprieve from the troubles of life.  To the south is a
+marble gate.  A lever has been set beside it.
+~
+[Guin] Clan Flee
+[Guin] Make exit north hidden, visible to clan members only.
+~
+-369623035 11 9 0
+D0
+thick, iron-bound door~
+~
+139 -1 51047 10 10 5
+D1
+~
+~
+0 -1 51046 10 10 5
+D2
+marble gate~
+~
+147 -1 51042 10 10 5
+D3
+~
+~
+0 -1 51045 10 10 5
+A
+~
+~
+if( !is_follower( ch ) ) {
+  act_tochar( #shut, ch );
+  act_notchar( #rshut, ch, obj, mob, sight );
+  close( room, south );
+}
+if( is_in_clan( ch, "FLEE" ) )
+show( ch, room, north );
+~
+E
+shut~
+@CThe gate silently swings shut behind you.@n
+~
+E
+rshut~
+@CThe gate silently swings shut behind $n.@n
+~
+!
+1 0 4
+A
+~
+~
+if( !is_in_clan( ch, "FLEE" ) ) {
+  act_tochar( #noway, ch );
+  act_notchar( #rnoway, ch, obj, mob, sight );
+  end;
+}
+continue;
+~
+E
+noway~
+@yYou see no way to open the door to the north.@n
+~
+E
+rnoway~
+@y$n finds no way to open the door to the north.@n
+~
+!
+8 0 1
+-1
+S
+
+#51045
+Kitchen~
+Even before you entered this room, the delicious smells wafting from it
+identify it as the kitchen.  Cabinets and cupboards line the walls, while
+pots and pans are hung from every nook and cranny available.  Over in the
+corner, you see an iron stove and griddle, ingeniously rigged so that the
+smoke goes right out through a vent in the side of the cliff.  You also
+see a table and some chairs sitting in one corner, made available for the
+passing adventurer who only has time for a quick meal.  The chef, a
+robust man with a thick, black moustache, is standing near a black kettle
+with a ladle in one hand.
+~
+[Guin] Clan Flee
+~
+-369623035 11 9 0
+D1
+~
+~
+0 -1 51044 10 10 5
+-1
+S
+
+#51046
+Meeting Hall~
+In this room you see a large oak table with maps and parchments scattered
+upon it.  The table is obviously the center of the room and is surrounded
+by high-backed chairs.  The walls are covered with tapestries.  At the
+foot of the large table is a small box from where a speaker may project
+his voice and inspire the listeners in this meeting hall.
+~
+[Guin] Clan Flee
+~
+-369623035 11 9 0
+D3
+~
+~
+0 -1 51044 10 10 5
+-1
+S
+
+#51047
+Storage Area~
+The size of this room is deceiving, as the darkness hides its true size. 
+There are a few torches burning and providing ample light for what
+business goes on here.  The floor is smooth and carved from the stone in
+the cliff.  The walls are a smooth sand color.  A button can be seen
+protruding from one of the walls.
+~
+[Guin] Clan Flee
+~
+-369555451 11 9 0
+D2
+thick, iron-bound door~
+~
+131 -1 51044 10 10 5
+E
+grand stone portal~
+A grand portal is set in the north wall here. Made of mithril, silver and gold
+it gleams from an unnatural light. Images of forests and plains, ice and fire,
+a cloudless sky and deep blue oceans flicker in it's center. The only way to
+know what lies on the other side is to enter and see.
+~
+A
+~
+~
+if( !is_follower( ch ) ) {
+  if( is_open( room, south ) ) {
+    send_to_room( #bang, room, sight );
+    close( room, south );
+  }
+}
+~
+E
+bang~
+The vault door slams shut by itself.
+~
+!
+1 0 4
+A
+read trace run~
+runes portal~
+act_tochar( #trace_stone, ch, obj, mob );
+act_notchar( #rtrace_stone, ch, obj, mob, sight );
+if( !is_in_clan( ch, "FLEE" ) )
+  end;
+if( get_integer( ch, "/Cayln/Stronghold/Flee/NCEntrance" ) == 0 )
+  end;
+wait( 1 );
+act_tochar( #run_hand, ch, obj, mob );
+act_notchar( #rrun_hand, ch, obj, mob, sight );
+wait( 1 );
+act_tochar( #transfer, ch, obj, mob );
+act_notchar( #rtransfer, ch, obj, mob, sight );
+transfer( ch, find_room( 13346 ) );
+act_notchar( #arrival, ch, obj, mob, sight );
+set_integer( ch, "/Cayln/Stronghold/Flee/NCEntrance", 0 );
+~
+E
+trace_stone~
+You find an intricate set of runes carved within the edges of the portal. 
+The runes look like a new inscription though, added within the recent
+past.
+~
+E
+rtrace_stone~
+$n runs his hands along the stones, tracing the intricate set of runes.
+~
+E
+run_hand~
+You trace your finger along the archaic runes, and as your finger draws
+along them, they glow an indigo blue.
+~
+E
+rrun_hand~
+$n traces $s finger along the archaic runes, and as $s fingers draw along
+them, they glow an indigo blue.
+~
+E
+arrival~
+$n appears in the midst of a blue sigilistic magic.
+~
+E
+transfer~
+The blue magics of the stone, entwine around your hands, and snake around
+your body.  You feel your body being moved through time and space.
+~
+E
+rtransfer~
+The blue magics of the stone, entwine around $n's hands, and then snake
+around $s body.  $n then vanishes from sight.
+~
+!
+0 0 0
+-1
+S
+
+#51048
+Rascal's Romper Room~
+The circular chamber is spacious, its ceiling rising overhead to
+disappear among the structural supports and dark wood rafters.  There are
+no windows, yet the room is well-lit by a combination of torches and
+elven-crafted glow globes spaced randomly around the room.  The
+furnishings of the room give a conflicting statement about its occupant. 
+Implements of war...armor and weapons...intermingle with a variety of
+well-maintained toys suitable for young children...from rocking horses
+and baby dolls, to bright, graphically drawn books with large, dark print.
+~
+[Guin] VILE
+~
+-369489883 11 9 0
+D0
+~
+~
+0 -1 51052 10 10 5
+D1
+thick wooden door~
+~
+407 4049 51040 10 10 5
+-1
+S
+
+#51049
+Atop a Rocky Promontory~
+You find yourself perched on a rocky outcropping of shale and limestone
+that forms a small promontory before a dangerously steep mountain slope. 
+A highland lake, nestled between the spires of the mountains, laps
+against the outcropping, its crystal clear waters partially obscured by
+an ever present mist that hangs over its surface.  Two small channels
+have eroded their way through the shale rock, one leading away from the
+lake and acting as an overflow, finally dispersing amongst the myriad of
+limestone boulders clustered above a vertical drop into a narrow gorge
+that runs through the foothills to the west.  The main stream goes east
+and follows the trail through an arcade opening.
+~
+[Guin] Grim
+~
+-1443364863 5 9 0
+D0
+~
+~
+0 -1 51050 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GCarefully, you descend the swinging rope ladder.@n
+~
+E
+to_room~
+@GCarefully, $n descends the swinging rope ladder.@n
+~
+!
+3 0 32
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CCarefully, you descend the old rope ladder hanging from the cliff.@n
+~
+E
+to_room~
+@CCarefully, $n descends the old rope ladder hanging from the cliff.@n
+~
+!
+3 0 32
+A
+~
+~
+if( has_obj( 4054, ch )) {
+  act_tochar( #poof, ch );
+  act_tochar( #poof2, ch );
+  act_notchar( #poof1, ch );
+  loop( followers ) {
+    if( is_pet( rch )) {
+      transfer( rch, find_room( 28164 ));
+    }
+  }
+  transfer( ch, find_room( 28164 ));
+}
+~
+E
+poof~
+You carefully blow on a highland horn, causing the room to spin.
+~
+E
+poof1~
+$n blows on a highland horn, and suddenly disappears.
+~
+E
+poof2~
+When the spinning stops, you feel yourself transported to a new location.
+~
+!
+0 0 0
+A
+~
+~
+acode( room, 3);
+loop( followers ) {
+ch = rch;
+acode( room, 4 );
+}
+~
+!
+0 0 0
+A
+blow~
+horn~
+if( has_obj( 4054, ch )) {
+acode( room, 4 );
+}
+~
+!
+0 0 0
+-1
+S
+
+#51050
+With a Spacious Cave~
+A musty and surprisingly spacious cavern descends at various levels into
+the mountain from here.  Shadows dance back and forth across the cavern
+floor, leaping in tune to the flickering torches held in practically
+constructed sconces around the cavern's walls.  The only constant source
+of light is a narrow shaft that comes streaming through a crevice in the
+northern wall, creating the image of a dusty curtain that rises across
+the entrance to the cavern.
+~
+[Guin] Grim
+~
+-1443233787 11 9 0
+D2
+~
+~
+0 -1 51049 10 10 5
+D3
+~
+~
+0 -1 51051 10 10 5
+-1
+S
+
+#51051
+Storage Chamber~
+Sconces set at regular intervals along the rough-hewn walls radiate
+flickering yellow torchlight, illuminating the ancient cave.  Limestone
+protrusions evidence that this corner of the cave was once filled with
+stalagmites and stalactites.  They have since been removed, making way
+for the many weapon racks and armor closets that now occupy every
+available space.  The walls have been heavily scarred in places where
+natural crevices have been haphazardly enlarged to form shelves.
+~
+[Guin] Grim
+~
+-1443166203 11 9 0
+D1
+~
+~
+0 -1 51050 10 10 5
+-1
+S
+
+#51052
+Parlor~
+Nestled between two private rooms, the parlor is a comfortable, quiet
+room perfect for escaping the everyday trials and tribulations of life. 
+The chill, grey granite of the mountains is overlaid with dark, thick
+tapestries, stitched in blue, that cover the walls of the chamber and
+provide a feeling of cosiness and warmth to the otherwise dank place.  A
+massive fireplace splits one wall, providing warmth to the room, and a
+pair of large, comfortable couches are placed before it.  A heavy, oak
+bookshelf holds volumes of varying ages and subjects.
+~
+[Guin] Vile
+~
+-369491964 11 9 0
+D1
+~
+~
+0 -1 51038 10 10 5
+D2
+~
+~
+0 -1 51048 10 10 5
+2410 17 1509949540 -2 0
+3456 17 1509949540 -2 0
+1773 17 1509949540 -2 16
+-1
+S
+
+#51053
+Ruined Castle~
+The shattered wood and twisted iron of the gatehouse still remains as a
+grim reminder to the epic conflict that tore through the castle.  Low,
+moss covered walls encircle the building, the rubble all that stands of a
+stout defense.  Between the wall and keep a grassy killing ground
+spreads, a few bits of lichen covered masonry poking through the dried
+grains.
+~
+~
+704118784 11 9 0
+D1
+~
+~
+0 -1 51054 10 10 5
+D3
+~
+~
+0 -1 8012 10 10 5
+-1
+S
+
+#51054
+The Antechamber~
+Once fine tapestries lie upon the floor of the stone chamber, bits of the
+outer door intermingling through it.  Dark blood-stains coat the cobbled
+floor, a few rents in the stone where axe and sword carved through flesh
+and bone to embed into the ground.  Northwards an inner courtyard opens
+up, most of it filled with rubble from the collapse of the upper stories.
+~
+~
+704249856 11 9 0
+D2
+~
+~
+0 -1 51055 10 10 5
+D3
+~
+~
+0 -1 51053 10 10 5
+-1
+S
+
+#51055
+Side Chapel~
+Perhaps faith or luck protected the small chapel from the destruction
+wrought upon the rest of the keep.  A white marble alter rests in the
+corner, the rusted remnants of a suite of mail staining its top.  A door
+in the east leads into an antechamber, the signs of battle marking its
+floor.
+~
+~
+704249856 11 9 0
+D0
+~
+~
+0 -1 51054 10 10 5
+-1
+S
+
+#0
+

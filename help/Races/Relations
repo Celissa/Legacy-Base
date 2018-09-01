@@ -1,0 +1,34 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+relations    : shows state of relations between all nations<br>
+relations -n : shows relations value as number from -100 to 100<br>
+<br>
+FLAGS<br>
+<br>
+n : display relations table in numeric form<br>
+<br>
+<h1> Description </h1>
+<br>
+The political relations between and among clans here are volatile and<br>
+dynamic, and are shaped by two key times: a natural proclivity toward peace<br>
+or war between two clans, and the actions of members of each of the clans<br>
+toward members of others. For example, Khedrun and Eleint are inclined to<br>
+ally, but continuous pejorative actions between the two will ultimately<br>
+plunge them into war.<br>
+<br>
+The relations table show the following values, in descending order from<br>
+harmony to abhorrence:<br>
+<br>
+        "+++"    Harmony     \<br>
+        " ++"    Accord       -  Peace<br>
+        " + "    Ease        /<br>
+        " = "    Tense<br>
+        " - "    Strife      \<br>
+        " --"    Discord      - War<br>
+        "---"    Abhorrence  /<br>
+<br>
+See also: nations, reputation<br>
+</html>
+</body>

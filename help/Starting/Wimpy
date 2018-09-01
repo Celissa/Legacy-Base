@@ -1,0 +1,23 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+wimpy                   : list current wimpy settings.<br>
+wimpy [field] [% value] : sets your wimpy to a % value of your max hps.<br>
+wimpy [field]           : resets the %value of that field to zero.<br>
+<br>
+<h1> Description </h1>
+<br>
+Wimpy causes you to flee when your hit points go below your wimpy % value.<br>
+You will attempt to flee automatically, so remember to turn it off at the<br>
+appropriate times or it could get you into more trouble than whatever good<br>
+it may do.  Your maximum wimpy % value depends upon level and your maximum<br>
+hit points.  Note that wimpy is NOT failsafe, and comes with no ironclad<br>
+guarantees, but it's usually better than nothing.<br>
+<br>
+The available fields are Flee, Blink, Recall and Pray.  When your hit<br>
+points go below the % value of a field, you will attempt to either flee,<br>
+recite a scroll of recall if you have one, or cast the spell 'blink' if you<br>
+are a mage.  Again, this is not failsafe, so be warned.<br>
+</html>
+</body>

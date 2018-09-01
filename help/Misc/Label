@@ -1,0 +1,14 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+label [obj] as [label] : adds a label to an object<br>
+label [obj]            : removes a label<br>
+<br>
+<h1> Description </h1>
+ <br>
+This command adds a label to a container.  Useful when carrying multiple<br>
+bags.  An example is label bag as Reagents would make a canvas bag appear<br>
+as a canvas bag labeled Reagents.<br>
+</html>
+</body>

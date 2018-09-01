@@ -1,0 +1,795 @@
+#M2_AREA
+2
+
+Trienna~
+Teircen~
+~
+~
+~
+
+0 0
+3
+1
+#ROOMS
+
+#4600
+A Secluded Glade~
+This hidden glade of lush greenery appears to be focused around a gentle
+spring that bubbles up to form a small pond.  A narrow ledge around the
+pond is lined with small ferns whose size is kept in check only by the
+grazing of the animals that pass through searching for sustenance. 
+Further out, the enriched soil has permitted densely packed verdant
+foliage to come into bloom early, nearly cutting the glade off from the
+outer world completely.  In the center of the gently rippling pond,
+someone has placed a crude carving of a howling wolf chisled from a
+glittering white rock.
+~
+Temple to Aelyoni, Safe, but NOT No.Mob for a reason.
+
+Passage is one way, from the north its a hidden transfer function.
+[Guin] Part of the elven area.
+~
+33030146 3 9 0
+D0
+~
+~
+0 -1 5138 10 10 5
+E
+howling wolf white rock statue carving~
+The crude stone carving is rough-hewn, as if made by a somewhat skilled
+person, but not one learned in the craft of stoneworking.  Despite its
+rough appearance, or perhaps because of it, the statuette has a feral
+beauty remeniscent of the real thing.  Small flecks of reflective
+crystaline bits embedded througout the stone twinkle like the stars of
+the night sky as the ambient light falls across the statuette.  The
+carving depicts the angled crest of a stone outrcopping, atop which
+stands a wolf, baying skyward as if at the moon.
+~
+A
+~
+~
+act_tochar( #siochaint, ch );
+~
+E
+siochaint~
+@BYou feel the peace of the glade wash over you, relaxing the tension
+from your body.@n 
+~
+!
+1 0 63
+A
+get take steal~
+4 statuette carving wolf~
+act_tochar( #no, ch );
+~
+E
+no~
+For all its crude beauty, the stone would be too heavy for even you to
+drag it away.  Perhaps you should seek better opportunities elsewhere?
+~
+!
+0 0 0
+A
+~
+~
+i = random( 1, 4 );
+if( i == 1 )
+  act_room( #ripple, ch );
+if( i == 2 )
+  act_room( #splash, ch );
+if( i == 3 )
+  act_room( #rustle, ch );
+if( i == 4 )
+  act_room( #breeze, ch );
+~
+E
+ripple~
+@bA pocket of air trapped in the underground stream escape as a rush of
+bubbles in the center of the burbling spring.
+~
+E
+splash~
+@BA splash sounds from reeds on the edge of the spring pond as a frog leaps
+into the water.  All that remains to see as your head reflexively turns
+towards the sound is a series of expanding ripples.
+~
+E
+rustle~
+@GSeveral plant branches rustle against each other suddenly as some small
+animal darts off further into the woods through the ground cover.
+~
+E
+breeze~
+@CA cooling, gentle breeze wafts through the glade filling the air with the
+aromatic scent of @Mw@Bi@Yl@Rd @Cflowers in bloom.
+~
+!
+4 150 0
+696 17 1509949540 -2 0
+-1
+S
+
+#4601
+Forest~
+Stately oaks and vibrant maples in hues of verdant green and vibrant red
+form the bulk of the larger vegetation in this area.  Dense shrubs,
+smaller only in comparison to the surrounding trees, spot the forest
+floor in a flower-dotted green to both the east and the west then coming
+together towards the south.  The chevron-like shape formed by the bushes
+is unusually uniform for the wild growth of the forest floor, indicating
+a likelihood that the shrubbery was intentionally grown this way.  The
+narrow break that seperates the bushes to the south, readily appearant on
+this side, would likely be indistinguishable from the thicker growth
+around it from the other side.
+~
+Passage is one way, from the south its a hidden transfer function.
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 4602 10 10 5
+D2
+~
+~
+0 -1 5138 10 10 5
+A
+~
+~
+act_tochar( #move_branches, ch );
+continue;
+~
+E
+move_branches~
+@gYou move aside a few of the branches and wend your way south.@n
+~
+!
+3 0 4
+-1
+S
+
+#4602
+Forest~
+The thick bole of an ancient oak stands at the heart of a small clearing
+bordered to the north by thick shrubbery.  The wide-spreading branches of
+the oak permit only filtered sunlight to reach the ground even in early
+spring and late-fall, preventing other trees from finding purchase in the
+precious, life-giving soil.  Younger trees, mostly oaks dotted with an
+occasional stray maple or elm, manage to grow just outside the range of
+the old oak's roots and branch-cover.  While you could easily make your
+way in most directions, it looks as if the passage through the denser
+northern shrubs would would be a bit of work before they yielded the
+right of passage to you.
+~
+You can climb up the tree here.
+
+Passage is one way, from the north its a hidden transfer function.
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 5137 10 10 5
+D1
+~
+~
+0 -1 4603 10 10 5
+D2
+~
+~
+0 -1 4601 10 10 5
+D3
+~
+~
+0 -1 4604 10 10 5
+E
+ancient oak~
+The trunk of the thick oak is thick with the growth of many centuries,
+measuring easily fifteen feet around at the base.  Either through some
+aspect of its ancient years or perhaps as a result of some disease,
+several thickened bulges form a nearly perfect tracery of ridgework that
+makes its way inconspicuously up the bole of the oak.  With a little
+grace, it shouldn't be difficult to scale the bole clear up to the lower
+branches of the tree.
+~
+E
+1 up~
+The thick branches of the ancient oak tree are well outside of reach. 
+For all their distance above you, they look easily wide enough for even a
+vodekyn to stand on.  Although, you doubt one could easily hide their
+bulk, even atop the wide branches, they would probably be pretty safe
+resting in the tree's sturdy branches.
+~
+A
+~
+~
+act_tochar( #leaving, ch );
+act_notchar( #rleft, ch );
+continue;
+~
+E
+leaving~
+@gYou push your way through the dense undergrowth to the north.
+~
+E
+rleft~
+@g$n pushes $s way through the dense undergrowth to the north.
+~
+!
+3 0 1
+A
+2 climb~
+1 up oak tree~
+if( !is_fighting( ch ) ) {
+  if( can_fly( ch ) ) {
+    act_tochar( #flying, ch );
+    act_notchar( #rflying, ch );
+    transfer( ch, find_room( 4605 ) );
+    act_notchar( #arrfly, ch );
+    end;
+    }
+  if( find_skill( ch, climb ) > random( 2, 4 ) ) {
+    act_tochar( #climb, ch );
+    act_notchar( #rclimb, ch );
+    transfer( ch, find_room( 4605 ) );
+    act_notchar( #arr, ch );
+    }
+  else {
+    act_tochar( #thud, ch );
+    act_notchar( #rthud, ch );
+    i = 2d4+2;
+    dam_message( ch , i, "the fall" );
+    inflict( ch, mob, i, "falling from a tree" );
+    }
+  }
+else
+  act_tochar( #no, ch );
+loop( followers ) {
+  ch = rch;
+  acode( room, 2 );
+  }
+~
+E
+flying~
+@cYou fly up into the lower branches of the ancient oak.@n
+~
+E
+rflying~
+@g$n flies up into the lower branches of the ancient oak.@n
+~
+E
+arrfly~
+@g$n flies up from below.@n
+~
+E
+climb~
+@yYou use the ridges in the sides of the oak as hand and foothold and
+climb the tree.@n 
+~
+E
+rclimb~
+@y$n climbs up the ancinet oak and into its lower branches.@n
+~
+E
+arr~
+@y$n climbs up from below.@n
+~
+E
+thud~
+@YYou manage to make @YYour way part way up the oak before losing @YYour
+grip and landing hard on the ground below.@n 
+~
+E
+rthud~
+@Y$n climbs half way up the ancient oak before slipping and falling to
+the ground.@n 
+~
+E
+no~
+@rNot while fighting you wont!@n Perhaps you should try @cflee@ning instead?
+~
+!
+0 0 0
+-1
+S
+
+#4603
+Forest~
+The lush undergrowth of the forest floor attempts to fill the entirety of
+the space between the ancient trees.  Fortunately, all it manages to
+succeed in doing is create an arcing path, used by animal and people
+alike, nestled between two living walls of plants.  While two of the
+trees look almost close enough to climb, the tangled branches of the
+shrubs make it impossible to reach them short of spending an inordinate
+amount of time hacking your way through them to reach the trees.  Towards
+the edge of the path, where it meets the undergrowth, several flowers do
+grow within picking reach, at least.
+~
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 4606 10 10 5
+D3
+~
+~
+0 -1 4602 10 10 5
+-1
+S
+
+#4604
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 4602 10 10 5
+D3
+~
+~
+0 -1 4608 10 10 5
+D5
+~
+~
+0 -1 4607 10 10 5
+-1
+S
+
+#4605
+In the Branches of a Tree~
+The lattice of broad oak branches form dozens of paths that criss-cross
+this level of the oak.  Amidst the clusters of leaves there are even a
+few simple plank platforms forming either bridges over wide gaps or
+convenient stopping points.  The overall effect is one of a small,
+open-aired field high in the branches of the ancient oak.  Despite
+the ease of travel in this general level, the next tier of branches grow
+tighter together and with a much less structured appearance that would
+not lend itself well to climbing.  Fortunately, the bole of the tree has
+thick ridges growing in it that would at least allow you a relatively
+safe journey back down to the ground below.
+~
+You can climb down here.
+
+there is an elf npc that hangs out here about 50% of the time.
+~
+33030144 3 9 0
+E
+ancient oak~
+The trunk of the thick oak is thick with the growth of many centuries,
+measuring easily fifteen feet around at the base.  Either through some
+aspect of its ancient years or perhaps as a result of some disease,
+several thickened bulges form a nearly perfect tracery of ridgework that
+makes its way inconspicuously down the bole of the oak.  With a little
+grace, it shouldn't be difficult to descend the bole of the oak clear to
+the ground below.
+~
+E
+1 down~
+The ground is a fair distance off and looks to be a painful fall.  A fair
+estimate would probably place the drop at about forty to fifty feet from
+the lowest branches to the hard soil below.  Perhaps finding a way down
+other than jumping would be advisable.
+~
+A
+2 climb~
+1 down tree ancient~
+if( !is_fighting( ch ) ) {
+  if( can_fly( ch ) ) {
+    act_tochar( #flying, ch );
+    act_notchar( #rflying, ch );
+    transfer( ch, find_room( 4602 ) );
+    act_notchar( #arrfly, ch );
+    end;
+    }
+  if( find_skill( ch, climb ) > random( 2, 4 ) ) {
+    act_tochar( #climb, ch );
+    act_notchar( #rclimb, ch );
+    transfer( ch, find_room( 4602 ) );
+    act_notchar( #arr, ch );
+    }
+  else {
+    act_tochar( #thud, ch );
+    act_notchar( #rthud, ch );
+    transfer( ch, find_room( 4602 ) );
+    i = 2d6+3;
+    dam_message( ch , i, "the fall" );
+    inflict( ch, mob, i, "falling from a tree" );
+    act_notchar( #arrthud, ch );
+    }
+  }
+else
+  act_tochar( #no, ch );
+loop( followers ) {
+  ch = rch;
+  acode( room, 2 );
+  }
+~
+E
+flying~
+@cYou fly down to the ground.@n
+~
+E
+rflying~
+@c$n flies down to the ground below.@n
+~
+E
+arrfly~
+@c$n flies down from high overhead.@n
+~
+E
+climb~
+@yYou climb down the bole of the oak using the ridges for hand and
+footholds.@n 
+~
+E
+rclimb~
+@y$n climbs down the bole of the ancient oak.@n
+~
+E
+arr~
+@y$n climbs down the bole of the ancient oak from the branches high overhead.@n
+~
+E
+thud~
+@rPart way down the bole of the oak you slip and fall!@n
+~
+E
+rthud~
+@rHalfway down the bole of the oak $n slips and falls to the ground below!@n
+~
+E
+arrthud~
+@rWith a yelp of pain $n crashes down out of the branches overhead to
+land with a hard thud on the ground here!@n 
+~
+E
+no~
+@rNot while fighting you wont!@n Perhaps you should try @cflee@ning instead?
+~
+!
+0 0 0
+A
+1 down~
+~
+act_tochar( #daft, ch );
+~
+E
+daft~
+Really?  And how were you planning on getting down?  By climbing down the
+tree or leaping to your possible death?
+~
+!
+0 0 0
+A
+jump~
+1 down~
+if( !is_fighting( ch ) ) {
+  act_tochar( #geronimo, ch );
+  act_notchar( #koo_koo, ch );
+  transfer( ch, find_room( 4602 ) );
+  i = 8d5+10;
+  dam_message( ch, i, "the fall" );
+  inflict( ch, mob, i, "a suicidal leap from a tall tree" );
+  act_notchar( #wham, ch );
+  }
+else {
+  act_tochar( #dunce, ch );
+  act_notchar( #rdunce, ch );
+  transfer( ch, find_room( 4602 ) );
+  i = 4d20+20;
+  dam_message( ch, i, "the fall" );
+  inflict( ch, mob, i, "a suicidal leap from a tall tree during combat" );
+  act_notchar( #haha, ch );
+  }
+~
+E
+geronimo~
+@rWith a wailing cry you leap from the branchesand plummet!@n
+~
+E
+koo_koo~
+@rShowing the sense of a brained goose, $n leaps from the branches.@n
+~
+E
+wham~
+@rWith all the grace of a skydiving elephant, $n plummets down from the
+branches overhead!@n 
+~
+E
+dunce~
+@rTaking your life in your hands you step backwards off a branch in
+mid-combat!@n 
+~
+E
+rdunce~
+@rEvading a near miss, $n takes a leap of faith and plummets from the
+branches!@n 
+~
+E
+haha~
+@rWith all the grace of a skydiving elephant, $n plummets down from the
+branches overhead!  A moment later a shadowy shape leans over the side of
+one of the branches and shakes their fist at $n.@n 
+~
+!
+0 0 0
+-1
+S
+
+#4606
+Forest~
+Under Construction.
+~
+leather worker does some work out here.  Has an odd smell.
+probably have some newbie quest to dig up and retrieve some leathers for him.
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 4603 10 10 5
+-1
+S
+
+#4607
+A Large Den~
+Under Construction.
+~
+This den is unusually large, having been cleared out from the ground, sheltered by the roots of two large trees.
+The entrances is nestled under a rising root and concealed by plants.
+shop - leather
+~
+33030144 3 9 0
+D4
+~
+~
+0 -1 4604 10 10 5
+-1
+S
+
+#4608
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 4616 10 10 5
+D1
+~
+~
+0 -1 4604 10 10 5
+D2
+~
+~
+0 -1 4609 10 10 5
+-1
+S
+
+#4609
+A Small Clearing in the Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 4608 10 10 5
+D1
+~
+~
+0 -1 4610 10 10 5
+D2
+~
+~
+0 -1 4611 10 10 5
+D3
+~
+~
+0 -1 4612 10 10 5
+-1
+S
+
+#4610
+Forest~
+Under Construction.
+~
+shop - general goods
+~
+33030144 3 9 0
+D3
+~
+~
+0 -1 4609 10 10 5
+-1
+S
+
+#4611
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 4609 10 10 5
+D4
+~
+~
+0 -1 4613 10 10 5
+D5
+~
+~
+0 -1 4614 10 10 5
+-1
+S
+
+#4612
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 4609 10 10 5
+D4
+~
+~
+0 -1 4615 10 10 5
+-1
+S
+
+#4613
+In the Branches of a Tree~
+Under Construction.
+~
+shop - alchemist
+~
+33030144 3 9 0
+D5
+~
+~
+0 -1 4611 10 10 5
+-1
+S
+
+#4614
+A Large Den~
+Under Construction.
+~
+shop - vintner
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 4621 10 10 5
+D4
+~
+~
+0 -1 4611 10 10 5
+-1
+S
+
+#4615
+In the Branches of a Tree~
+Under Construction.
+~
+shop - food
+~
+33030144 3 9 0
+D5
+~
+~
+0 -1 4612 10 10 5
+-1
+S
+
+#4616
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 4618 10 10 5
+D2
+~
+~
+0 -1 4608 10 10 5
+D3
+~
+~
+0 -1 4617 10 10 5
+-1
+S
+
+#4617
+Nothing~
+Under Construction.
+~
+weapons
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 4616 10 10 5
+-1
+S
+
+#4618
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D3
+~
+~
+0 -1 4616 10 10 5
+D4
+~
+~
+0 -1 4619 10 10 5
+-1
+S
+
+#4619
+Nothing~
+Under Construction.
+~
+~
+33030144 3 9 0
+D4
+~
+~
+0 -1 4620 10 10 5
+D5
+~
+~
+0 -1 4618 10 10 5
+-1
+S
+
+#4620
+Nothing~
+Under Construction.
+~
+- Tavern
+~
+33030144 3 9 0
+D5
+~
+~
+0 -1 4619 10 10 5
+-1
+S
+
+#4621
+A Large Den~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 4614 10 10 5
+-1
+S
+
+#0
+

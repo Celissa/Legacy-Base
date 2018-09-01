@@ -1,0 +1,6573 @@
+#M2_AREA
+2
+
+Serene Sunshine~
+Adakar~
+~
+~
+~
+
+70 0
+4
+1
+#ROOMS
+
+#11000
+Before a Shimmering Silver Portal~
+Fluffy white, and soft as silk, the vaporous clouds have coalesced to
+form a solid mass sturdy enough to bear most weight.  This surreal
+landscape seems to shift slightly from moment to moment as if it were
+moving; yet the general makeup remains the same.  As though mimicking
+mundane ground, a slightly elevated, smooth-surfaced path leads toward
+the north.  Flanked by neat, pillar-like squares of puffy clouds, the
+path is obviously an intentional creation and not a random generation of
+climatic effects.
+~
+[Adakar] all rooms should be no gate and no summon and maybe no recall. 
+and no disarm vs seraphim (if skill is re-enabled) 
+[Adakar] Thought : zone is set above the northern rainforest and northernmost mountains of the twins, view to the east is rainsforest, southeast is plains/mountains, south is mountains, down is rainforest, east is mountains and plains/foothills, northeast is forest and north is water
+[Eliza] rdesc and extras reviewed
+[Guin] Connects to TTG via portal in 47315
+~
+33030208 0 7 0
+D0
+~
+~
+0 -1 11001 10 10 5
+E
+pillar-like squares clouds~
+White as new fallen snow, these clouds are a puffy cumulus type pulled
+straight from a child's dream.  The small squares are neatly aligned in a
+semblence of a small hedge, almost as if they were marking the path for
+the unobservant traveler.
+~
+E
+path 1 north~
+Elevated and flanked by the small square pillars, this flat section of
+the cloud could only be a path.  Seemingly safe to walk upon, the path
+leads off to the north, away from the silver portal and farther out on
+the surface of this bright white cloud.
+~
+E
+flowing rune~
+On closer inspection the flowing rune actually surrounds a small picture,
+the picture is that of a single tower with a small cloud just off its
+surface.  The rune twists and flows in a language long forgotten from
+this world.
+~
+A
+enter~
+portal~
+if( obj_in_room( 7012, room ) ) {
+  act_tochar( #poof, ch );
+  act_notchar( #poof2, ch );
+  transfer( ch, find_room( 47315 ) );
+  act_notchar( #arrival, ch );
+  continue;
+  }
+else
+  act_tochar( #noport, ch );
+end;
+~
+E
+poof~
+You step through the shimmering silver portal, as easily as if it were
+water.
+~
+E
+poof2~
+$n steps through the shimmering silver portal.
+~
+E
+arrival~
+Casually exiting from the platinum portal, $n steps into the room.
+~
+E
+noport~
+You see nothing like that in the room to enter.
+~
+!
+0 0 0
+7012 17 1509949540 -2 0
+-1
+S
+
+#11001
+Serene Sunshine~
+Flowing out across the skies, a clumpy white cloud stretches forth
+seemingly without end.  The normally gaseous, cumulus creations have
+coalesced to form a slightly solid mass, hinting at more than a little
+arcane power.  A small parody of a mundane path, complete with miniature
+cloud pillars, leads in all directions save west; the cloud there
+appearing to be less cohesive and unable to bear weight.
+~
+[Eliza] small parody - narrow parody
+[Eliza] rdesc reviewed
+[Adakar] small as in little not small as in skinny
+[Adakar] extras in
+[Adakar] action west
+[Adakar] actionj reflection from portal( light strikes )
+~
+33030208 0 7 0
+D0
+~
+~
+0 -1 11007 10 10 5
+D1
+~
+~
+0 -1 11002 10 10 5
+D2
+~
+~
+0 -1 11000 10 10 5
+E
+miniature cloud pillars~
+White as new fallen snow, these clouds are a puffy cumulus type pulled
+straight from a child's dream.  The small squares are neatly aligned in a
+semblence of a small hedge, almost as if they were marking the path for
+the unobservant traveler.
+~
+E
+1 west~
+Gazing out towards the southwest, a patchwork of fields can bee seen,
+though from this distance detail is impossible to make out.  The the west
+and north though is a verdant green ocean flowing across the land.  This
+is certainly a rare view of the major forests of the west...  from above.
+~
+-1
+S
+
+#11002
+Serene Sunshine~
+Rising forth from the unbroken pearlescent surface of the cloud, a shiny
+silver portal stands a short distance to the southwest.  Small and large
+birds alike, flitter and flap above the surface of these cumulus
+creations, diving through the surface of the cloud in a child-like game. 
+The surface of the cloud thins out to the south, lending the impression
+of cotton that has been stretched too thin.  This thin strand of clouds
+offers a view of the ground far below, albeit in a slightly distorted
+view.
+~
+[Adakar] may need to mention the path
+[Adakar] room to the west, states the path heads in this direction also.
+[Eliza] lending the impression - much like a ball of cotton....
+[Eliza] rdesc reviewed
+[Adakar] action birds
+[Adakar] action light striking portal -- reflection
+[Adakar] action south, east
+~
+33030208 0 7 0
+D0
+~
+~
+0 -1 11003 10 10 5
+D3
+~
+~
+0 -1 11001 10 10 5
+5088 41 1509949540 3 0
+5088 73 1509949540 3 0
+-1
+S
+
+#11003
+Serene Sunshine~
+Retaining the same design in all three directions from this t-junction,
+small pillars flank this carefully created mockery of the ground below. 
+Obviously, this odd trail was meant to circle around the glowing orb just
+a short distance to the northeast.  Nearly making the pearlescent clouds
+seem mundane and boring, this semi-blinding orb appears to be a miniature
+sun hanging suspended in the air.  The ground appears to be stable...as
+stable as a cloud can be...in all directions save west, where it thins to
+the point of near-transparency.
+~
+[Adakar] greater sunshine orb, hanging in the air, (this one is un-obtainable)
+[Eliza] rdesc reviewed
+~
+33030208 0 6 0
+D0
+~
+~
+0 -1 11006 10 10 5
+D1
+~
+~
+0 -1 11004 10 10 5
+D2
+~
+~
+0 -1 11002 10 10 5
+-1
+S
+
+#11004
+Serene Sunshine~
+Curving around to complete the visible circle, the carefully manipulated
+path...for path it obviously is, even to the casual observer...flows with
+the arcane arts.  Flanked by white pillars of billowing vapors in an
+effort to further define the flat, level plane, the trail through the
+clouds encircles a brightly glowing orb suspended in midair, pulsating
+with an unknown purpose.  Birds soar freely, paying little heed to the
+orb as they wing their way through the sky.
+~
+[Eliza] rdesc reviewed.
+~
+33030208 0 6 0
+D0
+~
+~
+0 -1 11005 10 10 5
+D3
+~
+~
+0 -1 11003 10 10 5
+A
+~
+~
+act_room( #fly, ch );
+~
+E
+fly~
+@wA small white bird flitters through the air, frolicking and flying in
+and out of the large clouds.@n 
+~
+!
+2 0 0
+5091 9 1509949540 3 0
+-1
+S
+
+#11005
+Serene Sunshine~
+Another carefully crafted curve in the cloudy path helps complete the
+circle in the sky.  Flanking this mimicry of an earthbound path, small
+cumulus clouds stand as queit sentinels, airy pillars relacing the marker
+stones of a mundane road.  No doubt this ring's sole purpose is to
+circumscribe the glowing orb positioned a short distance to the southwest. 
+The orb is nearly blinding; it pulsates slightly as it hangs suspended in
+the air, burning with the intensity of a miniature sun.  Small birds seem
+to not notice as they flutter and fly all around, some diving through the
+surface of the clouds that now bear your weight.
+~
+[Adakar] view of the plains to the east/north
+~
+33030208 0 6 0
+D2
+~
+~
+0 -1 11004 10 10 5
+D3
+~
+~
+0 -1 11006 10 10 5
+5093 9 1509949540 3 0
+-1
+S
+
+#11006
+Serene Sunshine~
+Continuing to both the south and east, the magically crafted path atop
+the cumulus cloud curves majestically here.  Flanked by pillars along its
+entire length, this small trail was obviously meant to appear as a road
+on the ground would.  This odd trail curves around a glowing orb just a
+short distance to the southeast.  Breathtakingly bright, this brilliant
+orb makes the cloudy ground seem common and simple.  The cloud's surface
+looks to be unstable to both the west and north; its normally lumpy and
+thick makeup is thin and wispy.
+~
+[Adakar] Will give them a jump to the room to the north...  if they miss
+they will be transferred to a room on the ground, not sure what
+zone/road/city this zone will float over.
+[Adakar] north 1912
+[Eliza] will this transfer cause damage?
+[Eliza] rdsec line 5 - entire length, this narrow trail serves the same purpose as a mundane road on the ground far below. - suggestion.
+[Eliza] rdesc reviewed
+[Adakar] jumps will most likely be instant death, if you fail, level 65ish zone --- maybe 2000 hps of damage
+~
+33030208 0 6 0
+D1
+~
+~
+0 -1 11005 10 10 5
+D2
+~
+~
+0 -1 11003 10 10 5
+5091 9 1509949540 3 0
+-1
+S
+
+#11007
+Serene Sunshine~
+Crafted out of puffy clumps of cotton-like clouds and misty wisps of
+brilliant white, the ground here is far from normal.  Dazzling rays of
+light reflect off the pefectly white surface of these rain-bringing
+creations.  A carefully cultivated turn on the mockery of a path leads
+around an unseen obstacle to the north, the clouds there all appearing to
+be able to bear weight.  Though the surface appears stable, this path
+does not seem as if it would curve without reason.
+~
+[Eliza] rdesc reviewed
+~
+33030208 0 7 0
+D2
+~
+~
+0 -1 11001 10 10 5
+D3
+~
+~
+0 -1 11008 10 10 5
+E
+cloud pillars ground 1 down puffy clumps cotton~
+~
+5092 9 1509949540 3 0
+-1
+S
+
+#11008
+Serene Sunshine~
+Wisps of barely noticeable clouds drift continuously on gentle wind
+currents.  Though the air should be cold at this altitude, it is
+pleasantly comfortable to the average passerby.  A carefully cultivated
+turn on the mockery of a path leads off towards the east.  The clouds to
+both the south and west thin considerably in comparison to the solidified
+mass that supports your weight.  Faint images of the ground far below are
+visible, at such an extreme height that no great detail can be perceived.
+~
+[Adakar] wisps of cloouds/view of *very* far away mountains to the west
+[Adakar] see vnum 1900 for greater detail on zone placement.
+[Eliza] Well, I still don't like 'casual passerby' in conjunction with this zone.. but get a second opinion.;)
+[Eliza] rdesc reviewed
+~
+33030208 0 7 0
+D0
+~
+~
+0 -1 11009 10 10 5
+D1
+~
+~
+0 -1 11007 10 10 5
+-1
+S
+
+#11009
+Serene Sunshine~
+Thinning considerably, the puffy white clouds are mere wisps clinging
+together in an effort to maintain cohesion.  Glancing through the surface
+of the clouds to the west offers a slightly hazy view of the ground far
+below; the distance combined with the thin veil of clouds making details
+impossible to see.  The only part of the cloud that still appears stable
+is the path, running north and south.  The small path appears as a normal
+road on the ground would, level and straight, complete with short,
+flanking clouds in the shape of small pillars.
+~
+[Adakar] i think i screwed up the second sentence, something is telling
+me the ; is wrong 
+[Eliza] rdesc reviewed
+[Skurva] a ";" is used to connect what would be two perfectly good
+sentences with similar ideas, in this case the second part cannot be read
+as a sentence by itself, so no ";".
+~
+33030208 0 7 0
+D0
+~
+~
+0 -1 11010 10 10 5
+D2
+~
+~
+0 -1 11008 10 10 5
+5092 9 1509949540 3 0
+-1
+S
+
+#11010
+Serene Sunshine~
+Flittering and floating, pure white creatures of roughly humanoid shapes
+seem to meld into and form from the clouds surface to the west.  A thick
+clump of cumulus clouds form in that direction, separated by great
+distances of vaporous, misty clouds.  A small path begins to the south,
+leading in that direction, its edges flanked by small square pillars
+crafted out of the same cloudy material as the path.  The clouds to the
+north and east have solidified almost entirely, leaving only scant
+sections of the cloud dangerous to walk upon, where it remains thin and
+gaseous.
+~
+[Adakar] end of path.
+[Eliza] clump - cluster?
+[Eliza] rdesc reviewed
+~
+33030208 0 7 0
+D0
+~
+~
+0 -1 11015 10 10 5
+D1
+~
+~
+0 -1 11011 10 10 5
+D2
+~
+~
+0 -1 11009 10 10 5
+-1
+S
+
+#11011
+Serene Sunshine~
+Wispy white clouds drift at foot level, slowly condensing into a tight
+cumulus formation that is able to bear weight.  Arcane magics are
+obviously active, for no natural cloud could ever support a person.  The
+clouds to the south are still vaporously thin, offering a view, albeit
+hazy, of the countryside beneath; a crazy patchwork of fields, mountains
+and forest, that hints at the extreme altitude of these cloud formations. 
+The clouds in the other cardinal directions seem to have solidified
+almost entirely, their puffy formations mimicking boulder strewn ground.
+~
+[Eliza] nice room.
+[Eliza] rdesc reviewed
+~
+33030208 0 7 0
+D0
+~
+~
+0 -1 11013 10 10 5
+D1
+~
+~
+0 -1 11012 10 10 5
+D3
+~
+~
+0 -1 11010 10 10 5
+-1
+S
+
+#11012
+Serene Sunshine~
+The cloud formation here is thin and surrounded by wispy tendrils of
+clouds, slowly merging with the surface of the cloud as a whole.  Though
+the ground remains stable, it is obviously a newer creation than the
+ground to the west.  The surface of the cloud is just barely dense enough
+to prevent view of the ground below, although the areas to the south and
+east are thin enough to offer a hazy view.  The clouds are more level
+here, too infantile to billow out and take shapes of their own like the
+surface to the west.
+~
+[Adakar] south is 1906, jump action
+[Eliza] rdesc reviewed.
+~
+33030208 0 7 0
+D3
+~
+~
+0 -1 11011 10 10 5
+5091 9 1509949540 3 0
+-1
+S
+
+#11013
+Serene Sunshine~
+As if strewn with boulders, the puffy wide cumulus clouds are far from
+level on the surface.  Softly billowing out as they continuously grow,
+the magics condensing them have no apparent reason to make them level
+here.  Wispy tendrils of newly formed clouds, dance through the air as
+they travel their natural progression across the world.  Staring out in
+all directions, offers the same view, a rarely level yet stable cloud
+surface, sitting stagnant in the skies.
+~
+[Eliza] last sentence... staring out in all directions.. The view is the same in all directions,
+[Eliza] rdesc reviewed.
+~
+33030208 0 7 0
+D0
+~
+~
+0 -1 11016 10 10 5
+D1
+~
+~
+0 -1 11014 10 10 5
+D2
+~
+~
+0 -1 11011 10 10 5
+D3
+~
+~
+0 -1 11015 10 10 5
+5096 9 1509949540 3 0
+-1
+S
+
+#11014
+Serene Sunshine~
+Wispy white clouds drift at foot level, slowly condensing into a tight
+cumulus formation that is able to bear weight.  The surface of the cloud
+is just barely dense enough to prevent view of the world below, although
+the area to the east is thin enough to offer a hazy view.  A large
+cumulus formation has formed some distance to the east, white doves and
+humanoid shapes flying and playing on its surface.  Although the mockery
+of ground to the north and south is wispy thin, it appears to be able to
+support weight, however a jump over the thinner tendrils would be
+necessary.
+~
+[Adakar] south is 19012 -- jump action
+[Adakar] north is 1917 -- jump action
+[Eliza] rdesc reviewed
+~
+33030208 0 7 0
+D3
+~
+~
+0 -1 11013 10 10 5
+5091 9 1509949540 3 0
+-1
+S
+
+#11015
+Serene Sunshine~
+Roughly humanoid in shape, large white creations can be seen melding with
+and out of the clouds to the west, as if that were a highly magical area. 
+The largest grouping of cumulus clouds can be seen in that direction, so
+dense and thick those parts of it are too high to see their top. 
+Separating this cumulus cloud from the western one, are large distances
+of vaporous, thin clouds: these distances too wide to even conceive of
+jumping them.  Though far from level, the ground to the east and north
+appears to be substantial enough to support your weight; possibly the
+only way to gain access to the cloud to the west.
+~
+[Adakar] colon use correct?
+[Eliza] line 2, and out of the clouds.. and emerging out of the clouds?
+[Eliza] line 7 - is awkward..
+[Eliza] first colon perhaps should be a semi-colon.. I'm very weak on this subject.
+[Eliza] rdesc reviewed
+~
+33030208 0 7 0
+D0
+~
+~
+0 -1 11018 10 10 5
+D1
+~
+~
+0 -1 11013 10 10 5
+D2
+~
+~
+0 -1 11010 10 10 5
+A
+~
+~
+act_room( #elemental, ch );
+continue;
+~
+E
+elemental~
+@WBrilliant white doves call out in playful song as they dance with the
+humanoid shapes in the skies to the west.@n 
+~
+!
+2 200 0
+A
+push~
+button~
+acode( room, 1 );
+~
+!
+0 0 0
+-1
+S
+
+#11016
+Serene Sunshine~
+Dominating the area, twin lumpy blocks of cumulus matter rise from the
+surface of the cloud.  These two blocks appear as marker stones would,
+lending them as landmarks to pinpoint the exact location of safe ground. 
+They draw your attention to a small bridge, which seems to link two large
+clouds together to form one,the surface on either side of the bridge being
+to thin and wispy to walk on.  The joining of these two clouds leaves no
+doubt that they are being manipulated by arcane magics as clouds tend to
+not form bridges between them.
+~
+[Eliza] rdesc reviewed
+~
+33030208 0 7 0
+D0
+~
+~
+0 -1 11019 10 10 5
+D1
+~
+~
+0 -1 11017 10 10 5
+D2
+~
+~
+0 -1 11013 10 10 5
+D3
+~
+~
+0 -1 11018 10 10 5
+-1
+S
+
+#11017
+Serene Sunshine~
+Small tendrils break apart from the monstrous cumulus cloud far to the east. 
+Minute traces, barely recognizable as fingers of a cloud, drift at foot
+level, some condensing and helping form this magically created cloud. 
+Though the surface of the cloud is dense and thick, this is certainly the
+edge, with the lumpy cumulus clouds quickly becoming gaseous to the east. 
+White doves and humanoid shapes are evident on the surface of the clouds
+to the east, flying and playing oblivious to their surroundings.  The
+surface of the cloud becomes lumpier and more substantial to the west,
+giving the impression that it would be safer there then here so close to
+the edge.
+~
+[Adakar] south is 1914 -- jump action
+[Adakar] north is 1921 -- jump action
+[Eliza] rdesc reviewed.
+~
+33030208 0 7 0
+D3
+~
+~
+0 -1 11016 10 10 5
+-1
+S
+
+#11018
+Serene Sunshine~
+Standing here it becomes apparant that the entirety of this cloud is not
+a singular entity, but instead two large cumulus clouds that have joined
+together.  The bright whites are perfect matches for each other, although
+the joining is not yet complete.  The merging occurs to the north, the
+slight gap between the two clouds slowly filling in with wispy tendrils. 
+The only solid connection lies to the northwest where a bridge-like
+formation has coupled the clouds together.
+~
+[Adakar] north is 1929 -- jump action
+[Eliza] rdesc reviewed
+~
+33030208 0 7 0
+D1
+~
+~
+0 -1 11016 10 10 5
+D2
+~
+~
+0 -1 11015 10 10 5
+5091 9 1509949515 3 0
+-1
+S
+
+#11019
+Serene Sunshine~
+Nearly ethereal and just barely not transparent, a thin bridge of opaque
+material spans the distance between two large cumulus clouds.  The bridge
+appears to be as fragile as spun glass, ready to break apart at any
+moment.  Only obvious arcane magics prevent this cirrus style cloud from
+pulling away from its larger, lumpier neighbors.  The cloud quickly
+dissipates to both the east and west, allowing a view of the ground far
+below.  To fall off of this bridge would mean instant death, without
+question.
+~
+[Adakar] bridge -- connection between the two clouds
+[Adakar] jump action -- people jump they die, plain and simple
+[Eliza] meep.
+[Eliza] sentence 1 - Ethereal and nearly transparent, ... also opaque material.. some opaque substance.. ?
+[Eliza] rdesc reviewed
+~
+33030208 0 9 0
+D0
+~
+~
+0 -1 11020 10 10 5
+D2
+~
+~
+0 -1 11016 10 10 5
+A
+jump leap~
+off bridge over~
+~
+!
+0 0 0
+5088 41 1509949540 3 0
+5088 73 1509949540 3 0
+-1
+S
+
+#11020
+Serene Sunshine~
+Dominating the area, twin lumpy blocks of cumulus matter rise from the
+surface of the cloud.  These two blocks appear as marker stones would,
+lending them as landmarks to pinpoint the exact location of safe ground. 
+They draw your attention to a small bridge, which seems to link two large
+clouds together to form one, the surface on either side of the bridge
+being to thin and wispy to walk on.  The joining of these two clouds
+leaves no doubt that they are being manipulated by arcane magics as
+clouds tend to not form bridges between them.
+~
+[Adakar] all rooms from here have random chances to transfer chars to
+other rooms within this 30 square block, this room will be the only real
+marker other than room exits.
+[Adakar] all rooms north of here having a NESW exit should be sized ogre,
+all outter edge rooms should be giant.
+[Adakar] Maze is in... there are two paths, everything seems to work.
+~
+33030208 0 7 0
+D0
+~
+~
+0 -1 11025 10 10 5
+D1
+~
+~
+0 -1 11021 10 10 5
+D2
+~
+~
+0 -1 11019 10 10 5
+D3
+~
+~
+0 -1 11029 10 10 5
+-1
+S
+
+#11021
+Serene Sunshine~
+Stretching forth from horizon to horizon is a pearlescent sterility that
+is almost mind-numbing.  New formations billow out and bulge from the
+surface of this gargantuan cumulus cloud; as each blossom erupts previous
+ones dissipate and vanish.  Everything appears the same in all
+directions, save south, a field of pillowy, ever-changing cumulus matter
+that though it supports weight will not be easy to transgress.  The
+clouds to the south are vaporously thin, offering a hazy view of the
+countryside below.
+~
+[Adakar] south is 1917 -- jump action.
+[Adakar] jump action nixed, to far of a jump here
+~
+32505920 0 7 0
+D0
+~
+~
+0 -1 11024 10 10 5
+D1
+~
+~
+0 -1 11022 10 10 5
+D3
+~
+~
+0 -1 11020 10 10 5
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  act_tochar( #move, ch );
+  act_notchar( #gone, ch );
+  i = random( 1, 6 );
+  if( i == 1 )
+    j = 11020;
+  if( i == 2 )
+    j = 11025;
+  if( i == 3 )
+    j = 11024;
+  if( i == 4 )
+    j = 11023;
+  if( i == 5 )
+    j = 11022;
+  if( i == 6 )
+    j = 11021;
+  transfer( ch, find_room( j ) );
+  if( is_player( ch ) )
+    act_notchar( #arrive, ch );
+  if( !is_player( ch ) )
+    act_notchar( #mobarrive, ch );
+  loop( followers ) {
+    if( !is_sleeping( rch ) ) {
+      if( !is_resting( rch ) ) {
+        act_notchar( #move2, ch );
+        transfer( rch, find_room( j ) );
+        act_notchar( #arrive, rch );
+        }
+      }
+    }
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape.
+~
+E
+to_room~
+You follow $n across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 2
+A
+~
+~
+remove_rflag( reset0, room );
+continue;
+~
+!
+1 0 8
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  if( rflag( reset0, room ) ) {
+    act_tochar( #move, ch );
+    act_notchar( #gone, ch );
+    i = random( 1, 6 );
+    if( i == 1 )
+      j = 11020;
+    if( i == 2 )
+      j = 11025;
+    if( i == 3 )
+      j = 11024;
+    if( i == 4 )
+      j = 11023;
+    if( i == 5 )
+      j = 11022;
+    if( i == 6 )
+      j = 11021;
+    transfer( ch, find_room( j ) );
+    if( is_player( ch ) )
+      act_notchar( #arrive, ch );
+    if( !is_player( ch ) )
+      act_notchar( #mobarrive, ch );
+    loop( followers ) {
+      if( !is_sleeping( rch ) ) {
+        if( !is_resting( rch ) ) {
+          act_notchar( #move2, ch );
+          transfer( rch, find_room( j ) );
+          act_notchar( #arrive, rch );
+          }
+        }
+      }
+    }
+  else
+    continue;
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape, oddly a small
+path seems evident before your eyes.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 1
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  if( rflag( reset1, room ) ) {
+    act_tochar( #move, ch );
+    act_notchar( #gone, ch );
+    i = random( 1, 6 );
+    if( i == 1 )
+      j = 11020;
+    if( i == 2 )
+      j = 11025;
+    if( i == 3 )
+      j = 11024;
+    if( i == 4 )
+      j = 11023;
+    if( i == 5 )
+      j = 11022;
+    if( i == 6 )
+      j = 11021;
+    transfer( ch, find_room( j ) );
+    if( is_player( ch ) )
+      act_notchar( #arrive, ch );
+    if( !is_player( ch ) )
+      act_notchar( #mobarrive, ch );
+    loop( followers ) {
+      if( !is_sleeping( rch ) ) {
+        if( !is_resting( rch ) ) {
+          act_notchar( #move2, ch );
+          transfer( rch, find_room( j ) );
+          act_notchar( #arrive, rch );
+          }
+        }
+      }
+    }
+  else
+    continue;
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 8
+A
+~
+~
+remove_rflag( reset1, room );
+continue;
+~
+!
+1 0 1
+5092 9 1509949540 3 0
+-1
+S
+
+#11022
+Serene Sunshine~
+Stretching forth from horizon to horizon is a pearlescent sterility that
+is almost mind-numbing.  New formations billow out and bulge from the
+surface of this gargantuan cumulus cloud; as each blossom erupts previous
+ones dissipate and vanish.  Everything appears the same in all
+directions, save south, a field of pillowy, ever-changing cumulus matter
+that though it supports weight will not be easy to transgress.  The
+clouds to the south are vaporously thin, offering a hazy view of the
+countryside below.
+~
+~
+33030208 0 7 0
+D0
+~
+~
+0 -1 11023 10 10 5
+D1
+~
+~
+0 -1 11054 10 10 5
+D3
+~
+~
+0 -1 11021 10 10 5
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  act_tochar( #move, ch );
+  act_notchar( #gone, ch );
+  i = random( 1, 6 );
+  if( i == 1 )
+    j = 11021;
+  if( i == 2 )
+    j = 11024;
+  if( i == 3 )
+    j = 11023;
+  if( i == 4 )
+    j = 11053;
+  if( i == 5 )
+    j = 11054;
+  if( i == 6 )
+    j = 11022;
+  transfer( ch, find_room( j ) );
+  if( is_player( ch ) )
+    act_notchar( #arrive, ch );
+  if( !is_player( ch ) )
+    act_notchar( #mobarrive, ch );
+  loop( followers ) {
+    if( !is_sleeping( rch ) ) {
+      if( !is_resting( rch ) ) {
+        act_notchar( #move2, ch );
+        transfer( rch, find_room( j ) );
+        act_notchar( #arrive, rch );
+      }
+    }
+  }
+}
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 11
+-1
+S
+
+#11023
+Serene Sunshine~
+Stretching forth from horizon to horizon is a pearlescent sterility that
+is almost mind-numbing.  New formations billow out and bulge from the
+surface of this gargantuan cumulus cloud; as each blossom erupts previous
+ones dissipate and vanish.  Everything appears the same in all four
+cardinal directions, and yet in this cloud's ever-changing state, nothing
+remains the same from moment to moment.
+~
+[Eliza] reviewed
+[Eliza] needs rextras. *halo*
+[Adakar] extras  added in, quick but in
+~
+33030208 0 5 0
+D0
+~
+~
+0 -1 11028 10 10 5
+D1
+~
+~
+0 -1 11053 10 10 5
+D2
+~
+~
+0 -1 11022 10 10 5
+D3
+~
+~
+0 -1 11024 10 10 5
+E
+formations new billow bulge surface gargantuan cumulus cloud~
+Mimicking large boulders, jutting mountains and the rare valley the
+cloud's surface billows out on its own accord.  These creations seem to
+not last long, for as one forms another disappears, its matter fusing
+into the cloud so it can burst forth to dance once more.
+~
+E
+1 north 1 south 1 east 1 west~
+Slowly billowing out, the clouds in that direction shift and change
+before your very eyes.
+~
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  act_tochar( #move, ch );
+  act_notchar( #gone, ch );
+  i = random( 1, 9 );
+  if( i == 1 )
+    j = 11027;
+  if( i == 2 )
+    j = 11028;
+  if( i == 3 )
+    j = 11052;
+  if( i == 4 )
+    j = 11053;
+  if( i == 5 )
+    j = 11054;
+  if( i == 6 )
+    j = 11022;
+  if( i == 7 )
+    j = 11021;
+  if( i == 8 )
+    j = 11024;
+  if( i == 9 )
+    j = 11023;
+  transfer( ch, find_room( j ) );
+  if( is_player( ch ) )
+    act_notchar( #arrive, ch );
+  if( !is_player( ch ) )
+    act_notchar( #mobarrive, ch );
+  loop( followers ) {
+    if( !is_sleeping( rch ) ) {
+      if( !is_resting( rch ) ) {
+        act_notchar( #move2, ch );
+        transfer( rch, find_room( j ) );
+        act_notchar( #arrive, rch );
+        }
+      }
+    }
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 6
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  if( rflag( reset0, room ) ) {
+    act_tochar( #move, ch );
+    act_notchar( #gone, ch );
+    i = random( 1, 9 );
+    if( i == 1 )
+      j = 11027;
+    if( i == 2 )
+      j = 11028;
+    if( i == 3 )
+      j = 11052;
+    if( i == 4 )
+      j = 11053;
+    if( i == 5 )
+      j = 11054;
+    if( i == 6 )
+      j = 11022;
+    if( i == 7 )
+      j = 11021;
+    if( i == 8 )
+      j = 11024;
+    if( i == 9 )
+      j = 11023;
+    transfer( ch, find_room( j ) );
+    if( is_player( ch ) )
+      act_notchar( #arrive, ch );
+    if( !is_player( ch ) )
+      act_notchar( #mobarrive, ch );
+    loop( followers ) {
+      if( !is_sleeping( rch ) ) {
+        if( !is_resting( rch ) ) {
+          act_notchar( #move2, ch );
+          transfer( rch, find_room( j ) );
+          act_notchar( #arrive, rch );
+          }
+        }
+      }
+    }
+  else
+    continue;
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape, oddly a small path seems evident before your eyes.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 1
+A
+~
+~
+remove_rflag( reset0, room );
+continue;
+~
+!
+1 0 8
+A
+~
+~
+remove_rflag( reset1, room );
+continue;
+~
+!
+1 0 1
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  if( rflag( reset1, room ) ) {
+    act_tochar( #move, ch );
+    act_notchar( #gone, ch );
+    i = random( 1, 9 );
+    if( i == 1 )
+      j = 11027;
+    if( i == 2 )
+      j = 11028;
+    if( i == 3 )
+      j = 11052;
+    if( i == 4 )
+      j = 11053;
+    if( i == 5 )
+      j = 11054;
+    if( i == 6 )
+      j = 11022;
+    if( i == 7 )
+      j = 11021;
+    if( i == 8 )
+      j = 11024;
+    if( i == 9 )
+      j = 11023;
+    transfer( ch, find_room( j ) );
+    if( is_player( ch ) )
+      act_notchar( #arrive, ch );
+    if( !is_player( ch ) )
+      act_notchar( #mobarrive, ch );
+    loop( followers ) {
+      if( !is_sleeping( rch ) ) {
+        if( !is_resting( rch ) ) {
+          act_notchar( #move2, ch );
+          transfer( rch, find_room( j ) );
+          act_notchar( #arrive, rch );
+          }
+        }
+      }
+    }
+  else
+    continue;
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape, oddly a small path seems evident before your eyes.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 8
+5091 9 1509949540 3 0
+-1
+S
+
+#11024
+Serene Sunshine~
+Stretching forth from horizon to horizon is a pearlescent sterility that
+is almost mind-numbing.  New formations billow out and bulge from the
+surface of this gargantuan cumulus cloud; as each blossom erupts previous
+ones dissipate and vanish.  Everything appears the same in all four
+cardinal directions, and yet in this cloud's ever-changing state, nothing
+remains the same from moment to moment.
+~
+[Eliza] reviewed
+~
+33030208 0 5 0
+D0
+~
+~
+0 -1 11027 10 10 5
+D1
+~
+~
+0 -1 11023 10 10 5
+D2
+~
+~
+0 -1 11021 10 10 5
+D3
+~
+~
+0 -1 11025 10 10 5
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  act_tochar( #move, ch );
+  act_notchar( #gone, ch );
+  i = random( 1, 9 );
+  if( i == 1 )
+    j = 11020;
+  if( i == 2 )
+    j = 11025;
+  if( i == 3 )
+    j = 11026;
+  if( i == 4 )
+    j = 11027;
+  if( i == 5 )
+    j = 11028;
+  if( i == 6 )
+    j = 11023;
+  if( i == 7 )
+    j = 11022;
+  if( i == 8 )
+    j = 11021;
+  if( i == 9 )
+    j = 11024;
+  transfer( ch, find_room( j ) );
+  if( is_player( ch ) )
+    act_notchar( #arrive, ch );
+  if( !is_player( ch ) )
+    act_notchar( #mobarrive, ch );
+  loop( followers ) {
+    if( !is_sleeping( rch ) ) {
+      if( !is_resting( rch ) ) {
+        act_notchar( #move2, ch );
+        transfer( rch, find_room( j ) );
+        act_notchar( #arrive, rch );
+        }
+      }
+    }
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 9
+A
+~
+~
+remove_rflag( reset0, room );
+continue;
+~
+!
+1 0 4
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  if( rflag( reset0, room ) ) {
+    act_tochar( #move, ch );
+    act_notchar( #gone, ch );
+    i = random( 1, 9 );
+    if( i == 1 )
+      j = 11020;
+    if( i == 2 )
+      j = 11025;
+    if( i == 3 )
+      j = 11026;
+    if( i == 4 )
+      j = 11027;
+    if( i == 5 )
+      j = 11028;
+    if( i == 6 )
+      j = 11023;
+    if( i == 7 )
+      j = 11022;
+    if( i == 8 )
+      j = 11021;
+    if( i == 9 )
+      j = 11024;
+    transfer( ch, find_room( j ) );
+    if( is_player( ch ) )
+      act_notchar( #arrive, ch );
+    if( !is_player( ch ) )
+      act_notchar( #mobarrive, ch );
+    loop( followers ) {
+      if( !is_sleeping( rch ) ) {
+        if( !is_resting( rch ) ) {
+          act_notchar( #move2, ch );
+          transfer( rch, find_room( j ) );
+          act_notchar( #arrive, rch );
+          }
+        }
+      }
+    }
+  else
+    continue;
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape, oddly a small path seems evident before your eyes.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 2
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  if( rflag( reset1, room ) ) {
+    act_tochar( #move, ch );
+    act_notchar( #gone, ch );
+    i = random( 1, 9 );
+    if( i == 1 )
+      j = 11020;
+    if( i == 2 )
+      j = 11025;
+    if( i == 3 )
+      j = 11026;
+    if( i == 4 )
+      j = 11027;
+    if( i == 5 )
+      j = 11028;
+    if( i == 6 )
+      j = 11023;
+    if( i == 7 )
+      j = 11022;
+    if( i == 8 )
+      j = 11021;
+    if( i == 9 )
+      j = 11024;
+    transfer( ch, find_room( j ) );
+    if( is_player( ch ) )
+      act_notchar( #arrive, ch );
+    if( !is_player( ch ) )
+      act_notchar( #mobarrive, ch );
+    loop( followers ) {
+      if( !is_sleeping( rch ) ) {
+        if( !is_resting( rch ) ) {
+          act_notchar( #move2, ch );
+          transfer( rch, find_room( j ) );
+          act_notchar( #arrive, rch );
+          }
+        }
+      }
+    }
+  else
+    continue;
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape, oddly a small path seems evident before your eyes.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 4
+A
+~
+~
+remove_rflag( reset1, room );
+continue;
+~
+!
+1 0 2
+-1
+S
+
+#11025
+Serene Sunshine~
+Stretching forth from horizon to horizon is a pearlescent sterility that
+is almost mind-numbing.  New formations billow out and bulge from the
+surface of this gargantuan cumulus cloud; as each blossom erupts previous
+ones dissipate and vanish.  Everything appears the same in all four
+cardinal directions, and yet in this cloud's ever-changing state, nothing
+remains the same from moment to moment.
+~
+[Eliza] reviewed
+~
+33030208 0 5 0
+D0
+~
+~
+0 -1 11026 10 10 5
+D1
+~
+~
+0 -1 11024 10 10 5
+D2
+~
+~
+0 -1 11020 10 10 5
+D3
+~
+~
+0 -1 11032 10 10 5
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  act_tochar( #move, ch );
+  act_notchar( #gone, ch );
+  i = random( 1, 8 );
+  if( i == 1 )
+    j = 11033;
+  if( i == 2 )
+    j = 11026;
+  if( i == 3 )
+    j = 11027;
+  if( i == 4 )
+    j = 11024;
+  if( i == 5 )
+    j = 11021;
+  if( i == 6 )
+    j = 11020;
+  if( i == 7 )
+    j = 11029;
+  if( i == 8 )
+    j = 11032;
+  transfer( ch, find_room( j ) );
+  if( is_player( ch ) )
+    act_notchar( #arrive, ch );
+  if( !is_player( ch ) )
+    act_notchar( #mobarrive, ch );
+  loop( followers ) {
+    if( !is_sleeping( rch ) ) {
+      if( !is_resting( rch ) ) {
+        act_notchar( #move2, ch );
+        transfer( rch, find_room( j ) );
+        act_notchar( #arrive, rch );
+        }
+      }
+    }
+  }
+else
+continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape.
+~
+E
+to_room~
+You follow $n across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 15
+5092 9 1509949540 3 0
+-1
+S
+
+#11026
+Serene Sunshine~
+Stretching forth from horizon to horizon is a pearlescent sterility that
+is almost mind-numbing.  New formations billow out and bulge from the
+surface of this gargantuan cumulus cloud; as each blossom erupts previous
+ones dissipate and vanish.  Everything appears the same in all four
+cardinal directions, and yet in this cloud's ever-changing state, nothing
+remains the same from moment to moment.
+~
+[Eliza] reviewed
+~
+33030208 0 5 0
+D0
+~
+~
+0 -1 11049 10 10 5
+D1
+~
+~
+0 -1 11027 10 10 5
+D2
+~
+~
+0 -1 11025 10 10 5
+D3
+~
+~
+0 -1 11033 10 10 5
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  if( rflag( reset1, room ) ) {
+    act_tochar( #move, ch );
+    act_notchar( #gone, ch );
+    i = random( 1, 9 );
+    if( i == 1 )
+      j = 11033;
+    if( i == 2 )
+      j = 11035;
+    if( i == 3 )
+      j = 11049;
+    if( i == 4 )
+      j = 11048;
+    if( i == 5 )
+      j = 11027;
+    if( i == 6 )
+      j = 11024;
+    if( i == 7 )
+      j = 11025;
+    if( i == 8 )
+      j = 11032;
+    if( i == 9 )
+      j = 11026;
+    transfer( ch, find_room( j ) );
+    if( is_player( ch ) )
+      act_notchar( #arrive, ch );
+    if( !is_player( ch ) )
+      act_notchar( #mobarrive, ch );
+    loop( followers ) {
+      if( !is_sleeping( rch ) ) {
+        if( !is_resting( rch ) ) {
+          act_notchar( #move2, ch );
+          transfer( rch, find_room( j ) );
+          act_notchar( #arrive, rch );
+          }
+        }
+      }
+    }
+  else
+    continue;
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape, oddly a small
+path seems evident.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 1
+A
+~
+~
+remove_rflag( reset1, room );
+continue;
+~
+!
+1 0 8
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  if( rflag( reset0, room ) ) {
+    act_tochar( #move, ch );
+    act_notchar( #gone, ch );
+    i = random( 1, 9 );
+    if( i == 1 )
+      j = 11033;
+    if( i == 2 )
+      j = 11035;
+    if( i == 3 )
+      j = 11049;
+    if( i == 4 )
+      j = 11048;
+    if( i == 5 )
+      j = 11027;
+    if( i == 6 )
+      j = 11024;
+    if( i == 7 )
+      j = 11025;
+    if( i == 8 )
+      j = 11032;
+    if( i == 9 )
+      j = 11026;
+    transfer( ch, find_room( j ) );
+    if( is_player( ch ) )
+      act_notchar( #arrive, ch );
+    if( !is_player( ch ) )
+      act_notchar( #mobarrive, ch );
+    loop( followers ) {
+      if( !is_sleeping( rch ) ) {
+        if( !is_resting( rch ) ) {
+          act_notchar( #move2, ch );
+          transfer( rch, find_room( j ) );
+          act_notchar( #arrive, rch );
+          }
+        }
+      }
+    }
+  else
+    continue;
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape, oddly a small
+path seems evident.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 8
+A
+~
+~
+remove_rflag( reset0, room );
+continue;
+~
+!
+1 0 1
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  act_tochar( #move, ch );
+  act_notchar( #gone, ch );
+  i = random( 1, 9 );
+  if( i == 1 )
+    j = 11033;
+  if( i == 2 )
+    j = 11035;
+  if( i == 3 )
+    j = 11049;
+  if( i == 4 )
+    j = 11048;
+  if( i == 5 )
+    j = 11027;
+  if( i == 6 )
+    j = 11024;
+  if( i == 7 )
+    j = 11025;
+  if( i == 8 )
+    j = 11032;
+  if( i == 9 )
+    j = 11026;
+  transfer( ch, find_room( j ) );
+  if( is_player( ch ) )
+    act_notchar( #arrive, ch );
+  if( !is_player( ch ) )
+    act_notchar( #mobarrive, ch );
+  loop( followers ) {
+    if( !is_sleeping( rch ) ) {
+      if( !is_resting( rch ) ) {
+        act_notchar( #move2, ch );
+        transfer( rch, find_room( j ) );
+        act_notchar( #arrive, rch );
+        }
+      }
+    }
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 6
+-1
+S
+
+#11027
+Serene Sunshine~
+Stretching forth from horizon to horizon is a pearlescent sterility that
+is almost mind-numbing.  New formations billow out and bulge from the
+surface of this gargantuan cumulus cloud; as each blossom erupts previous
+ones dissipate and vanish.  Everything appears the same in all four
+cardinal directions, and yet in this cloud's ever-changing state, nothing
+remains the same from moment to moment.
+~
+[Eliza] reviewed
+~
+33030208 0 5 0
+D0
+~
+~
+0 -1 11048 10 10 5
+D1
+~
+~
+0 -1 11028 10 10 5
+D2
+~
+~
+0 -1 11024 10 10 5
+D3
+~
+~
+0 -1 11026 10 10 5
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  act_tochar( #move, ch );
+  act_notchar( #gone, ch );
+  i = random( 1, 9 );
+  if( i == 1 )
+    j = 11026;
+  if( i == 2 )
+    j = 11049;
+  if( i == 3 )
+    j = 11048;
+  if( i == 4 )
+    j = 11047;
+  if( i == 5 )
+    j = 11028;
+  if( i == 6 )
+    j = 11023;
+  if( i == 7 )
+    j = 11024;
+  if( i == 8 )
+    j = 11025;
+  if( i == 9 )
+    j = 11027;
+  transfer( ch, find_room( j ) );
+  if( is_player( ch ) )
+    act_notchar( #arrive, ch );
+  if( !is_player( ch ) )
+    act_notchar( #mobarrive, ch );
+  loop( followers ) {
+    if( !is_sleeping( rch ) ) {
+      if( !is_resting( rch ) ) {
+        act_notchar( #move2, ch );
+        transfer( rch, find_room( j ) );
+        act_notchar( #arrive, rch );
+        }
+      }
+    }
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 15
+-1
+S
+
+#11028
+Serene Sunshine~
+Stretching forth from horizon to horizon is a pearlescent sterility that
+is almost mind-numbing.  New formations billow out and bulge from the
+surface of this gargantuan cumulus cloud; as each blossom erupts previous
+ones dissipate and vanish.  Everything appears the same in all four
+cardinal directions, and yet in this cloud's ever-changing state, nothing
+remains the same from moment to moment.
+~
+[Eliza] reviewed
+~
+33030208 0 5 0
+D0
+~
+~
+0 -1 11047 10 10 5
+D1
+~
+~
+0 -1 11052 10 10 5
+D2
+~
+~
+0 -1 11023 10 10 5
+D3
+~
+~
+0 -1 11027 10 10 5
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  if( rflag( reset1, room ) ) {
+    act_tochar( #move, ch );
+    act_notchar( #gone, ch );
+    i = random( 1, 9 );
+    if( i == 1 )
+      j = 11027;
+    if( i == 2 )
+      j = 11048;
+    if( i == 3 )
+      j = 11047;
+    if( i == 4 )
+      j = 11051;
+    if( i == 5 )
+      j = 11052;
+    if( i == 6 )
+      j = 11053;
+    if( i == 7 )
+      j = 11023;
+    if( i == 8 )
+      j = 11024;
+    if( i == 9 )
+      j = 11028;
+    transfer( ch, find_room( j ) );
+    if( is_player( ch ) )
+      act_notchar( #arrive, ch );
+    if( !is_player( ch ) )
+      act_notchar( #mobarrive, ch );
+    loop( followers ) {
+      if( !is_sleeping( rch ) ) {
+        if( !is_resting( rch ) ) {
+          act_notchar( #move2, ch );
+          transfer( rch, find_room( j ) );
+          act_notchar( #arrive, rch );
+          }
+        }
+      }
+    }
+  else
+    continue;
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape, oddly a small path seems evident before your eyes.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 4
+A
+~
+~
+remove_rflag( reset1, room );
+continue;
+~
+!
+1 0 2
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  if( rflag( reset0, room ) ) {
+    act_tochar( #move, ch );
+    act_notchar( #gone, ch );
+    i = random( 1, 9 );
+    if( i == 1 )
+      j = 11027;
+    if( i == 2 )
+      j = 11048;
+    if( i == 3 )
+      j = 11047;
+    if( i == 4 )
+      j = 11051;
+    if( i == 5 )
+      j = 11052;
+    if( i == 6 )
+      j = 11053;
+    if( i == 7 )
+      j = 11023;
+    if( i == 8 )
+      j = 11024;
+    if( i == 9 )
+      j = 11028;
+    transfer( ch, find_room( j ) );
+    if( is_player( ch ) )
+      act_notchar( #arrive, ch );
+    if( !is_player( ch ) )
+      act_notchar( #mobarrive, ch );
+    loop( followers ) {
+      if( !is_sleeping( rch ) ) {
+        if( !is_resting( rch ) ) {
+          act_notchar( #move2, ch );
+          transfer( rch, find_room( j ) );
+          act_notchar( #arrive, rch );
+          }
+        }
+      }
+    }
+  else
+    continue;
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape, oddly a small path seems evident before your eyes.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 2
+A
+~
+~
+remove_rflag( reset0, room );
+continue;
+~
+!
+1 0 4
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  act_tochar( #move, ch );
+  act_notchar( #gone, ch );
+  i = random( 1, 9 );
+  if( i == 1 )
+    j = 11027;
+  if( i == 2 )
+    j = 11048;
+  if( i == 3 )
+    j = 11047;
+  if( i == 4 )
+    j = 11051;
+  if( i == 5 )
+    j = 11052;
+  if( i == 6 )
+    j = 11053;
+  if( i == 7 )
+    j = 11023;
+  if( i == 8 )
+    j = 11024;
+  if( i == 9 )
+    j = 11028;
+  transfer( ch, find_room( j ) );
+  if( is_player( ch ) )
+    act_notchar( #arrive, ch );
+  if( !is_player( ch ) )
+    act_notchar( #mobarrive, ch );
+  loop( followers ) {
+    if( !is_sleeping( rch ) ) {
+      if( !is_resting( rch ) ) {
+        act_notchar( #move2, ch );
+        transfer( rch, find_room( j ) );
+        act_notchar( #arrive, rch );
+        }
+      }
+    }
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 9
+5092 9 1509949540 3 0
+-1
+S
+
+#11029
+Serene Sunshine~
+Stretching forth from horizon to horizon is a pearlescent sterility that
+is almost mind-numbing.  New formations billow out and bulge from the
+surface of this gargantuan cumulus cloud; as each blossom erupts previous
+ones dissipate and vanish.  Everything appears the same in all
+directions, save south, a field of pillowy, ever-changing cumulus matter
+that though it supports weight will not be easy to transgress.  The
+clouds to the south are vaporously thin, offering a hazy view of the
+countryside below.
+~
+~
+33030208 0 7 0
+D0
+~
+~
+0 -1 11032 10 10 5
+D1
+~
+~
+0 -1 11020 10 10 5
+D3
+~
+~
+0 -1 11030 10 10 5
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  act_tochar( #move, ch );
+  act_notchar( #gone, ch );
+  i = random( 1, 5 );
+  if( i == 1 )
+    j = 11031;
+  if( i == 2 )
+    j = 11032;
+  if( i == 3 )
+    j = 11025;
+  if( i == 4 )
+    j = 11020;
+  if( i == 5 )
+    j = 11029;
+  transfer( ch, find_room( j ) );
+  if( is_player( ch ) )
+    act_notchar( #arrive, ch );
+  if( !is_player( ch ) )
+    act_notchar( #mobarrive, ch );
+  loop( followers ) {
+    if( !is_sleeping( rch ) ) {
+      if( !is_resting( rch ) ) {
+        act_notchar( #move2, ch );
+        transfer( rch, find_room( j ) );
+        act_notchar( #arrive, rch );
+        }
+      }
+    }
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 2
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  if( rflag( reset0, room ) ) {
+    act_tochar( #move, ch );
+    act_notchar( #gone, ch );
+    i = random( 1, 5 );
+    if( i == 1 )
+      j = 11031;
+    if( i == 2 )
+      j = 11032;
+    if( i == 3 )
+      j = 11025;
+    if( i == 4 )
+      j = 11020;
+    if( i == 5 )
+      j = 11029;
+    transfer( ch, find_room( j ) );
+    if( is_player( ch ) )
+      act_notchar( #arrive, ch );
+    if( !is_player( ch ) )
+      act_notchar( #mobarrive, ch );
+    loop( followers ) {
+      if( !is_sleeping( rch ) ) {
+        if( !is_resting( rch ) ) {
+          act_notchar( #move2, ch );
+          transfer( rch, find_room( j ) );
+          act_notchar( #arrive, rch );
+          }
+        }
+      }
+    }
+  else
+    continue;
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape, oddly a small
+path seems evident.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 8
+A
+~
+~
+remove_rflag( reset0, room );
+continue;
+~
+!
+1 0 1
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  if( rflag( reset1, room ) ) {
+    act_tochar( #move, ch );
+    act_notchar( #gone, ch );
+    i = random( 1, 5 );
+    if( i == 1 )
+      j = 11031;
+    if( i == 2 )
+      j = 11032;
+    if( i == 3 )
+      j = 11025;
+    if( i == 4 )
+      j = 11020;
+    if( i == 5 )
+      j = 11029;
+    transfer( ch, find_room( j ) );
+    if( is_player( ch ) )
+      act_notchar( #arrive, ch );
+    if( !is_player( ch ) )
+      act_notchar( #mobarrive, ch );
+    loop( followers ) {
+      if( !is_sleeping( rch ) ) {
+        if( !is_resting( rch ) ) {
+          act_notchar( #move2, ch );
+          transfer( rch, find_room( j ) );
+          act_notchar( #arrive, rch );
+          }
+        }
+      }
+    }
+  else
+    continue;
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape, oddly a small
+path seems evident.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 1
+A
+~
+~
+remove_rflag( reset1, room );
+continue;
+~
+!
+1 0 8
+-1
+S
+
+#11030
+Serene Sunshine~
+Stretching forth from horizon to horizon is a pearlescent sterility that
+is almost mind-numbing.  New formations billow out and bulge from the
+surface of this gargantuan cumulus cloud; as each blossom erupts previous
+ones dissipate and vanish.  Everything appears the same in all
+directions, save west, a field of pillowy, ever-changing cumulus matter
+that though it supports weight will not be easy to transgress.  Though
+seemingly rising up at a slight angle, the cloud appears more stable to
+the west, billowing out and growing in size but not changing its overall
+appearance.
+~
+~
+33030208 0 7 0
+D0
+~
+~
+0 -1 11031 10 10 5
+D1
+~
+~
+0 -1 11029 10 10 5
+D3
+~
+~
+1024 -1 11037 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+You climb up a slight angle, heading for another cloud.
+~
+E
+to_room~
+Heading for the cloud to the west, $n climbs upwards as $s goes.
+~
+!
+3 0 8
+5097 9 1509949540 3 0
+-1
+S
+
+#11031
+Serene Sunshine~
+Stretching forth from horizon to horizon is a pearlescent sterility that
+is almost mind-numbing.  New formations billow out and bulge from the
+surface of this gargantuan cumulus cloud; as each blossom erupts previous
+ones dissipate and vanish.  Everything appears the same in all
+directions, save west, a field of pillowy, ever-changing cumulus matter
+that though it supports weight will not be easy to transgress.  The
+clouds to the west are vaporously thin, offering a hazy view of the
+countryside below.
+~
+~
+33030208 0 7 0
+D0
+~
+~
+0 -1 11034 10 10 5
+D1
+~
+~
+0 -1 11032 10 10 5
+D2
+~
+~
+0 -1 11030 10 10 5
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  act_tochar( #move, ch );
+  act_notchar( #gone, ch );
+  i = random( 1, 4 );
+  if( i == 1 )
+    j = 11034;
+  if( i == 2 )
+    j = 11033;
+  if( i == 3 )
+    j = 11032;
+  if( i == 4 )
+    j = 11029;
+  transfer( ch, find_room( j ) );
+  if( is_player( ch ) )
+    act_notchar( #arrive, ch );
+  if( !is_player( ch ) )
+    act_notchar( #mobarrive, ch );
+  loop( followers ) {
+    if( !is_sleeping( rch ) ) {
+      if( !is_resting( rch ) ) {
+        act_notchar( #move2, ch );
+        transfer( rch, find_room( j ) );
+        act_notchar( #arrive, rch );
+        }
+      }
+    }
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 7
+5092 9 1509949540 3 0
+-1
+S
+
+#11032
+Serene Sunshine~
+Stretching forth from horizon to horizon is a pearlescent sterility that
+is almost mind-numbing.  New formations billow out and bulge from the
+surface of this gargantuan cumulus cloud; as each blossom erupts previous
+ones dissipate and vanish.  Everything appears the same in all four
+cardinal directions, and yet in this cloud's ever-changing state, nothing
+remains the same from moment to moment.
+~
+[Eliza] reviewed
+~
+33030208 0 5 0
+D0
+~
+~
+0 -1 11033 10 10 5
+D1
+~
+~
+0 -1 11025 10 10 5
+D2
+~
+~
+0 -1 11029 10 10 5
+D3
+~
+~
+0 -1 11031 10 10 5
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  if( rflag( reset1, room ) ) {
+    act_tochar( #move, ch );
+    act_notchar( #gone, ch );
+    i = random( 1, 8 );
+    if( i == 1 )
+      j = 11031;
+    if( i == 2 )
+      j = 11034;
+    if( i == 3 )
+      j = 11033;
+    if( i == 4 )
+      j = 11026;
+    if( i == 5 )
+      j = 11025;
+    if( i == 6 )
+      j = 11020;
+    if( i == 7 )
+      j = 11029;
+    if( i == 8 )
+      j = 11032;
+    transfer( ch, find_room( j ) );
+    if( is_player( ch ) )
+      act_notchar( #arrive, ch );
+    if( !is_player( ch ) )
+      act_notchar( #mobarrive, ch );
+    loop( followers ) {
+      if( !is_sleeping( rch ) ) {
+        if( !is_resting( rch ) ) {
+          act_notchar( #move2, ch );
+          transfer( rch, find_room( j ) );
+          act_notchar( #arrive, rch );
+          }
+        }
+      }
+    }
+  else
+    continue;
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape, oddly a small
+path seems evident.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 1
+A
+~
+~
+remove_rflag( reset1, room );
+continue;
+~
+!
+1 0 4
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  if( rflag( reset0, room ) ) {
+    act_tochar( #move, ch );
+    act_notchar( #gone, ch );
+    i = random( 1, 8 );
+    if( i == 1 )
+      j = 11031;
+    if( i == 2 )
+      j = 11034;
+    if( i == 3 )
+      j = 11033;
+    if( i == 4 )
+      j = 11026;
+    if( i == 5 )
+      j = 11025;
+    if( i == 6 )
+      j = 11020;
+    if( i == 7 )
+      j = 11029;
+    if( i == 8 )
+      j = 11032;
+    transfer( ch, find_room( j ) );
+    if( is_player( ch ) )
+      act_notchar( #arrive, ch );
+    if( !is_player( ch ) )
+      act_notchar( #mobarrive, ch );
+    loop( followers ) {
+      if( !is_sleeping( rch ) ) {
+        if( !is_resting( rch ) ) {
+          act_notchar( #move2, ch );
+          transfer( rch, find_room( j ) );
+          act_notchar( #arrive, rch );
+          }
+        }
+      }
+    }
+  else
+    continue;
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape, oddly a small
+path seems evident.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 4
+A
+~
+~
+remove_rflag( reset0, room );
+continue;
+~
+!
+1 0 1
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  act_tochar( #move, ch );
+  act_notchar( #gone, ch );
+  i = random( 1, 8 );
+  if( i == 1 )
+    j = 11031;
+  if( i == 2 )
+    j = 11034;
+  if( i == 3 )
+    j = 11033;
+  if( i == 4 )
+    j = 11026;
+  if( i == 5 )
+    j = 11025;
+  if( i == 6 )
+    j = 11020;
+  if( i == 7 )
+    j = 11029;
+  if( i == 8 )
+    j = 11032;
+  transfer( ch, find_room( j ) );
+  if( is_player( ch ) )
+    act_notchar( #arrive, ch );
+  if( !is_player( ch ) )
+    act_notchar( #mobarrive, ch );
+  loop( followers ) {
+    if( !is_sleeping( rch ) ) {
+      if( !is_resting( rch ) ) {
+        act_notchar( #move2, ch );
+        transfer( rch, find_room( j ) );
+        act_notchar( #arrive, rch );
+        }
+      }
+    }
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 10
+-1
+S
+
+#11033
+Serene Sunshine~
+Stretching forth from horizon to horizon is a pearlescent sterility that
+is almost mind-numbing.  New formations billow out and bulge from the
+surface of this gargantuan cumulus cloud; as each blossom erupts previous
+ones dissipate and vanish.  Everything appears the same in all four
+cardinal directions, and yet in this cloud's ever-changing state, nothing
+remains the same from moment to moment.
+~
+[Eliza] reviewed
+~
+33030208 0 5 0
+D0
+~
+~
+0 -1 11035 10 10 5
+D1
+~
+~
+0 -1 11026 10 10 5
+D2
+~
+~
+0 -1 11032 10 10 5
+D3
+~
+~
+0 -1 11034 10 10 5
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  act_tochar( #move, ch );
+  act_notchar( #gone, ch );
+  i = random( 1, 9 );
+  if( i == 1 )
+    j = 11034;
+  if( i == 2 )
+    j = 11042;
+  if( i == 3 )
+    j = 11035;
+  if( i == 4 )
+    j = 11049;
+  if( i == 5 )
+    j = 11026;
+  if( i == 6 )
+    j = 11025;
+  if( i == 7 )
+    j = 11032;
+  if( i == 8 )
+    j = 11031;
+  if( i == 9 )
+    j = 11033;
+  transfer( ch, find_room( j ) );
+  if( is_player( ch ) )
+    act_notchar( #arrive, ch );
+  if( !is_player( ch ) )
+    act_notchar( #mobarrive, ch );
+  loop( followers ) {
+    if( !is_sleeping( rch ) ) {
+      if( !is_resting( rch ) ) {
+        act_notchar( #move2, ch );
+        transfer( rch, find_room( j ) );
+        act_notchar( #arrive, rch );
+        }
+      }
+    }
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 1
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  if( rflag( reset0, room ) ) {
+    act_tochar( #move, ch );
+    act_notchar( #gone, ch );
+    i = random( 1, 9 );
+    if( i == 1 )
+      j = 11034;
+    if( i == 2 )
+      j = 11042;
+    if( i == 3 )
+      j = 11035;
+    if( i == 4 )
+      j = 11049;
+    if( i == 5 )
+      j = 11026;
+    if( i == 6 )
+      j = 11025;
+    if( i == 7 )
+      j = 11032;
+    if( i == 8 )
+      j = 11031;
+    if( i == 9 )
+      j = 11033;
+    transfer( ch, find_room( j ) );
+    if( is_player( ch ) )
+      act_notchar( #arrive, ch );
+    if( !is_player( ch ) )
+      act_notchar( #mobarrive, ch );
+    loop( followers ) {
+      if( !is_sleeping( rch ) ) {
+        if( !is_resting( rch ) ) {
+          act_notchar( #move2, ch );
+          transfer( rch, find_room( j ) );
+          act_notchar( #arrive, rch );
+          }
+        }
+      }
+    }
+  else
+    continue;
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape, oddly a small
+path seems evident.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 12
+A
+~
+~
+remove_rflag( reset0, room );
+continue;
+~
+!
+1 0 2
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  if( rflag( reset1, room ) ) {
+    act_tochar( #move, ch );
+    act_notchar( #gone, ch );
+    i = random( 1, 9 );
+    if( i == 1 )
+      j = 11034;
+    if( i == 2 )
+      j = 11042;
+    if( i == 3 )
+      j = 11035;
+    if( i == 4 )
+      j = 11049;
+    if( i == 5 )
+      j = 11026;
+    if( i == 6 )
+      j = 11025;
+    if( i == 7 )
+      j = 11032;
+    if( i == 8 )
+      j = 11031;
+    if( i == 9 )
+      j = 11033;
+    transfer( ch, find_room( j ) );
+    if( is_player( ch ) )
+      act_notchar( #arrive, ch );
+    if( !is_player( ch ) )
+      act_notchar( #mobarrive, ch );
+    loop( followers ) {
+      if( !is_sleeping( rch ) ) {
+        if( !is_resting( rch ) ) {
+          act_notchar( #move2, ch );
+          transfer( rch, find_room( j ) );
+          act_notchar( #arrive, rch );
+          }
+        }
+      }
+    }
+  else
+    continue;
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape, oddly a small
+path seems evident.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 2
+A
+~
+~
+remove_rflag( reset1, room );
+continue;
+~
+!
+1 0 12
+-1
+S
+
+#11034
+Serene Sunshine~
+Stretching forth from horizon to horizon is a pearlescent sterility that
+is almost mind-numbing.  New formations billow out and bulge from the
+surface of this gargantuan cumulus cloud; as each blossom erupts previous
+ones dissipate and vanish.  Everything appears the same in all
+directions, save west, a field of pillowy, ever-changing cumulus matter
+that though it supports weight will not be easy to transgress.  The
+clouds to the west are vaporously thin, offering a hazy view of the
+countryside below.
+~
+~
+33030208 0 7 0
+D0
+~
+~
+0 -1 11042 10 10 5
+D1
+~
+~
+0 -1 11033 10 10 5
+D2
+~
+~
+0 -1 11031 10 10 5
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  if( rflag( reset1, room ) ) {
+    act_tochar( #move, ch );
+    act_notchar( #gone, ch );
+    i = random( 1, 6 );
+    if( i == 1 )
+      j = 11042;
+    if( i == 2 )
+      j = 11035;
+    if( i == 3 )
+      j = 11033;
+    if( i == 4 )
+      j = 11032;
+    if( i == 5 )
+      j = 11031;
+    if( i == 6 )
+      j = 11034;
+    transfer( ch, find_room( j ) );
+    if( is_player( ch ) )
+      act_notchar( #arrive, ch );
+    if( !is_player( ch ) )
+      act_notchar( #mobarrive, ch );
+    loop( followers ) {
+      if( !is_sleeping( rch ) ) {
+        if( !is_resting( rch ) ) {
+          act_notchar( #move2, ch );
+          transfer( rch, find_room( j ) );
+          act_notchar( #arrive, rch );
+          }
+        }
+      }
+    }
+  else
+    continue;
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape, oddly a small
+path seems evident.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 2
+A
+~
+~
+remove_rflag( reset1, room );
+continue;
+~
+!
+1 0 1
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  if( rflag( reset0, room ) ) {
+    act_tochar( #move, ch );
+    act_notchar( #gone, ch );
+    i = random( 1, 6 );
+    if( i == 1 )
+      j = 11042;
+    if( i == 2 )
+      j = 11035;
+    if( i == 3 )
+      j = 11033;
+    if( i == 4 )
+      j = 11032;
+    if( i == 5 )
+      j = 11031;
+    if( i == 6 )
+      j = 11034;
+    transfer( ch, find_room( j ) );
+    if( is_player( ch ) )
+      act_notchar( #arrive, ch );
+    if( !is_player( ch ) )
+      act_notchar( #mobarrive, ch );
+    loop( followers ) {
+      if( !is_sleeping( rch ) ) {
+        if( !is_resting( rch ) ) {
+          act_notchar( #move2, ch );
+          transfer( rch, find_room( j ) );
+          act_notchar( #arrive, rch );
+          }
+        }
+      }
+    }
+  else
+    continue;
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape, oddly a small
+path seems evident.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 1
+A
+~
+~
+remove_rflag( reset0, room );
+continue;
+~
+!
+1 0 2
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  act_tochar( #move, ch );
+  act_notchar( #gone, ch );
+  i = random( 1, 6 );
+  if( i == 1 )
+    j = 11042;
+  if( i == 2 )
+    j = 11035;
+  if( i == 3 )
+    j = 11033;
+  if( i == 4 )
+    j = 11032;
+  if( i == 5 )
+    j = 11031;
+  if( i == 6 )
+    j = 11034;
+  transfer( ch, find_room( j ) );
+  if( is_player( ch ) )
+    act_notchar( #arrive, ch );
+  if( !is_player( ch ) )
+    act_notchar( #mobarrive, ch );
+  loop( followers ) {
+    if( !is_sleeping( rch ) ) {
+      if( !is_resting( rch ) ) {
+        act_notchar( #move2, ch );
+        transfer( rch, find_room( j ) );
+        act_notchar( #arrive, rch );
+        }
+      }
+    }
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 4
+5088 41 1509949540 3 0
+5088 73 1509949540 3 0
+-1
+S
+
+#11035
+Serene Sunshine~
+Stretching forth from horizon to horizon is a pearlescent sterility that
+is almost mind-numbing.  New formations billow out and bulge from the
+surface of this gargantuan cumulus cloud; as each blossom erupts previous
+ones dissipate and vanish.  Everything appears the same in all four
+cardinal directions, and yet in this cloud's ever-changing state, nothing
+remains the same from moment to moment.
+~
+[Eliza] reviewed
+~
+33030208 0 5 0
+D0
+~
+~
+0 -1 11036 10 10 5
+D1
+~
+~
+0 -1 11049 10 10 5
+D2
+~
+~
+0 -1 11033 10 10 5
+D3
+~
+~
+0 -1 11042 10 10 5
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  act_tochar( #move, ch );
+  act_notchar( #gone, ch );
+  i = random( 1, 8 );
+  if( i == 1 )
+    j = 11043;
+  if( i == 2 )
+    j = 11044;
+  if( i == 3 )
+    j = 11049;
+  if( i == 4 )
+    j = 11026;
+  if( i == 5 )
+    j = 11033;
+  if( i == 6 )
+    j = 11034;
+  if( i == 7 )
+    j = 11042;
+  if( i == 8 )
+    j = 11035;
+  transfer( ch, find_room( j ) );
+  if( is_player( ch ) )
+    act_notchar( #arrive, ch );
+  if( !is_player( ch ) )
+    act_notchar( #mobarrive, ch );
+  loop( followers ) {
+    if( !is_sleeping( rch ) ) {
+      if( !is_resting( rch ) ) {
+        act_notchar( #move2, ch );
+        transfer( rch, find_room( j ) );
+        act_notchar( #arrive, rch );
+        }
+      }
+    }
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 15
+5091 9 1509949540 3 0
+-1
+S
+
+#11036
+Serene Sunshine~
+Stretching forth from horizon to horizon is a pearlescent sterility that
+is almost mind-numbing.  New formations billow out and bulge from the
+surface of this gargantuan cumulus cloud; as each blossom erupts previous
+ones dissipate and vanish.  Everything appears the same in all
+directions, save north, a field of pillowy, ever-changing cumulus matter
+that though it supports weight will not be easy to transgress.  Jutting
+off to the north is what appears to be a perpetually stable cloud, its
+size and appearance remains the same even as the clouds around it shift
+and morph.
+~
+~
+33030208 0 7 0
+D0
+~
+~
+0 -1 11055 10 10 5
+D1
+~
+~
+0 -1 11044 10 10 5
+D2
+~
+~
+0 -1 11035 10 10 5
+D3
+~
+~
+0 -1 11043 10 10 5
+-1
+S
+
+#11037
+Serene Sunshine~
+Unlike the cloud to the east, absolutly no transitioning appears to be
+taking place on the solid cumulus cloud to the north.  No wispy tendrils
+dance merrily about waiting for their forms to be added to the existing
+cloud, instead that puffy white creation stands as a sentinal berift of
+the vapourous tendrils so common elsewhere.  That non-changing cloud has
+leeched itself to the side of the other by this singular connection
+point, allowing travel between the two.  A small ascending path leads off
+toward the south, the clouds edges dangerously close together...  nearly
+to the point of forcing single-file passage.
+~
+[Adakar] acode 1 doesn't fire properly if two guardians are in the room,
+so for now east is set as req.climb until i think of another way around
+it without using a pansy ass no.mob flag., 
+~
+33030208 0 7 0
+D1
+~
+~
+1024 -1 11030 10 10 5
+D2
+~
+~
+0 -1 11038 10 10 5
+A
+~
+~
+mob = mob_in_room( 5090, room );
+if( ch != mob )
+    continue;
+  else
+    end;
+~
+!
+3 0 2
+-1
+S
+
+#11038
+Serene Sunshine~
+Appearing as one solid mass, this small ascending path shows not a wisp
+of cumulus matter out of place.  This skinny path is no larger than three
+feet wide at its largest point.  A slight angle is evident towards the
+south as it snakes its way through the sky, its apparent purpose to lead
+passer-by's toward a much larger cloud to the southwest.  A slight view
+is evident to either side of the small path, though no details can be
+made through the thinning clouds...  to get a better look would entail
+walking off the path and that could prove disasterous.
+~
+[Adakar] cloud elemental guardian
+[Adakar] 'nother path, no protection from falling and death
+~
+33030208 0 7 0
+D0
+~
+~
+0 -1 11037 10 10 5
+D2
+~
+~
+0 -1 11039 10 10 5
+5090 9 1509949540 3 0
+-1
+S
+
+#11039
+Serene Sunshine~
+White as new-fallen snow the puffy cloud here has nearly entirely
+coalesced into a solid substance, only the edges of the small path seem
+thin enough to fall through.  A carefully sculpted turn in this ascending
+path leads towards the west and a mass of cumulus material that fills the
+sight from horizon to horizon in that direction.  The cloud here is not
+acting as one would expect, neither moving nor changing shape but instead
+remaining stagnant and purposeful much like a human built bridge spanning
+the gap between the western and southern clouds.
+~
+[Adakar] 'nother path, no protection from falling and death
+[Adakar] i.e. if a char types east or south they fall and die.
+~
+33030208 0 7 0
+D0
+~
+~
+0 -1 11038 10 10 5
+D3
+~
+~
+0 -1 11040 10 10 5
+5090 9 1509949540 3 0
+-1
+S
+
+#11040
+Serene Sunshine~
+Two statues, greater than twenty-five feet tall flank an incredibly large
+entrance to the inside of the cloud to the west.  With each holding out a
+still hand they appear as a welcoming party gesturing for you to enter
+that larger than life parody of a cave.  The cave's surface is the same
+as everything else surrounding it, made from the pure cumulus matter of
+the clouds it appears as a puffy ball of white cotton with a large hole
+perfectly set into its side.  A small, slightly descending path mimicking
+the downward slope of a gentle hill leads to the east and away from the
+entrance.
+~
+[Adakar] editors note...  guardians will be aggro evil and will attack
+any good/neut group aftr they kill the dragon but not before.
+~
+33030208 0 7 0
+D1
+~
+~
+0 -1 11039 10 10 5
+D3
+~
+~
+0 -1 11041 10 10 5
+5090 9 1509949540 3 0
+-1
+S
+
+#11041
+Serene Sunshine~
+The small pathway spills into a vast, domed chamber filled with more
+treasure than any one room should ever contain.  This cloudy cave is lit
+by the cumulus material itself it seems, filled with a soft diffused
+white light that has no evident source.  The walls, ceiling and floor are
+not smooth and hard but instead lumpy and soft; obviously they are still
+more cloud than wall and only a great amount of arcane magick's could be
+holding this chamber together.  The only egress from the room is a large
+circular hole in the cloudy walls to the east, oddly it seems to be wider
+than it is tall.
+~
+[Adakar] dragon here
+[Adakar] don't worry, the dragon will destroy 99% of the treasure when it
+dies..  prolly melting it into one giant pile that the players could
+never hope to lift.
+[Adakar] icy blast
+~
+33030208 0 7 0
+D1
+~
+~
+0 -1 11040 10 10 5
+5089 9 1509949540 3 0
+-1
+S
+
+#11042
+Serene Sunshine~
+Stretching forth from horizon to horizon is a pearlescent sterility that
+is almost mind-numbing.  New formations billow out and bulge from the
+surface of this gargantuan cumulus cloud; as each blossom erupts previous
+ones dissipate and vanish.  Everything appears the same in all
+directions, save west, a field of pillowy, ever-changing cumulus matter
+that though it supports weight will not be easy to transgress.  The
+clouds to the west are vaporously thin, offering a hazy view of the
+countryside below.
+~
+~
+33030208 0 9 0
+D0
+~
+~
+0 -1 11043 10 10 5
+D1
+~
+~
+0 -1 11035 10 10 5
+D2
+~
+~
+0 -1 11034 10 10 5
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  act_tochar( #move, ch );
+  act_notchar( #gone, ch );
+  i = random( 1, 5 );
+  if( i == 1 )
+    j = 11043;
+  if( i == 2 )
+    j = 11035;
+  if( i == 3 )
+    j = 11033;
+  if( i == 4 )
+    j = 11034;
+  if( i == 5 )
+    j = 11042;
+  transfer( ch, find_room( j ) );
+  if( is_player( ch ) )
+    act_notchar( #arrive, ch );
+  if( !is_player( ch ) )
+    act_notchar( #mobarrive, ch );
+  loop( followers ) {
+    if( !is_sleeping( rch ) ) {
+      if( !is_resting( rch ) ) {
+        act_notchar( #move2, ch );
+        transfer( rch, find_room( j ) );
+        act_notchar( #arrive, rch );
+        }
+      }
+    }
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 2
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  if( rflag( reset0, room ) ) {
+    act_tochar( #move, ch );
+    act_notchar( #gone, ch );
+    i = random( 1, 5 );
+    if( i == 1 )
+      j = 11043;
+    if( i == 2 )
+      j = 11035;
+    if( i == 3 )
+      j = 11033;
+    if( i == 4 )
+      j = 11034;
+    if( i == 5 )
+      j = 11042;
+    transfer( ch, find_room( j ) );
+    if( is_player( ch ) )
+      act_notchar( #arrive, ch );
+    if( !is_player( ch ) )
+      act_notchar( #mobarrive, ch );
+    loop( followers ) {
+      if( !is_sleeping( rch ) ) {
+        if( !is_resting( rch ) ) {
+          act_notchar( #move2, ch );
+          transfer( rch, find_room( j ) );
+          act_notchar( #arrive, rch );
+          }
+        }
+      }
+    }
+  else
+    continue;
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape, oddly a small
+path seems evident.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 1
+A
+~
+~
+remove_rflag( reset0, room );
+continue;
+~
+!
+1 0 4
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  if( rflag( reset1, room ) ) {
+    act_tochar( #move, ch );
+    act_notchar( #gone, ch );
+    i = random( 1, 5 );
+    if( i == 1 )
+      j = 11043;
+    if( i == 2 )
+      j = 11035;
+    if( i == 3 )
+      j = 11033;
+    if( i == 4 )
+      j = 11034;
+    if( i == 5 )
+      j = 11042;
+    transfer( ch, find_room( j ) );
+    if( is_player( ch ) )
+      act_notchar( #arrive, ch );
+    if( !is_player( ch ) )
+      act_notchar( #mobarrive, ch );
+    loop( followers ) {
+      if( !is_sleeping( rch ) ) {
+        if( !is_resting( rch ) ) {
+          act_notchar( #move2, ch );
+          transfer( rch, find_room( j ) );
+          act_notchar( #arrive, rch );
+          }
+        }
+      }
+    }
+  else
+    continue;
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape, oddly a small
+path seems evident.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 4
+A
+~
+~
+remove_rflag( reset1, room );
+continue;
+~
+!
+1 0 1
+-1
+S
+
+#11043
+Serene Sunshine~
+Stretching forth from horizon to horizon is a pearlescent sterility that
+is almost mind-numbing.  New formations billow out and bulge from the
+surface of this gargantuan cumulus cloud; as each blossom erupts previous
+ones dissipate and vanish.  Everything appears the same to both the south
+and east, a field of pillowy, ever-changing cumulus matter that though it
+supports weight will not be easy to transgress.  The clouds to the north
+and west are vaporously thin, offering a hazy view of the countryside
+below.
+~
+~
+33030208 0 9 0
+D1
+~
+~
+0 -1 11036 10 10 5
+D2
+~
+~
+0 -1 11042 10 10 5
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  if( rflag( reset1, room ) ) {
+    act_tochar( #move, ch );
+    act_notchar( #gone, ch );
+    i = random( 1, 3 );
+    if( i == 1 )
+      j = 11035;
+    if( i == 2 )
+      j = 11042;
+    if( i == 3 )
+      j = 11043;
+    transfer( ch, find_room( j ) );
+    if( is_player( ch ) )
+      act_notchar( #arrive, ch );
+    if( !is_player( ch ) )
+      act_notchar( #mobarrive, ch );
+    loop( followers ) {
+      if( !is_sleeping( rch ) ) {
+        if( !is_resting( rch ) ) {
+          act_notchar( #move2, ch );
+          transfer( rch, find_room( j ) );
+          act_notchar( #arrive, rch );
+          }
+        }
+      }
+    }
+  else
+    continue;
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape, oddly a small
+path seems evident.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 4
+A
+~
+~
+remove_rflag( reset1, room );
+continue;
+~
+!
+1 0 2
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  if( rflag( reset0, room ) ) {
+    act_tochar( #move, ch );
+    act_notchar( #gone, ch );
+    i = random( 1, 3 );
+    if( i == 1 )
+      j = 11035;
+    if( i == 2 )
+      j = 11042;
+    if( i == 3 )
+      j = 11043;
+    transfer( ch, find_room( j ) );
+    if( is_player( ch ) )
+      act_notchar( #arrive, ch );
+    if( !is_player( ch ) )
+      act_notchar( #mobarrive, ch );
+    loop( followers ) {
+      if( !is_sleeping( rch ) ) {
+        if( !is_resting( rch ) ) {
+          act_notchar( #move2, ch );
+          transfer( rch, find_room( j ) );
+          act_notchar( #arrive, rch );
+          }
+        }
+      }
+    }
+  else
+    continue;
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape, oddly a small
+path seems evident.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 2
+A
+~
+~
+remove_rflag( reset0, room );
+continue;
+~
+!
+1 0 4
+-1
+S
+
+#11044
+Serene Sunshine~
+Stretching forth from horizon to horizon is a pearlescent sterility that
+is almost mind-numbing.  New formations billow out and bulge from the
+surface of this gargantuan cumulus cloud; as each blossom erupts previous
+ones dissipate and vanish.  Everything appears the same in all
+directions, save north, a field of pillowy, ever-changing cumulus matter
+that though it supports weight will not be easy to transgress.  The
+clouds to the north are vaporously thin, offering a hazy view of the
+countryside below.
+~
+~
+33030208 0 9 0
+D1
+~
+~
+0 -1 11045 10 10 5
+D2
+~
+~
+0 -1 11049 10 10 5
+D3
+~
+~
+0 -1 11036 10 10 5
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  if( rflag( reset1, room ) ) {
+    act_tochar( #move, ch );
+    act_notchar( #gone, ch );
+    i = random( 1, 5 );
+    if( i == 1 )
+      j = 11044;
+    if( i == 2 )
+      j = 11045;
+    if( i == 3 )
+      j = 11048;
+    if( i == 4 )
+      j = 11049;
+    if( i == 5 )
+      j = 11035;
+    transfer( ch, find_room( j ) );
+    if( is_player( ch ) )
+      act_notchar( #arrive, ch );
+    if( !is_player( ch ) )
+      act_notchar( #mobarrive, ch );
+    loop( followers ) {
+      if( !is_sleeping( rch ) ) {
+        if( !is_resting( rch ) ) {
+          act_notchar( #move2, ch );
+          transfer( rch, find_room( j ) );
+          act_notchar( #arrive, rch );
+          }
+        }
+      }
+    }
+  else
+    continue;
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape, oddly a small
+path seems evident.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 2
+A
+~
+~
+remove_rflag( reset1, room );
+continue;
+~
+!
+1 0 4
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  if( rflag( reset0, room ) ) {
+    act_tochar( #move, ch );
+    act_notchar( #gone, ch );
+    i = random( 1, 5 );
+    if( i == 1 )
+      j = 11044;
+    if( i == 2 )
+      j = 11045;
+    if( i == 3 )
+      j = 11048;
+    if( i == 4 )
+      j = 11049;
+    if( i == 5 )
+      j = 11035;
+    transfer( ch, find_room( j ) );
+    if( is_player( ch ) )
+      act_notchar( #arrive, ch );
+    if( !is_player( ch ) )
+      act_notchar( #mobarrive, ch );
+    loop( followers ) {
+      if( !is_sleeping( rch ) ) {
+        if( !is_resting( rch ) ) {
+          act_notchar( #move2, ch );
+          transfer( rch, find_room( j ) );
+          act_notchar( #arrive, rch );
+          }
+        }
+      }
+    }
+  else
+    continue;
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape, oddly a small
+path seems evident.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 4
+A
+~
+~
+remove_rflag( reset0, room );
+continue;
+~
+!
+1 0 2
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  act_tochar( #move, ch );
+  act_notchar( #gone, ch );
+  i = random( 1, 5 );
+  if( i == 1 )
+    j = 11044;
+  if( i == 2 )
+    j = 11045;
+  if( i == 3 )
+    j = 11048;
+  if( i == 4 )
+    j = 11049;
+  if( i == 5 )
+    j = 11035;
+  transfer( ch, find_room( j ) );
+  if( is_player( ch ) )
+    act_notchar( #arrive, ch );
+  if( !is_player( ch ) )
+    act_notchar( #mobarrive, ch );
+  loop( followers ) {
+    if( !is_sleeping( rch ) ) {
+      if( !is_resting( rch ) ) {
+        act_notchar( #move2, ch );
+        transfer( rch, find_room( j ) );
+        act_notchar( #arrive, rch );
+        }
+      }
+    }
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 8
+5092 9 1509949540 3 0
+-1
+S
+
+#11045
+Serene Sunshine~
+Stretching forth from horizon to horizon is a pearlescent sterility that
+is almost mind-numbing.  New formations billow out and bulge from the
+surface of this gargantuan cumulus cloud; as each blossom erupts previous
+ones dissipate and vanish.  Everything appears the same in all
+directions, save north, a field of pillowy, ever-changing cumulus matter
+that though it supports weight will not be easy to transgress.  The
+clouds to the north are vaporously thin, offering a hazy view of the
+countryside below.
+~
+~
+33030208 0 9 0
+D1
+~
+~
+0 -1 11046 10 10 5
+D2
+~
+~
+0 -1 11048 10 10 5
+D3
+~
+~
+0 -1 11044 10 10 5
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  act_tochar( #move, ch );
+  act_notchar( #gone, ch );
+  i = random( 1, 6 );
+  if( i == 1 )
+    j = 11049;
+  if( i == 2 )
+    j = 11044;
+  if( i == 3 )
+    j = 11045;
+  if( i == 4 )
+    j = 11046;
+  if( i == 5 )
+    j = 11047;
+  if( i == 6 )
+    j = 11048;
+  transfer( ch, find_room( j ) );
+  if( is_player( ch ) )
+    act_notchar( #arrive, ch );
+  if( !is_player( ch ) )
+    act_notchar( #mobarrive, ch );
+  loop( followers ) {
+    if( !is_sleeping( rch ) ) {
+      if( !is_resting( rch ) ) {
+        act_notchar( #move2, ch );
+        transfer( rch, find_room( j ) );
+        act_notchar( #arrive, rch );
+        }
+      }
+    }
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 2
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  if( rflag( reset0, room ) ) {
+    act_tochar( #move, ch );
+    act_notchar( #gone, ch );
+    i = random( 1, 6 );
+    if( i == 1 )
+      j = 11049;
+    if( i == 2 )
+      j = 11044;
+    if( i == 3 )
+      j = 11045;
+    if( i == 4 )
+      j = 11046;
+    if( i == 5 )
+      j = 11047;
+    if( i == 6 )
+      j = 11048;
+    transfer( ch, find_room( j ) );
+    if( is_player( ch ) )
+      act_notchar( #arrive, ch );
+    if( !is_player( ch ) )
+      act_notchar( #mobarrive, ch );
+    loop( followers ) {
+      if( !is_sleeping( rch ) ) {
+        if( !is_resting( rch ) ) {
+          act_notchar( #move2, ch );
+          transfer( rch, find_room( j ) );
+          act_notchar( #arrive, rch );
+          }
+        }
+      }
+    }
+  else
+    continue;
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape, oddly a small
+path seems evident.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 8
+A
+~
+~
+remove_rflag( reset0, room );
+continue;
+~
+!
+1 0 4
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  if( rflag( reset1, room ) ) {
+    act_tochar( #move, ch );
+    act_notchar( #gone, ch );
+    i = random( 1, 6 );
+    if( i == 1 )
+      j = 11049;
+    if( i == 2 )
+      j = 11044;
+    if( i == 3 )
+      j = 11045;
+    if( i == 4 )
+      j = 11046;
+    if( i == 5 )
+      j = 11047;
+    if( i == 6 )
+      j = 11048;
+    transfer( ch, find_room( j ) );
+    if( is_player( ch ) )
+      act_notchar( #arrive, ch );
+    if( !is_player( ch ) )
+      act_notchar( #mobarrive, ch );
+    loop( followers ) {
+      if( !is_sleeping( rch ) ) {
+        if( !is_resting( rch ) ) {
+          act_notchar( #move2, ch );
+          transfer( rch, find_room( j ) );
+          act_notchar( #arrive, rch );
+          }
+        }
+      }
+    }
+  else
+    continue;
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape, oddly a small
+path seems evident.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 4
+A
+~
+~
+remove_rflag( reset1, room );
+continue;
+~
+!
+1 0 8
+-1
+S
+
+#11046
+Serene Sunshine~
+Stretching forth from horizon to horizon is a pearlescent sterility that
+is almost mind-numbing.  New formations billow out and bulge from the
+surface of this gargantuan cumulus cloud; as each blossom erupts previous
+ones dissipate and vanish.  Everything appears the same in all
+directions, save north, a field of pillowy, ever-changing cumulus matter
+that though it supports weight will not be easy to transgress.  The
+clouds to the north are vaporously thin, offering a hazy view of the
+countryside below.
+~
+~
+33030208 0 9 0
+D1
+~
+~
+0 -1 11050 10 10 5
+D2
+~
+~
+0 -1 11047 10 10 5
+D3
+~
+~
+0 -1 11045 10 10 5
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  act_tochar( #move, ch );
+  act_notchar( #gone, ch );
+  i = random( 1, 6 );
+  if( i == 1 )
+    j = 11045;
+  if( i == 2 )
+    j = 11045;
+  if( i == 3 )
+    j = 11050;
+  if( i == 4 )
+    j = 11051;
+  if( i == 5 )
+    j = 11047;
+  if( i == 6 )
+    j = 11048;
+  transfer( ch, find_room( j ) );
+  if( is_player( ch ) )
+    act_notchar( #arrive, ch );
+  if( !is_player( ch ) )
+    act_notchar( #mobarrive, ch );
+  loop( followers ) {
+    if( !is_sleeping( rch ) ) {
+      if( !is_resting( rch ) ) {
+        act_notchar( #move2, ch );
+        transfer( rch, find_room( j ) );
+        act_notchar( #arrive, rch );
+        }
+      }
+    }
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 14
+5092 9 1509949540 3 0
+-1
+S
+
+#11047
+Serene Sunshine~
+Stretching forth from horizon to horizon is a pearlescent sterility that
+is almost mind-numbing.  New formations billow out and bulge from the
+surface of this gargantuan cumulus cloud; as each blossom erupts previous
+ones dissipate and vanish.  Everything appears the same in all four
+cardinal directions, and yet in this cloud's ever-changing state, nothing
+remains the same from moment to moment.
+~
+[Eliza] reviewed
+~
+33030208 0 5 0
+D0
+~
+~
+0 -1 11046 10 10 5
+D1
+~
+~
+0 -1 11051 10 10 5
+D2
+~
+~
+0 -1 11028 10 10 5
+D3
+~
+~
+0 -1 11048 10 10 5
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  act_tochar( #move, ch );
+  act_notchar( #gone, ch );
+  i = random( 1, 9 );
+  if( i == 1 )
+    j = 11048;
+  if( i == 2 )
+    j = 11045;
+  if( i == 3 )
+    j = 11046;
+  if( i == 4 )
+    j = 11050;
+  if( i == 5 )
+    j = 11051;
+  if( i == 6 )
+    j = 11052;
+  if( i == 7 )
+    j = 11028;
+  if( i == 8 )
+    j = 11027;
+  if( i == 9 )
+    j = 11047;
+  transfer( ch, find_room( j ) );
+  if( is_player( ch ) )
+    act_notchar( #arrive, ch );
+  if( !is_player( ch ) )
+    act_notchar( #mobarrive, ch );
+  loop( followers ) {
+    if( !is_sleeping( rch ) ) {
+      if( !is_resting( rch ) ) {
+        act_notchar( #move2, ch );
+        transfer( rch, find_room( j ) );
+        act_notchar( #arrive, rch );
+        }
+      }
+    }
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 5
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  if( rflag( reset0, room ) ) {
+    act_tochar( #move, ch );
+    i = random( 1, 9 );
+    if( i == 1 )
+      j = 11048;
+    if( i == 2 )
+      j = 11045;
+    if( i == 3 )
+      j = 11046;
+    if( i == 4 )
+      j = 11050;
+    if( i == 5 )
+      j = 11051;
+    if( i == 6 )
+      j = 11052;
+    if( i == 7 )
+      j = 11028;
+    if( i == 8 )
+      j = 11027;
+    if( i == 9 )
+      j = 11047;
+    transfer( ch, find_room( j ) );
+    if( is_player( ch ) )
+      act_notchar( #arrive, ch );
+    if( !is_player( ch ) )
+      act_notchar( #mobarrive, ch );
+    loop( followers ) {
+      if( !is_sleeping( rch ) ) {
+        if( !is_resting( rch ) ) {
+          act_notchar( #move2, ch );
+          transfer( rch, find_room( j ) );
+          act_notchar( #arrive, rch );
+          }
+        }
+      }
+    }
+  else
+    continue;
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape, oddly a small
+path seems evident.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 8
+A
+~
+~
+remove_rflag( reset0, room );
+continue;
+~
+!
+1 0 2
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  if( rflag( reset1, room ) ) {
+    act_tochar( #move, ch );
+    act_notchar( #gone, ch );
+    i = random( 1, 9 );
+    if( i == 1 )
+      j = 11048;
+    if( i == 2 )
+      j = 11045;
+    if( i == 3 )
+      j = 11046;
+    if( i == 4 )
+      j = 11050;
+    if( i == 5 )
+      j = 11051;
+    if( i == 6 )
+      j = 11052;
+    if( i == 7 )
+      j = 11028;
+    if( i == 8 )
+      j = 11027;
+    if( i == 9 )
+      j = 11047;
+    transfer( ch, find_room( j ) );
+    if( is_player( ch ) )
+      act_notchar( #arrive, ch );
+    if( !is_player( ch ) )
+      act_notchar( #mobarrive, ch );
+    loop( followers ) {
+      if( !is_sleeping( rch ) ) {
+        if( !is_resting( rch ) ) {
+          act_notchar( #move2, ch );
+          transfer( rch, find_room( j ) );
+          act_notchar( #arrive, rch );
+          }
+        }
+      }
+    }
+  else
+    continue;
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape, oddly a small
+path seems evident.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 2
+A
+~
+~
+remove_rflag( reset1, room );
+continue;
+~
+!
+1 0 8
+-1
+S
+
+#11048
+Serene Sunshine~
+Stretching forth from horizon to horizon is a pearlescent sterility that
+is almost mind-numbing.  New formations billow out and bulge from the
+surface of this gargantuan cumulus cloud; as each blossom erupts previous
+ones dissipate and vanish.  Everything appears the same in all four
+cardinal directions, and yet in this cloud's ever-changing state, nothing
+remains the same from moment to moment.
+~
+[Eliza] reviewed
+~
+33030208 0 5 0
+D0
+~
+~
+0 -1 11045 10 10 5
+D1
+~
+~
+0 -1 11047 10 10 5
+D2
+~
+~
+0 -1 11027 10 10 5
+D3
+~
+~
+0 -1 11049 10 10 5
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  if( rflag( reset1, room ) ) {
+    act_tochar( #move, ch );
+    i = random( 1, 9 );
+    if( i == 1 )
+      j = 11049;
+    if( i == 2 )
+      j = 11044;
+    if( i == 3 )
+      j = 11045;
+    if( i == 4 )
+      j = 11046;
+    if( i == 5 )
+      j = 11047;
+    if( i == 6 )
+      j = 11028;
+    if( i == 7 )
+      j = 11027;
+    if( i == 8 )
+      j = 11026;
+    if( i == 9 )
+      j = 11048;
+    transfer( ch, find_room( j ) );
+    if( is_player( ch ) )
+      act_notchar( #arrive, ch );
+    if( !is_player( ch ) )
+      act_notchar( #mobarrive, ch );
+    loop( followers ) {
+      if( !is_sleeping( rch ) ) {
+        if( !is_resting( rch ) ) {
+          act_notchar( #move2, ch );
+          transfer( rch, find_room( j ) );
+          act_notchar( #arrive, rch );
+          }
+        }
+      }
+    }
+  else
+    continue;
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape, oddly a small
+path seems evident.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 2
+A
+~
+~
+remove_rflag( reset1, room );
+continue;
+~
+!
+1 0 1
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  if( rflag( reset0, room ) ) {
+    act_tochar( #move, ch );
+    i = random( 1, 9 );
+    if( i == 1 )
+      j = 11049;
+    if( i == 2 )
+      j = 11044;
+    if( i == 3 )
+      j = 11045;
+    if( i == 4 )
+      j = 11046;
+    if( i == 5 )
+      j = 11047;
+    if( i == 6 )
+      j = 11028;
+    if( i == 7 )
+      j = 11027;
+    if( i == 8 )
+      j = 11026;
+    if( i == 9 )
+      j = 11048;
+    transfer( ch, find_room( j ) );
+    if( is_player( ch ) )
+      act_notchar( #arrive, ch );
+    if( !is_player( ch ) )
+      act_notchar( #mobarrive, ch );
+    loop( followers ) {
+      if( !is_sleeping( rch ) ) {
+        if( !is_resting( rch ) ) {
+          act_notchar( #move2, ch );
+          transfer( rch, find_room( j ) );
+          act_notchar( #arrive, rch );
+          }
+        }
+      }
+    }
+  else
+    continue;
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape, oddly a small
+path seems evident.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 1
+A
+~
+~
+remove_rflag( reset0, room );
+continue;
+~
+!
+1 0 2
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  act_tochar( #move, ch );
+  act_notchar( #gone, ch );
+  i = random( 1, 9 );
+  if( i == 1 )
+    j = 11049;
+  if( i == 2 )
+    j = 11044;
+  if( i == 3 )
+    j = 11045;
+  if( i == 4 )
+    j = 11046;
+  if( i == 5 )
+    j = 11047;
+  if( i == 6 )
+    j = 11028;
+  if( i == 7 )
+    j = 11027;
+  if( i == 8 )
+    j = 11026;
+  if( i == 9 )
+    j = 11048;
+  transfer( ch, find_room( j ) );
+  if( is_player( ch ) )
+    act_notchar( #arrive, ch );
+  if( !is_player( ch ) )
+    act_notchar( #mobarrive, ch );
+  loop( followers ) {
+    if( !is_sleeping( rch ) ) {
+      if( !is_resting( rch ) ) {
+        act_notchar( #move2, ch );
+        transfer( rch, find_room( j ) );
+        act_notchar( #arrive, rch );
+        }
+      }
+    }
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 12
+5092 9 1509949540 3 0
+-1
+S
+
+#11049
+Serene Sunshine~
+Stretching forth from horizon to horizon is a pearlescent sterility that
+is almost mind-numbing.  New formations billow out and bulge from the
+surface of this gargantuan cumulus cloud; as each blossom erupts previous
+ones dissipate and vanish.  Everything appears the same in all four
+cardinal directions, and yet in this cloud's ever-changing state, nothing
+remains the same from moment to moment.
+~
+[Eliza] reviewed
+~
+33030208 0 5 0
+D0
+~
+~
+0 -1 11044 10 10 5
+D1
+~
+~
+0 -1 11048 10 10 5
+D2
+~
+~
+0 -1 11026 10 10 5
+D3
+~
+~
+0 -1 11035 10 10 5
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  act_tochar( #move, ch );
+  act_notchar( #gone, ch );
+  i = random( 1, 8 );
+  if( i == 1 )
+    j = 11035;
+  if( i == 2 )
+    j = 11044;
+  if( i == 3 )
+    j = 11045;
+  if( i == 4 )
+    j = 11048;
+  if( i == 5 )
+    j = 11027;
+  if( i == 6 )
+    j = 11026;
+  if( i == 7 )
+    j = 11033;
+  if( i == 8 )
+    j = 11049;
+  transfer( ch, find_room( j ) );
+  if( is_player( ch ) )
+    act_notchar( #arrive, ch );
+  if( !is_player( ch ) )
+    act_notchar( #mobarrive, ch );
+  loop( followers ) {
+    if( !is_sleeping( rch ) ) {
+      if( !is_resting( rch ) ) {
+        act_notchar( #move2, ch );
+        transfer( rch, find_room( j ) );
+        act_notchar( #arrive, rch );
+        }
+      }
+    }
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 10
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  if( rflag( reset0, room ) ) {
+    act_tochar( #move, ch );
+    act_notchar( #gone, ch );
+    i = random( 1, 8 );
+    if( i == 1 )
+      j = 11035;
+    if( i == 2 )
+      j = 11044;
+    if( i == 3 )
+      j = 11045;
+    if( i == 4 )
+      j = 11048;
+    if( i == 5 )
+      j = 11027;
+    if( i == 6 )
+      j = 11026;
+    if( i == 7 )
+      j = 11033;
+    if( i == 8 )
+      j = 11049;
+    transfer( ch, find_room( j ) );
+    if( is_player( ch ) )
+      act_notchar( #arrive, ch );
+    if( !is_player( ch ) )
+      act_notchar( #mobarrive, ch );
+    loop( followers ) {
+      if( !is_sleeping( rch ) ) {
+        if( !is_resting( rch ) ) {
+          act_notchar( #move2, ch );
+          transfer( rch, find_room( j ) );
+          act_notchar( #arrive, rch );
+          }
+        }
+      }
+    }
+  else
+    continue;
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape, oddly a small
+path seems evident.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 4
+A
+~
+~
+remove_rflag( reset0, room );
+continue;
+~
+!
+1 0 1
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  if( rflag( reset1, room ) ) {
+    act_tochar( #move, ch );
+    act_notchar( #gone, ch );
+    i = random( 1, 8 );
+    if( i == 1 )
+      j = 11035;
+    if( i == 2 )
+      j = 11044;
+    if( i == 3 )
+      j = 11045;
+    if( i == 4 )
+      j = 11048;
+    if( i == 5 )
+      j = 11027;
+    if( i == 6 )
+      j = 11026;
+    if( i == 7 )
+      j = 11033;
+    if( i == 8 )
+      j = 11049;
+    transfer( ch, find_room( j ) );
+    if( is_player( ch ) )
+      act_notchar( #arrive, ch );
+    if( !is_player( ch ) )
+      act_notchar( #mobarrive, ch );
+    loop( followers ) {
+      if( !is_sleeping( rch ) ) {
+        if( !is_resting( rch ) ) {
+          act_notchar( #move2, ch );
+          transfer( rch, find_room( j ) );
+          act_notchar( #arrive, rch );
+          }
+        }
+      }
+    }
+  else
+    continue;
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape, oddly a small
+path seems evident.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 1
+A
+~
+~
+remove_rflag( reset1, room );
+continue;
+~
+!
+1 0 4
+-1
+S
+
+#11050
+Serene Sunshine~
+Stretching forth from horizon to horizon is a pearlescent sterility that
+is almost mind-numbing.  New formations billow out and bulge from the
+surface of this gargantuan cumulus cloud; as each blossom erupts previous
+ones dissipate and vanish.  Everything appears the same to both the south
+and west, a field of pillowy, ever-changing cumulus matter that though it
+supports weight will not be easy to transgress.  The clouds to the north
+and east are vaporously thin, offering a hazy view of the countryside
+below.
+~
+~
+33030208 0 9 0
+D2
+~
+~
+0 -1 11051 10 10 5
+D3
+~
+~
+0 -1 11046 10 10 5
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  act_tochar( #move, ch );
+  act_notchar( #gone, ch );
+  i = random( 1, 4 );
+  if( i == 1 )
+    j = 11046;
+  if( i == 2 )
+    j = 11050;
+  if( i == 3 )
+    j = 11047;
+  if( i == 4 )
+    j = 11051;
+  transfer( ch, find_room( j ) );
+  if( is_player( ch ) )
+    act_notchar( #arrive, ch );
+  if( !is_player( ch ) )
+    act_notchar( #mobarrive, ch );
+  loop( followers ) {
+    if( !is_sleeping( rch ) ) {
+      if( !is_resting( rch ) ) {
+        act_notchar( #move2, ch );
+        transfer( rch, find_room( j ) );
+        act_notchar( #arrive, rch );
+        }
+      }
+    }
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 12
+-1
+S
+
+#11051
+Serene Sunshine~
+Stretching forth from horizon to horizon is a pearlescent sterility that
+is almost mind-numbing.  New formations billow out and bulge from the
+surface of this gargantuan cumulus cloud; as each blossom erupts previous
+ones dissipate and vanish.  Everything appears the same in all
+directions, save east, a field of pillowy, ever-changing cumulus matter
+that though it supports weight will not be easy to transgress.  The
+clouds to the east are vaporously thin, offering a hazy view of the
+countryside below.
+~
+~
+33030208 0 9 0
+D0
+~
+~
+0 -1 11050 10 10 5
+D2
+~
+~
+0 -1 11052 10 10 5
+D3
+~
+~
+0 -1 11047 10 10 5
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  if( rflag( reset1, room ) ) {
+    act_tochar( #move, ch );
+    act_notchar( #gone, ch );
+    i = random( 1, 6 );
+    if( i == 1 )
+      j = 11046;
+    if( i == 2 )
+      j = 11050;
+    if( i == 3 )
+      j = 11051;
+    if( i == 4 )
+      j = 11052;
+    if( i == 5 )
+      j = 11028;
+    if( i == 6 )
+      j = 11047;
+    transfer( ch, find_room( j ) );
+    if( is_player( ch ) )
+      act_notchar( #arrive, ch );
+    if( !is_player( ch ) )
+      act_notchar( #mobarrive, ch );
+    loop( followers ) {
+      if( !is_sleeping( rch ) ) {
+        if( !is_resting( rch ) ) {
+          act_notchar( #move2, ch );
+          transfer( rch, find_room( j ) );
+          act_notchar( #arrive, rch );
+          }
+        }
+      }
+    }
+  else
+    continue;
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape, oddly a small path seems evident.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 4
+A
+~
+~
+remove_rflag( reset1, room );
+continue;
+~
+!
+1 0 8
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  if( rflag( reset0, room ) ) {
+    act_tochar( #move, ch );
+    act_notchar( #gone, ch );
+    i = random( 1, 6 );
+    if( i == 1 )
+      j = 11046;
+    if( i == 2 )
+      j = 11050;
+    if( i == 3 )
+      j = 11051;
+    if( i == 4 )
+      j = 11052;
+    if( i == 5 )
+      j = 11028;
+    if( i == 6 )
+      j = 11047;
+    transfer( ch, find_room( j ) );
+    if( is_player( ch ) )
+      act_notchar( #arrive, ch );
+    if( !is_player( ch ) )
+      act_notchar( #mobarrive, ch );
+    loop( followers ) {
+      if( !is_sleeping( rch ) ) {
+        if( !is_resting( rch ) ) {
+          act_notchar( #move2, ch );
+          transfer( rch, find_room( j ) );
+          act_notchar( #arrive, rch );
+          }
+        }
+      }
+    }
+  else
+    continue;
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape, oddly a small path seems evident.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 8
+A
+~
+~
+remove_rflag( reset0, room );
+continue;
+~
+!
+1 0 4
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  act_tochar( #move, ch );
+  act_notchar( #gone, ch );
+  i = random( 1, 6 );
+  if( i == 1 )
+    j = 11046;
+  if( i == 2 )
+    j = 11050;
+  if( i == 3 )
+    j = 11051;
+  if( i == 4 )
+    j = 11052;
+  if( i == 5 )
+    j = 11028;
+  if( i == 6 )
+    j = 11047;
+  transfer( ch, find_room( j ) );
+  if( is_player( ch ) )
+    act_notchar( #arrive, ch );
+  if( !is_player( ch ) )
+    act_notchar( #mobarrive, ch );
+  loop( followers ) {
+    if( !is_sleeping( rch ) ) {
+      if( !is_resting( rch ) ) {
+        act_notchar( #move2, ch );
+        transfer( rch, find_room( j ) );
+        act_notchar( #arrive, rch );
+        }
+      }
+    }
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape. ada exit
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 1
+5092 9 1509949540 3 0
+-1
+S
+
+#11052
+Serene Sunshine~
+Stretching forth from horizon to horizon is a pearlescent sterility that
+is almost mind-numbing.  New formations billow out and bulge from the
+surface of this gargantuan cumulus cloud; as each blossom erupts previous
+ones dissipate and vanish.  Everything appears the same in all
+directions, save east, a field of pillowy, ever-changing cumulus matter
+that though it supports weight will not be easy to transgress.  The
+clouds to the east are vaporously thin, offering a hazy view of the
+countryside below.
+~
+~
+33030208 0 9 0
+D0
+~
+~
+0 -1 11051 10 10 5
+D2
+~
+~
+0 -1 11053 10 10 5
+D3
+~
+~
+0 -1 11028 10 10 5
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  act_tochar( #move, ch );
+  act_notchar( #gone, ch );
+  i = random( 1, 6 );
+  if( i == 1 )
+    j = 11047;
+  if( i == 2 )
+    j = 11051;
+  if( i == 3 )
+    j = 11052;
+  if( i == 4 )
+    j = 11053;
+  if( i == 5 )
+    j = 11023;
+  if( i == 6 )
+    j = 11028;
+  transfer( ch, find_room( j ) );
+  if( is_player( ch ) )
+    act_notchar( #arrive, ch );
+  if( !is_player( ch ) )
+    act_notchar( #mobarrive, ch );
+  loop( followers ) {
+    if( !is_sleeping( rch ) ) {
+      if( !is_resting( rch ) ) {
+        act_notchar( #move2, ch );
+        transfer( rch, find_room( j ) );
+        act_notchar( #arrive, rch );
+        }
+      }
+    }
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 4
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  if( rflag( reset0, room ) ) {
+    act_tochar( #move, ch );
+    act_notchar( #gone, ch );
+    i = random( 1, 6 );
+    if( i == 1 )
+      j = 11047;
+    if( i == 2 )
+      j = 11051;
+    if( i == 3 )
+      j = 11052;
+    if( i == 4 )
+      j = 11053;
+    if( i == 5 )
+      j = 11023;
+    if( i == 6 )
+      j = 11028;
+    transfer( ch, find_room( j ) );
+    if( is_player( ch ) )
+      act_notchar( #arrive, ch );
+    if( !is_player( ch ) )
+      act_notchar( #mobarrive, ch );
+    loop( followers ) {
+      if( !is_sleeping( rch ) ) {
+        if( !is_resting( rch ) ) {
+          act_notchar( #move2, ch );
+          transfer( rch, find_room( j ) );
+          act_notchar( #arrive, rch );
+          }
+        }
+      }
+    }
+  else
+    continue;
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape, oddly a small path seems evident.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 1
+A
+~
+~
+remove_rflag( reset0, room );
+continue;
+~
+!
+1 0 8
+A
+~
+~
+remove_rflag( reset1, room );
+continue;
+~
+!
+1 0 1
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  if( rflag( reset1, room ) ) {
+    act_tochar( #move, ch );
+    act_notchar( #gone, ch );
+    i = random( 1, 6 );
+    if( i == 1 )
+      j = 11047;
+    if( i == 2 )
+      j = 11051;
+    if( i == 3 )
+      j = 11052;
+    if( i == 4 )
+      j = 11053;
+    if( i == 5 )
+      j = 11023;
+    if( i == 6 )
+      j = 11028;
+    transfer( ch, find_room( j ) );
+    if( is_player( ch ) )
+      act_notchar( #arrive, ch );
+    if( !is_player( ch ) )
+      act_notchar( #mobarrive, ch );
+    loop( followers ) {
+      if( !is_sleeping( rch ) ) {
+        if( !is_resting( rch ) ) {
+          act_notchar( #move2, ch );
+          transfer( rch, find_room( j ) );
+          act_notchar( #arrive, rch );
+          }
+        }
+      }
+    }
+  else
+    continue;
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape, oddly a small path seems evident.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 8
+5092 9 1509949540 3 0
+-1
+S
+
+#11053
+Serene Sunshine~
+Stretching forth from horizon to horizon is a pearlescent sterility that
+is almost mind-numbing.  New formations billow out and bulge from the
+surface of this gargantuan cumulus cloud; as each blossom erupts previous
+ones dissipate and vanish.  Everything appears the same in all
+directions, save east, a field of pillowy, ever-changing cumulus matter
+that though it supports weight will not be easy to transgress.  The
+clouds to the east are vaporously thin, offering a hazy view of the
+countryside below.
+~
+~
+33030208 0 9 0
+D0
+~
+~
+0 -1 11052 10 10 5
+D2
+~
+~
+0 -1 11054 10 10 5
+D3
+~
+~
+0 -1 11023 10 10 5
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  act_tochar( #move, ch );
+  act_notchar( #gone, ch );
+  i = random( 1, 6 );
+  if( i == 1 )
+    j = 11023;
+  if( i == 2 )
+    j = 11028;
+  if( i == 3 )
+    j = 11052;
+  if( i == 4 )
+    j = 11053;
+  if( i == 5 )
+    j = 11054;
+  if( i == 6 )
+    j = 11022;
+  transfer( ch, find_room( j ) );
+  if( is_player( ch ) )
+    act_notchar( #arrive, ch );
+  if( !is_player( ch ) )
+    act_notchar( #mobarrive, ch );
+  loop( followers ) {
+    if( !is_sleeping( rch ) ) {
+      if( !is_resting( rch ) ) {
+        act_notchar( #move2, ch );
+        transfer( rch, find_room( j ) );
+        act_notchar( #arrive, rch );
+        }
+      }
+    }
+  }
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 13
+-1
+S
+
+#11054
+Serene Sunshine~
+Stretching forth from horizon to horizon is a pearlescent sterility that
+is almost mind-numbing.  New formations billow out and bulge from the
+surface of this gargantuan cumulus cloud; as each blossom erupts previous
+ones dissipate and vanish.  Everything appears the same to both the north
+and west, a field of pillowy, ever-changing cumulus matter that though it
+supports weight will not be easy to transgress.  The clouds to the south
+and east are vaporously thin, offering a hazy view of the countryside
+below.
+~
+~
+33030208 0 9 0
+D0
+~
+~
+0 -1 11053 10 10 5
+D3
+~
+~
+0 -1 11022 10 10 5
+A
+~
+~
+if( find_stat( ch, level ) < 98 ) {
+  act_tochar( #move, ch );
+  act_notchar( #gone, ch );
+  i = random( 1, 4 );
+  if( i == 1 )
+    j = 11022;
+  if( i == 2 )
+    j = 11023;
+  if( i == 3 )
+    j = 11053;
+  if( i == 4 )
+    j = 11054;
+  transfer( ch, find_room( j ) );
+  if( is_player( ch ) )
+    act_notchar( #arrive, ch );
+  if( !is_player( ch ) )
+    act_notchar( #mobarrive, ch );
+  loop( followers ) {
+    if( !is_sleeping( rch ) ) {
+      if( !is_resting( rch ) ) {
+        act_notchar( #move2, ch );
+        transfer( rch, find_room( j ) );
+        act_notchar( #arrive, rch );
+      }
+    }
+  }
+}
+else
+  continue;
+~
+E
+to_char~
+You travel further on across the disorienting landscape.
+~
+E
+to_room~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+move~
+You travel further on across the disorienting landscape.
+~
+E
+move2~
+You follow $n across the disorienting landscape.
+~
+E
+gone~
+$n leaves, traveling across the disorienting landscape.
+~
+E
+arrive~
+$n enters the room, looking only slightly lost.
+~
+E
+mobarrive~
+Emerging through the cloud's surface $n appears.
+~
+!
+3 0 9
+5092 9 1509949540 3 0
+-1
+S
+
+#11055
+Serene Sunshine~
+Misty thin tendrils of cottony material drift throuth the air, slowly
+melding with the ever-changing cloud to the south.  Nearly filling the
+air above the somewhat-stable surface of the cumulus cloud the vaporous
+tendrils coalesce into a faint archway leading toward the north.  Beyond
+the arch, the very air itself is enshrouded in a thick fog of expanding
+wisps that when combined make up the basis for this and every other cloud
+in the sky.
+~
+~
+33030208 0 9 0
+D0
+~
+~
+0 -1 11056 10 10 5
+D2
+~
+~
+0 -1 11036 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou pass beneath the misty archway, becoming nearly blind in the thick
+fog.
+~
+E
+to_room~
+@c$n passes through the misty archway to the north.
+~
+!
+3 0 1
+5098 9 1509949540 3 0
+-1
+S
+
+#11056
+Serene Sunshine~
+As if filled with the smoke from a morning campfire visibility here is
+all but nil.  Thick tendrils of cumulus matter drift through the air,
+though not stifling like a dense fog but instead wrapping this small room
+in a protective blanket that not even harsh light can pass through.  A
+faint glow is evident, warming the air with its peach-colored light... 
+its source the small altar set in the center of the visible surface.  The
+dense fog seems to thin toward the south leaving the only apparant egress
+away from the altar in that direction.
+~
+[Adakar] sigils.. will have to be an extra in the room i guess since oextras still don't work.
+~
+33030208 0 5 0
+D2
+~
+~
+0 -1 11055 10 10 5
+7043 17 1509949540 -2 0
+-1
+S
+
+#0
+

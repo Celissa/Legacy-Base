@@ -1,0 +1,4638 @@
+#M2_AREA
+2
+
+Ryoushi Passes~
+Nnilb~
+Ryoushi Passes~
+~
+~
+
+15 0
+0
+1
+#ROOMS
+
+#12250
+North End of a Mountain Pass~
+A sizable landslide has blocked much of the the northern end of a pass
+through the rubble and begins the descent down the craggy face of a
+mountain valley.  Southward, a sea of tussock flourishes on the slopes,
+as a more hospitalable vale spreads through a scattering of weather-worn
+boulders rising from the ground.  Despite the inhospitable terrain, the
+land appears to have once been settled, a distant ruin lies at the
+valley's southern end.
+~
+[Nnilb] one pass heads southeast and (presumably) out of the mountains
+[Nnilb] one pass heads southwest to form north and west border of the raven wood
+[Guin] Connects to 78500
+[Guin] Done.
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 78500 10 10 5
+D2
+~
+~
+0 -1 7983 10 10 5
+A
+~
+~
+send_to_room( #rock, room );
+send_to_room( #nextroomrockfall, find_room( 7983 ) );
+~
+E
+rock~
+@RA series of rocks tumble down the landslide, finally resting near your
+feet.@n 
+~
+E
+nextroomrockfall~
+@RA series of rocks fall down the landslide to the north, the sound
+echoing loudly.@n 
+~
+!
+2 200 0
+A
+2 move 2 clear~
+landslide 1 north~
+if( is_open( room, north ) ) {
+  act_tochar( #already, ch );
+  end;
+}
+if( !rflag( reset0, room ) ) {
+  act_tochar( #someone, ch );
+  end;
+}
+remove_rflag( reset0, room );
+act_tochar( #begin, ch );
+act_notchar( #rbegin, ch, obj, mob, sight );
+wait( 1 );
+act_tochar( #finally, ch );
+act_notchar( #rfinally, ch, obj, mob, sight );
+open( room, north );
+~
+E
+already~
+There is nothing blocking the way, why would you want to do that?
+~
+E
+someone~
+Someone is already trying to move the rubble, you would just get in their way.
+~
+E
+begin~
+You begin to move the rubble from the path to the north.
+~
+E
+rbegin~
+$n begins to move the rubble from the path to the north.
+~
+E
+finally~
+You heave a few more pieces of rubble, and find you have opened the path
+wide enough for a wagon.
+~
+E
+rfinally~
+$n heaves aside a few more pieces of rubble, and you notice $e has
+cleared enough to allow a wagon to pass.
+~
+!
+0 0 0
+A
+1 look~
+landslide 1 north~
+if( !is_open( room, north ) )
+act_tochar( #closed, ch, obj, mob );
+else
+act_tochar( #open, ch, obj, mob );
+~
+E
+closed~
+There is a landslide blocking the way, you might be able to move enough
+of it to get through.
+~
+E
+open~
+There is a path wide enough for a wagon to pass through the landslide.
+~
+!
+0 0 0
+-1
+S
+
+#12251
+Everwinter Mountains - The Eastern Sea Trail~
+Surrounded by towering mountains to the north and south the humble
+roadway does its best to continue through ice, snow and rockslides in a
+east- west direction.  Low clouds gather around the eastern flanks of the
+Everwinter range, obscuring what might lie in that direction.  Even now
+the air from the east feels warmer than the bitter chill of the swirling
+northern breeze.  Westwards the road descends sharply before bending
+south and disappearing out of sight.  Despite the steepness of the cliff
+it appears that someone has cut small handholds into its face, enabling a
+highly skilled climber to attempt to scale the heights.
+~
+[Azerin] climb north to get to ice wyrms
+~
+167247872 0 9 0
+D1
+~
+~
+162 -1 12477 10 10 5
+D3
+~
+~
+0 -1 12470 10 10 5
+D4
+~
+~
+1024 -1 12305 10 10 5
+-1
+S
+
+#12252
+A Blocked Pass~
+Under Construction.
+~
+~
+167247872 0 9 0
+D2
+~
+~
+0 -1 12253 10 10 5
+-1
+S
+
+#12253
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12252 10 10 5
+D2
+~
+~
+0 -1 12254 10 10 5
+-1
+S
+
+#12254
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12253 10 10 5
+D1
+~
+~
+0 -1 12255 10 10 5
+-1
+S
+
+#12255
+Nothing~
+Under Construction.
+~
+[Nnilb] over tunnel between lake and raven wood
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12256 10 10 5
+D3
+~
+~
+0 -1 12254 10 10 5
+-1
+S
+
+#12256
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12309 10 10 5
+D3
+~
+~
+0 -1 12255 10 10 5
+-1
+S
+
+#12257
+Everwinter Mountain Pass~
+This pass climbs the shoulder of the mountain to the west, rising toward
+a pass around the near vertical rise to the south.  To the east, the path
+descends slightly along this northern ridge of the mountain shelf, coming
+to an intersection.  Across the lush pine forests to the north, a series
+of rivers crisscross the landscape, as snowmelt churns out of the
+mountains and forces its way to the sea.
+~
+[Nnilb] can see forests to the nw, high slope to se
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12308 10 10 5
+D3
+~
+~
+0 -1 12258 10 10 5
+-1
+S
+
+#12258
+Everwinter Mountain Pass~
+The view from this bend in the pass is extraordinary.  To the southeast,
+a snow-capped crag lurches into the sky for at least another few thousand
+feet.  To the west, a pine forest surrounds a lake so calm that it
+creates the illusion of an underwater forest beneath its still surface. 
+The pass descends to the east, while it begins to climb sharply to the
+south.
+~
+[Nnilb] can see forests to the nw, high slope to se
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12257 10 10 5
+D2
+~
+~
+0 -1 12259 10 10 5
+-1
+S
+
+#12259
+Everwinter Mountain Pass~
+The pass grows a bit rocky as it climbs into the mountains to the west,
+as the footing becomes a bit less sure.  The pass winds its way around
+the mountain peak to the southeast, following a narrow shelf atop about a
+mile above the forest below, to the northwest.  To the north, the pass
+descends a bit as it begins to find its way past the north face of the
+mountain.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12258 10 10 5
+D3
+~
+~
+0 -1 12260 10 10 5
+-1
+S
+
+#12260
+Everwinter Mountain Pass~
+An enormous boulder sits half-buried in the path, making this portion of
+the mountain pass narrow indeed.  The pass follows the western face of
+the rising mountain to the east, heading south and east.  To the
+northwest, the view is a panorama of forest and lake, a lush green bowl
+between the mountains and the grey horizon beyond.
+~
+[Nnilb] d tunnel area of some kind
+[Nnilb] d will be greth and nnilb's drakes
+[Nnilb] approx level? 25 ? unk.
+[Nnilb] until he's ready, i'll leave an immovable boulder atop it.
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12259 10 10 5
+D2
+~
+~
+0 -1 12263 10 10 5
+D5
+hole~
+boulder d down~
+235 -1 12261 10 10 5
+-1
+S
+
+#12261
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D4
+~
+~
+235 -1 12260 10 10 5
+D5
+~
+~
+0 -1 12262 10 10 5
+-1
+S
+
+#12262
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D4
+~
+~
+0 -1 12261 10 10 5
+-1
+S
+
+#12263
+Everwinter Mountain Pass~
+The pass climbs to the west as it rises over a jutting shoulder of the
+mountain, while to the north it dips along the edge of the mountain's
+face.  A lush green forest stretches its branches far to the north away
+from the mountain to the southeast.  Cut into the rocky face of the
+mountain is a wide, smooths-stone tunnel.  A frost-coated ramp decending
+down into its dark maw.  Across the archway of the tunnel a polished
+copper sign hangs.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12260 10 10 5
+D1
+~
+~
+0 -1 12307 10 10 5
+D3
+~
+~
+0 -1 12264 10 10 5
+E
+polished copper sign~
+The highly polished copper sign swings slightly in the wind, there are
+rimes of frost hanging off the edges of it.  It has been inscribed with
+an archaic lettering.  The language is unknown to you, the feeling you
+have is it is unreadable to even those enchanted with the gift of tongues.
+~
+-1
+S
+
+#12264
+Everwinter Mountain Pass~
+The path rises to the west as it seeks a pass through the mountain range,
+dipping to the east as it begins to descend along the face of one of the
+slopes.  To the north, the face of the mountain drops sharply as the
+moss-covered stone of the mountain lays exposed above the forest below.
+Broken boulders choke the path, forming a dead end here.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12263 10 10 5
+D3
+~
+~
+0 -1 12265 10 10 5
+-1
+S
+
+#12265
+Everwinter Mountain Pass~
+Continuing to rise, the path leads west up towards a pass through the
+mountains.  To the east, the path descends slightly as it makes its way
+around the northern face of the mountain.  A horizontal stone shelf juts
+out a few inches above level, creating a small crevice.
+~
+[Nnilb] more
+[Nnilb] another boulder, back entrace to drakes
+[Nnilb] not boulder, something else...
+[Nnilb] lift shelf to go in back way to drakes
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12264 10 10 5
+D3
+~
+~
+0 -1 12266 10 10 5
+-1
+S
+
+#12266
+Everwinter Mountain Pass~
+A steep climb leads up to the west, while a descending path follows the
+north face of the mountain to the east.  The moss-covered stone has begun
+to give way to bare rock, as the altitude and cold create an inhospitable
+climate.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12265 10 10 5
+D4
+~
+~
+0 -1 12267 10 10 5
+-1
+S
+
+#12267
+Everwinter Mountain Pass~
+This is the northern end of a high mountain pass.  The pass descends to
+the east as it follows the north face of a mountain, leading down and
+around to the north to the forests below.  To the west, the pass climbs
+onto the shoulder of a massive peak.  To the north and south, below the
+shadows of the mountain range, lie forested valleys.
+~
+[Nnilb] aha, can see raven wood to the south
+~
+167247872 0 9 0
+D3
+~
+~
+0 -1 12268 10 10 5
+D5
+~
+~
+0 -1 12266 10 10 5
+-1
+S
+
+#12268
+Everwinter Mountain Pass~
+Rising to the south, the pass climbs onto to the east face of a squat,
+snow-capped mountain.  To the east, the pass descends along the
+moss-covered northwest face of a craggy rock of a mountain.  To the
+southeast, a valley of dark wood looms beneath a shroud of mist.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12267 10 10 5
+D2
+~
+~
+0 -1 12269 10 10 5
+-1
+S
+
+#12269
+Everwinter Mountain Pass~
+Here, at the summit of the pass, the world spreads before you like a
+cloud-and-blue-tinged globe of colour.  To the north, the pass begins its
+descent towards the lush pine forests of the Ryoushi, as glints of
+light reflect along the dark lakes and dance before your eyes.  Beyond
+the green, the ice-blue of the frozen sea at the edge of the distant,
+smoky horizon.  To the west, the pass sweeps down along the southeastern
+slope of a snow-capped mountain, bound for the plains and highlands.
+~
+[Nnilb] the 'top' of the pass
+[Nnilb] yes this desc sucks
+[Nnilb] not sure about Ryoushi...
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12268 10 10 5
+D3
+~
+~
+0 -1 12270 10 10 5
+-1
+S
+
+#12270
+Everwinter Mountain Pass~
+The pass descends sharply to the west as it dives down the face of the
+mountain.  To the east, the pass climbs to its pinnacle.  To the south,
+below the sharp drop of the mountainside, lies a heavily forested valley
+of dark wood.
+~
+[Nnilb] should definately be able to see ravenwood from here (to the south)
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12269 10 10 5
+D3
+~
+~
+0 -1 12271 10 10 5
+-1
+S
+
+#12271
+Everwinter Mountain Pass~
+This lonely mountain pass carves its way along the southeastern face of
+the massive mountain to the northwest.  To the east, the path rises
+toward the top of the pass, while to the south, the terrain descends
+sharply to avoid the mountain's rocky slopes.  The landscape to the south
+is that of a dark wood, shrouded by mist.
+~
+[Nnilb] mountain now towering overhead to the northwest
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12270 10 10 5
+D5
+~
+~
+0 -1 12272 10 10 5
+-1
+S
+
+#12272
+Everwinter Mountain Pass~
+The pass continues west, following a horizontal cut in the mountain.  The
+terrain rises sharply to the north, making a short climb before leveling
+off.  Rising above you to the northwest, the mountain face rises into
+rocky, then snow-covered heights.  Below the pass to the south, a dark
+forest lurks, smoky mist rising above its treetops.
+~
+~
+167247872 0 9 0
+D3
+~
+~
+0 -1 12273 10 10 5
+D4
+~
+~
+0 -1 12271 10 10 5
+-1
+S
+
+#12273
+Edge of the Forest - Mountain Pass~
+Thinning a little at the edges, the forest begins to give way to the bare,
+windswept slopes of the Everwinter mountains.  A goat trail winds up the
+mountain side, a few tussock plants growing beside it.  Toward the south,
+a crumbling cliff spirals downward, the mountain edge running against its
+sheer surface making it impassable.  Eastward, an ancient landslide of
+cataclysmic proportions destroyed what there was once of a path.
+~
+[Guin] East exit blocked and hidden. Unfinished in that direction.
+[Guin] Zone stops here for now.
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12272 10 10 5
+D3
+~
+~
+0 -1 12274 10 10 5
+E
+1 east landslide path~
+Hundreds of tons of rock block the path eastward through the mountains, a
+landslide of massive proportion.  That the avalanche occurred in ages
+past is undeniable; all manner of vegetation clings in the stony crevices
+and cracks.
+~
+899 9 1509949540 3 0
+4058 17 1509949540 -2 0
+-1
+S
+
+#12274
+Forest of Pines~
+To the south, the cliff spirals downward countless feet toward a basin
+land filled with more woodlands.  Massive white pines cling to the very
+edge of the cliffside, many of their roots splayed into the air. 
+Eastward, a goat track picks its way through the forest and begins to
+accend the side of the nearby mountains.  A side track heads southward,
+cutting down the cliff side before ending at a spire of rock.
+~
+[Nnilb] s is to raven
+[Yrna] Done.
+~
+167247872 5 9 0
+D1
+~
+~
+0 -1 12273 10 10 5
+D2
+~
+~
+0 -1 12275 10 10 5
+D3
+~
+~
+0 -1 12280 10 10 5
+-1
+S
+
+#12275
+Forest of Pines~
+The forest spreads out in every direction, the towering pines locking
+branches to form a near impassable barrier to travel.  Mounds of snow and
+pine needles lie beneath their massive roots forming into small rises
+that obscure the view beyond.  A giant-sized spire of rock rises over
+thirty feet to the south, its tip still well under half the height of the
+pines.  Chilling vapors of mist cling to the ground, obscuring what lies
+below.  Beyond the stone, the edge of a cliff drops suddenly below, a
+ravine side trail appearing to cut its way down it - however the
+giant-sized rock would sit upon its entrance point.
+~
+[Guin] Entrance to Raven Wood.
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 5 9 0
+D0
+~
+~
+0 -1 12274 10 10 5
+D5
+~
+~
+227 -1 12276 10 10 5
+E
+stone spire~
+The craggy face of the rock has been worn and cracked with the years of
+icy winters.  A scattering of scorch marks mar the stones base, as if
+someone had attempted to ignite the rock.
+~
+E
+mound snow pine needles root~
+Mounds of pine needles are covered in snow, which in turn is topped with
+pine needles again, showing clearly the change of seasons and passage of
+time.  One mound, however, is different than the rest.  Snow and needles
+are mixed together, with some dirt and a broken branch or two as well, as
+if someone was looking for something and then piled it all back up.
+~
+A
+search~
+mound snow pine needles root down~
+if( get_integer( ch, "Yrna/RyoushiPasses/Door" ) == 1 ) {
+  act_tochar( #done, ch );
+  end;
+}
+if( find_skill( ch, searching ) ) {
+  act_tochar( #notice, ch, obj );
+  act_notchar( #rnotice, ch, obj, mob, sight );
+  show( ch, room, down );
+  set_integer( ch, "Yrna/RyoushiPasses/Door", 1 );
+}
+else
+  act_tochar( #rummage, ch, obj );
+~
+E
+notice~
+@CYou search around the odd-looking mound and you are pretty sure that
+there is a hole right under it!@n 
+~
+E
+rnotice~
+@CWith a knowing look on $s face, $n searches around the snow mounds for
+a bit.@n 
+~
+E
+rummage~
+@cYou rummage around the mounds for a little while, but cannot spot
+anything unusual.@n 
+~
+E
+done~
+@cYou already discovered what you wanted.@n
+~
+!
+9 0 0
+A
+dig clear~
+mound snow needles hole down~
+if( get_integer( ch, "Yrna/RyoushiPasses/Door" ) == 1 ) {
+  act_tochar( #dig, ch, obj );
+  act_notchar( #rdig, ch, obj, mob, sight );
+  open( room, down );
+  set_integer( ch, "Yrna/RyoushiPasses/Door", 0 );
+}
+else
+  act_tochar( #no, ch, obj );
+~
+E
+dig~
+@cYou partially clear the mound of needles and snow, revealing a small
+hole.@n 
+~
+E
+rdig~
+@c$n digs in the snow for a while, finally revealing a small hole under
+one of the mounds.@n 
+~
+E
+no~
+@yYou dig in the snow for a while and get in touch with your inner child.@n
+~
+!
+0 0 0
+A
+climb jump~
+down hole~
+if( is_open( room, down ) ) {
+  if( can_fly( ch ) ) {
+    interpret( ch, "down" );
+    end;
+  }
+  if( find_skill( ch, climb ) > 2) {
+    act_tochar( #climb, ch, obj );
+    act_notchar( #rclimb, ch, obj, mob, sight );
+    transfer( ch, find_room( 12276 ) );
+    act_notchar( #appear, ch, obj, mob, sight );
+  }
+  else
+    act_tochar( #betternot, ch, obj );
+}
+else
+  act_tochar( #what, ch, obj );
+~
+E
+climb~
+@CYou slip down through the hole in the snow.@n
+~
+E
+rclimb~
+@C$n slips down through the hole in the snow.@n
+~
+E
+betternot~
+@yIt seems to be a long way down and you decide you're probably not
+skillfull enough to make it back up from there.@n 
+~
+E
+what~
+@EExactly where do you want to go?@n
+~
+E
+appear~
+@W$n appears from above.@n
+~
+!
+0 0 32
+A
+~
+~
+if( is_open( room, down ) ) {
+  if( can_fly( ch ) )
+    continue;
+  act_tochar( #climb, ch, obj );
+}
+else
+  act_tochar( #where, ch );
+~
+E
+climb~
+@cThe hole is too steep for walking. Try jumping or climbing instead.@n
+~
+E
+where~
+@cYou see no way to do that.@n
+~
+!
+3 0 32
+899 9 1509949540 3 0
+-1
+S
+
+#12276
+Below a Rise~
+You stand in a narrow pass which heads south, winding downward between
+two massive cliffs of dark brown rock.  A cool wind whips down through
+the pass from above and stirs dry dirt and snow into the air, making it
+hard to see.  The pass between the canyon climbs up between the cliffs;
+the way up is made unpassable by a mixture of snow, dirt and pine needles.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 0 9 0
+D2
+~
+~
+0 -1 12277 10 10 5
+D4
+~
+~
+227 -1 12275 10 10 5
+E
+snow dirt pine needles pass~
+There is a narrow pass between the cliffs here, or there was before it
+was blocked by a large mound of snow mixed with dirt and pine needles.
+~
+A
+clear dig~
+snow up~
+act_tochar( #clear, ch );
+act_notchar( #rclear, ch, obj, mob, sight );
+open( room, up );
+~
+E
+clear~
+@CYou clear the snow overhead, revealing a narrow gap between the cliffs.@n
+~
+E
+rclear~
+@C$n clears the snow overhead.@n
+~
+!
+0 0 0
+A
+~
+~
+if( !is_open( room, up ) )
+  act_tochar( #where, ch );
+else {
+  if( can_fly( ch ) )
+    continue;
+  act_tochar( #steep, ch );
+}
+~
+E
+where~
+@cYou see no way to do that.@n
+~
+E
+steep~
+@cTry climbing out instead.@n
+~
+!
+3 0 16
+A
+climb~
+hole opening 1 up gap~
+if( is_open( room, up ) ) {
+  if( can_fly( ch ) ) {
+    interpret( ch, "up" );
+    end;
+  }
+  if( find_skill( ch, climb ) > random( 2, 4 ) ) {
+    act_tochar( #climb, ch );
+    act_notchar( #rclimb, ch, obj, mob, sight );
+    transfer( ch, find_room( 12275 ) );
+    act_notchar( #appear, ch, obj, mob, sight );
+  }
+  else
+    act_tochar( #no, ch );
+}
+else
+  act_tochar( #where, ch );
+~
+E
+climb~
+@CYou scramble up the narrow passage between the cliffs.@n
+~
+E
+rclimb~
+@C$n climbs up the narrow passage between the cliffs.@n
+~
+E
+appear~
+@W$n appears from below.@n
+~
+E
+no~
+@cYou try to climb up, but lose foothold and slide back down.@n
+~
+E
+where~
+@cClimb where?@n
+~
+!
+0 0 0
+-1
+S
+
+#12277
+A Narrow Cut Through the Mountains~
+This narrow mountain pass winds between two great cliffs and stretches
+from the north to south, sloping ever upward like a long, rough ramp.  On
+the eastern wall of the cliff is a strange mark, a black circle of mirrored
+obsidian an arm's length in diameter.  It is nothing like the brown rock
+in which it is embedded. It is smooth, flat with the brown rock, and looks
+like a dark, glassy window.  The ruined trunks of several trees stand
+beside the trail; their branches, broken and torn, lie around their bases.
+~
+[Guin] Portal is not intended to work correctly.
+[Guin] Portal sorted, portal extra added.
+~
+167247872 4 9 0
+D0
+~
+~
+0 -1 12276 10 10 5
+D2
+~
+~
+0 -1 12278 10 10 5
+E
+black circle obsidian glass window~
+The black obsidian appears to be a perfect circle, which is odd for a
+natural rock formation.
+~
+E
+mark east wall cliff black circle obsidian 6 mirror~
+A smooth slab of polished black obsidian was embedded in the stone of the
+cliff side.  What its intended purpose was at the time of its creation is
+unknown, yet the remnants of ancient arcane magics still radiate from its
+surface.
+~
+-1
+S
+
+#12278
+A Narrow Cut Through the Mountains~
+This narrow path through the mountains bends here from west to north. 
+Very little grows here where the great canyon dances deep shadows across
+the dusty and bare earth.  The land rises steadily to the north, while
+below you to the east you can make out the black surface of a small pool. 
+The colors of the cliff on each side mix here; streaks of brown and white
+form in the middle like dirty marble.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 4 9 0
+D0
+~
+~
+0 -1 12277 10 10 5
+D1
+~
+~
+0 -1 12279 10 10 5
+E
+1 east black surface pool~
+Not far to the east you can see a streak of white in the dark black, an
+indication of a pool of some sort, although its depth or makeup is
+indeterminable.
+~
+-1
+S
+
+#12279
+A Shallow Ford~
+This narrow pass is blocked off to the north and south by granite rock
+cliffs that rise upwards into mist.  Water has collected here in the low
+ground of this pass, but it appears to be shallow enough to cross.  The
+pass begins to steepen to the west as it winds its way through the narrow
+canyon.  High above, on the south face of the cliff there appears to be
+an overhang; it is hard to tell from this angle, and certainly impossible
+to reach.  Several rocks and boulders rest along the side of the pass,
+clustering together around the ford.
+~
+[Yrna] Done.
+~
+167247872 13 9 0
+D1
+~
+~
+0 -1 2441 10 10 5
+D3
+~
+~
+0 -1 12278 10 10 5
+E
+1 east~
+The ground rises to the east, and the misty tops of trees can be seen a
+short distance away.
+~
+E
+1 west~
+The narrow mountain pass rises up from the pool, a twisting ramp riddled
+with boulders and smaller rocks.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@WAs you travel toward the approaching trees, tendrils of mist begin to
+curl around your legs.@n 
+~
+E
+to_room~
+As $n travels toward the approaching trees, tendrils of mist begin to
+curl around $s legs.@n 
+~
+!
+3 0 2
+-1
+S
+
+#12280
+Pine Forest - Beside a Ravine~
+Growing up to the very edge of the crumbling cliff are the massive pines
+- countless gnarled roots dangling in mid air.  Icicles hang from the
+branches of many trees, some reaching over a foot in lenght, the freezing
+wind rattling them when it blows.  Rising beyond the forest is the
+Everwinter mountain range, their jagged cliffs looking impassable.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 5 9 0
+D1
+~
+~
+0 -1 12274 10 10 5
+D2
+~
+~
+0 -1 12281 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CThe snow crunches under your feet as you leave $d.@n
+~
+E
+to_room~
+@CSnow crunching under $s feet, $n leaves $d.@n
+~
+!
+3 0 6
+A
+~
+~
+rch = rand_player( room );
+act_tochar( #icicle, rch, obj );
+act_notchar( #ricicle, rch, obj, mob, sight );
+damage( mob, rch, 1d5, cold, "a falling icicle", "small icicle" );
+~
+E
+icicle~
+@CA small icicle breaks off from the tree branch and hits you!@n
+~
+E
+ricicle~
+@CA small icicle breaks off from the tree branch and hits $n!@n
+~
+!
+2 150 0
+-1
+S
+
+#12281
+Pine Forest~
+Rising well over one hundred feet in height, the magestic pines dominate
+the landscape, only ending when the mountain flanks become to steep for
+them to cling to.  Mounds of snow lie in drifts between the trees,
+forming small hillocks that obscure vison with their glinting surface. 
+Eastwards a sleep cliff drops sharply away, another pine forest spreading
+out in its basin.  Clouds of mist hang in the air giving a bite to breath
+and soaking the skin.  A crumbling wall rises to the south, the tops of
+buildings visible beyond.
+~
+[Yrna] Done.
+[Guin] Done.
+[Yrna] Added moose reset
+~
+167247872 5 9 0
+D0
+~
+~
+0 -1 12280 10 10 5
+D2
+~
+~
+0 -1 78544 10 10 5
+E
+wall 1 south~
+The crumbling wall has seen better days, many of its stones have split
+and fallen, gathering now in low piles around its base.  A large area of
+it has collapsed inward, providing access between the dark forest and a
+small courtyard.  Moss and young saplings have begun to take hold of the
+stone work, some sections of wall completely disappearing in a wave of
+green growth.
+~
+A
+~
+~
+send_to_room( #mist, room, sight );
+~
+E
+mist~
+@cThe mist curls and swirls, creating pictures of dragons, beasts and
+castles, before once again forming a cold, shapeless mass.@n 
+~
+!
+2 200 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CYou make your way past the gaping hole in the crumbling stone wall.@n
+~
+E
+to_room~
+~
+!
+3 0 4
+885 9 1509949540 3 0
+-1
+S
+
+#12282
+Mountain Pass~
+Slowly climbing to the south, the pass stretches along the eastern slope
+of the mountain.  Below the pass to the east, a dark wood spreads out in
+the vicinity of the mountains.  High overhead, an outcropping of rock
+juts away from the mountain face, creating a ledge.
+~
+[Nnilb] climb up?
+~
+167247872 0 9 0
+D2
+~
+~
+0 -1 12283 10 10 5
+-1
+S
+
+#12283
+Mountain Pass~
+To the south, the pass begins to rise sharply as it pushes up to clear
+the final lip of mountaintop before reaching the plains.  To the north,
+the slope is a gentle one, steadily descending bit by bit as it flanks
+the dark forest below the mountain to the east.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12282 10 10 5
+D2
+~
+~
+0 -1 12284 10 10 5
+-1
+S
+
+#12284
+Mountain Pass~
+The slope is fairly steep at this point of the pass, as it climbs to the
+south, seeking a pass through the mountaintops.  To the north, the pass
+descends alongside the misty dark wood below the pass to the east.  A
+crack appears in the rock face to the west, and steam hisses into the
+chill air from some hidden source inside the mountain.
+~
+[Nnilb] can see big tree to e
+[Nnilb] put in an rextra
+[Nnilb] extras, etc
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12283 10 10 5
+D2
+~
+~
+0 -1 12285 10 10 5
+-1
+S
+
+#12285
+Mountain Pass~
+The pass makes a bend to the west, cutting across some flat terrain to
+make it more easily navigable.  To the north, the pass descends sharply. 
+Far below the pass to the east lies a valley floor, blanketed by a thick
+dark wood.
+~
+[Nnilb] something more
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12284 10 10 5
+D3
+~
+~
+0 -1 12286 10 10 5
+-1
+S
+
+#12286
+Mountain Pass~
+The white stone path continues to the south, rising as it makes its way
+back up into the mountains.  The pass bends to the east, following the
+contours of the mountain face.
+~
+[Nnilb] more
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12285 10 10 5
+D2
+~
+~
+0 -1 12287 10 10 5
+-1
+S
+
+#12287
+Mountain Pass~
+The slope is steep as the road climbs ever higher to the south to reach
+the top of the pass.  To the north, the level evens out before a bend
+sends the path eastward.
+~
+[Nnilb] more
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12286 10 10 5
+D2
+~
+~
+0 -1 12288 10 10 5
+-1
+S
+
+#12288
+Mountain Pass~
+~
+[Nnilb] need more here :)
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12287 10 10 5
+D2
+~
+~
+0 -1 12289 10 10 5
+-1
+S
+
+#12289
+Mountain Pass~
+Under Construction.
+~
+[Nnilb] description?
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12288 10 10 5
+D3
+~
+~
+0 -1 12290 10 10 5
+-1
+S
+
+#12290
+Mountain Pass~
+Under Construction.
+~
+[Nnilb] description?
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12289 10 10 5
+D4
+~
+~
+0 -1 12291 10 10 5
+-1
+S
+
+#12291
+Mountain Pass~
+Under Construction.
+~
+[Nnilb] description?
+~
+167247872 0 9 0
+D2
+~
+~
+0 -1 12292 10 10 5
+D5
+~
+~
+0 -1 12290 10 10 5
+-1
+S
+
+#12292
+Mountain Pass~
+Under Construction.
+~
+[Nnilb] description?
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12291 10 10 5
+D4
+~
+~
+0 -1 12293 10 10 5
+-1
+S
+
+#12293
+Mountain Pass~
+Under Construction.
+~
+[Nnilb] description?
+~
+167247872 0 9 0
+D3
+~
+~
+0 -1 12294 10 10 5
+D5
+~
+~
+0 -1 12292 10 10 5
+-1
+S
+
+#12294
+Mountain Pass~
+~
+[Nnilb] more herE :)
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12293 10 10 5
+D2
+~
+~
+0 -1 12295 10 10 5
+-1
+S
+
+#12295
+Mountain Pass~
+Under Construction.
+~
+[Nnilb] 'TOP' of the pass
+[Nnilb] some nice view or something
+[Nnilb] description?
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12294 10 10 5
+D2
+~
+~
+0 -1 12296 10 10 5
+-1
+S
+
+#12296
+Mountain Pass~
+The slope to the north rises slightly as the pass crests the mountain. 
+To the south, the stone road dips angrily as the pass plunges down the
+southern face.
+~
+[Nnilb] more
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12295 10 10 5
+D5
+~
+~
+0 -1 12297 10 10 5
+-1
+S
+
+#12297
+Mountain Pass~
+Just below the top of the pass, the road to the north rises sharply as it
+seeks entrance into the interior of the mountain range.  The terrain is
+also steep to the south, as the stone road dips down the south face of
+the mountain.
+~
+[Nnilb] streams, etc
+~
+167247872 0 9 0
+D2
+~
+~
+0 -1 12298 10 10 5
+D4
+~
+~
+0 -1 12296 10 10 5
+-1
+S
+
+#12298
+Mountain Pass~
+You are atop the first of several ridges leading toward the top of the
+southernmost mountaintop pass to the north.  Although the white stone
+terrain has a steep inclide, the surface is wide and easily traveled.  To
+the south, the sharp descent out of the mountains nears its end.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12297 10 10 5
+D5
+~
+~
+0 -1 12299 10 10 5
+-1
+S
+
+#12299
+Mountain Pass~
+The pass climbs the solid white stone of the mountains, heading north up
+a steep incline.  To the west, the pass nears its southern end,
+descending rapidly as it nears the edge of the mountains.
+~
+~
+167247872 0 9 0
+D3
+~
+~
+0 -1 12300 10 10 5
+D4
+~
+~
+0 -1 12298 10 10 5
+-1
+S
+
+#12300
+Mountain Pass~
+The incline of the pass is steep to the west as it finally reaches ground
+level.  To the east, the incline is also sharp as the pass climbs up into
+the mountains.  The solid white stone of the moutains appears barely
+worn, although this pass has been in operation for over a century and a
+half.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12299 10 10 5
+D5
+~
+~
+0 -1 12301 10 10 5
+-1
+S
+
+#12301
+Base of a Mountain Pass~
+A wide pass climbs sharply up into the mountains to the east, an
+adventurous start to what must be a treacherous journey across the
+massive mountains of white stone.  To the south you can see a large road. 
+The terrain is dotted with small pines and shrub.
+~
+~
+167247872 0 9 0
+D2
+~
+~
+0 -1 12302 10 10 5
+D4
+~
+~
+0 -1 12300 10 10 5
+-1
+S
+
+#12302
+Nothing~
+Under Construction.
+~
+[Nnilb] finally out of mountains. pass to north (up) goes across toward ryoushi village
+[Nnilb] roads south and west skirt endge of mountains, perhaps
+[Nnilb] i am thinking... plains to the south, then desert to the northwest, and narak beyond that.
+[Nnilb] 'Great North Road' :) heh
+[Nnilb] road to w follows edge of mountains, curving to north toward a dwarf stronghold
+[Nnilb] road to s follows edge of mountains to the ocean to the e
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12301 10 10 5
+D2
+~
+~
+0 -1 12303 10 10 5
+D3
+~
+~
+0 -1 12304 10 10 5
+-1
+S
+
+#12303
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12302 10 10 5
+D2
+~
+~
+0 -1 12392 10 10 5
+-1
+S
+
+#12304
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12302 10 10 5
+D3
+~
+~
+0 -1 12393 10 10 5
+-1
+S
+
+#12305
+Path Upon a Steep Slope~
+The slick cliff face offers little natural handholds, fortunately someone
+has cut small indentations into the grey stone enabling a seasoned
+climber to just continue strugling up the towering mountainside.  Above
+the climb ends at the summit, its top covered in freezing ice and snow,
+Below the roadway cuts an east and west path between the high peaks of
+the Everwinter Range.
+~
+[Nnilb] crap forgot this thing
+~
+167247872 0 9 0
+D4
+~
+~
+1024 -1 12306 10 10 5
+D5
+~
+~
+0 -1 12251 10 10 5
+-1
+S
+
+#12306
+Everwinter Mountains - Summit~
+A massive slab of rock juts out of the mountain face, its white granite
+surface etched by tool and blasted by wind and ice.  A narrow trail cuts
+a diagonal path down the north face of the peak.  Frozen slabs of ice
+thrust from the mountain side, their sharp edges making the journey
+impossible in all directions but the way you came.  Far below the peaks
+of lesser mountains spread - beyond that a forest carpets the landscape. 
+The bitter wind tears across the ridge, making breathing painfull.
+~
+[Nnilb] should have quite a view from here, eh?
+[Nnilb] extras for granite slab thing
+[Azerin] north to ice wyrms
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12471 10 10 5
+D5
+~
+~
+0 -1 12305 10 10 5
+-1
+S
+
+#12307
+Tunnel Through the Mountain~
+The slick sides of the tunnel drip with frost and icicles - some partially
+melted, sending trickling ribbons of water down the sides.  A handful of
+brackets line each wall - in theory they would hold torches or lanterns
+however at the momement they are empty save for a generous layer of
+frosting.  Westwards the tunnel opens out into the mountains - the snow
+and rocks continuing onwards until they meet the edge of a massive pine
+forest.  Towards the east the tunnel ends at the steps of wagon-sized
+stone doors.
+~
+~
+167247872 0 9 0
+D3
+~
+~
+0 -1 12263 10 10 5
+-1
+S
+
+#12308
+Everwinter Mountain Pass~
+Towering pine and snow coated cliffs rise hundreds if not thousands of
+feet above the roadway as the mighty Everwinter Range continues in a
+north-south direction.  Far to the north-west the wooded slopes give rise
+to rolling hills and grasslands where perhaps other settlements thrive on
+the rich farmland.  South a dusting of snow has settled upon the roadway,
+the chilling air cold enough to allow even the lightest of falls to
+settle.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12469 10 10 5
+D2
+~
+~
+0 -1 12257 10 10 5
+-1
+S
+
+#12309
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12310 10 10 5
+D3
+~
+~
+0 -1 12256 10 10 5
+-1
+S
+
+#12310
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D2
+~
+~
+0 -1 12311 10 10 5
+D3
+~
+~
+0 -1 12309 10 10 5
+-1
+S
+
+#12311
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12310 10 10 5
+D1
+~
+~
+0 -1 12312 10 10 5
+-1
+S
+
+#12312
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12313 10 10 5
+D3
+~
+~
+0 -1 12311 10 10 5
+-1
+S
+
+#12313
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D2
+~
+~
+0 -1 12314 10 10 5
+D3
+~
+~
+0 -1 12312 10 10 5
+-1
+S
+
+#12314
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12313 10 10 5
+D1
+~
+~
+0 -1 12315 10 10 5
+-1
+S
+
+#12315
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12316 10 10 5
+D3
+~
+~
+0 -1 12314 10 10 5
+-1
+S
+
+#12316
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D3
+~
+~
+0 -1 12315 10 10 5
+D4
+~
+~
+0 -1 12317 10 10 5
+-1
+S
+
+#12317
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12318 10 10 5
+D5
+~
+~
+0 -1 12316 10 10 5
+-1
+S
+
+#12318
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12319 10 10 5
+D3
+~
+~
+0 -1 12317 10 10 5
+-1
+S
+
+#12319
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12320 10 10 5
+D3
+~
+~
+0 -1 12318 10 10 5
+-1
+S
+
+#12320
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D2
+~
+~
+0 -1 12321 10 10 5
+D3
+~
+~
+0 -1 12319 10 10 5
+-1
+S
+
+#12321
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12320 10 10 5
+D1
+~
+~
+0 -1 12322 10 10 5
+-1
+S
+
+#12322
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D3
+~
+~
+0 -1 12321 10 10 5
+D4
+~
+~
+0 -1 12323 10 10 5
+-1
+S
+
+#12323
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D2
+~
+~
+0 -1 12324 10 10 5
+D5
+~
+~
+0 -1 12322 10 10 5
+-1
+S
+
+#12324
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12323 10 10 5
+D4
+~
+~
+0 -1 12325 10 10 5
+-1
+S
+
+#12325
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12326 10 10 5
+D5
+~
+~
+0 -1 12324 10 10 5
+-1
+S
+
+#12326
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12327 10 10 5
+D3
+~
+~
+0 -1 12325 10 10 5
+-1
+S
+
+#12327
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D3
+~
+~
+0 -1 12326 10 10 5
+D5
+~
+~
+0 -1 12328 10 10 5
+-1
+S
+
+#12328
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12329 10 10 5
+D4
+~
+~
+0 -1 12327 10 10 5
+-1
+S
+
+#12329
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D2
+~
+~
+0 -1 12330 10 10 5
+D3
+~
+~
+0 -1 12328 10 10 5
+-1
+S
+
+#12330
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12329 10 10 5
+D1
+~
+~
+0 -1 12331 10 10 5
+-1
+S
+
+#12331
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D3
+~
+~
+0 -1 12330 10 10 5
+D5
+~
+~
+0 -1 12332 10 10 5
+-1
+S
+
+#12332
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D2
+~
+~
+0 -1 12333 10 10 5
+D4
+~
+~
+0 -1 12331 10 10 5
+-1
+S
+
+#12333
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12332 10 10 5
+D5
+~
+~
+0 -1 12334 10 10 5
+-1
+S
+
+#12334
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12335 10 10 5
+D4
+~
+~
+0 -1 12333 10 10 5
+-1
+S
+
+#12335
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D3
+~
+~
+0 -1 12334 10 10 5
+D5
+~
+~
+0 -1 12336 10 10 5
+-1
+S
+
+#12336
+Nothing~
+Under Construction.
+~
+[Nnilb] now at ground level
+[Nnilb] roads go e, s aroudn mountains
+[Nnilb] what is e?
+~
+167247872 0 9 0
+D2
+~
+~
+0 -1 12337 10 10 5
+D4
+~
+~
+0 -1 12335 10 10 5
+-1
+S
+
+#12337
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12336 10 10 5
+D2
+~
+~
+0 -1 12338 10 10 5
+-1
+S
+
+#12338
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12337 10 10 5
+D2
+~
+~
+0 -1 12339 10 10 5
+-1
+S
+
+#12339
+Nothing~
+Under Construction.
+~
+[Nnilb] e will lead toward sumerian type
+[Nnilb] w will be closed.
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12338 10 10 5
+D3
+road~
+w west road~
+194 -1 12340 10 10 5
+-1
+S
+
+#12340
+A Closed Road~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+194 -1 12339 10 10 5
+D2
+~
+~
+0 -1 12341 10 10 5
+-1
+S
+
+#12341
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12340 10 10 5
+D2
+~
+~
+0 -1 12342 10 10 5
+-1
+S
+
+#12342
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12341 10 10 5
+D2
+~
+~
+0 -1 12343 10 10 5
+-1
+S
+
+#12343
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12342 10 10 5
+D3
+~
+~
+0 -1 12344 10 10 5
+-1
+S
+
+#12344
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12343 10 10 5
+D2
+~
+~
+0 -1 12345 10 10 5
+-1
+S
+
+#12345
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12344 10 10 5
+D2
+~
+~
+0 -1 12346 10 10 5
+-1
+S
+
+#12346
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12345 10 10 5
+D3
+~
+~
+0 -1 12347 10 10 5
+-1
+S
+
+#12347
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12346 10 10 5
+D2
+~
+~
+0 -1 12348 10 10 5
+-1
+S
+
+#12348
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12347 10 10 5
+D2
+~
+~
+0 -1 12349 10 10 5
+-1
+S
+
+#12349
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12348 10 10 5
+D3
+~
+~
+0 -1 12350 10 10 5
+-1
+S
+
+#12350
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12349 10 10 5
+D3
+~
+~
+0 -1 12351 10 10 5
+-1
+S
+
+#12351
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12350 10 10 5
+D2
+~
+~
+0 -1 12352 10 10 5
+-1
+S
+
+#12352
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12351 10 10 5
+D2
+~
+~
+0 -1 12353 10 10 5
+-1
+S
+
+#12353
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12352 10 10 5
+D3
+~
+~
+0 -1 12354 10 10 5
+-1
+S
+
+#12354
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12353 10 10 5
+D2
+~
+~
+0 -1 12355 10 10 5
+-1
+S
+
+#12355
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12354 10 10 5
+D2
+~
+~
+0 -1 12356 10 10 5
+-1
+S
+
+#12356
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12355 10 10 5
+D3
+~
+~
+0 -1 12357 10 10 5
+-1
+S
+
+#12357
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12356 10 10 5
+D3
+~
+~
+0 -1 12358 10 10 5
+-1
+S
+
+#12358
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12357 10 10 5
+D3
+~
+~
+0 -1 12359 10 10 5
+-1
+S
+
+#12359
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12358 10 10 5
+D3
+~
+~
+0 -1 12360 10 10 5
+-1
+S
+
+#12360
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12359 10 10 5
+D3
+~
+~
+0 -1 12361 10 10 5
+-1
+S
+
+#12361
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12360 10 10 5
+D2
+~
+~
+0 -1 12362 10 10 5
+-1
+S
+
+#12362
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12361 10 10 5
+D3
+~
+~
+0 -1 12363 10 10 5
+-1
+S
+
+#12363
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12362 10 10 5
+D3
+~
+~
+0 -1 12364 10 10 5
+-1
+S
+
+#12364
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12363 10 10 5
+D3
+~
+~
+0 -1 12365 10 10 5
+-1
+S
+
+#12365
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12364 10 10 5
+D3
+~
+~
+0 -1 12366 10 10 5
+-1
+S
+
+#12366
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12365 10 10 5
+D3
+~
+~
+0 -1 12367 10 10 5
+-1
+S
+
+#12367
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12366 10 10 5
+D3
+~
+~
+0 -1 12368 10 10 5
+-1
+S
+
+#12368
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12367 10 10 5
+D3
+~
+~
+0 -1 12369 10 10 5
+-1
+S
+
+#12369
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12368 10 10 5
+D3
+~
+~
+0 -1 12370 10 10 5
+-1
+S
+
+#12370
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12369 10 10 5
+D3
+~
+~
+0 -1 12371 10 10 5
+-1
+S
+
+#12371
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12370 10 10 5
+D3
+~
+~
+0 -1 12372 10 10 5
+-1
+S
+
+#12372
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12371 10 10 5
+D3
+~
+~
+0 -1 12373 10 10 5
+-1
+S
+
+#12373
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12372 10 10 5
+D2
+~
+~
+0 -1 12374 10 10 5
+-1
+S
+
+#12374
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12373 10 10 5
+D3
+~
+~
+0 -1 12375 10 10 5
+-1
+S
+
+#12375
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12374 10 10 5
+D3
+~
+~
+0 -1 12376 10 10 5
+-1
+S
+
+#12376
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12375 10 10 5
+D3
+~
+~
+0 -1 12377 10 10 5
+-1
+S
+
+#12377
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12376 10 10 5
+D3
+~
+~
+0 -1 12378 10 10 5
+-1
+S
+
+#12378
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12379 10 10 5
+D1
+~
+~
+0 -1 12377 10 10 5
+-1
+S
+
+#12379
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D2
+~
+~
+0 -1 12378 10 10 5
+D3
+~
+~
+0 -1 12380 10 10 5
+-1
+S
+
+#12380
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12379 10 10 5
+D3
+~
+~
+0 -1 12381 10 10 5
+-1
+S
+
+#12381
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12382 10 10 5
+D1
+~
+~
+0 -1 12380 10 10 5
+-1
+S
+
+#12382
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D2
+~
+~
+0 -1 12381 10 10 5
+D3
+~
+~
+0 -1 12383 10 10 5
+-1
+S
+
+#12383
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12382 10 10 5
+D3
+~
+~
+0 -1 12384 10 10 5
+-1
+S
+
+#12384
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12385 10 10 5
+D1
+~
+~
+0 -1 12383 10 10 5
+-1
+S
+
+#12385
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12386 10 10 5
+D2
+~
+~
+0 -1 12384 10 10 5
+-1
+S
+
+#12386
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D2
+~
+~
+0 -1 12385 10 10 5
+D3
+~
+~
+0 -1 12387 10 10 5
+-1
+S
+
+#12387
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12386 10 10 5
+D3
+~
+~
+0 -1 12388 10 10 5
+-1
+S
+
+#12388
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12387 10 10 5
+D3
+~
+~
+0 -1 12389 10 10 5
+-1
+S
+
+#12389
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12390 10 10 5
+D1
+~
+~
+0 -1 12388 10 10 5
+-1
+S
+
+#12390
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D2
+~
+~
+0 -1 12389 10 10 5
+D3
+~
+~
+0 -1 12391 10 10 5
+-1
+S
+
+#12391
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12392 10 10 5
+D1
+~
+~
+0 -1 12390 10 10 5
+-1
+S
+
+#12392
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12303 10 10 5
+D2
+~
+~
+0 -1 12391 10 10 5
+-1
+S
+
+#12393
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12304 10 10 5
+D3
+~
+~
+0 -1 12394 10 10 5
+-1
+S
+
+#12394
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12395 10 10 5
+D1
+~
+~
+0 -1 12393 10 10 5
+-1
+S
+
+#12395
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D2
+~
+~
+0 -1 12394 10 10 5
+D3
+~
+~
+0 -1 12396 10 10 5
+-1
+S
+
+#12396
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12395 10 10 5
+D3
+~
+~
+0 -1 12397 10 10 5
+-1
+S
+
+#12397
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12396 10 10 5
+D3
+~
+~
+0 -1 12398 10 10 5
+-1
+S
+
+#12398
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12399 10 10 5
+D1
+~
+~
+0 -1 12397 10 10 5
+-1
+S
+
+#12399
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12400 10 10 5
+D2
+~
+~
+0 -1 12398 10 10 5
+-1
+S
+
+#12400
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D2
+~
+~
+0 -1 12399 10 10 5
+D3
+~
+~
+0 -1 12401 10 10 5
+-1
+S
+
+#12401
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12400 10 10 5
+D3
+~
+~
+0 -1 12402 10 10 5
+-1
+S
+
+#12402
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12403 10 10 5
+D1
+~
+~
+0 -1 12401 10 10 5
+-1
+S
+
+#12403
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D2
+~
+~
+0 -1 12402 10 10 5
+D3
+~
+~
+0 -1 12404 10 10 5
+-1
+S
+
+#12404
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12403 10 10 5
+D3
+~
+~
+0 -1 12405 10 10 5
+-1
+S
+
+#12405
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12404 10 10 5
+D3
+~
+~
+0 -1 12406 10 10 5
+-1
+S
+
+#12406
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12405 10 10 5
+D3
+~
+~
+0 -1 12407 10 10 5
+-1
+S
+
+#12407
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12406 10 10 5
+D3
+~
+~
+0 -1 12408 10 10 5
+-1
+S
+
+#12408
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12407 10 10 5
+D3
+~
+~
+0 -1 12409 10 10 5
+-1
+S
+
+#12409
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12410 10 10 5
+D1
+~
+~
+0 -1 12408 10 10 5
+-1
+S
+
+#12410
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12411 10 10 5
+D2
+~
+~
+0 -1 12409 10 10 5
+-1
+S
+
+#12411
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D2
+~
+~
+0 -1 12410 10 10 5
+D3
+~
+~
+0 -1 12412 10 10 5
+-1
+S
+
+#12412
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12411 10 10 5
+D3
+~
+~
+0 -1 12413 10 10 5
+-1
+S
+
+#12413
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12412 10 10 5
+D3
+~
+~
+0 -1 12414 10 10 5
+-1
+S
+
+#12414
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12413 10 10 5
+D3
+~
+~
+0 -1 12415 10 10 5
+-1
+S
+
+#12415
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12414 10 10 5
+D3
+~
+~
+0 -1 12416 10 10 5
+-1
+S
+
+#12416
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12417 10 10 5
+D1
+~
+~
+0 -1 12415 10 10 5
+-1
+S
+
+#12417
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D2
+~
+~
+0 -1 12416 10 10 5
+D3
+~
+~
+0 -1 12418 10 10 5
+-1
+S
+
+#12418
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12417 10 10 5
+D3
+~
+~
+0 -1 12419 10 10 5
+-1
+S
+
+#12419
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12420 10 10 5
+D1
+~
+~
+0 -1 12418 10 10 5
+-1
+S
+
+#12420
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D2
+~
+~
+0 -1 12419 10 10 5
+D3
+~
+~
+0 -1 12421 10 10 5
+-1
+S
+
+#12421
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12420 10 10 5
+D3
+~
+~
+0 -1 12422 10 10 5
+-1
+S
+
+#12422
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12421 10 10 5
+D3
+~
+~
+0 -1 12423 10 10 5
+-1
+S
+
+#12423
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12422 10 10 5
+D2
+~
+~
+0 -1 12424 10 10 5
+-1
+S
+
+#12424
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12423 10 10 5
+D3
+~
+~
+0 -1 12425 10 10 5
+-1
+S
+
+#12425
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12424 10 10 5
+D3
+~
+~
+0 -1 12426 10 10 5
+-1
+S
+
+#12426
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12425 10 10 5
+D2
+~
+~
+0 -1 12427 10 10 5
+-1
+S
+
+#12427
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12426 10 10 5
+D3
+~
+~
+0 -1 12428 10 10 5
+-1
+S
+
+#12428
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12427 10 10 5
+D3
+~
+~
+0 -1 12429 10 10 5
+-1
+S
+
+#12429
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12428 10 10 5
+D3
+~
+~
+0 -1 12430 10 10 5
+-1
+S
+
+#12430
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12431 10 10 5
+D1
+~
+~
+0 -1 12429 10 10 5
+-1
+S
+
+#12431
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12432 10 10 5
+D2
+~
+~
+0 -1 12430 10 10 5
+-1
+S
+
+#12432
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D2
+~
+~
+0 -1 12431 10 10 5
+D3
+~
+~
+0 -1 12433 10 10 5
+-1
+S
+
+#12433
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12432 10 10 5
+D3
+~
+~
+0 -1 12434 10 10 5
+-1
+S
+
+#12434
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12433 10 10 5
+D3
+~
+~
+0 -1 12435 10 10 5
+-1
+S
+
+#12435
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12436 10 10 5
+D1
+~
+~
+0 -1 12434 10 10 5
+-1
+S
+
+#12436
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12437 10 10 5
+D2
+~
+~
+0 -1 12435 10 10 5
+-1
+S
+
+#12437
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D2
+~
+~
+0 -1 12436 10 10 5
+D3
+~
+~
+0 -1 12438 10 10 5
+-1
+S
+
+#12438
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12437 10 10 5
+D3
+~
+~
+0 -1 12439 10 10 5
+-1
+S
+
+#12439
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12440 10 10 5
+D1
+~
+~
+0 -1 12438 10 10 5
+-1
+S
+
+#12440
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D2
+~
+~
+0 -1 12439 10 10 5
+D3
+~
+~
+0 -1 12441 10 10 5
+-1
+S
+
+#12441
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12440 10 10 5
+D3
+~
+~
+0 -1 12442 10 10 5
+-1
+S
+
+#12442
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12441 10 10 5
+D3
+~
+~
+0 -1 12443 10 10 5
+-1
+S
+
+#12443
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12442 10 10 5
+D3
+~
+~
+0 -1 12444 10 10 5
+-1
+S
+
+#12444
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12445 10 10 5
+D1
+~
+~
+0 -1 12443 10 10 5
+-1
+S
+
+#12445
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12446 10 10 5
+D2
+~
+~
+0 -1 12444 10 10 5
+-1
+S
+
+#12446
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D2
+~
+~
+0 -1 12445 10 10 5
+D3
+~
+~
+0 -1 12447 10 10 5
+-1
+S
+
+#12447
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12448 10 10 5
+D1
+~
+~
+0 -1 12446 10 10 5
+-1
+S
+
+#12448
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12449 10 10 5
+D2
+~
+~
+0 -1 12447 10 10 5
+-1
+S
+
+#12449
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D2
+~
+~
+0 -1 12448 10 10 5
+D3
+~
+~
+0 -1 12450 10 10 5
+-1
+S
+
+#12450
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12449 10 10 5
+D3
+~
+~
+0 -1 12451 10 10 5
+-1
+S
+
+#12451
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12452 10 10 5
+D1
+~
+~
+0 -1 12450 10 10 5
+-1
+S
+
+#12452
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12453 10 10 5
+D2
+~
+~
+0 -1 12451 10 10 5
+-1
+S
+
+#12453
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D2
+~
+~
+0 -1 12452 10 10 5
+D3
+~
+~
+0 -1 12454 10 10 5
+-1
+S
+
+#12454
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12455 10 10 5
+D1
+~
+~
+0 -1 12453 10 10 5
+-1
+S
+
+#12455
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12456 10 10 5
+D2
+~
+~
+0 -1 12454 10 10 5
+-1
+S
+
+#12456
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12457 10 10 5
+D2
+~
+~
+0 -1 12455 10 10 5
+-1
+S
+
+#12457
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12458 10 10 5
+D2
+~
+~
+0 -1 12456 10 10 5
+-1
+S
+
+#12458
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D2
+~
+~
+0 -1 12457 10 10 5
+D3
+~
+~
+0 -1 12459 10 10 5
+-1
+S
+
+#12459
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12460 10 10 5
+D1
+~
+~
+0 -1 12458 10 10 5
+-1
+S
+
+#12460
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12461 10 10 5
+D2
+~
+~
+0 -1 12459 10 10 5
+-1
+S
+
+#12461
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12462 10 10 5
+D2
+~
+~
+0 -1 12460 10 10 5
+-1
+S
+
+#12462
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D2
+~
+~
+0 -1 12461 10 10 5
+D3
+~
+~
+0 -1 12463 10 10 5
+-1
+S
+
+#12463
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12464 10 10 5
+D1
+~
+~
+0 -1 12462 10 10 5
+-1
+S
+
+#12464
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12465 10 10 5
+D2
+~
+~
+0 -1 12463 10 10 5
+-1
+S
+
+#12465
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12466 10 10 5
+D2
+~
+~
+0 -1 12464 10 10 5
+-1
+S
+
+#12466
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12467 10 10 5
+D2
+~
+~
+0 -1 12465 10 10 5
+-1
+S
+
+#12467
+Nothing~
+Under Construction.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12468 10 10 5
+D2
+~
+~
+0 -1 12466 10 10 5
+-1
+S
+
+#12468
+Nothing~
+Under Construction.
+~
+[Nnilb] END OF ROAD
+[Nnilb] to n is a dwarven stronghold.
+[Nnilb] sort of clannish, a japanese feel.
+[Nnilb] will open up possibilities for mine areas in the mountains.
+~
+167247872 0 9 0
+D2
+~
+~
+0 -1 12467 10 10 5
+-1
+S
+
+#12469
+Everwinter Mountain Pass~
+Twin statues of gnome warriors guard the roadway, their backs pressed
+firmly against the icy eastern cliff face.  Unlike other guardian statues
+these fail to impart any sense of dignity, the gnomes floppy hats and
+strange cog-encrusted arms and armor giving more of a comical feel.  The
+roadway hacks southwards under the shadow of the mighty mountains and
+northwards where the ice and snow begin to assault it in earnest.
+~
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 12470 10 10 5
+D2
+~
+~
+0 -1 12308 10 10 5
+-1
+S
+
+#12470
+Everwinter Mountain Pass~
+The roadway struggles under the mantle of ice and snow, at several points
+it surrenders to their embrace and disappears from sight.  Towards the
+east the trail rises steeply upwards, the angle of the slope enabling the
+path to shed some of the snow.  Beyond the rise it enters a rift between
+mountain peaks, for the first time a traveler may be able to see the
+eastern side of the massive mountains.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12251 10 10 5
+D2
+~
+~
+0 -1 12469 10 10 5
+-1
+S
+
+#12471
+Ancient Roadway Across The Ice~
+Unlike much of the roads of the high mountains this one appears to have
+been crafted by a skillful master, its edges reinforced by brickwork, its
+surface cobbled.  Even without the tell-tale axe and runic mark upon the
+stones it would be easy to guess this was the work of the dwarves who use
+to rule these lands.  Thankfully the roadway quickly ducks downwards out
+of the howling gale that races across the exposed mountain summit.
+~
+~
+167247872 0 9 0
+D2
+~
+~
+0 -1 12306 10 10 5
+D5
+~
+~
+0 -1 12472 10 10 5
+-1
+S
+
+#12472
+Ancient Roadway Across The Ice~
+The cobbled road cuts eastwards around the base of the mountain summit,
+much of its journey it has been set into the cliff enabling a good
+overhang to keep its surface free from heavy snow.  Archways carved with
+twin war axes brace the roof, reinforcing the good work that nature has
+already provided.  Despite the steepness of its accent the roadway also
+cuts upwards reaching the actual summit of the mountain.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12473 10 10 5
+D4
+~
+~
+0 -1 12471 10 10 5
+-1
+S
+
+#12473
+Ancient Roadway Across The Ice~
+Winding its way through the high mountains the dwarven road leads ever
+onwards under the watchful gaze of storm clouds and snowy peaks. 
+Skillfully constructed so much of the road lies under an arched overhang
+the passage here is clear of the often choaking banks of snow and ice. 
+Westwards the roadway continues to climb heading onwards towards the
+mountains top.
+~
+~
+167247872 0 9 0
+D3
+~
+~
+0 -1 12472 10 10 5
+D5
+~
+~
+0 -1 12474 10 10 5
+-1
+S
+
+#12474
+Ancient Roadway Through The Everwinter Range~
+The roadway begins a steady climb into the mountains to the south,
+instead of navigating around the towering peak its creators have chosen
+to test the resolve of the highest peak.  A much gentler road runs
+eastwards from here, continue onwards until it reaches what appears to
+be an ice-coated wall.  Peaking between the gap in the mountains to the
+north west appears to be tundra land, the occasional massive creature
+wandering the snowy grass land.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12475 10 10 5
+D4
+~
+~
+0 -1 12473 10 10 5
+-1
+S
+
+#12475
+Ancient Roadway Through The Everwinter Range~
+The roadway gently descends as it cuts eastwards, flanked by ice and
+ruined buildings it appears to end a few hundred yards to the east. 
+Westwards the cobbled trail heads into the towering mountains, making for
+a brutally cold and physically challenging journey.  All around the
+mountains rise, forming a wall around the basin that keep the wind chill
+lesser than the surrounding lands.  A scattering of pine trees grow to the
+north east, their trunks bent by the harsh conditions.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12476 10 10 5
+D3
+~
+~
+0 -1 12474 10 10 5
+-1
+S
+
+#12476
+High Mountain Ruins~
+The remains of dwarven buildings lie nestled against the icy flank of the
+eastern cliff.  Frost and snow coats much of the ruin in a heavy blanket,
+however the roadway manages to shirk much of the fall, its cobbled path
+leading directly into the eastern cliff.  A scattering of pine trees grow
+amongst the stones, their green needles offering a break from the
+surrounding grey stone and white snow.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 39753 10 10 5
+D3
+~
+~
+0 -1 12475 10 10 5
+-1
+S
+
+#12477
+Everwinter Mountains - The Eastern Sea Trail~
+The mountains spread out to the north and south of the roadway, their icy
+peaks shrouded in cloud and snow storms.  Eastwards the roadway makes its
+way onwards through the pass, its cobbles often dissapearing under a
+coating of snow.  Beyond the mountains brown-hued plains and rich forests
+spread out towards the bright blue line that is the sea.
+~
+~
+167247872 0 9 0
+D3
+~
+~
+162 -1 12251 10 10 5
+-1
+S
+
+#0
+

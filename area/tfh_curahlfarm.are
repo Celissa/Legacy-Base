@@ -1,0 +1,6760 @@
+#M2_AREA
+2
+
+Curahl Farm~
+Rikahn~
+Curahl Farm~
+~
+~
+
+5 0
+0
+1
+#ROOMS
+
+#8750
+A Quaint Country Road~
+A narrow road, formed of dirt and gravel, leads the way to a large wooden
+structure visible in the distance to the north.  The two-story building
+seems to be well maintained, and looks very inviting.  Various styles of
+fencing surround fields filled with livestock around the house on all
+sides.  To the south, the gravel road gradually thins out into the open
+countryside away from the farm.
+~
+[Guin] Done.
+~
+167247880 12 9 0
+D0
+~
+~
+0 -1 8751 10 10 5
+D1
+~
+~
+0 -1 6437 10 10 5
+D2
+~
+~
+0 -1 6424 10 10 5
+D3
+~
+~
+0 -1 6462 10 10 5
+E
+two-story wooden house glass windows~
+The house on the horizon to the north has been built two stories tall,
+and is primarily made of wood.  The wooden planks covering the outside of
+the house appear somewhat old and worn, and have been stained a dark
+brown color.  Large planters have been built below open windows that
+flank a large oak door that faces southward, with a gravel road running
+from the house to this spot.
+~
+A
+~
+~
+send_to_room( #comeandgetit, room );
+~
+E
+comeandgetit~
+@yOff in the distance a cacophany of clanging bells ring and someone
+yells 'Come and get it, food's ready!'@n 
+~
+!
+2 150 0
+A
+~
+~
+act_tochar( #north, ch );
+continue;
+~
+E
+north~
+@cThe gravel crunches underfoot as you walk along the narrow road.@n 
+~
+!
+3 0 1
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cAs you leave the boundaries of the farm area, you wipe the crud off the
+bottom of your feet on a patch of grassy meadow.@n 
+~
+E
+to_room~
+@cAs $n leaves the farm, $e wipes the crud off the bottom of $s feet on a
+patch of grassy meadow.@n 
+~
+!
+3 0 14
+78 17 1509949540 -2 0
+203 9 1509949540 3 0
+-1
+S
+
+#8751
+A Quaint Country Road~
+A narrow lane of pale gray gravel winds its way through the countryside
+To the north is a large two-story farmhouse, its wooden exterior faded
+and worn.  The gravel path also continues to the south, leading away from
+the farm.  Fenced-in fields of various animals surround the farmhouse,
+though the entryway into these pens is not visible from here.  Rows of
+pretty purple flowers line the sides of this small country road,
+well-tended and neatly pruned.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 8752 10 10 5
+D2
+~
+~
+0 -1 8750 10 10 5
+E
+large two-story farmhouse~
+The house on the horizon to the north has been built two stories tall,
+and is primarily made of wood.  The wooden planks covering the outside of
+the house appear somewhat old and worn, and have been stained a dark
+brown color.  Plain glass windows flank a large door that faces
+southward, with a gravel road running from the house to this spot.
+~
+E
+fenced-in fields animals~
+Mid-sized fields lie to the east and west of this gravel path.  Animals
+are visible, grazing and mulling about behind fences erected around the
+fields.  There is no obvious means of getting into the pens from here,
+but the fencing does continue off to the north where the farmhouse is
+located.
+~
+A
+2 sniff 2 smell~
+3 flowers~
+if( rflag( reset0, room ) ) {
+  act_tochar( #smell, ch );
+  act_notchar( #smelling, ch );
+  end;
+  }
+act_tochar( #noflowers, ch );
+~
+E
+smell~
+@mTaking a deep breath, your nostrils are filled with the delicate scent
+of the pretty blossoms.@n 
+~
+E
+smelling~
+@mLeaning slightly closer to the flowers beds, $n breathes deeply of
+their scent.@n 
+~
+E
+noflowers~
+@mWith all the flowers gone, their sweet aroma has faded from the air.@n
+~
+!
+0 0 0
+A
+~
+~
+act_tochar( #north, ch );
+continue;
+~
+E
+north~
+@cA small cloud of dust rises from the ground as your feet stir up the
+dry dirt.@n 
+~
+!
+3 0 1
+A
+~
+~
+act_tochar( #south, ch );
+continue;
+~
+E
+south~
+@cCarefully avoiding the small flowers planted alongside the narrow lane,
+you continue southward.@n 
+~
+!
+3 0 4
+A
+climb jump~
+hemp netting 1 east~
+act_tochar( #climb, ch );
+act_notchar( #climb2, ch );
+transfer( ch, find_room( 8770 ) );
+act_notchar( #climb3, ch );
+~
+E
+climb~
+@bYou climb over the hemp fence.@n
+~
+E
+climb2~
+@b$n climbs over the hemp fence.@n
+~
+E
+climb3~
+@b$n comes climbing over the hemp fence.@n
+~
+!
+0 0 0
+7069 17 1509949540 -2 0
+-1
+S
+
+#8752
+A Quaint Country Road~
+A large, two-story country home dominates the view to the north.  Its
+faded, yet well-maintained, exterior has been darkly stained with some
+natural wooden color, and small designs of animals and farm tools are
+painted around the door frame and windows.  This lane is comprised of
+small bits of grayish gravel mixed in with dirt, hardpacked into a sturdy
+road, although small clumps of weeds and grasses poke up through the dirt
+at odd intervals.  The lane also continues off to the south, leading away
+from the farmhouse.  A tiny birdhouse rests on top of a ten foot tall
+wooden pole, banded together next to the fence to the west.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 8753 10 10 5
+D2
+~
+~
+0 -1 8751 10 10 5
+E
+tiny birdhouse wooden pole~
+A ten foot high wooden pole has been stuck into the ground and then
+lashed to a fencepost for extra stability.  On top of the pole, a
+birdhouse has been built of thin wooden sheets and trimming.  A wide dish
+of seeds has been placed on a ledge next to the house, and a small cup
+contains sugary water.  Small birds fly to and from the birdhouse on
+a regular basis, taking advantage of the hospitality left for them.
+~
+A
+~
+~
+i = random( 1, 15 );
+if( i < 4 ) {
+  send_to_room( #birdy, room );
+  end;
+  }
+if( i < 7 ) {
+  send_to_room( #birdy2, room );
+  end;
+  }
+if( i < 10 ) {
+  send_to_room( #birdy3, room );
+  end;
+  }
+if( i < 13 ) {
+  send_to_room( #birdy4, room );
+  end;
+  }
+send_to_room( #birdy5, room );
+~
+E
+birdy~
+A small @Bbluebird@n glides in from the west, lands on a small peg outside
+of the birdhouse and eats its fill before flying off again.
+~
+E
+birdy2~
+Gliding through the air, a @rred robin@n flies up to the birdhouse, pecks
+a bit, then wings off to the south.
+~
+E
+birdy3~
+A tiny yellow @yhummingbird@n flits in from the east, hovers around the
+birdhouse for something to drink, then zips off.
+~
+E
+birdy4~
+Gliding in from the east, a @cblue jay@n nibbles on some seeds, grooms
+itself, then flies away southward.
+~
+E
+birdy5~
+Clutching a twig in her beak, a @mpurple finch@n scrounges for food
+before soaring back to her nest.
+~
+!
+2 150 0
+A
+~
+~
+act_tochar( #south, ch );
+continue;
+~
+E
+south~
+@cThe gravel crunches underfoot as you walk along the narrow road.@n 
+~
+!
+3 0 4
+A
+~
+~
+act_tochar( #north, ch );
+continue;
+~
+E
+north~
+@cYour left foot slides in the loose gravel, but you manage to keep your
+balance.@n 
+~
+!
+3 0 1
+A
+climb jump~
+birdhouse pole~
+if( find_skill( ch, climb ) > 5 ) {
+  if( rflag( reset0, room ) ) {
+    remove_rflag( reset0, room );
+    act_tochar( #climb, ch );
+    act_notchar( #climb2, ch );
+    i = random( 1, 10 );
+    if( i == 1 ) {
+      obj_to_char( oload( 7403 ), ch );
+      end;
+      }
+    if( i == 10 ) {
+      obj_to_char( oload( 15 ), ch );
+      end;
+      }
+    obj_to_char( oload( 7476 ), ch );
+    end;
+    }
+  act_tochar( #already, ch );
+  act_notchar( #already2, ch );
+  end;
+  }
+act_tochar( #noclimb, ch );
+act_notchar( #noclimb2, ch );
+~
+E
+climb~
+You shinny up the narrow wooden pole, and manage to grab something from
+the birdhouse before slipping back down to the ground.
+~
+E
+climb2~
+$n shinnies up the narrow wooden pole, barely managing to grab something
+from within the birdhouse before slipping back down to the ground.
+~
+E
+already~
+You quickly shimmy up the narrow pole, but all efforts at recovering
+something from the birdhouse come up empty.
+~
+E
+already2~
+$n quickly shimmies up the narrow pole, but all efforts at recovering
+something from the birdhouse come up empty.
+~
+E
+noclimb~
+You try to shimmy up the narrow wooden pole, but just can't manage to
+keep a good enough grip.
+~
+E
+noclimb2~
+$n tries to shimmy up the narrow wooden pole, but just can't manage to
+keep a good enough grip.
+~
+!
+0 0 0
+A
+get take steal search grab~
+birdhouse pole~
+act_tochar( #duh, ch );
+~
+E
+duh~
+The birdhouse is out of your reach.
+~
+!
+0 0 0
+A
+climb jump~
+large rock~
+act_tochar( #rock, ch );
+act_notchar( #rock2, ch );
+~
+E
+rock~
+You climb on top of the rock, feeling very important about yourself for a
+while before climbing back down.
+~
+E
+rock2~
+$n climbs up on top of the large rock, feeling very good about $sself
+before climbing back down.
+~
+!
+0 0 0
+A
+climb jump~
+hemp netting 1 east~
+act_tochar( #climb, ch );
+act_notchar( #climb2, ch );
+transfer( ch, find_room( 8769 ) );
+act_notchar( #climb3, ch );
+~
+E
+climb~
+@bYou climb over the hemp fence.@n
+~
+E
+climb2~
+@b$n climbs over the hemp fence.@n
+~
+E
+climb3~
+@b$n comes climbing over the hemp fence.@n
+~
+!
+0 0 0
+3199 17 1509949540 -2 0
+7069 17 1509949540 -2 0
+-1
+S
+
+#8753
+A Quaint Country Road~
+Large fields of farm animals surround the country house to the north. 
+Each field has been enclosed by fencing in order to keep the various
+livestock contained.  A pen to the east is fenced in by a flimsy
+arrangement of hemp strings woven together in a random pattern, just
+tight enough to keep the chickens within, and a muddy pen surrounded by a
+wooden fence is visible to the west.  Gates to these pens are visible to
+the northeast and northwest, up next to the house.  The country road that
+leads up to the farmhouse runs north and south here, lined with small
+flowers that give the narrow road a very quaint look.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 8754 10 10 5
+D2
+~
+~
+0 -1 8752 10 10 5
+E
+east odd ringmail mesh~
+An odd assortment of thin metal rings have been woven together to create
+a unique fence that allows people to easily see the field and animals
+within, yet is sturdy enough to keep the chickens from escaping.  Within
+the fence are a number of chickens, and a chicken coop.  The metal fence
+completely encircles the field, but a gate is visible to the northeast.
+~
+E
+muddy wooden 1 west~
+A huge expanse of mud is enclosed by a short wooden fence to the west. 
+Inside of the penned in area are a number of pigs, frolicking around in
+the wet, sticky muck.  A number of troughs of slops can be seen on the
+other side of the fence, and a gate into the field is visible to the
+northwest.
+~
+A
+~
+~
+act_tochar( #south, ch );
+continue;
+~
+E
+south~
+@cA small cloud of dust rises from the ground as your feet stir up the
+dry dirt.@n 
+~
+!
+3 0 4
+A
+~
+~
+act_tochar( #north, ch );
+continue;
+~
+E
+north~
+@cAs you walk north, you leave partial footprints in the spotty dirt.@n
+
+~
+!
+3 0 1
+A
+climb jump~
+hemp netting 1 east~
+act_tochar( #climb, ch );
+act_notchar( #climb2, ch );
+transfer( ch, find_room( 8768 ) );
+act_notchar( #climb3, ch );
+~
+E
+climb~
+@bYou climb over the hemp fence.@n
+~
+E
+climb2~
+@b$n climbs over the hemp fence.@n
+~
+E
+climb3~
+@b$n comes climbing over the hemp fence.@n
+~
+!
+0 0 0
+7069 17 1509949540 -2 0
+-1
+S
+
+#8754
+Before a Large Farmhouse~
+A dense layer of dirt and gravel leads up to a large farmhouse to the
+north.  The outside of the house is covered with old, weathered wooden
+boards, and stained with some sort of oily material, turning it a deep
+brown color.  A narrow set of steps rises up to the front door of the
+house, a sturdy plank of solid oak.  Sprawling animal pens surround the
+farmhouse, with a variety of livestock visible through the gaps in the
+fencing that keeps the livestock within.  The gravel pathway extends
+around the house to the west and east, while a thicker bed of rocks leads
+away from the house to the south.
+~
+[Eliza] reviewed
+~
+167247872 12 9 0
+D0
+sturdy oak door~
+north sturdy oak door~
+131 -1 8784 10 10 5
+D1
+~
+~
+0 -1 8756 10 10 5
+D2
+~
+~
+0 -1 8753 10 10 5
+D3
+~
+~
+0 -1 8755 10 10 5
+E
+outside house weathered wooden planks stained~
+This tall farmhouse looks very old, but has weathered time relatively
+well.  Thick beams of solid oak frame the building, and wooden planks
+have been hung between the framework to provide a weatherproof exterior. 
+All of the wood has been treated with an unknown oily substance, making
+it somewhat waterproof.  A sturdy oak door provides entry into the
+house, flanked by two large yet very plain windows.
+~
+E
+sturdy oak door north~
+A thick plank of sturdy oak, this door has been stained with the same
+oily substance that covers the exterior of the farmhouse.  The farm house
+appears to welcome visitors with open arms, as there is no lock or
+keyhole visible in the door, and it stands ever so slightly ajar.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou climb up the steps and enter the farmhouse.@n
+~
+E
+to_room~
+@c$n climbs up the steps and enters the farmhouse.@n
+~
+!
+3 0 1
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou continue eastward along the path, the loose gravel crunching
+underfoot.@n 
+~
+E
+to_room~
+@c$n continues eastward along the path.@n
+~
+!
+3 0 2
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou continue westward along the path, the loose gravel crunching
+underfoot.@n 
+~
+E
+to_room~
+@c$n continues westward along the path.@n
+~
+!
+3 0 8
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou continue southward along the path, the loose gravel crunching
+underfoot.@n 
+~
+E
+to_room~
+@c$n continues southward along the path.@n
+~
+!
+3 0 4
+-1
+S
+
+#8755
+Outside a Large Farmhouse~
+A narrow gravel pathway runs between a large farmhouse to the north, and
+a fenced-in field to the south.  A big wooden box has been nailed to the
+side of the wall, just below an open window.  The narrow rectangular box
+is filled with dirt, and a variety of delicate flowers have been planted
+in the fine soil.  The gravel pathway leads off to the west around the
+side of the house, and to the east where the front door of the farmhouse
+is visible.  A short wooden gate leads into a muddy field to the south.
+~
+[Eliza] reviewed
+~
+167247880 12 9 0
+D1
+~
+~
+0 -1 8754 10 10 5
+D2
+short wooden gate~
+south short wooden gate~
+131 -1 8757 10 10 5
+D3
+~
+~
+0 -1 8777 10 10 5
+E
+large farmhouse~
+The tall building to the north appears to have been built quite some time
+ago.  Its wooden panels, stained a dark brown to protect it from the
+elements, has succumbed to the rigors of age.  Patches of the stain have
+faded from years of standing in the sun, and splinters of wood peel off
+at the edges.
+~
+E
+narrow gravel pathway~
+A shallow bed of gray gravel and dirt runs alongside the farmhouse to
+the north, providing a narrow yet functional path between the animal pens. 
+Its surface must be regularly maintained, as very few rocks are out of
+place.
+~
+E
+big wooden box flowers~
+A three by one foot box has been mounted to the side of the farmhouse,
+just below a glass window.  Inside of the box, beautiful flowers grow
+in fine soil, meticulously maintained by some expert gardener.
+~
+A
+~
+~
+wait( 1 );
+if( is_open( room, south ) ) {
+  send_to_room( #gate_shuts, room );
+  close( room, south );
+  }
+~
+E
+gate_shuts~
+A small spring in the hinges closes the short wooden gate.
+~
+!
+1 2 4
+A
+get pick steal grab search~
+wooden box flowers planter~
+if( rflag( reset0, room ) ) {
+  i = random( 1, 10 );
+  if( i < 3 ) {
+    act_tochar( #gotone, ch );
+    act_notchar( #gotone2, ch );
+    i = random( 1, 12 );
+    if( i < 3 ) {
+      obj_to_char( oload( 7068 ), ch );
+      remove_rflag( reset0, room );
+      end;
+      }
+    if( i < 5 ) {
+      obj_to_char( oload( 7418 ), ch );
+      remove_rflag( reset0, room );
+      end;
+      }
+    if( i < 7 ) {
+      obj_to_char( oload( 7393 ), ch );
+      remove_rflag( reset0, room );
+      end;
+      }
+    if( i < 9 ) {
+      obj_to_char( oload( 7401 ), ch );
+      remove_rflag( reset0, room );
+      end;
+      }
+    if( i < 11 ) {
+      obj_to_char( oload( 1498 ), ch );
+      remove_rflag( reset0, room );
+      end;
+      }
+    if( i < 13 ) {
+      obj_to_char( oload( 7412 ), ch );
+      remove_rflag( reset0, room );
+      end;
+      }
+    }
+  }
+act_tochar( #noneleft, ch );
+act_notchar( #noneleft2, ch );
+remove_rflag( reset0, room );
+~
+E
+gotone~
+@yYou reach up and pick a flower from the planter.@n
+~
+E
+gotone2~
+@y$n reaches up and picks a flower from the planter.@n
+~
+E
+noneleft~
+@yYou reach up into the planter, but the buds are too small to pick.@n
+~
+E
+noneleft2~
+@y$n reaches up into the planter, but the buds are too small to pick.@n
+~
+!
+0 0 0
+A
+climb jump~
+north window up~
+act_tochar( #no, ch );
+~
+E
+no~
+The window is too high to climb into from here.
+~
+!
+0 0 0
+A
+climb jump~
+wooden fence gate field 1 south~
+if( !is_open( room, south ) ) {
+  act_tochar( #climb, ch );
+  act_notchar( #climb2, ch );
+  transfer( ch, find_room( 8757 ) );
+  act_notchar( #climb3, ch );
+  end;
+  }
+act_tochar( #no, ch );
+~
+E
+climb~
+@bYou climb over the short wooden gate.@n
+~
+E
+climb2~
+@b$n climbs over the short wooden gate.@n
+~
+E
+climb3~
+@b$n comes climbing over the wooden gate.@n
+~
+E
+no~
+The gate is open.
+~
+!
+0 0 0
+210 17 1509949540 -2 0
+-1
+S
+
+#8756
+Outside a Large Farmhouse~
+A shallow path of gravel laid on top of dirt winds its way east and west,
+between a two-story farmhouse to the north and a fenced-in bare field to
+the south.  The fence is constructed of thin hemp strands loosely woven
+together to form an inexpensive see-through barrier that hangs between
+log posts, with a plain wooden gate hanging on a set of rusty old hinges
+that allows access into the pen.  A shallow planter is filled with tiny,
+yet bright flowers below an open window six feet above the ground.
+~
+[Eliza] reviewed
+~
+167247880 12 9 0
+D1
+~
+~
+0 -1 8778 10 10 5
+D2
+large wooden gate~
+south large wooden gate~
+131 -1 8768 10 10 5
+D3
+~
+~
+0 -1 8754 10 10 5
+E
+shallow path gravel dirt~
+A shallow bed of gray gravel and dirt runs alongside the farmhouse that
+lies to the north, providing a narrow yet functional path between the
+animal pens.  Its surface must be regularly maintained, as very few rocks
+are out of place.
+~
+E
+small wooden planter bright flowers glass window~
+A three by one foot box of tiny, yet vibrantly colored flowers has been
+mounted just below a large open window a few feet above the ground.  The
+flowers have been planted in rich soil, and meticulously maintained by
+what must be a master gardener.
+~
+A
+~
+~
+wait( 1 );
+if( is_open( room, south ) ) {
+  send_to_room( #gate_shuts, room );
+  close( room, south );
+  }
+~
+E
+gate_shuts~
+The large wooden gate slowly shuts itself.
+~
+!
+1 2 4
+A
+pick get steal grab search~
+shallow planter tiny bright flowers~
+if( rflag( reset0, room ) ) {
+  i = random( 1, 10 );
+  if( i < 3 ) {
+    act_tochar( #gotone, ch );
+    act_notchar( #gotone2, ch );
+    i = random( 1, 12 );
+    if( i < 3 ) {
+      obj_to_char( oload( 7068 ), ch );
+      remove_rflag( reset0, room );
+      end;
+      }
+    if( i < 5 ) {
+      obj_to_char( oload( 7418 ), ch );
+      remove_rflag( reset0, room );
+      end;
+      }
+    if( i < 7 ) {
+      obj_to_char( oload( 7393 ), ch );
+      remove_rflag( reset0, room );
+      end;
+      }
+    if( i < 9 ) {
+      obj_to_char( oload( 7401 ), ch );
+      remove_rflag( reset0, room );
+      end;
+      }
+    if( i < 11 ) {
+      obj_to_char( oload( 1498 ), ch );
+      remove_rflag( reset0, room );
+      end;
+      }
+    if( i < 13 ) {
+      obj_to_char( oload( 7412 ), ch );
+      remove_rflag( reset0, room );
+      end;
+      }
+    }
+  }
+act_tochar( #noneleft, ch );
+act_notchar( #noneleft2, ch );
+remove_rflag( reset0, room );
+~
+E
+gotone~
+@yYou reach up and pick a flower from the planter.@n
+~
+E
+gotone2~
+@y$n reaches up and picks a flower from the planter.@n
+~
+E
+noneleft~
+@yYou reach up into the planter, but the buds are too small to pick.@n
+~
+E
+noneleft2~
+@y$n reaches up into the planter, but the buds are too small to pick.@n
+~
+!
+0 0 0
+A
+climb jump~
+north window up~
+act_tochar( #no, ch );
+~
+E
+no~
+The window is too high to climb into from here.
+~
+!
+0 0 0
+A
+climb jump~
+wooden gate hemp netting fence 1 south~
+if( !is_open( room, south ) ) {
+  act_tochar( #climb, ch );
+  act_notchar( #climb2, ch );
+  transfer( ch, find_room( 8768 ) );
+  act_notchar( #climb3, ch );
+  end;
+  }
+act_tochar( #no, ch );
+~
+E
+climb~
+@bYou climb over the wooden gate.@n
+~
+E
+climb2~
+@b$n climbs over the wooden gate.@n
+~
+E
+climb3~
+@b$n comes climbing over the wooden fence.@n
+~
+E
+no~
+The gate is open.
+~
+!
+0 0 0
+-1
+S
+
+#8757
+A Livestock Holding Pen~
+A short wooden fence has been erected to the north and east, enclosing a
+large field of mud.  The wet, sticky dirt runs about six inches deep, and
+scores of hoofprints are imprinted in the viscous substance.  A wooden
+gate reinforced with cross slats hangs between two of the thicker
+support posts, allowing farmhands access into this large pig sty.  More
+mud and water are visible to the west and south, with the only dry land to
+be seen existing on the other side of the gate.
+~
+[Eliza] reviewed
+~
+167247872 12 9 0
+D0
+short wooden gate~
+north short wooden gate~
+131 -1 8755 10 10 5
+D2
+~
+~
+0 -1 8761 10 10 5
+D3
+~
+~
+0 -1 8759 10 10 5
+E
+fence east short~
+A three-foot high fence of wooden beams has been built in order to keep
+the pigs from leaving their messy pen.  Each beam is about four inches
+wide and two inches thick, and are nailed together with crude, rusty iron
+nails.  The wooden fence is covered in streaks of mud where pigs have
+rubbed against it.
+~
+E
+mud down sticky dirt viscous substance~
+Great amounts of water has been added to the dirt in this field to create
+a six-inch deep bog of mud.  The mud has many hoofprints and gouges in it
+from pigs rolling around in the wet, sticky substance to keep cool.  Bits
+of mud cling to everything that comes in contact with it.
+~
+A
+~
+~
+wait( 1 );
+if( is_open( room, north ) ) {
+  send_to_room( #gate_shuts, room );
+  close( room, north );
+  }
+~
+E
+gate_shuts~
+A small spring in the hinges closes the short wooden gate.
+~
+!
+1 0 1
+A
+climb jump~
+gate 1 north~
+// room 8755 needs references changed to 8755
+if( !is_open( room, north ) ) {
+  act_tochar( #climb, ch );
+  act_notchar( #climb2, ch );
+  transfer( ch, find_room( 8755 ) );
+  act_notchar( #climb3, ch );
+  end;
+  }
+act_tochar( #no, ch );
+~
+E
+climb~
+@bYou climb over the short wooden gate.@n
+~
+E
+climb2~
+@b$n climbs over the wooden gate.@n
+~
+E
+climb3~
+@b$n comes climbing over the wooden gate.@n
+~
+E
+no~
+The gate is open.
+~
+!
+0 0 0
+A
+climb jump~
+1 east~
+// room 8753 needs references changed to 8753
+act_tochar( #climb, ch );
+act_notchar( #climb2, ch );
+transfer( ch, find_room( 8753 ) );
+act_notchar( #climb3, ch );
+~
+E
+climb~
+@bYou climb over the wooden fence to the east.@n
+~
+E
+climb2~
+@b$n climbs over the wooden fence to the east.@n
+~
+E
+climb3~
+@b$n comes climbing over the wooden fence.@n
+~
+!
+0 0 0
+A
+climb jump~
+wooden fence~
+act_tochar( #duh, ch );
+~
+E
+duh~
+Which direction do you want to climb?
+~
+!
+0 0 0
+5506 9 1509949540 3 0
+5506 9 1509949540 3 0
+-1
+S
+
+#8758
+Outside a Large Ranch House~
+Under Construction.
+~
+~
+167247872 12 9 0
+-1
+S
+
+#8759
+A Livestock Holding Pen~
+A deep slough mires everything here like quicksand.  A short wooden fence
+has been erected to the north to keep the livestock inside of this sloppy
+holding area.  Mud is splattered all over the fence, and long streaks of
+dry dirt are visible there, where pigs have rubbed across its planks. 
+More of the sludgy mud can be seen in all directions except on the other
+side of the fence, although it seems to get deeper in the center of the
+pit to the south.
+~
+[Eliza] reviewed
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 8757 10 10 5
+D2
+~
+~
+0 -1 8760 10 10 5
+D3
+~
+~
+0 -1 8767 10 10 5
+E
+north fence short wooden~
+A three-foot high fence of wooden beams has been built in order to keep
+the pigs from leaving their messy pen.  Each beam is about four inches
+wide and two inches thick, and are nailed together with crude, rusty iron
+nails.  The wooden fence is covered in streaks of mud where pigs have
+rubbed against it.
+~
+E
+mud down slough~
+Great amounts of water has been added to the dirt in this field to create
+a six-inch deep bog of mud.  The mud has many hoofprints and gouges in it
+from pigs rolling around in the wet, sticky substance to keep cool.  Bits
+of mud cling to everything that comes in contact with it.
+~
+A
+climb jump~
+wooden fence 1 north~
+act_tochar( #climb, ch );
+act_notchar( #climb2, ch );
+transfer( ch, find_room( 8777 ) );
+act_notchar( #climb3, ch );
+~
+E
+climb~
+@bYou climb over the wooden fence.@n
+~
+E
+climb2~
+@b$n climbs over the wooden fence.@n
+~
+E
+climb3~
+@b$n comes climbing over the wooden fence to the south.@n
+~
+!
+0 0 0
+-1
+S
+
+#8760
+The Middle of a Livestock Holding Pen~
+Thick, sloppy mud runs about nine inches deep across the middle section
+of a muddy livestock pen.  A half-dozen or more indentations have been
+gouged into the ground, where pigs have squirmed and rolled in the thick,
+wet substance.  A musty odor rises from the oozing dirt; evidently the
+pen has not been cleaned out in some time.  More mud is visible in all
+directions, although this is the deepest part of the pig sty.  A low
+wooden fence in the distance encloses all sides of this pit, broken only
+by a narrow gate visible off to the northeast.
+~
+[Eliza] reviewed
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 8759 10 10 5
+D1
+~
+~
+0 -1 8761 10 10 5
+D2
+~
+~
+0 -1 8762 10 10 5
+D3
+~
+~
+0 -1 8766 10 10 5
+E
+sloppy mud down pen sty pit~
+A great amount of water has been added to the dirt in this field to
+create a nine-inch deep bog of mud.  The mud has scores hoofprints and
+gouges in it from pigs rolling around in the wet, sticky substance to
+keep cool.  Bits of mud cling to everything that comes in contact with it.
+~
+A
+~
+~
+loop( all_in_room ) {
+  if( !is_player( ch ) )
+    continue;
+  if( find_stat( ch, dex ) < random( 10, 15 ) ) {
+    if( random( 1, 2 ) == 1 ) {
+      act_tochar( #slip, ch );
+      act_notchar( #slip2, ch );
+      interpret( ch, "+sit" );
+      end; }
+      act_tochar( #slip3, ch );
+      act_notchar( #slip4, ch );
+      interpret( ch, "+sit" );
+      }
+    end; }
+    continue;
+~
+E
+slip~
+@yYou lose your footing and fall face first into the mud.@n
+~
+E
+slip2~
+@y$n loses $s footing and falls face first into the mud.@n
+~
+E
+slip3~
+@yYou suddenly slip and fall on your back in the deep mud.@n
+~
+E
+slip4~
+@y$n suddenly slips and falls flat on $s back in the deep mud.@n
+~
+!
+1 0 15
+5507 9 1509949540 3 0
+-1
+S
+
+#8761
+A Livestock Holding Pen~
+The thick layer of mud that covers most of this field thins out towards
+the eastern side of the pit here, where a wide trough has been built
+against a short wooden fence.  The trough is not very tall, and seems to
+be made of some water-resistant wood.  A layer of water and slops fills
+the trough, its disgusting scent wafting through the air, assaulting the
+senses.  The trough appears to have been built on this side of the pit so
+that the farmhands could dump the slops over the edge of the fence,
+avoiding getting muddy in the process.
+~
+[Eliza] reviewed
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 8757 10 10 5
+D2
+~
+~
+0 -1 8764 10 10 5
+D3
+~
+~
+0 -1 8760 10 10 5
+E
+east wooden fence short~
+A three-foot high fence of wooden beams has been built in order to keep
+the pigs from leaving their messy pen.  Each beam is about four inches
+wide and two inches thick, and are nailed together with crude, rusty iron
+nails.  The wooden fence is covered in streaks of mud where pigs have
+rubbed against it.
+~
+E
+mud down sty~
+Great amounts of water has been added to the dirt in this field to create
+a six-inch deep bog of mud.  The mud has many hoofprints and gouges in it
+from pigs rolling around in the wet, sticky substance to keep cool.  Bits
+of mud cling to everything that comes in contact with it.
+~
+E
+trough slops~
+A crude wooden trough, built of some sort of water-resistant wood, is
+filled to the brim with rancid water and leftover slops from the farm
+house.  Considered disgusting to many creatures, the pigs find it quite a
+delicacy.  Leftover corn cobs and bits of meat and bread float to the
+surface of the water.
+~
+A
+get take search steal grab eat~
+trough slops~
+act_tochar( #ick, ch );
+~
+E
+ick~
+That is so disgusting.
+~
+!
+0 0 0
+A
+climb jump~
+wooden fence 1 east~
+act_tochar( #climb, ch );
+act_notchar( #climb2, ch );
+transfer( ch, find_room( 8752 ) );
+act_notchar( #climb3, ch );
+~
+E
+climb~
+@bYou climb over the wooden fence.@n
+~
+E
+climb2~
+@b$n climbs over the wooden fence.@n
+~
+E
+climb3~
+@b$n comes climbing over the wooden fence.@n
+~
+!
+0 0 0
+7508 17 1509949540 -2 0
+-1
+S
+
+#8762
+A Livestock Holding Pen~
+Extreme amounts of water and loose dirt have formed into a heavy layer of
+sticky mud, covering the hardpacked ground in this section of the pig sty. 
+A low wooden fence to the south has been erected to the south, apparently
+to just keep the animals from escaping the farm, as it does little to
+contain the layer of mud from seeping out.  The top of a heavy leather
+boot pokes out of the mud here, left from a careless someone, whose foot
+apparently became stuck in the quicksand-like muck.  The field of mud
+runs on to the east and west, deepening in the center of the sty to the
+north.
+~
+[Eliza] reviewed
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 8760 10 10 5
+D1
+~
+~
+0 -1 8764 10 10 5
+D3
+~
+~
+0 -1 8763 10 10 5
+E
+south wooden fence small~
+A three-foot high fence of wooden beams has been built in order to keep
+the pigs from leaving their messy pen.  Each beam is about four inches
+wide and two inches thick, and are nailed together with crude, rusty iron
+nails.  The wooden fence is covered in streaks of mud where pigs have
+rubbed against it.
+~
+E
+mud down dirt water sty~
+Great amounts of water has been added to the dirt in this field to create
+a six-inch deep bog of mud.  The mud has many hoofprints and gouges in it
+from pigs rolling around in the wet, sticky substance to keep cool.  Bits
+of mud cling to everything that comes in contact with it.
+~
+E
+leather boot heavy~
+The top of a heavy leather boot pokes up from the mud, the rest of the
+boot completely buried underneath the sticky surface.  Someone's foot
+must have become stuck in the mud and only freed themselves by leaving
+the boot where it lays.  The mud around the boot is so viscous, it
+appears as if the boot may never be removed unless someone does a lot of
+digging.
+~
+A
+take get dig move steal grab~
+boot~
+act_tochar( #nobootforyou, ch );
+~
+E
+nobootforyou~
+You attempt to extract the boot from the mud, but it is hopelessly stuck.
+~
+!
+0 0 0
+A
+climb jump~
+wooden fence 1 south~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  send_to_room( #no, room );
+  end;
+  }
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  send_to_room( #no2, room );
+  end;
+  }
+if( rflag( reset2, room ) ) {
+  remove_rflag( reset2, room );
+  send_to_room( #no3, room );
+  end;
+  }
+act_tochar( #boot, ch );
+act_notchar( #boot2, ch );
+transfer( ch, find_room( 8750 ) );
+~
+E
+no~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence!"@n
+
+~
+E
+no2~
+@CA voice shouts out from the farmhouse: "If you break one of those
+planks I'll have your hide!"@n 
+~
+E
+no3~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence or
+you'll be sorry!"@n 
+~
+E
+boot~
+@BTwo burly farmhands rush out of the farmhouse and drag you out of the
+field, depositing you roughly on the ground.@n 
+~
+E
+boot2~
+@BTwo burly farmhands rush out of the farmhouse, grabbing $n and dragging
+$m out of the field.@n 
+~
+!
+0 0 0
+5507 9 1509949540 3 0
+-1
+S
+
+#8763
+A Livestock Holding Pen~
+Two sections of short wooden fence join together in the southwest corner
+of this livestock pen, held together by lengths of stout cord and
+tight-fitting pegs to keep it from falling apart.  Splotches of mud dot
+the fence where pigs have shaken themselves off, making a spotted effect
+resembling a leopard's skin.  The muddy pit continues along the fence to
+the north and east, and the center of the sloppy sty is visible just to
+the northeast.  Open fields to the south and west seem oblivious to the
+rampant slovenliness of the dank pit on this side of the small fence.
+~
+[Eliza] reviewed
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 8766 10 10 5
+D1
+~
+~
+0 -1 8762 10 10 5
+E
+south west short wooden fence~
+A three-foot high fence of wooden beams has been built in order to keep
+the pigs from leaving their messy pen.  Each beam is about four inches
+wide and two inches thick, and are nailed together with crude, rusty iron
+nails.  The wooden fence is covered in streaks of mud where pigs have
+rubbed against it.
+~
+E
+mud pit down sloppy sty~
+Great amounts of water has been added to the dirt in this field to create
+a six-inch deep bog of mud.  The mud has many hoofprints and gouges in it
+from pigs rolling around in the wet, sticky substance to keep cool.  Bits
+of mud cling to everything that comes in contact with it.
+~
+A
+climb jump~
+1 south~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  send_to_room( #no, room );
+  end;
+  }
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  send_to_room( #no2, room );
+  end;
+  }
+if( rflag( reset2, room ) ) {
+  remove_rflag( reset2, room );
+  send_to_room( #no3, room );
+  end;
+  }
+act_tochar( #boot, ch );
+act_notchar( #boot2, ch );
+transfer( ch, find_room( 8750 ) );
+~
+E
+no~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence!"@n
+
+~
+E
+no2~
+@CA voice shouts out from the farmhouse: "If you break one of those
+planks I'll have your hide!"@n 
+~
+E
+no3~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence or
+you'll be sorry!"@n 
+~
+E
+boot~
+@BTwo burly farmhands rush out of the farmhouse and drag you out of the
+field, depositing you roughly on the ground.@n 
+~
+E
+boot2~
+@BTwo burly farmhands rush out of the farmhouse, grabbing $n and dragging
+$m out of the field.@n 
+~
+!
+0 0 0
+A
+climb jump~
+1 west~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  send_to_room( #no, room );
+  end;
+  }
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  send_to_room( #no2, room );
+  end;
+  }
+if( rflag( reset2, room ) ) {
+  remove_rflag( reset2, room );
+  send_to_room( #no3, room );
+  end;
+  }
+act_tochar( #boot, ch );
+act_notchar( #boot2, ch );
+transfer( ch, find_room( 8750 ) );
+~
+E
+no~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence!"@n
+
+~
+E
+no2~
+@CA voice shouts out from the farmhouse: "If you break one of those
+planks I'll have your hide!"@n 
+~
+E
+no3~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence or
+you'll be sorry!"@n 
+~
+E
+boot~
+@BTwo burly farmhands rush out of the farmhouse and drag you out of the
+field, depositing you roughly on the ground.@n 
+~
+E
+boot2~
+@BTwo burly farmhands rush out of the farmhouse, grabbing $n and dragging
+$m out of the field.@n 
+~
+!
+0 0 0
+A
+climb jump~
+wooden fence~
+act_tochar( #duh, ch );
+~
+E
+duh~
+Which direction did you want to climb?
+~
+!
+0 0 0
+5506 9 1509949540 3 0
+5506 9 1509949540 3 0
+-1
+S
+
+#8764
+A Livestock Holding Pen~
+Mud is splattered all over a three-foot tall wooden fence that protects
+the pigs from escaping the holding pen to the east and south.  In the
+corner of the pit where the fence meets, thick loops of rope are knotted
+to hold the two sections of fence together in a somewhat secure fashion. 
+A wide wooden trough has been built up against the fence, filled with
+leftover rotting food and water.  The trough appears to have been built
+up against the fence so that whoever would be filling it would not have
+to walk through the mud.  The muddy pit also exists to the north and
+west, with only open countryside visible over the fence to the south, and
+a narrow gravel road on the other side of the fence to the east.
+~
+[Eliza] reviewed
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 8761 10 10 5
+D3
+~
+~
+0 -1 8762 10 10 5
+E
+south east fence wooden~
+A three-foot high fence of wooden beams has been built in order to keep
+the pigs from leaving their messy pen.  Each beam is about four inches
+wide and two inches thick, and are nailed together with crude, rusty iron
+nails.  The wooden fence is covered in streaks of mud where pigs have
+rubbed against it.
+~
+E
+down mud sty~
+Great amounts of water has been added to the dirt in this field to create
+a six-inch deep bog of mud.  The mud has many hoofprints and gouges in it
+from pigs rolling around in the wet, sticky substance to keep cool.  Bits
+of mud cling to everything that comes in contact with it.
+~
+A
+eat drink get take steal grab search~
+trough slops~
+act_tochar( #ick, ch );
+~
+E
+ick~
+That is disgusting.
+~
+!
+0 0 0
+A
+climb jump~
+1 east~
+act_tochar( #climb, ch );
+act_notchar( #climb2, ch );
+transfer( ch, find_room( 8751 ) );
+act_notchar( #climb3, ch );
+~
+E
+climb~
+@bYou climb over the wooden fence.@n
+~
+E
+climb2~
+@b$n climbs over the wooden fence.@n
+~
+E
+climb3~
+@b$n comes climbing over the wooden fence.@n
+~
+!
+0 0 0
+A
+climb jump~
+1 south~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  send_to_room( #no, room );
+  end;
+  }
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  send_to_room( #no2, room );
+  end;
+  }
+if( rflag( reset2, room ) ) {
+  remove_rflag( reset2, room );
+  send_to_room( #no3, room );
+  end;
+  }
+act_tochar( #boot, ch );
+act_notchar( #boot2, ch );
+transfer( ch, find_room( 8750 ) );
+~
+E
+no~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence!"@n
+
+~
+E
+no2~
+@CA voice shouts out from the farmhouse: "If you break one of those
+planks I'll have your hide!"@n 
+~
+E
+no3~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence or
+you'll be sorry!"@n 
+~
+E
+boot~
+@BTwo burly farmhands rush out of the farmhouse and drag you out of the
+field, depositing you roughly on the ground.@n 
+~
+E
+boot2~
+@BTwo burly farmhands rush out of the farmhouse, grabbing $n and dragging
+$m out of the field.@n 
+~
+!
+0 0 0
+A
+climb jump~
+wooden fence~
+act_tochar( #duh, ch );
+~
+E
+duh~
+Which direction do you want to climb?
+~
+!
+0 0 0
+5506 9 1509949540 3 0
+5506 9 1509949540 3 0
+7508 17 1509949540 -2 0
+1597 17 1509949473 -2 0
+764 9 1509949540 3 0
+764 9 1509949540 3 0
+-1
+S
+
+#8765
+Outside a Large Ranch House~
+Under Construction.
+~
+~
+167247872 12 9 0
+-1
+S
+
+#8766
+A Livestock Holding Pen~
+A wide open field is visible on the other side of a low wooden fence that
+has been built on the west side of this pit.  The vibrant, dry field is a
+stark contrast to the wet, sticky brown mud that covers the ground in a
+thick, sloppy layer.  Numerous tracks crisscross the mud in a random
+pattern of travel, with deep ruts where pigs must have rolled lazily in
+the cool, wet muck.  The muddy pit is somewhat shallow to the north and
+south, yet gets deeper when travelling to the center of the pig sty to
+the east.
+~
+[Eliza] reviewed
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 8767 10 10 5
+D1
+~
+~
+0 -1 8760 10 10 5
+D2
+~
+~
+0 -1 8763 10 10 5
+E
+west small wooden fence~
+A three-foot high fence of wooden beams has been built in order to keep
+the pigs from leaving their messy pen.  Each beam is about four inches
+wide and two inches thick, and are nailed together with crude, rusty iron
+nails.  The wooden fence is covered in streaks of mud where pigs have
+rubbed against it.
+~
+E
+mud down pit sticky brown tracks~
+Great amounts of water has been added to the dirt in this field to create
+a six-inch deep bog of mud.  The mud has many hoofprints and gouges in it
+from pigs rolling around in the wet, sticky substance to keep cool.  Bits
+of mud cling to everything that comes in contact with it.
+~
+A
+climb jump~
+wooden fence 1 west~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  send_to_room( #no, room );
+  end;
+  }
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  send_to_room( #no2, room );
+  end;
+  }
+if( rflag( reset2, room ) ) {
+  remove_rflag( reset2, room );
+  send_to_room( #no3, room );
+  end;
+  }
+act_tochar( #boot, ch );
+act_notchar( #boot2, ch );
+transfer( ch, find_room( 8750 ) );
+~
+E
+no~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence!"@n
+
+~
+E
+no2~
+@CA voice shouts out from the farmhouse: "If you break one of those
+planks I'll have your hide!"@n 
+~
+E
+no3~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence or
+you'll be sorry!"@n 
+~
+E
+boot~
+@BTwo burly farmhands rush out of the farmhouse and drag you out of the
+field, depositing you roughly on the ground.@n 
+~
+E
+boot2~
+@BTwo burly farmhands rush out of the farmhouse, grabbing $n and dragging
+$m out of the field.@n 
+~
+!
+0 0 0
+-1
+S
+
+#8767
+A Livestock Holding Pen~
+A short wooden fence encloses this shallow pit of mud to the north and
+west, erected to keep the animals within the muddy enclosure.  The mud
+here is somewhat congealed and drier than the rest of the mud in the sty,
+sticking to everything in heavy clumps.  Innumerable small hoofprints
+have almost fossilized in the drying muck, with tracks leading off to the
+east and south into yet more of the oozing sludge.  An open field is
+visible on the other side of the fence to the west, while another
+livestock area is visible further to the north.
+~
+[Eliza] reviewed
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 8759 10 10 5
+D2
+~
+~
+0 -1 8766 10 10 5
+E
+west north short wooden fence~
+A three-foot high fence of wooden beams has been built in order to keep
+the pigs from leaving their messy pen.  Each beam is about four inches
+wide and two inches thick, and are nailed together with crude, rusty iron
+nails.  The wooden fence is covered in streaks of mud where pigs have
+rubbed against it.
+~
+E
+down mud pit shallow~
+Great amounts of water has been added to the dirt in this field to create
+a six-inch deep bog of mud.  The mud has many hoofprints and gouges in it
+from pigs rolling around in the wet, sticky substance to keep cool.  Bits
+of mud cling to everything that comes in contact with it.
+~
+E
+small hoofprints fossilized~
+Captured within the drying muck are many hoofprints, their edges warped
+and cracked from the shrinking mud.
+~
+A
+climb jump~
+1 north~
+// room 8750 needs references changed to 8750
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  send_to_room( #no, room );
+  end;
+  }
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  send_to_room( #no2, room );
+  end;
+  }
+if( rflag( reset2, room ) ) {
+  remove_rflag( reset2, room );
+  send_to_room( #no3, room );
+  end;
+  }
+act_tochar( #boot, ch );
+act_notchar( #boot2, ch );
+transfer( ch, find_room( 8750 ) );
+~
+E
+no~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence!"@n
+
+~
+E
+no2~
+@CA voice shouts out from the farmhouse: "If you break one of those
+planks I'll have your hide!"@n 
+~
+E
+no3~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence or
+you'll be sorry!"@n 
+~
+E
+boot~
+@BTwo burly farmhands rush out of the farmhouse and drag you out of the
+field, depositing you roughly on the ground.@n 
+~
+E
+boot2~
+@BTwo burly farmhands rush out of the farmhouse, grabbing $n and dragging
+$m out of the field.@n 
+~
+!
+0 0 0
+A
+climb jump~
+1 west~
+// room 8750 needs references changed to 8750
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  send_to_room( #no, room );
+  end;
+  }
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  send_to_room( #no2, room );
+  end;
+  }
+if( rflag( reset2, room ) ) {
+  remove_rflag( reset2, room );
+  send_to_room( #no3, room );
+  end;
+  }
+act_tochar( #boot, ch );
+act_notchar( #boot2, ch );
+transfer( ch, find_room( 8750 ) );
+~
+E
+no~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence!"@n
+
+~
+E
+no2~
+@CA voice shouts out from the farmhouse: "If you break one of those
+planks I'll have your hide!"@n 
+~
+E
+no3~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence or
+you'll be sorry!"@n 
+~
+E
+boot~
+@BTwo burly farmhands rush out of the farmhouse and drag you out of the
+field, depositing you roughly on the ground.@n 
+~
+E
+boot2~
+@BTwo burly farmhands rush out of the farmhouse, grabbing $n and dragging
+$m out of the field.@n 
+~
+!
+0 0 0
+A
+climb jump~
+wooden fence~
+act_tochar( #duh, ch );
+~
+E
+duh~
+What direction did you want to climb?
+~
+!
+0 0 0
+5506 9 1509949540 3 0
+5506 9 1509949540 3 0
+-1
+S
+
+#8768
+A Livestock Holding Pen~
+Thick, wooden poles stand six feet apart, with some type of loose hemp
+netting strung between them to prevent the livestock from escaping. 
+Ragged tufts of grass grow sporadically, as the animals in this pen have
+slowly eaten the foliage in small clumps.  A wide gate has been built
+between two posts to the north to allow the farmers to get in and out of
+the enclosure.  The holding pen stretches to the south and east, while
+the the main farmhouse is located to the northwest.  A weathered shack,
+centered on the back fence, serves as a coop for roosting chickens.
+~
+[Eliza] reviewed
+~
+167247872 2 9 0
+D0
+large wooden gate~
+north large wooden gate~
+131 -1 8756 10 10 5
+D1
+~
+~
+0 -1 8771 10 10 5
+D2
+~
+~
+0 -1 8769 10 10 5
+E
+gate north~
+A wide wooden gate, standing four feet tall and eight feet wide has been
+built between two posts in order to allow farmhands some way of entering
+the livestock pen.  It swings open on rough-carved hinges, and has a
+basic iron latch to keep it locked when closed.
+~
+E
+farmhouse northwest~
+A tall, two-story farmhouse is visible in the distance.  Its wooden
+exterior has been colored with a deep brown stain, giving the wood a
+naturally aged look.  Large, paned glass windows are visible facing
+outward toward the countryside, and meticulous designs have been painted
+around the window frames.
+~
+E
+coop southeast~
+An almost haphazardly created shack, made of miscellaneous scraps of
+wood, has been constructed inside of this field to provide a roosting
+place for the chickens.  Tiny entrances to the small shack have been cut
+from the sides of of the ramshackle coop, with narrow ramps leading up to
+the holes.
+~
+E
+fence west mesh hemp~
+Narrow wooden poles about three inches in diameter have been driven into
+the ground in order to support a fence made of hemp fibers, woven into a
+loose netting of sorts.  The meshed fence is not very strong, yet appears
+more than adequate for keeping the chickens from leaving.
+~
+A
+~
+~
+wait( 1 );
+if( is_open( room, north ) ) {
+  send_to_room( #gate_shuts, room );
+  close( room, north );
+  }
+~
+E
+gate_shuts~
+The large wooden gate slowly shuts itself.
+~
+!
+1 2 1
+A
+climb jump~
+wooden gate 1 north~
+if( !is_open( room, north ) ) {
+  act_tochar( #climb, ch );
+  act_notchar( #climb2, ch );
+  transfer( ch, find_room( 8756 ) );
+  act_notchar( #climb3, ch );
+  end;
+  }
+act_tochar( #no, ch );
+~
+E
+climb~
+@bYou climb over the wooden gate.@n
+~
+E
+climb2~
+@b$n climbs over the wooden gate.@n
+~
+E
+climb3~
+@b$n comes climbing over the wooden gate.@n
+~
+E
+no~
+The gate is open.
+~
+!
+0 0 0
+A
+climb jump~
+hemp netting fence 1 west~
+act_tochar( #climb, ch );
+act_notchar( #climb2, ch );
+transfer( ch, find_room( 8753 ) );
+act_notchar( #climb3, ch );
+~
+E
+climb~
+@bYou climb over the hemp fence.@n
+~
+E
+climb2~
+@b$n climbs over the hemp fence.@n
+~
+E
+climb3~
+@b$n comes climbing over the hemp fence.@n
+~
+!
+0 0 0
+5504 9 1509949540 3 0
+-1
+S
+
+#8769
+A Livestock Holding Pen~
+Countless animal tracks pepper the ground here.  What might once have
+been a lush, green field has been reduced to a dusty patch of crabgrass,
+the half-score of resident rabbits leaving nothing much more than gnawed
+stems.  Sturdy wooden poles support a hemp net stretched between them to
+the west, preventing the animals from leaving their protective enclosure. 
+The dirt covered field stretches out in all directions but west, and a
+gate leading from the pen is visible off to the north.  A ramshackle
+building to the east appears to be a hastily-erected chicken coop, with a
+narrow doorway constructed to allow the chickens access to its interior.
+~
+[Eliza] reviewed
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 8768 10 10 5
+D1
+small wooden door~
+east small wooden door~
+513 -1 8772 10 10 5
+D2
+~
+~
+0 -1 8770 10 10 5
+E
+east coop doorway wooden~
+A rickety shack constructed of slender planks of wood has been hastily
+constructed in the middle of this livestock pen, evidently a home for all
+of the chickens.  A narrow wooden ramp with slats nailed onto it gently
+eases up to a small doorway cut from the side of the chicken coop's wall.
+~
+E
+hemp net west poles~
+Narrow wooden poles about three inches in diameter have been driven into
+the ground in order to support a fence made of hemp fibers, woven into a
+loose netting of sorts.  The meshed fence is not very strong, yet appears
+more than adequate for keeping the chickens from leaving.
+~
+A
+~
+~
+act_notchar( #down, ch );
+continue;
+~
+E
+down~
+@y$n leaves the chicken coop and carefully walks down the narrow ramp.@n
+~
+!
+1 0 2
+A
+~
+~
+if( race( ch ) != rabbit )
+continue;
+~
+E
+to_char~
+@yYou crawl up the small ramp and barely squeeze into the chicken coop.@n
+~
+E
+to_room~
+@y$n climbs up the small ramp and disappears into the chicken coop.@n
+~
+!
+3 0 2
+A
+climb jump~
+fence hemp netting 1 west~
+act_tochar( #climb, ch );
+act_notchar( #climb2, ch );
+transfer( ch, find_room( 8752 ) );
+act_notchar( #climb3, ch );
+~
+E
+climb~
+@bYou climb over the hemp fence.@n
+~
+E
+climb2~
+@n$n climbs over the hemp fence.@n
+~
+E
+climb3~
+@b$n comes climbing over the hemp fence.@n
+~
+!
+0 0 0
+-1
+S
+
+#8770
+A Livestock Holding Pen~
+This section of the holding pen if relatively free of the ravaging
+drought present in other portions of the field.  The bottom half of an
+old barrel rests here, its intact half filled with water for the
+livestock.  The surrounding ground and grass is soaked by spillage from
+the short wooden tub, creating a muddy, track-crossed morass.  An aging
+chicken coop constructed from faded, weathered wood stands to the
+northeast, a haven where the chickens can shelter from bad weather and
+cold nights.  Thick upright posts, spanned by some sort of netting stand
+to the south and east, preventing the animals from escaping into the
+countryside.
+~
+[Eliza] reviewed
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 8769 10 10 5
+D1
+~
+~
+0 -1 8773 10 10 5
+E
+coop faded weathered wood northeast~
+An almost haphazardly created shack, made of miscellaneous scraps of
+wood, has been contructed inside the field, providing a roosting place
+for the chickens.  Tiny entrances into the shack have been cut from the
+sides of the ramshackle coop, with narrow wooden ramps leading from the
+ground to the holes.
+~
+E
+1 west 1 south post netting~
+Narrow wooden poles about three inches in diameter have been driven into
+the ground in order to support a fence made of hemp fibers, woven into a
+loose netting of sorts.  The meshed fence is not very strong, yet appears
+more than adequate for keeping the chickens from leaving.
+~
+A
+climb jump~
+1 west~
+act_tochar( #climb, ch );
+act_notchar( #climb2, ch );
+transfer( ch, find_room( 8751 ) );
+act_notchar( #climb3, ch );
+~
+E
+climb~
+@bYou climb over the hemp fence.@n
+~
+E
+climb2~
+@b$n climbs over the hemp fence.@n
+~
+E
+climb3~
+@b$n comes climbing over the hemp fence.@n
+~
+!
+0 0 0
+A
+climb jump~
+1 south~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  send_to_room( #no, room );
+  end;
+  }
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  send_to_room( #no2, room );
+  end;
+  }
+if( rflag( reset2, room ) ) {
+  remove_rflag( reset2, room );
+  send_to_room( #no3, room );
+  end;
+  }
+act_tochar( #boot, ch );
+act_notchar( #boot2, ch );
+transfer( ch, find_room( 8750 ) );
+~
+E
+no~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence!"@n
+
+~
+E
+no2~
+@CA voice shouts out from the farmhouse: "If you snap any of those
+strands, I'll use your hair to re-weave it!"@n 
+~
+E
+no3~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence or
+you'll be sorry!"@n 
+~
+E
+boot~
+@BTwo burly farmhands rush out of the farmhouse and drag you out of the
+field, depositing you roughly on the ground.@n 
+~
+E
+boot2~
+@BTwo burly farmhands rush out of the farmhouse, grabbing $n and dragging
+$m out of the field.@n 
+~
+!
+0 0 0
+A
+climb jump~
+fence hemp netting~
+act_tochar( #duh, ch );
+~
+E
+duh~
+Which direction do you want to climb?
+~
+!
+0 0 0
+5019 9 1509949540 3 0
+5504 9 1509949540 3 0
+7507 17 1509949540 -2 0
+78 17 1509949540 -2 0
+764 9 1509949540 3 0
+764 9 1509949540 3 0
+-1
+S
+
+#8771
+A Livestock Holding Pen~
+A netting of sturdy fibers spans the distance between two narrow posts
+to the north, built in order to keep the animals within the pen.  What
+was once a lush, green field has been reduced to dry dust, with only
+sparse clumps of grass remaining.  Animals have chewed their way through
+almost all of the vegetation here.  A modest chicken coop lies southward, a
+low-rising ramp leading upward to a narrow door cut into the wall, its
+only means of access.  Patches of open pasture are visible to the east
+and west.
+~
+[Eliza] reviewed
+~
+167247872 2 9 0
+D1
+~
+~
+0 -1 8774 10 10 5
+D2
+small wooden door~
+south small wooden door~
+513 -1 8772 10 10 3
+D3
+~
+~
+0 -1 8768 10 10 5
+E
+coop south ramp doorway wall~
+A humble shack, built from thinly cut planks of weathered wood, has been
+hastily constructed in the middle of the pen, acting as a roosting place
+for the chickens held here.  A narrow ramp, with slats nailed across it
+for sturdiness, eases gently upward to a meager doorway cut from the side
+of the chicken coop's wall.
+~
+E
+netting sturdy fibers posts~
+Narrow wooden poles about three inches in diameter have been driven into
+the ground in order to support a fence made of hemp fibers, woven into a
+loose netting of sorts.  The meshed fence is not very strong, yet appears
+more than adequate for keeping the chickens from leaving.
+~
+A
+~
+~
+if( race( ch ) != rabbit )
+continue;
+~
+E
+to_char~
+@yYou crawl up the small ramp and barely squeeze into the chicken coop.@n
+~
+E
+to_room~
+@y$n climbs up the small ramp and disappears into the chicken coop.@n
+~
+!
+3 0 4
+A
+~
+~
+act_notchar( #down, ch );
+continue;
+~
+E
+down~
+@y$n leaves the chicken coop and carefully walks down the narrow ramp.@n
+~
+!
+1 0 4
+A
+climb jump~
+fence hemp netting 1 north~
+act_tochar( #climb, ch );
+act_notchar( #climb2, ch );
+transfer( ch, find_room( 8778 ) );
+act_notchar( #climb3, ch );
+~
+E
+climb~
+@bYou climb over the hemp fence.@n
+~
+E
+climb2~
+@b$n climbs over the hemp fence.@n
+~
+E
+climb3~
+@b$n comes climbing over the hemp fence.@n
+~
+!
+0 0 0
+5504 9 1509949540 3 0
+78 17 1509949540 -2 0
+-1
+S
+
+#8772
+A Chicken Coop~
+This confined wooden shack is built in the middle of a small field,
+penned in by a sturdy fence.  A score of wide shelves line the walls,
+littered with hay molded into nests by the chickens that live here.  The
+air is filled with a rotting stench, and the floor is covered with a thin
+layer of chicken droppings.  Narrow ramps lead down to the dusty field in
+all directions, small slats nailed into the boards providing some
+traction from the slippery surface.
+~
+[Eliza] reviewed
+~
+167247876 2 3 0
+D0
+small wooden door~
+small wooden door~
+513 -1 8771 10 10 3
+D1
+small wooden door~
+east small wooden door~
+513 -1 8775 10 10 5
+D2
+small wooden door~
+small wooden door south~
+513 -1 8773 10 10 5
+D3
+small wooden door~
+small wooden door west~
+513 -1 8769 10 10 5
+E
+shack wooden small coop~
+This construct is a small shack that has been haphazardly built to
+provide the chickens a place to roost and lay their eggs.  The wooden
+walls are made of miscellaneous planks, nailed together with crude iron
+nails.  The coop is not very big nor sturdy, but is adequate for the
+animals that live here.
+~
+E
+shelves hay nests~
+Wide wooden shelves line the walls in a multi-tiered setup to provide
+nesting space for as many chickens as possible in the cramped quarters of
+this chicken coop.  Small bundles of hay and straw have been molded into
+nests by the fowl, although whether any eggs are in the nests remains to
+be seen.
+~
+E
+ramp down slats nailed boards~
+Narrow wooden ramps lead out of the small doorway down to the field below. 
+The wooden slats have small strips of wood nailed perpendicular to the
+ramp in order to prevent the animals from slipping and falling.
+~
+A
+~
+~
+continue;
+~
+E
+to_room~
+@y$n scrambles $s way into the chicken coop.@n
+~
+E
+to_char~
+@y$n scrambles $s way into the chicken coop.@n
+~
+!
+1 0 15
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou carefully balance yourself as you walk down the narrow ramp.@n
+~
+!
+3 0 15
+A
+~
+nest nests hay shelves~
+i = random( 1, 30 );
+if( rflag( reset0, room ) ) {
+  if( i == 1 ) {
+    send_to_char( #goldegg, ch );
+    act_notchar( #goldegg2, ch );
+    obj_to_char( oload( 7030 ), ch );
+    remove_rflag( reset0, room );
+    end;
+    }
+  if( i < 7 ) {
+    send_to_char( #whiteegg, ch );
+    act_notchar( #whiteegg2, ch );
+    obj_to_char( oload( 7027 ), ch );
+    remove_rflag( reset0, room );
+    end;
+    }
+  if( i < 13 ) {
+    send_to_char( #brownegg, ch );
+    act_notchar( #brownegg2, ch );
+    obj_to_char( oload( 7029 ), ch );
+    remove_rflag( reset0, room );
+    end;
+    }
+  if( i < 18 ) {
+send_to_char(#brokenegg, ch );
+    act_notchar( #brokenegg2, ch );
+    obj_to_char( oload( 7028 ), ch );
+    remove_rflag( reset0, room );
+    end;
+    }
+  else
+    send_to_char( #nothing, ch );
+  remove_rflag( reset0, room );
+  end;
+  }
+remove_rflag( reset0, room );
+send_to_Char( #nothing, ch );
+~
+E
+goldegg~
+As you search through the nests on the shelves, you find a tiny
+golden egg!
+~
+E
+goldegg2~
+$n searches through the nests on the shelves and pulls out a tiny
+golden egg!
+~
+E
+whiteegg~
+As you search through the nests on the shelves, you find a white egg
+left in a nest.
+~
+E
+whiteegg2~
+As $n searches through the nests on the shelves, $n finds a white egg.
+~
+E
+brownegg~
+As you search through the nests on the shelves, you find a brown egg
+left in a nest.
+~
+E
+brownegg2~
+$n searches through the nests on the shelves, and pulls out a brown egg.
+~
+E
+brokenegg~
+As you search through the nests on the shelves, you find an egg but
+squeeze it too hard, breaking it in your hand.
+~
+E
+brokenegg2~
+$n searches through the nests on the shelves and finds an egg, but
+squeezes it too hard, breaking it in $s hand.
+~
+E
+nothing~
+You search through the nests on the shelves, but find nothing of interest.
+~
+!
+9 0 0
+5019 9 1509949540 3 0
+5019 9 1509949540 3 0
+5019 9 1509949540 3 0
+5019 9 1509949540 3 0
+81 17 1509949540 -2 0
+-1
+S
+
+#8773
+A Livestock Holding Pen~
+Dust blows up in small swirls from the parched ground, obscuring much of
+the view of this portion of the pen.  The chickens who live here have
+pecked at the ground so much that very little grass remains.  The open
+countryside to the south is barely visible, the dust and a tall fence of
+hemp netting is blocking the line of sight.  A narrow ramp of wood
+leads up to a chicken coop to the north, a small hole sawed out of the
+wood allowing the chickens to enter and exit freely.
+~
+~
+167247872 2 9 0
+D0
+small wooden door~
+small wooden door north~
+513 -1 8772 10 10 5
+D1
+~
+~
+0 -1 8776 10 10 5
+D3
+~
+~
+0 -1 8770 10 10 5
+E
+north ramp wood coop hole~
+A small shack made of small planks of wood has been hastily constructed
+in the middle of this livestock pen, evidently a home for all of the
+chickens.  A narrow wooden ramp with slats nailed onto it gently eases up
+to a small doorway cut out of the side of the chicken coop's wall.
+~
+E
+south fence hemp netting~
+Narrow wooden poles about three inches in diameter have been driven into
+the ground in order to support a fence made of hemp fibers, woven into a
+loose netting of sorts.  The meshed fence is not very strong, yet appears
+more than adequate for keeping the chickens from leaving.
+~
+A
+~
+~
+if( race( ch ) != rabbit )
+continue;
+~
+E
+to_char~
+@yYou crawl up the small ramp and barely squeeze into the chicken coop.@n
+~
+E
+to_room~
+@y$n climbs up the small ramp and disappears into the chicken coop.@n
+~
+!
+3 0 1
+A
+~
+~
+act_notchar( #down, ch );
+continue;
+~
+E
+down~
+@y$n leaves the chicken coop and carefully walks down the narrow ramp.@n
+~
+!
+1 0 1
+A
+climb jump~
+fence hemp netting 1 south~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  send_to_room( #no, room );
+  end;
+  }
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  send_to_room( #no2, room );
+  end;
+  }
+if( rflag( reset2, room ) ) {
+  remove_rflag( reset2, room );
+  send_to_room( #no3, room );
+  end;
+  }
+act_tochar( #boot, ch );
+act_notchar( #boot2, ch );
+transfer( ch, find_room( 8750 ) );
+~
+E
+no~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence!"@n
+
+~
+E
+no2~
+@CA voice shouts out from the farmhouse: "If you snap any of those
+strands, I'll use your hair to re-weave it!"@n 
+~
+E
+no3~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence or
+you'll be sorry!"@n 
+~
+E
+boot~
+@BTwo burly farmhands rush out of the farmhouse and drag you out of the
+field, depositing you roughly on the ground.@n 
+~
+E
+boot2~
+@BTwo burly farmhands rush out of the farmhouse, grabbing $n and dragging
+$m out of the field.@n 
+~
+!
+0 0 0
+-1
+S
+
+#8774
+A Livestock Holding Pen~
+Stringy strands of hemp fibers have been woven into a loose netting that
+has been stretched along three wooden posts driven into the ground to
+form a makeshift fence.  The fence runs along the north and east side of
+the pen here, lashed together sparsely with thin metal rings where the
+two sides meet.  A low, faded wooden trough has been built just inside
+the fence in the corner, apparently one of the sources of food for the
+animals.  The dry field within the fence continues to the west and south. 
+A shack that houses the chickens held here lies to the southwest.
+~
+[Eliza] reviewed
+~
+167247872 2 9 0
+D2
+~
+~
+0 -1 8775 10 10 5
+D3
+~
+~
+0 -1 8771 10 10 5
+E
+shack coop southwest~
+An almost haphazardly created shack, made of miscellaneous scraps of wood
+has been constructed inside of this field in order to provide a home for
+the chickens to roost.  Tiny entrances to the small shack have been cut
+out of the sides of the ramshackle coop, with small wooden ramps leading
+up to the holes.
+~
+E
+fence north east pen stringy strands hemp fibers netting~
+Narrow wooden poles about three inches in diameter have been driven into
+the ground in order to support a fence made of hemp fibers, woven into a
+loose netting of sorts.  The meshed fence is not very strong, yet appears
+more than adequate for keeping the chickens from leaving.
+~
+A
+climb jump~
+1 north~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  send_to_room( #no, room );
+  end;
+  }
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  send_to_room( #no2, room );
+  end;
+  }
+if( rflag( reset2, room ) ) {
+  remove_rflag( reset2, room );
+  send_to_room( #no3, room );
+  end;
+  }
+act_tochar( #boot, ch );
+act_notchar( #boot2, ch );
+transfer( ch, find_room( 8750 ) );
+~
+E
+no~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence!"@n
+
+~
+E
+no2~
+@CA voice shouts out from the farmhouse: "If you snap any of those
+strands, I'll use your hair to re-weave it!"@n 
+~
+E
+no3~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence or
+you'll be sorry!"@n 
+~
+E
+boot~
+@BTwo burly farmhands rush out of the farmhouse and drag you out of the
+field, depositing you roughly on the ground.@n 
+~
+E
+boot2~
+@BTwo burly farmhands rush out of the farmhouse, grabbing $n and dragging
+$m out of the field.@n 
+~
+!
+0 0 0
+A
+climb jump~
+1 east~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  send_to_room( #no, room );
+  end;
+  }
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  send_to_room( #no2, room );
+  end;
+  }
+if( rflag( reset2, room ) ) {
+  remove_rflag( reset2, room );
+  send_to_room( #no3, room );
+  end;
+  }
+act_tochar( #boot, ch );
+act_notchar( #boot2, ch );
+transfer( ch, find_room( 8750 ) );
+~
+E
+no~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence!"@n
+
+~
+E
+no2~
+@CA voice shouts out from the farmhouse: "If you snap any of those
+strands, I'll use your hair to re-weave it!"@n 
+~
+E
+no3~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence or
+you'll be sorry!"@n 
+~
+E
+boot~
+@BTwo burly farmhands rush out of the farmhouse and drag you out of the
+field, depositing you roughly on the ground.@n 
+~
+E
+boot2~
+@BTwo burly farmhands rush out of the farmhouse, grabbing $n and dragging
+$m out of the field.@n 
+~
+!
+0 0 0
+A
+climb jump~
+fence hemp netting~
+act_tochar( #duh, ch );
+~
+E
+duh~
+Which direction do you want to climb?
+~
+!
+0 0 0
+5019 9 1509949540 3 0
+-1
+S
+
+#8775
+A Livestock Holding Pen~
+Lush, green grass has been reduced to mere patches of scraggly foliage by
+the animals of this pen.  Various small tracks are evident in the dirt,
+and quite a bit of dust has been kicked up from the dry ground.  A wooden
+post supports an odd-looking arrangement of dried greenish-brown fibers
+woven into inexpensive netting that protects the pen's occupants from
+invaders.  The remainder of the parched field continues to the north and
+south, and a short wooden board, covered with wooden slats, gently leads
+up to a small opening cut into a chicken coop to the west.
+~
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 8774 10 10 5
+D2
+~
+~
+0 -1 8776 10 10 5
+D3
+small wooden door~
+small wooden door~
+513 -1 8772 10 10 3
+E
+west board wooden slats ramp opening coop~
+A shabby shack made of weathered planks of wood has been hastily
+constructed in the middle of this livestock pen, evidently a home for all
+of the chickens.  A narrow ramp with slats nailed onto it gently eases up
+to a small doorway cut from the side of the chicken coop's wall.
+~
+E
+east post odd-looking dried greenish-brown fibers netting~
+Narrow wooden poles about three inches in diameter have been driven into
+the ground in order to support a fence made of hemp fibers, woven into a
+loose netting of sorts.  The meshed fence is not very strong, yet appears
+more than adequate for keeping the chickens from leaving.
+~
+A
+~
+~
+if( race( ch ) != rabbit )
+continue;
+~
+E
+to_char~
+@yYou crawl up the small ramp and barely squeeze into the chicken coop.@n
+~
+E
+to_room~
+@y$n climbs up the small ramp and disappears into the chicken coop.@n
+~
+!
+3 0 8
+A
+~
+~
+act_notchar( #down, ch );
+continue;
+~
+E
+down~
+@y$n leaves the chicken coop and carefully walks down the narrow ramp.@n
+~
+!
+1 0 8
+A
+climb jump~
+hemp netting fence 1 east~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  send_to_room( #no, room );
+  end;
+  }
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  send_to_room( #no2, room );
+  end;
+  }
+if( rflag( reset2, room ) ) {
+  remove_rflag( reset2, room );
+  send_to_room( #no3, room );
+  end;
+  }
+act_tochar( #boot, ch );
+act_notchar( #boot2, ch );
+transfer( ch, find_room( 8750 ) );
+~
+E
+no~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence!"@n
+
+~
+E
+no2~
+@CA voice shouts out from the farmhouse: "If you snap any of those
+strands, I'll use your hair to re-weave it!"@n 
+~
+E
+no3~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence or
+you'll be sorry!"@n 
+~
+E
+boot~
+@BTwo burly farmhands rush out of the farmhouse and drag you out of the
+field, depositing you roughly on the ground.@n 
+~
+E
+boot2~
+@BTwo burly farmhands rush out of the farmhouse, grabbing $n and dragging
+$m out of the field.@n 
+~
+!
+0 0 0
+5504 9 1509949540 3 0
+78 17 1509949540 -2 0
+-1
+S
+
+#8776
+A Livestock Holding Pen~
+A sturdy tree trunk supports a wide fence made of woven hemp fibers that
+blocks passage to the south and east in this corner of the livestock pen. 
+Ragged tufts of short grass are interspersed along the otherwise dry,
+dusty ground, many hungry animals taking their toll on the landscape. 
+The field stretches off to the north and west, and an aging chicken coop
+is visible to the northwest.
+~
+[Eliza] reviewed
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 8775 10 10 5
+D3
+~
+~
+0 -1 8773 10 10 5
+E
+coop northwest~
+An almost haphazardly created shack, made of miscellaneous scraps of
+wood, has been constructed inside of this field in order to provide a
+home for the chickens to roost.  Tiny entrances to the shabby shack have
+been cut from the sides of the ramshackle coop, with narrow wooden ramps
+leading up to the holes.
+~
+E
+fence tree trunk 1 east 1 south woven hemp fibers~
+A thick tree stands sentry by itself in the southeast corner of this
+animal pen, its leafy branches lightly shading this portion of the field. 
+Strung around its sturdy trunk is a fence made of hemp fibers, stretching
+to the north and west.  The fibers have been woven into a loose net to
+keep the animals from escaping this pen.  The netting is not very strong,
+although it appears more than adequate for the job.
+~
+A
+climb jump~
+1 east~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  send_to_room( #no, room );
+  end;
+  }
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  send_to_room( #no2, room );
+  end;
+  }
+if( rflag( reset2, room ) ) {
+  remove_rflag( reset2, room );
+  send_to_room( #no3, room );
+  end;
+  }
+act_tochar( #boot, ch );
+act_notchar( #boot2, ch );
+transfer( ch, find_room( 8750 ) );
+~
+E
+no~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence!"@n
+
+~
+E
+no2~
+@CA voice shouts out from the farmhouse: "If you snap any of those
+strands, I'll use your hair to re-weave it!"@n 
+~
+E
+no3~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence or
+you'll be sorry!"@n 
+~
+E
+boot~
+@BTwo burly farmhands rush out of the farmhouse and drag you out of the
+field, depositing you roughly on the ground.@n 
+~
+E
+boot2~
+@BTwo burly farmhands rush out of the farmhouse, grabbing $n and dragging
+$m out of the field.@n 
+~
+!
+0 0 0
+A
+climb jump~
+1 south~
+// room 8750 needs references changed to 8750
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  send_to_room( #no, room );
+  end;
+  }
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  send_to_room( #no2, room );
+  end;
+  }
+if( rflag( reset2, room ) ) {
+  remove_rflag( reset2, room );
+  send_to_room( #no3, room );
+  end;
+  }
+act_tochar( #boot, ch );
+act_notchar( #boot2, ch );
+transfer( ch, find_room( 8750 ) );
+~
+E
+no~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence!"@n
+
+~
+E
+no2~
+@CA voice shouts out from the farmhouse: "If you snap any of those
+strands, I'll use your hair to re-weave it!"@n 
+~
+E
+no3~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence or
+you'll be sorry!"@n 
+~
+E
+boot~
+@BTwo burly farmhands rush out of the farmhouse and drag you out of the
+field, depositing you roughly on the ground.@n 
+~
+E
+boot2~
+@BTwo burly farmhands rush out of the farmhouse, grabbing $n and dragging
+$m out of the field.@n 
+~
+!
+0 0 0
+A
+climb jump~
+fence hemp netting~
+act_tochar( #duh, ch );
+~
+E
+duh~
+Which direction do you want to climb?
+~
+!
+0 0 0
+5019 9 1509949540 3 0
+-1
+S
+
+#8777
+Outside a Large Farmhouse~
+A narrow gravel pathway leads around a large farmhouse, turning a corner
+here to run both north and east.  Mid-sized fields of livestock are
+visible off to the west and south, though fencing surrounding the pens
+prevents entry to them from here.  The large farmhouse has withered old
+wooden boards nailed to its exterior, though the wooden planks have been
+treated with some sort of dark oily substance to prevent further aging. 
+~
+[Eliza] reviewed
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 8782 10 10 5
+D1
+~
+~
+0 -1 8755 10 10 5
+E
+large farmhouse wooden planks oily substance~
+The tall building to the northeast appears to have been built quite some
+time ago.  Its wooden panels, stained a dark brown to protect it from the
+elements, has succumbed to the rigors of age.  Patches of the stain have
+faded from years of standing in the sun, and splinters of wood peel off
+at the edges.
+~
+E
+narrow gravel pathway~
+A shallow bed of gray gravel and dirt runs alongside the farmhouse to
+the northeast, providing a narrow yet functional path between the animal
+pens.  Its surface must be regularly maintained, as very few rocks are
+out of place.
+~
+A
+climb jump~
+1 west~
+act_tochar( #climb, ch );
+act_notchar( #climb2, ch );
+transfer( ch, find_room( 8807 ) );
+act_notchar( #climb3, ch );
+~
+E
+climb~
+@bYou climb over the wooden fence.@n
+~
+E
+climb2~
+@b$n climbs over the wooden fence to the west.@n
+~
+E
+climb3~
+@b$n comes climbing over the wooden fence.@n
+~
+!
+0 0 0
+A
+climb jump~
+1 south~
+act_tochar( #climb, ch );
+act_notchar( #climb2, ch );
+transfer( ch, find_room( 8759 ) );
+act_notchar( #climb3, ch );
+~
+E
+climb~
+@bYou climb over the wooden fence to the south.@n
+~
+E
+climb2~
+@b$n climbs over the wooden fence to the south.@n
+~
+E
+climb3~
+@b$n comes climbing over the fence to the south.@n
+~
+!
+0 0 0
+A
+climb jump~
+wooden fence~
+act_tochar( #duh, ch );
+~
+E
+duh~
+Which direction do you want to climb?
+~
+!
+0 0 0
+-1
+S
+
+#8778
+Outside a Large Farmhouse~
+A shallow lane of pale gray rock and dirt winds its way around a tall
+wooden structure to the northwest.  The rather ordinary path leads off to
+the west and north between the building and two fenced-in fields of
+livestock to the east and south.  The pen to the east is surrounded by a
+stone wall, while the field to the south is enclosed by a fence of woven
+hemp strands.  Large rocks line the side of the path to prevent traffic
+from shuffling the gravel into the fields.
+~
+[Eliza] reviewed
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 8779 10 10 5
+D3
+~
+~
+0 -1 8756 10 10 5
+E
+shallow lane pale gray rock dirt~
+A shallow bed of gray gravel and dirt runs along the farmhouse to the
+northwest, providing a narrow yet functional path among the animal pens. 
+Its surface must be regularly maintained, as very few rocks are out of
+place.
+~
+E
+tall wooden structure northwest~
+The tall building to the northwest appears to have been built quite some
+time ago.  Its wooden panels, stained a dark brown to protect it from the
+elements, has succumbed to the rigors of age.  Patches of the stain have
+faded from years of standing in the sun, and splinters of wood peel off
+at the edges.
+~
+A
+climb jump~
+stone wall 1 east~
+act_tochar( #climb, ch );
+act_notchar( #climb2, ch );
+transfer( ch, find_room( 8796 ) );
+act_notchar( #climb3, ch );
+~
+E
+climb~
+@bYou climb over the stone wall.@n
+~
+E
+climb2~
+@b$n climbs over the stone wall.@n
+~
+E
+climb3~
+@b$n comes climbing over the stone wall.@n
+~
+!
+0 0 0
+A
+climb jump~
+hemp fence netting 1 south~
+act_tochar( #climb, ch );
+act_notchar( #climb2, ch );
+transfer( ch, find_room( 8771 ) );
+act_notchar( #climb3, ch );
+~
+E
+climb~
+@bYou climb over the hemp fence.@n
+~
+E
+climb2~
+@b$n climbs over the hemp fence.@n
+~
+E
+climb3~
+@b$n comes climbing over the hemp fence.@n
+~
+!
+0 0 0
+-1
+S
+
+#8779
+Outside a Large Farmhouse~
+A sturdy wall of stone blocks encircles a field of straw and grass to the
+east, that looks to be a cattle run.  A heavy gate of wooden logs stands
+between two sturdier poles so that people can still access the field.  A
+two-story structure looms to the west, the wooden planks covering its
+exterior slightly warped and faded from neglect on the leeward side of
+the building.  A narrow gravel path leads off to the north a short way
+toward a tall wooden fence, and also to the south toward more livestock
+pens.
+~
+[Eliza] reviewed
+~
+167247880 12 9 0
+D0
+~
+~
+0 -1 8780 10 10 5
+D1
+rusty metal gate~
+east rusty metal gate~
+131 -1 8790 10 10 5
+D2
+~
+~
+0 -1 8778 10 10 5
+E
+narrow gravel path~
+A shallow bed of gray gravel and dirt runs alongside the farmhouse to
+the west, providing a narrow yet functional path between the animal pens. 
+Its surface must be regularly maintained, as very few rocks are out of
+place.
+~
+E
+two-story structure west wooden planks~
+The tall building to the west appears to have been built quite some time
+ago.  Its wooden panels, stained a dark brown to protect it from the
+elements, has succumbed to the rigors of age.  Patches of the stain have
+faded from years of standing in the sun, and splinters of wood are
+peeling off at the edges.
+~
+A
+~
+~
+wait( 1 );
+if( is_open( room, east ) ) {
+  send_to_char( #gate_shuts, ch );
+  close( room, east );
+  }
+~
+E
+gate_shuts~
+The gate's rusty hinges groan loudly as it slowly closes.
+~
+!
+1 2 2
+A
+climb jump~
+stone wall heavy gate wooden logs 1 east~
+if( !is_open( room, east ) ) {
+  act_tochar( #climb, ch );
+  act_notchar( #climb2, ch );
+  transfer( ch, find_room( 8790 ) );
+  act_notchar( #climb3, ch );
+  end;
+  }
+act_tochar( #no, ch );
+~
+E
+climb~
+@bYou climb over the wooden gate.@n
+~
+E
+climb2~
+@b$n climbs over the wooden gate.@n
+~
+E
+climb3~
+@b$n comes climbing over the wooden gate.@n
+~
+E
+no~
+The gate is open.
+~
+!
+0 0 0
+-1
+S
+
+#8780
+Outside a Large Farmhouse~
+A gravel path, leading from the south, dead-ends here at a tall wall
+erected to prevent passers-by from raiding the ample vegetable garden
+apparent through knotholes in the wood.  An intricate cobweb spans the
+distance between the framhouse and the fence nearly at ground level, and
+bits of leftover straw and grass from the nearby pens nestle against the
+wooden planks.  A stone wall stands as a crude yet functional restraint
+for the cows which live in the field to the east, although no entrance
+into the field is apparent from here.
+~
+[Eliza] reviewed
+~
+167247872 12 9 0
+D2
+~
+~
+0 -1 8779 10 10 5
+E
+gravel path~
+A shallow bed of gray gravel and dirt runs alongside the farmhouse to
+the west, providing a narrow yet functional path between the animal pens. 
+Its surface must be regularly maintained, as very few rocks are out of
+place.
+~
+E
+farmhouse farmhouse~
+The tall building to the west appears to have been built quite some time
+ago.  Its wooden panels, stained a dark brown to protect it from the
+elements, has succumbed to the rigors of age.  Patches of the stain have
+faded from years of standing in the sun, and splinters of wood are
+peeling off at the edges.
+~
+E
+intricate cobweb~
+Intricate and delicate, this large cobweb must have taken days for a
+small spider to weave.  Hovering in the air between the farmhouse and the
+fence to the north, the farm environment must bring many tasty meals to
+its owner.
+~
+A
+climb~
+tall wooden fence 1 north~
+act_tochar( #climb, ch );
+act_notchar( #climb2, ch );
+i = 2d5+3;
+dam_message( ch, i, "falling off of the fence" );
+inflict( ch, ch, i, "falling off of a fence" );
+~
+E
+climb~
+You attempt to climb the fence, but slip and fall to the ground.
+~
+E
+climb2~
+$n attempts to climb the fence, but slips and falls to the ground.
+~
+!
+0 0 0
+A
+climb jump~
+stone wall 1 east~
+act_tochar( #jump, ch );
+act_notchar( #jump2, ch );
+transfer( ch, find_room( 8798 ) );
+act_notchar( #jump3, ch );
+~
+E
+jump~
+@bYou climb over the stone wall.@n
+~
+E
+jump2~
+@b$n climbs over the stone wall.@n
+~
+E
+jump3~
+@c$n comes climbing over the stone wall.@n
+~
+!
+0 0 0
+81 17 1509949540 -2 0
+764 9 1509949540 3 0
+-1
+S
+
+#8781
+Outside a Large Farmhouse~
+Under Construction.
+~
+~
+167247872 12 9 0
+-1
+S
+
+#8782
+Outside a Large Farmhouse~
+A rickety old gate made of wood hangs on rusty hinges to the west, the
+only visible entryway into a modest-sized field of sheep.  Wooden posts
+driven into the ground hold up the ancient-looking gate, as the vertical
+slats of thin wood that comprise the remainder of a fence surrounding the
+field would not support its weight.  A spacious farmhouse is present to the
+east, its withered, rustic exterior needing a touch of maintenance as
+well.  A narrow gravel pathway runs north and south here between the
+farmhouse and the fenced-in pen.
+~
+[Eliza] reviewed
+~
+167247880 12 9 0
+D0
+~
+~
+0 -1 8783 10 10 5
+D2
+~
+~
+0 -1 8777 10 10 5
+D3
+rickety old gate~
+west rickety old gate~
+131 -1 8799 10 10 5
+E
+narrow gravel pathway~
+A shallow bed of gray gravel and dirt runs alongside the farmhouse to
+the east, providing a narrow, yet functional, path between the animal pens. 
+Its surface must be regularly maintained, as very few rocks are out of
+place.
+~
+E
+small wooden posts slats~
+Wooden posts have been driven into the ground to support a rickety old
+gate that serves as the entrance into the fenced-in area to the west. 
+The fence that surrounds it is comprised of narrow wooden slats of thin
+wood, set in the dirt and nailed together with crossbeams to keep the
+animals within from escaping.
+~
+E
+large farmhouse east withered rustic~
+The tall building to the east appears to have been built quite some time
+ago.  Its wooden panels, stained a dark brown to protect it from the
+elements, has succumbed to the rigors of age.  Patches of the stain have
+faded from years of standing in the sun, and splinters of wood peel off
+at the edges.
+~
+A
+~
+~
+wait( 1 );
+if( is_open( room, west ) ) {
+  send_to_room( #gate_shuts, room );
+  close( room, west );
+  }
+~
+E
+gate_shuts~
+The rusty hinges screech as the rickety old gate closes.
+~
+!
+1 2 8
+A
+climb jump~
+rickety old gate fence wooden 1 west~
+if( !is_open( room, west ) ) {
+  act_tochar( #climb, ch );
+  act_notchar( #climb2, ch );
+  transfer( ch, find_room( 8799 ) );
+  act_notchar( #climb3, ch );
+  end;
+  }
+act_tochar( #no, ch );
+~
+E
+climb~
+@bYou climb over the wooden gate.@n
+~
+E
+climb2~
+@b$n climbs over the wooden gate.@n
+~
+E
+climb3~
+@b$n comes clamboring over the wooden gate.@n
+~
+E
+no~
+The gate is open.
+~
+!
+0 0 0
+-1
+S
+
+#8783
+Outside a Large Farmhouse~
+A narrow pathway runs beside the farmside, coming to an end at a tall
+wooden fence that lies to the north.  The fence, approximately eight feet
+in height, forms a near-solid wall of vertical slats that completely
+obscures the view ahead, and that would be difficult, at best, to climb. 
+A shorter fence of those same vertical slats encircles a mid-sized field
+of sheep on the west, with a gate visible just a short distance to the
+south.
+~
+[Eliza] reviewed
+~
+167247872 12 9 0
+D2
+~
+~
+0 -1 8782 10 10 5
+E
+farmhouse 1 east~
+The tall building to the east appears to have been built quite some time
+ago.  Its wooden panels, stained a dark brown to protect it from the
+elements, has succumbed to the rigors of age.  Patches of the stain have
+faded from years of standing in the sun, and splinters of wood peel off
+at the edges.
+~
+E
+narrow gravel pathway~
+A shallow bed of gray gravel and dirt runs alongside the farmhouse to
+the east, providing a narrow, yet functional, path between the animal pens. 
+Its surface must be regularly maintained, as very few rocks are out of
+place.
+~
+E
+tall wooden fence 1 north~
+An eight-foot tall fence of wooden slats has been built to prevent
+visitors from raiding the extensive vegetable garden and the wheat fields
+that are just barely visible through imperfections in the wood.  The tops
+of the slats are pointed, making climbing difficult and perhaps very
+painful.
+~
+E
+slats 1 west~
+A three-foot tall fence of vertical wooden slats bound tightly next to
+each other with thin lengths of rope.  The tops of the slats are slightly
+rounded, like the tops of clouds.  Oblong knots break the monotony of the
+otherwise identical planks.
+~
+A
+climb jump~
+1 north~
+act_tochar( #climb, ch );
+act_notchar( #climb2, ch );
+i = 2d5+3;
+dam_message( ch, i, "falling off of the fence" );
+inflict( ch, ch, i, "falling off of a fence" );
+~
+E
+climb~
+You attempt to climb the fence, but slip and fall down.
+~
+E
+climb2~
+$n attempts to climb the fence, but slips and falls down instead.
+~
+!
+0 0 0
+A
+climb jump~
+1 west~
+// room 8805 needs references changed to 8805
+act_tochar( #climb, ch );
+act_notchar( #climb2, ch );
+transfer( ch, find_room( 8805 ) );
+act_notchar( #climb3, ch );
+~
+E
+climb~
+@bYou carefully climb over the wooden fence.@n
+~
+E
+climb2~
+@b$n carefully climbs over the wooden fence.@n
+~
+E
+climb3~
+@b$n comes climbing over the wooden fence.@n
+~
+!
+0 0 0
+A
+climb jump~
+wooden fence tall slats field garden~
+act_tochar( #duh, ch );
+~
+E
+duh~
+There are two fences here.  Which direction did you wish to climb?
+~
+!
+0 0 0
+29 0 1509949540 -2 0
+764 9 1509949540 3 0
+-1
+S
+
+#8784
+Main Entryway~
+The inside of this farmhouse is a stark contrast to its exterior.  The
+walls inside are painted in vibrant natural colors, with an assortment of
+hand-wrought drawings of animals and farm tools painted in an even
+pattern in more subtle shades.  Narrow shelves flank the home's sturdy
+oak door to the south, filled with knick-knacks and curios carefully
+placed for all to see.
+~
+[Rikahn] Key search for upstairs bedroom here
+[Eliza] reviewed
+~
+167247885 0 9 0
+D0
+~
+~
+0 -1 8787 10 10 5
+D1
+~
+~
+0 -1 8785 10 10 5
+D2
+sturdy oak door~
+south sturdy oak door~
+131 -1 8754 10 10 5
+D3
+~
+~
+0 -1 8789 10 10 5
+E
+small shelves flank knick-knacks curios~
+Narrow, three-foot long wooden shelves have been built into the wall to
+the south, and are completely packed with a variety of items.  Tiny glass
+figurines, miniature hand-made dolls, and a half-score of pewter statues
+line the shelves, staring blankly into the room.  Amid the shiny
+figurines, a dull gleam catches your eye.
+~
+E
+walls assortment hand-wrought drawings animals farm tools~
+Unlike the bland, weatherbeaten wooden planks that cover the exterior of
+the farmhouse, the interior walls have been harmoniously decorated with a
+myriad of colors, shapes, and patterns.  A vibrant peach color has been
+painted on every wall as a base layer, with a repeating series of animals
+and farm tools patterned in various natural shades of green on top.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou exit the farmhouse and climb down the front steps.@n
+~
+E
+to_room~
+@c$n exits the farmhouse and climbs down the front steps.@n
+~
+!
+3 0 4
+A
+search~
+shelves shelf knick-knacks curios~
+i = random( 1, 15 );
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( i == 1 ) {
+    act_tochar( #got_key, ch );
+    act_notchar( #gotit, ch );
+    obj_to_char( oload( 7026 ), ch );
+    end;
+    }
+  }
+act_tochar( #no_key, ch );
+act_notchar( #nada, ch );
+~
+E
+got_key~
+After searching amongst the shelves you find a key.
+~
+E
+gotit~
+You see $n search through the items on the shelf and find something.
+~
+E
+nada~
+$n searches the shelves but leaves everything intact.
+~
+E
+no_key~
+You search amongst the items on the shelf, but find nothing worth taking.
+~
+!
+0 0 0
+-1
+S
+
+#8785
+Inside a Large Farmhouse~
+Rotund barrels of ale stand in the southeast corner of what must be the
+farmhouse's larder.  Tall cabinets are stacked to the top with an
+abundance of sealed jars filled with a variety of food, while big piles
+of dried, spiced meat lie curing on palettes on the floor.  The smell of
+fresh cooking wafts in from the kitchen to the north, and fresh country
+air drifts in from the open window between the cabinets on the south wall.
+~
+[Eliza] reviewed
+~
+167247877 0 9 0
+D0
+~
+~
+0 -1 8786 10 10 5
+D3
+~
+~
+0 -1 8784 10 10 5
+E
+- their contents - its content~
+Rotund barrels with great capacities sit stacked in the corner of the
+larder, with plain script on each barrel indicating their contents.  Each
+barrel contains some type of liquor, saved up for festive nights at the
+farm.  One barrel has its retaining rings removed and its lid is slightly
+ajar.
+~
+E
+tall cabinet jars~
+Row upon row of jars, sealed with heavy lids and thick wax rings are
+stored on tall cabinets along the southern wall.  Various forms of
+fruits, vegetables, and pickled meats are visible through the cheap
+clouded glass.
+~
+E
+big piles dried spiced meats curing pallets~
+Wide strips of meat have been stacked onto wooden pallets here in order
+to properly cure and dry.  Once completely dry, the meats would last well
+through the cold season.
+~
+A
+get search take grab steal~
+piles dried spiced meat palettes floor jerky~
+i = random( 1, 15 );
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( i < 3 ) {
+    act_tochar( #food, ch );
+    act_notchar( #food2, ch );
+    obj_to_char( oload( 54 ), ch );
+    end;
+    }
+  if( i == 4 ) {
+    act_tochar( #raw, ch );
+    act_notchar( #raw2, ch );
+    obj_to_char( oload( 823 ), ch );
+    end;
+    }
+  }
+send_to_room( #noluck, room );
+~
+E
+food~
+You manage to grab a piece of dried jerky without the woman in the
+kitchen seeing you.
+~
+E
+food2~
+$n manages to grab a piece of dried jerky without the woman in the
+kitchen seeing $m.
+~
+E
+raw~
+You manage to grab something from the palette without the woman in the
+kitchen seeing you, but it hasn't finished curing yet.
+~
+E
+raw2~
+$n manages to grab something from the palette without the woman in the
+kitchen noticing $m, but it is stringy and raw.
+~
+E
+noluck~
+The woman in the kitchen screams furiously: "Stay out of my pantry!  If
+you want something to eat, you need to buy it!" 
+~
+!
+0 0 0
+A
+get search take grab steal~
+cabinets sealed jars food~
+send_to_room( #notake, room );
+~
+E
+notake~
+The woman in the kitchen screams furiously: "Stay out of my pantry!  If
+you want something to eat, you need to buy it!" 
+~
+!
+0 0 0
+A
+climb jump~
+south window~
+act_tochar( #climb, ch );
+act_notchar( #climb2, ch );
+transfer( ch, find_room( 8756 ) );
+act_notchar( #climb3, ch );
+~
+E
+climb~
+@bYou climb through the open window, dropping to the ground.@n
+~
+E
+climb2~
+@b$n climbs through the open window, dropping to the ground.@n
+~
+E
+climb3~
+@b$n clambers out the open window, dropping to the ground.@n
+~
+!
+0 0 0
+7477 17 100 -2 3
+-1
+S
+
+#8786
+The Kitchen~
+A huge black iron woodstove occupies the entire east wall of this kitchen
+area.  Various pots of food are bubbling above the stove, dangling below
+pothooks above the open fire.  A huge rack of beef sizzles on a thick
+metal spit, its fatty drippings falling into the flame with a spattering
+hiss.  Tall wooden cabinets are filled to capacity with jars of various
+herbs and spices, and a long counter is covered with fresh-picked fruits
+and vegetables from the kitchen garden behind the farmhouse, which is
+visible through a large, open window.
+~
+[Eliza] reviewed
+~
+200806407 0 9 0
+D2
+~
+~
+0 -1 8785 10 10 5
+D3
+~
+~
+0 -1 8787 10 10 5
+E
+huge black iron woodstove stove~
+An immense firepit made of huge plates of solid iron and painted black,
+this stove looks like it could cook enough food to feed an army.  A wide
+hinged door on the front allows the remnants within the pit to be
+discarded, and access for the fire to be stoked.  Pothooks protrude
+horizontally above the open box, allowing pots to be hung above the open
+flame.  A heavy iron spit rotates slowly above one portion of the stove,
+with a full side of beef speared and sizzling in the heat.
+~
+E
+rack beef hole top~
+A large side of beef, freshly slaughtered, sizzles above an open flame
+pit in the top of the stove.  Skewered on a large iron rod, the meat
+rotates slowly so it cooks evenly.  The scent of the roasted meat and
+spices from other foods mingles in the kitchen, causing a heavenly aroma
+to permeate the house.
+~
+E
+tall wooden cabinets herbs spices~
+Tall wooden cabinets line the walls on both sides of the large metal
+stove, filled to the brim with glass jars of various cooking herbs and
+spices.  The aroma from the spices assaults the senses with a cacophany
+of scents and accents.
+~
+E
+counter fruits vegetables garden~
+Various piles of fresh fruits and vegetables are stacked on top of a long
+wooden counter, which appears to be the food preparation area for the
+kitchen.  Many of the vegetables are already sliced and diced and ready
+to be added to a cooking pot.
+~
+A
+~
+~
+send_to_room( #smell, room );
+~
+E
+smell~
+@yThe smell of fresh home cooking wafts throughout the kitchen.@n
+~
+!
+2 100 0
+A
+~
+~
+send_to_room( #pot, room );
+~
+E
+pot~
+@rThe fire within the stove flares briefly, almost singing the food.@n
+~
+!
+2 100 0
+A
+take grab get steal~
+pot stove food stew beef~
+act_tochar( #no, ch );
+act_notchar( #rno, ch );
+wait( 1 );
+transfer( ch, find_room( 8750 ) );
+act_tochar( #arr, ch );
+~
+E
+to_char~
+Once quite pleasant to you, the woman quickly raps your knuckles with her
+cooking utensils.  @r"Don't put your grubby little hands into my pots! 
+Maybe when you learn some manners you'll be able to sit at my table!"
+Two farm hands rush in and promptly kick you out of her kitchen.
+~
+E
+not_char~
+Once quite pleasant, the woman quickly raps $n's knuckles for trying to
+reach into her pots of food.  She yells something to $n about $s manners,
+then two farm hands rush in and kick $n out of the farmhouse.
+~
+E
+no~
+Once quite pleasant to you, the woman quickly raps your knuckles with her
+cooking utensils.  @r"Don't put your grubby little hands into my pots! 
+Maybe when you learn some manners you'll be able to sit at my table!"
+@nTwo farm hands rush in and promptly kick you out of her kitchen.@n
+~
+E
+rno~
+Once quite pleasant, the woman quickly raps $n's knuckles for trying to
+reach into her pots of food.  She yells something to $n about $s manners,
+then two farm hands rush in and kick $n out of the farmhouse.
+~
+E
+arr~
+Surprisingly, the farm hands don't rough you up a single bit.  They
+merely set you down outside the farmhouse, and walk away.
+~
+!
+0 0 0
+5046 9 1509949540 3 0
+704 17 1509949490 -1 0
+1585 17 1509949500 -1 0
+801 17 1509949520 -1 0
+54 17 1509949530 -1 0
+7509 17 1509949510 -1 0
+66 17 1509949506 -1 0
+1204 17 1509949480 -1 0
+823 17 1509949485 -1 0
+2940 17 1509949470 -1 0
+-1
+S
+
+#8787
+Inside a Large Farmhouse~
+A long, wide wooden dining table takes up most of the space in this room. 
+The table is huge, and looks like it could seat twenty people if
+necessary.  Its surface is polished, though countless scratches and
+gouges indicate the table has been used quite often.  A number of fruit
+baskets are placed in the center of the table, filled with a fresh
+selection from the orchards behind the farmhouse.  A stairwell to the
+second floor is visible to the west, and the front door of the farmhouse
+can be seen to the south.
+~
+[Eliza] reviewed
+~
+167247877 0 9 0
+D1
+~
+~
+0 -1 8786 10 10 5
+D2
+~
+~
+0 -1 8784 10 10 5
+D3
+~
+~
+0 -1 8788 10 10 5
+E
+long wide wooden dining table~
+Huge wooden legs support this monstrosity of a table, capable of seating
+twenty people or more in a pinch.  Its surface is covered with a
+multitude of scratches, though repeated polishing hides many of them from
+the casual eye.  An ornate centerpiece of flowers surrounded by leaves
+and heather rests in the middle of the table, with large baskets of
+apples from the orchard behind the farmhouse surrounding it.
+~
+A
+~
+~
+send_to_room( #smell, room );
+~
+E
+smell~
+@yThe scent of fresh home cooking drifts in from the kitchen, making your
+mouth water.@n 
+~
+!
+2 100 0
+A
+get take steal grab search~
+fruit apples baskets table~
+i = random( 1, 15 );
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( i < 3 ) {
+    act_tochar( #food, ch );
+    act_notchar( #food2, ch );
+    obj_to_char( oload( 49 ), ch );
+    end;
+    }
+  if( i == 4 ) {
+    act_tochar( #food3, ch );
+    act_notchar( #food4, ch );
+    obj_to_char( oload( 588 ), ch );
+    end;
+    }
+  }
+send_to_room( #noluck, room );
+~
+E
+food~
+You manage to grab an apple from one of the baskets without the woman in
+the kitchen seeing you.
+~
+E
+food2~
+$n manages to grab an apple from one of the baskets without the woman in
+the kitchen seeing $m.
+~
+E
+food3~
+You manage to find a smaller piece of red fruit among the big apples.
+~
+E
+food4~
+$n manages to find a smaller piece of red fruit among the big apples.
+~
+E
+noluck~
+The woman in the kitchen screams furiously: "Stay out of my baskets!  If
+you want something to eat, you need to buy it!" 
+~
+!
+0 0 0
+-1
+S
+
+#8788
+Inside a Large Farmhouse~
+A simple wooden staircase leads up to the second floor of this large farm
+house.  Natural wreaths of twigs and herbs, tied together with bright lace
+ribbons, have been hung on the wall next to the staircase.  A wonderful
+smell wafts in from the kitchen, that is visible on the other side of a
+large dining area to the east.
+~
+[Rikahn] Staircase leads to second floor
+[Eliza] reviewed
+~
+167247877 0 9 0
+D1
+~
+~
+0 -1 8787 10 10 5
+D2
+~
+~
+0 -1 8789 10 10 5
+D4
+~
+~
+0 -1 8808 10 10 5
+E
+simple wooden staircase second floor~
+A wooden staircase of low rising steps leads up to the upper floor of the
+farmhouse.  Oak newel posts support a sturdy railing to provide a steady
+path upstairs.
+~
+E
+small wreaths twigs herbs bright lace ribbons~
+Small wreaths hang on the western wall alongside the staircase leading
+upstairs.  Each wreath has been carefully woven from thin twigs, clumps
+of colored herbs, and tied together with strips of vibrantly colored lace.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+You climb up the staircase to the upper floor.
+~
+E
+to_room~
+$n climbs up the staircase to the upper floor.
+~
+!
+3 0 16
+-1
+S
+
+#8789
+Inside a Large Farmhouse~
+A few low tables have been placed around the room, draped with woven hemp
+tablecloths, with a scattering of family heirlooms situated upon them for
+all to see.  Hand-woven craft items hang on the wall, with rustic pieces
+of antique tools and woodwork rest on modest shelves nailed to the wall. 
+The main entrance to the farmhouse is visible to the east, and a stairway
+leading upstairs rises to the north.
+~
+[Eliza] reviewed
+~
+167247877 0 9 0
+D0
+~
+~
+0 -1 8788 10 10 5
+D1
+~
+~
+0 -1 8784 10 10 5
+E
+small tables hemp table family heirlooms~
+Short wooden tables are placed against the southern and western walls,
+forming a big L in the corner.  The tables are draped with simple hemp
+tablecloths that dangle down over the edges.  A half-dozen clocks of
+different designs and a similar number of tiny figurines are organized on
+the tables, with a regular painted pattern prevalent on all of them.  A
+framed painting of a family leans against the wall in the corner, with
+smiling faces portrayed realistically.
+~
+E
+hand-woven craft hang wall~
+A number of hand-woven craft items hang on the walls, giving the
+impression that the farmer's wife loves to create trinkets when not
+cooking.  Finely woven wreaths of leafy branches and earthy-colored lace
+ribbons entwined together hang next to framed mosaics of colored tile and
+sand glued to thin sheets of wood, primarily depicting farm life.
+~
+E
+pieces antique tools woodwork wooden shelves~
+Narrow shelves of painted pine planks are nailed to the wall, supporting
+small farm tools such as trowels, hammers, and even a scythe in a
+decorative pose.  Each tool is very worn and slightly rusted, a tribute
+to the hard working farm community.
+~
+-1
+S
+
+#8790
+A Livestock Holding Pen~
+Fist-sized rocks stuck together with generous portions of mortar have
+been built up into a crude but respectably sturdy wall to keep the
+powerful animals contained within the mid-sized field that is their home. 
+A primitive gate of wooden logs hangs on rusty metal hinges that barely
+support such a heavy weight.  The dry, dusty ground is blanketed by a
+thin layer of straw, trampled and strewn about by the constant traffic of
+man and beast.  The enclosure is bordered by the fence to the north and
+south, and extends eastward where more open ground is visible.
+~
+[Eliza] reviewed
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 8798 10 10 5
+D1
+~
+~
+0 -1 8791 10 10 5
+D2
+~
+~
+0 -1 8796 10 10 5
+D3
+rusty metal gate~
+west rusty metal gate~
+131 -1 8779 10 10 5
+A
+~
+~
+wait( 1 );
+if( is_open( room, west ) ) {
+  send_to_room( #gate_shuts, room );
+  close( room, west );
+  }
+~
+E
+gate_shuts~
+The gate's rusty hinges groan loudly as it slowly closes.
+~
+!
+1 2 8
+A
+climb jump~
+stone wall gate wooden logs 1 west~
+if( !is_open( room, west ) ) {
+  act_tochar( #climb, ch );
+  act_notchar( #climb2, ch );
+  transfer( ch, find_room( 8779 ) );
+  act_notchar( #climb3, ch );
+  end;
+  }
+act_tochar( #no, ch );
+~
+E
+climb~
+@bYou climb over the wooden gate.@n
+~
+E
+climb2~
+@b$n climbs over the wooden gate.@n
+~
+E
+climb3~
+@b$n comes climbing over the wooden gate.@n
+~
+E
+no~
+The gate is open.
+~
+!
+0 0 0
+5016 9 1509949540 3 0
+5016 9 1509949540 3 0
+-1
+S
+
+#8791
+The Middle of a Livestock Holding Pen~
+Thick bales of straw are piled up in the center of enclosure, evidently
+stored here as a long-term source of food for the animals in the
+fenced-in area.  Clumps of hay have been torn out of the bales by hungry
+cows, and strewn around the entire field by the hungry creatures.  A
+shoddily constructed wall of dense rocks surrounds the field in an
+attempt to prevent the animals from stampeding the rest of the farm.  A
+dilapidated gate has been built off to the west to allow the farmhands
+access into the pen.
+~
+[Eliza] reviewed
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 8797 10 10 5
+D1
+~
+~
+0 -1 8792 10 10 5
+D2
+~
+~
+0 -1 8795 10 10 5
+D3
+~
+~
+0 -1 8790 10 10 5
+E
+thick bales straw hay~
+A five foot tall stack of straw and hay has been haphazardly piled up in
+the middle of this field to provide a long-term food source for the
+bovines that live within the pen.  Most of the bales appear untouched and
+still securely banded, while others have been completely torn apart and
+gnawed on repeatedly.  When the light strikes just right, a faint gleam
+appears from within the hay.
+~
+A
+get take search grab steal~
+thick bales straw~
+i = random( 1, 15 );
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( i == 1 ) {
+    act_tochar( #got_needle, ch );
+    act_notchar( #got_needle2, ch );
+    obj_to_char( oload( 699 ), ch );
+    end;
+    }
+  if( i < 4 ) {
+    act_tochar( #got_straw, ch );
+    act_notchar( #got_straw2, ch );
+    obj_to_char( oload( 1600 ), ch );
+    end;
+    }
+  }
+act_tochar( #no_straw, ch );
+act_notchar( #no_straw2, ch );
+~
+E
+got_straw~
+You search through the bales of straw and find one piece is loose!
+~
+E
+got_straw2~
+$n searches through the bales of straw and finds a loose piece!
+~
+E
+no_straw~
+You search through the bales of straw but find nothing of interest.
+~
+E
+no_straw2~
+$n searches through the bales of straw but finds nothing of interest.
+~
+E
+got_needle~
+You search through the bales of straw and find a brass needle!
+~
+E
+got_needle2~
+$n searches through the bales of straw and finds something shiny!
+~
+!
+0 0 0
+848 9 1509949540 3 0
+5016 9 1509949540 3 0
+-1
+S
+
+#8792
+A Livestock Holding Pen~
+Thick clumps of old straw litter the ground, passed over for consumption
+by the animals that live in this field.  A haystack rises in the center
+of the field, and a tall farmhouse can be seen behind the pile in the
+distance.  Heavy boulders of varying shades of gray have been piled up on
+top of each other to create a sturdy wall, preventing the farm's
+livestock from walking away.  The open field parallels the wall to the
+north and south.
+~
+[Eliza] reviewed
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 8794 10 10 5
+D2
+~
+~
+0 -1 8793 10 10 5
+D3
+~
+~
+0 -1 8791 10 10 5
+A
+climb jump~
+stone wall 1 east~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  send_to_room( #no, room );
+  end;
+  }
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  send_to_room( #no2, room );
+  end;
+  }
+if( rflag( reset2, room ) ) {
+  remove_rflag( reset2, room );
+  send_to_room( #no3, room );
+  end;
+  }
+act_tochar( #boot, ch );
+act_notchar( #boot2, ch );
+transfer( ch, find_room( 8750 ) );
+~
+E
+no~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence!"@n
+
+~
+E
+no2~
+@CA voice shouts out from the farmhouse: "You'd best stop trying to mess
+with my fence!"@n 
+~
+E
+no3~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence or
+you'll be sorry!"@n 
+~
+E
+boot~
+@BTwo burly farmhands rush out of the farmhouse and drag you out of the
+field, depositing you roughly on the ground.@n 
+~
+E
+boot2~
+@BTwo burly farmhands rush out of the farmhouse, grabbing $n and dragging
+$m out of the field.@n 
+~
+!
+0 0 0
+-1
+S
+
+#8793
+A Livestock Holding Pen~
+Numerous rocks of all sorts of shapes and sizes have been hastily
+converted into a basic wall, held together with generous amounts of
+mortar.  The wall stands four feet high and two feet dense, though
+oddly-shaped rocks jut out at various points from the sides.  Open fields
+of wheat are visible on the other side of the shoddy construction, with
+waves of grain shifting in the lazy wind.  This holding pen opens up to
+the north and west, with a large wooden farmhouse visible off in the
+distance.
+~
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 8792 10 10 5
+D3
+~
+~
+0 -1 8795 10 10 5
+A
+climb jump~
+1 east~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  send_to_room( #no, room );
+  end;
+  }
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  send_to_room( #no2, room );
+  end;
+  }
+if( rflag( reset2, room ) ) {
+  remove_rflag( reset2, room );
+  send_to_room( #no3, room );
+  end;
+  }
+act_tochar( #boot, ch );
+act_notchar( #boot2, ch );
+transfer( ch, find_room( 8750 ) );
+~
+E
+no~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence!"@n
+
+~
+E
+no2~
+@CA voice shouts out from the farmhouse: "You'd best stop trying to mess
+with my fence!"@n 
+~
+E
+no3~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence or
+you'll be sorry!"@n 
+~
+E
+boot~
+@BTwo burly farmhands rush out of the farmhouse and drag you out of the
+field, depositing you roughly on the ground.@n 
+~
+E
+boot2~
+@BTwo burly farmhands rush out of the farmhouse, grabbing $n and dragging
+$m out of the field.@n 
+~
+!
+0 0 0
+A
+climb jump~
+1 south~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  send_to_room( #no, room );
+  end;
+  }
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  send_to_room( #no2, room );
+  end;
+  }
+if( rflag( reset2, room ) ) {
+  remove_rflag( reset2, room );
+  send_to_room( #no3, room );
+  end;
+  }
+act_tochar( #boot, ch );
+act_notchar( #boot2, ch );
+transfer( ch, find_room( 8750 ) );
+~
+E
+no~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence!"@n
+
+~
+E
+no2~
+@CA voice shouts out from the farmhouse: "You'd best stop trying to mess
+with my fence!"@n 
+~
+E
+no3~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence or
+you'll be sorry!"@n 
+~
+E
+boot~
+@BTwo burly farmhands rush out of the farmhouse and drag you out of the
+field, depositing you roughly on the ground.@n 
+~
+E
+boot2~
+@BTwo burly farmhands rush out of the farmhouse, grabbing $n and dragging
+$m out of the field.@n 
+~
+!
+0 0 0
+A
+climb jump~
+stone wall~
+act_tochar( #duh, ch );
+~
+E
+duh~
+Which direction do you wish to climb over the stone wall?
+~
+!
+0 0 0
+5016 9 1509949540 3 0
+-1
+S
+
+#8794
+A Livestock Holding Pen~
+Riddled with divots of clods of dirt and grass, this section of the field
+shows the constant traffic of the pen's occupants.  A two-foot wide wall
+of gray rocks, stacked upon each other and held together with a thick
+slathering of mortar protects the animals from walking away from the farm
+to the north and east.  The dusty field continues on to the west and
+south, with a large farmhouse visible in the distance to the west.
+~
+[Eliza] reviewed
+~
+167247872 2 9 0
+D2
+~
+~
+0 -1 8792 10 10 5
+D3
+~
+~
+0 -1 8797 10 10 5
+A
+climb jump~
+1 north~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  send_to_room( #no, room );
+  end;
+  }
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  send_to_room( #no2, room );
+  end;
+  }
+if( rflag( reset2, room ) ) {
+  remove_rflag( reset2, room );
+  send_to_room( #no3, room );
+  end;
+  }
+act_tochar( #boot, ch );
+act_notchar( #boot2, ch );
+transfer( ch, find_room( 8750 ) );
+~
+E
+no~
+@CA voice shouts out from the farmhouse: "You'd best not be trying to
+climb into my vegetable garden!"@n 
+~
+E
+no2~
+@CA voice shouts out from the farmhouse: "I told you to stay out of my
+vegetable garden!  I mean it!@n 
+~
+E
+no3~
+@CA voice shouts out from the farmhouse: "I warned you!  Get your hide
+out of my farm before I skin it!@n 
+~
+E
+boot~
+@BTwo burly farmhands rush out of the farmhouse and drag you out of the
+field, depositing you roughly on the ground.@n 
+~
+E
+boot2~
+@BTwo burly farmhands rush out of the farmhouse, grabbing $n and dragging
+$m out of the field.@n 
+~
+!
+0 0 0
+A
+climb jump~
+1 east~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  send_to_room( #no, room );
+  end;
+  }
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  send_to_room( #no2, room );
+  end;
+  }
+if( rflag( reset2, room ) ) {
+  remove_rflag( reset2, room );
+  send_to_room( #no3, room );
+  end;
+  }
+act_tochar( #boot, ch );
+act_notchar( #boot2, ch );
+transfer( ch, find_room( 8750 ) );
+~
+E
+no~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence!"@n
+
+~
+E
+no2~
+@CA voice shouts out from the farmhouse: "You'd best stop trying to mess
+with my fence!"@n
+~
+E
+no3~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence or
+you'll be sorry!"@n 
+~
+E
+boot~
+@BTwo burly farmhands rush out of the farmhouse and drag you out of the
+field, depositing you roughly on the ground.@n 
+~
+E
+boot2~
+@BTwo burly farmhands rush out of the farmhouse, grabbing $n and dragging
+$m out of the field.@n 
+~
+!
+0 0 0
+A
+climb jump~
+stone wall~
+act_tochar( #duh, ch );
+~
+E
+duh~
+Which direction do you wish to climb over the stone wall?
+~
+!
+0 0 0
+5016 9 1509949540 3 0
+764 9 1509949540 3 0
+764 9 1509949540 3 0
+-1
+S
+
+#8795
+A Livestock Holding Pen~
+Large gouges have been dug into the hardpacked dirt, evidently a large
+bovine animal has taken some frustration out on something here.  To the
+south, a stone wall three feet thick and five feet high has been built to
+prevent the animals within the pen from escaping.  The enclosure runs
+alongside the fence to the east and west, and opens up into a clear area
+to the north, where a tall pile of straw has been placed.
+~
+[Eliza] reviewed
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 8791 10 10 5
+D1
+~
+~
+0 -1 8793 10 10 5
+D3
+~
+~
+0 -1 8796 10 10 5
+A
+climb jump~
+stone wall 1 south~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  send_to_room( #no, room );
+  end;
+  }
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  send_to_room( #no2, room );
+  end;
+  }
+if( rflag( reset2, room ) ) {
+  remove_rflag( reset2, room );
+  send_to_room( #no3, room );
+  end;
+  }
+act_tochar( #boot, ch );
+act_notchar( #boot2, ch );
+transfer( ch, find_room( 8750 ) );
+~
+E
+no~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence!"@n
+
+~
+E
+no2~
+@CA voice shouts out from the farmhouse: "You'd best stop trying to mess
+with my fence!"@n 
+~
+E
+no3~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence or
+you'll be sorry!"@n 
+~
+E
+boot~
+@BTwo burly farmhands rush out of the farmhouse and drag you out of the
+field, depositing you roughly on the ground.@n 
+~
+E
+boot2~
+@BTwo burly farmhands rush out of the farmhouse, grabbing $n and dragging
+$m out of the field.@n 
+~
+!
+0 0 0
+-1
+S
+
+#8796
+A Livestock Holding Pen~
+A large L-shaped wall of crumbling rocks has been built in the southwest
+corner of this field in a shoddy attempt to prevent the cows from
+escaping.  The dense wall runs to the north and east, spreading out into
+the distance.  Large mounds of straw dot the otherwise bland ground,
+leftover from cows slowly eating through a stack of hay bales to the the
+northeast.
+~
+[Eliza] L-section - L-shaped section
+[Eliza] reviewed
+[Rikahn] rbugs fixed
+[Rikahn] wall modified
+[Rikahn] climb/jump wall acode added
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 8790 10 10 5
+D1
+~
+~
+0 -1 8795 10 10 5
+A
+climb jump~
+1 west~
+act_tochar( #climb, ch );
+act_notchar( #climb2, ch );
+transfer( ch, find_room( 8778 ) );
+act_notchar( #climb3, ch );
+~
+E
+climb~
+@bYou climb over the stone wall.@n
+~
+E
+climb2~
+@b$n climbs over the stone wall.@n
+~
+E
+climb3~
+@b$n comes climbing over the stone wall.@n
+~
+!
+0 0 0
+A
+climb jump~
+stone wall~
+act_tochar( #duh, ch );
+~
+E
+duh~
+Which direction do you wish to climb over the stone wall?
+~
+!
+0 0 0
+A
+climb jump~
+1 south~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  send_to_room( #no, room );
+  end;
+  }
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  send_to_room( #no2, room );
+  end;
+  }
+if( rflag( reset2, room ) ) {
+  remove_rflag( reset2, room );
+  send_to_room( #no3, room );
+  end;
+  }
+act_tochar( #boot, ch );
+act_notchar( #boot2, ch );
+transfer( ch, find_room( 8750 ) );
+~
+E
+no~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence!"@n
+
+~
+E
+no2~
+@CA voice shouts out from the farmhouse: "You'd best stop trying to mess
+with my fence!"@n 
+~
+E
+no3~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence or
+you'll be sorry!"@n 
+~
+E
+boot~
+@BTwo burly farmhands rush out of the farmhouse and drag you out of the
+field, depositing you roughly on the ground.@n 
+~
+E
+boot2~
+@BTwo burly farmhands rush out of the farmhouse, grabbing $n and dragging
+$m out of the field.@n 
+~
+!
+0 0 0
+-1
+S
+
+#8797
+A Livestock Holding Pen~
+Dusky gray boulders have been stacked up along the northern edge of this
+field, creating a crude wall of stone.  Clumps of straw are strewn among
+the ground, apparently the food source for the cows that reside in this
+holding pen.  Open countryside is visible to the north, with lush fields
+of wheat and other grains that sway in the wind.  This enclosure
+continues to the west, east, and south.
+~
+[Eliza] reviewed
+~
+167247872 2 9 0
+D1
+~
+~
+0 -1 8794 10 10 5
+D2
+~
+~
+0 -1 8791 10 10 5
+D3
+~
+~
+0 -1 8798 10 10 5
+A
+climb jump~
+stone wall 1 north~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  send_to_room( #no, room );
+  end;
+  }
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  send_to_room( #no2, room );
+  end;
+  }
+if( rflag( reset2, room ) ) {
+  remove_rflag( reset2, room );
+  send_to_room( #no3, room );
+  end;
+  }
+act_tochar( #boot, ch );
+act_notchar( #boot2, ch );
+transfer( ch, find_room( 8750 ) );
+~
+E
+no~
+@CA voice shouts out from the farmhouse: "You'd best not be trying to
+climb into my vegetable garden!"@n 
+~
+E
+no2~
+@CA voice shouts out from the farmhouse: "I told you to stay out of my
+vegetable garden!  I mean it!@n 
+~
+E
+no3~
+@CA voice shouts out from the farmhouse: "I warned you!  Get your hide
+out of my farm before I skin it!@n 
+~
+E
+boot~
+@BTwo burly farmhands rush out of the farmhouse and drag you out of the
+field, depositing you roughly on the ground.@n 
+~
+E
+boot2~
+@BTwo burly farmhands rush out of the farmhouse, grabbing $n and dragging
+$m out of the field.@n 
+~
+!
+0 0 0
+5016 9 1509949540 3 0
+-1
+S
+
+#8798
+A Livestock Holding Pen~
+A thick wall of heavy rocks has been constructed around the perimeter of
+this livestock pen, their smooth surfaces fitting together well enough to
+create a sturdy barrier for the cows that live within this field. 
+Patches of grass poke up through a thin layer of straw that blankets the
+ground of this holding pen, keeping the area dry and relatively odor-free. 
+The enclosure along the fence to the east, and a large gate is visible
+just off to the south.
+~
+[Eliza] reviewed
+[Guin] Bull needs mdesc.
+~
+167247872 2 9 0
+D1
+~
+~
+0 -1 8797 10 10 5
+D2
+~
+~
+0 -1 8790 10 10 5
+A
+climb jump~
+1 west~
+act_tochar( #climb, ch );
+act_notchar( #climb2, ch );
+transfer( ch, find_room( 8780 ) );
+act_notchar( #climb3, ch );
+~
+E
+climb~
+@bYou climb over the stone wall.@n
+~
+E
+climb2~
+@b$n climbs over the stone wall.@n
+~
+E
+climb3~
+@b$n comes climbing over the stone wall.@n
+~
+!
+0 0 0
+A
+climb jump~
+stone wall~
+act_tochar( #duh, ch );
+~
+E
+duh~
+Which direction do you wish to climb over the stone wall?
+~
+!
+0 0 0
+A
+climb jump~
+1 north~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  send_to_room( #no, room );
+  end;
+  }
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  send_to_room( #no2, room );
+  end;
+  }
+if( rflag( reset2, room ) ) {
+  remove_rflag( reset2, room );
+  send_to_room( #no3, room );
+  end;
+  }
+act_tochar( #boot, ch );
+act_notchar( #boot2, ch );
+transfer( ch, find_room( 8750 ) );
+~
+E
+no~
+@CA voice shouts out from the farmhouse: "You'd best not be trying to
+climb into my vegetable garden!"@n 
+~
+E
+no2~
+@CA voice shouts out from the farmhouse: "I told you to stay out of my
+vegetable garden!  I mean it!@n 
+~
+E
+no3~
+@CA voice shouts out from the farmhouse: "I warned you!  Get your hide
+out of my farm before I skin it!@n 
+~
+E
+boot~
+@BTwo burly farmhands rush out of the farmhouse and drag you out of the
+field, depositing you roughly on the ground.@n 
+~
+E
+boot2~
+@BTwo burly farmhands rush out of the farmhouse, grabbing $n and dragging
+$m out of the field.@n
+~
+!
+0 0 0
+-1
+S
+
+#8799
+A Livestock Holding Pen~
+This large, grassy field is surrounded by a short, hand-crafted wooden
+fence.  The fence is approximately three feet tall, and is made from
+countless narrow wooden boards nailed tightly together side by side.  A
+rickety old gate of mismatched boards hangs on rusty hinges between two
+rough-cut posts to the east, allowing access to this small field and
+preventing the animals from escaping.  The field continues to parallel
+the fence to the north and south, and opens up into a clearing to the
+west.
+~
+[Eliza] reviewed
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 8805 10 10 5
+D1
+rickety old gate~
+east rickety old gate~
+131 -1 8782 10 10 5
+D2
+~
+~
+0 -1 8807 10 10 5
+D3
+~
+~
+0 -1 8800 10 10 5
+E
+short wooden fence planks~
+This short fence has been set up so that none of the sheep within the pen
+can escape, and also keeps predators away from the lambs.  It has been
+constructed of three foot high planks of wood, tapered to a point at the
+top, and driven into the ground side by side.  No gaps exist between the
+planks, except where the natural warping of the wood provides peepholes
+into the countryside beyond.
+~
+A
+~
+~
+wait( 1 );
+if( is_open( room, east ) ) {
+  send_to_room( #gate_shuts, room );
+  close( room, east );
+  }
+~
+E
+gate_shuts~
+The rusty hinges screech as the rickety old gate closes.
+~
+!
+1 2 2
+A
+climb jump~
+wooden fence rickety old gate 1 east~
+if( !is_open( room, east ) ) {
+  act_tochar( #jump, ch );
+  act_notchar( #jump2, ch );
+  transfer( ch, find_room( 8782 ) );
+  act_notchar( #jump3, ch );
+  end;
+  }
+act_tochar( #no, ch );
+~
+E
+jump~
+@bYou climb over the rickety gate.@n
+~
+E
+jump2~
+@b$n climbs over the rickety gate.@n
+~
+E
+jump3~
+@b$n comes climbing over the rickety gate.@n
+~
+E
+no~
+The gate is open.
+~
+!
+0 0 0
+-1
+S
+
+#8800
+The Middle of a Livestock Holding Pen~
+A tall stack of large canvas bags stuffed to the brim with wool has been
+piled up in the middle of this mid-sized field.  A somewhat short fence
+of wooden planks surrounds the field on all sides, keeping the animals
+which reside within the pen safe from predators.  A gate from the
+enclosure can be seen eastward, just this side of a large farmhouse.
+~
+[Eliza] reviewed
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 8804 10 10 5
+D1
+~
+~
+0 -1 8799 10 10 5
+D2
+~
+~
+0 -1 8806 10 10 5
+D3
+~
+~
+0 -1 8801 10 10 5
+E
+large canvas bags wool tall stack~
+A five foot tall stack of canvas bags lies untended in the middle of this
+field.  Stacked haphazardly on top of one another, the heavy bags contain
+damp wool left outside to dry in the outdoor air.
+~
+A
+~
+tall stack large canvas bags wool~
+i = random( 1, 15 );
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( i == 1 ) {
+    act_tochar( #got_wool, ch );
+    act_notchar( #got_wool2, ch );
+    obj_to_char( oload( 691 ), ch );
+    end;
+    }
+  }
+act_tochar( #no_wool, ch );
+act_notchar( #no_wool2, ch );
+~
+E
+got_wool~
+You search the tightly packed canvas bags of wool and find a loose clump!
+~
+E
+got_wool2~
+$n searches the tightly packed canvas bags of wool and finds a loose clump!
+~
+E
+no_wool~
+You search through the canvas bags, but nothing will come loose.
+~
+E
+no_wool2~
+$n searches through the bags, but nothing will come loose.
+~
+!
+9 0 0
+256 9 1509949540 3 0
+256 9 1509949540 3 0
+691 17 1509949442 -2 0
+-1
+S
+
+#8801
+A Livestock Holding Pen~
+This open field stops short at a wooden fence standing to the west,
+blocking passage to the open countryside beyond.  The field continues to
+the north and south along the fence, but opens up again to the east,
+where a gate in the fence is visible at a distance.  Patterns of various
+tracks can be seen in the dirt, left by the livestock constantly foraging
+for the sparse food remaining here.
+~
+[Eliza] reviewed
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 8803 10 10 5
+D1
+~
+~
+0 -1 8800 10 10 5
+D2
+~
+~
+0 -1 8802 10 10 5
+E
+short wooden fence planks~
+This short fence has been set up so that none of the sheep within the pen
+can escape, and also keeps predators away from the lambs.  It has been
+constructed of three foot high planks of wood, tapered to a point at the
+top, and driven into the ground side by side.  No gaps exist between the
+planks, except where the natural warping of the wood provides peepholes
+into the countryside beyond.
+~
+A
+climb jump~
+wooden fence planks 1 west~
+// room 8750 needs references changed to 8750
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  send_to_room( #no, room );
+  end;
+  }
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  send_to_room( #no2, room );
+  end;
+  }
+if( rflag( reset2, room ) ) {
+  remove_rflag( reset2, room );
+  send_to_room( #no3, room );
+  end;
+  }
+act_tochar( #boot, ch );
+act_notchar( #boot2, ch );
+transfer( ch, find_room( 8750 ) );
+~
+E
+no~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence!"@n
+
+~
+E
+no2~
+@CA voice shouts out from the farmhouse: "If you break one of those
+planks I'll have your hide!"@n 
+~
+E
+no3~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence or
+you'll be sorry!"@n 
+~
+E
+boot~
+@BTwo burly farmhands rush out of the farmhouse and drag you out of the
+field, depositing you roughly on the ground.@n 
+~
+E
+boot2~
+@BTwo burly farmhands rush out of the farmhouse, grabbing $n and dragging
+$m out of the field.@n 
+~
+!
+0 0 0
+A
+l look examine ex observe~
+various tracks dirt ground~
+if( find_skill( ch, track ) > 5 ) {
+  act_tochar( #track, ch );
+  end;
+  }
+act_tochar( #track2, ch );
+end;
+~
+E
+track~
+By carefully examining the tracks along the ground, it is evident that
+there are ten seperate sets of sheep tracks that meander across the
+landscape, although some sets might be from the same animal.  Intermixed
+with the sheep tracks are a number of canine footprints, the size of the
+pads indicating they were made by a larger dog.
+~
+E
+track2~
+A messy tangle of random footprints litter the ground, some leaving the
+prints of a hooved animal, the others looking like paws.
+~
+!
+0 0 0
+-1
+S
+
+#8802
+A Livestock Holding Pen~
+Bits of grass poke up through an open expanse of hard-packed dirt, gnawed
+short by animals as a food source.  A short wooden fence encloses the
+field on the south and west, with three-foot tall planks of wood keeping
+predators at bay.  Open field is visible to the north and east, where a
+large farmhouse can be seen far off in the distance.
+~
+[Eliza] reviewed
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 8801 10 10 5
+D1
+~
+~
+0 -1 8806 10 10 5
+E
+short wooden fence planks~
+This short fence has been set up so that none of the sheep within the pen
+can escape, and also keeps predators away from the lambs.  It has been
+constructed of three foot high planks of wood, tapered to a point at the
+top, and driven into the ground side by side.  No gaps exist between the
+planks, except where the natural warping of the wood provides peepholes
+into the countryside beyond.
+~
+A
+climb jump~
+1 west~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  send_to_room( #no, room );
+  end;
+  }
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  send_to_room( #no2, room );
+  end;
+  }
+if( rflag( reset2, room ) ) {
+  remove_rflag( reset2, room );
+  send_to_room( #no3, room );
+  end;
+  }
+act_tochar( #boot, ch );
+act_notchar( #boot2, ch );
+transfer( ch, find_room( 8750 ) );
+~
+E
+no~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence!"@n
+
+~
+E
+no2~
+@CA voice shouts out from the farmhouse: "If you break one of those
+planks I'll have your hide!"@n 
+~
+E
+no3~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence or
+you'll be sorry!"@n 
+~
+E
+boot~
+@BTwo burly farmhands rush out of the farmhouse and drag you out of the
+field, depositing you roughly on the ground.@n 
+~
+E
+boot2~
+@BTwo burly farmhands rush out of the farmhouse, grabbing $n and dragging
+$m out of the field.@n 
+~
+!
+0 0 0
+A
+climb jump~
+1 south~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  send_to_room( #no, room );
+  end;
+  }
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  send_to_room( #no2, room );
+  end;
+  }
+if( rflag( reset2, room ) ) {
+  remove_rflag( reset2, room );
+  send_to_room( #no3, room );
+  end;
+  }
+act_tochar( #boot, ch );
+act_notchar( #boot2, ch );
+transfer( ch, find_room( 8750 ) );
+~
+E
+no~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence!"@n
+
+~
+E
+no2~
+@CA voice shouts out from the farmhouse: "If you break one of those
+planks I'll have your hide!"@n 
+~
+E
+no3~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence or
+you'll be sorry!"@n 
+~
+E
+boot~
+@BTwo burly farmhands rush out of the farmhouse and drag you out of the
+field, depositing you roughly on the ground.@n 
+~
+E
+boot2~
+@BTwo burly farmhands rush out of the farmhouse, grabbing $n and dragging
+$m out of the field.@n 
+~
+!
+0 0 0
+A
+climb jump~
+short wooden fence planks~
+act_tochar( #duh, ch );
+~
+E
+duh~
+Which direction do you want to climb?
+~
+!
+0 0 0
+5033 9 1509949540 3 0
+764 9 1509949540 3 0
+764 9 1509949540 3 0
+-1
+S
+
+#8803
+A Livestock Holding Pen~
+A short wooden fence is all that separates this dusty field from open
+wheat fields and countryside to the west and north.  The fence is made of
+wooden planks placed tightly side by side so the farm's sheep cannot
+meander too far away from the farmhouse.  The field opens up to the
+south and east, where the large farmhouse is visible in the distance.
+~
+[Eliza] reviewed
+~
+167247872 2 9 0
+D1
+~
+~
+0 -1 8804 10 10 5
+D2
+~
+~
+0 -1 8801 10 10 5
+E
+short wooden fence planks~
+This short fence has been set up so that none of the sheep within the pen
+can escape, and also keeps predators away from the lambs.  It has been
+constructed of three foot high planks of wood, tapered to a point at the
+top, and driven into the ground side by side.  No gaps exist between the
+planks, except where the natural warping of the wood provides peepholes
+to the countryside beyond.
+~
+A
+climb jump~
+1 north~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  send_to_room( #no, room );
+  end;
+  }
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  send_to_room( #no2, room );
+  end;
+  }
+if( rflag( reset2, room ) ) {
+  remove_rflag( reset2, room );
+  send_to_room( #no3, room );
+  end;
+  }
+act_tochar( #boot, ch );
+act_notchar( #boot2, ch );
+transfer( ch, find_room( 8750 ) );
+~
+E
+no~
+@CA voice shouts out from the farmhouse: "You'd best not be trying to
+climb into my vegetable garden!"@n 
+~
+E
+no2~
+@CA voice shouts out from the farmhouse: "I told you to stay out of my
+vegetable garden!  I mean it!@n 
+~
+E
+no3~
+@CA voice shouts out from the farmhouse: "I warned you!  Get your hide
+out of my farm before I skin it!@n 
+~
+E
+boot~
+@BTwo burly farmhands rush out of the farmhouse and drag you out of the
+field, depositing you roughly on the ground.@n 
+~
+E
+boot2~
+@BTwo burly farmhands rush out of the farmhouse, grabbing $n and dragging
+$m out of the field.@n 
+~
+!
+0 0 0
+A
+climb jump~
+1 west~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  send_to_room( #no, room );
+  end;
+  }
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  send_to_room( #no2, room );
+  end;
+  }
+if( rflag( reset2, room ) ) {
+  remove_rflag( reset2, room );
+  send_to_room( #no3, room );
+  end;
+  }
+act_tochar( #boot, ch );
+act_notchar( #boot2, ch );
+transfer( ch, find_room( 8750 ) );
+~
+E
+no~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence!"@n
+
+~
+E
+no2~
+@CA voice shouts out from the farmhouse: "If you break one of those
+planks I'll have your hide!"@n 
+~
+E
+no3~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence or
+you'll be sorry!"@n 
+~
+E
+boot~
+@BTwo burly farmhands rush out of the farmhouse and drag you out of the
+field, depositing you roughly on the ground.@n 
+~
+E
+boot2~
+@BTwo burly farmhands rush out of the farmhouse, grabbing $n and dragging
+$m out of the field.@n 
+~
+!
+0 0 0
+A
+climb jump~
+short wooden fence planks~
+act_tochar( #duh, ch );
+~
+E
+duh~
+Which direction do you wish to climb?
+~
+!
+0 0 0
+A
+~
+~
+act_tochar( #sneeze, ch );
+act_notchar( #sneeze2, ch );
+interpret( ch, "sneeze" );
+~
+E
+sneeze~
+You search along the ground, stirring up an irritating cloud of dust.
+~
+E
+sneeze2~
+$n searches along the ground, stirring up an irritating cloud of dust.
+~
+!
+9 0 0
+5033 9 1509949540 3 0
+-1
+S
+
+#8804
+A Livestock Holding Pen~
+Three foot tall planks of wood have been placed in the ground side by
+side, creating a makeshift fence to the north.  The wooden strips are
+painted white, though the whitewash color has faded and has flaked off in
+spots.  A large garden is visible on the other side of the fence behind
+the farmhouse to the east, and open countryside is visible to the
+northwest.  A well-worn pair of metal shears hangs from an old hook on
+the fence, used by the farmhands to shear wool from the shaggy sheep.
+~
+[Eliza] reviewed
+~
+167247872 2 9 0
+D1
+~
+~
+0 -1 8805 10 10 5
+D2
+~
+~
+0 -1 8800 10 10 5
+D3
+~
+~
+0 -1 8803 10 10 5
+E
+short wooden fence planks~
+This short fence has been set up so that none of the sheep within the pen
+can escape, and also keeps predators away from the lambs.  It has been
+constructed of three foot high planks of wood, tapered to a point at the
+top, and driven into the ground side by side.  No gaps exist between the
+planks, except where the natural warping of the wood provides peepholes
+into the countryside beyond.
+~
+E
+small metal shears hook~
+A simple set of metal shears hangs from a hook imbedded in a stout fence
+plank, about three feet off the ground.  The once shiny blades have
+rusted from being left out in the elements, and their edges are dull from
+extensive use.  A long length of chain keeps the useful implements firmly
+attached to a sturdy post that helps support the fence.
+~
+A
+climb jump~
+planks wood fence 1 north~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  send_to_room( #no, room );
+  end;
+  }
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  send_to_room( #no2, room );
+  end;
+  }
+if( rflag( reset2, room ) ) {
+  remove_rflag( reset2, room );
+  send_to_room( #no3, room );
+  end;
+  }
+act_tochar( #boot, ch );
+act_notchar( #boot2, ch );
+transfer( ch, find_room( 8750 ) );
+~
+E
+no~
+@CA voice shouts out from the farmhouse: "You'd best not be trying to
+climb into my vegetable garden!"@n 
+~
+E
+no2~
+@CA voice shouts out from the farmhouse: "I told you to stay out of my
+vegetable garden!  I mean it!@n 
+~
+E
+no3~
+@CA voice shouts out from the farmhouse: "I warned you!  Get your hide
+out of my farm before I skin it!@n 
+~
+E
+boot~
+@BTwo burly farmhands rush out of the farmhouse and drag you out of the
+field, depositing you roughly on the ground.@n 
+~
+E
+boot2~
+@BTwo burly farmhands rush out of the farmhouse, grabbing $n and dragging
+$m out of the field.@n 
+~
+!
+0 0 0
+A
+get take grab steal search~
+small metal shears rusty chain hook~
+act_tochar( #bah, ch );
+act_notchar( #bah2, ch );
+transfer( ch, find_room( 8750 ) );
+act_tochar( #bah3, ch );
+act_notchar( #bah4, ch );
+~
+E
+bah~
+@bA burly farmhand rushes from the farmhouse, noticing your attempt to
+steal the farm's belongings.  He threatens to use the shears to slowly
+cut off your head, then drags you out of the field, muttering something
+about the Curahl's policy towards visitors.@n 
+~
+E
+bah2~
+@bA burly farmhand rushes up and grabs $n by the scruff of $s neck,
+hauling $m out of the field, muttering about thieves and vandals along
+the way.@n 
+~
+E
+bah3~
+@bThe farmhand pushes you towards the open countryside, mentioning
+something about wasted hospitality and the desire to lop someone's head
+off for once before sauntering away.@n 
+~
+E
+bah4~
+@bA farmhand rushes up with $n being dragged by $s neck, kicking and
+screaming.  Unceremoniously dumping $n at the end of the gravel road, the
+farmhand mutters something about unworthy visitors and their thieving
+ways before sauntering back towards the farmhouse.@n 
+~
+!
+0 0 0
+A
+shear~
+sheep~
+act_tochar( #no, ch );
+~
+E
+no~
+You do not have the skill required to properly shear a sheep without
+ruining the quality of the wool.
+~
+!
+0 0 0
+1595 17 1509949445 -2 0
+-1
+S
+
+#8805
+A Livestock Holding Pen~
+A short fence of vertical wooden planks has been built around the
+perimeter of a mid-sized grassy field in order to protect livestock
+within the makeshift pen from predators.  The ground is comprised of dry,
+dust-producing fine dirt, as most of the grass which once grew here has
+been grazed away by the animals.  The field runs to the south and west,
+and a gate leading from the pen is visible to the south.
+~
+~
+167247872 2 9 0
+D2
+~
+~
+0 -1 8799 10 10 5
+D3
+~
+~
+0 -1 8804 10 10 5
+E
+short wooden fence planks~
+This short fence has been set up so that none of the sheep within the pen
+can escape, and also keeps predators away from the lambs.  It has been
+constructed of three foot high planks of wood, tapered to a point at the
+top, and driven into the ground side by side.  No gaps exist between the
+planks, except where the natural warping of the wood provides peepholes
+into the countryside beyond.
+~
+A
+climb jump~
+1 north~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  send_to_room( #no, room );
+  end;
+  }
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  send_to_room( #no2, room );
+  end;
+  }
+if( rflag( reset2, room ) ) {
+  remove_rflag( reset2, room );
+  send_to_room( #no3, room );
+  end;
+  }
+act_tochar( #boot, ch );
+act_notchar( #boot2, ch );
+transfer( ch, find_room( 8750 ) );
+~
+E
+no~
+@CA voice shouts out from the farmhouse: "You'd best not be trying to
+climb into my vegetable garden!"@n 
+~
+E
+no2~
+@CA voice shouts out from the farmhouse: "I told you to stay out of my
+vegetable garden!  I mean it!@n 
+~
+E
+no3~
+@CA voice shouts out from the farmhouse: "I warned you!  Get your hide
+out of my farm before I skin it!@n 
+~
+E
+boot~
+@BTwo burly farmhands rush out of the farmhouse and drag you out of the
+field, depositing you roughly on the ground.@n 
+~
+E
+boot2~
+@BTwo burly farmhands rush out of the farmhouse, grabbing $n and dragging
+$m out of the field.@n 
+~
+!
+0 0 0
+A
+climb jump~
+1 east~
+act_tochar( #jump, ch );
+act_notchar( #jump2, ch );
+transfer( ch, find_room( 8783 ) );
+act_notchar( #jump3, ch );
+~
+E
+jump~
+@bYou carefully climb over the wooden fence.@n
+~
+E
+jump2~
+@b$n carefully climbs over the wooden fence.@n
+~
+E
+jump3~
+@b$n comes climbing over the wooden fence.@n
+~
+!
+0 0 0
+A
+climb jump~
+short fence vertical wooden planks~
+act_tochar( #duh, ch );
+~
+E
+duh~
+Which direction do you wish to climb?
+~
+!
+0 0 0
+5033 9 1509949540 3 0
+-1
+S
+
+#8806
+A Livestock Holding Pen~
+A short fence prevents movement to the south from here, with vertical
+planks tightly placed side by side with no gaps between them.  Clumps of
+grass and weeds lay on top of hardpacked dirt from the animals constantly
+scrounging for food.  Another pen of animals can be seen on the other
+side of the fence, though there appears to be no direct gate between the
+two pens.
+~
+[Eliza] reviewed
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 8800 10 10 5
+D1
+~
+~
+0 -1 8807 10 10 5
+D3
+~
+~
+0 -1 8802 10 10 5
+E
+short wooden fence planks~
+This short fence has been set up so that none of the sheep within the pen
+can escape, and also keeps predators away from the lambs.  It has been
+constructed of three foot high planks of wood, tapered to a point at the
+top, and driven into the ground side by side.  No gaps exist between the
+planks, except where the natural warping of the wood provides peepholes
+into the countryside beyond.
+~
+A
+climb jump~
+short fence wooden planks 1 south~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  send_to_room( #no, room );
+  end;
+  }
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  send_to_room( #no2, room );
+  end;
+  }
+if( rflag( reset2, room ) ) {
+  remove_rflag( reset2, room );
+  send_to_room( #no3, room );
+  end;
+  }
+act_tochar( #boot, ch );
+act_notchar( #boot2, ch );
+transfer( ch, find_room( 8750 ) );
+~
+E
+no~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence!"@n
+
+~
+E
+no2~
+@CA voice shouts out from the farmhouse: "If you break one of those
+planks I'll have your hide!"@n 
+~
+E
+no3~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence or
+you'll be sorry!"@n 
+~
+E
+boot~
+@BTwo burly farmhands rush out of the farmhouse and drag you out of the
+field, depositing you roughly on the ground.@n 
+~
+E
+boot2~
+@BTwo burly farmhands rush out of the farmhouse, grabbing $n and dragging
+$m out of the field.@n 
+~
+!
+0 0 0
+-1
+S
+
+#8807
+A Livestock Holding Pen~
+A three-foot tall fence of boards has been erected here to make sure that
+no animals can escape the farm's confines.  Tightly bound planks been
+driven into the ground side by side, with no gaps between the boards
+except those caused by the natural warping of weathered wood.  Very
+little grass remains in this otherwise dusty area, the sheep who reside
+in this pen have eaten most of what used to grow here.  A large farmhouse
+is visible to the east on the other side of the fence, and the field
+stretches off to the north and west.
+~
+[Eliza] reviewed
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 8799 10 10 5
+D3
+~
+~
+0 -1 8806 10 10 5
+E
+short wooden fence planks~
+This short fence has been set up so that none of the sheep within the pen
+can escape, and also keeps predators away from the lambs.  It has been
+constructed of three foot high planks of wood, tapered to a point at the
+top, and driven into the ground side by side.  No gaps exist between the
+planks, except where the natural warping of the wood provides peepholes
+into the countryside beyond.
+~
+A
+climb jump~
+1 south~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  send_to_room( #no, room );
+  end;
+  }
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  send_to_room( #no2, room );
+  end;
+  }
+if( rflag( reset2, room ) ) {
+  remove_rflag( reset2, room );
+  send_to_room( #no3, room );
+  end;
+  }
+act_tochar( #boot, ch );
+act_notchar( #boot2, ch );
+transfer( ch, find_room( 8750 ) );
+~
+E
+no~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence!"@n
+
+~
+E
+no2~
+@CA voice shouts out from the farmhouse: "If you break one of those
+planks I'll have your hide!"@n 
+~
+E
+no3~
+@CA voice shouts out from the farmhouse: "Stop messing with my fence or
+you'll be sorry!"@n 
+~
+E
+boot~
+@BTwo burly farmhands rush out of the farmhouse and drag you out of the
+field, depositing you roughly on the ground.@n 
+~
+E
+boot2~
+@BTwo burly farmhands rush out of the farmhouse, grabbing $n and dragging
+$m out of the field.@n 
+~
+!
+0 0 0
+A
+climb jump~
+1 east~
+// room 8777 needs references changed to 8777
+act_tochar( #climb, ch );
+act_notchar( #climb2, ch );
+transfer( ch, find_room( 8777 ) );
+act_notchar( #climb3, ch );
+~
+E
+climb~
+@bYou climb over the wooden fence.@n
+~
+E
+climb2~
+@b$n carefully climbs over the wooden fence.@n
+~
+E
+climb3~
+@b$n comes climbing over the wooden fence.@n
+@b$n comes climbing over the wooden fence to the west.@n
+~
+!
+0 0 0
+A
+climb jump~
+short wooden fence planks~
+act_tochar( #duh, ch );
+~
+E
+duh~
+Which direction do you want to climb?
+~
+!
+0 0 0
+5033 9 1509949540 3 0
+-1
+S
+
+#8808
+An Upstairs Hallway~
+A simple wooden staircase opens up on the west side of the hallway,
+providing access between the two floors of this sprawling farmhouse. 
+Ornate brass lanterns have been mounted to the wall to provide some
+light, and assorted rustic farm tools have been nailed to the wall for
+decoration.  The hallway continues to the east, and an oaken door is
+present to the south.
+~
+[Eliza] reviewed
+~
+167247877 0 9 0
+D1
+~
+~
+0 -1 8809 10 10 5
+D2
+oaken door~
+south oaken door~
+391 7026 8813 10 10 5
+D5
+~
+~
+0 -1 8788 10 10 5
+E
+polished brass lantern mounted~
+Two polished brass lanterns have been mounted on opposite sides of the
+hall to shed some light in this otherwise plain hallway.  Each lantern
+has been meticulously maintained, and finely polished.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+You climb down the staircase.
+~
+E
+to_room~
+$n climbs down the staircase.
+~
+!
+3 0 32
+A
+get take grab steal search~
+brass lanterns rustic farm tools~
+act_tochar( #no, ch );
+~
+E
+no~
+The lanterns and farm tools are firmly affixed to the wall.
+~
+!
+0 0 0
+-1
+S
+
+#8809
+An Upstairs Hallway~
+Simple works of art and small hand tools decorate both sides of this long
+hallway running through the second floor of this big farmhouse.  The
+wood flooring has been meticulously maintained, and the floorboards have
+been scrubbed clean as a whistle.  Polished brass lanterns have been hung
+on both sides of the wall here, to cast some light upon the passage that
+continues to the east and west.
+~
+[Eliza] reviewed
+~
+167247877 0 9 0
+D1
+~
+~
+0 -1 8810 10 10 5
+D3
+~
+~
+0 -1 8808 10 10 5
+D4
+trapdoor to the attic~
+trapdoor attic up~
+2187 -1 8814 10 10 5
+E
+polished brass lantern hung~
+Two polished brass lanterns have been mounted on opposite sides of the
+hall to shed some light in this otherwise plain hallway.  Each lantern
+has been meticulously maintained, and finely polished.  Glancing at the
+southern lantern, you notice something odd about the ceiling in its
+reflection.
+~
+E
+wood flooring down~
+Narrow oak planks are nailed tightly side by side, creating a sturdy
+wooden floor.  A thin layer of wax has been finely handbuffed in order to
+create a shiny surface to the wood.  Admiring the sheen present on the
+floor, you happen to notice an oddly colored panel in the ceiling.
+~
+E
+ceiling up~
+Although the northern side of the room slants upward towards the center
+of the framed house, the ceiling along the hallway is not open to the
+top; Square wooden sheets are draped between the rafters.  One of the
+squares is slightly discolored, as if worn down more than the other
+panels.
+~
+E
+new art hand tools 1 north 1 south~
+Six-inch framed paintings line the northern and southern walls of this
+long hallway, each with a simple wooden frame surrounding the tiny canvas. 
+Noticing a similarity between all of the depictions, it appears as if
+this series of artworks are family portraits.  Carefully hung between the
+pictures are rustic hand tools, with a collection of worn-down trowels
+intermixed with pint-sized shovels and rakes.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+You jump up and pull yourself through the trapdoor in the ceiling.
+~
+E
+to_room~
+$n jumps up and pulls themself through the trapdoor in the ceiling.
+~
+!
+3 0 16
+A
+search~
+up ceiling trapdoor oddly colored panel~
+i = random( 1, 10 );
+if( i < 3 ) {
+  act_tochar( #trapdoor, ch );
+  act_notchar( #looks, ch );
+  show( ch, room, up );
+  }
+else {
+  act_tochar( #nodoor, ch );
+  act_notchar( #nope, ch );
+  }
+~
+E
+trapdoor~
+Searching the ceiling panels, you notice one is loose!
+~
+E
+looks~
+You notice $n carefully examining the ceiling.
+~
+E
+nodoor~
+You see nothing unusual about the ceiling.
+~
+E
+nope~
+You see $n strain to examine the ceiling, but frown in frustration.
+~
+!
+0 0 0
+A
+get take steal grab search~
+artwork hand tools paintings frames~
+act_tochar( #no, ch );
+~
+E
+no~
+The small paintings and hand tools are firmly affixed to the wall.
+~
+!
+0 0 0
+-1
+S
+
+#8810
+An Upstairs Hallway~
+Mid-sized brass lanterns have been affixed to the wall to shed some light
+in this narrow corridor.  Fine tapestries are hung on the walls, with the
+farm's crest prominently displayed on depictions of products the farm has
+produced.  A hardwood floor has been polished to a fine sheen, and nary a
+scratch or gouge is visible in its surface.  A simple wooden door, set in
+a heavy wood frame, opens to the south, and the hallway continues to the
+west.
+~
+[Eliza] reviewed
+~
+167247877 0 9 0
+D2
+simple wooden door~
+south simple wooden door~
+131 -1 8811 10 10 5
+D3
+~
+~
+0 -1 8809 10 10 5
+E
+polished brass lantern affixed~
+Two polished brass lanterns have been mounted on opposite sides of the
+hall to shed some light in this otherwise plain hallway.  Each lantern
+has been meticulously maintained, and finely polished.
+~
+E
+fine tapestries wall farm crest products~
+A series of finely crafted tapestries hang on the wall, each showing a
+type of product the farm produces, from farm-fresh eggs all the way to
+strips of leather being sewn together into a quality vest by a journeyman
+armorsmith.  In each depiction, the farm's stylish crest is prominently
+visible, the uniquely scripted C emblazoned in cerulean blue.
+~
+-1
+S
+
+#8811
+The Master's Chamber~
+The eastern half of this long bedroom has been converted into an office
+for the farm's owner.  A huge desk made of polished wood stands against
+the one wall, with scraps of paper and notes stacked neatly on its
+surface.  Small paintings of his family flank a wooden abacus, and large
+boards attached to the wall describe levels of livestock, feed supplies,
+and weather cycles.  A chair built from thick pieces of wood and expertly
+tanned hides provides comfortable seating when working.  A simple wooden
+door to the north leads into the upstairs hallway, and the remainder of
+the bedroom continues to the west.
+~
+[Eliza] reviewed
+~
+167251975 0 9 0
+D0
+simple wooden door~
+north simple wooden door~
+131 -1 8810 10 10 5
+D3
+~
+~
+0 -1 8812 10 10 5
+E
+huge desk polished wood~
+This desk must have come from an enormous tree, as the grain on each
+panel is entirely consistent.  The wide desk has two large drawers on
+each side, and a shallow pull-out drawer in the middle.  Its surface is
+stained a deep brown, and polished to a shimmering shine.
+~
+E
+small paintings family~
+Tiny paintings of the farm owner, a woman, and three strapping young men
+have been carefully placed into small wooden frames and propped up on the
+surface of the desk.
+~
+E
+wooden abacus~
+This wooden abacus looks heavily used; the paint on each of the beads has
+all but faded or flaked away, and the metal rods have deep worn grooves
+along their tops.  Judging by the number of beads present on the rods,
+this abacus looks capable of calculating very large numbers.
+~
+E
+chair thick limbs tanned hides~
+Crafted with thick legs, this wooden chair is very sturdy, but also quite
+heavy.  An intricate flowing pattern has been carved along the edges of
+the beams, ending in swirling patterns resembling roses.  Tanned hides of
+the finest quality have been stuffed and bound to the chair, giving a
+luxurious, cushioned seat to rest upon.
+~
+E
+papers~
+A quick glance at the papers in the man's hands is all that is available,
+as he glares at you for reading over his shoulder, curling the papers so
+only he can read them.  Before they are covered up, you see carefully
+itemized lists of all of the farm's stock on hand.
+~
+A
+open pick search~
+desk~
+act_tochar( #no, ch );
+~
+E
+no~
+You really shouldn't be rifling through this man's desk.
+~
+!
+0 0 0
+A
+sit stand~
+chair~
+act_tochar( #no, ch );
+~
+E
+no~
+You shouldn't sit on this man's chair, he might get upset.
+~
+!
+0 0 0
+5047 9 1509949540 3 0
+-1
+S
+
+#8812
+The Master's Chamber~
+An ample handwoven rug of thick wool, dyed with a brilliant pattern of
+colors, covers the majority of the hardwood floor in the master bedroom of
+the farmhouse's owners.  An oak desk sits against the wall to the south,
+and a pair of nightstands holding lanterns flank a tall four-poster bed
+against the west wall.  Thick velvet curtains cover a murky glass
+window facing south, overlooking all of the livestock pens below.  A
+makeshift office for the owner lies to the east, the only way out of the
+bedroom.
+~
+[Eliza] reviewed
+~
+167247877 0 9 0
+D1
+~
+~
+0 -1 8811 10 10 5
+E
+large handwoven rug wool dyed brilliant pattern floor~
+A large blanket, twenty feet by twenty feet, almost manages to cover the
+entire hardwood floor.  Roughly crafted by hand, each hook and loop is
+plainly visible, and provides excellent cushioning underfoot.  Various
+dyes have been used to create a brilliant moire pattern of color
+emanating from the center of the rug.
+~
+E
+oak desk south~
+A rough yet sturdy oak desk sits against the southern wall.  Its surface
+has been stained deep brown, and then highly polished.  Not a single
+speck of dust rests on its surface, testament to the cleaning prowess
+of the farmhouse's servants.  A single keyhole has been carved in the wood
+near the top of the desk where a cleverly designed, hinged door protects
+the contents inside.
+~
+E
+nightstand lantern flank~
+Wooden nightstands the same height as the bed's mattress flank both sides
+of the exquisite four-poster bed on the west wall.  Each nightstand has a
+brass-plated lantern sitting atop it, though both are unlit.
+~
+E
+four-poster bed west mattress~
+Four ornate beams rise from the intricate frame of an obsidian-colored
+wooden bed.  A fluffy mattress of feathers and wool rests on top of the
+frame, and looks very comfortable.  The bed is made with extreme
+precision with a finely-sewn hide blanket.
+~
+E
+thick velvet curtains murky glass window~
+Heavy velvet curtains have been draped in front of a murky glass window
+that overlooks the front half of the farm below.  Each curtain is pulled
+back from the window and drawn tight with a soft yellow rope.  Though its
+surface is clean, the cheap glass has many imperfections and distorts the
+view of the fenced-in pens.
+~
+A
+sit lay climb~
+bed~
+act_tochar( #no, ch );
+~
+E
+no~
+It would not be very polite to rumple someone else's bed.
+~
+!
+0 0 0
+A
+open pick search~
+desk~
+act_tochar( #no, ch );
+~
+E
+no~
+Poking through someone else's belongings isn't something you should be doing.
+~
+!
+0 0 0
+A
+take steal push move get~
+lantern~
+act_tochar( #no, ch );
+~
+E
+no~
+The lanterns are securely fastened to the nightstands.
+~
+!
+0 0 0
+-1
+S
+
+#8813
+A Small Bedroom~
+Homey patterns of diminutive white ducks and over-fed chickens decorate
+the walls of this small child's room.  An empty baby's cradle and other
+infant items are stacked in one corner of the room, either unused or
+already finished in their purpose.  A narrow bed is shoved into the
+opposite corner of the room, its mattress faded and dull from age. 
+Hand-carved wooden trim encircles an oaken door, leading to a hallway
+which runs between rooms on the upstairs floor of the farmhouse.
+~
+[Rikahn] Future expansion mob/quest/?? in this room later
+[Eliza] reviewed.
+~
+167247885 0 9 0
+D0
+oaken door~
+north oaken door~
+391 7026 8808 10 10 5
+E
+homey patterns ducks chickens walls~
+The walls of this room have been painted with a patterned series of small
+white ducks and plump yellow chickens from floor to ceiling.  The colors
+of the diminutive pictorals have faded, and most of the symbols nearer to
+the floor have been worn away.
+~
+E
+baby cradle infant items~
+Covered with a light coating of dust, this wooden baby cradle sits long
+unused in one corner of the room, along with crates of infant toys.  Many
+of the crates have been broken open, as unruly visitors to the friendly
+farm have already rummaged through what little remains.
+~
+E
+hand-carved wooden trim~
+The supportive frame of the doorway has intricate cariactures of cows
+jumping over moons and sheep leaping over tiny fences up and down its
+sides.  Small notches have been cut into the wooden frames at random
+heights up to four feet, with small numbers from one to twelve inscribed
+next to the cuts.
+~
+E
+narrow bed mattress~
+A bed only a small child or a pint-sized gnome would love, it has doweled
+rails six inches high that connect to a horizontal crossmember, to keep
+whoever might sleep within the bed from rolling off its edge.  It is
+covered in dust, though patches of dust have been stirred up in messy
+handprint shapes.
+~
+A
+search~
+infant items toys~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 50 ) < 37 ) {
+    act_tochar( #toy, ch );
+    act_notchar( #toy2, ch );
+    obj = oload( 2882 );
+    if( can_handle( ch, obj ) )
+      obj_to_char( obj, ch );
+    else
+      obj_to_room( obj, room );
+    end;
+  }
+}
+act_tochar( #notoy, ch );
+act_notchar( #notoy2, ch );
+~
+E
+toy~
+You rummage through the crates of infant items, and find an intact toy!
+~
+E
+toy2~
+$n rummages through the crates of infant items, and finds an intact toy!
+~
+E
+notoy~
+You rummage through the crates of infant items but only find broken toys.
+~
+E
+notoy2~
+$n rummages through the crates of infant items but only finds broken toys.
+~
+!
+0 0 0
+A
+search~
+cradle~
+act_tochar( #empty, ch );
+~
+E
+empty~
+Their kids having grown up long ago, the Curahls keep the baby cradle
+empty.
+~
+!
+0 0 0
+A
+search~
+narrow bed mattress~
+act_tochar( #nada, ch );
+act_notchar( #nada2, ch );
+~
+E
+nada~
+You lift up the narrow mattress but discover nothing underneath but balls
+of dust.
+~
+E
+nada2~
+$n lifts up the narrow mattress but discovers nothing underneath but
+balls of dust.
+~
+!
+0 0 0
+-1
+S
+
+#8814
+The Attic~
+A simple storage room has been built at the very top of the farmhouse, a
+place to store old family treasures.  A musty smell permeates the small
+area from the rustic items left in here for so long, and countless
+cobwebs hang in the rafters.  Small octagonal windows, covered in dust
+and grime, provide scant view of the livestock pens to the south, and the
+large vegetable garden and open countryside below to the north.  Piles of
+old clothing, curios, and memorabilia are carefully stored in the
+corners, with extra chairs and dishes for the dining room carefully
+stacked near the trapdoor, leading to the remainder of the house.
+~
+[Rikahn] Add a large wooden chest here, put something very simple inside
+like a bolt of cloth, thread, needle, whatever.
+[Eliza] Reviewed.
+~
+167247884 0 9 0
+D5
+trapdoor out of the attic~
+trapdoor attic down~
+2187 -1 8809 10 10 5
+E
+small octagonal window dust grime~
+Small octagonal windows, covered with metal mesh, provide a view of the
+countryside below to the north and south.  To the north of the farmhouse,
+a large vegetable garden and tall wheat fields grow in solitary peace,
+while to the south the animal pens and roadway leading up to the farm
+stretch out into the distance.
+~
+E
+piles old clothing curios memorabilia~
+Piles of old mementos lie next to each other around the perimeter of this
+loft space.  Stacks of old blankets, outgrown children's clothing, and
+paintings have been saved for the memories in the musty attic.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+You swing your legs over the trapdoor and drop to the hallway below.
+~
+E
+to_room~
+$n swings their legs over the trapdoor and drops to the hallway below.
+~
+!
+3 0 32
+2703 49 1509949540 -2 0
+1451 81 1509949442 -2 0
+7031 81 1509949445 -2 0
+7030 81 1509949442 -2 0
+691 81 1509949445 -2 0
+2 81 1509949540 -2 0
+764 9 1509949540 3 0
+-1
+S
+
+#0
+

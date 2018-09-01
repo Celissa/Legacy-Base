@@ -1,0 +1,20 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+search        : searches the room<br>
+search on|off : toggles continual searching on and off<br>
+<br>
+<h1> Description </h1>
+<br>
+When you are actively searching, you spend a few more points of movement,<br>
+but you are more likely to find traps and secret doors.  NOTE: Finding a<br>
+trap will only work if you are a Thief, or a Ranger.  And the ease of<br>
+finding said trap is descending in that order.  So Thieves are the best<br>
+at finding them.  They are also the ONLY class that gains the ability to<br>
+try and disarm them.<br>
+<br>
+NOTE: Searching takes extra movement.  Please also see help file on<br>
+options.  Also see help file: untrap.<br>
+</html>
+</body>

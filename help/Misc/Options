@@ -1,0 +1,94 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+options          : see how your various options are set<br>
+options [option] : toggle the specified option<br>
+options [option] [option level #] : sets option level for that option<br>
+<br>
+<h1> Description </h1>
+The 'options' command will allow you to view and configure the options<br>
+which control your interface and affect your environment.<br>
+<br>
+By typing 'options' with no arguments, you will see the options you<br>
+currently have set.<br>
+<br>
+By typing 'options' followed by one of the available keywords, you<br>
+will toggle the stated option.<br>
+<br>
+example : opt no_summon will toggle that option on or off.<br>
+You will see a message stating : "No_summon set to TRUE" (or FALSE, as<br>
+the case may be).  If the message were, "No_summon set to TRUE," then you<br>
+cannot be summoned.<br>
+<br>
+Note that the '*' after the flag indicates that the option is 'on'; eg,<br>
+no_summon (*) indicates that you cannot be summoned.<br>
+<br>
+Options under 'Option Levels' can be set from 0 to 3 by typing option<br>
+[option] [#], and the number is shown in parentheses.  Setting an option<br>
+level at 0 will turn off the level-settable option and be indicated with<br>
+a hyphen with the parentheses.<br>
+<br>
+OPTIONS AND MEANINGS<br>
+<br>
+autoassist   : automatically assist your group members in battle<br>
+autobackstab : When autoassisting in a group, thief will automatically<br>
+               try to backstab the victim.<br>
+autoexit     : Display the open exits in a room automatically.<br>
+autoloot     : Automatically loots the corps.<br>
+autoscan     : Automatically scan each time you move. *SEE BELOW*<br>
+autoskin     : Automatically skins kills. (Autoloot fires first)<br>
+autosplit    : Automatically splits looted gold among group members.<br>
+brief        : Disables the showing of room descriptions.<br>
+chat         : Turn on or off the chat channel.<br>
+chant        : Turns the chant channel on or off.<br>
+email.public : Sets your email address public or private.<br>
+gossip       : Turn on or off the gossip channel<br>
+group.incog  : Hides the player's stats from the group<br>
+idle         : If on, allows others to see how long you have been idle.<br>
+info.repeat  : You see your own Info || Messages<br>
+no.summon    : If on, prohibits others from summoning you.<br>
+numeric      : Displays numbers instead of worded numbers.<br>
+prompt       : Display a prompt with your hitpoints, mana, and stamina<br>
+reverse      : Reverses order in which notes, mails, channel histores, etc<br>
+               are displayed.  When set true, the newest is first.<br>
+searching    : Search for secret doors on every move.<br>
+sneak        : Attempt to sneak on every move.<br>
+track        : Allows you to see the tracks of others<br>
+parry        : If on, will fight only defensively.<br>
+pet.assist   : Have your pet automatically assist you in battle<br>
+lang.id      : Display the language other people are speaking in<br>
+say.repeat   : Displays outgoing tells/says/etc.<br>
+say.repcolor : Colours outgoing says/tells/etc the same as incoming.<br>
+status.bar   : Display a status bar with info about your character<br>
+safe.kill    : Protection from killing your own clan members<br>
+ctell        : Toggles clan talk channel on or off.<br>
+portal       : Sends you to portal when mud crashes or reboots.<br>
+atalk        : Toggles auction talk channel on or off.<br>
+spamback     : Echoes notes back to you when editing.<br>
+ooc          : Toggles ooc channel off and on.<br>
+info         : Toggles info messages off and on.<br>
+<br>
+Options with levels and their Meanings<br>
+<br>
+Autoloot : Automatically loots things off a slain mob.  0 = off, 1 =<br>
+lists what is in a corpse, 2 = loots gold only, 3 = loots everything.<br>
+<br>
+Autoscan: Automatically scans when entering rooms.  0 = off, 1 = autoscan<br>
+one square everywhere except towns, 2 = autoscan two squares everywhere<br>
+but towns, 3 = autoscan two squares everywhere except towns were you'll<br>
+autoscan one square.  Note: You must have long scan to scan two<br>
+squares.<br>
+<br>
+Ignore : Prevents people from sending you tells.  0 = off, 1 = ignore<br>
+all but befriended and grouped people, 2 = ignore everyone but introduced<br>
+people, 3 = ignore everyone <br>
+<br>
+Incognito : Hides your character's level and class on 'who' and 'whois'<br>
+commands.  0 = off, 1 = intro'd, befriended and clan members can see 2 =<br>
+befriended and clan members can see, 3 = no one else can see the info.<br>
+<br>
+Room.Info : Reveals more details to each room.  0 = off, 1 = shows<br>
+visible exits, 2 = visible exits and room numbers, 3 = same as 2 <br>
+</html>
+</body>

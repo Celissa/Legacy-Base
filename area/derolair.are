@@ -1,0 +1,2381 @@
+#M2_AREA
+2
+
+Dero Lair~
+~
+Dero Lair~
+~
+~
+
+25 0
+0
+1
+#ROOMS
+
+#6500
+Dero Mine~
+The low, close tunnel dead-ends here at a loose formation of dark grey
+shale, shot through with green veins of ore.  The green varies in color
+from near-black to a bright shade approaching turquoise.  Struts of
+half-rotted wood reinforce the striated walls and ceiling overhead, where
+flakes of unstable stone drop occasionally to the ground below.  Pick
+marks riddle the verdigris streaks in an attempt to mine the crude ore.
+~
+[Guin] Add mine ore code for obj 943, need obj 2589 in inventory to do so.
+[Guin] Reviewed
+[Yrna] Added mining code.
+~
+200933381 11 5 0
+D3
+~
+~
+0 -1 6501 10 10 5
+E
+copper vein streaks ore green turquoise~
+Bands of copper ore streak the loose shale formations with a rich
+tapestry of greens in hues ranging from verdigris to brilliant turquoise. 
+More than a few of the striations are scarred by pick marks, an
+indication there were attempts at mining the crude metal.
+~
+E
+struts wood walls ceiling stone~
+Timbers and boards of half-rotted wood form a latticework of support for
+the loose shale of the walls and the ceiling overhead.  Despite the
+attempt to shore up the unstable stone, there is a near constant
+showering of small stones and dust dropping to the floor.
+~
+A
+~
+~
+rch = rand_player( room );
+act_tochar( #rock, rch );
+act_notchar( #rrock, rch, obj, mob, sight );
+damage( mob, rch, 2d3, physical, "falling rock", "falling rock" );
+~
+E
+rock~
+@RA smallish rock flakes off from the ceiling, hitting you!@n
+~
+E
+rrock~
+@RA smallish rock flakes off from the ceiling, scratching $n as it
+falls!@n 
+~
+!
+2 250 0
+A
+mine~
+ore copper vein~
+if( has_obj( 2589, ch ) ) {
+  if( rflag( reset0, room ) ) {
+    remove_rflag( reset0, room );
+    if( random( 1, 10 ) == 7 ) {
+      act_tochar( #ore, ch, obj );
+      act_notchar( #rore, ch, obj, mob, sight );
+      obj_to_char( oload( 943 ), ch );
+    }
+    else {
+      act_tochar( #badluck, ch, obj );
+      act_notchar( #rbadluck, ch, obj, mob, sight );
+    }
+  }
+  else
+    act_tochar( #no, ch, obj );
+}
+else
+  act_tochar( #noaxe, ch );
+~
+E
+ore~
+@GYou successfully mine some ore.@n
+~
+E
+rore~
+@G$n successfully mines some ore.@n
+~
+E
+badluck~
+@gYou spend some time trying to mine the copper ore, but you can't get
+any chunks worth taking.@n 
+~
+E
+rbadluck~
+@g$n spends some time trying to mine the ore, but no luck.@n
+~
+E
+noaxe~
+@yYou need something to mine ore with - bare hands just won't do.@n
+~
+E
+no~
+@yThe vein has already been mined.@n
+~
+!
+0 0 0
+5393 9 1509949540 3 0
+2573 9 1509949540 3 0
+-1
+S
+
+#6501
+Dero Mine~
+Veins of color streak the stone tunnel walls in shades of rusty red and
+dull blue-green.  A hand cart, nearly as wide as the passage, rests to
+one side, filled with chunks of rock pried loose by pick and axe.
+Visible in the dust underfoot, a score of small footprints can be
+detected amid other, unidentifiable, prints.  Eastward, the darkness is
+complete, anything lying there unseen.
+~
+[Guin] Old Room 4873
+[Guin] Done.
+~
+200933381 11 5 0
+D1
+~
+~
+0 -1 6500 10 10 5
+D3
+~
+~
+0 -1 6502 10 10 5
+E
+hand cart~
+Half full with recent delvings the ore cart appears a tad pointless in
+such a small mine.  To make matters worse one of its wheels has split at
+the rim, the wood appearing to have suffered from dry rot untill it
+couldnt support its own wieght.
+~
+E
+footprints prints~
+Countless footprints crisscross the tunnel floor...layer upon layer of
+them.  Some can be recognized as those of a large rodent; others seem to
+be those of small-sized, shod humanoid.  There are those that can't be
+identified at all, blurred as they are by later tracks.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou continue along the mine tunnel into the darkness to the $d.@n
+~
+E
+to_room~
+@y$n continues along the mine tunnel into the darkness to the $d.@n
+~
+!
+3 0 10
+A
+search~
+hand cart ore~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+if( random( 1, 25 ) < 5 )
+    obj = oload( 7965 );
+  if( obj ) {
+    act_tochar( #ore, ch, obj );
+    act_notchar( #rore, ch, obj, mob, sight );
+    obj_to_char( obj, ch );
+  }
+  else {
+    act_tochar( #nada, ch );
+    act_notchar( #rnada, ch, obj, mob, sight );
+  }
+}
+else
+  act_tochar( #already, ch, obj );
+~
+E
+ore~
+@YA quick search through the ore cart rewards you with $p.@
+~
+E
+rore~
+@Y$n appears to have found something while searching the cart.@n
+~
+E
+nada~
+@yA search through the cart reveals nothing.@n
+~
+E
+rnada~
+@y$n quickly searches the cart, but doesn't appear to have found
+anything.@n 
+~
+E
+already~
+@yBy the looks of it, the cart has already been searched.@n
+~
+!
+9 0 0
+1489 9 1509949540 3 0
+-1
+S
+
+#6502
+Dero Mine~
+The tunnel turns sharply to the east, skirting a lethal-looking pile of
+jagged rock and debris, left from a recent incursion into this section of
+the mine.  The struts, supporting the unstable ceiling overhead, appear
+to be relatively new, the wood fresh-cut and dark with remaining moisture.
+A broken pick, its handle split clean in two, lies forgotten on the ground
+next to the northern wall.  The tunnel continues onward to the east and
+west, cloaked in unrelenting darkness.
+~
+[Guin] Old Room 4874
+[Guin] Done.
+~
+200933381 11 5 0
+D1
+~
+~
+0 -1 6501 10 10 5
+D2
+~
+~
+0 -1 6503 10 10 5
+E
+struts wood~
+The red pine has made an ideal material to shore up the collapsing
+ceiling.  Despite the wood's strength, the load they bear is aready
+beginning to warp the timbers.
+~
+E
+broken pick handle~
+An old axe lies close to one wall, its handle split in two and its head
+rusted beyond reclamation.  It remains where it was dropped, covered with
+dust and a scattering of stone pieces.
+~
+A
+~
+~
+if( is_mob( ch ) )
+  continue;
+else {
+  act_tochar( #oops, ch, obj );
+  act_notchar( #roops, ch, obj, mob, sight );
+  damage( mob, ch, 1d5, physical, "jagged rock", "jagged rock" );
+  continue;
+}
+~
+E
+oops~
+@YYou walk too close to a sharp rock on the floor and get scratched!@n
+~
+E
+roops~
+@Y$n walks too close to the pile of jagged rock and hurts himself.  Maybe
+you will be more careful.@n 
+~
+!
+3 0 6
+5393 9 1509949540 3 0
+-1
+S
+
+#6503
+Dero Mine~
+An iron grate breaches the irregularly shaped opening that leads westward
+into another section of the caverns.  Flanking the portal, rusty brackets
+hold the remains of torches burned out long ago.  The low ceiling and
+jagged walls show hack and pick marks, an indication the crude tunnel was
+man-made rather than a natural phenomemon.  The passage disappears
+northward into darkness and southward, where the soft plop of
+slow-falling water echos through the silence.
+~
+[Guin] Old Room 4875
+[Guin] Done.
+~
+200933381 11 5 0
+D0
+~
+~
+0 -1 6502 10 10 5
+D1
+~
+~
+0 -1 6504 10 10 5
+D2
+~
+~
+0 -1 6506 10 10 5
+D3
+old iron grate~
+~
+407 7869 6525 10 10 5
+E
+iron grate~
+The rusted metal has been driven deep into the hard stone, a chunky lock
+sealing the gate.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou pass beneath the opening to the west, heading back into the main
+dero enclave.@n 
+~
+E
+to_room~
+@y$n passes beneath the opening to the west, heading back into the main
+dero enclave.@n 
+~
+!
+3 0 8
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou duck through the low opening of the tunnel to the north.@n
+~
+E
+to_room~
+@y$n ducks through the low opening of the tunnel to the north.@n
+~
+!
+3 0 1
+2573 9 1509949540 3 0
+5393 9 1509949540 3 0
+-1
+S
+
+#6504
+Dero Mine~
+Hewn from the natural stone, the craggy surface of the chamber shows
+countless pick and shovel marks.  A scattering of flecked ore veins
+run in a fine lattice across the eastern portion of the cave.  A narrow
+seam in the western wall allows passageway, the rough rocks making it a
+tight fit for all but the smallest of creatures.  A smear of dried blood
+spreads across the ground, where some unfortunate met an unpleasant end.
+~
+[Guin] Old Room 4876
+[Guin] Done.
+~
+200933381 11 5 0
+D3
+~
+~
+0 -1 6503 10 10 5
+E
+ore veins~
+Copper or tin, the slivers of ore are barely worth mining for.
+~
+2573 9 1509949540 3 0
+-1
+S
+
+#6506
+Dero Mine~
+A half-dozen trickles of water inch down the tunnel walls, dropping with
+a soft plop into the shallow pool of milky liquid that fills the
+depression the floor underfoot.  Rising from the water's surface, a
+faint, yet distinct, acrid metallic aroma fills the air.  The familiar
+hack and pick marks, seen elsewhere in the tunnels, are present here as
+well, yet there are no clear discolorations in the stone to denote veins
+of ore.  Struts of old wood and heavy wire form a barrier to the south,
+restraining an unstable wall of flaky stone.
+~
+[Guin] Old room 4878
+[Guin] Done.
+~
+200933381 11 5 0
+D0
+~
+~
+0 -1 6503 10 10 5
+E
+shallow pool milky liquid~
+Filled with undrinkable liquid the shallow pool has been formed by the
+mineral and water run offs that trickle down the walls.  A crust of
+minerals lines the pools lip, sulfur and salts mixing with the rocks.
+~
+A
+drink fill~
+pool liquid metallic shallow milky depression~
+send_to_room( #nodrink, room );
+~
+E
+nodrink~
+@CThe pool of liquid is unappealing enough to prevent drinking.@n
+~
+!
+0 0 0
+A
+1 look~
+pool shallow milky liquid~
+send_to_char( #pool, ch );
+~
+E
+pool~
+Filled with undrinkable liquid the shallow pool has been formed by the
+mineral and water run offs that trickle down the walls.  A crust of
+minerals lines the pools lip, sulfur and salts mixing with the rocks.
+~
+!
+0 0 0
+2573 9 1509949540 3 0
+1662 17 1509949540 -2 43
+-1
+S
+
+#6507
+Dero Lair~
+Clusters of broken lanterns hang from iron rungs around the cracked and
+pitted limestone walls.  Cut into the western wall are shallow handholds,
+enabling an easy climb out of the chamber.  Littering the floor is a
+carpet of stone chips and dry, dusty dirt.  Circular tunnels have been
+hacked into the north, east and southern walls, each one hung with a
+tattered leather curtain.
+~
+[Guin] Old Room 4880
+[Guin] Room links up to 4761
+[Guin] Done.
+[Carth] added up exit acode
+~
+200933381 11 5 0
+D0
+~
+~
+0 -1 6508 10 10 5
+D1
+~
+~
+0 -1 6525 10 10 5
+D2
+~
+~
+0 -1 6509 10 10 5
+D4
+stone slab~
+~
+171 -1 4761 10 10 5
+E
+clusters lanterns iron rungs~
+Battered and broken, most of the lanterns are beyond repair, a few
+however appear in reasonable condition.  The loops in the lanterns top
+attach to iron rungs that have been hammered into the walls; cracks in
+the stone radiate from them.
+~
+E
+cracked pitted limestone walls~
+The walls appear to have moved at some point, causing the stone to buckle
+and split in countless places.  The limestone is fractured like a broken
+mirror sending shards of rock spilling across the floor.
+~
+E
+handholds~
+Carved from the soft limestone, the handholds allow for an easy climb
+into and out of the cave.
+~
+E
+stone chips dirt floor~
+Spilled from the surrounding walls, the chips of limestone lie scattered
+across the floor.
+~
+E
+curtain~
+Stained with grime and water, the tattered curtains droop to just above
+the floor.  At the top, battered-copper rings attach to a rusty iron bar
+that has been set into the stone wall, and sealed with a gravel-filled
+mortar.
+~
+E
+ceiling~
+One of the stone slabs in the ceiling does not seem to fit right.
+Perhaps it could be pushed aside to allow access to whatever is above it.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cMoving aside the tattered remains of the curtain you contine
+northward.@n 
+~
+E
+to_room~
+@c$n shoves the curtain aside and continues northward.@n
+~
+!
+3 0 1
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yGrabbing the ample hand holds, you clamber out of the dank cave.@n
+~
+E
+to_room~
+@y$n carefully climbs upward, out of the caverns.@n
+~
+!
+3 0 16
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou throw aside the curtain and boldly continue into the gloomy
+tunnel.@n 
+~
+E
+to_room~
+@c$n throws aside the curtain and heads into the darkness beyond.@n 
+~
+!
+3 0 4
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cDucking past the tattered curtain you continue onward.@n
+~
+E
+to_room~
+@c$n ducks the tattered curtain and leaves eastward.@n
+~
+!
+3 0 2
+A
+get take~
+lantern~
+act_tochar( #to_char, ch );
+act_notchar( #to_room, ch );
+~
+E
+to_char~
+@gDespite your best efforts, the lanterns are out of reach.@n
+~
+E
+to_room~
+@g$n attempts to reach the cluster of lanterns but fails.@n
+~
+!
+0 0 0
+A
+move~
+slab stone ceiling~
+if( !is_open( room, up ) ) {
+  act_tochar( #move_char, ch );
+  act_notchar( #move_room, ch, obj, mob, sight );
+  open( room, up );
+} else {
+act_tochar( #nomove, ch );
+}
+~
+E
+move_char~
+You climb the handholds and push on the irregular slab.  It moves out the
+way easily.
+~
+E
+move_room~
+$n climbs up the handholds and pushes a block up, revealing an exit!
+~
+E
+nomove~
+The slab has already been moved!
+~
+!
+0 0 0
+5399 9 1509949540 3 0
+5399 9 1509949540 3 0
+5404 9 1509949540 3 0
+-1
+S
+
+#6508
+Dero Lair~
+Glinting crystals jut from the limestone walls of the circular tunnel,
+their multi-faceted surfaces covered in a lattice of fine cracks. 
+Fissures in the floor send gentle gusts of fetid air into the room,
+stirring dust into small columns.  Hung across the southern opening is a
+tattered cloth, partially obscuring the view beyond.  Westwards the
+tunnel descends sharply, the sound of trickling water echoing from the
+darkness.
+~
+[Tifa] Old Room 4881
+[Guin] Done.
+~
+200933381 11 5 0
+D2
+~
+~
+0 -1 6507 10 10 5
+D3
+~
+~
+0 -1 6512 10 10 5
+E
+glinting crystals~
+A trail of quartz-like crystals jut from the limestone wall, their
+fractured surfaces catching the light.
+~
+E
+limestone wall~
+The soft stone has been moulded by the passage of water; perhaps an
+underground river once poured through the now semi-dry caverns.  Swirling
+patterns of minerals run through the rocks, lending it an apricot hue.
+~
+E
+cracks~
+The natural erosion of the stone has been hastened by a few well place
+pick blows, leaving the wall crumbling in several locations.
+~
+E
+fissures~
+A rumbling sound echos from the cracks, as warm gusts of air blow through
+the openings.  A soft glow filters through the cracks, perhaps from a
+distant fire below.
+~
+E
+tattered cloth~
+The cloth was once a wagon tarpaulin; the brass rings of one side are
+looped with hemp to form a servicable curtain.  A generous layer of
+mildew spreads across tattered bits that reach the floor.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou move aside the tattered cloth and head southward.@n
+~
+E
+to_room~
+@c$n moves aside the tattered cloth and heads southward.@n
+~
+!
+3 0 4
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou carefully make your way down the slope and into the gloom beyond.@n
+~
+E
+to_room~
+@c$n descends down the western tunnel, disappearing into the gloom.@n
+~
+!
+3 0 8
+A
+search pry get~
+crystals~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 10 ) == 4 )
+    obj = oload( 7760 );
+  if( obj ) {
+    act_tochar( #yay, ch, obj );
+    act_notchar( #ryay, ch, obj, mob, sight );
+    obj_to_char( obj, ch );
+  }
+  else {
+    act_tochar( #nay, ch );
+    act_notchar( #rnay, ch, obj, mob, sight );
+  }
+}
+else
+  act_tochar( #none_left, ch );
+~
+E
+yay~
+@WYou manage to pry some crystals free from the wall.@n
+~
+E
+ryay~
+@W$n manages to get some crystals from the wall.@n
+~
+E
+nay~
+@wYou try to pry some crystals free, but they crumble in your hands.@n 
+~
+E
+rnay~
+@w$n tries to pull some crystals free from the wall, but they crumble in
+$s hands.@n 
+~
+E
+none_left~
+@wNone of the crystals are big enough to pull off.@n
+~
+!
+0 0 0
+5403 9 1509949540 3 0
+5399 9 1509949540 3 0
+-1
+S
+
+#6509
+Dero Lair~
+A jagged fissure in the floor sends plumes of sulfurous mist into the
+chamber.  Beyond the crevice, a basin of rock drips steaming water that
+in turn dribbles down into the fractured floor.  Carved into the
+limestone walls are demonic faces, their leering mouths filled with sharp
+teeth and multiple looping tongues.  An eastern tunnel winds out of the
+stifling room, sloping slightly upwards as it bends out of sight.  To the
+north the tattered remains of a leather curtain dangle to the floor,
+partially obscuring what lies beyond.
+~
+[Tifa] Old Room 4882
+[Guin] Done.
+~
+200933381 11 5 0
+D0
+~
+~
+0 -1 6507 10 10 5
+D1
+~
+~
+0 -1 6510 10 10 5
+E
+jagged fissure floor sulfurous mist~
+Peering into the mist, it is almost impossible to see into the fissure.
+With the faint light managing to pierce only a little of the mist, the
+best you can see if rock walls descending downwards.
+~
+E
+limestone walls faces~
+Carved directly into the soft limestone walls are many faces of
+disfigured and leering demons.  Teeth, fangs.  horns and other features
+all stick out from the wall and make the imagery all the more surreal.
+Amongst the humanoid demon faces, the occasional animal head can be seen,
+also disfigured and covered in horns and strange carvings.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cPulling aside the tattered curtain, you continue onward.@n
+~
+E
+to_room~
+@c$n pulls aside the curtain and pauses briefly before continuing
+onward.@n
+~
+!
+3 0 1
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cWith eyes scanning the ground for slick patches, you head east up the
+slight rise.@n 
+~
+E
+to_room~
+@c$n lowers $s head and starts walking along the rise to the east.@n 
+~
+!
+3 0 2
+A
+~
+~
+act_tochar( #nothing, ch );
+act_notchar( #rnothing, ch );
+~
+E
+nothing~
+@YDespite a thorough search of the mouths, you don't find anything.@n 
+~
+E
+rnothing~
+@y$n does a quick yet thorough search of the carving's mouths, but
+doesn't seem to find anything.@n 
+~
+!
+9 0 0
+5399 9 1509949540 3 0
+-1
+S
+
+#6510
+Dero Lair~
+Solid-looking pine logs brace the cracked ceiling, the rubble-littered
+floor a clear indication of the tunnel's instability.  Hacked into the
+cavern's sides are deep grooves, left from someone's delving.  A
+flickering of minerals scatter across the rocks surface, their facets
+glinting like night stars.
+~
+[Tifa] Old Room 4883
+[Guin] Done.
+~
+200933381 11 5 0
+D2
+~
+~
+0 -1 6511 10 10 5
+D3
+~
+~
+0 -1 6509 10 10 5
+E
+solid-looking pine logs~
+Roughly-hewn logs, stripped of most of their bark, have been carefully
+put together to support the crumbling ceiling overhead.  A few scratches
+and gouges mark the logs' surfaces, but apart from that they're in good
+condition.
+~
+E
+cracked ceiling~
+More evidence that the tunnels here are becoming increasingly unstable,
+the fissures spread across most of the stone ceiling.
+~
+E
+rubble littered floor~
+A scattering of stones lies across the floor, much of it falling from the
+crumbling roof.
+~
+E
+deep groves~
+Apparently random, the grooves appear to be the work of someone with a
+pick.
+~
+E
+flickering minerals facets stars~
+A trace of quartz runs through the limestone. Of little monetary value;
+they appear to have been ignored by the delvers.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@YWaves of heat pour from the south, staggering you slightly.@n
+~
+E
+to_room~
+@Y$n staggers slightly as $e heads southward.@n
+~
+!
+3 0 4
+A
+~
+~
+send_to_room( #flick, room );
+~
+E
+flick~
+@CThe crytals in the wall sparkle with a rainbow of light.@n
+~
+!
+2 150 0
+A
+pry get search~
+minerals facets stars crystals quartz~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 6 ) == 3 )
+    obj = oload( 7760 );
+  if( obj ) {
+    act_tochar( #yay, ch, obj );
+    act_notchar( #ryay, ch, obj, mob, sight );
+    obj_to_char( obj, ch );
+  }
+  else {
+    act_tochar( #nay, ch );
+    act_notchar( #rnay, ch, obj, mob, sight );
+  }
+}
+else
+  act_tochar( #none_left, ch );
+~
+E
+yay~
+@WYou successfully pry a crystal free from the shimmering vein of
+quartz.@n 
+~
+E
+ryay~
+@W$n successfully pries a crystal free from the quartz vein.@n
+~
+E
+nay~
+@wYou try to pry some crystals free, but they crumble in your hands.@n
+~
+E
+rnay~
+@w$n tries to pull some crystals free from the wall, but they crumble in
+$s hands.@n
+~
+E
+none_left~
+@wNone of the crystals are big enough to pull off.@n
+~
+!
+0 0 0
+5394 9 1509949540 3 0
+287 17 1509949540 -2 0
+-1
+S
+
+#6511
+Dero Lair~
+A murky pool of shadows ripples in the center of the chamber, the silky
+darkness simmering and hissing softly.  The cavern's walls are covered in
+ridges and folds, as if the stones had melted like wax.  Whorls of basalt
+rock jut from the stones, adding to the liquid appearance.  Clusters of
+dusty-black crystals line the pool's edge, perhaps formed from solidified
+tar or minerals.
+~
+[Tifa] Old Room 4884
+[Guin] Done.
+~
+200409093 11 5 0
+D0
+~
+~
+0 -1 6510 10 10 5
+E
+murky pool shadows silky darkness broiling~
+The shadowy pool oozes and bubbles with boiling tar.  The waves of heat,
+erupting from its roiling surface, make the walls shimmer with a shimmery
+haze.
+~
+E
+whorls basalt rock stones~
+Solidified tar crystals jut from the walls.  Several of the older ones
+appear to be loose.
+~
+E
+cavern walls ridges folds wax~
+Once molten rock has cooled to form into ridges and folds, giving the
+walls an appearance of melted wax.
+~
+A
+~
+~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  rch = rand_player( room );
+  send_to_room( #splash, room, sight );
+  damage( mob, rch, 1d5, fire, "a splash of hot tar", "hot tar" );
+}
+else
+  send_to_room( #wave, room );
+~
+E
+wave~
+@RWaves of heat roll from the bubbling tar, making breathing difficult.@n
+
+~
+E
+splash~
+@RBubbling tar sends tiny dropplets splashing everywhere!@n
+~
+!
+2 100 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GWith sweat dripping from your brow, you stagger northward away from the
+searing heat.@n 
+~
+E
+to_room~
+@GGasping for air, $n staggers northward.@n
+~
+!
+3 0 1
+A
+~
+~
+send_to_room( #bub, room );
+~
+E
+bub~
+@RThe thick tar bubbles and boils, sending plumes of greasy smoke across
+the ceiling.@n 
+~
+!
+2 150 0
+A
+dig search pry get~
+tar crystals~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 10 ) == 4 )
+    obj = oload( 7968 );
+  if( obj ) {
+    act_tochar( #yay, ch, obj );
+    act_notchar( #ryay, ch, obj, mob, sight );
+    damage( mob, ch, 1d6, fire, "the boiling tar", "boiling tar" );
+    obj_to_char( obj, ch );
+  }
+  else {
+    act_tochar( #nay, ch );
+    act_notchar( #rnay, ch, obj, mob, sight );
+    damage( mob, ch, 1d6, fire, "the boiling tar", "boiling tar" );
+  }
+}
+else
+  act_tochar( #none_left, ch );
+~
+E
+yay~
+@YYou collect some crystals from the tar's surface, but you get scorched
+in the process.@n 
+~
+E
+ryay~
+@Y$n collects some crystals from the tar's surface, but gets scorched in
+the process - that sure looks painful!@n 
+~
+E
+nay~
+@yYou try to collect some crystals, but all you manage to do is get
+scorched by the boiling tar.@n 
+~
+E
+rnay~
+@y$n tries to collect some crystals, but only gets scorched by boiling
+tar.  Ouch!@n 
+~
+E
+none_left~
+@yThere is nothing to collect there.@n
+~
+!
+0 0 0
+-1
+S
+
+#6512
+Dero Lair~
+Broken and cracked skulls and bones have been thrust into countless
+alcoves in the northern wall.  Blood-red swirls of dye surround the
+collection, adding to the disquiet of the room.  A flat rock forms a dais
+in the center of the chamber, its surface covered in a lattice of
+scratches where a sharp implement has struck it repeatedly.  Three
+tunnels lead from the chamber, a fetish of bones and feathers dangling
+above each one.
+~
+[Tifa] Old Room 4895
+[Guin] Done.
+~
+200933509 11 5 0
+D1
+~
+~
+0 -1 6508 10 10 5
+D2
+~
+~
+0 -1 6515 10 10 5
+D3
+~
+~
+0 -1 6513 10 10 5
+E
+broken skulls bones alcoves~
+The corpses of countless victims lie stacked into the alcoves, their
+bleached bones all that remain of them.  A few of the skulls gleam as if
+recently polished, or perhaps are new aquisitions to the collection.
+~
+E
+blood red swirls dye~
+The flaking surface of blood spreads across the walls, its pattern
+abstract at best.
+~
+E
+flat rock dias~
+The rock is filled with scratch and gouges marks, signs that mark this
+stone as a sacraficial altar.  A deeper groove runs from the stone's
+center to all four sides, its surface filled with pooled, dried blood.
+~
+E
+fetish bones feathers~
+In the form of twisted humans the fetish dolls hang from the ceiling, far
+from the reach of would-be thieves.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GA chilling numbness takes hold of your limbs when you pass beneath the
+hanging fetish.@n 
+~
+E
+to_room~
+@G$n shudders as if cold when $e passes beneath the dangling fetish.@n
+~
+!
+3 0 14
+A
+~
+~
+send_to_room( #blood, room, sight );
+~
+E
+blood~
+@RThe blood-red swirls seem to shift and blur, the surface gleaming as if
+freshly applied.@n 
+~
+!
+2 150 0
+A
+~
+~
+send_to_room( #whisper, room, sight );
+~
+E
+whisper~
+@CA whispered conversation filters from the south, the words
+unintelligible.@n 
+~
+!
+2 150 0
+5405 9 1509949540 3 0
+-1
+S
+
+#6513
+Dero Lair~
+Black soot coats every surface of the stone chamber.  Its grimy walls and
+floor are covered in boot prints and small hand marks.  A collection of
+broken chests and crates lie against the western wall, their contents
+long since removed.  A narrow tunnel winds south from the chamber, the
+smudges of soot marking its surface becomes lighter the further south you
+go.
+~
+[Tifa] Old Room 4896
+[Guin] Done.
+~
+200933381 11 5 0
+D1
+~
+~
+0 -1 6512 10 10 5
+D2
+~
+~
+0 -1 6516 10 10 5
+E
+black soot~
+The walls and floor here are covered in layer upon layer of loose soot. 
+Anything that moves stirs a cloud of the black dust into the air. 
+Footprints of all shapes and sizes crisscross the ground underfoot, each
+set obscuring the one below.
+~
+E
+broken chests crates~
+Stacks of broken crates and boxes are pile against the wall.  Clearly of
+ancient design, the wood is rotting away and even the metal bandings are
+rusted and deteriorated.
+~
+A
+search~
+crates boxes chest remains~
+act_tochar( #nothing, ch );
+act_notchar( #rnothing, ch );
+~
+E
+nothing~
+@RDespite a thorough search, you don't find anything of interest.@n
+~
+E
+rnothing~
+@R$n rummages through the stacks of crates and chests, but doesn't seem
+to find anything.@n 
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CA cloud of soot swirls around your feet as you continue onward.@n
+~
+E
+to_room~
+@C$n stirs up a cloud of soot as $e wanders through the cavern.@n
+~
+!
+3 0 6
+-1
+S
+
+#6515
+Dero Lair~
+Mounds of cracked bones lie across the rough stone floor of the chamber;
+animal and humanoid remains are intermixed in a jumbled mass.  Missing
+however are the skulls of the dead, leaving exact identification of the
+skeletons difficult.  Crude paintings cover the rough slate wall,
+depicting a huge feast of dero eating each other as a black winged figure
+looks on.
+~
+[Tifa] Old Room 4894
+[Guin] Done.
+~
+200933381 11 5 0
+D0
+~
+~
+0 -1 6512 10 10 5
+D3
+~
+~
+0 -1 6516 10 10 5
+E
+mounds cracked bones stone floor animal humanoid jumbled mass skeletons~
+Piled up on the floor of the chamber lie a large collection of bones from
+many different species.  In places the hind quarters of something the
+size of a horse can be seen, while in another part of the chamber the
+diminuative forearm of a small humanoid skeleton sticks out of the
+skeletal mass.  In all cases of skeletons, the heads have been removed,
+and none can be seen.
+~
+E
+paintings~
+Covering the southern and eastern walls are crude paintings created with
+some kind of crude paste to serve as paint.  Centered on the apex of the
+joint at the southeastern corner of the room, sits a hunched up demonic
+figure with huge black wings.  As the wings stretch across the walls,
+scores of dero can be seen feasting upon the flesh of their own kind,
+nestled under the blanket of the black wings.
+~
+A
+~
+~
+send_to_room( #ghost, room );
+~
+E
+ghost~
+@CThe faint cries of battle echo from the walls.@n
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yBones crunch underfoot as you move throught the room.@n
+~
+E
+to_room~
+@yAs $n moves through the room, bones crack and break under $s feet.@n
+~
+!
+3 0 9
+5404 9 1509949540 3 0
+5405 9 1509949540 3 0
+-1
+S
+
+#6516
+Dero Lair~
+Piles of foul-smelling rags and hides lie scattered about the oval
+chamber.  A few gnawed-upon bones sit beside a fire pit in the center of
+the cave.  A dirty puddle of water collects in a naturally formed basin of
+rock, a pale-red mould spreading up the wall beside it.  A bundle of
+rodent skulls and bird feathers hang from the roof, a leather strip
+attaching it to the rocks.
+~
+[Tifa] Old Room 4893
+[Guin] Done.
+~
+200933381 11 5 0
+D0
+~
+~
+0 -1 6513 10 10 5
+D1
+~
+~
+0 -1 6515 10 10 5
+D3
+~
+~
+0 -1 6517 10 10 5
+E
+foul-smelling rags hides~
+Rotting and covered in slime and mold, a mound of rags and animal hides
+lie scattered throughout this part of the cavern.  Smelling putrid and
+filthy, they could carry any number of diseases.
+~
+E
+bones fire pit~
+Situated in the precise center of the chamber, the edges of a shallow
+fire pit are protected by a ring of stones.  Various bones, all with
+substantial tooth and gnaw marks, rest on top of and beside the rocks.
+~
+E
+dirty puddle water basin~
+Near the south side of the chamber, the dampness of the area has formed a
+shallow pool inside a natural rock basin.  A patch of pale-red mold
+clings to the stones, growing up the wall toward the ceiling.
+~
+E
+pale-red mould~
+The mold is red, pale enough to be easily visible.  The texture of it is
+spongy and it doesn't cling to the wall very well.
+~
+E
+bundle rodent skulls bird feathers leather strip~
+Hanging high overhead, the bundle of skulls and feathers sway back and
+forth on its leather cord.
+~
+A
+~
+~
+send_to_room( #water, room );
+~
+E
+water~
+@CA few drips of water spash into the basin, sending ripples across its
+clouded surface.@n 
+~
+!
+2 150 0
+A
+search get take~
+feathers~
+act_tochar( #noreach, ch );
+act_notchar( #rnoreach, ch );
+~
+E
+noreach~
+@RStretching up as high as you can, you find that the feathers hang just
+out of reach.@n
+~
+E
+rnoreach~
+@R$n reaches up as high as @e can, but are unable to reach the feathers
+hanging from the ceiling.@n 
+~
+!
+0 0 0
+A
+~
+water~
+if( rflag( reset0, room ) ) {
+  if( random( 1, 10 ) == 1 ) {
+    if( can_handle( ch, oload( 116 ) ) ) {
+      act_tochar( #findboots, ch );
+      act_notchar( #rfindboots, ch );
+      obj_to_char( oload( 116 ), ch );
+      end;
+    }
+  }
+}
+act_tochar( #nothing, ch );
+act_notchar( #rnothing, ch );
+remove_rflag( reset0, room );
+~
+E
+findboots~
+@RYou submerge your hands into the water in an attempt to find something. 
+Touching a strange object under water, you grip and pull out an old
+boot!@n 
+~
+E
+rfindboots~
+@R$n dips their hands into the water, and pulls up a pair of old boots!@n
+~
+E
+nothing~
+@RYou dip your hands into the water, but despite swirling them around
+carefully, don't find anything.@n 
+~
+E
+rnothing~
+@R$n dips their hands into the water, swirling them around to find
+something, but comes up with empty hands.@n 
+~
+!
+9 0 0
+A
+drink sip taste~
+water pool~
+act_tochar( #nodrink, ch );
+~
+E
+nodrink~
+The water doesn't look like it is drinkable, the murkiness of the puddle
+and the proximity of the rotting hides is quite off-putting.
+~
+!
+0 0 0
+A
+search~
+piles rags hides~
+act_tochar( #nothing, ch );
+act_notchar( #rnothing, ch );
+~
+E
+nothing~
+@RRummaging through the pile of rotting rags and animal hides, you find
+nothing except for a cloud of dust and rotting material.@n 
+~
+E
+rnothing~
+@R$n rummages through the rotting hides, sending up a spray of dust and
+rotting material, but doesn't seem to find anything.  @n
+~
+!
+0 0 0
+A
+get take grab move~
+mould moss mold pale red~
+act_tochar( #toosoft, ch );
+act_notchar( #rtoosoft, ch );
+~
+E
+toosoft~
+@GYou try and touch the mould, but it disintegrates under your touch, and
+the fragments fall away.@n
+~
+E
+rtoosoft~
+@G$n tries to touch some of the mould on the southern wall, but when they
+touch it, the mould disintegrates beneath their fingers.@n
+~
+!
+0 0 0
+-1
+S
+
+#6517
+Dero Lair~
+Stout pine beams prop up the cracked and pitted roof of the cavern, a few
+bent under the strain.  A mound of splinted rock and shattered wood lies
+against the southern wall where a section of roof has caved in.  Set in
+the western wall is a unadorned stone door, its surface smooth and
+glossy-grey in coloration.  Above the doorway a smoldering torch hangs in
+a beaten copper sconce, its flickering flame almost out.
+~
+[Tifa] Old Room 4892
+[Guin] Done.
+~
+200933381 11 5 0
+D0
+~
+~
+0 -1 6518 10 10 5
+D1
+~
+~
+0 -1 6516 10 10 5
+D3
+grey stone door~
+~
+131 -1 6521 10 10 5
+E
+stout pine beams~
+Propped up against the ceiling lie several stout wooden beams made of oak.
+Several are beginning to rot in places, but they still look fairly solid.
+~
+E
+cracked pitted roof~
+In parts of this chamber, the roof has caved in badly, leaving the
+ceiling quite rdesc unstable.  In those places, stout beams have been
+placed to help hold the ceiling up.
+~
+E
+mound splinted rock shattered wood~
+A wide mound of splintered rock and wood fills most of the northern
+tunnel.  It makes passaage in that direction difficult at best.
+~
+A
+~
+~
+send_to_room( #beam, room );
+~
+E
+beam~
+@yWith a groan the pine log shifts slightly showering the chamber with
+rock dust!@n 
+~
+!
+2 150 0
+5404 9 1509949540 3 0
+-1
+S
+
+#6518
+Dero Lair~
+A huge rent in the ceiling has spilled a swath of rubble that partially
+blocks the tunnel; shattered pine beams and twisted metal braces lie
+partially buried amid the debris.  The constant clatter of falling stones
+echoes from the maw, as more debris tumbles into the unstable room.  A
+flicker of light pierces the darkness to the south, while a narrow crawl
+space allows passage onward.
+~
+[Tifa] Old Room 4897
+[Guin] Done.
+~
+200933381 11 5 0
+D2
+~
+~
+0 -1 6517 10 10 5
+D3
+~
+~
+0 -1 6519 10 10 5
+E
+huge rent ceiling split rubble~
+The remains of a sizable cave-in, the scar is a constant source of dust
+showers and falling pebbles.
+~
+E
+pine beams twisted metal braces~
+Unable to support the massive weight of rocks the beams have snapped and
+twisted.  Splinters of wood lie scattered atop the mounds of rubble.
+~
+E
+flicker light~
+The gutteral flame of distant torches partially illuminates the chamber.
+A few shadowy figures obscure the flame, then disappear from sight.
+~
+A
+~
+~
+send_to_room( #rocks, room );
+~
+E
+rocks~
+@cA stream of dust and rocks flows from the cracked ceiling.@n
+~
+!
+2 150 0
+A
+~
+~
+if( is_mob( ch ) )
+  continue;
+else {
+  if( find_stat( ch, dex ) < 14 ) {
+    act_tochar( #scratch, ch );
+    act_notchar( #rscratch, ch, obj, mob, sight );
+    damage( mob, ch, 1d4, physical, "a sharp rock", "sharp rock" );
+    continue;
+  }
+  else {
+    act_tochar( #noscratch, ch, obj );
+    act_notchar( #rnoscratch, ch, obj, mob, sight );
+    continue;
+  }
+}
+~
+E
+scratch~
+@YCrawling over the pile of rubble, your back gets caught on a sharp
+rock.@n 
+~
+E
+rscratch~
+@Y$n crawls over the pile of rubble, catching $s back on a sharp rock.@n
+~
+E
+noscratch~
+@GYou crawl over the pile of rubble, skillfully avoiding sharp rocks
+protruding from just about everywhere.@n 
+~
+E
+rnoscratch~
+@G$n crawls over the pile of rubble, successfully avoiding a sharp rock
+threatening to scratch $m.@n 
+~
+!
+3 0 4
+2053 17 1509949540 -2 0
+-1
+S
+
+#6519
+Dero Lair~
+The rough cut chamber is covered in a fine lattice of fissures - stress
+fractures from the heavy weight of the mountain above.  Pine beams
+support the more unstable portions of the ceiling, however the floor
+remains littered with chunks of fallen debris they have not been able to
+contain.  A trickling ribbon of water flows from a shadowy crack in the
+wall and fills the floor with about an inch of cold water.  A few bubbles
+rise near the western wall, where a fracture in the floor allows some of
+the pooling water to escape.  A broken, battered lantern hangs from a
+dangling chain; it hasn't been lit in quite some time.
+~
+[Tifa] Old Room 4898
+[Guin] Done.
+~
+200933381 11 5 0
+D1
+~
+~
+0 -1 6518 10 10 5
+D3
+secret door~
+~
+171 -1 6520 10 10 5
+E
+lattice fissures stress fractures~
+The room appears to have suffered some damage, perhaps from an earthquake.
+The lattice of cracks drip with dust and seeping water.
+~
+E
+pine beams~
+With some haste, the pine beams appear to have been jammed against the
+roof in order to prevent a total cave in.  A few scattered patches of
+bark still cling to the nearly-bare trunks.
+~
+E
+ceiling~
+Without the support of the pine beams, the roof would have crashed into
+the room some time ago.  Fist-size cracks appear at some of the more
+unstable points, a trickle of water oozing from them.
+~
+E
+floor debris~
+Scattered bits of wood and rock riddle the floor of the flooded chamber
+almost like a cluster of islands in a murky sea.
+~
+E
+trickling ribbon water shadowy crack~
+Just above the uneven ground, a fine crack slashes across the western
+wall; unerringly straight, it allows a trickle of water to escape.
+~
+E
+chain broken battered lantern~
+Well past any use, the lanterns dangle at shoulder height, each attached
+to a single chain that appears to disappear into the ceiling.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cSending ripples across the water, you splash eastward.@n
+~
+E
+to_room~
+@c$n sends a ripple across the water, as $e heads eastward.@n
+~
+!
+3 0 2
+A
+~
+~
+send_to_room( #room, room );
+~
+E
+room~
+@MThe sound of dripping water echoes through the dank cavern.@n
+~
+!
+2 150 0
+A
+pull~
+lantern chain~
+if( !is_open( room, west ) ) {
+  act_tochar( #ope, ch );
+  act_notchar( #rope, ch );
+wait( 1 );
+  act_room( #pull, ch );
+  open( find_room( 6519 ), west );
+}
+else
+act_tochar( #already, ch, obj );
+~
+E
+ope~
+@gYou pull upon the battered lantern, the chain gives a bit and a *click*
+echoes from the west.@n 
+~
+E
+rope~
+@g$n pulls upon the battered lantern, the chain moves slightly, and a
+*click* echoes from the west.@n 
+~
+E
+pull~
+@GThe sound of grinding stone rumbles through the tunnels.@n
+~
+E
+already~
+@yYou tug at the chain, but nothing really happens.@n
+~
+!
+0 0 0
+A
+~
+lattice fissures crack fractures~
+act_tochar( #nothing, ch, obj );
+act_notchar( #rnothing, ch, obj, mob, sight );
+~
+E
+nothing~
+@yYou search around the cracks for a while and find nothing but empty
+space filling them.@n
+~
+E
+rnothing~
+@y$n appears to be looking for something.@n
+~
+!
+9 0 0
+5404 9 1509949540 3 0
+3552 17 1509949540 -2 0
+-1
+S
+
+#6520
+Dero Lair~
+Cobwebs and dust coat the chamber giving it the feel of an abandoned crypt
+rather than a natural cavern.  Drag marks have been scuffed into the
+floor and lead up to an iron strongbox that rests against the western
+wall.  Old, battered lanterns hang from the roof, too damaged to be of any
+use.  A collection of grime-covered crates lie stacked in the middle of
+the chamber, their contents well picked through.
+~
+[Tifa] Old Room 4899
+[Galstaff] Extras checked
+[Guin] Add fake search crates here.
+[Guin] Reviewed.
+~
+200933381 11 5 0
+D1
+~
+~
+171 -1 6519 10 10 5
+E
+cobwebs dust~
+An indication of the age of the place, the cobwebs appear to gather
+little more than dust.
+~
+E
+drag marks scuffed~
+With some effort someone has dragged the heavy-looking strongbox across
+the floor.
+~
+E
+old battered lanterns~
+The dusty lanterns hang from a single chain, which is surprisingly free
+of debris and rust, unlike the rest of the room.
+~
+E
+grime-covered crates~
+Broken and discarded, the pine crates have been well looted.
+~
+A
+pull~
+lantern chain~
+if( !is_open( room, east ) ) {
+  act_tochar( #ope, ch );
+  act_notchar( #rope, ch );
+  wait( 1 );
+  act_room( #pull, ch );
+  open( find_room( 6520 ), east );
+}
+else
+  act_tochar( #already, ch, obj );
+~
+E
+ope~
+@gAs you pull at the lantern a door in the east opens with a click.@n
+~
+E
+rope~
+@gAs $n pulls on the lantern you here a soft *click* from the east@n
+~
+E
+pull~
+@GThe sound of stone grinding on stone fills the room as the lantern's
+chain begins to move upwards.@n 
+~
+E
+already~
+@yYou pull the chain but nothing happens.@n
+~
+!
+0 0 0
+2561 49 1509949540 -2 0
+0 0 1509949460 -2 0
+1 0 1509949460 -2 0
+12 81 1509949520 -2 0
+12 81 1509949500 -2 0
+12 81 1509949480 -2 0
+14 81 1509949470 -2 0
+14 81 1509949460 -2 0
+14 81 1509949450 -2 0
+2 81 1509949450 -2 0
+2 81 1509949448 -2 0
+2 81 1509949444 -2 0
+882 81 1509949460 -2 0
+638 81 1509949445 -2 0
+927 81 1509949445 -2 0
+1130 81 1509949445 -2 0
+5399 137 1509949540 3 0
+-1
+S
+
+#6521
+Dero Lair~
+Covering the cold stone floor of the chamber are a selection of
+semi-rotten furs and animal pelts.  The stench is almost overwhelming,
+with several of the skins oozing black, maggot-filled ichor. Hung
+from iron hooks in the ceiling are a collection of humanoid skulls, their
+bones covered in swirling red patterns.  Set into the eastern wall is a
+blood-splattered stone door.
+~
+[Tifa] Old Room 4891
+[Guin] Done.
+~
+200933381 11 5 0
+D1
+blood-spattered door~
+~
+131 -1 6517 10 10 5
+D2
+~
+~
+0 -1 6523 10 10 5
+D3
+~
+~
+0 -1 6522 10 10 5
+E
+stone floor semi-rotten fur animal pelts~
+The stained floor has been blanketed with desiccated bones and decaying
+animal pelts, mostly deer and rabbit, although a few appear to be more
+humanoid in origin.
+~
+E
+oozing black maggot ichor~
+The dissolving flesh has been churned into a putrid soup by the vigorous
+maggots that infest it.
+~
+E
+iron hooks humanoid skulls~
+Human and goblinoid skulls have been nailed to the blood-soaked door,
+perhaps in for some added decoration to the woodwork.
+~
+E
+swirling red pattern~
+The patterns seem to be symbolic sygils and runes, excluselively dero,
+and were painted in dried blood.
+~
+E
+blood splattered stone door~
+The amount of stained blood on the door makes it clear that it has been
+added by design rather than accident.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@RThe skulls and bones clatter together when you pass beneath them.@n
+~
+E
+to_room~
+@RThe skulls and bones clatter together when $n passes beneath them.@n
+~
+!
+3 0 12
+5395 9 1509949540 3 0
+-1
+S
+
+#6522
+Dero Lair~
+Every surface in the circular chamber gleams as if polished.  Light from
+a burning lantern suspended from the ceiling dances across the walls,
+making the rock appear to be on fire.  A pile of sparkling-clean skulls
+have been woven together with white cord, and covered with a soft-looking
+cloth, forming a crude chair.
+~
+[Tifa] Old Room 4890
+[Guin] Done.
+~
+200933381 11 5 0
+D1
+~
+~
+0 -1 6521 10 10 5
+E
+lantern~
+The dangling lantern leaves as many eerie shadows as it does light the
+room.  The dull yellow flame seems ready to sputter out at any moment.
+~
+E
+skulls white cord cloth chair~
+The humanoid skulls have been carefully stacked into a comfortable chair,
+the grim throne appealing to the evil dero.  Binding the heap are slim
+white ropes, the cords knotted together in several locations.
+~
+A
+~
+chair skull~
+if( rflag( reset0, room ) ) {
+  if( find_skill( ch, searching ) > random( 5, 10 ) ) {
+    remove_rflag( reset0, room );
+    act_tochar( #foun, ch, obj, mob, sight );
+    act_notchar( #rfound, ch, obj, mob, sight );
+    obj_to_room( oload( 7545 ), room );
+  }
+  else {
+    remove_rflag( reset0, room );
+    act_tochar( #first_search, ch, obj, mob, sight );
+    act_notchar( #rfirst_search, ch, obj, mob, sight );
+  }
+}
+else {
+  act_tochar( #ser, ch, obj, mob, sight );
+  act_notchar( #rser, ch, obj, mob, sight );
+}
+~
+E
+ser~
+@YThe chair appears to have been searched already.@n
+~
+E
+rser~
+@y$n quickly rummages around the skull chair.@n
+~
+E
+foun~
+@cYou rummage round the skull chair and dislodge something!@n
+~
+E
+rfound~
+@c$n searches the chair, knocking something loose.@n
+~
+E
+first_search~
+@yYou rummage around the chair, but fail to find anything.@n
+~
+E
+rfirst_search~
+@y$n rummages around the chair, but fails to find anything of interest.@n
+
+~
+!
+9 0 0
+A
+sit rest~
+chair throne~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( is_good( ch ) ) {
+    position( ch, 6 );
+    act_tochar( #sick, ch, obj );
+    act_notchar( #rsick, ch, obj, mob, sight );
+    damage( mob, ch, 1d6, physical, "an evil influence", "feeling sick while sitting on an evil throne" );
+  }
+  if( is_evil( ch ) ) {
+    position( ch, 6 );
+    i = random( 1, 6 );
+    act_tochar( #heal, ch, obj );
+    act_notchar( #rheal, ch, obj, mob, sight );
+    heal( ch, i );
+  }
+  if( is_neutral( ch ) ) {
+    position( ch, 6 );
+    act_tochar( #sit, ch, obj );
+    act_notchar( #rsit, ch, obj, mob, sight );
+  }
+}
+else
+  act_tochar( #repulsion, ch, obj );
+~
+E
+sick~
+@MAs you sit on the grim throne, a sudden feeling of sickness overcomes
+you.@n 
+~
+E
+rsick~
+@MAs $n rests on the skull-covered throne, $s suddenly goes pale and then
+a light shade of green.@n 
+~
+E
+heal~
+@MAs you sit on the grim throne, your cuts and scratches begin to
+close.@n 
+~
+E
+rheal~
+@MAs $n rests on the skull-covered throne, you notice his cuts and
+bruises fading away.@n 
+~
+E
+sit~
+@mAs you sit on the grim throne, you feel a hidden presence in the room,
+but you can't make out the source.@n 
+~
+E
+rsit~
+@m$n rests on the grim throne for a while.@n
+~
+E
+repulsion~
+@YYou step towards to throne, but decide against it.@n
+~
+!
+0 0 0
+5407 9 1509949540 3 0
+-1
+S
+
+#6523
+Dero Lair~
+Set into the western wall is an ornately carved stone door, its surface a
+tapestry of battle scenes filled with death and destruction.  The
+surrounding chamber has been lined with the remnants of furs and hides,
+forming a soft layer underfoot.  Copper sconces beside the door hold
+pools of bubbling tar, a blue flame dancing above them.  Pine tree trunks
+brace the ceiling, their bark and a few branches still remaining.
+~
+[Tifa] Old Room 4888
+[Guin] Done.
+~
+200933381 11 5 0
+D0
+~
+~
+0 -1 6521 10 10 5
+D3
+ornately carved door~
+~
+131 -1 6524 10 10 5
+E
+copper sconces~
+The sconces are carved into the shape of a rampant lion, the heat and
+mane forming a shallow tar filled bowl.  A flecking of blue flame dances
+across the bubbling pitch, giving off little heat and almost no light.
+~
+E
+stone door~
+Covered with countless images of death and destruction, the door shows a
+campaign of dero against what appear to be vyan overlords.  A simple loop
+of iron slides a bar to open the door.
+~
+E
+furs hides~
+The tattered remains of poorly cured hides cover the floor and lower
+walls.  A few oddly shaped mounds rise where excess fur has been piled up.
+~
+E
+tar blue flame~
+Above the sticky mass of burning tar, a cool blue flame burns dimly, a
+wisp of smoke spiraling off its tip.
+~
+E
+pine tree trunks bark branches~
+Roughly hewn and braced together, the pine trunks ooze with sticky sap
+from their scars.  Clusters of needles droop from the branches at the
+roof, under their soft canopy a few pine cones peak.  Chunks of cracked
+and split bark still cling to the wood.
+~
+A
+~
+~
+send_to_room( #spit, room );
+~
+E
+spit~
+@RThe burning tar spits and splutters and sends the blue flame dancing
+high across the smoke-stained roof before dying down again.@n
+~
+!
+2 150 0
+A
+~
+furs hides~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  i = random( 1, 100 );
+  if( i < 16 )
+    obj = oload( 40 );
+  else if( i < 32 )
+    obj = oload( 41 );
+  if( obj ) {
+    act_tochar( #fur, ch, obj );
+    act_notchar( #rfur, ch, obj, mob, sight );
+    obj_to_char( obj, ch );
+  }
+  else {
+    act_tochar( #none, ch );
+    act_notchar( #rnone, ch, obj, mob, sight );
+  }
+}
+else
+  act_tochar( #nothing, ch );
+~
+E
+fur~
+@YSearching through the pile of furs and hides, you find one worth
+taking.@n 
+~
+E
+rfur~
+@YSearching through the furs and hides, $n decides to take one.@n
+~
+E
+nothing~
+@yThere is nothing left to take.@n
+~
+E
+none~
+@yYou search through the furs and hides, but find none worth taking.@n
+~
+E
+rnone~
+@y$n searches through furs and hides, but decides not to take any.@n
+~
+!
+9 0 0
+A
+~
+~
+if( mob_in_room( 5404, room ) ) {
+  act_tochar( #block, ch, obj );
+  act_notchar( #rblock, ch, obj, mob, sight );
+}
+else
+  continue;
+~
+E
+block~
+@RThe dero guard steps infront of you threateningly, blocking off the
+door.@n 
+~
+E
+rblock~
+@RThe dero guard steps infront of $n, blocking his access to the door.@n
+~
+!
+8 0 8
+5404 9 1509949540 3 0
+-1
+S
+
+#6524
+Dero Lair~
+Covering the wall of the circular chamber are grimy hides, each of them
+stitched together to form a tent of foul-smelling skins.  An ornately
+carved stone door stands across an opening in the eastern wall, its
+surface covered with scenes of war.  Wisps of acrid smoke plume from
+burning oil basins that dangle from the roof, their flickering flames
+casting as many shadows as light.  A mound of furs has been heaped
+against the western wall, forming a serviceable bed.
+~
+[Tifa] Old Room 4889
+[Guin] Done.
+~
+200933381 11 5 0
+D1
+ornately carved door~
+~
+131 -1 6523 10 10 5
+E
+grime-covered hides tent skins~
+Cut from human skins and animal pelts, the filth infested skins are both
+flea-ridden and dirt-caked.
+~
+E
+burning oil basin acrid smoke plume~
+Spluttering out a weak light, the oil basins appear to be filled with a
+crude fat that resists most attempts to light it.
+~
+E
+mound furs bed~
+The 'bed' appears to be home to various forms insect life, the dirty
+skins moving with the sheer number of them.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CYou leave the odd cave-chamber, passing through the opening in the
+eastern wall.@n 
+~
+E
+to_room~
+@C$n leaves the odd cave-chamber, passing through the opening in the
+eastern wall.@n 
+~
+!
+3 0 2
+A
+~
+furs bed mound~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #start, ch, obj );
+  act_notchar( #rstart, ch, obj, mob, sight );
+  wait( 1 );
+  if( random( 1, 20 ) == 17 )
+    obj = oload( 16 );
+  else
+    obj = oload( 12 );
+  act_tochar( #coin, ch, obj );
+  act_notchar( #rcoin, ch, obj, mob, sight );
+  obj_to_char( obj, ch );
+}
+else
+  act_tochar( #already, ch, obj );
+~
+E
+start~
+@gSending a whole variety of insects scuttling away, you start searching
+through the makeshift bed.@n 
+~
+E
+rstart~
+@gBreaking up many an insect's home, $n starts searching through the
+makeshift bed.@n 
+~
+E
+coin~
+@GAt the bottom of the bed, you discover someone's life savings - $p!@n
+~
+E
+rcoin~
+@G$n appears to have found some sort of a coin under the pile of furs.@n
+~
+E
+already~
+@gThe scattered furs indicate the bed has already been searched.@n
+~
+!
+9 0 0
+5406 9 1509949540 3 0
+-1
+S
+
+#6525
+Dero Lair~
+Hacked into the soft limestone walls are deep grooves, where prying picks
+and shovels have cut a tunnel out of the natural rocks.  As the tunnel
+heads eastward, the limestone begins to end, replaced by a pitch-hued
+slate.  The roof and walls have been braced with beams of pine, a trickle
+of rock dust falling between them.  Suspended from the beams are battered
+oil lanterns, their flickering flames leaving shadows to dance across the
+ground.  A rusted iron grate has been set into the wall, forming a crude
+door that seals the eastern tunnel from the remaining catacomb.
+~
+[Guin] Old Room 4877
+[Guin] Done.
+~
+200933381 11 5 0
+D1
+old iron gate~
+~
+407 7869 6503 10 10 5
+D3
+~
+~
+0 -1 6507 10 10 5
+E
+limestone groves~
+The walls have been crudly hacked, perhaps in a attempt to bypass the
+iron grate or maybe to remove any valuables the stones would hold.
+~
+E
+roof walls beams pine~
+A newer addition to the caverns, the pine beams still smell fresh and
+gummy.  Around each cross-section the roof appears to sag a little less.
+~
+E
+battered oil lanterns flame~
+Ancient and rusted the oil lanterns provide as much light as a candle.
+~
+E
+iron grate~
+Rusted iron bars form a seemingly impenetrable barrier to the eastern
+caves, an inlaid lock and bar sealing it shut.  For added protection, a
+handful of stout spikes thrust out from both sides of the metal.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cThe tattered curtain pulls slightly on you as you brush past it and
+head westward through the tunnel.@n
+~
+E
+to_room~
+@c$n almost gets tangled up in the tattered curtain as $e head
+westward through the tunnel.@n
+~
+!
+3 0 8
+A
+~
+~
+continue;
+~
+E
+to_char~
+@y@yYou pass beneath the opening to the east, heading into the mine.@n
+~
+E
+to_room~
+@y@y$n passes beneath the opening to the east, heading into the mine.@n
+~
+!
+3 0 2
+5404 9 1509949540 3 0
+5404 9 1509949540 3 0
+-1
+S
+
+#0
+

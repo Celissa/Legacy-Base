@@ -1,0 +1,694 @@
+#M2_AREA
+2
+
+Grimblenash's Motherlode~
+Ciani~
+~
+~
+~
+
+0 0
+4
+1
+#ROOMS
+
+#7700
+A Narrow Passageway~
+The smoothed sides of the tunnel encroach claustrophobically from all
+sides.  A few striations of grey ripple through the black rock, which
+appears to absorb light.  The floor pitches steeply downwards into an
+inky blackness of shadow.  A few deep gouges have been taken out of the
+floor, presumably as hand and footholds.
+~
+~
+33161216 11 5 0
+D4
+~
+~
+0 -1 7918 10 10 5
+D5
+~
+~
+0 -1 7701 10 10 5
+-1
+S
+
+#7701
+A Narrow Passageway~
+The steep pitch of the floor evens out somewhat, although it still has a
+decidedly downwards slant.  The walls seem to pull back somewhat,
+providing almost enough space for a taller creature to walk upright. 
+Faintly luminescent lichens grow in sporadic patches, clinging to tiny
+clefts in the rocks.
+~
+~
+33161217 11 9 0
+D1
+~
+~
+0 -1 7702 10 10 5
+D4
+~
+~
+0 -1 7700 10 10 5
+-1
+S
+
+#7702
+A Narrow Passageway~
+The tunnel curves widely as it widens somewhat.  The inner wall of the
+curve is scratched and pitted as though some heavy machinery knocked
+against it repeatedly.  A low-pitched rhythmic noise echoes occasionally
+throughout the corridor, sounding as though it originates from further
+down the tunnel.  A few pebbles have accumulated along the edges of the
+stone pathway, likely left there by some outside source.
+~
+~
+33161216 11 9 0
+D2
+~
+~
+0 -1 7703 10 10 5
+D3
+~
+~
+0 -1 7701 10 10 5
+78 17 1509949490 -2 0
+-1
+S
+
+#7703
+A Narrow Passageway~
+The cave recommences its downward slope, although at a shallower grade
+than before.  A cleft in one of the cave walls might once have served as
+a torch bracket, but it stands empty.  Fine cracks in the ceiling of the
+tunnel are home to pale sprouting plants, their wiry tendrils clinging
+for dear life to the rock.
+~
+[Ciani] need a search for the cleft
+[Ciani] find a gold coin or something else of moderate interest about 50% of the time
+~
+33161216 11 9 0
+D0
+~
+~
+0 -1 7702 10 10 5
+D5
+~
+~
+0 -1 7704 10 10 5
+-1
+S
+
+#7704
+A Narrow Passageway~
+The path finally finds its equilibrium and evens out to a smooth ungraded
+passageway.  The walls pull back into a smallish cave; the ceiling
+seemingly dripping with stalactites.  A trickling sound permeates the
+air, accented by the staccato ring of metal against stone.  The gutteral
+flickering of a torch shoved into a cleft in the wall creates more shadow
+than light.
+~
+~
+33161216 11 9 0
+D1
+~
+~
+0 -1 7705 10 10 5
+D4
+~
+~
+0 -1 7703 10 10 5
+-1
+S
+
+#7705
+A Narrow Underground Cave~
+This section of the cave is a veritable forest of stalactites and
+stalagmites, which abound in such profusion that many have been broken or
+destroyed to allow passage through the cave.  A fine dust covers much of
+the floor, a document of hundreds of nearly indistinguishable small
+footprints.  Sounds of activity echo around the cave.
+~
+~
+33161216 11 9 0
+D1
+~
+~
+0 -1 7706 10 10 5
+D3
+~
+~
+0 -1 7704 10 10 5
+-1
+S
+
+#7706
+A Narrow Underground Cave~
+The ceiling rockets up suddenly, looking almost artificial.  Many of the
+nearby stalactites have been broken off at the base, providing
+much-needed headroom.  A faint unidentifiable smell hangs in the still
+air, slightly acrid but bearable.  The sounds of a slow-moving river come
+from nearby.  A slightly rusty basket has been attached to the wall with
+steel nails, and it is stuffed full of lichens and moss which emit a
+faint glow.
+~
+~
+33161217 11 9 0
+D0
+~
+~
+0 -1 7707 10 10 5
+D3
+~
+~
+0 -1 7705 10 10 5
+-1
+S
+
+#7707
+A Large Underground Cave~
+The cave opens up into more of a cavern, extending as one large room for
+some ways to the east.  Stalactites drip from the ceiling, hanging almost
+low enough to hit one's head against.  The sound of moving water is a
+soft background noise, as is the steady clink of metal against metal.  A
+long crevice near the ceiling has been stuffed full of lumiscent moss,
+which provides a gentle light to the surrounding area.
+~
+[Ciani] bags of rock, tool rack or somethin
+~
+33161217 11 9 0
+D0
+~
+~
+0 -1 7708 10 10 5
+D1
+~
+~
+0 -1 7710 10 10 5
+D2
+~
+~
+0 -1 7706 10 10 5
+-1
+S
+
+#7708
+A Large Underground Cave~
+Several thread-bare burlap sacks are piled haphazardly upon each other,
+barely holding their contents in.  One of the sacks near the bottom of
+the stack has split at the bottom seam its contents -- hundreds of tiny
+bits of rock -- have spilled into the corner of the cave.  A small river
+flows sluggishly off in the distance.  Long cracks in the wall have been
+filled with a phosphorescent moss, which provide light for the cave.
+~
+[Ciani] have bags of rock here or something
+~
+33161217 11 9 0
+D1
+~
+~
+0 -1 7709 10 10 5
+D2
+~
+~
+0 -1 7707 10 10 5
+78 17 1509949540 -2 0
+78 17 1509949515 -2 0
+78 17 1509949490 -2 0
+78 17 1509949490 -2 0
+78 17 1509949465 -2 0
+-1
+S
+
+#7709
+Along an Underground River~
+A slow-moving stream of water -- barely describable as a river --
+meanders through the cave along a bed carved over countless millenia. 
+The rock of the cave floor slopes sharply towards the channel for about
+half a foot, creating a decent enough bank to keep the river well in its
+course.  Somebody has set a straw-filled cushion upon the slope, and it
+shows evidence of repeated usage.  Dried globs of sludge and organic
+matter speckle the stone embankment, embedded here and there with small
+bits of stone.
+~
+[Ciani] river along here
+[Ciani] like to the east
+[Ciani] gnome here
+~
+33161216 11 9 0
+D2
+~
+~
+0 -1 7710 10 10 5
+D3
+~
+~
+0 -1 7708 10 10 5
+E
+straw-filled cushion~
+A small square sack of muslin stuffed with straw, which smells like it's
+begun to rot.  A firm impression of a small person's backside is distinct
+upon its patched and threadbare surface.
+~
+E
+dried globs sludge organic matter embankment bits~
+The random pattern of these blobs seem to indicate their having been
+carelessly dropped from the height of a few feet.  Composed mainly of
+mud, rotting vegetation and tiny pebbles, they smell faintly malodourouss. 
+Perhaps they were drawn from the river and discarded in disgust?
+~
+5102 9 1509949540 3 0
+-1
+S
+
+#7710
+Along an Underground River~
+The underground river flows by to the northeast, its surface dark and
+opaque.  Small piles of grit and sludge have accumulated along the stony
+bank, still slightly wet.  A couple shoddy hand-sieves have been
+abandoned on the floor, their meshes broken and rusty.  The ceiling of
+the cavern vaults high overhead, providing more than adequate headroom.
+~
+[Ciani] river ne
+[Ciani] gnome here
+~
+33161216 11 9 0
+D0
+~
+~
+0 -1 7709 10 10 5
+D1
+~
+~
+0 -1 7711 10 10 5
+D3
+~
+~
+0 -1 7707 10 10 5
+5102 9 1509949540 3 0
+-1
+S
+
+#7711
+Along an Underground River~
+The river curves broadly here, the bank forming a semicircle in response. 
+The drop to the bed is nearly vertical and slippery with some sort of
+slimy moss.  A hole has been chipped into the rock of the bank and a
+stout wooden pole protrudes.  A fine rope netting has been tied to the
+post and it drags in the river.
+~
+[Ciani] river n
+[Ciani] river east
+~
+33161216 10 9 0
+D2
+~
+~
+0 -1 7712 10 10 5
+D3
+~
+~
+0 -1 7710 10 10 5
+E
+stout wooden pole post fine rope netting~
+The wooden pole is unfinished and stands about four hands high.  The top
+is slightly split from being pounded exceedingly firmly into the hole. 
+The net is made of dozens of fine strands of rope tied together, and
+attached to the pole.  The net hangs in the water in an attempt to catch
+things moving downstream, but all it looks to have caught is a bunch of
+mud and silt.
+~
+5102 9 1509949540 3 0
+-1
+S
+
+#7712
+Along an Underground River~
+A few piles of broken rock and reedy silt have accumulated here and there
+upon the stone riverbank, smelling faintly of the nearby river.  The dark
+water moves sluggishly as it forks, one finger continuing south while the
+other moves eastward.  A bridge of plain wooden planks has been built
+across the river directly to the east, allowing dry passage to the other
+bank.
+~
+[Ciani] river ne
+[Ciani] it curves so going east means crossing a small brdge or something
+~
+33161216 11 9 0
+D0
+~
+~
+0 -1 7711 10 10 5
+D1
+~
+~
+0 -1 7714 10 10 5
+D2
+~
+~
+0 -1 7713 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou cross the narrow bridge over the river to the east.@n
+~
+E
+not_char~
+@y$n crosses the bridge over the river to the east.@n
+~
+!
+3 0 2
+-1
+S
+
+#7713
+Inside A Subterranean Cave~
+The dark river and cave both come to an end here at a smooth rock wall. 
+Tiny bits of quartz in the pale stone impurities reflect the light
+faintly.  The river flows southwards through a hole in the wall; only the
+topmost part of the hole is visible above the water.  A few dark
+stalactites hang over the river, the tips of the longest almost
+interrupting its flow.
+~
+[Ciani] river to east flows into cave wall...
+[Ciani] flows south
+~
+33161216 11 9 0
+D0
+~
+~
+0 -1 7712 10 10 5
+5102 9 1509949540 3 0
+-1
+S
+
+#7714
+Along A Narrow Stretch~
+This small outcropping of stone is surrounded on three sides by the dark
+waters of the subterranean river.  A rickety wooden bridge arches over
+the narrowest point of the river just to the west, linking the two banks. 
+A large stalagmite rears out of the river directly to the south, its tip
+dangerously sharp.  A rope has been tied around the finger near the top
+and leads back to the stony bank, and is tied tightly to a small wooden
+post sunk into a crack in the rock floor.
+~
+[Ciani] river north, west
+[Ciani] bridge to west
+~
+33161216 11 9 0
+D1
+~
+~
+0 -1 7715 10 10 5
+D3
+~
+~
+0 -1 7712 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou cross the narrow bridge over the river to the west.@n
+~
+E
+not_char~
+@y$n crosses the narrow bridge over the river to the west.@n
+~
+!
+3 0 8
+-1
+S
+
+#7715
+Along A Narrow Stretch~
+The sluggish river moves along both sides of this narrow expanse of rock. 
+The water to the south is soon bordered by the large cavern wall, which
+also keeps the river from flowing any further east.  The river seems to
+be leaving the cave through a hole in the wall just to the west.  A
+bridge of coarse boards has been constructed over the river just to the
+north, looking like it was assembled in a hurry.
+~
+[Ciani] river north
+[Ciani] bridge over river north
+~
+33161216 11 9 0
+D0
+~
+~
+0 -1 7717 10 10 5
+D1
+~
+~
+0 -1 7716 10 10 5
+D3
+~
+~
+0 -1 7714 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou cross the rickety bridge over the river to the north.@n
+~
+E
+not_char~
+@y$n crosses the rickety bridge over the river to the north.@n
+~
+!
+3 0 1
+-1
+S
+
+#7716
+Along an Underground River~
+The river is a silent presence to the north, its dark water still and
+soundless.  The cave wall to the east is smooth, rising to curve into the
+arched ceiling overhead.  An acrid smell comes strongly from the south,
+accompanied by numerous clinking and banging noises.
+~
+[Ciani] gold machine supervisor here...
+[Ciani] he will need an acode... when you try to go south he blocks you, when you try again he gives you "one last warning", third time he attacks
+~
+33161216 11 9 0
+D2
+~
+~
+0 -1 7721 10 10 5
+D3
+~
+~
+0 -1 7715 10 10 5
+-1
+S
+
+#7717
+By the River's Fork~
+The flat waters of the river drift silently to the south, their surface
+neither reflecting nor absorbing the nearby light.  A bridge of wooden
+slats has been constructed over the river to provide a means of moving to
+the other bank.  A rusty trowel and hand sieve lie abandoned on the dark
+floor amidst a pile of dried muck.
+~
+[Ciani] river south, bridge south
+[Ciani] river west
+~
+33161216 11 9 0
+D0
+~
+~
+0 -1 7719 10 10 5
+D1
+~
+~
+0 -1 7718 10 10 5
+D2
+~
+~
+0 -1 7715 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou cross the rickety bridge over the river to the south.@n
+~
+E
+not_char~
+@y$n crosses the rickety bridge over the river to the south.@n
+~
+!
+3 0 4
+-1
+S
+
+#7718
+Edge of an Underground River~
+The floor between the wall and the edge of the river is fairly wide,
+providing ample room to walk.  Tiny pits and scars in the floor's surface
+glint mutedly.  The stone embankment gently slope down to the dark, slow
+river, which glides by to the south.  Muddy gravel is littered all over
+the floor, mixed with lesser amounts of tiny quartz fragments and bits of
+leaf matter.
+~
+~
+33161216 11 9 0
+D1
+~
+~
+0 -1 7722 10 10 5
+D3
+~
+~
+0 -1 7717 10 10 5
+5102 9 1509949540 3 0
+-1
+S
+
+#7719
+Along an Underground River~
+The stone of the floor has been worn away by the ceaseless flow of the
+river, carving itself a fairly deep bed just to the southwest.  The water
+flows by sedately, its surface dark and calm.  Small bits of matter are
+stuck to the insides of the rocky bank, left by small waves and splashes. 
+Bits of gravel and silt are splattered across the floor, looking as
+though they were carelessly tossed from some height.  A few grey
+striations lace the rocky wall to the east.
+~
+[Ciani] river west
+~
+33161216 11 9 0
+D2
+~
+~
+0 -1 7717 10 10 5
+D3
+~
+~
+0 -1 7720 10 10 5
+-1
+S
+
+#7720
+A Rocky Point~
+A dark river slowly seeps out of a hole in the cave wall to the northwest
+into an ancient bed etched several feet into the rocky floor.  Upon the
+sloping embankments are several piles of sludge and silt, accumulated in
+many layers visible as stripes.  A stalactite hangs from the low roof
+directly overhead, creating something of an impediment.
+~
+[Ciani] river south, west
+[Ciani] acode for going around stalactite..... if you have less than 7 dex you walk into it by mistake when you try to leave east, lol,
+[Ciani] itll do about 1d10 damage and you end up in the room to the east on your ass cuz you fell
+~
+33161216 11 9 0
+D1
+~
+~
+0 -1 7719 10 10 5
+A
+~
+~
+if( find_stat( ch, dex ) < 7 ) {
+  act_tochar( #bump, ch );
+  act_notchar( #bump2, ch );
+  position( ch, 6 );
+  end;
+  }
+continue;
+~
+E
+bump~
+You clumsily bump your head against the stalactite, dropping you to the
+floor.@n 
+~
+E
+bump2~
+$n clumsily bumps $s head against the stalactite, dropping $m to the
+floor.@n 
+~
+E
+to_char~
+You walk around the pointed stalactite as you head eastward.
+~
+E
+to_room~
+$n walks around the pointed stalactite as you head eastward.
+~
+!
+3 0 2
+5102 9 1509949540 3 0
+-1
+S
+
+#7721
+Along an Underground River~
+Gleaming gold and gem fleck the walls of the tunnel, its slick surface
+broken by a multitude of pick marks where the gnomes have pryed at the
+precious metals and gemstones.  The dark waters of an underground river
+surgest to the east, the waters sending out chilling waves of mist.
+~
+[Ciani] gold machine
+[Ciani] What its gonna do is take 2 gold nuggets and spit out 5 gold coins.... since the nuggets are worth 150 each at 5% pop it sounds fair
+~
+33161216 11 9 0
+D0
+~
+~
+0 -1 7716 10 10 5
+-1
+S
+
+#7722
+Edge of an Underground River~
+The ceiling begins to slope downwards to the east, the grade so sharp it
+seems to materialize suddenly just above one's head.  A few raised
+circular spots on the ceiling are the last remnants of now-shattered
+stalactites, most likely removed to facilitate passage along this wide
+strip of cave.  The river to the south flows slowly, almost sluggishly,
+eastwards, disappearing into a hole in the bottom of the far cavern wall.
+~
+~
+33161216 11 9 0
+D1
+~
+~
+0 -1 7723 10 10 5
+D3
+~
+~
+0 -1 7718 10 10 5
+-1
+S
+
+#7723
+Edge of an Underground River~
+The ceiling of the cave meets the wall at an acute angle, creating the
+cavern's easternmost wall.  There appears to be a small hole near the
+bottom of the wall through which the river flows, passing further into
+the subterranean unknown.
+~
+~
+33161216 11 9 0
+D3
+~
+~
+0 -1 7722 10 10 5
+5102 9 1509949540 3 0
+-1
+S
+
+#0
+

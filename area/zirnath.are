@@ -1,0 +1,1199 @@
+#M2_AREA
+2
+
+Zirnath~
+Azerin and Co~
+zirnath~
+Zirnath~
+~
+
+0 544498024
+0
+1
+#ROOMS
+
+#150000
+Zirnath~
+A scattering of trees rise about the roadway, their mottled leaves
+scattering across the dwarven roadway.  Although it is hard to imagine the
+settlement of Zirnath will one day reach this spot, perhaps claiming the
+young trees for lumber.
+~
+~
+167247872 1 9 0
+D1
+~
+~
+0 -1 150001 10 10 5
+D3
+~
+~
+0 -1 4499 10 10 5
+2641 9 1509949540 3 0
+2641 9 1509949540 3 0
+-1
+S
+
+#150001
+Zirnath~
+Carving its way across the grasslands the gleaming cobbled road heads in
+an east-west direction, the fine dwarven roadway flanked by tall stands
+of beech trees and lush grass.
+~
+~
+167247872 1 9 0
+D1
+~
+~
+0 -1 150002 10 10 5
+D3
+~
+~
+0 -1 150000 10 10 5
+-1
+S
+
+#150002
+Zirnath~
+Wooden stakes rise from the grasslands, marking the boundries of one plot
+and the beginning of the next.  The cobbled roadway cuts eastwards deeper
+into the township or westwards towards forest and rolling hills.
+~
+~
+167247872 1 9 0
+D1
+~
+~
+0 -1 150003 10 10 5
+D3
+~
+~
+0 -1 150001 10 10 5
+-1
+S
+
+#150003
+Zirnath~
+The roadway continues onwards heading east and westwards across the great
+plains.  Far to the west the mountains rise, their icy peaks capped in
+perminant winter.
+~
+~
+167247872 1 9 0
+D1
+~
+~
+0 -1 150004 10 10 5
+D3
+~
+~
+0 -1 150002 10 10 5
+-1
+S
+
+#150004
+Zirnath~
+A cobbled road winds east and west through the low grasses of the plains,
+the track leading through what will soon be the township of Zirnath.  Far
+to the east the sea sparkles the white caps of massive waves dancing on
+its blue surface.
+~
+~
+167247872 1 9 0
+D0
+Black Iron Gates~
+black iron gate~
+131 -1 150041 10 10 5
+D1
+~
+~
+0 -1 150005 10 10 5
+D3
+~
+~
+0 -1 150003 10 10 5
+A
+open~
+n north black iron gate~
+if( !is_open( room, north ) ) {
+   act_room( #door, ch, obj, mob );
+}
+continue;
+~
+E
+door~
+@YThe gate's hinges screech as they are opened.
+~
+!
+0 0 0
+-1
+S
+
+#150005
+Zirnath~
+A few white-washed stones mark the ground in the grass, perhaps where a
+builder has claimed his or her plot.  For now only the grass and scrubs
+thrive on the new land, the hum of industry yet to touch the land.  Newly
+cobbled the Zirnath main road heads in an east-west direction, its
+gleaming surface awaiting the first of the trade wagons.
+~
+~
+167247872 1 9 0
+D1
+~
+~
+0 -1 150006 10 10 5
+D3
+~
+~
+0 -1 150004 10 10 5
+-1
+S
+
+#150006
+Zirnath~
+A handful of saplings grow at the roadside, the beech trees uncommon so
+close to the ocean.  A small way stone rests within their roots the stone
+without any mark or writing as of yet.  A squat smithy sends out ruddy
+light from its coals to the north.
+~
+~
+167247872 1 9 0
+D0
+~
+~
+0 -1 150034 10 10 5
+D1
+~
+~
+0 -1 150007 10 10 5
+D2
+~
+~
+0 -1 150035 10 10 5
+D3
+~
+~
+0 -1 150005 10 10 5
+A
+~
+~
+send_to_room( "@RA loud dwarven curse booms out from the shop to the south.@n", room );
+~
+!
+2 3 0
+-1
+S
+
+#150007
+Zirnath~
+Low scrub and grasslands spread out from the freshly cobbled road, the
+wilderness yet to give way to the settler's houses.  The neatly cobbled
+main street continues westwards and out of the new township or eastwards
+towards the sea.  Roads head off the main thoroughfare heading north and
+south, leading deeper into the new city.
+~
+~
+167247872 1 9 0
+D0
+~
+~
+0 -1 150017 10 10 5
+D1
+~
+~
+0 -1 150008 10 10 5
+D2
+~
+~
+0 -1 150018 10 10 5
+D3
+~
+~
+0 -1 150006 10 10 5
+-1
+S
+
+#150008
+Zirnath~
+Grass spreads out from the cobbled roadway, the young spring growth still
+thriving in the rich mountain-washed loam.  In the distance to the east
+the sea sparkles across the horizon, the clear ocean swarming with gulls. 
+Off cuts of recent stone work lie scattered through the weeds, a
+splattering of now dried mortar coating some of the leaves.
+~
+~
+167247872 1 9 0
+D1
+~
+~
+0 -1 150009 10 10 5
+D3
+~
+~
+0 -1 150007 10 10 5
+-1
+S
+
+#150009
+Zirnath~
+The cobbled roadway continues through the new settlement, allowing travel
+in a straight east-west direction.  Grass spreads around the roadside,
+much of it trampled down from the recent roadworks that have transformed
+the once muddy road into a quick cobbled highway.  Pegs have been driven
+into the ground marking where the buildings that will soon dominate the
+landscape are to be built.  Towards the north the dwarven workers have
+built a fine stone bank for the merchants of Zirnath.
+~
+[Azerin] bank north
+~
+167247872 1 9 0
+D0
+~
+~
+0 -1 150028 10 10 5
+D1
+~
+~
+0 -1 150010 10 10 5
+D3
+~
+~
+0 -1 150008 10 10 5
+-1
+S
+
+#150010
+Zirnath - Town Square~
+Skillfully crafted stone cobbles form an impressive roadway through the
+heart of Zirnath, the edges lined with shallow gutters that whisk away
+rain and debris from the causeway.  More of the township spreads outwards
+in all directions, the weeds and grasses standing where the homes of
+settlers will stand.  Standing in the center of the road is a simple
+water fountian ready to quench the thirst of those in need.  Eastwards
+the land continues to transform from pasture to sand as it reaches at
+last the eastern sea.  A squat stone keep rises to the south, the emblem
+of Zirnath fluttering from its high buttress.  An archway frames twin
+doors of black oak, a lattice of silvery metal re-enforcing it.
+~
+~
+167247872 1 9 0
+D1
+~
+~
+0 -1 150013 10 10 5
+D2
+silver-bound door~
+~
+131 -1 150011 10 10 5
+D3
+~
+~
+0 -1 150009 10 10 5
+2646 9 1509949540 3 0
+2641 9 1509949540 3 0
+2641 9 1509949540 3 0
+1 17 1509949540 -2 0
+-1
+S
+
+#150011
+Zirnath Keep~
+An antechamber has been cut from smooth finished stones greet guests to
+the Mayoral keep of Zirnath.  Tapestries depicting twin children crossing
+a great range of mountains flutter from the high ceiling; a happy yet
+determined look upon their faces.  Twin doors to the north allow access
+to the main street while to the south a single door leads deeper in to
+the keep.
+~
+~
+167247872 1 9 0
+D0
+silver-bound door~
+~
+131 -1 150010 10 10 5
+D2
+wooden door~
+~
+131 -1 150012 10 10 5
+-1
+S
+
+#150012
+Zirnath Keep~
+A great hall spreads out northwards its roof supported by finly carved
+columns of white stone.  Tapestries drape from brass rings at their apex,
+great dragons and beasts stitched upon their surface.  A door in the
+north leads from the meeting room, back to the antechamber of the keep.
+~
+~
+167247872 1 9 0
+D0
+wooden door~
+~
+131 -1 150011 10 10 5
+D1
+~
+~
+511 -1 150033 10 10 5
+A
+enter~
+tapestry~
+obj = is_wearing( 4107, ch );
+if( !obj )
+  obj = is_wearing( 4108, ch );
+if( !obj )
+  obj = is_wearing( 4242, ch );
+if( obj ) {
+  // zirn members only
+  act_tochar( #slip, ch, obj, mob, sight );
+  act_notchar( #rslip, ch, obj, mob, sight );
+  transfer( ch, find_room( 150033 ) );
+  act_notchar( #arrive, ch, obj, mob, sight );
+}
+~
+E
+slip~
+@YYou slip behind one of the tapestries and through the solid stone wall,
+$p tingling with magical energies.@n 
+~
+E
+rslip~
+$n disappears behind a tapestry and is gone.
+~
+E
+arrive~
+$n appears, stepping through the wall.
+~
+!
+0 0 0
+-1
+S
+
+#150013
+Zirnath - East Road~
+Cut from white stone, the cobbled road continues onwards, heading in an
+east-west direction.  As it draws further eastwards the land transforms
+from plain to scrub then finally to sand dunes and the massive eastern
+sea.  Directly westwards lies the heart of Zirnath, a stone well set
+beside the mayoral keep.  A sign adorned with a thread and bolt dangles
+from above the northern shop, a light shines from the window indicating
+the crafter is at work.
+~
+~
+167247872 1 9 0
+D0
+narrow door~
+~
+131 -1 150036 10 10 5
+D1
+~
+~
+0 -1 150014 10 10 5
+D3
+~
+~
+0 -1 150010 10 10 5
+-1
+S
+
+#150014
+Zirnath - East Road~
+Winding through the dried grass and coastal shrubs runs the main road of
+Zirnath, its surface cobbled from white stones.  A shallow gutter runs
+down each side of the passageway, drawing off any rain water to keep the
+road in as good condition as possible.  The sounds of ocean mix with the
+clumping of guards boots as the township goes about its business.
+~
+~
+167247872 1 9 0
+D1
+~
+~
+0 -1 150015 10 10 5
+D3
+~
+~
+0 -1 150013 10 10 5
+-1
+S
+
+#150015
+Zirnath - East Road~
+A finely cobbled path cuts its way through the rising dunes and grass,
+heading close and closer to the golden sand and crashing ocean that
+spreads eastwards.  Towards the west the land heads across fertile plains
+and forested hills before reaching the Everwinter Mountains, their peaks
+gleaming.
+~
+~
+167247872 1 9 0
+D0
+~
+~
+0 -1 150016 10 10 5
+D1
+~
+~
+0 -1 79000 10 10 5
+D2
+~
+~
+0 -1 150025 10 10 5
+D3
+~
+~
+0 -1 150014 10 10 5
+-1
+S
+
+#150016
+Zirnath - North Road~
+The northern road heads parallel to the great ocean framed by rolling
+dunes and wild grasslands.  A few scattered wooden pegs show where plots
+of land have been sold, the buildings yet to be built.
+~
+~
+167247872 1 9 0
+D0
+~
+~
+0 -1 150023 10 10 5
+D1
+wooden door~
+~
+407 4140 150032 10 10 5
+D2
+~
+~
+0 -1 150015 10 10 5
+-1
+S
+
+#150017
+Zirnath~
+A narrow cobbled road heads into the long grass, it's freshly completed
+surface still gleaming from a loving polish that the fastidious dwarven
+crafters applied.  The main street of Zirnath lies due south, the city
+slowing growing around it.
+~
+~
+167247872 1 9 0
+D0
+~
+~
+0 -1 150019 10 10 5
+D2
+~
+~
+0 -1 150007 10 10 5
+-1
+S
+
+#150018
+Zirnath~
+Cutting through the scrub and grass runs the neat cobbled road of a
+Zirnath side street.  Eastwards, the keep rises out of the landscape, the
+tallest building in Zirnath.
+~
+~
+167247872 1 9 0
+D0
+~
+~
+0 -1 150007 10 10 5
+D2
+~
+~
+0 -1 150021 10 10 5
+-1
+S
+
+#150019
+Zirnath~
+Continuing northwards, the gleaming cobbled road leads further across the
+grasslands, each paver cut precisely the same size as those surrounding
+it.  Cleared of debris, vast tracts of land have been carefully marked to
+indicate the boundary of prospective development sites.
+~
+~
+167247872 1 9 0
+D0
+~
+~
+0 -1 150020 10 10 5
+D2
+~
+~
+0 -1 150017 10 10 5
+-1
+S
+
+#150020
+Zirnath~
+Coming to an end here, the cobbled road has been neatly squared off.  A
+vast tract of empty land extends from far to the west, sweeps northward
+for quite some distance, and continues off to the east.  A small cottage
+has been built to the west, its wood freshly coated with paint.
+~
+~
+167247872 1 9 0
+D0
+~
+~
+162 -1 8000 10 10 5
+D2
+~
+~
+0 -1 150019 10 10 5
+D3
+wooden door~
+~
+0 4122 150029 10 10 5
+-1
+S
+
+#150021
+Zirnath~
+Continuing south through the empty fields, the neatly laid cobbles
+provide a durable roadway through the grass.  An occasional shrub
+clutches at the ground, trying desparately to withstand the inevitable
+destruction that flourishing civilisations bring with them.
+~
+[Azerin] rat reset
+~
+167247872 1 9 0
+D0
+~
+~
+0 -1 150018 10 10 5
+D2
+~
+~
+0 -1 150022 10 10 5
+-1
+S
+
+#150022
+Zirnath~
+The cobbled road ends abruptly, a swathe of wild grasses trampled by the
+workers.  Towering in the east, the Zirnath keep marks the centre of the
+developing city, its fluttering flag proudly boasting the town's emblem.
+~
+~
+167247872 1 9 0
+D0
+~
+~
+0 -1 150021 10 10 5
+D2
+~
+~
+0 -1 76250 10 10 5
+-1
+S
+
+#150023
+Zirnath - North Road~
+Continuing northwards, the road carries on into the broad grasslands, its
+path unerringly straight.  A great deal of craftsmanship has gone into
+the masonry of each flagstone, the corners squared of carefully in order
+to fit seamlessly with the surrounding cobbles.  From off to the east,
+the repetitive crash of water on land can be heard.
+~
+~
+167247872 1 9 0
+D0
+~
+~
+0 -1 150024 10 10 5
+D1
+iron oak door with the engraving of flames around the edges~
+iron oak door engraving flames~
+131 -1 150037 10 10 5
+D2
+~
+~
+0 -1 150016 10 10 5
+-1
+S
+
+#150024
+Zirnath - North Road~
+Ending in a swathe of trampled grass, the cobbled road comes to a halt. 
+Empty plots of land have been marked out by wooden stakes that protrude
+from the hard earth, indicating prospective development sites for future
+landowners.
+~
+~
+167247872 1 9 0
+D0
+~
+~
+162 -1 8006 10 10 5
+D2
+~
+~
+0 -1 150023 10 10 5
+-1
+S
+
+#150025
+Zirnath - South Road~
+The cobbled road lies upon a grassy field, the stones embedded into the
+hard-packed earth.  Away to the east, rolling sand dunes mark the border
+between the plains and the ocean, the thundering waves audible even from
+this distance.
+~
+~
+167247872 1 9 0
+D0
+~
+~
+0 -1 150015 10 10 5
+D2
+~
+~
+0 -1 150026 10 10 5
+D3
+wooden door~
+~
+131 -1 150030 10 10 5
+-1
+S
+
+#150026
+Zirnath - South Road~
+Continuing south from the main avenue, this side street lies in the midst
+of a grassy plain, opening up the landscape for future development.  Not
+far to the west, the towering Zirnath keep watches over the locale.
+~
+~
+167247872 1 9 0
+D0
+~
+~
+0 -1 150025 10 10 5
+D2
+~
+~
+0 -1 150027 10 10 5
+-1
+S
+
+#150027
+Zirnath - South Road~
+Cutting across the grasslands, the cobbled roadway continues south. 
+Dunes, marking the border between the coast and the fields, protect the
+township from a cool onshore breeze.  Off to the west, it is possible to
+see the flag of Zirnath fluttering in the breeze.
+~
+~
+167247872 1 9 0
+D0
+~
+~
+0 -1 150026 10 10 5
+-1
+S
+
+#150028
+Zirnath Bank~
+The stone walls of the vault have been re-enforced with iron bars that
+ensure the safe keeping of the stored goods.  A stout door leads out to
+the south, like the walls its surface laticed with metal.  An alcove in
+the northern wall enables patrons to secure their goods.
+~
+~
+167249924 1 9 0
+D2
+~
+~
+0 -1 150009 10 10 5
+-1
+S
+
+#150029
+Under the Branches of a Large Tree~
+You find yourself standing under the branches of a huge tree.  Its
+branches spread out above in all directions, creating a cool and
+refreshing shade.  The trunk of the tree is to the west, and in the trunk
+is a beautifully carved door that appears to open into the tree.  You
+notice writing carved into the door, which on closer inspection reads:
+Home of Keondu and Snarp.  The grass under your feet is soft and lush,
+with violets growing throughout it, creating a soft fragrance.  Various
+flowers, including lily of the valley and forget-me-nots are growing
+around the base of the huge tree.  To the north is a post for tieing pets
+to, and next to it a trough full of clean water for them to drink from. 
+Large leafy bushes grow all around, leaving the only exit to the east, or
+through the doorway to the west 
+~
+~
+167247873 0 7 0
+D1
+wooden door~
+~
+0 -1 150020 10 10 5
+D3
+wooden door~
+~
+407 4122 150043 10 10 5
+-1
+S
+
+#150030
+Pine Lodge~
+Built around the massive bole of an old oak tree, the building is
+circular in shape.  Evenly spaced roughly hewn beams encircled with ivy
+meet the distance from tree to wall hatching bound by the same ivy fills
+the spaces.  The Tree must be rather ancient judging from its size, as
+many trees of great age the heart has hollowed out making for a
+convenient hearth.  On the opposite side of the tree a rope ladder
+reaches up to the ceiling, a circular portal gives access to the roof. 
+The walls are made of pine, lending a fresh smell to the room, muted by
+the smell of various animals.  Several paintings adorn the wall, either
+showing hectic battle scenes or of tranquil nature settings, there is
+also the obligatory five point white stag trophy head.  There is no
+furniture to speak of, but the floor is practically blanketed in several
+piles of bearskins that seem to serve for both sitting and bedding.  In
+the corner lies a pile of adventuring equipment - coils of rope, climbing
+spikes, a shovel and a pickaxe.
+~
+~
+167247884 0 6 0
+D1
+Wooden Door~
+~
+131 -1 150025 10 10 5
+D4
+trap door~
+~
+215 -1 150031 10 10 5
+-1
+S
+
+#150031
+Pine Lodge~
+Under Construction.
+~
+~
+167247872 1 9 0
+D5
+~
+~
+215 -1 150030 10 10 5
+-1
+S
+
+#150032
+Humble Cottage~
+Slabs of neatly fitting stone form the snug walls of the house, a slim
+layer of mortar binding them together.  Narrow windows have been set in
+the east allowing a touch of light to warm the room.  Over head wooden
+rafters support a roof of thatching, the material cheap and surprisingly
+snug to both the houses owner and the great proliferation of mice and
+rats that enjoy the straw.
+~
+~
+167247872 1 9 0
+D3
+wooden door~
+~
+407 4140 150016 10 10 5
+-1
+S
+
+#150033
+City Vault~
+You are inside the vault of the city of Zirnath, a small but secure room
+deep within the Zirnath Keep.  The walls are made from solid stone making
+the room rather cold and grey, however unlike many cellars there are no
+leaks.  A shining portal in one wall appears to be the only way out.
+~
+[Seltha] Only ONE iron-banded chest (vnum 2968) should exist in this room.
+~
+-335839171 1 9 0
+D3
+~
+~
+511 -1 150012 10 10 5
+A
+~
+~
+if( !is_player( ch ) )
+  end;
+if( find_stat( ch, level ) < 98 ) {
+  send_to_char( "You cannot take anything from here.", ch );
+  end;
+}
+else
+  continue;
+~
+!
+15 0 0
+A
+2 aset 2 aedit 2 acode~
+*~
+if( find_stat( ch, level ) < 98 ) {
+  send_to_char( "Action editor disabled here.", ch );
+  end;
+}
+continue;
+~
+!
+0 0 0
+A
+enter~
+portal~
+act_tochar( #leave, ch, obj, mob, sight );
+act_notchar( #rleave, ch, obj, mob, sight );
+transfer( ch, find_room( 150012 ) );
+act_notchar( #arrive, ch, obj, mob, sight );
+~
+E
+leave~
+You step through the portal and arrive back in the Zirnath Keep.
+~
+E
+rleave~
+$n steps through the portal and is gone.
+~
+E
+arrive~
+$n slips out from behind one of the tapestries.
+~
+!
+0 0 0
+A
+poke~
+~
+loop( objects ) {
+obj_to_char( robj, ch );
+}
+~
+!
+0 0 0
+A
+~
+~
+mob = mob_in_room( 2749, room );
+if( !mob ) {
+  // load the vaultkeeper
+  mob = mload( 2749, room );
+  act_room( "$n bustles in, apologising for being late.", mob, obj, ch, sight );
+}
+else {
+  mpcode( mob, 1 );
+}
+~
+!
+4 1000 0
+-1
+S
+
+#150034
+Zirnath Weapons~
+The room is dominated by a forge where the weaponsmith works to make and
+repair many weapons.  The fruits of his labor line the walls in very
+organized racks.  In the back corner of the room is a pile of weapons
+that the weaponsmith has yet to get to.
+~
+~
+167247872 1 9 0
+D2
+~
+~
+0 -1 150006 10 10 5
+2668 9 1509949540 3 0
+3028 17 1509949540 -1 0
+3001 17 1509949540 -1 0
+930 17 1509949540 -1 0
+380 17 1509949540 -1 0
+-1
+S
+
+#150035
+Zirnath Armorsmith~
+This small building is packed full of metal scrap and various forms of
+armor.  While it is obvious that the shopkeeper is not the most organized
+good at what he does.  In the back of the room is the anvil and forge
+where the shopkeeper does his work.
+~
+~
+167247872 1 9 0
+D0
+~
+~
+0 -1 150006 10 10 5
+2672 9 1509949540 3 0
+1077 17 1509949540 -1 0
+2003 17 1509949540 -1 0
+980 17 1509949540 -1 0
+186 17 1509949540 -1 0
+-1
+S
+
+#150036
+Zirnath - Fine Tailored Goods~
+The room has been filled with bolts of brightly coloured cloth, yards of
+silk and hundreds of thread spools.  A loom rests against the north wall,
+a half finished pattern appearing in its cords.  A circular table lies
+piled with jumbles of garment designs, the bundles held down with tiny
+crafting blades.  A narrow door to the south leads back onto the main
+street of Zirnath.
+~
+~
+167247872 1 9 0
+D2
+narrow door~
+~
+131 -1 150013 10 10 5
+2734 9 1509949540 3 0
+4391 17 1509949540 -1 0
+-1
+S
+
+#150037
+Wizard's Tower Foyer~
+As you walk into this room you are standing at the end of a very long and
+splendid hall with a highly polished darkwood floor.  The ceiling is
+bright blue and inlaid with gleeming golden symbols that continually move
+and change like a heavenly notice board.  The walls on each side are
+paneled in shiny dark wood and have many gilded fireplaces set into them. 
+Halfway down the hall is a fountain, the fountain consists of assorted
+mythical beasts and suchlike that stand in themiddle of a pool while a
+jet of crystal-clear blue water shoots upward glistening in the lights,
+the sights and sounds of the fountain soothe you as though you are
+entranced by its beauty.
+~
+need a fountian extra
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 150038 10 10 5
+D3
+iron oak door with the engraving of flames around the edges~
+iron oak door engraving flames~
+131 -1 150023 10 10 5
+-1
+S
+
+#150038
+Wizard's Tower Shop~
+A strange anomoly exists here, while the room seems perfectly ordinary at
+a glance the walls seem to shift out of focus unless you look at them
+directly.  An extensive libary of ancient tomes is held by volumonius
+bookcases that stretch to the corner of each wall.  Encased behind
+protective glass the encyclopediac collection is well labeled with bronze
+tabs identifying the correct placement for each book.  The floor is made
+of black tiles with an unbroken silver circle edged with runic symbols
+dominating the circumference of the room.  A workbench is in the middle
+of the room, covered with a variety of strange and unsual objects in
+addition to a chain of bubbling beakers, spiralling tubes and drippers.
+~
+okies ubber powerful mage here
+~
+167248128 0 9 0
+D3
+~
+~
+0 -1 150037 10 10 5
+D4
+~
+~
+0 -1 150039 10 10 5
+95 9 1509949540 3 0
+-1
+S
+
+#150039
+Wizard's Tower Lab~
+Unlike the room before, you seem to have stepped straight into a dungeon. 
+different instruments the likes of which you know not.  On the shelves
+there are assorted jars and beakers, all of which are filled with
+soemthing different, one jar in particular stands out, it seems to be
+encased in some sort of glass case as you look more closely at it, it
+dawns on you that you are looking at some kind of unborn fetus of sorts,
+floating aimlessly around in its gelotonous coccoon.  Where there should
+be a wall or something to the east there is nothing.  A faint breeze
+drifts in from this giant window of sorts.  The window looks out across a
+short beach to the ocean.  On a good day you can see a small archipelago
+of islands.  As you look through the window you realize that none of the
+various birds and insecst flying by have strayed into the room.
+~
+~
+167247877 0 9 0
+D3
+~
+~
+0 -1 150040 10 10 5
+D5
+~
+~
+0 -1 150038 10 10 5
+-1
+S
+
+#150040
+Wizard's Tower Living Quarters~
+Other than the cabalistic runes that have been painted on ceiling the
+room is a rather simple affair.  A large bay window overlooks the
+bustling town of Zirnath and provides the source of light and breeze.  To
+the right of the window is a neatly made, comfortable looking bed. 
+Beside the bed sits a nightstand with a half-spent candle, a colorful rug
+also adorns the floor.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 150039 10 10 5
+1392 17 1509949540 -2 0
+-1
+S
+
+#150041
+Gloomy Graveyard~
+The land itself is dead, but yet something lives here.  Dense mist creeps
+along the ground, flowing between headstones.  A blackend oak tree stands
+in the middle of eight headstones.  Swinging from one of the branches is
+a noosed rope.  Broken leaves and twigs lead up the center of this path
+towards a mausoleum.
+~
+~
+167247872 1 9 0
+D0
+Large Obsidian Double Doors~
+obsidian double door~
+131 -1 150042 10 10 5
+D2
+Black Iron Gates~
+black iron gate~
+131 -1 150004 10 10 5
+A
+~
+~
+act_room( #creek, ch, obj, mob );
+~
+E
+creek~
+@A low end screeching echos through the graveyard.
+~
+!
+2 250 0
+A
+~
+~
+act_tochar( #mist, ch, obj, mob );
+~
+E
+mist~
+@bThick mists weaves between your legs.
+~
+!
+2 450 0
+A
+open~
+s south black iron gate~
+if( !is_open( room, south ) ) {
+   act_room( #door, ch, obj, mob );
+}
+continue;
+~
+E
+door~
+@YThe hinges on the gate creak as you open them.
+~
+!
+0 0 0
+-1
+S
+
+#150042
+Shadowy Mausoleum~
+The walls are lined with linen-wrapped corpses.  Three in-cut shelves
+line each wall, one above the other.  Oil burning brazers have been hung
+in each corner.  Stand in the middle of the room is a large obsidian
+sepulture.  Carved into the lid of the sepulture is a depiction of Xharax. 
+Neatly scribed around the lip of the sepulture are small necromantic
+glyphs.
+~
+~
+167247872 1 9 0
+D2
+Large Obsidian Double Doors~
+obsidian double door~
+131 -1 150041 10 10 5
+A
+look~
+xharax lid deciption scepulture~
+act_tochar( #lid, ch, obj, mob );
+~
+E
+lid~
+This tomb looks very new, but a presence of something ancient linger
+about it.  The carved depiction of Xharax is almost life like.  Two small
+fiery-red rubies have been layed for eyes.  His wings wrap down around
+the side of the tomb.  A vile snear is apon his lips.  With the dancing
+flames, his eyes appear to be staring into your soul.
+~
+!
+0 0 0
+A
+look~
+necromantic glyphs lip~
+act_tochar( #glyph, ch, obj, mob );
+~
+E
+glyph~
+The glyphs flow all the way around the sepulture.  These glyphs
+alternately pulsate between red and black.  The glyphs flow through the
+wings, up one of the veins on each side.
+~
+!
+0 0 0
+A
+~
+~
+act_room( #fire, ch, obj, mob );
+~
+E
+fire~
+@rThe fire within the braziers dances, causing the shadows to come alive.
+~
+!
+2 200 0
+-1
+S
+
+#150043
+A Cozy Home Inside a Large Tree~
+Stepping inside, you notice that the whole tree is hollow and has been
+turned into a large cozy room.  Intricate swirling designs of various
+birds and animals have been painted in bright colors over the walls.  An
+attractive stone fireplace has been constructed against the wall to the
+west, providing a roaring hot fire for cold winter days, and a large
+colourful rug lies on the floor infront of it.  In the north west corner
+of the room a small spiral staircase leads higher up into the tree, and a
+high glass door behind it provides an exit out into the backyard to the
+west.  Large windows in the north and south walls provide light for the
+room.  Vines of wisteria growing outside partially cover the windows
+causing the light to enter in sparkles as the sunlight shines through.  A
+large dining table has been placed, with a chair either end of it, near
+the window to the south.  A small window in the east wall next to the
+doorway looks out to the front garden and the road of Zirnath.
+~
+~
+167247877 0 9 0
+D1
+~
+~
+407 -1 150029 10 10 5
+-1
+S
+
+#0
+

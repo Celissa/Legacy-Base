@@ -1,0 +1,2739 @@
+#M2_AREA
+2
+
+Ironguard Dwarves~
+Azerin Morros~
+Iron Guard~
+~
+~
+
+30 0
+0
+1
+#ROOMS
+
+#2250
+Edge of the Grasslands~
+Scattered across the landscape, tall stands of wild grain spill into the
+savannah and merge with the wild grasses there.  A dry dirt road cuts
+through the grasslands, its surface dust blown about by an ever present
+wind.  Eastward, hills rise in natural progression toward the towering
+white-capped peaks of the Everwinters.  A deep ravine cuts through the
+countryside, snaking its way north; the torrential white water of a river
+surges along its bottom.
+~
+[Azerin] savanah land, wild critters lvl 5-10
+[Guin] Done.
+~
+167247880 2 9 0
+D0
+~
+~
+0 -1 2251 10 10 5
+D2
+~
+~
+0 -1 5949 10 10 5
+E
+east hills everwinters~
+Tall stands of golden grain spread across the nearby terrain,
+disappearing into the heavy grass growth of the savannah.
+~
+E
+dirt road~
+A hard-packed dirt road cuts through the countryside to the north and
+southward.  A thin layer of dust and a scattering of pebbles covers the
+brick-like trail, shifting constantly in the nearly constant breeze.
+~
+E
+hill 1 east everwinter mountain~
+A series of hills rise progressively higher in height toward the great
+span of the lofty, white-capped peaks of the Everwinter Mountains.
+~
+A
+~
+~
+send_to_room( #wind, room );
+~
+E
+wind~
+@GWind whips through the grasslands, sending ripples across the savannah
+like waves across across a sea-green ocean.@n 
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@YYou make your way along the dusty road toward the $d.@n
+~
+E
+to_room~
+@Y$n makes $s way along the dusty road toward the $d.@n
+~
+!
+3 0 5
+-1
+S
+
+#2251
+Grass and Hills~
+A low hill rises amid the grasslands, its western flank delineated by a
+line of red-leafed trees.  Eastward, the majestic peaks of the Everwinter
+Mountains cut jaggedly across the horizon, their white-capped peaks faded
+against the sky.  Scarring the landscape, a ravine twists a tortuous
+path, a surging river coursing through the craggy basin.  A dusty trail
+skirts the ravine, following its ninety-degree jog to the north.
+~
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 2252 10 10 5
+D2
+~
+~
+0 -1 2250 10 10 5
+E
+red-leafed trees red leafed 1 west hill~
+A long row of tall trees flanks the western side of the low hill, jutting
+through the sea of grass to hinder passage in that direction.  The trees'
+foliage, brilliant hues of crimson and orange, are a striking contrast to
+the sea of golden grass.
+~
+E
+ravine 1 east river dirt path~
+A hard dirt path follows the line of the ravine to the north then turns
+sharply, scarring the land as it splits into two vast sections.  Deep
+within the chasm, a surging river flows onward, eroding the rocks that
+hold its powerful currents in place.
+~
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 ) {
+  send_to_room( #river, room, sight );
+}
+if( i == 2 ) {
+  send_to_room( #wind, room, sight );
+}
+if( i == 3 ) {
+  send_to_room( #wind2, room, sight );
+}
+~
+E
+wind~
+@YGusting strongly from the east, a wind whips dust and debris spinning
+into the air.@n 
+~
+E
+river~
+@CThe sounds of a surging river echoes in the ravine, and a fine spray of
+mist billows from the rocky gorge.@n 
+~
+E
+wind2~
+@RThe red-hued leaves rustle in the gusting breeze, whispering the secret
+songs of the trees.@n 
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@YFollowing the path along the ravine northward, dust billows in your
+wake.@n 
+~
+E
+to_room~
+@YDust billows behind $n, as $e follows the dirt path to the north.@n
+~
+!
+3 0 1
+176 9 1509949540 3 0
+-1
+S
+
+#2252
+Along a Ravine~
+Skirting the edge of the gorge, a dusty dirt path cuts through this half
+of the grasslands and circles an ancient tree.  At the bottom of the
+ravine, a powerful river boils through a narrow gap, as if trying to
+force its way beyond the narrow confines of the space.  A succession of
+rising foothills leads to the base of the Everwinter Mountains, standing
+stark and bare in the distance.  Waves of yellow-brown grass, heavy with
+seedpods stretch to the west and north, fading into the horizon in those
+directions.
+~
+[Guin] Done.
+~
+167247872 2 9 0
+D2
+~
+~
+0 -1 2251 10 10 5
+D3
+~
+~
+0 -1 2253 10 10 5
+E
+foothills succession base Everwinter Mountain~
+The rock-bound gorge cradles the gushing river, clutching it within its
+grasp.  At this point, the width of the ravine narrows, forcing the
+waters below into a churning, boiling stretch of deadly, whitewater
+rapids.
+~
+E
+hills 1 north stone building~
+Like the ancient titans of lore, the towering, snow-capped peaks of the
+Everwinter Mountains, loom over the lands below.
+~
+E
+waves grass seedpods 1 north 1 west horizon.~
+Stretching as far as the eye can see, a sea of grass dominates the
+landscape.  Only a lone, twisted tree disturbs the yellow expanse.
+~
+E
+ancient tree~
+An ancient tree, its limbs heavy with foliage, grows amid the spreading
+grassland.  Beneath its gnarled and twisting branches, a patch of shade
+provides a spot for resting.
+~
+A
+~
+~
+send_to_room( #rocks, room );
+~
+E
+rocks~
+@CWith a clatter, a few loose rocks tumble from the ravine's edge and
+disappear into the churning waters below.@n 
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@YYou follow the gentle slope of the low hill, southward.@n
+~
+E
+to_room~
+@Y$n follows the gentle slope of the low hill, southward.@n
+~
+!
+3 0 4
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GFollowing the line of the ravine, you take the western curve of the
+path.@n 
+~
+E
+to_room~
+@GFollowing the line of the ravine, $n takes the western curve of the
+path.@n 
+~
+!
+3 0 8
+-1
+S
+
+#2253
+Copse Beside the Ravine~
+Embracing the ravine, tall, graceful trees reach skyward and spread wide,
+casting dappled patterns of light and dark on the ground below.  Tangled
+and gnarled roots dig deep into the earth where a scattered clusters of
+blossoming wildflowers make their home.  The path pulls inward slightly,
+following the ravine's change of direction.  One, particularly old tree
+stands in the center of the path, a few lower branches enabling it to be
+climbed.
+~
+[Morros] Done.
+[Guin] Done.
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 2252 10 10 5
+D3
+~
+~
+0 -1 2254 10 10 5
+D4
+~
+~
+1024 -1 2281 10 10 5
+E
+trees branches roots wildflowers shadows~
+The patches of dappled shadow and light cool this section of the trail, a
+vast tree providing the deepest shade.  Blooming amidst some twisted and
+gnarled roots, clusters of diminutive wildflowers create and embroidery
+of color in the other dusty yellow savannah.
+~
+E
+path ravine debris~
+The trail pulls slightly away from the ravine's edge where it jogs
+sharply before continuing on its east to west trajectory.  Gusting winds
+have manage to keep the path's hard-packed surface relatively clear of
+fallen leaves or debris.  Down below, a raging river occupies the gorge's
+bottom, splitting the grasslands into to two vast halves.
+~
+A
+~
+~
+send_to_room( #branch, room );
+~
+E
+branch~
+@GThe branches overhead creak and groan as a strong wind buffets them.@n
+~
+!
+2 200 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@YPlodding up the hill, you slowly make your way $d.@n 
+~
+E
+to_room~
+@YPlodding $s way up the hill, $n heads eastward.@n 
+~
+!
+3 0 2
+A
+climb~
+tree maple 1 up~
+if( can_fly( ch ) ) {
+  act_tochar( #fly, ch, obj, mob, sight );
+  act_notchar( #rfly, ch, obj, mob, sight );
+  transfer( ch, find_room( 2281 ) );
+  act_notchar( #farrive, ch, obj, mob, sight );
+}
+if( find_skill( ch, climb ) > 4 ) {
+  act_tochar( #climb, ch, obj, ch, sight );
+  act_notchar( #climb2, ch, obj, ch, sight );
+  transfer( ch, find_room( 2281 ) );
+}
+else {
+  act_tochar( #fail, ch, obj, ch, sight );
+  act_notchar( #fail2, ch, obj, ch, sight );
+}
+~
+E
+climb~
+@wYou make your way up the maple tree.@n 
+~
+E
+climb2~
+@w$n climbs the maple tree.@n 
+~
+E
+fail~
+@cYou fail to climb the maple tree.@n
+~
+E
+fail2~
+@c$n fails to climb the maple tree.@n
+~
+E
+fly~
+@yYou fly up the maple tree, and alight on one of it's branches.@n
+~
+E
+rfly~
+@y$n flies up the maple tree, and alights on one of the branches.@n
+~
+E
+farrive~
+@y$n alights on one of the branches near you.@n
+~
+!
+0 0 0
+A
+~
+~
+send_to_char( #nope, ch );
+~
+E
+nope~
+@GClimbing the tree might be a better option.@n
+~
+!
+3 0 16
+176 9 1509949540 3 0
+-1
+S
+
+#2254
+Fallen Tree~
+The trunk of a massive felled tree spans the ravine from one rocky side
+to the other.  Bare of any branches, the tree serves as a safe crossing
+for the terrible scar in the earth's crust.  An arrangement of rocks
+crowd the ravine here, providing a barricade against a deadly fall.  The
+ravine turns sharply southward, affectively halting travel to the west. 
+~
+[Guin] Done.
+[Jydan] affectively -> effectively
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 2255 10 10 5
+D1
+~
+~
+0 -1 2253 10 10 5
+E
+ravine bridge branches 1 north~
+Spanning the ravine from one side to the other, a sturdy tree serves as a
+bridge.  Its craggy bark provides good footing, making the crossing
+easier.  The tree is bare of any branches, all removed and smoothed down
+so the points do not jut out; if not for the missing bark, it would be
+hard to tell where the branches even were.  The ravine, running from west
+to east, takes a degree turn and vanishes into the distance to the south.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@BScrambling for footing, you latch onto the log crossing it toward the
+north.@n 
+~
+E
+to_room~
+@B$n latches onto the log and crosses it to the north.@n 
+~
+!
+3 0 1
+A
+~
+~
+send_to_room( #bird, room, sight );
+~
+E
+bird~
+@gThe shuffle of birds disturbs the silence as they fly from one tree to
+another.@n 
+~
+!
+2 150 0
+-1
+S
+
+#2255
+Fallen Tree Across the Ravine~
+The rough texture of the bark creates a somewhat safe passage across the
+gorge, the trunk being just as strong along this section as it is at
+either end where it is securely fastened.  Along the bottom of the gorge
+far below, the river tumbles onward on along its course, undeniable in
+its power.  A hut, situated to the north, seems to have been made from
+the larger limbs and branches removed from the tree bridge.  Southward,
+the land is blanketed in waves of foot-high grass as far as the eye can
+see.
+~
+[Guin] Done.
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 2256 10 10 5
+D2
+~
+~
+0 -1 2254 10 10 5
+E
+branches hut~
+The hut, rising above the sea of grass, looks to be abandoned, or perhaps
+it's just a stopgap shelter for travelers across the plains.  The walls
+lean this way and that and the roof is hole riddled.  It was constructed
+from bark-stripped tree branches and the wood is grey and weathered from
+exposure to the climate and the humidity of the river at the gorge's
+bottom.
+~
+E
+bark passage trunk end bridge~
+The trunk of a massive tree spans the gorge from side to side.  Stripped
+of branches, the bark is still in place, creating somewhat secure footing. 
+At either end of the span, braces of thick wooden poles where driven deep
+into the ground on both sides of the tree to hold it immobile.
+~
+A
+~
+~
+i = random( 1, 2 );
+if( i == 1 )
+  send_to_room( #spray, room );
+if( i == 2 )
+  send_to_room( #smoke, room, sight );
+~
+E
+spray~
+@CMist from the river below rises over the edge of the ravine in
+sparling cloud.@n 
+~
+E
+smoke~
+@cSmoke spirals out of the hole-riddled roof in the hut to the north.@n 
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou make your way across the tree bridge to the $d.@n
+~
+E
+to_room~
+@y$n makes $s way across the tree bridge to the $d.@n
+~
+!
+3 0 5
+176 9 1509949540 3 0
+-1
+S
+
+#2256
+Ramshackle Hut Beside the Road~
+The branches collected from the tree bridge were woven and tied together
+to form a hole-riddled for the dilapidated hut, its door loosely swinging
+by one hinge.  Beyond the ravine, a sea of yellow-brown grass stretches
+as far as the eye can see.  A dense stand of trees crowds a hard dirt
+path that circles the hovel, blocking travel to the west but still
+penetrable to the north.
+~
+[Guin] Done.
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 2280 10 10 5
+D1
+~
+~
+0 -1 2257 10 10 5
+D2
+~
+~
+0 -1 2255 10 10 5
+E
+roof hut door~
+The hut, standing to the side of the path, is shabbily constructed, its
+roof nothing more than a series of dead tree limbs bound together. 
+Likewise, the walls are also formed from branches, hurriedly patched with
+dried mud.  The door hangs open, suspended by one hinge and just beyond,
+a firepit holds a dying fire, the smoke from its waning flames spiraling
+upward through the gaps in the roof.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou squeeze between the trees, continuing your journey northward.@n
+~
+E
+to_room~
+~
+!
+3 0 1
+A
+~
+~
+send_to_room( #smoke, room, sight );
+~
+E
+smoke~
+@CSmoke spirals upward from the sputtering firepit.@n
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou climb onto the log, heading across it toward the south.@n
+~
+E
+to_room~
+@y$n climbs onto the log, heading across it toward the south.@n
+~
+!
+3 0 4
+A
+~
+~
+if( get_integer( room, "/morros/ironguard/mobpopped" ) != 0 )
+  end;
+set_integer( room, "/morros/ironguard/mobpopped", 1 );
+if( get_integer( find_room( 2286 ), "/morros/ironguard/evilowns" ) == 0 ) {
+  mob = mload( 2535, room );
+  set_integer( mob, "/morros/ironguard/spawnroom", vnum( room ) );
+}
+else {
+  mob = mload( 5458, room );
+  set_integer( mob, "/morros/ironguard/spawnroom", vnum( room ) );
+}
+~
+!
+16 0 0
+-1
+S
+
+#2257
+Road Through the Grasslands~
+A sea of grass blankets the surrounding landscape save for the surface of
+the dusty dirt path that meanders lazily along, following the curves of
+the rolling hills.  A dilapidated hut lies off to the west; apparently
+abandoned, it serves as a layover for travelers through the area. 
+Southward, the gaping wound of a deep gorge is spanned by a old, felled
+tree, its branches and limbs stripped bare long ago.
+~
+[Guin] Done.
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 2258 10 10 5
+D3
+~
+~
+0 -1 2256 10 10 5
+E
+path~
+The path turns to the north, following the incline of a low hill, its
+surface nothing more than hard-packed dirt.  Surprisingly, one of the
+deep ruts in the road give a glimpse of ancient cobblestones, long buried
+by the passing years.
+~
+E
+1 west hut~
+A rundown hovel lies to the west, the path running along beside it.  From
+this point, it seems to be made from branches and limbs stripped from the
+few trees that grow nearby.  A wisp smoke filters through gaps in the
+roof, quickly dissipating into the air above.
+~
+E
+gorge 1 south~
+The gorge holds a fast-flowing river in check, and cuts the land into two
+vast seas of grass.  The only way over the gorge is the bole of felled
+tree, spanning it from side to side.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou follow the turn in the path to the north.@n
+~
+E
+to_room~
+@y$n follows the turn in the path to the north.@n
+~
+!
+3 0 1
+A
+~
+~
+send_to_room( #wind, room, sight );
+~
+E
+wind~
+@GA gust of wind swirls across the landscape, sending the grasslands into
+a fitful dance.@n 
+~
+!
+2 150 0
+176 9 1509949540 3 0
+-1
+S
+
+#2258
+Road Through the Grasslands~
+A verdant carpet of long-stemmed grass spreads out from beside the
+roadway, the dew covered shoots gleaming in the light.  Gossamer strands
+of spider silk lie draped between the ripening seed heads, their sticky
+stands covered with tiny midges.  As it winds northward, the trail leaves
+the grassland and enters the rolling hills that lie at the feet of the
+Everwinter Mountains.  The cobbling increases as the road travels through
+the tors, turning into a wide and well-maintained causeway.  To the west,
+the road deteriorates until it is little more than a goat trail through
+the savannah.
+~
+[Morros] Done.
+[Guin] Done.
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 2259 10 10 5
+D2
+~
+~
+0 -1 2257 10 10 5
+D3
+~
+~
+0 -1 2280 10 10 5
+E
+silk grass insect~
+Webs of spiders silk, as intricate and ethereal as the most delicate of
+laces, are swagged between the long stalks of grass.  Hundreds of tiny
+midges are trapped among the sticky, dew-bedazzles gossamer strands.
+~
+A
+~
+~
+i = random( 1, 2 );
+if( i == 1 )
+  send_to_room( #cry, room, sight );
+~
+E
+cry~
+@RThe loud sounds of battle cries can be heard to the north.@n
+~
+!
+2 100 0
+A
+get grab remove~
+silk web~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  i = random( 1, 3 );
+  if( random( 1, 2 ) == 1 ) {
+    obj = oload( 81, i );
+    obj_to_char( obj, ch );
+    act_tochar( #web, ch, obj, mob, sight );
+    act_notchar( #web2, ch, obj, mob, sight );
+  }
+  else {
+    act_tochar( #oops, ch, obj, mob, sight );
+    act_notchar( #oops2, ch, obj, mob, sight );
+  }
+}
+else
+  act_tochar( #no, ch, obj, ch, sight );
+~
+E
+oops~
+@cYou destroy the webs as you try to gather them.@n 
+~
+E
+oops2~
+@c$n destroys the webs as $e tries to gather them.@n 
+~
+E
+no~
+@cThe webs that were reachable are now gone.@n 
+~
+E
+web~
+@cYou manage to acquire a web or two.@n 
+~
+E
+web2~
+@c$n manages to attain a web or two.@n 
+~
+!
+0 0 0
+A
+~
+~
+if( get_integer( room, "/morros/ironguard/mobpopped" ) != 0 )
+  end;
+set_integer( room, "/morros/ironguard/mobpopped", 1 );
+if( get_integer( find_room( 2286 ), "/morros/ironguard/evilowns" ) == 0 ) {
+  mob = mload( 2535, room );
+  set_integer( mob, "/morros/ironguard/spawnroom", vnum( room ) );
+}
+else {
+  mob = mload( 5458, room );
+  set_integer( mob, "/morros/ironguard/spawnroom", vnum( room ) );
+}
+~
+!
+16 0 0
+-1
+S
+
+#2259
+Road Across the Plains~
+Lush grass grows up to the very edge of the roadway, the slender blades
+bent and swaying in the blustering winds.  The delicate strands of spider
+webs dangle between many of the plants, their sticky surface sparking
+like silver.  Rising out of the valley are a scattering of dusky-orange
+mounds, each one weatherworn and eroded.  The acrid smell of fire hangs
+heavy in the air; a few wisps of smoke rise from the east.  Toward the
+south, a river-filled gorge cuts through the grassland, a fallen tree
+providing a way to bridge the gap.
+~
+[Guin] Done.
+[Jydan] wall of smoke is to thick -> too thick
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 2260 10 10 5
+D2
+~
+~
+0 -1 2258 10 10 5
+E
+orange mounds ants 1 west~
+Mounds of red dirt lie scattered dusky, orange mounds, their surface
+eroded by the weather.  There is little evidence to hint at what dwells
+within them, though they look like ant hills.
+~
+E
+gorge 1 south~
+The gorge snakes through the terrain, running east and west, then north
+and south and so on, til it disappears out of site.  In the distance, to
+the south, what appears to be felled tree spans the gap created by the
+deep ravine.
+~
+E
+1 east smoke~
+Plumes of smoke rise to the east, floating on the air currents before
+dissipating into nothingness.
+~
+A
+get remove take grab~
+spider web~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  i = random( 1, 3 );
+  if( random( 1, 2 ) == 1 ) {
+    obj = oload( 81, i );
+    obj_to_char( obj, ch );
+    act_tochar( #web, ch, obj, mob, sight );
+    act_notchar( #web2, ch, obj, mob, sight );
+  }
+  else {
+    act_tochar( #oops, ch, obj, mob, sight );
+    act_notchar( #oops2, ch, obj, mob, sight );
+  }
+}
+else
+  act_tochar( #no, ch, obj, ch, sight );
+~
+E
+oops~
+@cYou destroy the webs as you try to gather them.@n 
+~
+E
+oops2~
+@c$n destroys the webs as $e tries to gather them.@n 
+~
+E
+no~
+@cThe webs that were reachable are now gone.@n 
+~
+E
+web~
+@cYou manage to acquire a web or two.@n 
+~
+E
+web2~
+@c$n manages to attain a web or two.@n 
+~
+!
+0 0 0
+2233 9 1509949540 3 0
+-1
+S
+
+#2260
+Between Hills and Plains~
+The road comes to a three way intersection, turning to the north to rise
+to the crest of the hill and the tall tower situated there, and
+southward, where a newly beaten path leads to the scene of a
+well-maintained campsite.  A few trees grow nearby, stripped of most of
+their branches and leaves.  Westward, the path descends the low rise of
+the hillside, disappearing at last into the grasslands that lie in that
+direction.
+~
+[Morros] Done.
+[Guin] Room's Done.
+~
+167247936 0 9 0
+D0
+~
+~
+0 -1 2261 10 10 5
+D2
+~
+~
+0 -1 2282 10 10 5
+D3
+~
+~
+0 -1 2259 10 10 5
+E
+camp smoke fire 1 south~
+Clouds of thick smoke block most of the visibility toward the south,
+where a well-maintained campfire burns lustily.  Stripped from the
+surrounding trees, branches, twigs and leafy vegetation were used to
+construct the popping, cracking blaze.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+$t : @yThe wall of smoke is to thick to see through.@n
+~
+!
+17 0 27
+A
+look~
+1 north 1 west~
+act_tochar( #smoke, ch, obj, ch, sight );
+~
+E
+smoke~
+@yThe wall of smoke is to thick to see through.@n 
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cWith no little trepidation, you advance southward into the clouds of
+smoke, unsure of what lies within it.@n 
+~
+E
+to_room~
+@c$n heads south toward the cloud of dissipating smoke.@n
+~
+!
+3 0 4
+A
+~
+*~
+if( is_evil( ch ) )
+  if( get_integer( find_room( 2286 ), "/morros/ironguard/evilowns" ) == 0 ) {
+  send_to_room( #boom, room, sight );
+  damage( mob, ch, 2d50, magic, "the magic blast", "ironguard dwarven cannon" );
+}
+else
+  if( get_integer( find_room( 2286 ), "/morros/ironguard/evilowns" ) != 0 ) {
+  send_to_room( #boom, room, sight );
+  damage( mob, ch, 2d50, magic, "the magic blast", "dwarven cannon fired by an orc" );
+}
+~
+E
+boom~
+@RA tremendous **BOOM** echoes throughout the area, shaking the nearby
+trees.@n 
+~
+!
+1 0 13
+A
+~
+~
+if( get_integer( room, "/morros/ironguard/mobpopped" ) != 0 )
+  end;
+set_integer( room, "/morros/ironguard/mobpopped", 1 );
+if( get_integer( find_room( 2286 ), "/morros/ironguard/evilowns" ) == 0 ) {
+  mob = mload( 2535, room );
+  set_integer( mob, "/morros/ironguard/spawnroom", vnum( room ) );
+}
+else {
+  mob = mload( 5458, room );
+  set_integer( mob, "/morros/ironguard/spawnroom", vnum( room ) );
+}
+~
+!
+16 0 0
+-1
+S
+
+#2261
+Roadway Across a Hill~
+Climbing the hill, the path proceeds onwards, slicing the hill into two
+sections.  The road is well kept, with clusters of thorn bushes and
+tussocks of dusky brown grass bordering it along both sides.  A sturdy
+stone tower is visible atop the hill; its construction is an incredible
+work of craftsmanship.  To the south, the path continues through the
+grasslands, disappearing abruptly at a river gorge.
+~
+[Morros] Done.
+[Guin] Room's Done.
+~
+167247872 0 9 0
+D2
+~
+~
+0 -1 2260 10 10 5
+D4
+~
+~
+0 -1 2262 10 10 5
+E
+tussock grass dusky brown thorn bush~
+Tussocks of dusky brown grass and dense clusters of hardy thorn bushes
+border the path along both sides, growing so thick it is impossible to
+pass through the prickly stems.
+~
+E
+tower building stone~
+Resting atop the hill, the grey tower is clearly of dwarven construction. 
+The walls, each block of stone is perfectly and seamlessly placed...built
+to withstand the exigencies of time and weather.
+~
+A
+~
+~
+send_to_room( #smoke, room, sight );
+~
+E
+smoke~
+@cPlumes of smoke envelop the area to the south.@n
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@YYou follow the road, ascending the northward-lying hill.@n
+~
+E
+to_room~
+@Y$n follows the road, ascending the northward-lying hill.@n
+~
+!
+3 0 17
+A
+~
+*~
+if( is_evil( ch ) )
+  if( get_integer( find_room( 2286 ), "/morros/ironguard/evilowns" ) == 0 ) {
+  send_to_room( #boom, room, sight );
+  damage( mob, ch, 2d50, magic, "the magic blast", "ironguard dwarven cannon" );
+}
+else
+  if( get_integer( find_room( 2286 ), "/morros/ironguard/evilowns" ) != 0 ) {
+  send_to_room( #boom, room, sight );
+  damage( mob, ch, 2d50, magic, "the magic blast", "dwarven cannon fired by an orc" );
+}
+~
+E
+boom~
+@cA loud *BOOM* echoes in the skies.@n
+~
+!
+1 0 20
+-1
+S
+
+#2262
+Hillside Road - Towards a Rock Outcrop~
+Clumps of tussock and stands of willowy grass grow beside the well-tended
+road.  A shallow trough cuts across the road, directing a trickling
+stream so to avoid the waters eroding the path.  Westward, the road
+climbs up to the side of a craggy cliff-face, a gleaming door visible
+upon its surface.  Above the roadway a squat watchtower sits, all but the
+roof made from stout stone.  Dipping suddenly down a steep bank, the road
+also continues eastward, heading into a grassy plain.
+~
+[Guin] Done.
+~
+167247872 0 9 0
+D3
+~
+~
+0 -1 2263 10 10 5
+D5
+~
+~
+0 -1 2261 10 10 5
+E
+trough streem path road~
+The path arrives from the south and cuts to the west, toward a stone
+tower.  On the corner of the road, just before it cuts west, a narrow
+trough goes from one side to the other, allowing a narrow stream to
+descend the hill to the northeast.
+~
+E
+stone tower 1 west~
+Following the path to the west, two massive wooden doors seal the
+entrance to the tower.  All of the tower from this location, from the
+arrow slits to peak of the tiled roof.  The stones of the towers
+construction are cut to fit together perfectly, almost seamlessly.
+~
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 )
+  send_to_room( #water, room, sight );
+if( i == 2 )
+  send_to_room( #sway, room, sight );
+~
+E
+water~
+@CThe ribbon of water sparkles where it trickles across the roadway,
+dampening the stone-line trough.@n 
+~
+E
+sway~
+@GA light breeze skitters across the hillside, rustling through the
+whispery grasses.@n 
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@YYou follow the line of the hillside, avoiding the trickling stream of
+water.@n 
+~
+E
+to_room~
+@Y$n follows the line of the hillside, avoiding the trickling stream of
+water.@n 
+~
+!
+3 0 32
+A
+~
+*~
+if( is_evil( ch ) )
+  if( get_integer( find_room( 2286 ), "/morros/ironguard/evilowns" ) == 0 ) {
+  send_to_room( #boom, room, sight );
+  damage( mob, ch, 2d50, magic, "the magic blast", "ironguard dwarven cannon" );
+}
+else
+  if( get_integer( find_room( 2286 ), "/morros/ironguard/evilowns" ) != 0 ) {
+  send_to_room( #boom, room, sight );
+  damage( mob, ch, 2d50, magic, "the magic blast", "dwarven cannon fired by an orc" );
+}
+~
+E
+boom~
+@RA resounding **BOOM** echoes into nothingness.@n
+~
+!
+1 0 40
+A
+~
+~
+if( get_integer( room, "/morros/ironguard/mobpopped" ) != 0 )
+  end;
+set_integer( room, "/morros/ironguard/mobpopped", 1 );
+if( get_integer( find_room( 2286 ), "/morros/ironguard/evilowns" ) == 0 ) {
+  mob = mload( 2535, room );
+  set_integer( mob, "/morros/ironguard/spawnroom", vnum( room ) );
+}
+else {
+  mob = mload( 5458, room );
+  set_integer( mob, "/morros/ironguard/spawnroom", vnum( room ) );
+}
+~
+!
+16 0 0
+-1
+S
+
+#2263
+Before a Stone Keep~
+A solid watchtower sits directly to the west, a pair of solid doors
+sealing its entrance.  A masterwork of craftsmanship, the stones of the
+tower fit together seamlessly; no mortar holds the structure together,
+yet it bears marked signs of age and beleaguerment.  The roadway turns
+sharply to the south, leading down the decline of the hill toward the
+gorge and the grasslands to the south.
+~
+[Morros] Done.
+[Guin] Room's done.
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 2262 10 10 5
+D3
+pair of solid doors~
+~
+195 -1 2264 10 10 5
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 )
+  send_to_room( #ring, room, sight );
+if( i == 2 )
+  send_to_room( #wind, room, sight );
+if( i == 3 )
+  send_to_room( #bird, room, sight );
+~
+E
+ring~
+@RThe rythmic and constant beating of war drums echoes through the
+countryside.@n 
+~
+E
+wind~
+@RA breeze circles the tower, carrying in its wake the scents of
+gunpowder and blood.@n 
+~
+E
+bird~
+@MA flock of carrion birds takes wing, circling the skies above the
+tower.@n 
+~
+!
+2 150 0
+A
+~
+~
+if( is_evil( ch ) )
+  if( get_integer( find_room( 2286 ), "/morros/ironguard/evilowns" ) == 0 ) {
+  send_to_room( #boom, room, sight );
+  damage( mob, ch, 2d50, magic, "the magic blast", "ironguard dwarven cannon" );
+}
+else
+  if( get_integer( find_room( 2286 ), "/morros/ironguard/evilowns" ) != 0 ) {
+  send_to_room( #boom, room, sight );
+  damage( mob, ch, 2d50, magic, "the magic blast", "dwarven cannon fired by an orc" );
+}
+~
+E
+boom~
+@cA loud *BOOM* echoes through the skies.@n 
+~
+!
+1 0 2
+A
+bang knock pound~
+door gate 1 west~
+if( is_open( room, west ) ) {
+  act_tochar( #more, ch, obj, mob, sight );
+  end;
+}
+i = 0;
+if( is_evil( ch ) ) {
+  if( get_integer( find_room( 2286 ), "/morros/ironguard/evilowns" ) != 0 )
+    i = -1;
+}
+else {
+  if( get_integer( find_room( 2286 ), "/morros/ironguard/evilowns" ) == 0 )
+    i = -1;
+}
+if( i == -1 ) {
+  act_tochar( #no, ch, obj, mob, sight );
+  act_notchar( #no2, ch, obj, mob, sight );
+  end;
+}
+act_tochar( #bang, ch, obj, mob, sight );
+act_notchar( #bang2, ch, obj, mob, sight );
+send_to_room( #open, room, sight );
+open( room, west );
+wait( random( 3, 5 ) );
+send_to_room( #close, room, sight );
+send_to_room( #close, find_room( 2264 ), sight );
+close( room, west );
+~
+E
+more~
+How much more open would you like them?
+~
+E
+bang~
+You bang on the iron-bound doors.
+~
+E
+bang2~
+$n bangs on the iron-bound doors.
+~
+E
+close~
+The iron-bound gates swing shut.
+~
+E
+no~
+You bang on the iron-bound doors to no avail.
+~
+E
+no2~
+$n bangs on the iron-bound doors to no avail.
+~
+E
+open~
+The iron-bound doors swing open.
+~
+!
+0 0 0
+A
+~
+~
+if( get_integer( room, "/morros/ironguard/mobpopped" ) != 0 )
+  end;
+set_integer( room, "/morros/ironguard/mobpopped", 1 );
+if( get_integer( find_room( 2286 ), "/morros/ironguard/evilowns" ) == 0 ) {
+  mob = mload( 2534, room );
+  set_integer( mob, "/morros/ironguard/spawnroom", vnum( room ) );
+}
+else {
+  mob = mload( 5458, room );
+  set_integer( mob, "/morros/ironguard/spawnroom", vnum( room ) );
+}
+~
+!
+16 0 0
+-1
+S
+
+#2264
+Rough Stone Hall~
+Wall-mounted torches placed on each side of the iron-bound gate to the
+east keep the drafty room alight.  Stone blocks form the walls, not a
+single sign of age or crack in any of them.  The blocks reach roughly
+eight feet high before dead-ending into the ceiling of wooden planks
+strung across the structure to form the second floor.  Embedded into the
+cobblestone floor, a steel lever is located in the corner.
+~
+[Guin] Done.
+~
+167247885 0 5 0
+D0
+~
+~
+0 -1 2265 10 10 5
+D1
+marble door~
+~
+195 -1 2263 10 10 5
+E
+wall-mounted mounted torches~
+Wooden torches, confined within brass clamps, barely illuminate the
+chamber.
+~
+E
+walls stone blocks~
+Stacked and tarred upon one another, the blocks create the walls - each
+block chipped and fitted like a jigsaw puzzle to finish the face.
+~
+E
+ceiling planks 1 up~
+Solid oak planks strung across the walls above form the ceiling and
+second story.
+~
+A
+pull~
+lever~
+if( is_open( room, east ) )
+  act_tochar( #more, ch, obj, mob, sight );
+else {
+  act_tochar( #pull, ch, obj, mob, sight );
+  act_notchar( #pull2, ch, obj, mob, sight );
+  send_to_room( #open, room, sight );
+  send_to_room( #open, find_room( 2263 ), sight );
+  open( room, east );
+  wait( 2 );
+  send_to_room( #close, room, sight );
+  send_to_room( #close, find_room( 2263 ), sight );
+  close( room, east );
+}
+~
+E
+more~
+You pull the steel lever but nothing happens.
+~
+E
+pull~
+You pull the steel lever.
+~
+E
+pull2~
+$n pulls the steel lever.
+~
+E
+open~
+The iron-bound gates swing open.
+~
+E
+close~
+The iron-bound gates swing shut.
+~
+!
+0 0 0
+A
+~
+~
+if( get_integer( room, "/morros/ironguard/mobpopped" ) != 0 )
+  end;
+set_integer( room, "/morros/ironguard/mobpopped", 1 );
+if( get_integer( find_room( 2286 ), "/morros/ironguard/evilowns" ) == 0 ) {
+  mob = mload( 5458, room );
+  set_integer( mob, "/morros/ironguard/spawnroom", vnum( room ) );
+}
+else {
+  mob = mload( 2535, room );
+  set_integer( mob, "/morros/ironguard/spawnroom", vnum( room ) );
+}
+~
+!
+16 0 0
+-1
+S
+
+#2265
+Rough Stone Hall~
+The corridor continues through the interior of the stone tower, making a
+sharp turn to the east and south.  A door opens to the north, providing
+entry to the room beyond.  Wall-mounted torches flicker in the draughty
+hallway, creating ghostly shadows that seem almost alive.  The ceiling
+overhead is support with hand-hewn beams to reinforce a strategic weak
+point.  One stone block are missing form the eastern wall in order to see
+the tower's surroundings.
+~
+[Morros] Done.
+[Guin] Room's done.
+[Jydan] Last sentence - 'form' -> from, 'are' -> is
+[Jydan] 'east and south' west and south surely?
+~
+167247885 0 9 0
+D0
+iron-bound door~
+~
+131 -1 2266 10 10 5
+D2
+~
+~
+0 -1 2264 10 10 5
+D3
+~
+~
+0 -1 2267 10 10 5
+-1
+S
+
+#2266
+Forge Within the Keep~
+Dominating the center of the circular chamber is a squat forge, the coals
+blazing with heat.  Rippling patterns dance upon the stone walls, shadows
+and heat waves combining to form an errie affect.  A copper flute above
+the forge whisks away much of the smoke, however a decent amount still
+hangs in the air beneath the rafters.  An iron-bound door lies in the
+south of the chamber, its only obvious exit.
+~
+[Azerin] need a redwood haft and
+[Azerin] quest to bring dwarven forge master 4 ingots of steel, get dwarven steel waraxe
+[Azerin] level 15 2hnd weapon
+[Azerin] vnumber of axe = 3766
+[Guin] Reviewed.
+[Jydan] errie eerie
+~
+167383044 0 9 0
+D1
+~
+~
+235 -1 2274 10 10 5
+D2
+iron-bound door~
+~
+131 -1 2265 10 10 5
+E
+forge coals flute~
+Crafted from blue-black stones the forge is ideal for the creation of
+fine dwarven weapons and armor.  The blazing coals give off huge amounts
+of heat and a few whisps of smoke, that the copper flute quickly whisks
+away.
+~
+A
+~
+~
+// load objects here if necessary
+
+// quick check to make sure that we don't load multiple mobs
+if( get_integer( room, "/morros/ironguard/mobpopped" ) != 0 )
+  end; // mob already registered to this room
+set_integer( room, "/morros/ironguard/mobpopped", 1 );
+
+// now load the good or evil mob based on the variable in 2286
+if( get_integer( find_room( 2286 ), "/morros/ironguard/evilowns" ) == 0 ) {
+  // good owns this tower, spawn good mob and assign vnum of room
+  send_to_room( "Good mob pops", room );
+  mob = mload( 2543, room );
+  set_integer( mob, "/morros/ironguard/spawnroom", vnum( room ) );
+}
+else {
+  // evil owns this tower, spawn evil mob and assign vnum of room
+  send_to_room( "Evil mob pops", room );
+  mob = mload( 5463, room );
+  set_integer( mob, "/morros/ironguard/spawnroom", vnum( room ) );
+}
+~
+!
+16 0 0
+A
+~
+~
+if( players_room( room ) != 0 )
+  end;
+mob = mob_in_room( 5473, room );
+if( mob )
+  transfer( mob, find_room( 2274 ) );
+~
+!
+2 1000 0
+A
+~
+~
+if( mob_in_room( 5473, room ) )
+  end;
+mob = mob_in_room( 5473, find_room( 2274 ) );
+if( mob ) {
+  if( !is_evil( ch ) ) {
+    if( get_integer( find_room( 2286 ), "/morros/ironguard/evilowns" ) == 0 ) {
+      transfer( mob, find_room( 2266 ) );
+      send_to_room( #arrival, room, sight );
+    }
+  }
+  else {
+    if( get_integer( find_room( 2286 ), "/morros/ironguard/evilowns" ) != 0 ) {
+      transfer( mob, find_room( 2266 ) );
+      act_room( #chains, mob );
+    }
+  }
+}
+~
+E
+arrival~
+@RA dwarven smith stumps into the room, and grunts to your entrance.@n
+~
+E
+chains~
+@RA small orc drags $n in by some chains and orders $m to do some work.@n
+@RThe small orc then vanishes into the room.@n
+~
+!
+1 0 4
+5473 9 1509949540 3 0
+-1
+S
+
+#2267
+Rough-Stone Hall~
+Dying flames flicker atop the mounted torches, casting shadows along the
+hallway.  A sparse cloud of smoke lingers above, hardly noticeable if not
+for the slight odor.  The corridor continues west and east; a wooden door
+leading northward breaches its expanse.  Underfoot, the stones of the
+floor have settled unevenly; countless years of foot traffic have worn a
+groove in floor where dust and other debris have collected.
+~
+[Morros] Done.
+[Guin] Done.
+~
+167247877 0 9 0
+D0
+wooden panel door~
+~
+131 -1 2268 10 10 5
+D1
+~
+~
+0 -1 2265 10 10 5
+D3
+~
+~
+0 -1 2269 10 10 5
+E
+torch~
+Faintly crackling flames slowly burn to their demise on the wall-mounted
+torches.  Each torch, set about two feet off the floor, is symetrically
+placed, each location drawn to an exact distance from the next.
+~
+A
+~
+~
+if( get_integer( room, "/morros/ironguard/mobpopped" ) != 0 )
+  end;
+set_integer( room, "/morros/ironguard/mobpopped", 1 );
+if( get_integer( find_room( 2286 ), "/morros/ironguard/evilowns" ) == 0 ) {
+  mob = mload( 5458, room );
+  set_integer( mob, "/morros/ironguard/spawnroom", vnum( room ) );
+}
+else {
+  mob = mload( 2535, room );
+  set_integer( mob, "/morros/ironguard/spawnroom", vnum( room ) );
+}
+~
+!
+16 0 0
+-1
+S
+
+#2268
+Barracks~
+Bunk beds line both the east and west walls of the lengthy room, each one
+neatly made with stiff-looking white sheets.  A round table sits in the
+room's center, a collection of barrels and mismatched chairs surrounding
+it.  A wooden panel door in the south leads back to the hallway. 
+Dangling from the low ceiling is a collection of old lanterns, their
+flickering light casting shadows upon the rough stone walls.
+~
+[Morros] Done.
+[Guin] Room's Done.
+~
+167247877 0 9 0
+D2
+wooden panel door~
+~
+131 -1 2267 10 10 5
+E
+bed bunk sheets~
+Carved from white pine, the bunk beds look rather hard; wooden slats keep
+a thin mattress off the floor.  Coarse cotton sheets line the beds, their
+edges crisp and straight.
+~
+E
+table barrels chairs~
+The tabletop is constructed from white pine, the edges of it rounded and
+smooth.  Lacking legs, it rests atop a pair of barrels.  The barrels
+themselves appear to have once held ale.  Now only the smell of alchol
+lingers within them.  The old, rickety chairs that surround the table
+look less than sturdy and ready to break.
+~
+E
+lanterns~
+A soft light filters from out of the dusty, cracked lanterns.  The
+combination of several of them are just enough to illuminate most of the
+room.
+~
+A
+~
+~
+if( get_integer( room, "/morros/ironguard/mobpopped" ) != 0 )
+  end;
+set_integer( room, "/morros/ironguard/mobpopped", 1 );
+if( get_integer( find_room( 2286 ), "/morros/ironguard/evilowns" ) == 0 ) {
+  mob = mload( 5458, room );
+  set_integer( mob, "/morros/ironguard/spawnroom", vnum( room ) );
+  mob = mload( 5460, room );
+  set_integer( mob, "/morros/ironguard/spawnroom", vnum( room ) );
+}
+else {
+  mob = mload( 2535, room );
+  set_integer( mob, "/morros/ironguard/spawnroom", vnum( room ) );
+  mob = mload( 2534, room );
+  set_integer( mob, "/morros/ironguard/spawnroom", vnum( room ) );
+}
+~
+!
+16 0 0
+-1
+S
+
+#2269
+Rough Stone Hall~
+The passage walls gleam with veins of silvery ore that run in a lattice
+throughout them.  Torches cradled by copper sconces on both walls give
+off dull illumination, their low flame sending out more smoke than light. 
+Following the path to the south, the tunnel descends, a few shallow steps
+cut into the floor make for an easier passage.  An iron-banded door has
+been set into the western wall, its keystone etched with a hammer and
+shield.
+~
+[Guin] Possible zone location for the future.
+[Azerin] turn sconce and open northern tunnels
+[Morros] Done.
+[Guin] Done.
+[Jydan] l ore, impurites -> impurities
+~
+167247877 0 9 0
+D1
+~
+~
+0 -1 2267 10 10 5
+D2
+~
+~
+0 -1 2270 10 10 5
+D3
+iron-bound door~
+~
+131 -1 2277 10 10 5
+E
+silvery ore lattice~
+The viens of ore are flecked with impurties, perhaps the reason they
+still remain in the walls.
+~
+E
+copper sconces torches~
+Bound in the copper holders, the pitch-soaked torches offer a reasonable
+light to see by.  Across many of the sconces are etched patterns of axes
+and hammers.
+~
+E
+keystone~
+The smokey-hued keystone has been covered with the finely carved emblem
+of a hammer and shield.
+~
+-1
+S
+
+#2270
+Rough Stone Hall~
+The arched hallway ends abrubtly, at a stone-chipped wall to the south. 
+On either flanking wall, iron-banded doors open into rooms beyond.  In
+copper brackets beside each door is a basin of oil with a flickering wick
+burning in each.  A crude symbol of a hammer crossing over a shield is
+etched into one wall, as if to remind inhabitants of the original
+builders of the tower.
+~
+[Morros] Done.
+[Guin] Done.
+[Jydan] 'The iron-banded to the west is already open.'
+~
+167247877 0 5 0
+D0
+~
+~
+0 -1 2269 10 10 5
+D1
+iron-banded door~
+~
+131 -1 2271 10 10 5
+D3
+iron-banded~
+~
+131 -1 2272 10 10 5
+A
+~
+~
+if( get_integer( room, "/morros/ironguard/mobpopped" ) != 0 )
+  end;
+set_integer( room, "/morros/ironguard/mobpopped", 1 );
+if( get_integer( find_room( 2286 ), "/morros/ironguard/evilowns" ) == 0 ) {
+  mob = mload( 5458, room );
+  set_integer( mob, "/morros/ironguard/spawnroom", vnum( room ) );
+}
+else {
+  mob = mload( 2535, room );
+  set_integer( mob, "/morros/ironguard/spawnroom", vnum( room ) );
+}
+~
+!
+16 0 0
+-1
+S
+
+#2271
+Private Chamber~
+A four-posted bed rests against the northern wall of the cozy chamber. 
+Tapestries depicting scenes of dwarven festivials and battles, often a
+mixture of both, dangle beside the bed.  A pine desk sits against the
+eastern wall, its finish plain and unpolished.  Above the desk sits a
+iron rack, a few crumbling scrolls stacked on it.  An iron-banded door,
+set in the western wall appears to be the only exit from the chamber.
+~
+[Morros] Done.
+[Guin] Done.
+~
+167247877 0 5 0
+D3
+iron-banded door~
+~
+131 -1 2270 10 10 5
+E
+four-posted posted bed~
+This ornately sculptured bed lies a luxurious five feet wide by five foot
+long.  The golden headboard arches two feet in height; the filigree
+patterns bedecked with fiery rubies.  Rising from each corner of the bed
+are four gold pillars, six feet in height, intricately etched with an
+ancient dwarven song recounting the uncountable fortune that lies coveted
+beneath the mountains.  A slender railing runs around the top of the
+gleaming posts, and a deep vermilion curtain of heavy velvet drapes to
+the floor.  The silken covers, lying neatly folded back, are the colour
+of bright scarlet and a runic patter of ebony and gold has been
+embroidered at the foot of the sleek quilt.  The soft, deep pillows are
+imprinted with the same design and their plush roundness seems too
+irresistible.  It would be very difficult not to succumb to the
+temptation of sleeping here.
+~
+E
+tapestries~
+The tapestries, stitched in fine wools and silks, were hung to warm the
+draughty room.  Although faded and worn, the battle scenes depicted
+against the stark black background can still be clear seen.
+~
+E
+rack scrolls~
+A few scrolls rest upon the rack, some even worth a second look.
+~
+A
+get~
+scrolls~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 15 ) == 1 ) {
+    act_tochar( #got, ch, obj, mob, sight );
+    act_notchar( #got2, ch, obj, mob, sight );
+    obj_to_char( oload( 1004 ), ch );
+  }
+  else {
+    act_tochar( #not, ch, obj, mob, sight );
+  }
+}
+  else {
+    act_tochar( #again, ch, obj, mob, sight );
+  }
+~
+E
+got~
+@CYou take a useful scroll off the shelf.@n 
+~
+E
+got2~
+@C$n gets a useful scroll off the shelf.@n 
+~
+E
+not~
+@CNone of the scrolls seem worth taking.@n 
+~
+E
+again~
+There are no scrolls left to take.
+~
+!
+0 0 0
+A
+~
+~
+if( get_integer( room, "/morros/ironguard/mobpopped", ) != 0 )
+  end;
+set_integer( room, "/morros/ironguard/mobpopped", 1 );
+if( get_integer( find_room( 2286 ), "/morros/ironguard/evilowns" ) == 0 ) {
+  mob = mload( 5460, room );
+  set_integer( mob, "/morros/ironguard/spawnroom", vnum( room ) );
+}
+else {
+  mob = mload( 2534, room );
+  set_integer( mob, "/morros/ironguard/spawnroom", vnum( room ) );
+}
+~
+!
+16 0 0
+-1
+S
+
+#2272
+Stair Well~
+Crude steps are carved into the western wall of the stone chamber.  The
+stair well leads up and out of the room to the floor above.  Rusty iron
+sconces are placed around the room, a flickering torched embraced by each. 
+Nearby, a rack holds an assortment of weapons, where a heavy chain
+secures them in place.  An iron-banded door leads eastward, out of the
+room into the keep proper.
+~
+[Morros] Done.
+[Guin] Done.
+[Jydan] torched torch
+~
+167247877 0 5 0
+D1
+iron-banded door~
+~
+131 -1 2270 10 10 5
+D4
+~
+~
+0 -1 2273 10 10 5
+E
+weapon rack~
+The weapon rack, forged of iron, holds an assortment of weapons of all
+types.  Each is fixed in place securely but a heavy chain looped around
+the rack and through the handles of the axes, swords and halberds.
+~
+A
+get~
+weapon~
+act_tochar( #no, ch, obj, mob, sight );
+~
+E
+no~
+You try to free one of the weapons but they are secured in place by the
+chain.
+~
+!
+0 0 0
+-1
+S
+
+#2273
+Watchtower~
+The dimly lit chamber sprawls out in various directions.  A heavy oak
+door, set with bands of iron, opens to the east, its braced hinges and
+massive lock designed to withstand a sizable force before breaking.  A
+wooden ladder has been braced against the northern wall, offering access
+to the tower.  A spiral staircase leads downward from the room's center
+to the floor below, its steps rough and worn.
+~
+[Guin] Done.
+[Jydan] 'stand stifly -> stands stiffly
+~
+167247873 0 6 0
+D1
+heavy oak door~
+~
+407 3927 2279 10 10 5
+D4
+wooden trapdoor~
+wooden trapdoor~
+407 3927 2276 10 10 5
+D5
+~
+~
+0 -1 2272 10 10 5
+E
+trapdoor 1 up~
+Just barely wide enough to fit a body though, the trapdoor is all that
+bars the way to the tower above.
+~
+A
+~
+~
+if( get_integer( room, "/morros/ironguard/mobpopped" ) != 0 )
+  end;
+set_integer( room, "/morros/ironguard/mobpopped", 1 );
+if( get_integer( find_room( 2286 ), "/morros/ironguard/evilowns" ) == 0 ) {
+  mob = mload( 5459, room );
+  set_integer( mob, "/morros/ironguard/spawnroom", vnum( room ) );
+}
+else {
+  mob = mload( 2531, room );
+  set_integer( mob, "/morros/ironguard/spawnroom", vnum( room ) );
+}
+~
+!
+16 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CYou step into the sky as you leave east.@n 
+~
+!
+3 0 2
+A
+~
+~
+junk_obj( obj );
+continue;
+~
+E
+to_char~
+You unlock $1 with $2 which shatters into countless pieces.
+~
+E
+to_room~
+$1 unlocks $2 with $3 which shatters into countless pieces afterwards.
+~
+!
+12 0 16
+-1
+S
+
+#2274
+Work and Storage Room~
+A heavy vise, secured to a sturdy work bench, sits in the center of the
+room, a half-formed piece of armor still in its grip.  Stacks and racks
+of supplies line the outer walls, as well as a few unused tools.  In one
+forlorn corner, a pile of dirty furs and dirtier rags form what looks
+like a bed.
+~
+[Guin] Done.
+~
+167383044 0 9 0
+D3
+~
+~
+235 -1 2266 10 10 5
+-1
+S
+
+#2276
+Top of the Tower~
+Thick planks, supported by old wood beams form the solid floor underfoot,
+smooth but for a small piece of wood sticking out in the corner.  The
+circular room is no more than eight feet in circumference, its stone-made
+walls rising to a tiled room overhead.  Two round holes support either
+end of solid oak pole.  Affixed to the pole, a shining golden bell is
+suspended in the middle of the room.  A metal chain attached to the bell
+can be pulled to set it ringing.
+~
+[Seltha] This room has the good/bad guy variable on it.
+[Seltha] 'toggle' acode for testing
+[Guin] Room's done.
+~
+167247878 0 5 0
+D5
+~
+~
+407 -1 2273 10 10 5
+E
+small piece wood~
+Upon closer inspection you decide the small piece of wood could be a
+button of some sort.
+~
+A
+ring~
+bell~
+if( get_integer( find_room( 2286 ), "/morros/ironguard/evilowns" ) == 0 ) {
+  // good was owning, toggle to evil
+  set_integer( find_room( 2286 ), "/morros/ironguard/evilowns", 1 );
+  send_to_area( "@RBwahahaaaa.  Evil now owns this tower.", find_room( 2286 ) );
+}
+else {
+  // evil was owning, toggle to good
+  set_integer( find_room( 2286 ), "/morros/ironguard/evilowns", 0 );
+  send_to_area( "@RChaaaaaaa.  Good now owns this tower.", find_room( 2286 ) );
+}
+i = 2250;
+loop( i <= 2287 ) {
+  if( i != 2275 )
+    if( i != 2284 )
+    if( i != 2285 )
+    room = find_room( i );
+  loop( all_in_room ) {
+    if( !is_mob( rch ) )
+      transfer( rch, find_room( 2250 ) );
+    else {
+      junk_mob( rch );
+    }
+  }
+  set_integer( room, "/morros/ironguard/mobpopped", 0 );
+  i += 1;
+}
+~
+!
+0 0 0
+A
+push press~
+small piece wood button~
+if( is_open( room, down ) )
+  act_tochar( #nothing, ch );
+else {
+  act_tochar( #open, ch );
+  act_notchar( #ropen, ch, obj, mob, sight );
+  open( room, down );
+}
+~
+E
+nothing~
+@yYou push a small piece of wood a few times, but nothing happens.@n
+~
+E
+open~
+@YYou push a small wooden button and the planks silently part leaving an
+opening in the centre of the room.@n 
+~
+E
+ropen~
+@Y$n pushes a small wooden button and the planks silently part leaving an
+opening in the room centre.@n 
+~
+!
+0 0 0
+-1
+S
+
+#2277
+Great Hall~
+The room never seems to end as twin stone tables with knee-high benches
+riding beside them nearly end in a perspective point of view.  A massive
+tapestry of a hammer and shield drapes down from the northern wall, a
+faint, fluttering breeze stirring its tassels.  Squat beeswax candles
+burn in bronze candelabras on each wall, the smoke spiraling upward and
+out through a circular opening in the ceiling.
+~
+[Morros] Done.
+[Guin] Done.
+~
+167247877 0 9 0
+D1
+iron-bound door~
+~
+131 -1 2269 10 10 5
+D3
+stone door~
+~
+131 -1 2278 10 10 5
+E
+stone tables~
+Carved from white stone the long tables would sit at least a hundred
+people; a few scratches mar the otherwise perfectly polished surface.
+~
+E
+bench~
+Made from a red-hued pine the benches are plain and functional.
+~
+E
+tapestry hammer shield~
+Woven from fine cloth, the tapestries are over thirty feet in length and
+stitched in fine wools and silks.  The symbols of past inhabitants of the
+tower faded out long ago and the edges of the piece are frayed and
+stained.
+~
+E
+candelabras beeswax candles smoke~
+Sending whisps of white smoke skyward the fat beeswax candles offer just
+enough illumination to see with.  The ornimental candelabras add a
+artisan finish to the drab stone walls.  Each one reaching over eight
+feet high and half as wide.
+~
+A
+~
+~
+if( get_integer( room, "/morros/ironguard/mobpopped" ) != 0 )
+  end;
+set_integer( room, "/morros/ironguard/mobpopped", 1 );
+if( get_integer( find_room( 2286 ), "/morros/ironguard/evilowns" ) == 0 ) {
+  mob = mload( 5460, room );
+  set_integer( mob, "/morros/ironguard/spawnroom", vnum( room ) );
+}
+else {
+  mob = mload( 2534, room );
+  set_integer( mob, "/morros/ironguard/spawnroom", vnum( room ) );
+}
+~
+!
+16 0 0
+-1
+S
+
+#2278
+Chapel~
+Pale pillars of marble rise from the cobbled floor, their apices fan out
+into branches that meet in the vaulted chamber's center.  A wagon-wheel
+shaped stained glass window sends rainbow hued light across the floor. 
+Under the window sits a squat altar, a mosaic of black onyx covering its
+surface.  An iron-banded door in the eastern wall leads out of the room;
+beside the door, two quartz basins rise, their bowls filled with crystal
+clear water.
+~
+[Morros] Done.
+[Guin] Done
+~
+167248005 0 6 0
+D1
+stone door~
+~
+131 -1 2277 10 10 5
+E
+marble floor pillar pale cream~
+Jutting from floor to ceiling, the pillars support the dome-shaped roof
+above.  Pale cream in color and as round as an aged oak tree, the pillars
+prove a massive work of art.
+~
+E
+wagon-wheel wheel stained glass window~
+Almost perfectly circular, the stained-glass window in the western wall
+allows a rainbow of light to illuminate the room.
+~
+E
+quartz basin bowl~
+The sparkling basins made of quartz stand on both sides of the iron door,
+each bowl filled with a glistening clear water.
+~
+A
+~
+~
+send_to_room( #color, room, sight );
+~
+E
+color~
+Streaming through the stained glass of the window, a rainbow of
+@Rc@Go@Bl@Ro@br@Ys@n lightens the room.
+~
+!
+2 100 0
+A
+~
+~
+if( get_integer( room, "/morros/ironguard/mobpopped" ) != 0 )
+  end;
+set_integer( room, "/morros/ironguard/mobpopped", 1 );
+if( get_integer( find_room( 2286 ), "/morros/ironguard/evilowns" ) == 0 ) {
+  mob = mload( 2544, room );
+  set_integer( mob, "/morros/ironguard/spawnroom", vnum( room ) );
+}
+else {
+  mob = mload( 2545, room );
+  set_integer( mob, "/morros/ironguard/spawnroom", vnum( room ) );
+}
+~
+!
+16 0 0
+3985 17 1509949540 -2 0
+3985 17 1509949540 -2 0
+-1
+S
+
+#2279
+Parapet~
+Rising well above ground level, the tower parapets afford a panoramic
+view of the surrounding countryside.  Far to the south, a deep gorge
+divides the terrain into two vast sections of grasslands, and nearby,
+smoke spirals upward from two well-burning campfires.  Underfoot, two
+grooves are cut into the floor allowing expedient movement of a
+seige-breaking cannon.
+~
+[Guin] Done.
+~
+167247876 0 9 0
+D0
+~
+~
+0 -1 2286 10 10 5
+D3
+solid oak door~
+~
+407 -1 2273 10 10 5
+-1
+S
+
+#2280
+Path of Hacked Trees~
+A succession of undersized tree stumps crowd either side of a narrow
+trail the leads both to the south and east.  Elsewhere, there is little
+to be be seen other than miles of grasslands, with no apparent forged way
+through it.  Far to the south, a ruined hut trails a plume of smoke into
+the still, dry air and beyond, a deep, river-carved gorge splits the land
+in twain.
+~
+[Guin] Ruined Abbey to the west.
+[Guin] Exit west closed off. Start of a new block of rooms and zones.
+[Azerin] start of new zone, dust ants northwest, grasslands spreading around it
+[Guin] No extras needed.
+[Guin] Done.
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 2258 10 10 5
+D2
+~
+~
+0 -1 2256 10 10 5
+D3
+~
+~
+0 -1 14000 10 10 5
+A
+~
+~
+send_to_room( #smoke, room, sight );
+~
+E
+smoke~
+@cA plume of smoke spirals upward from a ruined hut to the south.@n
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou follow the stump-line path to the $d.@n
+~
+E
+to_room~
+@g$n follows the stump-line path to the $d.@n
+~
+!
+3 0 6
+176 9 1509949540 3 0
+-1
+S
+
+#2281
+Up a Tree~
+The view from high among the tree's branches is nothing short of
+spectacular.  Deep with the rocky ravine, the river washes against its
+banks.  Beyond the gorge, a tall stone construction perches regally atop
+a rising hill that lies to the north.  In all other directions, the
+grasslands dominate the landscape in hues of yellow and light brown, and
+only a few clumps of colorful wildflowers break the monotony.  Nearby, a
+@ynest@n of twigs and grass rests in the crook of a smaller branch, empty
+and abandoned.
+~
+[Morros] Done.
+[Guin] Done.
+~
+167247936 0 5 0
+D5
+~
+~
+1024 -1 2253 10 10 5
+E
+river ravine~
+The ravine's actual length and depth can be seen much better from here. 
+The river, which the ravine cradles, flows with enthusiasm, still
+searching for a way to break free from the rocky cell which confines it.
+~
+E
+stone construction 1 north~
+On top of the hill, a great stone tower can be seen.  The slabs of stone,
+while hard to see from a distance, seem to be well formed, definitely a
+true work of architecture.
+~
+E
+branch nest~
+The nest could never have held more than a few eggs, and is now
+abandoned, only a few broken shells its remaining contents.  It is
+constructed of thin twigs and broken stems, light weight material easy
+for a small bird to carry from place to place.  Within reach, the branch
+that cradles the tiny aerie is flimsy and might or might not hold if used
+for climbing.
+~
+A
+climb~
+1 down tree~
+act_tochar( #climb, ch, obj, ch, sight );
+act_notchar( #climb2, ch, obj, ch, sight );
+transfer( ch, find_room( 2253 ) );
+~
+E
+climb~
+@cTaking care to not fall, you climb back down the tree.@n
+~
+E
+climb2~
+@cTaking care to not fall, $n climbs back down the tree.@n
+~
+!
+0 0 0
+A
+~
+~
+send_to_room( #tree, room, sight );
+~
+E
+tree~
+@CA gust of wind rustles the red-hued leaves, whispering of secrets yet
+untold.@n
+~
+!
+2 150 0
+A
+~
+nest branch~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #reach, ch, obj, ch, sight );
+  act_notchar( #reach2, ch, obj, ch, sight );
+  i = random( 1, 2 );
+  if( i == 2 ) {
+    act_tochar( #success, ch, obj, ch, sight );
+    act_notchar( #success2, ch, obj, ch, sight );
+    if( random( 1, 10 ) == 1 ) {
+      obj_to_char( oload( 3131 ), ch );
+      act_tochar( #loot, ch, obj, ch, sight );
+      act_notchar( #loot2, ch, obj, ch, sight );
+    }
+    else {
+      act_tochar( #fail, ch, obj, ch, sight );
+      act_notchar( #fail2, ch, obj, ch, sight );
+    }
+  }
+  else {
+    act_tochar( #oops, ch, obj, ch, sight );
+    act_notchar( #oops2, ch, obj, ch, sight );
+    transfer( ch, find_room( 2253 ) );
+    damage( mob, ch, 1d25, physical, "the fall", "falling from a tree" );
+  }
+}
+else {
+  act_tochar( #no, ch, obj, ch, sight );
+}
+~
+E
+reach~
+@CYou step out on the branch, hoping it will hold.@n 
+~
+E
+reach2~
+@C$n steps out onto the thin branch. Hopefully, it will hold.@n
+~
+E
+success~
+@CThe branch holds and you manage to search through the nest.@n
+
+~
+E
+success2~
+@CLuckily, the branch holds and $n searches the nest.@n 
+~
+E
+fail~
+@cYou search through the nest but find nothing.@n 
+~
+E
+fail2~
+@c$n searches through the nest but moments later, gives up.@n
+
+~
+E
+oops~
+@RAs soon as you step onto the branch, it snaps in half, sending you
+plummeting to the ground.@n 
+~
+E
+oops2~
+@RAs soon as $n steps on the branch, it breaks in half, sending $m
+plummeting to the ground.@n 
+~
+E
+loot~
+@CMoments after searching the nest, you find a piece of thread.@n 
+~
+E
+loot2~
+@CAfter moments of searching, $n pockets something.@n
+
+~
+E
+no~
+@cYou've already searched the nest.@n 
+~
+!
+9 0 0
+A
+~
+~
+send_to_char( #nope, ch );
+~
+E
+nope~
+@GClimbing might be a better option.@n
+~
+!
+3 0 32
+2582 9 1509949540 3 0
+-1
+S
+
+#2282
+Campsite~
+Crackling and hissing, a strong-burning campfire feeds on green branches
+and leaves hacked from nearby trees, producing thick clouds of smoke. 
+Strung between two trees, a tanned hide forms a makeshift shelter; piles
+of bones and pieces of rotting meat cover the ground beneath the leanto. 
+A few wooden barrels stand off to the side of the clearing.  Toppled
+over, their contents spill across the ground.  The thick smoke that rises
+from the blaze blocks visibility beyond the immediate area.
+~
+[Morros] Done.
+[Guin] Done.
+[Jydan] scan -> The smoke is to thick ... -> too
+~
+167247936 0 9 0
+D0
+~
+~
+0 -1 2260 10 10 5
+E
+campfire branches leaves smoke~
+The fire blazes enthusiastically, spitting and hissing as it devours the
+fodder used to feed it.  Thick clouds of smoke are sucked away from the
+camp toward the north, blocking sight in that direction.
+~
+E
+pile bones meat~
+Bones are strewn everywhere beneath the makeshift shelter, chunks of
+flesh still clinging to a few of them.
+~
+E
+barrels ingredients~
+The contents of the toppled barrels are strewn across the ground but
+appear to be of little value to anyone but orcs.  Rusted and broken
+weapons, torn or cracked armor, and some grains of black powder too
+scattered to be collected comprise the majority of the items.
+~
+A
+3 scan~
+*~
+act_tochar( #to_char, ch );
+~
+E
+to_char~
+@yThe smoke is to thick to see through.@n 
+~
+!
+0 0 2
+A
+1 look~
+1 north~
+act_tochar( #no, ch, obj, ch, sight );
+~
+E
+no~
+@yThe smoke is to thick to see through.@n 
+~
+!
+0 0 0
+A
+~
+~
+send_to_room( #fire, room, sight );
+~
+E
+fire~
+@RThe fire crackles and hisses, devouring some of the still-green
+branches.@n 
+~
+!
+2 100 0
+A
+~
+pile bone meat~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  i = random( 1, 3 );
+  if( i == 1 ) {
+    act_tochar( #yay, ch, obj, ch, sight );
+    act_notchar( #yay2, ch, obj, ch, sight );
+    obj_to_char( oload( 1408 ), ch );
+  }
+  else if( i == 2 ) {
+    act_tochar( #wow, ch, obj, ch, sight );
+    act_notchar( #wow2, ch, obj, ch, sight );
+    obj_to_char( oload( 7483 ), ch );
+  }
+  else if( i == 3 ) {
+    act_tochar( #no, ch, obj, ch, sight );
+    act_notchar( #no2, ch, obj, ch, sight );
+  }
+}
+else {
+  act_tochar( #no3, ch, obj, ch, sight );
+}
+~
+E
+yay~
+@cAfter digging through the pile of bones you have found a small
+dagger.@n 
+~
+E
+yay2~
+@c$n has found something and pocketed it.@n 
+~
+E
+wow~
+@cAfter digging through the pile of bones you have found some meat.@n 
+~
+E
+wow2~
+@c$n has found something and quickly pockets it.@n 
+~
+E
+no~
+@cYou search through the pile of bones but find nothing of interest.@n
+
+~
+E
+no2~
+@c$n digs through the pile of bones but finds nothing.@n 
+~
+E
+ow~
+@CAs you begin looking through the bones someone gives you a swift kick
+and you land dangerously close to the fire!@n
+~
+E
+ow2~
+@C$n begins to search through the bones but the chief give $m and swift
+kick, knocking $n dangerously close to the fire!@n
+
+@GMoments later, the camp bursts into laughter.@n
+~
+E
+no3~
+@cYou have already searched the pile.@n 
+~
+E
+laugh~
+@GThe camp bursts into laughter.@n 
+~
+!
+9 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou advance through the smoke, heading north.@n 
+~
+E
+to_room~
+@g$n disappears into the smoke, heading north.@n
+~
+!
+3 0 1
+A
+~
+~
+if( get_integer( room, "/morros/ironguard/mobpopped" ) != 0 )
+  end;
+set_integer( room, "/morros/ironguard/mobpopped", 1 );
+if( get_integer( room, "/morros/ironguard/evilowns" ) == 0 ) {
+  mob = mload( 2531, room );
+  set_integer( mob, "/morros/ironguard/spawnroom", vnum( room ) );
+}
+else {
+  mob = mload( 5459, room );
+  set_integer( mob, "/morros/ironguard/spawnroom", vnum( room ) );
+}
+~
+!
+16 0 0
+-1
+S
+
+#2283
+Oubliette~
+Under Construction.
+~
+[Morros] 2267
+~
+167247877 0 9 0
+-1
+S
+
+#2286
+Watchtower Turret Room~
+The Everwinter Mountains show their beauty from here; the snow-capped
+peaks seem small in the distance but cut across the horizon like a knife. 
+horizon.  The grasslands before the tower lead to a shallow stream and
+then a mighty forest just before the mountain bases are reached.  The
+parapet stone wall wraps its way around the tower protecting all that
+seek shelter behind its walls; the gaps between each wall range about
+four feet 
+~
+[Seltha] This room has the good/bad guy variable on it.
+[Seltha] 'toggle' acode for testing
+[Guin] Room's done.
+~
+167247876 0 9 0
+D2
+~
+~
+0 -1 2279 10 10 5
+A
+Toggle~
+~
+if( get_integer( find_room( 2286 ), "/morros/ironguard/evilowns" ) == 0 ) {
+  // good was owning, toggle to evil
+  set_integer( find_room( 2286 ), "/morros/ironguard/evilowns", 1 );
+  send_to_area( "@RBwahahaaaa.  Evil now owns this tower.", find_room( 2286 ) );
+}
+else {
+  // evil was owning, toggle to good
+  set_integer( find_room( 2286 ), "/morros/ironguard/evilowns", 0 );
+  send_to_area( "@RChaaaaaaa.  Good now owns this tower.", find_room( 2286 ) );
+}
+~
+!
+0 0 0
+A
+~
+~
+if( get_integer( room, "/morros/ironguard/mobpopped" ) != 0 )
+  end;
+set_integer( room, "/morros/ironguard/mobpopped", 1 );
+if( get_integer( find_room( 2286 ), "/morros/ironguard/evilowns" ) == 0 ) {
+  mob = mload( 2536, room );
+  set_integer( mob, "/morros/ironguard/spawnroom", vnum( room ) );
+}
+else {
+  mob = mload( 5464, room );
+  set_integer( mob, "/morros/ironguard/spawnroom", vnum( room ) );
+}
+~
+!
+16 0 0
+3882 17 1509949540 -2 0
+-1
+S
+
+#2287
+Code Room~
+Under Construction.
+~
+[Guin] Do not delete this room. It must exist for coding purposes.
+~
+167247878 0 9 0
+-1
+S
+
+#0
+

@@ -1,0 +1,20 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+chat [message] : send [message] to the mud general chatter channel<br>
+chat [on|off]  : turn chat on or off<br>
+chat           : display last 10 chats<br>
+<br>
+<h1> Description </h1>
+<br>
+ Use this channel for idle talk about anything you want, but please<br>
+stay in character, of course.  If trying to get the attention of an<br>
+immortal use gossip.  Use of this channel requires gossip points; it<br>
+costs one gossip point per use of chat.  These points accumulate over<br>
+time, and non-use of any channel.  To see how many points your character<br>
+has accumulated, type "score"; the points are listed under Gsp_points.<br>
+<br>
+See also: channels, score<br>
+</html>
+</body>

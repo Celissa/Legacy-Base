@@ -1,0 +1,15 @@
+<html>
+<body>
+/Murdo/portal/open ....  set on room 52671.  1 is open, 0 is closed. <br>
+Portal rooms are 52671 and 2305.<br>
+<br>
+/Murdo/CaveYeti/Position ... 1-7, marks position in grid.<br>
+/Murdo/CaveYeti/Front ... 1 means front row, 0 means back...<br>
+These variables are not part of a fuctioning code as of yet...  it's an<br>
+experiment (interrupted..  ongoing?) in giving players more options<br>
+during combat..  chars can move around inside the room to various<br>
+positions to try to out-strategize the cave yeti...  the implication<br>
+being that those who simply stand and swing will take the full blunt of<br>
+the damage.<br>
+</html>
+</body>

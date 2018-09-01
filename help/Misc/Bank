@@ -1,0 +1,23 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+deposit [amount]<br>
+balance<br>
+withdraw [amount]<br>
+<br>
+<h1> Description </h1>
+<br>
+The banking system provides a convenient mechanism for storing and<br>
+retrieving money.  The bank performs all transactions in units of copper<br>
+pieces, and returns to you the correct distribution between all coin<br>
+types.  <br>
+<br>
+Your money in the bank is not insured.  While there is currently no<br>
+mechanism in place to rob a bank, there will likely be a way in the<br>
+future. Additionally, the bank does not provide interest to its account<br>
+holders.  <br>
+<br>
+Other help files that may be useful include help money.<br>
+</html>
+</body>

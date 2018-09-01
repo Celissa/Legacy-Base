@@ -1,0 +1,1691 @@
+#M2_AREA
+2
+
+Frostfur Woods~
+Azerin~
+Frostfur Woods~
+~
+~
+
+8 0
+0
+1
+#ROOMS
+
+#5300
+Frostfur Woods~
+An icy layer of frost spreads across the brambles and bracken of the
+woodland floor.  The densely packed fir trees cluster together, forming
+walls of foliage.  An outcrop of rock rises to the east, its rough
+surfaces pitted and cracked from the harsh winters.  Patches of iris
+grow around the rock's base, their blue flowers attracting a swarm of
+buzzing insects.  Cutting through the heavy vegetation is a muddy trail,
+its surface coated with brackish pools of stagnant water.
+~
+[Azerin] 7900 block joins east
+[Guinafaer] Done.
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 7914 10 10 5
+D3
+~
+~
+0 -1 5301 10 10 5
+E
+iris~
+Warmed by the heat radiating off the sun-warmed rock, the purple and
+blue-hued flowers perch atop stiff yellow-green stalks.  Elongated,
+pointed leaves grow from the base of the stems, encasing them in emerald
+furls.
+~
+E
+trails pools brackish~
+A narrow trail winds its way among the bracken and brambles, curving this
+way and that between old-growth trees.  The surface of the path is rutted
+and eroded, broken by the groping roots of nearby firs.  The low places
+are filled with pools of brackish water, remnants of a recent snow melt 
+~
+E
+brambles icy frost~
+The tangled and twisted brambles rise between the trees, their tortured
+branches coated in a delicate sheath of crystalline ice.
+~
+A
+~
+~
+act_tochar( #mud, ch );
+act_notchar( #rmud, ch );
+continue;
+~
+E
+mud~
+@yWith oozing mud squelching underfoot, you tromp westward.@n 
+~
+E
+rmud~
+@yWith some effort, $n manages to free $mself from the mud and continue
+westward.@n 
+~
+!
+3 0 8
+-1
+S
+
+#5301
+Frostfur Woods - Muddy Trail~
+The mud-churned trail weaves its way around the rotting remains of a
+sizable tree stump and continues onward in an east and northerly
+direction.  Newly seeded saplings thrust through the ground near the
+rotting stump, their delicate tips coated in beads of ice.  A layer of
+frost carpets the undergrowth, dusting each plant with sparkling crystals. 
+The distant sound of rushing water echos through the woodlands, its
+source somewhere to the north.
+~
+[Guinafaer] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 5302 10 10 5
+D1
+~
+~
+0 -1 5300 10 10 5
+E
+stump saplings~
+The hollowed out remains of an towering old fir stump lies to the west
+and slightly north.  The outershell is blackened as if once burnt, its
+branches broken completely off in places, and cracked and dangling in
+others.  Nearby, slender saplings sprout in a future grove, the
+sharp-needled branches colored bright green.
+~
+E
+frost undergrowth crystals~
+Rimed with frost, the undergrowth along the forest floor crackles
+underfoot and sparkles brilliantly, like fairy lights on a moonlit night.
+~
+A
+~
+~
+send_to_room( #gutt, room );
+~
+E
+gutt~
+@GThe barking and growling of some wolven creature echoes through the
+woods from the north.@n 
+~
+!
+2 300 0
+A
+~
+~
+act_tochar( #mud, ch );
+act_notchar( #rmud, ch );
+continue;
+~
+E
+mud~
+@yWith a mixture of slurping mud and crunching ice, you continue
+onward.@n 
+~
+E
+rmud~
+@yWith some difficulty, $n manages to navigate the muddy trail and
+continue onward.@n 
+~
+!
+3 0 3
+-1
+S
+
+#5302
+Frostfur Woods - Muddy Trail~
+A rampant swatch of ivy swarms over the scraggly trees of the woodlands,
+the blood-hued leaves ablaze with color.  Honeysuckle vines tangle from
+out of the ivy and add a strangling grip upon some of the unfortunate fir
+trees.  Cut from the overgrown forest floor, a winding forest trail
+allows for an easier passage through the woods.  The littered bones of
+small animals, perhaps a fox or stoat, lie entangled through the ivy.
+~
+[Guinafaer] Done.
+[Virt] search ivy in this room yields a message with misspelled word "yeild'
+~
+167247872 3 9 0
+D2
+~
+~
+0 -1 5301 10 10 5
+D3
+~
+~
+0 -1 5303 10 10 5
+E
+ivy leaves~
+Wide verdigris-hued leaves grow thick on the tangled vine, splotches of
+red adorning the heart-shaped edges.  The ivy, stretched from tree to
+tree, hides what lies in the darkest shadows of the ancient forest beyond.
+~
+E
+bones~
+The clustered bones of a small forest creature are clutched in the tight
+grasp of the tangled ivy, retaining a surprising semblance of the
+original form.  Tiny bunches of fur are caught up in the vine, their
+color still a deep-hued red.
+~
+E
+honeysuckle~
+Deep emerald in hue, graceful honeysuckle vines weave in and out the mass
+of tangled ivy, their delicate leaves in stark contrast to the
+crimson-splashed larger ones.  Diminutive white flowers sprinkle the
+growth like newly fallen snow, their scent filling the air with a
+sweetness that attracts small birds and buzzing insects.
+~
+A
+~
+~
+send_to_room( #slith, room );
+~
+E
+slith~
+@gThe ivy at the trail's edge rustles softly as some unseen creature
+moves through the undergrowth.@n 
+~
+!
+2 150 0
+A
+search~
+bones ivy honeysuckle vines~
+act_tochar( #ivy, ch, obj, mob );
+act_notchar( #rivy, ch, obj, mob, sight );
+~
+E
+rivy~
+@G$n searches through the ivy, yielding nothing of use.@n
+~
+E
+ivy~
+@GYour searches through the ivy yeild nothing of use.@n
+~
+!
+9 0 0
+2411 9 1509949540 3 0
+-1
+S
+
+#5303
+Frostfur Woods - Muddy Trail~
+A fallen log lies across the muddy trail, its rotting bark coated in a
+lush layer of sphagnum moss and pale cream-capped toadstools.  A
+grass-covered hillock rises to the south of the trail, the ancient husk
+of a stout fir tree rising from its peak.  The burbling rush of water
+echoes through the woodlands, its source somewhere to the north.  A few
+rodent skulls dangle from the fir tree branches, the occasional gust of
+wind stirring them into a clatter of sound.
+~
+[Azerin] south is entrance to gnoll lair.
+[Guinafaer] Done
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 5324 10 10 5
+D1
+~
+~
+0 -1 5302 10 10 5
+D2
+~
+~
+0 -1 5308 10 10 5
+D3
+~
+~
+0 -1 5304 10 10 5
+E
+toadstools~
+The delicate stems of the fungi bend under the wieght of their
+cream-colored caps.  A few speckles of purple run like veins up their
+fleshy stem.  The lack of any creatures nibbling upon them might suggest
+that they are poisonous or at least very unsavoury.
+~
+E
+skulls~
+Attached to the branches of a nearby tree by long, thin strips of
+rawhide, less than a dozen rodent skulls present a grizzly picture of the
+forest's inhabitants.  The pale, bleached bones clatter together
+threateningly in the breeze of a passing wind gust.
+~
+E
+moss bark log trail~
+The remnant of a long-felled tree lies across the path, its dessicated,
+rotting bark blanketed with a dense layer of gray-green moss that
+flourishes in the damp conditions.
+~
+A
+~
+~
+send_to_room( #message, room, sight );
+~
+E
+message~
+@YA soft light escapes from the top of the tree stump, as if something
+was moving within the trunk.@n 
+~
+!
+2 350 0
+A
+~
+~
+act_tochar( #log, ch );
+act_notchar( #rlog, ch );
+continue;
+~
+E
+log~
+@gYou step over the fallen log and continue westward.@n 
+~
+E
+rlog~
+@g$n steps over a fallen log and continues westward.@n 
+~
+!
+3 0 8
+A
+~
+~
+send_to_room( #bones, room );
+~
+E
+bones~
+@CThe bones in the trees clatter together, creating a disquieting
+melody.@n 
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou take a turn in the path and continue to the south.@n
+~
+E
+to_room~
+@g$n takes a turn in the path and continues to the south.@n
+~
+!
+3 0 4
+-1
+S
+
+#5304
+Frostfur Woods - Muddy Trail~
+Patches of grass grow beside the muddy trail, the seedhead tufts coated
+in a layer of frost.  Rising to the southeast is a low hillock, the
+remnants of a sizable tree standing at its top.  A few semi-frosted ferns
+grow under the fir trees, their fronds wilted and black from the bitter
+cold.  The sound of a rushing river sings through the woodlands, its
+source some distance to the north.
+~
+[Guinafaer] Done.
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 5303 10 10 5
+D2
+~
+~
+0 -1 5305 10 10 5
+E
+ferns fronds~
+The nearby ferns, one bright green, are wilting now, their frond's edges
+curling and blackened from a recent frost.
+~
+E
+patches grass frost tufts~
+Patches of dying grass grow along the half-frozen trail.  Gone to seen
+long since, the seed tufts are rhimed with frost, resembling an old man's
+beard.
+~
+A
+wind~
+~
+send_to_room( #wind, room );
+~
+E
+wind~
+@cThe wind howls through the tree tops, stirring up a cloud of pollen and
+dust.@n 
+~
+!
+2 150 0
+2411 9 1509949540 3 0
+-1
+S
+
+#5305
+Frostfur Woods - Muddy Trail~
+An ice-capped fairy ring lies beside the muddy trail, the withered
+grasses and frost-covered ferns surrounding the red-splashed toadstools. 
+Gathering close to the roadside, the densely foliaged fir trees form an
+impenetrable wall of vegetation.  From somewhere to the north, filters
+the sound of rushing water.  Dangling from high branches are threaded
+bones that form a bleached wind-chime.
+~
+[Guinafaer] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 5304 10 10 5
+D3
+~
+~
+0 -1 5306 10 10 5
+E
+faerie ring toadstools~
+Lying close by the pathway, a flattened section of darkened vegetation
+forms a perfect circle.  Called a faerie ring, the round patch is
+surrounded by frost darkened ferns and creamy colored toadstools, their
+caps splotched with crimson.  The air immediately above the patch
+shimmers as if something unseen were was distorting it.
+~
+E
+bones windchime bleached~
+Scores of bones of varying shapes and sizes are suspended from nearby fir
+boughs, both high and low.  Bleached white by the weather, there are
+rat-sized skulls and tiny leg bones, and the larger bones of bigger prey. 
+A passing breeze sets the bones to dancing, tattooing a macabre melody
+into the forest.
+~
+A
+chim~
+~
+send_to_room( #windc, room );
+~
+E
+windc~
+@WThe bones rattle in the blustery winds.@n 
+~
+!
+2 350 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou slog along the muddy trail, continuing onward.@n
+~
+E
+to_room~
+@g$n slogs along the muddy trail, continuing onward.@n
+~
+!
+3 0 3
+-1
+S
+
+#5306
+Frostfur Woods - Muddy Trail~
+Bloated, moisture-soaked logs lie in a rotting heap beside the woodland
+path.  A splash of brightly capped toadstools swarm across the decaying
+surface, a hazy cloud of spores hanging in the air around them. 
+Dew-coated ferns spread their fronds across the forest floor, the rich
+smell of damp ground filling the air.  Rising from the basin of ferns,
+the gnarled fir trees stretch to over fifty feet in hight, their needled
+branches forming a wall of greenery.
+~
+[Guinafaer] Done.
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 5305 10 10 5
+D3
+~
+~
+0 -1 5307 10 10 5
+E
+logs heap toadstool spores~
+A rotting pile of broken branches and remnants of a felled tree lie
+beside the path, the wood swollen and dank and its bark all but decayed
+away.  A cluster of crimson-capped toadstools make their home across the
+heap, a splash of bright-hued color against the dead brown wood.
+~
+E
+ferns fronds~
+Dew beaded ferns spread across the forest floor, encroaching on the
+serpentine path.  Warmed by the radiant heat of nearby rocks, these
+particular ferns show little sign of frost damage.
+~
+A
+~
+~
+send_to_room( #light, room );
+wait( 3 );
+send_to_room( #thun, room );
+~
+E
+thun~
+@BDistant thunder rumbles through the ice-capped mountains.@n
+~
+E
+light~
+@CA flash of lightning illuminates the distant peaks.@n
+~
+!
+2 50 0
+2410 9 1509949540 3 0
+-1
+S
+
+#5307
+Frostfur Woods - Muddy Trail~
+Rising through the carpet of frost-coated ferns is a monolith of gray
+stone.  Whorls of carvings coat its surface, the indentations filled with
+growing green moss.  Running around the stone is a muddy forest trail;
+through the branches of the fir trees, it winds into the heart of the
+woodlands.  Scattered around the stone's base is a collection of bones
+and fir scraps, perhaps the site of a long-past feast.
+~
+[Guinafaer] Altar
+[Guin] Done.
+~
+167248000 3 9 0
+D0
+~
+~
+0 -1 5309 10 10 5
+D1
+~
+~
+0 -1 5306 10 10 5
+E
+bones fir scraps~
+Weathered bones, broken fir twigs and ruined husks of rotting acorns like
+in a bed of decaying needles strewn around the base of the ancient grey
+stone monolith as if left there as an offering to whatever god the altar
+is dedicated to.
+~
+E
+monolith stone whorls carvings moss~
+A gray stone monument rises beside the path, its worn and weathered
+surface ancient beyond reckoning.  Etched into the stone and smoothed by
+the passing of years, the whorls and lines of intricate sigils are masked
+by a thin layer of velvety green moss.
+~
+A
+search~
+bones fir scraps~
+if( rflag( reset0, room ) ) {
+  if( random( 0, 10 ) < 10 ) {
+    obj_to_char( oload( 3626 ), ch );
+    act_tochar( #get, ch );
+    act_notchar( #notget, ch );
+    }
+  else {
+    act_tochar( #noget, ch );
+    act_notchar( #notnoget, ch );
+    }
+  remove_rflag( reset0, room );
+  end;
+  }
+act_tochar( #noget, ch );
+act_notchar( #notnoget, ch );
+~
+E
+get~
+@gYou search through the pile of bones of firs and find something.@n
+~
+E
+notget~
+@g$n searches through the pile of bones and finds something.@n
+~
+E
+noget~
+@gYou search through the pile of bones an find nothing of use.@n
+~
+E
+notnoget~
+@g$n searches through the pile of bones but finds nothing.@n
+~
+!
+0 0 0
+A
+touch trace~
+whorls lines sigils~
+if( is_neutral( ch ) )
+  if( !is_affected( bless, ch ) ) {
+  act_notchar( #isblessed, ch, obj, mob );
+  act_tochar( #blessed, ch, obj, mob );
+  do_spell( bless, ch );
+  interpret( ch, "leech bless" );
+}
+act_notchar( #isnotneutral, ch, obj, mob, sight );
+act_tochar( #notneutral, ch, obj, mob, touch );
+~
+E
+isnotneutral~
+@c$n traces the strange, moss covered markings with $s finger, but
+nothing happens@n 
+~
+E
+notneutral~
+@cYou trace the strange, moss covered runs with one finger, but nothing
+happens.@n 
+~
+E
+isblessed~
+@C$n traces the strange, moss covered lines with $s finger, and a@n
+@Wglowing white light@n @Csurrounds $m.@n 
+~
+E
+blessed~
+@CYou trace the strange, moss covered lines with a finger, and a@n
+@Wglowing white light@n @Csurrounds you.@n 
+~
+E
+nada~
+No description.
+~
+!
+0 0 0
+2505 9 1509949540 3 0
+2412 9 1509949540 3 0
+-1
+S
+
+#5308
+Frostfur Woods - The Blackened Stump~
+Covering much of the hillock are the remains of a giant fir tree. 
+Despite being blackened with fire and missing half its branches, the tree
+still stands nearly fifty feet in height and at least ten feet round. 
+Cut into the sickly-scarred bark of the tree is a round doorway, a dirty
+paw print set into its middle.  Leading from the hillock is a overgrown
+trail; it heads northward into the woodlands.
+~
+[Azerin] entrance to gnoll lair
+[Guinafaer] Done
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 5303 10 10 5
+D2
+blackened door~
+~
+391 3646 5312 10 10 5
+E
+door paw print~
+A sizable humanoid pawprint smears its way across the blackened wood of
+the cicular door.  A scattering of light scratch marks also mar its
+surface.  Nearly invisible, a black iron keyhole has been set in the
+midnight-hued door.
+~
+A
+~
+~
+act_tochar( #nor, ch );
+act_notchar( #rnor, ch );
+continue;
+~
+E
+nor~
+@gYou make your way down the hillock and back into the forest.@n 
+~
+E
+rnor~
+@g$n makes $s way down the hillock and into the forest.@n 
+~
+!
+3 0 1
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou step through the door into the hollowed out tree.@n
+~
+E
+to_room~
+@g$n steps through the door into the hollowed out tree.@n
+~
+!
+3 0 4
+-1
+S
+
+#5309
+Frostfur Woods - Muddy Trail~
+Festooned with frost, the ferns and bracken of the undergrowth droop low,
+the icy burden bending them to the ground.  The tangled roots of fir
+trees spread out between the clumps of growth, their gnarled bark
+impervious to the icy layer.  A narrow path winds through the woods, its
+surface churned into a morass of mud.  The sound of rushing water filters
+in from the north; a chilling mist swirls through the woods from that
+direction.
+~
+[Guinafaer] Done.
+~
+167247872 3 9 0
+D2
+~
+~
+0 -1 5307 10 10 5
+D3
+~
+~
+0 -1 5310 10 10 5
+E
+frost ferns bracken~
+Lacy tendrils of ice drape from leave to branch and back again, creating
+a wonderous shimmering web of the forest's undergrowth, bending the
+delicate fern fronds low to the ground.
+~
+E
+roots bark icy~
+Twisted and gnarled roots stretch between patches of moss and the
+sprouting growth of frost bedewed ferns.  Encased in a sheet of
+shimmering ice, the groping roots look like a fantastical piece of
+glassine artwork created by a master craftsman.
+~
+A
+~
+~
+act_tochar( #mud, ch );
+act_notchar( #rmud, ch );
+continue;
+~
+E
+mud~
+@yThe mud churns beneath your feet as you journey southward.@n 
+~
+E
+rmud~
+@yChurning through the mud, $n journeys southward.@n 
+~
+!
+3 0 4
+-1
+S
+
+#5310
+Frostfur Woods - Muddy Trail~
+Speckled moss spreads across the branches and roots of the gnarled fir
+trees, frozen droplets of dew hanging from their leaves.  Beneath the
+spreading limbs, a muddy trail winds, its outter fringe flanked with
+rime-brushed bluebells and ferns.  A clinging mist drapes itself through
+the gaps in the woods, blanketing the area in a hazy cloud.  From the
+north, the sound of a rushing river rolls like thunder, the ground
+underfoot vibrating from the torrential flow.
+~
+[Guinafaer] Done.
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 5309 10 10 5
+D3
+~
+~
+0 -1 5311 10 10 5
+E
+moss roots dew~
+A sheet of velvety moss clings to the twisted rooms and gnarled branches
+of nearby firs.  Ranging in color from muted greens to faded crimsons and
+duller browns, the moss is beaded with frozen dew, sparkling like
+crystalline pearls.
+~
+E
+mist~
+Directly to the north, a haze of mist shimmers and rolls, distorting
+vision and veiling what lies beyond the trees on the other side of the
+gorge.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou wander along the trail 'neath the overhanging branches.@n
+~
+E
+to_room~
+@c$n wanders along the trail 'neath the overhanging branches.@n
+~
+!
+3 0 10
+-1
+S
+
+#5311
+Frostfur Woods - Muddy Trail~
+Flanked by tall fir trees, the muddy trail begins to wind into the
+forest's heart.  Bluebells line the path's edge, their bell-shaped
+flowers coated in a dusting of frost.  The air is bitterly cold, making
+breathing labourous and stinging exposed flesh.  Beyond the
+northward-lying trees, a ravine opens up, soaking mist rising from a
+roaring river that rushes along the gorge's basin.  Hanging from the high
+branches are a collection of bones and bird skulls, their surface covered
+in bright red patterns.
+~
+[Azerin] no mob
+[Azerin] join to 7947 west
+[Guinafaer] Done.
+~
+167247880 3 9 0
+D1
+~
+~
+0 -1 5310 10 10 5
+D3
+~
+~
+0 -1 7947 10 10 5
+E
+ravine gorge mist~
+Not far to the north, beyond a narrow line of firs, the land drops into a
+river-carved gorge.  Rising mist, formed by the rushing waters below,
+veil what lies at the bottom of the ravine.
+~
+E
+bones birds skulls branches patterns~
+A collection of bones are suspended from the sharp-needled branches of a
+nearby tree by thin strips of uncured rawhide The gruesome treasure has
+been painted with red in various, undefinable patterns known only to the
+artists.
+~
+A
+~
+~
+send_to_room( #windc, room );
+~
+E
+windc~
+@BA breeze stirs the trees and rattles the dangling bones.@n 
+~
+!
+2 400 0
+-1
+S
+
+#5312
+Inside the Stump~
+Carved from the dull red wood of the tree, the circular chamber is lined
+with a matting of dried bracken and ferns.  A round door has been set
+into the northern wall; an alcove carved beside it holds a tallow candle. 
+The air is heavy with woodsmoke and the aroma of sap mixed with the dank
+stench of wet dog.  An opening in the south leads into another chamber,
+slightly larger than this one.
+~
+[Guinafaer] Done.
+~
+167247876 0 5 0
+D0
+blackened door~
+~
+391 3646 5308 10 10 5
+D2
+~
+~
+0 -1 5313 10 10 5
+E
+bracken ferns~
+Cut from the surrounding forest, the mottled foliage is rapidly becoming
+dry and brittle.
+~
+E
+alcove~
+The shallow alcove has been crafted to hold a single candle.  Around the
+edges, a spidery writing has been scrawled, the script encircling the
+entire niche.
+~
+E
+spidery writing~
+Carved in a flowing script, the writing seems to have no clear beginning
+or end.
+~
+A
+~
+~
+act_tochar( #swirl, ch );
+continue;
+~
+E
+swirl~
+@CFaint wisps of woodsmoke curl through the air as you move southward.@n
+~
+!
+3 0 4
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou duck through the door leading outside.@n
+~
+E
+to_char~
+@g$n ducks through the door leading outside.@n
+~
+!
+3 0 1
+-1
+S
+
+#5313
+Inside the Stump - Sleeping chamber~
+The chamber has been carved from the heart of the tree, a rich grain
+running through the walls highlighted by a sweet-smelling varnish.  A
+brick-lined firepit sits in the center of the room, a few scattered
+sleeping furs beside it.  An orb of glass dangles from the ceiling by a
+silver chain, a soft glowing light emanating from it.  An exit in the
+north leads to a fern-carpeted room.  A round wooden door has been set
+into the western wall.
+~
+[Azerin] planned a wizard/magic zone far below or something :)
+[Guinafaer] Done.
+~
+167247876 0 5 0
+D0
+~
+~
+0 -1 5312 10 10 5
+D3
+round door~
+~
+131 -1 5314 10 10 5
+E
+brick-lined firepit~
+The clay-fired bricks form a circle around the smoldering ash of a wood
+fire.  A few tendrils of smoke gently drift upward from the heap.
+~
+E
+orb glass chain~
+Sparkling with soft illumination, the glass orb appears to be a form of
+enchanted torch.  A silver chain affixed to the top attaches the orb to
+the wooden ceiling.
+~
+A
+~
+~
+send_to_room( #light, room );
+~
+E
+light~
+@cWith a sparkle of light, the orb in the ceiling spins on the chain and
+sends a rainbow-hued ripple across the walls.@n 
+~
+!
+2 200 0
+A
+get take~
+orb light glow~
+if( rflag( reset0, room ) ) {
+  if( random( 0, 10 ) < 9 ) {
+    act_tochar( #getchar, ch );
+    act_notchar( #getnotchar, ch );
+    obj_to_char( oload( 3648 ), ch );
+    }
+  else {
+    act_tochar( #noget, ch );
+    act_notchar( #nonotget, ch );
+    }
+  remove_rflag( reset0, room );
+  }
+else {
+  act_tochar( #noget, ch );
+  act_notchar( #nonotget, ch );
+  }
+~
+E
+getchar~
+@yYou jump up and manage to grab the glow globe.
+~
+E
+getnotchar~
+@y$n reaches up and manages to grab a glow globe.
+~
+E
+noget~
+@yYou jump at the glow globe but can't reach.
+~
+E
+nonotget~
+@y$n jump up to grab the glow globe but can't reach.
+~
+!
+0 0 0
+2414 9 1509949540 3 0
+-1
+S
+
+#5314
+Inside the Stump - Stairwell~
+Cut into the chamber's wall is a narrow stairwell that ascends into the
+higher levels of the tree.  The semi-circular cavity has been covered
+with carvings of forest animals, most being hunted by gnolls and wolves. 
+Round doorways have been set in the eastern and western walls, each one
+framed by a whitewashed arch.
+~
+[Guinafaer] Done.
+~
+167247876 0 5 0
+D1
+wooden door~
+~
+131 -1 5313 10 10 5
+D3
+blackened door~
+~
+391 3646 5315 10 10 5
+D4
+~
+~
+0 -1 5316 10 10 5
+E
+stairwell~
+Cut from the heartwood, the stout stairs would make for an easy climb
+into the higher boughs of the tree.
+~
+E
+carvings forest animals gnolls volves~
+The carvings show a pack of gnolls and wolves rushing through the
+woodlands, slaughtering anything they find.  A half-destroyed image of a
+red-cloaked human watches from behind the horde, a barbed whip grasped in
+one hand.
+~
+A
+~
+~
+act_tochar( #up, ch );
+act_notchar( #rup, ch );
+continue;
+~
+E
+up~
+@gYou stride up the winding stairs, leaving the carved room behind.@n
+
+~
+E
+rup~
+@g$n climbs up the stairs, dissapearing out of sight.@n 
+~
+!
+3 0 16
+-1
+S
+
+#5315
+Before a Blackened Stump~
+The remnants of a standing stone lie here, overrun by a tangle of
+thorn-covered raspberry branches.  Across its pitted surface a line of
+faint runes has been etched.  The blackened tree rises to the east, its
+solid branches rising upwards.  Leafless and twisted the stump would have
+been a massive oak or maple were it still alive.  The acrid smell of wood
+smoke hangs on the air around its base, mixing with the rank odor of
+decay that makes breathing unpleasant.
+~
+[Azerin] west spreads out with more gnolls and then connects to roadway
+[Guinafaer] Done.
+~
+167247872 3 9 0
+D1
+blackened door~
+~
+391 3646 5314 10 10 5
+E
+standing stone runes~
+The faint lines of the runes have been eroded away by the passing years
+and harsh mountain weather.  Leaning heavly to the south, cracks and
+fissures mar the dusky-orange stone.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou step through the rounded doorway, back into the tree.@n
+~
+E
+to_room~
+@g$n steps through the rounded doorway, back  into the three.@n
+~
+!
+3 0 2
+2441 17 1509949540 -2 0
+-1
+S
+
+#5316
+Inside the Stump - Stairwell~
+A stairwell descends in the center of the circular chamber, its narrow
+steps burnished with use.  Skins of animals have been streched across the
+ceiling; deer, bear and fox pelts make up the majority of the creatures. 
+A white-washed arch frames the circular door to the north.  A plain
+wooden bench stands against the southern wall, the rich grain of the wood
+polished until it gleams.
+~
+[Azerin] gnoll reset
+[Guinafaer] done
+~
+167247876 0 5 0
+D0
+circular door~
+~
+131 -1 5318 10 10 5
+D5
+~
+~
+0 -1 5314 10 10 5
+E
+stairwell~
+Cut from the heart of the tree, the darkwood stairwell spirals downward
+out of the chamber.  The steps have been worn by years of use until they
+gleam as if polished.
+~
+E
+skins animals deer bear fox pelts ceiling~
+Stitched across the roof the skins appear to serve little purpose other
+than to display someone's skill at destroying woodland animals.  Iron
+spikes have been driven into each side of the cover, pinning it to the
+wood.
+~
+E
+white-washed arch~
+Pale ash has been worked into the rich wood until it has become bleached
+like bone.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou carefully make your way down the stairs.@n
+~
+E
+to_notchar~
+@g$ carefully makes $s way down the stairs.@n
+~
+!
+3 0 32
+2414 9 1509949540 3 0
+501 17 1509949540 -2 0
+-1
+S
+
+#5317
+Inside the Stump - Stairwell~
+Under Construction.
+~
+~
+167247872 3 9 0
+-1
+S
+
+#5318
+Inside the Stump - Narrow Hallway~
+Gleaming walls and floor reflect the light cast from sconce-set torches
+that jut from near the roof.  A fissure in the northern wall allows a
+chilling breeze in, the cool wind causing the flames to flicker and dance. 
+Eastward, the hallway continues toward a narrow window, admitting
+filtered light.  A round wooden door has been set in the southern wall, a
+blood-colored pawprint its only decoration.
+~
+[Guinafaer] Done
+~
+167247876 0 5 0
+D1
+~
+~
+0 -1 5319 10 10 5
+D2
+circular door~
+~
+131 -1 5316 10 10 5
+E
+sconce-set torches~
+Set into the wall by iron rivets, the bronze sconces cup the flickering
+torchs, keeping them from damaging the wall.
+~
+E
+fissure~
+The narrow crack appears to have been formed by a flaw in the outer wood,
+the cold climate of the mountains expanding the crack with years of frost.
+~
+E
+blood-colored pawprint~
+Dried to a bloody red-black the pawprint is about as large as an ogre's. 
+A few ribbons of blood trickled down the surface of the door.
+~
+A
+~
+~
+send_to_room( #gust, room );
+~
+E
+gust~
+@GThe tree shakes and groans loudly as a power gust of wind slams into
+it.@n
+~
+!
+2 150 0
+-1
+S
+
+#5319
+Inside the Stump - Narrow Hallway~
+The fine grain of the wall's wood gleams with polish, reflecting the
+light cast from a torch set into a high sconce.  A knothole in the
+northern wall has been cut out, forming a almond-shaped window to the
+outside.  The bark around the hole smells sickly sweet, a oozing liquid
+pooling around it.  An opening in the south enters into a circular
+chamber, similar to most of the gnoll's rooms.  Westward, the tunnel ends
+at a door set into the southern wall.
+~
+[Guinafaer] Done.
+~
+167247876 0 5 0
+D2
+~
+~
+0 -1 5320 10 10 5
+D3
+~
+~
+0 -1 5318 10 10 5
+E
+torch sconce~
+The simple copper sconce juts from the smooth wood wall, ensuring that
+any torch will avoid burning it.
+~
+E
+knothole window outside bark~
+Cut into a reptilian eye-shaped hole, the almond window looks out upon
+the fir woods below.
+~
+E
+oozing liquid pooling~
+The amber liquid seeps from the knothole like blood from a wound.  At the
+edges, it has begun to crystalize.  A scattering of minute insects appear
+to have been trapped in its sticky embrace.
+~
+-1
+S
+
+#5320
+Inside the Stump~
+Carved out of the heartwood of the blackened stump, the circular chamber
+has been carpeted with dry bracken and off-cuts of animal pelts.  An
+opening in the northern wall leads into a narrow hallway, that twists
+sharply to the west.  Dangling from an opening in the ceiling is a
+knotted rung ladder, the hemp and wood apparently in good conditon.  The
+skull of a wolf has been mounted above the eastern door, blood-red
+pawprints surrounding it.  A basin of water fills the opening to the
+south a few water lilies floating on its surface.
+~
+[Azerin] gnoll leader east
+[Guinafaer] Reviewed.
+~
+167247876 0 5 0
+D0
+~
+~
+0 -1 5319 10 10 5
+D1
+wooden door~
+~
+131 -1 5321 10 10 5
+D2
+~
+~
+0 -1 5322 10 10 5
+D4
+~
+~
+0 -1 5323 10 10 5
+E
+dry bracken animal pelts~
+The discarded scraps of animal hides lie entwined in the scraggy bracken
+upon the floor, their desiccated husks a sad remnant of a once living
+creature.
+~
+E
+knotted run ladder hemp wood~
+Hemp and animal hair have been knotted around slats of fir tree to form
+a serviceable ladder.
+~
+E
+skull wolf blood-red pawprints~
+The blood-red pawprints radiate out from the bleached bone skull, giving
+it the appearance of a gruesome flower.
+~
+E
+basin water lilies~
+Almost too perfect the flower-covered pool has an unnatural feel about it. 
+The lilies undulate on the rippling water, forming a mesmerizing pattern.
+~
+A
+~
+~
+act_tochar( #to_char, ch );
+end;
+~
+E
+to_char~
+@yYou need to climb up the ladder to proceed.
+~
+!
+3 0 16
+A
+climb~
+up ladder~
+if( !is_player( ch ) ) {
+  if( find_skill( ch, climb ) > 0 )
+    transfer( ch, find_room( 5323 ) );
+  end;
+  if( can_fly( ch, ) )
+    transfer( ch, find_room( 5323 ) );
+  }
+if( is_player( ch ) ) {
+  act_notchar( #notclimb, ch );
+  act_tochar( #climb, ch );
+  transfer( ch, find_room( 5323 ) );
+  }
+loop( followers ) {
+  if( !is_player( rch ) ) {
+    if( find_skill( rch, climb ) > 0 )
+      transfer( rch, find_room( 5323 ) );
+    end;
+    if( can_fly( rch ) )
+      transfer( rch, find_room( 5323 ) );
+    }
+  if( is_player( rch ) ) {
+act_notchar( #notclimb, rch );
+    act_tochar( #climb, rch );
+transfer( rch, find_room( 5323 ) );
+    }
+  }
+~
+E
+climb~
+@yThe ladder sways gently as you climb it to the room above.@n
+~
+E
+notclimb~
+@yThe ladder sways gently as $n climbs it to the room above.@n
+~
+!
+0 0 0
+2414 9 1509949540 3 0
+2414 9 1509949540 3 0
+-1
+S
+
+#5321
+Inside the Stump - Trophy Room~
+The bones and furs of countless animals and human-like creatures line the
+walls and cover the floor of the chamber.  Stacked into a crude chair is
+a mound of skulls, most appearing to be orc or goblin in origin.  The
+rusted remains of weapons lie in a stack against the eastern wall, the
+mottled collection fused together.  A circular door in the western wall
+appears to be the only exit from the room.
+~
+[Azerin] gnoll leader reset
+[Guin] Done.
+[Elisa] descript with chest  length
+~
+167247876 0 5 0
+D3
+wooden door~
+~
+131 -1 5320 10 10 5
+E
+bones furs walls~
+Stacks of animal bones and poorly-cured pelts have been stitched against
+the wooden walls, iron spikes driven through them to keep the trophies
+secure.  Deer skulls and wolf pelts make up the majority of remains,
+although a scattering of humanoid skulls adorn the eastern wall.
+~
+E
+chair mound skulls orc goblin~
+Chipped and cracked the skulls have been piled into a crude chair,
+leather cords threaded through the eye sockets bind the grim mound
+together.  By the size of the teeth and general shape of the cranium, it
+would appear that most were formally owned by goblins or orcs.
+~
+E
+rusted weapons stack~
+The collection of weapons have rusted together, fusing the metal into a
+useless pile.  The worm-wood remnants of spear shafts and axe hafts lie
+in a pile, ready to be used as firewood.
+~
+A
+2 pick~
+2 chest 2 closed 2 locked 2 fire-scarred~
+if( mob_in_room( 2413, room ) ) {
+  act_tochar( #no, ch );
+  act_notchar( #ono, ch );
+  end;
+  }
+continue;
+~
+E
+no~
+Picking the lock is impractical while the gnoll warden waits here.
+~
+E
+ono~
+$n gazes at the strongbox avariciously.
+~
+!
+0 0 0
+A
+~
+chair~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  i = random( 1, 10 );
+  if( i == 1 ) {
+    j = random( 1, 10 );
+    if( j < 4 )
+      obj = oload( 803 );
+    else if( j < 7 )
+      obj = oload( 994 );
+  }
+  else if( i < 5 )
+    obj = oload( 994 );
+  else if( i < 8 )
+    obj = oload( 621 );
+}
+if( obj ) {
+  act_tochar( #snag, ch, obj, mob );
+  act_notchar( #rsnag, ch, obj, mob, sight );
+  obj_to_char( obj, ch );
+}
+else {
+  act_tochar( #nada, ch );
+  act_notchar( #rnada, ch, obj, mob, sight );
+}
+~
+E
+snag~
+You search on the chair, and find $p in good condition.
+~
+E
+rsnag~
+$n quickly searches the chair, and finds $p.
+~
+E
+nada~
+You find nothing worthwhile on the chair.
+~
+E
+rnada~
+$n seems to find nothing worthwhile.
+~
+!
+9 0 0
+2413 9 1509949540 3 0
+3659 49 1509949540 -2 0
+40 81 1509949480 -2 0
+40 81 1509949460 -2 0
+43 81 1509949450 -2 0
+44 81 1509949450 -2 0
+1811 81 1509949445 -2 0
+1612 81 1509949445 -2 0
+7534 81 1509949450 -2 0
+16 81 1509949485 -2 0
+7538 81 1509949460 -2 0
+-1
+S
+
+#5322
+Inside the Stump - A Shallow Pool~
+Crystal-clear, the pool's surface ripples like glass, the flotilla of
+lilies bobbing gently on its reflective skin.  Above the pool, a strange
+handprint has been burned into the wall, the wood an ashen hue around the
+scorch mark.  A round opening in the north allows entrance into a
+circular chamber, doors lining the east and northern walls.  Overhead, a
+single shard of crystal has been imbedded in the ceiling, its faceted
+edges gleaming with a soft light.
+~
+[Azerin] pool is portal to wizard who fled the gnoll invasion
+[Azerin] touch pool and touch hand opens portal in south to wizard lair(tm)
+[Guinafaer] Portal code disabled for now.
+[Guinafaer] Done.
+~
+167247876 0 5 0
+D0
+~
+~
+0 -1 5320 10 10 5
+E
+shard crystal~
+A little over a foot in length, the crystal appears firmly set into the
+roof.
+~
+E
+pool water ripple~
+The surface of the pool ripples like water, yet seems solid and cool much
+like glass.  Crystal lilies float upon it, their petals and flowers
+sparking in the light.
+~
+E
+handprint burnt~
+The size and shape of a human hand, the burned mark has been incinerated
+into an inch of wood.
+~
+A
+~
+~
+if( !obj_in_room( 2430, room ) ) {
+  send_to_room( #glow, room );
+  obj_to_room( oload( 2430 ), room );
+  }
+~
+E
+glow~
+@yThe crystal begins to glow softly. Shimmering light cascades from
+it, as the sparkles touch the surface of the pool, a swirling gate rises
+filling the darkness.@n
+~
+!
+0 0 0
+A
+~
+~
+obj = obj_in_room( 2430, room );
+if( obj ) {
+  send_to_room( #go, room );
+  junk_obj( obj );
+  }
+~
+E
+go~
+@RThe gate folds in upon itself and vanishes in the blink of an eye.@n
+~
+!
+2 1000 0
+1519 17 1509949540 -2 0
+-1
+S
+
+#5323
+The Top of the Stump~
+The blacked remnants of branches form a ring around the top of the stump,
+like the ribcage of a gigantic beast.  Below the patchwork of fir, trees
+spread outward until they meet the rising cliffs, forming the basin's
+edge.  Rusted iron spikes hold a rung ladder in place, allowing access to
+the tree's heart below.
+~
+[Guin] Done.
+~
+167247872 0 5 0
+D5
+~
+~
+0 -1 5320 10 10 5
+E
+branches ring ribcage~
+Rising skyward, the charred tree limbs form a blackened canopy that does
+little to halt the pervasive winds.  A few wisps of seared foliage cling
+to the branch tips, their charred surfaces withered and lifeless.
+~
+E
+patchwork fir trees cliffs basin~
+The mottled landscape of stone and forest spread out across the basin
+land.  Gusts of wind cut through the valley, the brutal gale sending
+clouds of dust and leaf litter skyward.  Beyond the basin wall the Cairn
+peaks rise, their jagged surfaces gleaming with permafrost and snow.
+~
+E
+iron spikes rung latter~
+Woven from hemp and animal hair, the rung ladder allows for an easy climb
+into the tree's heart.  Rusted iron spikes have been driven into the tree
+top, securing the rope.
+~
+A
+climb~
+down ladder~
+if( !is_player( ch ) ) {
+if( find_skill( ch, climb ) > 0 )
+transfer( ch, find_room( 5320 ) );
+end;
+if( can_fly( ch, ) )
+transfer( ch, find_room( 5320 ) );
+}
+if( is_player( ch ) ) {
+act_notchar( #notclimb, ch );
+act_tochar( #climb, ch );
+transfer( ch, find_room( 5320 ) );
+}
+loop( followers ) {
+if( !is_player( rch ) ) {
+if( find_skill( rch, climb ) > 0 )
+transfer( rch, find_room( 5320 ) );
+end;
+if( can_fly( rch ) )
+transfer( rch, find_room( 5320 ) );
+}
+if( is_player( rch ) ) {
+act_notchar( #notclimb, rch );
+act_tochar( #climb, rch );
+transfer( rch, find_room( 5320 ) );
+}
+}
+~
+E
+notclimb~
+@y$n slowly climbs down the rickety ladder.@n
+~
+E
+climb~
+@yYou slowly climb down the later with a creak at each rung.@n
+~
+!
+0 0 0
+A
+~
+~
+Act_tochar( #act_tochar, ch );
+end;
+~
+E
+act_tochar~
+@yThe walls of the stump are impossible to climb down, maybe you should
+use the ladder.
+~
+!
+3 0 32
+A
+~
+~
+send_to_room( #smoke, room );
+~
+E
+smoke~
+@CThe acrid scent of burned wood drifts by on a current of air.@n
+~
+!
+2 150 0
+-1
+S
+
+#5324
+Frostfur Woods - Fallen Pine Shelter~
+Frost-fir toadstools festoon the rotting bark of a fallen pine, their
+blue-white caps gleaming with a dusting of dew.  A narrow opening has
+been cut out of the fallen tree, forming a snug shelter from the cold
+wind and rain that often lash the highlands.  The skull of a goat hangs
+above the shelter, its frontal bone painted with a bloody hand. 
+Southward, a goat track cuts through the fir trees in an east-west
+direction.  Beyond the path a black tree spreads its dead roots upon the
+top of a low hillock.
+~
+~
+167251978 3 9 0
+D2
+~
+~
+0 -1 5303 10 10 5
+E
+frost-fir toadstools~
+The fragile fungi smother the wet decaying bark and wood, their slender
+stems bend under the weight of a single droplet of dew.
+~
+A
+4 practice~
+2 summon cadaver~
+mob = mob_in_room( 699, room );
+tell( mob, ch, #stat1 );
+~
+E
+stat1~
+@ROur dark *grrr* brothers and *snarl* sisters are growing in power.  An
+evil pair has now taken a tower that once dwarves held.  Seek them to the
+west if you wish to continue your studies.@n 
+~
+!
+0 0 0
+699 9 1509949540 3 0
+3978 17 1509949540 -1 0
+3960 17 1509949540 -1 0
+3964 17 1509949540 -1 0
+3963 17 1509949540 -1 0
+3962 17 1509949540 -1 0
+3960 17 1509949540 -1 0
+3982 17 1509949490 -1 0
+3965 17 1509949490 -1 0
+3961 17 1509949540 -1 0
+210 17 1509949515 -1 0
+-1
+S
+
+#0
+

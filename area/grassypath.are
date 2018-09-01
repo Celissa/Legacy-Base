@@ -1,0 +1,245 @@
+#M2_AREA
+2
+
+Grassy Path~
+Larken~
+~
+~
+~
+
+0 0
+0
+1
+#ROOMS
+
+#76250
+Grassy Path~
+The grassy plain spreads out all around you.  The path you are on turns
+into a cobbled roadway and leads into the developing town Zirnath, and
+continues as a small foot trail through the grass to the south.  Small
+birds and insects flit in the air nearby.  To the east the sound of
+breakers crashing on the shore can barely be heard.
+~
+[Azerin] done - az
+~
+167247873 12 9 0
+D0
+~
+~
+0 -1 150022 10 10 5
+D2
+~
+~
+0 -1 76251 10 10 5
+-1
+S
+
+#76251
+Grassy Path~
+The path continues through the plain to the north and south.  A little to
+the south you see a lone oak tree standing alone in this flat grass land. 
+A salty sea breeze blows across the land from the east.  Small animal
+tracks crisscross the path in a number of place, but the grass is tall
+enough to hide most nearby animals from sight.
+~
+[Azerin] done - az
+~
+167247873 12 9 0
+D0
+~
+~
+0 -1 76250 10 10 5
+D2
+~
+~
+0 -1 76252 10 10 5
+203 9 1509949540 3 0
+2508 9 1509949540 3 0
+2509 9 1509949540 3 0
+-1
+S
+
+#76252
+Grassy Path - North of a Lone Oak~
+The grassy path here allows for quick and easy travel to the north and
+east.  To the north the sounds of a bustling little town drift in on the
+breeze.  To the east the path continues threw the mostly featureless
+plain.  Far off to the southeast a large blackened structure rises out of
+the ground.  The small birds and insects that seem to populate this area
+seem to avoid the structure for the most part.
+~
+[Azerin] done - az
+~
+167247873 12 9 0
+D0
+~
+~
+0 -1 76251 10 10 5
+D1
+~
+~
+0 -1 76253 10 10 5
+755 9 1509949540 3 0
+755 9 1509949540 3 0
+-1
+S
+
+#76253
+Grassy Path~
+The path continues to curve around the trunk of the great tree.  To the
+west you see the path take a turn to the north towards what appears to be
+a town.  To the south the path disappears from sight as it wraps around
+the old tree.  The knobbly roots of the tree provide a natural habitat for
+many small animals.
+~
+[Azerin] done - az
+~
+167247873 12 9 0
+D2
+~
+~
+0 -1 76254 10 10 5
+D3
+~
+~
+0 -1 76252 10 10 5
+-1
+S
+
+#76254
+Grassy Path - East of a Lone Oak~
+The path curves to the north and west around the trunk of the great oak. 
+The tree's limbs provide a natural shelter from the elements.  The faint
+breeze from the east ruffles the leaves of the great tree occasionally
+sending some spiralling to the ground.
+~
+[Azerin] done az
+~
+167247873 12 9 0
+D0
+~
+~
+0 -1 76253 10 10 5
+D3
+~
+~
+0 -1 76255 10 10 5
+2582 9 1509949540 3 0
+-1
+S
+
+#76255
+Grassy Path - South of a Lone Oak~
+To the north a giant oak tree grows out of the plain and stands alone in
+this vast grassland.  The path continues to the east and west.  The roots
+of the great tree run along the trail like the fingers of some great
+living creature.
+~
+[Azerin] done - az
+~
+167247873 12 9 0
+D1
+~
+~
+0 -1 76254 10 10 5
+D3
+~
+~
+0 -1 76256 10 10 5
+-1
+S
+
+#76256
+Grassy Path~
+This small path continues to the east and west.  To the west you can see
+it take a turn toward the south, and to the east you see it turn toward
+the north around a great oak tree.  Small song birds sing their sweet
+songs from the branches of the tree.  Across the grassy plain to the
+south and a little east a tall dark structure casts its shadow on this
+peaceful area.
+~
+[Azerin] done - az
+~
+167247873 12 9 0
+D1
+~
+~
+0 -1 76255 10 10 5
+D3
+~
+~
+0 -1 76257 10 10 5
+-1
+S
+
+#76257
+Grassy Path~
+The path curves here to the east and south.  Small animals scamper along
+the foot path and in the grassy field around you.  The song of small
+birds drifts in from the tree to the north.  From the east a faint sea
+breeze brings the smell of salt.
+~
+[Azerin] done - az
+~
+167247873 12 9 0
+D1
+~
+~
+0 -1 76256 10 10 5
+D2
+~
+~
+0 -1 76258 10 10 5
+-1
+S
+
+#76258
+Grassy Path~
+Tall grass lines the path to the east and west.  Randomly crisscrossing
+the path small animal trail are a the most obvious sign of life in the
+tall grass.  To the south you can see a tall dark stone structure.  Black
+soot or smoke or both seems to swirl up from the stucture.
+~
+[Azerin] redo the first part, less conversation and more description :)
+[Azerin] done - az
+[Larken] fixed
+~
+167247873 12 9 0
+D0
+~
+~
+0 -1 76257 10 10 5
+D2
+~
+~
+0 -1 76259 10 10 5
+896 9 1509949540 3 0
+896 9 1509949540 3 0
+896 9 1509949540 3 0
+-1
+S
+
+#76259
+Grassy Path~
+To the east southeast a circle of large blacked stones appears to
+surround something.  The small animal and bird life that is evident
+through out the rest of the plain seems to be lacking from that place. 
+The sea breeze from the west also brings the faint smell of ash and smoke.
+~
+[Larken] repop for sprites
+[Azerin] done - az
+~
+167247873 12 9 0
+D0
+~
+~
+0 -1 76258 10 10 5
+D1
+~
+~
+0 -1 75750 10 10 5
+-1
+S
+
+#0
+

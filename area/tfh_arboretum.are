@@ -1,0 +1,3723 @@
+#M2_AREA
+2
+
+Denahl's Arboretum~
+Rikahn~
+Denahl's Arboretum~
+~
+~
+
+5 0
+0
+1
+#ROOMS
+
+#5800
+Zone Details~
+~
+[Rikahn] Zone Concept:  Quest-Action area that concentrates on looks and activities
+[Rikahn] Entrances/Exits to the north and west
+[Rikahn] Beekeeper in center of zone at white gazebo:
+[Rikahn] - Gives tasks to players for catching bees
+[Rikahn] - Catching of bees results in honeycombs and beeswax
+[Rikahn] Bees cannot be 'killed' - Must either swat at them to disperse or catch
+[Rikahn] Attacking of bees makes them angry - They sting repeatedly without combat
+[Rikahn] Lack of proper combat technique in this zone is intentional - do not alter
+~
+200802304 2 5 0
+-1
+S
+
+#5801
+Before a White Gazebo~
+A pair of slim steps lead up to a squat, open structure to the east,
+which looks cozy and inviting.  Lush, green grass grows tall around the
+building, right up to a ring of stones that surrounds a crushed rock path. 
+The trail of loose pebbles runs in a lazy circle through the arboretum,
+with branches leading into the flower gardens and also out into the
+forest.  Flowerbeds with colorful blooms are visible in all of the
+corners, brightening up the view.
+~
+[Eliza] Done
+~
+200802304 12 5 0
+D0
+~
+~
+0 -1 5807 10 10 5
+D1
+gazebo entrance~
+~
+513 -1 5802 10 10 5
+D2
+~
+~
+0 -1 5811 10 10 5
+D3
+~
+~
+0 -1 5825 10 10 5
+E
+pair slim steps squat open structure 1 east~
+Open and airy, a framework gazebo has been built to the east, in the
+center of the network of gardens.  The lack of walls gives the structure
+an excellent vantage point from which to view the arboretum, with a
+slatted roof protecting its occupants from the weather.  Two narrow steps
+lead up into the enclosure, its floor built up slightly above the ground.
+~
+E
+lush green grass ground~
+Growing wild, yet still maintained to an even height, every square inch
+of space not occupied by the gravel path or lush plants is covered in
+grass, its slender blades emerald green.  Some patches vary in color, but
+all are healthy and inviting to walk upon.
+~
+E
+ring stones crushed rock path trail loose pebbles circle~
+Flat, oval-shaped stones line the sides of the crushed gravel path that
+runs throughout the entire series of gardens.  The primary path leads
+north and south, although branches follow a course westward out of the
+arboretum and eastward into an airy gazebo.
+~
+E
+flower gardens forest flowerbeds colorful blooms~
+Sectioned off into somewhat isolated fields, a wide variety of beautiful
+flowers brighten up the gardens in all directions.  The gravel path that
+winds its way through the arboretum, provides a comfortable walkway to
+gaze upon the flowers in peace.
+~
+A
+~
+~
+if( mob_in_room( 5013, room ) ) {
+  if( random( 1, 5 ) == 4 ) {
+    send_to_room( #dissipate, room );
+    junk_mob( mob_in_room( 5013, room ) );
+    end;
+    }
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( find_stat( rch, level ) < 90 )
+        act_tochar( #angry, rch );
+      }
+    }
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( find_stat( rch, level ) < 90 ) {
+        dam_message( rch, 2d2, "the bee sting" );
+        inflict( rch, mob, 2d2, "being stung by a bee" );
+        }
+      }
+    }
+  }
+~
+E
+angry~
+@rThe swarm of angry bees attack with their stingers!@n
+~
+E
+dissipate~
+@rThe angry bees calm down and fly off in search of more pollen.@n
+~
+!
+2 4000 0
+A
+~
+~
+if( race( ch ) != insect )
+  continue;
+~
+E
+to_char~
+@mYou climb up the steps and enter the gazebo.@n
+~
+E
+to_room~
+@m$n climbs up the steps and enters the gazebo.@n
+~
+!
+3 0 2
+A
+~
+~
+if( race( ch ) == insect )
+  continue;
+~
+E
+to_char~
+You are an insect.  You don't count.
+~
+E
+to_room~
+@y$n flies into the gazebo.@n
+~
+!
+3 0 2
+-1
+S
+
+#5802
+Inside the White Gazebo~
+Open and airy, this simple structure has been designed to offer a place
+for visitors to rest, shielded from the sun and other elements.  Tall
+beams support a roof of triangular panels, rounded in the center as it
+wraps its way around a tall elm tree.  Squat benches are placed in the
+corners away from the open exits, sitting in front of crisscrossed beams
+that help reinforce the flimsy building.  Openings are available in all
+directions, allowing a full view of the beautiful flower gardens. 
+Nestled within the elm tree is a thriving beehive, the humming sound of
+the cramped bees somehow comforting instead of scary.
+~
+[Eliza] Done.
+~
+200802312 0 5 0
+D0
+gazebo entrance~
+~
+513 -1 5805 10 10 5
+D1
+gazebo entrance~
+~
+513 -1 5803 10 10 5
+D2
+gazebo entrance~
+~
+513 -1 5809 10 10 5
+D3
+gazebo entrance~
+~
+513 -1 5801 10 10 5
+E
+simple structure crisscrossed planks~
+Constructed in a simple fashion in order to add to and not detract from
+the natural beauty of its surroundings, this whitewashed gazebo is made
+from very few materials.  Eight vertical beams support a roof of
+triangular panels, and crisscrossed planks help reinforce the
+structure's sides.
+~
+E
+tall beams roof triangular panels rounded~
+Vertical beams support triangular sheets of wood, fit together snugly to
+form a watertight roof.  Curving edges have been cut from the panels near
+its peak, where they wrap around the trunk of an elm tree that rises up
+into the sky.
+~
+E
+beautiful flower gardens~
+Aesthetically beautiful flower gardens surround the gazebo on all sides,
+each one offering different varities and colors of plants.  Built as a
+place of rest and relaxation from hard journeys, this arboretum is a
+tranquil place to explore.
+~
+E
+elm tree~
+Full-grown long before the structure encapsulated its breadth, this elm
+tree stands in the exact center of the arboretum's grounds.  All of its
+branches and leaves have been carefully trimmed away underneath the
+gazebo's roof, although a gaping hole in its side houses an active
+beehive.
+~
+A
+~
+~
+if( mob_in_room( 5013, room ) ) {
+  if( random( 1, 5 ) == 4 ) {
+    send_to_room( #dissipate, room );
+    junk_mob( mob_in_room( 5013, room ) );
+    end;
+    }
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( find_stat( rch, level ) < 90 )
+        act_tochar( #angry, rch );
+      }
+    }
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( find_stat( rch, level ) < 90 ) {
+        dam_message( rch, 2d2, "the bee sting" );
+        inflict( rch, mob, 2d2, "being stung by a bee" );
+        }
+      }
+    }
+  }
+~
+E
+angry~
+@rThe swarm of angry bees attack with their stingers!@n
+~
+E
+dissipate~
+@rThe angry bees calm down and fly off in search of more pollen.@n
+~
+!
+2 4000 0
+A
+~
+~
+if( race( ch ) == insect )
+  continue;
+~
+E
+to_char~
+You are an insect.  Go find some pollen.
+~
+E
+to_room~
+@y$n flies away to the $T, searching for more flowers.@n
+~
+!
+3 0 15
+A
+~
+~
+if( race( ch ) != insect )
+  continue;
+~
+E
+to_char~
+@mYou climb down the steps and head back into the garden to the $T.@n
+~
+E
+to_room~
+@m$n climbs down the steps and heads back into the garden to the $T.@n
+~
+!
+3 0 15
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 )
+  send_to_room( #action1, room );
+if( i == 2 )
+  send_to_room( #action2, room );
+if( i == 3 )
+  send_to_room( #action3, room );
+~
+E
+action1~
+@cA single bee flies out of the beehive, buzzing away in search of
+nectar.@n 
+~
+E
+action2~
+@cA slight breeze flows through the open gazebo, the scent of flowers
+carried in its wake.@n 
+~
+E
+action3~
+@cThe beekeeper reaches into the beehive, carefully extracting a
+honeycomb.@n 
+~
+!
+2 200 0
+7675 17 1509949540 -2 0
+3490 17 1509949540 -2 0
+5260 9 1509949540 3 0
+3110 17 1509949460 -1 0
+-1
+S
+
+#5803
+Before a White Gazebo~
+Its floor raised above the ground, two wooden steps lead up to the
+entrance of the structure to the west.  Possibly containing the best
+observation location within the gardens, only framework supports the
+roof, with no walls blocking the view.  To the east, a squat clay hut has
+been squeezed between a row of junipers on its north side, and a thick
+tangle of ivy supported by a trellis to the southeast.  A rectangular
+entrance is open, with no visible door in its frame.  A rock pathway
+leads to the north and south, towards other sections of the garden.
+~
+[Rikahn] builder's note - rflag reset0/1/2 stolen for r5824
+[Eliza] Done.
+~
+200802304 12 5 0
+D0
+~
+~
+0 -1 5808 10 10 5
+D1
+~
+~
+0 -1 5804 10 10 5
+D2
+~
+~
+0 -1 5812 10 10 5
+D3
+gazebo entrance~
+~
+513 -1 5802 10 10 5
+E
+two wooden steps entrance structure framework 1 west~
+Twin planks lead up to the raised entrance of a whitewashed building to
+the west.  Completely devoid of any walls, vertical wooden beams support
+a simple roof, with crisscrossed planks providing structural support.  A
+broad elm tree rises through the center of the structure, growing lush
+and full up above.
+~
+E
+squat clay hut rectangular entrance doorway 1 east~
+Made of dried mud, the squat structure to the east has been sun-dried and
+looks reasonably stable.  A foul stench wafts from the opening facing the
+path, reminiscent of manure.  There are no other windows or openings
+visible in the building except for the rectangular doorway.
+~
+E
+row junipers northeast~
+A long row of trimmed juniper bushes stand sentinel north of the clay
+hut, wrapping around the garden to the northeast.  The shrubs have been
+uniformly trimmed, barely brushing against one another.
+~
+E
+tangle ivy trellis southeast~
+A trellis of wooden slats supports a wall of dusky green ivy, just south
+of the clay hut to the east.  The latticework and vines provide a
+natural-looking barrier, obscuring the wild forest beyond.
+~
+E
+rock pathway~
+Tiny gray pebbles lie on top of soft dirt, providing a comfortable
+surface to walk upon.  Larger oblong stones line the sides of the
+pathway, keeping the gravel in place.  Branches lead off to the north and
+south towards the flower gardens.
+~
+A
+~
+~
+if( mob_in_room( 5013, room ) ) {
+  if( random( 1, 5 ) == 4 ) {
+    send_to_room( #dissipate, room );
+    junk_mob( mob_in_room( 5013, room ) );
+    end;
+    }
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( find_stat( rch, level ) < 90 )
+        act_tochar( #angry, rch );
+      }
+    }
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( find_stat( rch, level ) < 90 ) {
+        dam_message( rch, 2d2, "the bee sting" );
+        inflict( rch, mob, 2d2, "being stung by a bee" );
+        }
+      }
+    }
+  }
+~
+E
+angry~
+@rThe swarm of angry bees attack with their stingers!@n
+~
+E
+dissipate~
+@rThe angry bees calm down and fly off in search of more pollen.@n
+~
+!
+2 4000 0
+A
+~
+~
+if( race( ch ) != insect )
+  continue;
+~
+E
+to_char~
+@mYou climb up the steps and enter the gazebo.@n
+~
+E
+to_room~
+@m$n climbs up the steps and enters the gazebo.@n
+
+~
+!
+3 0 8
+A
+~
+~
+if( race( ch ) == insect )
+  continue;
+~
+E
+to_char~
+You are an insect.  You don't count.
+~
+E
+to_room~
+@y$n flies into the gazebo.@n
+~
+!
+3 0 8
+A
+~
+~
+if( race( ch ) != insect )
+  continue;
+~
+E
+to_char~
+@mYou step into the cramped hut.@n
+~
+E
+to_room~
+@m$n steps into the cramped hut.@n
+~
+!
+3 0 2
+A
+~
+~
+if( race( ch ) == insect )
+  continue;
+~
+E
+to_char~
+You are an insect.  Go sting something.
+~
+E
+to_room~
+@y$n flies into the adobe hut.@n
+~
+!
+3 0 2
+-1
+S
+
+#5804
+Inside an Adobe Hut~
+With the ceiling only six feet above the ground, this adobe hut is
+cramped and stuffy.  A caustic scent assaults the senses, emanating from
+sacks of fertilizer stacked up against the back wall.  The northern wall
+is covered with hooks, used to store the garden implements when not in
+use.  Tracks in the dirt floor indicate something of substantial weight
+has rested here, although what could have made the wide ruts can only be
+guessed at.
+~
+[Eliza] Done.
+~
+200802308 2 5 0
+D3
+~
+~
+0 -1 5803 10 10 5
+E
+sacks fertilizer~
+Enormous sacks of manure are stacked up in the back of the hut, their
+combined scent assaulting to the senses.  Apparently brought in by cart,
+they are much too heavy to pick up by themselves.
+~
+E
+wall hooks garden implements 1 north~
+Used to store a variety of garden implements, a number of hooks are
+anchored into the clay wall to the north.  At the moment, all of the
+hooks are empty, the tools in use elsewhere in the gardens.
+~
+E
+tracks dirt floor wide ruts ground 1 down~
+Spread a couple of feet apart, two ruts have been gouged out in the dirt
+floor.  Trailing out the doorway, they look as if they were created by
+the wheels of a cart or small wagon.
+~
+A
+~
+~
+if( mob_in_room( 5013, room ) ) {
+  if( random( 1, 5 ) == 4 ) {
+    send_to_room( #dissipate, room );
+    junk_mob( mob_in_room( 5013, room ) );
+    end;
+    }
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( find_stat( rch, level ) < 90 )
+        act_tochar( #angry, rch );
+      }
+    }
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( find_stat( rch, level ) < 90 ) {
+        dam_message( rch, 2d2, "the bee sting" );
+        inflict( rch, mob, 2d2, "being stung by a bee" );
+        }
+      }
+    }
+  }
+~
+E
+angry~
+@rThe swarm of angry bees attack with their stingers!@n
+~
+E
+dissipate~
+@rThe angry bees calm down and fly off in search of more pollen.@n
+~
+!
+2 4000 0
+A
+~
+~
+if( race( ch ) != insect )
+  continue;
+~
+E
+to_char~
+@mYou step out of the building, taking a deep breath of fresh air.@n
+~
+E
+to_room~
+@m$n steps out of the building, taking large gulps of fresh air.@n
+~
+!
+3 0 8
+A
+~
+~
+if( race( ch ) == insect )
+  continue;
+~
+E
+to_char~
+You are an insect.  Get out there and find some plants.
+~
+E
+to_room~
+@y$n flies out of the hut.@n
+~
+!
+3 0 8
+A
+get take grab search steal~
+hooks garden implements~
+act_tochar( #no, ch );
+~
+E
+no~
+The hooks are all empty, the implements already in use outside of the hut.
+~
+!
+0 0 0
+A
+get take grab search steal~
+sacks fertilizer~
+act_tochar( #no, ch );
+~
+E
+no~
+The sacks of fertilizer are much too heavy to pick up.
+~
+!
+0 0 0
+2505 17 1509949540 -2 0
+5264 9 1509949540 3 0
+-1
+S
+
+#5805
+Before a White Gazebo~
+Winding its way in a circle through the garden, a path wide enough for
+three people to walk abreast has sections leading off to the east and
+west.  Another branch leads off to the north between two hedgerows,
+heading back into the forest beyond.  Two wooden steps ease access into
+an airy gazebo built to the south, a tall tree rising up into the air
+through its center.
+~
+[Eliza] Done
+~
+200802304 12 5 0
+D0
+~
+~
+0 -1 5806 10 10 5
+D1
+~
+~
+0 -1 5808 10 10 5
+D2
+gazebo entrance~
+~
+513 -1 5802 10 10 5
+D3
+~
+~
+0 -1 5807 10 10 5
+E
+circle path 1 east 1 west 1 north hedgerows~
+Encircling the white building to the south, this path of crushed gravel
+and pebbles offers a guiding pathway through the gardens.  Rounded stones
+line the sides of the path to keep the trail neat and organized, with
+bigger rocks bordering the path that heads northward between two rows of
+junipers.
+~
+E
+two wooden steps airy gazebo tree center 1 south~
+A framed building with a minimal number of side panels has been built to
+the south, surrounding a tall elm tree that grows through its center. 
+Wooden beams crisscross between its roof supports at each corner,
+designed to only allow access at four of its cardinal points.  Two steps
+lead up to a raised floor, all of its surfaces whitewashed and clean.
+~
+A
+~
+~
+if( mob_in_room( 5013, room ) ) {
+  if( random( 1, 5 ) == 4 ) {
+    send_to_room( #dissipate, room );
+    junk_mob( mob_in_room( 5013, room ) );
+    end;
+    }
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( find_stat( rch, level ) < 90 )
+        act_tochar( #angry, rch );
+      }
+    }
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( find_stat( rch, level ) < 90 ) {
+        dam_message( rch, 2d2, "the bee sting" );
+        inflict( rch, mob, 2d2, "being stung by a bee" );
+        }
+      }
+    }
+  }
+~
+E
+angry~
+@rThe swarm of angry bees attack with their stingers!@n
+~
+E
+dissipate~
+@rThe angry bees calm down and fly off in search of more pollen.@n
+~
+!
+2 4000 0
+A
+~
+~
+if( race( ch ) != insect )
+  continue;
+~
+E
+to_char~
+@mYou climb up the steps and enter the gazebo.@n
+~
+E
+to_room~
+@m$n climbs up the steps and enters the gazebo.@n
+~
+!
+3 0 4
+A
+~
+~
+if( race( ch ) == insect )
+  continue;
+~
+E
+to_char~
+You are an insect.  You don't count.
+~
+E
+to_room~
+@y$n flies into the gazebo.@n
+~
+!
+3 0 4
+5259 9 1509949540 3 0
+-1
+S
+
+#5806
+Underneath a Sculpted Arch~
+Two hedgerows flank a rock path that leads north and south.  Each row
+consists of sets of juniper bushes, trimmed along the sides, giving each
+pair a uniform appearance.  The height of the plants drops along the row,
+until the last ones are only waist-high, though an arch of twining ivies
+soars overhead from the tops of the uppermost pair at least nine feet
+above the ground.
+~
+[Eliza] Done.
+~
+200802304 12 5 0
+D0
+~
+~
+0 -1 6480 10 10 5
+D2
+~
+~
+0 -1 5805 10 10 5
+E
+hedgerows row juniper bushes trimmed uniform appearance~
+Double rows of juniper bushes grow along the edges of the path, running
+through the garden.  Every plant on each side has a twin of exact
+dimensions on the opposite side, with varying heights that drop as you
+look southward.  The bushes appear to be dividers, sectioning off the
+different types of flowers into separate areas.
+~
+E
+arch twining ivies uppermost~
+Supported by an almost undetectable stick frame, a cluster of ivy grows
+in a wide swath overhead between the highest shrubs in the northern
+corners.  The leafy ivy provides a modicum of shade, and lends an elegant
+touch to the organic fence that surrounds the gardens to the south.
+~
+E
+rock path 1 north 1 south~
+Neatly organized into straight lines, oval stones line the edges of a bed
+of rock that runs to the north and south.  From a casual glance, not a
+single pebble has been cast outside of the prim path, the walkway
+meticulously maintained.
+~
+A
+~
+~
+if( mob_in_room( 5013, room ) ) {
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( find_stat( rch, level ) < 90 )
+        act_tochar( #angry, rch );
+      }
+    }
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( find_stat( rch, level ) < 90 ) {
+        dam_message( rch, 2d2, "the bee sting" );
+        inflict( rch, mob, 2d2, "being stung by a bee" );
+        }
+      }
+    }
+  }
+~
+E
+angry~
+@rThe swarm of angry bees attack with their stingers!@n
+~
+!
+2 4000 0
+-1
+S
+
+#5807
+Curved Path~
+A shallow path of crushed rock curves through the gardens to the south
+and east, the edges of the trail contained by a border of larger stones. 
+An open garden of yellow flowers is visible to the northwest, the variety
+of blooms dazzling against a dark green border of trimmed bushes.  The
+arboretum exudes an aura of peace and tranquility with nature, with the
+only man-made object being a whitewashed gazebo built around an elm tree
+to the southeast.
+~
+[Eliza] Done
+~
+200802304 12 5 0
+D0
+~
+~
+0 -1 5816 10 10 5
+D1
+~
+~
+0 -1 5805 10 10 5
+D2
+~
+~
+0 -1 5801 10 10 5
+D3
+~
+~
+0 -1 5818 10 10 5
+E
+shallow path crushed rock border larger stones~
+Softly winding its way in a circle through the garden, this path of gray
+pebbles is softened by a layer of dirt, offering a pleasant surface to
+walk upon.  The fringes of the path are contained by a row of oval
+stones, preventing the pebbles from scattering into the grass.
+~
+E
+open garden yellow flowers dark green border trimmed bushes~
+A border of perfectly trimmed shrubs and bushes encircles most of a
+series of yellow flowerbeds in an enclave to the northwest.  The flowers
+wrap in an arc around a solitary tree planted on a grassy knoll in the
+middle of the clearing.
+~
+E
+man-made object whitewashed gazebo elm tree southeast~
+Its roof wrapped around the trunk of an elm tree, a gazebo with
+whitewashed panels stands in the center of the garden.  Wooden railings
+crisscross up to waist height around its perimeter, offering a place to
+rest or observe all of the facets of the arboretum from one location.
+~
+A
+~
+~
+if( mob_in_room( 5013, room ) ) {
+  if( random( 1, 5 ) == 4 ) {
+    send_to_room( #dissipate, room );
+    junk_mob( mob_in_room( 5013, room ) );
+    end;
+    }
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( find_stat( rch, level ) < 90 )
+        act_tochar( #angry, rch );
+      }
+    }
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( find_stat( rch, level ) < 90 ) {
+        dam_message( rch, 2d2, "the bee sting" );
+        inflict( rch, mob, 2d2, "being stung by a bee" );
+        }
+      }
+    }
+  }
+~
+E
+angry~
+@rThe swarm of angry bees attack with their stingers!@n
+~
+E
+dissipate~
+@rThe angry bees calm down and fly off in search of more pollen.@n
+~
+!
+2 4000 0
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 )
+  send_to_room( #action1, room );
+if( i == 2 )
+  send_to_room( #action2, room );
+if( i == 3 )
+  send_to_room( #action3, room );
+~
+E
+action1~
+@cThe gravel settles beneath the weight of your feet, making a crunching
+sound.@n 
+~
+E
+action2~
+@cThe rich scent of aromatic flowers drifts through the air.@n
+~
+E
+action3~
+@cAn earthworm pokes its snout up from the earth, debating whether to
+crawl out of its underground home.@n 
+~
+!
+2 200 0
+5259 9 1509949540 3 0
+-1
+S
+
+#5808
+Curved Path~
+Curving around a white building to the southwest, this lazy circular path
+continues throughout the entire arboretum.  Comprised of tiny pebbles and
+rounded stones, it provides a pleasant guideway through this collection
+of beautiful plants.  A series of purple-hued flowerbeds have been
+planted to the northeast, their petals in full bloom.  Divided from the
+rest of the gardens by a continual hedgerow, the open field offers a
+peaceful place to casually walk and observe nature at its finest.
+~
+[Eliza] Done.
+~
+200802304 12 5 0
+D0
+~
+~
+0 -1 5813 10 10 5
+D1
+~
+~
+0 -1 5815 10 10 5
+D2
+~
+~
+0 -1 5803 10 10 5
+D3
+~
+~
+0 -1 5805 10 10 5
+E
+white building southwest~
+Sparse and airy, a whitewashed wooden frame building stands in the center
+of the arboretum, its sides left bare to offer a full view of the gardens
+are available.  Built around a sprawling elm tree, it provides a peaceful
+place to observe the natural surroundings, yet remain protected from the
+elements.
+~
+E
+lazy circular path tiny pebbles rounded stones guideway~
+This circular path runs around the white gazebo to the southwest, also
+providing a pleasant walkway to the flower gardens located around the
+outer perimeter of the arboretum.  A thin layer of gray pebbles are kept
+in place by larger oval stones, though a narrow shelf extends to the
+northeast into the flower garden.
+~
+E
+series purple-hued flowerbeds petals full bloom~
+A myriad of flowerbeds grows in front of the hedgerows, varying in
+intensity from light lavender to bright purple.  Nestled in organized
+sections, each plant is in full bloom, their petals spread wide to absorb
+the sunshine.
+~
+E
+divided continual hedgerow~
+Rising up from waist-height to well over nine feet tall as it wraps
+around in a square pattern, juniper bushes have been primly shaped to an
+identical diameter and appearance, helping isolate a portion of the
+gardens for extreme tranquility.
+~
+A
+~
+~
+if( mob_in_room( 5013, room ) ) {
+  if( random( 1, 5 ) == 4 ) {
+    send_to_room( #dissipate, room );
+    junk_mob( mob_in_room( 5013, room ) );
+    end;
+    }
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( find_stat( rch, level ) < 90 )
+        act_tochar( #angry, rch );
+      }
+    }
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( find_stat( rch, level ) < 90 ) {
+        dam_message( rch, 2d2, "the bee sting" );
+        inflict( rch, mob, 2d2, "being stung by a bee" );
+        }
+      }
+    }
+  }
+~
+E
+angry~
+@rThe swarm of angry bees attack with their stingers!@n
+~
+E
+dissipate~
+@rThe angry bees calm down and fly off in search of more pollen.@n
+~
+!
+2 9000 0
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 )
+  send_to_room( #action1, room );
+if( i == 2 )
+  send_to_room( #action2, room );
+if( i == 3 )
+  send_to_room( #action3, room );
+~
+E
+action1~
+@cA honeybee flies through the air, heading towards the flowerbeds to the
+northeast.@n 
+~
+E
+action2~
+@cThe scent of flowers drifts through the air, sweet and strong.@n
+~
+E
+action3~
+@cA dried leaf floats through the air, carried aloft by an unseen wind.@n
+~
+!
+2 200 0
+5259 9 1509949540 3 0
+-1
+S
+
+#5809
+Before a White Gazebo~
+The gravelly path which winds its way through the arboretum comes to a
+crossroads, with branches leading off in all directions.  To the north, a
+whitewashed gazebo wraps itself around an old elm tree, providing a
+shelter from the elements, and a place to rest one's weary bones.  The
+trail continues to the east and west, passing by the various plants and
+flowers which are displayed for all to enjoy.  An isolated clearing is
+barely visible to the south, its entrance mostly obscured by dark ivy
+which hangs from a trellis.
+~
+[Rikahn] builder's note - rflag reset0/1/2 stolen for r5822
+[Eliza] Done.
+~
+200802304 12 5 0
+D0
+gazebo entrance~
+~
+513 -1 5802 10 10 5
+D1
+~
+~
+0 -1 5812 10 10 5
+D2
+~
+~
+0 -1 5810 10 10 5
+D3
+~
+~
+0 -1 5811 10 10 5
+E
+gravelly path crossroads branches ground 1 down~
+Tiny gray pebbles cover a dirt path that leads in a circle through the
+entire arboretum, with side trails that lead into the assorted gardens
+and nooks.  Larger stones line the edges of the path, preventing the
+gravel from skittering into the plants as travelers pass by.
+~
+E
+whitewashed gazebo old elm tree shelter 1 north~
+The framework structure to the north is open and airy with no walls, only
+designed to support a flimsy room to protect its occupants from the
+beating sun and inclement weather.  Crisscrossed beams near its base
+lend some stability, and a vibrant layer of whitewash coats every part
+of the building.
+~
+E
+isolated clearing entrance obscured dark ivy trellis 1 south~
+A wooden lattice has been built to the south, supporting a tangle of
+dusky green ivy which almost completely covers its surface.  Gaps can be
+seen through the section of vines in its center, the missing slats an
+entrance into a grassy field beyond.
+~
+A
+~
+~
+if( mob_in_room( 5013, room ) ) {
+  if( random( 1, 5 ) == 4 ) {
+    send_to_room( #dissipate, room );
+    junk_mob( mob_in_room( 5013, room ) );
+    end;
+    }
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( find_stat( rch, level ) < 90 )
+        act_tochar( #angry, rch );
+      }
+    }
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( find_stat( rch, level ) < 90 ) {
+        dam_message( rch, 2d2, "the bee sting" );
+        inflict( rch, mob, 2d2, "being stung by a bee" );
+        }
+      }
+    }
+  }
+~
+E
+angry~
+@rThe swarm of angry bees attack with their stingers!@n
+~
+E
+dissipate~
+@rThe angry bees calm down and fly off in search of more pollen.@n
+~
+!
+2 4000 0
+A
+~
+~
+if( race( ch ) != insect )
+  continue;
+~
+E
+to_char~
+@mYou climb up the steps and enter the gazebo.@n
+~
+E
+to_room~
+@m$n climbs up the steps and enters the gazebo.@n
+~
+!
+3 0 1
+A
+~
+~
+if( race( ch ) == insect )
+  continue;
+~
+E
+to_char~
+You are an insect.  You don't count.
+~
+E
+to_room~
+@y$n flies into the gazebo.@n
+~
+!
+3 0 1
+A
+~
+~
+if( race( ch ) != insect )
+  continue;
+~
+E
+to_char~
+@mSweeping aside the ivy with one hand, you enter the isolated garden.@n
+
+~
+E
+to_room~
+@mSweeping aside the ivy with one hand, $n enters the isolated garden.@n
+~
+!
+3 0 4
+A
+~
+~
+if( race( ch ) == insect )
+  continue;
+~
+E
+to_char~
+You are an insect.  Go sting someone for fun.
+~
+E
+to_room~
+@y$n flies south between the hanging vines.@n
+~
+!
+3 0 4
+5259 9 1509949540 3 0
+-1
+S
+
+#5810
+Cozy Nook~
+Almost completely isolated from the outside world, this quiet corner
+offers a peaceful location to contemplate one's thoughts.  A soaring
+trellis surrounds the clearing on three sides, with dusky green ivy
+cascading through and down its framework.  To the north, a rectangular
+shaped section of the lattice is missing, with the dangling foliage
+serving to provide privacy for those inside.  A vertical wall of earth
+rises to the west, its surface hardpacked, with colored tiles showing a
+map of the arboretum itself pressed into the dirt.
+~
+[Eliza] Done.
+~
+200802312 2 5 0
+D0
+~
+~
+0 -1 5809 10 10 5
+E
+soaring trellis dusky green ivy framework~
+Boxing in this field on three sides, a tall trellis of wooden lattice
+helps support thick tangles of dusky green ivy, lending an air of privacy
+to this isolated nook.  Tiny bluish-purple berries grow upon some of the
+vines, though they do not look very appetizing.
+~
+E
+rectangular section lattice missing dangling privacy~
+Upon closer examination, there is a doorway-shaped section of lattice
+missing to the north, where the ivy dangles down without support.  Used
+to obscure the entrance to this cozy hideaway, the sturdy vines
+surprisingly remain intact.
+~
+E
+vertical wall earth surface hardpacked dirt~
+Sectioning off the southwest part of the arboretum is a sheer cliff of
+earth, its surface hardpacked and coated with a glazed substance that
+helps keep it from crumbling.  A series of colorful tiles are stuck in
+the earth, depicting a simple map of the surrounding gardens.
+~
+E
+colored tiles map arboretum 1 west~
++----+ @c#@n +----+
+|@Y****@n| @c#@n |@M****@n|
+|@Y*@n@Go@n  + @c#@n +  @Go@n@M*@n|
+|@Y*@n   @c#####@n   @M*@n|
++--+@c#@n +-+ @c#@n+--+
+@c######@n|@GO@n|@c##@n|  |
++--+@c#@n +-+ @c#@n+--+
+|@R*@n   @c#####@n   @W*@n|
+|@R*@n@Go@n  +@G^^^@n+  @Go@n@W*@n|
+|@R****@n| @BX@n |@W****@n|
++----+   +----+
+~
+A
+~
+~
+if( mob_in_room( 5013, room ) ) {
+  if( random( 1, 5 ) == 4 ) {
+    send_to_room( #dissipate, room );
+    junk_mob( mob_in_room( 5013, room ) );
+    end;
+    }
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( find_stat( rch, level ) < 90 )
+        act_tochar( #angry, rch );
+      }
+    }
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( find_stat( rch, level ) < 90 ) {
+        dam_message( rch, 2d2, "the bee sting" );
+        inflict( rch, mob, 2d2, "being stung by a bee" );
+        }
+      }
+    }
+  }
+~
+E
+angry~
+@rThe swarm of angry bees attack with their stingers!@n
+~
+E
+dissipate~
+@rThe angry bees calm down and fly off in search of more pollen.@n
+~
+!
+2 4000 0
+A
+~
+~
+if( race( ch ) != insect )
+  continue;
+~
+E
+to_char~
+@mYou sweep aside the dangling ivy, leaving the isolated nook.@n
+~
+E
+to_room~
+@m$n sweeps aside the dangling ivy, leaving the isolated nook.@n
+~
+!
+3 0 1
+A
+~
+~
+if( race( ch ) == insect )
+  continue;
+~
+E
+to_char~
+You are an insect.  Go find some pollen.
+~
+E
+to_room~
+@y$n flies northward, darting between the hanging vines.@n
+~
+!
+3 0 1
+A
+pick get take grab steal~
+ivy vines tiny bluish-purple berries berry~
+if( rflag( reset0, find_room( 5811 ) ) ) {
+  remove_rflag( reset0, find_room( 5811 ) );
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 7691 ), ch );
+  end;
+  }
+if( rflag( reset1, find_room( 5811 ) ) ) {
+  remove_rflag( reset1, find_room( 5811 ) );
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 7691 ), ch );
+  end;
+  }
+if( rflag( reset2, find_room( 5811 ) ) ) {
+  remove_rflag( reset2, find_room( 5811 ) );
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 7691 ), ch );
+  end;
+  }
+act_tochar( #nomore, ch );
+end;
+~
+E
+pick~
+You pick one of the tiny berries off of the vines.
+~
+E
+pick2~
+$n picks one of the tiny berries off of the vines.
+~
+E
+nomore~
+There are no more suitable berries on the vines.
+~
+!
+0 0 0
+3240 17 1509949540 -2 0
+-1
+S
+
+#5811
+Curved Path~
+Slowly curving its way past the various exhibits, a path of gray pebbles
+is directed by rows of oval stones.  A series of red-hued flowerbeds are
+visible to the southwest, somewhat isolated by a steeply-sloped hillside
+of pink-budded shrubs.  The circular pathway extends to the north and
+east, surrounding a white framework building that stands in the direct
+center of the beautiful arboretum.
+~
+[Rikahn] builder's note - rflag reset0/1/2 stolen for r5810
+[Eliza] Done.
+~
+200802304 12 5 0
+D0
+~
+~
+0 -1 5801 10 10 5
+D1
+~
+~
+0 -1 5809 10 10 5
+D2
+~
+~
+0 -1 5821 10 10 5
+D3
+~
+~
+0 -1 5819 10 10 5
+E
+curving various exhibits path gray pebbles rows oval stones~
+A gravelly pathway leads off to the north and east, although sections of it
+are visible running throughout the entire arboretum.  Branches off the
+main path lead into the various gardens which are visible around its
+perimeter, with oval stones lining its edges to contain the pebbles in
+place.
+~
+E
+red-hued flowerbeds southwest~
+Nestled in the valley to the southwest are countless numbers of red
+flowers, planted in organized beds at the base of the steep hill.  Almost
+every shade of red is visible, from pink to the darkest crimson color.
+~
+E
+steeply-sloped hillside pink-budded shrubs~
+Almost completely surrounding the flowers to the southwest, a steep berm
+of earth helps isolate the tranquil garden from the untamed forest beyond. 
+Clusters of green bushes with pink flowers grow upon its surface, lending
+a colorful splash to the background.
+~
+E
+white framework building center~
+Completely devoid of any walls, the open structure to the northeast
+allows its occupants to observe every facet of the arboretum from one
+location.  Each wooden beam painted white, its basic function does not
+seem out of place in these gardens of nature.
+~
+A
+~
+~
+if( mob_in_room( 5013, room ) ) {
+  if( random( 1, 5 ) == 4 ) {
+    send_to_room( #dissipate, room );
+    junk_mob( mob_in_room( 5013, room ) );
+    end;
+    }
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( find_stat( rch, level ) < 90 )
+        act_tochar( #angry, rch );
+      }
+    }
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( find_stat( rch, level ) < 90 ) {
+        dam_message( rch, 2d2, "the bee sting" );
+        inflict( rch, mob, 2d2, "being stung by a bee" );
+        }
+      }
+    }
+  }
+~
+E
+angry~
+@rThe swarm of angry bees attack with their stingers!@n
+~
+E
+dissipate~
+@rThe angry bees calm down and fly off in search of more pollen.@n
+~
+!
+2 4000 0
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 )
+  send_to_room( #action1, room );
+if( i == 2 )
+  send_to_room( #action2, room );
+if( i == 3 )
+  send_to_room( #action3, room );
+~
+E
+action1~
+@cA tiny hummingbird flies through the garden, in search of some sweet
+dew.@n 
+~
+E
+action2~
+@cA single honeybee lands on your arm for just a moment before flying
+away.@n 
+~
+E
+action3~
+@cCausing the nearby leaves to rustle, a brief gust of wind blows through
+the forest.@n 
+~
+!
+2 200 0
+5259 9 1509949540 3 0
+-1
+S
+
+#5812
+Curved Path~
+A garden full of @ewhite@n flowers has been planted to the southeast, almost
+completely surrounded by a wall of twining ivies.  Supported by a wooden
+trellis, the vines loop through and in front of the latticework.  A
+crushed gravel pathway leads throughout the arboretum, the gray pebbles
+neatly held in place by bigger stones along the path's edge.  A squat
+structure stands to the northwest, its whitewashed wooden beams almost as
+bright as the nearby flowers.
+~
+[Rikahn] builder's note - rflag reset0/1/2 stolen for r5823
+[Eliza] Done.
+~
+200802304 12 5 0
+D0
+~
+~
+0 -1 5803 10 10 5
+D1
+~
+~
+0 -1 5824 10 10 5
+D2
+~
+~
+0 -1 5822 10 10 5
+D3
+~
+~
+0 -1 5809 10 10 5
+E
+garden white flowers southeast~
+A series of flowerbeds have been planted to the southeast, their white
+blooms standing out against the dusky green backdrop of the hanging vines. 
+The pleasant scent of fresh flowers drifts through the air, tantalizing
+the senses.  Portions of the garden can be seen to the east and south.
+~
+E
+wall twining ivies wooden trellis vines latticework~
+A series of wooden trellises almost completely encircle the garden to the
+southeast.  Hundreds of dusky green vines cover its surface, weaving in
+and out of the various gaps between the slats.  The latticework serves as
+a natural barrier from the wild forest beyond.
+~
+E
+crushed gravel pathway gray pebbles stones edge~
+Oblong stones line the sides of a gray pebble pathway that runs in a
+circle throughout the arboretum.  The extra stones are missing to the
+southeast, where a wide field of white flowerbeds grow bright and full. 
+The trail continues to the north and west, towards other garden sections.
+~
+E
+squat structure northwest whitewashed wooden beams~
+Its roof merely nine feet above the ground, the building to the northwest
+looks like a jumble of sticks.  Whitewashed wooden beams support the
+roof, with no walls and only some crisscrossed sections providing
+stability.  However flimsy it might look, it would provide an excellent
+vantage point for the gardens.
+~
+A
+~
+~
+if( mob_in_room( 5013, room ) ) {
+  if( random( 1, 5 ) == 4 ) {
+    send_to_room( #dissipate, room );
+    junk_mob( mob_in_room( 5013, room ) );
+    end;
+    }
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( find_stat( rch, level ) < 90 )
+        act_tochar( #angry, rch );
+      }
+    }
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( find_stat( rch, level ) < 90 ) {
+        dam_message( rch, 2d2, "the bee sting" );
+        inflict( rch, mob, 2d2, "being stung by a bee" );
+        }
+      }
+    }
+  }
+~
+E
+angry~
+@rThe swarm of angry bees attack with their stingers!@n
+~
+E
+dissipate~
+@rThe angry bees calm down and fly off in search of more pollen.@n
+~
+!
+2 4000 0
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 )
+  send_to_room( #action1, room );
+if( i == 2 )
+  send_to_room( #action2, room );
+if( i == 3 )
+  send_to_room( #action3, room );
+~
+E
+action1~
+@cA gust of wind rustles the leaves, disturbing the silence for a
+moment.@n 
+~
+E
+action2~
+@cThe gravel settles underneath your feet with a crunching sound.@n
+~
+E
+action3~
+@cA tiny droplet of water falls from above, although there isn't a cloud in
+the sky.@n 
+~
+!
+2 200 0
+5259 9 1509949540 3 0
+-1
+S
+
+#5813
+Beside a Bed of Purple Flowers~
+A continuous row of juniper bushes curves along the western and northern
+edges of this secluded portion of the garden.  Rising from waist-height
+in the southwest corner to almost nine feet tall as it continues to the
+east, each bush has been recently trimmed and shaped.  Clusters of
+@mlavender@n plants grow tall alongside the bushes, each purple bloom
+directed upwards towards the sunlight.  All of the old leaves have been
+trimmed from the long, green stems, leaving only the healthiest parts to
+survive.
+~
+[Eliza] Done.
+~
+200802304 2 5 0
+D1
+~
+~
+0 -1 5814 10 10 5
+D2
+~
+~
+0 -1 5808 10 10 5
+E
+continuous row juniper bushes trimmed shaped 1 north 1 west~
+Standing tall against one another, a series of juniper bushes form a
+natural fence for the peaceful arboretum.  Uniformly trimmed, each one
+looks identical at a casual glance, although the row heading southward
+grow shorter until only waist-high.
+~
+E
+clusters lavender plants purple bloom long green stems~
+Thin yet long stems with countless green leaves stand tightly packed into
+bunches, each stem supporting a cluster of tiny purple flowers.  Every
+bloom is highly aromatic, with a pleasant scent that is easily
+distinguished.  The plants stand out against the backdrop of dark green
+bushes, highlighting their pale color with ease.
+~
+A
+~
+~
+if( mob_in_room( 5013, room ) ) {
+  if( random( 1, 5 ) == 4 ) {
+    send_to_room( #dissipate, room );
+    junk_mob( mob_in_room( 5013, room ) );
+    end;
+    }
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( find_stat( rch, level ) < 90 )
+        act_tochar( #angry, rch );
+      }
+    }
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( find_stat( rch, level ) < 90 ) {
+        dam_message( rch, 2d2, "the bee sting" );
+        inflict( rch, mob, 2d2, "being stung by a bee" );
+        }
+      }
+    }
+  }
+~
+E
+angry~
+@rThe swarm of angry bees attack with their stingers!@n
+~
+E
+dissipate~
+@rThe angry bees calm down and fly off in search of more pollen.@n
+~
+!
+2 4000 0
+A
+pick get take steal grab~
+lavender purple bloom plants~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 7679 ), ch );
+  end;
+  }
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  if( random( 1, 20 ) == 9 ) {
+    act_tochar( #special, ch );
+    act_notchar( #special2, ch );
+    obj_to_char( oload( 7393 ), ch );
+    end;
+    }
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 7679 ), ch );
+  end;
+  }
+if( rflag( reset2, room ) ) {
+  remove_rflag( reset2, room );
+  if( random( 1, 20 ) == 11 ) {
+    act_tochar( #special, ch );
+    act_notchar( #special2, ch );
+    obj_to_char( oload( 7393 ), ch );
+    end;
+    }
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 7679 ), ch );
+  end;
+  }
+act_tochar( #nomore, ch );
+~
+E
+pick~
+You pick a purple sprig from the flowerbed.
+~
+E
+pick2~
+$n picks a purple sprig from the flowerbed.
+~
+E
+nomore~
+If you pick any more flowers, there will be none left for viewing.
+~
+E
+special~
+You find a different kind of purple flower growing beneath the lavender!
+~
+E
+special2~
+$n finds a different kind of purple flower growing beneath the lavender!
+~
+!
+0 0 0
+-1
+S
+
+#5814
+Beehive Clearing~
+A blanket of purple flowers covers the ground, standing out against two
+hedgerows that intersect in the northeast corner of the garden.  Delicate
+yellow stamens contrast with the vivid, fluffy petals displayed within
+this section of @mviolets@n.  A number of other purple plants fringe the
+flowerbed, giving a full range of colors and scents.  The open arboretum
+continues to the west and south, where other flora have been planted.
+~
+[Eliza] Done.
+~
+200802304 2 5 0
+D2
+~
+~
+0 -1 5815 10 10 5
+D3
+~
+~
+0 -1 5813 10 10 5
+E
+purple flowers plants blanket ground fringe flowerbed~
+A number of purple flowers are growing within this portion of the garden,
+though the majority of them are brightly-hued violets.  Dead or dying
+leaves are almost non-existant, as these plants are apparently regularly
+pruned with care.
+~
+E
+delicate yellow stamens vivid fluffy petals violets~
+Soft, teardrop-shaped petals spread out in a circular pattern from a
+pollen-rich yellow bud, each leaf laying horizontally.  Streaks of pale
+yellow run down the center, although it is almost invisible against the
+bright purple hue of the rest of the petals.
+~
+A
+~
+~
+if( mob_in_room( 5013, room ) ) {
+  if( random( 1, 5 ) == 4 ) {
+    send_to_room( #dissipate, room );
+    junk_mob( mob_in_room( 5013, room ) );
+    end;
+    }
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( find_stat( rch, level ) < 90 )
+        act_tochar( #angry, rch );
+      }
+    }
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( find_stat( rch, level ) < 90 ) {
+        dam_message( rch, 2d2, "the bee sting" );
+        inflict( rch, mob, 2d2, "being stung by a bee" );
+        }
+      }
+    }
+  }
+~
+E
+angry~
+@rThe swarm of angry bees attack with their stingers!@n
+~
+E
+dissipate~
+@rThe angry bees calm down and fly off in search of more pollen.@n
+~
+!
+2 4000 0
+A
+~
+~
+if( race( ch ) == insect )
+  continue;
+~
+E
+to_char~
+You are an insect.  Go find some more pollen.
+~
+E
+to_room~
+@y$n flies away to the $T, searching for more flowers.@n
+~
+!
+3 0 12
+A
+~
+~
+if( race( ch ) != insect )
+  continue;
+~
+E
+to_char~
+@mYou walk away from the beehive, the humming sound from the bees inside
+fading away as you travel $T.@n 
+~
+E
+to_room~
+@m$n walks $T away from the beehive, carefully avoiding the bees.@n
+~
+!
+3 0 12
+A
+pick get grab steal take~
+blanket purple flowers violets~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 7680 ), ch );
+  end;
+  }
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 7680 ), ch );
+  end;
+  }
+if( rflag( reset2, room ) ) {
+  remove_rflag( reset2, room );
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 7680 ), ch );
+  end;
+  }
+act_tochar( #nomore, ch );
+~
+E
+pick~
+You pick a handful of the purple flowers from the flowerbed.
+~
+E
+pick2~
+$n picks a handful of purple flowers from the flowerbed.
+~
+E
+nomore~
+If you pick any more flowers, there will be none left for viewing.
+~
+!
+0 0 0
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 )
+  send_to_room( #action1, room );
+if( i == 2 )
+  send_to_room( #action2, room );
+if( i == 3 )
+  send_to_room( #action3, room );
+~
+E
+action1~
+@cVarying in intensity, the drone of swarming honeybees echoes throughout
+the garden.@n 
+~
+E
+action2~
+@cA tiny hummingbird flits in from the other side of the junipers,
+looking for something to drink before flying away.@n 
+~
+E
+action3~
+@cA gust of wind blows through the garden, rustling the leaves on the
+tree.@n 
+~
+!
+2 200 0
+7675 17 1509949540 -2 0
+5259 9 1509949540 3 0
+-1
+S
+
+#5815
+Beside a Bed of Purple Flowers~
+Growing lush with long, green stalks, a stand of purple @morchids@n have
+been planted in even layers in front of two hedgerows, surrounding this
+corner of the arboretum.  Multiple blooms dangle from each stem, their
+feathery petals separated just far enough to see a yellow stamen within. 
+The bushes that run north and west have been trimmed to a uniform height,
+set close enough to each other to partially overlap at the edges.
+~
+[Eliza] Done.
+~
+200802304 2 5 0
+D0
+~
+~
+0 -1 5814 10 10 5
+D3
+~
+~
+0 -1 5808 10 10 5
+E
+long green stalks layers stem~
+At least an inch around at their base, two-foot green stalks support
+heavy clusters of purple orchids with ease.  Strip-shaped leaves wrap
+around the stems like ears of corn, providing a sturdy base that barely
+budges in the wind.
+~
+E
+purple orchids feathery petals yellow stamen~
+At least a dozen flowers cling to each thick, green stem, with the blooms
+in a varied state of color and size.  The uppermost petals are drawn in
+tight, with a dark purple shade.  Further down the stalk, the petals
+spread out with a pale violet hue, each leaf trying to extract as much
+sunlight as possible.  Thin yellow filaments dangle from each stamen,
+their tips rich with pollen.
+~
+E
+hedgerows bushes trimmed uniform overlap edges~
+Shaggy juniper bushes stand evenly next to each other, trimmed to a
+uniform diameter so that the edges of each plant brush against each
+other, appearing as if it was one solid wall of foliage.  The twin rows
+continue to the north and west, with no discernable difference between
+them.
+~
+A
+~
+~
+if( mob_in_room( 5013, room ) ) {
+  if( random( 1, 5 ) == 4 ) {
+    send_to_room( #dissipate, room );
+    junk_mob( mob_in_room( 5013, room ) );
+    end;
+    }
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( find_stat( rch, level ) < 90 )
+        act_tochar( #angry, rch );
+      }
+    }
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( find_stat( rch, level ) < 90 ) {
+        dam_message( rch, 2d2, "the bee sting" );
+        inflict( rch, mob, 2d2, "being stung by a bee" );
+        }
+      }
+    }
+  }
+~
+E
+angry~
+@rThe swarm of angry bees attack with their stingers!@n
+~
+E
+dissipate~
+@rThe angry bees calm down and fly off in search of more pollen.@n
+~
+!
+2 4000 0
+A
+pick get take grab steal~
+stand purple orchid flower blooms~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 7681 ), ch );
+  end;
+  }
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 7681 ), ch );
+  end;
+  }
+if( rflag( reset2, room ) ) {
+  remove_rflag( reset2, room );
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 7681 ), ch );
+  end;
+  }
+act_tochar( #nomore, ch );
+~
+E
+pick~
+You pick one of the purple flowers from the flowerbed.
+~
+E
+pick2~
+$n picks one of the purple flowers from the flowerbed.
+~
+E
+nomore~
+If you pick any more flowers, there will be none left for viewing.
+~
+!
+0 0 0
+-1
+S
+
+#5816
+Beside a Bed of Yellow Flowers~
+A row of sculpted juniper shrubs stands in perfect precision to the
+north, forming a green wall around the arboretum.  The tops of the shrubs
+gradually grow shorter as the barrier curves to the south along the
+eastern side of this grassy field, tapering to just a couple of feet off
+the ground.  An enormous bed of yellow @Ylilies@n has been planted within
+the nook created by the arcing bushes, each petal reaching upward with a
+teardrop-shaped cup open to the sky.
+~
+[Eliza] Done.
+~
+200802304 2 5 0
+D2
+~
+~
+0 -1 5807 10 10 5
+D3
+~
+~
+0 -1 5817 10 10 5
+E
+row sculpted juniper shrubs green wall bushes tops 1 north 1 east~
+Juniper shrubs, each one trimmed to equal heights and dimensions have
+been planted at precise intervals along the northern edge of the garden. 
+To the east, the hedgerow turns southward, its top sheared at a downward
+angle until only waist-high.
+~
+E
+enormous bed yellow lilies nook petal teardrop-shaped cup~
+Bright yellow flowers rise two feet off the ground with thick green stems. 
+Curved petals form an S-shape from the center of each stem, appearing
+like an inverted bell or teardrop.  Streaks of black run through the
+middle of each petal, forming a star pattern in the center of the bud.
+~
+A
+~
+~
+// mob 5013 needs references changed to 5013
+// mob 5013 needs references changed to 5013
+if( mob_in_room( 5013, room ) ) {
+  if( random( 1, 5 ) == 4 ) {
+    send_to_room( #dissipate, room );
+    junk_mob( mob_in_room( 5013, room ) );
+    end;
+    }
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( find_stat( rch, level ) < 90 )
+        act_tochar( #angry, rch );
+      }
+    }
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( find_stat( rch, level ) < 90 ) {
+        dam_message( rch, 2d2, "the bee sting" );
+        inflict( rch, mob, 2d2, "being stung by a bee" );
+        }
+      }
+    }
+  }
+~
+E
+angry~
+@rThe swarm of angry bees attack with their stingers!@n
+~
+E
+dissipate~
+@rThe angry swarm of bees calm down and fly off in search of more pollen.@n
+~
+!
+2 4000 0
+A
+pick get grab steal take~
+lilies lily yellow flowers~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 7684 ), ch );
+  end;
+  }
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  if( random( 1, 20 ) == 9 ) {
+    act_tochar( #special, ch );
+    act_notchar( #special2, ch );
+    obj_to_char( oload( 7411 ), ch );
+    end;
+    }
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 7684 ), ch );
+  end;
+  }
+if( rflag( reset2, room ) ) {
+  remove_rflag( reset2, room );
+  if( random( 1, 20 ) == 11 ) {
+    act_tochar( #special, ch );
+    act_notchar( #special2, ch );
+    obj_to_char( oload( 7411 ), ch );
+    end;
+    }
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 7684 ), ch );
+  end;
+  }
+act_tochar( #nomore, ch );
+~
+E
+pick~
+You pick a handful of the yellow flowers from the flowerbed.
+~
+E
+pick2~
+$n picks a handful of the yellow flowers from the flowerbed.
+~
+E
+nomore~
+If you pick any more flowers, there will be none left for viewing.
+~
+E
+special~
+You find a sprig of yellow flowers growing beneath the lilies!
+~
+E
+special2~
+$n finds a sprig of yellow flowers growing beneath the lilies!
+~
+!
+0 0 0
+-1
+S
+
+#5817
+Beehive Clearing~
+Surrounded by rows of groomed bushes to the north and west, this
+cubbyhole within the arboretum aesthetically pleases the eye.  Each bush
+is planted in perfect alignment next to one another, and are trimmed
+exactly alike.  A narrow bed of @Yaurinias@n brighten up the otherwise
+darkened landscaping, their intense yellow petals bursting with color.  A
+solitary elm tree grows atop the grassy knoll, its leaves pruned back so
+that sunshine can reach the other plants.
+~
+[Eliza] Done
+~
+200802304 2 5 0
+D1
+~
+~
+0 -1 5816 10 10 5
+D2
+~
+~
+0 -1 5818 10 10 5
+E
+rows groomed bushes cubbyhole shrubs dark green 1 north 1 west~
+Surrounding the arboretum are natural borders of groomed bushes.  Merging
+in the corner to the northwest are two rows of grown junipers, each one
+trimmed to a uniform height and shape.  The leafy green plants stretch
+off to the south and east, enclosing the garden of yellow flowers with
+solitude.
+~
+E
+narrow bed aurinias intense yellow petals color~
+A one-foot wide bed of aurinias has been planted in an arc along the
+edges of the trimmed junipers that border this isolated section of the
+gardens.  The flowers have been planted densely, each beautiful yellow
+bloom lush and full.
+~
+E
+solitary elm tree grassy knoll leaves pruned~
+A single elm tree rises up into the sky, planted upon a grassy knoll in
+the center of this wing of the garden.  Its leaves and branches have been
+carefully trimmed to balance the amount of shade beneath its breadth and
+the amount of sunlight available for the other plants.  An oval hole in
+its trunk houses a dense beehive, teeming with activity from the bees
+that live within.
+~
+A
+~
+~
+// mob 5013 needs references changed to 5013
+// mob 5013 needs references changed to 5013
+if( mob_in_room( 5013, room ) ) {
+if( random( 1, 5 ) == 4 ) {
+send_to_room( #dissipate, room );
+junk_mob( mob_in_room( 5013, room ) );
+end;
+}
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( find_stat( rch, level ) < 90 )
+        act_tochar( #angry, rch );
+      }
+    }
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( find_stat( rch, level ) < 90 ) {
+        dam_message( rch, 2d2, "the bee sting" );
+        inflict( rch, mob, 2d2, "being stung by a bee" );
+        }
+      }
+    }
+  }
+~
+E
+angry~
+@rThe swarm of angry bees attack with their stingers!@n
+~
+E
+dissipate~
+@rThe angry bees calm down and fly off in search of more pollen.@n
+~
+!
+2 4000 0
+A
+~
+~
+if( race( ch ) == insect )
+  continue;
+~
+E
+to_char~
+You are an insect.  Go find some pollen.
+~
+E
+to_room~
+@y$n flies away to the $T, searching for more pollen.@n
+~
+!
+3 0 6
+A
+~
+~
+if( race( ch ) != insect )
+  continue;
+~
+E
+to_char~
+@mYou walk along the shrubs to the $T, glad to leave the teeming beehive
+behind.@n 
+~
+E
+to_room~
+@m$n walks along the shrubs to the $T, glad to leave the teeming beehive
+behind.@n 
+~
+!
+3 0 6
+A
+pick get grab steal take~
+aurinias yellow flowers~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 7683 ), ch );
+  end;
+  }
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 7683 ), ch );
+  end;
+  }
+if( rflag( reset2, room ) ) {
+  remove_rflag( reset2, room );
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 7683 ), ch );
+  end;
+  }
+act_tochar( #nomore, ch );
+~
+E
+pick~
+You pick a handful of the yellow flowers from the flowerbed.
+~
+E
+pick2~
+$n picks a handful of the yellow flowers from the flowerbed.
+~
+E
+nomore~
+If you pick any more flowers, there will be none left for viewing.
+~
+!
+0 0 0
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 )
+  send_to_room( #action1, room );
+if( i == 2 )
+  send_to_room( #action2, room );
+if( i == 3 )
+  send_to_room( #action3, room );
+~
+E
+action1~
+@cThe drone of buzzing bees grows louder, the sound coming from the elm
+tree.@n 
+~
+E
+action2~
+@cThe sweet scent of the flowerbeds drifts through the air.@n
+~
+E
+action3~
+@cA droplet of dew falls from one of the flowers, silently striking the
+ground.@n 
+~
+!
+2 200 0
+7675 17 1509949540 -2 0
+5259 9 1509949540 3 0
+-1
+S
+
+#5818
+Beside a Bed of Yellow Flowers~
+A natural wall of trimmed hedges enters from the northwest, each plant
+trimmed exactly alike.  As the barrier continues southward, the deep
+green shrubs are replaced with ixora bushes, each cluster of tiny red
+blooms dazzling against the backdrop of emerald leaves.  A bed of yellow
+@Ychrysanthemums@n grows in front of the foliage screen, their
+densely-packed petals open to the sky.
+~
+[Eliza] Done.
+~
+200802304 2 5 0
+D0
+~
+~
+0 -1 5817 10 10 5
+D1
+~
+~
+0 -1 5807 10 10 5
+E
+trimmed hedges deep green shrubs~
+Juniper shrubs have been planted equidistantly along the outer edge of
+the enclave, entering from the northwest before ending abruptly at a
+dense section of ixora bushes.  The dark green leaves contrast with the
+lighter-hued bushes, the subtle difference enhancing the beauty of the
+garden.
+~
+E
+ixora bushes cluster tiny red blooms emerald leaves~
+Its leaves a lighter shade of green than the row of juniper shrubs, a
+cluster of ixora bushes grows lush and full along the southwestern corner
+of this beautiful garden.  Patches of vivid red flowers stand out from
+the darker background, most of the petals drawn in tight against the
+branches.
+~
+E
+bed yellow chrysanthemums densely-packed petals~
+Similar to daisies, these yellow flowers have numerous thin petals that
+stretch out horizontally from its stamen.  Tiny tufts of pollen cling to
+each anther, ready to be carried free by the local honeybees.  Crammed
+together in a seemingly random pattern, the foot-wide bed of flowers is a
+sight to behold.
+~
+A
+~
+~
+// mob 5013 needs references changed to 5013
+// mob 5013 needs references changed to 5013
+if( mob_in_room( 5013, room ) ) {
+  if( random( 1, 5 ) == 4 ) {
+    send_to_room( #dissipate, room );
+    junk_mob( mob_in_room( 5013, room ) );
+    end;
+    }
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( find_stat( rch, level ) < 90 )
+        act_tochar( #angry, rch );
+      }
+    }
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( find_stat( rch, level ) < 90 ) {
+        dam_message( rch, 2d2, "the bee sting" );
+        inflict( rch, mob, 2d2, "being stung by a bee" );
+        }
+      }
+    }
+  }
+~
+E
+angry~
+@rThe swarm of angry bees attack with their stingers!@n
+~
+E
+dissipate~
+@rThe angry bees calm down and fly off in search of more pollen.@n
+~
+!
+2 4000 0
+A
+get take grab steal pick~
+chrysanthemums yellow flowers~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 7682 ), ch );
+  end;
+  }
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  if( random( 1, 20 ) == 9 ) {
+    act_tochar( #special, ch );
+    act_notchar( #special2, ch );
+    obj_to_char( oload( 7399 ), ch );
+    end;
+    }
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 7682 ), ch );
+  end;
+  }
+if( rflag( reset2, room ) ) {
+  remove_rflag( reset2, room );
+  if( random( 1, 20 ) == 11 ) {
+    act_tochar( #special, ch );
+    act_notchar( #special2, ch );
+    obj_to_char( oload( 7399 ), ch );
+    end;
+    }
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 7682 ), ch );
+  end;
+  }
+act_tochar( #nomore, ch );
+~
+E
+pick~
+You pick a yellow flower from the flowerbed.
+~
+E
+pick2~
+$n picks a yellow flower from the flowerbed.
+~
+E
+nomore~
+If you pick any more flowers, there will be none left for viewing.
+~
+E
+special~
+You find a sprig of yellow flowers growing beneath the chrysanthemums!
+~
+E
+special2~
+$n finds a sprig of yellow flowers growing beneath the chrysanthemums!
+~
+!
+0 0 0
+-1
+S
+
+#5819
+Beside a Bed of Red Flowers~
+Dozens of tiny blooms cling to the stems of red @rsnapdragons@n, grown in
+a cone shape that points upwards into the sky.  Organized into rows, the
+flowers grow in the foreground of a pink and green wall of azaleas that
+have been planted along a berm of earth that curves around the outer edge
+of the gardens.  The top of an ivy archway is barely visible at the
+northwest corner of the hillside, though what it soars over is
+undetectable from this range.
+~
+[Eliza] Done.
+~
+200802304 2 5 0
+D1
+~
+~
+0 -1 5811 10 10 5
+D2
+~
+~
+0 -1 5820 10 10 5
+E
+dozens tiny red blooms snapdragons cone shape rows flowers~
+Thick green stalks support comparatively enormous bundles of tiny red
+blooms, each set of petals resembling a pair of pursed lips, ready to
+kiss.  Growing in a cone shape, the scores of buds release a lightly
+aromatic scent which wafts through the air.
+~
+E
+pink green wall azaleas berm earth hillside 1 west 1 north~
+Curved emerald and jade leaves sprout en masse from the clusters of
+azalea bushes that grow full upon the side of the hill.  Pink blooms
+sprout from buds at the tips of some branches, accentuating the vibrant
+red snapdragons which grow at its base.
+~
+E
+top ivy archway northwest corner soars~
+Rising up from behind the peak of the hill, a two-foot wide swath of
+dusky-green ivy grows in an arc to the northwest.  Upon concentrated
+examination, thin sticks can be seen supporting the plants in their
+unnatural shape and location.
+~
+A
+~
+~
+// mob 5103 needs references changed to 5013
+// mob 5103 needs references changed to 5013
+if( mob_in_room( 5103, room ) ) {
+  if( random( 1, 5 ) == 4 ) {
+    send_to_room( #dissipate, room );
+    junk_mob( mob_in_room( 5103, room ) );
+    end;
+    }
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( find_stat( rch, level ) < 90 )
+        act_tochar( #angry, rch );
+      }
+    }
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( find_stat( rch, level ) < 90 ) {
+        dam_message( rch, 2d2, "the bee sting" );
+        inflict( rch, mob, 2d2, "being stung by a bee" );
+        }
+      }
+    }
+  }
+~
+E
+angry~
+@rThe swarm of angry bees attack with their stingers!@n
+~
+E
+dissipate~
+@rThe angry bees calm down and fly off in search of more pollen.@n
+~
+!
+2 4000 0
+A
+pick take grab get steal~
+blooms red snapdragons flowers~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 7686 ), ch );
+  end;
+  }
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  if( random( 1, 20 ) == 9 ) {
+    act_tochar( #special, ch );
+    act_notchar( #special2, ch );
+    obj_to_char( oload( 7402 ), ch );
+    end;
+    }
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 7686 ), ch );
+  end;
+  }
+if( rflag( reset2, room ) ) {
+  remove_rflag( reset2, room );
+  if( random( 1, 20 ) == 11 ) {
+    act_tochar( #special, ch );
+    act_notchar( #special2, ch );
+    obj_to_char( oload( 7402 ), ch );
+    end;
+    }
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 7686 ), ch );
+  end;
+  }
+act_tochar( #nomore, ch );
+~
+E
+pick~
+You pick one of the red flowers from the flowerbed.
+~
+E
+pick2~
+$n picks one of the red flowers from the flowerbed.
+~
+E
+nomore~
+If you pick any more flowers, there will be none left for viewing.
+~
+E
+special~
+You find a different kind of red flower growing beneath the snapdragons!
+~
+E
+special2~
+$n finds a different kind of red flower growing beneath the snapdragons!
+~
+!
+0 0 0
+-1
+S
+
+#5820
+Beehive Clearing~
+Arranged in a semi-circle, multiple @rrose@n bushes stand thick and full,
+with numerous buds fully grown and ready to bloom.  Slim stems with
+prickly thorns protrude from the rich soil, any faded or dried leaves
+pruned off and taken away.  Long rows of azaleas grow up a steeply-sloped
+hillside, their pink buds accenting the deeper hue of the roses.  Nearby,
+assorted flowers have been planted, all of them some shade of red.  A
+lone elm tree grows in the center of this sectioned garden, providing
+shade for whomever might be walking beneath its boughs.
+~
+[Eliza] Done.
+~
+200802304 2 5 0
+D0
+~
+~
+0 -1 5819 10 10 5
+D1
+~
+~
+0 -1 5821 10 10 5
+E
+semi-circle rose bushes thick full buds bloom~
+Healthy-looking rose bushes are planted at the base of the hillside,
+every branch sporting a growing bud or a fully bloomed rose.  Tender care
+has been taken with the rosebushes, no lifeless or dying branches are
+visible throughout the garden.  These plants sprout bright red roses,
+their petals velvety soft to the touch.
+~
+E
+slim stems prickly thorns faded dried leaves~
+Every rosebud grows atop a slim yet sturdy branch, with prickly thorns
+present up and down the stem.  Sharp and pointed, each thorn helps
+protect the plant from natural predators, and can be painful if not
+handled properly.
+~
+E
+long rows azaleas steeply-sloped hillside pink buds~
+A steeply-sloped berm of earth provides a natural barrier from the wild
+forests on the other side, lending a sense of peace and tranquility to
+the garden.  Covered with azalea bushes, their pink buds accent the
+bright red roses planted at the base of the hill.
+~
+E
+nearby assorted flowers planted red~
+Other flowerbeds are visible just a short distance away from this bed of
+rosebushes, all of them isolated behind the berm of earth that almost
+wraps around this field in a complete circle.  Every petal in this
+section of the garden is some shade of red, although no two varieties are
+completely alike.
+~
+A
+~
+~
+// mob 5013 needs references changed to 5013
+// mob 5013 needs references changed to 5013
+if( mob_in_room( 5013, room ) ) {
+  if( random( 1, 5 ) == 4 ) {
+    send_to_room( #dissipate, room );
+    junk_mob( mob_in_room( 5013, room ) );
+    end;
+    }
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( find_stat( rch, level ) < 90 )
+        act_tochar( #angry, rch );
+      }
+    }
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( find_stat( rch, level ) < 90 ) {
+        dam_message( rch, 2d2, "the bee sting" );
+        inflict( rch, mob, 2d2, "being stung by a bee" );
+        }
+      }
+    }
+  }
+~
+E
+angry~
+@rThe swarm of angry bees attack with their stingers!@n
+~
+E
+dissipate~
+@rThe angry bees calm down and fly off in search of more pollen.@n
+~
+!
+2 4000 0
+A
+~
+~
+if( race( ch ) == insect )
+  continue;
+~
+E
+to_char~
+You are an insect.  Go find some pollen.
+~
+E
+to_room~
+@y$n flies away to the $T, searching for more flowers.@n
+~
+!
+3 0 3
+A
+~
+~
+if( race( ch ) != insect )
+  continue;
+~
+E
+to_char~
+@mYou walk away from the beehive, careful to avoid stirring the bees as
+you head $T.@n 
+~
+E
+to_room~
+@m$n walks away from the beehive, carefully avoiding stirring the bees as
+$e heads $T.@n 
+~
+!
+3 0 3
+A
+pick get take grab steal~
+rose bush flowers~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 545 ), ch );
+  end;
+  }
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 545 ), ch );
+  if( random( 1, 10 ) == 6 ) {
+    act_tochar( #special, ch );
+    act_notchar( #special2, ch );
+    obj_to_char( oload( 2376 ), ch );
+    end;
+    }
+  end;
+  }
+if( rflag( reset2, room ) ) {
+  remove_rflag( reset2, room );
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 545 ), ch );
+  if( random( 1, 10 ) == 4 ) {
+    act_tochar( #special, ch );
+    act_notchar( #special2, ch );
+    obj_to_char( oload( 2376 ), ch );
+    end;
+    }
+  end;
+  }
+act_tochar( #nomore, ch );
+~
+E
+pick~
+You pick one of the red flowers from the rosebushes.
+~
+E
+pick2~
+$n picks one of the red flowers from the rosebushes.
+~
+E
+nomore~
+If you pick any more flowers, there will be none left for viewing.
+~
+E
+special~
+You also manage to pull off a thorn.
+~
+E
+special2~
+$n also manages to pull off a thorn.
+~
+!
+0 0 0
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 )
+  send_to_room( #action1, room );
+if( i == 2 )
+  send_to_room( #action2, room );
+if( i == 3 )
+  send_to_room( #action3, room );
+~
+E
+action1~
+@cA buzzing sound emanates from the elm tree.@n
+~
+E
+action2~
+@cThe sound of birds chirping drifts through the garden.@n
+~
+E
+action3~
+@cA single rose petal falls from one of the roses, drifting to the
+ground.@n 
+~
+!
+2 200 0
+7675 17 1509949540 -2 0
+5259 9 1509949540 3 0
+-1
+S
+
+#5821
+Beside a Bed of Red Flowers~
+Growing along a sharply-sloped hillside are numerous azaleas, covering it
+with a blanket of color.  The steep bank of pink-flowered bushes wraps
+around the southwestern section of the arboretum, isolating it from the
+wild forest beyond.  Bright red @rcarnations@n grow near its base, each
+one's tip a writhing mass of feathery petals.  Other flowers grow closer
+to the ground, although what kind they are is difficult to tell, as they
+appear to be native to the gardens instead of planted for show.
+~
+[Eliza] Done.
+~
+200802304 2 5 0
+D0
+~
+~
+0 -1 5811 10 10 5
+D3
+~
+~
+0 -1 5820 10 10 5
+E
+sharply-sloped hillside azaleas blanket color pink-flowered bushes~
+Wrapping around the flowerbeds to the south and east, a towering berm of
+earth surrounds the garden with a natural means of protection. 
+Completely covered in leafy green bushes, the pink blooms that sprout
+from the tips of some branches detract from the otherwise bland
+surroundings.
+~
+E
+bright red carnations tip writhing mass feathery petals~
+Extremely soft to the touch, each carnation has numerous contorted petals
+crammed against one another, the overall effect eye-catching and
+wonderful.  Tinges of white can be seen along the tips of some of the
+flowers, although most of the plants remain a constant red hue.
+~
+E
+other flowers ground native~
+Nestled underneath the bright carnations are other wildflowers, their
+muted red shades difficult to see against the vibrant red flowers growing
+above them.  They appear to be native, growing untamed and mostly left
+untouched by the gardeners.
+~
+A
+~
+~
+// mob 5013 needs references changed to 5013
+// mob 5013 needs references changed to 5013
+if( mob_in_room( 5013, room ) ) {
+  if( random( 1, 5 ) == 4 ) {
+    send_to_room( #dissipate, room );
+    junk_mob( mob_in_room( 5013, room ) );
+    end;
+    }
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( find_stat( rch, level ) < 90 )
+        act_tochar( #angry, rch );
+      }
+    }
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( find_stat( rch, level ) < 90 ) {
+        dam_message( rch, 2d2, "the bee sting" );
+        inflict( rch, mob, 2d2, "being stung by a bee" );
+        }
+      }
+    }
+  }
+~
+E
+angry~
+@rThe swarm of angry bees attack with their stingers!@n
+~
+E
+dissipate~
+@rThe angry bees calm down and fly off in search of more pollen.@n
+~
+!
+2 4000 0
+A
+pick get take grab steal~
+red carnations flowers~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 7685 ), ch );
+  end;
+  }
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  if( random( 1, 20 ) == 9 ) {
+    act_tochar( #special, ch );
+    act_notchar( #special2, ch );
+    obj_to_char( oload( 7398 ), ch );
+    end;
+    }
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 7685 ), ch );
+  end;
+  }
+if( rflag( reset2, room ) ) {
+  remove_rflag( reset2, room );
+  if( random( 1, 20 ) == 11 ) {
+    act_tochar( #special, ch );
+    act_notchar( #special2, ch );
+    obj_to_char( oload( 7398 ), ch );
+    end;
+    }
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 7685 ), ch );
+  end;
+  }
+act_tochar( #nomore, ch );
+~
+E
+pick~
+You pick one of the red flowers from the flowerbed.
+~
+E
+pick2~
+$n picks one of the red flowers from the flowerbed.
+~
+E
+nomore~
+If you pick any more flowers, there will be none left for viewing.
+~
+E
+special~
+You find a sprig of red flowers growing beneath the carnations!
+~
+E
+special2~
+$n finds a sprig of red flowers growing beneath the carnations!
+~
+!
+0 0 0
+-1
+S
+
+#5822
+Beside a Bed of White Flowers~
+Its bloom slightly resembling a rose, a deep flowerbed of @Wgardenias@n
+have been planted in this section of the garden.  A fan of white spreads
+out from the base of its bud, just below a whorl of tightly-packed petals
+in its center.  Standing out against the dark green ivy which tumbles
+down an eight-foot lattice behind them, the flowers are a wondrous sight
+to behold.  Other sections of the arboretum can be visited to the north
+and east, where more flowers grow tall and healthy.
+~
+[Eliza] Done.
+~
+200802304 2 5 0
+D0
+~
+~
+0 -1 5812 10 10 5
+D1
+~
+~
+0 -1 5823 10 10 5
+E
+bloom resembling rose deep flowerbed ground~
+Closely resembling a rose, scores of white gardenias bloom on the ground
+in front of the wall of ivy.  Their petals are rose-like, though smoother
+around the edges and peeled back away from the center more than their
+lookalikes.
+~
+E
+gardenias fan white base bud whorl tightly-packed petals center~
+Whorls of white petals swim around the center of the bud, creating the
+illusion that the flower is larger than it really is.  Soft, slightly
+ruffled edges peel back from the center, almost completely back to the
+stem at some points.  A light scent wafts from the stamen, just strong
+enough to be pleasant.
+~
+E
+dark green ivy tumbles eight-foot lattice~
+An eight-foot tall wall of criss-crossed wooden slats supports a tangle
+of dusky green ivy, almost completely obscuring the forest area beyond. 
+Tiny bluish-purple berries grow along the vines, though most of them have
+fallen off the plants and rotted.
+~
+A
+~
+~
+// mob 5013 needs references changed to 5013
+// mob 5013 needs references changed to 5013
+if( mob_in_room( 5013, room ) ) {
+  if( random( 1, 5 ) == 4 ) {
+    send_to_room( #dissipate, room );
+    junk_mob( mob_in_room( 5013, room ) );
+    end;
+    }
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( find_stat( rch, level ) < 90 )
+        act_tochar( #angry, rch );
+      }
+    }
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( find_stat( rch, level ) < 90 ) {
+        dam_message( rch, 2d2, "the bee sting" );
+        inflict( rch, mob, 2d2, "being stung by a bee" );
+        }
+      }
+    }
+  }
+~
+E
+angry~
+@rThe swarm of angry bees attack with their stingers!@n
+~
+E
+dissipate~
+@rThe angry bees calm down and fly off in search of more pollen.@n
+~
+!
+2 4000 0
+A
+pick get take grab steal~
+flowerbed gardenias white flowers~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 7690 ), ch );
+  end;
+  }
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  if( random( 1, 20 ) == 9 ) {
+    act_tochar( #special, ch );
+    act_notchar( #special2, ch );
+    obj_to_char( oload( 7412 ), ch );
+    end;
+    }
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 7690 ), ch );
+  end;
+  }
+if( rflag( reset2, room ) ) {
+  remove_rflag( reset2, room );
+  if( random( 1, 20 ) == 11 ) {
+    act_tochar( #special, ch );
+    act_notchar( #special2, ch );
+    obj_to_char( oload( 7412 ), ch );
+    end;
+    }
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 7690 ), ch );
+  end;
+  }
+act_tochar( #nomore, ch );
+~
+E
+pick~
+You pick one of the white flowers from the flowerbed.
+~
+E
+pick2~
+$n picks one of the white flowers from the flowerbed.
+~
+E
+nomore~
+If you pick any more flowers, there will be none left for viewing.
+~
+E
+special~
+You find a different kind of white flower growing beneath the gardenias!
+~
+E
+special2~
+$n finds a different kind of white flower growing beneath the gardenias!
+~
+!
+0 0 0
+A
+pick get take grab steal~
+ivy vines bluish-purple berries berry~
+if( rflag( reset0, find_room( 5809 ) ) ) {
+  remove_rflag( reset0, find_room( 5809 ) );
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 7691 ), ch );
+  end;
+  }
+if( rflag( reset1, find_room( 5809 ) ) ) {
+  remove_rflag( reset1, find_room( 5809 ) );
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 7691 ), ch );
+  end;
+  }
+if( rflag( reset2, find_room( 5809 ) ) ) {
+  remove_rflag( reset2, find_room( 5809 ) );
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 7691 ), ch );
+  end;
+  }
+act_tochar( #nomore, ch );
+end;
+~
+E
+pick~
+You pick one of the tiny berries off of the vines.
+~
+E
+pick2~
+$n picks one of the tiny berries off of the vines.
+~
+E
+nomore~
+There are no more suitable berries on the vines.
+~
+!
+0 0 0
+-1
+S
+
+#5823
+Beehive Clearing~
+Spread out in a semi-circle to the southwest, a kidney-shaped bed of
+white @Wirises@n has been planted, almost colorblinding in their intensity.
+Shapely soft petals droop down around the outer edge of the flower, while
+another yellow-tinged cluster stand up with their edges touching one
+another.  Olive-green ivy hangs down the front of a wooden trellis that
+stretches out to the north and south, intersecting behind the flowerbed. 
+A solitary elm tree grows six feet from the leading edge of the flowers,
+humming with activity from a beehive which resides within its trunk.
+~
+[Eliza] Done.
+~
+200802304 2 5 0
+D0
+~
+~
+0 -1 5824 10 10 5
+D3
+~
+~
+0 -1 5822 10 10 5
+E
+semi-circle southeast kidney-shaped bed flowerbed~
+Planted in a curved bed of soil, a cluster of white irises stands upright
+in organized rows.  Evenly spaced, there is just enough room for each
+bloom to grow without touching another unless a breeze is blowing through
+the garden.
+~
+E
+white irises shapely soft petals droop yellow-tinged cluster edges~
+Looking like gaping mouths, pairs of curving petals curve downward and
+upward from a wide stamen, with buds of pollen facing outward from
+between the pairs.  Blindingly white, each petal has an almost
+undetectable streak of yellow running through its center.
+~
+E
+olive-green ivy wooden trellis~
+Light green slats of wood crisscross in a diagonal pattern, their tips
+sunk down deep into the ground for stability.  Supporting a wall of ivy
+that overlaps itself in many locations, it provides a natural divider
+from the wild forest beyond.
+~
+E
+solitary elm tree trunk~
+A lone elm tree grows in the center of the garden, its thinner branches
+and leaves pruned back to promote the health of the rest of the tree.  An
+oval hole has been gnawed out of its trunk, housing a beehive which
+buzzes with activity inside.
+~
+A
+~
+~
+// mob 5013 needs references changed to 5013
+// mob 5013 needs references changed to 5013
+if( mob_in_room( 5013, room ) ) {
+  if( random( 1, 5 ) == 4 ) {
+    send_to_room( #dissipate, room );
+    junk_mob( mob_in_room( 5013, room ) );
+    end;
+    }
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( find_stat( rch, level ) < 90 )
+        act_tochar( #angry, rch );
+      }
+    }
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( find_stat( rch, level ) < 90 ) {
+        dam_message( rch, 2d2, "the bee sting" );
+        inflict( rch, mob, 2d2, "being stung by a bee" );
+        }
+      }
+    }
+  }
+~
+E
+angry~
+@rThe swarm of angry bees attack with their stingers!@n
+~
+E
+dissipate~
+@rThe angry bees calm down and fly off in search of more pollen.@n
+~
+!
+2 4000 0
+A
+~
+~
+if( race( ch ) == insect )
+  continue;
+~
+E
+to_char~
+You are an insect.  Go find some pollen.
+~
+E
+to_room~
+@y$n flies away to the $T, searching for more flowers.@n
+~
+!
+3 0 9
+A
+~
+~
+if( race( ch ) != insect )
+  continue;
+~
+E
+to_char~
+@mYou venture away from the trees and back towards the grassy field to
+the $T.@n 
+~
+E
+to_room~
+@m$n ventures away from the trees, heading back towards the grassy field
+to the $T.@n 
+~
+!
+3 0 9
+A
+pick get take grab steal~
+flowerbed white irises flowers~
+if( rflag( reset0, room ) ) {
+remove_rflag( reset0, room );
+act_tochar( #pick, ch );
+act_notchar( #pick2, ch );
+obj_to_char( oload( 7688 ), ch );
+end;
+}
+if( rflag( reset1, room ) ) {
+remove_rflag( reset1, room );
+if( random( 1, 20 ) == 9 ) {
+act_tochar( #special, ch );
+act_notchar( #special2, ch );
+obj_to_char( oload( 7395 ), ch );
+end;
+}
+act_tochar( #pick, ch );
+act_notchar( #pick2, ch );
+obj_to_char( oload( 7688 ), ch );
+end;
+}
+if( rflag( reset2, room ) ) {
+remove_rflag( reset2, room );
+if( random( 1, 20 ) == 11 ) {
+act_tochar( #special, ch );
+act_notchar( #special2, ch );
+obj_to_char( oload( 7395 ), ch );
+end;
+}
+act_tochar( #pick, ch );
+act_notchar( #pick2, ch );
+obj_to_char( oload( 7688 ), ch );
+end;
+}
+act_tochar( #nomore, ch );
+~
+E
+pick~
+You pick one of the white flowers from the flowerbed.
+~
+E
+pick2~
+$n picks one of the white flowers from the flowerbed.
+~
+E
+special~
+You find a sprig of white flowers growing beneath the irises!
+~
+E
+special2~
+$n finds a sprig of white flowers growing beneath the irises!
+~
+E
+nomore~
+If you pick any more flowers, there will be none left for viewing.
+~
+!
+0 0 0
+A
+pick get take grab steal~
+ivy vines bluish-purple berries berry~
+if( rflag( reset0, find_room( 5812 ) ) ) {
+  remove_rflag( reset0, find_room( 5812 ) );
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 7691 ), ch );
+  end;
+  }
+if( rflag( reset1, find_room( 5812 ) ) ) {
+  remove_rflag( reset1, find_room( 5812 ) );
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 7691 ), ch );
+  end;
+  }
+if( rflag( reset2, find_room( 5812 ) ) ) {
+  remove_rflag( reset2, find_room( 5812 ) );
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 7691 ), ch );
+  end;
+  }
+act_tochar( #nomore, ch );
+end;
+~
+E
+pick~
+You pick one of the tiny berries off of the vines.
+~
+E
+pick2~
+$n picks one of the tiny berries off of the vines.
+~
+E
+nomore~
+There are no more suitable berries on the vines.
+~
+!
+0 0 0
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 )
+  send_to_room( #action1, room );
+if( i == 2 )
+  send_to_room( #action2, room );
+if( i == 3 )
+  send_to_room( #action3, room );
+~
+E
+action1~
+@cThe sound of buzzing bees echos from the tree trunk.@n
+~
+E
+action2~
+@cA light breeze blows through the garden, rustling the flowers.@n
+~
+E
+action3~
+@cThe delicate scent of the irises drifts through the air.@n
+~
+!
+2 200 0
+7675 17 1509949540 -2 0
+5259 9 1509949540 3 0
+-1
+S
+
+#5824
+Beside a Flowerbed of White Flowers~
+Although relatively plain and common in comparison to many of the other
+floral species presented in the gardens, this bed of white @Wdaisies@n
+still looks beautiful.  Delicate, overlapping petals sprout out in a
+circular fan from a central yellow bud, standing atop a narrow stem.  An
+eight-foot tall trellis has been built behind the flowerbed, extending
+further along to the south and west.  Dark green ivy cascades down the
+front of the lattice, with tiny bluish-purple berries clinging to the
+vines.
+~
+[Eliza] Done.
+~
+200802304 2 5 0
+D2
+~
+~
+0 -1 5823 10 10 5
+D3
+~
+~
+0 -1 5812 10 10 5
+E
+bed white daisies delicate overlapping petals circular yellow bud narrow stem~
+Although commonly seen throughout the forests and towns, this bed of
+daisies fits in with the rarer flowers with ease.  Bright white petals
+overlap each other perpendicular to the stem, leaving the bloom wide open
+to observe.
+~
+E
+eight-foot tall trellis lattice~
+Thin slats of wood crisscross diagonally, creating a wall of support for
+a dense matting of ivy which grows through and upon its surfaces.  The
+slats have been painted a dull green, making them almost invisible
+against the textured vines.
+~
+E
+dark green ivy tiny bluish-purple berries vines~
+Vines, as thick as a finger in some places, cover the trellis like a
+plague, almost completely obscuring the wooden slats.  Mid-sized green
+leaves sprout out in all directions, mostly dusky green but some lighter
+in shade.  Tiny bluish-purple berries can be seen beneath some leaves,
+although their surface has a pale waxy color, and does not look edible.
+~
+A
+~
+~
+// mob 5013 needs references changed to 5013
+// mob 5013 needs references changed to 5013
+if( mob_in_room( 5013, room ) ) {
+  if( random( 1, 5 ) == 4 ) {
+    send_to_room( #dissipate, room );
+    junk_mob( mob_in_room( 5013, room ) );
+    end;
+    }
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( find_stat( rch, level ) < 90 )
+        act_tochar( #angry, rch );
+      }
+    }
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( find_stat( rch, level ) < 90 ) {
+        dam_message( rch, 2d2, "the bee sting" );
+        inflict( rch, mob, 2d2, "being stung by a bee" );
+        }
+      }
+    }
+  }
+~
+E
+angry~
+@rThe swarm of angry bees attack with their stingers!@n
+~
+E
+dissipate~
+@rThe angry bees calm down and fly off in search of more pollen.@n
+~
+!
+2 4000 0
+A
+pick get take grab steal~
+white daisies daisy flowers~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 7687 ), ch );
+  end;
+  }
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  if( random( 1, 20 ) == 9 ) {
+    act_tochar( #special, ch );
+    act_notchar( #special2, ch );
+    obj_to_char( oload( 7392 ), ch );
+    end;
+    }
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 7687 ), ch );
+  end;
+  }
+if( rflag( reset2, room ) ) {
+  remove_rflag( reset2, room );
+  if( random( 1, 20 ) == 11 ) {
+    act_tochar( #special, ch );
+    act_notchar( #special2, ch );
+    obj_to_char( oload( 7392 ), ch );
+    end;
+    }
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 7687 ), ch );
+  end;
+  }
+act_tochar( #nomore, ch );
+~
+E
+pick~
+You pick one of the white flowers from the flowerbed.
+~
+E
+pick2~
+$n picks one of the white flowers from the flowerbed.
+~
+E
+nomore~
+If you pick any more flowers, there will be none left for viewing.
+~
+E
+special~
+You find a different kind of white flower growing beneath the daisies!
+~
+E
+special2~
+$n finds a different kind of white flower growing beneath the daisies!
+~
+!
+0 0 0
+A
+pick get take grab steal~
+ivy vines tiny bluish-purple berries berry~
+if( rflag( reset0, find_room( 5803 ) ) ) {
+  remove_rflag( reset0, find_room( 5803 ) );
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 7691 ), ch );
+  end;
+  }
+if( rflag( reset1, find_room( 5803 ) ) ) {
+  remove_rflag( reset1, find_room( 5803 ) );
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 7691 ), ch );
+  end;
+  }
+if( rflag( reset2, find_room( 5803 ) ) ) {
+  remove_rflag( reset2, find_room( 5803 ) );
+  act_tochar( #pick, ch );
+  act_notchar( #pick2, ch );
+  obj_to_char( oload( 7691 ), ch );
+  end;
+  }
+act_tochar( #nomore, ch );
+end;
+~
+E
+pick~
+You pick one of the tiny berries off of the vines.
+~
+E
+pick2~
+$n picks one of the tiny berries off of the vines.
+~
+E
+nomore~
+There are no more suitable berries on the vines.
+~
+!
+0 0 0
+-1
+S
+
+#5825
+Underneath a Sculpted Arch~
+An arch of twining ivies soars overhead, supported by a thin framework of
+curved sticks.  Below the archway, a narrow path runs east and west,
+nestled between a cluster of ixora bushes and a grassy hillside.  The
+flowering shrubs to the north are fully grown, trimmed to near exacting
+sizes and shapes.  Built up almost vertically, the earthy knoll to the
+south is covered with some type of wild crabgrass, each thick green blade
+standing up straight as an arrow.
+~
+[Rikahn] needs acode - leaving west (when zone reset)
+[Eliza] Done.
+~
+200802304 12 5 0
+D1
+~
+~
+0 -1 5801 10 10 5
+E
+arch twining ivies soars overhead thin framework curved sticks~
+Almost completely obscured by leafy vines, a frame of thin, bent sticks
+curves overhead, providing an elegant entryway into the arboretum.  The
+archway is built high in the air, spanning the distance from the hillside
+to the south and the ixora bushes to the north.
+~
+E
+narrow path 1 east 1 west~
+Dusky-gray oval stones line both sides of a crushed gravel path that runs
+throughout the entire arboretum, leading to all of the gardens. 
+Carefully maintained, nary a single pebble remains outside of its
+confines for long.  Branches off the main trail lead in other directions
+further down the path.
+~
+E
+ixora bushes flowery shrubs 1 north~
+Broad green leaves spread out from the branches of these fully grown
+shrubs.  Planted to provide an aesthetically pleasing natural fence, they
+obscure whatever lies behind them with ease.  Clusters of tiny
+pinwheel-shaped flowers protrude like red snowballs, their aromatic scent
+faint yet sweet-smelling.
+~
+E
+berm earth grassy hillside wild crabgrass green blade 1 south~
+Rising sharply, a steep hillside helps isolate portions of the arboretum
+with a natural barrier.  A wild strain of crabgrass has been planted
+along its slope, their tall blades swaying slightly in the wind.
+~
+A
+~
+~
+// mob 5013 needs references changed to 5013
+// mob 5013 needs references changed to 5013
+if( mob_in_room( 5013, room ) ) {
+  if( random( 1, 5 ) == 4 ) {
+    send_to_room( #dissipate, room );
+    junk_mob( mob_in_room( 5013, room ) );
+    end;
+    }
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( find_stat( rch, level ) < 90 )
+        act_tochar( #angry, rch );
+      }
+    }
+  loop( all_in_room ) {
+    if( is_player( rch ) ) {
+      if( find_stat( rch, level ) < 90 ) {
+        dam_message( rch, 2d2, "the bee sting" );
+        inflict( rch, mob, 2d2, "being stung by a bee" );
+        }
+      }
+    }
+  }
+~
+E
+angry~
+@rThe swarm of angry bees attack with their stingers!@n
+~
+E
+dissipate~
+@rThe angry bees calm down and fly off in search of more pollen.@n
+~
+!
+2 4000 0
+-1
+S
+
+#0
+

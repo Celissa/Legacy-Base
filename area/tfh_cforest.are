@@ -1,0 +1,4474 @@
+#M2_AREA
+2
+
+Coralon Forest~
+Rikahn Ciani~
+Coralon Forest~
+~
+~
+
+3 0
+0
+1
+#ROOMS
+
+#6700
+Charred Plains - Coralon Forest~
+A deep bed of ash coats the ground, the desiccated remains of what was
+once a lush forest.  What few trees still stand to the south are
+blackened from root to tip, the heavy scent of their burnt leaves still
+hanging heavy in the air.  A rutted roadway arcs around the charred field
+from west to north, evidently a major lane of transportation by its
+breadth.
+~
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 13253 10 10 5
+D1
+~
+~
+0 -1 6701 10 10 5
+D3
+~
+~
+0 -1 13255 10 10 5
+E
+deep bed ash ground remains~
+Thick drifts of grey ash cover the ground with a blanket of fine wispy
+flakes.  The charred remains of the blackened trees crumble into dust at
+the slightest touch.
+~
+E
+rutted roadway 1 west 1 north lane~
+Gouged deeply into the packed earth road are rutted tracks presumably
+made from caravans that regularly pass through the area.  A myriad of
+footprints accompany the trace of wagons; many appear to be oxen hoof
+prints and swathes of cattle prints.
+~
+A
+~
+~
+send_to_room( #ash, room );
+~
+E
+ash~
+@cThe wind picks up some of the ash and swirls it around the air.@n
+~
+!
+2 150 0
+-1
+S
+
+#6701
+Charred Plains~
+The forest where great oaks, so tall they blocked out the sun, once stood,
+has been replaced by blackened hulks of burnt-out tree trunks.  Tiny
+saplings have begun to grow through a dense coating of ash, which covers
+everything in a greyish-white layer.  The charred destruction is visible
+on all sides except to the north, where a dirt road winds its way across
+the lands.
+~
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 13252 10 10 5
+D1
+~
+~
+0 -1 6702 10 10 5
+D2
+~
+~
+0 -1 6704 10 10 5
+D3
+~
+~
+0 -1 6700 10 10 5
+E
+oaks blackened tree trunks~
+The towering skeletons of once mighty oaks extend their charred limbs,
+stripped of all life, towards the heavens.  Gutted from the inside, eerie
+hollows provide shelter inside the long dead trunks.
+~
+E
+tiny saplings ash~
+Sprouting from amidst the decaying forest, a new hope for life emerges
+from the depths of the greyish ash, as fresh growth pushes aside the
+crumbling remains of its predecessors.
+~
+E
+1 north dirt road~
+Hacked through the centre of the blackened forest is a long winding dirt
+road; the only reprieve from the ashen surroundings.  Its surface is
+scarred from overuse and very little in the way of maintenance.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CYou wind your way through the burned out husks toward the $d.@n
+~
+E
+to_room~
+@C$n winds $s way through the burned out husks toward the $d.@n
+~
+!
+3 0 15
+-1
+S
+
+#6702
+Charred Plains~
+The stench of burnt trees hovers in the air like a bank of fog, thick and
+strong.  A forest fire has recently decimated the forest, leaving only
+blackened hulks where proud oak trees once stood for centuries.  A stand
+of leafy elms rises to the south, somehow escaping the mass destruction
+that has plagued the remainder of the plants nearby.
+~
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 13251 10 10 5
+D1
+~
+~
+0 -1 6703 10 10 5
+D2
+~
+~
+0 -1 6705 10 10 5
+D3
+~
+~
+0 -1 6701 10 10 5
+E
+forest blackened hulks trees~
+What once were magnificent oak trees are now sorrowful remains of yards
+wide trunks.  No discernable trace of life can be found in the decimated
+husks.
+~
+E
+leafy elms 1 south~
+A wash of emerald green elms flourish along the southern verge of the
+forest, seemingly unscathed from the destruction of the fire.  The change
+in monotony is welcome relief from the blackened desolation.
+~
+A
+~
+~
+send_to_room( #song, room, sound );
+~
+E
+song~
+@CThe carol of birdsong rings through throughout the forest, drifting in
+from the south.@n 
+~
+!
+2 150 0
+-1
+S
+
+#6703
+Charred Plains~
+What little grass covers the plain is extremely short; charred black tips
+top singed brown blades.  A path has been beaten across the plain, devoid
+of plant life.  A forest begins nearby to the south, the closer trees
+looking slightly blackened, much in the same way as the grass.  The
+verdant, lush tops of healthy trees are visible beyond the blackened
+ones, and birdsong rings merrily from between the trees.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D2
+~
+~
+0 -1 6706 10 10 5
+D3
+~
+~
+0 -1 6702 10 10 5
+E
+forest 1 south tops lush blackened~
+Spanning for quite some distance to the south, a vast expanse of
+blackened trees waver feebly as a cool breeze sifts through their charred
+limbs.  Contrasting their black trunks, the crowns of the trees appear to
+be intact.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou follow the path southward toward a stand of ancient elms.@n
+~
+E
+to_char~
+@G$n follows the path southward toward a stand of ancient elms.@n 
+~
+!
+3 0 4
+-1
+S
+
+#6704
+Charred Plains~
+The rampant devastation visible further to the north begins to thin
+somewhat to the south, where a dense tangle of healthy elms flourish as
+they have for many years.  A thick canopy of leaves obscures most of the
+sky, only a scant few leaves singed from the horrendous blaze which left
+portions of the forest in ruins.  A trampled path leads around the elms
+to the east and the west, deeper into the tree line.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 6701 10 10 5
+D1
+~
+~
+0 -1 6705 10 10 5
+D3
+~
+~
+0 -1 6715 10 10 5
+E
+1 south dense tangle elm trees~
+Seemingly oblivious to the destruction to the north, the elm forest to
+the south rustles with the familiar sounds of woodland life.  Entwined
+throughout the trunks of the elms are numerous vines and creepers, their
+fine tendrils creating an impenetrable wall in the undergrowth.
+~
+E
+thick canopy leaves~
+The dense canopy of verdant leaves, crowning the top of the thick forest,
+stretches across the sky providing shelter for common woodland
+creatures.  The majority of the leaves curl upwards, although most are
+unscathed by the fire, their edges minimally singed by the blazing heat.
+~
+E
+tramples path 1 east 1 west~
+Disappearing between the closely gathered tree trunks, the well worn
+trail winds its way predominantly in an east-west direction.  In places
+along the path, the usually hard packed dry earth has become waterlogged
+and muddy.
+~
+A
+~
+~
+send_to_room( #scent, room );
+~
+E
+scent~
+@GThe musky scent of rising ash mingles with the aromas of old growth
+trees representing the cycle of life and death.@n 
+~
+!
+2 150 0
+-1
+S
+
+#6705
+Coralon Forest~
+A potpourri of scents mingle in mid-air, the haughty odor of a thriving
+forest contrasting with the acrid stench of burnt trees.  A forest fire
+has cleared most of the foliage to the north, though the elms to the
+south have managed to completely escape the flaming wrath.  A dense bed
+of dead leaves covers the ground, slowly decomposing into mulch.
+~
+[Guin] Add search leaves/floor for random coins, either silver or gold.
+[Guin] Reviewed.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 6702 10 10 5
+D1
+~
+~
+0 -1 6706 10 10 5
+D2
+~
+~
+0 -1 6741 10 10 5
+D3
+~
+~
+0 -1 6704 10 10 5
+E
+forest fire foliage 1 north~
+The desolation left in the aftermath of the hellish fire is of a
+black-grey colour and the remaining debris appears to crumble at the
+barest of touches.  The only evidence of the oaken foliage that once
+stood here now lies on the ground as a bed of fine ash flakes.
+~
+E
+dense bed dead leaves ground mulch~
+Lying thickly on the ground, a slowly mouldering bed of decaying material
+covers the roots and lower trunks of the towering elm trees and the
+blackened remains of the unfallen oaks.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CYou wind a path through the dessicated forest toward the $d.@n
+~
+E
+to_char~
+@C$n winds a path through the dessicated forest toward the $d.@n
+~
+!
+3 0 15
+A
+~
+dead bed leaves dense~
+if( !rflag( reset0, room ) ) {
+  act_tochar( #already, ch );
+  act_notchar( #ralready, ch, obj, mob, sight );
+  end;
+}
+remove_rflag( reset0, room );
+if( random( 1, 25 ) < 20 )
+  obj = oload( 14, random( 1, 8 ) );
+else if( random( 1, 8 ) == 4 )
+  obj = oload( 2, random( 1, 3 ) );
+if( obj ) {
+  act_tochar( #found, ch, obj );
+  act_notchar( #rfound, ch, obj, mob, sight );
+  obj_to_char( obj, ch );
+}
+else {
+  act_tochar( #nothing, ch );
+  act_tochar( #rnothing, ch, obj, mob, sight );
+}
+~
+E
+already~
+@yThe leaves have already been thoroughly scattered about the floor.@n
+~
+E
+ralready~
+@y$n looks at the leaves and shrugs $s shoulders.@n
+~
+E
+found~
+@YYou find $p while searching through the bed of dead leaves.@n 
+~
+E
+rfound~
+@Y$n finds $p while searching through the bed of dead leaves.@n
+~
+E
+nothing~
+You find nothing of interest in the pile of leaves.
+~
+E
+rnothing~
+$n finds nothing during $s search of the leaves.
+~
+!
+9 0 0
+203 9 1509949540 3 0
+2508 9 1509949540 3 0
+29 0 1509949540 -2 0
+28 9 1509949540 3 0
+-1
+S
+
+#6706
+Charred Forest~
+Blackened and singed trees encroach on all sides of the intersection. 
+The forest gives way to a charred plain to the north, while healthy trees
+grow bright and green to the south.  A chaotic mix of footprints - both
+animal and otherwise - cover the path, muddled and indistinct.  The
+smells of the forest hang heavy in the air, a rather pleasant mix.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 6703 10 10 5
+D1
+~
+~
+0 -1 6753 10 10 5
+D2
+~
+~
+0 -1 6740 10 10 5
+D3
+~
+~
+0 -1 6705 10 10 5
+E
+intersection path footprints~
+Left in the loamy earth, a myriad of track and footprints meander about
+in the intersection in haphazard patterns, their owners seeming to have
+no particular destination in mind as the prints disappear into the
+underbrush.
+~
+A
+~
+~
+send_to_room( #burn, room );
+~
+E
+burn~
+@CThe reek of burned wood is carried through the forest on a passing
+breeze.@n 
+~
+!
+2 150 0
+-1
+S
+
+#6707
+Charred Plains~
+The burned-out hulk of an old oak displays evidence of a recent forest
+fire.  A thick layer of dried, blackened leaves and branches covers the
+ground, where fiery debris rained down from the sky during the inferno. 
+Tufts of wild grasses poke up through the decayed mulch, the process of
+regrowth already in progress.  Portions of the forest left untouched by
+the blaze stand tall to the west, encircling the carnage with a thick
+wall of green foliage, only slightly singed around the edges.
+~
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 6708 10 10 5
+D1
+~
+~
+0 -1 13254 10 10 5
+E
+hulk burnt old oak tree fire~
+The remains of an oak tree take centerpiece here, the hollowed out trunk,
+and scarred branches are all that remain of a once-proud tree.  The
+thoroughness of the destruction indicates that the entire area was ablaze
+at some point in the past, eradicating all plant life in this desolate
+place.
+~
+E
+1 west carnage wall green foliage singed~
+Directly to the west stands a thick wall of blackened and burned foliage,
+which seems to have survived the inferno.  Behind the front edge of the
+singed foliage, the plant life lives and grows in abundance.
+~
+A
+~
+~
+send_to_room( #carrion, room, sight );
+~
+E
+carrion~
+@CA flock of carrion birds circle the sky above the burned out forest
+some distance to the south and east.@n 
+~
+!
+2 150 0
+-1
+S
+
+#6708
+Charred Plains~
+A thick coating of powdered charcoal covers the ground, where leafy trees
+and shrubs once stood lush and green.  Some careless traveler must have
+begun the blaze, which has decimated the foliage, as the damage is
+concentrated mostly along the roadway to the southeast.  New plants have
+begun to bloom through the rich soil, their fresh buds giving life back
+into the forest.
+~
+[Guin] Done.
+~
+167247872 2 9 0
+D1
+~
+~
+0 -1 6709 10 10 5
+D2
+~
+~
+0 -1 6707 10 10 5
+E
+coating powdered charcoal ground 1 south 1 east~
+Stretching out to the south and east, the charred plains stand as a scar
+where once stood a lush forest.  The charcoal ground, a mixture of soot
+and ash, shifts underfoot, but the footing appears to be quite stable.
+~
+E
+new plants bloom fresh buds~
+Here and there the occasional plant has begun to grow again, proving that
+nature's resilience will ensure growth even in this harsh environment. 
+Some of the plants have flowered, adding a touch of pink and red to the
+otherwise stark surroundings.
+~
+-1
+S
+
+#6709
+Charred Plains~
+The skeletal remains of a once-proud oak rise up into the air like the
+knobbly hands of an old man, crooked in many directions where thick
+branches once supported thousands of leaves.  A raging forest fire has
+charred the lush undergrowth into hulks, a fine powder of soot and ash
+all that remains of the sweet-smelling flowered bushes.  A wide, rutted
+roadway runs perpendicular to the forest to the south.
+~
+[Guin] Done.
+~
+167247872 2 9 0
+D1
+~
+~
+0 -1 6710 10 10 5
+D2
+~
+~
+0 -1 13254 10 10 5
+D3
+~
+~
+0 -1 6708 10 10 5
+E
+skeletal remains oak tree old man crooked~
+Towering overhead, the thick twisted branches of the old oak tree reach
+skyward, looking to all the world like skeletal arms.  The dead tree
+seems to be clutching toward the heavens, as if demanding a response to
+its fate.
+~
+E
+charred lush undergrowth hulks powder soot ash flowered bushes~
+Underfoot the ground is covered in a dark mixture of soot and ash, greasy
+and unpleasant to walk on.  The landscape is bereft the lush vegetation
+that once thrived here, long since burned and destroyed by the terrible
+fire that scarred this land.  In places some weeds have begun to grow,
+taking root in the protective windbreak of the broken oak tree.
+~
+E
+wide rutted roadway 1 south~
+Directly to the south, a rutted road runs east to south.  The size of the
+ruts seems to indicate a well-used road, despite the damage to the
+landscape and the surrounding environment.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CYou tramp southward through the ask toward the old rutted road.@n
+~
+E
+to_room~
+@C$n tramps southward through the ask toward the old rutted road.@n
+~
+!
+3 0 4
+-1
+S
+
+#6710
+Charred Plains~
+The dusky patterns of an extinguished fire spiral out in a circle from a
+star-shaped black mound on the ground; apparently the source of the
+blaze, that burned the surrounding forest.  Primarily concentrated to the
+east and west, the destructive force was thwarted from continuing
+northward by a cluster of old petrified trees, their trunks contorted and
+charred but otherwise intact.
+~
+[Guin] Done
+~
+167247872 2 9 0
+D1
+~
+~
+0 -1 6711 10 10 5
+D2
+~
+~
+0 -1 13253 10 10 5
+D3
+~
+~
+0 -1 6709 10 10 5
+E
+dusky patterned spiral circle star-shaped black mound~
+A large burned-out mound spirals out into the shape of a star, its
+purpose unclear.  Bits of litter lay scattered about within the ashes on
+the mound.
+~
+E
+cluster petrified trees trunks~
+Forming a barrier for passage to the north, a line of petrified trees
+remains rooted to the spot, despite the damage done to their surroundings. 
+The trees are obviously old, with fire burns charring the pitted and
+scarred trunks.
+~
+A
+~
+star-shaped black mound ground ashes~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #found, ch );
+  act_notchar( #found2, ch );
+  obj_to_char( oload( 2119 ), ch );
+  end;
+  }
+act_tochar( #no, ch );
+~
+E
+found~
+Brushing the thick coating of ash from the mound, you find something on
+the ground!
+~
+E
+found2~
+Brushing the thick coating of ash from the mound, $n finds something on
+the ground!
+~
+E
+no~
+There is nothing remaining underneath the mound of ash and debris.
+~
+!
+9 0 0
+-1
+S
+
+#6711
+Charred Plains~
+The stringy stems of crabgrass have begun to poke up through a thick
+layer of charred mulch, which covers the ground in a layer of ash.  The
+remnants of a blazing forest fire which has swept through the forest,
+charred twigs and branches, are all that remains of the lush foliage.  A
+rutted roadway runs alongside the blackened field to the south, its dirt
+surface scattered with bits of ash.
+~
+~
+167247872 2 9 0
+D1
+~
+~
+0 -1 6712 10 10 5
+D2
+~
+~
+0 -1 13252 10 10 5
+D3
+~
+~
+0 -1 6710 10 10 5
+E
+stringy stems crabgrass charred mulch ground burnt heap~
+Despite the desolation of the landscape, you can see several stems of
+crabgrass emerging from the ashen waste.  The light brown vegetation is
+barely growing, survives still in the harsh environment.
+~
+E
+rutted roadway blackened field 1 south dirt ash~
+Running east and west, the road looks old and well-used, but the ash
+layer has the road lightly coated in an undisturbed layer mixture of
+charcoal and ash.
+~
+-1
+S
+
+#6712
+Charred Plains~
+The splintered hulk of a fallen tree lies sprawled across the field, its
+trunk burned into lumps of brittle charcoal.  Ravaged by the same forest
+fire that destroyed much of the nearby forest, what few branches remain
+rise up into the air like distorted blackened fingers.  More ashen
+remains can be seen further to the west, running alongside a rutted road
+that winds its way through the countryside to the south.
+~
+[Guin] Done.
+~
+167247872 2 9 0
+D2
+~
+~
+0 -1 13251 10 10 5
+D3
+~
+~
+0 -1 6711 10 10 5
+E
+splintered hulk fallen tree trunk burnt brittle charcoal~
+Lying down across the field, the remains of a fallen oak tree have
+splintered and cracked until only the vague shape of a tree remains.  The
+fire damage is complete, the tree disintegrates at the slightest touch.
+~
+E
+1 west rutted ashen remains 1 south~
+Covering the ground directly to the west, the ash layer mars what was
+once a verdant landscape.  Telltale signs of destruction litter the
+ground, and from here the devastation looks complete.  Directly to the
+south, a road meanders through the ashen ground, surely one of its
+passengers being the cause for the surrounding damage.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yPuffs of black ash rise underfoot as you trudge $Tward through the
+burned out forest.@n
+~
+E
+to_room~
+@yPuffs of black ash rise underfoot as $n trudges $Tward through the
+burned out forest.
+~
+!
+3 0 12
+246 17 1509949490 -2 0
+-1
+S
+
+#6713
+On the Bank of a Burbling Stream~
+The trail running through the forest comes to an end at the bank of a
+swiftly flowing stream.  Newly grown cattails and other marsh grasses
+protrude from the water near its edge, swaying with the currents in an
+undulating motion.  A tightly packed cluster of elm trees bars passage to
+the northwest, the only open avenues of travel being the path to the east
+or attempting to cross the stream to the south.
+~
+[Guin] Done.
+~
+167247880 3 9 0
+D1
+~
+~
+0 -1 6714 10 10 5
+D2
+~
+~
+0 -1 6747 10 10 5
+E
+bank stream trail cattails water edge~
+Swift waters flow southbound from here, cottontails guiding the borders
+of the stream.
+~
+E
+cluster elm trees 1 north 1 west~
+A large cluster of trees prevents any travel in this direction.  The
+trees all appear healthy and strong, perhaps from plenty of fresh water
+in the area.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CYou step from the bank into the rushing stream.@n
+~
+E
+to_room~
+@C$n steps from the bank into the rushing stream.@n
+~
+!
+3 0 4
+-1
+S
+
+#6714
+Grassy Field~
+Wild grasses grow waist-high in an open clearing deep within the forest. 
+A circular patch has been trampled to the ground in the center of the
+space with wide trails leading off in all directions.  The faint sounds
+of running water drift in from the southwest, easily heard in the
+otherwise tranquil environment.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 6715 10 10 5
+D1
+~
+~
+0 -1 6718 10 10 5
+D2
+~
+~
+0 -1 6716 10 10 5
+D3
+~
+~
+0 -1 6713 10 10 5
+E
+circular patch trampled ground center clearing wild grass space~
+Wild grasses surround the entire area, although there is a trampled
+section on the ground in front of you, this appears to be some type of
+intersection within the path.
+~
+A
+~
+~
+send_to_room( #burble, room, sound );
+~
+E
+burble~
+@CThe music of a burbling stream underlies the whispers of falling leaves
+and the melodic harmonies of a birdsong chorus.@n 
+~
+!
+2 150 0
+587 17 1509949540 -2 0
+-1
+S
+
+#6715
+Coralon Forest~
+A faint trail winds its way through the trees, the wild grasses growing
+across its surface trampled in places by the animals of the forest. 
+Sandwiched between a stand of elms to the southeast and a fallen oak to
+the west, the passage is barely wide enough for a horse and its rider to
+pass by unscathed.  The fading scent of burning leaves hangs in the air,
+drifting in from the north.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 6704 10 10 5
+D2
+~
+~
+0 -1 6714 10 10 5
+E
+fallen oak passage faint trail~
+Intruding across a portion of the trail lays the thick blackened trunk of
+a toppled oak; its charred length is home to a myriad of beetles and
+slaters.  Encroaching from the other side of the trail, a dense wall of
+elms lines the path with a verdant flourish of leaves.
+~
+A
+~
+~
+send_to_room( #rustle, room, sound );
+~
+E
+rustle~
+@GThe verdant leaves of the ancient elms rustle as if in welcome when you
+pass beneath them.@n 
+~
+!
+2 150 0
+78 17 1509949540 -2 0
+-1
+S
+
+#6716
+Grassy Trail~
+Knee-high grass grows densely in the clearing, trampled firmly down in
+places to create a path through the growth.  A forest of leafy trees
+stands to the east, and the trail through the grass passes between two of
+them and continues into the forest.  A dense wall of brambles and rocks
+combine to the west to block all passage in that direction.  The sounds
+of a swift-moving river come from just beyond the wall.
+~
+[Rikahn] river to west, cannot access
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 6714 10 10 5
+D1
+~
+~
+0 -1 6717 10 10 5
+D2
+~
+~
+0 -1 6720 10 10 5
+E
+wall brambles rocks 1 west~
+Although this seemingly unnatural wall blocks the passage to the west, it
+is clear that no outside influence created the barrier.  The jagged rocks
+appear to be held in haphazard formation by a knotted tangle of prickly
+brambles.
+~
+A
+~
+~
+send_to_room( #hop, room );
+~
+E
+hop~
+@GA horde of grasshoppers leap across the trail and into the tall
+grasses.@n 
+~
+!
+2 200 0
+474 17 1509949500 -2 0
+210 9 1509949540 3 0
+-1
+S
+
+#6717
+A Path in Coralon Forest~
+Wide green leaves grow abundantly on the slender branches overhead,
+shading the dirt footpath below.  Leaf litter and small twigs cover the
+edges of the trail, and a few small clusters of toadstools pop up here
+and there amongst the fallen matter.  The sound of a fast-moving river
+hangs softly in the air, underscored by the occasional rustle of leaves.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 6718 10 10 5
+D1
+~
+~
+0 -1 6719 10 10 5
+D3
+~
+~
+0 -1 6716 10 10 5
+E
+leaf litter twigs toadstools~
+Cluttering the path that winds through the forest, a light covering of
+leaves and twigs lay scattered about.  In some places small clusters of
+toadstools sprout out of the ground in semi-circular patterns.
+~
+A
+~
+~
+send_to_room( #shape, room, sight_sound );
+~
+E
+shape~
+@CA dark shape skitters between the trees, rustling the fallen leaves
+along the forest floor.@n 
+~
+!
+2 150 0
+2500 9 1509949540 3 0
+29 0 1509949540 -2 0
+-1
+S
+
+#6718
+Coralon Forest - A Stand of Elms~
+The dusty footpath winds its way through the forest.  A thick stand of
+slender elms rises just to the north of the path, their pale green leaves
+rustling slightly as the breeze touches them.  A few mushrooms and
+toadstools grow up between the fallen leaves on the forest floor.  The
+path leads deeper into the forest to the south, and to the west is a
+grassy field.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D2
+~
+~
+0 -1 6717 10 10 5
+D3
+~
+~
+0 -1 6714 10 10 5
+E
+mushrooms toadstools fallen leaves floor~
+Large umbrella mushrooms spread their spores on the wind, standing
+stoically amid the detritus blanketing the forest floor.  toadstools add
+a touch of colour to the dark browns and greens of the decaying leaves.
+~
+A
+~
+~
+send_to_room( #rustle, room, sight_sound );
+~
+E
+rustle~
+@GThe leaves on a nearby elm branch rustle gently as a robin settles on a
+slender branch.@n 
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou wind through the trees, following the serpentine course of a narrow
+game trail.@n 
+~
+E
+to_room~
+@G$n winds through the trees, following the serpentine course of a narrow
+game trail.@n 
+~
+!
+3 0 12
+2505 41 1509949540 3 0
+1159 73 1509949540 3 0
+-1
+S
+
+#6719
+A Path in Coralon Forest~
+Leafy trees and wide-fronded ferns line the narrow footpath, which seems
+to fork ceaselessly anywhere space between the trees allows.  A thin
+layer of fallen leaves and other forest matter covers the ground
+everywhere but the path, which is dusty and is covered with a multitude
+of unidentifiable footprints.  The sound of running water seems to
+permeate the area, a steady background noise.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 6741 10 10 5
+D1
+~
+~
+0 -1 6738 10 10 5
+D3
+~
+~
+0 -1 6717 10 10 5
+E
+ferns wide fronded narrow footpath~
+Draping their gossamer thin fronds across the narrow trail, lacy ferns
+line the sides of the narrow path, their verdant leaves snapped in some
+places where careless passers-by have brushed them roughly aside.
+~
+A
+~
+~
+send_to_room( #noise, room );
+~
+E
+noise~
+@rSomething rustles in the underbrush.@n
+~
+!
+2 150 0
+587 17 1509949540 -2 0
+215 9 1509949540 3 0
+-1
+S
+
+#6720
+Coralon Forest - Bend in the River~
+The river bends sharply here, ending the path that leads in from the
+north.  Tall trees grow fairly close together, their slim branches
+overshadowing the path with wide leaves.  A large boulder has fallen into
+the river nearby; when the swift-moving water hits it, it sends off a
+spray of fine mist in all directions.  There seems to be a small
+clearing, of sorts, on the west side of the river.  An old log bridge, a
+brace of felled tree trunks lashed together with weathered rope, spans
+the river to the west.
+~
+[Rikahn] west is path to kobolds
+[Rikahn] river immediately to west and south
+[Guin] Bridge here.
+[Guin] Done.
+~
+167247880 3 9 0
+D0
+~
+~
+0 -1 6716 10 10 5
+D2
+~
+~
+0 -1 6722 10 10 5
+D3
+~
+~
+0 -1 6721 10 10 5
+D4
+~
+~
+0 -1 6732 10 10 5
+E
+boulder river spray mist~
+As the water splashes over the large angular boulder, a light mist from
+the spray coats the surrounding area with a thin film of moisture. 
+Around the base of the boulder, the water swirls about, slowly eroding
+the underside of the rock.
+~
+A
+poke~
+~
+if( !is_night( ) )
+  send_to_room( #rainbow, room, sight );
+else
+  send_to_room( #splash, room, sight );
+~
+E
+rainbow~
+@BA splash of water against the boulder sends a mist of fine droplets in
+the air creating a @Mr@Ba@Ci@Gn@Yb@n@yo@Rw@B.@n
+~
+E
+splash~
+@BA wave hits the boulder, soaking you from head to toe in cold water!@n
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CYou scramble atop the log and make your way across the river.@n
+~
+E
+to_room~
+@C$n scrambles atop the log and makes $s way across the river.@n
+~
+!
+3 0 16
+-1
+S
+
+#6721
+Rushing River~
+Whipped into foaming waves, the river roars across a shallow bed of
+rocks, forming a brief rapid-filled ford.  A horse-sized boulder juts
+from the center of the stream, the river forking into two as it surges
+around and continues onward.  Islands of floating grass grow at the
+rivers edge, the mass bobbing upon the turbulent waters.
+~
+** RIVER **
+[Rikahn] water flows south
+[Guin] Connects to 4024 - kobs zone.
+[Yrna] river code done.
+[Guin] Done
+~
+200802304 8 6 0
+D0
+~
+~
+0 -1 6747 10 10 5
+D1
+~
+~
+0 -1 6720 10 10 5
+D2
+~
+~
+0 -1 6761 10 10 5
+D3
+~
+~
+0 -1 4024 10 10 5
+E
+waves shallow bed ford~
+Beneath the turbulent surface of the foaming water, the gravelly bed is
+deeply rutted by overuse.  As the water rushes over the stones it burbles
+merrily, rippling over the slowly smoothing stones.
+~
+E
+boulder~
+A grey stone boulder nearly as big as a horse, perches in the middle of
+the river stoically like a silent sentinel, immovable and immutable save
+by the swiftly rushing waters.
+~
+A
+~
+~
+if( is_player( ch ) ) {
+  wait( 1 );
+  act_tochar( #river, ch, obj );
+  act_notchar( #rriver, ch, obj, mob, sight );
+  transfer( ch, find_room( 6761 ) );
+  act_notchar( #arrive, ch, obj, mob, sight );
+  acode( find_room( 6761 ), 1 );
+}
+~
+E
+river~
+@BThe river carries your onward!  Fighting to stay on the surface, you
+almost bang your head against a log bridging the rapids.@n 
+~
+E
+rriver~
+@BUnable to fight the raging river, $n is helplessly carried onward!@n 
+~
+E
+arrive~
+@BSomething arrives from the north, carried by the foaming rapids.  You
+realise it's $n, as $e struggles to the surface, gasping for air!@n 
+~
+!
+0 0 0
+A
+~
+~
+if( is_player( ch ) ) {
+  if( find_stat( ch, str ) < 15 )
+    act_tochar( #no, ch, obj );
+  elseif( find_skill( ch, swimming ) < 5 )
+    act_tochar( #no, ch, obj );
+  else
+    continue;
+}
+else
+  continue;
+~
+E
+no~
+@CBeing caught in river's wild waves, you can't even stay on the surface,
+let alone move freely!@n 
+~
+!
+3 0 15
+A
+~
+~
+if( is_player( ch ) ) {
+  if( find_stat( ch, str ) < 15 ) {
+    act_tochar( #str, ch, obj );
+    act_notchar( #rstr, ch, obj, mob, sight );
+    wait( 1 );
+    transfer( ch, find_room( 6761 ) );
+    act_notchar( #arrive, ch, obj, mob, sight );
+    acode( find_room( 6761 ), 1 );
+  }
+  elseif( find_skill( ch, swimming ) < 5 ) {
+    act_tochar( #str, ch, obj );
+    act_notchar( #rstr, ch, obj, mob, sight );
+    wait( 1 );
+    transfer( ch, find_room( 6761 ) );
+    act_notchar( #arrive, ch, obj, mob, sight );
+    acode( find_room( 6761 ), 1 );
+  }
+}
+~
+E
+str~
+@BAs you step into the water, a large wave immediately sweeps you off
+your feet.  Caught in the trubulent flow, you are carried southward.@n
+~
+E
+rstr~
+@B$n steps into the river and is immediately swept of $s feet!  Before
+you manage to react, the voilent, foaming rapids carry $m downstream!@n
+~
+E
+arrive~
+@BSomething arrives from the north, carried by the foaming rapids.  You
+realise it's $n, as $e struggles to the surface, gasping for air!@n
+~
+!
+1 0 10
+27 9 1509949540 3 0
+324 17 1509949540 -2 0
+-1
+S
+
+#6722
+Rushing River~
+With swirling waters the river cascades down a series of rapids, the
+surface white with foam and the air soaked with mist.  The steep bank
+gives way on the north, a few scattered rocks ideally placed to allow
+people to scrabble from the waters.  The southern bank is less negotiable;
+only a few ferns clinging to the earthen wall.  Deep waters swell
+eastwards, murk and silt making the river's depth unclear.
+~
+** RIVER **
+[Rikahn] water flows east
+[Guin] Done.
+~
+200802304 8 6 0
+D0
+~
+~
+0 -1 6720 10 10 5
+D1
+~
+~
+0 -1 6723 10 10 5
+D3
+~
+~
+0 -1 6761 10 10 5
+E
+steep bank 1 north~
+Rising almost vertically from the gushing waters, the clayey bank is home
+to a few strategically placed steppingstones.  Undercut sharply by the
+river, the haphazard path along the top of the bank appears barely able
+to support the weight of a small woodland creature.
+~
+A
+~
+~
+if( is_player( ch ) ) {
+  wait( 1 );
+  act_tochar( #river, ch, obj );
+  act_notchar( #rriver, ch, obj, mob, sight );
+  transfer( ch, find_room( 6723 ) );
+  act_notchar( #arrive, ch, obj, mob, sight );
+  acode( find_room( 6723 ), 2 );
+}
+~
+E
+river~
+@BThe river carries you down a series of rapids, and you struggle to
+avoid the large rocks in your way.  By some miracle, you manage to dodge
+them all, but the river carries you ever onward!@n 
+~
+E
+rriver~
+@B$n struggles in the foaming rapids, dodging the large rocks but never
+managing to break free from the water's grasp!@n 
+~
+E
+arrive~
+@BTrying to shout, and swallowing a lot of water on $s way, $n floats
+past you carried by the swift river.@n 
+~
+!
+0 0 0
+A
+~
+~
+if( is_player( ch ) ) {
+  if( find_stat( ch, str ) < 15 )
+    act_tochar( #no, ch, obj );
+  elseif( find_skill( ch, swimming ) < 5 )
+    act_tochar( #no, ch, obj );
+  else
+    continue;
+}
+else
+  continue;
+~
+E
+no~
+@CYou try to scrabble out of water grabbing at roots and ferns, but just
+as you think you're free, a large wave sweeps you off your feet again!@n
+~
+!
+3 0 11
+A
+~
+~
+if( is_player( ch ) ) {
+  if( find_stat( ch, str ) < 15 ) {
+    act_tochar( #str, ch, obj );
+    act_notchar( #rstr, ch, obj, mob, sight );
+    wait( 1 );
+    transfer( ch, find_room( 6723 ) );
+    act_notchar( #arrive, ch, obj, mob, sight );
+    acode( find_room( 6723 ), 2 );
+  }
+  elseif( find_skill( ch, swimming ) < 5 ) {
+    act_tochar( #swim, ch, obj );
+    act_notchar( #rstr, ch, obj, mob, sight );
+    wait( 1 );
+    transfer( ch, find_room( 6723 ) );
+    act_notchar( #arrive, ch, obj, mob, sight );
+    acode( find_room( 6723 ), 2 );
+  }
+}
+~
+E
+str~
+@BAs you step into the foaming rapids, you realise you have made a
+mistake.  You are just not strong enough to fight the current that has
+swept you off your feet!@n 
+~
+E
+rstr~
+@B$n is swept off $s feet and the foaming rapids swiftly carry $m
+downstream, as you helplessly stand and watch!@n 
+~
+E
+swim~
+@BStepping into the rapids, you slip and fall over!  You try to escape,
+but your swimming is not up to the challange and the river swiftly
+carries you downstream.@n 
+~
+E
+arrive~
+@BTrying to shout, and swallowing a lot of water on $s way, $n floats
+past you carried by the swift river.@n 
+~
+!
+1 0 1
+324 17 1509949540 -2 0
+113 9 1509949540 3 0
+-1
+S
+
+#6723
+Rushing River~
+The slightly murky waters of the river rush by, catching into small
+eddies against rocks protruding from the bottom of the riverbed.  Steep
+banks rise to the north and south, small root tips and tendrils
+protruding meekly into the exposed air.  An impassable path seems to lead
+towards a cliff to the south while the forest grows thickly to the north.
+~
+** RIVER **
+[Rikahn] water flows east
+[Guin] Done.
+~
+200802304 8 6 0
+D0
+~
+~
+0 -1 6724 10 10 5
+D1
+~
+~
+0 -1 6725 10 10 5
+D3
+~
+~
+0 -1 6722 10 10 5
+E
+murky water river eddies~
+Swirling about the rocks and riverbanks, the water gargles as it spins
+around, pushed by the swift current.  Dense drifts of silt twirl about
+the murky water making it difficult to determine the depth of the river.
+~
+A
+1 look~
+3 river~
+interpret( ch, "look water" );
+~
+!
+0 0 0
+A
+~
+~
+if( is_player( ch ) ) {
+  wait( 1 );
+  transfer( ch, find_room( 6725 ) );
+  act_notchar( #arrive, ch, obj, mob, sight );
+  acode( find_room( 6725 ), 1 );
+}
+~
+E
+arrive~
+@B$n arrives from the east, carried by the rushing waters.  You can only
+stand and watch as $e floats past you and continues downstream.@n 
+~
+!
+0 0 0
+A
+~
+~
+if( is_player( ch ) ) {
+  if( find_stat( ch, str ) < 15 )
+    act_tochar( #no, ch, obj );
+  elseif( find_skill( ch, swimming ) < 5 )
+    act_tochar( #no, ch, obj );
+  else
+    continue;
+}
+else
+  continue;
+~
+E
+no~
+@CTry as you might, you cannot escape the whirpool you are caught in.  In
+desperation, you try reaching for some roots on the river bank, but to no
+avail.@n 
+~
+!
+3 0 11
+A
+~
+~
+if( is_player( ch ) ) {
+  if( find_stat( ch, str ) < 15 ) {
+    act_tochar( #oops, ch, obj );
+    act_notchar( #roops, ch, obj, mob, sight );
+wait( 1 );
+    transfer( ch, find_room( 6725 ) );
+    act_notchar( #arrive, ch, obj, mob, sight );
+    acode( find_room( 6725 ), 1 );
+  }
+  elseif( find_skill( ch, swimming ) < 5 ) {
+    act_tochar( #oops, ch, obj );
+    act_notchar( #roops, ch, obj, mob, sight );
+wait( 1 );
+    transfer( ch, find_room( 6725 ) );
+    act_notchar( #arrive, ch, obj, mob, sight );
+    acode( find_room( 6725 ), 1 );
+  }
+}
+~
+E
+oops~
+@BThe moment you step into the river, you get caught into the swift,
+turbulent current and, before you know it, you are struggling for breath
+as the river carries you downstream!@n 
+~
+E
+roops~
+@B$n steps into the rushing waters, not realising the danger.  Before $e
+knows it, $e is carried off downstream!@n 
+~
+E
+arrive~
+@B@B$n arrives from the east, carried by the rushing waters.  You can
+only stand and watch as $e floats past you and continues downstream.@n
+~
+!
+1 0 1
+324 17 1509949540 -2 0
+-1
+S
+
+#6724
+Coralon Forest - By A River~
+A wide river rushes by to the south, carrying bits of leaf and tiny twigs
+along its eddying waters.  The forest grows especially thickly to the
+north; underbrush and low-growing branches combining to effectively block
+passage by anything but the smallest animal.  Somebody has carved a sigil
+of some sorts into an especially large tree just to the west.  This small
+clearing continues to the east.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 6727 10 10 5
+D2
+~
+~
+0 -1 6723 10 10 5
+E
+sigil tree~
+A small patch of bark has been stripped away and a crude, angle-edged
+circle has been carved into the exposed space.  A few horizontal lines
+have been cut across one of the arcing edges...  perhaps in
+representation of a coin.
+~
+2500 9 1509949540 3 0
+-1
+S
+
+#6725
+Rushing River~
+Cutting a wide path through the forest, the river rushes eastwards upon
+its watery way.  Steep, root-laced banks rise to the north and south,
+containing the river in a cradle-like hold.  Several leafy branches arch
+over the river, shading its turbulent, eddying surface.  A few rocks are
+visible through the water, but for the most part the silt floating in the
+water obscures the surfaces beneath.
+~
+** RIVER **
+[Rikahn] water flows east
+[Guin] Done.
+~
+200802304 8 6 0
+D0
+~
+~
+0 -1 6727 10 10 5
+D1
+~
+~
+0 -1 6726 10 10 5
+D2
+~
+~
+0 -1 6728 10 10 5
+D3
+~
+~
+0 -1 6723 10 10 5
+E
+steep root laced banks~
+Riddling the clay banks, a fine network of roots, ranging in size from
+nothing more than fine tendrils to the vast bases of towering trees,
+desperately cling to the soil as the gushing waters try to steal it away.
+~
+A
+~
+~
+if( is_player( ch ) ) {
+  wait( 1 );
+  act_tochar( #river, ch, obj );
+  act_notchar( #rriver, ch, obj, mob, sight );
+  transfer( ch, find_room( 6726 ) );
+  act_notchar( #arrive, ch, obj, mob, sight );
+  acode( find_room( 6726 ), 1 );
+}
+~
+E
+river~
+@BDesperately grabbing at passing roots and branches protruding from the
+riverbank, you swallow some water as the raging river carries you ever
+onward.@n 
+~
+E
+rriver~
+@B$n tries to reach for roots and branches along the riverbank, but all
+$e does is loses the little control $e had and swallows some water.  You
+stand and watch as the river carries $m off into the unknown.@n 
+~
+E
+arrive~
+@BCoughing and fighting for breath, $n arrives from the west, carried by
+the river's eddying flow.@n 
+~
+!
+0 0 0
+A
+~
+~
+if( is_player( ch ) ) {
+  if( find_stat( ch, str ) < 15 )
+    act_tochar( #no, ch, obj );
+  elseif( find_skill( ch, swimming ) < 5 )
+    act_tochar( #no, ch, obj );
+  else
+    continue;
+}
+else
+  continue;
+~
+E
+no~
+@CYou reach for a large branch overhanging the river, trying to steady
+yourself.  Unfortunately, the branch breaks and falls into the water,
+narrowly missing you.@n 
+~
+!
+3 0 15
+A
+~
+~
+if( is_player( ch ) ) {
+  if( find_stat( ch, str ) < 15 ) {
+    act_tochar( #oops, ch, obj );
+    act_notchar( #roops, ch, obj, mob, sight );
+    wait( 1 );
+    transfer( ch, find_room( 6726 ) );
+    act_notchar( #arrive, ch, obj, mob, sight );
+    acode( find_room( 6726 ), 1 );
+  }
+  elseif( find_skill( ch, swimming ) < 5 ) {
+    act_tochar( #oops, ch, obj );
+    act_notchar( #roops, ch, obj, mob, sight );
+    wait( 1 );
+    transfer( ch, find_room( 6726 ) );
+    act_notchar( #arrive, ch, obj, mob, sight );
+    acode( find_room( 6726 ), 1 );
+  }
+}
+~
+E
+oops~
+@BYou try to cross the river, but the current is just too strong.  Caught
+in the turublent flow, you are carried downstream!@n 
+~
+E
+roops~
+@B$n gingerly steps into the rushing waters, but the swift current
+quickly overwhelms $m and carries $m off downstream!@n 
+~
+E
+arrive~
+@BA large shadow floats in from the west.  Looking closer, you realise
+its $n, carried by the swift river's flow.@n 
+~
+!
+1 0 5
+324 17 1509949540 -2 0
+113 9 1509949540 3 0
+-1
+S
+
+#6726
+Rushing River~
+Crashing against the eastern bank, the waters pummel a huge exposed
+boulder before surging northwards.  Trees and ferns gather around the
+steep banks, spectators to the rushing river's anger.  Once again rocks
+pierce the wild surface of the frothing waters, their tips churning the
+waters into white-foam wakes.
+~
+** RIVER **
+[Rikahn] water flows north
+[Guin] Done.
+~
+200802304 8 6 0
+D0
+~
+~
+0 -1 6734 10 10 5
+D3
+~
+~
+0 -1 6725 10 10 5
+E
+trees ferns banks~
+Lacy ferns drape their delicate fronds into the fierce waters, their
+verdant furls almost savaged by the violent water.  Towering above the
+gentle ferns, tall beech, oak and elm trees raise their thick limbs in
+salutation to the sun.
+~
+A
+~
+~
+if( is_player( ch ) ) {
+  wait( 1 );
+  transfer( ch, find_room( 6734 ) );
+  act_notchar( #arrive, ch, obj, mob, sight );
+  acode( find_room( 6734 ), 1 );
+}
+~
+E
+arrive~
+@BYou watch in disbelief as $n floats past you, whirling and swirling in
+the eddy current.@n 
+~
+!
+0 0 0
+A
+~
+~
+if( is_player( ch ) ) {
+  if( find_stat( ch, str ) < 15 )
+    act_tochar( #no, ch, obj );
+  elseif( find_skill( ch, swimming ) < 5 )
+    act_tochar( #no, ch, obj );
+  else
+    continue;
+}
+else
+  continue;
+~
+E
+no~
+@CGasping for breath, you reach for the trees and frens growing on the
+river's steep banks.  All that does, however, is break a few leaves as
+the strong current pulls you onward.@n 
+~
+!
+3 0 9
+324 17 1509949540 -2 0
+-1
+S
+
+#6727
+Coralon Forest - By A River~
+A wide river rushes by to the south, filling the air with the sound of
+water.  Some trees have pulled back to the north, creating a sort of
+glade just off the river.  They form an impenetrable wall to the north
+and east, but have receded enough to allow one a view of the sky.  A
+flowering bush grows just to the north, at the edge of the forest.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D2
+~
+~
+0 -1 6725 10 10 5
+D3
+~
+~
+0 -1 6724 10 10 5
+E
+flowering bush~
+Pale violet flowers riddle the green shrub with small dots of colour. 
+Dusted with a fine spray of water, the dew-spangled flowers glimmer like
+gems in the limelight of the dark green forest.
+~
+1234 9 1509949540 3 0
+-1
+S
+
+#6728
+A Path in Coralon Forest~
+Broad, many-fronded ferns grow up along the riverbank, shading small
+patches of toadstools which have sprouted just beneath them.  The river
+rushes swiftly by, the noise quite loud.  Graceful trees fill the
+surrounding area, shading the ground below with wide, verdant leaves. 
+Fallen leaves and twigs cover much of the space between the trees.
+~
+[Guin] Done.
+~
+167247880 3 9 0
+D0
+~
+~
+0 -1 6725 10 10 5
+D1
+~
+~
+0 -1 6729 10 10 5
+E
+patches toadstools ferns~
+Gossamer thin leaves arch elegantly over the patches of toadstools on the
+forest floor.  Sprouting out of the litter-strewn ground, bright
+orange-red toadstools congregate in circles beneath the lacy fronds.
+~
+A
+~
+~
+send_to_room( #fern, room );
+~
+E
+fern~
+@GThe ferns rustle softly.@n
+~
+!
+2 185 0
+189 17 1509949515 -2 0
+-1
+S
+
+#6729
+A Path in Coralon Forest~
+The trees have grown up in such a way as to allow the path to move in a
+relatively straight line, east to west.  A large boulder rests just off
+the south side of the path, its pitted and craggy surface covered with
+lush moss and lichen.  The sound of rushing water drifts in through the
+trees to the north.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 6772 10 10 5
+D2
+~
+~
+0 -1 4030 10 10 5
+D3
+~
+~
+0 -1 6728 10 10 5
+E
+boulder large moss lichen~
+Clinging to the barren surface of the boulder, hardy moss, lichen and
+vines climb over the fractured surfaces, firmly planting their meagre
+roots into the cracks.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou follow the straight line of the path toward the $T.@n
+~
+E
+to_room~
+@G$n follows the straight line of the path toward the $T.@n
+~
+!
+3 0 10
+2693 17 1509949540 -2 0
+29 0 1509949540 -2 0
+-1
+S
+
+#6730
+Rushing River~
+As the river rushes past to the north, this small clearing is filled with
+the sounds of water moving over rock.  Despite the seclusion of being
+surrounded by thick stands of trees to the west and south, there is still
+a feeling of openness about the area.  Directly to the east sits a small
+wooden shack, its door hanging on rusty hinges, and its windows blocked
+up with planks of wood.  The ground here is slightly spongy, as some of
+the river still manages to splash through here.  To the north lies a mass
+of brambles, but beyond it can be seen a rushing river.
+~
+[Guin] Done.
+~
+200802368 13 8 0
+D0
+mound of brambles~
+brambles bush~
+2187 -1 6762 10 10 5
+D1
+door~
+door~
+131 -1 6731 3 10 5
+E
+1 north river brambles~
+Directly to the north rushes past a swift moving river.  Hidden rocks and
+fallen branches cause the water to burble loudly as it runs past.  The
+brambles look like some have been uprooted, and could be moved.
+~
+E
+trees stands 1 west 1 south~
+Surrounding the clearing to the west and south, grow large stands of
+trees.  Between the roots grow large bushes of various plants, thick
+enough to prevent egress past them.
+~
+E
+1 east shack door windows~
+The small shack looks old and run down, the door sits gingerly on two
+rusty hinges, and the windows have been boarded up.  Far from impressive,
+it looks like a run down hovel.
+~
+A
+move clear~
+brambles bush~
+act_notchar( #rmove, ch );
+act_tochar( #move, ch );
+send_to_room( #bushes, find_room( 6762 ) );
+if( is_open( room, north ) )
+  close( room, north );
+else
+  open( room, north );
+~
+E
+move~
+@RYou step forward, and push the brambles around a bit.  @n
+
+~
+E
+rmove~
+@R$n steps forward and moves the brambles.@n
+~
+E
+bushes~
+@RThe bushes to the south shake and move erratically.@n
+~
+!
+0 0 0
+-1
+S
+
+#6731
+Decrepit Old Shack~
+The insides of this run down shack are dingy, smelly and quite
+unimpressive to look at.  The walls have some mildew growing on them,
+while the low ceiling has hastily patched up holes in its woodwork.  A
+small doorway leads to the west, the remains of the door itself hanging
+feebly on a pair of rusty hinges.  A pile of rags serves as a bed in the
+corner, while a small desk covered with a pile of parchment is the only
+thing not suffering signs of decay in the room.
+~
+[Guin] Reviewed.
+~
+200802306 3 9 0
+D3
+door~
+door~
+131 -1 6730 10 10 5
+E
+walls mildew~
+The walls are in a terrible state.  Holes are badly patched up, mildew is
+growing in abundance in the corners, and the east wall looks like it
+could fall down at any time.
+~
+E
+ceiling holes~
+Overhead the ceiling sags ominously.  Holes have been nailed shut with
+yards of cloth and wood, but the alarming dip in the center of the roof
+indicates that the roof will not stay up forever.
+~
+E
+1 west door~
+The ramshackle door hangs on for grim life to a pair of rusty hinges. 
+It looks like one good hard shove, and the entire doorframe could fall
+out.
+~
+E
+rags bed~
+Rags piled up in the corner look to serve as a bed from the depression in
+the middle of them.  Just to the side of it lie several candle stubs,
+the remains of nighttime reading.
+~
+E
+desk parchment~
+The only solid structure in the building is this desk. The wood has
+remained without rot or mildew while the building around it has fallen into
+disrepair.  The table is covered in the parchments and writings of
+someone who is highly disorganised, as the mess would seem to indicate.
+~
+A
+~
+~
+act_tochar( #grunt, ch );
+~
+E
+grunt~
+A gnome wizard grunts at you and goes back to work.
+~
+!
+1 0 8
+A
+practice~
+acid blast~
+if( !cflag( 48, ch ) ) {
+  act_tochar( #arrow, ch );
+  end;
+  }
+else if( !cflag( 73, ch ) ) {
+  act_tochar( #toad, ch );
+  end;
+  }
+act_room( #combine, ch );
+act_tochar( #ouch, ch );
+act_notchar( #ouch1, ch );
+dam_message( ch, 5d5, "The piercing arrow" );
+inflict( ch, mob, 5d5, "gnome wizard" );
+continue;
+~
+E
+arrow~
+A gnome wizard says:
+
+You have not brough me the arrow.
+~
+E
+toad~
+A gnome wizard says:
+
+You have not brought me the tongue.
+~
+E
+combine~
+A gnome wizard carefully combines a yavendar toad's tongue with the
+broken arrow, causing the arrow to glow @ggreen.@n 
+~
+E
+ouch~
+A gnome wizard shoves a @gglowing-green@n arrow into you!
+~
+E
+ouch1~
+A gnome wizard shoves a @gglowing-green@n arrow into $n!
+~
+!
+0 0 0
+5461 9 1509949540 3 0
+81 17 1509949540 -1 0
+189 17 1509949540 -1 0
+246 17 1509949490 -1 0
+284 17 1509949515 -1 0
+1182 17 1509949540 -1 0
+415 17 1509949515 -1 0
+755 17 1509949490 -1 0
+-1
+S
+
+#6732
+Log Bridge in Coralon Forest~
+A small-scale excavation has occurred here in order to allow for the
+foundations that support the log bridge that spans westward over the
+river.  Leading up to the bridge are four shallow steps, each about one
+foot in height.  A half dozen tree trunks have been lashed together with
+yard upon yard of weather worn rope.  Very little has been done to the
+logs other than the stripping of the bark and the smearing of a tar and
+sand slurry over each trunk.  At random intervals occasional gaps varying
+in size from an inch or so to over a foot in width lie between the logs
+making it easy to stumble or even fall on the uneven surface.
+~
+[Guin] swift moving river below.
+[Guin] Done.
+~
+167247880 3 9 0
+D3
+~
+~
+0 -1 6745 10 10 5
+D5
+~
+~
+0 -1 6720 10 10 5
+E
+steps shallow~
+These appear to be the off cuts from the trunks that have been used to
+create the surrounding foundations of the bridge.  Most appear to be
+roughly hewn and sit at badly skewed angles, wobbling unsteadily when any
+weight is placed upon them.
+~
+E
+tree trunks logs tar sand slurry~
+Each trunk is around a foot in diameter and long enough to span the
+entire width of the river without a break.  Their bark has been stripped
+back in an effort to smooth their surfaces slightly before being coated
+in a viscous concoction of sand and tar that has been used to keep the
+majority of the weather from the hard wood.
+~
+E
+rope weather worn~
+Weaving over and under the logs, this durable rope tightly secures the
+logs together, forming the wide bridge that spans the river.  Here and
+there strands of twine uncurl from the twisted length of rope - a sign of
+its slow degradation from time and weathering.
+~
+E
+excavation foundations~
+A series of deep holes and trenches have been hacked into the side of the
+riverbank, and the foundations that support the bridge are, for the most
+part, buried in the hard packed earth.  It looks as though some repairs
+have been made in the past when parts of the foundation have become too
+unstable to continue supporting the heavy log bridge.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CYou climb down from the log to solid ground.@n
+~
+E
+to_room~
+@C$n climbs down from the log back to solid ground.@n
+~
+!
+3 0 32
+A
+~
+~
+if( !is_mob( ch ) )
+  if( find_stat( ch, dex ) < random( 6, 15 ) ) {
+  act_tochar( #fall, ch );
+  act_notchar( #rfall, ch, obj, mob, sight );
+  position( ch, 6 );
+  end;
+}
+continue;
+~
+E
+to_char~
+@cYou nimbly manage your way westward across the bridge.@n
+~
+E
+to_room~
+@c$n nimbly manages $s way westward across the bridge.@n
+~
+E
+fall~
+@cYou trip over an irregularity in the logs and land on your bottom.@n
+~
+E
+rfall~
+@c$n trips over an irregularity in the logs and lands on $s bottom.@n
+~
+!
+3 0 8
+-1
+S
+
+#6733
+Rushing River~
+Under Construction.
+~
+~
+200802304 8 9 0
+-1
+S
+
+#6734
+Rushing River~
+Burbling and splashing the river rushes onwards through the dark woods. 
+A few roots from the oak trees spread down the bank and into the rivers
+edge, a collection of leaves and waterweeds growing around their gnarled
+tendrils.  Silt and pebbles lie scattered upon the northern bank, the
+river appearing to have changed courses slightly leaving some of the bed
+exposed.  Waterweeds cover the rivers shallows, their tiny leaves moving
+with the water's flow.
+~
+** RIVER **
+[Rikahn] water flows east
+[Guin] Done.
+~
+200802304 8 6 0
+D0
+~
+~
+0 -1 6738 10 10 5
+D1
+~
+~
+0 -1 6735 10 10 5
+D2
+~
+~
+0 -1 6726 10 10 5
+E
+silt pebbles bed bank~
+Buried amidst a thick layer of silt are small fragments of quartz and
+marble, their pale white colouration contrasting the greys and browns of
+the dried riverbed.  Inter-bedded throughout, an occasional agate, smooth
+and clear, can be seen.
+~
+A
+~
+~
+if( is_player( ch ) ) {
+  wait( 1 );
+  act_tochar( #river, ch, obj );
+  act_notchar( #rriver, ch, obj, mob, sight );
+  transfer( ch, find_room( 6735 ) );
+  act_notchar( #arrive, ch, obj, mob, sight );
+acode( find_room( 6735 ), 2 );
+}
+~
+E
+river~
+@BYou continue on your bumpy ride downstream, screaming as you go and
+hoping it will end soon!@n
+~
+E
+rriver~
+@B$n is carried off by the gushing river, screaming as $e goes and
+swallowing a fair bit of water in the process.@n 
+~
+E
+arrive~
+@B$n arrives from the west, bobbing up and down in the turbulent
+waters.@n 
+~
+!
+0 0 0
+A
+~
+~
+if( is_player( ch ) ) {
+  if( find_stat( ch, str ) < 15 )
+    act_tochar( #no, ch, obj );
+  elseif( find_skill( ch, swimming ) < 5 )
+    act_tochar( #no, ch, obj );
+  else
+    continue;
+}
+else
+  continue;
+~
+E
+no~
+@Caught in the swift current, you are unable to swim freely and get out
+of the river.@n 
+~
+!
+3 0 7
+A
+~
+~
+if( is_player( ch ) ) {
+  if( find_stat( ch, str ) < 15 ) {
+    act_tochar( #bye, ch, obj );
+    act_notchar( #rbye, ch, obj, mob, sight );
+    wait( 1 );
+    transfer( ch, find_room( 6735 ) );
+    act_notchar( #arrive, ch, obj, mob, sight );
+acode( find_room( 6735 ), 2 );
+  }
+  elseif( find_skill( ch, swimming ) < 5 ) {
+    act_tochar( #bye, ch, obj );
+    act_notchar( #rbye, ch, obj, mob, sight );
+    wait( 1 );
+    transfer( ch, find_room( 6735 ) );
+    act_notchar( #arrive, ch, obj, mob, sight );
+acode( find_room( 6735 ), 2 );
+  }
+}
+~
+E
+bye~
+@BYou enter the river and the foaming waves close over you head as the
+burst of water knock you off your feet and starts carrying you
+downsream.@n 
+~
+E
+rbye~
+@B$n enters the river and suddenly disappears under its surface as the
+burst of water knocks $m off $s feet.  You se $m struggle to the surface
+as $e is carried downstream!@n 
+~
+E
+arrive~
+@B$n arrives from the west, bobbing up and down in the turbulent 
+waters.@n
+~
+!
+1 0 3
+518 9 1509949540 3 0
+324 17 1509949540 -2 0
+-1
+S
+
+#6735
+A Log over A Rushing River~
+Weaving between tangled roots and upthrust stones the river surges
+onwards under a fallen tree trunk that forms a natural bridge between the
+riverbanks. Dripping tendrils of moss hang from the trees' rotting
+bark, their tips disappearing into the muddy waters.  A cluster of
+polished stones has been set into the earthen banks, adding to their
+strength.
+~
+** RIVER **
+[Rikahn] water flows east
+[Guin] Leave this room as dry land.
+[Guin] Bugbears south
+[Guin] Done.
+~
+200802312 3 6 0
+D0
+~
+~
+0 -1 6736 10 10 5
+D1
+~
+~
+0 -1 6762 10 10 5
+D2
+~
+~
+0 -1 6771 10 10 5
+D3
+~
+~
+0 -1 6734 10 10 5
+E
+fallen tree trunk bridge~
+Worn smooth with the passage of many footfalls, the upper side of the
+trees' trunk is somewhat slippery with a coating of algae spreading
+across its length.  The underside of the log is decaying slowly as a
+constant spray from the murky water idly erodes the waterlogged wood.
+~
+A
+~
+~
+send_to_room( #river, room );
+~
+E
+river~
+@CTumbling and splashing, the river runs beneath the precariously perched
+log and continues on its way.@n 
+~
+!
+2 150 0
+A
+~
+~
+if( is_player( ch ) ) {
+  act_tochar( #log, ch, obj );
+  act_notchar( #rlog, ch, obj, mob, sight );
+  damage( mob, ch, 2d5, physical, "a bump on the head" );
+}
+~
+E
+log~
+@RJust before you come to a sudden stop, you notice a large log coming
+toward you at great speed.  You try ducking out of way, but the water is
+too shallow!@n 
+~
+E
+rlog~
+@R$n comes to a sudden stop, hitting $s head on a large log that bridges
+this part of the river.  That must have hurt!@n 
+~
+!
+1 0 8
+-1
+S
+
+#6736
+A Path in Coralon Forest - By A River~
+A wide river rushes by to the east and south, cutting a wide swath
+through the forest.  Leafy branches overhang the river, shading the
+eddying surface.  The hard, dusty path curves parallel to the river,
+moving along the bank where the trees have pulled back slightly. 
+Nevertheless, the leafy giants cast wide shadows across the path.
+~
+[Rikahn] path to south leads to bugbears
+[Guin] Done.
+~
+167247880 3 9 0
+D0
+~
+~
+0 -1 6739 10 10 5
+D1
+~
+~
+0 -1 6737 10 10 5
+D2
+~
+~
+0 -1 6735 10 10 5
+D3
+~
+~
+0 -1 6738 10 10 5
+E
+branches shadows path~
+Dappled lighting filters through the leaves of the towering trees, the
+shadows being cast across the dirt path waver as the wind rustles through
+the crowns of the verdant elms.
+~
+2576 17 1509949540 -2 0
+130 9 1509949540 3 0
+324 17 1509949540 -2 0
+-1
+S
+
+#6737
+Rushing River~
+Shooting down a channel between rock-studded banks rushes a white-capped
+river.  The muddy waters slosh and splash against the edges, sending
+twisting currents through the wake.  A few isolated reeds grow in the
+water's edge, their seeds whisked away in the fast-paced river. 
+Dragonflies dance above the turbulent waters; their delicate wings a blur
+in flight.
+~
+** RIVER **
+[Rikahn] water flows north
+[Guin] Done.
+~
+200802304 8 6 0
+D0
+~
+~
+0 -1 6742 10 10 5
+D2
+~
+~
+0 -1 6762 10 10 5
+D3
+~
+~
+0 -1 6736 10 10 5
+E
+channel rock studded banks~
+Narrowing slightly, the course of the river deepens, causing the racing
+waters to cascade over the rocks forming white foaming waves that rush
+through the tapering passage.
+~
+27 9 1509949540 3 0
+324 17 1509949540 -2 0
+-1
+S
+
+#6738
+A Path in Coralon Forest - By A River~
+The forest ends abruptly to the south at a wide, fast-moving river.  It
+flows across a deeply carved bed, about half a foot below the forest
+floor.  A few branches reach out over the river, but for the most part
+the sky is exposed, allowing travellers a glimpse of the sky.  A few of
+the trees here seem to be wider around than others, and look to be much,
+much older.
+~
+[Guin] Done.
+~
+167247880 3 9 0
+D1
+~
+~
+0 -1 6736 10 10 5
+D2
+~
+~
+0 -1 6734 10 10 5
+D3
+~
+~
+0 -1 6719 10 10 5
+E
+branches trees~
+As the trees loom into the sky, their branches mingle together forming a
+dense canopy of leaves.  A soft light filters down through the leaves,
+casting a dappled shadow across the forest floor.
+~
+E
+1 south river~
+A wide, rolling river flows by directly to the south, its water clear and its surface carrying bits and pieces of fallen leaves and twigs.
+~
+A
+~
+~
+send_to_room( #leaf, room );
+~
+E
+leaf~
+@GA withered leaf falls softly to the ground.@n
+~
+!
+2 200 0
+-1
+S
+
+#6739
+A Path in Coralon Forest~
+The dusty, footworn trail through the forest comes to an abrupt end at a
+steep drop-off to a riverbed.  Gurgles and splashes seem to fill the air
+as a wide river twists through the forest, flowing rapidly.  Green-leafed
+branches arch high overhead, shading the littered ground beneath.  A tree
+has fallen by the side of the path, looking quite like a natural seat.
+~
+[Guin] Done.
+~
+167247880 3 9 0
+D1
+~
+~
+0 -1 6742 10 10 5
+D2
+~
+~
+0 -1 6736 10 10 5
+D3
+~
+~
+0 -1 6740 10 10 5
+E
+tree fallen seat~
+Lying on its side, the thickness of the fallen tree's trunk stands about
+two and a half feet off the ground.  The top of the log appears somewhat
+worn from use, and telltale footprints lead towards the natural seat.
+~
+A
+~
+~
+send_to_room( #bird, room );
+~
+E
+bird~
+@CA bird settles on a branch overhead and begins to sing a sweet melody.@n
+~
+!
+2 210 0
+805 17 1509949490 -2 0
+3880 17 1509949540 -2 0
+-1
+S
+
+#6740
+A Path in Coralon Forest~
+Leafy trees of indeterminate age grow relatively densely about the paths. 
+Bright foliage adorns the gnarled branches, and dead leaves litter the
+ground below, half-decomposed.  A few fingers of sunlight poke through
+the canopy, providing enough light for small flowers and mushrooms to
+grow alongside the path.  A particularly dense stand of trees grows to
+the south, their slender branches intertwining to create a nearly
+impenetrable wall of greenery.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 6706 10 10 5
+D1
+~
+~
+0 -1 6739 10 10 5
+D3
+~
+~
+0 -1 6741 10 10 5
+E
+small flowers mushrooms~
+Thriving in the few patches of sunlight, a myriad of small, brightly
+coloured flowers cover the ground.  Standing in one particularly round
+patch of light an almost perfectly circular ring of mushrooms grows - the
+centre of the ring is completely devoid of life.
+~
+A
+1 south~
+~
+act_tochar( #no, ch );
+act_notchar( #nno, ch );
+~
+E
+no~
+@GThe dense foliage blocks your passage south.@n
+~
+E
+nno~
+@G$n tries to go south but is blocked by the dense foliage.@n
+~
+!
+0 0 4
+A
+~
+~
+send_to_room( #rah, room );
+~
+E
+rah~
+@GSomething rustles softly in the underbrush.@n
+~
+!
+2 150 0
+78 17 1509949540 -2 0
+755 9 1509949540 3 0
+-1
+S
+
+#6741
+A Path in Coralon Forest~
+Two narrow footpaths intersect here, the trees drawing back slightly from
+the area.  Broad green leaves grow profusely on the branches of the
+surrounding trees, filtering the light and reducing it to narrow fingers
+poking through sporadically.  A dense stand of elm trees grows to the
+northwest, a bright spot in the mixed wood of the forest.
+~
+[Rikahn] elms northwest
+[Ciani] acode of birdsong
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 6705 10 10 5
+D1
+~
+~
+0 -1 6740 10 10 5
+D2
+~
+~
+0 -1 6719 10 10 5
+E
+footpaths narrow~
+Well sheltered by the trees, the paths here are of a softer consistency
+in parts, the loamy soil giving way to patches of slick mud.
+~
+A
+~
+~
+send_to_room( #song, room );
+~
+E
+song~
+@MOff in the distance, a bird begins to twitter a staccato song.@n
+~
+!
+2 200 0
+587 17 1509949540 -2 0
+-1
+S
+
+#6742
+Rushing River~
+The force of the river has torn a chunk of rock and earth free from the
+bank, forming a rapidly shrinking island midstream.  Water surges around
+the stone, eating away at the soft earth around the bank's wound. 
+Stained brown with silt, the waters move with a strong current that
+attempts to drag anything caught in its grasp beneath the churning waters.
+~
+** RIVER **
+[Rikahn] water flows east
+[Guin] Done.
+~
+200802304 8 6 0
+D0
+~
+~
+0 -1 6748 10 10 5
+D1
+~
+~
+0 -1 6743 10 10 5
+D2
+~
+~
+0 -1 6737 10 10 5
+D3
+~
+~
+0 -1 6739 10 10 5
+E
+bank earth~
+A pandemonium of water swirls about the broken bank, the vicious water
+undercutting the ground that forms the limits of the ravaging currents.
+~
+324 17 1509949540 -2 0
+-1
+S
+
+#6743
+Rushing River~
+The crumbling remains of a stone bridge overhang the churning river as it
+surges eastwards.  Midstream a stone pillar juts out of the muddy waters,
+its surface eroded by the constant rushing waters.  Steep banks rise on
+either side of the river, channelling its fury.  Swarms of minute flies
+dance about the swirling waters forming a speckled column of living
+creatures.
+~
+** RIVER **
+[Rikahn] water flows east
+[Guin] Done.
+~
+200802304 8 6 0
+D1
+~
+~
+0 -1 6744 10 10 5
+D3
+~
+~
+0 -1 6742 10 10 5
+E
+bridge remains stone pillar~
+A thin covering of moss and algae lines the stones that once formed the
+bridge and pillars.  It appears that at some point in the distant past, a
+devastating flood has swept through the area, demolishing the sturdy
+bridge in its wake.
+~
+324 17 1509949540 -2 0
+113 9 1509949540 3 0
+-1
+S
+
+#6744
+Rushing River~
+A wall of reeds rises around the southern bank, their slender steams bent
+with the weight of earthen-colored seed heads.  The river runs onwards,
+flanked by fern-covered banks on each side.  The woodlands gather close
+to the bank's edge, a few roots dipping into the waters.  A cluster of
+black-flecked rocks lies exposed on the eastern bank, their surfaces
+sparkling.
+~
+** RIVER **
+[Rikahn] water flows north
+[Guin] Done.
+~
+200802304 8 6 0
+D0
+~
+~
+0 -1 6746 10 10 5
+D2
+~
+~
+0 -1 4089 10 10 5
+D3
+~
+~
+0 -1 6743 10 10 5
+E
+banks fern roots~
+Protruding through the undercut banks, the rootlets of lacy ferns thread
+their way amidst the crumbling matrix of soil and stones.
+~
+324 17 1509949540 -2 0
+-1
+S
+
+#6745
+Log Bridge in Coralon Forest~
+Stretching to the east and west, the weather-beaten trunks span from one
+side of the river to the other.  Lashed together with yards of strong
+rope, the half dozen logs lie stripped of bark, their bare surfaces
+thickly coated in a slurry of tar and sand, used to protect the wood from
+the brutality of the elements.  About six feet at the widest point, the
+original builders of this bridge must have deemed it not necessary to
+include a safety rail on this construction due to the generous breadth of
+the tree trunks.  Several large gaps lie between the blackened logs
+making it imperative to be careful when traversing the stout bridge.
+~
+[Guin] River below.
+[Guin] Done.
+~
+167247880 3 9 0
+D1
+~
+~
+0 -1 6732 10 10 5
+D3
+~
+~
+0 -1 4025 10 10 5
+E
+weather beaten trunks logs slurry tar sand~
+Each trunk is around a foot in diameter and long enough to span the
+entire width of the river without a break.  Their bark has been stripped
+back in an effort to smooth their surfaces slightly before being coated
+in a viscous concoction of sand and tar that has been used to keep the
+majority of the weather from the hard wood.
+~
+E
+gaps~
+Every few yards along the bridge, the trunks of the trees twist away from
+each other, despite the best efforts of the thick rope.  The gaps that
+forms between the logs vary in size from an inch or so wide to over a
+foot - it would be very easy to lose stable footing if not paying
+attention to the holes along the bridge.
+~
+E
+strong rope~
+Weaving over and under the logs, this durable rope tightly secures the
+logs together, forming the wide bridge that spans the river.  Here and
+there strands of twine uncurl from the twisted length of rope - a sign of
+its slow degradation from time and weathering.
+~
+-1
+S
+
+#6746
+Rushing River~
+Overhanging the rushing river are the tangled branches of gnarled weeping
+willows, their draping limbs dipping into the white waters of the river. 
+Nestled among the willows' spreading roots are clusters of ferns and
+wildflowers.  Flowing eastwards, the river dips and dives between rocks
+and tree roots, its wakes sending splashing water skyward.
+~
+** RIVER **
+[Rikahn] water flows east
+[Guin] Done.
+~
+200802304 8 6 0
+D1
+~
+~
+0 -1 6763 10 10 5
+D2
+~
+~
+0 -1 6744 10 10 5
+E
+tangled branches gnarled weeping willows~
+Verdant crowns of the weeping willows tumble graciously down toward the
+waters rippling surface; some tendrils of the negligently draping trees
+ebb in the turbulent water.
+~
+324 17 1509949540 -2 0
+-1
+S
+
+#6747
+Rushing River~
+Bursting through a partially finished dam, the river surges once again in
+a southern direction.  A fallen tree lies partially submerged, the
+branches tangling passing leaves and twigs into their fold.  Crumbled
+under the impact of the tree, the northern bank appears climbable.  The
+roar of rapids thunders from the south, as the river increases in tempo
+as it flows onwards.
+~
+** RIVER **
+[Rikahn] water flows south
+[Yrna] This is the start of the river code
+[Yrna] river code done.
+[Guin] Done.
+~
+200802304 8 6 0
+D0
+~
+~
+0 -1 6713 10 10 5
+D2
+~
+~
+0 -1 6721 10 10 5
+D3
+~
+~
+0 -1 6755 10 10 5
+E
+dam fallen tree~
+Overrun by the turbulent water, the semi-completed dam vies against the
+current in a futile effort to quell the angry forces of the swift river. 
+Blocking a part of the river, a waterlogged tree slowly decays, half
+submerged in the silty water.
+~
+A
+~
+~
+if( is_player( ch ) ) {
+  if( find_stat( ch, str ) < 15 ) {
+    act_tochar( #str, ch, obj );
+    act_notchar( #rstr, ch, obj, mob, sight );
+    wait( 1 );
+    transfer( ch, find_room( 6721 ) );
+    act_notchar( #arrive, ch, obj, mob, sight );
+    acode( find_room( 6721 ), 1 );
+  }
+  elseif( find_skill( ch, swimming ) < 5 ) {
+    act_tochar( #swim, ch, obj );
+    act_notchar( #rswim, ch, obj, mob, sight );
+    wait( 1 );
+    transfer( ch, find_room( 6721 ) );
+    act_notchar( #arrive, ch, obj, mob, sight );
+    acode( find_room( 6721 ), 1 );
+  }
+}
+~
+E
+str~
+@BThe surge of river through the dam is so strong it kocks you off your
+feet.  You are not strong enough to fight the river as it carries you
+downstream.@n 
+~
+E
+rstr~
+@BThe surge of river through a gap in the dam is too strong for $n. 
+Caught in turbulent waters, river carrying $m downstream.@n 
+~
+E
+swim~
+@BThe rushing of water through the gap in the dam creates particullary
+turbulent water.  As you are carried downstream, you realise you are not
+a good enough swimmer to fight this.@n 
+~
+E
+rswim~
+@BThe rushing water bursting through the small dam take $n by surprise. 
+You see $m partially sink, then bob back on the surface as the turbulent
+waters carry $m south.@n 
+~
+E
+arrive~
+@C$n arrives from the north, carried by the rushing water.@n
+~
+!
+1 0 9
+A
+~
+~
+if( is_player( ch ) ) {
+  if( find_stat( ch, str ) < 15 )
+    act_tochar( #no, ch, obj );
+  elseif( find_skill( ch, swimming ) < 5 )
+    act_tochar( #no, ch, obj );
+  else
+    continue;
+}
+else
+  continue;
+~
+E
+no~
+@CBeing caught in a small whirpool, you find yourself unable to move
+freely.@n 
+~
+!
+3 0 13
+324 17 1509949540 -2 0
+-1
+S
+
+#6748
+A Path in Coralon Forest~
+The dusty trail bends to avoid the wide river, which surges by just to
+the south.  The trees grow tall and straight, their slim branches arching
+over the path and shading it with broad leaves.  Many of the leaves have
+fallen over the years and now cover the area between the trees, their
+edges shrivelled and turned brown.
+~
+[Guin] Done.
+~
+167247880 3 9 0
+D0
+~
+~
+0 -1 6749 10 10 5
+D1
+~
+~
+0 -1 6773 10 10 5
+D2
+~
+~
+0 -1 6742 10 10 5
+E
+dusty trail path~
+Following the course of the gushing river, the narrow path darts hither
+and thither as it wends its way amidst the tree trunks.  A criss-crossing
+of footprints scurry randomly along the trail.
+~
+A
+~
+~
+send_to_room( #spray, room );
+~
+E
+spray~
+@CThe river crashes into a rock, sending spray all through the air.@n
+~
+!
+2 200 0
+755 9 1509949540 3 0
+-1
+S
+
+#6749
+A Path in Coralon Forest~
+The trail winds its inexorable way between trees, interrupted
+occasionally by a gnarled root.  Graceful tall trees crouch close to the
+trail, their smooth-barked trunks sprouting slender limbs to arch over
+the path.  One of the branches has been cracked near its base and hangs
+limply from the tree, directly over the path.  The sounds of a swift
+river come from close by.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D2
+~
+~
+0 -1 6748 10 10 5
+D3
+~
+~
+0 -1 6751 10 10 5
+E
+gnarled root~
+Twisting about itself, the gnarled root seems to have tied itself into a
+dense tangle of knotted wood.  The dark wood appears to be unearthing
+itself from the moist soil of the forest floor.
+~
+E
+branch branches crack~
+An older limb of a nearby tree is cracked and dangles limply from a
+meager sliver of wood.  The break itself, is charred, and looks to have
+been struck by lightning.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou push by the hanging branch and continue $d.@n
+~
+E
+not_char~
+@G$n pushes by the hanging branch and continues $d.@n
+~
+!
+3 0 12
+29 0 1509949475 -2 0
+-1
+S
+
+#6750
+Old Plank Bridge~
+Two posts, around seven feet in height, lean precariously over the
+riverbank.  Carefully balanced between them, a narrow, weather-beaten
+plank extends southwards over the swiftly flowing water.  Secured to the
+top of each post is a ragged, but sturdy, rope that sags to the south
+above the bridge.  Leading down a steep incline to the north are a series
+of stone steps that are, for the most part, covered in bright green
+lichen and slippery algae.
+~
+[Guin] River below
+[Guin] Leaving down finished.
+[Guin] Done.
+~
+167247880 3 9 0
+D2
+~
+~
+0 -1 6754 10 10 5
+D5
+~
+~
+0 -1 6776 10 10 5
+E
+posts ragged sturdy rope~
+These posts are made from roughly hewn oak trunks and appear to have been
+standing for quite some time.  They seem to have sunk a foot or two over
+the years and lean at rather skewed angles from the vertical that they
+used to be.  There seems to be a deep groove carved around the top of
+each pole, and the thick rope sits snugly in it.  Although battered and
+frayed by the elements, the rope is still thick and durable, and by all
+appearances looks as though it should still be holding strong for many
+years to come.
+~
+E
+stone steps~
+These appear to be no more than a half dozen flat stones stacked on top
+of each other to form a few shallow steps that lead down to the ground
+below.  In the centre of the impromptu steps there is a slight dip from
+where many footfalls have slowly smoothed and eroded the sandstone rocks.
+~
+E
+lichen algae~
+Clinging to the barren stones that form the steps, the dew-spangled
+lichen manages to survive despite the lack of nutrients to be gleaned
+from the rock.  In the shadowy patches between the stones, a slippery
+coating of algae thrives on the droplets of water that sedately drip from
+the tips of the bright green lichen.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou descend the shallow stone steps downward to solid ground.@n
+~
+E
+to_room~
+@G$n descends the shallow stone steps downward to solid ground.@n
+~
+!
+3 0 32
+-1
+S
+
+#6751
+A Path in Coralon Forest~
+The dusty footpath winds its way between smooth-barked trees, interrupted
+here and there by a gnarled root poking up from the dark-soiled forest
+floor.  Fallen leaves and branches cover the ground between trees and
+encroach upon the edges of the path.  A few small stands of bright
+wildflowers pop up amongst the fallen leaves, adding a splash of colour
+to the otherwise green and brown surroundings.
+~
+[Guin] Add pick flower code for 7393, 7402, 7412, one flower per reset at around 15%.
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 6752 10 10 5
+D1
+~
+~
+0 -1 6749 10 10 5
+D2
+~
+~
+0 -1 6753 10 10 5
+E
+small bright wildflowers~
+Almost shyly emerging from beneath the decaying debris that is scattered
+across the forest floor, tiny flowers of red, yellow and violet waver
+slightly in a gentle breeze.
+~
+A
+~
+~
+send_to_room( #smell, room );
+~
+E
+smell~
+@CA light breeze carries the musky scent of a living forest in its
+wakes@n.
+~
+!
+2 205 0
+A
+~
+flowers wildflowers~
+if( !rflag( reset0, room ) ) {
+  act_tochar( #already, ch );
+  act_notchar( #ralready, ch, obj, mob, sight );
+  end;
+}
+remove_rflag( reset0, room );
+if( random( 1, 100 ) < 16 ) {
+  i = random( 1, 3 );
+  if( i == 1 )
+    obj = oload( 7393 );
+  else if( i == 2 )
+    obj = oload( 7402 );
+  else
+    obj = oload( 7412 );
+}
+if( obj ) {
+  act_tochar( #found, ch, obj );
+  act_notchar( #rfound, ch, obj, mob, sight );
+  obj_to_char( obj, ch );
+}
+else {
+  act_tochar( #noflower, ch );
+  act_notchar( #rnoflower, ch, obj, mob, sight );
+}
+~
+E
+already~
+@gSomeone has already picked all the flowers of any note here.@n
+~
+E
+ralready~
+@g$n looks around for a flower or two to pick.@n
+~
+E
+found~
+@gYou find $p in the flowers.@n
+~
+E
+rfound~
+@g$n finds $p in the flowers.@n
+~
+E
+noflower~
+You find no flower worth picking.
+~
+E
+rnoflower~
+$n finds no flower worth picking.
+~
+!
+9 0 0
+130 9 1509949540 3 0
+-1
+S
+
+#6752
+Dead End in Coralon Forest~
+The winding trail comes to an abrupt end at an especially dense growth of
+trees.  Not only have the trees grown closer together, thick bracken and
+shrubbery grow close around the bases of the trunks, effectively blocking
+passage of all but the smallest animals.  A small, clinging vine winds
+through the bushes and the lower parts of the trees, tangling them all
+together with knotty tendrils.
+~
+[Guin] Action pending til directional variable is sorted.
+[Guin] Reviewed.
+[Guin] Done.
+~
+167247872 3 9 0
+D2
+~
+~
+0 -1 6751 10 10 5
+E
+vine knotty tendrils~
+Small heart-shaped leaves adorn the fine network of tendrils that form
+the mass of this climbing vine.  The thin strands malignantly entwine
+themselves about the trunks and branches of the great trees, choking the
+woods with their knotted lianas.
+~
+A
+1 north~
+*~
+act_tochar( #to_char, ch );
+~
+E
+to_char~
+@gYou try to move to the north but can't break through the vines.@n
+~
+!
+0 0 0
+A
+1 east~
+*~
+act_tochar( #to_char, ch );
+~
+E
+to_char~
+@gYou try to move to the east but can't break through the vines.@n
+~
+!
+0 0 0
+A
+1 west~
+*~
+act_tochar( #to_char, ch );
+~
+E
+to_char~
+@gYou try to move to the west but can't break through the vines.@n
+~
+!
+0 0 0
+2505 9 1509949540 3 0
+-1
+S
+
+#6753
+A Path in Coralon Forest~
+Verdant, leafy trees line the path, clustered into stands and groves of
+like species.  Slim boughs reach over the path, shading it with dappled
+shadows.  A papery beehive hangs from a stout branch just off the side
+of the path; the buzzing of its occupants fills the area with a constant
+drone.  The faint burble of running water underlies the buzzing.  A heady
+scent of natural potpourri hangs heavy in the air, carried about as the
+breeze occasionally brushes by.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 6751 10 10 5
+D3
+~
+~
+0 -1 6706 10 10 5
+E
+beehive hive branch~
+A dusky beehive hangs from a low branch here, countless bees swarm around
+it, entering and leaving with equal energy.  The bees seem to ignore most
+intruders to the area, but the wildlife still seems to give the hive a
+wide berth.
+~
+805 17 1509949540 -2 0
+596 17 1509949540 -2 21
+-1
+S
+
+#6754
+Old Plank Bridge~
+High above the turbulent waters the rickety old plank continues both to
+the north and the south.  At regular intervals along the unstable bridge,
+a pair of posts has been set on either side of the weathered board and a
+battered railing nailed loosely to each one in order to provide minimal
+protection from falling into the torrid waters below.  Hanging from the
+thick ropes overhead, which span from one side of the river to the other,
+are three-inch wide straps of leather that wrap beneath the plank in an
+effort to ease some of the pressure at either end of the sagging bridge.
+~
+[Guin] River below
+[Guin] Done.
+~
+167247880 3 9 0
+D0
+~
+~
+0 -1 6750 10 10 5
+D2
+~
+~
+0 -1 4090 10 10 5
+E
+posts battered railing~
+Three-foot high posts have been spaced along the bridge every yard or so
+to support the weather worn railing that runs along both sides of the
+plank.  The posts are not much more than partially decayed tree stumps,
+halved or quartered depending on the thickness of the trunk.
+~
+E
+lashings leather straps~
+With a two-inch overlap below the rope, the leather is secured tightly by
+a couple of wooden pegs driven through the thick material and shaped to
+make it extremely difficult to remove them from their position.  The
+lashings run from one rope to the other rope, cradling the weathered
+plank between them.  The leather is cracked from exposure to the
+elements, but for the most part it is still intact.
+~
+E
+rickety plank~
+Two inches thick by three feet wide, this plank would not be the easiest
+place to pass by someone, with barely enough room for one person as it is. 
+The wood is a pale brown hue, the colour bleached out from it by the sun. 
+Its surface has been smoothed from many years of passage and it appears
+that it once was coated in a slurry of tar and sand to keep the weather
+out.
+~
+-1
+S
+
+#6755
+Rushing River~
+With a final surge the river spreads out into a crescent-shaped pond. 
+Rushes and reeds grow in from the edges of the water, almost meeting in
+the middle.  A partially completed dam of wood and rocks slows the
+rushing waters briefly before they hurtle onwards once again.  Steep
+fern-drenched banks line the river making exiting the waterway impossible.
+~
+** RIVER **
+[Rikahn] water flows east
+[Guin] Done.
+~
+200802304 8 6 0
+D1
+~
+~
+0 -1 6747 10 10 5
+D3
+~
+~
+0 -1 6756 10 10 5
+E
+dam wood rocks~
+Though only partly completed, this dam has been constructed with a great
+deal of care and forethought.  Lashings made from stripped bark ensure
+that the rocks forming the chock are held close together.  Infilling the
+gaps, small gravels and pebbles minimise the flow of the water.
+~
+A
+~
+~
+if( is_player( ch ) ) {
+  act_tochar( #west, ch, obj );
+  act_notchar( #rwest, ch, obj, mob, sight );
+  continue;
+}
+else
+  continue;
+~
+E
+west~
+@CHolding onto the dam for extra balance, you continue your journey
+upstream.@n 
+~
+E
+rwest~
+@C$n holds tightly onto the dam as $e continues west.@n
+~
+!
+3 0 8
+A
+~
+~
+continue;
+~
+E
+to_char~
+@BYou squeeze past the partially completed dam and continue east.@n
+~
+E
+to_room~
+@B$n swims east, squeezing through the gap in a partially completed
+dam.@n 
+~
+!
+3 0 2
+324 17 1509949540 -2 0
+-1
+S
+
+#6756
+Rushing River~
+Onwards the torrents of water flow, the pass sending the landscape beyond
+into blurring images of greens and gold.  The tangling branches of bent
+and twisted trees dance across the foaming water's surface, sending
+ripples of movement down the already choppy river.  Bull-rushes and
+watercress hug the muddy riverbank, the reeds home to a few birds and
+water life.  Beyond the fringes the stone-studded bank rises upwards,
+almost forming a tunnel above the watercourse.
+~
+** RIVER **
+[Rikahn] water flows east
+[Guin] Done.
+~
+200802304 8 6 0
+D1
+~
+~
+0 -1 6755 10 10 5
+D2
+~
+~
+0 -1 6757 10 10 5
+E
+stone studded bank watercourse tunnel~
+As the gushing water flows rapidly through its winding course, the
+turbulent current erodes great chunks of clay and soil from the underside
+of the close banks, causing the undercut bed to form a pseudo-tunnel.
+~
+324 17 1509949540 -2 0
+-1
+S
+
+#6757
+Rushing River~
+Swirling wakes of whitecaps splash the tangled roots of trees as the
+river surges onwards through the forest.  Mounds of tangled branches and
+leaf litter lie wedged in the root systems.  The torrents of water add to
+the debris of some and tear free others.  At the river's edge a swath of
+sandy soil gives way to higher banks, lined with orchids and ferns,
+making exiting the river a difficult task.
+~
+** RIVER **
+[Rikahn] water flows north
+[Guin] Done.
+~
+167247872 8 6 0
+D0
+~
+~
+0 -1 6756 10 10 5
+D3
+~
+~
+0 -1 6758 10 10 5
+E
+orchids frens swath bank~
+Brightly coloured orchids line both sides of the river, flourishing in
+the moist fertile soils.  Gossamer thin fronds of draping fern trees
+elegantly bow to the majesty of the turbulent waters.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@BYou easily continue downstream.@n
+~
+E
+to_room~
+@B$n swims north, the rushing water helping $m on $s way.@n
+~
+!
+3 0 1
+A
+~
+~
+if( is_player( ch ) ) {
+  if( random( 1, 3 ) == 2 ) {
+    act_tochar( #no, ch, obj );
+    act_notchar( #rno, ch, obj, mob, sight );
+  }
+  else {
+    act_tochar( #ok, ch, obj );
+    act_notchar( #rok, ch, obj, mob, sight );
+    continue;
+  }
+}
+else
+  continue;
+~
+E
+no~
+@BYou get caught in a small whirpool, which prevents your movement
+upstream.@n 
+~
+E
+rno~
+@B$n gets caught in the small whirpool as $e tries to swim upstream.@n
+~
+E
+ok~
+@CYou grab a root protruding out of riverbank and pull yourself
+upstream.@n 
+~
+E
+rok~
+@C$n grabs a root protruding out of a riverbank and with its help
+continues upstream.@n 
+~
+!
+3 0 8
+324 17 1509949540 -2 0
+113 9 1509949540 3 0
+-1
+S
+
+#6758
+Rushing River~
+Dancing down a small waterfall the river continues its swift journey
+eastwards.  A green-blue pool of burbling water spreads out from under
+the falls, the water swift and cold.  A smattering of waterworn boulders
+rise from the foaming watercourse, their surfaces gleaming with slick
+algae.  Reeds and cattails grow at the muddy fringes of the river, a few
+bird nests visible within.
+~
+** RIVER **
+River flows east.
+[Guin] Done.
+~
+200802304 8 6 0
+D0
+~
+~
+0 -1 6759 10 10 5
+D1
+~
+~
+0 -1 6757 10 10 5
+E
+reeds cattails muddy fringes nests~
+Hiding deep within the wavering reeds, cattails and flaxes, small
+hurriedly constructed nests have been formed amidst the tree-foot tall
+stems, their sides caked with mud to prevent them from falling apart too
+quickly.
+~
+A
+~
+bird nests~
+if( is_fighting( ch ) ) {
+  act_tochar( #busy, ch );
+  end;
+}
+if( !rflag( reset1, room ) ) {
+  act_tochar( #already, ch );
+  act_notchar( #ralready, ch, obj, mob, sight );
+  end;
+}
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  mob = mload( 971, room );
+  act_tochar( #disturb, ch, obj, mob );
+  act_notchar( #rdisturb, ch, obj, mob, sight );
+  init_attack( mob, ch );
+  end;
+}
+remove_rflag( reset1, room );
+i = random( 1, 100 );
+if( i < 26 ) {
+  j = random( 1, 4 );
+  if( j == 1 )
+    obj = oload( 983 );
+  else if( j == 2 )
+    obj = oload( 1039 );
+  else if( j == 3 )
+    obj = oload( 1066 );
+  else
+    obj = oload( 1293 );
+}
+else if( i < 40 ) {
+  if( random( 1, 2 ) == 1 )
+    obj = oload( 1067 );
+  else
+    obj = oload( 1068 );
+}
+else if( i < 45 ) {
+  j = random( 1, 5 );
+  if( j == 1 )
+    obj = oload( 105 );
+  else if( j == 2 )
+    obj = oload( 2155 );
+  else if( j == 3 )
+    obj = oload( 7337 );
+  else if( j == 4 )
+    obj = oload( 633 );
+  else
+    obj = oload( 7037 );
+}
+if( obj ) {
+  act_tochar( #found, ch, obj );
+  act_notchar( #rfound, ch, obj, mob, sight );
+  obj_to_char( obj, ch );
+}
+else {
+  act_tochar( #nothing, ch );
+  act_notchar( #rnothing, ch, obj, mob, sight );
+}
+~
+E
+already~
+Your too late, someone else has already searched through all the nests.
+~
+E
+ralready~
+$n is too late, someone else has already searched the nests.
+~
+E
+disturb~
+@RYou disturb $N from its nest, it leaps to attack you!@n
+~
+E
+rdisturb~
+@R$n disturbs $N from its nest, it leaps to attack $m!@n
+~
+E
+found~
+@CYou find $p secreted away in one of the nests.@n
+~
+E
+rfound~
+@C$n finds $p secreted away in one of the nests.@n
+~
+E
+nothing~
+You find nothing of interest.
+~
+E
+rnothing~
+$n finds nothing of interest.
+~
+E
+busy~
+You are a little busy right now.
+~
+!
+9 0 0
+324 17 1509949540 -2 0
+-1
+S
+
+#6759
+Rushing River~
+Surging past boulders and branches, the turbulent waters sweep
+southwards, sending a misty spray into the air.  The swift current has
+eaten into the soft, forested bank, leaving a shadowy overhang for fish
+and other wildlife to shelter in.  The rumble of stones and the crash of
+waves echo through the woodlands.
+~
+** RIVER **
+[Rikahn] water flows south
+[Guin] Done.
+~
+200802304 8 6 0
+D2
+~
+~
+0 -1 6758 10 10 5
+D3
+~
+~
+0 -1 6760 10 10 5
+E
+bank overhang soft forested shadowy~
+Cutting deeply into the clayey banks, the burbling water has hollowed a
+sheltered dark pool beneath the thick roots of the trees.  Slithering
+throughout the murky waters are fish, eels and other aquatic wildlife.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@BThe rushing river helps you on your way south.@n
+~
+E
+to_room~
+@B$n swims south, helped on $s way by the rushing water.@n
+~
+!
+3 0 4
+A
+~
+~
+if( is_player( ch ) ) {
+  if( random( 1, 3 ) == 2 ) {
+    act_tochar( #noway, ch, obj );
+    act_notchar( #rnoway, ch, obj, mob, sight );
+  }
+  else {
+    act_tochar( #ok, ch, obj );
+    act_notchar( #rok, ch, obj, mob, sight );
+    continue;
+  }
+}
+else
+  continue;
+~
+E
+noway~
+@BYou try swimming upstream, but you seem to be losing the fight against
+the rushing water.@n 
+~
+E
+rnoway~
+@B$n tries to swim upstream, but $e is fighting a losing battle against
+the river's turbolent flow.@n 
+~
+E
+ok~
+@CNot without struggle, you continue your way upstream.@n
+~
+E
+rok~
+@CDefeating the swift current, $n continues upstream.@n
+~
+!
+3 0 8
+324 17 1509949540 -2 0
+-1
+S
+
+#6760
+Raging Waterfall~
+Tumbling down from a cliff which towers to the west, a rushing waterfall
+cascades over the edge in a torrent.  Pooling at the bottom before
+whisking away eastward, the river's surface foams with tiny bubbles of
+air that were drawn underneath its surface.  Slime-coated tips of rocks
+thrust through the turbulent waters, the crashing water sending waves of
+foam spraying out to land further downstream.
+~
+** RIVER **
+[Rikahn] waterfall coming down, have water flow to the east
+[Guin] Done.
+~
+200802304 8 6 0
+D1
+~
+~
+0 -1 6759 10 10 5
+E
+waters river waves surface~
+Tumbling over the algae covered outcropping of rock, the white waters
+foam as they cascade into the pool at the foot of the falls.  As the flow
+of water continues towards the edge of the pool, the surge from the
+waterfall pushes the ebbing water into a swiftly burbling river.
+~
+A
+1 look~
+3 river~
+interpret( ch, "look water" );
+~
+!
+0 0 0
+A
+2 drink~
+3 water~
+interpret( ch, "drink river" );
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@BCarried by the turbolent flow, you swim east.@n
+~
+E
+to_room~
+@BCarried by the turbolent flow, $n swims east.@n
+~
+!
+3 0 2
+324 17 1509949540 -2 0
+5036 9 1509949540 3 0
+-1
+S
+
+#6761
+Rushing River~
+With a sudden dip the river tumbles down another short water fall and
+rushes eastwards.  The waters briefly turn from icy-blue to a emerald
+green in the deep pool, before the rocks rise to form the white waters
+once again.  Flashes of wildflowers speckle the riverbank, their blooms
+coated in dew from the misty spray.  Further along, the banks rise
+upwards, forming earthen walls that obscure what lies beyond.
+~
+** RIVER **
+[Rikahn] water flows east
+[Guin] Done.
+~
+200802304 8 6 0
+D0
+~
+~
+0 -1 6721 10 10 5
+D1
+~
+~
+0 -1 6722 10 10 5
+E
+wildflowers bank blooms~
+Crammed onto the limited space on the riverbanks, small, sweetly scented
+wildflowers create a river of their own in varying shades of red and pink. 
+The small buds support scant few petals and the plants bear very few
+leaves.
+~
+A
+~
+~
+if( is_player( ch ) ) {
+  wait( 1 );
+  transfer( ch, find_room( 6722 ) );
+  act_notchar( #arrive, ch, obj, mob, sight );
+  acode( find_room( 6722 ), 1 );
+}
+~
+E
+arrive~
+@B$n floats past you, carried by the swift, wild river!@n
+~
+!
+0 0 0
+A
+~
+~
+if( is_player( ch ) ) {
+  if( find_stat( ch, str ) < 15 )
+    act_tochar( #no, ch, obj );
+  elseif( find_skill( ch, swimming ) < 5 )
+    act_tochar( #no, ch, obj );
+  else
+    continue;
+}
+else
+  continue;
+~
+E
+no~
+@CYou try swimming in strong strokes, but it is to no avail.  You cannot
+fight the swift rapids that carry you downstream!@n 
+~
+!
+3 0 3
+324 17 1509949540 -2 0
+-1
+S
+
+#6762
+Rushing River~
+Hurtling onwards at great pace the river bends and weaves through the
+forest.  Crumbling stock-banks of rock line the river's course, adding to
+the waters depth and speed by confining the space it has to flow. 
+Invisible boulders churn the waters from beneath the muddy surface, the
+wake they form the only indication to their existence.  Directly to the
+south stands a large mound of brambles.
+~
+** RIVER **
+[Rikahn] water flows north
+[Guin] Done.
+~
+200802304 8 6 0
+D0
+~
+~
+0 -1 6737 10 10 5
+D2
+brambles~
+brambles bush~
+2187 -1 6730 10 10 5
+D3
+~
+~
+0 -1 6735 10 10 5
+E
+1 south brambles bushes~
+The large mound of brambles stands out on the other side of the river as
+different from the surrounding foliage, only because of the sheer mass
+that is present.  In places though, you can see some brambles have been
+uprooted, and could probably be easily moved from their current spot.
+~
+A
+move clear~
+brambles bush~
+act_notchar( #rmove, ch );
+act_tochar( #move, ch );
+send_to_room( #bushes, find_room( 6730 ) );
+if( !is_open( room, south ) )
+  open( room, south );
+else
+  close( room, south );
+~
+E
+rmove~
+@R$n steps forward and moves the brambles.@n
+~
+E
+move~
+@RYou step forward, and push the brambles around a bit.@n 
+~
+E
+bushes~
+@RThe bushes to the north shake as if someone was moving them.@n
+
+~
+!
+0 0 0
+324 17 1509949540 -2 0
+-1
+S
+
+#6763
+Rushing River~
+The turbulent river rushes swiftly eastward in a deeply cut bed. 
+Finger-like rocks and skeletal branches protrude from the muddy bottom of
+the river, reaching upwards.  As the water comes to these obstacles, it
+swirls and eddies around them, creating an unpredictable current.  Wide
+green leaves shade the sky overhead, and a few, freshly fallen, float
+along the surface of the river.
+~
+** RIVER **
+[Rikahn] water flows east
+[Yrna] This is the room where people under level 15 and swim under 4 should get stuck on the branches and rocks, so they don't go down the waterfall.
+[Guin] Done.
+~
+167247872 8 6 0
+D0
+~
+~
+0 -1 6776 10 10 5
+D1
+~
+~
+0 -1 6764 10 10 5
+D2
+~
+~
+0 -1 4088 10 10 5
+D3
+~
+~
+0 -1 6746 10 10 5
+E
+rocks branches obstacles~
+Striving to reach the surface of the water, the rocks and branches are
+well covered with decaying leaves and twigs that were snared on the
+jutting fingers as the current gently slipped through the solid grasp.
+~
+A
+~
+~
+i = 0;
+if( is_player( ch ) ) {
+  if( find_skill( ch, swimming ) < 4 )
+    i = -1;
+  if( find_stat( ch, level ) < 15 )
+    i = -1;
+}
+if( i == -1 ) {
+  act_tochar( #nogo, ch );
+  act_notchar( #rnogo, ch, obj, mob, sight );
+  damage( mob, ch, 1d2, physical, "the scratching branches" );
+  end;
+}
+continue;
+~
+E
+nogo~
+@cYou get stuck on the branches and are unable to get yourself further.@n
+~
+E
+rnogo~
+@c$n gets stuck on the branches and is unable to make $mself go further.@n
+~
+!
+3 0 2
+324 17 1509949540 -2 0
+-1
+S
+
+#6764
+Rushing River~
+Swirling waters churn around the tips of worn rocks before splashing
+onwards, the rivers pace increasing slightly.  The fern covered banks
+overhang the rushing waters, their tops almost touching.  Muddy swirls
+splash from under their shadows, stirred up by the river's wake.  A few
+broad leaves dance across the water surface like boats in a stormy sea.
+~
+** RIVER **
+[Rikahn] water flows north
+[Guin] Done.
+~
+200802304 8 6 0
+D0
+~
+~
+0 -1 6765 10 10 5
+D3
+~
+~
+0 -1 6763 10 10 5
+E
+fern covered banks overhang~
+Draping their lacy leaves into the turbulent white waters, the delicate
+fronds are spun about by the gushing current.  The deeply undercut banks,
+though nearly touching in some parts, appear to be unable to support
+much weight.
+~
+324 17 1509949540 -2 0
+-1
+S
+
+#6765
+Rushing River~
+The river surges wildly onwards, rocky cliffs running parallel to it. 
+The roar of a waterfall echoes from the east, as the river tumbles onwards
+towards a great cliff.  The blurring shadows of trees flash by, their
+details obscured by the speed of the watercourse.  Clusters of scraggly
+reeds cling to the river's edge, their slender stems flailing in the
+current.
+~
+** RIVER **
+[Rikahn] water flows east
+[Guin] Done.
+~
+167247872 8 6 0
+D1
+~
+~
+0 -1 6766 10 10 5
+D2
+~
+~
+0 -1 6764 10 10 5
+E
+scraggly reeds stems~
+With a fine network of roots, the thick clusters of reeds huddle close to
+the safety of the riverbank, their fragile stems almost snapping in the
+rush of the current.
+~
+324 17 1509949540 -2 0
+113 9 1509949540 3 0
+-1
+S
+
+#6766
+Rushing River - Near a Waterfall.~
+Heaving and splashing, the white waters launch over the broken edges of a
+torrential waterfall.  A wall of spray falls like rain upon the ground. 
+A huge variety of ferns gather in every crevice, flourishing in the
+wetness.  Ancient willows bend low, their branches stroking the water's
+surface, the last touch before the river cascades beyond their reach.  A
+blur of leaves and rocks tumble along with the waters, the clatter of
+rocks adding to the thunder of the falls.
+~
+** RIVER **
+[Rikahn] water flows in from the east, disappears over the edge of a cliff/waterfall
+Possibly entrance to another zone, asy, throwing yourself down the waterfall
+~
+200802304 8 6 0
+D3
+~
+~
+0 -1 6765 10 10 5
+E
+willows ancient branches~
+Knotted trunks rise from the loamy soil to support the thick girth of the
+elegant willows.  Archly bending their graceful branches towards the
+torrent of the river, the ancient trees offer their slender leaves in
+supplication to the raging current.
+~
+324 17 1509949540 -2 0
+-1
+S
+
+#6771
+A Path in Coralon Forest~
+A muddy footpath leads away from the river southwards into the forest of
+tall, slender trees.  A few roots break the surface of the trail,
+criss-crossing like a gnarled spider web.  Wildflowers and ferns grow in
+profusion along the riverbank, giving way to brambles and dense shrubbery
+as the trees move in.  A path is visible across the river to the north.
+~
+[Guin] Done.
+~
+167247880 3 9 0
+D0
+~
+~
+0 -1 6735 10 10 5
+D2
+~
+~
+0 -1 6772 10 10 5
+E
+muddy footpath 1 south~
+A rutted dirt path, thick with mud, leads away from the turbulent river
+in a southerly direction.  Lying across the pathway are several roots and
+broken branches that have been left where they lie.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CYou trudge southward through the forest along the muddy path.@n
+~
+E
+to_room~
+@C$n trudges southward through the forest along the muddy path.@n
+~
+!
+3 0 4
+122 9 1509949540 3 0
+2500 9 1509949540 3 0
+122 9 1509949540 3 0
+-1
+S
+
+#6772
+A Path in Coralon Forest~
+The path twists to avoid a particularly dense cluster of trees to the
+east.  Thickly leaved branches weave overhead to create a sort of
+ceiling, keeping most of the light from the sky away from the forest
+floor.  Fallen leaves and branches decompose between the trees.  A few
+wildflowers grow along the edge of the trail.  The sound of a rapid river
+drifts in from the north.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 6771 10 10 5
+D3
+~
+~
+0 -1 6729 10 10 5
+E
+wildflowers trail edge~
+Small, yet sweetly scented flowers decorate the sides of the path with a
+rainbow of colours, which brighten the subdued hues of the forest.
+~
+A
+~
+~
+send_to_room( #river, room );
+~
+E
+river~
+@CThe sounds of swifting flowing water fills this area of the forest.@n
+~
+!
+2 150 0
+2509 9 1509949540 3 0
+-1
+S
+
+#6773
+A Path in Coralon Forest~
+The smooth trees grow tall and proud, extending their branches to shade
+the ground below.  Small flowers grow up along the sides of the dusty
+path, their bright petals turned up towards the sky.  A delicate scent
+fills the area, emanating from the upturned faces of the flowers.  The
+dusty foot-worn trail snakes and curves to avoid the trees, which spread
+their roots across its surface regardless.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 6774 10 10 5
+D3
+~
+~
+0 -1 6748 10 10 5
+E
+path dusty trail~
+Wending its way meticulously between the towering trees, the path is now
+arid and dusty, being quite far removed from the river that runs through
+this forest.
+~
+672 17 1509949470 -2 0
+78 17 1509949540 -2 0
+2509 9 1509949540 3 0
+28 9 1509949540 3 0
+-1
+S
+
+#6774
+A Path in Coralon Forest~
+Elms and oaks spread their branches skyward, forming a lush canopy of
+leaves overhead.  Growing beside the trail is a solitary maple tree, its
+leaves a burnished-red in stark contrast to the rich tapestry of greens
+surrounding it.  A few ferns grow under the forests mantle, enjoying the
+low light conditions.  The dirt track continues onwards through the
+woodlands, its destination unclear.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 6775 10 10 5
+D2
+~
+~
+0 -1 6773 10 10 5
+E
+maple burnished red tree~
+Standing at about half the height of the surrounding trees, this
+relatively young maple strives to extend its branches towards the high
+canopy of the forest.  Its deep rust-red leaves distinguish it from the
+surrounding forest of oaks and elms.  The lower branches would make this
+an easy tree to climb.
+~
+A
+~
+~
+send_to_room( #fuzzy, room );
+~
+E
+fuzzy~
+@RA small animal darts quickly across the path and disappears into the
+underbrush.@n 
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou follow the path $Tward through the trees.@n
+~
+E
+to_room~
+@G$n follows the path $Tward through the trees.@n
+~
+!
+3 0 6
+-1
+S
+
+#6775
+A Path in Coralon Forest~
+Dull-green foxgloves grow under the shade of the ancient oak trees, their
+stems covered with clusters of bright flowers. A few bumblebees dart
+between the blooms, their black and yellow backs covered in pollen.  A
+scattering of bracken lurks in the deeper shadows, their fronds spotted
+with rust.  Mounds of leaf litter lie amongst the tangled roots of the
+trees, the smell of the rich loam and decaying vegetation filling the air. 
+A trail winds through the woodlands, heading in an east-west direction.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 6776 10 10 5
+D3
+~
+~
+0 -1 6774 10 10 5
+E
+foxgloves stems clusters blooms~
+Flourishing in the limelight of the forest, the hardy foxgloves grow up
+to four feet in height; the sturdy stems are heavily burdened with
+bell-shaped flowers of a bright violet hue.
+~
+E
+mounds leaf litter tangled roots~
+A thick covering of fallen leaves and twigs have settled deep into the
+crevices between the roots of the mighty trees.  The slowly decomposing
+matter infuses the soil with rich nutrients that provides sustenance for
+the ever-growing forest.
+~
+A
+~
+~
+send_to_room( #bees, room );
+~
+E
+bees~
+@YBees flit among the flowers gathering pollen for their hive.@n
+~
+!
+2 150 0
+-1
+S
+
+#6776
+A Path in Coralon Forest~
+Cattails and rushes grow beside the rushing waters to the south.  Beyond
+the wall of reeds massive oak trees spread, their tangled roots digging
+deep into the damp earth.  Clumps of sphagnum moss grow upon the trees
+bark, giving them a mottled appearance.  The sound of water, both
+dripping from dew-covered leaves and river, echo through the woodlands. 
+A mud-churned trail meanders through the trees, heading westward away
+from the river.  A series of stones provides steps up to an old plank
+bridge that crosses the river southward.
+~
+[Guin] Up is bridge
+[Guin] Done.
+~
+167247880 3 9 0
+D2
+~
+~
+0 -1 6763 10 10 5
+D3
+~
+~
+0 -1 6775 10 10 5
+D4
+~
+~
+0 -1 6750 10 10 5
+E
+cattails rushes reeds~
+Tall reeds, cattails and rushes grow on the verge of the gurgling river,
+their slender stems wavering about as they are moved by the swiftly
+flowing water.
+~
+E
+oak trees tangled roots bark moss sphagnum~
+Clinging to the damp trunks of the ancient oaks, small patches of moss
+and lichen grow, their miniature roots persistently set in the cracks of
+the bark.  In varying shades of pale and dark green, the fine nonvascular
+plants mottle the drab brown hues of the tree trunks.
+~
+E
+series stones steps plank bridge~
+A half dozen or so flat stones have been stacked one atop the other to
+form shallow steps that lead to an old plank bridge.
+~
+A
+~
+~
+send_to_room( #river, room );
+~
+E
+river~
+@BThe sound of the rushing river fills the forest.@n
+~
+!
+2 175 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou climb the shallow steps upward to the bridge, preparing to cross
+the river.@n 
+~
+E
+to_room~
+@G$n climbs the shallow steps upward to the bridge, preparing to cross
+the river.@n 
+~
+!
+3 0 16
+-1
+S
+
+#0
+

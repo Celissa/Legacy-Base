@@ -1,0 +1,18 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+lock( room, dir )<br>
+<br>
+room - Pointer to room<br>
+dir - Direction of exit to lock ( north, west, south, east, up, down )<br>
+<br>
+<h1> Description </h1>
+<br>
+This function locks an exit.<br>
+<br>
+EXAMPLES<br>
+<br>
+lock( room, west );         //Locks the west exit in the room<br>
+</html>
+</body>

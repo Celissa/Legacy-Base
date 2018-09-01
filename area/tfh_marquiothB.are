@@ -1,0 +1,1937 @@
+#M2_AREA
+2
+
+Mar Quioth(2)~
+Tiene Kaelana~
+~
+~
+~
+
+0 0
+2
+1
+#ROOMS
+
+#1100
+Inside the Gates of Sha'rheza~
+Massive obsidian gates rise up to the east, keeping all the undesireables
+out of the Old City.  Stretching off into the distance to the west is
+Szearin Boulevard, from which other roads branch off to lead deeper into
+the city.  The cavern trail that was so narrow on the other side of the
+gate opens up into a massive cavern to the west, housing the entire city
+of Sha'rheza within its confines.
+~
+[Azerin] east was 800
+~
+33161223 0 9 0
+D3
+~
+~
+0 -1 1101 10 10 5
+-1
+S
+
+#1101
+Szearin Boulevard~
+A wide roadway of dark stone stretches east and west the bredth of the
+city, ending far in the distance to the west.  Two spacious buildings
+constructed of the darkest marble rise on either side of the road here,
+signs hanging above their doors.  Sidestreets branch off this road just
+to the west, and more streets turn off further to the west.  The ceiling
+of the cavern the city rests in rises high overhead, lost from sight.
+~
+~
+33161223 0 9 0
+D0
+~
+~
+0 -1 1102 10 10 5
+D1
+~
+~
+0 -1 1100 10 10 5
+D2
+~
+~
+0 -1 1103 10 10 5
+D3
+~
+~
+0 -1 1104 10 10 5
+-1
+S
+
+#1102
+toymaker~
+Wonderous toys of all shapes and sizes fill the graceful dark crystal
+shelves which line the west and east walls.  The ceiling overhead is
+domed, and tiny, iridescent glass creatures hang from nearly invisible
+threads.  A counter extends just in front of the south wall, and bits of
+wood, cloth and metal are scattered across its surface.  A few of the
+larger toys sit upon the floor, which is tiled in an elaborate pattern of
+stars in black and dark blue.
+~
+~
+33161223 0 9 0
+D2
+~
+~
+0 -1 1101 10 10 5
+E
+wonderous toys crystal shelves walls~
+No description.
+~
+E
+tiny iridescent glass creatures~
+No description.
+~
+E
+counter wood cloth metal~
+No description.
+~
+E
+floor pattern stars~
+No description.
+~
+-1
+S
+
+#1103
+Fine Parchments of Sha'rheza~
+Bleached wooden pigeon-hole shelving covers the west and south walls of
+this small store.  The vast majority of the small openings are filled
+with scrolls, scribed upon all manner of paper and bound with a rainbow
+of ribbons.  A thick-piled crimson area rug covers the medium-grey stone
+of the floor.  Two plush black chairs rest against the east wall.
+~
+~
+33161223 0 9 0
+D0
+~
+~
+0 -1 1101 10 10 5
+E
+bleached wooden pigeon-hole shelving west south walls scrolls paper rainbow ribbons~
+No description.
+~
+E
+thick-piled crimson area rug floor~
+No description.
+~
+E
+plush black chairs east~
+No description.
+~
+-1
+S
+
+#1104
+Szearin Boulevard~
+A sidestreet crosses Szearin Boulevard here, leading a short ways north
+and south.  Southwards lies a blue-grey crystal building, smoke rising
+from its chimney and the faint smell of food wafting from open windows. 
+To the north, the sidestreet curves and leads towards a row of shops.
+~
+~
+33161223 0 9 0
+D0
+~
+~
+0 -1 1130 10 10 5
+D1
+~
+~
+0 -1 1101 10 10 5
+D2
+~
+~
+0 -1 1105 10 10 5
+D3
+~
+~
+0 -1 1121 10 10 5
+-1
+S
+
+#1105
+Ancalagon Lane~
+Ancalagon Lane comes to its eastern end here, the midnight ivory building
+rising up to the east effectively blocking all traffic in that direction. 
+Loud voices, and the smell of food and drink emanate from the
+brightly-lit building to the south.  The road moves westward, branching
+off a little further down.
+~
+~
+33161223 0 9 0
+D0
+~
+~
+0 -1 1104 10 10 5
+D2
+~
+~
+0 -1 1106 10 10 5
+D3
+~
+~
+0 -1 1108 10 10 5
+-1
+S
+
+#1106
+The Shadow's Edge~
+This well-furnished tavern looks as though it's turned quite a profit
+over the years.  The wall behind the bar to the north is lined with
+exotic bottles of liquor, and the bar itself is of a lacquered dark wood. 
+The stools tucked under the bar are of the same wood, and the cushions
+are upholstered in deep crimson brocade.  Several round tables are
+scattered about the room, oiled to a high gloss.  A few chairs are pulled
+up to each.  A gleaming mithril chandelier hangs from the middle of the
+slightly-vaulted ceiling, small hanging crystals scattering refracted
+light all over the room.  Everything in the room is immaculately clean
+and well-maintained.
+~
+[Ciani] the goblin is a thief trainer
+[Ciani] and the troll is his buddy, i want to write some funny codes for them
+~
+33161223 0 9 0
+D0
+~
+~
+0 -1 1105 10 10 5
+D3
+~
+~
+0 -1 1107 10 10 5
+E
+wall bar north exotic bottles liquor lacquered dark wood~
+No description.
+~
+E
+stools cushions upholstered upholstery brocade~
+No description.
+~
+E
+round tables chairs~
+No description.
+~
+E
+gleaming mithril chandelier hanging crystal refracted light~
+No description.
+~
+5340 9 1509949540 3 0
+5285 9 1509949540 3 0
+5314 9 1509949540 3 0
+-1
+S
+
+#1107
+The Shadow's Edge - Common Room~
+An enormous fireplace has been built into the south wall of the room,
+warming the area and bathing everything in a pleasant glow.  Chairs and
+small couches have been arranged in a semi-circle around the fire, with
+ample floorspace in the middle so people may sit when the chairs are full. 
+Warm-toned wood paneling covers the walls, covered in vivid tapestries
+depicting varying scenes.  The end of the bar extends into the room, a
+few stools situated nearby for those who would wish to get a drink while
+staying near the fire.
+~
+[Ciani] this guy tells stories and stuff
+~
+33161223 0 9 0
+D1
+~
+~
+0 -1 1106 10 10 5
+E
+enormous fireplace south~
+No description.
+~
+E
+chairs small couches semi-circle floor~
+No description.
+~
+E
+warm-toned wood paneling walls vivid tapestries scenes~
+No description.
+~
+E
+bar stools~
+No description.
+~
+5121 9 1509949540 3 0
+-1
+S
+
+#1108
+Ancalagon Lane~
+Ancalagon Lane stretches east and west, further in the latter direction
+than the former.  A short distance to the north, the main road of
+Sha'rheza is visible, a garden of crystal flowers preventing one from
+running between the two roads.  Branching off this road to the near west
+is another road that leads due south.  A dark crystal-walled building
+rises up to the south.
+~
+[Ciani] rextras need doing
+[Ciani] need an acode to keep people from doing stuff to flowers
+[Ciani] rextras done
+~
+33161223 0 9 0
+D1
+~
+~
+0 -1 1105 10 10 5
+D3
+~
+~
+0 -1 1109 10 10 5
+E
+garden crystal flowers~
+Dainty flowers have been fashioned -- or perhaps somehow naturally grown
+-- of highly refractive crystal in a rainbow of colors.  Faceted petals
+turn back to face the "sky" of the cavern, and delicate green leaves
+scatter rainbows of light across the floor.
+~
+-1
+S
+
+#1109
+Intersection of Ancalagon Lane and Sindara Way~
+The wide avenue of Ancalagon Lane splits here, the narrower Sindara Way
+leading directly south.  To the north is a garden of crystalline flowers,
+which glitter in the reflected light of the few specks of light that
+float nearby, lighting the area.  Beyond the garden is the city's main
+road.
+~
+[Ciani] need an acode to keep people from doing stuff to flowers
+[Ciani] rextras need doing
+[Ciani] rextras done
+~
+33161223 0 9 0
+D1
+~
+~
+0 -1 1108 10 10 5
+D2
+~
+~
+0 -1 1110 10 10 5
+D3
+~
+~
+0 -1 1114 10 10 5
+E
+garden crystalline flowers~
+Dainty flowers have been fashioned -- or perhaps somehow naturally grown
+-- of highly refractive crystal in a rainbow of colors.  Faceted petals
+turn back to face the "sky" of the cavern, and delicate green leaves
+scatter rainbows of light across the floor.
+~
+-1
+S
+
+#1110
+Sindara Way~
+Under Construction.
+~
+~
+33161223 0 9 0
+D0
+~
+~
+0 -1 1109 10 10 5
+D2
+~
+~
+0 -1 1111 10 10 5
+-1
+S
+
+#1111
+Sindara Way~
+The wide thoroughfare of Sindara Way comes to an abrupt end here, blocked
+to the south by an impressively massive gate.  Panels of the blackest
+obsidian have been elaborately carved with swirling, flowing designs,
+which have been inlaid with gleaming metals and precious, glittering gems.
+~
+[Kaelana] South will go to the Palace of Tears
+~
+33161223 0 9 0
+D0
+~
+~
+0 -1 1110 10 10 5
+D1
+~
+~
+0 -1 1112 10 10 5
+D3
+~
+~
+0 -1 1113 10 10 5
+-1
+S
+
+#1112
+Sha'rheza~
+Under Construction.
+~
+~
+33161223 0 9 0
+D3
+~
+~
+0 -1 1111 10 10 5
+-1
+S
+
+#1113
+Sha'rheza~
+Under Construction.
+~
+~
+33161223 0 9 0
+D1
+~
+~
+0 -1 1111 10 10 5
+-1
+S
+
+#1114
+Ancalagon Lane~
+The wide lane stretches east and west here, ending not much further in
+the latter direction.  Another street is visible a ways to the north; in
+the way is a garden of crystalline flowers that glitters softly.  A few
+specks of light float around nearby, bathing the area in a soft glow.  A
+street can be seen branching off a little to the east, leading in a
+southward direction.
+~
+[Ciani] rextras need doing
+[Ciani] need an acode to keep people from doing stuff to flowers
+[Ciani] rextras done
+~
+33161223 0 9 0
+D1
+~
+~
+0 -1 1109 10 10 5
+D3
+~
+~
+0 -1 1117 10 10 5
+E
+garden crystalline flowers~
+Dainty flowers have been fashioned -- or perhaps somehow naturally grown
+-- of highly refractive crystal in a rainbow of colors.  Faceted petals
+turn back to face the "sky" of the cavern, and delicate green leaves
+scatter rainbows of light across the floor.
+~
+-1
+S
+
+#1115
+Brandor's Custom Finery~
+Mannequins dominate the room, dressed in half-finished clothing.  The
+walls of the room are all but hidden behind massive racks of silks,
+velvets, linens and all matter of fabrics.  A fine wooden table rests in
+the middle of the room, stacked high with sewing supplies and more
+garments, and a cushioned chair is tucked into the table.  The floor
+underfoot is tiled in silver marble and midnight obsidian, in
+checkerboarded concentric circles.
+~
+[Ciani] need to make/add clothing for customs
+~
+33161223 0 9 0
+D3
+~
+~
+0 -1 1116 10 10 5
+E
+mannequins half-finished clothing~
+No description.
+~
+E
+massive racks silks velvets linens fabrics~
+No description.
+~
+E
+fine wooden table sewing supplies garments chair~
+No description.
+~
+E
+floor tiles~
+No description.
+~
+5282 9 1509949540 3 0
+-1
+S
+
+#1116
+Sadranee's Fine Fabrics~
+Shelves upon shelves of fabric dominate the west and south walls, nearly
+overfilled with bolts of plain and exotic fabrics in a veritable rainbow
+of color.  Against the north and east walls, and in the middle of the
+room, are oak and steel racks bearing a plethora of clothing, ranging
+from everyday wear to elaborate finery.  A few tailor's mannequins stand
+in the corner, more visible to the east.  The floor underfoot is tiled in
+black obsidian and white marble, in a pattern of checkerboarded
+concentric circles.  An elegant spiral staircase rises in the southwest
+corner, the wide steps leading up to the second level.
+~
+[Ciani] need to make/add clothing and fabric to sell here
+[Ciani] rextras need doing
+~
+33161223 0 9 0
+D0
+ebonwood door~
+~
+0 -1 1117 10 10 5
+D1
+~
+~
+0 -1 1115 10 10 5
+D4
+~
+~
+0 -1 1162 10 10 5
+E
+shelves fabric west south bolts plain exotic fabric rainbow~
+No description.
+~
+E
+north east middle oak steel rack plethora clothing everyday wear elaborate finery~
+No description.
+~
+E
+tailor's mannequins corner~
+No description.
+~
+E
+floor pattern checkerboarded concentric circles~
+No description.
+~
+E
+elegant spiral staircase second level~
+No description.
+~
+5283 9 1509949540 3 0
+7721 17 1509949540 -1 0
+7722 17 1509949540 -1 0
+7502 17 1509949540 -1 0
+7701 17 1509949540 -1 0
+7299 17 1509949540 -1 0
+7748 17 1509949540 -1 0
+-1
+S
+
+#1117
+Ancalagon Lane~
+Ancalagon Lane meets its westernmost end here, a short by-street
+connecting it to Szearin Boulevard just to the north.  To the south, a
+sprawling two-storey dark marble and crystal building houses a busy shop. 
+Tailor's mannequins are visible through the small, paned windows flanking
+the door, and shelves of fabric give backdrop to the figures.
+~
+~
+33161223 0 9 0
+D0
+~
+~
+0 -1 1118 10 10 5
+D1
+~
+~
+0 -1 1114 10 10 5
+D2
+none~
+~
+0 -1 1116 10 10 5
+-1
+S
+
+#1118
+Szearin Boulevard~
+A small street branches off of Szearin Boulevard here, running south for
+a very short distance.  Indeed, its only purpose seems to be to connect
+this road with another one that runs parallel to the south.  Szearin
+continues for a short distance to the west where it ends in a cluster of
+shops, and eastward lies the city gate.
+~
+~
+33161223 0 9 0
+D0
+~
+~
+0 -1 1134 10 10 5
+D1
+~
+~
+0 -1 1119 10 10 5
+D2
+~
+~
+0 -1 1117 10 10 5
+D3
+~
+~
+0 -1 1135 10 10 5
+-1
+S
+
+#1119
+Szearin Boulevard~
+The main street of Sha'rheza continues its arrow-straight east and west
+course here, the dark stones underfoot looking as though they were
+recently cleaned.  In the distance to the west, a cluster of buildings
+rise up to end the street.  Eastward is a street branching off to the
+north, and further down are the main gates of the city.  A garden of
+crystal flowers "grows" to the south, and beyond that is a road
+paralleling this one.
+~
+~
+33161223 0 9 0
+D1
+~
+~
+0 -1 1120 10 10 5
+D3
+~
+~
+0 -1 1118 10 10 5
+E
+garden crystal flowers south~
+Raised by some unknown means, these beautiful flowers of pure crystal
+look extremely fragile.  Their petals are of deep, rich colors, which
+scatter tiny refracted rainbows everywhere.
+~
+-1
+S
+
+#1120
+Intersection of Szearin Boulevard and Daeshin Street~
+Sha'rheza's main street splits off here, another wide avenue leading
+northward, further into the city.  The road has been cobbled with large,
+dark stones, which are in good condition even though they look to be
+millenia old.  A garden of crystalline flowers grows to the south,
+providing a barrier between this road and the one paralleling it to the
+south.
+~
+~
+33161223 0 9 0
+D0
+~
+~
+0 -1 1122 10 10 5
+D1
+~
+~
+0 -1 1121 10 10 5
+D3
+~
+~
+0 -1 1119 10 10 5
+E
+garden crystalline flowers south~
+These delicate flowers have somehow been formed of highly-refractive
+crystal.  As light strikes their rich-toned petals, miniature rainbows
+scatter all about.  The green tinged stems are slender; it really is a
+wonder that they support the heads.
+~
+-1
+S
+
+#1121
+Szearin Boulevard~
+Under Construction.
+~
+~
+33161223 0 9 0
+D1
+~
+~
+0 -1 1104 10 10 5
+D3
+~
+~
+0 -1 1120 10 10 5
+-1
+S
+
+#1122
+Daeshin Street~
+Under Construction.
+~
+~
+33161223 0 9 0
+D0
+~
+~
+0 -1 1123 10 10 5
+D2
+~
+~
+0 -1 1120 10 10 5
+-1
+S
+
+#1123
+Daeshin Street~
+Under Construction.
+~
+~
+33161223 0 9 0
+D0
+~
+~
+0 -1 1124 10 10 5
+D1
+~
+~
+0 -1 1125 10 10 5
+D2
+~
+~
+0 -1 1122 10 10 5
+D3
+~
+~
+0 -1 1126 10 10 5
+-1
+S
+
+#1124
+jewelers~
+Three display cases of clear glass are the focal points of this small
+store.  One sits against the west and east walls, and another against the
+north wall, in front of which two stools rest.  The cases are full of all
+manner of glittering jewelry, and the glass of the cases themselves look
+to be worth nearly as much as their contents.
+~
+~
+33161223 0 5 0
+D2
+~
+~
+0 -1 1123 10 10 5
+-1
+S
+
+#1125
+Sidestreet in Sha'rheza~
+Under Construction.
+building to the north is built of indigo crystal
+~
+~
+33161223 0 9 0
+D0
+~
+~
+0 -1 1127 10 10 5
+D1
+~
+~
+0 -1 1128 10 10 5
+D2
+~
+~
+0 -1 1129 10 10 5
+D3
+~
+~
+0 -1 1123 10 10 5
+-1
+S
+
+#1126
+Sha'rheza~
+Under Construction.
+~
+~
+33161223 0 9 0
+D0
+~
+~
+0 -1 1131 10 10 5
+D1
+~
+~
+0 -1 1123 10 10 5
+D2
+~
+~
+0 -1 1133 10 10 5
+D3
+~
+~
+0 -1 1132 10 10 5
+-1
+S
+
+#1127
+First Bank of Mar Quioth~
+This stately room, while richly decorated, appears very cold and austere. 
+The walls have been built of indigo crystal, and their surfaces are bare. 
+A long desk along the north end of the bank is made of the same material,
+and all the metal in the area is a highly polished hard white metal,
+which looks extremely strong.  Underfoot, the floor is black and grey
+obsidian tile.
+~
+~
+33163271 0 5 0
+D2
+~
+~
+0 -1 1125 10 10 5
+-1
+S
+
+#1128
+Sha'rheza's Auction~
+This austere room's main feature is the large number of dark wooden chairs arranged in neat rows.
+A glass display case rests near the wall at the front of the room.
+The obsidian walls are hung with grey tapestries, and the black stone floor is bare.
+~
+~
+33161223 0 9 0
+D3
+~
+~
+0 -1 1125 10 10 5
+-1
+S
+
+#1129
+Sha'rheza~
+Under Construction.
+~
+~
+33161223 0 9 0
+D0
+~
+~
+0 -1 1125 10 10 5
+D1
+~
+~
+0 -1 1130 10 10 5
+-1
+S
+
+#1130
+Sha'rheza~
+Under Construction.
+~
+~
+33161223 0 9 0
+D2
+~
+~
+0 -1 1104 10 10 5
+D3
+~
+~
+0 -1 1129 10 10 5
+-1
+S
+
+#1131
+pets~
+Under Construction.
+~
+~
+33161223 0 5 0
+D2
+~
+~
+0 -1 1126 10 10 5
+-1
+S
+
+#1132
+Midnight Moon Glassblowery~
+Gorgeous, rainbow-hued creations of glass are suspended on near-invisible
+strings, or gaily colored ribbons, from the domed crystal roof overhead. 
+Figurines, vases, abstract sculptures and dozens of other hand-blown
+items rest inside enclosed crystal cases, behind thin velvet cords.  A
+blazing-hot furnace sits in the back corner, next to several
+similar-appearing items that must be used to blow the wonderous glass for
+sale here.
+~
+[Ciani] I know "glassblowery" isnt a word, but it is now.
+~
+33161223 0 5 0
+D1
+~
+~
+0 -1 1126 10 10 5
+-1
+S
+
+#1133
+Sha'rheza~
+Under Construction.
+~
+~
+33161223 0 9 0
+D0
+~
+~
+0 -1 1126 10 10 5
+D3
+~
+~
+0 -1 1134 10 10 5
+-1
+S
+
+#1134
+weaponsmith~
+Under Construction.
+~
+~
+33161223 0 9 0
+D1
+~
+~
+0 -1 1133 10 10 5
+D2
+~
+~
+0 -1 1118 10 10 5
+D3
+~
+~
+0 -1 1136 10 10 5
+-1
+S
+
+#1135
+Szearin Boulevard~
+Szearin Boulevard ends here, stores branching off to the north, west and
+south.  The sound of a hammer against an anvil rings from the north,
+while the other two shops seem quieter and geared towards dry goods. 
+Massive obsidian gates are visible far to the east, while small streets
+branch off the main road in several places before the gate.
+~
+~
+33161223 0 9 0
+D0
+~
+~
+0 -1 1136 10 10 5
+D1
+~
+~
+0 -1 1118 10 10 5
+D2
+~
+~
+0 -1 1137 10 10 5
+D3
+~
+~
+0 -1 1138 10 10 5
+-1
+S
+
+#1136
+custom armor~
+Under Construction.
+~
+[Ciani] Armorer #5
+~
+33161223 0 9 0
+D1
+~
+~
+0 -1 1134 10 10 5
+D2
+~
+~
+0 -1 1135 10 10 5
+-1
+S
+
+#1137
+The Magickal Supply~
+This small shop is cluttered with herbal and alchemical items.  Graceful
+shelving is home to jars of glass, ceramic, pottery, metals and wood,
+housing any number of obscure reagents.  Dried and drying plants hang from
+the ceiling in the corners, and the room is filled with the scent of
+herbs.  A small chair sits near the back of the store, beside which rests
+a low table covered in papers and thin books.
+~
+[Ciani] reagents and such
+[Ciani] the "good" reagents (sphere of glass, acid globe, etc) will be sold in sha'mysra at the temple and/or mage school
+[Ciani] this guy might teach things, i dont know
+~
+33161223 0 9 0
+D0
+~
+~
+0 -1 1135 10 10 5
+E
+graceful shelving jars glass ceramic pottery metals wood~
+No description.
+~
+E
+dried drying pants ceiling corners~
+No description.
+~
+E
+low table papers thin books~
+No description.
+~
+5514 9 1509949540 3 0
+37 17 1509949540 -1 0
+79 17 1509949540 -1 0
+81 17 1509949540 -1 0
+98 17 1509949540 -1 0
+127 17 1509949540 -1 0
+206 17 1509949540 -1 0
+304 17 1509949540 -1 0
+284 17 1509949540 -1 0
+479 17 1509949540 -1 0
+977 17 1509949540 -1 0
+1194 17 1509949540 -1 0
+1269 17 1509949540 -1 0
+1301 17 1509949540 -1 0
+1460 17 1509949540 -1 0
+425 17 1509949540 -1 0
+-1
+S
+
+#1138
+Tavilor's Imported Goods~
+Handsomely carved shelves of exotic wood line the walls, laden with every
+type of curio and knick-knack imaginable.  A glass-topped counter
+separates the west part of the store from the east, and more
+expensive-looking items rest inside.  A velvet-cushioned stool rests
+behind the counter, upon which the shopkeeper might sit when he tires. 
+The walls in the front end of the store are covered with bright
+tapestries.  A few specks of iridescent light float around, illuminating
+the room.
+~
+[Ciani] general store
+~
+33161223 0 9 0
+D1
+~
+~
+0 -1 1135 10 10 5
+E
+handsomely carved shelves exotic wood walls curio knick-knack~
+Teak, ebony and mahogany are just a few of the identifiable woods making
+up the carved shelving in this shop.  Intricate vines wind around
+geometric shapes on the front edges of the shelves, adding to their value. 
+Filling these shelves are carved, cast, molded and otherwise created
+knick-knacks, whose sole purpose seems to be to collect dust.  However,
+mixed among the paperweights there appears to be a few items of genuine
+use.
+~
+E
+glass-topped counter expensive-looking~
+The counter running the width of the store is testament to the wealth of
+the proprieter.  Rare panes of glass cover the top and front side,
+exposing the insides for perusal by customers.  Lining the bottom is a
+stretch of red velvet, and a few tiny specks of light float around inside
+the display case, lighting it and the store.
+~
+E
+walls tapestries bright~
+These bright tapestries have been woven of the finest wool.  Deep, rich
+reds, violets and blues are the predominant colors, but a few vibrant
+greens and oranges are present as well.  Each tapestry depicts an
+abstracted set of geometric shapes.
+~
+5281 9 1509949540 3 0
+-1
+S
+
+#1139
+Inside the Gates~
+A small stone guardpost has been built against each end of the gate here,
+with space enough for perhaps two in each.  The back of the gate is
+rather less impressive than the front; there is no elaborate scrollwork,
+just plain metal.  The road bends northward, heading towards Sha'kechani.
+~
+[Jilious] was here
+~
+33161223 0 9 0
+D0
+~
+~
+0 -1 1140 10 10 5
+D3
+~
+~
+0 -1 1379 10 10 5
+E
+gate back~
+The gate rises from the floor of the tunnel to the ceiling, and stretches
+all the way across the road, effectively blocking anyone from coming or
+going.
+~
+5269 9 1509949540 3 0
+5270 9 1509949540 3 0
+-1
+S
+
+#1140
+The Streets of Sha'kechani~
+The roadway here is wide enough for about four to walk abreast, and it
+runs north and south.  Another road branches off to the east, ending a
+short way away at another road.  A cave opens up to the north, which
+houses a stone building.  To the south is the west gate of the city, and
+the voices of the guards carry to this part of the cave.
+~
+[Jilious] no extras
+[Jilious] was here
+[Ciani] what is there to rextra?
+~
+33161223 0 9 0
+D0
+~
+~
+0 -1 1141 10 10 5
+D1
+~
+~
+0 -1 1144 10 10 5
+D2
+~
+~
+0 -1 1139 10 10 5
+-1
+S
+
+#1141
+The Streets of Sha'kechani~
+The street ends here as a wide cave opens up to the east.  Inside is a
+building of pale stone, with no obvious windows to show what is inside. 
+Instead of windows, there are two vertical slits on either side of the
+door, identifying the building as something of a military nature.  The
+edges of the west gate are visible around a bend to the south.
+~
+[Jilious] no extras
+[Jilious] was here
+[Ciani] what is there to rextra?
+~
+33161223 0 9 0
+D1
+the heavy wooden door~
+~
+390 -1 1142 10 10 5
+D2
+~
+~
+0 -1 1140 10 10 5
+-1
+S
+
+#1142
+Barracks of the Ke'chan'edras~
+These spartan barracks look as though they were designed for
+functionality at the cost of everything else, including comfort.  Bunk
+beds line the west, south and east walls, packed as close together as
+possible.  The floor is plain dark stone, and looks to have been recently
+swept clean.  Flanking the door on either side are two vertical slits,
+for crossbowmen to defend the building perhaps.  The barracks continue
+northward, looking to house more beds.
+~
+[Jilious] no extras
+[Jilious] was here
+[Ciani] not adding extras in the building
+~
+33161223 0 9 0
+D0
+~
+~
+0 -1 1143 10 10 5
+D3
+the heavy wooden door~
+~
+390 -1 1141 10 10 5
+-1
+S
+
+#1143
+Barracks of the Ke'chan'edras~
+The spartan living quarters continue here, the row upon row of bunk bed
+broken only by a small sectioned-off area in the northeast corner, which
+might be designated for things relating to personal hygiene.  A pair of
+small windows are set in the north wall of the building, allowing air to
+circulate.  A few wire baskets along the ceiling line house floating
+balls of white light, which provide just enough illumination for the
+building.
+~
+[Jilious] no extras
+[Jilious] was here
+~
+33161223 0 9 0
+D2
+~
+~
+0 -1 1142 10 10 5
+-1
+S
+
+#1144
+The Streets of Sha'kechani~
+A narrow side-street splinters southwards off the main road, leading to a
+small cave, housing an elongated single-story building.  There are two
+very small windows in the front of the building, next to a thick
+steel-banded door.  Voices echo faintly from within.  The roadway here is
+wide enough for four people to walk abreast.
+~
+[Jilious] no extras
+[Jilious] was here
+[Ciani] I will not extra this room. just to be contrary =P
+~
+33161223 0 9 0
+D1
+~
+~
+0 -1 1148 10 10 5
+D2
+the heavy wooden door~
+~
+390 -1 1145 10 10 5
+D3
+~
+~
+0 -1 1140 10 10 5
+5271 9 1509949540 3 0
+5272 9 1509949540 3 0
+-1
+S
+
+#1145
+Barracks of the Ke'chan'edras~
+Sturdily-constructed bunk beds line the east and west walls of this
+spartan building.  Thin grey woolen blankets cover the bed, providing
+what may well be the only luxury for these soldiers.  The walls and
+floors are plain stone, and there are no coverings on either.  The
+barracks continue to the south.
+~
+[Jilious] no extras
+[Jilious] was here
+[Ciani] nothing to extra, theres enough detail in the rdesc imo, nobody is really gonna come in here anyway
+~
+33161223 0 9 0
+D0
+the heavy wooden door~
+~
+390 -1 1144 10 10 5
+D2
+~
+~
+0 -1 1146 10 10 5
+-1
+S
+
+#1146
+Barracks of the Ke'chan'edras~
+This spartan building houses the soldiers of Sha'kechani.  Bunk beds line
+the walls, covered in thin wool blankets.  The walls are built from
+seamless slabs of pale stone, and the floor of the building is the same
+stone as the caverns outside, a dark grey color.  Some boxes have been
+stacked up in the area to the west.
+~
+[Jilious] was here
+~
+33161223 0 9 0
+D0
+~
+~
+0 -1 1145 10 10 5
+D3
+~
+~
+0 -1 1147 10 10 5
+E
+boxes stacked west~
+Large boxes and crates have been stacked upon each other in a vague
+pyramid shape, and are probably being used for storage.
+~
+-1
+S
+
+#1147
+Barracks of the Ke'chan'edras~
+This part of the barracks seems to have been designated for storage. 
+Boxes and crates have been stacked up along the east and north walls,
+nailed shut.  The southwest corner seems to have been designated for
+hygiene matters; a pair of basins rests on a counter and there is a
+half-used cake of soap between them.  A small amount of dust has begun to
+collect in the corners.
+~
+[Ciani] dummy search for crates/boxes until we need something to pop there praps
+[Jilious] was here
+~
+33161223 0 9 0
+D1
+~
+~
+0 -1 1146 10 10 5
+E
+boxes crates stacked north wall east~
+Constructed of smooth-planed pale wood, these boxes and crates are most
+likely used for storage.
+~
+A
+search~
+boxes crates~
+act_tochar( #nope, ch );
+act_notchar( #rnope, ch );
+~
+E
+nope~
+You rummage through the crates, but find nothing.
+~
+E
+rnope~
+$n rummages through the crates, but comes up empty-handed.
+~
+!
+0 0 0
+-1
+S
+
+#1148
+The Streets of Sha'kechani~
+The street twists again here, the northward way leading towards a pale
+building sitting in a cave.  Another cave opens to the direct south,
+housing another pale building.  The sounds of metal upon metal ring from
+both caves and echo around the roadway.  The road continues a short way
+to the west before meeting up with a wider roadway which looks as though
+it may lead out of the city.
+~
+[Jilious] was here
+~
+33161223 0 9 0
+D0
+~
+~
+0 -1 1154 10 10 5
+D2
+the pale stone door~
+~
+0 -1 1149 10 10 5
+D3
+~
+~
+0 -1 1144 10 10 5
+E
+cave south pale building~
+A pale building has been built in the small cave to the south.  A thin
+padded mat covers its floor, and a rack full of wooden weapons hangs on
+the far wall inside.
+~
+-1
+S
+
+#1149
+Training Hall of the Ke'chan'edras~
+This spacious hall is the training area for the soliders of Mar Quioth. 
+Covering the floor is a thin mat of muslin, several large, washed-out
+stains and thickly-stiched scars giving testament to the sheer amount of
+use this area has seen.  The ceiling vaults overhead, providing plenty of
+space for the people to maneuver about.  The hall continues to the east,
+with a door to a different sort of room visible to the far east.
+~
+[Jilious] was here
+~
+33161223 0 9 0
+D0
+the pale stone door~
+~
+0 -1 1148 10 10 5
+D1
+~
+~
+0 -1 1150 10 10 5
+E
+washed-out stain~
+Pale pink against the off-white of the muslin, these stains are most
+likely from the blood of some combatant long passed through.
+~
+-1
+S
+
+#1150
+Training Hall of the Ke'chan'edras~
+This large hall serves as the training hall and practice area for the
+soldiers of Mar Quioth.  The floor is covered in a thinly stuffed muslin
+mat, and bears dozens of thickly-stitched mending scars.  The walls are
+plain stone, pale in shade, and the room vaults high overhead, well out
+of the way of the combatants on the floor.  Wide windows on either side
+of the door let the air circulate out of the hall, which may well be the
+reason the hall doesnt reek quite as badly of sweat as it could.  A
+wooden weapon rack hangs on the south wall, and another room lies to the
+east beyond a pair of half-height swinging doors.
+~
+[Ciani] training hall
+[Ciani] some sort of trainer here
+[Ciani] need an acode for leaving east - so and so pushes through the swinging doors
+[Ciani] This trainer will probably teach lowish level phys skills, and start quests for some of the bigger ones.
+[Rikahn] mob settings done, needs trainer skills set.
+[Rikahn] talk to me if you need help setting up a trainer, think of a list of skills
+[Ciani] this guy can teach punch kick bash dodge parry
+[Ciani] shield
+[Ciani] disarm
+[Jilious] was here
+~
+33161223 0 9 0
+D0
+the pale stone door~
+~
+0 -1 1152 10 10 5
+D1
+~
+~
+0 -1 1151 10 10 5
+D3
+~
+~
+0 -1 1149 10 10 5
+E
+floor thinly stuffed muslin mats~
+Perhaps an inch thick, these once-white muslin mats are now greyed from
+steady usage, and stained with dark spots that are likely blood.  In
+place to provide a slightly softer fall, it looks as though they might
+well do that.
+~
+E
+wooden weapon rack~
+Sturdily built of fine dark wood, this rack houses wooden weapons of all
+varieties.
+~
+5273 9 1509949540 3 0
+-1
+S
+
+#1151
+Training Hall of the Ke'chan'edras - Smithy~
+This section of the training hall has been separated to provide space for
+the armorer to work.  A massive fireplace has been built into the south
+wall, and situated before it is a huge, scarred anvil.  On one side of
+the anvil is a large barrel of water, and on the other is a collection of
+hammers and tongs.  A battered stool is close by the anvil, obviously
+where the smith sits while he works.  A few mannequins of differing
+shapes and sizes stand around the room, modeling half-finished pieces of
+armor.  A sign has been posted on the north wall.
+~
+[Ciani] this is the guy who will do the nice custom armor
+[Ciani] need an acode for leaving/arriving in other room
+[Ciani] This guy makes the best armor in Mar Q
+[Rikahn] mob settings done, shop created and flagged though no inventory yet
+[Ciani] Armorer #6
+~
+33165319 0 9 0
+D1
+~
+~
+0 -1 1165 10 10 5
+D2
+~
+~
+0 -1 1164 10 10 5
+D3
+~
+~
+0 -1 1150 10 10 5
+E
+sign~
+The sign has been carefully lettered:
+
+@I@ISpecializing in custom armor work.
+@I@IPlease inquire within.
+~
+5268 9 1509949540 3 0
+-1
+S
+
+#1152
+The Streets of Sha'kechani~
+The dark stone tunnel continues here, widening to the south into a
+considerably larger cave.  A building of pale stone has been built inside
+the cave, wide windows providing a glimpse to the inside of the building. 
+It seems to be a training hall of sorts: padded mats cover the floor, and
+a weapon rack hangs against the far wall.  Loud voices and sharp commands
+echo througout the cavern, proof of the business of the hall.
+~
+[Jilious] was here
+~
+33161223 0 9 0
+D0
+~
+~
+0 -1 1153 10 10 5
+D2
+the pale stone door~
+~
+0 -1 1150 10 10 5
+E
+building pale stone inside cave windows glimpse training hall padded mats weapon rack~
+Inside the small cave is a wide hall built from large blocks of pale
+stone.  Thin, spotted mats cover the floor, providing a somewhat softer
+landing for whomever may fall.  A sturdy weapon rack hangs on the far
+wall, full of wooden weapons.
+~
+-1
+S
+
+#1153
+The Streets of Sha'kechani~
+The dark stone passageway that passes for a street forks again, the short
+branch to the west ending at a cross-street, and the branch to the south
+ending shortly before a wide cave housing a pale building.  Shouts and
+the clash of weapons echo from the south, while the way west seems
+quieter.  The walls and ceiling seem to be a little wider here than
+elsewhere in the city, with space for perhaps six to walk abreast.
+~
+[Jilious] no extras
+[Jilious] was here
+~
+33161223 0 9 0
+D1
+~
+~
+0 -1 1156 10 10 5
+D2
+~
+~
+0 -1 1152 10 10 5
+D3
+~
+~
+0 -1 1154 10 10 5
+5271 9 1509949540 3 0
+5272 9 1509949540 3 0
+5269 9 1509949540 3 0
+-1
+S
+
+#1154
+The Streets of Sha'kechani~
+The street continues east and south here, while opening up into a larger
+cave to the north.  The upper reaches of the cave are veiled by smoke,
+which has stained the pale stone of the building inside a darker grey. 
+The thick wooden door of the building to the north is propped open with a
+small anvil, and heat blasts from within, the sound of a hammer upon
+metal carrying with it.  Some wrought-iron letters have been spiked into
+the stone above the doorway.
+~
+[Jilious] was here
+~
+33161223 0 9 0
+D0
+~
+~
+0 -1 1155 10 10 5
+D1
+~
+~
+0 -1 1153 10 10 5
+D2
+~
+~
+0 -1 1148 10 10 5
+E
+wrought-iron letters~
+These simple letters spell out the name "The Gory Blade Forge".
+~
+-1
+S
+
+#1155
+The Gory Blade Forge~
+This spacious building serves as the main forge in Sha'kechani.  A
+massive fireplace has been built into the east wall, and a large pair of
+sooty bellows lies on the stone floor next to it.  In front of the
+fireplace is a scarred anvil and steel-bound barrel of water, and a small
+rack of tools stands on the other side of the anvil.  Against the west
+wall is a case containing small bladed weapons, and hanging from the
+north wall are several nasty-looking swords and spears.  A hand-lettered
+sign has been tacked to the wall next to a particularly wicked sword.
+~
+[Ciani] need a smith mob here (duh)
+[Ciani] this guy will do some spifftastic custom weaponry
+[Ciani] he sells nicish weaponry and stuff too
+[Rikahn] Mob stats set, shop setup though inventory empty for now
+[Ciani] if these weapons aren't appropriate, could whoever reviews please change it, or let me know what to put
+[Jilious] maybe an extra for this wicked sword that no one can have? hehe
+[Jilious] was here
+[Ciani] new extra added
+~
+33165319 0 9 0
+D2
+~
+~
+0 -1 1154 10 10 5
+E
+tools~
+This sturdy wooden rack is home to several hammers of varying sizes,
+tongs, chisels, a few dirty rags and a cracked clay mug.
+~
+E
+hand-lettered sign~
+Painted in black on a nicely finished piece of rectangular wood is the
+following message: 
+
+@I@I@IThis sword is not for sale.
+
+@I@I@IIf you desire something similar, please inquire with the smith.
+~
+E
+wicked sword~
+Forged of some bright metal, both sides of this sword's blade look
+razor-sharp, and light catches from them and glitters.  The hilt is long,
+designed to be held in two hands, and it has been wrapped with mithril
+wires for a better grip.  Set into the pommel is a humanoid skull.
+~
+5267 9 1509949540 3 0
+7208 17 1509949540 -1 0
+3003 17 1509949540 -1 0
+3004 17 1509949540 -1 0
+467 17 1509949540 -1 0
+7203 17 1509949540 -1 0
+4080 17 1509949540 -1 0
+-1
+S
+
+#1156
+The Streets of Sha'kechani~
+The wide stone road splits here; one fork leading north to a pale
+building, the other leading west towards the heart of Sha'kechani.  There
+are no street signs or any sort of indication what lies in either
+direction; the residents must have memorized the street layout.  Noise of
+conversation drifts from the building to the north, as does the faint
+smell of food and beer.
+~
+[Jilious] no extras
+[Jilious] was here
+[Ciani] what is there to rextra? honestly.
+~
+33161223 0 9 0
+D0
+~
+~
+0 -1 1157 10 10 5
+D2
+~
+~
+0 -1 1161 10 10 5
+D3
+~
+~
+0 -1 1153 10 10 5
+5271 9 1509949540 3 0
+-1
+S
+
+#1157
+Before the Bleeding Moon~
+The ceiling of the cavern rockets upwards, rising to at least forty feet
+overhead.  The upper reaches of the cavern are lost from sight behind a
+thick layer of smoke, which is even now drifing up from the thick chimney
+of the building immediately to the west.  Built from wide, smoothed
+blocks of pale stone, this building has only one floor but stretches all
+the way to the back of the cavern; about forty feet.  A thick,
+steel-banded door is set into the wall directly to the west, between two
+small, square holes that serve as windows.  Some words have been painted
+onto the door.
+~
+[Jilious] was here
+~
+33161223 0 9 0
+D2
+~
+~
+0 -1 1156 10 10 5
+D3
+~
+~
+0 -1 1158 10 10 5
+E
+words painted door~
+The words read: @rWelcome to the Bleeding Moon@n.
+Underneath, somebody has painted a crude picture of a moon with blood
+dripping from the lower half.
+~
+-1
+S
+
+#1158
+Common Room of the Bleeding Moon~
+The inside of the tavern is about as sparse as it could be while still
+remaining functional.  A dozen tables are scattered about the room, each
+with four chairs neatly (or not so neatly) tucked in.  There are more
+"windows" in the west and south walls, which are in fact just empty
+spaces: no panes, no curtains.  The dark stone floor is clean-swept, but
+is stained in various places and likely has been for years.  A
+wrought-iron chandelier of sorts hangs from the ceiling, the eight
+massively thick pillar candles perched upon it providing the main light
+for the room.  There appears to be a bar just to the north.
+~
+[Ciani] Tavern here, three rooms
+[Ciani] Serving wench here
+[Jilious] was here
+~
+33161223 0 9 0
+D0
+~
+~
+0 -1 1159 10 10 5
+D1
+~
+~
+0 -1 1157 10 10 5
+E
+wrought-iron chandelier~
+This chandelier hangs from the ceiling by three thick links; the topmost
+link is attached to a hook bolted into the ceiling and the bottom link is
+actually a hook from which the chandelier is hung.  The eight,
+equally-spaced arms of the chandelier end in circular platforms, each at
+least six inches in diameter.  These are the bases upon which the thick,
+three-wicked pillar candles rest.
+~
+E
+tables chairs~
+This functional wooden furniture looks as though its survived many a
+tavern brawl.  The tables are square, supported in the middle by a thick
+pillar which spreads into four stable feet.  The chairs are functional
+but don't appear to be that comfortable: the surface for sitting is flat,
+not countoured, and the backpiece is also flat, supported by two short
+posts.  Scratches, gouges and small chips have all been taken out of the
+surface of the dark, oiled wood, which seems to still be in good
+condition despite its battered history.
+~
+E
+dark stone floor stained stains~
+The floor here looks to probably be the natural floor of the cavern. 
+Stains spatter its surface, most darker than the stone itself.  Several
+of these stains are a dark black-red tone, and are likely dried blood. 
+There is little dirt on the floor, except near the doorway.
+~
+5257 9 1509949540 3 0
+66 17 1509949540 -1 0
+801 17 1509949540 -1 0
+171 17 1509949540 -1 0
+-1
+S
+
+#1159
+The Bleeding Moon's Bar~
+The main feature of this otherwise spartan area of the tavern is a long
+bar stretching the length of the north wall.  The countertop is oiled
+dark wood, pitted and scratched by years of use.  A few bar stools have
+been pulled up, all looking a little worse for the wear.  Hanging from a
+solid rack above the bar is a large collection of mugs and steins, all
+showing signs of use but appearing clean nonetheless.  A wide doorway has
+been built into the west wall, half-covered by thin swinging doors.  The
+smells and sounds of cooking food drift through the doors.
+~
+[Ciani] bartender here
+[Jilious] was here
+~
+33161223 0 9 0
+D2
+~
+~
+0 -1 1158 10 10 5
+D3
+~
+~
+0 -1 1160 10 10 5
+E
+long bar north wall countertop dark wood barstools stools~
+A long, straight bar stretches along the north wall.  It is rather plain
+and unadorned, more functional than anything.  Its dark surface has been
+oiled to keep it protected from spills.  Scratches, chips and gouges have
+been taken out of the surface in some past bar brawl.  The stools under
+the edge of the bar are very similar in appearance: dark, chipped wood. 
+Three legs support the flat round seat on each stool, and there looks to
+be about half a dozen of them.
+~
+E
+solid rack collection mugs steins~
+Hanging from the ceiling by stout iron chains is a large wooden gridwork
+with dozens of hooks drilled into its lower surface.  Most of these hooks
+hold a mug or a tankard, while a few are empty -- the mugs that go there
+in use by patrons.
+~
+E
+1 west swinging doors~
+They cover the middle fifty percent or so of the doorway.  These swinging
+doors are just wooden rectangles hung from the doorframe with two-way
+hinges.  A minimal amount of carving has been done on this side of the
+doors in an attempt to make them less of an eyesore.
+~
+5261 9 1509949540 3 0
+2687 17 1509949540 -1 1
+2687 17 1509949540 -1 4
+2687 17 1509949540 -1 7
+7676 17 1509949540 -1 8
+7676 17 1509949540 -1 38
+-1
+S
+
+#1160
+Kitchen of the Bleeding Moon~
+A massive fireplace built into the north wall dominates the room, and the
+crackling and popping of the wood fire provides the backdrop to the
+bustle and noise of the kitchen.  A grate covers the fire, upon which a
+pan and several covered pots have been set to cook.  Sturdy shelves line
+the wall, filled with spices, vegetables, utensils, and pots and pans.  A
+side of meat hangs from a hook in the southwest corner, looking to have
+been recently cut to provide somebody with dinner.  A huge pad of paper
+has been tacked to the south wall, covered with scribblings of orders.
+~
+[Jilious] was here
+~
+33161223 0 9 0
+D1
+~
+~
+0 -1 1159 10 10 5
+E
+massive fireplace north grate pan covered pot~
+Huge flagstones form the immense fireplace in the north wall.  Small
+char-spots mark the stones, giving it a very aged appearance.  A thick
+iron grate rests overtop of the logs in the fireplace, providing a
+convenient place to set steel pots and pans full of food.
+~
+E
+shelves spices vegetables utensils~
+Dark wooden shelves line the walls, filled to capacity with vegetables,
+small jars of spices, steel and iron utensils and other cooking items.
+~
+5262 9 1509949540 3 0
+823 17 1509949540 -1 0
+801 17 1509949540 -1 0
+5266 9 1509949540 3 0
+5266 9 1509949540 3 0
+-1
+S
+
+#1161
+Inside the Gates~
+The massive gates to this part of the city rise up to the east.  The
+floor underfoot is dark grey stone, very clean and flat.  The roadway
+here is wide enough for four to walk abreast, and the walls have been
+planed flat to meet the floor at right angles.  The ceiling, about
+fifteen feet overhead at its highest point, is smoothly arched and blends
+seamlessly into the walls.  To the north, a pale grey stone building is
+visible in the distance.
+~
+[Rikahn] mob settings done.  Need to add reputations-based attack code later
+[Jilious] does this room need an acode for opening gate from inside?
+[Jilious] was here
+~
+33161223 0 9 0
+D0
+~
+~
+0 -1 1156 10 10 5
+D1
+~
+~
+0 -1 1382 10 10 5
+E
+massive gates east~
+The back of the gates are considerably less impressive than the front
+side: there is no elaborate scrollwork, just a massive and slightly
+abused sheet of thick metal.
+~
+5270 9 1509949540 3 0
+5269 9 1509949540 3 0
+-1
+S
+
+#1162
+Couture of Sha'rheza~
+The unadorned walls of dark crystal are nearly completely hidden behind
+ranks of tailor's mannequins, dressed in finery for all occasions. 
+Dresses, shirts, skirts and all other manner of clothing are displayed,
+and polished wooden racks hold even more expensive-looking clothes.  The
+floor is tiled in plain black, the design consisting of half a dozen
+interlocking shapes.
+~
+~
+33161223 0 9 0
+D5
+~
+~
+0 -1 1116 10 10 5
+5086 9 1509949540 3 0
+7723 17 1509949520 -1 0
+7707 17 1509949520 -1 0
+7693 17 1509949540 -1 0
+7704 17 1509949520 -1 0
+7695 17 1509949540 -1 0
+7656 17 1509949540 -1 0
+7705 17 1509949510 -1 0
+-1
+S
+
+#1163
+custom armor~
+Under Construction.
+~
+~
+33161223 0 9 0
+-1
+S
+
+#1164
+Small Room off the Smithy~
+The crude stone walls of the cramped (for an ogre) chamber have been
+lined with bits of outcast metal, scrap armor and furs forming a strange
+decoration.  A small forge rests in the rooms center, a bedmat beside it
+has been covered in armor working tools.  The smell of oil, smoke and
+metal intermingle with the heavy musk of the ogre worker.
+~
+[Ciani] Armorer #7
+~
+33165319 0 9 0
+D0
+~
+~
+0 -1 1151 10 10 5
+5377 9 1509949540 3 0
+3507 17 1509949540 -1 0
+3508 17 1509949540 -1 0
+3543 17 1509949540 -1 0
+2005 17 1509949540 -1 0
+2023 17 1509949540 -1 0
+2043 17 1509949540 -1 0
+-1
+S
+
+#1165
+Further Into the Smithy~
+This room appears to be more used for storage than anything else,
+although there is a small fire and anvil set up in one corner.  Stacked
+against a wall, many boxes and crates reach almost to the ceiling,
+presumably used for the storing of materials that have not yet been
+required by the smithies that work here.  Taking up a vast portion of the
+already cluttered floor, a large bellows lies in tattered pieces.  the
+leather cracked and frame splintered to the point of being in dire need
+for repair.
+~
+[Ciani] Armorer #4
+[Ciani] this guy can make iron hardware too
+~
+33165319 0 9 0
+D3
+~
+~
+0 -1 1151 10 10 5
+-1
+S
+
+#0
+

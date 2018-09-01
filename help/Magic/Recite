@@ -1,0 +1,22 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+recite [scroll_name] [target] <br>
+<br>
+<h1> Description </h1>
+<br>
+Some spells are written down on scrolls, and to access those spells,<br>
+one must recite the scroll.  Not all scrolls have targets; reciting a<br>
+scroll of magic mapping does not requre a target.<br>
+<br>
+Note : recall scrolls have an additional, optional argument which can be<br>
+used -<br>
+<br>
+recite recall [town_name] [player]<br>
+<br>
+The effect is having the player recalled to the specific town; no town<br>
+name is required, though, and in that case, the default town will be the<br>
+town of that player's race.<br>
+</html>
+</body>

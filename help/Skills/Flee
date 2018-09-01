@@ -1,0 +1,22 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+flee : attempts to make you flee from current battle<br>
+flee [direction] : attempts to flee from battle in a specified direction<br>
+<br>
+<h1> Description </h1>
+This command is very useful when you find that you are in a losing battle<br>
+situation.  You lose some experience points for fleeing with amount loss<br>
+dependent on how powerful and badly hurt the foe is.  However, the amount<br>
+loss is usually minimal compared to the amount loss from death.  So<br>
+sometimes it may be better to flee to live to fight another day, rather<br>
+than be brave and die today.<br>
+<br>
+NOTE: This command is not fail proof, and you may sometimes not be able<br>
+to flee due to lack of movement points, being bashed, bad luck, or<br>
+whatever.<br>
+<br>
+See also help wimpy and help pray.<br>
+</html>
+</body>

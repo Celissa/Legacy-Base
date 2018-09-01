@@ -1,0 +1,465 @@
+#M2_AREA
+2
+
+Wagon trail to Calidar's Harbour~
+~
+~
+~
+~
+
+70 0
+0
+1
+#ROOMS
+
+#9450
+Wagon Trail - Across The Grassland~
+Southwards the tree line fades and a dusty wagon trail leads southwards
+across the amber-hued grassland, its rough rutted surface little more
+than a smug of dirt in the plains.  Way stones mark each hundred feet
+enabling the wagoners to tell that they remain on the path.  Far to the
+south the distant sea spreads, its waves capped with foam.
+~
+~
+167247873 12 9 0
+D0
+~
+~
+0 -1 6475 10 10 5
+D2
+~
+~
+0 -1 9451 10 10 5
+-1
+S
+
+#9451
+Wagon Trail - Across The Grassland~
+Winding through the spreading grasslands the muddy road has been carved
+from the wilderness by the constant rumbling of wagons.  Way stones at
+even spaces keep the wagons on track, else it would be difficult for a
+driver to figure out where the rough ground began and the rough road
+ended.  A ridge of rock runs to the west of the road, its broken surface
+giving form to the otherwise flat savannah.
+~
+~
+167247873 12 9 0
+D0
+~
+~
+0 -1 9450 10 10 5
+D1
+~
+~
+0 -1 9466 10 10 5
+D2
+~
+~
+0 -1 9452 10 10 5
+-1
+S
+
+#9452
+Wagon Trail - Across The Grassland~
+Under the open sky of the savannah runs the rutted roadway, heading
+onwards in a north south direction.  The occasional way stone marks the
+boundary of the road, keeping wagons to the only slightly gentler trail. 
+A scattering of scrub and brush sprinkle the grassland to the south,
+their dark green foliage a welcome break from the arid grass.  Running
+parallel to the roadway runs a western ridge, the exposed stones cracked
+by the hard weather of the realm.
+~
+~
+167247873 12 9 0
+D0
+~
+~
+0 -1 9451 10 10 5
+D1
+~
+~
+0 -1 9464 10 10 5
+D2
+~
+~
+0 -1 9453 10 10 5
+-1
+S
+
+#9453
+Wagon Trail - Across The Grassland~
+Meandering through the low scrub and grasslands runs the southern wagon
+trail, heading in a north-south direction through the barren landscape. 
+Spires of rock rise to the west as a ridge of stone ends abruptly, the
+cracked stone surface rising a good hundred feet in the air above the
+grasslands.  Further to the south the land begins to slope downwards,
+heading slowly to the distant sea.
+~
+~
+167247873 12 9 0
+D0
+~
+~
+0 -1 9452 10 10 5
+D1
+~
+~
+0 -1 9467 10 10 5
+D2
+~
+~
+0 -1 9454 10 10 5
+-1
+S
+
+#9454
+Wagon Trail - Across The Grassland~
+Broom and sagebrush grow at the roads edge, the hardly leaves protected
+from the harsh winter snow and hot summer heat.  Stalks of grass spread
+out from the road, some adorned with last years seed heads.  Termite
+mounds dot the savannah, for much of the visible land the only things
+that reach more than a yard in height.  Southwards the distant sea draws
+nearer, the roadway beginning to dip downwards.  Towards the north a
+towering spire of rock dominates the horizon, beyond that the land
+quickly becomes richer, green fields turning to deep forest the further
+you go.
+~
+~
+167247873 12 9 0
+D0
+~
+~
+0 -1 9453 10 10 5
+D2
+~
+~
+0 -1 9455 10 10 5
+-1
+S
+
+#9455
+Wagon Trail - Across The Grassland~
+Termite mounds flank the roadway, a few of the smaller ones starting to
+build across its edge.  The orange dirt of the plains gusts into dust
+clouds with each blustering wind, making travel down the wagon trail an
+unpleasant ordeal.  Bitterly cold in winter and chokingly dry in summer
+the road would test even the most seasoned Wagoner.  Directly to the west
+a mound of fresh earth forms a sizable crater.
+~
+~
+167247873 12 9 0
+D0
+~
+~
+0 -1 9454 10 10 5
+D2
+~
+~
+0 -1 9456 10 10 5
+D3
+~
+~
+0 -1 11250 10 10 5
+-1
+S
+
+#9456
+Wagon Trail - Across The Grassland~
+The trail widens out a bit as its edges begin to mingle with the barren
+rocks of the cliff face.  Southwards the road dips downwards and begins a
+steep journey towards the coast.  Westwards the grasslands spread out
+unbroken save for a scattering of termite mounds and thorn trees.
+~
+~
+167247873 12 9 0
+D0
+~
+~
+0 -1 9455 10 10 5
+D2
+~
+~
+0 -1 9457 10 10 5
+-1
+S
+
+#9457
+Wagon Trail - Across The Grassland~
+Sharp stone shards pockmark the ground as the dirt slowly transforms into
+stone the further south one travels.  The trail is rough but navigable,
+although offering a bumpier journey the rocks at least will not mire a
+wagon in the rain.  Some distance to the south the land dips down and
+begins to descend into the pebbled coastland while to the north it carves
+its way across the great plain.
+~
+~
+167247873 12 9 0
+D0
+~
+~
+0 -1 9456 10 10 5
+D2
+~
+~
+0 -1 9458 10 10 5
+-1
+S
+
+#9458
+Wagon Trail - Broken Land~
+Rough slabs of stone and broke rock spills out around the remnants of the
+grasslands as the dried plants give way to a much harsher landscape of
+rock and wind.  The roadway dips down into a shallow ravine before
+ducking back in a zigzagging trail that quickly takes it a few hundred
+feet down to the coastal lands of the southern ocean.
+~
+~
+167247873 12 9 0
+D0
+~
+~
+0 -1 9457 10 10 5
+D5
+~
+~
+0 -1 9459 10 10 5
+-1
+S
+
+#9459
+Wagon Trail - Broken Land~
+Splintered rocks thrust out from the sides of the crumbling cliff side
+making for a slow and somewhat dangerous descent for someone on foot, let
+alone a wagon packed with goods.  Far below a walled fortification
+surrounds a deep harbour, fluttering flags adorning the buttresses.  The
+road continues to zigzag downward heading onwards to the buildings.
+~
+~
+167247873 12 9 0
+D4
+~
+~
+0 -1 9458 10 10 5
+D5
+~
+~
+0 -1 9460 10 10 5
+-1
+S
+
+#9460
+Wagon Trail - Broken Land~
+Overhanging rocks shelter the roadway somewhat from the blustering sea
+breezes, their surfaces warped with pockmarks from the onslaught of the
+howling gales and salt spray.  Ice plants spill over the rocks, the
+succulents unaffected by the seemingly inhospitable terrain.  Gulls and
+other sea birds squawk from cliff side nests, the birds safe from all but
+winged predators.
+~
+~
+167247873 12 9 0
+D4
+~
+~
+0 -1 9459 10 10 5
+D5
+~
+~
+0 -1 9461 10 10 5
+-1
+S
+
+#9461
+Wagon Trail - Broken Land~
+The roadway cuts steeply across the cliff face, its outer edge crumbling
+and spit from the harsh sea winds.  Clumps of tussock poke through a sea
+of ice plants upon the rocks, the hardy plants growing in conditions that
+would wilt most others.  Downwards the road finally ends at the cliff
+base, where upwards it continues its arduous journey out of the coastal
+land.
+~
+~
+167247873 12 9 0
+D4
+~
+~
+0 -1 9460 10 10 5
+D5
+~
+~
+0 -1 9462 10 10 5
+-1
+S
+
+#9462
+Wagon Trail - Broken Land~
+The costal road reaches the base of a towering cliff, its surfaces marked
+with caves and ledges carved by the wind and rain of the southern sea. 
+Birds cover much of its surface, the gulls and other seabirds using the
+sheltered rock for nesting.  The road steeply ascends across the cliff,
+its slope just enough to enable a wagon to traverse it.  Southwards the
+road picks its way around ancient tidal pools and sand dunes heading
+onwards to the sea.
+~
+~
+167247873 12 9 0
+D2
+~
+~
+0 -1 9463 10 10 5
+D3
+~
+~
+32 -1 38750 10 10 5
+D4
+~
+~
+0 -1 9461 10 10 5
+-1
+S
+
+#9463
+Wagon Trail - Coastal Land~
+Cutting across now dry tidal rocks and sand dunes the roadway makes for a
+north-south route.  A high walled fortification rises to the south as the
+road enters under a well-defended gatehouse and into the darkness beyond. 
+To the north the road reaches the edge of a high cliff, and begins a
+steep ascend to its top.  Green pendants adorned with a white stag snap
+from flag poles upon the walled fort.
+~
+~
+167247873 12 9 0
+D0
+~
+~
+0 -1 9462 10 10 5
+D2
+~
+~
+0 -1 9650 10 10 5
+-1
+S
+
+#9464
+Across The Grassland - Near a Wagon Trail~
+The grasslands of the savannah spread out all around you like a vast sea,
+the rippling affect caused by the wind adding to the affect.  Just to the
+west you spy the main road cutting straight as an arrow heading north to
+destinations unknown.
+~
+~
+167247873 12 9 0
+D0
+~
+~
+0 -1 9466 10 10 5
+D1
+~
+~
+0 -1 9465 10 10 5
+D2
+~
+~
+0 -1 9467 10 10 5
+D3
+~
+~
+0 -1 9452 10 10 5
+-1
+S
+
+#9465
+Across The Grassland - Twisted Dead Tree~
+A massive old tree stretches towards the sky.  Long dead, its branches
+and trunk are twisted, cracked and black as the deepest night.  The
+grasslands of the savannah thin out and disapear well short of the trees
+base, the ground cracked and baked hard by the unrelenting sun.  One
+patch of dirt stands out from the rest, appearing soft and quite loose as
+though recently disturbed.
+~
+~
+167247873 12 9 0
+D3
+~
+~
+0 -1 9464 10 10 5
+D5
+~
+~
+219 -1 100500 10 10 5
+E
+dirt soil patch~
+Looking closely you see that the dirt in this patch is very loose indeed. 
+It may well be possible to dig here.
+~
+A
+dig~
+down dirt patch soil~
+if( is_open( room, down ) ) {
+act_tochar( #opendoofus, ch );
+}
+else {
+act_tochar( #dig, ch );
+act_notchar( #dig2, ch );
+open( room, down );
+}
+~
+E
+opendoofus~
+The tunnels already open.
+~
+E
+dig~
+You dig into the loose dirt, exposing a tunnel into the earth.
+~
+E
+dig2~
+$n digs at the loose dirt uncovering a subterranean tunnel!
+~
+!
+0 0 0
+-1
+S
+
+#9466
+Across The Grassland - Near a Wagon Trail~
+The grasslands of the savannah spread out all around you like a vast sea,
+the rippling affect caused by the wind adding to the affect.  Just to the
+west you spy the main road cutting straight as an arrow heading north to
+destinations unknown.
+~
+~
+167247873 12 9 0
+D2
+~
+~
+0 -1 9464 10 10 5
+D3
+~
+~
+0 -1 9451 10 10 5
+-1
+S
+
+#9467
+Across The Grassland - Near a Wagon Trail~
+The grasslands of the savannah spread out all around you like a vast sea,
+the rippling affect caused by the wind adding to the affect.  Just to the
+west you spy the main road cutting straight as an arrow heading north to
+destinations unknown.
+~
+~
+167247873 12 9 0
+D0
+~
+~
+0 -1 9464 10 10 5
+D3
+~
+~
+0 -1 9453 10 10 5
+-1
+S
+
+#0
+

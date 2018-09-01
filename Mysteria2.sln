@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2003
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Mysteria2", "Mysteria2.vcxproj", "{FBB599A1-51BE-4986-8300-0AAF2C85DE21}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FBB599A1-51BE-4986-8300-0AAF2C85DE21}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FBB599A1-51BE-4986-8300-0AAF2C85DE21}.Debug|Win32.Build.0 = Debug|Win32
+		{FBB599A1-51BE-4986-8300-0AAF2C85DE21}.Release|Win32.ActiveCfg = Release|Win32
+		{FBB599A1-51BE-4986-8300-0AAF2C85DE21}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8EAA3C30-EA61-4627-BCCA-904D836FE6EB}
+	EndGlobalSection
+EndGlobal

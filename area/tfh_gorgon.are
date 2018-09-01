@@ -1,0 +1,3456 @@
+#M2_AREA
+2
+
+Gorgon's Perch~
+Aurelian Ophelia~
+~
+~
+~
+
+1 0
+2
+1
+#ROOMS
+
+#7000
+Convergence of Gorgon and Marek~
+This intersection of Gorgon and Marek Street is dominated by the massive
+black-iron porticullis that leads out of the city.  The gate is
+fifteen-feet across, large enough to admit a wagon flanked by an ogre on
+each side.  Twenty-five feet above the ground, the porticullis recedes
+into a great stone arch that links together both sides of the huge
+rampart-walls.  Though the thick, black bars of the gate are
+unembellished, a series of intricately-detailed relief sculptures are
+carved into the arch.  Read from left-to-right, they create a
+relief-mural depicting the triumph of Queen Grogria over her uncle, the
+dreaded half-orc mage, Patriarch Hawkes.
+~
+set action to get porticullis lifted to go out....should be something like asking the guard to unlock it and ipen it instead of being able to do it yourself.
+~
+33030145 0 7 0
+D0
+~
+~
+0 -1 7001 10 10 5
+D1
+~
+~
+0 -1 7006 10 10 5
+D2
+iron porticullis~
+iron porticullis~
+343 -1 7116 10 10 5
+D3
+~
+~
+0 -1 7025 10 10 5
+E
+sculpture relief~
+The intricately-carved relief sculptures form a mural depicting the
+battle between Queen Grogria and her uncle, Patriarch Hawkes.  The
+thunderbolt-like sword stroke that smote down the great Patriarch is
+inlaid with rich mosiac-style tiles fashioned from turquoise,
+mother-of-pearl, and lapis lazuli.  As light reflects from the tiles,
+they seem to almost move, re-creating the famous death-blow.
+~
+E
+porticullis gate bars~
+Thick, black bars, seven-inches around, form the grating of this huge
+porticullis.  A massive chain, connected to a huge iron winch, pulls the
+grating up into the great stone arch, high overhead.
+~
+5154 9 1509949540 3 0
+5154 9 1509949540 3 0
+-1
+S
+
+#7001
+Gorgon Street~
+Gorgon street runs north towards Gorgon Perch's main temple.  Paved with
+jagged, granite rocks, the well-kept road tears and cuts at the feet of
+travelers, tripping even the most dexterous.  To the west is an adobe,
+dome-shaped shop, marked with arcane symbols.  An impressive-looking
+building rises to the east, and the main city-gate lies to the south.
+~
+~
+33030145 1 7 0
+D0
+~
+~
+0 -1 7002 10 10 5
+D2
+~
+~
+0 -1 7000 10 10 5
+D3
+rune covered mahogany door~
+rune covered mahogany door~
+131 -1 7033 10 10 5
+E
+pavement jagged granite rocks ground~
+The ground here is paved with roughly hewn, granite slabs.  The slabs are
+so rough that all over their surface are jagged lumps which cut and tear
+at the feet of those passing by.  The street is kept immaculately clean,
+no dirt, no litter, no garbage is left in the street.  Possibly this is
+done to avoid sparing the feet of those lucky enough to trod on the
+cushioning that would be provided by the refuse.
+~
+E
+west adobe dome-shaped~
+The shop is made from adobe bricks fired during the summer's heat.  The
+top of the shop comes together in a dome covered with clay-mud stucco to
+smooth the dome out.  The surface of the dome, principally light-brown,
+is ringed by vibrant blue and white arcane symbols.  Juting from the dome
+is a tiny tube, presumably a chimney, from which a whispy white smoke
+escapes.  The only way into the shop appears to be through a rune covered
+door that seems to be made of mahogany.
+~
+E
+arcane symbols~
+No description.
+~
+E
+east building~
+No description.
+~
+E
+south city-gate gate~
+Looming a short distance to the south is the twenty-five foot high arch
+which houses the city gates.  A massive iron porticullis fills the arch
+in and even from this distance, you can see that the iron bars are more
+than six inches thick.
+~
+E
+north temple~
+The Temple of Nactur rises to the north from the cold, granite floor. 
+The surface of the temple is covered by thick branches carved from some
+brown stone.  The temple looks like a giant hedge stretching from the
+city floor towards the top of the niche the city is built within.
+~
+E
+whispy smoke~
+The thin stream of white smoke rapidly dissappears into the thicker grey
+smoke prevalent in the town.
+~
+-1
+S
+
+#7002
+Gorgon Street~
+Gorgon road keeps running north toward the city's main temple.  The
+jagged, stone paving continues to bruise travelers' feet, even those of
+warriors lucky enough to have procured a set of heavy war boots.  A
+strange chemical smell emanates from the building to the west, and a
+barren-looking alley lies to the east.  To the south, you can hear the
+clanking of iron as the massive porticullis at the city's entrance is
+raised and lowered.
+~
+~
+33030145 1 7 0
+D0
+~
+~
+0 -1 7003 10 10 5
+D1
+~
+~
+0 -1 7029 10 10 5
+D2
+~
+~
+0 -1 7001 10 10 5
+D3
+~
+~
+0 -1 7040 10 10 5
+E
+ground jagged stone pavement~
+The ground here is paved with roughly hewn, granite slabs.  The slabs
+are so rough that all over their surface are jagged lumps which cut and
+tear at the feet of those passing by.  The street is kept immaculately
+clean, no dirt, no litter, no garbage is left in the street.  Possibly
+this is done to avoid sparing the feet of those lucky enough to trod on
+the cushioning that would be provided by the refuse.
+~
+E
+west building~
+No description.
+~
+E
+east alley~
+The alley to the east is barely wide enough for an ogre's shoulders to
+fit down.  The alley is clean right where it meets the street.  But about
+4 feet up the alley it becomes filthy.  The ground is covered in debris
+and many small mounds of decomposing garbage.
+~
+E
+north temple~
+The Temple of Nactur rises to the north from the cold, granite floor. 
+The surface of the temple is covered by thick branches carved from some
+brown stone.  The temple looks like a giant hedge stretching from the
+city floor towards the top of the niche the city is built within.
+~
+E
+south porticullis~
+Despite the occasional loud clanking and grinding of the porticullis from
+the south, you can't quite see it through the crowds from here.
+~
+-1
+S
+
+#7003
+Gorgon Street~
+Gorgon street keeps heading north toward Gorgon's Perch's main temple. 
+The jagged, granite pavement is kept in pristine condition, perhaps to
+keep built-up dirt from cushioning travelers' steps.  To the west is a
+dark and peculiar-looking shop, with shades drawn down and a large wooden
+door painted a vivid shade of purple.
+~
+~
+33030145 1 7 0
+D0
+~
+~
+0 -1 7004 10 10 5
+D2
+~
+~
+0 -1 7002 10 10 5
+D3
+large purple wooden door~
+large purple wooden door~
+131 -1 7041 10 10 5
+E
+shop west~
+No description.
+~
+E
+shades~
+No description.
+~
+E
+temple north main~
+The Temple of Nactur rises to the north from the cold, granite floor. 
+The surface of the temple is covered by thick branches carved from some
+brown stone.  The temple looks like a giant hedge stretching from the
+city floor towards the top of the niche the city is built within. 
+Stretching from the top of the temple to the ceiling of the niche is a
+thin-looking, tendril-like, vine.
+~
+-1
+S
+
+#7004
+Intersection of Gorgon and Throg Street~
+This intersection of Gorgon's Perch's two main thoroughfares, Gorgon and
+Throg Streets, is marked by a ten-foot tall, thorn-like obsidian spike,
+carved into a cork-screw spiral.  A favorite pastime of Gorgon's Perch
+citizens is to watch the bodies of impaled heretics and criminals slowly
+spiral to the ground.  The Temple of Nactur lies to the north, while
+Throg street stretches out to the east and west.
+~
+~
+33030145 1 7 0
+D0
+~
+~
+0 -1 7005 10 10 5
+D1
+~
+~
+0 -1 7018 10 10 5
+D2
+~
+~
+0 -1 7003 10 10 5
+D3
+~
+~
+0 -1 7019 10 10 5
+E
+thorn spike obsidian~
+This large, obsidian impaling spike is surprisingly free of gore. 
+Municipal workers hose it down between the frequent impalings, then
+polish its surface to a biting, cruel shine.
+~
+E
+temple nactur north~
+The Temple of Nactur rises to the north from the cold, granite floor. 
+The surface of the temple is covered by thick branches carved from some
+brown stone.  The temple looks like a giant hedge stretching from the
+city floor towards the top of the niche the city is built within. 
+Stretching from the top of the temple to the ceiling of the niche is a
+thin tendril-like vine, disappearing into the celing's surface.
+~
+-1
+S
+
+#7005
+Gorgon Street~
+Gorgon street ends at the foot of an ominous-looking temple, The Temple
+of Nactur.  A winding, tangled mass of a thorn hedge carved out of brown
+obsidian, the Temple of Nactur, long before the arrival of Patriarch
+Hawkes, had housed a peace-loving deity, a protector of Nature.  The
+Patriarch's utter exploitation of his immediate natural surroundings in
+his pursuit of personal gain, caused the once green and inviting temple
+to change: jade-colored leaves fell from supple, willow-like branches,
+shriveling into brown, rotting tree-flesh on the ground.  The branches
+themselves changed, growing thick and stone-hard, and sprouting five-inch
+thick, dagger-like, obsidian thorns.  All this reflected a more extreme
+internal change, as Nactur transformed from a passive and jovial lover of
+the woods, to the dark and dangerous Avenger of Nature.
+~
+~
+33030145 1 7 0
+D0
+obsidian door covered in relief carvings of thorny vines~
+obsidian door relief carvings thorny vines~
+131 -1 7049 10 10 5
+D2
+~
+~
+0 -1 7004 10 10 5
+E
+rotting tree-flesh ground leaves~
+No description.
+~
+E
+branches dagger thorns~
+The branches are so carefully carved that were it not for the nearly
+uniform color of the obsidian, you could mistake them for living foliage. 
+Each branch has but a few leaves on it, however, there are a number of
+thick, five-inch long thorns jutting out from each branch at a variety of
+angles.
+~
+E
+hedge brown temple~
+The Temple of Nactur rises to the north from the cold, granite floor. 
+The building itself is almost completely covered by thick branches carved
+from brown obsidian.  The covering looks as though it was intended to
+make the whole temple look like a giant, seventy-foot-tall hedge.
+~
+-1
+S
+
+#7006
+Marek Street~
+Marek street, the city's southernmost main thoroughfare, continues to the
+east and west.  To the south stands the innermost southern wall of the
+city, the last defense against a southern invasion.  As such, the wall is
+high, thick and extremely difficult to scale, most especially because
+it's constructed of the same type of jagged, granite rocks as are the
+city roads, with the addition of one further pecadillo: the edges of the
+jagged rocks are buffed and polished into razor-sharp spikes -- even on
+the inside of the wall.  To the north is an impressive-looking marble
+building with seven dorian-style columns supporting its dome-shaped roof.
+~
+~
+33030145 1 7 0
+D0
+iron banded door~
+iron banded door~
+131 -1 7037 10 10 5
+D1
+~
+~
+0 -1 7007 10 10 5
+D3
+~
+~
+0 -1 7000 10 10 5
+E
+wall granite jagged spikes~
+The wall is made from thick granite blocks, extracted and carved from
+the mountain into which the city is set.  Each block, rather than
+having even, clean lines, has many jagged protrusions jutting from its
+surface. The protrusions have been filed, buffed, and polished into
+razor-sharp spikes and edges.  The worst spikes seem to be focused on and
+near the top of the wall.  However, even the inside of the wall looks
+very treacherous for anyone foolish enough to attempt a climb.
+~
+E
+north building~
+The building to the north is made from large, carved, marble bricks. 
+Each creamy-white brick is a foot high and two feet long.  There doesn't
+seem to be any mortar holding the marble bricks together, the weight of
+the bricks alone seems sufficient to keep them in place.  Circling the
+building are a number of dorian-style colums, reaching upwards to support
+a massive dome.
+~
+E
+dome~
+The dome is made of perfectly smooth white marble.  It is so smooth is
+looks like it was carved from a single slab of marble.
+~
+E
+columns~
+These dorian-style columns are made of a slightly darker marble than the
+bricks for the building and the marble for the roof.  Each column is
+carved to be a perfect duplicate of the others.
+~
+-1
+S
+
+#7007
+Marek Street~
+Marek street, the city's southernmost main thoroughfare, continues to the
+east and west.  To the south stands the innermost southern wall of the
+city, the last defense against a southern invasion.  As such, the wall is
+high, thick and extremely difficult to scale, most especially because
+it's constructed of the same type of jagged, granite rocks as are the
+city roads, with the addition of one further pecadillo: the edges of the
+jagged rocks are buffed and polished into razor-sharp spikes -- even on
+the inside of the wall.
+~
+~
+33030145 1 7 0
+D1
+~
+~
+0 -1 7008 10 10 5
+D3
+~
+~
+0 -1 7006 10 10 5
+E
+wall jagged granite spikes~
+The wall is made from thick granite blocks, extracted and carved from
+the mountain into which the city is set.  Each block, rather than
+having even, clean lines, has many jagged protrusions jutting from its
+surface. The protrusions have been filed, buffed, and polished into
+razor-sharp spikes and edges.  The worst spikes seem to be focused on and
+near the top of the wall.  However, even the inside of the wall looks
+very treacherous for anyone foolish enough to attempt a climb.
+~
+-1
+S
+
+#7008
+Intersection of Marek and Smott~
+Marek street, the city's southernmost main thoroughfare, continues to the
+east and west.  To the south stands the innermost southern wall of the
+city, the last defense against a southern invasion.  As such, the wall is
+high, thick and extremely difficult to scale, most especially because
+it's constructed of the same type of jagged, granite rocks as are the
+city roads, with the addition of one further pecadillo: the edges of the
+jagged rocks are buffed and polished into razor-sharp spikes -- even on
+the inside of the wall.  To the north, Smott street extends towards the
+entrance to the Queen's stronghold.
+~
+~
+33030145 1 7 0
+D0
+~
+~
+0 -1 7026 10 10 5
+D1
+~
+~
+0 -1 7009 10 10 5
+D3
+~
+~
+0 -1 7007 10 10 5
+E
+wall jagged granite spikes~
+The wall is made from thick granite blocks, extracted and carved from
+the mountain into which the city is set.  Each block, rather than
+having even, clean lines, has many jagged protrusions jutting from its
+surface. The protrusions have been filed, buffed, and polished into
+razor-sharp spikes and edges.  The worst spikes seem to be focused on and
+near the top of the wall.  However, even the inside of the wall looks
+very treacherous for anyone foolish enough to attempt a climb.
+~
+E
+stronghold north smott~
+No description.
+~
+-1
+S
+
+#7009
+Marek Street~
+Marek street, the city's southernmost main thoroughfare, continues to the
+east and west.  To the south stands the innermost southern wall of the
+city, the last defense against a southern invasion.  As such, the wall is
+high, thick and extremely difficult to scale, most especially because
+it's constructed of the same type of jagged, granite rocks as are the
+city roads, with the addition of one further pecadillo: the edges of the
+jagged rocks are buffed and polished into razor-sharp spikes -- even on
+the inside of the wall.
+~
+~
+33030145 1 7 0
+D1
+~
+~
+0 -1 7010 10 10 5
+D3
+~
+~
+0 -1 7008 10 10 5
+E
+wall jagged granite spikes~
+The wall is made from thick granite blocks, extracted and carved from
+the mountain into which the city is set.  Each block, rather than
+having even, clean lines, has many jagged protrusions jutting from its
+surface. The protrusions have been filed, buffed, and polished into
+razor-sharp spikes and edges.  The worst spikes seem to be focused on and
+near the top of the wall.  However, even the inside of the wall looks
+very treacherous for anyone foolish enough to attempt a climb.
+~
+-1
+S
+
+#7010
+Intersection of Marek and Grubb~
+Marek street, the city's southernmost main thoroughfare, intersects
+briefly with Grubb street and continues to the west.  Grubb street,
+replete with its unforgiving pavement, proceeds on to the north.  To the
+east stand the set of heavy, banded-oak doors that prohibit free passage
+into the city's towering east turret, which serves as a watchtower.
+~
+~
+33030145 1 7 0
+D0
+~
+~
+0 -1 7011 10 10 5
+D1
+iron banded oak door~
+iron banded oak door~
+391 7075 7031 10 10 5
+D3
+~
+~
+0 -1 7009 10 10 5
+E
+tower~
+Inside the watchtower are housed several of the Queen's elite fighting
+units, ever on the watch for signs of enemy infiltration and invasion. 
+These units of heavy ogre and troll fighters and skilled orcish archers
+are grimly determined to protect their home.
+~
+-1
+S
+
+#7011
+Grubb Street~
+Grubb Street is the easternmost road in the city.  It's the heart of the
+entertainment district, always bustling with the rousing, boot-stomping
+clog dances and raucous, croaking bar-songs which are so central to
+Ogrish cultural heritage.  Bards and acrobats, jugglers and thieving
+goblin pickpockets fill the street -- at least until curfew-time every
+night.  To the west is a dark, reddish-brown, stained wooden door through
+which you can hear the sound of a sharp, bladed object repeatedly
+striking wood.
+~
+~
+33030145 1 7 0
+D0
+~
+~
+0 -1 7012 10 10 5
+D2
+~
+~
+0 -1 7010 10 10 5
+D3
+stained-red wooden door~
+stained red wooden door~
+131 -1 7034 10 10 5
+E
+west stained wooden door~
+No description.
+~
+-1
+S
+
+#7012
+Grubb Street~
+Grubb Street is the easternmost road in the city.  It's the heart of the
+entertainment district, always bustling with the rousing, boot-stomping
+clog dances and raucous, croaking bar-songs which are so central to
+Ogrish cultural heritage.  Bards and acrobats, jugglers and thieving
+goblin pickpockets fill the street -- at least until curfew-time every
+night.  From the west you hear deep-throated laughing and singing
+interspersed with the occasional high-pitched howl of pain as something
+heavy thuds into wood.
+~
+add thing about shop to west
+~
+33030145 1 7 0
+D0
+~
+~
+0 -1 7013 10 10 5
+D2
+~
+~
+0 -1 7011 10 10 5
+D3
+oak door~
+oak door~
+131 -1 7035 10 10 5
+-1
+S
+
+#7013
+Grubb Street~
+Grubb Street is the easternmost road in the city.  It's the heart of the
+entertainment district, always bustling with the rousing, boot-stomping
+clog dances and raucous, croaking bar-songs which are so central to
+Ogrish cultural heritage.  Bards and acrobats, jugglers and thieving
+goblin pickpockets fill the street -- at least until curfew-time every
+night.  To the west is an immaculately polished iron door.
+~
+[Aurelian] collusseum to the east
+~
+33030145 1 7 0
+D0
+~
+~
+0 -1 7014 10 10 5
+D1
+~
+~
+0 -1 7125 10 10 5
+D2
+~
+~
+0 -1 7012 10 10 5
+D3
+immaculately polished iron door~
+immaculately polished iron door~
+131 -1 7036 10 10 5
+-1
+S
+
+#7014
+Intersection of Grubb and Throg Street~
+Grubb Street stretches out to the south, offering, as implied by its
+name, a variety of eating places.  Despite not being one of the city's
+main thoroughfares, Grubb Street, alas, offers weary, pain-ridden
+travelers no relief from the city's cruel, but immaculate, roads.
+~
+~
+33030145 1 7 0
+D2
+~
+~
+0 -1 7013 10 10 5
+D3
+~
+~
+0 -1 7015 10 10 5
+E
+road ground down~
+The ground here is paved with roughly hewn, granite slabs.  The slabs
+are so rough that all over their surface are jagged lumps which cut and
+tear at the feet of those passing by.  The street is kept immaculately
+clean, no dirt, no litter, no garbage is left in the street.  Possibly
+the cushioning that would be provided by the refuse.
+~
+-1
+S
+
+#7015
+Throg Street~
+Throg Street is paved with the same jagged, stone rocks for which the
+city roads are infamous.  To the north, carved out of the mountain
+itself, is the southern-most wall of the Queen's stronghold.  To the
+south is the north wall of Stonefists, a tavern frequented by the local
+guards and military.  Even further to the south is the Hole in 'Human
+tavern where the smaller races are often used as "entertainment" in games
+of spear chucking.
+~
+~
+33030145 1 7 0
+D1
+~
+~
+0 -1 7014 10 10 5
+D3
+~
+~
+0 -1 7016 10 10 5
+E
+north stronghold~
+No description.
+~
+E
+south tavern~
+No description.
+~
+E
+ground pavement down~
+The ground here is paved with roughly hewn, granite slabs.  The slabs
+are so rough that all over their surface are jagged lumps which cut and
+tear at the feet of those passing by.  The street is kept immaculately
+clean, no dirt, no litter, no garbage is left in the street.  Possibly
+this is done to avoid sparing the feet of those lucky enough to trod on
+the cushioning that would be provided by the refuse.
+~
+-1
+S
+
+#7016
+Outside the Front Gate of the Queen's Stronghold~
+Throg Street is paved with the same painful, jagged rocks for which the
+city roads are infamous.  To the north is the thick iron door of Queen
+Grogria's stronghold.  When they're not admitting the few that are
+required to pass through on business, the double doors are kept bolted,
+guarding against infiltration by enemy spies and potential assassins. 
+Smott Street stretches out to the south.
+~
+[Aurelian] still need to do all the inside of Grogria's stringhold
+~
+33030145 1 7 0
+D0
+solid iron door~
+solid iron door~
+407 7077 7058 10 10 5
+D1
+~
+~
+0 -1 7015 10 10 5
+D2
+~
+~
+0 -1 7028 10 10 5
+D3
+~
+~
+0 -1 7017 10 10 5
+E
+ground pavement down~
+The ground here is paved with roughly hewn, granite slabs.  The slabs
+are so rough that all over their surface are jagged lumps which cut and
+tear at the feet of those passing by.  The street is kept immaculately
+clean, no dirt, no litter, no garbage is left in the street.  Possibly
+this is done to avoid sparing the feet of those lucky enough to trod on
+the cushioning that would be provided by the refuse.
+~
+E
+north stronghold~
+No description.
+~
+-1
+S
+
+#7017
+Throg Street~
+Throg Street is paved with the same painful, jagged rocks for which the
+city roads are infamous.  The owner of the shop to the north has devised
+a clever way of advertising her wares: she's hung a fine example of them,
+an exquisite silver lamp, directly above her door, in place of the usual
+wooden placard announcing the shop's name.
+~
+add warehouse south
+~
+33030145 1 9 0
+D0
+fine wooden door inlaid with silver writing~
+fine wooden door inlaid silver writing~
+131 -1 7045 10 10 5
+D1
+~
+~
+0 -1 7016 10 10 5
+D3
+~
+~
+0 -1 7018 10 10 5
+E
+ground pavement down~
+The ground here is paved with roughly hewn, granite slabs.  The slabs
+are so rough that all over their surface are jagged lumps which cut and
+tear at the feet of those passing by.  The street is kept immaculately
+clean, no dirt, no litter, no garbage is left in the street.  Possibly
+this is done to avoid sparing the feet of those lucky enough to trod on
+the cushioning that would be provided by the refuse.
+~
+E
+silver lamp exquisite~
+No description.
+~
+-1
+S
+
+#7018
+Throg Street~
+Throg Street is paved with the same painful, jagged rocks for which the
+city roads are infamous.  Directly to the north lies a fine-looking store
+with gilt-trimmed shutters.  Farther to the north looms the mass of
+tangled thorns known as the Temple of Nactur.  To the south is a large
+adobe brick warehouse, which has clearly seen better days.  The
+warehouse's exterior is pitted and clearly has not been maintained
+against the elements.
+~
+~
+33030145 1 9 0
+D0
+fine wooden door inlaid with golden writing~
+fine wooden door inlaid golden~
+131 -1 7044 10 10 5
+D1
+~
+~
+0 -1 7017 10 10 5
+D3
+~
+~
+0 -1 7004 10 10 5
+E
+ground pavement ground jagged rocks~
+The ground here is paved with roughly hewn, granite slabs.  The slabs
+are so rough that all over their surface are jagged lumps which cut and
+tear at the feet of those passing by.  The street is kept immaculately
+clean, no dirt, no litter, no garbage is left in the street.  Possibly
+this is done to avoid sparing the feet of those lucky enough to trod on
+the cushioning that would be provided by the refuse.
+~
+E
+north store~
+No description.
+~
+E
+gilt shutters~
+No description.
+~
+E
+temple nactur thorns~
+The Temple of Nactur rises to the north from the cold, granite floor. 
+The surface of the temple is covered by thick branches carved from some
+brown stone.  The temple looks like a giant hedge stretching from the
+city floor towards the top of the niche the city is built within. 
+Stretching from the top of the temple to the ceiling of the niche is a
+thin tendril-like vine, disappearing into the celing's surface.
+~
+E
+adobe brick warehouse~
+No description.
+~
+-1
+S
+
+#7019
+Throg Street~
+Throg street is paved with the same painful, jagged granite for which the
+city roads are infamous.  The Temple of Nactur rises high, brown and
+thorny to the north-east.  A small, nondescript, thatched-roof shack lies
+to the south.  From the west comes the irritating clanking of some type
+of machinery.
+~
+[Aurelian] auction house north from hewre
+~
+33030145 1 7 0
+D0
+~
+~
+0 -1 7133 10 10 5
+D1
+~
+~
+0 -1 7004 10 10 5
+D3
+~
+~
+0 -1 7020 10 10 5
+E
+temple nactur~
+The Temple of Nactur rises to the north-east from the cold, granite floor. 
+The surface of the temple is covered by thick branches carved from some
+brown stone.  The temple looks like a giant hedge stretching from the
+city floor towards the top of the niche the city is built within. 
+Stretching from the top of the temple to the ceiling of the niche is a
+thin tendril-like vine, disappearing into the ceiling's surface.  On the
+near side of the temple, about fourty feet up, is a small oval opening
+above a smallish ledge.
+~
+E
+shack thatched-roof~
+No description.
+~
+E
+down ground pavement jagged~
+The ground here is paved with roughly hewn, granite slabs.  The slabs
+are so rough that all over their surface are jagged lumps which cut and
+tear at the feet of those passing by.  The street is kept immaculately
+clean, no dirt, no litter, no garbage is left in the street.  Possibly
+this is done to avoid sparing the feet of those lucky enough to trod on
+the cushioning that would be provided by the refuse.
+~
+-1
+S
+
+#7020
+Intersection of Slayer and Throg~
+To the west looms the massive east wall of the ore factory that provides
+most of the city's substantial wealth.  As a result, the ear-splitting
+grinding of gears and the choking smell of molten metal permeates the
+length of Slayer Street, which stretches out the the south.  To the north
+are the massive stables of Gorgon's Perch.  Within are said to be
+contained mounts of almost any desired variety.
+~
+~
+33030145 1 7 0
+D0
+~
+~
+1 -1 7124 10 10 5
+D1
+~
+~
+0 -1 7019 10 10 5
+D2
+~
+~
+0 -1 7021 10 10 5
+E
+wall factory~
+The eastern wall of the ore factory looms over Slayer Street.  The wall,
+and presumably the rest of the factory as well, is made from glazed, clay
+bricks.  What color the bricks once were is impossible to determine as
+they are covered in thick, black grime and a layer of soot.  The bottom
+level of the factory has no windows, however, the 2nd floor has a window
+opening every eight to ten feet along its length.  It is impossible to
+see in the windows because of the thick black smoke emanating from them.
+~
+E
+down ground pavement~
+The ground here is paved with roughly hewn, granite slabs.  The slabs
+are so rough that all over their surface are jagged lumps which cut and
+tear at the feet of those passing by.  The street is kept immaculately
+clean, no dirt, no litter, no garbage is left in the street.  Possibly
+this is done to avoid sparing the feet of those lucky enough to trod on
+the cushioning that would be provided by the refuse.
+~
+-1
+S
+
+#7021
+Slayer Street~
+To the west looms the massive east wall of the city's lucrative ore
+factory.  The factory's heavy wooden doors stand open, emitting a dense,
+choking smoke.  The odor from the factory-smoke is so strong the
+surounding air tastes heavy, like metal and grime.  Slayer Street,
+replete with its unforgiving pavement, continues to the north and south.
+~
+~
+33030145 1 7 0
+D0
+~
+~
+0 -1 7020 10 10 5
+D2
+~
+~
+0 -1 7022 10 10 5
+D3
+heavy wooden doors~
+heavy wooden doors~
+641 -1 7042 10 10 5
+E
+wall factory~
+The eastern wall of the ore factory looms over Slayer Street.  The wall,
+and presumably the rest of the factory as well, is made from glazed, clay
+bricks.  What color the bricks once were is impossible to determine as
+they are covered in thick, black grime and a layer of soot.  The bottom
+level of the factory has no windows, however, the 2nd floor has a window
+opening every eight to ten feet along its length.  It is impossible to
+see in the windows because of the thick black smoke emanating from them.
+~
+E
+smoke air~
+No description.
+~
+E
+door~
+No description.
+~
+E
+down ground pavement~
+The ground here is paved with roughly hewn, granite slabs.  The slabs
+are so rough that all over their surface are jagged lumps which cut and
+tear at the feet of those passing by.  The street is kept immaculately
+clean, no dirt, no litter, no garbage is left in the street.  Possibly
+this is done to avoid sparing the feet of those lucky enough to trod on
+the cushioning that would be provided by the refuse.
+~
+-1
+S
+
+#7022
+Slayer Street~
+To the west looms the massive east wall of the city's lucrative
+ore-processing factory.  The air here is filled with a thick, heavy smoke. 
+The smoke is thick enough to have given the air a metallic taste.  Slayer
+Street, replete with its unforgiving, granite pavement, continues to the
+north and south.
+~
+~
+33030145 1 7 0
+D0
+~
+~
+0 -1 7021 10 10 5
+D2
+~
+~
+0 -1 7023 10 10 5
+E
+wall factory~
+The eastern wall of the ore factory looms over Slayer Street.  The wall,
+and presumably the rest of the factory as well, is made from glazed, clay
+bricks.  What color the bricks once were is impossible to determine as
+they are covered in thick, black grime and a layer of soot.  The bottom
+level of the factory has no windows, however, the 2nd floor has a window
+opening every eight to ten feet along its length.  It is impossible to
+see in the windows because of the thick black smoke emanating from them.
+~
+E
+down ground pavement~
+The ground here is paved with roughly hewn, granite slabs.  The slabs
+are so rough that all over their surface are jagged lumps which cut and
+tear at the feet of those passing by.  The street is kept immaculately
+clean, no dirt, no litter, no garbage is left in the street.  Possibly
+this is done to avoid sparing the feet of those lucky enough to trod on
+the cushioning that would be provided by the refuse.
+~
+-1
+S
+
+#7023
+Slayer Street~
+A thick steel door, set into the wall of the ore-factory, lies to the
+west.  A placard hanging above the door informs all those interested that
+this is the place to negotiate a purchasing price for newly-processed ore. 
+Slayer Street, replete with its unforgiving pavement, continues to the
+north and south.  To the east lies the backside of an adobe building. 
+Some words are scrawled on the wall in coal-black letters.
+~
+[Aurelian] words on wall are to help w/ goblin round-up quest
+~
+33030145 1 7 0
+D0
+~
+~
+0 -1 7022 10 10 5
+D2
+~
+~
+0 -1 7024 10 10 5
+D3
+steel door~
+steel door~
+131 -1 7043 10 10 5
+E
+placard~
+-------------------------------
+| Athog Minerals and Refining |
+| Materials Disbursement Div. |
+-------------------------------
+~
+E
+backside adobe building~
+This building is made from sun-fired, adobe bricks covered with a thick
+mud-stucco.  This side of the building is rather dull with no
+distinguishing features along its dirty, light-brown surface.  Some word
+are scrawled on the wall in black coal-dust.
+~
+E
+words coal letters~
+Barely legibly scrawled on the wall in coal dust is the following :
+"All yous whoos patrols, dere bees loise gobbos chattel.  Days someweres
+stile in dis toun.  Finds and brings deres carcassys o' dere chattel
+colours to dey queen's heatd gard.  Hes gifts yous fore de trobel."
+~
+E
+down ground pavement~
+The ground here is paved with roughly hewn, granite slabs.  The slabs
+are so rough that all over their surface are jagged lumps which cut and
+tear at the feet of those passing by.  The street is kept immaculately
+clean, no dirt, no litter, no garbage is left in the street.  Possibly
+this is done to avoid sparing the feet of those lucky enough to trod on
+the cushioning that would be provided by the refuse.
+~
+-1
+S
+
+#7024
+Intersection of Slayer and Marek~
+Marek Street, the city's southernmost main thoroughfare, intersects
+briefly with Slayer Street and continues to the east.  Slayer Street,
+replete with its unforgiving pavement, proceeds on to the north.  To the
+west stand the set of heavy, banded-oak doors that prohibit free passage
+into the city's towering west turret, which serves as a watchtower.
+~
+~
+33030145 1 7 0
+D0
+~
+~
+0 -1 7023 10 10 5
+D1
+~
+~
+0 -1 7025 10 10 5
+D3
+iron banded oak door~
+iron banded oak door~
+135 7075 7032 10 10 5
+E
+watchtower turret~
+Inside the watchtower are housed several of the Queen's elite fighting
+units, ever on the watch for signs of enemy infiltration and invasion. 
+These units of heavy ogre and troll fighters and skilled orcish archers
+are grimly determined to protect their home.
+~
+-1
+S
+
+#7025
+Marek Street~
+Marek street, the city's southernmost main thoroughfare, continues to the
+east and west.  To the south stands the innermost southern wall of the
+city, the last defense against a southern invasion.  As such, the wall is
+high, thick and extremely difficult to scale, most especially because
+it's constructed of the same type of jagged, granite rocks as are the
+city roads, with the addition of one further pecadillo: the edges of the
+jagged rocks are buffed and polished into razor-sharp spikes -- even on
+the inside of the wall.  To the north is an odd-looking adobe hut.
+~
+~
+33030145 1 7 0
+D1
+~
+~
+0 -1 7000 10 10 5
+D3
+~
+~
+0 -1 7024 10 10 5
+E
+wall jagged granite spikes~
+The wall is made from thick granite blocks, extracted and carved from the
+mountain into which the city is set.  Each block, rather than having
+even, clean lines, has many jagged protrusions jutting from its surface. 
+The protrusions have been filed, buffed, and polished into razor-sharp
+spikes and edges.  The worst spikes seem to be focused on and near the
+top of the wall.  However, even the inside of the wall looks very
+treacherous for anyone foolish enough to attempt a climb.
+~
+E
+adobe hut~
+The adobe hut to the north is a smallish domed structure, out of place in
+Gorgon's Perch . It seems to have been made from sun-dried bricks with a
+thick layer of stucco applied to smooth out the rough edges.  The dome is
+ringed by blue and white mystic symbols which contrasts starkly with the
+dull, light-brown of the adobe and stucco.  On the far side of the hut is
+a tiny chimney, spewing a thin white smoke.
+~
+-1
+S
+
+#7026
+Smott Street~
+Dimly-lit, stuffy and narrow, Smott Street was intended for use as a
+private passageway between the Stronghold and the Patriarch's various
+brothels, drinking halls and other pleasuring spots, which used to line
+the street of the now public entertainment district.  Smott Street has
+the distinction of being the only road in the city paved in a smooth,
+polished tile.  Ostensibly, this reluctance to pave his private alley
+with the same jagged stone with which the rest of the city is paved, was
+because the Patriarch wished to spare the feet of the important and
+privledged special guests he often escorted to his private pleasure
+palaces.  In reality the smooth tiling was implemented in order to
+facilitate, shall we say, "other activities," for guests so impatient 
+that they took their pleasures in the alley itself.
+~
+~
+33030145 1 5 0
+D0
+~
+~
+0 -1 7027 10 10 5
+D1
+stained-red wooden door~
+stained red wooden door~
+131 -1 7034 10 10 5
+D2
+~
+~
+0 -1 7008 10 10 5
+E
+sign~
+No description.
+~
+E
+north stronghold~
+No description.
+~
+-1
+S
+
+#7027
+Smott Street~
+Dimly-lit, stuffy and narrow, Smott Street was intended for use as a
+private passageway between the Stronghold and the Patriarch's various
+brothels, drinking halls and other pleasuring spots, which used to line
+the street of the now public entertainment district.  Smott Street has
+the distinction of being the only road in the city paved in a smooth,
+polished tile.  Ostensibly, this reluctance to pave his private alley
+with the same jagged stone with shich the rest of the city is paved, was
+because the Patriarch wished to spare the feet of the important and
+privledged special guests he often escorted to his private pleasure
+palaces.  In reality the smooth tiling was implemented in order to
+facilitate, shall we say, "other activities, " for guests so impatient
+that they took their pleasures in the alley itself.
+~
+adobe warehouse north-est
+~
+33030145 1 5 0
+D0
+~
+~
+0 -1 7028 10 10 5
+D1
+oak door~
+oak door~
+131 -1 7035 10 10 5
+D2
+~
+~
+0 -1 7026 10 10 5
+D3
+~
+~
+0 -1 7030 10 10 5
+E
+sign~
+No description.
+~
+E
+north stronghold~
+No description.
+~
+E
+west alley~
+The alley to the east is barely wide enough for an ogre's shoulders to
+fit down.  The alley is clean right where it meets the street.  But about
+four feet up the alley it becomes filthy.  The ground is covered in
+debris and many small mounds of decomposing garbage.
+~
+-1
+S
+
+#7028
+Smott Street~
+Dimly-lit, stuffy and narrow, Smott Street was intended for use as a
+private passageway between the Stronghold and the Patriarch's various
+brothels, drinking halls and other pleasuring spots, which used to line
+the street of the now public entertainment district.  Smott Street has
+the distinction of being the only road in the city paved in a smooth,
+polished tile.  Ostensibly, this reluctance to pave his private alley
+with the same jagged stone with shich the rest of the city is paved, was
+because the Patriarch wished to spare the feet of the important and
+privledged special guests he often escorted to his private pleasure
+palaces.  In reality the smooth tiling was implemented in order to
+facilitate, shall we say, "other activities, " for guests so impatient
+that they took their pleasures in the alley itself.  Hanging on the wall
+is a alabaster sign covered in bright red letters.
+~
+adobe warehouse west
+~
+33030145 1 5 0
+D0
+~
+~
+0 -1 7016 10 10 5
+D1
+oak door with a sign on it~
+oak door sign~
+131 -1 7036 10 10 5
+D2
+~
+~
+0 -1 7027 10 10 5
+E
+sign~
+Scrawled on the sign in large blood red letters is the following: "No
+Loitering on Smott Street by order of the Queen.  Offenders will be made
+to work in the ore mines for a period of not less than thirty days." 
+~
+E
+north stronghold~
+No description.
+~
+-1
+S
+
+#7029
+Dark, Narrow Alley~
+This alley is just barely wide enough for a good-sized ogre to fit down. 
+The south side of the alley is made up by extremely dirty marble.  It is
+covered with the deritrius of many years.  The marble is darkened by many
+years of exposure to the smoke from the ore processing carried out in the
+western part of the city.  Caked on top of the soot and dirt are streaks
+of a crusty black substance.  There are many scratches and gouges in the
+once fine marble.  The north side of the alley is made of chipped adobe
+brick and mortar.  The bricks seem very worn and have taken quite a
+beating from the elements.  The ground is littered with debris including
+crushed bone fragments, chips of granite and adobe, old rotting cloth,
+and a few rusty pieces of iron.
+~
+~
+33030145 1 5 0
+D1
+~
+~
+0 -1 7030 10 10 5
+D3
+~
+~
+0 -1 7002 10 10 5
+E
+south marble~
+No description.
+~
+E
+crusty black substance~
+No description.
+~
+E
+scratches gouges~
+No description.
+~
+E
+adobe brick mortar~
+No description.
+~
+E
+bone debris stone granite cloth down iron~
+No description.
+~
+-1
+S
+
+#7030
+Dark, Narrow Alley~
+This alley is just barely wide enough for a good-sized ogre to fit down. 
+The south side of the alley is made up by extremely dirty marble.  It is
+covered with the deritrius of many years.  The marble is darkened by many
+years of exposure to the smoke from the ore processing carried out in the
+western part of the city.  Caked on top of the soot and dirt are streaks
+of a crusty black substance.  There are many scratches and gouges in the
+once fine marble.  The north side of the alley is made of chipped adobe
+brick and mortar.  There are a few holes in the wall to the north where
+the elements have begun the process of decomposition on the poorly
+maintained building.  The wind whistles lightly off the holes making a
+soft sound almost like the moaning of a dying man who is muffling his
+suffering in a pillow or mattress.  The ground is littered with debris
+including crushed bone fragments, chips of stone and adobe, old rotting
+cloth, and stinking piles of what can only be excrement.
+~
+search excrement should pop something worth a little everyonce in a while.
+the holes in wall to north are for goblins to look out of
+some action shuld allow accress to the goblins north
+~
+33030145 1 5 0
+D0
+~
+~
+139 -1 7039 10 10 5
+D1
+~
+~
+0 -1 7027 10 10 5
+D3
+~
+~
+0 -1 7029 10 10 5
+E
+south marble~
+No description.
+~
+E
+crusty black substance~
+No description.
+~
+E
+scratches gouges~
+No description.
+~
+E
+north adobe brick mortar~
+No description.
+~
+E
+holes~
+No description.
+~
+E
+ground debris bone stone cloth~
+No description.
+~
+E
+piles excrement~
+No description.
+~
+-1
+S
+
+#7031
+East Tower~
+~
+~
+33030145 1 9 0
+D3
+iron banded oak door~
+iron banded oak door~
+391 3403 7010 10 10 5
+D4
+~
+~
+0 -1 7122 10 10 5
+D5
+trapdoor~
+trapdoor~
+1155 -1 7071 10 10 5
+-1
+S
+
+#7032
+West Tower~
+~
+~
+33030145 1 6 0
+D1
+iron banded oak door~
+iron banded oak door~
+135 3403 7024 10 10 5
+D4
+~
+~
+0 -1 7123 10 10 5
+D5
+trapdoor~
+trapdoor~
+131 -1 7080 10 10 5
+-1
+S
+
+#7033
+Mage's Shop~
+~
+~
+33034245 0 5 0
+D1
+mahogany door~
+mahogany door~
+131 -1 7001 10 10 5
+5150 9 1509949540 3 0
+-1
+S
+
+#7034
+Butcher's~
+A terribly slovenly creature with degrees in both meat design and
+interior desecration, Agorog is known thoughout the land for his talent
+with raw flesh.  Immediately after acquiring this establishment (the
+previous owners had the honor of "contributing"to the realization of his
+greatest culinary masterpiece, roast yeti in forty-goblin sauce) he set
+about putting his desecration knowledge to use.  Notice first the
+opulent, almost ostentatious, overabundance of ever-so-slightly congealed
+blood.  It covers all surfaces of the butchery -- stained into walls,
+caked into corners, swirling in small eddies of muck on the floor.  The
+rich, deep rust-colored brown of this precious, human body-fluid
+contributes to the general ambience of the space, serving as the 
+foundation for the room's overall style: Classic
+Torture-Chamber-Nightmare, brought up-to-date by our owner with his
+addition of a rare collection of mounted elf heads.
+_____
+have agorog ask people have they heard of his cul delights?
+Have a quest to get some components for a delight
+~
+~
+66588677 0 5 0
+D1
+stained-red wooden door~
+stained red wooden door~
+131 -1 7011 10 10 5
+D3
+blood-caked door~
+blood blood-caked door~
+131 -1 7026 10 10 5
+5165 9 1509949540 3 0
+7493 17 1509949540 -1 0
+-1
+S
+
+#7035
+Hole in o'Human Tavern~
+This spacious room is really the only place in town where rowdy citizens
+are tolerated...  at least until curfew.  As a result, it's nearly always
+filled beyond capacity with singing and dancing drunkards clanking mugs,
+hopping up on tables to entertain the crowd with impromptu feats of
+belching and flatulence, and engaging in other forms of "entertainment"
+-- forms of amusement which almost always involve ogrish spears and the
+captive goblins chained to the overhead rafters.
+~
+[Aurelian] corcyx should cutome a liquid called brewed kargrut
+~
+33034245 0 5 0
+D1
+oak door~
+oak door~
+131 -1 7012 10 10 5
+D3
+oak door~
+oak door~
+131 -1 7027 10 10 5
+D4
+~
+~
+0 -1 7129 10 10 5
+1072 9 1509949540 3 0
+7483 17 1509949540 -1 0
+7484 17 1509949540 -1 0
+7486 17 1509949540 -1 0
+7487 17 1509949540 -1 0
+7488 17 1509949540 -1 0
+7489 17 1509949540 -1 0
+7490 49 1509949540 -1 1
+7490 49 1509949540 -1 3
+7491 49 1509949540 -1 49
+7462 49 1509949540 -2 0
+1252 81 1509949540 -2 0
+1252 81 1509949540 -2 0
+1252 81 1509949465 -2 0
+1252 81 1509949460 -2 0
+1252 81 1509949455 -2 0
+-1
+S
+
+#7036
+Stonefist's~
+An eerie place -- more because of its remarkable, almost psychotically
+maintained neatness than even its collection of various mounted human
+body parts (carefully dusted of course) -- this tavern is a haven only
+for the numerous military population of Gorgon's perch.  Only soldiers,
+used to the harsh discipline so favored in "the perch," could enjoy
+themselves in a watering-hole where the owner snatches up
+your dirty glass the minute you drain it and seems to never tire of
+obsessively wiping-down any empty surface.
+~
+~
+33030149 0 5 0
+D1
+immaculately polished iron door~
+immaculately polished iron door~
+131 -1 7013 10 10 5
+D3
+oak door~
+oak door~
+131 -1 7028 10 10 5
+D5
+~
+~
+0 -1 7099 10 10 5
+E
+collection mounted human parts~
+No description.
+~
+-1
+S
+
+#7037
+The Bank Foyer~
+~
+[Aurelian] these guys are the bank guards.....they should be very buff.
+~
+33030149 0 5 0
+D1
+~
+~
+0 -1 7038 10 10 5
+D2
+iron banded door~
+iron banded door~
+131 -1 7006 10 10 5
+5168 9 1509949540 3 0
+5169 9 1509949540 3 0
+-1
+S
+
+#7038
+The Bank~
+~
+[Aurelian] need attack prog for bank teller
+[Aurelian] need eq for the bank teller too
+~
+33032229 0 5 0
+D3
+~
+~
+0 -1 7037 10 10 5
+5166 9 1509949540 3 0
+-1
+S
+
+#7039
+Goblin Hideout~
+~
+~
+33030149 0 3 0
+D2
+~
+~
+139 -1 7030 10 10 5
+D5
+~
+~
+0 -1 7091 10 10 5
+2270 9 1509949540 3 0
+-1
+S
+
+#7040
+Furs, Linens, and Leather~
+~
+custom leather from local bison
+~
+33034245 0 5 0
+D1
+none~
+~
+0 -1 7002 10 10 5
+5164 9 1509949540 3 0
+7850 17 1509949540 -1 0
+-1
+S
+
+#7041
+Assorted Oddities~
+Once inside this tiny, cramped shop, even the height of noon on the
+brightest summer day you ever spent by the sea seems like a faded dream
+from an ever-diminishing world.  The walls are all painted a swallowing
+black, ornamented only by a border of softly glowing runes stretching
+completely around the room where walls meet ceiling.  The luminescence
+emanating from the runes provides the only light in the room.
+~
+[Aurelian] Add more stuff to the potion of invulnerability custom
+~
+33034245 0 5 0
+D1
+large purple wooden door~
+large purple wooden door~
+131 -1 7003 10 10 5
+E
+walls black paint~
+No description.
+~
+E
+runes border luminescence~
+No description.
+~
+5149 9 1509949540 3 0
+-1
+S
+
+#7042
+Ore Warehouse~
+~
+[Aurelian] made from glazed bricks....blackeened by the soot from the
+forges and stuff.
+Need a 2nd floor too
+~
+33030149 0 5 0
+D1
+heavy wooden doors~
+heavy wooden doors~
+641 -1 7021 10 10 5
+D2
+~
+~
+0 -1 7046 10 10 5
+D3
+~
+~
+0 -1 7047 10 10 5
+-1
+S
+
+#7043
+Athog M&R -- Ore Shop~
+~
+make silver ore pop here for azerin
+[Aurelian] Athog's 25 year old incompetant son should pop here
+~
+33034245 0 5 0
+D0
+steel door~
+steel door~
+391 -1 7046 10 10 5
+D1
+steel door~
+steel door~
+131 -1 7023 10 10 5
+D4
+~
+~
+0 -1 7121 10 10 5
+5158 9 1509949540 3 0
+-1
+S
+
+#7044
+The Jewelry Shop~
+The shop is surprisingly free of the usual ostentatious ornamentation
+that clutters a jewelry or luxury shop.  The walls are padded with
+cotton-filled sheaths of midnight-blue velvet, as though to keep out both
+light and sound.  Indeed, the only light in the room comes from the
+jewels themselves, draped haphazardly, as opposed to actually being
+displayed, in cluttered, dirty glass cases.  It seems almost as though
+this shopkeeper is rather ambivalent about whether or not his wares
+actually sell.
+~
+~
+33030149 0 5 0
+D2
+fine wooden door~
+fine wooden door~
+131 -1 7018 10 10 5
+E
+cotton sheaths velvet~
+No description.
+~
+E
+jewels cases~
+No description.
+~
+5157 9 1509949540 3 0
+-1
+S
+
+#7045
+Silver Smithy~
+An odor of sandlewood mixed with highly acidic urine assaults your
+nostrils as soon as you enter this shop.  As your feet sink down into the
+layers of thick sand which cover the floor, you suddenly realize that
+sweat is pouring off of your forehead.  It's sweltering in here!
+~
+~
+33030149 0 5 0
+D2
+fine wooden door~
+fine wooden door~
+131 -1 7017 10 10 5
+5151 9 1509949540 3 0
+-1
+S
+
+#7046
+Ore Warehouse~
+~
+~
+33030149 0 5 0
+D0
+~
+~
+0 -1 7042 10 10 5
+D2
+steel door~
+steel door~
+391 -1 7043 10 10 5
+D3
+~
+~
+0 -1 7048 10 10 5
+-1
+S
+
+#7047
+Ore Warehouse~
+~
+[Aurelian] Conveyor belt comes up here
+[Aurelian] make an action to jump down the belt (40 ft. fall cushioned by something)
+~
+33030149 0 5 0
+D1
+~
+~
+0 -1 7042 10 10 5
+D2
+~
+~
+0 -1 7048 10 10 5
+-1
+S
+
+#7048
+Ore Warehouse~
+~
+~
+33030149 0 5 0
+D0
+~
+~
+0 -1 7047 10 10 5
+D1
+~
+~
+0 -1 7046 10 10 5
+D4
+~
+~
+0 -1 7117 10 10 5
+-1
+S
+
+#7049
+Temple of Nactur~
+As you enter the temple, you're immediately saturated with a biting damp
+cold -- it penetrates through to your bones, soaking your clothes, hair,
+skin with an achingly cold, dense mist.  Additionally, your nose is
+accosted with the smell of damp earth and rotting vegetation.  Despite
+the generous proportions of the room, the wide passageways and terribly
+high viney ceiling, you're still plagued by the forboding presence of the
+same razor-sharp obsidian thorns which adorn the outside of the temple
+-- only now they're protruding out a random points all the way through
+the corridor.  Although they're easily avoided, you still feel as though
+you can't get far enough away from those ominous, spiky points.
+~
+[Aurelian] temple shared between ragezer and nactur.  It is a site of pilgramaged (like wailing wall in jerusalem or mecca for the nactur worshippers, and ragezer's primary temple)
+~
+33030149 0 6 0
+D0
+~
+~
+0 -1 7052 10 10 5
+D1
+~
+~
+0 -1 7051 10 10 5
+D2
+obsidian door~
+obsidian door~
+131 -1 7005 10 10 5
+D3
+~
+~
+0 -1 7050 10 10 5
+-1
+S
+
+#7050
+Temple of Nactur~
+~
+~
+33030149 0 5 0
+D1
+~
+~
+0 -1 7049 10 10 5
+-1
+S
+
+#7051
+Temple of Nactur~
+~
+~
+33030149 0 5 0
+D3
+~
+~
+0 -1 7049 10 10 5
+-1
+S
+
+#7052
+Temple of Nactur~
+You notice a more powerful, acrid-smelling odor overwhelming the smell of
+rotting moss and damp earth in this large chamber.  It almost feels as
+though the smell penetrates through your skin right down into your lungs,
+filling them with the somewhat metallic, somewhat earthy smell.  The
+origin of the strange odor becomes apparent to you as you look towards
+the center of the chamber and notice an immense fountain of dark lquid
+bubbling up out of the earth itself.  Every so often the fountain starts
+to emit a low hissing sound which builds in volume and intensity,
+heralding the emission of a thundrous spray of liquid so intense that it
+coats everything in the chamber, from the very ceiling to the faces of
+passing pilgrims, with a fine red sheen.
+~
+fountain of blood here
+~
+33030149 0 6 0
+D1
+~
+~
+0 -1 7053 10 10 5
+D2
+~
+~
+0 -1 7049 10 10 5
+D3
+~
+~
+0 -1 7054 10 10 5
+7078 17 1509949540 -2 13
+-1
+S
+
+#7053
+Temple of Nactur~
+~
+~
+33030149 0 6 0
+D0
+~
+~
+0 -1 7055 10 10 5
+D3
+~
+~
+0 -1 7052 10 10 5
+-1
+S
+
+#7054
+Temple of Nactur~
+~
+~
+33030149 0 6 0
+D0
+~
+~
+0 -1 7057 10 10 5
+D1
+~
+~
+0 -1 7052 10 10 5
+-1
+S
+
+#7055
+Temple of Nactur~
+~
+~
+33030149 0 6 0
+D2
+~
+~
+0 -1 7053 10 10 5
+D3
+~
+~
+0 -1 7056 10 10 5
+-1
+S
+
+#7056
+The Altar to Nactur~
+Standing directly in the center of the room is a thick obsidian column
+which rises nearly thirty-five feet from the floor.  The column has been
+carved into a winding vine similar to the spike located directly outside
+the temple.  Thick, five-inch spikes jut out at random from the column,
+each culminating in a pin-point, perpendicular to the vine.
+~
+make the corpses in the extra be a room you can climb to and get stuff
+off of them for an item 
+use the is_exhausted function here (checks move points)
+~
+33031301 0 6 0
+D1
+~
+~
+0 -1 7055 10 10 5
+D3
+~
+~
+0 -1 7057 10 10 5
+E
+3 thorns~
+There seem to be a couple of dripping, newly-impaled human corpses
+hanging from the thorns nearest the ceiling.
+~
+A
+climb~
+vine column~
+act_tochar( #vine, ch );
+act_notchar( #rmvine, ch );
+transfer( ch, find_room( 7113 ) );
+act_notchar( #arrive, ch );
+loop( followers ) {
+ch = rch;
+acode( room, 5 );
+}
+~
+E
+vine~
+You climb up the vine taking care not to impale yourself on any of the
+spikes protruding from it.
+~
+E
+rmvine~
+$n climbs up the vine carefully, trying to avoid impaling $mself on one of
+the spikes along its surface.
+~
+E
+arrive~
+No description.
+~
+!
+0 0 0
+-1
+S
+
+#7057
+Temple of Nactur~
+~
+~
+33030149 0 6 0
+D1
+~
+~
+0 -1 7056 10 10 5
+D2
+~
+~
+0 -1 7054 10 10 5
+D5
+~
+~
+0 -1 7104 10 10 5
+-1
+S
+
+#7058
+Inside the Front Gate of the Queen's Stronghold~
+~
+~
+33030149 0 7 0
+D0
+~
+~
+0 -1 7063 10 10 5
+D1
+~
+~
+0 -1 7059 10 10 5
+D2
+solid iron door~
+solid iron door~
+407 7077 7016 10 10 5
+-1
+S
+
+#7059
+Hallway in the Queen's Stronghold~
+~
+~
+33030149 0 6 0
+D0
+~
+~
+1 -1 7061 10 10 5
+D1
+~
+~
+0 -1 7060 10 10 5
+D3
+~
+~
+0 -1 7058 10 10 5
+-1
+S
+
+#7060
+Hallway in the Queen's Stronghold~
+~
+~
+33030149 0 6 0
+D0
+~
+~
+0 -1 7062 10 10 5
+D3
+~
+~
+0 -1 7059 10 10 5
+-1
+S
+
+#7061
+The Queen's Weaponsmithy~
+~
+~
+33034245 0 5 0
+D2
+~
+~
+1 -1 7059 10 10 5
+5176 9 1509949540 3 0
+-1
+S
+
+#7062
+The Queen's Armory~
+~
+[Rikahn] armor shop started, needs full inventory.  Customs to be added later
+~
+33034247 0 5 0
+D2
+~
+~
+0 -1 7060 10 10 5
+5177 9 1509949540 3 0
+7850 17 1509949540 -1 0
+-1
+S
+
+#7063
+Hallway in the Queen's Stronghold~
+~
+~
+33030149 0 7 0
+D0
+~
+~
+0 -1 7064 10 10 5
+D2
+~
+~
+0 -1 7058 10 10 5
+-1
+S
+
+#7064
+Hallway in the Queen's Stronghold~
+~
+~
+33030149 0 7 0
+D0
+~
+~
+0 -1 7069 10 10 5
+D1
+~
+~
+0 -1 7065 10 10 5
+D2
+~
+~
+0 -1 7063 10 10 5
+-1
+S
+
+#7065
+Hallway in the Queen's Stronghold~
+~
+~
+33030149 0 6 0
+D1
+~
+~
+0 -1 7066 10 10 5
+D3
+~
+~
+0 -1 7064 10 10 5
+-1
+S
+
+#7066
+Hallway in the Queen's Stronghold~
+~
+~
+33030149 0 6 0
+D0
+~
+~
+0 -1 7068 10 10 5
+D1
+~
+~
+1 -1 7067 10 10 5
+D3
+~
+~
+0 -1 7065 10 10 5
+-1
+S
+
+#7067
+Sage of Gorgon's Perch~
+~
+[Aurelian] Somad is a former Shepherd.  His advice should always be given in the form of appropriate shepherdy saytings.
+~
+33030149 0 5 0
+D3
+~
+~
+1 -1 7066 10 10 5
+5263 9 1509949540 3 0
+-1
+S
+
+#7068
+Some Room~
+~
+~
+33030149 0 5 0
+D2
+~
+~
+0 -1 7066 10 10 5
+-1
+S
+
+#7069
+The Throne Room~
+~
+throne should provide invlunderablity to anyone sitting at it
+! make throne only seat one !
+~
+33030149 0 7 0
+D1
+liridium door covered in runes and sigils~
+liridium door runes sigils~
+407 7076 7070 10 10 5
+D2
+~
+~
+0 -1 7064 10 10 5
+7080 17 1509949540 -2 0
+5178 9 1509949540 2 0
+-1
+S
+
+#7070
+The Queen's Bedchambers~
+~
+~
+33030149 0 8 0
+D3
+liridium door with the fur of a yeti hanging on it~
+liridium door yeti fur~
+407 7076 7069 10 10 5
+D5
+~
+~
+0 -1 7109 10 10 5
+-1
+S
+
+#7071
+Carved Tunnel~
+~
+~
+33030149 11 6 0
+D3
+~
+~
+0 -1 7072 10 10 5
+D4
+trapdoor~
+~
+1155 -1 7031 10 10 5
+-1
+S
+
+#7072
+Carved Tunnel~
+~
+~
+33030149 11 6 0
+D1
+~
+~
+0 -1 7071 10 10 5
+D3
+~
+~
+0 -1 7073 10 10 5
+-1
+S
+
+#7073
+Carved Tunnel~
+~
+~
+33030149 11 6 0
+D1
+~
+~
+0 -1 7072 10 10 5
+D3
+~
+~
+0 -1 7074 10 10 5
+-1
+S
+
+#7074
+Carved Tunnel~
+~
+~
+33030149 11 6 0
+D1
+~
+~
+0 -1 7073 10 10 5
+D3
+~
+~
+0 -1 7075 10 10 5
+-1
+S
+
+#7075
+Carved Tunnel~
+~
+~
+33030149 11 6 0
+D1
+~
+~
+0 -1 7074 10 10 5
+D3
+~
+~
+0 -1 7076 10 10 5
+-1
+S
+
+#7076
+Carved Tunnel~
+~
+~
+33030149 11 6 0
+D1
+~
+~
+0 -1 7075 10 10 5
+D3
+~
+~
+0 -1 7077 10 10 5
+-1
+S
+
+#7077
+Carved Tunnel~
+~
+~
+33030149 11 6 0
+D0
+~
+~
+0 -1 7081 10 10 5
+D1
+~
+~
+0 -1 7076 10 10 5
+D3
+~
+~
+0 -1 7078 10 10 5
+-1
+S
+
+#7078
+Carved Tunnel~
+Under Construction.
+~
+~
+33030149 11 6 0
+D1
+~
+~
+0 -1 7077 10 10 5
+D3
+~
+~
+0 -1 7079 10 10 5
+-1
+S
+
+#7079
+Carved Tunnel~
+Under Construction.
+~
+~
+33030149 11 6 0
+D1
+~
+~
+0 -1 7078 10 10 5
+D3
+~
+~
+0 -1 7080 10 10 5
+-1
+S
+
+#7080
+Carved Tunnel~
+~
+~
+33030149 11 9 0
+D1
+~
+~
+0 -1 7079 10 10 5
+D4
+trapdoor~
+~
+131 -1 7032 10 10 5
+-1
+S
+
+#7081
+Wide Cavern~
+Under Construction.
+~
+~
+33030149 11 8 0
+D0
+~
+~
+0 -1 7082 10 10 5
+D2
+~
+~
+0 -1 7077 10 10 5
+-1
+S
+
+#7082
+Wide Cavern~
+Under Construction.
+~
+~
+33030149 11 9 0
+D0
+~
+~
+0 -1 7084 10 10 5
+D1
+~
+~
+0 -1 7083 10 10 5
+D2
+~
+~
+0 -1 7081 10 10 5
+-1
+S
+
+#7083
+Wide Cavern~
+Under Construction.
+~
+~
+33030149 11 9 0
+D3
+~
+~
+0 -1 7082 10 10 5
+-1
+S
+
+#7084
+Wide Cavern~
+Under Construction.
+~
+~
+33030149 11 9 0
+D0
+~
+~
+0 -1 7086 10 10 5
+D2
+~
+~
+0 -1 7082 10 10 5
+D3
+~
+~
+0 -1 7085 10 10 5
+-1
+S
+
+#7085
+Wide Cavern~
+Under Construction.
+~
+~
+33030149 11 9 0
+D1
+~
+~
+0 -1 7084 10 10 5
+-1
+S
+
+#7086
+Wide Cavern~
+Under Construction.
+~
+~
+33030149 11 9 0
+D0
+~
+~
+0 -1 7087 10 10 5
+D2
+~
+~
+0 -1 7084 10 10 5
+-1
+S
+
+#7087
+Wide Cavern~
+Under Construction.
+~
+~
+33030149 11 9 0
+D0
+~
+~
+0 -1 7092 10 10 5
+D2
+~
+~
+0 -1 7086 10 10 5
+-1
+S
+
+#7088
+Wide Cavern~
+Under Construction.
+~
+~
+33030149 11 9 0
+D0
+~
+~
+0 -1 7093 10 10 5
+D1
+~
+~
+0 -1 7089 10 10 5
+-1
+S
+
+#7089
+Wide Cavern~
+Under Construction.
+~
+~
+33030149 11 9 0
+D2
+~
+~
+0 -1 7090 10 10 5
+D3
+~
+~
+0 -1 7088 10 10 5
+-1
+S
+
+#7090
+Wide Cavern~
+Under Construction.
+~
+~
+33030149 11 9 0
+D0
+~
+~
+0 -1 7089 10 10 5
+D2
+~
+~
+0 -1 7091 10 10 5
+-1
+S
+
+#7091
+Wide Cavern~
+Under Construction.
+~
+~
+33030149 11 9 0
+D0
+~
+~
+0 -1 7090 10 10 5
+D4
+~
+~
+0 -1 7039 10 10 5
+-1
+S
+
+#7092
+Wide Cavern~
+Under Construction.
+~
+~
+33030149 11 9 0
+D0
+~
+~
+0 -1 7103 10 10 5
+D1
+~
+~
+0 -1 7093 10 10 5
+D2
+~
+~
+0 -1 7087 10 10 5
+D3
+~
+~
+0 -1 7100 10 10 5
+-1
+S
+
+#7093
+Wide Cavern~
+Under Construction.
+~
+~
+33030149 11 9 0
+D1
+~
+~
+0 -1 7095 10 10 5
+D2
+~
+~
+0 -1 7088 10 10 5
+D3
+~
+~
+0 -1 7092 10 10 5
+-1
+S
+
+#7094
+Wide Cavern~
+Under Construction.
+~
+~
+33030149 11 9 0
+D2
+~
+~
+0 -1 7096 10 10 5
+D3
+~
+~
+0 -1 7095 10 10 5
+-1
+S
+
+#7095
+Wide Cavern~
+Under Construction.
+~
+~
+33030149 11 9 0
+D1
+~
+~
+0 -1 7094 10 10 5
+D3
+~
+~
+0 -1 7093 10 10 5
+-1
+S
+
+#7096
+Wide Cavern~
+Under Construction.
+~
+~
+33030149 11 9 0
+D0
+~
+~
+0 -1 7094 10 10 5
+D1
+~
+~
+0 -1 7097 10 10 5
+-1
+S
+
+#7097
+Wide Cavern~
+Under Construction.
+~
+~
+33030149 11 9 0
+D2
+~
+~
+0 -1 7098 10 10 5
+D3
+~
+~
+0 -1 7096 10 10 5
+-1
+S
+
+#7098
+Wide Cavern~
+Under Construction.
+~
+~
+33030149 11 9 0
+D0
+~
+~
+0 -1 7097 10 10 5
+D2
+~
+~
+0 -1 7099 10 10 5
+-1
+S
+
+#7099
+Wide Cavern~
+Under Construction.
+~
+~
+33030149 11 9 0
+D0
+~
+~
+0 -1 7098 10 10 5
+D4
+~
+~
+0 -1 7036 10 10 5
+-1
+S
+
+#7100
+Wide Cavern~
+Under Construction.
+~
+~
+33030149 11 9 0
+D1
+~
+~
+0 -1 7092 10 10 5
+D3
+~
+~
+0 -1 7101 10 10 5
+-1
+S
+
+#7101
+Wide Cavern~
+Under Construction.
+~
+~
+33030149 11 9 0
+D1
+~
+~
+0 -1 7100 10 10 5
+D2
+~
+~
+0 -1 7102 10 10 5
+-1
+S
+
+#7102
+Wide Cavern~
+Under Construction.
+~
+leads to hydropower place and underground river
+~
+33030149 11 9 0
+D0
+~
+~
+0 -1 7101 10 10 5
+-1
+S
+
+#7103
+Wide Cavern~
+Under Construction.
+~
+~
+33030149 11 9 0
+D0
+~
+~
+0 -1 7104 10 10 5
+D2
+~
+~
+0 -1 7092 10 10 5
+-1
+S
+
+#7104
+Wide Cavern~
+~
+~
+33030149 11 9 0
+D1
+~
+~
+0 -1 7105 10 10 5
+D2
+~
+~
+0 -1 7103 10 10 5
+D3
+~
+~
+0 -1 7110 10 10 5
+D4
+~
+~
+0 -1 7057 10 10 5
+-1
+S
+
+#7105
+Wide Cavern~
+~
+~
+33030149 11 9 0
+D1
+~
+~
+0 -1 7106 10 10 5
+D3
+~
+~
+0 -1 7104 10 10 5
+-1
+S
+
+#7106
+Wide Cavern~
+~
+~
+33030149 11 9 0
+D1
+~
+~
+0 -1 7107 10 10 5
+D3
+~
+~
+0 -1 7105 10 10 5
+-1
+S
+
+#7107
+Wide Cavern~
+~
+~
+33030149 11 9 0
+D1
+~
+~
+0 -1 7108 10 10 5
+D3
+~
+~
+0 -1 7106 10 10 5
+-1
+S
+
+#7108
+Wide Cavern~
+~
+~
+33030149 11 9 0
+D1
+~
+~
+0 -1 7109 10 10 5
+D3
+~
+~
+0 -1 7107 10 10 5
+-1
+S
+
+#7109
+Wide Cavern~
+~
+[Sleeping] disabled unicorn enter thing for now because bug message every 5 minutes
+~
+33030149 11 9 0
+D3
+~
+~
+0 -1 7108 10 10 5
+D4
+~
+~
+0 -1 7070 10 10 5
+-1
+S
+
+#7110
+Wide Cavern~
+~
+~
+33030149 11 9 0
+D1
+~
+~
+0 -1 7104 10 10 5
+D3
+~
+~
+0 -1 7111 10 10 5
+-1
+S
+
+#7111
+Wide Cavern~
+~
+~
+33030149 11 9 0
+D0
+~
+~
+0 -1 7112 10 10 5
+D1
+~
+~
+0 -1 7110 10 10 5
+-1
+S
+
+#7112
+Wide Cavern~
+Under Construction.
+~
+leads deeper into the underdark towards the kuo-toan city and the
+jermalaines 
+~
+33030149 11 9 0
+D2
+~
+~
+0 -1 7111 10 10 5
+-1
+S
+
+#7113
+On the Obsidian Vine~
+This is a really long line toy show stefany an example of how it'll parse
+the wordes out correctly and stuff.  Thid small niche carved out of the
+side of the vine forms a small bedroom.  The walls are completely covered
+in red and green tapestries and the floor is smooth, polished obsidian,
+almost mirror-like 
+~
+~
+33030149 0 5 0
+D4
+~
+~
+0 -1 7114 10 10 5
+-1
+S
+
+#7114
+On the Obsidian Vine~
+~
+corpse in this room
+~
+33030149 0 5 0
+D4
+~
+~
+0 -1 7115 10 10 5
+D5
+~
+~
+0 -1 7113 10 10 5
+-1
+S
+
+#7115
+On Top of the Temple~
+Make a good view of the town from here
+gate to the south, cavern top....or niche top is up and south
+to the east and west can barely see thre sky from this angle.
+----
+Have some way of getting up from here to the top of the niche and have a
+tunnel go into the caves from there.
+~
+~
+33030144 0 8 0
+D5
+~
+~
+0 -1 7114 10 10 5
+-1
+S
+
+#7116
+Outside Gorgon's Perch~
+~
+make desc so that it is clear one should no t pound or knock on the gate
+set it to do minimal damage 'scuffing knuckes' if someone knocks.
+correct action should be call guard or something like that.
+~
+33030145 1 9 0
+D0
+iron porticullis~
+iron porticullis~
+343 -1 7000 10 10 5
+D2
+~
+~
+0 -1 7138 10 10 5
+5152 9 1509949540 3 0
+5152 9 1509949540 3 0
+-1
+S
+
+#7117
+Ore Warehouse -- 2nd Floor~
+Under Construction.
+~
+~
+33030149 0 7 0
+D0
+~
+~
+0 -1 7120 10 10 5
+D1
+~
+~
+0 -1 7118 10 10 5
+D5
+~
+~
+0 -1 7048 10 10 5
+-1
+S
+
+#7118
+Ore Warehouse -- 2nd Floor~
+Under Construction.
+~
+[Aurelian] make a way to jump out (20 ft. drop)
+[Aurelian] Rikhan helped write a look window ex.
+~
+33030149 0 7 0
+D0
+~
+~
+0 -1 7119 10 10 5
+D3
+~
+~
+0 -1 7117 10 10 5
+A
+look~
+window~
+act_tochar( #looking, ch );
+transfer( ch, find_room( 7022 ) );
+transfer( ch, find_room( 7118 ) );
+continue;
+~
+E
+looking~
+You look through the window and find...
+~
+!
+0 0 0
+-1
+S
+
+#7119
+Ore Warehouse -- 2nd Floor~
+Under Construction.
+~
+[Aurelian] windows to stereet.  Make way to look down if possible.
+[Aurelian] make a way to jump out (20 ft. drop)
+~
+33030149 0 7 0
+D2
+~
+~
+0 -1 7118 10 10 5
+D3
+~
+~
+0 -1 7120 10 10 5
+-1
+S
+
+#7120
+Ore Warehouse -- 2nd Floor~
+Under Construction.
+~
+~
+33030149 0 7 0
+D1
+~
+~
+0 -1 7119 10 10 5
+D2
+~
+~
+0 -1 7117 10 10 5
+-1
+S
+
+#7121
+Athog M&R -- Accounting~
+~
+[Aurelian] should be something for the lighty quest to shut down the ore
+factory up here.  Some sort of invoice or something to help them along
+the way.
+just imagine the fun to be had with ogre accountants
+~
+33030149 0 5 0
+D5
+~
+~
+0 -1 7043 10 10 5
+-1
+S
+
+#7122
+Top of the East Tower~
+~
+[Aurelian] add an extra about the temple, the roof of cavern, and the view of the plateau in front of gorgon's perch
+[Aurelian] also add a thing for the colluseum
+~
+33030145 1 9 0
+D5
+~
+~
+0 -1 7031 10 10 5
+5512 9 1509949540 3 0
+-1
+S
+
+#7123
+Top of the West Tower~
+Under Construction.
+~
+[Aurelian] see notes in top of east tower for desc ideas
+~
+33030145 1 9 0
+D5
+~
+~
+0 -1 7032 10 10 5
+5512 9 1509949540 3 0
+-1
+S
+
+#7124
+Stables~
+This is the stables of Gorgon's Perch.  The smells of a variety of beasts
+and their excrement assail your nostrils.  To the west are the stalls of
+the many riding beasts.  You can hear the whinny of horses as well as the
+braying of donkeys and camels.  You could also swear you hear hissing as
+if from some giant reptilian beast.
+~
+[Aurelian] Stables about 66% done.  Need to discuss mount types for approval.
+~
+66846755 0 8 0
+D2
+~
+~
+1 -1 7020 10 10 5
+D3
+~
+~
+0 -1 7132 10 10 5
+-1
+S
+
+#7125
+Colluseum Entry~
+The entrance to the Colluseum is flanked by large, marble statues of great ogrish heros.
+~
+[Aurelian] this part built completeely by the ogres, w/slave gnomish labor of course.
+~
+33030145 1 9 0
+D1
+~
+~
+0 -1 7126 10 10 5
+D3
+~
+~
+0 -1 7013 10 10 5
+-1
+S
+
+#7126
+Passage to the Colluseum~
+This wide corridor leads from the harsh streets of Gorgon's Perch to the
+seating area in the Colluseum.  The walls are made from blocks of heavy
+granite intricately carved with bas-relief of battles and fights.  The
+floor is a relief from the harsh streets of Gorgon's Perch as it is
+smooth and doesn't cut into the feet of all passerbys.  From the east you
+can already hear the din of the assembled crowd.  To the west, above the
+exit, is a large sign written in bright blue letters.
+~
+[Aurelian] extra of a sign for the vomitorium
+~
+33030145 1 9 0
+D1
+~
+~
+0 -1 7127 10 10 5
+D3
+~
+~
+0 -1 7125 10 10 5
+E
+sign~
+The sign has written on it in bright blue letters:
+'Vomitorium'
+~
+-1
+S
+
+#7127
+Overlooking the Colluseum Floor~
+Under Construction.
+~
+[Aurelian] build the colluseum up later
+~
+33030145 1 9 0
+D3
+~
+~
+0 -1 7126 10 10 5
+D5
+~
+~
+0 -1 7128 10 10 5
+-1
+S
+
+#7128
+Colluseum Floor~
+Under Construction.
+~
+~
+33030145 1 9 0
+D0
+~
+~
+0 -1 7131 10 10 5
+D1
+~
+~
+0 -1 7130 10 10 5
+D4
+~
+~
+0 -1 7127 10 10 5
+-1
+S
+
+#7129
+Bunks in the Hole in o'Human Tavern~
+~
+[Aurelian] do desc on the bunkbed
+~
+33034245 0 5 0
+D5
+~
+~
+0 -1 7035 10 10 5
+7482 17 1509949540 -2 0
+7482 17 1509949540 -2 0
+5175 9 1509949540 0 0
+-1
+S
+
+#7130
+Colluseum Floor~
+Under Construction.
+~
+~
+33030145 1 9 0
+D3
+~
+~
+0 -1 7128 10 10 5
+-1
+S
+
+#7131
+Colluseum Floor~
+Under Construction.
+~
+~
+33030145 1 9 0
+D2
+~
+~
+0 -1 7128 10 10 5
+-1
+S
+
+#7132
+Stables~
+This is the stables of Gorgon's Perch..  The smells of a variety of
+beasts and their excrement assail your nostrils.  To the south you hear
+the whinny of horses and the braying of donkeys and camels.  To the north
+you can hear an occasional trumpetting noise and the loud thumping of
+some massive creature.  Further to the west you hear a softer hissing
+noise.  To the east is the exit from the stables back on to the harsh
+streets of Gorgon's Perch.
+~
+~
+66846755 0 8 0
+D0
+~
+~
+0 -1 7137 10 10 5
+D1
+~
+~
+0 -1 7124 10 10 5
+D2
+~
+~
+0 -1 7136 10 10 5
+D3
+~
+~
+0 -1 7134 10 10 5
+-1
+S
+
+#7133
+auction house~
+Under Construction.
+~
+~
+33030145 1 9 0
+D2
+~
+~
+0 -1 7019 10 10 5
+-1
+S
+
+#7134
+Stables~
+This is the west end of the stables of Gorgon's Perch.  The smells of a
+variety of beasts and their excrement assail your nostrils.  The most
+powerful smell is similar to the smell of sun roasted almonds, a sure
+sign of giant reptiles.  To the south are the stalls containing these
+reptilian mounts.  Hissing and gurgling noises can be heard emanating
+from the stalls.  The air floating in from the south feels unusually warm
+as if something was heating the room.  To the east is the center of the
+stables and far to the east is the exit from the stables to the harsh
+streets of Gorgon's Perch.
+~
+~
+66846755 0 8 0
+D1
+~
+~
+0 -1 7132 10 10 5
+D2
+~
+~
+0 -1 7135 10 10 5
+-1
+S
+
+#7135
+Stables for Reptiles~
+This room is almost unbearably warm.  The floor has small holes cut in it
+in a number of places from which heated steam escapes.  All around the
+edges of the room are stalls filled with giant lizards of all kinds.
+~
+[Aurelian] finish up the description once the types of lizards are approved
+~
+66846755 0 8 0
+D0
+~
+~
+0 -1 7134 10 10 5
+-1
+S
+
+#7136
+Stables for Mammals~
+Around you are the stalls holding all the mammalian mounts held in the
+stables.  Horses snort and whinny; Donkeys bray and pace; Camels snort
+and spit upon the floor outside their stalls.  The combined affect is a
+chaotic jumble of noise and motion.  Despite all this the stalls are
+among the cleanest you have ever seen.  No scrap of hay is found outside
+the stalls except that which is neatly bundled in preparation for
+cleaning the stalls sometime later today.
+~
+~
+66846755 0 8 0
+D0
+~
+~
+0 -1 7132 10 10 5
+-1
+S
+
+#7137
+Stables for Large Mounts~
+~
+[Aurelian] Elephants, Rhinos, and others?
+~
+66846755 0 9 0
+D2
+~
+~
+0 -1 7132 10 10 5
+-1
+S
+
+#7138
+Path Outside Gorgon's Perch~
+Under Construction.
+~
+[Guin] Tar'ippal lies south eastish.. throught the everwinters. This place is high up on the mountains..
+~
+33030145 1 9 0
+D0
+~
+~
+0 -1 7116 10 10 5
+-1
+S
+
+#0
+

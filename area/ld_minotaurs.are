@@ -1,0 +1,4395 @@
+#M2_AREA
+2
+
+Forgotten Isle~
+Void Estrella Yrna Cayln Guin~
+Forgotten Isle~
+~
+~
+
+80 0
+0
+1
+#ROOMS
+
+#12750
+Nothing~
+Under Construction 
+~
+[Void] Mobs:
+Mino Guard 171 - reviewed/Guin
+Mino Warrior 465 - reviewed/Guin
+Mino Bodyguard 1227 - copy of mino warrior - reviwed/Guin
+Red Hydra - 1322
+Mino Statue 173 - reviewed/Guin
+Blood-covered statue - 772 (copy of above) - Reviewed/Guin
+Mino Armorer 1989 - Reviewed Guin
+Mino Sorceror 492 - Reviewed/Guin
+Mino Priest 915 - Reviewed/Guin
+Mino King 979 - reviewed/Guin
+
+[Void] Objects
+- Chain Wand 3841 - reviewed/Guin
+bloody mantle of the damned 3844 - reviewed/Guin
+bloody sleeves of the damned 3845 - Reviewed/Guin
+bloody leggings of the damned 3846 - reviewed/Guin
+boots of enlightenment 3856 - reviewed/Guin
+belt of revival 3855 - Reviewed/Guin
+stone of faith 3857 - reviewed/Guin
+battle axe of blood lust 3858 - Reviewed/Guin
+horned helmet 3859 - Reviewed/Guin
+mace of the ecclesiastic 3860 - Reviewed/Guin
+ring of power 3582 - Reviewed/Guin
+~
+167247872 12 9 0
+-1
+S
+
+#12751
+Winding trail~
+The surrounding area is well sheltered, with a series of vast granite
+rocks to the east barring the strong wind and spray from the sea. 
+Several nesting areas can be seen within the quiescent cove; the smell of
+rotting food and bird droppings lingers in the calm air.  Further toward
+the west a large cliff can be seen stretching high into the sky and a
+winding path leads off to the south.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 12 9 0
+D2
+~
+~
+0 -1 12796 10 10 5
+D3
+~
+~
+0 -1 12752 10 10 5
+D4
+~
+~
+235 -1 12812 10 10 5
+E
+nest bird~
+The remnants of shattered eggshells and rotting food lie amongst the
+nests that are visible, but there is no sign of where the constant
+squawking sound originates.
+~
+E
+Vast granite rocks~
+The huge craggy rocks line the eastern shore creating a wind break and
+their vast size barring all sight of the ocean.
+~
+A
+~
+~
+set_integer( ch, "/vaco/practicechallenge", 0 );
+continue;
+~
+!
+3 0 12
+A
+~
+~
+set_integer( ch, "/vaco/practicechallenge", 0 );
+continue;
+~
+!
+1 0 12
+2770 9 1509949540 3 0
+-1
+S
+
+#12752
+Cliff face~
+A jagged rock face surrounds this area, its cracked surfaces blocking any
+access to the north and south.  The rock itself is reddish in colour and
+forms the base of a cliff that reaches far into the sky.  About twenty
+yards up the cliff-face on the western side, a vast ebon opening can be
+seen retreating into a stygian blackness.  Clinging to the rock, a matted
+tangle of thick verdant vines drapes down the cliff face, its knotted
+tendrils disappearing into the darkness of the cave beyond.
+~
+[Void] cli vine to get up
+[Yrna] Done. - Love the vine!
+[Guin] Done.
+~
+167247872 5 9 0
+D1
+~
+~
+0 -1 12751 10 10 5
+D4
+~
+~
+510 -1 12753 10 10 5
+E
+opening~
+From within the opening long, thick vines cascade down the rock and onto
+to the ground below.
+~
+E
+vines~
+The leafless vines are thick and sturdy, providing access to the opening
+above.
+~
+A
+climb~
+vine~
+if( find_skill( ch, climb ) > random( 5, 7 ) ) {
+  send_to_char( #to_char, ch );
+  act_notchar( #to_room, ch );
+  transfer( ch, find_room( 12753 ) );
+  act_notchar( #climb, ch, obj, mob, sight );
+}
+else {
+  send_to_char( #fail, ch );
+  act_notchar( #failed, ch );
+  position( ch, 6 );
+  end;
+}
+~
+E
+to_char~
+@GYou grab hold of some vines and climb up into the cave above.@n
+~
+E
+to_room~
+@G$n grabs hold of some vines, and climbs into the cave above.@n
+~
+E
+fail~
+@BAs you try to climb up the cliff you lose your grip on the vine and
+tumble to the floor!@n 
+~
+E
+failed~
+@BAs $n tries to climb up the cliff $s loses grip on the vine and tumbles
+to the floor!@n 
+~
+E
+climb~
+$n pulls $mself the last few feet up the cliff.
+~
+!
+0 50 0
+A
+~
+~
+send_to_room(#rumbling, room );
+wait(2);
+send_to_room(#falling, room );
+wait(1);
+send_to_room(#towards, room );
+wait(1);
+loop( all_in_room )
+  if( !is_mob( rch ) )
+  damage( mob, rch, 10d10+100, physical, "The crushing boulder" )
+~
+E
+rumbling~
+@RThe rumbling of falling rocks can be heard at the top of the cliff.@n
+~
+E
+falling~
+@RThe sound of falling rocks becomes louder.@n
+~
+E
+towards~
+@RLarge boulders come hurtling towards you.@n
+~
+!
+2 150 0
+A
+swing hop jump~
+vine~
+if( !rflag( reset0, room ) ) {
+  act_tochar( #already, ch );
+  end;
+}
+remove_rflag( reset0, room );
+send_to_char( #swing1, ch );
+act_notchar( #oswing1, ch );
+wait( 1 );
+send_to_char( #swing2, ch );
+act_notchar( #oswing2, ch );
+wait( 1 );
+if( random( 1, 5 ) == 3 ) {
+  send_to_char( #swing3, ch );
+  act_notchar( #oswing3, ch );
+  wait( 1 );
+  send_to_char( #swing4, ch );
+  act_notchar( #oswing4, ch );
+  damage( mob, ch, 10d30, physical, "The sharp outcropping of rocks" );
+}
+else {
+  act_tochar( #success, ch );
+  act_notchar( #nsuccess, ch );
+}
+set_rflag( reset0, room );
+~
+E
+swing1~
+@GYou grab a leafy vine and start swinging back and forth playfully.@n
+~
+E
+swing2~
+@GYou swing yourself faster, enjoying the wind on your face.@n
+~
+E
+swing3~
+@GSuddenly, the vine catches on an outcropping of rock!@n
+~
+E
+oswing1~
+@G$n grabs a leafy vine and swings about playfully.@n
+~
+E
+oswing2~
+@G$n swings $mself faster, enjoying the wind on $s face.@n
+~
+E
+oswing3~
+@GSuddenly, the vine catches on an outcropping of rock!@n
+~
+E
+swing4~
+@RYou lose control and slam into the rocky cliff!@n
+~
+E
+oswing4~
+@R$n loses control and slams into the rocky cliff!@n
+~
+E
+success~
+@GYou carefully let go of the vine and jump down to the ground.@n 
+~
+E
+nsuccess~
+@G$n carefully lets go of the vine and jumps down to the ground.@n 
+~
+E
+already~
+@YWait your turn!  Someone else is currently enjoying the swinging vine.@n
+~
+!
+0 0 0
+-1
+S
+
+#12753
+Cave Entrance~
+Small, reddish coloured boulders lie scattered around this dark, foul
+smelling cave.  Thick vines lie across the floor growing from the eastern
+opening.  Toward the west of the darkened cave, the boulders become
+deminished in number, giving the impression that the floor may have been
+cleared to create the start of an underground passageway.
+~
+[Guin] Done.
+[Aldric] needs an entry message
+~
+167378948 11 9 0
+D3
+~
+~
+0 -1 12754 10 10 5
+D5
+~
+~
+510 -1 12752 10 10 5
+E
+boulders~
+Patches of dark moss grow over the majority of the boulders even the
+smallest of which would be nearly impossible to move.
+~
+E
+vine~
+The vines are healthy and strong and can easily be used to climb out of
+the opening.
+~
+E
+1 west passageway~
+Against the western wall of the sinister-feeling cave, a shadowy opening
+leads to a tunnel snaking through the mountain's interior.
+~
+A
+climb~
+vine 1 down~
+send_to_char( #to_char, ch );
+act_notchar( #to_room, ch );
+transfer( ch, find_room( 12752));
+act_notchar( #drop, ch, obj, mob, sight );
+~
+E
+to_char~
+@GYou grab hold of some vines and climb down out of the cave.@n
+~
+E
+to_room~
+@G$n grabs hold of some vines, and climbs down out of the cave.@n
+~
+E
+drop~
+$n drops the last few feet to the ground.
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yStepping into the shadowed opening, you enter the tunnel to the west.@n
+~
+E
+to_room~
+@yStepping into the shadowed opening, $n enters the tunnel to the west.@n
+~
+!
+3 0 8
+-1
+S
+
+#12754
+Subterranean Passage~
+Tall columns of rock rise from the ground, creating pillars that support
+the ceiling of this chamber.  The rock, old as time and hard as iron,
+is carved with words and is shaped to form vast corridors as tall as
+ten men.  The floor is unnaturally smooth and cool to touch.  The ground
+vibrates very slightly and a quiet hum resonates throughout the whole
+passageway.
+~
+[Guin] Done.
+~
+167378948 11 9 0
+D1
+~
+~
+0 -1 12753 10 10 5
+D2
+~
+~
+0 -1 12755 10 10 5
+E
+rock~
+The rock is grey in colour and shot throughout with flecks of red.
+~
+E
+floor~
+The floor is strangely smooth; definitely not of natural formation.
+~
+E
+Columns~
+The columns are enormous, made from carved stone and rise from the earth
+creating the strength to prevent the chamber from collapsing.
+~
+E
+old carved words~
+In that dreaded place, beneath the moon's pale gaze, damned men walk. 
+They hunt the labyrinths in the breathless, windless night.  They
+brandish their weapons in mocking challenge to all life, and sometimes in
+deep hard voices, like the thunder and rain, shout the one word, the word
+of their ancient, dark master.  They shout "GARNORGOTH", the prince of
+darkness.
+~
+A
+touch~
+floor~
+damage( mob, ch, 5d40, cold, "The floor's chill touch" );
+~
+!
+0 0 0
+-1
+S
+
+#12755
+Gateway of the Ancients~
+Terrific columns stand in line rising from the floor to the ceiling, like
+carved sentinels looking down guarding the hallway.  A huge stone tablet
+has been fashioned directly into the stone floor.  To the west stands an
+immense gateway adorned in strange runes and symbols.
+~
+[Void] Yell Garnorgoth to open the gateway
+[Yrna] Done.
+[Guin] Done.
+~
+167378949 11 9 0
+D0
+~
+~
+0 -1 12754 10 10 5
+D2
+~
+~
+0 -1 12756 10 10 5
+D3
+gateway~
+~
+211 -1 12757 10 10 5
+E
+columns~
+The columns are huge, made from interlocking carved stones, their size and
+form shadowing the area, creating a feeling of unease.
+~
+E
+stone tablet runes symbols~
+Here lies the gateway to confusion, an entrance to chaos itself. 
+Guardians have stood in rock for timeless ages watching this place.  Pay
+heed now, and go no further.  This place is cursed throughout all
+eternity.  This gateway has been sealed to keep the inside in, and the
+foolish out.
+~
+E
+gate gateway west~
+The gate stands approximately thirty feet in height and stretches the
+entire width of this extensive corridor.  Adorned with unintelligible
+runes and symbols, the gate is sealed tight with no apparent way to gain
+access.
+~
+A
+yell~
+garnorgoth~
+act_tochar( #garn, ch );
+act_notchar( #ngarn, ch );
+wait( 1 );
+if( !is_open( room, west ) ) {
+  send_to_room( #open, room );
+  send_to_room( #open, find_room( 12757 ) );
+  open( room, west );
+  end;
+}
+send_to_room( #close, room );
+send_to_room( #close, find_room( 12757 ) );
+close( room, west );
+~
+E
+garn~
+You yell: @R"GARNORGOTH".@n
+~
+E
+ngarn~
+$n yells the word: @R"GARNORGOTH".@n
+~
+E
+open~
+@CThe gateway emits a low crunching noise and slowly the doors open.@n
+~
+E
+close~
+@CThe gateway emits a low crunching noise and slowly the doors close.@n
+
+~
+!
+0 0 0
+A
+bang~
+gateway~
+act_tochar( #bang, ch );
+act_notchar( #n_bang, ch );
+~
+E
+bang~
+@CYou bang the gates as hard as you can, but nothing happens.@n
+~
+E
+n_bang~
+@C$n furiously bangs on the gates, but nothing happens.@n
+~
+!
+0 0 0
+-1
+S
+
+#12756
+Room of the Ages~
+Huge stone statues are inset in arched alcoves along the entire length of
+the room.  The chamber is vast, at least the length of one hundred men and
+width of fifty men lying head to toe.  The floor of this room is covered
+with a thick sheet of mist, obscuring what may lie beneath.  Ivy has
+grown vigorously up one alcove on the west wall, stretching across the
+vast ceiling and down the wall to the east.  The only exit is back to the
+north.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378949 11 9 0
+D0
+~
+~
+0 -1 12755 10 10 5
+E
+statues stone~
+The man-like statues are hewn from a deep red granite, and stand a proud
+fifteen feet tall.  The statues are of creatures with impressively
+muscular, broad shoulders, beast-like legs and a human torso.  The
+piercing eyes of the bull-shaped heads, with horns twisting menacingly
+stare down at you impassively.
+~
+E
+alcove~
+The alcove has been overrun with ivy.  Tiny cracks line the internal
+structure of the wall where the masonry has weathered and worn over
+centuries of time.
+~
+E
+ivy~
+The ivy is twisted and gnarled, and has embedded itself into the wall.
+~
+A
+search move~
+ivy~
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  i = random( 0, 100 );
+  if( i < 4 )
+    obj = oload( 2864 );
+  else if( i < 10 )
+    obj = rtable_object( 2 );
+  if( obj ) {
+    act_tochar( #true_char, ch, obj );
+    act_notchar( #true_room, ch, obj );
+    obj_to_char( obj, ch );
+    end;
+  }
+}
+send_to_char( #false_char, ch );
+~
+E
+false_char~
+@GYou find nothing of interest in the ivy.@n
+~
+E
+true_room~
+@G$n finds $p buried in the ivy!@n
+~
+E
+true_char~
+@GYou find $p buried deep in the ivy!@n
+~
+!
+0 0 0
+-1
+S
+
+#12757
+Undercity of Ruatonim~
+A soft glow emanates from the red stone wall.  To one side a large
+brazier filled with a black liquid burns brightly, permeating the room
+with a flickering light.  Shadows are cast everywhere, dancing darkly in
+the glow of the flames.  Tall stone columns are patterned with black and
+white diamond shapes, and the floor is elaborately decorated with mosaics.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378957 11 9 0
+D1
+gateway~
+~
+211 -1 12755 10 10 5
+D3
+~
+~
+0 -1 12758 10 10 5
+E
+brazier~
+The brazier stands about five feet from the floor, made from a strange
+black metal.  An evil flame pours out of the hot bowl filling the room
+with an sinister dark light.
+~
+E
+columns diamonds~
+The massive columns are crafted of carved stone.  A patterned mosaic
+creeps and spirals its way around the pillar in a unique black and white
+diamond pattern.
+~
+E
+floor mosaics~
+The highly decorated mosaics roam and encompass their way across the
+floor, in a beautiful cubed and interlocking geometric pattern.  The
+small tiles are made from a type of ceramic pottery.
+~
+E
+wall red stoned~
+The red stone walls are covered in deep scratch marks and stained with
+blood.
+~
+E
+gate gateway east~
+The gate stands approximately thirty feet in height and stretches the
+runes and symbols the gate is sealed tight with no apparent way to gain
+access.
+~
+A
+push~
+gateway door~
+if( mob_in_room( 171, room ) ) {
+  act_tochar( #no, ch );
+  act_notchar( #rno, ch );
+  end;
+}
+if( is_open( room, east  ) )
+  send_to_char( #no_open, ch );
+else {
+  send_to_char( #open1, ch );
+  act_notchar( #open2, ch );
+  open( room, east );
+}
+~
+E
+no_open~
+@CYou attempt to push the doors but realise they are already open.@n 
+~
+E
+open1~
+@CAfter a great amount of effort you manage to push the doors of the
+gateway open.@n 
+~
+E
+open2~
+@C$n pushes with all their might against the doors and finally manages to
+push them slowly open.@n 
+~
+E
+no~
+The huge minotaur guard looks at you and groans "You can not escape!".
+~
+E
+rno~
+The huge minotaur guard slams his hands down on $n to prevent $m from
+pushing the gateway open.
+~
+!
+0 0 0
+A
+bang~
+gateway door~
+act_tochar( #bang, ch );
+act_notchar( #n_bang, ch );
+~
+E
+bang~
+@CYou bang the gates as hard as you can, but nothing happens.@n
+~
+E
+n_bang~
+@C$n furiously bangs on the gates, but nothing happens.@n
+~
+!
+0 0 0
+171 9 1509949540 3 0
+-1
+S
+
+#12758
+High Antechamber~
+The rocks forming the room have been hammered to create kaleidoscopic
+formations, with huge alcoves fashioned into the southern wall.  Around
+the base of the alcoves, extrude huge pillars adorned with mosaics of
+large man-like creatures being united with horned beasts.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378949 11 9 0
+D0
+~
+~
+0 -1 12759 10 10 5
+D1
+~
+~
+0 -1 12757 10 10 5
+D3
+~
+~
+0 -1 12761 10 10 5
+E
+rocks kaleidoscopic formations~
+The kaleidoscopic patterns have been delicately fashioned, using a fine
+tool.  They are bright in color and change appearance as the light
+flickers.
+~
+E
+alcoves~
+The alcoves have tiny cracks that line the internal structure of the wall. 
+Over centuries of time the masonry has become weathered and battered. 
+The internal ceiling of each alcove has a picture depicting the heavens
+and the stars with small fine silver lines covering the painting like a
+web.
+~
+E
+pillars mosaics~
+The mosaics are made from very fine cubed ceramic pottery, carefully
+positioned upon the pillars to depict reincarnation.
+~
+465 9 1509949540 3 0
+-1
+S
+
+#12759
+Fire Forge of Oblaid~
+A mighty fire forge glows in the centre of the room, creating a dazzling
+white light from the tremendous heat.  The light is blinding and the hot
+air engulfs the room.  Oddly shaped, broken and rusty armor lies
+scattered throughout, along with shattered swords blood-stained from
+previous battles.
+~
+[Yrna] Oh, I've got to ask ... WHY 'forge of Oblaid'? Who is Oblaid?
+[Guin] Good question. I asked, he answered, I forgot.
+[Guin] Done.
+~
+167247885 11 9 0
+D0
+~
+~
+0 -1 12760 10 10 5
+D2
+~
+~
+0 -1 12758 10 10 5
+E
+forge mighty~
+A mighty fire forge glows with intense heat.  Impressive weapons of mass
+destruction must have been fashioned with this fire from hell.  The
+flames rage, lapping at the sides of the forge, like the sea in a raging
+storm.
+~
+E
+armor sword~
+Rusty armor and weapons lie here in a totally worthless state.
+~
+A
+~
+~
+loop( all_in_room ) {
+act_tochar( #steam, rch );
+if( !is_mob( rch ) )
+damage( mob, rch, 10d10+100, fire, "The burning steam" )
+}
+~
+E
+steam~
+@YThe forge emits a low rumble and the fire begins to bubble.@n 
+~
+!
+2 150 0
+3840 17 1509949540 -2 0
+-1
+S
+
+#12760
+Armory of Ratak~
+Spanning from wall to wall of this large circular room are long rows of
+what is mostly unfinished armour.  The walls are smooth and covered with
+hellish paintings depicting strange scenes from a time long forgotten by
+mortal man.  The floor underfoot is made of pitch black and blood red
+tiles, which cover the entire area.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247877 11 9 0
+D2
+~
+~
+0 -1 12759 10 10 5
+E
+armor armour unfinished~
+To one side, rows of what is mostly unfinished armour line the walls. 
+The armour is linked together by a huge chain, although some links of the
+chain are broken.
+~
+E
+pictures scenes~
+The walls are smooth and covered with hellish pictures containing strange
+scenes of demons torturing man-like creatures, spiking them with spears
+and boiling them in vast black cauldrons.  The depictions are disturbing;
+who knows what creature could be capable of such cruelty.
+~
+E
+floor tiles~
+The tiles are smooth to touch and made from fine cubed ceramic pottery.
+~
+A
+~
+armour armor unfinished~
+if( mob_in_room( 1989, room ) ) { 
+  send_to_char( #mobalive, ch );
+  end;
+}
+else {
+  if( !rflag( reset0, room ) ) {
+    act_tochar( #already, ch );
+    end;
+  }
+  if( rflag( reset0, room ) ) {
+    remove_rflag( reset0, room );
+    if( random( 1, 10 ) == 7 ) {
+      act_tochar( #armor, ch );
+      act_notchar( #narmor, ch );
+      obj_to_char( oload( 86 ), ch );
+      end;
+    }
+  }
+}
+act_tochar( #fail, ch );
+act_notchar( #nfail, ch );
+~
+E
+fail~
+You search through the armour and grab something interesting.  As you
+lift the item it snaps back to its original resting-place, unable to be
+freed from the huge iron chain.
+~
+E
+nfail~
+$n searches through the armour and comes up empty handed as the item $e
+had chosen is firmly attached to a huge iron chain.
+~
+E
+armor~
+You search through the armour and grab something interesting.  As you
+lift the item the huge iron chain snaps in two allowing you to take the
+armour.
+~
+E
+narmor~
+$n searches through the armour and finds something interesting.  As $n
+lifts the item the huge iron chain snaps in two, allowing the armour to
+be taken.
+~
+E
+mobalive~
+@RAre you crazy?  It is impossible to search while the armorer is
+alive!@n 
+~
+E
+already~
+The armor has been searched through with nothing of interest left.
+~
+!
+9 0 0
+1989 9 1509949540 3 0
+-1
+S
+
+#12761
+Chamber of Forms~
+Twisted shades of red purge this chamber, ripping all other colors from
+the room.  The mosaic design continues to spread across the floor, with
+relentless vigour and strength.  Tall stone columns stand, decorated from
+base to crown with a black and white diamond tilled pattern.  Torches
+cling to the walls, fil led with burning liquid.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378949 11 9 0
+D1
+~
+~
+0 -1 12758 10 10 5
+D2
+~
+~
+0 -1 12768 10 10 5
+D3
+~
+~
+0 -1 12762 10 10 5
+E
+mosaic design~
+The mosaic is a geometric pattern that interlocks within itself. 
+Comprised of forged black, red and white small tiles, each is made from a
+type of smooth ceramic pottery.
+~
+E
+torches liquid~
+Small torches line the walls, made from forged black metal and filled
+with liquid to provide the light source.  A baneful flame pours out from
+the torches filling the room with a hellish glow.
+~
+A
+~
+~
+act_tochar( #torches, ch );
+act_notchar( #ntorches, ch );
+continue;
+~
+E
+torches~
+@YThe light flickers when you brush past the torches.@n 
+~
+E
+ntorches~
+@YThe light flickers when $n brushes past the torches.@n
+~
+!
+3 0 14
+-1
+S
+
+#12762
+Hall of the Ancient Ones~
+Torches, placed along the walls, burn with a smoky flame, creating
+twisting, writhing shadows that move like minor devils dancing in the
+night.  Complex mosaic shapes continue across the floor here, forming
+geometric patterns of interlocking squares; their meaning, if any, is
+unclear.  To the west, the hard stone walls close in claustrophobically,
+an impenetrable barrier in that direction.
+~
+[Yrna] Done.
+~
+167378949 11 9 0
+D0
+~
+~
+0 -1 12763 10 10 5
+D1
+~
+~
+0 -1 12761 10 10 5
+E
+torches~
+The torches that line the walls have almost burned into oblivion, their
+once bright flame now a mere whisper away from being embers.
+~
+E
+mosiac~
+The mosaic is a geometric pattern that interlocks within itself.  It is
+constructed from black, red and white small tiles; each is made from a
+type of smooth ceramic pottery.
+~
+-1
+S
+
+#12763
+Chamber of the Ages~
+To the west stands an awesome gate, with two equal sized doors made from
+the finest oak and held together with gold and krynite banding.  A large
+gold door knocker in the shape of a bulls head is found in the centre of
+the gate.  The chamber itself is circular; around thirty feet in diameter
+with a dome shaped roof.  There are further exits leading to the north
+and south.
+~
+[Yrna] Done.
+~
+167378949 11 9 0
+D0
+~
+~
+0 -1 12764 10 10 5
+D2
+~
+~
+0 -1 12762 10 10 5
+D3
+gate~
+~
+211 -1 12766 10 10 5
+E
+gate~
+The gate is approximately fifteen feet wide and twenty-five feet high. 
+It is in impressive condition, with only the odd scratch mark to be found
+on its gilded surface.
+~
+E
+door knocker bulls head~
+The large door knocker has been fashioned out of the finest gold with the
+bulls head providing the perfect shape to grasp hold of; the rounded
+horns arc backwards into the door itself.
+~
+A
+knock bang~
+gate knocker bulls head~
+act_tochar( #knock, ch );
+act_notchar( #nknock, ch );
+wait( 1 );
+if( !is_open( room, west ) ) {
+  send_to_room( #open, room );
+  send_to_room( #open, find_room( 12766 ) );
+  open( room, west );
+  end;
+}
+send_to_room( #close, room );
+send_to_room( #close, find_room( 12766 ) );
+close( room, west );
+~
+E
+knock~
+You grab hold of the @Rbulls head@n and bang it against the gate, causing
+a tremendous THUD!
+~
+E
+nknock~
+$n grabs hold of the @Rbulls head@n and bangs it against the gate,
+causing a tremendous THUD!
+~
+E
+open~
+The doors open slowly, dragging against the rocky floor as they move in
+to position.
+~
+E
+close~
+The doors slowly close, crunching against the rocky floor until they
+finally come to rest.
+~
+!
+0 0 0
+465 9 1509949540 3 0
+-1
+S
+
+#12764
+Gloomy Corridor~
+The faint sound of dripping water can be heard to the north, echoing
+throughout this immense corridor.  A reeking draft of putrid air wafts
+through the dark, its smell almost sickening.  The eastern walls glisten
+and shimmer from the damp atmosphere, with pockets of moss thriving in
+the gloomy conditions.  The corridor widens toward the north, cutting
+deeper and deeper into the mountainside.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378949 11 9 0
+D0
+~
+~
+0 -1 12765 10 10 5
+D2
+~
+~
+0 -1 12763 10 10 5
+E
+moss~
+Dark green in color, with a sticky texture, the moss grows throughout the
+corridor's stony walls.
+~
+-1
+S
+
+#12765
+Pool of Radiance~
+A glowing pool ripples throughout this chamber with its own enriched
+dynamism.  Lightning strikes across the pools deep surface and a
+brilliant blue light radiates from within.  The occasional wave of azure
+fire pulses across the surface like charging wild horses.  In the centre
+of the pool twists a vortex, a column of pure energy, flowing with
+unadulterated power.  In the corner of the room a large pile of dust and
+rubble has accumulated.  The only exit is back to the south.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378957 11 9 0
+D2
+~
+~
+0 -1 12764 10 10 5
+E
+pool glowing radiance~
+A glowing pool of radiance ripples in front of you, its presence is
+incredible, never before have you witnessed such unharnessed raw power. 
+Looking closer into the pool itself, you see the body of the pool change in
+hues of blue. The water's depth can't be determined by observation.
+~
+E
+lightning~
+The pool pulsates and ripples, and from time to time you see a sudden
+speed change and flow of the pool.  As the water switches direction, a
+huge build-up of energy causes lightning to strike across the surface,
+causing the chamber to be filled with glaring light.
+~
+E
+vortex~
+The vortex twists at high speeds creating a mind-bending sound.  It looks
+like a nexus of intertwining energy strands.  Perhaps this is a place
+where all time and energy is focused, forming this rift of pure raw power.
+~
+E
+dust rubble pile~
+Dust and rubble is gathered together in the corner of the room, covered
+in dark red bloodstains and the odd clump of matted human hair.
+~
+A
+~
+pool radiance~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 12 ) == 5 ) {
+    act_tochar( #success, ch );
+    act_notchar( #nsuccess, ch );
+    obj_to_char( oload( 3841 ), ch );
+    end;
+  }
+}
+act_tochar( #fail, ch );
+act_notchar( #nfail, ch );
+wait( 1 );
+act_tochar( #fail1, ch );
+act_notchar( #nfail1, ch );
+wait( 1 );
+loop( all_in_room )
+  if( !is_mob( rch ) )
+  damage( mob, rch, 10d40, shock, "The pools sudden burst of lightning" );
+~
+E
+success~
+You place your hands in the electrified pool and manage to find something
+of use!
+~
+E
+nsuccess~
+$n places $s hand in the electrified pool and manages to find something
+of use!
+~
+E
+fail~
+You place your hands in the pool's bubbling surface.
+~
+E
+nfail~
+$n places $s hands in the pool's bubbling surface.
+~
+E
+fail1~
+As you place your hand deeper into the pool, you feel something brush
+against it.  The water suddenly explodes with flashes of lightning coming
+from the surface.
+~
+E
+nfail1~
+$n places $s hand more deeply into the pool with a grimace of distaste. 
+The water suddenly explodes with flashes of lightning darting off the
+surface.
+~
+!
+9 0 0
+A
+2 move~
+dust rubble~
+act_tochar( #nothing, ch );
+act_notchar( #nnothing, ch );
+~
+E
+nothing~
+You search the dusty rubble, but find nothing worthwhile.
+~
+E
+nnothing~
+$n searches the dusty rubble, but finds nothing worthwhile.
+~
+!
+9 0 0
+492 9 1509949540 3 0
+-1
+S
+
+#12766
+Corridor of Desolation~
+Cutting deep into the western edge of this colossal underground cavern,
+the corridor twists as it winds its way deeper into the heart of the
+earth.  Razor sharp rocks extend from the uneven surface of the cavern
+floor, their angular edges covered with a matted tangle of blood and raw
+flesh.  The walls are rough and wet to touch with moisture dripping from
+a vast network of cracks that riddle the ceiling.  To the east stands a
+huge gate full of strength and presence.
+~
+[Yrna] Done.
+~
+167378948 11 9 0
+D1
+gate~
+~
+211 -1 12763 10 10 5
+D3
+~
+~
+0 -1 12767 10 10 5
+E
+gate~
+The gate is approximately fifteen feet wide and twenty-five feet high. 
+It is in impressive condition, with only the odd scratch mark to be found
+on its gilded surface.
+~
+A
+push open~
+gate door~
+if( is_player( ch ) ) {
+if( is_open( room, east ) ) {
+send_to_char( #open, ch );
+};
+else {
+send_to_char( #knock, ch );
+act_notchar( #nknock, ch );
+wait( 1 );
+send_to_room( #close, room );
+open( room, east );
+}
+}
+~
+E
+knock~
+You push hard in the centre of the gate.
+~
+E
+nknock~
+$n pushes hard at the centre of the gate.
+~
+E
+open~
+The doors are already open.
+~
+E
+close~
+The doors swing open.
+~
+!
+0 0 0
+A
+~
+~
+act_tochar( #ouch, ch );
+act_notchar( #nouch, ch );
+damage( mob, ch, 5d5+25, physical, "the razor sharp rock" );
+continue;
+~
+E
+ouch~
+As you leave the corridor, you accidentally brush against a jagged rock.
+~
+E
+nouch~
+As $n leaves the room, $e accidentally brushes against a jagged rock.
+~
+!
+3 0 8
+465 9 1509949540 3 0
+-1
+S
+
+#12767
+Antechamber of Desolation~
+Vaulted high overhead, the ceiling of this vast antechamber towers about
+thirty feet in height; resonant echoes of deep murmurings impose an air
+of unsettlement on the room.  Pooling in the fissures of the blood
+coloured stone floor, a thick coagulating liquid beads on the surface of
+the walls, slowly trickling down the cracks and fractures.  Shrouded by a
+cold mist that clings to the dark, jagged rock, an effigy of immense
+proportions stands in the centre of the room, his stature poised for
+battle.  To the east a dingy corridor extends back into darkness as it
+leaves this morose chamber.
+~
+[Yrna] Extra for tiles needs work - at least make two sentences out of that one
+[Yrna] You have extra for depestals and bands, but I can't see either of them mentioned anywhere else. Um ... do rethink those extras, and if you are keeping them, they need rewriting
+[Yrna] oh, and before I forget - what's all this green goo splashing about?
+[Yrna] And why does the floor do cold damage?
+[Yrna] Done.
+~
+167378957 11 9 0
+D1
+~
+~
+0 -1 12766 10 10 5
+E
+floor tile~
+The floor is covered with a black and red tile effect, the tiles are made
+from a smooth pottery, that is cold to touch.
+~
+E
+pedestals~
+Huge pedestals cling from the walls they are made from a metal that is
+black as the blood of the earth.  A baneful flame pours out a thick
+smoke, that makes your eyes fill with water.
+~
+E
+bands imbedded~
+large bands of mithril are imbedded into the rock to the north and south
+and west.
+~
+E
+effigy~
+A large, marble statue of a man-like creature stands prominently in the
+centre of the antechamber.  The creature must be close to ten feet tall,
+with muscular broad shoulders a human torso and beast like legs.  Bright
+yellow marbles have been fashioned to produce startlingly evil looking
+eyes, piercing out from the bull shaped head.  The horns are etched out
+of blood red rock and twist menacingly outward.
+~
+A
+look~
+statue man-like creature marble~
+if( obj_in_room( 3839, room ) ) {
+  junk_obj( obj_in_room( 3839, room ) );
+  send_to_char( #statue, ch );
+  act_notchar( #nstatue, ch );
+  wait( 2);
+  send_to_char( #statue1, ch );
+  act_notchar( #nstatue1, ch );
+  wait( 1);
+  mob = mload( 173, room );
+  attack( mob, ch, 10d10+100, "thunderous headbutt" );
+}
+~
+E
+statue~
+A large, marble statue of a man-like creature stands a prominent ten feet
+tall, with muscular broad shoulders a human torso and beast like legs. 
+Bright yellow marbles have been fashioned to produce startlingly evil
+looking eyes, piercing out from the bull shaped head.  The horns are
+etched out of blood red rock and twist menacingly outward.
+~
+E
+nstatue~
+$n looks at the statue of a man-like creature.
+~
+E
+statue1~
+The statues @Yyellow@n marble eyes blink at you and his body slowly
+begins to move.
+~
+E
+nstatue1~
+The statues @Yyellow@n marble eyes blink at $n and his body slowly begins
+to move.
+~
+!
+0 0 0
+A
+touch~
+floor~
+damage( mob, ch, 5d30, cold, "The floor's cool touch" );
+~
+!
+0 0 0
+A
+~
+~
+send_to_room(#liquid, room );
+~
+E
+liquid~
+@GA sudden burst of liquid shoots out from within the chamber ceiling
+splashing on to your head, slowly trickling down your body and coming to
+rest on the floor.@n 
+~
+!
+2 150 0
+3839 17 1509949540 -2 0
+-1
+S
+
+#12768
+Hallway of Arches~
+Hundreds upon hundreds of arches extend throughout the long passageway.
+Rising from the base of the cavern and reaching up to and spanning the
+pinnacle of the vaulted corridor, which must be at least fifty-foot high. 
+Within each arch a series of carved cherubs line the walls, all peering
+down from their seats on high with faces of despondency and despair.  The
+hallway continues to pass beneath the arches to the north and south.
+~
+[Yrna] Done.
+~
+167378949 11 9 0
+D0
+~
+~
+0 -1 12761 10 10 5
+D2
+~
+~
+0 -1 12769 10 10 5
+E
+cherubs~
+Looking closer at one of the carved cherubs you see they have been carved
+from a pure veined marble.  The head seems large compared with the tiny
+body and piercing eyes made from swirling gems peer down.  The cherubs
+look down from their seats on high with faces of despondency and despair. 
+The sight brings a feeling of sadness and woe into your heart.
+~
+465 9 1509949540 3 0
+-1
+S
+
+#12769
+Fountain of Blood~
+In the centre of the room resides a three-tiered circular fountain with a
+huge blood covered statue standing in the middle.  A thick sanguine
+liquid spews from the mouth of the statue in a steady stream, down into a
+large pool, which coagulates around the edges. A small splattering of
+blood, showered onto the floor, makes the ground very slippery. This room
+is at a cross roads, with exits in each direction.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378957 11 9 0
+D0
+~
+~
+0 -1 12768 10 10 5
+D1
+~
+~
+0 -1 12772 10 10 5
+D2
+~
+~
+0 -1 12771 10 10 5
+D3
+door~
+~
+0 -1 12770 10 10 5
+E
+fountain circular blood~
+Made from smooth, deep red crystal, a multi-tiered fountain spews gallons
+of blood.  The sanguine liquid flows from the fountains lip into
+increasingly deeper bowls, spilling in places onto the broken floor.
+~
+E
+statue~
+The tall statue stands poised over the fountain covered in blood.  It is
+shaped like a large muscular humanoid and is carved out of a
+milk-coloured stone.
+~
+A
+~
+~
+if( !is_player( ch ) )
+  continue;
+if( find_stat( ch, dex ) < random( 1, 15 ) ) {
+  act_tochar( #fall, ch );
+  act_notchar( #nfall, ch );
+  interpret( ch, "sit" );
+}
+else
+  continue;
+~
+E
+fall~
+@RYou slip and slide on the pool of blood.@n
+~
+E
+nfall~
+@R$n slips and slides on the pool of blood.@n.
+~
+!
+3 0 15
+A
+touch move get~
+statue blood covered~
+send_to_char( #statue, ch );
+act_notchar( #nstatue, ch );
+wait( 2 );
+send_to_char( #statue1, ch );
+act_notchar( #nstatue1, ch );
+wait( 1);
+mob = mload( 772, room );
+attack( mob, ch, 10d10+100, "thunderous headbutt" );
+~
+E
+statue~
+The statue tilts slightly and @Rblood@n beings to pump from its veins.
+~
+E
+nstatue~
+$n touches the @Rblood stained@n statue, which tilts slightly and blood
+begins to pump from its veins.
+~
+E
+statue1~
+The statues body slowly begins to move towards you as the blood pumps
+through the @Rblood stained@n torso.
+~
+E
+nstatue1~
+The statues body slowly begins to move towards $n as the blood pumps
+through the @Rblood stained@n torso.
+~
+!
+0 0 0
+-1
+S
+
+#12770
+Alcove~
+The alcove is around thirty-five feet wide with a sloping ceiling that
+limits the space.  Several large wooden shelves have been crudely fixed
+with rusty nails to the level walls.  The ground vibrates very slightly
+and a quiet hum resonates throughout the whole chamber; a red-hued mist
+hovers close to the floor.  The only exit from the room is back toward
+the east.
+~
+[Yrna] Done
+[Guin] Done.
+~
+167378949 11 9 0
+D1
+~
+~
+0 -1 12769 10 10 5
+E
+wooden shelves~
+Poorly crafted and riddled with woodworm the shelves are mainly bare.  A
+few clay urns, together with other pottery can be found.
+~
+A
+~
+large wooden shelves~
+act_tochar( #nothing, ch );
+act_notchar( #nnothing, ch );
+~
+E
+nothing~
+You search through the wooden shelves and come up empty handed.
+~
+E
+nnothing~
+$n searches through the wooden shelves but $e fails to find anything of
+interest.
+~
+!
+9 0 0
+-1
+S
+
+#12771
+Room of Purity~
+A thick, tangled honeysuckle vine grows against the southern wall.  Small
+droplets of water fall from the chamber's ceiling, touching the delicate
+flowers and causing a sweet smelling perfume to waft throughout the room. 
+A whisper of warm air seeps through a hole in the wall to the west with
+the leaves of the honeysuckle gently swaying in the breeze.  The only
+exit is north, heading out of this relative tranquillity into the unknown.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378949 11 9 0
+D0
+door~
+~
+0 -1 12769 10 10 5
+E
+honeysuckle~
+Against the southern wall, a large honeysuckle grows in full bloom. 
+Waves of sweet smelling perfume emanate from the water covered flowers.
+~
+465 9 1509949540 3 0
+-1
+S
+
+#12772
+Darkened Cavern~
+Large, reddish coloured stones lie scattered around this dark cavern,
+creating an irregular floor underfoot.  A large broken mosaic lies across
+the expanse of the floor, clearly neglected and suffering from erosion. 
+Toward the southern end of the darkened cavern, a large boulder stands
+alone.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 9 0
+D3
+~
+~
+0 -1 12769 10 10 5
+D5
+~
+~
+187 -1 12773 10 10 5
+E
+boulders~
+The boulder is fairly large and would take a great feat of strength to be
+able to move it.  A small glimmer of light can be seen, emanating from
+from where it meets the floor.
+~
+E
+floor mosiac~
+The mosaic is in a very poor state with many of the multi-hued ceramic
+tiles scattered across the floor.  The bright pattern, seen elsewhere in
+the complex, is destroyed almost beyond recognition.
+~
+A
+push move~
+boulder boulders~
+if( is_open( room, down ) ) {
+  act_tochar( #already_done, ch );
+  end;
+}
+act_tochar( #opens_door, ch );
+act_notchar( #ropens_door, ch );
+wait( 1 );
+if( find_stat( ch, str ) >= 21 ) {
+  act_room( #door_opens, ch );
+  send_to_room( #door_opens, find_room( 12773 ) );
+  open( room, down );
+  end;
+}
+act_tochar( #nope, ch );
+act_notchar( #onope, ch );
+~
+E
+already_done~
+@yYou try to move the boulder but it can be moved no further.@n
+~
+E
+opens_door~
+@yYou push against the stone with all your might.@n
+~
+E
+ropens_door~
+@y$n pushes against the boulder with all $s might.@n
+~
+E
+door_opens~
+@yThe boulder slides slowly to the side, showering the ground below with
+dust, and the passageway below is revealed.@n 
+~
+E
+nope~
+@yYou push against the stone, but haven't the strength to move it.@n
+~
+E
+onope~
+@y$n pushes up against the boulder fruitlessly, grunting, feet sliding
+against the rocks.  The boulder shifts slightly, then resettles...as
+though teasing and taunting $m to continue this comical ode to
+futility.@n 
+~
+!
+0 0 0
+-1
+S
+
+#12773
+Humming Chamber~
+The ground vibrates very slightly and a quiet hum resonates through the
+whole passageway.  This antechamber has a cold and chilling mist that
+clings to the floor, and claws at your legs.  A blood red liquid runs
+down the wall to the west, creating a puddle that ripples and bubbles. 
+There are a number of small razor sharp rocks scattered throughout the
+floor, making passage awkward.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378956 11 9 0
+D2
+~
+~
+0 -1 12774 10 10 5
+D4
+~
+~
+187 -1 12772 10 10 5
+E
+blood liquid puddle~
+A blood red liquid runs down the wall to the west, creating a puddle that
+ripples and bubbles.  The puddle is quite shallow but warm to touch.  The
+liquid runs into deep cracks in the floor creating a deep gurgling sound.
+~
+A
+move push~
+boulder stone~
+if( is_open( room, up ) ) {
+  act_tochar( #already_done, ch );
+  end;
+}
+act_tochar( #opens_door, ch );
+act_notchar( #ropens_door, ch );
+wait( 1 );
+if( find_stat( ch, str ) >= 21 ) {
+  act_room( #door_opens, ch );
+  send_to_room( #door_opens, find_room( 12772 ) );
+  open( room, up );
+  end;
+}
+act_tochar( #nope, ch );
+act_notchar( #onope, ch );
+~
+E
+opens_door~
+@yYou push against the stone with all your might.@n
+~
+E
+ropens_door~
+@y$n pushes against the stone with all $s might.@n
+~
+E
+already_done~
+@yYou try to move the boulder but it can be moved no further.@n 
+~
+E
+odoor_opens~
+@yA large boulder slowly moves revealing a passageway below.@n
+~
+E
+door_opens~
+@yThe boulder slides slowly to the side, showering the ground below with
+dust, and the passageway above is revealed.@n
+~
+E
+nope~
+@yYou push against the stone, but haven't the strength to move it.@n 
+~
+E
+onope~
+@y$n pushes up against the boulder fruitlessly, grunting, feet sliding
+against the rocks.  The boulder shifts slightly, then resettles...  as
+though teasing and taunting $m to continue this comical ode to
+futility.@n 
+~
+!
+0 0 0
+A
+~
+~
+send_to_room(#hum, room );
+~
+E
+hum~
+@BThe hum from the chamber gets louder and louder and a sudden gust of
+wind shoots in from above!!@n
+~
+!
+2 50 0
+5419 137 1509949540 3 0
+-1
+S
+
+#12774
+Whokey Hole~
+Small charred black roots grow from the ceiling forming a network of
+spindly twisted tendrils that drape across the passageway.  Stalactites
+form from the low cavern roof, their sides coated in a reddish liquid
+which slowly rolls down the rock and drips onto the floor, creating pools
+of water rich with ore.  In some places the minerals have settled into
+deep crevices, their minute particles fusing together to form pinkish
+stalagmites.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 9 0
+D0
+~
+~
+0 -1 12773 10 10 5
+D2
+~
+~
+0 -1 12775 10 10 5
+E
+roots ceiling tendrils~
+Reaching through the ceiling of this cavern, thin tendrils of blackened
+roots trace the contours of the cave walls, some dangling down to the
+rocky floor.
+~
+E
+crevices stalagmites~
+Clusters of crystals line the crevices, forming small, glittering
+stalagmites.  Almost like tiny flowers growing in this dark cavern, these
+delicate structures could be snapped off quite easily.
+~
+A
+~
+~
+send_to_room(#tendrils, room );
+~
+E
+tendrils~
+@BA gust of wind sends a wave of dripping wet tendrils in to your face!@n
+~
+!
+2 150 0
+A
+get break snap~
+crystal structure stalagmite~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  i = random( 1, 75 );
+  if( i < 25 )
+    obj = oload( 7004 );
+  else if( i < 50 )
+    obj = oload( 7538 );
+  else if( i < 65 )
+    obj = oload( 7534 );
+  else
+    obj = oload( 7023 );
+  act_tochar( #gem, ch, obj );
+  act_notchar( #rgem, ch, obj, mob, sight );
+  obj_to_char( obj, ch );
+}
+else
+  act_tochar( #nogems, ch, obj );
+~
+E
+gem~
+@MYou gently break off one of the tiny, crystalline stalagmites.@n
+~
+E
+rgem~
+@M$n breaks off one of the crystalline stalagmites.@n
+~
+E
+nogems~
+@mThere are no more crystals worth taking here.@n
+~
+!
+9 0 0
+-1
+S
+
+#12775
+Cavern of Stalactites~
+Contrasting the basalt walls, a narrow vein of krynite ripples across the
+bleak surface.  Intermingled within the cracks of the fractured rock,
+clusters of deep red crystal refract light off their angular edges. 
+Slicken-sided stalactites line the roof of the cavern as it proceeds in a
+north and south direction.  Small beads of mineralised water continue to
+drip water onto floor, creating shallow pools rich with reddish ore.
+~
+[Yrna] Done.
+[Guin] Done
+~
+167378948 11 9 0
+D0
+~
+~
+0 -1 12774 10 10 5
+D2
+~
+~
+0 -1 12776 10 10 5
+E
+krynite red crystal~
+To one side of the cavern, the wall grows a thin vein of violet krynite,
+the precious ore bespeckled with clusters of deep red crystals.
+~
+E
+stalactites~
+Large stalactites grow from the low cavern ceiling in as a slow formation
+of ore settles on their sides.  An occasional drip of red liquid can be
+seen falling from the tip of the stalactites to the rock floor below.
+~
+A
+~
+~
+act_tochar( #dark, ch );
+act_notchar( #ndark, ch );
+continue;
+~
+E
+dark~
+@cYou climb over a slight ridge and head south in to the darkness.@n
+~
+E
+ndark~
+@c$n climbs over a slight ridge and heads south in to the darkness.@n
+~
+!
+3 0 4
+5419 137 1509949540 3 0
+-1
+S
+
+#12776
+Gloomy Chamber~
+Deep gouges scar the dark basalt walls and drips of icy cold liquid fall
+from the high ceiling.  The air is stale and the stench of decay lingers
+throughout the gloomy chamber.  From jagged outcroppings of stone, dark
+brown moss starved of life clings to the fragments of rock, their meagre
+roots unable to find a more fertile location.  The cavern path continues
+to the east and up the slope to the north.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 9 0
+D0
+~
+~
+0 -1 12775 10 10 5
+D1
+~
+~
+0 -1 12777 10 10 5
+E
+brown moss~
+Tangled amidst the fractured rock, the wilting moss desperately clings to
+the last shards of sterile dirt that has collected between the cracks in
+the rough surface, leaching what scant few nutrients reside therein.
+~
+A
+~
+~
+act_tochar( #dark, ch );
+act_notchar( #ndark, ch );
+continue;
+~
+E
+dark~
+@cYou scramble over the slope.@n
+~
+E
+ndark~
+@c$n scrambles over the slope.@n
+~
+!
+3 0 1
+-1
+S
+
+#12777
+Gloomy Chamber~
+From the south a flicker of light can be seen, providing a small respite
+from the otherwise pitch-black chamber.  A cold breeze blows and the
+smell of fresh air radiates along the passage, stirring the musty air of
+this dank corridor.  The faint sound of rustling leaves can be heard and
+to the west a strange bubbling noise and the trickling of liquid into
+shallow, stone-cradled pools.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 9 0
+D2
+~
+~
+0 -1 12778 10 10 5
+D3
+~
+~
+0 -1 12776 10 10 5
+E
+1 west~
+In the dimly lit corridor it is possible to discern a meagre brook of
+trickling liquid, the sound it makes seems a lot denser than that of
+water.
+~
+A
+~
+~
+loop( all_in_room ) {
+  if( !is_mob( rch ) ) {
+    act_tochar( #cold, rch );
+    damage( mob, rch, 5d20, cold, "The cold breeze" );
+  }
+}
+~
+E
+cold~
+@CA chill wind blows into the room from the south.@n
+~
+!
+2 200 0
+2401 9 1509949540 3 0
+-1
+S
+
+#12778
+Cave Entrance Between Two Oaks~
+Forming a great arch over the exit to the south, two great oaks spread
+their thick branches high above the ground; as the trees have grown,
+their leafy canopy has been pushed against the rock face that forms the
+entrance to the dank cave.  The smell of fresh air is strong as it swirls
+about the dim hole in the rock.  A cool breeze washed through the
+surrounding trees, blowing leaves down from the lofty branches.  To the
+north the passageway becomes darker and more enclosed with small boulders
+lining the chipped floor.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 11 9 0
+D0
+~
+~
+0 -1 12777 10 10 5
+D2
+~
+~
+0 -1 12779 10 10 5
+E
+tree oak~
+The large oak trees stand about forty-five feet tall, their vast branches
+spreading a great canopy overhead as the aged trees stand in solemnity. 
+Like rivulets of water, the bark is rippled by fine cracks on the outer
+shell of the mighty trees.
+~
+A
+~
+~
+act_tochar( #tree, ch );
+act_notchar( #ntree, ch );
+continue;
+~
+E
+tree~
+@GYou pass through the centre of two large oak trees.@n
+~
+E
+ntree~
+@G$n passes through the centre of two large oak trees.@n
+~
+!
+3 0 4
+-1
+S
+
+#12779
+Wooded Grove~
+To the north there is a passable opening through the trees, with two
+vast oaks shaping the exit.  A faint trail leads off to the north and
+east, twisting through the wooded grove.  The forest undergrowth appears
+to be thriving here, with many small plants and bushes scattered around
+the thick tree trunks.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247873 11 9 0
+D0
+~
+~
+0 -1 12778 10 10 5
+D3
+~
+~
+0 -1 12780 10 10 5
+E
+large oak trees~
+Surrounding the path as it passes beneath the blackened trees, the
+lengthy branches cast deep shadows about this grove.
+~
+A
+~
+~
+act_tochar( #tree, ch );
+act_notchar( #ntree, ch );
+continue;
+~
+E
+tree~
+@GYou pass through the centre of two large oak trees.@n 
+~
+E
+ntree~
+@G$n passes through the centre of two large oak trees.@n 
+~
+!
+3 0 1
+A
+~
+~
+send_to_room(#bee, room, sight );
+~
+E
+bee~
+@YA large bee suddenly flies in from the east buzzing around, moving from
+plant to plant.@n 
+~
+!
+2 150 0
+2401 9 1509949540 3 0
+5419 137 1509949540 3 0
+-1
+S
+
+#12780
+Wooded Grove~
+Towering high overhead several large, ancient oak trees and some of the
+most impressive, tall, lush pine trees spread out their great branches. 
+A gentle breeze blows a sweet pine scent throughout the grove.  The trees
+block out the majority of light, with only small bolts of it penetrating
+the leafy canopy.  A worn trail leads off to the east and west, snaking
+its way between the trees.
+~
+[Yrna] done.
+[Guin] Done.
+~
+167247873 11 9 0
+D1
+~
+~
+0 -1 12779 10 10 5
+D3
+~
+~
+0 -1 12781 10 10 5
+E
+trail worn~
+The trail winds amidst the trunks of the flourishing pine trees, it
+appears to be fairly well used, with many scuff marks present on the
+dusty ground.
+~
+A
+~
+~
+act_tochar( #leaving, ch );
+act_notchar( #nleaving, ch );
+continue;
+~
+E
+leaving~
+@GYou swiftly walk across the lush green grass and head off in to the
+wooded grove.@n 
+~
+E
+nleaving~
+@G$n swiftly walks across the lush green grass and heads off in to the
+wooded grove.@n 
+~
+!
+3 0 2
+2504 9 1509949540 3 0
+-1
+S
+
+#12781
+Temple Entrance~
+The surrounding oak and pine trees line either side of the worn path,
+creating a perfectly straight track which leads to the base of a stone
+ramp to the west and back in to the wooded grove to the east.  The ramp
+slopes gently upwards, leading directly to an arched gateway, with
+surrounding walls and a narrow ledge.  The wall has scratches gouged deep
+into the stone, with two large black doors in the gateway stretching
+almost half way up the wall.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 11 9 0
+D1
+~
+~
+0 -1 12780 10 10 5
+D3
+pair of ebon-hued doors~
+~
+391 356 12782 10 10 5
+E
+walls scratches tall~
+The wall has been created from large, carved granite boulders and stands
+at least twenty-five feet high.  Numerous scratches have been gouged deep
+into the face of the wall.
+~
+E
+black doors~
+The huge black doors swing inward on large hinges.  Hacked over the arch
+of the doorway, several runes stretch from right to left, but as they are
+etched in an ancient hieroglyphic icon, they are, for the most part,
+undecipherable, although they look to be of a generally evil nature.
+~
+E
+ramp~
+Comprising of five-foot square blocks of solid stone linked together with
+a crude form of mortar, the ramp rises towards the entrance to the Temple
+of Angrell.
+~
+A
+~
+~
+act_tochar( #leaving, ch );
+act_notchar( #nleaving, ch );
+continue;
+~
+E
+leaving~
+@eYou stride west through the arched portal.@n 
+~
+E
+nleaving~
+@e$n strides west through the arched portal.@n 
+~
+!
+3 0 8
+5419 137 1509949540 3 0
+-1
+S
+
+#12782
+Inside the Temple of Angrell~
+The sprawling temple stretching out before you is in a state of complete
+ruin.  Huge columns that used to tower up to the height of the wall now
+lie desolately across the floor; the vaulted wooden ceiling has caved in,
+and parts of it lie strewn across the floor.  Symbols are painted across
+a wall, broken up by a large black doorway to the east.  Deep purple
+draperies, tattered and weather-beaten, hang to the north.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247876 11 9 0
+D0
+deep purple draperies~
+~
+131 -1 12783 10 10 5
+D1
+ebon-hued doors~
+~
+391 356 12781 10 10 5
+D2
+~
+~
+0 -1 12790 10 10 5
+D3
+~
+~
+0 -1 12787 10 10 5
+E
+doorway black 1 east~
+Great ebon-hued doors of granite span the arched portal to the east. 
+The black slabs of stone are unnaturally smooth, their surface having
+been subjected to uncountable years of scouring by the temple eunuchs.
+~
+E
+draperies purple 1 north~
+Once regal, velvetine drapes of the deepest violet hung on gilded rails,
+separating the temple foyer from the studies and private quarteres of the
+official priests of Angrell.  Now the tattered curtains hang in disrepair
+on a rail of flaking brass, the gold coating having chipped off in the
+distant past.
+~
+A
+~
+~
+act_tochar( #curtains, ch );
+act_notchar( #ncurtains, ch );
+continue;
+~
+E
+curtains~
+@BYou squeeze past the gap in the curtains.@n 
+~
+E
+ncurtains~
+@B$n squeezes past the gap in the curtains.@n
+~
+!
+3 0 1
+A
+~
+~
+act_tochar( #leaving, ch );
+act_notchar( #nleaving, ch );
+continue;
+~
+E
+leaving~
+@eYou stride east through the arched portal.@n 
+~
+E
+nleaving~
+@e$n strides east through the arched portal.@n 
+~
+!
+3 0 2
+1227 9 1509949540 3 0
+-1
+S
+
+#12783
+Temple Vestry~
+Separated from the rest of the temple, crudely hung curtains to the west
+and south provide privacy to this small sanctuary.  Clothes lay strewn
+across the floor and over a low bench, which sits in the northeast
+corner.  A tall wall supported by large columns towers overhead, its
+rough-hewn surfaces decorated by icons of horned demons and flickering
+flames.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247876 11 9 0
+D2
+deep purple curtains~
+~
+131 -1 12782 10 10 5
+D3
+deep purple curtains~
+~
+131 -1 12784 10 10 5
+E
+Symbols painted wall~
+Across the wall are scratches and a large mural that has been scribed
+deep into the crude masonry.  Looking closer at the markings, an
+indescribable unrest seems to encroach demonic devilry over the room.
+~
+E
+huge column~
+The immense columns, hewn from near ebon stone, rise from the smooth
+marble floor, holding the flimsy weight of the crumbling shelter.
+~
+E
+bench clothes~
+A low stone bench sits in the corner of the room, its surface covered
+over with piles of luxurious clothing.
+~
+A
+~
+~
+act_tochar( #curtains, ch );
+act_notchar( #ncurtains, ch );
+continue;
+~
+E
+curtains~
+@BYou squeeze past the gap in the curtains.@n 
+~
+E
+ncurtains~
+@B$n squeezes past the gap in the curtains.@n
+~
+!
+3 0 4
+A
+~
+~
+act_tochar( #curtains, ch );
+act_notchar( #ncurtains, ch );
+continue;
+~
+E
+curtains~
+@BYou squeeze past the gap in the curtains.@n
+~
+E
+ncurtains~
+@B$n squeezes past the gap in the curtains.@n
+~
+!
+3 0 8
+A
+search~
+clothes floor bench~
+if( mob_in_room( 979, room ) ) {
+  send_to_char( #mobalive, ch );
+  end;
+}
+else {
+  if( !rflag( reset0, room ) ) {
+    act_tochar( #already, ch );
+    end;
+  }
+  if( rflag( reset0, room ) ) {
+    remove_rflag( reset0, room );
+    if( random( 1, 100 ) == 10 ) {
+      act_tochar( #success, ch );
+      act_notchar( #nsuccess, ch );
+      obj_to_char( oload( 3582 ), ch );
+      end;
+    }
+    else {
+      act_tochar( #success1, ch );
+      act_notchar( #nsuccess1, ch );
+      obj_to_char( oload( 16 ), ch );
+    }
+}
+}
+~
+E
+already~
+@GThe clothes have been thoroughly search with nothing more to be
+found.@n 
+~
+E
+mobalive~
+@GAre you crazy?  It is impossible to conduct a search while the king is
+alive!@n 
+~
+E
+success~
+@RAfter a few minutes of searching through the clothes you suddenly find
+something out of the ordinary!@n 
+~
+E
+nsuccess~
+@RAfter a few minutes of searching through the clothes $n suddenly looks
+up as $e looks to have found something out of the ordinary!@n 
+~
+E
+nsuccess1~
+@RAfter a few minutes of searching through the clothes $n looks up and
+flips a platinum coin $e has found in to $s pocket@n 
+~
+E
+success1~
+@RAfter a few minutes of searching through the clothes you find a
+platinum coin which you flip in to your pocket.@n 
+~
+!
+0 0 0
+979 9 1509949540 3 0
+-1
+S
+
+#12784
+North Temple Quarter~
+A smooth white marble floor contrasts with the darker, rougher columns
+that stretch to the basalt roof overhead.  Debris, scattered across the
+ground, is coated in deep red blood, still wet from a recent ceremony. 
+To the east drape some heavy purple curtains, crudely hung from a brass
+rail.  There is a small statue resting on a narrow shelf, which has been
+chiselled into the northern wall.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247876 11 9 0
+D1
+deep purple curtains~
+~
+131 -1 12783 10 10 5
+D2
+~
+~
+0 -1 12787 10 10 5
+D3
+~
+~
+0 -1 12785 10 10 5
+E
+purple curtain brass rail~
+An old tattered curtain slumps off its rail, torn and eaten with age.  A
+thick layer of dust and mildew has gathered over its matted surface.
+~
+E
+debris marble benches~
+Strewn around the floor are the remnants of benches and furniture; they
+lie scattered across the white marble.  There appears to be nothing of
+value other than firewood.
+~
+E
+statue small shelf~
+A small statue rests on the shelf, crudely dug out of the crumbling
+masonry.  There is a definite shape to the figure, depicting an evil god
+of death and destruction.  Although hideous to look at, this artifact
+would be of considerable value to those who worship and follow this path.
+~
+A
+~
+~
+act_tochar( #curtains, ch );
+act_notchar( #ncurtains, ch );
+continue;
+~
+E
+curtains~
+@BYou squeeze past the gap in the curtains.@n
+~
+E
+ncurtains~
+@B$n squeezes past the gap in the curtains.@n
+~
+!
+3 0 2
+A
+get take~
+small statue~
+act_tochar( #statue, ch );
+act_notchar( #nstatue, ch );
+~
+E
+statue~
+@CYou lean forward and try to grab the small statue, as you do the statue
+magically moves and avoids your grasp!@n 
+~
+E
+nstatue~
+@C$n leans forward and tries to grab the small statue, as $e attempts to
+pick the statue up it magically moves and avoids $s grasp!n 
+~
+!
+0 0 0
+915 9 1509949540 3 0
+-1
+S
+
+#12785
+Sacraficial Pit~
+Changing from smooth marble, the white-hued stone cracks into dark red
+flagstones, their size increasing as they get nearer to a large pit in the
+centre of the floor.  Ten feet deep, the pit has been roughly hacked into
+the floor of the temple, the sides coated in coagulated blood.  In the
+wall to the north, there is a small boarded up window, the ebon mahogany
+planks effectively blocking the light from filtering in from the outside. 
+Spanning the entirity of both the north and western walls, with exception
+for the small window, a vast mural covers the stone slabs, scratches and
+some crumbling patches of rock mar the dynamic painting.
+~
+[Yrna] Done.
+[Guin] Done.
+[Zuig] Room is Sacraficial pit - should be Sacrificial
+~
+167248004 11 9 0
+D1
+~
+~
+0 -1 12784 10 10 5
+D2
+~
+~
+0 -1 12786 10 10 5
+E
+window boarded small planks wood shaved~
+A window, similar in shape to the vaulted ceiling of the temple, has been
+cut into the north wall; several crudely shaved planks of wood have been
+pushed into the small alcove that surrounds the window, effectively
+blocking out the light that tries to penetrate this dank chamber.
+~
+E
+wall 1 north 1 west~
+The vast painting, which has been scrawled into the masonry, is marred by
+deep scratches that span a full yard in length; they appear to have been
+made by a sharp blade of some kind.  The mural itself has been
+masterfully painted, although the scene that covers the wall is a
+depiction of what can only be a grotesque form of worship.  The graphic
+details are of people and creatures being sacrificed over a blood
+drenched altar, with the precious sanguine being collected into tall
+silver decanters.  Further around the pictures show the urns being tipped
+into a deep bath, the blood roiling as unknow evils slither through its
+midst.  demonic evil descends upon the unlit surroundings.
+~
+E
+large pit floor~
+About seven feet long by fifteen feet wide, the deep hole has been hewn
+into the ground beneath the red flagstones.  The rough, sanguine-drenched
+sides have been smoothed enough to provide no handholds out of the
+forboding pit.  Gathering in a pool of blood at the bottom, chunks of
+flesh and bone protrude from the slick surface of the rusty-red liquid. 
+It is impossible to tell what other horrors may lie beneath that placid
+covering.
+~
+A
+search~
+sacrificial pit~
+if( mob_in_room( 915, room ) ) {
+  send_to_char( #mobalive, ch );
+  end;
+}
+else {
+  if( !rflag( reset0, room ) ) {
+    act_tochar( #already, ch );
+    end;
+  }
+  if( rflag( reset0, room ) ) {
+    remove_rflag( reset0, room );
+    act_tochar( #success, ch );
+    act_notchar( #nsuccess, ch );
+obj_to_char( oload( 2252 ), ch );
+    end;
+  }
+}
+~
+E
+mobalive~
+@RAre you crazy?!  It is impossible to search the pit while the priest is
+here!@n 
+~
+E
+already~
+@RThe sacrafical pit has already been searched and is completely empty.@n
+~
+E
+success~
+@RUsing a long stick from the side of the pit you poke around a bit and
+manage to spear something!!@n 
+~
+E
+nsuccess~
+@R$n grabs a long stick from the side of the pit and starts poking around
+a bit and eventually $e appears to have speared something!!@n 
+~
+!
+0 0 0
+A
+~
+~
+act_tochar( #leaving, ch );
+act_notchar( #nleaving, ch );
+continue;
+~
+E
+leaving~
+@eYou move quickly out of the room in an attempt to get away from the
+foul smell.@n 
+~
+E
+nleaving~
+@e$n moves quickly out of the room in an attempt to get away from the
+foul smell.@n 
+~
+!
+3 0 6
+915 9 1509949540 3 0
+-1
+S
+
+#12786
+Ancient Altar~
+Standing in the centre of the room is a small altar carved from black
+marble; it seems to be the focal point of the entire temple.  Raised
+above the rest of the floor on a wooden dais, the ebon reredos glistens
+with the blood of a fresh sacrifice.  To the west, sits a small statue of
+a horned beast, resting on a hollowed shelf in the wooden wall.
+~
+[Guin] Add the 'get statue' acode like you did in room 12784.
+[Yrna] Done.
+[Guin] Reviewed.
+~
+167248004 11 9 0
+D0
+~
+~
+0 -1 12785 10 10 5
+D1
+~
+~
+0 -1 12787 10 10 5
+D2
+~
+~
+0 -1 12788 10 10 5
+E
+altar carved black marble wooden stand~
+Standing in the middle of the temple, a small marble altar rests on a
+marble plinth.  The blackened marble is inscribed with similar runes as
+the surrounding walls.  A delicate wooden stand holds the altar off the
+dusty floor.
+~
+E
+statue small shelf~
+A small statue rests on the shelf, crudely dug out of the crumbling
+masonry.  There is a definite shape to the figure, depicting an evil god
+of death and destruction.  Although hideous to look at, this artifact
+would be of considerable value to those who worship and follow this path.
+~
+A
+1 get 1 take~
+small statue~
+act_tochar( #statue, ch, obj, mob );
+act_notchar( #rstatues, ch, obj, mob, sight );
+~
+E
+statue~
+@CYou lean forward and try to grab the small statue, as you do the statue
+magically moves and avoids your grasp!@n
+~
+E
+rstatues~
+@C$n leans forward and tries to grab the small statue, as $e attempts to
+pick the statue up it magically moves and avoids $s grasp!n
+~
+!
+0 0 0
+915 9 1509949540 3 0
+-1
+S
+
+#12787
+Temple Centre~
+Lying in the centre of the temple, this sizeable room looks to be the
+main seating area for religious ceremonies.  Vast columns, stretching up
+into the sky, once supported a lofty vaulted ceiling, but the
+weather-beaten roof now lies crumbling beneath your feet.  Scattered
+across the ground lie the remains of several broken benches, most of
+which are covered in debris and blood soaked rags.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247876 11 9 0
+D0
+~
+~
+0 -1 12784 10 10 5
+D1
+~
+~
+0 -1 12782 10 10 5
+D2
+~
+~
+0 -1 12789 10 10 5
+D3
+~
+~
+0 -1 12786 10 10 5
+E
+huge column~
+The immense columns, hewn from carved stone, rise from the marble floor,
+where they once would have supported the sheltering wood ceiling that now
+lies crumbling at your feet.
+~
+E
+debris furniture marble benches blood rags~
+Strewn around the floor are the remnants of benches and furniture, they
+lay scattered across the marble.  Several blood soaked rags lie amongst
+the debris.  There appears to be nothing of value other than firewood.
+~
+A
+~
+~
+act_tochar( #leaving, ch );
+act_notchar( #nleaving, ch );
+continue;
+~
+E
+leaving~
+@yYou step over the broken benches and in to the darkness.@n
+~
+E
+nleaving~
+@y$n steps over the broken benches and in to the darkness.@n 
+~
+!
+3 0 15
+A
+~
+~
+send_to_room(#movement, room );
+~
+E
+movement~
+A sudden gust of wind causes dust and small fragments of debris to lift
+in to the air.@n 
+~
+!
+2 150 0
+1227 9 1509949540 3 0
+-1
+S
+
+#12788
+Decayed Font~
+Standing in the southwest corner of this side room, an empty font,
+crumbling into dust and stone, lies in desolation.  Above the fountain
+hangs a cap, forming the same shape and size of the font itself.  In the
+centre of the room sits a tall column, stretching into the darkness above.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247876 11 9 0
+D0
+~
+~
+0 -1 12786 10 10 5
+D1
+~
+~
+0 -1 12789 10 10 5
+E
+font stone cap~
+A large stone font, decaying from age and disuse, rests in the centre of
+the chamber.  Engraved into both the base and cap are devilish figures
+performing foul religious rites.
+~
+E
+huge column~
+The huge column, made from carved stone, rises from the marble floor. 
+Fastened halfway down its length an old fraying rope suspends the font
+cap about its base.  The slowly untwining rope creaks under the immense
+weight of the engraved stone cap.
+~
+A
+~
+~
+send_to_room(#movement, room );
+~
+E
+movement~
+@cAs you step across the marble floor the movement causes dust and small
+fragmets of debris to lift in to the air.@n 
+~
+!
+2 150 0
+1227 9 1509949540 3 0
+-1
+S
+
+#12789
+South Temple Quarter~
+The floor of the temple is crafted out of smooth marble, the pale stone
+shadowed by a lone column standing in the centre of the floor.  Hacked
+into the southern wall, a small dug out shelf holds a miniature statue of
+a demonic icon, the material it has been carved from appears slick and is
+of a blood red colour.  Shards of rock, scattered across the floor,
+crunch underfoot, their angular fragments grinding against the marble
+ground.
+~
+[Guin] Done.
+~
+167247876 11 9 0
+D0
+~
+~
+0 -1 12787 10 10 5
+D1
+~
+~
+0 -1 12790 10 10 5
+D3
+~
+~
+0 -1 12788 10 10 5
+E
+lone column~
+The single column, immense and made from intricately carved ebon stone,
+rises from the marble floor where it once would have supported a vast
+vaulted ceiling, which now lies disintegrating on the stone ground.
+~
+E
+small statue shelf~
+A small statue rests on the shelf, crudely dug out of the crumbling
+masonry.  There is a definite shape to the figure, depicting an evil god
+of death and destruction.  Although hideous to look at, this artifact
+would be of considerable value to those who worship and follow this path.
+~
+A
+~
+~
+act_tochar( #ouch, ch );
+act_notchar( #nouch, ch );
+dam_message( ch, 5d5+25, "the razor-sharp rock" );
+inflict( ch, mob, 5d5+25, "the razor-sharp rock" );
+continue;
+~
+E
+ouch~
+@RAs you leave the room you accidentally brush against a jagged rock.@n
+~
+E
+nouch~
+@RAs $n leaves the room, $e accidentally brushes against a jagged rock.@n
+~
+!
+3 0 11
+A
+get take grab~
+small statue~
+act_tochar( #statue, ch );
+act_notchar( #nstatue, ch );
+~
+E
+statue~
+@CYou lean forward and try to grab the small statue, as you do the statue
+magically moves and avoids your grasp!@n 
+~
+E
+nstatue~
+@C$n leans forward and tries to grab the small statue, as $e attempts to
+pick the statue up it magically moves and avoids $s grasp!n 
+~
+!
+0 0 0
+A
+~
+~
+send_to_room(#movement, room );
+~
+E
+movement~
+@cAs you step across the marble floor the movement causes dust and small
+fragmets of debris to lift in to the air.@n 
+~
+!
+2 150 0
+-1
+S
+
+#12790
+Dark Temple Corner~
+This area appears to be the most commonly used part of the temple.  The
+floor is clear from dust or debris, and around a tall column that
+supports the ceiling, a few benches are neatly arranged to face the
+southern wall.  On the wall to the south, painted symbols of demonic
+idols play out scenes from the history that depicts the rise of the
+overlord of darkness.  They stretch around the corner of the temple and
+onto the eastern wall, disappearing from sight behind another towering
+column.  Amidst the murals on the southern wall, a roughly hewn hole
+penetrates deeper within the rockface.
+~
+[Void] enter hole
+[Guin] Room linked by hidden exit.
+[Guin] Done.
+~
+167247876 11 9 0
+D0
+~
+~
+0 -1 12782 10 10 5
+D3
+~
+~
+0 -1 12789 10 10 5
+D5
+~
+~
+234 -1 12791 10 10 5
+E
+benches~
+These small wooden benches are crudely constructed, forming an uneven and
+rough surface; thick splinters jut out of the basic pews making the seats
+look very uncomfortable to sit on.
+~
+E
+tall column~
+The column, towering about thirty-seven feet high, is hewn from stone
+inscribed with evil icons.  It rises up from the marble floor, where it
+once would have supported a ceiling of wood that now lies in broken
+fragments on the crumbling floor.
+~
+E
+symbols painted corner wall~
+Fiendish hieroglyphs are painted all around the walls, some of the evil
+art has flaked away from the rotting wall, which crumbles onto the floor.
+~
+E
+rotting crumbling~
+A section of the plaster has eroded away from the wall, leaving a hole
+big enough to crawl through.
+~
+A
+climb enter~
+hole opening 1 down~
+act_tochar( "You climb hand over hand down into the cave entrance.", ch );
+act_notchar( "$n climbs hand over hand down into the cave entrance.", ch );
+transfer( ch, find_room( 12791 ) );
+act_notchar( "$n comes climbing down into the cave.", ch );
+~
+!
+0 0 0
+915 9 1509949540 3 0
+-1
+S
+
+#12791
+Cave Entrance~
+The cave narrows as it wanders along to the north, giving the impression
+that the passage closes in on its surrounds.  There is very little room
+inside the tunnel making it impossible for a humanoid to stand at full
+height.  Meandering haphazardly, the corridor runs generally in a
+southern direction.  Breaching the northern wall, a jagged opening in the
+crumbling stone looks big enough to climb through.
+~
+[Guin] No.mob room
+[Guin] Done.
+~
+167378956 11 9 0
+D2
+~
+~
+0 -1 12792 10 10 5
+D4
+~
+~
+234 -1 12790 10 10 5
+E
+1 northern jagged opening crumbling stone~
+Little more than a narrow crevice, the fissure to the north looks as
+though it has been widened with crude tools chipping away the dense rock
+and allowing access into the malignant temple.
+~
+A
+enter climb~
+jagged opening entrance 1 up~
+act_tochar( "You climb up hand over hand through the jagged opening.", ch );
+act_notchar( "$n climbs up hand over hand through the jagged opening.", ch );
+transfer( ch, find_room( 12790 ) );
+act_notchar( "$n comes climbing into the temple.", ch );
+~
+!
+0 0 0
+A
+~
+~
+act_tochar( #leaving, ch );
+act_notchar( #nleaving, ch );
+continue;
+~
+E
+leaving~
+@eLowering your head to avoid the jagged ceiling you scramble south.@n
+
+~
+E
+nleaving~
+@e$n lowers $s head to avoid the jagged ceiling and scrambles south.@n
+
+~
+!
+3 0 4
+-1
+S
+
+#12792
+Twisted Tunnel~
+Putrid and repugnant, the stench of death becomes overpowering as the
+corridor disappears into blackness.  Sharply twisting and turning as it
+winds both to the east and north, the tunnel delves between the cracks in
+the jagged rock formation.  The darkness of the passage seems to filter
+in the dim light that emanates from somewhere off to the east.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 9 0
+D0
+~
+~
+0 -1 12791 10 10 5
+D1
+~
+~
+0 -1 12793 10 10 5
+E
+cracks jagged rock formation~
+Small fissures riddle the surface of the cave walls, their narrow
+incisions into the rock are a home to many slaters and beetles.  A fine
+covering of dust and rock fragments cover the horizontal ledges of the
+cave.
+~
+A
+~
+~
+send_to_room( #movement, room, sight );
+~
+E
+movement~
+@MThe cavern floor vibrates suddenly as a screech is heard in the
+distance.@n 
+~
+!
+2 100 0
+A
+~
+~
+act_tochar( #leaving, ch );
+act_notchar( #nleaving, ch );
+continue;
+~
+E
+leaving~
+@eLowering your head to avoid the jagged ceiling you scramble north.@n
+
+~
+E
+nleaving~
+@e$n lowers $s head to avoid the jagged ceiling and scrambles north.@n
+
+~
+!
+3 0 1
+5419 137 1509949540 3 0
+2401 137 1509949540 3 0
+-1
+S
+
+#12793
+Cave Opening~
+Amber light filling this tunnel radiates in from the opening to the east;
+as it flickers over the rough walls, deep shadows dance when a light
+draft causes the unseen flame to waver.  A putrid stench wafts along this
+dingy corridor, its deathly odour nauseating.  A gentle but deep hum can
+be heard, vibrating as it reverberates from further along the tunnel.
+~
+[Guin] Done.
+~
+167378948 11 9 0
+D1
+~
+~
+0 -1 12794 10 10 5
+D3
+~
+~
+0 -1 12792 10 10 5
+E
+amber light shadows~
+Flickering across the dark grey granite walls, the faint amber lighting
+wavers slightly, causing the shadows to deepen as it advances and
+retreats with a whispy draft.
+~
+A
+~
+~
+send_to_room( #movement, room, sight );
+~
+E
+movement~
+@MThe spine chilling sound of a creature crunching bones comes from the
+east.@n 
+~
+!
+2 500 0
+-1
+S
+
+#12794
+Large Cavern~
+The continuous cracking and splintering of bones can be heard underfoot,
+as they are trod on by those who wander this hallway.  Set into the wall
+to the east, a shallow basin has been hacked into the angular stone
+surfaces.  The dark basalt walls surrounding this corridor are deeply
+scratched and marred with what would appear to be deep claw marks.  The
+cavern narrows to the west and continues to the south.  A single
+guttering torch sits in a wall bracket above the basin, creating a dull
+amber glow.
+~
+[Guin] Done.
+~
+167378948 11 9 0
+D2
+~
+~
+0 -1 12795 10 10 5
+D3
+~
+~
+0 -1 12793 10 10 5
+E
+bones~
+Scattered around are numerous skeletal bones that have been crushed
+underfoot, the yellowed fragments sustain a thin layer of mold.
+~
+E
+scratches claw marks wall~
+Deeply scratched into the stone walls are random claw marks, gouged from
+the rough surface, the angry incursions seem to almost to seethe with
+devilry.
+~
+E
+basin~
+A shallow basin, hacked into the wall, is empty of anything save dust and
+bat guano.  What it once held is no mystery; the inside of the bowl is
+stained the color of dried blood.
+~
+A
+~
+~
+act_tochar( #leaving, ch );
+act_notchar( #nleaving, ch );
+continue;
+~
+E
+leaving~
+@YBones shatter underfoot as you begin to move south and a great feeling
+of fear suddenly comes over you as there is no turning back and you head
+in to the darkness.@n 
+~
+E
+nleaving~
+@YBones shatter underfoot as $n begins to move south.  $n looks
+apprehensive as there is no turning back and $e heads in to the
+darkness.@n 
+~
+!
+3 0 4
+2252 17 1509949540 -2 0
+5419 137 1509949540 3 0
+2401 137 1509949540 3 0
+-1
+S
+
+#12795
+Lair~
+Throughout the cavern, bones are strewn across the floor creating a thick
+carpet of brittle ivory.  Rags, ripped and shredded, lay intermingled
+with the bleached skeletons in this desolate chamber.  There is a
+clearing in the bones, forming a circular nest of enormous proportions. 
+A hollowed out alcove has been hewn into the eastern wall with bars
+crossing the entrance preventing any access.
+~
+[Guin] Done.
+~
+-369491956 11 9 0
+D0
+~
+~
+0 -1 12794 10 10 5
+E
+bones carpet ivory~
+Thick underfoot is a blanket of bones, their gnawed lengths indicating
+that the unfortunate owners were obviously a past meal for some
+unspeakable creature.
+~
+E
+bars tunnel~
+An alcove, hewn into the eastern wall by means unknown, is blocked by a
+securely fixed metal grate.  At a glance, there is no way to open or lift
+grate to access the opening beyond it.
+~
+A
+~
+~
+if( mob_in_room( 1322, room ) ) {
+  remove_rflag( reset0, room );
+  end;
+}
+if( is_follower( ch ) )
+  end;
+if( !is_player( ch ) )
+  end;
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  remove_rflag( reset1, room );
+  close( room, north );
+  act_tochar( #disturb, ch );
+  wait( 2 );
+  Act_room( #wall, ch );
+  close( room, north );
+  Wait( 2 );
+  Send_to_room( #animate, room );
+  wait( 2 );
+  send_to_room( #attack, room );
+  mob = mload( 1322, room );
+  damage( mob, ch, 3d10+75, physical, "rending claw swipe" );
+  init_attack( mob, ch );
+  open( room, north );
+  set_rflag( reset1, room );
+}
+~
+E
+disturb~
+@RAs you enter the lair you hear the scraping of claws from above.@n
+~
+E
+Animate~
+@RA blast of air shoots in from above and a red hydra swoops down
+clearing the path north with its claws.@n 
+~
+E
+attack~
+@RThe red hydra swoops down raising its seven heads screeching in fury.@n
+~
+E
+wall~
+@RSuddenly a shower of boulders falls from the ceiling blocking the
+exit!@n
+~
+!
+1 0 1
+A
+~
+~
+if( !rflag( reset1, room ) ) {
+  act_tochar( #how, ch, obj, mob );
+  end;
+}
+continue;
+~
+E
+to_char~
+@eThe bones underfoot crunch and shift with your weight as you scramble
+northward.@n 
+~
+E
+to_room~
+@eThe bones underfoot crunch and shift with $n weight as $e scrambles
+northward.@n 
+~
+E
+how~
+@cHow do you expect to get out of here right now?!?@n
+~
+!
+3 0 1
+A
+1 look~
+bars tunnel grate~
+if( rflag( reset2, room ) )
+  act_tochar( #grate, ch, obj, mob, sight );
+else
+  act_tochar( #agrate, ch, obj, mob, sight );
+~
+E
+grate~
+An alcove, hewn into the eastern wall by means unknown, is blocked by a
+securely fixed metal grate.  At a glance, there is no way to open or lift
+grate to access the opening beyond it.
+~
+E
+agrate~
+The grate, jarred loose by the hydra's death throes, leans drunkenly at
+an angle but still partially blocks what lies beyond.
+~
+!
+0 0 0
+A
+1 open pry move pull~
+bars tunnel grate~
+if( rflag( reset2, room ) ) {
+  act_tochar( #firmly, ch, obj, mob, sight );
+  act_notchar( #rfirmly, ch, obj, mob, sight );
+  end;
+}
+if( !rflag( status0, room ) ) {
+  act_tochar( #already, ch, obj, mob, sight );
+  end;
+}
+remove_rflag( status0, room );
+act_tochar( #pry_grate, ch, obj, mob, sight );
+act_notchar( #rpry_grate, ch, obj, mob, sight );
+wait( 1 );
+container = oload( 578 );
+act_tochar( #pull_chest, ch, container, mob, sight );
+act_notchar( #rpull_chest, ch, container, mob, sight );
+obj_to_room( container, room );
+if( random( 1, 20 ) == 3 )
+  obj_to_cont( oload( 2465 ), container );
+obj_to_cont( oload( 16, random( 2, 5 ) ), container );
+obj_to_cont( oload( 1761 ), container );
+if( random( 1, 10 ) == 1 )
+  obj_to_cont( oload( 197 ), container );
+if( random( 1, 20 ) == 3 )
+  obj_to_cont( oload( 2396 ), container );
+if( random( 1, 20 ) == 6 )
+  obj_to_cont( oload( 7381 ), container );
+if( random( 1, 15 ) == 3 )
+  obj_to_cont( oload( 3935 ), container );
+~
+E
+firmly~
+The grate is firmly attached the wall.
+~
+E
+rfirmly~
+$n pries on the grate, but gives up in futility.
+~
+E
+pry_grate~
+You pry on the hanging grate, and you clear it completely from
+obstructing the alcove.
+~
+E
+rpry_grate~
+$n pries on the grate, and clears it from obstructing the vault.
+~
+E
+pull_chest~
+You pull $p from the alcove, and drop it on the floor.
+~
+E
+rpull_chest~
+$n pulls $p from the alcove and drops it on the floor.
+~
+E
+already~
+The alcove has already been opened up.
+~
+E
+raining_elements~
+$p explodes in a rash of the elements, and it seems it was magically
+linked to others...
+~
+!
+0 0 0
+A
+~
+~
+set_rflag( status0, room );
+~
+!
+16 0 0
+2053 17 1509949540 -2 0
+-1
+S
+
+#12796
+Rocky trail~
+Enormous granite boulders lying end on end block any passage to the west
+and east with the slippery seaweed covered surfaces impossible to
+traverse.  There is a small inlet of water in the rocky terrain,
+advancing from the east with a deep pool of seawater congregating at the
+base of the granite rocks.  A rocky path leads off to the north and south.
+~
+[Yrna] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 12751 10 10 5
+D2
+~
+~
+0 -1 12797 10 10 5
+E
+Inlet deep pool~
+The inlet trickles down through a crack in the rocks to the northeast and
+congregates as a deep pool in the southwest corner.
+~
+E
+Granite boulders seaweed~
+The vast granite boulders are covered in a mixture of seaweed and what
+looks like gigantic bird droppings.  The sheer size and shape of the
+boulders mixed with the slippery seaweed make them impossible to climb.
+~
+-1
+S
+
+#12797
+Rocky Trail~
+The ocean can be seen clearly off to the north with the waves crashing
+down.  As the wind picks up and on the horizon the fog continues to
+envelop around the island.  In the distance toward the north a large top
+section of cliff can be seen, with gigantic feathered creatures circling
+high in the sky above.  The worn trail leads down a few rocks to the
+north and across a large boulder to the east.
+~
+[Yrna] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 12796 10 10 5
+D1
+~
+~
+0 -1 12798 10 10 5
+A
+~
+~
+act_tochar( #leaving, ch );
+act_notchar( #nleaving, ch );
+continue;
+~
+E
+leaving~
+@eYou carefully clamber across the granite boulder.@n 
+~
+E
+nleaving~
+@e$n carefully clambers across the granite boulder.@n 
+~
+!
+3 0 2
+-1
+S
+
+#12798
+Vantage Point~
+Small tufts of wispy grass sprout from underneath a large slab of
+granite, which rests to the northeast of this rocky area.  The granite
+slab appears to be deliberately positioned for a resting spot as it has
+created an incredible vantage point, with sea views stretching in every
+direction.  Looking out toward the sea, a barrier of thick fog encircles
+the island, successfully hiding it from the outside world.  A passable
+rocky trail leads off along the coast to the west and south.  Eastward, a
+break in the stony ground leads to the base of a cliff.
+~
+[Guin] Connects to Ice Fields east - Room 14511
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+64 -1 14511 10 10 5
+D2
+~
+~
+0 -1 12799 10 10 5
+D3
+~
+~
+0 -1 12797 10 10 5
+E
+Tufts wispy grass~
+The straggly grass sways slightly in the gentle breeze blowing in from
+the sea.
+~
+E
+Slab granite~
+The makeshift bench is around twenty feet long and five feet wide
+providing an excellent panoramic view over the sea and rocky shore.  At
+the centre of the granite surface the word "HELP!" has been hastily
+scrawled in dried blood.  Moving out from the centre of the bench there
+is further evidence of spots of dried blood.
+~
+-1
+S
+
+#12799
+Rocky trail~
+The sea lies directly to the east with dark green seaweed clinging to the
+craggy rocks, which make up the jagged shoreline.  Several dozen
+black-headed gulls fly above, circling around looking for scraps of food
+in this barren, inhospitable expanse.  Spanning toward the far northwest,
+the uppermost section of a cliff can be made out, with large,
+unidentifiable creatures roaming throughout the grassy looking summit. 
+The rocky trail can be traversed to the north and south.
+~
+[Yrna] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 12798 10 10 5
+D2
+~
+~
+0 -1 12800 10 10 5
+E
+seaweed craggy rocks~
+The vast granite boulders are covered in a mixture of seaweed and what
+looks like gigantic bird droppings.  The sheer size and shape of the
+boulders mixed with the slippery seaweed make them impossible to climb.
+~
+A
+~
+~
+send_to_room(#bird, room );
+~
+E
+bird~
+@rA black-headed gull suddenly swoops down just missing your face and
+dives towards the sea.@n
+~
+!
+2 150 0
+-1
+S
+
+#12800
+Worn trail~
+The thick mist has cleared in this area, however looking to the east it
+continues to linger, creating a misty barrier and making it impossible to
+see more than fifteen feet along the lengthy pier.  Stretching away
+toward the northeast, the ocean can clearly be seen with black-headed
+gulls flying overhead looking for any scraps of food left on the rocky
+shore.  There is a slightly worn trail leading off over some small rocks
+to the north, avoiding the large, impassable granite boulders to the west
+and south.
+~
+[Yrna] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 12799 10 10 5
+D1
+~
+~
+0 -1 12801 10 10 5
+E
+granite boulders~
+The lack of handholds and sheer slopes of these immense granite rocks
+makes them far too difficult to climb.
+~
+A
+1 west~
+~
+act_tochar( #leaving, ch );
+act_notchar( #nleaving, ch );
+~
+E
+leaving~
+@eYou try to scramble across the granite boulders but soon give up and
+realise it is an impossible task.@n 
+~
+E
+nleaving~
+@e$n tries to scramble across the granite boulders but soon gives up and
+realises it is an impossible task.@n 
+~
+!
+0 0 0
+-1
+S
+
+#12801
+Rickety Pier~
+A dense mist shrouds the area with the pier extending to the western
+shore where the fog lifts slightly.  East, toward the end of the pier,
+visibility becomes more difficult as the fog becomes thick and shifts and
+turns with every breath of wind.  In a patch of thinning mist it is only
+just possible to make out some broken planks of wood with sharp splinters
+protruding from the damaged timber.  The decrepit pier is in serious
+danger of collapse at any time, making the journey to shore or to the
+pier end treacherous.
+~
+[Yrna] Done.
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 12802 10 10 5
+D3
+~
+~
+0 -1 12800 10 10 5
+A
+~
+~
+send_to_room(#fog, room );
+~
+E
+fog~
+@CThe fog shifts and turns in the prevailing breeze.@n 
+~
+!
+2 150 0
+A
+~
+~
+act_tochar( #leaving, ch );
+act_notchar( #nleaving, ch );
+continue;
+~
+E
+leaving~
+@cVery carefully, step by step you walk across the decrepit pier.@n
+~
+E
+nleaving~
+@cVery carefully, step by step $n walks across the decrepit pier.@n 
+~
+!
+3 0 8
+-1
+S
+
+#12802
+Eastern End of the Pier~
+A long, rickety pier stretches out to the west for what must be at least
+thirty feet with thick mist rolling in from the sea obscuring everything
+from that point onward.  Constructed from old planks and scraps of timber
+the pier is in a very decrepit state, with the tide and waves from the
+sea eroding the structure over the years.  Looking back toward the sea
+nothing at all can be made out through the mist and an eerie silence
+encompasses the area.  To the north, resting on a handrail and tied down
+with some worn string is a large hand bell.
+~
+[Void] Ok this is the end of the boatride
+[Yrna] Done.
+~
+167247872 13 9 0
+D1
+~
+~
+234 -1 12803 10 10 5
+D3
+~
+~
+0 -1 12801 10 10 5
+E
+large hand bell~
+The hefty bell is constructed from silver plate and is loosely attached
+to the pier using an old piece of string.  Along the base of the bell
+there is an inscription reading "For assistance ring three times".
+~
+A
+~
+~
+send_to_room(#fog, room );
+~
+E
+fog~
+@CThe breeze from the east causes the mist to swirl around your face,
+sending a chill down your spine.@n 
+~
+!
+2 200 0
+A
+~
+~
+mob = mob_in_room( 2575, find_room( 12803 ) );
+if( mob )
+  if( players_room( find_room( 12803 ) ) == 0 )
+  if( players_room( find_room( 12802 ) ) == 0 )
+  transfer( mob, find_room( 12806 ) );
+~
+!
+16 0 0
+A
+1 east~
+*~
+mob = mob_in_room( 2575, find_room( 12803 ) );
+if( mob ) {
+  act_tochar( #plank, ch );
+  act_notchar( #rplank, ch, obj, mob, sight );
+  transfer( ch, find_room( 12803 ) );
+  act_notchar( #cplank, ch, obj, mob, sight );
+  mpcode( mob, 3 );
+}
+else
+  act_tochar( #edge_of_jetty, ch );
+~
+E
+plank~
+@cYou carefully climb onto the plank and cross over to the ship.@n
+~
+E
+rplank~
+@c$n carefully climbs onto the plank and crosses over to the ship.@n
+~
+E
+cplank~
+@c$n jumps down to the deck from the plank.@n
+~
+E
+edge_of_jetty~
+@cYou walk up to the edge of the pier, and look down into the water.@n
+~
+E
+ring~
+@CThe bell rings with a crisp clear sound, echoing throughout the area.@n
+~
+!
+0 0 0
+A
+cross 3 climb~
+plank~
+acode( room, 3 );
+~
+!
+0 0 0
+A
+ring~
+bell~
+mob = mob_in_room( 2575, find_room( 12803 ) );
+if( mob ) {
+  act_tochar( #already, ch, obj, mob );
+  end;
+}
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  send_to_area( #ring, room, sound );
+  end;
+}
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  send_to_area( #ring, room, sound );
+  end;
+}
+send_to_area( #ring, room, sound );
+mob = mob_in_room( 2575, find_room( 12806 ) );
+if( !mob ) {
+  act_room( #wrong, ch, obj, mob );
+  end;
+}
+wait( random( 1, 2 ) );
+rch = rand_player( room );
+if( rch )
+  if( !is_affected( blind, rch ) ) {
+  act_tochar( #in_the_distance, rch, obj, mob, sight );
+  act_notchar( #rin_the_distance, rch, obj, mob, sight );
+}
+wait( random( 1, 2 ) );
+send_to_room( #docks, room, sight );
+wait( 1 );
+send_to_room( #plank, room, sight );
+transfer( mob, find_room( 12803 ) );
+~
+E
+already~
+@RThe boat is already at the edge of the pier.@n
+~
+E
+ring~
+@CThe bell rings with a crisp clear sound, echoing throughout the area.@n
+~
+E
+wrong~
+@CSomething seems wrong, you have a chill running across your back.@n
+~
+E
+in_the_distance~
+You see a large sailing vessel approaching the pier to the west.  It is
+too far for you to make out any details, but you point it out to othersin
+the room, in case they didn't see it.
+~
+E
+rin_the_distance~
+$n sees something in the distance, after you concentrate on it a bit, you
+think that it is probably a large boat.
+~
+E
+docks~
+A magnificent looking sail boat crests a wave close to the dock, and just
+barely touches the jetty.  Its size astounds you at probably close to one
+hundred feet in height, it also has three triangular shaped sails to move
+it along the ocean.  You have a feeling the captain of the vessel is
+probably very well to do.  On the front of the vessel there is a wooden
+
+~
+E
+plank~
+A wooden plank, about ten feet in length and close to six feet in width
+is placed between the boat and the jetty.
+~
+!
+0 0 0
+-1
+S
+
+#12803
+Near a Rickety Pier~
+The old battered boat bobs up and down as the water laps against the
+rickety old pier.  A dingy sail rises toward the center of the skiff,
+wispy remnants of the surrounding fog curled around the mast.  The
+sea-going craft is long and narrow, with room for only a limited few
+passengers.  A pair of weary oars lean drunkenly in opposing oarlocks,
+dry blades a foot or more above the briny sea.
+~
+[Yrna] Same as the other pier, done.
+~
+167247872 13 9 0
+D1
+~
+~
+234 -1 12804 10 10 5
+D3
+~
+~
+234 -1 12802 10 10 5
+A
+1 east~
+*~
+act_tochar( #drown, ch );
+~
+E
+drown~
+You would probably drown if you dove off here.
+~
+!
+0 0 0
+A
+climb cross~
+pier plank 1 up 1 west~
+if( !mob_in_room( 2575, room ) ) {
+  act_tochar( #climb, ch );
+  act_notchar( #rclimb, ch, obj, mob, sight );
+  transfer( ch, find_room( 12802 ) );
+  act_notchar( #darrive, ch, obj, mob, sight );
+}
+else {
+  act_tochar( #plank, ch );
+  act_notchar( #rplank, ch, obj, mob, sight );
+  transfer( ch, find_room( 12802 ) );
+  act_notchar( #cplank, ch, obj, mob, sight );
+}
+~
+E
+climb~
+@CYou grab ahold of the ladder, and draw yourself out of the cold water. 
+You then climb up the ladder and onto the pier.@n 
+~
+E
+rclimb~
+@C$N grabs ahold of the ladder, and draws $mself out of the cold water.
+Then $e climbs up the ladder and onto the pier.@n
+~
+E
+darrive~
+@C$n pulls $mself up onto the pier, there is water dripping off of $s
+clothing.@n
+~
+E
+plank~
+@cYou carefully set foot on the plank and make your way across to the
+pier.@n
+~
+E
+rplank~
+@c$n carefully sets foot on the plank and makes $s way across to the
+pier.@n
+~
+E
+cplank~
+@C$n steps off the plank onto the pier.@n
+~
+!
+0 0 0
+A
+1 west~
+*~
+acode( room, 2 );
+~
+!
+0 0 0
+-1
+S
+
+#12804
+Somewhere on the Moonfall Sea~
+Wispy fingers of fog twine sinuously around the boat and its mast as the
+journey continues interminably onward, building to dense low-lying clouds
+against the far off horizons.  There are no landmarks...no clues to a
+possible destination...only the clear grey water of the slow-rolling sea.
+Likewise, no sounds can be heard save the lap of undulating swells
+against the weathered wood of the skiff.
+~
+[Yrna] Done. Again, the same as before serpent room
+~
+167247872 13 9 0
+D1
+~
+~
+234 -1 12805 10 10 5
+D3
+~
+~
+234 -1 12803 10 10 5
+A
+1 west 1 east~
+*~
+act_tochar( #drown, ch );
+~
+E
+drown~
+You would probably drown if you dove off here.
+~
+!
+0 0 0
+A
+~
+~
+mob = mob_in_room( 2575, room );
+if( !mob ) {
+  send_to_room( #wash_up, room );
+  loop( all_in_room )
+    if( rch )
+    transfer( rch, find_room( 12808 ) );
+}
+~
+E
+wash_up~
+The current drags you off...
+~
+!
+2 200 0
+-1
+S
+
+#12805
+Dark Waters on the Moonfall~
+The veil of mist and fog lift at this spot on the Moonfall, revealing a
+vast stretch of dark grey water.  So too, the sea is strangely calm, the
+undulating waves prevalent elsewhere gone, and the smooth surface
+glass-like in appearance.  Here, the chill in the air is mind-numbing,
+despite the lifting of the ever-present haze.
+~
+[Cayln] 1 in 10 chance of sea monster attack, increase probability if someone small is around
+[Cayln] Serpents Lair lays below
+[Yrna] Done.
+~
+166199296 13 9 0
+D1
+~
+~
+234 -1 12806 10 10 5
+D3
+~
+~
+234 -1 12804 10 10 5
+D5
+~
+~
+42 -1 12809 10 10 5
+A
+1 east 1 west~
+*~
+act_tochar( #drown, ch );
+~
+E
+drown~
+You would probably drown if you dove off here.
+~
+!
+0 0 0
+A
+~
+~
+~
+!
+0 0 0
+A
+~
+~
+send_to_room( #wind, room );
+remove_rflag( reset1, room );
+mob = mob_in_room( 2575, room );
+if( mob ) {
+  act_room( #ready, mob );
+  set_integer( mob, "/Cayln/ForgIsle/BoatRide", 0 );
+}
+~
+E
+wind~
+@CThe wind starts picking up again.@n
+~
+E
+ready~
+$n breathes a sigh of relief and says, "With the winds picking up again,
+we can move on when you heroes are ready.  Tell me @Cready@n to make me
+get my crew moving again."
+~
+!
+2 200 0
+A
+3 dive~
+*~
+if( !rflag( reset0, room ) ) {
+  act_tochar( #you_dive, ch, obj, mob, sight );
+  act_notchar( #ryou_dive, ch, obj, mob, sight );
+  transfer( ch, find_room( 12809 ) );
+  act_notchar( #darrive, ch, obj, mob, sight );
+}
+else
+  act_tochar( #why, ch );
+~
+E
+you_dive~
+You dive off the ship, penetrating deep into the waters.
+~
+E
+ryou_dive~
+$n dives off the ship, penetrating deop into the water.
+~
+E
+why~
+Why would you want to do that?
+~
+E
+darrive~
+$n arrives in the water, having dove off the ship.
+~
+!
+0 0 0
+A
+~
+~
+mob = mob_in_room( 2575, room );
+if( !mob ) {
+  send_to_room( #wash_up, room );
+  loop( all_in_room )
+    if( rch )
+    transfer( rch, find_room( 12808 ) );
+}
+~
+E
+wash_up~
+The current drags you off...
+~
+!
+2 200 0
+-1
+S
+
+#12806
+Somewhere on the Moonfall Sea~
+Wispy fingers of fog twine sinuously around the boat and its mast as the
+journey continues interminably onward, building to dense low-lying clouds
+against the far off horizons.  There are no landmarks...no clues to a
+possible destination...only the clear grey water of the slow-rolling sea.
+Likewise, no sounds can be heard save the lap of undulating swells
+against the weathered wood of the skiff.
+~
+[Yrna] Exactly the same as east ... I suppose that's alright
+[Yrna] Done.
+[Cayln] this is where the 'ship' rests.
+~
+167247872 13 9 0
+D1
+~
+~
+234 -1 12807 10 10 5
+D3
+~
+~
+234 -1 12805 10 10 5
+A
+1 west 1 east~
+*~
+if( mob_in_room( 2575, room ) )
+act_tochar( #drown, ch );
+else
+act_tochar( #stupid, ch );
+~
+E
+drown~
+You would probably drown if you dove off the ship here.
+~
+E
+stupid~
+You have no idea which way to swim to make it to shore.
+~
+!
+0 0 0
+A
+~
+~
+mob = mob_in_room( 2575, room );
+if( !mob ) {
+  send_to_room( #wash_up, room );
+  loop( all_in_room )
+    if( rch )
+    transfer( rch, find_room( 12808 ) );
+}
+~
+E
+wash_up~
+The current drags you off...
+~
+!
+2 200 0
+2575 9 1509949540 3 0
+-1
+S
+
+#12807
+Somewhere on the Moonfall Sea~
+Wispy fingers of fog twine sinuously around the boat and its mast as the
+journey continues interminably onward, building to dense low-lying clouds
+against the far off horizons.  There are no landmarks...no clues to a
+possible destination...only the clear grey water of the slow-rolling sea.
+Likewise, no sounds can be heard save the lap of undulating swells
+against the weathered wood of the skiff.
+~
+[Yrna] Done.
+~
+167247872 13 9 0
+D3
+~
+~
+234 -1 12806 10 10 5
+A
+1 east 1 west~
+*~
+act_tochar( #drown, ch );
+~
+E
+drown~
+You would probably drown if you dove off the ship here.
+~
+!
+0 0 0
+A
+~
+~
+mob = mob_in_room( 2575, room );
+if( !mob ) {
+  send_to_room( #wash_up, room );
+  loop( all_in_room )
+    if( rch )
+    transfer( rch, find_room( 12808 ) );
+}
+~
+E
+wash_up~
+The current drags you off...
+~
+!
+0 0 0
+-1
+S
+
+#12808
+Near a Weathered Jetty~
+The old battered boat bobs up and down as the water laps against the
+weathered jetty.  A dingy sail rises toward the center of the skiff,
+wispy remnants of the surrounding fog curled around the mast.  The
+sea-going craft is long and narrow, with room for only a limited few
+passengers.  A pair of weary oars lean drunkenly in opposing oarlocks,
+dry blades a foot or more above the briny sea.
+~
+[Yrna] Done.
+[Guin] Do not delete this room, ever!
+[Guin] West exit deliberately disconnected.
+~
+167247872 13 9 0
+D1
+~
+~
+170 -1 78775 10 10 5
+A
+3 climb~
+jetty 1 up 1 east~
+if( !mob_in_room( 2575, room ) ) {
+  act_tochar( #climb, ch );
+  act_notchar( #rclimb, ch, obj, mob, sight );
+  transfer( ch, find_room( 78775 ) );
+  act_notchar( #darrive, ch, obj, mob, sight );
+}
+else {
+  act_tochar( #plank, ch );
+  act_notchar( #rplank, ch, obj, mob, sight );
+  transfer( ch, find_room( 78775 ) );
+  act_notchar( #cplank, ch, obj, mob, sight );
+}
+~
+E
+climb~
+@CYou grab ahold of the ladder, and draw yourself out of the cold water. 
+You then climb up the ladder and onto the jetty.@n 
+~
+E
+rclimb~
+@C$n grabs ahold of the ladder, and draws $mself out of the cold water.
+Then $e climbs up the ladder and onto the jetty.@n 
+~
+E
+darrive~
+@C$n pulls $mself up onto the jetty, there is water dripping off of $s
+clothing.@n 
+~
+E
+plank~
+@cYou carefully set foot on the plank and make your way across to the
+jetty.@n 
+~
+E
+rplank~
+@c$n carefully sets foot on the plank and makes $s way across to the
+jetty.@n 
+~
+E
+cplank~
+@C$n steps off the plank onto the jetty.@n
+~
+!
+0 0 0
+A
+1 east~
+*~
+acode( room, 1 );
+~
+!
+0 0 0
+A
+1 west~
+*~
+act_tochar( #drown, ch );
+~
+E
+drown~
+You would probably drown if you dove off the ship.
+~
+!
+0 0 0
+A
+3 climb 3 cross~
+plank~
+act_tochar( #cross, ch );
+act_notchar( #rcross, ch, obj, mob, sight );
+transfer( ch, find_room( 78775 ) );
+act_notchar( #arrive, ch, obj );
+~
+E
+cross~
+You cross the plank onto the jetty.
+~
+E
+rcross~
+$n crosses the plank onto the jetty.
+~
+E
+arrive~
+$n steps onto the jetty, from the plank leading to the ship.
+~
+!
+0 0 0
+-1
+S
+
+#12809
+Beneath the Sea~
+Here, just below the sea's surface, the water is gyrating violently and
+filled with bits and dirt and debris circling in a whirlpool-like vortex. 
+The pull of the water downward is insistent and undeniable.
+~
+[Guin] Done.
+~
+167247872 7 9 0
+D4
+~
+~
+42 -1 12805 10 10 5
+D5
+~
+~
+0 -1 12810 10 10 5
+-1
+S
+
+#12810
+Beneath the Sea~
+The sea floor here is sandy, peppered with a scattering of pebbles and
+rocks.  The tug of the sea is strong, the gyrations of the whirlpool-like
+vortex insistent.  Sand grains spin in the water, upward and to the west,
+pulled through a funnel-shaped opening that lies in that direction.
+~
+[Guin] Sandy bottom underfoot, peppered with rocks.
+~
+167247872 7 9 0
+D3
+~
+~
+0 -1 12811 10 10 5
+D4
+~
+~
+0 -1 12809 10 10 5
+-1
+S
+
+#12811
+Serpent's Lair~
+The murky water flows into a vast underground cavern, that soars high
+overhead and disappears into the darkness to the west.  Dark lines circle
+the stone, the walls beneath the lines worn smooth by the flow of water
+at high tide.  Above the waterline, the sloping floor of the cave is dry
+and covered with the flotsam and jetsam normally found on the sea's
+surface.
+~
+[Guin] Done.
+~
+167378948 13 9 0
+D1
+~
+~
+0 -1 12810 10 10 5
+E
+flotsam jetsam~
+What can be seen of the cavern's floor is covered in mounds and piles of
+debris.  Water-logged seaweed, bleached bones of various sizes and grey
+driftwood lie in piles of various sizes.
+~
+2574 137 1509949540 3 0
+-1
+S
+
+#12812
+Winding trail~
+Under Construction.
+~
+~
+167247872 12 9 0
+D5
+~
+~
+235 -1 12751 10 10 5
+2770 9 1509949540 3 0
+-1
+S
+
+#0
+

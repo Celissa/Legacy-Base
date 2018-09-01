@@ -1,0 +1,1750 @@
+#M2_AREA
+2
+
+Sylfaen(2)~
+Teircen~
+~
+~
+~
+
+0 0
+2
+1
+#ROOMS
+
+#6900
+Forest~
+A pristine white wall to the north extends east and west of here, quickly
+arcing out of sight as it curves to the northeast and northwest.  What
+you can see of the wall at this angle makes it appear to be no more than
+an arc in a much larger circular barricade protecting what lays within. 
+The verdant greenery outside the wall appears unbroken in its placement
+as if not a single tree or shrub was cut down to make room for it yet, at
+the same time, the trees all seem to stand off a short, but respectful,
+distance from the wall.  A large, arcing portal forms a break in the wall
+providing passage to the north.
+~
+Acodes 1 and 2 in room 11565 are for the city gates north of here once I
+determine how I want to handle them.
+More detailed explanation in the rbug in room 11565.
+[Guin] Elven forest, not started.
+[Guin] connected north to 11565
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 6901 10 10 5
+D3
+~
+~
+0 -1 6902 10 10 5
+-1
+S
+
+#6901
+Forest~
+Under Construction.
+~
+[Guin] connected east to 7448
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 6900 10 10 5
+-1
+S
+
+#6902
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 6900 10 10 5
+D3
+~
+~
+0 -1 6903 10 10 5
+-1
+S
+
+#6903
+Forest~
+Under Construction.
+~
+[Guin] connect south to 7453
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 6902 10 10 5
+D3
+~
+~
+0 -1 6904 10 10 5
+-1
+S
+
+#6904
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 6905 10 10 5
+D1
+~
+~
+0 -1 6903 10 10 5
+-1
+S
+
+#6905
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 6904 10 10 5
+D3
+~
+~
+0 -1 6906 10 10 5
+-1
+S
+
+#6906
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 6905 10 10 5
+D3
+~
+~
+0 -1 6907 10 10 5
+-1
+S
+
+#6907
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 6906 10 10 5
+D2
+~
+~
+0 -1 6908 10 10 5
+-1
+S
+
+#6908
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 6907 10 10 5
+D3
+~
+~
+0 -1 6909 10 10 5
+-1
+S
+
+#6909
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 6908 10 10 5
+D3
+~
+~
+0 -1 6910 10 10 5
+-1
+S
+
+#6910
+Forest~
+Under Construction.
+~
+[Guin] connected west to 7454
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 6911 10 10 5
+D1
+~
+~
+0 -1 6909 10 10 5
+-1
+S
+
+#6911
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 6912 10 10 5
+D2
+~
+~
+0 -1 6910 10 10 5
+-1
+S
+
+#6912
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 6911 10 10 5
+D3
+~
+~
+0 -1 6913 10 10 5
+-1
+S
+
+#6913
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 6914 10 10 5
+D1
+~
+~
+0 -1 6912 10 10 5
+-1
+S
+
+#6914
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 6913 10 10 5
+D3
+~
+~
+0 -1 6915 10 10 5
+-1
+S
+
+#6915
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 6914 10 10 5
+D3
+~
+~
+0 -1 6916 10 10 5
+-1
+S
+
+#6916
+Forest~
+Under Construction.
+~
+[Guin] connected south to 7462
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 6915 10 10 5
+D3
+~
+~
+0 -1 6917 10 10 5
+-1
+S
+
+#6917
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 6918 10 10 5
+D1
+~
+~
+0 -1 6916 10 10 5
+-1
+S
+
+#6918
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 6919 10 10 5
+D2
+~
+~
+0 -1 6917 10 10 5
+-1
+S
+
+#6919
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 6920 10 10 5
+D2
+~
+~
+0 -1 6918 10 10 5
+-1
+S
+
+#6920
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 6921 10 10 5
+D2
+~
+~
+0 -1 6919 10 10 5
+-1
+S
+
+#6921
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 6922 10 10 5
+D3
+~
+~
+0 -1 6920 10 10 5
+-1
+S
+
+#6922
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 6921 10 10 5
+D3
+~
+~
+0 -1 6923 10 10 5
+-1
+S
+
+#6923
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 6924 10 10 5
+D1
+~
+~
+0 -1 6922 10 10 5
+-1
+S
+
+#6924
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 6923 10 10 5
+D3
+~
+~
+0 -1 6925 10 10 5
+-1
+S
+
+#6925
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 6926 10 10 5
+D1
+~
+~
+0 -1 6924 10 10 5
+-1
+S
+
+#6926
+Forest~
+Under Construction.
+~
+[Guin] connects east to 7400
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 6925 10 10 5
+D3
+~
+~
+0 -1 6927 10 10 5
+-1
+S
+
+#6927
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 6926 10 10 5
+D3
+~
+~
+0 -1 6928 10 10 5
+-1
+S
+
+#6928
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 6929 10 10 5
+D1
+~
+~
+0 -1 6927 10 10 5
+-1
+S
+
+#6929
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 6928 10 10 5
+D3
+~
+~
+0 -1 6930 10 10 5
+-1
+S
+
+#6930
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 6929 10 10 5
+D3
+~
+~
+0 -1 6931 10 10 5
+-1
+S
+
+#6931
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 6930 10 10 5
+D2
+~
+~
+0 -1 6932 10 10 5
+-1
+S
+
+#6932
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 6931 10 10 5
+D3
+~
+~
+0 -1 6933 10 10 5
+-1
+S
+
+#6933
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 6934 10 10 5
+D1
+~
+~
+0 -1 6932 10 10 5
+-1
+S
+
+#6934
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 6935 10 10 5
+D2
+~
+~
+0 -1 6933 10 10 5
+-1
+S
+
+#6935
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 6934 10 10 5
+D3
+~
+~
+0 -1 6936 10 10 5
+-1
+S
+
+#6936
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 6937 10 10 5
+D1
+~
+~
+0 -1 6935 10 10 5
+-1
+S
+
+#6937
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 6936 10 10 5
+D3
+~
+~
+0 -1 6938 10 10 5
+-1
+S
+
+#6938
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 6937 10 10 5
+D3
+~
+~
+0 -1 6939 10 10 5
+-1
+S
+
+#6939
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 6940 10 10 5
+D1
+~
+~
+0 -1 6938 10 10 5
+-1
+S
+
+#6940
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 6939 10 10 5
+D3
+~
+~
+0 -1 6941 10 10 5
+-1
+S
+
+#6941
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 6942 10 10 5
+D1
+~
+~
+0 -1 6940 10 10 5
+-1
+S
+
+#6942
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 6943 10 10 5
+D2
+~
+~
+0 -1 6941 10 10 5
+-1
+S
+
+#6943
+Forest~
+Under Construction.
+~
+[Guin] connected east to 7272
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 6942 10 10 5
+D3
+~
+~
+0 -1 6944 10 10 5
+-1
+S
+
+#6944
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 6943 10 10 5
+D3
+~
+~
+0 -1 6945 10 10 5
+-1
+S
+
+#6945
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 6944 10 10 5
+D3
+~
+~
+0 -1 6946 10 10 5
+-1
+S
+
+#6946
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 6947 10 10 5
+D1
+~
+~
+0 -1 6945 10 10 5
+D2
+~
+~
+0 -1 6987 10 10 5
+-1
+S
+
+#6947
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 6986 10 10 5
+D2
+~
+~
+0 -1 6946 10 10 5
+D3
+~
+~
+0 -1 6948 10 10 5
+-1
+S
+
+#6948
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 6947 10 10 5
+D3
+~
+~
+0 -1 6949 10 10 5
+-1
+S
+
+#6949
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 6948 10 10 5
+D3
+~
+~
+0 -1 6950 10 10 5
+-1
+S
+
+#6950
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 6951 10 10 5
+D1
+~
+~
+0 -1 6949 10 10 5
+-1
+S
+
+#6951
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 6950 10 10 5
+D3
+~
+~
+0 -1 6952 10 10 5
+-1
+S
+
+#6952
+Forest~
+Under Construction.
+~
+[Guin] Connected to 5100 west
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 6953 10 10 5
+D1
+~
+~
+0 -1 6951 10 10 5
+-1
+S
+
+#6953
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 6954 10 10 5
+D2
+~
+~
+0 -1 6952 10 10 5
+-1
+S
+
+#6954
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 6955 10 10 5
+D1
+~
+~
+0 -1 6956 10 10 5
+D3
+~
+~
+0 -1 6953 10 10 5
+-1
+S
+
+#6955
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 6954 10 10 5
+D3
+~
+~
+0 -1 6957 10 10 5
+-1
+S
+
+#6956
+Forest~
+Under Construction.
+~
+new elf/ranger shortcut will be here, east to room 6969
+~
+33030144 3 9 0
+D3
+~
+~
+0 -1 6954 10 10 5
+-1
+S
+
+#6957
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 6955 10 10 5
+D3
+~
+~
+0 -1 6958 10 10 5
+-1
+S
+
+#6958
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 6959 10 10 5
+D1
+~
+~
+0 -1 6957 10 10 5
+-1
+S
+
+#6959
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 6960 10 10 5
+D2
+~
+~
+0 -1 6958 10 10 5
+-1
+S
+
+#6960
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 6961 10 10 5
+D3
+~
+~
+0 -1 6959 10 10 5
+-1
+S
+
+#6961
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 6962 10 10 5
+D2
+~
+~
+0 -1 6960 10 10 5
+-1
+S
+
+#6962
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 6963 10 10 5
+D3
+~
+~
+0 -1 6961 10 10 5
+-1
+S
+
+#6963
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 6964 10 10 5
+D3
+~
+~
+0 -1 6962 10 10 5
+-1
+S
+
+#6964
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 6963 10 10 5
+D1
+~
+~
+0 -1 6965 10 10 5
+-1
+S
+
+#6965
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 6970 10 10 5
+D2
+~
+~
+0 -1 6966 10 10 5
+D3
+~
+~
+0 -1 6964 10 10 5
+-1
+S
+
+#6966
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 6965 10 10 5
+D1
+~
+~
+0 -1 6967 10 10 5
+-1
+S
+
+#6967
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 6968 10 10 5
+D3
+~
+~
+0 -1 6966 10 10 5
+-1
+S
+
+#6968
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 6967 10 10 5
+D1
+~
+~
+0 -1 6985 10 10 5
+D3
+~
+~
+0 -1 6969 10 10 5
+-1
+S
+
+#6969
+Forest~
+Under Construction.
+~
+new elf/ranger shortcut will be here, west to room 6956
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 6968 10 10 5
+-1
+S
+
+#6970
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 6971 10 10 5
+D3
+~
+~
+0 -1 6965 10 10 5
+-1
+S
+
+#6971
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 6972 10 10 5
+D3
+~
+~
+0 -1 6970 10 10 5
+-1
+S
+
+#6972
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 6973 10 10 5
+D2
+~
+~
+0 -1 6971 10 10 5
+-1
+S
+
+#6973
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 6974 10 10 5
+D3
+~
+~
+0 -1 6972 10 10 5
+-1
+S
+
+#6974
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 6973 10 10 5
+D1
+~
+~
+0 -1 6977 10 10 5
+D2
+~
+~
+0 -1 6975 10 10 5
+-1
+S
+
+#6975
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 6974 10 10 5
+D3
+~
+~
+0 -1 6976 10 10 5
+-1
+S
+
+#6976
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 6975 10 10 5
+-1
+S
+
+#6977
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 6978 10 10 5
+D3
+~
+~
+0 -1 6974 10 10 5
+-1
+S
+
+#6978
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 6979 10 10 5
+D3
+~
+~
+0 -1 6977 10 10 5
+-1
+S
+
+#6979
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 6978 10 10 5
+D2
+~
+~
+0 -1 6980 10 10 5
+-1
+S
+
+#6980
+Forest~
+Under Construction.
+~
+[Guin] connected east to 7277
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 6979 10 10 5
+D3
+~
+~
+0 -1 6981 10 10 5
+-1
+S
+
+#6981
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 6980 10 10 5
+D2
+~
+~
+0 -1 6982 10 10 5
+-1
+S
+
+#6982
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 6981 10 10 5
+D3
+~
+~
+0 -1 6983 10 10 5
+-1
+S
+
+#6983
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 6982 10 10 5
+D3
+~
+~
+0 -1 6984 10 10 5
+-1
+S
+
+#6984
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 6985 10 10 5
+D1
+~
+~
+0 -1 6983 10 10 5
+D2
+~
+~
+0 -1 6986 10 10 5
+-1
+S
+
+#6985
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 6984 10 10 5
+D3
+~
+~
+0 -1 6968 10 10 5
+-1
+S
+
+#6986
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 6984 10 10 5
+D3
+~
+~
+0 -1 6947 10 10 5
+-1
+S
+
+#6987
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 6946 10 10 5
+D2
+~
+~
+0 -1 6989 10 10 5
+D3
+~
+~
+0 -1 6988 10 10 5
+-1
+S
+
+#6988
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 6987 10 10 5
+D3
+~
+~
+0 -1 6991 10 10 5
+-1
+S
+
+#6989
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 6987 10 10 5
+D1
+~
+~
+0 -1 6990 10 10 5
+-1
+S
+
+#6990
+Forest~
+Under Construction.
+~
+[Guin] connected south to 7229
+~
+33030144 3 9 0
+D3
+~
+~
+0 -1 6989 10 10 5
+-1
+S
+
+#6991
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 6988 10 10 5
+D2
+~
+~
+0 -1 6992 10 10 5
+-1
+S
+
+#6992
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 6991 10 10 5
+D2
+~
+~
+0 -1 6993 10 10 5
+-1
+S
+
+#6993
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 6992 10 10 5
+D1
+~
+~
+0 -1 6994 10 10 5
+D2
+~
+~
+0 -1 6995 10 10 5
+D3
+~
+~
+0 -1 6996 10 10 5
+-1
+S
+
+#6994
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D3
+~
+~
+0 -1 6993 10 10 5
+-1
+S
+
+#6995
+Forest~
+Under Construction.
+~
+[Guin] connects east 7206, south 7205
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 6993 10 10 5
+-1
+S
+
+#6996
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 6993 10 10 5
+D3
+~
+~
+0 -1 6997 10 10 5
+-1
+S
+
+#6997
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 6996 10 10 5
+D2
+~
+~
+0 -1 6998 10 10 5
+-1
+S
+
+#6998
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 6997 10 10 5
+D3
+~
+~
+0 -1 6999 10 10 5
+-1
+S
+
+#6999
+Forest~
+Under Construction.
+~
+[Guin] connected south 7200
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 6998 10 10 5
+-1
+S
+
+#0
+

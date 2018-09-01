@@ -1,0 +1,1218 @@
+#M2_AREA
+2
+
+Giant Mole Den~
+Brunhilde~
+Giant Mole Den~
+~
+~
+
+7 1836019570
+0
+0
+#ROOMS
+
+#80000
+Within The Mound~
+Natural light manages to filter through down here from the open sky above. 
+Deep gouges scar the freshly dug walls, testament to the presence of one
+or more gigantic burrow-dwelling beasts.  Underfoot, not an inch of
+ground has escaped being covered by a loose scattering of leaves and
+clover, most likely refuse from the mound that was carved into the forest
+floor overhead.  Dark earth surrounds you on all sides, the only
+exceptions being the hole above, and the root-choked tunnel to the west.
+~
+[Guin] connects to 44533 up.
+[Guin] Done
+~
+200933384 11 5 0
+D3
+~
+~
+0 -1 80001 10 10 5
+D4
+~
+~
+0 -1 44533 10 10 5
+E
+leaf clover leaves~
+Fresh oak leaves, mingle with broken and wilted clover, clover no doubt
+left here after the assault on the soil above.  Oak leaves, green and
+crisp, brought in by the wind, lie atop fading white blossoms of the
+clover, although they are still visible.
+~
+E
+gouges scar wall~
+Deep scarring and gouges have been cut inches into the wall by powerful
+claws.  Small tufts of black fur are wedged within the grooves.
+~
+E
+west root tunnel~
+To the west you can make out large knotted roots, obviously from some
+ancient tree which grows overhead.  It looks as if you will have a hard
+time getting through them.
+~
+E
+tuft fur~
+Black fur from some large creature has been wedged into the walls. 
+Approximately one and a half inches long, these hairs are soft and supple.
+~
+A
+~
+~
+send_to_room( #leaf, room, sight );
+~
+E
+leaf~
+@gA single green oak leaf, brought inside by a sudden gust of wind, lands
+softly on the tunnel floor@n.
+~
+!
+2 100 0
+A
+~
+~
+/*
+ *   simple leaving code
+ *
+ *   all you have to do is set the adata 'to_char' and 'to_room'
+ *   and specify 'continue;' in the code.
+ */
+
+continue;             // continue allows the player to move (end would stop the player dead in their tracks)
+~
+E
+to_char~
+@yYou claw your way up out of the dark, uninviting tunnel.@n
+~
+E
+to_room~
+@y$n claws $s way $T out of the dark, uninviting tunnel.@n
+~
+!
+3 0 16
+A
+~
+~
+continue;
+~
+E
+to_char~
+@YYou claw your way west through thick, dirt-covered roots.@n
+~
+E
+to_room~
+@Y$n claws $s way to the east through thick, dirt encrusted roots.@n
+~
+!
+3 0 8
+720 137 1509949540 3 0
+-1
+S
+
+#80001
+Dirt Tunnel - Beneath A Giant Oak~
+A wide tunnel breaks its usual formation of relatively smooth walls cut
+from the earth by stong clawed creatures, to something more akin to the
+likes of a rabbit warren.  Thick and twisted roots from a tree which
+grows above emerge from the ceiling of the tunnel and disappear back into
+the soil beneath the well-trodden path.  The passage continues off to the
+east and south, both routes winding around enormous roots.  Eastward it
+leads lit by natural light from the outside world, and southward into a
+gaping hole.
+~
+[Guin] Done.
+~
+200933380 11 5 0
+D1
+~
+~
+0 -1 80000 10 10 5
+D2
+~
+~
+0 -1 80002 10 10 5
+E
+roots twisted~
+Beautifully twisted and gnarled roots ensnare the tunnel and make
+movement extremely difficult.  Roots growing from the roof twist and turn
+until they reach the soil in the floor and walls.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cEntering the room you pull up short, realising a great hole lies here.@n
+~
+E
+to_room~
+@c$n stumbles south, but avoids plummeting head first into the gaping hole.@n
+~
+!
+3 0 4
+A
+~
+~
+if( find_stat( ch, dex ) > random( 8, 13 ) ) {
+  act_tochar( #passes, ch );
+  act_notchar( #rpasses, ch );
+  continue;
+}
+act_tochar( #fail, ch );
+act_notchar( #rfail, ch );
+position( ch, 6 );
+~
+E
+passes~
+@yYou easily bypass the tangled roots, trying to ensnare your path.@n
+~
+E
+rpasses~
+@y$n dodges easily around the gnarled roots which choke the tunnel.@n
+~
+E
+fail~
+@YYou fall onto your bottom as the twisted roots entangle your feet.@n
+~
+E
+rfail~
+@Y$n falls onto $s bottom with a thud as large roots get tangled around $s feet.@n
+~
+!
+1 0 6
+720 9 1509949540 3 0
+-1
+S
+
+#80002
+Dirt Cavern - Atop A Gaping Hole~
+A circular cavern is dimly lit by an eerie glow coming from small
+creatures attached to the ceiling of the tunnel.  A hole dominating the
+centre of the room is fairly well cut into an almost perfect circle; no
+trace of what lies below can be seen as it remains pitch black.  The bugs
+create enough light to see a crude picture scratched deeply into the wall
+to the south, but yet not enough light to see any distance into the great
+hole.
+~
+[Guin] Done.
+~
+200933380 11 5 0
+D0
+~
+~
+0 -1 80001 10 10 5
+D5
+~
+~
+0 -1 80003 10 10 5
+E
+creatures ceiling~
+Illuminating the cavern, small bugs which are clinging to the ceiling
+reveal intricacies perhaps better left covered - horrid crude pictures.
+~
+E
+hole centre circle~
+Looking into the almost pefectly circular hole in the floor, you can make
+out nothing but darkness and dirt.  Small holes mark the walls of the
+hole descending downwards, almost like handholds.
+~
+E
+picture scratch wall south~
+The entirety of the south wall is taken up by a rather crude drawing
+scratched into the freshly dug wall.  The scratchings are of a vicious
+looking rodentlike creature.  One of the occupant moles perhaps.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou carefully use the handholds and slowly inch your way down.@n
+~
+E
+to_room~
+@cEver so slowly, $n climbs down the hole using handy holds in the wall.@n
+~
+!
+3 0 32
+-1
+S
+
+#80003
+The Bottom Of A Deep Hole~
+Roughly carved walls encircle the cavern.  Where you would expect to find
+a ceiling however, there is nothing but blackness.  Foot and handholds
+have been dug quite recently into the hardpacked walls leaving an easy
+route upwards.  One wall however, does not appear to be uniform with the
+surrounding scenery; loose soil and clumps of dirt have been heaped, or
+have fallen.  Clearing them may remove the blockage to the east.
+~
+[Guin] Done.
+~
+200933380 11 5 0
+D1
+wall of loose soil~
+wall east loose soil dirt~
+219 -1 80004 10 10 5
+D4
+~
+~
+0 -1 80002 10 10 5
+E
+foot handhold foothold up route~
+Small holes, larger than the size of a human handgrip pock the wall of
+the hole ascending upwards.  These indentations in the wall would made
+the climb extemely easy.
+~
+E
+wall scenery clumps dirt heap blockage east~
+While checking out the scenery something seems out of place.  The wall to
+the east looks decidedly strange, as if it was newly constructed out of
+clumps of dirt.  The blockage east could most likely be cleared if you
+had a shovel and could dig at the heap.
+~
+A
+dig~
+1 east wall loose soil dirt~
+/*
+ *   a simple 'dig' code which checks to see if you have a shovel first
+ *
+ *   to re-use: copy acode and change change 'east' on lines 21 and 45 to the direction
+ *   of the exit, and '80004' on line 43 to the destination room number
+ *
+ *   don't forget to rewrite the adata for 'open', 'hands', 'dig', 'odig', and 'rdig'
+ */
+
+obj = has_obj( 1489, ch );                  // 1489 is the vnum for the shovel (if they have one, set it to 'obj')
+if( is_open( room, east ) ) {               // check to see if the exit is open
+  act_tochar( #open, ch );                     // it's already open
+  end;                                         // end the program
+}
+else if( !obj ) {                           // check to see if they have the shovel
+  act_tochar( #hands, ch );                    // can't dig with your hands
+  end;                                         // end the program
+}
+else {                                      // have passed checks, let's dig
+  act_tochar( #dig, ch, obj );                 // $p in hand, you dig trough the wall
+  act_notchar( #odig, ch, obj );               // $n digs through the wall with $p
+  send_to_room( #rdig, find_room( 80004 ) );   // send dig message to destination room (80004)
+  open( room, east );                          // actually open the exit up so people can go through
+}
+
+/*
+ *   please also note, that you need to flag the exit as:
+ *     is.door, closed, secret, no.open, reset.closed
+ */
+~
+E
+dig~
+$p in hand, you dig out an opening to the east.
+~
+E
+odig~
+$p in hand, $n digs out an opening to the east.
+~
+E
+open~
+The soil is already cleared!
+~
+E
+hands~
+You'll need more than just your hands to dig through the wall.
+~
+E
+rdig~
+Someone digs an opening in the wall to the west of you.
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou ram your fingers into the handholds and lift yourself up.@n
+~
+E
+to_room~
+@c$n pulls $mself up the hole using handy handholds.@n
+~
+!
+3 0 16
+720 9 1509949540 3 0
+-1
+S
+
+#80004
+Bend In The Dirt Tunnel~
+A dirty tunnel, much like any other, leads here from the west where a
+huge wall of loose soil and clumps of dirt blocked your way.  To the to
+the north it looks like more of the same; dirt, the occasional root
+poking through the walls, bugs, and most likely moles.  Off into the
+distance to the north however, one thing looks out of place.  Small
+pieces of stone, leading into larger pieces of stone, line the dirt floor.
+~
+[Guin] Done.
+~
+200933380 11 5 0
+D0
+~
+~
+0 -1 80005 10 10 5
+D3
+wall of loose soil~
+wall west loose soil dirt~
+219 -1 80003 10 10 5
+E
+west wall loose soil dirt~
+Westwards, dirt and loose soil make up the most part of the wall. Easily
+cleared, this wall looks as if it would collapse at the drop of a pin.
+~
+E
+stone~
+Chunks of grey stone, increasing in size from small to large, litter the
+floor heading north.  The evidence suggests a ruin of some kind.
+~
+E
+bug~
+Peering into the blackness small bugs, big bugs, creepycrawly bugs
+scatter into every corner.  Make sure the poisonous centipedes dont crawl
+across your feet.
+~
+A
+dig~
+1 west wall loose soil dirt~
+obj = has_obj( 1489, ch );
+if( is_open( room, west ) ) {
+  act_tochar( #open, ch );
+  end;
+}
+else if( !obj ) {
+  act_tochar( #hands, ch );
+  end;
+}
+else {
+  act_tochar( #dig, ch, obj );
+  act_notchar( #odig, ch, obj );
+  send_to_room( #dig, find_room( 8003 ) );
+  open( room, west );
+}
+~
+E
+open~
+The soil is already cleared!
+~
+E
+dig~
+$p in hand, you dig out an opening to the west
+~
+E
+odig~
+$p in hand, $n digs out an opening to the west.
+~
+E
+hands~
+You'll need more than just your hands to dig through the wall.
+~
+E
+rdig~
+Someone digs an opening in the wall to the east of you.
+~
+!
+0 0 0
+A
+~
+~
+send_to_room( #bug, room );
+~
+E
+bug~
+@rA small multi-legged bug crawls across your foot.@n
+~
+!
+2 100 0
+-1
+S
+
+#80005
+Dirt Tunnel - Dark Cavern~
+Stones, both small and large boulders, scatter the floor.  As the entire
+wall to the north is made of enormous blue-stone slabs, you surmise that
+the fallen rocks must have been pulled or clawed off the walls during the
+construction of the tunnel.  A hole in the ground here looks as if it was
+purposefully built, and not just a trap for the unwary.
+~
+[Guin] Done.
+~
+200933380 11 5 0
+D2
+~
+~
+0 -1 80004 10 10 5
+D5
+~
+~
+0 -1 80006 10 10 5
+E
+wall north blue~
+Heading southwards, bluestone rocks as big as a small street dog are
+scattered around the ground, declining in size until they peter out into
+nothing.
+~
+E
+stone boulder rock~
+A bluestone wall stretches from floor to ceiling and most likely beyond
+on the northern wall.  Chunks of stone have been prised off the enormous
+slabs and now lay littering the floor.
+~
+E
+down hole~
+The hole in the ground leads down, it looks to be an easy climb, what
+lays beyond however is a mystery.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@BDeciding against danger, you dive head first into the hole.@n
+~
+E
+to_room~
+@B$n foolishly dives head first into the hole with no concern to $s
+safety.@n 
+~
+!
+3 0 32
+408 9 1509949540 3 0
+720 9 1509949540 3 0
+-1
+S
+
+#80006
+Dirt Tunnel - Long Hallway~
+An archway, bold and beautiful, towers beyond your headheight along the
+northern wall.  Remnant of an ancient civilization, this arch once
+belonged to an important household.  Beyond the stone arch is a solid
+wall of hardpacked dirt, and no passage is possible.  Spread across the
+floor of the tunnel, a mass of leaf-litter gives bug and insect lifeforms
+a place to hide.
+~
+[Guin] Done.
+~
+200933380 11 5 0
+D1
+~
+~
+0 -1 80007 10 10 5
+D4
+~
+~
+0 -1 80005 10 10 5
+E
+arch~
+Ancient blocks of bluestone have been lovingly stacked into a beautiful
+archway.  Simple runes of a long dead script border the arch, much the
+same way important households mark their doorways to this very day. 
+Through the arch's window there is nothing except soild, impenetratable
+dirt.
+~
+E
+leaf leaf-litter mass~
+Mouldering leaf-litter lies thickly across the usually barren tunnel
+floor.  Oak, beech and maple make up the majority of the organic waste
+which is now home to many lifeforms, creepy-crawly bugs and insects alike.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@BYou deftly climb up, out of this hole.@n
+~
+E
+to_char~
+@B$n climbs up with great ease.@n
+~
+!
+3 0 16
+-1
+S
+
+#80007
+Middle Of A Long Hallway~
+This long featureless corridor stretches off to the east and to the west. 
+Westward, stone features of some kind are discernible, while to the east
+nothing but stone can be seen.  In this stretch of the corridor it seems
+to be dirt, plain and simple...earth above and earth below.  Fresh soil
+covers the floor, perhaps scraped loose by trampling feet or fallen from
+the ceiling.
+~
+[Guin] done.
+~
+200933380 11 5 0
+D1
+~
+~
+0 -1 80008 10 10 5
+D3
+~
+~
+0 -1 80006 10 10 5
+E
+dirt floor~
+Loose soil is heaped into a small pile slightly off the beaten track. 
+It seems slightly out of place in this well kept passage.
+~
+E
+west stone~
+Great stone monuments, remnants of a forgotten era lay to the west. 
+Although now broken and torn asunder, these structures still hold some
+tatters of grandeur and glory.
+~
+E
+east~
+Black stone, barely able to be seen, catches your eye off to the east. 
+The utter destruction of some long forgotten deeds.  A giant stone slab
+takes up much of the floorspace at the end of the corridoor.
+~
+A
+~
+floor dirt~
+/*
+ *   simple search acode which loads goodies depending on search skill check
+ */
+
+if( rflag( reset0, room ) ) {          // if reset0 isn't set, proceed with search
+  remove_rflag( reset0, room );        // unset reset0, one search per repop
+  if( random( -2, 5 ) < find_skill( ch, searching ) ) {  // check search skill
+    i = random( 0, 100 );              // roll up a percentage
+    if( i < 10 )                       // 10% chance of popping best goodie
+      obj = oload( 998 );              // load that goodie
+    else if( i < 30 )                  // 20% chance of popping sencond prize (30-10=20)
+      obj = oload( 983 );              // load second prize
+    else                               // rest of the chance for 3rd prize
+      obj = oload( 1039 );             // load the bogus prize
+    act_tochar( #find, ch, obj );      // inform them of their prize
+    act_notchar( #ofind, ch, obj );    // inform the room of the char finding something
+    obj_to_char( obj, ch );            // hand it over to the char
+    end;                               // end the script
+  }
+}
+
+// otherwise, they come up empty handed
+act_tochar( #search, ch );
+act_notchar( #osearch, ch );
+~
+E
+find~
+Searching through the loose dirt floor, you find $p!
+~
+E
+ofind~
+Searching through the loose dirt floor, $n finds $p.
+~
+E
+search~
+You search through the loose dirt floor but come away empty handed.
+~
+E
+osearch~
+$n searches through the loose dirt floor but comes away empty handed.
+~
+!
+9 0 0
+720 9 1509949540 3 0
+720 9 1509949490 3 0
+-1
+S
+
+#80008
+Ruined Structure~
+Blackened beyond belief, a dominating stone wall descends from the low
+ceiling to the soft earthen floor.  Mammoth stone boulders scatter the
+floor, testimony to some ancient destruction.  A small crevice lies
+underneath the corner of the largest of the stone blocks like an evil eye
+lurking in the blackness.  Downward lies what may be an escape from the
+tight quarters you are currently suffering.
+~
+[Brunhilde] no.mob to keep section below clear
+[Guin] Done.
+~
+200933388 11 5 0
+D3
+~
+~
+0 -1 80007 10 10 5
+D5
+~
+~
+0 -1 80009 10 10 5
+E
+black wall~
+Fine black ash covers this wall of giant stone blocks.  Charred by
+searing flames thousands of years ago, these ruins show no clue as to who
+made them.
+~
+E
+crevice boulder stone block~
+It looks to be a tight fit, but through this crevice is unexplored
+territory.  The large stone block covering most of this hole looks to
+weigh a few tons.  Chunks of dirt still cling to the rock, giving the
+impression of it recently being excavated.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@bYou squeeze your way under a giant stone slab and proceed downwards.@n
+~
+E
+to_room~
+@b$n squeezes past a huge stone slab and disappears into the blackness.@n
+~
+!
+3 0 32
+-1
+S
+
+#80009
+Dirt Tunnel - Branching Intersection~
+Not as closed as much of the tunnel, this intersection must see a lot of
+traffic.  The recent passage of many creatures has worn the loose soil on
+the floor into a hard packed route.  A small cache of bones and animal
+refuse form piles in the northwestern corner here, creating a very
+pungent odour.  Snuffling and scratching can be heard faintly in all
+directions.  Above, there is only a small hole which can be climbed
+through with only a little effort.
+~
+[Guin] Done.
+~
+200933380 11 5 0
+D1
+~
+~
+0 -1 80011 10 10 5
+D2
+~
+~
+0 -1 80010 10 10 5
+D4
+~
+~
+0 -1 80008 10 10 5
+E
+cache bones refuse corner~
+Disgusting piles of animal refuse have been shifted into the corner of
+the intersection.  The smell of the feces is rank and putridly
+complimented by the cache of wildlife bones...bones which still boast the
+remnants of decaying meat.
+~
+A
+~
+~
+continue;
+~
+E
+to_room~
+@b$n scrables up the wall and only just manages to squeeze past a giant slab of stone.@n
+~
+E
+to_char~
+@bYou climb up the walls and squeeze your way past the stone slab.@n
+~
+!
+3 0 16
+408 9 1509949540 3 0
+720 9 1509949540 3 0
+720 9 1509949490 3 0
+-1
+S
+
+#80010
+A Bend In The Dirt Tunnel~
+Walls of earth surround you, making this small section of tunnel appear
+rather tomb-like.  Peculiarly, the floor is made from carefully crafted
+cobblestones.  An ancient, broken down hearth lies half embedded in the
+southern wall, deep gouges revealing the method of its excavation.  Exits
+lie to the north and west of here.
+~
+[Guin] Done.
+~
+200933380 11 5 0
+D0
+~
+~
+0 -1 80009 10 10 5
+D3
+~
+~
+0 -1 80012 10 10 5
+E
+floor cobble stone~
+Cobblestones the size of fine china dinner plates lie embedded firmly
+into the hard packed soil of the tunnel floor.  One or two stones seem to
+have been pried loose and left holes five inches deep.
+~
+E
+hearth southern wall~
+A small broken hearth made of grey and blue stone bricks lies only
+recently disturbed from its ancient slumber.  The hearth, along with
+remnants of a large wall, reside along the southern wall of this bend in
+the tunnel.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@mWith much bravado you head into the virtual darkess to the west.@n
+~
+E
+to_room~
+@m$n bravely leads the way into the unknown.@n
+~
+!
+3 0 8
+-1
+S
+
+#80011
+Narrowing Tunnel~
+The dark confines of the narrowing tunnel close inward, becoming
+claustrophobic as it continues onward.  The air is still and musty, the
+walls smooth except for a few jagged protrusions caused by extending
+roots and buried stones.  Underfoot, infinitely small piles of slightly
+coarse fur and tiny bones lie at irregular intervals against the tunnel
+walls.
+~
+[Guin] Done.
+~
+200933380 11 5 0
+D1
+~
+~
+0 -1 80013 10 10 5
+D3
+~
+~
+0 -1 80009 10 10 5
+E
+stones~
+Smooth grey stones protrude from the earthen walls in seemingly random
+patterns.  These stones were probable remnants of some wall or similar
+structure.  They are not very impressive or interesting to look at.
+~
+E
+fur bones~
+Interesting colored fur has been deeply pressed into the walls of the
+tunnel. Fur the color of a moonlit night also clings off meat still
+attached to small fragments of bone scattered along the edges of the
+tunnel out of way of trampling feet.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@wYou tread with uncertainty into the blackness.@n
+~
+E
+to_room~
+@w$n leads the way into blackness with what looks like trepidation.@n
+~
+!
+3 0 10
+-1
+S
+
+#80012
+Mole Nursery~
+What would normally be dank and uninviting appears to be stylishly
+decorated, if you are a burrow-dwelling creature.  Foliage that has been
+ripped from lowlying plants line five small nests.  Sweet smelling
+clover, freshly picked, give the nests their comfortable appearance. 
+Scatterings of crudely carved animal bones lay haphazardly throughout the
+room, playthings of its baby inhabitants.
+~
+[Guin] Done.
+~
+200933380 11 5 0
+D1
+~
+~
+0 -1 80010 10 10 5
+E
+nest plants clover~
+Five small nests lined with sweet smelling clover and soft leaves from
+lowlying plants look to be comfortable and well made beds for the
+littlest of moles.  Interwoven twigs create the frames into which the
+foliage has been deposited.
+~
+E
+animal bones carved~
+Small chunks of bone litter the floor near where the baby moles are
+playing.  These bones have been crudely carved into replica moles.  Each
+with giant claws and vicious looking teeth.  The sharp ends appear to
+have been dulled considerably.
+~
+A
+~
+~
+if( mob_in_room( 371, room ) )
+  send_to_room( #play, room, sight );
+~
+E
+play~
+@wSmall baby moles wriggle around the floor playing with small bone toys.@n
+~
+!
+2 100 0
+371 9 1509949540 3 0
+371 9 1509949540 3 0
+371 9 1509949490 3 0
+371 9 1509949465 3 0
+371 9 1509949450 3 0
+408 137 1509949540 3 0
+3732 17 1509949445 -2 0
+-1
+S
+
+#80013
+Narrowing Tunnel - Atop a Sheer Drop~
+A deep hole plunges into the centre of the floor.  Faintly outlined
+against the darkness, you can see a small landing halfway down the hole
+and further down, what look like giant spikes.  To the west the tunnel
+leads into uncertainty, although the scuffling of small, clawed feet is
+audible.  Slashed into the wall is a vicious swipe pointing downwards,
+above which resides a bloody image of a twisted face.
+~
+[Guin] Done.
+~
+200933380 11 5 0
+D3
+~
+~
+0 -1 80011 10 10 5
+D5
+~
+~
+0 -1 80014 10 10 5
+E
+swipe wall bloody image face~
+The bloody image of a mole-like face screams from out of the shadowed
+wall.  Dried chunks of flesh and blood give texture to this disgusting
+work of art.  Pointing downwards is an obvious reference to the direction
+of the terrifying mole who resembles the portrait.
+~
+A
+~
+~
+if( !can_fly( ch ) ) {
+  if( find_skill( ch, climb ) < random( -1, 4 ) ) {
+    improve_skill( ch, climb );
+    act_tochar( #fall, ch );
+    act_notchar( #rfall, ch );
+    transfer( ch, find_room( 80015 ) );
+    position( ch, 6 );
+    act_tochar( #slip, ch );
+    end;
+  }
+  else {
+    act_tochar( #safe, ch );
+    continue;
+  }
+}
+else
+  continue;
+~
+E
+fall~
+@gYou lose your grip on the handholds and fall down the dark hole.@n
+~
+E
+safe~
+@gYou carefully climb down the dark hole, hugging the wall closely.@n
+~
+E
+rfall~
+@g$n loses grip of the wall and falls below.@n
+~
+E
+slip~
+@yFalling from above you land on your rump.  OUCH!
+~
+!
+3 0 32
+-1
+S
+
+#80014
+Narrowing Tunnel - Clinging To The Walls~
+This stretch of vertical corridor has a brief respite from the steep
+descent and ascent.  Here, a small ledge has been carefully left hanging
+out of the sheer cliff.  Below, numerous sharpened stakes, buried point
+upward, make things interesting.  Slipping and falling could mean death. 
+Deep scratches mar the walls, showing the chosen path of the occupants of
+this tunnel.
+~
+[Guin] Done.
+~
+200933388 11 5 0
+D4
+~
+~
+0 -1 80013 10 10 5
+D5
+~
+~
+0 -1 80015 10 10 5
+E
+scratches walls~
+Deeply scratched paths heading downwards have been made in the walls. 
+The moles of this tunnel do not use handholds or ropes to climb, instead
+use their hardy claws.
+~
+E
+stakes below down sharpened~
+Extremely dangerous looking spikes loom out of the darkness below. 
+Inches thick and feet long, these stakes could penetrate the most sturdy
+of armors.
+~
+A
+~
+~
+/*
+ *   see room 80013 acode 1 and 2
+ *
+ *   don't forget to set 'to_char' and 'to_room' and 'aflag' the exits
+ *   as they must be done in each room you trigger from
+ */
+
+if( can_fly( ch ) )
+  continue;
+
+if( find_skill( ch, climb ) < random( -1, 4 ) ) {
+  improve_skill( ch, climb );
+  act_tochar( #fall, ch );
+  act_notchar( #rfall, ch );
+  transfer( ch, find_room( 80015) );
+  position( ch, 6 );
+  act_tochar( #slip, ch );
+  end;
+}
+continue;
+~
+E
+to_char~
+@yYou slowly climb $T the wall.@n
+~
+E
+to_room~
+@y$n slowly climbs $T.@n
+~
+E
+fall~
+@gYou lose your grip on the wall and fall down the dark shaft.
+~
+E
+safe~
+@gYou safely climb down the rest of the shaft.
+~
+E
+rfall~
+@g$n loses $m grip on the wall and falls to the bottom of the shaft.
+~
+E
+slip~
+@yFalling from above you land on your rump.  OUCH!
+~
+!
+3 0 48
+-1
+S
+
+#80015
+Fortified Room - Outside A Lair~
+Small and cramped, this section of the vast dirt tunnels differs from the
+surrounding area.  There is rarely an inch of wall that has not been
+fortified by branches and sticks.  Mud has been pressed between the
+branches to hold them into place and add extra support to the room. 
+Sharpened pikes of wood are sticking out of the ground, beneath the steep
+climb up, out of this room. To fall from above would cause serious injury.
+~
+[Brunhilde] level 9 warrior mole moves between this and the giant mole room.
+[Guin] Done.
+~
+200933380 11 5 0
+D3
+~
+~
+0 -1 80016 10 10 5
+D4
+~
+~
+0 -1 80014 10 10 5
+E
+branches sticks mud~
+Red mud, the color of terracotta, has been used to glue together branches
+and sticks to line the walls of this cavern.  The mud has strange beings
+caked into its form.  Bugs.  Most likely innocent creatures living in the
+soil before it was dampened and shoved into the walls.
+~
+E
+sharpened pike steep climb~
+Looking at the long, steep climb above and at the dangerous spikes, it
+would be foolish to try to climb up without special care.  The sharpened
+branches have been cut to lengths between three and four feet.
+~
+A
+~
+~
+/*
+ *   see room 80013 acode 1 and 2
+ *
+ *   don't forget to set 'to_char' and 'to_room' and 'aflag' the exits
+ *   as they must be done in each room you trigger from
+ */
+
+if( !can_fly( ch ) )
+  if( find_skill( ch, climb ) < random( -1, 4 ) ) {
+  act_tochar( #slip, ch );
+  act_notchar( #oslip, ch );
+  end;
+}
+continue;
+~
+E
+to_room~
+@y$n slowly climbs $T.@n
+~
+E
+to_char~
+@yYou slowly climb $T the wall.@n
+~
+E
+slip~
+@yYou try to climb up, but slip on the wall.@n
+~
+E
+oslip~
+@y$n tries to climb up, but fails.@n
+~
+!
+3 0 16
+A
+~
+~
+continue;
+~
+E
+to_char~
+@rYou hesitantly enter the lair to the west.@n
+~
+E
+to_room~
+@r$n enters the western lair with much trepidation.@n
+~
+!
+3 0 8
+1711 9 1509949540 3 0
+-1
+S
+
+#80016
+Inside The Giant Mole's Den~
+Rotting bones of all shapes and sizes dominate this room, the stench of
+such bones could most likely be smelled from fifty feet away.  Assembled
+in the far west corner of this messy room lies a large, crude wooden bed. 
+Across the western wall, a large bloodstain is easily visible; it appears
+to not be of random design.
+~
+[Guin] Done.
+~
+200933380 11 5 0
+D1
+~
+~
+0 -1 80015 10 10 5
+E
+bones~
+Peeking from under a great pile of bones a small humanoid hand, stripped
+of all flesh, can be seen.
+~
+E
+wall western bloodstain~
+Covering the western wall a bloody mess has been painted.  It resembles
+the horrific face of a giant rodentlike creature.  Nasty pointed teeth
+and small beady eyes give it an extremely evil character.  It could
+possibly be a self-portrait, scrawled in blood, by the leader of the
+moles himself.
+~
+E
+wooden bed~
+Short stumps for legs and all sorts of leafy organic material lining the
+base of this bed, make it look almost comfortable.  The pungent smell
+coming from the bed however, is a different matter.
+~
+A
+~
+hand skeleton~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( -2, 5 ) < find_skill( ch, searching ) ) {
+    i = random( 0, 100 );
+    if( i < 30 ) {
+      obj = oload( 1256 );
+      act_tochar( #find, ch, obj );
+      act_notchar( #ofind, ch, obj );
+      obj_to_char( obj, ch );
+      end;
+    }
+  }
+}
+act_tochar( #search, ch );
+act_notchar( #osearch, ch );
+~
+E
+find~
+Searching the skeletal remains of a hand, you find $p!
+~
+E
+ofind~
+Searching the skeletal remains of a hand, $n finds $p.
+~
+E
+search~
+You search the skeletal remains of a hand but find nothing important.
+~
+E
+osearch~
+$n searches the skeletal remains of a hand but finds nothing of importance.
+~
+!
+9 0 0
+2471 9 1509949540 3 0
+-1
+S
+
+#0
+

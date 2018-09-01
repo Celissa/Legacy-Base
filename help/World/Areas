@@ -1,0 +1,15 @@
+<html>
+<body>
+SYNTAX:<br>
+<br>
+areas             : lists areas.<br>
+areas [area name] : returns the help file for a particular area.<br>
+<br>
+DESCRIPTION:<br>
+<br>
+This command lists some of the open areas along with a description of the<br>
+area which often includes hints to its location.  Not all areas are<br>
+listed by any means and the level is only a guideline which may very well<br>
+be wrong.<br>
+</html>
+</body>

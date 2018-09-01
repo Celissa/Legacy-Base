@@ -1,0 +1,3668 @@
+#M2_AREA
+2
+
+~
+Ariellen Psidlym~
+~
+~
+~
+
+0 0
+4
+0
+#ROOMS
+
+#45000
+Behind a Scrub Brush Wall~
+The land slopes down steeply to the west here, where it meets a row of
+small scrub brush.  The scrub brush line what appears to be a well
+traveled road way.  The mountainside here is immaculately groomed with
+hedgerows that form impassible barriers to the south and east.  To the
+north there is a green copper gate set in between two tall hedges.  A
+graveled path leads off into a well-tended garden maze.
+~
+[Shanfiata] Room #28130 using:  Small scrub brush lines the nearly vertical walls to the east and west.
+[Shanfiata] entrance to here will be behind the bush on the eastern side of that room.
+[Shanfiata] Extras: Gate, Hedgerow, Scrub brush, Road, Sloped hillside
+[Shanfiata] Acodes: search BASE of gate in IVY for a key to wizrds house (req search, 1 in 10)
+~
+33030152 3 5 0
+D0
+green copper gate~
+~
+131 -1 45001 4 10 5
+E
+green copper gate~
+The @Ggreen copper gate@n is set in between two tall hedges here.  This
+gate is around six feet high and swings shut and open on well-oiled
+hinges.  Ivy twines about your feet and along the edge of the slope and
+around the bottom of the gate.  Vines of ivy twine about the lower
+portion of the gate, but do not hinder its movement.  The hedges are
+interlaced with prickly thorns, and look truly impassible.  The gate
+opens up into what appears to be a hedge maze and flower garden.
+~
+E
+hedges hedgerow~
+The hedges are tightly packed and interlaced with prickly thorns, in an
+attempt to make them truly impassible.  Someone went through a great deal
+of trouble to make sure all stayed within the confines of the hedgerows
+walls.
+~
+E
+ivy vines~
+Strands of ivy twine all about your feet, along the edge of the slope,
+and around the bottom of the gate.  The ivy vines also grow about the
+lower portion of the green copper gate, but do not seem to hinder its
+movement at all.  Near the base of the gate's hinged side is where the
+highest concentration of ivy is growing from.
+~
+E
+great northern road traveled~
+The Great Northern Road passes between the walls of the northern pass
+west of here.  The pass here is very rocky, and stretches of the mountain
+walls seem near vertical.  The pass stretches to the north and south, and
+the road follows a narrow cut in the treacherous terrain.  Small scrub
+brush lines the road and the nearly vertical walls to the east and west
+of it.
+~
+E
+scrub brush bushes~
+Small scrub brush bushes line both the eastern and western edges of the
+great northern pass.  They grow all along the nearly vertical walls that
+are to the east and west of the road traveling through the northern pass.
+~
+E
+sloped mountainside maze~
+The land slopes down steeply to the west towards a well-traveled roadway. 
+Where the road meets the slope, there is a row of small scrub brush
+bushes that attempt to prevent passersby from climbing the slope. 
+Towards the north the slope rises, and a well-groomed hedge maze and
+flower garden dominate the mountainside.
+~
+A
+search~
+base ivy 5 ground~
+if( rflag( reset0, room ) ) {
+ remove_rflag( reset0, room );
+ if( find_skill( ch, searching ) > 0 ) {
+ if( random( 1, 10 ) == 6 ) {
+  obj_to_char( oload( 1129 ), ch );
+  send_to_char( #find, ch );
+  act_notchar( #find2, ch );
+  end;
+  }
+ else
+  send_to_char(#search, ch );
+ }
+}
+else
+ send_to_char( #search, ch );
+~
+E
+find~
+You find a tiny key hidden in the @Givy@n at the base of the gate.
+~
+E
+find2~
+$n find something while searching the @Givy@n at the base of the gate.
+~
+E
+search~
+You search around in the @Givy@n for a while and come up empty handed.
+~
+E
+test~
+No description.
+~
+!
+0 0 0
+1 17 1509949540 -2 0
+-1
+S
+
+#45001
+Inside of a Copper Gate - Graveled Path~
+A graveled path leads off to the north and east here.  The path leads
+farther into a well-tended garden maze.  The hedgerow walls height has
+grown here to over the feet.  There are flowers in bloom all along the
+edge of the graveled path, and the perfumed scent of the flowers drifts
+in the air.
+~
+[Shanfiata] Extras: flowers, hedgerow, green copper gate, graveled path
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 45002 10 10 5
+D1
+~
+~
+0 -1 45003 10 10 5
+D2
+green copper gate~
+green copper gate~
+131 -1 45000 4 10 5
+E
+green copper gate~
+The @Ggreen copper gate@n is set in between two tall hedges here.  This
+gate is around six feet high and swings shut and open on well-oiled
+hinges.  Vines of ivy twine about the lower portion of the gate, but do
+not hinder its movement.  The hedges are interlaced with prickly thorns,
+and look truly impassible.  The gate opens up into what appears to be a
+ledge outside of the hedge maze and flower garden.
+~
+E
+flowers bloom~
+There are many types of commonplace flowers that are growing here along
+the side of the gravel path.  Marigolds, orchids, daffodils, and foxglove
+are the most prevalent here.
+~
+E
+hedgerow~
+The hedges here are tightly packed and interlaced with prickly thorns, in
+an attempt to make them impassible.  Someone went through a great deal of
+trouble to make sure that you stay within the confines of the hedgerows
+walls.  The hedgerows seem to be growing taller and taller the farther
+into the maze you travel.
+~
+E
+graveled path~
+The graveled path is made mostly from pieces of blue granite.  The
+dwarfs, in the mountains closer to Kha-Da, most likely mined these rocks,
+and they were brought here at a high expense to someone.  The path itself
+leads off both north and east into a well-tended garden maze.
+~
+A
+search get~
+gravel granite path~
+act_tochar( #nothing, ch );
+act_notchar( #nothing_room, ch );
+~
+E
+nothing~
+You search for a while, but find nothing here worth keeping.
+~
+E
+nothing_room~
+$n searches around in the gravel for a while, but seems to find nothing
+worth keeping.
+~
+!
+0 0 0
+A
+~
+~
+i = 1d7;
+if( i == 1 )
+ send_to_room( #sound, room );
+if( i == 2 )
+ send_to_room( #flower, room );
+if( i == 3 )
+ send_to_room( #paranoid, room );
+if( i > 3 ) {
+ end; }
+~
+E
+sound~
+Wind rustles through the @Ghedges@n, and there is a sound of far off
+birds singing on the wind.
+~
+E
+flower~
+You catch a glimse of movement out of the corner of your eye.  When you
+turn to look, though all you see are the flowerbeds lining the path.
+~
+E
+paranoid~
+You think you see some movement out of the corner of your eye.  When you
+turn to look you see nothing out of the ordinary, but when you turn again
+you hear a rustling behind you.  Again when you turn, there is nothing to
+be seen.
+~
+!
+1 400 15
+-1
+S
+
+#45002
+Northern Gravel Path~
+The graveled path stretches north and south here.  Farther to the north,
+the path makes a turn to the east.  To the south, the entrance to the
+garden can be seen.  The western wall of the path is formed of a tall
+hedge, as well as the eastern wall.  The pathway is lined with large
+pieces of blue granite rock, and flowerbeds.
+~
+[Shanfiata] Extras: granite rock, hedge walls, flowerbed.
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 45004 10 10 5
+D2
+~
+~
+0 -1 45001 10 10 5
+E
+flowerbeds~
+These flowerbeds line the gravel pathway that leads north and south here. 
+The flowers are in full bloom and the fragrance that wafts though the air
+is almost palatable.  Jasmine, honeysuckle, daisies, and irises occupy
+the deep-brown soils of these well-groomed flowerbeds.
+~
+-1
+S
+
+#45003
+Eastern Gravel Path~
+The graveled path stretches east and west here.  To the east the path
+makes a turn heading northeast, and to the west is the entrance to the
+gardens.  The northern wall of the path is formed of a tall hedge, and
+the southern wall is the carved from the smooth stone of the mountain. 
+The pathway is lined with larger pieces of blue granite rock, and
+flowerbeds.
+~
+[Shanfiata] Add acode for when they look at the flowers, one steps out of the flowerbed.
+[Ariellen] rework flowers to all healthy
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 45010 10 10 5
+D3
+~
+~
+0 -1 45001 10 10 5
+E
+blue granite rock pieces~
+The blue granite stones are about the size of a human's head.  The stones
+are placed a foot or two apart all along the edge of the path here.
+~
+E
+flowerbeds flowers~
+The flowerbeds here and absolutely perfect, except for a few spot where
+it seems a flower has been pulled out of the ground.  It looks like the
+flower's roots have been ripped out of the ground, which has left behind
+only dirt filled holes.
+~
+E
+southern wall smooth stone mountain~
+The southern wall here is carved right from the stone of the mountain
+itself.  The wall is so smoothly cut, that climbing it would be very
+difficult, almost impossible.
+~
+E
+tall hedge northern~
+The hedge to the north is tightly packed leaves and branches interlaced
+with prickly thorns and briars.  Passage through the hedge would be near
+impossible.
+~
+A
+~
+~
+acode( find_room( 45001 ), 2 );
+~
+!
+2 400 0
+-1
+S
+
+#45004
+Northern Gravel Path~
+The path stretches north and south as it transitions from gravel to
+cobblestone.  To the north, the path makes a turn to the east.  A ways
+off to the south, the entrance to the garden can be seen.  The hedge
+walls on the east and west side of the path block travel in those
+direction.
+~
+[Ariellen] Extras: hedge walls, gravel-cobblestone transition.
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 45005 10 10 5
+D2
+~
+~
+0 -1 45002 10 10 5
+1713 9 1509949540 3 0
+755 9 1509949500 3 0
+-1
+S
+
+#45005
+Arched Entrance to the Hedgemaze~
+The cobblestone pathway leads east though an archway in the eastern hedge
+wall.  The garden-maze proper lays in that direction, and it teams with
+plant life.  The thick hedge wall, on the northern and western sides of
+the path, prevents movement in those directions.  To the south the
+cobblestone pathway transitions to gravel and leads towards the entrance.
+~
+[Shanfiata] east turn
+[Shanfiata] transition from gravel to cobblestone
+[Ariellen] Reset for raspberry bush
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 45007 10 10 5
+D2
+~
+~
+0 -1 45004 10 10 5
+A
+~
+~
+acode( find_room( 45001 ), 2 );
+~
+!
+2 400 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou turn east and head into the hedgemaze proper.@n
+~
+E
+to_room~
+$n turns east and heads into the @Ghedgemaze@n.
+~
+!
+3 0 2
+2441 17 1509949540 -2 0
+2458 9 1509949540 3 0
+2458 9 1509949540 3 0
+-1
+S
+
+#45006
+Corner of a Cobblestone Path~
+The cobblestone path rounds a corner here heading north and east.  The
+thick green hedge wall on the south side of the path doesn't have the
+same customary thorns as the rest of the hedge maze.  The opulent
+flowerbeds surrounding the northeastern corner of the hedge wall have a
+variety of scents that waft upwards on the warm breeze in this part of
+the garden.
+~
+[Shanfiata] acode to open door as a secret room south.
+[Ariellen] add acode to make movement like a maze. 1/2 chance to goto dark side.
+[Ariellen] extras: swinging hedge wall
+~
+33030208 3 9 0
+D0
+~
+~
+0 -1 45007 10 10 5
+D1
+~
+~
+0 -1 45023 10 10 5
+D2
+swinging hedge wall~
+swinging hedge wall~
+2219 -1 45022 10 10 5
+A
+3 search~
+1 south 3 hedge 3 wall~
+if( find_skill( ch, searching ) > random( 2, 4 ) ) {
+  act_tochar( #find, ch );
+  act_notchar( #find2, ch );
+  loop( all_in_room ) {
+   show( ch, room, south ); }
+  end;
+ }
+else
+ act_tochar( #nada, ch );
+~
+E
+find~
+You search the odd portion of the @Ghedge wall@n and find that it is on a
+counterbalance and could be opened.
+~
+E
+find2~
+$n has found the @Ghedgewall@n south to be openable.
+~
+E
+nada~
+You did not find what you were looking for.
+~
+!
+0 0 0
+A
+push pull~
+swinging hedge wall~
+if( !is_open( room, south ) ) {
+  act_tochar( #to_char, ch );
+  act_notchar( #to_room, ch );
+  open( room, south );
+  wait(7);
+  send_to_room( #closes, room );
+  close( room, south );
+ }
+else
+  act_tochar( #is_open, ch );
+~
+E
+is_open~
+The swinging @Ghedge wall@n the the south is already open.
+~
+E
+to_char~
+You open the swinging @Ghedge wall@n to the south.
+~
+E
+to_room~
+$n opens the swinging @Ghedge wall@n to the south.
+~
+E
+closes~
+The counterbalanced @Ghedge wall@n swings shut.
+~
+!
+0 0 0
+-1
+S
+
+#45007
+An Intersection on the Cobblestone Path~
+The cobblestone path converges, forming a four-way intersection on the
+edge of the hedge maze.  To the west, is the arched entrance to the hedge
+maze; the other directions take you further into the twisting passages of
+the hedge maze.
+~
+[Ariellen] add acode to make movement like a maze. 1/2 chance to goto dark side.
+[Ariellen] West exit always works
+~
+33030208 3 9 0
+D0
+~
+~
+0 -1 45008 10 10 5
+D1
+~
+~
+0 -1 45024 10 10 5
+D2
+~
+~
+0 -1 45006 10 10 5
+D3
+~
+~
+0 -1 45005 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+You leave the @Ghedgemaze@n through the @Garchway@n to the west.
+~
+E
+to_room~
+$n heads west out of the @Ghedgemaze@n, exiting through the @Garchway@n.
+~
+!
+3 0 8
+-1
+S
+
+#45008
+Corner of a Cobblestone Path~
+The cobblestone path runs east and south here, with large hedge walls
+preventing movement off the path.  The high walls prevent you from
+getting a good view of the surroundings.  A bench has been placed here to
+rest your tired bones on.
+~
+[Ariellen] add acode to make movement like a maze. 1/2 chance to goto dark side.
+~
+33030208 3 9 0
+D1
+~
+~
+0 -1 45009 10 10 5
+D2
+~
+~
+0 -1 45007 10 10 5
+3240 17 1509949540 -2 0
+-1
+S
+
+#45009
+An Intersection on the Cobblestone Path~
+The intersection here on the cobblestone path leads away south, while the
+main walkway heads in the east-west direction.  The hedge wall to the
+north is extremely dense and the sharp spines of thorns easily deter you
+from brushing against it.  A ways off to the south can be seen another
+intersection.
+~
+[Ariellen] add acode to make movement like a maze. 1/2 chance to goto dark side.
+~
+33030208 3 9 0
+D1
+~
+~
+0 -1 45025 10 10 5
+D2
+~
+~
+0 -1 45024 10 10 5
+D3
+~
+~
+0 -1 45008 10 10 5
+-1
+S
+
+#45010
+Twist in the Gravel Path~
+The gravel path takes a twist here and heads off to the north.  The path
+is narrow and surrounded by walls made from hedge bushes interwoven with
+thorny plants.  The flowerbeds on the side of the path are vibrant with
+plant life.
+~
+[Ariellen] Added climb acode
+[Ariellen] Extras: Flowers and Flowerbeds..          Added
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 45011 10 10 5
+D3
+~
+~
+0 -1 45003 10 10 5
+D4
+~
+~
+1258 -1 45016 10 10 5
+E
+flowerbed flowers~
+The flowerbeds here are planted with a variety of vibrant flowers.  The
+soil seems freshly turned and there is no sign of weeds, infestation, or
+disease.  The @Miolets@n and @Ymarigolds@n form a spectacular display of
+@Mdeep purple@n mixed with @Yvibrant yellow@n.
+~
+A
+climb scale~
+rock cliff wall stone 1 up~
+if( can_fly( ch ) ) {
+  send_to_char( #fly, ch );
+  act_notchar( #nfly, ch );
+  transfer( ch, find_room( 45016 ) );
+  act_notchar( #nfly2, ch );
+  end; }
+if( is_mounted( ch ) ) {
+  send_to_char( #nomount, ch );
+  end;  }
+if( find_skill( ch, climb ) > 6 ) {
+  send_to_char( #climb, ch );
+  act_notchar( #nclimb, ch );
+  transfer( ch, find_room( 45016 ) );
+  act_notchar( #nclimb2, ch );  }
+else {
+i = 1d2;
+if( i == 1 ) {
+  act_tochar( #fail, ch );
+  act_notchar( #nfail, ch ); }
+if( i == 2 ) {
+  act_tochar( #fail2, ch );
+  act_notchar( #nfail, ch );
+  dam_message( ch, 2d6, "The fall from the cliff face" );
+  inflict( ch, mob, 2d6, "the fall" );
+ }
+}
+~
+E
+fly~
+You fly up beside the wall easily and land on a hillside ledge.
+~
+E
+nfly~
+$n flys straight up, and disapears over the edge of a ledge above.
+~
+E
+nfly2~
+$n flew up from below and lands lightly on the ledge.
+~
+E
+nomount~
+You can not do that while mounted.
+~
+E
+climb~
+You climb up the steep rock cliffs towards the ledge above, making it
+safely.
+~
+E
+nclimb~
+$n climbs up the steep rock cliff to a ledge above, disappearing out of
+sight.
+~
+E
+nclimb2~
+$n comes climbing up the rocky cliff wall, and makes it to the hillside
+ledge.
+~
+E
+fail~
+You slip while trying to make the climb and almost hurt yourself.
+~
+E
+fail2~
+You slip while trying to make the climb and have hurt yourself.
+~
+E
+nfail~
+$n has fallen while trying to climb the steep cliff.
+~
+!
+0 0 0
+-1
+S
+
+#45011
+Fork in the Pathway~
+Here the path makes a transition from gravel to cobblestone.  The gravel
+path leads south and takes a turn to the west, following along the
+mountainside.  The cobblestone path leads off to the east, where it
+branches off not too far away.  The flowerbeds here are devoid of plant
+life, but the soil looks rich, and freshly tuned.
+~
+[Ariellen] rework flowers to all healthy
+[Ariellen] add acode for leaveing north message
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 45023 10 10 5
+D1
+~
+~
+0 -1 45012 10 10 5
+D2
+~
+~
+0 -1 45010 10 10 5
+E
+cobblestone~
+The cobblestones are hand carved to fit near seamlessly together, and
+form a near flawless path.  The cobblestone path stretches off to the
+east, and as you step foot on it, one of the stones wobbles a little.
+~
+E
+flowerbed flowers~
+The flowerbeds here are devoid of plant life.  It looks as those
+something was planted here recently, but no sign of those plants remain,
+except the divots where the roots grew into the dirt.
+~
+2458 137 1509949440 3 0
+2458 137 1509949540 3 0
+-1
+S
+
+#45012
+The Cobblestone Path~
+The cobblestone path splits here.  A portion heads to the north, into way
+appears to be the deeper portions of the hedge maze, while the main path
+leads east and west.  The southern wall is carved straight from the side
+of the mountain, and a small trickle of @Bwater@n runs over the smooth rock.
+~
+[Ariellen] rework flowers to all healthy
+[Cayln] did the acode, if you don't like how it works gimme a shout about it.
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 45013 10 10 5
+D3
+~
+~
+0 -1 45011 10 10 5
+E
+wall smooth rock southern water trickle~
+A trickle of @Bwater@n glides down the smooth surface of the carved rock.
+The wall itself, being carved from the stone of the mountain, hardly
+notices the flow.  The trickle forms a small @Bpuddle@n at the base of the
+wall.
+~
+E
+puddle~
+The @Bwater@n flowing down the wall collects in a small @Bpuddle@n at the base.
+The @Bwater@n is a few inches deep in the depression, and small @Cbubbles@n of
+air rise to the surface from some sort of vent in the ground.
+~
+E
+vent hole bubbles~
+A vent small hole has formed inside the @Bpuddle@n of @Bwater@n and
+gasses seem to be @Cbubbling@n out into the @Bwater@n.  You see @Wlight
+glint@n off of something deeper back in the hole.  The hole is tiny,
+and you'd be lucky if your hand fit in it.
+~
+A
+~
+~
+send_to_char( #bubbles, ch );
+~
+E
+bubbles~
+@CBubbles@n form on the surface of the small @Bpuddle@n of @Bwater@n, then pop.
+~
+!
+2 10000 0
+A
+~
+~
+acode( find_room( 45001 ), 2 );
+~
+!
+2 400 0
+A
+~
+3 vent 3 hole~
+if( is_player( ch ) )
+  if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( size( ch ) < 4 ) {
+   if( find_skill( ch, searching ) > 0 ) {
+    if( random( 1, 18 ) == 6 ) {
+    obj = oload( 881 );
+    if( can_handle( ch, obj ) ) {
+      send_to_char( #find, ch );
+      obj_to_char( obj, ch );
+      end;
+    }
+   }
+  }
+ }
+}
+act_tochar( #nothing, ch );
+act_notchar( #rnothing, ch );
+~
+E
+find~
+You find a large piece of quartz in the hole.
+~
+E
+nothing~
+You find nothing of interest in the hole.
+~
+E
+rnothing~
+$n searches around in a little hole, and finds nothing of interest apparently.
+~
+!
+9 0 0
+-1
+S
+
+#45013
+Corner of a Cobblestone Path~
+This is the shaded corner of the cobblestone path.  The path continues to
+the north and the west.  The southern and eastern walls are carved
+smoothly from the side of the mountain, and the inside corner is formed
+by the thorn woven hedgerow.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 45014 10 10 5
+D3
+~
+~
+0 -1 45012 10 10 5
+E
+smooth stone wall 1 southern 1 eastern~
+The mountainside has been carved down to form a very smooth wall to the
+south and east.  The wall stretches up some twenty feet or more over you,
+and is totally vertical.  Climbing it would be near impossible.
+~
+-1
+S
+
+#45014
+Cobblestone Path - Along the Mountainside~
+The cobblestone path winds north and south here.  The steep slope of the
+mountainside comes down east of the path a few paces, and flowerbeds line
+the stony wall.  A thick patch of @Ggreen ivy@n covers side of the
+mountain here, and reaches quite a ways up the wall.  A large nest can be
+seen further up the rock wall on a very narrow ledge.
+~
+[Ariellen] grizzly bear cave hidden east
+[Ariellen] Extras: green ivy, ledge, stony wall, flowerbeds, birds nest
+[Ariellen] Add acode for climbing up.
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 45015 10 10 5
+D1
+ivy canopy~
+ivy canopy~
+2219 -1 45043 10 10 5
+D2
+~
+~
+0 -1 45013 10 10 5
+D4
+~
+~
+226 -1 45052 10 10 5
+E
+green ivy patch wall~
+@GIvy@n has grown up the sides of the rocky wall here.  It reaches up
+several dozen spans on the cliff, to right below the narrow ledge.  There
+is a dark opening concealed behind the @Givy@n, and perhaps it can be
+opened further.  Its @gvibrant green@n color tells of how healthy it is.
+~
+-1
+S
+
+#45015
+Arched Entrance to the Hedgemaze~
+An archway in the western hedge wall leads into the garden-maze proper. 
+The steep mountain wall, off to the north and east of the path, prevent
+movement in those directions.  To the south the ivy covered wall of the
+mountain continues parallel to hedge wall.
+~
+[Ariellen] Extras: archway, hedgewall, mountain wall
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 45014 10 10 5
+D3
+~
+~
+0 -1 45026 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou turn west and head into the hedgemaze proper.@n
+~
+E
+to_room~
+$n turns west and heads into the @Ghedgemaze@n.
+~
+!
+3 0 8
+2458 9 1509949540 3 0
+2458 9 1509949540 3 0
+-1
+S
+
+#45016
+Steep Mountainside~
+The carved stone face of the mountain below you forms the southern wall
+of the hedge maze that stretches off to the north.  It extends below you
+twenty feet and is a nearly smooth vertical surface.  The mountainside
+you are on has a very steep pitch and it is difficult to keep your
+footing.  A few scraggly bushes grow here and there; clumps of grass are
+also scattered about the hillside.  A once tall birch tree has fallen
+because of erosion of its roots.  It lays facing down hill here and
+stretches out over the stone wall into the hedge maze 
+~
+[Shanfiata] Search grass=nothing, dig grass w/spade, shovel, digging stick=poss. key to thieves den
+[Shanfiata] add acode for Search bush causes lizard or garter snake to pop out
+[Shanfiata] Add acode for crossing birch tree   ADDED
+[Ariellen] Acoded added for climbing down the cliff,
+[Ariellen] Extra: birch tree
+[Ariellen] Rework the dig grass command to 2 items
+~
+33030144 3 9 0
+D0
+~
+~
+226 -1 45017 10 10 5
+D5
+~
+~
+1258 -1 45010 10 10 5
+E
+clump grass~
+Clumps of grass grow scattered among the bushes here.  The grass is thin
+and narrow, well adapted to the rugged mountain weather.  At the base of
+one clump of grass, you notice something shiny embedded in the ground.
+~
+A
+scale climb repel~
+wall rock cliff stone 1 down~
+if( can_fly( ch ) ) {
+  send_to_char( #fly, ch );
+  act_notchar( #nfly, ch );
+  transfer( ch, find_room( 45010 ) );
+  act_notchar( #nfly2, ch );
+ end; }
+if( is_mounted( ch ) ) {
+  send_to_char( #nomount, ch );
+  end;  }
+if( find_skill( ch, climb ) > 6 ) {
+  send_to_char( #climb, ch );
+  act_notchar( #nclimb, ch );
+  transfer( ch, find_room( 45010 ) );
+  act_notchar( #nclimb2, ch );  }
+else {
+  act_tochar( #fail, ch );
+  act_notchar( #nfail, ch );
+  dam_message( ch, 2d6, "The fall from the cliff face" );
+  inflict( ch, mob, 2d6, "the fall" );
+ }
+~
+E
+fly~
+You fly down beside the steep cliff wall, and easily land on the path.
+~
+E
+nfly~
+$n flys over the edge and floats down, landing on the ground below.
+~
+E
+nfly2~
+$n flew down from above and lands lightly on the ground.
+~
+E
+nomount~
+You can not do that while mounted.
+~
+E
+climb~
+You climb down the steep rock cliffs towards the hedge maze, making it
+safely.
+~
+E
+nclimb~
+$n climbs down the steep rock cliff to trail below, disappearing out of
+sight.
+~
+E
+nclimb2~
+$n comes climbing down the rocky cliff wall.
+~
+E
+fail~
+You slip while trying to make the climb, falling and hurting yourself.
+~
+E
+nfail~
+$n has fallen while trying to climb down the steep cliff.
+~
+!
+0 0 0
+A
+3 cross 4 crawl 3 walk 2 climb~
+3 birch 3 tree 3 tall log 5 fallen~
+if( can_fly( ch ) ) {
+  send_to_char( #fly, ch );
+  act_notchar( #nfly, ch );
+  transfer( ch, find_room( 45017 ) );
+  act_notchar( #nfly2, ch );
+  end; }
+if( find_stat( ch, dex ) < 12 ) {
+  act_notchar( #nfail, ch );
+  transfer( ch, find_room( 45011 ) );
+  act_tochar( #fail, ch );
+  dam_message( ch, 3d6, "The fall from the slippery log" );
+  inflict( ch, mob, 3d6, "The fall from the slippery log" );
+  act_notchar( #nfail2, ch );
+ }
+else {
+  send_to_char( #cross, ch );
+  act_notchar( #ncross, ch );
+  transfer( ch, find_room( 45017 ) );
+  act_notchar( #ncross2, ch );
+ }
+~
+E
+fail~
+You slip while trying to make the trek across the @Gslippery birch log@n,
+falling and hurting yourself.
+~
+E
+nfail~
+$n has fallen while trying to cross the slippery birch log.
+~
+E
+nfail2~
+$n has come tumbling down from above and crashes into the ground with a
+THUMP.
+~
+E
+fly~
+You fly across the top of the slippery birch log with no problem.
+~
+E
+nfly~
+$n flys north over the top of a slippery birch log.
+~
+E
+nfly2~
+$n comes flying of from the south, having flown over the slippery birch
+log.
+~
+E
+cross~
+You cross over the @Gslippery moss covered birch log@n with little
+difficulty.
+~
+E
+ncross~
+No description.
+~
+E
+ncross2~
+No description.
+~
+!
+0 0 0
+A
+3 search~
+clump grass base~
+act_tochar( #fail, ch );
+~
+E
+fail~
+You search around the @Ggrass@n for a while and come up empty handed,
+perhaps what you are looking for was buried during your search.
+~
+!
+0 0 0
+A
+dig 4 shovel pry~
+clump grass base dirt~
+if( has_obj( 483, ch ) || has_obj( 1489, ch ) || has_obj( 2723, ch ) || has_obj( 414, ch ) || has_obj( 2026, ch ) || has_obj( 599, ch ) || has_obj( 970, ch ) || has_obj( 883, ch ) || has_obj( 3044, ch ) ) {
+  if( !rflag( reset0, room ) ) {
+    send_to_char( #fail, ch );
+    end; }
+  else
+    if( find_skill( ch, searching ) > 0 ) {
+    if( random( 1, 10 ) == 1 ) {
+    remove_rflag( reset0, room );
+    obj_to_char( oload( 3312 ), ch );
+    send_to_char( #find, ch );
+    act_notchar( #nfind, ch );
+  end;  }
+  }
+}
+else {
+  send_to_char( #fail2, ch ); }
+~
+E
+find~
+You find a key by digging around near the clumb of grass.
+~
+E
+fail~
+You dig around for a while, but failed to find what you were looking for.
+~
+E
+fail2~
+You don't have the proper tools for serious digging, and the ground here
+is too rocky to dig by hand.
+~
+E
+nfind~
+$n digs around in the dirt for a while and finds a key.
+~
+!
+0 0 0
+A
+1 north~
+~
+if( find_stat( ch, level ) < 91 ) {
+ send_to_char( #idea, ch );
+ end; }
+else
+ continue;
+~
+E
+idea~
+It would be a bad idea to just walk off the cliff, perhaps you should try
+finding a way across the fallen log.
+~
+!
+0 0 0
+-1
+S
+
+#45017
+On a Standing Stone~
+You're located on a small stone pedestal that was placed inside the
+center of the hedge wall.  The stone is maybe two feet by two feet, and
+must be close to fifteen feet tall.  A flower and vine covered house is
+just visible tucked into a nook in the mountainside north of here.  The
+house is back dropped by the ruins of a keep farther up the mountainside
+in the northern pass.  The is another stone within jumping distance to
+the north.
+~
+[Shanfiata] Add acode for jumping
+[Shanfiata] Add acode for crossing birch tree
+[Ariellen] Acode crossing tree south, Incomplete
+[Ariellen] Acode for jumping stones north, Incomplete
+~
+33030144 3 9 0
+D0
+~
+~
+226 -1 45018 10 10 5
+D2
+~
+~
+226 -1 45016 10 10 5
+A
+jump leap hop~
+1 north~
+~
+E
+busy~
+You are too busy fighting, so pay attention.
+~
+!
+0 0 0
+A
+1 north 1 south~
+~
+if( find_stat( ch, level ) < 91 ) {
+ send_to_char( #idea, ch );
+ end; }
+else
+ continue;
+~
+E
+idea~
+Walking off of the stone doesn't seem like a real intelligent option,
+rethinking you decide to try and find a diffrent way to travel.
+~
+!
+0 0 0
+-1
+S
+
+#45018
+On a Standing Stone - Near the Center Edge of a Hedge Maze~
+This standing stone lies within the hedge wall just southwest of the
+center of the hedge maze.  There is a marble fountain that adorns the
+intersection in the center of the garden.  A stepping-stone to the west
+and south provide for a point of egress.  A flower and vine covered house
+is just visible tucked into a nook in the mountainside north of here. 
+The house is back dropped by the ruins of a keep farther up the
+mountainside in the northern pass.
+~
+[Ariellen] Acodes added for jumping west and south, edit the fail area
+~
+33030144 3 9 0
+D2
+~
+~
+226 -1 45017 10 10 5
+D3
+~
+~
+226 -1 45019 10 10 5
+A
+jump hop leap~
+1 south~
+if( is_fighting( ch ) ) {
+ act_tochar( #busy, ch );
+ end;  }
+if( can_fly( ch ) ) {
+  send_to_char( #fly, ch );
+  act_notchar( #nfly, ch );
+  transfer( ch, find_room( 45017 ) );
+  act_notchar( #nflying2, ch );
+  end;  }
+if( is_mounted( ch ) ) {
+  send_to_char( #nomount, ch );
+  end;  }
+if( find_stat( ch, dex ) > random( 7, 17 ) ) {
+  send_to_char( #jumpsouth, ch );
+  act_notchar( #njumpsouth, ch );
+  transfer( ch, find_room( 45017 ) );
+  act_notchar( #comessouth, ch );  }
+else {
+  send_to_char( #fail, ch );
+  act_notchar( #nfailjump, ch );
+  act_notchar( #ncomessouth, ch );
+  transfer( ch, find_room( 45011 ) );
+  send_to_char( #stand, ch );
+  act_notchar( #nabove, ch );
+}
+~
+E
+busy~
+You are too busy fighting, so pay attention.
+~
+E
+fly~
+You fly over the gap easily.
+~
+E
+nfly~
+$n flies south over the gap between stones.
+~
+E
+nflying2~
+$n comes flying in from the north, and lands gently on the stone.
+~
+E
+nomount~
+You can not do that while mounted.
+~
+E
+jumpsouth~
+You leap to the stone just south of you.
+~
+E
+njumpsouth~
+$n jumps south across the gap, landing solidly on the other stone.
+~
+E
+comessouth~
+$n comes jumping in from the south and lands on the stone solidly.
+~
+E
+fail~
+You hurl downwards and crash into the group with a thud!
+~
+E
+nfailjump~
+$n leaps for the stone to the north and doesn't make it.  You see them
+fall to the cobblestones below, landing with a thud.
+~
+E
+ncomessouth~
+You hear a yelp and look north just in time to see $n fall short of
+making the jump to this stone.
+~
+E
+stand~
+You brush yourself off and quickly stand to your feet.
+~
+E
+nabove~
+$n leaps from a stone above you.  You see them fall to the cobblestones
+and land with a thud.  Then get up and brush $sself off.
+~
+!
+0 0 0
+A
+jump leap hop~
+1 west~
+if( is_fighting( ch ) ) {
+  act_tochar( #busy, ch );
+  end;  }
+if( can_fly( ch ) ) {
+  send_to_char( #fly, ch );
+  act_notchar( #nfly, ch );
+  transfer( ch, find_room( 45019 ) );
+  act_notchar( #nflying2, ch );
+  end;  }
+if( is_mounted( ch ) ) {
+  send_to_char( #nomount, ch );
+  end;  }
+if( find_stat( ch, dex ) > random( 7, 17 ) ) {
+  send_to_char( #jumpwest, ch );
+  act_notchar( #njumpwest, ch );
+  transfer( ch, find_room( 45019 ) );
+  act_notchar( #comeswest, ch );  }
+else {
+  send_to_char( #fail, ch );
+  act_notchar( #nfailjump, ch );
+  act_notchar( #ncomeswest, ch );
+  transfer( ch, find_room( 45011 ) );
+  send_to_char( #stand, ch );
+  act_notchar( #nabove, ch );
+}
+~
+E
+busy~
+You are too busy fighting, so pay attention.
+~
+E
+fly~
+You fly over the gap easily.
+~
+E
+nfly~
+$n flies west over the gap between stones.
+~
+E
+nflying2~
+$n comes flying in from the east, and lands gently on the stone.
+~
+E
+nomount~
+You can not do that while mounted.
+~
+E
+jumpwest~
+You leap to the stone just west of you.
+~
+E
+njumpwest~
+$n jumps west across the gap, landing solidly on the other stone.
+~
+E
+comeswest~
+$n comes jumping in from the east and lands on the stone solidly.
+~
+E
+fail~
+You hurl downwards and crash into the group with a thud!
+~
+E
+nfailjump~
+$n leaps for the stone to the west and doesn't make it.  You see them
+~
+E
+ncomeswest~
+You hear a yelp and look east just in time to see $n fall short of making
+the jump to this stone.
+~
+E
+stand~
+You brush yourself off and quickly stand to your feet.
+~
+E
+nabove~
+$n leaps from a stone above you.  You see them fall to the cobblestones
+and land with a thud.  Then get up and brush $sself off.
+~
+E
+nfly~
+$n flies west over the gap between stones.
+~
+!
+0 0 0
+A
+1 west 1 south~
+~
+if( find_stat( ch, level ) < 91 ) {
+send_to_char( #idea, ch );
+end; }
+else
+continue;
+~
+E
+idea~
+You think it would be a better idea to jump to the next stone, instead of
+walking off the edge.
+~
+!
+0 0 0
+-1
+S
+
+#45019
+On a Standing Stone~
+You're located on a small stone pedestal that was placed inside the
+center of the hedge wall.  The stone is maybe two feet by two feet, and
+must be close to fifteen feet tall.  A flower and vine covered house is
+just visible tucked into a nook in the mountainside north of here.  The
+house is back dropped by the ruins of a keep farther up the mountainside
+in the northern pass.  There are other stones within jumping distance to
+north and the east.  The path to the south appears different from the
+others you've seen, because a trellis covered in roses closes it off from
+above.
+~
+[Ariellen] Acodes added for jumping north and east, edit the fail area
+~
+33030144 3 9 0
+D0
+~
+~
+226 -1 45020 10 10 5
+D1
+~
+~
+226 -1 45018 10 10 5
+E
+rose trellis~
+A rose covered trellis stretches across the path to the south.  The
+trellis is completely covered with thick runners coming up from the base
+of a large rose bush that must be rooted below.  The rose bush appears to
+be in full bloom, with many deep red roses amongst its many thorns. 
+There is a small gap in the rose bush towards the center of the trellis.
+~
+E
+gap~
+There is a small gap in the trellis to the south, were a portion of it
+has broken.  With a running leap you might be able to jump through it.
+~
+A
+1 north 1 east~
+~
+if( find_stat( ch, level ) < 91 ) {
+act_tochar( #walking, ch );
+end; }
+else
+continue;
+~
+E
+walking~
+You think it would be easier jumping to the next stone instead of walking off the edge.
+~
+!
+0 0 0
+A
+jump leap hop~
+1 east~
+if( is_fighting( ch ) ) {
+  act_tochar( #busy, ch );
+  end;  }
+if( can_fly( ch ) ) {
+  send_to_char( #fly, ch );
+  act_notchar( #nfly, ch );
+  transfer( ch, find_room( 45018 ) );
+  act_notchar( #nflying2, ch );
+  end;  }
+if( is_mounted( ch ) ) {
+  send_to_char( #nomount, ch );
+  end;  }
+if( find_stat( ch, dex ) > random( 7, 17 ) ) {
+  send_to_char( #jumpeast, ch );
+  act_notchar( #njumpeast, ch );
+  transfer( ch, find_room( 45018 ) );
+  act_notchar( #comeseast, ch );  }
+else {
+  send_to_char( #fail, ch );
+  act_notchar( #nfailjump, ch );
+  act_notchar( #ncomeseast, ch );
+  transfer( ch, find_room( 45011 ) );
+  send_to_char( #stand, ch );
+  act_notchar( #nabove, ch );
+}
+~
+E
+jumpeast~
+You leap to the stone just east of you.
+~
+E
+fly~
+You fly over the gap easily.
+~
+E
+nfly~
+$n flies east over the gap between stones.
+~
+E
+njumpeast~
+$n jumps east across the gap, landing solidly on the other stone.
+~
+E
+nfailjump~
+$n leaps for the stone to the east and doesn't make it.  You see them
+fall to the cobblestones below.  Landing with a thud.
+~
+E
+fail~
+You hurl downwards and crash into the group with a thud!
+~
+E
+nflying2~
+$n comes flying in from the west, and lands gently on the stone.
+~
+E
+NoMount~
+You can not do that while mounted.
+~
+E
+busy~
+You are too busy fighting, so pay attention.
+~
+E
+stand~
+You brush yourself off and quickly stand to your feet.
+~
+E
+comeseast~
+$n comes jumping in from the west and lands on the stone solidly.
+~
+E
+ncomeseast~
+You hear a yelp and look west just in time to see $n fall short of making
+the jump to this stone.
+~
+E
+Nabove~
+$n leaps from a stone above you.  You see them fall to the cobblestones
+and land with a thud.  Then get up and brush $sself off.
+~
+!
+0 0 0
+A
+jump leap hop~
+1 north~
+if( is_fighting( ch ) ) {
+  act_tochar( #busy, ch );
+  end;  }
+if( can_fly( ch ) ) {
+  send_to_char( #fly, ch );
+  act_notchar( #nfly, ch );
+  transfer( ch, find_room( 45020 ) );
+  act_notchar( #nflying2, ch );
+  end;  }
+if( is_mounted( ch ) ) {
+  send_to_char( #nomount, ch );
+  end;  }
+if( find_stat( ch, dex ) > random( 7, 17 ) ) {
+  send_to_char( #jumpeast, ch );
+  act_notchar( #njumpeast, ch );
+  transfer( ch, find_room( 45020 ) );
+  act_notchar( #comeseast, ch );  }
+else {
+  send_to_char( #fail, ch );
+  act_notchar( #nfailjump, ch );
+  act_notchar( #ncomeseast, ch );
+  transfer( ch, find_room( 45011 ) );
+  send_to_char( #stand, ch );
+  act_notchar( #nabove, ch );
+}
+~
+E
+busy~
+You are too busy fighting, so pay attention.
+~
+E
+fly~
+You fly over the gap easily.
+~
+E
+nfly~
+$n flies east over the gap between stones.
+~
+E
+nflying2~
+$n comes flying in from the west, and lands gently on the stone.
+~
+E
+nomount~
+You can not do that while mounted.
+~
+E
+jumpeast~
+You leap to the stone just east of you.
+~
+E
+njumpeast~
+$n jumps east across the gap, landing solidly on the other stone.
+~
+E
+comeseast~
+$n comes jumping in from the west and lands on the stone solidly.
+~
+E
+fail~
+You hurl downwards and crash into the group with a thud!
+~
+E
+nfailjump~
+$n leaps for the stone to the east and doesn't make it.  You see them
+fall to the cobblestones below, landing with a thud.
+~
+E
+ncomeseast~
+You hear a yelp and look west just in time to see $n fall short of making
+the jump to this stone.
+~
+E
+stand~
+You brush yourself off and quickly stand to your feet.
+~
+E
+nabove~
+$n leaps from a stone above you.  You see them fall to the cobblestones
+and land with a thud.  Then get up and brush $sself off.
+~
+!
+0 0 0
+-1
+S
+
+#45020
+On a Standing Stone - Near the Western Edge of a Hedge Maze~
+You're located on a small stone pedestal that was placed inside the
+center of the hedge wall.  The stone is maybe two feet by two feet, and
+must be close to fifteen feet tall.  There is another stone within
+jumping distance to the south, and a wire has been stretched taught over
+the hedgerow to the north.  There is a flower and vine covered house,
+just barely visible to the north of here.  The ruins of a keep, farther
+up the northern pass, back drop the house.
+~
+[Shanfiata] Add acode for crossing thin wire
+[Ariellen] acode added for jumping south, edit the fall location.
+[Ariellen] Acode for north, and crossing north; Incomplete
+~
+33030144 3 9 0
+D0
+~
+~
+226 -1 45021 10 10 5
+D2
+~
+~
+226 -1 45019 10 10 5
+E
+wire~
+There is a thin wire stretched taught between here and the hillside to
+the north.  You should be able to cross the wire if you are dexterous
+enough.
+~
+A
+jump hop leap~
+1 south~
+if( is_fighting( ch ) ) {
+ act_tochar( #busy, ch );
+ end;  }
+if( can_fly( ch ) ) {
+  send_to_char( #fly, ch );
+  act_notchar( #nfly, ch );
+  transfer( ch, find_room( 45019 ) );
+  act_notchar( #nflying2, ch );
+  end;  }
+if( is_mounted( ch ) ) {
+  send_to_char( #nomount, ch );
+  end;  }
+if( find_stat( ch, dex ) > random( 7, 17 ) ) {
+  send_to_char( #jumpsouth, ch );
+  act_notchar( #njumpsouth, ch );
+  transfer( ch, find_room( 45019 ) );
+  act_notchar( #comessouth, ch );  }
+else {
+  send_to_char( #fail, ch );
+  act_notchar( #nfailjump, ch );
+  act_notchar( #ncomessouth, ch );
+  transfer( ch, find_room( 45011 ) );
+  send_to_char( #stand, ch );
+  act_notchar( #nabove, ch );
+}
+~
+E
+busy~
+You are too busy fighting, so pay attention.
+~
+E
+fly~
+You fly over the gap easily.
+~
+E
+nfly~
+$n flies south over the gap between stones.
+~
+E
+nflying2~
+$n comes flying in from the north, and lands gently on the stone.
+~
+E
+nomount~
+You can not do that while mounted.
+~
+E
+jumpsouth~
+You leap to the stone just south of you.
+~
+E
+njumpsouth~
+$n jumps south across the gap, landing solidly on the other stone.
+~
+E
+comessouth~
+$n comes jumping in from the south and lands on the stone solidly.
+~
+E
+fail~
+You hurl downwards and crash into the group with a thud!
+~
+E
+nfailjump~
+$n leaps for the stone to the north and doesn't make it.  You see them
+fall to the cobblestones below, landing with a thud.
+~
+E
+ncomessouth~
+You hear a yelp and look north just in time to see $n fall short of
+making the jump to this stone.
+~
+E
+stand~
+You brush yourself off and quickly stand to your feet.
+~
+E
+nabove~
+$n leaps from a stone above you.  You see them fall to the cobblestones
+and land with a thud.  Then get up and brush $sself off.
+~
+!
+0 0 0
+A
+1 south~
+~
+if( find_stat( ch, level ) < 91 ) {
+send_to_char( #idea, ch );
+end; }
+else
+continue;
+~
+E
+idea~
+You think it would be a better idea to jump to the stone south here,
+instead of just walking off the edge.
+~
+!
+0 0 0
+-1
+S
+
+#45021
+A Steep Hillside, Before a Flower and Vine Covered House~
+Under Construction.
+~
+[Ariellen] Acode for crossing south, Incomplete
+[Ariellen] Add acode for entering from below and exiting to below.
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 45028 10 10 5
+D2
+~
+~
+226 -1 45020 10 10 5
+D5
+~
+~
+0 -1 45033 10 10 5
+-1
+S
+
+#45022
+A Dead-end with a Trellis Overhang~
+The cobblestone path dead-ends south of a hedge wall it passes through. 
+There is a massive rosebush at the end of the path.  @RRosebush@n runners
+climb all three of the walls, south, east and west, and completely cover
+a trellis that spans the space above you.
+~
+[Ariellen] Extras: Trellis, rose bush, strongbox, northern swining wall, hedge wall, standing stone above
+[Ariellen] Hole, latice work
+[Ariellen] Acodes incomplete
+[Ariellen] need to fix the thorn loading code on rosebush
+~
+33030144 3 9 0
+D0
+swinging hedge wall~
+~
+2219 -1 45006 10 10 5
+E
+rosebush trellis runners massive~
+This massive rosebush is covered in @Rdeep red flowers@n and extremely sharp
+thorns.  There is something @Wwhite@n that you can barely catch a glimpse of
+at the base of the rosebush.  The rosebush climbs massive trellis that
+covers the space above you.  The trellis is held up on the north side by
+some sort of standing stone.  The stone is barely visible, protruding
+from the top of the hedge wall.  There is a small hole on the latice work
+of the trellis, towards the middle.
+~
+A
+3 search~
+1 north 3 hedge 3 wall~
+if( find_skill( ch, searching ) > random( 0, 2 ) ) {
+ act_tochar( #find, ch );
+ act_notchar( #find2, ch );
+  loop( all_in_room ) {
+   show( ch, room, north ); }
+  end;
+ }
+else
+ act_tochar( #nada, ch );
+~
+E
+find~
+You search the odd portion of the @Ghedge wall@n and find that it is on a
+counterbalance and could be opened.
+~
+E
+find2~
+$n has found the @Ghedgewall@n north to be openable.
+~
+E
+nada~
+You did not find what you were looking for.
+~
+E
+search~
+You You get closer trying to see whats inside the rosebush.  The thing
+that was deep inside the bush appears to bee the bleached @Wwhite skull@n
+of a full grown male troll.  The flesh is all gone, and the empty sockets
+stare at you.  Resting under the skull appears to be an iron-banded
+strongbox, wrapped int the strong roots of the rosebush.
+~
+!
+0 0 0
+A
+3 search 1 look~
+skull white~
+act_tochar( #look, ch );
+act_notchar( #room, ch );
+wait(2);
+act_tochar( #look2, ch );
+wait(1);
+~
+E
+look~
+As you look closer at the bottom of the @Rrosebush@n, it begins to move.
+~
+E
+look2~
+The @Rrosebush@n looks very @Waggressive@n, best watch out!
+~
+E
+room~
+The @Rrosebush@n begins to move and, thorny runners begin to thrash about.
+~
+!
+0 0 0
+A
+push pull~
+swinging hedge wall~
+if( !is_open( room, north ) ) {
+  act_tochar( #to_char, ch );
+  act_notchar( #to_room, ch );
+  open( room, north );
+  wait(7);
+  send_to_room( #closes, room );
+  close( room, north );
+ }
+else
+ act_tochar( #is_open, ch );
+~
+E
+to_char~
+You open the swinging @Ghedge wall@n to the north.
+~
+E
+to_room~
+$n opens the swinging @Ghedge wall@n to the north.
+~
+E
+is_open~
+The swinging @Ghedge wall@n the the north is already open.
+~
+E
+closes~
+The counterbalanced @Ghedge wall@n swings shut.
+~
+!
+0 0 0
+2406 9 1509949540 3 0
+3871 17 1509949540 -2 0
+-1
+S
+
+#45023
+An Intersection on the Cobblestone Path~
+Under Construction.
+~
+[Ariellen] add acode to make movement like a maze. 1/2 chance to goto dark side.
+[Ariellen] South exit always works
+[Ariellen] add acode for leaveing south message
+~
+33030208 3 9 0
+D0
+~
+~
+0 -1 45024 10 10 5
+D1
+~
+~
+0 -1 45027 10 10 5
+D2
+~
+~
+0 -1 45011 10 10 5
+D3
+~
+~
+0 -1 45006 10 10 5
+-1
+S
+
+#45024
+Circular Cobblestone Path~
+The cobblestone path here circles around a central fountain made of @Wwhite
+alabaster@n.  The circle has several off shooting paths leading away from
+the center of the maze.  Flowerbeds circle the fountain and the hedges
+cast shadows here and there.  The tranquility of this place is profound.
+~
+[Ariellen] add acode that if you mess with the angel 2x or the urn load mob 1712
+[Ariellen] add acode to make movement like a maze. 1/2 chance to goto dark side.
+~
+33030152 3 9 0
+D0
+~
+~
+0 -1 45009 10 10 5
+D1
+~
+~
+0 -1 45026 10 10 5
+D2
+~
+~
+0 -1 45023 10 10 5
+D3
+~
+~
+0 -1 45007 10 10 5
+E
+marble alabaster fountain~
+The @Walabaster fountain@n is a few feet tall, and covered in petite delicate
+carved flowers and tiny cherubs.  The center of the fountain is adorned
+with a @Wstatue of an angel@n, wings spread wide, holding a small @Yurn@n that
+pours forth @Bwater@n that tumbles down into the fountain in a steady @Bstream@n.
+~
+E
+angel urn~
+The angel's features are superbly carved and very much lifelike.  She
+stands nearly three feet tall and her feet rest upon the base of a pillar
+in the fountains center.  She holds in her arms an @Yurn of etched gold@n.
+The urn pours a constant stream of @Bwater@n from it into the fountain.
+~
+3715 17 1509949540 -2 0
+-1
+S
+
+#45025
+The Corner of a Cool Path in the Hedge Maze~
+The path takes a bend here heading south and west.  A slight breeze blows
+here, cool to your skin.  It probably comes from off the side of the
+mountain that lies to the east.  The shade of the mountainside keeps this
+part of the maze cool during the early part of the day, and the height of
+the hedge wall blocks most of the sun during late afternoons.
+~
+[Ariellen] add acode to make movement like a maze. 1/2 chance to goto dark side.
+~
+33030208 3 9 0
+D2
+~
+~
+0 -1 45026 10 10 5
+D3
+~
+~
+0 -1 45009 10 10 5
+1714 137 1509949540 3 0
+2358 137 1509949540 3 0
+1715 137 1509949540 3 0
+1627 137 1509949540 3 0
+2503 9 1509949540 3 0
+-1
+S
+
+#45026
+A Cool Path in the Hedge Maze~
+The cobblestone path converges, forming a four-way intersection on the
+edge of the hedge maze.  To the east, is the arched entrance to the hedge
+maze; in the other directions, the further reaches of the hedge maze can
+be seen.  A slight breeze blows here, playing across your skin.  The
+shade of the mountainside keeps this part of the maze cool during the
+early part of the day.
+~
+[Ariellen] add acode to make movement like a maze. 1/2 chance to goto dark side.
+[Ariellen] East exit always works
+~
+33030208 3 9 0
+D0
+~
+~
+0 -1 45025 10 10 5
+D1
+~
+~
+0 -1 45015 10 10 5
+D2
+~
+~
+0 -1 45027 10 10 5
+D3
+~
+~
+0 -1 45024 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+You've come to the edge of the @Ghedgemaze@n and leave east through the
+@Garchway@n.
+~
+E
+to_room~
+$n heads east under the @Garchway@n, exiting the @Ghedgemaze@n.
+~
+!
+3 0 2
+-1
+S
+
+#45027
+The Corner of a Cool Path in the Hedge Maze~
+The path corners both north and west here.  The shade of the mountainside
+keeps this part of the maze cool during the early part of the day, and
+the height of the hedge wall blocks most of the sun during late
+afternoons.
+~
+[Ariellen] add acode to make movement like a maze. 1/2 chance to goto dark side.
+~
+33030208 3 9 0
+D0
+~
+~
+0 -1 45026 10 10 5
+D3
+~
+~
+0 -1 45023 10 10 5
+-1
+S
+
+#45028
+In Front of a Flower and Vine Covered House~
+A shaft of sunlight streams through the upper canopy of this forested
+area, its gentle rays linger on a slightly domed structure, which is
+completely covered in vines.  The remains of a wooden windowsill can just
+be discerned through the tumble of creeping tendrils.  A patch of
+wildflowers flourish on the edge of a barely visible path, their sweet
+scent carried away by a gently whispering wind.
+~
+[Ariellen] add extra: house, flowers and vines, vine covered door, window
+[Ariellen] acode to open window into basement
+[Ariellen] Add mob here trying to enter house forcefully
+[Ariellen] Add Acode of entering and leaving through the window, room #218 example.
+~
+33030144 3 9 0
+D0
+vine covered door~
+vine covered door~
+391 1129 45030 10 10 5
+D3
+~
+~
+0 -1 45021 10 10 5
+2503 137 1509949540 3 0
+-1
+S
+
+#45029
+The Laboratory and Kitchen, Inside a Flower and Vine Covered House~
+Strewn with all kinds of curious equipment, the benches that line the
+wall of the room look like a multitude of experiments have recently taken
+place.  Halfway along the western wall, a blackened stove sits, its cast
+iron surface covered by two small pots and a large skillet.  A fine shaft
+of sunlight filters through the vine walls, its dappled rays luminating a
+shallow weed-filled trough.
+~
+[Ariellen] Extras: Stove/oven, vine walls, table, bench, trapdoor under bench(secret)
+[Ariellen] Extras: deep sink, reagents on table, potions, plants growing on table, filtered sunlight
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 45031 10 10 5
+D5
+~
+~
+171 -1 45032 10 10 5
+-1
+S
+
+#45030
+Foyer of a Flower and Vine Covered House~
+Trickling in from beneath the northern wall, a sparkling spring burbles
+through the main foyer of this house of vines.  Lying before the southern
+door, a tightly woven vine rug sends tendrils beneath the door in search
+of greater quantities of sunlight.  A large tree grows up through the
+roof of this house, its massive trunk dominating the northeastern corner
+of the foyer.
+~
+[Ariellen] Extras: woven vine rug, vine walls, skylight, natural spring, tree growing through roof
+[Ariellen] Add mob here large plant that will assist wizard.
+[Ariellen] add water source
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 45031 10 10 5
+D2
+vine covered door~
+vine covered door~
+391 1129 45028 10 10 5
+-1
+S
+
+#45031
+A Botanical Study, Inside a Flower and Vine Covered House~
+Tendrils of ivy and blossoming jasmine create the walls of this secluded
+house; the creeping vines appear to hold a bookshelf off the wooden floor. 
+A myriad of plants grow in profusion from terracotta pots, which have
+been carefully placed in the filtered rays of sunshine, which penetrate
+through the living wall.  A book, lying open on a triangular wooden
+table, displays an odd diagram which appears to document the cross
+breeding of various plants.
+~
+[Ariellen] Extras: wooden shelves, stacks of books, table with plants growing, potions
+[Ariellen] Extras: Vine walls, tree growing through roof, filter sunlight(roof)
+[Ariellen] Add a Hedge Wizard here names Arinosh(human, Druid)
+[Ariellen] Add exit up to roof, opened by mobcode only.
+[Ariellen] make these mset group Warren
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 45029 10 10 5
+D3
+~
+~
+0 -1 45030 10 10 5
+D4
+~
+~
+194 -1 45051 10 10 5
+-1
+S
+
+#45032
+The Musty Basement of a Flower and Vine Covered House~
+Littered across the earthen floor of this neglected basement, mounds of
+brambles spill in through the decrepit window.  Vines and climbers cling
+to the timber walls and rafters, gibing the basement an appearance of a
+small grotto.  Lined neatly along the walls, barrels and bins have been
+stacked three high to allow for more strong space on the hard packed
+ground.  A wine rack full of oaken kegs dominates the eastern wall; a low
+wooden table sits before it.
+~
+[Ariellen] Extras: Bin of roots, Mound of brambles, vines and leaves, phials, wine rack, low lying table
+[Ariellen] Add searches for, phials on table, bin of roots, wine rack, mound of brambles, vines, and leaves.
+[Ariellen] add Acode for popping a mob 563 (8 second time delay) when searching vines and brambles
+[Ariellen] Add Acode of entering and leaving through the window, room #218 example.
+~
+33030144 3 9 0
+D4
+concealed wooden trapdoor~
+~
+131 -1 45029 10 10 5
+-1
+S
+
+#45033
+Inside hedge maze dark side~
+Under Construction.
+~
+~
+33030208 3 9 0
+D2
+~
+~
+0 -1 45034 10 10 5
+D4
+~
+~
+0 -1 45021 10 10 5
+-1
+S
+
+#45034
+Inside hedge maze dark side~
+Under Construction.
+~
+~
+33030208 3 9 0
+D0
+~
+~
+0 -1 45033 10 10 5
+D1
+~
+~
+0 -1 45036 10 10 5
+D2
+~
+~
+0 -1 45035 10 10 5
+D3
+~
+~
+0 -1 45037 10 10 5
+-1
+S
+
+#45035
+Circular Cobblestone Path~
+The cobblestone path here circles around a central fountain made of @bblack
+marble@n.  The circle has several off shooting paths leading away from
+the center of the maze.  What were once flowerbeds, now circle the
+fountain in a mocking display compared to what they once were.  The
+hedges here cast shadows this way and that, lending to the eerie
+atmosphere.  The silence of death in this place is profound.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 45034 10 10 5
+D1
+~
+~
+0 -1 45039 10 10 5
+D2
+~
+~
+0 -1 45040 10 10 5
+D3
+~
+~
+0 -1 45038 10 10 5
+3396 17 1509949540 -2 0
+-1
+S
+
+#45036
+Inside hedge maze dark side~
+Under Construction.
+~
+~
+33030208 3 9 0
+D2
+~
+~
+0 -1 45039 10 10 5
+D3
+~
+~
+0 -1 45034 10 10 5
+-1
+S
+
+#45037
+Bend in the Cobblestone Path~
+The path here continues either east or south.  A faint breeze stirs the
+leaves of an ivy plant, which grows intermingled with the hedge on the
+western wall of the path.
+~
+[Ariellen] extras: hedge, ivy gap vines.
+[Ariellen] add acode to, cut vines and path north west farther up the gap.
+~
+33030208 3 9 0
+D1
+~
+~
+0 -1 45034 10 10 5
+D2
+~
+~
+0 -1 45038 10 10 5
+D3
+~
+~
+2218 -1 45044 10 10 5
+E
+hedge~
+The hedge here seems to not be growing well.  A portion of it has died,
+leaving a gap that has since filled with a growing vine off @Ggreen ivy@n.
+~
+E
+ivy gap vines west wall~
+A large amount of a @Ggreen ivy vine@n has grown in the gap of the dead
+hedge.  The ivy twines all through the hedge and around the hole in the
+hedge wall.  The @Givy@n has even begun to spread away from the wall and
+covers the ground in some places here, forming a natural carpet.  Some of
+the @Eivy@n is a @Edarker green@n than the most, and has a diffrent leaf shape
+even.
+~
+A
+look~
+ivy gap west wall 3 vines~
+if( rflag( reset0, room ) )
+ remove_rflag( reset0, room );
+ continue;
+~
+!
+0 0 0
+A
+cut hack~
+4 vines ivy~
+if( rflag( reset0, room ) ) {
+ act_tochar( #noidea, ch );
+ end;
+ }
+   if( mob_in_room( 1627, room ) ) {
+   send_to_char( #ishere, ch );
+   end;
+   }
+else {
+ send_to_char( #cut, ch );
+ remove_rflag( reset1, room );
+ mload( 1627, room );
+}
+~
+E
+cut~
+You begin to hack at the @Givy@n, and the @Givy@n lashes out at you attacking
+back.
+~
+E
+noidea~
+Perhaps you should try looking at what you're going to cut first.
+~
+E
+ishere~
+It appears that someone already tried to cut the ivy vine, and that it
+didn't like it.
+~
+!
+0 0 0
+A
+enter crawl climb jump~
+gap hole opening~
+if( mob_in_room( 1627, room ) ) {
+ act_tochar( #noway, ch );
+ end;
+ }
+if( rflag( reset1, room ) ) {
+ act_tochar( #notcut, ch );
+ end;
+ }
+else
+ send_to_char( #enter, ch );
+ act_notchar( #nenter2, ch );
+ wait( 1 );
+ transfer( ch, find_room( 45044 ) );
+ send_to_char( #enter2, ch );
+ act_notchar( #nenter, ch );
+~
+E
+noway~
+You can't get through with the poisonous vine in the way.
+~
+E
+notcut~
+The ivy in the way will need to be cut before you can fit through the gap.
+~
+E
+enter~
+You begin making your way through the gap in the hedge wall.
+~
+E
+enter2~
+You arrive on the other side of the hedge wall gap.
+~
+E
+nenter~
+$n has arrived through a gap in the hedge wall.
+~
+E
+nenter2~
+$n begins moving through the gap in the hedge wall.
+~
+!
+0 0 0
+-1
+S
+
+#45038
+Inside hedge maze dark side~
+Under Construction.
+~
+~
+33030208 3 9 0
+D0
+~
+~
+0 -1 45037 10 10 5
+D1
+~
+~
+0 -1 45035 10 10 5
+D2
+~
+~
+0 -1 45042 10 10 5
+-1
+S
+
+#45039
+Inside hedge maze dark side~
+Under Construction.
+~
+[Ariellen] Entrance to a small dark cave east of here (wrath wyrms)
+~
+33030208 3 9 0
+D0
+~
+~
+0 -1 45036 10 10 5
+D2
+~
+~
+0 -1 45041 10 10 5
+D3
+~
+~
+0 -1 45035 10 10 5
+-1
+S
+
+#45040
+Inside hedge maze dark side~
+The hedge walls here are dark green and full of dagger like thorns
+capable of inflicting serious wounds on an unfortunate passerby.  Dark
+shadows cling to the edges of the path and seem to reach out towards you
+as you pass.  This place is eerie and you don't feel comfortable at all,
+as if something or someone were watching you.
+~
+~
+33030208 3 9 0
+D0
+~
+~
+0 -1 45035 10 10 5
+D1
+~
+~
+0 -1 45041 10 10 5
+D3
+~
+~
+0 -1 45042 10 10 5
+-1
+S
+
+#45041
+Inside hedge maze dark side~
+Under Construction.
+~
+~
+33030208 3 9 0
+D0
+~
+~
+0 -1 45039 10 10 5
+D3
+~
+~
+0 -1 45040 10 10 5
+-1
+S
+
+#45042
+Inside hedge maze dark side~
+Under Construction.
+~
+~
+33030208 3 9 0
+D0
+~
+~
+0 -1 45038 10 10 5
+D1
+~
+~
+0 -1 45040 10 10 5
+-1
+S
+
+#45043
+Behind the Ivy Canopy - A Grizzly Bear Cave~
+This is a large cave, and the living space is suitable to the bear that
+usually occupies it.  Bit of debris litter the floor along with a few
+bones, most are the remains of fish and other small animals that the bear
+had feed upon.  The walls of natural rock were hollowed out by the flow
+of water long ago, and the source of that water has long since dried up. 
+What is left behind is a natural recess into the mountainside.
+~
+[Ariellen] Extras: bones, ivy canopy, walls
+[Ariellen] add search for bones
+[Ariellen] search pops item 226, black leather gloves, lvl 5, ar 3, Nothing special.
+~
+33030144 3 9 0
+D3
+~
+~
+2219 -1 45014 10 10 5
+E
+wall rock ivy canopy~
+A canopy of ivy drapes itself over the entrance to this niche.  The walls
+are smooth and the curves of the stone make it quite evident that a
+powerful flow of water carved this hole.  Stratified layers of sandstone
+make make it appear as the swirls of that forgoten water left thier mark
+apon the stone for all ages.
+~
+E
+debris bones~
+The floor is strewn with bones and debris.  Most of the bones are from
+fish and smaller animals.  Likely most of these came from being food for
+the bear that resides in this cave.
+~
+A
+~
+~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( find_skill( ch, searching ) > 0 ) {
+   if( random( 1, 10 ) == 6 ) {
+   obj_to_char( oload( 226 ), ch );
+   send_to_char( #find, ch );
+   act_notchar( #find2, ch );
+   end;
+  }
+else
+ send_to_char(#search, ch );
+ }
+}
+else
+ send_to_char( #search, ch );
+~
+E
+find~
+You find the skeletal remains of a hand wearing a pair of black leather gloves.
+~
+E
+find2~
+$n finds the remains of a hand wearing a pair of black leather gloves.
+~
+E
+search~
+You search the bones and debris finding nothing of worth.
+~
+!
+0 0 0
+2502 9 1509949540 3 0
+-1
+S
+
+#45044
+Behind the Hedge Wall - Path Farther into Great Northern Pass~
+Under Construction.
+~
+~
+33030208 3 9 0
+D1
+gap in the hedge wall~
+~
+2218 -1 45037 10 10 5
+-1
+S
+
+#45045
+Deep in a Hedge Maze~
+The path diverges here, leading to more corners and twist.  You're not
+exactly sure where you are and which way is what.  You orientate yourself
+as best as you can, guessing at the directions of the exits.  The shadows
+and silence continue in this portion of the garden.  You feel very alone,
+and think the foreboding atmosphere here is affecting you.
+~
+~
+33030208 3 9 0
+D1
+~
+~
+0 -1 45046 10 10 5
+D2
+~
+~
+0 -1 45049 10 10 5
+-1
+S
+
+#45046
+Deep in a Hedge Maze~
+The east-west pathway here leads to more corners and twist.  You're not
+exactly sure which way is which, but you've orientate yourself decently
+and think that the directions of the exits are right.  The shadows and
+silence stretch out to oblivion in this part of the garden.  You feel
+very alone, and think the foreboding atmosphere here is affecting you.
+~
+[Ariellen] Room #45050 is the north south version of this room.
+~
+33030208 3 9 0
+D1
+~
+~
+0 -1 45047 10 10 5
+D3
+~
+~
+0 -1 45045 10 10 5
+-1
+S
+
+#45047
+Deep in a Hedge Maze~
+The path diverges here, leading to more corners and twist.  You're not
+exactly sure which way is which, but you orientate yourself as best as
+you can by guessing at the directions of the exits.  The shadows and
+silence continue in this portion of the garden.  You feel very alone, and
+think the foreboding atmosphere here is affecting you.
+~
+~
+33030208 3 9 0
+D0
+~
+~
+0 -1 45048 10 10 5
+D3
+~
+~
+0 -1 45046 10 10 5
+-1
+S
+
+#45048
+A Dead-end Deep in a Hedge Maze~
+Some twist, turn, or misdirection has lead you to this dead-end.  The
+path stops here at a sheer wall of prickly thorns and hedgerows.  The
+walls east, west and north prevent further movement in those directions.
+~
+~
+33030208 3 9 0
+D2
+~
+~
+0 -1 45047 10 10 5
+-1
+S
+
+#45049
+A Dead-end Deep in a Hedge Maze~
+Some twist, turn, or misdirection has lead you to this dead-end.  The
+path stops here at a sheer wall of prickly thorns and hedgerows.  The
+walls east, west and south prevent further movement in those directions.
+~
+~
+33030208 3 9 0
+D0
+~
+~
+0 -1 45045 10 10 5
+-1
+S
+
+#45050
+Deep in a Hedge Maze~
+The hedge garden is overshadowed and darker here than in the other spots. 
+The way the light is reflected from the path and absorbed by the hedge
+walls makes the whole area appear as though a full moon shone overhead
+with darkness surrounding you.  Patches of shadow seem to move of their
+own accord back and forth across the path and along the edges of the
+walls, where they grow rather thick.
+~
+[Ariellen] South will lead to 45047 (66%), and 45049 (34%)
+[Ariellen] North will lead to 45045 (66%), and 45048 (34%)
+~
+33030208 3 9 0
+D0
+~
+~
+0 -1 45048 10 10 5
+D2
+~
+~
+0 -1 45049 10 10 5
+-1
+S
+
+#45051
+The Roof of a Flower and Vine Covered House~
+The vista from atop the roof of this vine-covered house looks out over
+the middle canopy of a dappled forest.  The large tree, which grows
+through the vined house, spreads its great branches outward and upward;
+its deep green leaves seem to yearn for more sunlight.  A light covering
+of jasmine and climbing roses add vibrant hues of the palest pink and
+deepest red to the verdant surroundings.
+~
+~
+33030144 3 9 0
+D5
+~
+~
+194 -1 45031 10 10 5
+-1
+S
+
+#45052
+On a Stony Rock Wall~
+The steeply sloped stone wall of the mountainside runs nearly verticle in
+sections here, making it very difficult to climb.  Thick patches of
+flowers adorn the edge of the cobblestone path below you, and a hedge
+maze is visible off to the west.  A short ways above you is a narrow
+ledge with a large nest secured to it.
+~
+[Ariellen] Add extras: nest, ledge, stone
+[Ariellen] Add acode for climbing up.
+~
+33030144 3 9 0
+D4
+~
+~
+226 -1 45053 10 10 5
+D5
+~
+~
+226 -1 45014 10 10 5
+-1
+S
+
+#45053
+Narrow Ledge - Atop a Stony Rock Wall~
+The narrow ledge here is a treacherous place to stand at best.  Loose rock
+and soil covers the stone ledge a few inches deep.  A large nest is
+secured to the eastern edge of the ledge and to the cliff wall directly
+behind it.
+~
+[Ariellen] add nest
+[Ariellen] Add acode for climbing down.
+~
+33030144 3 9 0
+D5
+~
+~
+226 -1 45052 10 10 5
+-1
+S
+
+#45054
+Deep Beech Forest, Narrow Road Along a Cliff~
+The cliff edge lies along the west side of this narrow road that runs
+north-south here.  Just over the edge of the cliff a fern filled basin
+can be seen where fern trees, bracken and all manner of other fronded
+plants seem to be thriving.  Moss covered rocks line the drop, their
+surface coated in damp dew.  The smell of rich loam intermingles with a
+more chemical aroma of sulfur that appears to be drifting in from the
+northwest.
+~
+[Ariellen] Add acode to climb down, west.
+[Ariellen] Extras: moss covered rocks.
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 45055 10 10 5
+D2
+~
+~
+2210 -1 9350 10 10 5
+-1
+S
+
+#45055
+Deep Beech Forest, Narrow Road Along a Cliff~
+The cliff edge lies along the west side of this narrow road that runs
+north-south here.  Just over the edge of the cliff large fern fronds can
+be seen wavering in the gentle breeze.  Large black beech trees line the
+road on the east side, their trunks thick around and covered with lichens.
+The smell of rich loam intermingles with the more chemical aroma of
+sulfur that appears to be drifting in from the northwest.  A thin layer
+of yellow dust covers most every surface here from trees to dead leaves.
+~
+[Ariellen] Extras: yellow dust, dead leaves.
+[Ariellen] Add acodes for searching leaves, gathering sulfur, and climbing down.
+[Ariellen] narrow road
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 45056 10 10 5
+D2
+~
+~
+0 -1 45054 10 10 5
+-1
+S
+
+#45056
+Narrow Road through the Beech Forest~
+A thick wall of beech trees blocks further progress north here, however
+just beyond the imposing row of trees is a clearing.  There is a hill
+that is centered in that clearing to the north.  To the south the deep
+beech forest thickens immediately, crowding in on the narrow road. 
+Distant smells of fetid water and sulfur drift through the air here.  A
+narrow road leads either south or west from here, following along the
+direction the cliff side went.
+~
+[Ariellen] No.mob to hold vyans
+[Ariellen] Add acode to allow rangers, pathfinders, and elves to lead north.
+~
+33030152 3 9 0
+D0
+~
+~
+130 -1 45057 10 10 5
+D2
+~
+~
+0 -1 45055 10 10 5
+D3
+~
+~
+0 -1 45066 10 10 5
+-1
+S
+
+#45057
+A Clearing in the Beech Forest~
+The giant beech trees have given way to a small hill and clearing.  To
+the south the black beech forest thickens immediately, crowding in on the
+tiny hidden trail.  Faint smells of fetid water and sulfur drift through
+the air here.  The hill rises quickly to the north, and only a smattering
+of beech trees is visible beyond its top.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 45058 10 10 5
+D1
+~
+~
+0 -1 45061 10 10 5
+D2
+~
+~
+130 -1 45056 10 10 5
+D3
+~
+~
+0 -1 45062 10 10 5
+A
+~
+~
+acode( find_room( 45063 ), 1 );
+~
+!
+2 250 0
+2706 265 1509949540 3 0
+-1
+S
+
+#45058
+Hill Top in a Clearing~
+Here you are at the crown of the hill, and it offers one of the best
+views of the area.  All around the area large beech trees crowd in on the
+clearing.  A damp mist rolls over the eastern portion of the clearing
+obscuring most of what could be seen there.  A small glade can be seen to
+the north through a small gap in the beech trees.  The closeness of the
+trees nearly conceals it completely.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 45059 10 10 5
+D1
+~
+~
+0 -1 45060 10 10 5
+D2
+~
+~
+0 -1 45057 10 10 5
+D3
+~
+~
+0 -1 45063 10 10 5
+A
+~
+~
+acode( find_room( 45063 ), 1 );
+~
+!
+2 250 0
+2706 9 1509949540 3 0
+-1
+S
+
+#45059
+Deep Beech Forest, Concealed Glade~
+Looming beech tree tower overhead, their interwoven branches covering any
+view of the sky.  The thick dark trunks of the beech trees surround this
+small glade, concealing it from prying eyes, and making it seem perfectly
+tranquil.  A @Bsmall pool of water@n centered here, is fed from a natural
+spring.  Tiny pebbles line the bottom of the pool.  Thick green grass
+covers the ground in a natural carpet, and helps to dampen any sound that
+might be in the area.
+~
+[Ariellen] make Acode for pathfind and rangers level 25 and above to be able to see exit west
+[Ariellen] Add acode to get pebbles from the pool
+~
+33030152 3 9 0
+D2
+~
+~
+0 -1 45058 10 10 5
+D3
+~
+~
+0 -1 45067 10 10 5
+2709 393 1509949540 3 0
+1519 17 1509949540 -2 0
+-1
+S
+
+#45060
+A Clearing in the Beech Forest~
+Monstrous beech trees tower over everything here.  They for an impassable
+wall to the north, and their boughs are several feet wide.  Ferns grow
+here along the ground, enjoying the moisture that hangs heavily in the
+air.  A think bank of misty fog rolls in from the east between the trunks
+of more beech trees.
+~
+[Ariellen] mist obscures east exit
+[Ariellen] make characters stumble and fall into cave if the don't clear the mist
+[Ariellen] Veiled vyans kept from going east.
+[Ariellen] Broken east command, why did i have the vyans stop people?
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 45064 10 10 5
+D2
+~
+~
+0 -1 45061 10 10 5
+D3
+~
+~
+0 -1 45058 10 10 5
+A
+~
+~
+acode( find_room( 45063 ), 1 );
+~
+!
+2 250 0
+A
+clear move blow~
+mist vapor fog bank~
+if( rflag( reset0, room ) ) {
+remove_rflag( reset0, room );
+act_tochar( #clear, ch );
+act_notchar( #r_clear, ch );
+}
+else
+act_tochar( #allclear, ch );
+~
+E
+clear~
+@wYou try your best to clear the mist bank thats rolling about the area.
+Visibility is better now, at least you can see the ground.@n 
+~
+E
+r_clear~
+@w$n clears away some of the mist that was rolling in from the east.@n
+~
+E
+allclear~
+@wThe rolling fog bank has been cleared away, at least mostly.@n
+~
+!
+0 0 0
+A
+1 east~
+~
+if( mob_in_room( 2706, room ) ) {
+end;
+}
+else
+transfer( ch, find_room( 45064 ) );
+~
+!
+0 0 0
+2706 265 1509949540 3 0
+-1
+S
+
+#45061
+A Clearing in the Beech Forest~
+Beech trees have given wait to a small hill and form the border of the
+clearing.  Their imposing trunks block passage further east or south. 
+The small hillock lies to the northwest, while to the north a bank of
+mist swirls about along the edge of the beech forest.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 45060 10 10 5
+D3
+~
+~
+0 -1 45057 10 10 5
+A
+~
+~
+acode( find_room( 45063 ), 1 );
+~
+!
+2 250 0
+2706 9 1509949540 3 0
+-1
+S
+
+#45062
+A Clearing in the Beech Forest~
+A thick stand of beech trees lies west of this point, and a small line of
+thick beech trunks block immediate passage to the south.  The beech trees
+have given way some and a there is a small clearing around a hill.  The
+rest of the clearing is also bordered by imposing beech trees.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 45063 10 10 5
+D1
+~
+~
+0 -1 45057 10 10 5
+A
+~
+~
+acode( find_room( 45063 ), 1 );
+~
+!
+2 250 0
+2708 9 1509949540 3 0
+2706 9 1509949540 3 0
+-1
+S
+
+#45063
+A Clearing in the Beech Forest~
+A thick stand of beech trees lies northwest of this point.  The beech
+trees have given way some and a small hill's clearing has formed here. 
+The imposing beech trees block passage north and west of here.  The small
+hillock lies to the east, and the clearing continues on to the south,
+where it too is bordered by beech trees.  Off to the the west, a short
+distance, there is a decline slope that leads downward into a forested
+valey.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 45058 10 10 5
+D2
+~
+~
+0 -1 45062 10 10 5
+D3
+~
+~
+0 -1 45084 10 10 5
+A
+~
+~
+I = 1d5;
+if( I == 1 )
+  if( mob_in_room( 2706, room ) ) {
+  send_to_room( #dance, room, sight );
+}
+if( I == 2 )
+  if( mob_in_room( 2706, room ) ) {
+  send_to_room( #spin, room, sight );
+}
+if( I == 3 )
+  if( mob_in_room( 2706, room ) ) {
+  send_to_room( #lower, room, sight );
+}
+if( I == 4 )
+  if( mob_in_room( 2706, room ) ) {
+  send_to_room( #raise, room, sight );
+}
+if( I == 5 )
+  if( mob_in_room( 2706, room ) ) {
+  send_to_room( #slow, room, sight );
+}
+~
+E
+dance~
+@wThe lithe vyaness twirls and circles in an elegant dance all about the clearing.@n
+~
+E
+spin~
+@WThe vyaness' dance takes on a diffrent form and she spins around in
+concentric circles faster and faster.@n 
+~
+E
+lower~
+@CLower and lower the vyaness goes; seeming to shrink in on herself.  She
+maintains the dance even at impossible angles, as she is mere inches from
+the ground at times.@n 
+~
+E
+raise~
+@wRaising her arms, she tumbles and whirls, her dance a prayer to her
+goddess, and her movements reverent.@n 
+~
+E
+slow~
+@GSlowing her movements to a near stop, the vyaness painstakingly continues
+on with a dance that requires large amounts of dexterity and patience.@n
+~
+!
+2 250 0
+2706 265 1509949540 3 0
+-1
+S
+
+#45064
+Cave Mouth in the Deep Beech Forest~
+A wide mouth of a cave opens into the ground here.  The black earth of
+the region borders the cave mouth, which appears to be a natural cave
+into solid rock.  Some of the fertile loam has spilled into the cave and
+the mounds of dirt can be used to climb down into the cave.  Some fifteen
+feet below, the stone flooring of the cave can be seen.  Ringing the cave
+entrance are the thick boughs of the beech trees, except to the west,
+where a hill rises up in a clearing.
+~
+[Ariellen] action: mist rolls out of the cave mouth
+[Ariellen] Acode for entering cave made.
+[Ariellen] Acode for clearing mist made, to take no damage from entering cave.
+[Ariellen] Add a remove flag to acode 3 for the damage loop, add a dex check as well (15-20)
+~
+33030144 3 9 0
+D3
+~
+~
+0 -1 45060 10 10 5
+D5
+~
+~
+0 -1 45065 10 10 5
+A
+~
+~
+send_to_room( #roll, room, sight );
+~
+E
+roll~
+@wWhite vapor mist rolls out of a cave mouth, clings to the ground, and
+obscures the ground all around the area.@n 
+~
+!
+2 200 0
+A
+clear move blow~
+mist vapor fog bank~
+acode( find_room( 45060 ), 2 );
+~
+!
+0 0 0
+A
+1 down~
+~
+if( rflag( reset0, room ) ) {
+  damage( mob, ch, 2d10+10, physical, "the fall into the cave", "fall" );
+  transfer( ch, find_room( 45065 ) );
+  interpret( ch, "rest" );
+  loop( followers ) {
+    if( !is_resting( rch ) ) {
+      ch = rch;
+      acode( room, 3 );
+    }
+  }
+}
+else
+  transfer( ch, find_room( 45065 ) );
+loop( followers ) {
+  if( !is_resting( rch ) ) {
+    ch = rch;
+    acode( room, 3 );
+  }
+}
+~
+!
+0 0 32
+-1
+S
+
+#45065
+Cave Mouth in the Deep Beech Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D4
+~
+~
+0 -1 45064 10 10 5
+-1
+S
+
+#45066
+Narrow Road leading through a Deep Beech Forest~
+Giant beech trees spread out here taking all the room that thier massive
+trunks and towering branches should be allowed.
+~
+[Ariellen] narrow road
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 45056 10 10 5
+D3
+~
+~
+0 -1 45071 10 10 5
+-1
+S
+
+#45067
+Deep Beech Forest, Hidden Path~
+Thick limbs twist and twine overhead, forming a thick canopy that allows
+little light to pass below it.  Ancient beech trees stretch ever skyward
+and the wide spaces between their trunks are mostly filled with scraggly
+underbrush.  A faint trail leads east-west, and appears mostly hidden,
+even to the trained eye.
+~
+~
+33030152 3 9 0
+D1
+~
+~
+0 -1 45059 10 10 5
+D3
+~
+~
+0 -1 45068 10 10 5
+-1
+S
+
+#45068
+Deep Beech Forest, Hidden Path~
+Under Construction.
+~
+~
+33030152 3 9 0
+D0
+~
+~
+0 -1 45069 10 10 5
+D1
+~
+~
+0 -1 45067 10 10 5
+-1
+S
+
+#45069
+Deep Beech Forest, Hidden Path~
+The beech wood forest is very old here with ancient beech trees towering
+over the small path you are following.  Off farther to the west some new
+growth can be seen.  further west.  The faint hidden trail leads off west
+here to where the shadows seem to darken, and also can be followed to the
+south.  The foliage is thick and blocks most of the light from the forest
+floor.
+~
+~
+33030152 3 9 0
+D2
+~
+~
+0 -1 45068 10 10 5
+D3
+~
+~
+0 -1 45070 10 10 5
+-1
+S
+
+#45070
+Deep Beech Forest, Forest Den~
+The beech wood forest is both thick and old here, but has a large amount
+of new growth as well.  Dozens of the smaller beech trees have been bent
+over by some unknown force, and they seem to form a small sheltered area
+at their center.  The faint hidden trail dead ends here, and shadows seem
+to darken the area below the giant beech trees.  The foliage is thick
+enough that almost no sunlight would reach the forest floor, even on a
+very bright day.
+~
+~
+33030152 3 9 0
+D1
+~
+~
+0 -1 45069 10 10 5
+2707 9 1509949540 3 0
+-1
+S
+
+#45071
+Narrow Road leading through a Deep Beech Forest~
+Under Construction.
+~
+[Ariellen] narrow road
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 45066 10 10 5
+D2
+~
+~
+0 -1 45072 10 10 5
+-1
+S
+
+#45072
+A Switch-backed Narrow Road Along a Cliff's Edge~
+Under Construction.
+~
+[Ariellen] narrow road
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 45071 10 10 5
+D5
+~
+~
+0 -1 45073 10 10 5
+-1
+S
+
+#45073
+A Switch-backed Narrow Road through a Forested Valley~
+Under Construction.
+~
+[Ariellen] narrow road
+[Ariellen] Ferns and bracken edge the narrow road
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 45074 10 10 5
+D4
+~
+~
+0 -1 45072 10 10 5
+-1
+S
+
+#45074
+A Narrow Road through a Forested Valley~
+Along the western edge of the narrow road lies a cliff wall of rock.  The
+wall of rock, covered in a spongy moss blanket, looks impossible to climb
+as it rises steeply from the valleys floor.  The cliff is forested on its
+top with a grove of mountain beeches.  Some of the ancient beech trees
+have low-lying branches that drape half way down the cliffs edge, but
+none that could be reached.  The steep hill to the east, covered in a
+thick tangle of black beech trees, also looks impassible.
+~
+[Ariellen] spell check all these rooms in word
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 45075 10 10 5
+D2
+~
+~
+0 -1 45073 10 10 5
+-1
+S
+
+#45075
+A Narrow Road through a Forested Valley~
+The valley continues north and south here, between the steep incline to
+the east and a sheer cliff face to the west.  The cliff face to the west
+is topped with large mountain beech trees, that grow all the way to the
+edge.  The large overhanging trees can't help but to shade the narrow
+road here in the forested valley, and deep pools of shadow cover the road
+even during the brightest parts of the day.  The hard packed dirt of this
+narrow road is moist, and hardly any dust stirs due to wind or the
+passage of feet.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 45076 10 10 5
+D2
+~
+~
+0 -1 45074 10 10 5
+-1
+S
+
+#45076
+A Narrow Road through a Forested Valley~
+A mossy cliff face rises upwards to the west, its forested edge filled
+with the mountain beeches.  The beech trees rise high into the air above
+the cliff and overhang the edge.  The shade from thier branches cause
+darkness to pool on the path even during bright daylight, and they deepen
+the darkness during the night.  The path along the bottom of the valley
+has come to a junction here, with trails leading off north and south as
+well as east.  To the east the valley floor begins to slope upwards to
+meet the hills above, while to the north and south the valley continues.
+~
+[Ariellen] narrow road
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 45077 10 10 5
+D2
+~
+~
+0 -1 45075 10 10 5
+D4
+~
+~
+0 -1 45084 10 10 5
+-1
+S
+
+#45077
+A Narrow Road through a Forested Valley~
+Under Construction.
+~
+[Ariellen] narrow road
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 45078 10 10 5
+D2
+~
+~
+0 -1 45076 10 10 5
+-1
+S
+
+#45078
+A Narrow Road through a Forested Valley~
+Under Construction.
+~
+[Ariellen] narrow road
+[Ariellen] Conceal cave entrance to the east.
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 45081 10 10 5
+D2
+~
+~
+0 -1 45077 10 10 5
+D3
+~
+~
+0 -1 45079 10 10 5
+-1
+S
+
+#45079
+A Narrow Road through a Forested Valley~
+Under Construction.
+~
+[Ariellen] narrow road
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 45078 10 10 5
+D3
+~
+~
+0 -1 45080 10 10 5
+-1
+S
+
+#45080
+A Narrow Road through a Forested Valley~
+Under Construction.
+~
+[Ariellen] narrow road
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 45079 10 10 5
+D4
+~
+~
+0 -1 45085 10 10 5
+-1
+S
+
+#45081
+Cave Mouth into a Dark Cave~
+Under Construction.
+~
+~
+33030144 3 7 0
+D1
+~
+~
+0 -1 45082 10 10 5
+D3
+~
+~
+0 -1 45078 10 10 5
+-1
+S
+
+#45082
+cave~
+Under Construction.
+~
+~
+33030144 11 7 0
+D1
+~
+~
+0 -1 45083 10 10 5
+D3
+~
+~
+0 -1 45081 10 10 5
+-1
+S
+
+#45083
+cave~
+Under Construction.
+~
+~
+33030144 11 7 0
+D3
+~
+~
+0 -1 45082 10 10 5
+-1
+S
+
+#45084
+A Gentle Decline to a Forested Valley~
+Under Construction.
+~
+[Ariellen] No.mob to hold the vyans in
+~
+33030152 3 9 0
+D1
+~
+~
+0 -1 45063 10 10 5
+D5
+~
+~
+0 -1 45076 10 10 5
+-1
+S
+
+#45085
+A Narrow Road through a Forested Valley~
+Under Construction.
+~
+[Ariellen] narrow road
+~
+33030144 3 9 0
+D3
+~
+~
+0 -1 5100 10 10 5
+D5
+~
+~
+0 -1 45080 10 10 5
+-1
+S
+
+#0
+

@@ -1,0 +1,18 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+commands                      : lists all command categories<br>
+commands [category]           : lists all commands in the category<br>
+commands -p [permission_flag] : lists commands requiring that flag<br>
+<br>
+<h1> Description </h1>
+<br>
+This displays all commands divided by logical category or by permission<br>
+flag.  Most players only have the none permission flag so the second<br>
+option is irrelevant to most.  You can also type Help [letter] to see<br>
+help files starting with a particular letter of the alphabet.  Ex: Help A.<br>
+<br>
+See also: Index<br>
+</html>
+</body>

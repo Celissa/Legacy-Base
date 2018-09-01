@@ -1,0 +1,1280 @@
+#M2_AREA
+2
+
+Silk worms~
+X, Azerin~
+silk worms~
+~
+~
+
+10 544026939
+0
+1
+#ROOMS
+
+#100500
+In a Dark Tunnel~
+A tunnel decends rapidly into the earth, the air getting thicker the
+further it goes.  You notice that the walls of the tunnel are remarkably
+solid, the soil packed tight and rather slick with a strange filmy
+substance.  The pungent stench of mildew increases as the tunnel decends,
+and from the depths below you can faintly hear a soft scraping sound.
+Directly above you the tunnel appears to end in a bank of loose soil.
+~
+[Eccles] dig up/soil/bank to clear a path out of the zone
+[Larken] look soil bank up
+~
+167378944 11 5 0
+D4
+~
+~
+219 -1 9465 10 10 5
+D5
+~
+~
+0 -1 100504 10 10 5
+E
+soil bank up~
+The soil above you is a dark topsoil with only the slightest hint of red
+clay mixed in.  Thin roots make a maze in the soil which small worms try
+to navagate in their search for nutrients.  As you brush the ceiling
+pieces of dirt crumble down around you, perhaps with a little effort you
+could dig your way to the surface.
+~
+A
+down~
+~
+act_tochar( #down, ch );
+continue;
+~
+E
+down~
+Treading carefully, you descend into darkness.
+~
+!
+0 0 0
+A
+dig~
+up soil bank~
+if( is_open( room, up ) ) {
+  act_tochar( #open, ch );
+  end;
+}
+else {
+  act_tochar( #dig, ch, obj );
+  act_notchar( #odig, ch, obj );
+  open( room, up );
+}
+~
+E
+open~
+A hole has already been dug through the soil bank.
+~
+E
+dig~
+You start to dig your way upwards.
+~
+E
+odig~
+$n digs upwards through the soil bank.
+~
+!
+0 0 0
+-1
+S
+
+#100501
+Silk worms~
+Under Construction.
+~
+~
+167247872 1 9 0
+-1
+S
+
+#100502
+Silk worms~
+Under Construction.
+~
+~
+167247872 1 9 0
+-1
+S
+
+#100503
+Silk worms~
+Under Construction.
+~
+~
+167247872 1 9 0
+-1
+S
+
+#100504
+In a Dark Tunnel - Branching Intersection~
+Here the tunnel opens up slightly into a chamber like intersection carved
+from the natural bedrock.  The eastern branch tightens almost immediately
+and you can just make out the tunnel dipping slightly as it curves around
+a massive tree root.  The northerly branch appears to duck off into
+almost complete darkness, the tunnel floor getting increasingly damp with
+large standing pools of stagnant water visible.  The final branch of the
+tunnel slopes upward and you sense a distinct lightening of the
+oppressive atmosphere in that direction.
+~
+[Eccles] touch patch/green/wall burns you for a little acid damage
+~
+167378945 11 5 0
+D0
+~
+~
+0 -1 100506 10 10 5
+D1
+~
+~
+0 -1 100505 10 10 5
+D4
+~
+~
+0 -1 100500 10 10 5
+2684 9 1509949540 3 0
+-1
+S
+
+#100505
+In a Dark Tunnel - Along a Giant Tree Root~
+Winding through the darkness runs an east-west tunnel, its northern wall
+filled with the long sinuous roots of a massive tree.  Clumps of earth
+and stone lie tangled in the wall of roots, a scattering of bones
+intermingling through them.  Eastwards the tunnel slopes down slightly, a
+smattering of muddy pools lining its floor.  Westwards the tunnel
+continues its journey through the warren-like caverns.
+~
+[Larken] look bones wall roots
+[Larken] look pools
+[Jydan] search bone
+[Jydan] missing final period on desc
+~
+167378944 11 5 0
+D1
+~
+~
+0 -1 100527 10 10 5
+D3
+~
+~
+0 -1 100504 10 10 5
+E
+bones wall roots~
+The roots of many differnt trees line the wall forming display of all
+this tunnel has caught.  Mostly you see limestone and other stones that
+make up the bedrock around here, but there are small bits and pieces of
+other prizes to be seen.  As you study the wall you find an area of white
+bones near the center.  You lean closer to look at the bones and realize
+they are of a humanoid. A skull is there among the pile, twisted and
+slighly crushed by the roots its eye sockets hollow and empty.
+~
+E
+pools~
+Pools of stagnate water cover the floor here and there collecting
+everything that passes their way.
+~
+-1
+S
+
+#100506
+In a Dark Tunnel - Steep Descent~
+Rivulets of water flow from the roof of the tunnel, down the walls and
+disapear into a large hole at your feet.  It looks possible, though
+perilous indeed, to attempt a climb down here into the hole and its pitch
+black depths.  A faint wind bearing a chill that seeps into your very
+bones seems to blow up from the hole though you notice your clothes
+remain completely undisturbed.
+~
+[Eccles] requires climb at 7 to get down here
+[Larken] look water
+~
+167378944 11 5 0
+D2
+~
+~
+0 -1 100504 10 10 5
+D5
+~
+~
+0 -1 100507 10 10 5
+E
+water~
+Small streams of water flow down the walls carrying with them clumps of
+dirt and who knows what eles.  It probably would not be the best idea to
+drink from this water.
+~
+A
+~
+~
+act_tochar( #to_char, ch );
+~
+E
+to_char~
+The path down looks too steep, probably best to climb.
+~
+!
+3 0 32
+A
+climb~
+down~
+if( find_skill( ch, climb ) < 7 ) {
+  act_tochar( #fail, ch );
+}
+else {
+  act_tochar( #climb, ch );
+  act_notchar( #climb2, ch );
+  transfer( ch, find_room( 100507 ) );
+  loop( followers ) {
+    ch = rch;
+    acode( room, 2 );
+  }
+}
+~
+E
+fail~
+You walk right to the edge but this climb looks too much for your meager
+skill.
+~
+E
+climb~
+Finding sure footing, you begin the climb down.
+~
+E
+climb2~
+$n swings over the edge and begins to climb down.
+~
+!
+0 0 0
+-1
+S
+
+#100507
+In a Dark Tunnel - Steep Descent~
+The steep slope of the tunnel and the oozing mud underfoot make movement
+very difficult here.  Faintly glowing moss clings to walls made slick by
+water running in rivulets from above and trickling into the darkness
+below.  The air seems to close in, stifling sound and carrying with it a
+faint acrid smell that burns in the back of your throat.
+~
+~
+167378944 11 5 0
+D4
+~
+~
+0 -1 100506 10 10 5
+D5
+~
+~
+0 -1 100508 10 10 5
+A
+~
+~
+act_tochar( #to_char, ch );
+~
+E
+to_char~
+Looks too steep to walk down from here.
+~
+!
+3 0 32
+A
+~
+~
+act_tochar( #to_char, ch );
+~
+E
+to_char~
+Looks too steep to walk up from here.
+~
+!
+3 0 16
+A
+climb~
+up~
+if( find_skill( ch, climb ) < 7 ) {
+  act_tochar( #fail, ch );
+}
+else {
+  act_tochar( #climb, ch );
+  act_notchar( #climb2, ch );
+  transfer( ch, find_room( 100506 ) );
+  loop( followers ) {
+    ch = rch;
+    acode( room, 3 );
+  }
+}
+~
+E
+fail~
+This climb looks too steep for your meager skill.
+~
+E
+climb~
+Finding sure footing, you begin the climb upwards.
+~
+E
+climb2~
+Looking confident, $n begins to climb the slope.
+~
+!
+0 0 0
+A
+climb~
+down~
+if( find_skill( ch, climb ) < 7 ) {
+  act_tochar( #fail, ch );
+}
+else {
+  act_tochar( #climb, ch );
+  act_notchar( #climb2, ch );
+  transfer( ch, find_room( 100508 ) );
+  loop( followers ) {
+    ch = rch;
+    acode( room, 4 );
+  }
+}
+~
+E
+fail~
+The climb down looks too steep for your meager skill.
+~
+E
+climb~
+Finding sure footing, you begin the climb down.
+~
+E
+climb2~
+Looking confident, $n begins to climb down the slope.
+~
+!
+0 0 0
+2684 9 1509949540 3 0
+-1
+S
+
+#100508
+Entrance to the Ancient Ruins - Base of a Steep Incline~
+The tunnel opens up into a large cave strewn with cracked and broken
+masonry.  Completely filling the northern side of the cave a large
+black-stone wall rises, its surface appearing perfectly smooth and
+flawless.  A heavy sense of forboding pervades the atmosphere, not helped
+by the heavy acrid stench filling the air.  The stench seems to thicken
+the closer you get to the wall itself, burning in your nostrils and
+causing you to gasp for breath.  In the centre of the wall is a large
+arch, its edges intricately carved with spidery runes.
+~
+[Eccles] room is no.mob to stop other worms moving into the area with the queen
+[Eccles] need climb of 7 to get up here
+[Larken] look wall north arch runes
+[Jydan] nostrels -> nostrils
+~
+167247880 11 5 0
+D0
+~
+~
+0 -1 100509 10 10 5
+D1
+~
+~
+0 -1 100514 10 10 5
+D2
+~
+~
+0 -1 100513 10 10 5
+D4
+~
+~
+0 -1 100507 10 10 5
+E
+wall north arch runes~
+The black wall to the north is perfect.  Time has ruined most of the
+surroundings, but this wall stands unmarked.  The runes that twine their
+way around the edges of the arch shine brightly in this dismal place. 
+They are written in a language and style that has been long lost, but it
+is not the look of the runes that catches you it is the feeling that
+seeps into you when you try and study them.  The feeling akin to having a
+something on the tip of your tongue that you just can not quite say. 
+That nagging feeling seeps its way into your mind.  The runes must be
+trying to tell you something.  Why is that arch there?  Is it to keep
+something in?  To keep you out?  To keep something else out?  To warn you
+of something?
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@rYou cautiously step through the arched gateway into blackness beyond.@n
+~
+!
+3 0 1
+A
+~
+~
+if( can_fly( ch ) )
+  continue;
+act_tochar( #to_char, ch );
+~
+E
+to_char~
+The slope looks too steep to walk up.
+~
+!
+3 0 16
+A
+climb~
+up~
+if( find_skill( ch, climb ) < 7 ) {
+  act_tochar( #fail, ch );
+}
+else {
+  act_tochar( #climb, ch );
+  act_notchar( #climb2, ch );
+  transfer( ch, find_room( 100507 ) );
+  loop( followers ) {
+    ch = rch;
+    acode( room, 3 );
+  }
+}
+~
+E
+fail~
+You walk right up to the slope but decide the climb is too tough for your
+meager skill.
+~
+E
+climb~
+Finding sure footing, you being to climb the slope.
+~
+E
+climb2~
+$n walks up to the slope and begins to climb up.
+~
+!
+0 0 0
+2686 9 1509949540 3 0
+2686 9 1509949540 3 0
+-1
+S
+
+#100509
+Ancient Stone Ruins - Overlooking a Dark Pit~
+Cracked columns rise around an open courtyard in what must once have been
+a great city.  The ruined shells of once majestic buildings stretch into
+the distance, the ravages of time failing to completely eradicate their
+dark and slender beauty.  The cave containing this city must be truly
+enormous, the city itself stretching on into blackness as far as the eye
+can see.  In the centre of the courtyard a small amphitheatre surrounds a
+fighting pit that descends into darkness, a heavy acrid stench seeming to
+emanate from its depths.  You fail to shake the feeling of unseen eyes
+staring out at you from the blackness.  A strange fog winds its way
+through the ruins, wrapping tightly to the base of the ruined structures.
+~
+[Jydan] truely truly
+[Jydan] eminate emanate
+~
+167378944 11 5 0
+D0
+~
+~
+0 -1 100511 10 10 5
+D2
+~
+~
+0 -1 100508 10 10 5
+D5
+~
+~
+0 -1 100510 10 10 5
+E
+fog~
+An almost ethereal fog winds its way through the ruins, wrapping itself
+to the base of ruined structures.  Disturbingly, the fog seems to slow a
+strange pale white.
+~
+A
+~
+~
+i = random( 1, 2 );
+if( i == 1 ) {
+  loop( all_in_room ) {
+    act_tochar( #fog, rch );
+    damage( mob, rch, 1d10, cold, "chilling fog" );
+  }
+}
+if( i == 2 )
+  send_to_room( #whisper, room );
+~
+E
+fog~
+@wA ghostly finger of fog touches your skin.
+~
+E
+whisper~
+@mOn the edge of hearing, a ghostly moan rises and dies away.
+~
+!
+2 200 0
+-1
+S
+
+#100510
+Dark Pit Beneath The Ruins~
+The overwhelming acidic stench makes it almost impossible to breathe, the
+smell seeming to emanate from a disgusting stagnant pool of slime that
+fills the bottom of the pit to almost knee deep.  The amphitheatre looms
+above you, dark cracks and crevices seeming to watch you with unseen eyes.
+~
+[Eccles] silk worm bohemouth emerges from a large pool of slime at the bottom of the pit when entering room
+[Jydan] eminate emanate
+[Jydan] stangnant stagnant
+[Jydan] a search slime?
+~
+167378944 11 5 0
+D4
+~
+~
+0 -1 100509 10 10 5
+2688 9 1509949540 3 0
+-1
+S
+
+#100511
+Main Thoroughfare Through an Ancient Ruined City~
+A wide main street of the ruined city comes to an abrupt end here, a tall
+tower having toppled into the street creating an impassible barrier.  The
+houses to either side of the street appear as though they would at one
+time have been palacial and wealthy residences.  An eerie fog winds its
+way through the ruins, wrapping tightly to the base of toppled buildings
+and statues still darkly beautiful despite the ravages of time.  In
+contrast to the rest of the city, the building to the west appears
+strangely untouched.
+~
+[Jydan] topled toppled
+[Jydan] erie eerie
+~
+167378944 11 5 0
+D2
+~
+~
+0 -1 100509 10 10 5
+D3
+black stone door~
+~
+131 -1 100512 10 10 5
+E
+fog~
+An almost ethereal fog winds its way through the ruins, wrapping itself
+to the base of ruined structures.  Disturbingly, the fog seems to slow a
+strange pale white.
+~
+E
+ruins houses~
+The ruins of one proud and majestic villas line the sides of the street. 
+Constructed from deep black stone and dark blue marble, their
+architecture is at once both gracefully elegant and darkly savage.
+~
+A
+~
+~
+i = random( 1, 2 );
+if( i == 1 ) {
+  loop( all_in_room ) {
+    act_tochar( #fog, rch );
+    damage( mob, rch, 1d10, cold, "chilling fog" );
+  }
+}
+if( i == 2 )
+  send_to_room( #whisper, room );
+~
+E
+fog~
+@wA ghostly finger of fog touches your skin.
+~
+E
+whisper~
+@mYou swear you just heard whispering coming from the ruins.
+~
+!
+2 300 0
+-1
+S
+
+#100512
+Inside an Ancient Ruined Chamber~
+A fine layer of dust has settled across the floors and furnishings of the
+chamber, a scattering of cobwebs add to the disused appearance.  The
+remains of moldering tapestries dangle from tarnished rings along the
+west and northern wall.  Faint discoloration remains across the southern
+wall where pictures once hung.  Drifting rivers of mist curl up from gaps
+in the cobbled floors, the fog slowly seeping out the opening to the east.
+~
+[Jydan] burl -> curl?
+~
+167378944 0 5 0
+D1
+black stone door~
+~
+131 -1 100511 10 10 5
+2687 9 1509949540 3 0
+-1
+S
+
+#100513
+In a Dark Tunnel - New Excavation~
+This tunnel appears distinctly different to others you have seen in this
+area.  The tunnel walls are almost solid soil and quite soft to touch,
+and gouged with long marks that appear quite new.  To the north you can
+see the tunnel open up into a larger cave littered with cracked and
+broken masonry.  An acidic stench seems to eminate from that direction,
+catching in the back of your throat.  To the south the tunnel continues,
+delving into darkness.
+~
+~
+167378944 11 5 0
+D0
+~
+~
+0 -1 100508 10 10 5
+D2
+~
+~
+0 -1 100515 10 10 5
+-1
+S
+
+#100514
+In a Dark Tunnel - Complex Tunnel System~
+A bitter acrid smell hangs heavy in the still air of the dirt tunnel, the
+aroma rising in fetid green whisps from a oozing slime that drips from
+the walls.  A clostrophobicly-narrow tunnel snakes into the darkness to
+the east its, walls no more than a few feet appart at several places.  A
+less cramped tunnel works its way westward, its walls worn smooth by
+the passage of creatures.  Just in sight to the west the tunnel opens up
+into a cave with cracked and broken masonry scattered about.
+~
+[Jydan] clostrophobic -> claustrophobic
+[Jydan] comma between 'east' and 'its'
+~
+167378944 11 5 0
+D1
+~
+~
+0 -1 100516 10 10 5
+D3
+~
+~
+0 -1 100508 10 10 5
+2685 9 1509949540 3 0
+-1
+S
+
+#100515
+In a Dark Tunnel - New Excavation~
+The newer excavation ends in a solid wall of hard packed soil.  A strong
+earthy smell almost masks the acidic tinge in the air, though an
+occasional faint breath of wind from the north is almost enough to make
+you gag.  The soil of the walls appears much softer here, and the
+occasional tremble in roof of the tunnel gives rise to suspicions about
+its stability.
+~
+~
+167378944 11 9 0
+D0
+~
+~
+0 -1 100513 10 10 5
+2685 9 1509949540 3 0
+-1
+S
+
+#100516
+In a Dark Tunnel - Complex Tunnel System~
+Acrid slime clings to the tunnel walls, the green goo releasing a foul
+stench into the already musty passage.  A grey-stone pillar juts from the
+eastern wall, its surface covered in cracks.  Mounds of rock shards
+sprinkle about its base where the years of entombment and passage movement
+has broken them free.  The tunnel cuts northwards to avoid the pillar and
+westwards down a narrow passageway.
+~
+[Eccles] note for rdesc - check map, tunnel circling north around a large granite pillar
+[Jydan] movemnt movement
+~
+167378944 11 9 0
+D0
+~
+~
+0 -1 100517 10 10 5
+D3
+~
+~
+0 -1 100514 10 10 5
+-1
+S
+
+#100517
+In a Dark Tunnel - Complex Tunnel System~
+The tunnel weaves its away around the base of a large pillar, the soft
+earth caked in globules of acrid slime.  Bits of rock and stone lie
+strewn across the uneaven floor, the chips cast from the broken surface
+of the pillar.  Pools of liquified mud make for a squelching passage to
+the east while a much drier tunnel meanders southwards around the pillar
+and into the gloom.
+~
+[Eccles] note for rdesc - check map, tunnel circling north around a large granite pillar
+~
+167378944 11 9 0
+D1
+~
+~
+0 -1 100518 10 10 5
+D2
+~
+~
+0 -1 100516 10 10 5
+2685 9 1509949540 3 0
+-1
+S
+
+#100518
+In a Dark Tunnel - Complex Tunnel System~
+A mire of mud fills a foot of the tunnels floor, its depressions filled
+with slime and water.  The walls of the tunnel have been pock-marked by
+the claws or teeth of some creature.  The fractured surface of a stone
+pillar thrusts from the wall to the south-west, its grey stones crumbling
+away in the damp conditions.  A corridor carves its way through the muddy
+ground and surges southwards while another water-soaked tunnel oozes to
+the west.
+~
+[Eccles] note for rdesc - check map, tunnel circling around a large granite pillar
+[Jydan] poc-marked pock-marked
+[Jydan] comma between south-west and its
+~
+167378944 11 9 0
+D2
+~
+~
+0 -1 100519 10 10 5
+D3
+~
+~
+0 -1 100517 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GStruggling through the mire, you continue west.
+~
+!
+3 0 8
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GStruggling through the mire, you continue south.
+~
+!
+3 0 4
+-1
+S
+
+#100519
+In a Dark Tunnel - Complex Tunnel System~
+Gossimer strands of silk cascade down from a rent in the roof, the
+tumbling web soft and cool to the touch.  Dirt and mud spread underfoot,
+the water causing the tunnel floor to become a quagmire.  Exits run from
+the chamber to the north and south, their narrow walls caked in grime and
+blobs of bright green slime.  The faint noise of rustling silk filters in
+from above, a rich yeasty aroma drifting with the sound.
+~
+[Eccles] note for rdesc - check map, tunnel circling around a large granite pillar
+[Eccles] climb pillar up, handholds in the pillar (climb 5 to get up here )
+[Larken] look silk web roof up
+[Larken] look handholds
+[Jydan] comma between south and their
+~
+167378944 11 9 0
+D0
+~
+~
+0 -1 100518 10 10 5
+D2
+~
+~
+0 -1 100521 10 10 5
+D4
+~
+~
+0 -1 100520 10 10 5
+E
+silk web roof up~
+Looking at the rent in the roof that the silk seems to be coming from you
+see a series of handholds in the nearby granite pillar leading straight
+up through it.
+~
+E
+handholds~
+This handholds are really nothing more than shallow notches carved into
+the granite, but with some skill and a little luck they should allow an
+adventurer access to what ever lies above.
+~
+A
+~
+~
+act_tochar( #climb, ch );
+~
+E
+climb~
+The way up is little more than a hole in the roof of the tunnel, it looks
+like it may be possible to get there via climbing the pillar.
+~
+!
+3 0 16
+A
+climb~
+up pillar~
+if( find_skill( ch, climb ) < 5 ) {
+  act_tochar( #nogood, ch );
+}
+else if( find_skill( ch, climb ) >= 5 ) {
+  act_notchar( #climb3, ch );
+  act_tochar( #climb, ch );
+  wait( 1 );
+  act_tochar( #climb2, ch );
+  transfer( ch, find_room( 100520 ) );
+  loop( followers ) {
+    ch = rch;
+    acode( find_room( 100519 ), 2 );
+  }
+}
+~
+E
+nogood~
+@WYou attempt to climb up the side of the giant pillar, but slip and fall
+back down.
+~
+E
+climb~
+You climb up the cracked surface of the pillar.
+~
+E
+climb2~
+@wGossamer strands of silk caress your skin as you haul yourself up and
+through the opening in the tunnel roof.
+~
+E
+climb3~
+$n begins climbing up the side of the pillar.
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@wYou move south, strands of silk brushing your skin.
+~
+!
+3 0 4
+A
+~
+~
+continue;
+~
+E
+to_char~
+@wYou move north, strands of silk brushing your skin.
+~
+!
+3 0 1
+2685 9 1509949540 3 0
+-1
+S
+
+#100520
+In a Dark Tunnel - Claustrophobia~
+Whispy strands of silk fill this area - cascading from the roof, clinging
+to the walls and carpeting the floor.  The pungent stench of yeast is
+thick in the air making it difficult to breathe and lending the cloying
+atmosphere a particularly claustrophobic feel.  The silk fills the area
+with a constant soft rustling, parting reluctantly and making it
+difficult to move.
+~
+~
+167378952 11 9 0
+D0
+~
+~
+0 -1 100528 10 10 5
+D5
+~
+~
+0 -1 100519 10 10 5
+A
+north~
+~
+act_tochar( #north, ch );
+continue;
+~
+E
+north~
+@wThe silk parts reluctantly, and you push northwards.
+~
+!
+0 0 0
+A
+~
+~
+act_tochar( #nocli, ch );
+~
+E
+nocli~
+You walk up to the hole but think twice about jumping down.
+~
+!
+3 0 32
+A
+climb~
+down pillar~
+if( find_skill( ch, climb ) < 5 ) {
+  act_tochar( #suck, ch );
+  act_notchar( #suck2, ch );
+  wait( 1 );
+  transfer( ch, find_room( 100519 ) );
+  damage( mob, ch, 3d10, physical, "falling down a hole", "falling down a hole" );
+}
+else {
+  act_tochar( #climb, ch );
+  act_notchar( #climb2, ch );
+  wait( 1 );
+  act_tochar( #climb3, ch );
+  transfer( ch, find_room( 100519 ) );
+  loop( followers ) {
+    ch = rch;
+    acode( room, 3 );
+  }
+}
+~
+E
+suck~
+You start to climb, but slip and tumble over the edge!
+~
+E
+climb~
+Finding cracks in the pillar, you begin to climb down.
+~
+E
+climb2~
+$n grasps ahold of the pillar and begins to climb down.
+~
+E
+climb3~
+@wPushing through the strands of silk you make it to the bottom.@n
+~
+E
+suck2~
+You see $n start to climb, then slip and go tumbling down the hole.
+~
+!
+0 0 0
+-1
+S
+
+#100521
+In a Dark Tunnel - Complex Tunnel System~
+Silken webbing clings to the walls and tree roots embedded in the tunnel
+roof, cloaking it in a shroud that obscures detail and blinds further
+view in each direction.  A chill pervades the soil and stones, as if the
+underdark were seeping into the very fabric of the earth.  Options
+onwards include a silk lined tunnel to the north and a damper but silk
+free one to the west.  The sound of dripping water echos about the
+passage, its source unclear.
+~
+~
+167378944 11 9 0
+D0
+~
+~
+0 -1 100519 10 10 5
+D3
+~
+~
+0 -1 100522 10 10 5
+-1
+S
+
+#100522
+In a Dark Tunnel - Complex Tunnel System~
+Trickling runs of oozing water dribble down the muddy sides of the narrow
+tunnel, the water pooling across the floor, transforming the hard earth
+into a glooping mire.  The air becomes increasingly still and fetid
+making breathing arduous.  A root-lined hole in the ceiling offers escape
+from the dank conditons, although the slick sides would make it a
+challenging climb.  Eastwards another tunnel snakes out into the
+darkness, a faint gust of foul smelling air drifting from it.
+~
+[Jydan] challaning challenging
+[Jydan] feotid -> fetid, I assume
+[Jydan] ardous arduous
+~
+167378944 11 9 0
+D1
+~
+~
+0 -1 100521 10 10 5
+D4
+~
+~
+0 -1 100523 10 10 5
+A
+~
+~
+send_to_room( #drip, find_room( 100522 ) );
+send_to_room( #drip, find_room( 100523 ) );
+send_to_room( #drip, find_room( 100524 ) );
+send_to_room( #drip, find_room( 100525 ) );
+send_to_room( #drip, find_room( 100506 ) );
+send_to_room( #drip, find_room( 100507 ) );
+~
+E
+drip~
+@bThe faint trickle of running water echos all around you.
+~
+!
+2 200 0
+-1
+S
+
+#100523
+In a Dark Tunnel - Complex Tunnel System~
+Twisted tree roots swarm across the rock and soil roof of the tunnel, a
+few of the longer ones reaching past head height in their search for
+nutrients and firmer ground.  Eastwards the tunnel transforms its
+composition, turning from mostly soil to a more rocky mix.  A mud-lined
+opening in the floor allows the brave - or foolish - to clamber down into
+the bowls of the earth, the dark maw lined with jutting rocks and oozing
+algae.
+~
+[Eccles] going down, chance to slip and fall on butt
+~
+167378944 11 9 0
+D1
+~
+~
+0 -1 100524 10 10 5
+D5
+~
+~
+0 -1 100522 10 10 5
+2684 9 1509949540 3 0
+-1
+S
+
+#100524
+In a Dark Tunnel - Under a Giant Tree Root~
+The tunnel here runs east-west directly beneath the bole of a massive
+tree root.  Hacked splinters of wood lie scattered about the tunnel
+floor, the surface of the root pocked and scarred by constant passage. 
+Sinuous root tendrils snake across the face of a hole in the tunnel roof
+making for a rather easy climb upwards.  The western tunnel passage
+slopes downwards plunging into softer earth, while to the east a tunnel
+has been carved into almost solid bedrock.
+~
+~
+167378944 11 9 0
+D1
+~
+~
+0 -1 100525 10 10 5
+D3
+~
+~
+0 -1 100523 10 10 5
+D4
+~
+~
+0 -1 100526 10 10 5
+-1
+S
+
+#100525
+In a Dark Tunnel - Rock Chamber~
+The tunnel here ends abruptly in a large chamber carved into the very
+rock itself.  Blocks of stone lie scattered about and the rock surface is
+gouged and splintered as though some creature has tried to carve further
+into the bedrock but given up.  A long vein of quartz lines the southern
+wall of the chamber, glistening an opaque pale white.
+~
+[Larken] look block stone
+[Larken] would be neat if there was a search pop for a pick axe here that could get some of the quartz.
+~
+167378944 11 9 0
+D3
+~
+~
+0 -1 100524 10 10 5
+E
+block stone~
+Blocks of limestone lie scattered around.  It seems who ever started this
+left in a hurry, you can still see the rusted head of a pickaxe lying in
+the mess.
+~
+2684 9 1509949540 3 0
+-1
+S
+
+#100526
+In a Dark Tunnel - Along a Giant Tree Root~
+Hacked from the soft earth and cracked stone the tunnel winds in an
+western direction.  The gnarled roots of a surface tree thrust through
+the northern wall, the tendril-like roots grasping at the thin air in an
+attempt to find firm purchase.  Underfoot a mixture of mud, stone and
+crumbling soil makes for an easy if sligtly noisy passage.  A small
+opening under the flailing roots allows a keen explorer to drop down a
+dark hole, its destination unclear although the ample tree roots would
+make a clamber out quite possible.
+~
+[Eccles] going down, chance to slip and fall on butt
+~
+167378944 11 9 0
+D3
+~
+~
+0 -1 100527 10 10 5
+D5
+~
+~
+0 -1 100524 10 10 5
+2684 9 1509949540 3 0
+-1
+S
+
+#100527
+In a Dark Tunnel - Along a Giant Tree Root~
+Cutting its way east and west runs a narrow tunnel, its walls carved from
+the natural rock and stone.  Poking through the wall to the north are a
+scattering of tree roots, their gnarled surfaces coated in mud and rock
+dust.  Across some of the roots a fine dusting of minute fungi grow,
+their dusky-brown caps showing a few signs of insect damage.  The
+decaying remains of hacked off tree roots lie in mounds across the floor,
+their ends cut cleanly off with an axe or simillar chopping weapon.
+~
+~
+167378944 11 9 0
+D1
+~
+~
+0 -1 100526 10 10 5
+D3
+~
+~
+0 -1 100505 10 10 5
+-1
+S
+
+#100528
+Silk Worm Hatchery~
+The pungent smell of yeast is almost overpowering here, the atmosphere of
+this place cloying and claustrophobic.  Wafer-thin strands of silk fill
+the area, your movement causing a hypnotic cascading effect as the silk
+parts and flows around you.  You can just barely make out the faintest
+sighing sound, its origin impossible to tell.
+~
+~
+167378944 11 9 0
+D2
+~
+~
+0 -1 100520 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@wYou push south, the silk parting and flowing around you.@n
+~
+E
+to_room~
+@w$n pushes south, the silk parting and flowing around $m.@n
+~
+!
+3 0 4
+A
+~
+~
+i = random( 1, 2 );
+if( i == 1 )
+  send_to_room( #sigh, room );
+if( i == 2 )
+  send_to_room( #silk, room );
+~
+E
+sigh~
+@cA faint sighing sound rises and falls.@n
+~
+E
+silk~
+@wA stray strand of silk brushes over your face, caressing your skin.@n
+~
+!
+2 100 0
+A
+cut~
+husk cocoon silk~
+if( obj_in_room( 4222, room ) ) {
+  obj = obj_in_room( 4222, room );
+  junk_obj( obj );
+  act_tochar( #cut, ch );
+  act_notchar( #cut2, ch );
+  if( random( 1, 10 ) == 1 ) {
+    obj_to_char( oload( 4221 ), ch );
+  }
+  i = random( 1, 10 );
+  if( i <= 5 ) {
+    mob = mload( 2686, room );
+    init_attack( mob, ch );
+  }
+  if( i > 5 ) {
+    mob = mload( 2685, room );
+    init_attack( mob, ch );
+  }
+}
+~
+E
+cut~
+You reach out to cut open the cocoon.
+~
+E
+cut2~
+$n reaches out to cut open the cocoon.
+~
+!
+0 0 0
+4222 17 1509949540 -2 0
+4222 17 1509949540 -2 0
+4222 17 1509949490 -2 0
+4222 17 1509949490 -2 0
+2686 9 1509949540 3 0
+-1
+S
+
+#0
+

@@ -1,0 +1,44 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+note [board name]: eg, 'note bug', will shift the board that will be read<br>
+ to the bugs board.<br>
+<br>
+note : this allows you to list the notes on one type of board.<br>
+<br>
+note [#] : this will let you read a specific note.<br>
+<br>
+note new [title] : this creates a new note with the given title, to<br>
+ be posted later on the board you are flagged to read.<br>
+<br>
+note post  : posts the note you have just completed onto the board.<br>
+<br>
+note delete  : deletes the note that you have been editing.<br>
+<br>
+note delete [#]  : if you were the writer of that posted note, you<br>
+ can delete it with this command.<br>
+<br>
+note title [new_title] : this allows you to change the title of the note<br>
+ in progress.<br>
+<br>
+note edit [text] : allows you to edit a note already posted<br>
+ (to exit this mode, 'note delete').<br>
+<br>
+note boardlist : gives a list of the boards to which you have<br>
+  access.<br>
+<br>
+note move [#] [board]: moves a note from one board to another.<br>
+<br>
+<h1> Description </h1>
+<br>
+There are many boards which can be read by mortals.  They are not located<br>
+at any specific area.  Rather, you can read them at any place, awake or<br>
+asleep.  The list of boards you can read can be accessed by typing note<br>
+boardlist.  You will see (iflag level x) next to the board's title.  This<br>
+is the minimum number you have to have 'iflag notes' set to in order to<br>
+see the Info || statements associated with that board.<br>
+<br>
+See Help Note Editor for more information.<br>
+</html>
+</body>

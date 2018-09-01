@@ -1,0 +1,561 @@
+#M2_AREA
+2
+
+Aillse Lake~
+Glynis~
+Aillse Lake~
+~
+~
+
+0 0
+0
+1
+#ROOMS
+
+#1500
+Within the Ruby Sphere~
+Like being trapped within a ruby, the walls of this room are cut from the
+stone as though by an expert jeweler, and covered with a spongy, crimson
+algae.  Floating at the top of the sphere, a small luminous bubble
+billows soft blue light 'round the room.  A circular passageway, large
+enough to accommodate a whale and intricately carved in much the same
+manner as the room's walls, opens in the exact center of the northern
+sphere's curvature.
+~
+[Guin] Done.
+~
+-335937411 11 6 0
+D0
+~
+~
+0 -1 1502 10 10 5
+E
+1 passageway 1 circular 1 north~
+A clear shimmering membrane of some sort covers the entrance, forming a
+flat surface.  The blue light from above makes the membrane's surface
+reflective, conecealing what lies beyond.
+~
+E
+wall stone cut~
+Spongy red lichen is distributed in a thin layer, perfectly covering
+every inch of the cut stone it calls home.  The stone is cut like a
+multifaceted gem.  Standing in the room feels much like standing within a
+massive, perfectly cut ruby.  Each facet of the stone is the exact same
+size as the others.
+~
+A
+~
+~
+if( !is_affected( water.breath, ch ) ) {
+  act_tochar( #cantleave, ch );
+  end;
+  }
+else
+  continue;
+~
+E
+cantleave~
+Having no idea what awaits you beyond the wall of water, the realization
+that breathing underwater is not a skill you possess, keeps you from
+stepping out of the sphere.
+~
+E
+to_char~
+The membrane ripples as you break the surface tension, stepping into
+weightlessness.
+~
+E
+to_room~
+$n sends ripples across the membrane as $e steps through.
+~
+!
+3 0 1
+A
+search take get~
+spongy crimson algae~
+send_to_room( #nope, room );
+~
+E
+nope~
+@RThe crimson algae dissipates into the air where ever it is touched.@n
+~
+!
+0 0 0
+5388 9 1509949540 3 0
+-1
+S
+
+#1501
+Confined Within An Itchy Bag~
+Itchy fibers rub against your skin.  You try to itch but find your hands
+are bound.  Kicking only serves to frustate you more as your feet are
+bound as well.  To make matters worse, both your feet and hands are bound
+with the same abrasive material that the bag you are in is made out of.
+~
+[Glynis] Trans from 1715
+[Glynis] Trap in 1715 fires acode 1.
+[Adakar] acode now only fires in this room.
+~
+200802366 0 9 0
+A
+~
+~
+room = find_room( 1501 );
+ch = rand_char( room );
+wait( 1 );
+act_tochar( #bump, ch );
+wait( 2 );
+act_tochar( #ouch, ch );
+dam_message( ch, 1d5+2, "small pricks and bumps from outside the bag" );
+inflict( ch, mob, 1d5+2, "bumpy dragging" );
+wait( 2 );
+act_tochar( #stop, ch );
+transfer( ch, find_room( 1500 ) );
+~
+E
+bump~
+@WGroggy, with a pounding headache, you awake.  You can see nothing and
+find yourself bound with a strong abrasive fabric.@n 
+~
+E
+ouch~
+@WAs you regain more of your consciousness, you realize you are being
+dragged along the ground within a bag of some type.  @n 
+~
+E
+stop~
+@GYou hear a conversation in strange high-pitched phrases.  Three
+distinct voices can be heard - two female and one male.  The dragging
+stops and someone unties the bag opening.  @n 
+~
+!
+0 0 0
+-1
+S
+
+#1502
+Cylindrical Amber Tunnel~
+This is a cylindrical room filled with water.  The walls are smooth,
+polished, grey stone and are covered with garnet and gold algae.  The
+tunnel runs east and west - to the north and south are whale-sized,
+perfectly circular holes.  By some force of magic, the water in this
+tunnel is kept from filling the area beyond the holes.  Small blue
+bubbles of light line floor and ceiling at three foot intervals and run
+the length of the cylinder.
+~
+[Guin] Done.
+~
+200933381 7 9 0
+D0
+~
+~
+0 -1 1503 10 10 5
+D2
+~
+~
+0 -1 1500 10 10 5
+D3
+~
+~
+0 -1 1507 10 10 5
+E
+bubbles light blue~
+About the size of a large coconut and pale blue as the sky on a cloudless
+day, these 'bubbles' pulsate in unison with each other.  Their pale blue
+color shifts to other lighter and darker hues and the shift seems to
+coincide with the pulsations.  Nothing fastens them to the tube they
+line; they just float in place, unaffected by the currents flowing
+through here.
+~
+E
+walls smooth polished~
+Small, randomly sized and distributed holes cover the curved surface of
+this tunnel.  The holes are deep enough to prevent any view of their
+interior.  The blue billowing light from the bubbles dances along the
+walls in waves creating strange, beautiful shapes with the fuzzy garnet
+and gold lichen covering the curved tunnel's surface.
+~
+5188 9 1509949540 3 0
+5447 9 1509949540 3 0
+-1
+S
+
+#1503
+Within the Golden Sphere~
+Only the view from within a piece of amber could look like this.  This
+perfectly spherical room, cut much like a many-faceted gem and large
+enough to contain a king's ransom, is covered with a brilliant golden
+lichen.  A blue bubble, about the size of a pumpkin, glows softly at the
+sphere's epoch.  Soft blue light floats down from it, bouncing here and
+there, catching your eye as it glints off the wet lichen at the proper
+angle.  A circular opening in the south wall is large enough for a
+phalanx of ogres to pass through.
+~
+[Guin] Done.
+~
+200933381 7 5 0
+D2
+~
+~
+0 -1 1502 10 10 5
+E
+1 passageway 1 opening 1 ogres 1 phalanx~
+No description.
+~
+E
+1 bubble 1 blue 1 glow 1 epoch~
+No description.
+~
+E
+1 lichen 1 amber 1 gold~
+No description.
+~
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 )
+  send_to_room( #bubble, room );
+if( i == 2 )
+  send_to_room( #fish, room );
+if( i == 3 )
+  send_to_room( #current, room );
+~
+E
+bubble~
+@CTiny bubbles break free of the floor and wiggle their way to the
+sphere's epoch.@n 
+~
+E
+fish~
+@CTiny fish, most no larger than a human pinky, float through the area
+creating a kaleidoscope of colors that gleam in the faint blue light.@n
+~
+E
+current~
+@BA slight current pushes you up towards the ceiling of the room.@n 
+~
+!
+2 250 0
+A
+search take get~
+lichen golden~
+send_to_room( #nope, room );
+~
+E
+nope~
+@YThe golden lichen crumbles into nothingness where ever it is touched.@n
+~
+!
+0 0 0
+5388 9 1509949540 3 0
+-1
+S
+
+#1507
+Cylindrical Amber Tunnel - Graceful Upward Turn~
+The cylindrical tunnel takes a graceful upward turn here.  The blue
+bubbles stray from their beeline and begin to spiral around the walls to
+the right.  Above, the tunnel appears to take another turn.  Occasionally
+fish swim by, some slow - some fast.  Some small schooling minnows pass
+in large enough numbers to obscure all vision.
+~
+[Guin] Done.
+~
+200933381 7 9 0
+D1
+~
+~
+0 -1 1502 10 10 5
+D4
+~
+~
+0 -1 1518 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CYou push off the bottom and rocket youself upward into the now vertical
+tube.  The water flows through your hair and around your body -- gripping
+you like a lover's warm embrace.  Your equilibrium loses its way and only
+memory serves to remind you which way is down.  The blue bubbles which
+cling to the walls spiral past you, further distorting your sense of
+direction.@n 
+~
+E
+not_char~
+@C$n pushes off the bottom, rocketing up the tunnel like an angel
+returning to the heavens.@n
+~
+!
+3 0 16
+5188 9 1509949540 3 0
+5447 9 1509949540 3 0
+-1
+S
+
+#1518
+A Small Radiant Pool~
+A curved rock ledge encircles a glistening pool of water, as clear as a
+shard of the finest glass.  The pool's edge is perfectly circular in
+shape, as if meticulously created by a master craftsman.  Stringy grey
+lichen clings to the sides of the walls, its mossy surface damp to the
+touch from a thick layer of humidity, rising from the warm pool.  A
+bright beam of light shines up from beneath the water, refracting its
+soft blue tinge into wavy streams of dancing sparkles.  An opening in the
+cavern wall leads off to the north toward a darkened corridor.
+~
+[Guin] Done.
+~
+200933389 11 5 0
+D0
+~
+~
+0 -1 1520 10 10 5
+D5
+~
+~
+0 -1 1507 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CThe water looks fairly deep within the pool.  After much contemplation
+you dive headfirst into the cool clear water.@n 
+~
+E
+to_room~
+@C$n inspects the water.  After much contemplation $e dives headfirst
+into the cold pool.@n 
+~
+!
+3 0 32
+-1
+S
+
+#1520
+Damp Misty Cavern~
+A thick mustard-tinted lichen covers the ceiling of this cavern..  About
+the size of a thennish kitchen, and lit like a skliss den, this room has
+little room for more than five humans to stand comfortably.  Light beams
+through the moist air, its source somewhere beyond a thick curtain of
+moss on the northern wall.  Water trickles onto the flooded floor of the
+cavern from above the moss, its sound resonating off every nook and
+cranny in the pitted cavern.  To the south, a faint blue light
+illuminates the cavern walls.  The water looks to deepen in that
+direction.
+~
+[Guin] Do not add mpc to this guy. He needs to be here for things to work properly.
+[Guin] Done.
+~
+200933383 12 9 0
+D0
+curtain of moss~
+curtain of moss~
+131 -1 1713 10 10 6
+D2
+~
+~
+0 -1 1518 10 10 5
+E
+lichen~
+@yYellow@n lichen, thick and spongy, thrives on the ceiling of this
+cavern.  It grows thick enough in some places to sink a hand into up to
+the wrist.
+~
+E
+1 walls 1 cavern~
+At first glance, the pitted walls of this cavern appear as any others,
+carved by some force of nature from the surrounding sedimentary rock. 
+Closer examination reveals that the rock is anything but sedimentary. 
+Long dead coral, made up mostly of solid white and yellow calcium, is
+everywhere.
+~
+A
+~
+~
+if( mob_in_room( 5034, find_room( 1520 ) ) ) {
+  wait( 1 );
+  act_tochar( #entering, ch );
+  wait( 1 );
+  act_tochar( #closing, ch );
+  close( room, north );
+  }
+~
+E
+entering~
+The fynn netweaver calmly looks up from his work.
+~
+E
+closing~
+@YBefore you can react, the dirty little fynn darts to the curtain, rips
+it back into position, and returns to his work.@n 
+~
+!
+1 0 1
+A
+~
+~
+mob = mob_in_room( 5034, room );
+obj = is_wearing( 7604, ch );
+if( mob ) {
+  if( !obj ) {
+    mpcode( mob, 4 );
+    continue;
+  }
+  else {
+    act_tochar( #blocked, ch );
+    end;
+  }
+}
+~
+E
+to_char~
+@GThe netweaver looses a cackle which wildly reverbates off the damp
+cavern walls and haunts you as you slosh off to the south.@n 
+~
+E
+to_room~
+@G$n looks strangely at the netweaver and sloshes off to the south.@n
+~
+E
+blocked~
+@GWith a splash, a strangely glowing vine-rope net is ripped out of the
+water and stretches to block off the southern exit.@n 
+~
+!
+3 0 4
+A
+~
+~
+send_to_room( #smoke, room );
+~
+E
+smoke~
+@YA narrow stream of smoke rises slowly to the cavern ceiling as the
+netweaver puffs his pipe.@n 
+~
+!
+2 250 0
+A
+custom~
+~
+if( mob_in_room( 5034, room ) )
+act_tochar( #custom, ch );
+~
+E
+custom~
+@CFynn Netweaver@n
+
+ Item                          Cost  Level  Items Required to Customize
++----------------------------+------+-----+-----------------------------+
+| Leaf-Bottomed Boots        |  100 |  8  | Elephant Ear Leaf           |
+|                            |      |     | Sturdy Length of Vine       |
++----------------------------+------+-----+-----------------------------+
+~
+!
+0 0 0
+A
+custom~
+leafy-bottomed shoes~
+if( mob_in_room( 5034, room ) ) {
+  if( has_obj( 7718, ch ) ) {
+    if( has_obj( 7719, ch ) ) {
+      if( has_obj( 2, ch ) ) {
+        act_tochar( #custom, ch );
+        act_notchar( #custom2, ch );
+        junk_obj( has_obj(7718, ch ), 1 );
+        junk_obj( has_obj(7719, ch ), 1 );
+        junk_obj( has_obj(2, ch ), 1 );
+        obj_to_char( oload( 7717 ), ch );
+        end;
+        }
+      act_tochar( #nogold, ch );
+      end;
+      }
+    act_tochar( #nostring, ch );
+    end;
+    }
+  act_tochar( #noleaf, ch );
+  end;
+  }
+~
+E
+custom~
+The fynn netweaver takes your items and quickly fashions them into a pair
+of loose-fitting, comfortable shoes.
+~
+E
+custom2~
+The fynn netweaver takes $n's items and quickly fashions them into a pair
+of loose-fitting, comfortable shoes.
+~
+E
+nogold~
+The fynn netweaver tells you: "Hey, I'm not doing this for free!  You
+need to pay me a gold coin, and you don't have one." 
+~
+E
+nostring~
+The fynn netweaver tells you: "I need a string of vine rope to hold the
+shoes together, and you don't have one." 
+~
+E
+noleaf~
+The fynn netweaver tells you: "You need to have an elephant-ear leaf for
+me to make you a pair of shoes, and you don't have one." 
+~
+!
+0 0 0
+A
+list sell buy~
+~
+if( mob_in_room( 5034, room ) )
+act_tochar( #no, ch );
+~
+E
+no~
+The fynn netweaver tells you:  "I only make shoes."
+~
+!
+0 0 0
+A
+listen~
+~
+i = random( 1, 3 );
+if( i == 1 ) 
+  act_tochar( #drip, ch );
+if( i == 2 )
+  act_tochar( #splash, ch );
+if( i == 3 )
+  act_tochar( #flow, ch );
+~
+E
+drip~
+@GThe distant sound of water dripping into water, slowly as an icicle
+melting into its pooling substance below, reaches your ears.  @n 
+~
+E
+splash~
+@GEchoing off the walls, the splash of something falling into a distant
+pool of water reaches your ears.@n 
+~
+E
+flow~
+@GLike the sound of a halfling-height waterfall, water dropping gently
+and constantly into a standing pool reaches your ears from the north.  @n
+~
+!
+0 0 0
+5034 9 1509949540 3 0
+-1
+S
+
+#0
+

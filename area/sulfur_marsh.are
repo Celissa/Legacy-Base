@@ -1,0 +1,3093 @@
+#M2_AREA
+2
+
+Sulfur Marsh~
+Azerin II, Wogalan, Ariellen~
+Sulfur Marsh~
+~
+~
+
+10 0
+0
+1
+#ROOMS
+
+#9350
+Deep Beech Forest~
+The black soot like mold continues to thrive on the towering beech trees,
+leaving them with a dark, sickly apperance.  Wasps and bees buzz around
+tiny dew-drops that sprout from the mildew, the insects feeding on the
+sweet droplets.  The broken remains of shells lie scattered about the
+forest floor, their gleaming edges covered with a fresh layer of leaf
+litter.
+~
+[Ariellen] Extras: shells, leaves, mold mildew
+[Ariellen] Acode: wasp and bees, shell search, leaf search
+~
+167247873 3 9 0
+D0
+~
+~
+2210 -1 45054 10 10 5
+D1
+~
+~
+0 -1 5385 10 10 5
+D3
+~
+~
+0 -1 9394 10 10 5
+A
+search look play move~
+leaves leafs~
+acode( find_room( 9413 ), 1 );
+acode( find_room( 9403 ), 1 );
+~
+!
+0 0 0
+A
+~
+~
+acode( find_room( 9403 ), 1 );
+~
+!
+2 150 0
+2509 9 1509949540 3 0
+-1
+S
+
+#9351
+Nothing~
+Under Construction.
+~
+~
+167247873 12 9 0
+D3
+~
+~
+0 -1 9352 10 10 5
+-1
+S
+
+#9352
+Nothing~
+Under Construction.
+~
+~
+167247873 12 9 0
+D1
+~
+~
+0 -1 9351 10 10 5
+D3
+~
+~
+0 -1 9353 10 10 5
+-1
+S
+
+#9353
+Nothing~
+Under Construction.
+~
+~
+167247873 12 9 0
+D1
+~
+~
+0 -1 9352 10 10 5
+D3
+~
+~
+0 -1 9354 10 10 5
+-1
+S
+
+#9354
+Nothing~
+Under Construction.
+~
+~
+167247873 12 9 0
+D0
+~
+~
+0 -1 9355 10 10 5
+D1
+~
+~
+0 -1 9353 10 10 5
+-1
+S
+
+#9355
+Nothing~
+Under Construction.
+~
+~
+167247873 12 9 0
+D0
+~
+~
+0 -1 9356 10 10 5
+D2
+~
+~
+0 -1 9354 10 10 5
+-1
+S
+
+#9356
+Nothing~
+Under Construction.
+~
+~
+167247873 12 9 0
+D2
+~
+~
+0 -1 9355 10 10 5
+D3
+~
+~
+0 -1 9357 10 10 5
+-1
+S
+
+#9357
+Nothing~
+Under Construction.
+~
+~
+167247873 12 9 0
+D1
+~
+~
+0 -1 9356 10 10 5
+D3
+~
+~
+0 -1 9358 10 10 5
+-1
+S
+
+#9358
+Nothing~
+Under Construction.
+~
+~
+167247873 12 9 0
+D1
+~
+~
+0 -1 9357 10 10 5
+D3
+~
+~
+0 -1 9359 10 10 5
+-1
+S
+
+#9359
+Nothing~
+Under Construction.
+~
+~
+167247873 12 9 0
+D0
+~
+~
+0 -1 9360 10 10 5
+D1
+~
+~
+0 -1 9358 10 10 5
+D5
+~
+~
+0 -1 9365 10 10 5
+-1
+S
+
+#9360
+Nothing~
+Under Construction.
+~
+~
+167247873 12 9 0
+D2
+~
+~
+0 -1 9359 10 10 5
+D3
+~
+~
+0 -1 9361 10 10 5
+-1
+S
+
+#9361
+Nothing~
+Under Construction.
+~
+~
+167247873 12 9 0
+D1
+~
+~
+0 -1 9360 10 10 5
+D3
+~
+~
+0 -1 9362 10 10 5
+-1
+S
+
+#9362
+Nothing~
+Under Construction.
+~
+~
+167247873 12 9 0
+D0
+~
+~
+0 -1 9363 10 10 5
+D1
+~
+~
+0 -1 9361 10 10 5
+-1
+S
+
+#9363
+Nothing~
+Under Construction.
+~
+~
+167247873 12 9 0
+D0
+~
+~
+0 -1 9364 10 10 5
+D2
+~
+~
+0 -1 9362 10 10 5
+-1
+S
+
+#9364
+Nothing~
+Under Construction.
+~
+~
+167247873 12 9 0
+D2
+~
+~
+0 -1 9363 10 10 5
+D4
+~
+~
+0 -1 9367 10 10 5
+-1
+S
+
+#9365
+Nothing~
+Under Construction.
+~
+~
+167247873 12 9 0
+D4
+~
+~
+0 -1 9359 10 10 5
+D5
+~
+~
+0 -1 9366 10 10 5
+-1
+S
+
+#9366
+Nothing~
+Under Construction.
+~
+~
+167247873 12 9 0
+D4
+~
+~
+0 -1 9365 10 10 5
+-1
+S
+
+#9367
+Nothing~
+Under Construction.
+~
+~
+167247873 12 9 0
+D4
+~
+~
+0 -1 9368 10 10 5
+D5
+~
+~
+0 -1 9364 10 10 5
+-1
+S
+
+#9368
+Nothing~
+Under Construction.
+~
+~
+167247873 12 9 0
+D4
+~
+~
+0 -1 9369 10 10 5
+D5
+~
+~
+0 -1 9367 10 10 5
+-1
+S
+
+#9369
+Nothing~
+Under Construction.
+~
+~
+167247873 12 9 0
+D3
+~
+~
+0 -1 9370 10 10 5
+D5
+~
+~
+0 -1 9368 10 10 5
+-1
+S
+
+#9370
+Nothing~
+Under Construction.
+~
+~
+167247873 12 9 0
+D1
+~
+~
+0 -1 9369 10 10 5
+D3
+~
+~
+0 -1 9371 10 10 5
+-1
+S
+
+#9371
+Nothing~
+Under Construction.
+~
+~
+167247873 12 9 0
+D1
+~
+~
+0 -1 9370 10 10 5
+D4
+~
+~
+0 -1 9372 10 10 5
+-1
+S
+
+#9372
+Nothing~
+Under Construction.
+~
+~
+167247873 12 9 0
+D3
+~
+~
+0 -1 9373 10 10 5
+D5
+~
+~
+0 -1 9371 10 10 5
+-1
+S
+
+#9373
+Nothing~
+Under Construction.
+~
+~
+167247873 12 9 0
+D1
+~
+~
+0 -1 9372 10 10 5
+D3
+~
+~
+0 -1 9374 10 10 5
+-1
+S
+
+#9374
+Nothing~
+Under Construction.
+~
+~
+167247873 12 9 0
+D1
+~
+~
+0 -1 9373 10 10 5
+D3
+~
+~
+0 -1 9375 10 10 5
+-1
+S
+
+#9375
+Nothing~
+Under Construction.
+~
+~
+167247873 12 9 0
+D1
+~
+~
+0 -1 9374 10 10 5
+D3
+~
+~
+0 -1 9379 10 10 5
+D4
+~
+~
+0 -1 9376 10 10 5
+-1
+S
+
+#9376
+Nothing~
+Under Construction.
+~
+~
+167247873 12 9 0
+D4
+~
+~
+0 -1 9377 10 10 5
+D5
+~
+~
+0 -1 9375 10 10 5
+-1
+S
+
+#9377
+Nothing~
+Under Construction.
+~
+~
+167247873 12 9 0
+D4
+~
+~
+0 -1 9378 10 10 5
+D5
+~
+~
+0 -1 9376 10 10 5
+-1
+S
+
+#9378
+Nothing~
+Under Construction.
+~
+~
+167247873 12 9 0
+D5
+~
+~
+0 -1 9377 10 10 5
+-1
+S
+
+#9379
+Nothing~
+Under Construction.
+~
+~
+167247873 12 9 0
+D1
+~
+~
+0 -1 9375 10 10 5
+D5
+~
+~
+0 -1 9380 10 10 5
+-1
+S
+
+#9380
+Nothing~
+Under Construction.
+~
+~
+167247873 12 9 0
+D4
+~
+~
+0 -1 9379 10 10 5
+D5
+~
+~
+0 -1 9381 10 10 5
+-1
+S
+
+#9381
+Nothing~
+Under Construction.
+~
+~
+167247873 12 9 0
+D4
+~
+~
+0 -1 9380 10 10 5
+D5
+~
+~
+0 -1 9382 10 10 5
+-1
+S
+
+#9382
+Nothing~
+Under Construction.
+~
+~
+167247873 12 9 0
+D3
+~
+~
+0 -1 9383 10 10 5
+D4
+~
+~
+0 -1 9381 10 10 5
+-1
+S
+
+#9383
+Nothing~
+Under Construction.
+~
+~
+167247873 12 9 0
+D1
+~
+~
+0 -1 9382 10 10 5
+D3
+~
+~
+0 -1 9384 10 10 5
+-1
+S
+
+#9384
+Nothing~
+Under Construction.
+~
+~
+167247873 12 9 0
+D1
+~
+~
+0 -1 9383 10 10 5
+D2
+~
+~
+0 -1 9385 10 10 5
+-1
+S
+
+#9385
+Nothing~
+Under Construction.
+~
+~
+167247873 12 9 0
+D0
+~
+~
+0 -1 9384 10 10 5
+D2
+~
+~
+0 -1 9386 10 10 5
+-1
+S
+
+#9386
+Nothing~
+Under Construction.
+~
+~
+167247873 12 9 0
+D0
+~
+~
+0 -1 9385 10 10 5
+D5
+~
+~
+0 -1 9387 10 10 5
+-1
+S
+
+#9387
+Nothing~
+Under Construction.
+~
+~
+167247873 12 9 0
+D3
+~
+~
+0 -1 9390 10 10 5
+D4
+~
+~
+0 -1 9386 10 10 5
+D5
+~
+~
+0 -1 9388 10 10 5
+-1
+S
+
+#9388
+Nothing~
+Under Construction.
+~
+~
+167247873 12 9 0
+D4
+~
+~
+0 -1 9387 10 10 5
+D5
+~
+~
+0 -1 9389 10 10 5
+-1
+S
+
+#9389
+Nothing~
+Under Construction.
+~
+~
+167247873 12 9 0
+D4
+~
+~
+0 -1 9388 10 10 5
+-1
+S
+
+#9390
+Nothing~
+Under Construction.
+~
+~
+167247873 12 9 0
+D0
+~
+~
+0 -1 9391 10 10 5
+D1
+~
+~
+0 -1 9387 10 10 5
+-1
+S
+
+#9391
+Nothing~
+Under Construction.
+~
+~
+167247873 12 9 0
+D0
+~
+~
+0 -1 9392 10 10 5
+D2
+~
+~
+0 -1 9390 10 10 5
+-1
+S
+
+#9392
+Nothing~
+Under Construction.
+~
+~
+167247873 12 9 0
+D0
+~
+~
+0 -1 9393 10 10 5
+D2
+~
+~
+0 -1 9391 10 10 5
+-1
+S
+
+#9393
+Nothing~
+Under Construction.
+~
+~
+167247873 12 9 0
+D2
+~
+~
+0 -1 9392 10 10 5
+-1
+S
+
+#9394
+Deep Beech Forest~
+Ferns and bracken grow under the shadows of the mountain beeches, their
+high canopy only allowing a filtered light to reach the forest floor.  A
+handful of broken shell fragments lie scattered upon the ground, most
+buried under a thin layer of rotting leaves and old branches.  The smell
+of sulfur and water drifts in from the northwest, the land sloping
+downwards in that direction.
+~
+[Ariellen] Extras: shells, leaves branches
+[Ariellen] Acodes: search leaves, random smells
+~
+167247873 3 9 0
+D0
+~
+~
+0 -1 9395 10 10 5
+D1
+~
+~
+0 -1 9350 10 10 5
+D3
+~
+~
+0 -1 9396 10 10 5
+A
+search look play move~
+leaves leafs~
+acode( find_room( 9413 ), 1 );
+acode( find_room( 9403 ), 1 );
+~
+!
+0 0 0
+A
+~
+~
+acode( find_room( 9403 ), 1 );
+~
+!
+2 150 0
+755 9 1509949540 3 0
+-1
+S
+
+#9395
+Deep Beech Forest~
+A short drop to the west leads into a fern filled basin where tree ferns,
+bracken and all manner of other fronded plant thrive.  Moss covered rocks
+line the drop, their surface coated in damp dew.  The smell of rich loam
+intermingles with a more chemical aroma of sulfur that appears to be
+drifting in from the northwest.
+~
+[Ariellen] No.mob to prevent wandering
+~
+167247881 3 9 0
+D2
+~
+~
+0 -1 9394 10 10 5
+D5
+~
+~
+0 -1 9397 10 10 5
+A
+~
+~
+acode( find_room( 9403 ), 1 );
+~
+!
+2 150 0
+-1
+S
+
+#9396
+Deep Beech Forest~
+Towering mountain beech trees grow to the edge of a shallow drop, the
+landscape below filled with countless ferns of all shape and size.  The
+forest continues westwards and southwards while the ferns dominate the
+scenery to the north and west.  The smell of water and sulfur hang heavy
+on the air.
+~
+~
+167247873 3 9 0
+D1
+~
+~
+0 -1 9394 10 10 5
+D2
+~
+~
+0 -1 9400 10 10 5
+D3
+~
+~
+0 -1 9401 10 10 5
+D5
+~
+~
+0 -1 9399 10 10 5
+A
+~
+~
+acode( find_room( 9403 ), 1 );
+~
+!
+2 150 0
+-1
+S
+
+#9397
+Sea of Ferns~
+Fern plants spread before you.  Visibility has dropped, and is next to
+none.  There is a slight slope up, and it rises into a beech tree forest. 
+The larges ferns extent into the air much higher than your head can
+reach, and block most of the view of the sky.  The leaves of the ferns
+when viewed from above make it appear to be a sea of fern fronds.  A
+steep cliff borders the fern gully to the east and the north.  Large
+beech trees can be standing on top the steep enbankments.
+~
+~
+167247945 3 9 0
+D3
+~
+~
+0 -1 9398 10 10 5
+D4
+~
+~
+0 -1 9395 10 10 5
+2663 137 1509949540 3 0
+-1
+S
+
+#9398
+Sea of Ferns~
+A forest of ferns grows here, with each fern plant topping the height of
+a full grown ogre.  Visibility is cut to near nothing as you wander about
+this area.  Each of the large fern frond rises high into the air, and
+spreads away from the base of the plant.  The fronds are large and fan
+shapped, with many blades extending from a central point in the stem.
+~
+~
+167247937 3 9 0
+D1
+~
+~
+0 -1 9397 10 10 5
+D2
+~
+~
+0 -1 9399 10 10 5
+D3
+~
+~
+0 -1 9417 10 10 5
+2663 9 1509949540 3 0
+-1
+S
+
+#9399
+Sea of Ferns~
+A valley of sorts has formed here, and ferns have taken over, as the only
+form of vegetation Visibility past the fern is near impossible, as the
+crowd in all around you.  There is a slight slope upwards, and it leads
+into a beech tree forest.  The largest here ferns extent into the air
+much higher than your head can reach, and block the view of most
+everything.  The leaves of the ferns when viewed from above make it
+appear to be a sea of fern fronds.
+~
+~
+167247945 3 9 0
+D0
+~
+~
+0 -1 9398 10 10 5
+D4
+~
+~
+0 -1 9396 10 10 5
+2663 137 1509949540 3 0
+-1
+S
+
+#9400
+Deep Beech Forest~
+Towering mountain beech trees grow in thick stands around this area. 
+There is a shallow drop to the north of here, and the mountain beech
+trees grow right up to the edge.  The forest continues to the west and
+south, but the trees are too thick to get through from here.  The smell
+of water and sulfur hang heavy on the air.
+~
+~
+167247873 3 9 0
+D0
+~
+~
+0 -1 9396 10 10 5
+-1
+S
+
+#9401
+Deep Beech Forest~
+Tall beech trees grow around the edge of a fern-filled gully, some of
+their roots dangling through the sides of the bank.  Below the smell of
+water, sulfur and decay drift up on a warm wind.  The forest spreads out
+across slightly rolling country side that forms the western lands of
+Talidar.
+~
+~
+167247873 3 9 0
+D1
+~
+~
+0 -1 9396 10 10 5
+D3
+~
+~
+0 -1 9402 10 10 5
+A
+~
+~
+acode( find_room( 9403 ), 1 );
+~
+!
+2 150 0
+-1
+S
+
+#9402
+Deep Beech Forest~
+A fallen tree lies split and torn, its death ripping out a large clearing
+that could easily accommodate several wagons.  Grass, thorn bushes and
+foxgloves grown amongst the new beech saplings; each of the plants racing
+to grab the spot of the fallen giant Toadstools grow across the rotting
+bark, their bright caps warning would-be eaters of their poisonous nature.
+~
+~
+167247873 3 9 0
+D1
+~
+~
+0 -1 9401 10 10 5
+D2
+~
+~
+0 -1 9405 10 10 5
+D3
+~
+~
+0 -1 9403 10 10 5
+A
+~
+~
+acode( find_room( 9403 ), 1 );
+~
+!
+2 150 0
+1535 9 1509949540 3 0
+-1
+S
+
+#9403
+Deep Beech Forest~
+A single oak tree grows amongst the black trunk beech trees its thick
+roots forming a carpet that draws out the water and nutrients from the
+soil.  Tiny oak saplings grow in a sprinkling around its base.  Beech
+tree stumps surround the oak where it appears a space has been cleared in
+the forest for the exotic to grow Nestled under its roots is a slab of
+pale stone, a few words scrawled across it.
+~
+[Jydan] missing period before last sentence
+[Jydan] nice if look slab workted
+~
+167247873 3 9 0
+D1
+~
+~
+0 -1 9402 10 10 5
+D2
+~
+~
+0 -1 9404 10 10 5
+E
+words~
++--------------------------------------------------------------+
++ On the first day of spring, being of sound spirit, I Talidar +
++ planted this oak in fond memory of Elista and Eldomor.       +
++--------------------------------------------------------------+
+~
+A
+~
+~
+i = 1d2;
+if( i == 1 )
+  send_to_room( #smell, room, sight );
+if( i == 2 )
+  send_to_room( #fern, room, sight );
+~
+E
+smell~
+The noxious smell of @Gswamp gasses@n and @Ysulfur@n drift to your nose
+from the north.
+~
+E
+fern~
+To the north a @Gsea of ferns@n waver in a slight breeze.  Further still
+a small pond belches pockets of @Yyellow gas@n into the air.
+~
+!
+2 200 0
+2665 137 1509949540 2 0
+-1
+S
+
+#9404
+Deep Beech Forest~
+Forest continues in earnest across the shadowed rolling hills of west
+Talidar.  Towards the north and northwest the forest thickens greatly,
+the mountain beech, red beech and black beech trees rising to great
+heights, some near a hundred feet high.  Mightier than even the beech are
+a scattering of kauri trees, each one over one hundred and fifty feet
+high and at least thirty feet across at the base.
+~
+~
+167247873 3 9 0
+D0
+~
+~
+0 -1 9403 10 10 5
+D1
+~
+~
+0 -1 9405 10 10 5
+D2
+~
+~
+0 -1 9413 10 10 5
+D3
+~
+~
+0 -1 9414 10 10 5
+A
+~
+~
+acode( find_room( 9403 ), 1 );
+~
+!
+2 150 0
+-1
+S
+
+#9405
+Deep Beech Forest~
+Bottle brush and broom surround the edge of a small clearing, the yellow
+flowers of the broom giving off a sweet almost buttery smell that
+attracts droves of bees and wasps.  A cluster of sagebrush grows in the
+clearing, the normally alpine plant struggling with the lowland
+conditions.  A headstone lies beside the sagebrush, perhaps a grave stone
+or way marker.
+~
+[Ariellen] Extras: headstone, sagebrush, broom flowers
+[Ariellen] Acode: random smells, bees and wasp
+~
+167247873 3 9 0
+D0
+~
+~
+0 -1 9402 10 10 5
+D1
+~
+~
+0 -1 9406 10 10 5
+D2
+~
+~
+0 -1 9408 10 10 5
+D3
+~
+~
+0 -1 9404 10 10 5
+-1
+S
+
+#9406
+Deep Beech Forest~
+A shallow, weed choked stream struggles between the roots of the beech
+trees, flowing southwards down the gentle sloping ground.  Bulrushes grow
+around the water course their dense foliage making it difficult to push
+past the clumping plants.  Mounds of tiny leaves spread under the roots
+of the trees where last winters fall has yet to rot away.
+~
+[Ariellen] Extras: bulrushes, leaves
+[Ariellen] Acode: search leaves
+[Ariellen] done
+~
+167247873 3 9 0
+D2
+~
+~
+0 -1 9407 10 10 5
+D3
+~
+~
+0 -1 9405 10 10 5
+E
+bulrushes water weed~
+These bulrushes are water plants that grow in the constrained waters of
+the small stream.  The bulrushes form a mat of plant material that covers
+the surface of the water.
+~
+E
+mounds leaves roots~
+Mounds of leaves have blown about and ended up trapped here in the root
+systems of the beech tree forest.
+~
+A
+search look play move~
+leaves leafs~
+acode( find_room( 9413 ), 1 );
+~
+!
+0 0 0
+398 17 1509949540 -2 0
+755 9 1509949540 3 0
+-1
+S
+
+#9407
+Deep Beech Forest~
+Clusters of toadstools festoon the rotting beech leaves their dew-soaked
+caps bent low under the enormous weight of a single water droplet. 
+Towering beech trees rise up above the damp ground, their branches
+bifurcating into a broad and dense canopy.  Scraggy manuka bushes grow
+under the rough-barked trees, their black leaves hiding clusters of
+bright pink and white flowers.
+~
+[Ariellen] leaves here
+[Jydan] need a comma after leaves in first line
+~
+167247873 3 9 0
+D0
+~
+~
+0 -1 9406 10 10 5
+D1
+~
+~
+0 -1 9409 10 10 5
+D3
+~
+~
+0 -1 9408 10 10 5
+A
+search look play move~
+leaves leafs~
+acode( find_room( 9413 ), 1 );
+~
+!
+0 0 0
+-1
+S
+
+#9408
+Deep Beech Forest~
+The beech forest seems to thin here in spots, and some of the sky is
+visible between the boughs of the tall trees.  To the north you can see
+some underbrush surrounding a small clearing, while in all other
+directions the beech forest continues unabated.
+~
+~
+167247873 3 9 0
+D0
+~
+~
+0 -1 9405 10 10 5
+D1
+~
+~
+0 -1 9407 10 10 5
+D2
+~
+~
+0 -1 9412 10 10 5
+D3
+~
+~
+0 -1 9413 10 10 5
+2660 9 1509949540 3 0
+5193 9 1509949540 3 0
+755 9 1509949540 3 0
+-1
+S
+
+#9409
+Deep Beech Forest~
+The rotting remains of fallen beech branches lie in a decaying mound
+where they have obviously been dragged.  A squat slab of moss-covered
+stone rises from a central clearing, around its base wild flowers
+flourish.  Southwards the forest begins to thin slightly, the trees
+younger than the deep woodlands about here.  Westwards a swirling mist
+lurks between the trunks, the fog obscuring what lies in that direction.
+~
+[Ariellen] leaves here
+~
+167247873 3 9 0
+D1
+~
+~
+0 -1 9411 10 10 5
+D2
+~
+~
+0 -1 9410 10 10 5
+D3
+~
+~
+0 -1 9407 10 10 5
+A
+search look play move~
+leaves leafs~
+acode( find_room( 9413 ), 1 );
+~
+!
+0 0 0
+-1
+S
+
+#9410
+Deep Beech Forest~
+A massive beech tree grows in the middle of a swath of saplings, its
+rough barked trunk over ten feet across.  Its branches reach skywards,
+most of them draped in vines and sphagnum moss.  A scattering of metal
+scraps and leather off casts decay at the base of the tree.  An opening
+in the forest to the north leads into another clearing, this one
+dominated by a squat slab of stone.
+~
+~
+167247873 3 9 0
+D0
+~
+~
+0 -1 9409 10 10 5
+D4
+~
+~
+0 -1 9433 10 10 5
+A
+~
+~
+if( find_stat( ch, level ) < 91 ) {
+  act_tochar( #try, ch );
+  end;
+}
+else
+  continue;
+~
+E
+try~
+Its hard to walk up a tree, try climbing instead.
+~
+!
+3 0 16
+A
+climb~
+1 up tree beech~
+if( is_mounted( ch ) ) {
+  send_to_char( #nomount, ch );
+  end;
+}
+if( can_fly( ch ) ) {
+  send_to_char( #fly, ch );
+  act_notchar( #flying, ch );
+  transfer( ch, find_room( 9433 ) );
+  act_notchar( #flying2, ch );
+  loop( followers ) {
+    if( !is_resting( rch ) ) {
+      ch = rch;
+      acode( room, 2 );
+    }
+  }
+  end;
+}
+if( find_skill( ch, climb ) > random( 0, 7 ) ) {
+  send_to_char( #success, ch );
+  act_notchar( #success1, ch );
+  transfer( ch, find_room( 9433 ) );
+  act_notchar( #success2, ch );
+}
+else {
+  send_to_char( #fail, ch );
+  act_notchar( #failed, ch );
+  end;
+}
+loop( followers ) {
+  if( !is_resting( rch ) ) {
+    ch = rch;
+    acode( room, 1 );
+  }
+}
+~
+E
+nomount~
+You can't do that while mounted.
+~
+E
+fly~
+You fly up into the tree.
+~
+E
+flying~
+$n flies up into the tree.
+~
+E
+flying2~
+$n flies up from below and lands on a nearby branch.
+~
+E
+failed~
+$n slips while trying to climb the tree.
+~
+E
+fail~
+You slip, while trying to climb the tree, nearly hurting yourself.
+~
+E
+success~
+Finding many helping branches you clamber up the tree.
+~
+E
+success1~
+$n grabs a low lying branch and clambers up the tree.
+~
+E
+success2~
+$n comes clambering up from below.
+~
+!
+0 0 0
+-1
+S
+
+#9411
+Deep Beech Forest~
+A clearing has been cut from the beech forest, the stumps of the trees
+slowly being buried under a sea of leaves and moss.  Stacks of chopped
+branches and wood like to the south where someone has left the timber to
+dry.  Unfortunately the forest appears to have other ideas, a lush layer
+of toadstools spread across the tops of the wood, an indication that the
+drying process is far from successful in the damp area.
+~
+[Ariellen] leaves here
+~
+167247873 3 9 0
+D3
+~
+~
+0 -1 9409 10 10 5
+A
+search look play move~
+leaves leafs~
+acode( find_room( 9413 ), 1 );
+~
+!
+0 0 0
+2664 9 1509949540 3 0
+-1
+S
+
+#9412
+Deep Beech Forest~
+Beech trees block all progress further along through this part of the
+forest.  The only way to leave the area is though the north.  Brambles
+and briars abound through this clearing, and between the tree trunks.  A
+small depressed pit here, is partially hidden by the underbrush, and a
+small piles of leaves.
+~
+[Ariellen] leaves here
+[Ariellen] done
+[Jydan] search leaves -> 'searching through the leave'
+[Jydan] 'a small piles of leaves' -> pile
+~
+167247873 3 9 0
+D0
+~
+~
+0 -1 9408 10 10 5
+E
+small depressed pit leaves underbrush~
+A small drepressed pit is hidden here with a small pile of leaves.  The
+leave appear to have been blown about the area by the wind.  Leaves are
+trapped in the pit like depression and also in the underbrush around this
+small clearing.
+~
+E
+delete~
+No description.
+~
+A
+search look play move~
+leaves leafs~
+acode( find_room( 9413 ), 1 );
+~
+!
+0 0 0
+A
+1 south 1 west 1 east~
+~
+act_tochar( #not, ch );
+dam_message( ch, 2d4, "the sharp thorns and brambles" );
+inflict( ch, mob, 2d4, "some thorn pricks" );
+end;
+~
+E
+not~
+The thorny brambles and underbrush prevent you from going that way.
+~
+!
+0 0 0
+2661 9 1509949540 3 0
+755 9 1509949540 3 0
+-1
+S
+
+#9413
+Deep Beech Forest~
+Beech trees spread around you in a large forest.  The hills all around
+this side of Talidar are covered with mountain beech trees, and farther
+into the forest red beech and black beech trees also.  A small mound of
+moss covered dirt can be seen here in a small clearing.  Piles of leaves
+are strewn about the area.  They are what remains of last years leaves
+that had fallen, and have been blown into the recesses of the area.
+~
+[Ariellen] Extras: moss covered dirt mound
+[Ariellen] leaves here
+[Ariellen] done
+~
+167247873 3 9 0
+D0
+~
+~
+0 -1 9404 10 10 5
+D1
+~
+~
+0 -1 9408 10 10 5
+E
+dirt covered moss mound~
+There is a small mound of dirt here that has been covered over with a
+thick @Gcarpet of green moss@n.  Piles of leaves are strewn about the
+area, and some leaves have blown onto the mound.
+~
+A
+search look play move~
+leaves leafs~
+if( !is_player( ch ) )
+  end;
+send_to_char( #sear, ch );
+act_notchar( #r_sear, ch );
+if( !rflag( reset0, room ) ) {
+  send_to_char( #none, ch );
+  end;
+}
+remove_rflag( reset0, room );
+i = random( 1, 10 );
+if( i == 1 ) {
+  send_to_char( #bug, ch );
+  end;
+}
+if( i > 7 ) {
+  send_to_char( #none, ch );
+  end;
+}
+send_to_char( #find, ch );
+act_notchar( #r_find, ch );
+if( i == 2 )
+  obj_to_char( oload( 755 ), ch );
+else
+  if( i == 3 )
+  obj_to_char( oload( 415 ), ch );
+else
+  if( i == 4 )
+  obj_to_char( oload( 1246 ), ch );
+else
+  if( i == 5 )
+  obj_to_char( oload( 304 ), ch );
+else
+  if( i == 6 )
+  obj_to_char( oload( 1099 ), ch );
+else
+  if( i == 7 )
+  obj_to_char( oload( 3900 ), ch );
+~
+E
+sear~
+You begin searching through the leave looking for something.
+~
+E
+r_sear~
+$n searches through the leaves on the ground, throwing them all about.
+~
+E
+none~
+You find nothing worth keeping, just dead, rotting leaves.
+~
+E
+find~
+You find something among all the leaves.
+~
+E
+r_find~
+$n finds something among the leaves.
+~
+E
+bug~
+You find nothing but bugs in the leaves, and even those quickly scurry
+away.
+~
+!
+0 0 0
+-1
+S
+
+#9414
+Deep Beech Forest~
+The forest to the north and west of here is very dense.  The mountain
+beech thin as more red beech and black beech trees take over.  The trees
+in that section of the forest rising to great heights, some near a
+hundred feet high.  Mightier than even the beech are a scattering of
+kauri trees, each one over one hundred and fifty feet high and at least
+thirty feet across at the base.  A slight acrid smell pervades the air
+here.
+~
+~
+167247873 3 9 0
+D1
+~
+~
+0 -1 9404 10 10 5
+D2
+~
+~
+0 -1 9415 10 10 5
+A
+~
+~
+acode( find_room( 9403 ), 1 );
+~
+!
+2 150 0
+755 9 1509949540 3 0
+-1
+S
+
+#9415
+Deep Beech Forest~
+The mountain beech trees thin in this area.  To the north west, more red
+beech and black beech trees along with kauri trees take over.  To the
+direct west an outcroping of rock can be seen thrusting through the
+ground, and a cluster of maple saplings grow near the rocks.
+~
+~
+167247873 3 9 0
+D0
+~
+~
+0 -1 9414 10 10 5
+D3
+~
+~
+0 -1 9416 10 10 5
+755 9 1509949540 3 0
+-1
+S
+
+#9416
+Deep Beech Forest~
+A moss-coated outcrop of rock thrusts through the ground to the west, its
+base encircled by lush ivy.  Set into the natural rock appears to be
+stone slab doors, a strange swirling pattern cut into it.  A cluster of
+maple saplings ring the rock, their branches interwoven to block the sun
+and rain from it.  Underfoot the faint remains of a roadway being to show
+through the leaf litter and wild flowers, a handful of grey stone cobbles
+still visible.
+~
+[Azerin] leads to forest ruins
+[Azerin] mid 20's zone
+[Azerin] entrance to gnome town
+[Jydan] look doors/slab/pattern
+~
+167247873 3 9 0
+D1
+~
+~
+0 -1 9415 10 10 5
+2754 9 1509949540 3 0
+-1
+S
+
+#9417
+Sea of Ferns~
+A forest of ferns large enough to swallow a gnome's home grows here.  The
+ferns each top over ten feet tall, and towers over most everything in the
+area.  Each fern frond rises high into the air.  The fronds are large and
+leaf-like.  Each frond is relatively narrow, and has serrated edges with
+deeply cut ribs.  The underside of the fronts are covered by small round
+shapes.  The soil here is a rich loam, that is slightly damp.
+~
+~
+167247937 3 9 0
+D0
+~
+~
+0 -1 9418 10 10 5
+D1
+~
+~
+0 -1 9398 10 10 5
+D3
+~
+~
+0 -1 9419 10 10 5
+-1
+S
+
+#9418
+Sea of Ferns~
+Fern plants spread before you in a wide array of sizes and shapes.  The
+larges ferns extent into the air much higher than your head can reach,
+and block most of the view of the sky.  Visibiliy at ground level isn't
+much better as you are completely surrounded.  The fertile soil here is
+moist and slopes gently to the west.
+~
+~
+167247937 3 9 0
+D2
+~
+~
+0 -1 9417 10 10 5
+D3
+~
+~
+0 -1 9420 10 10 5
+2663 9 1509949540 3 0
+-1
+S
+
+#9419
+Sea of Ferns~
+A sea of enormous ferns covers the area.  Each fern tops over ten feet
+tall and towers over most everything in the area.  Each fern frond rises
+a creeping rhizome, and they do not forming clumps.  The fronds are large
+fertile leaf-like greenery, that stands erect.  Each frond is relatively
+narrow, and has edges with deeply cut ribs, oblong lobes that have smooth
+edge.  There are about a dozen lobes per frond, and they run
+perpendicular to the stem.  The underside of the fronts are covered by
+small round shapes.  The spheres are the spore-bearing sori used in fern
+reproduction.
+~
+~
+167247937 3 9 0
+D0
+~
+~
+0 -1 9420 10 10 5
+D1
+~
+~
+0 -1 9417 10 10 5
+2663 9 1509949540 3 0
+-1
+S
+
+#9420
+Sea of Ferns~
+Pools of steaming water and ferns combine to form a vegetative shallows
+that extend to the north.  Reeds and flax grass grow out of the muddy
+water, their bright red and orange leaves coated with a dusting of yellow
+powerder.  The strong smell of chemicals escape the water a few bubbles
+rising from their depths releasing a stench of sulfur into the air. 
+Large ferns seen to the south and east tower high over head, and block
+further viewing in those directions.
+~
+[Azerin] no.mob to keep the frogs and co in
+[Ariellen] Extras: reed, flax grass,
+~
+167247881 13 9 0
+D0
+~
+~
+0 -1 9421 10 10 5
+D1
+~
+~
+0 -1 9418 10 10 5
+D2
+~
+~
+0 -1 9419 10 10 5
+A
+1 look~
+reeds~
+act_tochar( #reed, ch );
+~
+E
+reed~
+Clinging to the edge of a small water source, the shoots of this plant
+jut outwards in every direction.  The shoots of the green, leafy plant
+are segmented and grow at tall as eight feet.  Though there are many
+shoots growing from this single plant, few appear to be mature.
+~
+!
+0 0 0
+2152 17 1509949540 -2 0
+1146 17 1509949540 -2 0
+-1
+S
+
+#9421
+Sulfur Pools~
+The hot waters of the sulfur pond have transformed this bog into a
+vegetative paradise.  Aquatic ferns, reeds, and bulrush grow up out of
+the brackish waters, but the thick mud and muck of the pool bottom clings
+to the plants.  To the west the rotting remains of an ancient tree can be
+seen rising up out of the mire.  To the south a sea of ferns grows out of
+the steaming waters.  To the north and east the sulfur pond continues. 
+Thick mud and muck cling to the plant here, even as they grow up out of
+the water.
+~
+[Ariellen] Extras: aquatic ferns, bulrush, ancient tree west
+[Ariellen] Random acode, frog croaking, uses status0
+[Ariellen] done
+[Jydan] frog snake 'yeallow' -> yellow
+~
+167247873 13 9 0
+D0
+~
+~
+0 -1 9422 10 10 5
+D1
+~
+~
+0 -1 9423 10 10 5
+D2
+~
+~
+0 -1 9420 10 10 5
+D3
+~
+~
+0 -1 9424 10 10 5
+E
+aquatic ferns~
+These ferns are smaller than their land cousins.  They are a light green,
+and reside along the surface of the water.  A network of spidery thin
+root-veins branch out from beneath each plant.  The light green fronds
+lean backward as the sprout nearly a foot into the air from the waters
+surface.  The leaf stalks are a straw-color, with light brown scales. 
+The fronds are in the shape of a blade, broadly triangular, and usually
+longer than wide, tapering rapidly to narrow tip.  The lowest pair of
+leaflets are somewhat more widely spaced from the rest, and typically
+drooping down to touch the waters surface.  The whole of the ferns are
+coved in a light dusting of yellow powder.
+~
+E
+bulrush~
+These bulrushes are water plants that grow in the open waters of the
+sulfur ponds, where the water depth is less than a few feet deep.  The
+roots of the bulrush reach down deep into the organic-rich mud on the
+pond bottom.  The bulrushes form a mat of plant material that covers the
+surface of the pond, and bubbles of sulfur gas vent up out of the
+material at uneven intervals.
+~
+E
+rotting remains ancient tree~
+To the west is the remains of a large ancient tree.  The ancient beech
+tree must have been huge, as it can be seen from quite a distance, and
+stand partially above the water of the mire.
+~
+A
+~
+~
+if( rflag( status0, room ) ) {
+  if( mob_in_room( 2629, room ) ) {
+    remove_rflag( status0, room );
+  }
+  if( mob_in_room( 2630, room ) ) {
+    remove_rflag( status0, room );
+  }
+}
+if( !rflag( status0, room ) ) {
+  if( mob_in_room( 2631, room ) ) {
+    send_to_room( #to_room, room );
+    set_rflag( status0, room );
+  }
+}
+if( !rflag( status0, room ) ) {
+  if( mob_in_room( 2632, room ) ) {
+    send_to_room( #to_room, room );
+    set_rflag( status0, room );
+  }
+}
+~
+E
+to_room~
+@YA load chorus of croaks and ribbits rise up from the assembled frogs.@n
+~
+!
+2 550 0
+A
+~
+~
+act_tochar( #entering, ch );
+~
+E
+entering~
+As you enter the pool, you feel the warm brackish water seeping it's way
+through your clothes, and to your skin.
+~
+!
+1 0 4
+A
+~
+~
+continue;
+~
+E
+to_char~
+You leave the room to the west, and head deeper into the swamp.
+~
+E
+to_room~
+$n leaves the room to the west, and heads deeper into the swamp.
+~
+!
+3 0 8
+A
+~
+~
+continue;
+~
+E
+to_char~
+You leave the room to the north, and head deeper into the swamp.
+~
+E
+to_room~
+$n leaves the room to the north, and heads deeper into the swamp.
+~
+!
+3 0 1
+A
+~
+~
+continue;
+~
+E
+to_char~
+You leave the room to the east, heading towards a wall of rock.
+~
+E
+to_room~
+$n leaves the room to the east, heading toward a wall of rock.
+~
+!
+3 0 2
+2152 17 1509949540 -2 0
+1146 17 1509949540 -2 0
+-1
+S
+
+#9422
+Sulfur Pools~
+Waterweed and lilies spread across the bubbling water, apparently
+unafected by the heavy chemicals that bleach up from the depths.  The
+feted air around the pools is hot and clammy, the humidity as bad as the
+deep jungle.  Frogs and other aquatic creatures spread out in mass
+abundance throughout the pools, some of the large creatures reaching the
+size of a dog.
+~
+[Azerin] blue frog reset
+[Ariellen] Extras: waterweed, water lillies
+[Ariellen] Acode to get water weed, #3904, uses reset1
+[Ariellen] Random acode, frog croaking, uses status0
+[Ariellen] done
+~
+167247873 13 9 0
+D1
+~
+~
+0 -1 9428 10 10 5
+D2
+~
+~
+0 -1 9421 10 10 5
+D3
+~
+~
+0 -1 9425 10 10 5
+E
+lilies lillies sulfur pond~
+There are several colors of water lilies that grow on the sulfur pond
+here.  The most hardy seem to be the yellow ones.  The lilies, which
+produce blooms over a long season, hold their flowers above the water
+surface.  The fragrant flowers of the lilies cannot be smelled, due to
+the high sulfur content of the air.  The water lilies have lightly
+mottled leaves that are slightly shade tolerant.  The leaves are green
+with a slight pink undertone, and spread out across the surface of the
+pond.  Some of the leaves are larger around than a full-grown male ogres
+hand.  The lilies leaves and flower edges are tipped with yellow mud and
+sulfur crystals.
+~
+E
+waterweeds weeds~
+These are the dark green weeds that occupy the edge of the water, and
+have roots that dip down into the brackish waters to get their nutrients
+from the mud and muck at the bottom of the sulfur pond.  These weeds are
+a variety of different plants, from stingy grasses to an occasional bog
+bean.  Some of these waterweeds look to be edible, and you could consider
+picking some if you were desperate enough to eat them.
+~
+A
+command get pick search~
+water weed waterweed~
+if( random( 0, 2 ) == 0 ) {
+  if( rflag( reset1, room ) ) {
+    remove_rflag( reset1, room );
+    act_tochar( #last, ch, obj );
+    act_notchar( #r_weed, ch, obj );
+  }
+}
+else {
+  if( rflag( reset1, room ) ) {
+    send_to_char( #weeds, ch );
+    act_notchar( #r_weed, ch, obj );
+  }
+}
+obj_to_char( oload( 3904 ), ch );
+~
+E
+last~
+@GYou pick the last handful of waterweeds.@n
+~
+E
+weeds~
+@GYou pick a handful of mushy water weeds from the pool.@n 
+~
+E
+r_weed~
+@G$n picks a handful of mushy water weeds from the pool.@n
+~
+!
+0 0 0
+A
+~
+~
+acode( find_room( 9421 ), 1 );
+~
+!
+2 350 0
+2631 9 1509949540 3 0
+1146 17 1509949540 -2 0
+-1
+S
+
+#9423
+Sulfur Pools~
+A large bubbling pool of water serves as a vent for noxious sulfur gasses. 
+The waters of the large pool churn with inner turmoil.  The pool, which
+is flanked along the northern edge by ferns and flax plants, appears not
+to be more than a few feet deep.  Along the eastern edge of the murky
+pool is a wall of rock.  The wall of rock is covered in a spongy moss
+blanket, and the cliff face rises steeply from the waters edge.  The
+cliff is forested at the top with a grove of mountain beeches.  Some of
+the ancient beech trees have low-lying branches that drape down close to
+the waters edge.  A wall of mud blocks any further progress to the south. 
+The wall supports large amount of plant life, and wild ferns can be seen
+covering its sides and its crest.
+~
+[Ariellen] Acodes added: climb beech tree branch, climb mossy cliff face
+[Ariellen] Extras: ferns, flax, wall of rock cliff face, mountain beech trees branches.
+[Ariellen] Random acode, frog croaking, uses status0
+[Ariellen] done
+~
+167247873 13 9 0
+D3
+~
+~
+0 -1 9421 10 10 5
+E
+flax plants~
+These delicate plants have several flowers in full blossom.  At least one
+plant's flowers, appear to be blowing away in the breeze.  The long, thin
+stems of these flax plants move freely in the breeze.  The short leaves
+are linear, alternate and smooth margined.  The five-pedaled blue flowers
+have a yellow center.
+~
+E
+ferns~
+A patch of common wetland ferns grows here.  Each fern frond rises
+individually from a creeping rhizome without forming clumps.  The fronds
+are like fertile leaves, except that they stand more erect.  Each frond
+is narrow, and has edges with deeply cut ribs, oblong lobes that have
+smooth edge.  There are about a dozen per frond, and they run
+perpendicular to the stem.  that slightly roll over to show the
+spore-bearing sori.
+~
+E
+mossy cliff face rock wall~
+A bank of fertile loam to the east, covered with ferns, leads up to the
+base of a mossy cliff wall.  The rock wall of the cliff is carpeted with
+green and gray lichen several inches deep.  The slick moss would make the
+cliff face nearly impossible to climb.  The cliff face rises to a
+plateau, a forested edge with large beech trees that dip their branches
+for sunlight visible just over the top.
+~
+E
+mountain beech tree branches~
+The bark of these tree branches is a light gray color and smooth to the
+touch.  The beech's leaves grow up to five inches long, and they're ovate
+in shape with a pointed tip.  The leaves have short stalks and
+saw-toothed edges.  The leaves are a dull dark green on top and light
+green on the bottom.  A light coating of yellow dust covers the branches,
+leaves, and trunk of the tree, and the parasitic sphagnum and old man's
+beard the climb the trunk and branches.
+~
+A
+climb~
+branch tree beech~
+acode( find_room( 9428 ), 1 );
+~
+!
+0 0 0
+A
+climb~
+mossy cliff face rock wall~
+acode( find_room( 9428 ), 2 );
+~
+!
+0 0 0
+A
+~
+~
+acode( find_room( 9421 ), 1 );
+~
+!
+2 350 0
+A
+1 east~
+~
+act_tochar( #blockEast, ch );
+~
+E
+blockEast~
+A moss covered wall of rock blocks your way to the east.
+~
+!
+0 0 0
+A
+1 south~
+~
+act_tochar( #blockSouth, ch );
+~
+E
+blockSouth~
+After a moment of searching, you give it up to find a way to the south. 
+The wall of plants and mud is way to thick here to pass.
+~
+!
+0 0 0
+A
+1 north~
+~
+act_tochar( #blockNorth, ch );
+~
+E
+blockNorth~
+There is no way to go north, because the ferns and flax plants have grown
+together to a solid wall of plants here.
+~
+!
+0 0 0
+3572 17 1509949540 -2 0
+1146 17 1509949540 -2 0
+-1
+S
+
+#9424
+Sulfur Pools~
+Bubbling sulfur erupts from the muddy surface of the pool creating a
+cloud of yellowish gas that even a troll would be proud to create. 
+Bulrushes and flax plants line the water, their waxy leaves immune to the
+acrid water bleched from the ground.  The rotting remains of an ancient
+tree rises throught the mire, its surface caked in sphagnum and mud.
+~
+[Azerin] yellow frog reset
+[Ariellen] Extras: ancient tree, bulrushes, flax plants
+[Ariellen] Random acode, frog croaking, uses status0
+[Ariellen] done
+[Jydan] frog appearance, 'dibbling -> dribbling
+~
+163053569 13 9 0
+D1
+~
+~
+0 -1 9421 10 10 5
+D2
+~
+~
+0 -1 9429 10 10 5
+D3
+~
+~
+0 -1 9430 10 10 5
+E
+bulrush~
+These bulrushes are water plants that grow in the open waters of the
+sulfur ponds, where the water depth is less than a few feet deep.  The
+roots of the bulrush reach down deep into the organic-rich mud on the
+pond bottom.  The bulrushes form a mat of plant material that covers the
+surface of the pond, and bubbles of sulfur gas vent up out of the
+material at uneven intervals.
+~
+E
+flax plants~
+These delicate plants have several flowers in full blossom.  At least one
+plant's flowers, appear to be blowing away in the breeze.  The long, thin
+stems of these flax plants move freely in the breeze.  The short leaves
+are linear, alternate and smooth margined.  The five-pedaled blue flowers
+have a yellow center.
+~
+E
+rotting remains ancient tree~
+The bark of this ancient tree is rotten, but small patches of gray
+colored smooth bark can be seen below the layers of moss, lichens, and
+sphagnum.  This ancient beech tree had a trunk four feet across and must
+have had a height of nearly one hundred twenty feet.  Its once high perch
+does it no good now, as it lay in a mire of mud and fetid water.  The
+mosses that cover the tree have tiny white lobe like leaves that are
+slightly tinged with red and sometimes green 
+~
+A
+~
+~
+acode( find_room( 9421 ), 1 );
+~
+!
+2 350 0
+2630 9 1509949540 3 0
+1146 17 1509949540 -2 0
+-1
+S
+
+#9425
+Sulfur Pools~
+The pools of bubbling water broil around the roots of the tall mountain
+beeches, the waters churned a yellowy brown by the constant uphevials.
+Dripping sphagnum and old man's beared, cling to the bows of the trees. 
+The carpet of parasitic plants swaming many of the smaller ones.  Rotting
+branches rise out of the mire, their decaying limbs a perfect spot for a
+frog to annouce its presence to the world.
+~
+[Ariellen] Extras: mountain beech tree, sphagnum, old man's beard
+[Ariellen] Random acode, frog croaking, uses status0
+[Ariellen] done
+~
+167247873 13 9 0
+D0
+~
+~
+0 -1 9426 10 10 5
+D1
+~
+~
+0 -1 9422 10 10 5
+D3
+~
+~
+0 -1 9427 10 10 5
+E
+mountain beech tree branches~
+This one mountain beech is a fairly large tree, being approximately sixty
+feet tall.  Its trunks is around two feet wide.  The bark of this tree is
+a light gray and smooth to the touch.  The beech's leaves grow up to five
+inches long, and they're ovate in shape with a pointed tip.  The leaves
+have short stalks and saw-toothed edges.  The leaves are a dull dark
+green on top and light green on the bottom.  The flowers of this beech
+are clustered together in one inch yellow balls, and spread throughout
+the branches.  The fruits is this tree are a little less than one inch in
+length, and they are long and prickly.  A light coating of yellow dust
+covers the branches, leaves, and trunk of the tree, and the parasitic
+sphagnum and old man's beard the climb the trunk and branches.  The
+smaller beech trees in the area are overrun with the tree parasites.
+~
+E
+old man's beard~
+The old man's beard is a common climbing tree parasite.  It has a dense
+festoon of greenish-gray hair-like flexuous strands, that it anchors to
+the tree trunk and branches by sparse wiry roots.  This tree parasite is
+a vigorous deciduous climber having panicles of fragrant green-white
+flowers thoughout the summer and autumn.  This plant bears numerous
+panicles of small creamy white flowers 
+~
+E
+dripping sphagnum~
+This sphagnum is a common moss that grows only in a very wet, acid area. 
+These mosses have white leaves that are slightly tinged with red and
+sometimes green.  These mosses are typically found growing in marshy
+places such as this bog.  These pale and ashy mosses sink to the bottom
+of the bog when they die and help make the spongy bottom of this sulfur
+pond even clingier.
+~
+A
+~
+~
+acode( find_room( 9421 ), 1 );
+~
+!
+2 350 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@BYou hop over the stones leaving west.@n
+~
+E
+to_room~
+@B$n hops over the stones leaving west.@n
+~
+!
+3 0 8
+1146 17 1509949540 -2 0
+-1
+S
+
+#9426
+Sulfur Pools~
+A wall of ferns, flax and tree trunks encircle the sulfur pools the
+vegetation preventing further passage in that direction.  Bubbling pools
+of faintly sulfuric water churn up mud and debris under the tree roots,
+the stench of chemicals hanging heavy on the air about them.  The sound
+of croaking frog songs echo from all around the sulfur pools, the
+amphibians thriving in the aquatic conditions.
+~
+[Ariellen] Extras: ferns and flax
+[Ariellen] Random acode, frog croaking, uses status0
+[Ariellen] done
+~
+163053569 13 9 0
+D2
+~
+~
+0 -1 9425 10 10 5
+E
+flax plants~
+These delicate plants have several flowers in full blossom.  At least one
+plant's flowers, appear to be blowing away in the breeze.  The long, thin
+stems of these flax plants move freely in the breeze.  The short leaves
+are linear, alternate and smooth margined.  The five-pedaled blue flowers
+have a yellow center.
+~
+E
+ferns wall~
+A patch of common wetland ferns grows here.  Each fern frond rises
+individually from a creeping rhizome without forming clumps.  The fronds
+are like fertile leaves, except that they stand more erect.  Each frond
+is narrow, and has edges with deeply cut ribs, oblong lobes that have
+smooth edge.  There are about a dozen per frond, and they run
+perpendicular to the stem.  that slightly roll over to show the
+spore-bearing sori.
+~
+A
+~
+~
+acode( find_room( 9421 ), 1 );
+~
+!
+2 350 0
+1146 17 1509949540 -2 0
+-1
+S
+
+#9427
+Sulfur Pools~
+Fern rimmed pools of yellow-brown water bubble between the roots of
+sphagnum coated beech trees.  The air hangs heavy with the smell of
+sulfur, the frogs and other reptiles appearing immune to its stench. 
+Tar-like mud banks rise to the west, the ground too dangerous for all but
+the lightest of creatures to venture across.  Eastwards more ferns and
+pools spread out under the shallow roots, the sound of frog calls and
+bubbling water echoing from their.
+~
+[Azerin] banded frog snake reset
+[Ariellen] Extras: ferns, sphagnum, mountain beech trees
+[Ariellen] Random acode, frog croaking, uses status0
+[Ariellen] done
+~
+167247873 13 9 0
+D1
+~
+~
+0 -1 9425 10 10 5
+E
+mountain beech trees~
+The bark of these mountain beech trees is a light gray color and smooth
+to the touch.  The beech tree leaves several inches long, and they're
+ovate in shape with a pointed tip.  The leaves have short stalks and
+saw-toothed edges.  The leaves are a dark green on top and light green on
+the bottom.  A light coating of yellow dust covers the branches, leaves,
+and trunks of the trees, and the parasitic sphagnum that climbs them. 
+The smaller beech trees in the area are overrun with the tree parasites.
+~
+E
+shpagnum~
+This sphagnum is a common moss that grows only in a very wet, acid area. 
+These mosses have white leaves that are slightly tinged with red and
+sometimes green.  These mosses are typically found growing in marshy
+places such as this bog.
+~
+E
+ferns~
+A patch of common wetland ferns grows here.  Each fern frond rises
+individually from a creeping rhizome without forming clumps.  The fronds
+are like fertile leaves, except that they stand more erect.  Each frond
+is narrow, and has edges with deeply cut ribs, oblong lobes that have
+smooth edge.  There are about a dozen per frond, and they run
+perpendicular to the stem.  that slightly roll over to show the
+spore-bearing sori.
+~
+A
+~
+~
+acode( find_room( 9421 ), 1 );
+~
+!
+2 350 0
+A
+1 west~
+~
+act_tochar( #blockWest, ch );
+act_notchar( #blockWest2, ch, obj, mob, sight );
+~
+E
+blockWest~
+You carefully step onto the muddy bank.  As you realize that it will
+engulf you, you @Rquickly@n jump back into the pool.
+~
+E
+blockWest2~
+$n carefully steps onto the muddy bank, but after a moment
+$e @Rquickly@n jumps back into the water.
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@BYou hop over the stones leaving east.@n
+~
+E
+to_room~
+@B$n hops over the stones leaving east.@n
+~
+!
+3 0 2
+2633 9 1509949540 3 0
+3572 17 1509949540 -2 0
+1146 17 1509949540 -2 0
+-1
+S
+
+#9428
+Sulfur Pools~
+A thick molasses of mud and water churn in several large pools, their
+outer edges flanked by ferns and flax.  Beyond the wall of plants a mossy
+cliff face rises, its forested edge filled with the mountain beeches. 
+Low branches drape down to the waters edge their tips caked in mud and
+sphagnum.
+~
+[Ariellen] Extras: ferns, flax, cliff face, branches
+[Ariellen] Acodes: climb beech tree branches, climb mossy cliff
+[Ariellen] Random acode, frog croaking, uses status0
+[Ariellen] done
+~
+167247873 13 9 0
+D3
+~
+~
+0 -1 9422 10 10 5
+E
+flax plants~
+These delicate plants have several flowers in full blossom.  At least one
+plant's flowers, appear to be blowing away in the breeze.  The long, thin
+stems of these flax plants move freely in the breeze.  The short leaves
+are linear, alternate and smooth margined.  The five-pedaled blue flowers
+have a yellow center.
+~
+E
+fern wall~
+A patch of common wetland ferns grows here.  Each fern frond rises
+individually from a creeping rhizome without forming clumps.  The fronds
+are like fertile leaves, except that they stand more erect.  Each frond
+is narrow, and has edges with deeply cut ribs, oblong lobes that have
+smooth edge.  There are about a dozen per frond, and they run
+perpendicular to the stem.  that slightly roll over to show the
+spore-bearing sori.
+~
+E
+mossy cliff face~
+A bank of fertile loam to the east, covered with ferns, leads up to the
+base of a mossy cliff wall.  The rock wall of the cliff is carpeted with
+green and gray lichen several inches deep.  The slick moss would make the
+cliff face nearly impossible to climb.  The cliff face rises to a
+plateau, a forested edge with large beech trees that dip their branches
+for sunlight visible just over the top.
+~
+E
+beech branches sphagnum mountain~
+The bark of these tree branches is a light gray color and smooth to the
+touch.  The beech tree leaves have grown up to five inches long, and
+they're an oval shape with pointed tips.  The branches leaves have short
+stalks and saw-toothed edges, and are coated in a fine yellow powder. 
+Each tree limb is covered with a moss.  These mosses have tiny white
+lobes kind of like leaves that are slightly tinged with red and sometimes
+green.
+~
+A
+climb~
+branch tree beech~
+act_tochar( #nope, ch );
+~
+E
+nope~
+@GTry as you might, you cannot get a good enough grip onto the branches
+to climb this tree.@n 
+~
+!
+0 0 0
+A
+climb~
+mossy cliff face~
+act_tochar( #nope, ch );
+act_notchar( #r_nope, ch );
+~
+E
+nope~
+@GYou attempt to climb the cliff face, however its covered in moss and
+muck, and you slip back down to the pool below.  @n 
+~
+E
+r_nope~
+$n tries to climb the @Gmossy cliff face@n, but no matter how hard $e
+tried, $e ended up back in the pool.
+~
+!
+0 0 0
+A
+~
+~
+acode( find_room( 9421 ), 1 );
+~
+!
+2 350 0
+A
+1 east~
+~
+acode( find_room( 9423 ), 4 );
+~
+!
+0 0 0
+2152 17 1509949540 -2 0
+1146 17 1509949540 -2 0
+-1
+S
+
+#9429
+Sulfur Pools~
+Sulfur pools spread out through the waterweeds and rushes, the land more
+mire than waterway making for a arduous travel though the swamp. 
+Dragonflies zip across the bubbling marsh their gossimer wings beating
+furiously.  A low cliff to the south prevents the water from spreading
+onwards, a wall of ferns and beech trees covering its base and top.
+~
+[Azerin] green sulfur frog reset
+[Ariellen] Acode to get water weed, #3904, uses reset1
+[Ariellen] Extras: waterweeds, rushes, cliff, ferns, beech trees
+[Ariellen] Random acode, frog croaking, uses status0
+[Ariellen] done
+~
+163053569 13 9 0
+D0
+~
+~
+0 -1 9424 10 10 5
+E
+waterweeds weeds~
+These are the dark green weeds that occupy the edge of the water, and
+have roots that dip down into the brackish waters to get their nutrients
+from the mud and muck at the bottom of the sulfur pond.  These weeds are
+a variety of different plants, from stingy grasses to an occasional bog
+bean.  Some of these waterweeds look to be edible, and you could consider
+picking some if you were desperate enough to eat them.
+~
+E
+mountain beech trees~
+The beech trees here are large trees, being approximately sixty feet tall. 
+Their trunks are around two feet wide, and their bark is a light gray
+color and smooth to the touch.  The beeches leaves grow up to five inches
+long, and they're ovate in shape with a pointed tip.  The leaves have
+short stalks and saw-toothed edges, their colors are a dull dark green on
+top and light green on the bottom.  The flowers of these beech trees are
+clustered together in one inch yellow balls, and spread throughout the
+branches.
+~
+E
+ferns~
+A patch of common wetland ferns grows here.  Each fern frond rises
+individually from a creeping rhizome without forming clumps.  The fronds
+are like fertile leaves, except that they stand more erect.  Each frond
+is narrow, and has edges with deeply cut ribs, oblong lobes that have
+smooth edge.  There are about a dozen per frond, and they run
+perpendicular to the stem.  that slightly roll over to show the
+spore-bearing sori.
+~
+E
+rushes bulrush~
+These bulrushes are water plants that grow in the open waters of the
+sulfur ponds, where the water depth is less than a few feet deep.  The
+roots of the bulrush reach down deep into the organic-rich mud on the
+pond bottom.  The bulrushes form a mat of plant material that covers the
+surface of the pond, and bubbles of sulfur gas vent up out of the
+material at uneven intervals.
+~
+E
+low cliff~
+A small rise of stone and fertile loam pen the waters, of the sulfur
+pond, from spreading any farther.  Ferns and mountain beech trees grow
+along the rise, and prevent further movement to the south.  This low
+cliff is some of the highest ground around the area.
+~
+A
+get pick search~
+water weed waterweed~
+acode( find_room( 9422 ), 1 );
+~
+!
+0 0 0
+A
+~
+~
+acode( find_room( 9421 ), 1 );
+~
+!
+2 350 0
+A
+~
+~
+~
+!
+0 0 0
+2632 9 1509949540 3 0
+1146 17 1509949540 -2 0
+-1
+S
+
+#9430
+Sulfur Pools~
+Water lilies spread across the bubbling water of the sulfur pools, their
+edges tipped with yellow mud and sulfur crystals.  A dirt-coated rock
+rises out of the mire to the west, the first firm ground for some miles
+westwards.  Southwards the ground rises steeply upwards, heading into a
+dense forest.
+~
+[Azerin] red frog reset
+[Ariellen] Extras: dirt coated rock, water lillies
+[Ariellen] Random acode, frog croaking, uses status0
+[Ariellen] done
+~
+167247873 13 9 0
+D1
+~
+~
+0 -1 9424 10 10 5
+D3
+~
+~
+0 -1 9431 10 10 5
+E
+dirt covered rock dirt-covered~
+A rather large dirt-coved boulder rises up out of the mire and nearly
+blocks further travel to the west.  The large boulder is the only solid
+ground you've seen in quite some time.  A thin layer of yellow dust coats
+the caked on mud of the rock.
+~
+E
+lilies lillies sulfur pond water~
+There are several colors of water lilies that grow on the sulfur pond
+here.  The most hardy seem to be the yellow ones.  The lilies, which
+produce blooms over a long season, hold their flowers above the water
+surface.  The fragrant flowers of the lilies cannot be smelled, due to
+the high sulfur content of the air.  The water lilies have lightly
+mottled leaves that are slightly shade tolerant.  The leaves are green
+with a slight pink undertone, and spread out across the surface of the
+pond.  Some of the leaves have grown to be larger around than a
+full-grown male ogres hand.  The lilies leaves and flower edges are
+tipped with yellow mud and sulfur crystals.
+~
+A
+~
+~
+acode( find_room( 9421 ), 1 );
+~
+!
+2 350 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+You climb up to the top of the dirt covered rock, leaving the sulfur
+pools behind you.
+~
+E
+to_room~
+$n climbs up to the top of the dirt covered rock in the east.
+~
+!
+3 0 8
+A
+~
+~
+act_tochar( #climbDown, ch );
+~
+E
+climbDown~
+You slide down from the bank and land in a awful smelling sulfur pool.
+~
+!
+1 0 8
+A
+1 south~
+~
+act_tochar( #leaveSouth, ch );
+~
+E
+leaveSouth~
+The hill is to steep to go that way.
+~
+!
+0 0 0
+A
+~
+~
+loop( all_in_room ) {
+  if( is_player( rch ) ) {
+    damage( mob, rch, 1d6, fire, "The hot water of the pool" );
+  }
+  if( is_pet( rch ) ) {
+    damage( mob, rch, 1d6, fire, "The hot water of the pool" );
+  }
+}
+~
+!
+2 110 0
+2629 9 1509949540 3 0
+3572 17 1509949540 -2 0
+1146 17 1509949540 -2 0
+-1
+S
+
+#9431
+On a Fern Bank, Edging a Sulfur Pool~
+You are on a fertile fern bank over looking a murky swamp to the west,
+and the sulfur pools to the east.  The ground here is a few feet above
+the surrounding waters level.  Water from the swamp west doesn't make its
+way to the sulfur ponds, and the reverse is also true.  Finding a path
+across this bank is difficult, due to the large fronded ferns that cover
+the area.  A large dirt covered rock stands here on the edge of the
+sulfur pool.
+~
+[Ariellen] No.mob to prevent the frogs escape
+[Ariellen] Extras: ferns
+~
+167247881 2 9 0
+D1
+~
+~
+0 -1 9430 10 10 5
+D3
+~
+~
+0 -1 9432 10 10 5
+E
+large dirt covered dirt-coated coated rock~
+A rather large dirt-coved boulder rises up out of the mire and nearly
+blocks further travel to the west.  The large boulder is the only solid
+ground you've seen in quite some time.  A thin layer of yellow dust coats
+the caked on mud of the rock.
+~
+E
+ferns fertile bank~
+A sea of enormous ferns covers the area.  Each fern tops over ten feet
+tall and towers over most everything in the area.  Each fern frond rises
+a creeping rhizome, and they do not forming clumps.  The fronds are large
+fertile leaf-like greenery, that stands erect.  Each frond is relatively
+narrow, and has edges with deeply cut ribs, oblong lobes that have smooth
+edge.
+~
+-1
+S
+
+#9432
+On a Fern Bank, Edging a Murky Swamp~
+You are on a fertile fern bank over looking a murky swamp to the west. 
+The ground here is raise a few feet from the surrounding mires level, and
+water from the swamp west doesn't make its way to the sulfur ponds to the
+east.  Finding a path across this bank is difficult, due to the large
+fronded ferns that cover the area.
+~
+[Ariellen] Extras: ferns
+[Jydan] 'raise a few' raised a few
+[Jydan] mires -> mire's
+[Jydan] l fern 'do not forming' do not form
+~
+167247873 2 9 0
+D1
+~
+~
+0 -1 9431 10 10 5
+D3
+~
+~
+0 -1 55000 10 10 5
+E
+fern bank fertile~
+A sea of enormous ferns covers the area.  Each fern tops over ten feet
+tall and towers over most everything in the area.  Each fern frond rises
+a creeping rhizome, and they do not forming clumps.  The fronds are large
+fertile leaf-like greenery, that stands erect.  Each frond is relatively
+narrow, and has edges with deeply cut ribs, oblong lobes that have smooth
+edge.
+~
+-1
+S
+
+#9433
+In a Tall Beech Tree~
+A tangle of branches spread out in all directions, some a few inches in
+diameter, others wide enough to support a careful climber.  Below a short
+drop from here the mossy ground awaits, a handful of rocks making a fall
+a bit less pleasant.  Further up the tree the branches begin to thin
+again, a few patches in the canopy allowing a would-be climber to
+continue onwards.  A rather large nest can be seen further up the tree,
+while a stout branch leads off to the east.
+~
+~
+167247873 3 9 0
+D1
+~
+~
+0 -1 9434 10 10 5
+D4
+~
+~
+0 -1 9435 10 10 5
+D5
+~
+~
+0 -1 9410 10 10 5
+A
+~
+~
+if( find_stat( ch, level ) < 91 ) {
+act_tochar( #try, ch );
+end;
+}
+else
+continue;
+~
+E
+try~
+You can't walk out of a tree.  Try climbing or jumping.
+~
+E
+~
+No description.
+~
+!
+3 0 32
+A
+climb~
+1 down~
+if( is_mounted( ch ) ) {
+  send_to_char( #nomount, ch );
+  end;
+}
+if( can_fly( ch ) ) {
+  send_to_char( #fly, ch );
+  act_notchar( #flying, ch );
+  transfer( ch, find_room( 9410 ) );
+  act_notchar( #flying1, ch );
+  loop( followers ) {
+    if( !is_resting( rch ) ) {
+      ch = rch;
+      acode( room, 2 );
+    }
+  }
+  end;
+}
+if( find_skill( ch, climb ) > random( 0, 3 ) ) {
+  act_tochar( #success, ch );
+  act_notchar( #success1, ch );
+  transfer( ch, find_room( 9410 ) );
+  act_notchar( #success2, ch );
+}
+else {
+  if( random( 0, 2 ) == 0 ) {
+    act_tochar( #fall, ch );
+    act_notchar( #r_fall, ch );
+    transfer( ch, find_room( 9410 ) );
+    act_notchar( #fall1, ch );
+    dam_message( ch, 2d6, "the sharp rocks" );
+    inflict( ch, mob, 2d6, "some sharp rocks" );
+    interpret( ch, "sit" );
+  }
+  else
+    send_to_char( #fail, ch );
+  act_notchar( #failed, ch );
+  end;
+}
+loop( followers ) {
+  if( !is_resting( rch ) ) {
+    ch = rch;
+    acode( room, 2 );
+  }
+}
+~
+E
+nomount~
+You can't do that while mounted.
+~
+E
+fly~
+You fly down from the tree.
+~
+E
+flying~
+$n flys down out of the tree.
+~
+E
+flying1~
+$n comes flying down from the tree to land on the ground below.
+~
+E
+fail~
+You slip and almost hurt yourself.
+~
+E
+failed~
+$n slips while trying to climbing down from the tree.
+~
+E
+fall~
+You slip and fall from the tree.
+~
+E
+r_fall~
+$n has slipped and fallen while trying to climb the tree.
+~
+E
+fall1~
+$n comes plummeting down from above, having fallen from the tree
+~
+E
+success~
+You climb down the tree with ease, finding many branches along the way to
+help you.
+~
+E
+success1~
+$n grabs at some branches and lowers $mself down the tree.
+~
+E
+success2~
+$n has come climbing down from the tree branches above.
+~
+!
+0 0 0
+A
+climb~
+1 up tree beech~
+send_to_char( #climb, ch );
+act_notchar( #r_climb, ch );
+transfer( ch, find_room( 9435 ) );
+act_notchar( #r_climb1, ch );
+loop( followers ) {
+  if( !is_resting( rch ) ) {
+    ch = rch;
+    acode( room, 3 );
+  }
+}
+~
+E
+climb~
+You climb up the tree.
+~
+E
+r_climb~
+$n easily climbs up the tree.
+~
+E
+r_climb1~
+$n arrives from below having climbed up the tree.
+~
+!
+0 0 0
+2662 137 1509949540 3 0
+-1
+S
+
+#9434
+On a Limb in a Tall Beech Tree~
+A precarious path of tangled branches juts out from the trunk of the
+tree, allowing a well balanced individual to shimmy along its soft barked
+surface.  Below the ground looks close enough to drop down upon without
+too much injury, however a smattering of rocky obstacles present an
+increase in a would-be daredevils drop.
+~
+~
+167247873 3 9 0
+D3
+~
+~
+0 -1 9433 10 10 5
+1935 9 1509949490 3 0
+1933 9 1509949490 3 0
+-1
+S
+
+#9435
+High in a Tall Beech Tree~
+The trees canopy parts allowing for a reasonable view of the forest to
+the north and west, although many other trees rise above this ones high
+do ruin the view somewhat.  Lacking in strength and secure handholds
+there appears to be no further option to climb upwards.  Down below the
+clusters of branches would make for an easy descent.
+~
+~
+167247873 3 9 0
+D5
+~
+~
+0 -1 9433 10 10 5
+A
+~
+~
+send_to_char( #arrive, ch );
+act_notchar( #r_arrive, ch );
+~
+E
+arrive~
+You arrive near the top of the tree after climbing the many branches.
+~
+E
+r_arrive~
+$n arrives from below, having climbed up the tree.
+~
+!
+1 0 32
+A
+climb~
+1 down tree beech~
+act_tochar( #climb, ch );
+act_notchar( #r_climb, ch );
+transfer( ch, find_room( 9433 ) );
+act_notchar( #r_arrive, ch );
+loop( followers ) {
+  if( !is_resting( rch ) ) {
+    ch = rch;
+    acode( room, 2 );
+  }
+}
+~
+E
+climb~
+You climb down the tree easily.
+~
+E
+r_climb~
+$n climbs down the tree to a lower branch.
+~
+E
+r_arrive~
+$n arrives here having climbed down from a higher branch.
+~
+!
+0 0 0
+937 9 1509949540 3 0
+3872 17 1509949540 -2 0
+-1
+S
+
+#0
+

@@ -1,0 +1,5557 @@
+#M2_AREA
+2
+
+Crabman Village~
+Galen~
+~
+~
+~
+
+0 0
+0
+0
+#ROOMS
+
+#63000
+Inside a Squat Tower of Sand~
+The interior of this short tower of sand is surprisingly sophisticated
+for its decor is nothing what you might have expected in the desert.  The
+tower is completely round on the inside and stands about forty feet tall. 
+Spiraling around the resin-coated walls are shelves of sand which jut
+directly out of the walls.  Upon the shelves are a variety of scrolls,
+tomes, and objects, each of which looks anywhere from mildly old to
+extremely ancient.  The floor of the tower has been tiled with small
+squares of alternating red and black glass, upon which sits a chair,
+table, and desk, all made out of sculpted sand.  On the east wall, just
+under a particularly high bookshelf, hangs a worn and tattered tapestry
+and to the south stands a door formed from bound reeds.
+~
+*CF
+~
+167247873 10 9 0
+D1
+tattered, woven tapestry~
+tattered woven tapestry~
+163 -1 63001 10 10 5
+D2
+door of bound reeds~
+door bound reeds~
+139 -1 78174 10 10 5
+E
+door bound reeds~
+Thick, century-old reeds, bound together with strips of hide, form a door
+which is set into the south wall.  Though crude, the door prevents the
+elements for wandering in uninvited (as well as vagrants) and is lockable
+from the inside, by way of a descending bar.
+~
+E
+worn tattered tapestry 1 east~
+Woven from bleached desert grass, the tapestry which hangs here is very
+old and perhaps dates back to the founding of this small settlement. 
+Most of the tapestry is too faded to make out, but from what you can see,
+it appears that a deadly scene of conquest is taking place.  Hordes of
+crab people are fleeing from the great pyramid while a bolt of lightning
+strikes its tip.  At the edge of the tapestry, you notice that a bar
+mechanism runs behind it and you realize that the tapestry is a concealed
+door out to the east.
+~
+E
+scrolls **M**~
+Out of all the scrolls lining the shelves, very few, if any, appear
+useful.  Most seem to be ancient and would probably crumble to dust at
+the slightest touch.  Each scroll is carefully rolled up and bound with a
+single ribbon of hide.
+~
+E
+tomes **M**~
+This modest library of books contains more volumes than many you have
+seen previously.  Unfortunately, if the foreign scripts down their spines
+are any indication, all of them are illegible.  The tomes vary in size,
+color, and shape; from a round, palm-sized volume bound in blue, scaly
+hide to a two-foot, green librum which is about as thick as your arm and
+has been bound in the shape of a triangle.
+~
+E
+objects **M**~
+While the scrolls and tomes outnumber the objects on the shelves, the
+objects themselves are nonetheless as interesting.  Placed at the
+beginning and end of each shelf, probably as bookends, the objects vary
+in type and oddity, from the skull of what you think must be a crabman,
+to a stylized string instrument.
+~
+E
+bookshelves shelves **M**~
+The bookshelves which spiral up and around the tower are actually
+extensions of the red, sandy walls themselves.  They jut straight out,
+providing a flat surfaces for the books to rest upon.
+~
+E
+floor tile squares black red **M**~
+Small tiles of black and red glass stretch around the length of the floor. 
+The pattern of colored-tiles alternates so that there is never two tiles
+of the same color side by side.
+~
+E
+chair~
+A high-backed chair with an unusually wide seat sits behind the desk and
+to the side of the large, sand-sculpted table, so that it might be used
+for sitting at both.  Formed from resin-coated red and black sand, the
+chair matches the alternating tiled floor perfectly.  The arms of the
+chair bear deep scratch marks, as though they were the frequent victim of
+someone's agitation.
+~
+E
+table **M**~
+Sculpted from black sand and coated with a clear, hardening resin, this
+table stands about three feet high and lies adjacent to the desk in the
+chamber.  The surface of the table is clear of everything, except for a
+few pieces of old papyrus.
+~
+E
+old papyrus **M**~
+The papyrus on the desk appears to be some type of official document.  It
+is written in a flowing script you would not have credited the crab
+people with and bears some type of official seal down at the bottom.
+~
+E
+desk **M**~
+Sculpted from red sand and coated with hardening resin like every other
+structure and piece of furniture you have seen thus far, this desk stands
+in front of a large chair and adjacent to a large table.  The desk has
+but a single drawer and its surface is clean of anything but a quill of
+sorts, a few sheets of blank papyrus, and a bottle of what must be ink.
+~
+E
+ink bottle **M**~
+The bottle on the desk contains a thick, black fluid which looks harmless
+and is probably what you think it is: ink.
+~
+A
+bar~
+tapestry door~
+if( !is_open( room, east ) )
+  if( rflag( status1, find_room( 63005 ) ) ) {
+  act_tochar( #bars, ch );
+  act_notchar( #rbars, ch );
+  remove_rflag( status1, find_room( 63005 ) );
+}
+else 
+  act_tochar( #already, ch );
+else
+  act_tochar( #need, ch );
+~
+E
+need~
+The tattered, tapestry door must be closed first in order to bar it.
+~
+E
+bars~
+Picking up a beam of wood leaning in the corner, you slide it into groves
+to either side of the tattered tapestry, thus barring the concealed door.
+~
+E
+rbars~
+$n bars the front of the tattered tapestry with a beam of wood which 
+once rested in adata the corner of the chamber.
+~
+E
+already~
+The tattered tapestry has already been securely barred against intrusion.
+~
+!
+0 0 0
+A
+unbar move~
+tapestry door bar~
+if( !rflag( status1, find_room( 63005 ) ) )  {
+  act_tochar( #unbar, ch );
+  act_notchar( #runbar, ch );
+  set_rflag( status1, find_room( 63005 ) ); 
+}
+else
+  act_tochar( #already, ch );
+~
+E
+unbar~
+You lift the beam of wood out of its groves and put it back in the corner
+of the room.  Nothing is blocking the tattered tapestry now.
+~
+E
+runbar~
+You watch as $n removes a beam of wood from across the 
+tattered tapestry and unbar the concealed door.
+~
+E
+already~
+There is nothing in place over the tattered tapestry door to bar it
+against intrusion.
+~
+E
+already~
+The door behind the tattered tapestry is already open.
+~
+E
+barred~
+You cannot open the tattered tapestry door. It is barred closed.
+~
+E
+opens~
+The tattered tapestry swings open.
+~
+!
+0 0 0
+A
+open~
+tapestry door~
+if( !rflag( status1, find_room( 63005 ) ) )  {
+  act_tochar( #barred, ch );
+  end;
+  }
+if( !is_open( room, east ) ) {
+  act_room( #opens, ch );
+open( room, east );
+show( ch, room, east );
+  }
+else
+  act_tochar( #already, ch );
+~
+E
+already~
+The door behind the tattered tapestry is already open.
+~
+E
+barred~
+You cannot open the tattered tapestry door. It is barred closed.
+~
+E
+opens~
+The tattered tapestry swings open.
+~
+!
+0 0 0
+A
+2 open~
+1 south door reeds bound~
+if( !is_open( room, south ) ) {
+  show( ch, room, south );
+  continue;
+}
+else
+  continue;
+~
+E
+to_char~
+You open the door of bound reeds.
+~
+E
+to_room~
+$n opens the door of bound reeds.
+~
+E
+to_side~
+The door of bound reeds opens.
+~
+!
+0 0 4
+2365 17 1509949449 -2 0
+-1
+S
+
+#63001
+Before a Squat Tower of Sand~
+The red, sandy plains of the desert are fairly level here.  Except for a
+series of unusual formations of sand to the east, this area looks as
+though the sand has been artificially leveled.  Abruptly to the west, a
+squat tower of sand ascends into the sky (at least for thirty or so feet). 
+From the side of the tower hangs a mat of braided grasses.  The walls and
+towers of red sandstone castles can be seen in nearly every direction.
+~
+*CF
+~
+167247872 10 9 0
+D0
+~
+~
+0 -1 63018 10 10 5
+D1
+~
+~
+0 -1 63021 10 10 5
+D2
+~
+~
+0 -1 63002 10 10 5
+D3
+mat of braided grasses~
+mat braided grasses~
+163 -1 63000 10 10 5
+E
+squat tower 1 west~
+The sandstone castle to the west is actually a short tower which stands
+maybe thirty feet tall.
+~
+E
+1 east ~
+To the far east, you can see the twin battlements of identical sand
+castles.
+~
+E
+1 north~
+Two castles stand to the north.  The first, which lies more to the
+northwest, is very small and easy to ignore.  The second castle is a
+little larger but has a more modest architecture.
+~
+E
+1 south~
+A tall, spindle of sand rises to the south.  It ascends into the sky like
+a gigantic, tapering candle.
+~
+E
+mat braided grass~
+Attached to the side of the short tower is a mat of braided grass.  The
+mat has been fashioned from bits of both brown and green desert grass and
+has been coated with resin.  The mat has a distinct rectangular shape,
+like a door.
+~
+A
+bash~
+mat braided grass~
+if( !is_open( room, west ) )
+if( !rflag( status1, find_room( 63005 ) ) )
+if( find_skill( ch, bash ) > random( 4, 10 ) )
+if( find_stat( ch, str ) > random( 13, 21 ) ) {
+act_tochar( #bash, ch );
+act_notchar( #rbash, ch );
+set_rflag( status1, find_room( 63005 ) );
+wait( 1 );
+act_tochar( #opens, ch );
+open( room, west );
+}
+else {
+act_tochar( #feeble, ch );
+act_notchar( #rfeeble, ch );
+}
+else {
+act_tochar( #nobash, ch );
+act_notchar( #rnobash, ch );
+}
+else
+act_tochar( #noneed, ch );
+else
+act_tochar( #alreadyopen, ch );
+~
+E
+alreadyopen~
+The mat of braided grass is already open.
+~
+E
+bash~
+You slam yourself into the mat of braided grass in an effort to bash it
+open.
+~
+E
+rbash~
+$n slams into the mat of braided grass.
+~
+E
+rnobash~
+Ineptly, $n throws $mself against the mat of braided grass. 
+Ouch, that must have hurt!
+~
+E
+feeble~
+As you slam yourself into the mat of braided grass, it gives slightly,
+but remains firmly in place.  Perhaps if you were a bit stronger you
+could bash it open.
+~
+E
+rfeeble~
+$n makes a feeble attempt at bashing the mat of braided grass 
+open. Apparently it is much stronger than it appears.
+~
+E
+opens~
+You can hear the barring mechanism splinter as the mat of braided grass
+bursts open.
+~
+E
+bash~
+You slam yourself into the mat of braided grass in an effort to bash it
+open.
+~
+E
+nobash~
+As you slam into the mat of braided grass, you succeed only in rattling
+your teeth.
+~
+E
+noneed~
+There does not seem a need for that.  The mat of braided grass looks like
+it can be easily opened.
+~
+!
+0 0 0
+A
+open~
+mat braided grass~
+if( !rflag( status1, find_room( 63005 ) ) )  {
+act_tochar( #barred, ch );
+end;
+}
+if( !is_open( room, west ) ) {
+act_room( #opens, ch );
+open( room, west );
+show( ch, room, west );
+}
+else
+act_tochar( #already, ch );
+~
+E
+barred~
+The mat of braided grass won't open. It has been barred from the inside.
+~
+E
+opens~
+The mat of braided grass swings aside.
+~
+E
+already~
+The mat of braided grass has already been moved.
+~
+!
+0 0 0
+2365 17 1509949449 -2 0
+-1
+S
+
+#63002
+At the Base of a Spiraling Column of Sand~
+You stand along side one of the southernmost edges of the great canyon
+which surrounds the entire Naraki desert.  The endless sands continue
+outward, lapping at the base of the canyon walls like errant waves.  Out
+of the center of these waves of sand, a single, columnar-dune rises,
+twisting and spiraling upward like an alicorn.  A few loose pebbles rest
+along the foot of the spiraling column of sand.  The battlements of two
+identical castles built from red sandstone peek up over dunes of sand to
+the southeast.
+~
+*CF
+[Ssleestaq] you can't look column or dune??
+~
+167251968 10 9 0
+D0
+~
+~
+0 -1 63001 10 10 5
+D1
+~
+~
+0 -1 63005 10 10 5
+D2
+watery illusion~
+watery illusion~
+235 -1 63003 10 10 5
+E
+canyon walls cliffs~
+The walls of the great canyon which surrounds the Naraki desert rises up
+to the south, with sheer cliffs too steep to climb.  The red granite and
+sandstone walls of the ancient valley walls act as a natural southern
+boundary.  Or prison.
+~
+E
+loose pebbles~
+The loose pebbles which lie at the base of the spiraling dune of sand are
+arranged in a perfectly straight row.  Each pebble gleams slightly, as
+though they were coated with something shiny.
+~
+E
+battlements identical castles~
+Twins in every respect, two castles built from red sandstone stand to the
+near southwest.  You cannot see much more than their battlements from
+here, except maybe for little blue and green flags waving from the tips
+of the castles' towers.
+~
+A
+remove get~
+pebble~
+if( rflag( status0, find_room( 63005 ) ) )
+  if( rflag( reset0, room ) ){
+  act_tochar( #getpebble, ch );
+  act_notchar( #rgetpebble, ch );
+  obj_to_char( oload( 78 ), ch );
+  remove_rflag( reset0, room );
+  }
+else {
+  act_tochar( #cantget, ch );
+  end;
+  }
+else {
+  act_room( #magicflare, ch );
+  end; 
+  }
+if( !is_open( room, south ) ) {
+  wait( 1 );
+  act_room( #slightshimmer, ch );
+  wait( 1 );
+  act_room( #dispelled, ch );
+  open( room, south );
+  }
+else
+  act_room( #slightshimmer, ch );
+~
+E
+magicflare~
+The southern wall flares brightly with magic along the outline of a solid
+door of sand.
+~
+E
+cantget~
+The pebbles seem to be imbedded into the ground.  Try as you might, you
+cannot pick one up.
+~
+E
+slightshimmer~
+The edges of the tower of spiraling sand shimmer around the outlines of a
+door.
+~
+E
+dispelled~
+Where once there was a wall of sand there is now an open passage into
+the side of the tower of sand.
+~
+E
+getpebble~
+Reaching down, you pick up one of the pebbles from the ground.
+~
+E
+rgetpebble~
+$n reaches down and picks up a pebble.
+~
+!
+0 0 0
+A
+look~
+foot~
+if( !is_open( room, south ) )
+if( find_stat( ch, int ) > random( 12, 20 ) ) 
+act_tochar( #revealed, ch );
+else
+act_tochar( #normaldesc, ch );
+else
+act_tochar( #noillusion, ch );
+~
+E
+revealed~
+To the south, in the wall of towering sand, you can see the shimmering
+outline of an illusionary door.
+~
+E
+normaldesc~
+The foot of the spiraling dune of sand is surrounded by a straight line
+of pebbles, whose surfaces gleam with unusual properties.  Out of the
+corner of your eye, part of the dune shimmers, like a mirage.
+~
+E
+noillusion~
+The foot of the spiraling dune of sand is surrounded by a straight line
+of pebbles, whose surfaces gleam with unusual properties.  Now that some
+of the pebbles have been removed and the line broken, a doorway,
+previously veiled by illusion, is set into the side of the spiraling dune
+to the south.
+~
+!
+0 0 0
+A
+bash~
+illusionary door tower~
+if( !is_open( room, south ) )
+if( !rflag( status0, find_room( 63005 ) ) )
+if( find_skill( ch, bash ) > random( 4, 10 ) )
+if( find_stat( ch, int ) > random( 12, 20 ) ) {
+act_tochar( #bash, ch );
+act_notchar( #rbash, ch );
+set_rflag( status0, find_room( 63005 ) );
+wait( 1 );
+act_tochar( #opens, ch );
+open( room, south );
+}
+else {
+act_tochar( #feeble, ch );
+act_notchar( #rfeeble, ch );
+}
+else {
+act_tochar( #nobash, ch );
+act_notchar( #rnobash, ch );
+}
+else
+act_tochar( #noneed, ch );
+else
+act_tochar( #alreadyopen, ch );
+~
+E
+alreadyopen~
+The way into the tower of spiraling sand is already open.
+~
+E
+bash~
+You slam yourself into the side of the spiraling tower of sand in an
+effort to bash an opening in the structure.
+~
+E
+rbash~
+$n slams into the side wall of the tower of sand.
+~
+E
+noneed~
+There does not seem a need for that.  Only the illusionary door must be
+dispelled.
+~
+E
+nobash~
+As you slam into the side of the towering wall of sand, an intense
+magical force throws you back.
+~
+E
+rnobash~
+Ineptly, $n throws $mself against the side of the towering spiral of 
+sand.  Ouch, that must have hurt!
+~
+E
+feeble~
+As you slam yourself into the tower of sand, part of the wall shimmers,
+revealing an illusionary door.  Perhaps if you had the ability to
+concentrate more.
+~
+E
+rfeeble~
+$n makes a feeble attempt at bashing in the side of the tower. 
+Apparently $e does not realize that illusion and magic shroud the
+structure.
+~
+E
+opens~
+Through a bit of luck and very little skill, the illusion and magic
+surrounding the tower of sand to the south dissipates, revealing a
+passageway into the spiraling dune.
+~
+!
+0 0 0
+A
+~
+~
+acode( find_room( 63021 ), 2 );
+~
+!
+1 0 3
+A
+custom~
+blue sand pinch handful clump~
+acode( find_room( 63012 ), 8 );
+continue; 
+~
+!
+0 0 0
+1574 9 1509949540 3 0
+2365 17 1509949449 -2 0
+-1
+S
+
+#63003
+Inside a Spiraling Tower of Sand~
+The interior of the column of spiraling sand is actually part of a
+slender tower which extends upwards, into the spire of the sandy pillar. 
+The floor consists of hard, packed sand and the walls of the tower are
+molded from black sand and coated with clear resins.  A simple mat of
+woven grass lies on the floor and next to it there is a fat, tapered
+candle and a pile of sand about five feet wide.  While there appears to
+be at least a second story to this odd tower, there is no way of reaching
+it.  In front of a door-shaped depression in the wall is a straight row
+of pebbles.
+~
+*CF
+[Malissin] She...in the s desc of Dorgonnag should be Her
+~
+167247872 3 9 0
+D0
+illusionary door~
+illusionary door~
+235 -1 63002 10 10 5
+D4
+~
+~
+0 -1 63004 10 10 5
+D5
+~
+~
+235 -1 69039 10 10 5
+E
+ladder~
+Once you concentrate upon the room, you can easily see the ladder which
+leads to the second story of the tower.  The ladder is made of dried
+reeds bound together with strips of hide.
+~
+E
+simple mat woven~
+Woven from alternating colors of green and brown, a medium-sized round
+rug lies in the center of the room.  The alternating colors of grass have
+been braided around a spiraling pattern that is half-hypnotic.
+~
+E
+fat tapered candle~
+Poured from melted animal fat, this odorous yellow candle is about a foot
+thick at its base and stands more than four feet tall.  As it rises from
+its iron cauldron holder, the candle twists and tapers to a fine point.
+~
+E
+pile sand~
+Beside the round, woven mat of grass rests a pile of sand.  The sand has
+multiple depressions in it, as though something had been resting on it. 
+Flakes of chitin lie on the surface of the sandy pile.
+~
+E
+walls black~
+Rather than being sculpted from red sand like most other structures here,
+the walls of the spiral tower are lined with black sand and covered with
+hardening resins.  The black sand is not indigenous to this region of
+desert and hard toils must have been underwent to bring such a great
+amount of it to this tower.
+~
+E
+floor~
+The floor of the tower consists of hard packed, red sand.  Except for the
+pile of sand which lies next to the rug, the floor has been swept clean.
+~
+E
+door-like space depression~
+The depression in the northern wall of the tower is about the size of a
+door though there is no door there.  A row of pebbles lie in front of the
+depression.
+~
+A
+disbelieve~
+ladder 1 up~
+if( cflag( 57, ch ) )
+if( rflag( reset1, room ) ) {
+act_tochar( #concentrates, ch );
+act_notchar( #rconcentrates, ch );
+wait( 3 );
+act_tochar( #illusion, ch );
+act_notchar( #points, ch );
+wait( 3 );
+act_tochar( #allnotice, ch );
+act_notchar( #notice, ch );
+remove_rflag( reset1, room );
+}
+else
+act_tochar( #already, ch );
+else
+continue;
+~
+E
+dontknow~
+<Type 'help' for help>
+~
+E
+already~
+The illusion has already been dispelled about the ladder.
+~
+E
+notice~
+As soon as $n points out the illusion, you can easily see the ladder
+leading up through the tower.
+~
+E
+allnotice~
+As everyone around you notices the illusion surrounding the ladder, it
+snaps into visibility nearly audibly.
+~
+E
+illusion~
+As you concentrate, you can see a ladder, partly veiled by illusion,
+snaking up into the heights of the tower.
+~
+E
+points~
+$n shouts excitedly about a ladder and points at something in 
+the middle of the room. After a few moments, you can 
+see the edges of something wispy.
+~
+E
+concentrates~
+With great effort, you stop all you are doing and begin to concentrate
+intently.
+~
+E
+rconcentrates~
+$n suddenly stops all $e is doing and a look of intense
+concentration crosses $s features.
+~
+!
+0 0 0
+A
+up~
+*~
+if( !can_fly( ch ) )
+  if( !rflag( reset1, room ) ) {
+  act_tochar( #climbup, ch );
+  continue;
+  }
+else
+  act_tochar( #noway, ch );
+else {
+  act_tochar( #flyup, ch );
+  act_notchar( #rflyup, ch );
+  continue;
+  }
+~
+E
+climbup~
+You climb up the ladder to the top of the tower.
+~
+E
+noway~
+There does not seem to be a way up, unless you can fly.
+~
+E
+flyup~
+You fly up to the top of the tower.
+~
+E
+rflyup~
+$n flies up to the top of the tower.
+~
+!
+0 0 0
+A
+place~
+pebble~
+if( !rflag( status0, find_room( 63005 ) ) )  {
+  act_tochar( #magicbarred, ch );
+  end;
+}
+if( !is_open( room, north ) ) {
+  act_tochar( #passthru, ch );
+  act_notchar( #rpassthru, ch );
+  open( room, north );
+}
+else
+  act_tochar( #already, ch );
+~
+E
+already~
+You have already discerned that the illusionary door is no longer in
+place.
+~
+E
+magicbarred~
+You sense that a strong field of magic surrounds the doorway to the
+north, barring you from passing through it.
+~
+E
+passthru~
+With ease, your hand passes through the field of magic, indicating that
+it is possible to go through it.
+~
+E
+rpassthru~
+With ease, $n's hand passes through the field of magic, indicating that
+it is possible to go through it.
+~
+!
+0 0 0
+A
+place~
+pebble~
+if( rflag( status0, find_room( 63005 ) ) )
+if( has_obj( 78, ch ) ) {
+act_tochar( #placepebble, ch );
+act_notchar( #rplacepebble, ch );
+obj = has_obj( 78, ch );
+junk_obj( obj, 1 );
+remove_rflag( status0, find_room( 63005 ) );
+wait( 3 );
+set_rflag( reset0, room );
+close( room, north );
+act_room( #shimmers, ch );
+}
+else
+act_tochar( #nopebble, ch );
+else 
+act_tochar( #already, ch );
+~
+E
+already~
+The door has already been magically barred.
+~
+E
+nopebble~
+You do not have a pebble.
+~
+E
+placepebble~
+Bending down, you insert a pebble into the line of pebbles lying across
+the threshold of the doorspace.
+~
+E
+rplacepebble~
+$n bends down a places a pebble on the floor, on the 
+threshold of the doorway.
+~
+E
+shimmers~
+The doorway shimmers as it becomes magically barred against intrusion.
+~
+!
+0 0 0
+A
+get take grab~
+pebble~
+if( !rflag( status0, find_room( 63005 ) ) )
+  if( rflag( reset0, room ) ){
+  act_tochar( #getpebble, ch );
+  act_notchar( #rgetpebble, ch );
+  obj_to_char( oload( 78 ), ch );
+  remove_rflag( reset0, room );
+  }
+else {
+  act_tochar( #cantget, ch );
+  end;
+  }
+else {
+  act_tochar( #magicflare, ch );
+  end;
+  }
+if( !is_open( room, north ) ){
+  wait( 3 );
+  act_room( #dispelled, ch );
+  set_rflag( status0, find_room( 63005 ) );
+  }
+else
+  act_room( #slightshimmer, ch );
+~
+E
+magicflare~
+The edge of the door shimmers and flares, but not in a way to indicate
+that the passage north is barred.
+~
+E
+cantget~
+You cannot seem to pick up any of the pebbles.  They are fused into the
+sandy earth.
+~
+E
+slightshimmer~
+The doorway in the wall shimmers slightly.
+~
+E
+dispelled~
+Before your eyes, a doorway appears in the side of the tower and the barring
+magic surrounding it is dispelled.
+~
+E
+rgetpebble~
+$n reaches down and gets a nice-looking pebble.
+~
+E
+getpebble~
+You reach down and get a nice-looking pebble.
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+You climb down through the hole using the ladder.
+~
+E
+to_room~
+$n climbs down through the floor using the ladder in the hole.
+~
+!
+3 0 32
+2365 17 1509949443 -2 0
+1555 9 1509949540 3 0
+-1
+S
+
+#63004
+At the Top of the Tower~
+As you gaze around in the upper part of the spiraling tower, the first
+thing you notice is there floor.  There is not one!  Or at least, not a
+visible one.  Like the illusions cast to protect the crabman village from
+intrusion, it appears some magic has been cast on the floor, turning it
+invisible.  A single table with an angular chair behind it rests on the
+invisible floor, towards the back of the tower room.  Shelves made from
+sand and coated with a thick, hardening resin stick out from the walls of
+the tower.  On the shelves, there is a large collection of scrolls and
+tomes which look remarkably well preserved for being in a desert climate.
+~
+*CF
+*library here
+~
+167247880 3 9 0
+D5
+~
+~
+0 -1 63003 10 10 5
+E
+ladder~
+The ladder itself, once illusion is not masking it, looks quite ordinary. 
+It has evenly spaced rungs that are durably fastened together to the
+frame of the ladder.  Though a bit wider than most ladders, it looks like
+it could easily support your weight.
+~
+E
+scrolls~
+A few of the scrolls resting atop the shelves are parcially open,
+allowing you to catch a glimpse of their contents.  Universally, the
+scrolls' contents are detailed pictograms.  No words to read, no
+hieroglyphics to translate.  Just a bunch of pictures with crabmen in
+them.  The great pyramid also figures into the scrollwork quite heavy as
+well.  Browsing through all the scrolls would take a lifetime.
+~
+E
+tomes~
+Bound in red, blue, and green leather hide, many of the volumes look
+extremely ancient and would probably fall apart at the slightest touch. 
+Currently, you have no use of anything you might find in this library.
+Browsing through all the tomes would take a lifetime.
+~
+E
+shelves~
+Sculpted from sand and layered with hardening resin, the shelves
+themselves are an artistic creation.  They have filigree along the edges
+and curls along the sides.  And they are still remarkably level and flat. 
+A number of scrolls and tomes rest along the various shelves.
+~
+E
+table~
+The table which stands towards the back of the room has a relatively
+small surface top.  It, like most of the furniture in this odd little
+settlement, is sculpted from sand and coated with a resin to preserve its
+shape.  Atop the table, there are several claw marks, which appear to be
+little more than a crabman's nervous scrapings.
+~
+E
+angular chair~
+Much to wide for a normal person, this chair looks to have been made
+especially for a crabman.  Sculpted from sand and coated with a hardening
+resin, the chair as a slick look to it.
+~
+A
+disbelieve~
+ladder~
+if( cflag( 57, ch ) )
+  if( rflag( reset1,  find_room( 63003 ) ) ) {
+  act_tochar( #concentrates, ch );
+  act_notchar( #rconcentrates, ch );
+  wait( 3 );
+  act_tochar( #illusion, ch );
+  act_notchar( #points, ch );
+  wait( 3 );
+  act_tochar( #allnotice, ch );
+  act_notchar( #notice, ch );
+  remove_rflag( reset1, find_room( 63003 ) );
+  }
+else
+  act_tochar( #already, ch );
+else
+  act_tochar( #dontknow, ch );
+~
+E
+dontknow~
+(Type help for help.)
+~
+E
+already~
+The illusion has already been dispelled about the ladder.
+~
+E
+notice~
+As soon as $n points out the illusion, you can easily see
+the ladder leading down through the tower.
+~
+E
+allnotice~
+As everyone around you notices the illusion surrounding the ladder, it
+snaps into visibility nearly audibly.
+~
+E
+illusion~
+As you concentrate, you can see a ladder, partly veiled by illusion,
+snaking down into the depths of the tower.
+~
+E
+points~
+$n shouts excitedly about a ladder and points at something in 
+the middle of the room.  After a few moments, you can see the edges of
+something wispy.
+~
+E
+concentrates~
+With great effort, you stop all you are doing and begin to concentrate
+intently.
+~
+E
+rconcentrates~
+$n suddenly stops all $e is doing and a look of intense
+concentration crosses $s features.
+~
+!
+0 0 0
+A
+down~
+~
+if( !can_fly( ch ) )
+if( !rflag( reset1, find_room( 63003 ) ) ) {
+act_tochar( #climbdown, ch );
+continue;
+}
+else
+act_tochar( #noway, ch );
+else {
+act_tochar( #flydown, ch );
+act_notchar( #rflydown, ch );
+continue;
+}
+~
+E
+climbdown~
+You climb down the ladder to the bottom of the tower.
+~
+E
+noway~
+There does not seem to be a way down, unless you can fly.
+~
+E
+flydown~
+You fly down to the bottom of the tower.
+~
+E
+rflydown~
+$n flies down to the bottom of the tower.
+~
+!
+0 0 0
+A
+look~
+floor~
+if( find_skill( ch, detect invisible ) > 0 ) 
+act_tochar( #see, ch );
+else
+act_tochar( #nosee, ch );
+~
+E
+nosee~
+You don't see that here. (It IS invisible, remember?)
+~
+E
+see~
+On second glance, you can see a transparent, glass floor below your feet.
+~
+!
+0 0 0
+A
+browse~
+scrolls~
+if( rflag( reset0, room ) ) {
+  act_tochar( #browse, ch );
+  act_notchar( #rbrowse, ch );
+  i = random( 1, 5 );
+  wait( 2 );
+  if( i == 1 )
+    act_tochar( #info1, ch );
+  if( i == 2 )
+    act_tochar( #info2, ch );
+  if( i == 3 )
+    act_tochar( #info3, ch );
+  if( i > 3 ) {
+    remove_rflag( reset0, room );
+    act_tochar( #done, ch );
+    }
+  }
+else
+  act_tochar( #bored, ch );
+~
+E
+bored~
+Glancing at the piles of dusty scrolls, you give up browsing through them. 
+It's a hopeless task.
+~
+E
+browse~
+You dig through the scrolls, looking for something interesting, and find
+one!
+~
+E
+rbrowse~
+$n reads through one of the scrolls in the room.
+~
+E
+info1~
+Upon the scroll, you find detailed information about a complex ritual of
+summoning.  You see a diagram of nine standing stones, with a shadow of
+the seven stone falling across the middle marker.  Though much of the
+scroll is too old to read, you see mention of needing a cauldron,
+spider's eye, and a horse's horn.
+~
+E
+info2~
+Upon the scroll is a drawing of the desert as it must have looked quite
+some time ago.  You can see the great pyramid at its center, btu around
+it are three obelisks.  The obelisks stand to the east, north, and south
+of the great monument.  At the bottom of the scroll, there is a note:
+
+@RThe eastern obelisk is liable to collapse at anytime.  The underground
+water there is weakening its foundation.
+~
+E
+done~
+You give the scroll a glance.  There doesn't appear to be anything here
+you want to know about.
+~
+E
+info3~
+On the surface of an ebony scroll, you see a picture of a fairy creature,
+possibly a pixie.  She wears a circlet upon her head as well as a fine
+chain.  The borders of the scroll are etched with chains of lightning.
+~
+!
+0 0 0
+A
+browse~
+tomes~
+if( rflag( reset1, room ) ) {
+  act_tochar( #browse, ch );
+  act_notchar( #rbrowse, ch );
+  i = random( 1, 5 );
+  wait( 2 );
+  if( i == 1 )
+    act_tochar( #info1, ch );
+  if( i == 2 )
+    act_tochar( #info2, ch );
+  if( i > 2 ) {
+    remove_rflag( reset1, room );
+    act_tochar( #done, ch );
+    }
+  }
+else
+  act_tochar( #bored, ch );
+~
+E
+browse~
+You find an interesting tome and browse through it.
+~
+E
+rbrowse~
+$n finds an interesting tome and browse through it.
+~
+E
+info1~
+The large tome you've selected mentions something about magic fruit
+growing from strange trees.  A note beside the passage about the fruit
+mentions that the fruit no longer exists because the grove it grew in has
+been lost.
+~
+E
+info2~
+Within the book, you find a few passages which tell of a magic obelisk
+guarded by a powerful golem.  Faded hieroglyphics, much too old to
+decipher, rim the edges of the page.
+~
+E
+done~
+You find nothing of interest in the tome.  In fact, there doesn't look to
+be anything among any of them that will further interest you.
+~
+E
+bored~
+You decide that you'd rather do anything but go through the boring old
+tomes.
+~
+!
+0 0 0
+2942 17 1509949540 -2 0
+-1
+S
+
+#63005
+Before Twin Castles of Red Sand~
+To the south, at the edge of the red desert, stand two castles of
+sandstone, whose turrets and battlements rise into the sky as tall as any
+dune.  The castle which stands to the direct south has three towers, each
+of whose top is graced by tiny green flags which flap in the breeze.  The
+shadow of an enormous spiral of sand stretches in front of the castle
+from the west.  Adjacent to this castle, to the east, looms its twin. 
+The walls between each castle are oriented so that the eastern castle
+cannot be reached directly from here.
+~
+||Invasion code||
+~
+167247872 10 9 0
+D2
+driftwood beam~
+driftwood beam~
+235 -1 63006 10 10 5
+D3
+~
+~
+0 -1 63002 10 10 5
+E
+towers battlements~
+At the points along an imaginary triangle, three towers rise up, forming
+the corners of the castle.  The battlements which branch off from the
+towers have alternating indentations, designed for defense.  The
+indentations, though, appear too thin to offer much protection.
+~
+E
+walls~
+What look to be individual blocks of red sandstone have been closely
+stacked and fit together to construct the walls of this fortification. 
+The surface of the sandstone, though, has a dew-like sheen on it.  Set
+into the frontmost wall is a flat, driftwood beam several feet across.
+~
+E
+driftwood beam~
+A beam of driftwood, larger than most, stands upright against the front
+castle wall.  The beam is very old and half-petrified and stands in the
+exact middle of the castle wall, like a door.
+~
+E
+dew-like sheen~
+On closer inspection, the dew-like sheen is actually a hardened resin
+which has been applied to each inch of the castle's surface.  Indeed, the
+walls are not made of sandstone blocks, but of sculpted sand!
+~
+E
+spiral shadow~
+The shadow which stretches across part of the western twin castle belongs
+to a spiraling tower of stand which stands like a silent sentinel to the
+west.
+~
+E
+1 east twin~
+The castle whose walls adjoin this one is its exact twin.  Save for
+having a different amount of towers and colored flags, both twins look to
+be mirror images of the other.
+~
+A
+bash~
+beam driftwood~
+if( !is_open( room, south ) )
+if( !rflag( status2, find_room( 63009 ) ) )
+if( find_skill( ch, bash ) > random( 4, 10 ) )
+if( find_stat( ch, str ) > random( 13, 21 ) ) {
+act_tochar( #bash, ch );
+act_notchar( #rbash, ch );
+set_rflag( status2, find_room( 63009 ) );
+wait( 1 );
+act_tochar( #opens, ch );
+open( room, west );
+}
+else {
+act_tochar( #feeble, ch );
+act_notchar( #rfeeble, ch );
+}
+else {
+act_tochar( #nobash, ch );
+act_notchar( #rnobash, ch );
+}
+else
+act_tochar( #noneed, ch );
+else
+act_tochar( #alreadyopen, ch );
+~
+E
+alreadyopen~
+The beam of driftwood has already been pulled aside.
+~
+E
+bash~
+You slam yourself into the beam of driftwood in an effort to bash the
+beam aside.
+~
+E
+rbash~
+$n slams into the beam of driftwood with a solid THUD.
+~
+E
+noneed~
+There does not seem a need for that. The beam of driftwood looks like it
+can easily be moved.
+~
+E
+nobash~
+As you slam into the beam of driftwood, you succeed only in rattling your
+teeth.
+~
+E
+rnobash~
+Ineptly, $n throws $mself against the beam of driftwood. 
+Ouch, that must have hurt!
+~
+E
+feeble~
+As you slam yourself into the beam of driftwood, it gives slightly, but
+remains firmly in place.  Perhaps if you were a bit stronger you could
+bash it aside.
+~
+E
+rfeeble~
+$n makes a feeble attempt at bashing the beam of driftwood 
+open. Apparently the beam is much more stout than it seems.
+~
+E
+opens~
+You can hear the barring mechanism splinter as the beam of driftwood
+bursts aside.
+~
+!
+0 0 0
+A
+move open~
+beam driftwood~
+if( !rflag( status2, find_room( 63009 ) ) )  {
+act_tochar( #barred, ch );
+end;
+}
+if( !is_open( room, south ) ) {
+act_room( #opens, ch );
+open( room, south );
+}
+else
+act_tochar( #already, ch );
+~
+E
+barred~
+The beam of driftwood appears to be braced closed from the inside.
+~
+E
+opens~
+The beam of driftwood moves to one side.
+~
+E
+already~
+The beam of driftwood has already been placed aside.
+~
+!
+0 0 0
+2365 17 1509949449 -2 0
+-1
+S
+
+#63006
+Inside the Western Twin Sand Castle~
+The inside of this sand castle is relatively plain and not too large. 
+The chamber probably stands about thirty feet tall and goes back about
+twenty feet.  It has few embellishments.  On the western wall there
+stands a brazier forged of a dark, smoky glass and back towards the south
+wall stands a statue on a marble pedestal.  The floor is covered with
+loose sand and a heap of the sandy material lies against the eastern wall
+of the castle.  A single table and chair are the room's only pieces of
+identifiable furniture.  A giant beam of driftwood, several feet thick
+and wide, hangs from hinges set into the northern wall of resin-coated
+sand. The giant piece of driftwood is being used as a door.
+~
+*CF
+~
+167251969 10 9 0
+D0
+driftwood beam~
+driftwood beam~
+235 -1 63005 10 10 5
+D1
+sandy heap~
+sandy heap~
+235 -1 63007 10 10 5
+E
+brazier dark smoky glass ~
+Forged from melted black sand, this fire brazier stands about two feet
+tall and has a delicate lattice of glass filigree cascading up and down
+its length.  Three spiraling columns of smoky glass jut outward from the
+bowl of the brazier, acting as a tripod for the glass fire burner.
+~
+E
+1 south statue~
+Sculpted from white sand and glazed with hardening resin, this statue
+bears close resemblance to a human with the head and poise of a cat. 
+Obviously feminine, the statue rests upon a pedestal of marble, giving it
+a height of about five feet.  While in good condition, a few cracks mar
+the base of the statue, probably from age.
+~
+E
+base **M**~
+~
+E
+pedestal marble~
+The pedestal on which the statue of the cat-like person stands is made of
+marble.  It has been carved into the shape of a hexagonal disk and has
+smooth corners.  The surface of the marble is polished so that it almost
+glows in the light.
+~
+E
+5 sandy heap **M**~
+The heap of sand to the east does, indeed, look to be a makeshift pallet
+of sorts.  There are depressions in the sand to indicate that it has been
+used recently for a place to rest, at least.
+~
+E
+table **M**~
+This small, round table has three legs and a triangular table top.  The
+legs of the table are sculpted from black sand while the top of the table
+is made from red sand.  Both are covered with hardening resin, to help
+them keep their shape.  There is nothing on the table.
+~
+E
+chair **M**~
+This red chair is shaped from the sand of the desert and mixed with
+resins and pigments to harden and darken the color of the medium.  It has
+a low back and long, wide arm rests.  Loose sand has been piled in the
+seat of the chair, to provide a softer surface on which to sit.
+~
+E
+driftwood beam~
+This thick beam of salvaged wood stands about six feet tall and is
+approximately four fe to the northern wall by brackets and strips of
+leathery hide.  Two slots, one to either side of the beam, allow for a
+much slimmer beam of wood to be placed in between them in order to
+barricade the door.  Such a piece of slim wood leans up against the
+corner of the chamber.
+~
+E
+slim wood corner~
+A slim piece of wood, which looks like a door bar, stands in the
+northeast corner of the room.
+~
+A
+bar ~
+beam driftwood~
+if( !is_open( room, north ) )
+if( rflag( status2, find_room( 63009 ) ) ) {
+act_tochar( #bars, ch );
+act_notchar( #rbars, ch );
+remove_rflag( status2, find_room( 63009 ) );
+}
+else 
+act_tochar( #already, ch );
+else
+act_tochar( #need, ch );
+~
+E
+need~
+Before the doorway can be barred, the beam of driftwood must be drawn
+closed.
+~
+E
+bars~
+Picking up a beam of wood leaning in the corner, you slide it into groves
+to either side of the larger beam of driftwood, thus barring the door.
+~
+E
+rbars~
+$n bars the beam of driftwood with a smaller beam of wood which
+once rested in the corner of the chamber.
+~
+E
+already~
+The beam of driftwood has already been securely barred against intrusion.
+~
+!
+0 0 0
+A
+unbar move~
+beam driftwood~
+if( !rflag( status2, find_room( 63009 ) ) ) {
+act_tochar( #unbar, ch );
+act_notchar( #runbar, ch );
+set_rflag( status2, find_room( 63009 ) ); 
+}
+else
+act_tochar( #already, ch );
+~
+E
+unbar~
+You lift the beam of wood out of its groves and put it back in the corner
+of the room.  The beam of driftwood is now unbarred.
+~
+E
+runbar~
+You watch as $n removes a beam of wood from across 
+the larger beam of driftwood and unbars the door.
+~
+E
+already~
+There is nothing in place over the beam of driftwood to bar it against
+intrusion.
+~
+!
+0 0 0
+A
+open~
+driftwood beam door~
+if( !rflag( status2, find_room( 63009 ) ) )  {
+act_tochar( #barred, ch );
+end;
+}
+if( !is_open( room, north ) ) {
+act_room( #opens, ch );
+open( room, north );
+}
+else
+act_tochar( #already, ch );
+~
+E
+already~
+The beam of driftwood stands to the side already.
+~
+E
+barred~
+You cannot open the beam of driftwood. It is barred closed.
+~
+E
+opens~
+The large beam of driftwood moves aside.
+~
+!
+0 0 0
+A
+move~
+mound heap sandy piles~
+if( !is_open( room, east ) ) {
+act_tochar( #moves, ch );
+act_notchar( #rmoves, ch );
+open( room, east );
+}
+else {
+act_tochar( #moveback, ch );
+act_tochar( #rmoveback, ch );
+close( room, east );
+} 
+~
+E
+moves~
+You spend several moments, moving the pile of sand away from the wall. 
+Soon, a secret passage into the adjoining twin castle is revealed.
+~
+E
+rmoves~
+$n spends a little while, moving sand away from the wall. After 
+a few moments, $e discovers a secret passage that runs between
+the two twin castles!
+~
+E
+moveback~
+You move the pile of sand aside and cover up the secret passage into the
+adjoining castle.
+~
+E
+rmoveback~
+$n moves a pile of sand against the wall, concealing the adjoining
+passageway to the other castle.
+~
+!
+0 0 0
+A
+look~
+mound heap sandy piles~
+if( !is_open( room, east ) ) 
+act_tochar( #desc, ch );
+else
+act_tochar( #movedesc, ch );
+~
+E
+desc~
+The heap of sand to the east does, indeed, look to be a makeshift pallet
+of sorts.  There are depressions in the sand to indicate that it has been
+used recently for a place to rest, perhaps even as a bed.
+~
+E
+movedesc~
+The heap of sand used for a bed has been shifted aside and a secret
+passage to the east revealed.
+~
+!
+0 0 0
+1549 9 1509949540 3 0
+1021 17 1509949448 -1 0
+305 17 1509949450 -1 0
+38 17 1509949455 -1 0
+210 17 1509949515 -1 0
+474 17 1509949515 -1 0
+1269 17 1509949485 -1 0
+1182 17 1509949540 -1 0
+127 17 1509949540 -1 0
+249 17 1509949453 -1 0
+189 17 1509949515 -1 0
+2727 17 1509949460 -1 0
+776 17 1509949465 -1 0
+2404 17 1509949445 -1 0
+2365 17 1509949449 -2 0
+-1
+S
+
+#63007
+Inside the Eastern Twin Sand Castle~
+The inside of this sand castle is not too large and relatively plain. 
+The chamber probably stands about twenty feet tall and goes back about
+thirty feet.  It has few embellishments.  On the eastern wall there
+stands a brazier forged of a light, tan glass and back towards the south
+wall stands a statue on a malachite pedestal.  The floor is covered with
+loose sand and a heap of the sandy material lies against the western wall
+of the castle.  A single chair and table are the room's only pieces of
+identifiable furniture.  A giant, fresh water oyster shell hangs from
+hinges set into the northern wall of resin-coated sand, acting as a door.
+~
+~
+167251969 10 9 0
+D0
+giant oyster shell door~
+giant oyster shell door~
+235 -1 63008 10 10 5
+D3
+sandy heap~
+sandy heap~
+235 -1 63006 10 10 5
+E
+brazier light tan glass **M**~
+This delicate fire burner is truly a work of art.  Graceful limbs of
+glass curve down from its fiery bowl to form four, geometrically enhanced
+legs.  Around the rim of the brazier, tiny glass forest animals dance and
+frolic around a scene of foliage and life.  As the brazier consumes
+handfuls of dried desert grass, it gives off a pleasant and smokeless
+scent.
+~
+E
+1 south statue **M**~
+The statue resting upon a malachite pedestal has the features of a
+humanoid woman.  She is not old, but nor is she young.  In fact, the
+features of the statue are hard to place an age upon.  She wears a
+flowing gown and her features and poise are vaguely reminiscent of a
+predatory cat.
+~
+E
+pedestal malachite~
+This cylindrical wedge of stone is made of a dark green malachite and has
+been polished to perfection.  Not a single rough edge or spot remains on
+the pedestal.  The sides of the pedestal slope slightly inward.
+~
+E
+floor loose sand **M**~
+The floor of this castle is covered loosely with sand, giving the
+impression that you have never left the desert.  Some of the sand looks
+to be piled into a nest or bed along the western wall.
+~
+E
+5 sandy heap~
+The heap of sand resting alongside the west wall looks purposefully
+placed and well piled.  The heap seems reminiscent of a nest or a bed.
+~
+E
+table **M**~
+This small, round table has six legs and a round top.  The legs of the
+table are sculpted from red sand while the top of the table is made from
+black sand.  Both are covered with hardening resin, to help them keep
+their shape.  There is nothing on the surface of the table.
+~
+E
+chair~
+This simple, high-back chair rests a comfortable distance away from the
+table, next to the fire brazier.  Fashioned from pieces of petrified
+wood, the chair looks extremely hard.
+~
+E
+giant oyster shell ~
+A giant, fresh water oyster has been killed and its shell mounted by
+hinges on the northern wall.  Thus, it serves the purpose of a makeshift
+door.  To either side of the shell there are notches through which a
+sliding bar can be dropped into place, thus keeping anything out of the
+castle chamber.  Next to the oyster shell is just such a bar.
+~
+E
+bar sliding~
+The sliding bar next to the door appears to be made of petrified tree
+bark.  Not much could probably get through the oyster shell door once
+this bar were dropped down into place.
+~
+A
+bar~
+oyster shell door~
+if( !is_open( room, north ) )
+if( rflag( status1, find_room( 63009 ) ) ) {
+act_tochar( #bars, ch );
+act_notchar( #rbars, ch );
+remove_rflag( status1, find_room( 63009 ) );
+}
+else 
+act_tochar( #already, ch );
+else
+act_tochar( #need, ch );
+~
+E
+need~
+The giant oyster shell needs to be brought to a close first.
+~
+E
+bars~
+Picking up a beam of wood resting in the corner, you slide it into groves
+to either side of the giant oyster shell door.  Thus, the door is now
+barred.
+~
+E
+rbars~
+$n bars the giant oyster shell door with a beam of wood which once
+rested in the corner of the chamber.
+~
+E
+already~
+The giant oyster shell door has already been securely barred against
+intrusion.
+~
+!
+0 0 0
+A
+unbar move~
+giant oyster shell door~
+if( !rflag( status1, find_room( 63009 ) ) )  {
+act_tochar( #unbar, ch );
+act_notchar( #runbar, ch );
+set_rflag( status1, find_room( 63009 ) ); 
+}
+else
+act_tochar( #already, ch );
+~
+E
+unbar~
+You lift the beam of wood out of its groves and put it back in the corner
+of the room.  The giant oyster shell door is now unbarred.
+~
+E
+runbar~
+You watch as $n removes a beam of wood from across the 
+giant oyster shell door and unbars the door.
+~
+E
+already~
+There is nothing in place over the giant oyster shell door to bar it
+against intrusion.
+~
+!
+0 0 0
+A
+open~
+giant oyster shell door~
+if( !rflag( status1, find_room( 63009 ) ) )  {
+act_tochar( #barred, ch );
+end;
+}
+if( !is_open( room, north ) ) {
+act_room( #opens, ch );
+open( room, north );
+}
+else
+act_tochar( #already, ch );
+~
+E
+already~
+The giant oyster shell door is already open.
+~
+E
+barred~
+You cannot open the giant oyster shell door. It is barred closed.
+~
+E
+opens~
+The giant oyster shell door opens.
+~
+!
+0 0 0
+A
+move~
+sandy mound heap piles~
+if( !is_open( room, west ) ) {
+  act_tochar( #moves, ch );
+  act_notchar( #rmoves, ch );
+  open( room, west );
+  }
+else {
+  act_tochar( #moveback, ch );
+  act_notchar( #rmoveback, ch );
+  close( room, west );
+  } 
+~
+E
+moves~
+You spend several moments, moving the pile of sand away from the wall. 
+Soon, a secret passage into the adjoining twin castle is revealed.
+~
+E
+rmoves~
+$n spends a little while, moving sand away from the wall. After 
+a few moments, $e discovers a secret passage that runs between 
+the two twin castles!
+~
+E
+moveback~
+You move the pile of sand aside and cover up the secret passage into the
+adjoining castle.
+~
+E
+rmoveback~
+$n moves a pile of sand against the wall, concealing the 
+adjoining passageway to the other castle.
+~
+!
+0 0 0
+A
+~
+~
+if( !is_open( room, west ) ) 
+act_tochar( #desc, ch );
+else
+act_tochar( #movedesc, ch );
+~
+E
+desc~
+The heap of sand to the east does, indeed, look to be a makeshift pallet
+of sorts.  There are depressions in the sand to indicate that it has been
+used recently for a place to rest, perhaps even as a bed.
+~
+E
+movedesc~
+The heap of sand used for a bed has been shifted aside and a secret
+passage to the west revealed.
+~
+!
+0 0 0
+1550 9 1509949540 3 0
+1025 17 1509949540 -1 0
+1020 17 1509949490 -1 0
+78 17 1509949540 -1 0
+284 17 1509949540 -1 0
+246 17 1509949475 -1 0
+280 17 1509949460 -1 0
+206 17 1509949485 -1 0
+81 17 1509949500 -1 0
+872 17 1509949505 -1 0
+304 17 1509949448 -1 0
+2404 17 1509949445 -1 0
+2365 17 1509949449 -2 0
+-1
+S
+
+#63008
+Before Twin Castles of Red Sand~
+To the south, at the edge of the red desert, stand two castles of
+sandstone, whose turrets and battlements rise into the sky as tall as any
+dune.  The castle which stands right in front of you has six, slender
+towers, each of whose top is graced by large blue flags which lie limp,
+regardless of the breeze.  The walls of the eastern twin castle are
+oriented as such that the other castle cannot be reached directly from
+here.  In the distance, to the north, stretches a path which runs north,
+back into the main desert.
+~
+*CF
+~
+167251968 10 9 0
+D0
+~
+~
+0 -1 63009 10 10 5
+D2
+giant oyster shell door~
+giant oyster shell door~
+235 -1 63007 10 10 5
+E
+towers battlements~
+At the points along an imaginary trapezoid four towers rise up, forming
+the corners of the castle.  The battlements which branch off from the
+towers have alternating indentations, designed for defense.  The
+indentations, though, appear too thin to offer much protection.
+~
+E
+walls~
+What look to be individual blocks of red sandstone have been closely
+stacked and fit together to construct the walls of this fortification. 
+The surface of the sandstone, though, has a dew-like sheen on it.  Set
+into the frontmost wall is a curved, shell from a giant, fresh water
+oyster.
+~
+E
+giant fresh oyster shell~
+The giant shell has a speckled white and blue surface, with bits of rock
+adhered to it.  From the ridges along its lip, the oyster looks to have
+come from a large body of fresh water.  Rather than leaning up against the
+wall, the oyster shell looks to actually hang from the castle wall, like
+a door.
+~
+E
+dew-like sheen~
+On closer inspection, the dew-like sheen is actually a hardened resin
+which has been applied to each inch of the castle's surface.  Indeed, the
+walls are not made of sandstone blocks, but of sculpted sand!
+~
+E
+spiral shadow~
+The shadow which stretches across part of the western twin castle belongs
+to a spiraling tower of stand which stands like a silent sentinel to the
+west.
+~
+E
+1 west twin~
+The castle whose walls adjoin this one is its exact twin.  Save for
+having a different amount of towers and colored flags, both twins look to
+be mirror images of the other.
+~
+A
+bash~
+oyster shell giant door~
+if( !is_open( room, south ) )
+if( !rflag( status1, find_room( 63009 ) ) )
+if( find_skill( ch, bash ) > random( 4, 10 ) )
+if( find_stat( ch, str ) > random( 13, 21 ) ) {
+act_tochar( #bash, ch );
+act_notchar( #rbash, ch );
+set_rflag( status1, find_room( 63009 ) );
+wait( 1 );
+act_tochar( #opens, ch );
+open( room, west );
+}
+else {
+act_tochar( #feeble, ch );
+act_notchar( #rfeeble, ch );
+}
+else {
+act_tochar( #nobash, ch );
+act_notchar( #rnobash, ch );
+}
+else
+act_tochar( #noneed, ch );
+else
+act_tochar( #alreadyopen, ch );
+~
+E
+alreadyopen~
+The giant oyster shell has already been pulled aside.
+~
+E
+bash~
+You slam yourself into the giant oyster shell in an effort to bash the
+door open.
+~
+E
+rbash~
+$n slams into the giant oyster shell door.
+~
+E
+noneed~
+There does not seem a need for that.  The giant oyster shell looks like
+it can be easily opened.
+~
+E
+nobash~
+As you slam into the giant oyster shell, you succeed only in rattling
+your teeth.
+~
+E
+rnobash~
+Ineptly, $n throws $mself against the giant oyster shell door. 
+Ouch, that must have hurt!
+~
+E
+feeble~
+As you slam yourself into the door made from a giant oyster shell, it
+gives slightly, but remains firmly in place.  Perhaps if you were a bit
+stronger you could bash it open.
+~
+E
+rfeeble~
+$n makes a feeble attempt at bashing the giant oyster shell open. 
+Apparently the giant freshwater shell is much stronger that it appears.
+~
+E
+opens~
+You can hear the barring mechanism splinter as the giant oyster shell
+bursts open.
+~
+!
+0 0 0
+A
+open~
+oyster shell giant door~
+if( !rflag( status1, find_room( 63009 ) ) )  {
+act_tochar( #barred, ch );
+end;
+}
+if( !is_open( room, south ) ) {
+act_room( #opens, ch );
+open( room, south );
+}
+else
+act_tochar( #already, ch );
+~
+E
+barred~
+The giant oyster shell door refuses to budge. It has been braced from the inside.
+~
+E
+opens~
+The giant oyster shell opens like a door.
+~
+E
+already~
+The giant oyster shell door is already open.
+~
+!
+0 0 0
+A
+~
+~
+acode( find_room( 63021 ), 2 );
+~
+!
+1 0 1
+A
+custom~
+black sand pinch handful clump~
+acode( find_room( 63012 ), 8 );
+continue; 
+~
+!
+0 0 0
+1574 9 1509949540 3 0
+2365 17 1509949449 -2 0
+-1
+S
+
+#63009
+Red Desert Path with a Branching Trail ~
+Continuing unimaginatively onward like a caravan slave, the path through
+the red desert sweeps ever on its course, from north to south. 
+Characteristic red blocks of granite stand to either side of the broad
+desert trail, marking, perhaps, the safe points in the path.  Here
+though, the trail branches to the east and has cruder blocks of red
+granite demarcating it.
+~
+*CF
+..
+~
+167247872 10 9 0
+D0
+~
+~
+0 -1 63012 10 10 5
+D1
+~
+~
+0 -1 63010 10 10 5
+D2
+~
+~
+0 -1 63008 10 10 5
+E
+red granite blocks~
+There are two sets of red granite blocks in this part of the desert.  One
+set are smoothed and polished, and the other are fashioned from cruder
+chunks of granite and have coarse edges.  The later look amazingly like
+rejects.
+~
+E
+polished smooth~
+The smoothed blocks of red granite are polished until they almost gleam. 
+Their edges are sharp and precise and their surfaces are devoid of any
+scratches or markings.
+~
+E
+cruder coarse rejects~
+The coarse blocks of red granite stand to either side of a smaller trail
+which branches off the main path.  The trail travels to the east, where
+you can see the top of a tent.  The surfaces of the granite plugs of
+stone look much older and weathered and have marking alongside them.
+~
+E
+markings~
+The markings etched in the surfaces of a few of the older, cruder blocks
+of granite appear to be hieroglyphics.
+~
+A
+look~
+hieroglyphics glyphics~
+if( has_obj( 1549, ch ) ){
+obj = has_obj( 1549, ch );
+act_tochar( #ctrans, ch, obj );
+act_notchar( #rctrans, ch, obj );
+wait( 1 );
+act_tochar( #trans1, ch, obj );
+}
+else
+act_tochar( #desc, ch  );
+~
+E
+ctrans~
+For a moment, $p becomes warm an
+begins to glow as you examine the hieroglyphics.
+~
+E
+rctrans~
+Momentarily, $p in $n's possession glows as $e 
+examines a section of  hieroglyphics. 
+~
+E
+desc~
+The hieroglyphics are much too complex to understand.
+~
+E
+trans1~
+With the aid of $p, you are finally able to fully 
+understand the hieroglyphics here. They read: 
+
+....eful were .....  When finished, ...  ....  Priest and ......  laid .... 
+...  a....  not an idol, for ...  ...  expressed a marked ........  for
+them.  Instead, ...  ........  flo...  was placed ....  ...  marble
+surface.  May ...  .o....  forever be as . ......  of ...  power and may
+the Valley, ...  .......  and the Peo...  ..  ..  one for an ........ 
+~
+!
+0 0 0
+A
+translate~
+hieroglyphics glyphics~
+i = get_integer( ch, "/Cayln/TabletEnduraba" );
+obj = has_obj( 1548, ch );
+if( obj ) {
+  j = get_integer( obj, "/Cayln/TabletEnduraba" );
+  if( i == j ) {
+    act_notchar( #rtmess, ch, obj );
+    act_tochar( #trans1, ch, obj );
+    end;
+  }
+  else {
+    act_tochar( #notfamiliar, ch, obj );
+    act_notchar( #rnotfamiliar, ch, obj );
+    end;
+  }
+}
+obj = has_obj( 1549, ch );
+if( obj ) {
+  act_tochar( #ctrans, ch, obj, mob );
+  act_notchar( #rctran, ch, obj, mob );
+  wait( 2 );
+  act_tochar( #trans1, ch, obj, mob );
+  end;
+}
+act_tochar( #notrans, ch );
+act_notchar( #rnotrans, ch );
+~
+E
+trans1~
+With the aid of $p, you are finally able to fully 
+understand the hieroglyphics here. They read: 
+
+....eful were .....  When finished, ...  ....  Priest and ......  laid .... 
+...  a....  not an idol, for ...  ...  expressed a marked ........  for
+them.  Instead, ...  ........  flo...  was placed ....  ...  marble
+surface.  May ...  .o....  forever be as . ......  of ...  power and may
+the Valley, ...  .......  and the Peo...  ..  ..  one for an ........
+~
+E
+ctrans~
+For a moment, $p becomes warm and
+begins to glow as you examine the hieroglyphics.
+~
+E
+rctran~
+Momentarily, $p in $n's possession glows as $e 
+examines a section of hieroglyphics. 
+~
+E
+rtmess~
+$n's brow furrows in thought as $e tries to translate a section 
+of hieroglyphics using $p as a guide.
+~
+E
+notrans~
+The hieroglyphics are much too complex to understand.
+~
+E
+rnotrans~
+$n's frowns with frustration as $e finishes examining a portion
+of the hieroglyphics.
+~
+E
+notfamiliar~
+You are not familiar enough with $p to use it properly, it is going to
+take alot of study.
+~
+E
+rnotfamiliar~
+$n tries to use $p to decipher the hieroglyphics, but gives up in the
+effort.
+~
+!
+0 0 0
+2365 17 1509949449 -2 0
+-1
+S
+
+#63010
+Outside of a Large Tent~
+A crude, rectangular tent fashioned from strips of animal hide attached
+to slender poles has been erected at the end of the desert trail's only
+branch.  The tent looks very old and smells of ill-cured hides.  The
+front of the tent has leather fastening strips, along where the material
+looks to part.  Red blocks of granite stand to either side of a path
+which winds to the west and merges with a wider trail heading north and
+south.
+~
+*CF
+~
+167247872 10 9 0
+D1
+tent flaps~
+tent flaps~
+131 -1 63011 10 10 5
+D3
+~
+~
+0 -1 63009 10 10 5
+E
+animal skins hides~
+For the most part, the animal skins are light in color and sewn together
+crudely with yet more strips of animal hide or leather.  The majority of
+the hide is covered with short, soft fur, which reminds you of a desert
+hare.  The rest consists of various, unidentifiable shreds of skin.
+~
+E
+slender poles~
+These slender poles appear to be a type of reed or bamboo that you have
+not seen growing in any part of the desert.  The poles are dead and
+lifeless, having been cut sometime ago.
+~
+E
+leather strips~
+The leather strips on the front of the tent seem to be meant for securely
+closing the tent during times of privacy, need, or rising desert storms. 
+Currently, the strips of leather hang loose and unfastened on the tent
+flaps.
+~
+E
+flaps~
+The flaps of the tent are really nothing more than two large animal skins. 
+The skins, if the odorous, shaggy fur still attached to them is any
+indication, once belonged to a camel.
+~
+E
+blocks granite red~
+The blocks of granite here are not as smoothly polished or as cleanly cut
+as the rest of the blocks which form the desert trail just to the west. 
+In fact, not only are the blocks more crudely fashioned, but they are
+also crooked and uneven, and look to have been placed here as an after
+thought.
+~
+2365 17 1509949449 -2 0
+-1
+S
+
+#63011
+Desert Trader's Tent~
+Fashioned from animal skins sewn together with crude skill and ribbons of
+leather, this small tent stands about eight feet tall and has barely
+enough room for three, maybe four people of human height to stand
+comfortably.  The interior smells of rotten flesh and contaminated water. 
+In the middle of the tent stands a tiny, ironwork brazier, which gives
+off a faint amount of heat.  Woven blankets and hides lie on the floor of
+the tent, offering but little comfort from the hard, sandy ground. 
+Hanging from a support pole in the ceiling of the tent there is an unlit
+lantern.  Shadows clamber around the corners of the tent.
+~
+*CF
+[Ssleestaq] the preyless hunter
+~
+167251968 10 5 0
+D3
+~
+~
+131 -1 63010 10 10 5
+E
+tent 1 west~
+This rectangular tent is constructed from supple but dried reeds and
+pieces of animal skin.  Two large, shaggy furs hang from the west end of
+the central tent pole.  Between the two skins runs a seam along where
+leather straps can securely fasten the two flaps closed.
+~
+E
+flaps~
+The two flaps of skin hang limply at the western end of the tent.  The
+flaps can easily be parted though.
+~
+E
+pole ceiling~
+A wide, supple reed runs the length of the tent's ceiling, supporting the
+fabric of animal hides hanging off of it.  A chain hangs from this
+central support and from it, a lantern swings gentle from side to side.
+~
+E
+unlit lantern~
+Unlike most lanterns which hold oil, this one holds a simple, fat candle. 
+The lantern is forged from pieces of iron melded together and curled with
+an eye for detail.  Triangles of glass with a shiny, metallic backing
+line the interior of the lantern with the apparent purpose of directing
+all the light out of one panel.
+~
+E
+woven blankets~
+A few old, woven blankets lie on the floor of the tent.  The blankets,
+though riddled with holes and tears, look well cared for.  Woven from
+plant fibers, the blankets are a little rougher than you would like.
+~
+E
+hides~
+The majority of the animal skins the tent fabric is composed of are
+small, furry, and soft.  Many of them remind you of desert hare skins. 
+The others look to be either camel or lizard hides.
+~
+E
+brazier ironwork ~
+Forged completely from iron, the brazier is very elegant in design.  It
+has a flowing rim and curving legs.  Pieces of rose-colored glass are set
+into some of the ironwork, making the simple fire brazier a work of art.
+~
+A
+light~
+lantern lamp~
+if( !rflag( lit, room ) )
+
+  if( find_stat( ch, int ) > random( 9, 12 ) ) {
+  act_tochar( #ponder, ch );
+  wait( 2 );
+  act_tochar( #idea, ch );
+  wait( 2 );
+  act_tochar( #lighting, ch );
+  act_notchar( #rlightning, ch );
+set_rflag( lit, room );
+  wait( 2 );
+  act_tochar( #noshadows, ch );
+  }
+else
+  act_tochar( #noidea, ch );
+else
+  act_tochar( #donelitdetails, ch );
+~
+E
+donelitdetails~
+The lantern has already been lit and casts its light about the room,
+dispelling all shadows and revealing many previously concealed details in
+the old tent.
+~
+E
+ponder~
+You ponder for a moment on how to light the lantern.
+~
+E
+idea~
+Finally, after pondering the problem for several moments, you get a
+marvelous idea!
+~
+E
+noidea~
+After a few moments of thought, you have no idea what to do with the
+lantern.  It's just a lantern anyway.
+~
+E
+lighting~
+Picking up a hot coal from the flaming brazier with a set of tongs lying
+beside it, you lift the hot coal up and light the lantern.
+~
+E
+rlightning~
+With a set of tongs, $n takes a hot coal out of the flaming brazier
+and lights the old lantern which hangs above.
+~
+E
+noshadows~
+The lantern's light casts out the shadows in the room, revealing many
+previously concealed details.
+~
+!
+0 0 0
+A
+look~
+concealed details~
+if( rflag( lit, room ) )
+act_tochar( #details, ch );
+else
+act_tochar( #not, ch );
+~
+E
+details~
+All about the room, there are details you previously missed.  There are
+numerous hieroglyphic panels and sketchings, as well as a drawing.
+~
+E
+not~
+You don't see that here.
+~
+!
+0 0 0
+A
+look~
+panels~
+if( rflag( lit, room ) )
+  act_tochar( #panels, ch );
+else
+  act_tochar( #not, ch );
+~
+E
+not~
+You don't see that here.
+~
+E
+panels~
+There are three panels of stone that bear hieroglyphics.  One is made of
+quartz, one is made of granite, and the last is made of sandstone.  Each
+appears to have been sanded clean of detail.
+~
+!
+0 0 0
+A
+look~
+drawing sketching~
+if( rflag( lit, room ) )
+act_tochar( #draw, ch );
+else
+act_tochar( #not, ch );
+~
+E
+not~
+You don't see that here.
+~
+E
+draw~
+A faded charcoal sketch is tacked to the side of the tent.  Previously
+veiled in darkness, the sketch depicts a crabman dressed in robes going
+into the forest and bowing to greet the trees in a solemn gesture of
+peace.  In another part of the sketch, once the robed crabman has bowed
+and greeted the trees, the trees in turn bow back.
+~
+!
+0 0 0
+A
+~
+~
+if( rflag( lit, room ) ) {
+act_room( #flicker, ch );
+remove_rflag( lit, room );
+continue;
+}
+else
+continue;
+~
+E
+flicker~
+The lantern light flickers and dies as a breeze enters the room from the
+west.
+~
+!
+3 0 8
+2425 17 100 -2 0
+1472 9 1509949540 3 0
+2014 17 1509949540 -1 0
+54 17 1509949540 -1 0
+24 17 1509949540 -1 0
+2365 17 1509949449 -2 0
+-1
+S
+
+#63012
+Red Desert Path - Before A Colossal Sand Castle~
+Blocks of red granite run parallel to one another as they create a
+north-south section through part of the Naraki Desert.  Located to the east
+of the path lies a sandstone castle of colossal size and architectural
+complexity.  Towers rise off the main castle wall at the corners of the
+massive fortification.  Stained glass windows with frames of petrified
+bark are set into both the castle and tower walls while the castle itself
+is surrounded by a moat of brown silt.  The red granite blocks part
+briefly at the entrance to the castle, right in front of an opaque glass
+drawbridge.  Smaller, less grandiose castles of sand stand among the
+dunes along the western horizon.
+~
+*CF
+~
+167251976 10 9 0
+D0
+~
+~
+0 -1 63015 10 10 5
+D1
+opaque glass drawbridge~
+opaque glass drawbridge~
+107 -1 63013 10 10 5
+D2
+~
+~
+0 -1 63009 10 10 5
+D3
+~
+~
+0 -1 63017 10 10 5
+E
+opaque glass drawbridge~
+Forged from melted sand, the castle's drawbridge is one solid piece of
+thick glass.  The glass is opaque and framed in heavy bronze.  Upon the
+center of the drawbridge is a coat of arms.  The drawbridge appears to
+some how lower, providing a bridge for the moat of brown silt encircling
+the castle.
+~
+E
+stained glass windows~
+The stained glass windows are composed of slim ingots of colored red,
+black, blue, clear, and tan glass which have been pinched between bronze
+framework patterns.  Predominant among the window glasses is a theme of
+the ocean.  Within the patterns of glass strange, multi-colored fish and
+grasses swim through watery depths.
+~
+E
+walls castle~
+The walls of the castle stand tall and wide, topped by dovetailing
+parapets.  The surface of the walls have a glossy look to them which is a
+result of a special resin which has been used to coat its surface. 
+Instead of being built out of individual blocks of stone, the red, sandy
+walls are sculpted from the sands of the desert itself and hardened with
+this resin.  Lines are engraved into the walls to give the illusion of
+stone.
+~
+E
+towers~
+Towers of sculpted sand emerge from the corner walls of the grand
+fortress The dimensions seem all wrong, however.  They seem too stilted
+and flat to actually be part of the castle structure.
+~
+E
+coat of arms~
+A three-part coat of arms has been etched into the surface of the
+drawbridge.  The first part consists of a shield bearing the emblem of a
+pyramid.  Over the pyramid, forming the second part, rise great storm
+clouds and a descending bolt of lightning.  To either side of the etched
+pyramid, broken chains grasped in crabman claws make up the third part of
+the emblem.
+~
+E
+path blocks red granite~
+Rectangular blocks of red granite demarcate a path through the red sand
+desert, from north to south.  Each block has been polished and smoothed
+and bears not a single blemish.
+~
+E
+silt moat~
+A sea of silt completely encircles the colossal sand castle, making
+passage over its drawbridge the only possible way into it.  To either
+side of the moat's shore stand feline statues.
+~
+A
+knock~
+opaque glass drawbridge~
+if( rflag( status0, find_room( 63009 ) ) )
+if( !is_open( room, east ) ) {
+act_tochar( #knock, ch );
+act_notchar( #rknocks, ch );
+}
+else
+act_tochar( #why, ch );
+else
+act_tochar( #barred, ch );
+~
+E
+knock~
+You cannot walk up and knock on the door.  Without the drawbridge of
+opaque glass being lowered, you cannot cross the moat of silt.
+~
+E
+rknocks~
+$n makes a move to cross the moat of silt to knock on the 
+drawbridge, but looks to have thought better of it.
+~
+E
+why~
+If the drawbridge of opaque glass has already been lowered, why would you
+need to knock on it?
+~
+E
+barred~
+It looks as though the glass drawbridge has been barred shut.
+~
+!
+13 0 0
+A
+bash~
+opaque glass drawbridge~
+if( !is_open( room, east ) )
+  if( !rflag( status0, find_room( 63009 ) ) )
+  if( find_skill( ch, bash ) > random( 4, 10 ) )
+  if( find_stat( ch, str ) > random( 13, 21 ) ) {
+  act_tochar( #bash, ch );
+  act_notchar( #rbash, ch );
+  set_rflag( status0, find_room( 63009 ) );
+  wait( 1 );
+  act_tochar( #splinters, ch );
+  damage( mob, ch, 6d6+10, physical, "a few shards of flying glass" );
+  open( room, east );
+}
+else {
+  act_tochar( #feeble, ch );
+  act_notchar( #rfeeble, ch );
+}
+else {
+  act_tochar( #nobash, ch );
+  act_notchar( #rnobash, ch );
+}
+else {
+  act_tochar( #noneed, ch );
+  end; 
+}
+else
+  act_tochar( #open, ch );
+if( rflag( reset2, find_room( 48029 ) ) )
+  if( random( 1, 10 ) == 1 ) {
+  remove_rflag( reset2, find_room( 48029 ) );
+  act_tochar( #summoned, ch );
+  act_notchar( #rsummoned, ch );
+  mload( 1452, room );
+  attack( mob, ch, 5d6+5, "sandy tendril" );
+}
+~
+E
+alreadyopen~
+The drawbridge of opaque glass is already open.
+~
+E
+bash~
+Having to cross the moat of silt surrounding the castle to do so, you
+leap across.  You slam yourself into the drawbridge of opaque glass in an
+effort to bash the drawbridge open.
+~
+E
+rbash~
+$n jumps across the moat of silt and slams into the drawbridge of 
+opaque glass.
+~
+E
+noneed~
+There does not seem a need for that.  Why would you want to risk injury,
+destroying it for no reason?
+~
+E
+nobash~
+As you throw yourself across the moat of silt and slam into the
+drawbridge of opaque glass, you succeed only in rattling your teeth.
+~
+E
+rnobash~
+Ineptly, $n throws $mself across the moat of silt and crashes against
+the drawbridge of opaque glass. Ouch, that must have hurt!
+~
+E
+feeble~
+As you slam yourself into the drawbridge of opaque glass, it gives
+slightly, but remains firmly in place.  Perhaps if you were a bit
+stronger you could bash it open.
+~
+E
+rfeeble~
+$n makes a feeble attempt at bashing the drawbridge of opaque glass 
+open. Apparently it's stronger than $s bash.
+~
+E
+splinters~
+Fragments of glass fly everywhere as the heavy drawbridge of glass
+splinters slightly and falls open.
+~
+E
+summoned~
+Your efforts concerning the drawbridge of opaque glass have disrupted one
+of the denizens living in the moat of silt.  A large beast covered with
+sand rises up with tendrils of sand flailing wildly.
+~
+E
+rsummoned~
+Disturbed by $n's effort with the drawbridge, a silt monster, 
+with tendrils of sand flailing wildly, it rises up from the moat of silt.
+~
+E
+open~
+The drawbridge of glass is already open!
+~
+!
+0 0 0
+A
+look~
+1 east~
+if( !is_open( room, east ) ) 
+act_tochar( #isup, ch );
+else
+act_tochar( #isdown, ch );
+~
+E
+isup~
+The opaque glass drawbridge is up.
+~
+E
+isdown~
+The opaque glass drawbridge is down.
+~
+!
+0 0 0
+A
+insert place affix implant use~
+pebble shiny nice eye~
+if( rflag( status0, find_room( 63021 ) ) )
+  if( rflag( reset0, room ) )
+  if( has_obj( 2017, ch ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #placing, ch );
+  act_notchar( #rplacing, ch );
+  obj = has_obj( 2017, ch );
+  junk_obj( obj, 1 );
+  wait( 3 );
+  act_tochar( #wink, ch );
+  act_notchar( #rwink, ch );
+  wait( 3 );
+  act_room( #lowers, ch );
+  open( room, east );
+  }
+else
+  act_tochar( #nopebble, ch );
+else
+  act_tochar( #already, ch );
+else
+  act_tochar( #closes, ch );
+~
+E
+placing~
+You take a pebble, which appears to be the same size as the statue's
+missing eye, and place it into the empty eye socket.
+~
+E
+rplacing~
+$n pulls out a nice-looking pebble and places it in the empty eye socket 
+of the feline statue.
+~
+E
+wink~
+It might have been your imagination, but once you placed the pebble in the 
+cat's head, it seems to have winked at you.
+~
+E
+rwink~
+You have been in the desert much too long. As soon as $n
+places the pebble in the cat statue's empty eye socket, you 
+quite clearly see the feline statue wink at $m.
+~
+E
+nopebble~
+You have nothing of the appropriate size and shape to place in the cat's
+empty eye socket.
+~
+E
+already~
+A nice-looking pebble already gleams in the cat's eye socket.
+~
+E
+lowers~
+Slowly, the drawbridge of opaque glass lowers.
+~
+E
+closes~
+A thin eye lid of glass covers the empty socket, preventing anything from
+being placed in it.
+~
+!
+0 0 0
+A
+look~
+feline statues~
+if( rflag( reset0, room ) )
+act_tochar( #emptysocket, ch );
+else
+act_tochar( #pebbled, ch );
+~
+E
+emptysocket~
+To either side of where the drawbridge is suppose to come to rest on the
+shore, stand two statues of sleek, hunting cats.  Each statue is forged
+from opaque, black glass as shiny as obsidian and has tiny, pebble-sized
+emeralds for eyes.  Their mouths are agape in ferocious but silent roars
+as they face outward, away from the castle protectively.  One of the
+cats' eyes is missing, though.
+~
+E
+pebbled~
+To either side of where the drawbridge is suppose to come to rest on the
+shore, stand two statues of sleek, hunting cats.  Each statue is forged
+from opaque, black glass as shiny as obsidian and has tiny, pebble-sized
+emeralds for eyes.  Their mouths are agape in ferocious but silent roars
+as they face outward, away from the castle protectively.  One of the cats
+has a loose but nice-looking pebble for an eye, rather than an emerald.
+~
+!
+0 0 0
+A
+look~
+eye socket missing~
+if( rflag( reset0, room ) )
+act_tochar( #nopebble, ch );
+else
+act_tochar( #pebbled, ch );
+~
+E
+nopebble~
+The cat which stands to the left of the drawbridge landing is missing its
+right eye.  Even so, it manages to look even more menacing.
+~
+E
+pebbled~
+The cat which stands to the left of the drawbridge has one emerald eye
+and one loose pebble for an eye.  The statue to the right has two,
+gleaming emerald eyes.
+~
+!
+0 0 0
+A
+remove get steal~
+eye pebble~
+if( is_name( arg, "pebble eye" ) ) {
+  if( !rflag( reset0, room ) ) {
+    set_rflag( reset0, room );
+    act_tochar( #removing, ch );
+    act_notchar( #rremoving, ch );
+    wait( 1 );
+    act_tochar( #swipe, ch );
+    act_notchar( #rswipe, ch );
+    damage( mob, ch, 4d5+3, physical, "the feline statue's wicked claw", "being snapped in two by a feline statue's swipe" );
+    obj_to_room( oload( 2017 ), room );
+    wait( 3 );
+    act_room( #raises, ch );
+    close( room, east );
+    end;
+  }
+  else {
+    act_tochar( #nopebble, ch );
+    act_tochar( #noway, ch );
+    act_notchar( #rnoway, ch );
+    damage( mob, ch, 4d5+3, physical, "the feline statue's wicked claw", "being snapped in two by a feline statue's swipe" );
+    close( room, east );
+    end;
+  }
+}
+continue;
+~
+E
+removing~
+With relative ease, you pluck the pebble out of the left feline statue's
+eye socket.
+~
+E
+rremoving~
+$n reaches over and plucks the pebble-eye out of the left feline statue.
+~
+E
+swipe~
+Before you can pocket the nice-looking pebble, the statue becomes
+partially animate and takes a swipe at you with its claws.  The statue
+then resumes its sleep after it has knocked the pebble from your hands.
+~
+E
+rswipe~
+You watch in awe as the feline statue comes to life and swipes at $n,
+knocking the pebble from $s hands.
+~
+E
+nopebble~
+There is nothing like that in the cat statue's eye socket.
+~
+E
+raises~
+Once the feline statue turns back into glass, the drawbridge begins to
+slowly raise.
+~
+E
+noway~
+The statue of the feline comes to life and swats at you!
+~
+E
+rnoway~
+The feline statue comes to life and swats at $n!
+~
+E
+resume~
+The feline resumes the form of a stone statue.
+~
+!
+0 0 0
+A
+custom~
+0 red sand clump pinch handful~
+if( mob_in_room( 1574, room ) )
+  act_tochar( #custom, ch );
+else
+  act_tochar( #noone, ch );
+continue;
+~
+E
+custom~
+The young crabman looks very happy playing with the sand.
+~
+E
+noone~
+You are not in a shop.
+~
+!
+0 0 0
+A
+~
+~
+acode( find_room( 63021 ), 2 );
+~
+!
+1 0 13
+1574 9 1509949540 3 0
+1575 9 1509949540 3 0
+2365 17 1509949449 -2 0
+-1
+S
+
+#63013
+Inside the Colossal Castle~
+Behind a door of opaque glass set into the west wall spreads a vast room. 
+While the interior of this sand castle lacks many of the fascinating
+architectural feats the exterior displayed, it nevertheless has a charm
+all its own.  A tattered but serviceable rug stretches from the threshold
+to a dais, upon which stands a throne of sparkling glass.  Hung upon the
+sandy walls are a variety of tapestries and rough sketches.  At each
+corner of the sand-sculpted chamber, there are small iron braziers.
+~
+~
+167247873 0 9 0
+D1
+~
+~
+235 -1 63014 10 10 5
+D3
+opaque glass drawbridge~
+opaque glass drawbridge~
+107 -1 63012 10 10 5
+E
+opaque door **M**~
+Though opaque, you can tell from the glare and the door's texture that
+someone has managed to forge glass into a sheet large enough and thick
+enough to use as a door to ones abode.  The door has a faint, reddish
+cast to it and has been made in the shape of a drawbridge.
+~
+E
+variety tapestries~
+The tapestries are made of woven grasses which have been either dyed or
+pigmented in some way.  Most of the tapestries consists of nothing more
+than everyday scenes of life that the crab people living in this part of
+the Naraki Desert share.
+~
+E
+scenes everyday life~
+In the first scene, two larger, older looking craw people busy themselves
+with watching over a pack of smaller crabs.  In the second, a crab person
+is sitting atop a dune of sands, strumming a stringed-instrument with its
+claw.  In the third, a robust crabman stands over a hot forge, with a
+hammer in one hand and what looks to be an ingot in the other.  In the
+final scene, a pair of crab people, identical in every respect, stand
+beneath the two moons and a dim aura of light surrounds them.
+~
+E
+sketches~
+There are two sketches, both of which represent the same thing, but from
+different angles.  Each sketch is a diagrammed representation of the
+construction of a vast pyramidal structure.  The diagrams are drawn upon
+sheets of beaten papyrus paper with pieces of charcoal and look
+relatively well preserved.  The only thing which belies their age are the
+cracked, upturned corners of the second diagram.
+~
+E
+diagrammed representations~
+The sketches are divided into several sections, with each section
+depicting yet another stand in the structure's completion.  From the
+underground foundation, to its tip, from its base to its limestone
+sheathing, every step of the pyramid's construction has been carefully
+documented.  Prominent in both diagrams is the use of crabmen as slaves
+and laborers.
+~
+E
+cracked upturned corners **M**~
+The resin applied to the surface of the sketched diagrams appears to have
+broken down at the corners of the second sketch.  This is probably
+because the second section of sketched papyrus is almost twice as thick
+as the first.
+~
+E
+dais **M**~
+The creatures who constructed this place have a knack for sculpted sand
+into the shapes they desire and for making the sand harden.  The dais
+stands at the edge of the long rug which extends towards the doorway.  It
+is round in shape and stands only a foot or two off the ground.  The
+dais, like the walls, ceiling and floor of the sand castle, is sculpted
+from red sand.  Atop the raised platform sits a throne made entirely of
+glass.
+~
+E
+throne **M**~
+Made entirely of glass, an ornate throne sits atop the sculpted sand dais. 
+Unlike the opaque door of glass which serves as the drawbridge to the
+castle, the glass the throne is made from is clear as crystal and not
+solely red in color.  Each section of the throne has been forged from a
+different color of class.  The arms of the throne are clear, the seat of
+the throne is red, the base and sides of the throne are a light brown,
+and the back of the throne is of a rich blue.  The surfaces of the throne
+are etched with indecipherable glyphs and symbols.
+~
+E
+rug~
+Woven from thin strands of grass and plant fibers, this old and tattered
+rug stretches the length of the room.  Though the edges are worn and the
+dyes are faded, you can still see the sharp, geometric patterns which
+adorn the narrow carpet.
+~
+E
+geometric patterns~
+The geometric patterns consists of a series of concentric squares,
+circles, and triangles.  Each of the patterns seems to revolve around one
+large triangle, which is situated at the center of the rug.
+~
+E
+center triangle~
+At the center of the rug, there is a triangle about a foot long.  Around
+it, a multitude of geometric patterns spawn across the surface of the rug
+wildly.  The pigments on and around the triangle are heavily worn, as
+though people stand in this spot more oft than not to address their
+grievances to the occupant of the throne.
+~
+A
+~
+sketch~
+if( rflag( reset0, room ) ) 
+  if( random( 1, 10 ) == 1 ) {
+  act_tochar( #sketchfalls, ch );
+  act_notchar( #rsketchfalls, ch );
+  obj_to_room( oload( 1895 ), room );
+  remove_rflag( reset0, room );
+  }
+else {
+  act_tochar( #crumble, ch );
+  remove_rflag( reset0, room );
+  act_notchar( #rcrumble, ch );
+  }
+else
+  act_tochar( #already, ch );
+~
+E
+already~
+The diagram has already been moved aside and whatever used to be behind
+it, taken.
+~
+E
+sketchfalls~
+Moving the diagram aside, another sketch falls to the floor like a
+feather.
+~
+E
+rsketchfalls~
+$n touches one of the diagrammed sketches on the wall 
+and moves it. Another sketch, once stuck behind it, floats to the floor
+~
+E
+crumble~
+As you move the diagrammed sketch aside, the second sketch behind it
+falls to the floor and crumbles to dust.
+~
+E
+rcrumble~
+You watch as $n moves one of the diagrammed sketches on
+the wall. As $e does so, another sketch, once trapped behind 
+the first, falls to the ground but crumbles when it reaches it.
+~
+!
+9 0 0
+A
+pull~
+lever~
+if( !rflag( status0, find_room( 63009 ) ) ) {
+  act_tochar( #barred, ch );
+  end;
+  }
+else {
+  act_tochar( #pulls, ch );
+  act_notchar( #rpulls, ch );
+  }
+wait( 2 );
+if( !is_open( room, west ) ) {
+  act_room( #opens, ch );
+  remove_rflag( reset0, find_room( 63012 ) );
+  open( room, west );
+  }
+else {
+  act_room( #closes, ch );
+  close( room, west );
+set_rflag( reset0, find_room( 63012 ) );
+  }
+~
+E
+barred~
+The lever inset into the wall beside the opaque glass drawbridge refuses
+to budge.  A beam of wood has been placed across the drawbridge and
+lever, barring the lever from operation.
+~
+E
+pulls~
+You pull the glass lever and hear the sounds of grinding glass as the
+gate's mechanisms begin to function.
+~
+E
+rpulls~
+$n reaches out and pulls a glass lever beside the opaque glass drawbridge. 
+Suddenly, you hear the sounds of glass scraping against glass.
+~
+E
+opens~
+The sound of grinding glass ceases and the drawbridge completes its descent.
+~
+E
+closes~
+The sound of grinding glass stops as the drawbridge is completely raised.
+~
+!
+0 0 0
+A
+stand~
+center middle design triangle~
+if( !is_open( room, east ) ) {
+  act_tochar( #steps, ch );
+  act_notchar( #rsteps, ch );
+  wait( 1 );
+  act_room( #throne, ch );
+  wait( 4 );
+  act_room( #opens, ch );
+  open( room, east );
+  }
+else {
+  act_tochar( #steps, ch );
+  act_notchar( #rsteps, ch );
+  wait( 1 );
+  act_room( #closes, ch );
+  close( room, east );
+  wait( 4 );
+  act_room( #throne2, ch );
+  }
+~
+E
+steps~
+You step upon the center of the design.  Slowly, the floor below your
+feet sinks into the ground a few inches, and you can hear the faint
+whiring as some type of mechanism spins.
+~
+E
+rsteps~
+As $n steps on the central design on the floor, the design
+sinks slightly into the  ground. Before long, you can hear the
+faint sound of whiring mechanisms.
+~
+E
+throne~
+With a slight whooshing of air, the throne and dais shift to one side
+with celerity, revealing a door behind it.
+~
+E
+throne2~
+With a slight whooshing of air, the throne and dais shifts to the side
+hastily, to conceal the door beyond them.
+~
+E
+opens~
+The door behind the throne rises up into the ceiling.
+~
+E
+closes~
+A slab of resin-coated sand descends from the top of the doorway behind
+the throne, sealing it.
+~
+!
+0 0 0
+A
+look~
+glyphs symbols~
+if( find_skill( ch, detect magic ) > random( 4, 7 ) ) 
+act_tochar( #runesrevealed, ch );
+else
+act_tochar( #normaldesc, ch );
+~
+E
+runesrevealed~
+Using your talents and experience with magic, you are able to discern
+that the runes pertain to a potent spell of concealment and opening.
+~
+E
+normaldesc~
+The glyphs and symbols appear to be nothing more than a system of writing
+that you do not understand.
+~
+!
+0 0 0
+A
+bar~
+drawbridge glass~
+if( !is_open( room, west ) )
+if( rflag( status0, find_room( 63009 ) ) ){
+act_tochar( #bars, ch );
+act_notchar( #rbars, ch );
+remove_rflag( status0, find_room( 63009 ) );
+}
+else 
+act_tochar( #already, ch );
+else
+act_tochar( #need, ch );
+~
+E
+bars~
+Picking up a beam of wood leaning in the corner, you slide it into groves
+to either side of the drawbridge of opaque glass, thus barring the door.
+~
+E
+rbars~
+$n bars the drawbridge of opaque glass with a beam of wood 
+which once rested in the corner of the chamber.
+~
+E
+already~
+The drawbridge of opaque glass has already been securely barred against
+intrusion.
+~
+E
+need~
+The drawbridge needs to be closed before it can be barred.
+~
+!
+0 0 0
+A
+unbar~
+glass drawbridge~
+if( !rflag( status0, find_room( 63009 ) )  ) {
+act_tochar( #unbar, ch );
+act_notchar( #runbar, ch );
+set_rflag( status0, find_room( 63009 ) ); 
+}
+else
+act_tochar( #already, ch );
+~
+E
+unbar~
+You lift the beam of wood out of its groves and put it back in the corner
+of the room.  The drawbridge of opaque glass is now unbarred.
+~
+E
+runbar~
+You watch as $n removes a beam of wood from across 
+the drawbridge of opaque glass and unbars the door.
+~
+E
+already~
+There is nothing in place over the drawbridge of opaque glass to bar it
+against intrusion.
+~
+!
+0 0 0
+1551 9 1509949540 3 0
+1552 9 1509949540 3 0
+2425 17 100 -2 0
+2425 17 100 -2 0
+2425 17 100 -2 0
+2425 17 100 -2 0
+2942 17 1509949540 -2 0
+-1
+S
+
+#63014
+Within a Sand-filled Tunnel~
+Sculpted in the same manner as the castles of sand which stand in the red
+desert, a tunnel extends to the east from the secret opening behind the
+dais.  The tunnel is taller than you might have expected, but a lot
+grimier too.  The walls are coated with a thin layer of slime and there
+are a couple of piles of bones stacked up along the floor.  On the floor,
+there is a large, metallic basin and set into the side wall is a length
+of iron chain.  From here, you can see that the tunnel does not extend
+much beyond this point. 
+~
+*CF
+~
+167247872 0 5 0
+D3
+secret door~
+secret door~
+171 -1 63013 10 10 5
+E
+secret opening~
+While there are no hints of this secret tunnel on the other side, here
+the door and mechanism are clearly discernible.  A small, adjustable
+block sticks out beside the door, just at its edge.
+~
+E
+walls slime layer **M**~
+As you examine the walls, you make two startling discoveries.  The first,
+is that the slime coating the walls smells more than yesterday's dung
+heap.  The second, is that the walls are not coated with slime, but
+instead, saliva.
+~
+E
+basin water **M**~
+The metallic basin at your feet is made of steel and has been bolted down
+to the floor.  The content of the basin looks to be water, but it is so
+cloudy and unappealing that you don't think drinking it would be such a
+good idea.  Along the side of the water basin, there is a panel of etched
+hieroglyphics.
+~
+E
+length iron chain~
+Securely fastened to the wall is a length of iron chain which hangs
+limply to the ground.  Around the chain fastener there are deep gouges in
+the hard, packed sand and crimson stains are smeared over some of them.
+~
+E
+crimson stains **M**~
+The crimson stains are indeed streaks of blood and a couple of them look
+fairly recent too.
+~
+1412 9 1509949540 3 0
+2942 17 1509949540 -2 0
+-1
+S
+
+#63015
+Red Desert Path~
+Impenetrable and immense, the sheltering walls of the canyon loom
+overhead to the east, its cliffs sloping inward towards the desert.  And
+to the west, spiraling dunes of sand emerge from an otherwise flat,
+scarlet plain of sand.  Between the two natural barriers runs a rough but
+visible trail.  To either side of the trail stand blocks of red granite,
+whose polished surfaces gleam.
+~
+*CF
+~
+167247872 10 9 0
+D0
+~
+~
+0 -1 63016 10 10 5
+D2
+~
+~
+0 -1 63012 10 10 5
+E
+canyon walls cliff~
+The granite walls of the sunken valley lie just to the east.  The wall
+here is so tall that cliffs are formed up above.  However, the canyon
+walls slope inward, making scaling the cliffs an impossible feat.  In
+places, the rough granite surfaces of the cliffs are tinged with red,
+marking them as a probable source for the granite blocks lining the edges
+of the desert path.
+~
+E
+spiraling dunes~
+Unlike barchan dunes whose sandy crescents dot the majority of the main
+desert, the crimsons sand here spiral around a central column of sand,
+creating a swirling design in the sandy canvas.  The dunes stand as tall
+as a hundred or so feet, and oft block what lies beyond.  Between two of
+the slimmer spiral dunes, though, you can catch a glimpse of a red,
+sandstone castle to the west!
+~
+E
+polished granite blocks~
+Each block has been cut with precision and in the exact same shape and
+size as the one next to it.  These rectangular blocks border the edge of
+a desert path which courses north to south through this red desert region. 
+The path looks well maintained and traveled.
+~
+2365 17 1509949449 -2 0
+2942 17 1509949540 -2 0
+-1
+S
+
+#63016
+Red Desert Path~
+Bordered on either side by blocks of polished red granite, a trail winds
+north to south through the red desert.  Dunes of impenetrable sand loom
+along the edge of the canyon to the east while to the south, you see the
+walls of some type of structure, possibly that of a castle.  To the south
+you can also see the tops of similar, castle-shaped structures.  There is
+also something strange about the sand to the south that might need
+further investigation.
+~
+*CF
+~
+167247880 10 9 0
+D0
+~
+~
+0 -1 48170 10 10 5
+D2
+~
+~
+0 -1 63015 10 10 5
+E
+blocks polished granite~
+Nearly identical in every respect, square blocks of red granite rise up
+out of the sand, as demarcations of the desert path.  The surfaces of the
+blocks are cool and smooth and bear no foreign symbols, unlike the marker
+stones in the sections of tan sand desert.
+~
+E
+castle castle-like tops~
+Indeed, off in the distance, you can see the battlements, parapets, and
+spiraling minarets of miniature castles.  About one-fourth the size of
+normal castles, these castles nevertheless look real.  The architecture
+from castle top to castle top differs as greatly as two blades of grass.
+~
+A
+disbelieve~
+wall living sand illusion 1 south~
+i = add( get_integer( ch, "/Cayln/Disbelieve" ), find_stat( ch, int ) );
+if( cflag( 57, ch ) )
+  if( rflag( reset0, room ) )
+  if( i > random( 10, 20 ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #concentrate, ch );
+  act_notchar( #rconcentrates, ch );
+  wait( 3 );
+  act_tochar( #shimmers, ch );
+  act_notchar( #rshimmers, ch );
+  wait( 2 );
+  wait( 1 );
+  act_tochar( #disappears, ch );
+  act_notchar( #rdisappears, ch );
+  remove_rflag( reset1, room ); 
+}
+else {
+  act_tochar( #invain, ch );
+  act_notchar( #rinvain, ch );
+}
+else 
+  act_tochar( #already, ch );
+else
+  act_tochar( #nogo, ch );
+~
+E
+concentrate~
+You stare intently at the wall of living sand and concentrate.
+~
+E
+rconcentrates~
+$n stops dead in $s tracks and begins looking at the wall
+of sand with intense concentration.
+~
+E
+shimmers~
+As you concentrate on the wall, the edges of it begin to shimmer slightly. 
+You recognize this for the illusion that it is.
+~
+E
+rshimmers~
+The edges of the living wall of sand begin to shimmer slightly, as though
+it were being illuminated from behind.
+~
+E
+disappears~
+Suddenly, with a loud *POP* and a rush of air, the wall disappears
+entirely. 
+~
+E
+rdisappears~
+Once $n begins calling the wall of living sand an illusion,
+everything becomes clear to you. The wall disappears out
+of sight with a loud *POP*.
+~
+E
+invain~
+As you bring your will to bear on the wall of living sand, you realize
+it's no use.  You cannot concentrate enough.
+~
+E
+rinvain~
+$n looks very frustrated as $e stares aimlessly at the 
+wall of living sand.
+~
+E
+already~
+The wall of living sand has already been dissipated.
+~
+E
+nogo~
+You don't know how to do that.
+~
+!
+0 0 0
+A
+~
+~
+i = random( 1, 10 );
+if( rflag( reset0, room ) )
+if( i == 1 )
+act_tochar( #wall1, ch );
+else if( i == 2 )
+act_tochar( #wall2, ch );
+else if( i == 3 )
+act_tochar( #wall3, ch );
+else if( i == 4 )
+act_tochar( #wall4, ch );
+else if( i == 5 )
+act_tochar( #wall5, ch );
+else if( i == 6 )
+act_room( #wall6, ch );
+else if( i == 7 )
+act_room( #wall7, ch );
+else if( i == 8 )
+act_room( #wall8, ch );
+else if( i == 9 )
+act_room( #wall9, ch );
+else
+act_room( #wall10, ch );
+else
+continue;
+~
+E
+wall1~
+The living wall of sand moves with the viscosity of liquid, blocking your
+every move.
+~
+E
+wall2~
+Large hands of sand emerge from the wall, holding you back.
+~
+E
+wall3~
+As you try and advance past the wall, its sands churn and shifts,
+threatening to surround you! Luckily, you jump back just in time.
+~
+E
+wall4~
+The wall of sand moves to block your passage to the south, as though it
+were a living thing.
+~
+E
+wall5~
+Just when you think you can dodge past the wall through an opening in it,
+the sides of the walls merge together, and narrowly miss trapping you in
+between.
+~
+E
+wall6~
+A face emerges from the living wall of sand and says:
+"Oh dear! I'm afraid you'll have to go around."
+~
+E
+wall7~
+A face emerges from the living wall of sand and says:
+" I'm sorry, I can't let you pass."
+~
+E
+wall8~
+A face emerges from the living wall of sand and says:
+"Leave this place, before someone gets hurt."
+~
+E
+wall9~
+A face emerges from the living wall of sand and says:
+"Leave this place, before someone else gets hurt."
+~
+E
+wall10~
+A face emerges from the living wall of sand and says:
+"You better leave now, before someone else is murdered."
+~
+!
+3 0 4
+A
+look~
+wall living sand illusion 1 south~
+if( rflag( reset0, room ) )
+act_tochar( #wall, ch );
+else
+act_tochar( #nowall, ch );
+~
+E
+wall~
+To the south, a wall of sand stands in your way.  The edges of the sandy
+wall are wispy and almost non-existent but the rest of it churns and
+shifts in a solid, massive barrier.
+~
+E
+nowall~
+To the south along the sand, you can barely see what remains of an
+once-complex illusion.
+~
+!
+0 0 0
+A
+1 east 1 west~
+*~
+acode( find_room( 48006 ), 1 );
+~
+!
+0 0 0
+1573 9 1509949540 3 0
+1573 9 1509949540 3 0
+2365 17 1509949449 -2 0
+2942 17 1509949540 -2 0
+-1
+S
+
+#63017
+In the Center of the Red Desert Expanse~
+Blood-red sand fills your gaze in every direction as rising dunes dot the
+landscape.  Blocks of red granite, set in pairs, lie to the far east,
+denoting a path through the desert.  Across from the path stands an
+imposing castle.  Castles of sand lie in all other directions but they
+are no where near as large or impressive as the easternmost one.  Swirls
+of sand cascade over the surface of a stone formation to the near south.
+~
+*CF
+~
+167251968 10 9 0
+D0
+~
+~
+0 -1 63022 10 10 5
+D1
+~
+~
+0 -1 63012 10 10 5
+D2
+~
+~
+0 -1 63021 10 10 5
+D3
+~
+~
+0 -1 63018 10 10 5
+E
+sandstone stone formations~
+The sandstone formations which rise to the south appear at first to be
+nothing more than tiny sand dunes.  As you stare at them a moment,
+though, you can make out distinct, statuesque forms among them.
+~
+A
+~
+~
+acode( find_room( 63021 ) , 2 );
+~
+!
+1 0 15
+A
+custom~
+white sand clumps pinch handful~
+acode( find_room( 63012 ), 8 );
+continue;
+~
+!
+0 0 0
+1574 9 1509949540 3 0
+2365 17 1509949449 -2 0
+-1
+S
+
+#63018
+Before Two Castles of Sand~
+A plain of red sand, hot as burning coals and red as blood stretches out
+before you and beyond to the east.  The arid land undulates as dunes of
+sand rise and fall across its surface.  Ascending out of the sands,
+though, stand two castles.  Each castle is built entirely from sand and
+stands of near-equal height.  Their walls have the look of being built
+from individual blocks of cut, red sandstone and gleam with a wet look. 
+The castle of sand to the west has short, stocky battlements and spindly
+minarets rising off its sides.  The castle which stands adjacent to it,
+though, has simpler walls and towers.  A drawbridge of woven grass is set
+into the small castle to the west while a mass of beaten chitin lies up
+against the castle of sand to the north.  The top of a squat tower can be
+seen to the south.  In the distance, to the northwest, you can see the
+tip of a very large pyramid rising above the castles.
+~
+[Ssleestaq] should be stretches out to the east and south, the 'you' implies i'm facing south which is damned odd.
+[Ssleestaq] smartass :P perhaps you should knock.
+..
+~
+167247872 10 9 0
+D0
+~
+~
+171 -1 63019 10 10 5
+D1
+~
+~
+0 -1 63017 10 10 5
+D2
+~
+~
+0 -1 63001 10 10 5
+D3
+woven drawbridge of grass~
+woven drawbridge grass~
+235 -1 63020 10 10 5
+E
+squat tower~
+To the far south stands a squat tower sculpted from sand.  It has no
+windows or apparent doors that you can see, but it does seem to be a
+purposefully constructed building.
+~
+E
+l west~
+The castle of sand which rises to the west is small but detailed.  It has
+short, stocky battlements and blood-red minarets branching off of its
+side towers.  The castle has no windows, but it does possess a drawbridge
+of tightly woven grass.  A plume of smoke rises up from the center of the
+castle's roof.
+~
+E
+1 north~
+Modest both in design and size, the castle of sand which stands to the
+north has no windows and but two towers.  The castle's front is graced by
+simple arches and modest pieces of statuary.
+~
+E
+mass beaten chitin~
+The mass of chitin shell set into the front of the castle has been
+hammered into a roughly rectangular shape.  Attached to the chitin is a
+strip of hardened leather, like a handle.  The hammered mass, on closer
+inspection, is a swinging door.
+~
+E
+grass woven drawbridge~
+Bound together with strips of leathery hide, sections of long-stemmed,
+desert grass have been woven together into a drawbridge.  Judging from
+the chains hanging down on either side of the gate, it looks serviceable. 
+Perhaps you should knock?
+~
+E
+walls blocks red sandstone ~
+On closer examination, the walls of the sand castles are not built from
+blocks of sand stone.  Rather, the castles have been sculpted by hand. 
+Lines carefully drawn into the sand gives the appearance of individual
+stone blocks.  Every surface has been coated with a thick, clear resin
+which lets the sand maintain its shape.
+~
+E
+modest statuary~
+The statuary out front of the sand castle to the north consists of a few
+simple sandstone sculptures of miniature crabs.  The crab statuary rests
+on the ground, all around the base of the castle.
+~
+E
+pyramid monument tip~
+A pyramidal structure looms to the northwest.  Its polished, pale-green
+limestone practically gleams.  Along the upper part of the pyramid, near
+the tip, you can barely discern several tracks of hieroglyphics.
+~
+A
+knock~
+drawbridge woven grass~
+if( rflag( status2, find_room( 63021 ) ) )
+if( !is_open( room, west ) ) {
+act_tochar( #knock, ch );
+act_notchar( #rknock, ch );
+wait( 3 );
+act_room( #panel, ch );
+wait( 3 );
+act_room( #pulleys, ch );
+wait( 1 );
+act_room( #openthud, ch );
+open( room, west );
+show( ch, room, west );
+}
+else 
+act_tochar( #alreadyopen, ch );
+else {
+act_tochar( #justasbar, ch );
+act_notchar( #rjustasbar, ch );
+}
+~
+E
+knock~
+Feeling a little silly, you knock upon the drawbridge of woven grass.
+~
+E
+rknock~
+$n knocks on the drawbridge of woven grass. How peculiar.
+~
+E
+justasbar~
+As you knock upon the drawbridge, you can hear the sound of a bolt or
+bar being placed behind it.
+~
+E
+rjustasbar~
+As $n knocks upon the drawbridge, you can hear the sound of a bolt or
+bar being slid into place. 
+~
+E
+alreadyopen~
+The drawbridge is already open, so there is no need to knock.
+~
+E
+panel~
+A flap of grass in the drawbridge swings open, and behind the small
+window, you feel something is looking you over.  The flap closes after a
+second or two.
+~
+E
+pulleys~
+You can hear the grinding sound of some type of mechanism being operated, and
+the drawbridge of woven grass begins to fall.
+~
+E
+openthud~
+The drawbridge of woven grass lowers with an audible whoosh.
+~
+!
+13 0 0
+A
+bash~
+drawbridge woven grass~
+if( !is_open( room, west ) )
+  if( !rflag( status2, find_room( 63021 ) ) )
+  if( find_skill( ch, bash ) > random( 4, 10 ) )
+  if( find_stat( ch, str ) > random( 13, 21 ) ) {
+  act_tochar( #bash, ch );
+  act_notchar( #rbash, ch );
+  set_rflag( status2, find_room( 63021 ) );
+  wait( 1 );
+  act_tochar( #opens, ch );
+  open( room, west );
+  }
+else {
+  act_tochar( #feeble, ch );
+  act_notchar( #rfeeble, ch );
+  }
+else {
+  act_tochar( #nobash, ch );
+  act_notchar( #rnobash, ch );
+  }
+else
+  act_tochar( #noneed, ch );
+else
+  act_tochar( #alreadyopen, ch );
+~
+E
+bash~
+You slam yourself into the drawbridge of woven grass in an effort to bash
+the door open.
+~
+E
+rbash~
+$n slams into the drawbridge of woven grass.
+~
+E
+noneed~
+There does not seem a need for that.  The drawbridge of woven grass looks
+like it is easily opened.
+~
+E
+nobash~
+As you slam into the drawbridge of woven grass, you succeed only in
+rattling your teeth.
+~
+E
+rnobash~
+Ineptly, $n throws $mself against the drawbridge of woven grass.
+Ouch, that must have hurt!
+~
+E
+feeble~
+As you slam yourself into the drawbridge of woven grass, it gives
+slightly, but remains firmly in place.  Perhaps if you were a bit
+stronger you could bash it open.
+~
+E
+rfeeble~
+$n makes a feeble attempt at bashing the drawbridge of woven grass
+open. Apparently it's much tougher than $s bash.
+~
+E
+opens~
+You can hear the barring mechanism splinter as the drawbridge of woven
+grass bursts open.
+~
+E
+alreadyopen~
+The drawbridge of woven grass is already open.
+~
+!
+0 0 0
+A
+bash~
+door beaten chitin~
+if( !is_open( room, north ) )
+  if( !rflag( status1, find_room( 63021 ) ) )
+  if( find_skill( ch, bash ) > random( 4, 10 ) )
+  if( find_stat( ch, str ) > random( 13, 21 ) ) {
+  act_tochar( #bash, ch );
+  act_notchar( #rbash, ch );
+  set_rflag( status1, find_room( 63021 ) );
+  wait( 1 );
+  act_tochar( #opens, ch );
+  open( room, west );
+}
+else {
+  act_tochar( #feeble, ch );
+  act_notchar( #rfeeble, ch );
+}
+else {
+  act_tochar( #nobash, ch );
+  act_notchar( #rnobash, ch );
+}
+else
+  act_tochar( #noneed, ch );
+else
+  act_tochar( #alreadyopen, ch );
+~
+E
+alreadyopen~
+The door of beaten chitin is already open.
+~
+E
+bash~
+You slam yourself into the door of beaten chitin in an effort to bash the
+door open.
+~
+E
+rbash~
+$n slams into the door of beaten chitin.
+~
+E
+noneed~
+There does not seem a need for that.  The door of beaten chitin looks
+like it is easily opened.
+~
+E
+nobash~
+As you slam into the door of beaten chitin, you succeed only in rattling
+your teeth.
+~
+E
+rnobash~
+Ineptly, $n throws $mself against the door of beaten chitin. 
+Ouch, that must have hurt!
+~
+E
+feeble~
+As you slam yourself into the door of beaten chitin, it gives slightly,
+but remains firmly in place.  Perhaps if you were a bit stronger you
+could bash it open.
+~
+E
+rfeeble~
+$n makes a feeble attempt at bashing the door of beaten chitin
+open. Apparently it is a lot tougher than $e suspected.
+~
+E
+opens~
+You can hear the barring mechanism splinter as the door of beaten chitin
+bursts open.
+~
+!
+0 0 0
+A
+open~
+door beaten chitin~
+if( !rflag( status1, find_room( 63021 ) ) )  {
+act_tochar( #barred, ch );
+end;
+}
+if( !is_open( room, north ) ) {
+act_room( #opens, ch );
+open( room, north );
+show( ch, room, north );
+}
+else
+act_tochar( #already, ch );
+~
+E
+barred~
+The door of beaten chitin appears to be barred from the inside.
+~
+E
+opens~
+The door of beaten chitin swings open.
+~
+E
+already~
+The mass of beaten chitin has already been moved.
+~
+!
+0 0 0
+A
+look~
+hieroglyphics glyphics tracks~
+if( has_obj( 1549, ch ) ){
+obj = has_obj( 1549, ch );
+act_tochar( #ctrans, ch, obj );
+act_notchar( #rctrans, ch, obj );
+wait( 1 );
+act_tochar( #trans1, ch, obj );
+}
+else
+act_tochar( #desc, ch  );
+~
+E
+ctrans~
+For a moment, $p becomes warm and
+begins to glow as you examine the hieroglyphics.
+~
+E
+rctrans~
+Momentarily, $p in $n's possession glows as $e 
+examines a section of  hieroglyphics. 
+~
+E
+desc~
+The hieroglyphics are much too complex to understand.
+~
+E
+trans1~
+With the aid of $p, you are finally able to fully 
+understand the hieroglyphics here. They read: 
+
+                        ...gave unto us renewed...
+                ...than to the Land of the Dead. Thus,...
+             ...the IV, Cleomina the III, Ramsetmos the I,...
+...and glory. Also, by the will and powers of the Phraoah Setmos the VII,... 
+~
+!
+0 0 0
+A
+translate~
+hieroglyphics glyphics tracks~
+i = get_integer( ch, "/Cayln/TabletEnduraba" );
+obj = has_obj( 1548, ch );
+if( obj ) {
+  j = get_integer( obj, "/Cayln/TabletEnduraba" );
+  if( i == j ) {
+    act_notchar( #rtmess, ch, obj );
+    act_tochar( #trans1, ch, obj );
+    end;
+  }
+  else {
+    act_tochar( #notfamiliar, ch, obj );
+    act_notchar( #rnotfamiliar, ch, obj );
+    end;
+  }
+}
+obj = has_obj( 1549, ch );
+if( obj ) {
+  act_tochar( #ctrans, ch, obj, mob );
+  act_notchar( #rctran, ch, obj, mob );
+  wait( 2 );
+  act_tochar( #trans1, ch, obj, mob );
+  end;
+}
+act_tochar( #notrans, ch );
+act_notchar( #rnotrans, ch );
+~
+E
+trans1~
+With the aid of $p, you are finally able to fully 
+understand the hieroglyphics here. They read: 
+
+                        ...gave unto us renewed...
+                ...than to the Land of the Dead. Thus,...
+             ...the IV, Cleomina the III, Ramsetmos the I,...
+...and glory. Also, by the will and powers of the Phraoah Setmos the VII,... 
+~
+E
+ctrans~
+For a moment, $p becomes warm and
+begins to glow as you examine the hieroglyphics.
+~
+E
+rctran~
+Momentarily, $p in $n's possession glows as $e 
+examines a section of  hieroglyphics. 
+~
+E
+rtmess~
+$n's brow furrows in thought as $e tries to translate a section 
+of hieroglyphics using $p as a guide.
+~
+E
+notrans~
+The hieroglyphics are much too complex to understand.
+~
+E
+rnotrans~
+$n's frowns with frustration as $e finishes examining a portion
+of the hieroglyphics.
+~
+E
+notfamiliar~
+You are not familiar enough with $p to translate the hieroglphyics.
+~
+E
+rnotfamiliar~
+$n studies the hieroglyphics and $p for awhile, but gives up.
+~
+!
+0 0 0
+1575 9 1509949540 3 0
+2365 17 1509949449 -2 0
+-1
+S
+
+#63019
+Within the Modest Sand Castle~
+The inside of this sand castle resembles only partially what one might
+expect the interior architecture to look like.  The resin-coated walls of
+red sand have been etched with lines to give the appearance of blocks of
+stone and the floor has been covered with a pigmented resin, to give it a
+green, marbleized look.  A few tattered tapestries hang from the walls of
+the castle, as well as a mantle which protrudes over a small fireplace. 
+Heaps of sand shaped closely to beds rest towards the back of the
+chamber, near the fireplace.  All in all, this abode looks quite modest. 
+Set into the south wall is a beaten door made of chitin.
+~
+*CF
+~
+167251969 10 9 0
+D2
+door of beaten chitin~
+door beaten chitin~
+171 -1 63018 10 10 5
+E
+beds heaps sand **M**~
+The sand which composes the bulk of the beds is fresh and clean, as
+though they have been recently changed.
+~
+E
+mantle **M**~
+This long, slender plank of petrified wood spans one side of the wall to
+the other, nearly.  A few worthless pieces of junk, like a crabman doll
+and a broken lantern, reside atop the mantle.
+~
+E
+fireplace **M**~
+The fireplace is little more than a few crude rocks stack up on one
+another to create a bowl in which flammable fuels may be placed.  A
+column of hollowed out sand rises up above the fireplace as a makeshift
+chimney.  Mounted on the chimney wall, there is a plank of petrified wood
+acting as a mantle.
+~
+E
+blue-green stain floor **M**~
+While the floor has been covered with a deep green, hardening resin, to
+help it keep its shape and to retain a color other than red, its surface
+is marred by a blue-green stain which spreads over the surface of it. 
+The stain looks to be a couple of days old, and smells like rotten fish. 
+Or crab.
+~
+E
+walls **M**~
+The walls of the castle are coated with a thick but unusual resin which
+keeps them hardened and weather-proofed.  A few splattered stains, of the
+same color and type which appear on the floor, discolor the wall in a few
+places.
+~
+E
+door beaten chitin~
+Constructed from the shells of crab people, this door is sturdy and thick. 
+The beaten plates which compose the door are of a dark orange color and
+have been cured to prevent drying or cracking.  While the door lacks a
+sophisticated locking mechanism, it does indeed have a bar which can be
+dropped across the inside of the door, to prevent it from opening.
+~
+A
+bar ~
+mass door beaten chitin~
+if( !is_open( room, south ) )
+if( rflag( status1, find_room( 63021 ) ) ) {
+act_tochar( #bars, ch );
+act_notchar( #rbars, ch );
+remove_rflag( status1, find_room( 63021 ) );
+}
+else 
+act_tochar( #already, ch );
+else
+act_tochar( #need, ch );
+~
+E
+bars~
+Picking up a beam of wood leaning in the corner, you slide it into groves
+to either side of the door of beaten chitin, thus barring the door.
+~
+E
+rbars~
+$n bars the door of beaten chitin with a beam of wood which 
+once rested in the corner of the chamber.
+~
+E
+already~
+The door of beaten chitin has already been securely barred against intrusion.
+~
+E
+need~
+The door of beaten chitin must be closed first in order to bar it.
+~
+!
+0 0 0
+A
+unbar~
+mass door beaten chitin~
+if( !rflag( status1, find_room( 63021 ) ) )  {
+act_tochar( #unbar, ch );
+act_notchar( #runbar, ch );
+set_rflag( status1, find_room( 63021 ) );
+}
+else
+act_tochar( #already, ch );
+~
+E
+unbar~
+You lift the beam of wood out of its groves and put it back in the corner
+of the room.  The door of beaten chitin is now unbarred.
+~
+E
+runbar~
+You watch as $n removes a beam of wood from across the door of 
+beaten chitin and unbars the door.
+~
+E
+already~
+There is nothing in place over the slab of beaten chitin to bar it against 
+intrusion.
+~
+!
+0 0 0
+A
+open~
+mass door beaten chitin~
+if( !rflag( status1, find_room( 63021 ) ) )  {
+act_tochar( #barred, ch );
+end;
+}
+if( !is_open( room, south ) ) {
+act_room( #opens, ch );
+open( room, south );
+show( ch, room, south );
+}
+else
+act_tochar( #already, ch );
+~
+E
+already~
+The door of beaten chitin stands open already.
+~
+E
+barred~
+You cannot open the door of beaten chitin. It is barred closed.
+~
+E
+opens~
+The door of beaten chitin opens.
+~
+!
+0 0 0
+1553 9 1509949540 3 0
+25 17 1509949540 -1 0
+27 17 1509949540 -1 0
+4 17 1509949540 -1 0
+229 17 1509949540 -1 0
+230 17 1509949540 -1 0
+330 17 1509949540 -1 0
+6 17 1509949515 -1 0
+948 17 1509949515 -1 0
+20 17 1509949485 -1 0
+949 17 1509949475 -1 0
+552 17 1509949460 -1 0
+2365 17 1509949449 -2 0
+-1
+S
+
+#63020
+Inside a Small Sand Castle~
+The first thing you notice about the inside of this small sand castle is
+the incredible amount of heat confined within the room.  The walls are
+coated with a sooty fill.  In the center of the room, taking center
+stage, stands a huge fire pit and forge.  Unlike a metalworking forge,
+this one seems to be suited for only forging and blowing glass.  A giant
+bellows lies at the foot of the fire pit, as does a basin filled with
+some black rocks and dried reeds.  Beside the forge stands a
+sand-sculpted rack.  A column of wispy smoke rises from the fiery pit to
+escape through an opening in the ceiling.  The walls of this chamber are
+unadorned, save for a single tapestry which has been fastened to the
+north wall.  To the east stands what looks like a drawbridge made of
+woven grasses.
+~
+*CF
+~
+167251969 10 9 0
+D1
+woven drawbridge of grass~
+woven drawbridge grass~
+235 -1 63018 10 10 5
+E
+fire pit forge~
+Surrounded by rock and melted sand, a large pit is sunk into the floor. 
+The pit is filled with burning black stone and dried reeds, which give
+off an incredible amount of heat.  The heat seems to conduct itself up a
+column of stone rises up out of the center of the pit.  There are a
+couple of hollow cubbies in the column, suggestive of miniature kilns. 
+The top of the column looks smooth enough to be able to turn or spin
+glass on.
+~
+E
+bellows~
+A giant bellows fashioned from bits of hardened leather and bone stands
+at the base of the forge.  With but a few pumps from this large bellows,
+any fire could probably be stoked.
+~
+E
+rack sand-sculpted~
+This rack stands about four feet tall and holds a variety of tools.  Its
+red, sandy material has been covered with clear resin to help it maintain
+its shape.
+~
+E
+tools variety~
+A variety of tools, most of which you cannot put a name to, stand or lean
+up against the rack.  Most of the tools seem like they would prove useful
+in forging or blowing glass sculptures.
+~
+E
+reeds black rocks basin~
+The basin beside the forge is made of a dark, smoky glass and has a
+series of imperfections running through it.  Inside the basin, there are
+chunks of hard black rock and cut sections of an extremely woody reed. 
+Both the reeds and the stone look like they might burn well.
+~
+E
+hole ceiling~
+The hole in the ceiling allows all the smoke to escape from the fire pit
+and forge.  It is rimmed with a heavy layer of black soot.
+~
+E
+tapestry~
+The tapestry hanging on the northern wall has been coated with the same
+clear resin that the walls have been treated with.  It is made from high
+quality, woven threads and the dyes and embroidery upon the tapestry are
+extraordinary.  The tapestry depicts a creature with a body of stone,
+wings, claws, and a grim but apathetic look.  In one hand the creature
+holds a balance, while in the other he holds an anvil.  All in all, the
+fine tapestry looks out of place in this sandy abode.
+~
+E
+woven drawbridge~
+Piles of dried brown desert grass have been tightly banded together with
+strips of hide to form a working drawbridge.  The surface of the gate
+shines and has been lavished with several heavy coats of clear, hardening
+resin.  The massive gate is set into the east wall and appears to have an
+actual, working mechanism which lowers and raises the drawbridge.  There
+is also a bar which can slide back into the wall mounted on the
+drawbridge, so that the gate can be held against invaders.
+~
+A
+bar~
+drawbridge woven grass~
+if( !is_open( room, east ) )
+if( rflag( status2, find_room( 63021 ) ) ) {
+act_tochar( #bars, ch );
+act_notchar( #rbars, ch );
+remove_rflag( status2, find_room( 63021 ) );
+}
+else 
+act_tochar( #already, ch );
+else
+act_tochar( #need, ch );
+~
+E
+need~
+The drawbridge should be closed first before it is barred.
+~
+E
+bars~
+Picking up a beam of wood leaning in the corner, you slide it into groves
+to either side of the woven grass drawbridge, thus barring it.
+~
+E
+rbars~
+$n bars the woven grass drawbridge with a beam of wood which
+once rested in the corner of the chamber.
+~
+E
+already~
+The drawbridge of woven grass has already been securely barred against
+intrusion.
+~
+!
+0 0 0
+A
+unbar move~
+drawbridge woven grass~
+if( !rflag( status2, find_room( 63021 ) ) ) {
+act_tochar( #unbar, ch );
+act_notchar( #runbar, ch );
+set_rflag( status2, find_room( 63021 ) ); 
+}
+else
+act_tochar( #already, ch );
+~
+E
+unbar~
+You lift the beam of wood out of its groves and put it back in the corner
+of the room.  The drawbridge of woven grass is now unbarred.
+~
+E
+runbar~
+You watch as $n removes a beam of wood from across the 
+drawbridge of woven grass and unbars the door.
+~
+E
+already~
+There is nothing in place over the woven grass drawbridge to bar it
+against intrusion.
+~
+!
+0 0 0
+A
+pull~
+lever~
+if( !rflag( status2, find_room( 63021 ) ) )  {
+  act_tochar( #barred, ch );
+  end;
+}
+else {
+  act_tochar( #pulls, ch );
+  act_notchar( #rpulls, ch );
+}
+wait( 2 );
+if( !is_open( room, east ) ) {
+  act_room( #opens, ch );
+  open( room, east );
+  show( ch, room, east );
+}
+else {
+  act_room( #closes, ch );
+  close( room, east );
+}
+~
+E
+closes~
+With a faint rush of air, the woven drawbridge of grass is raised upward
+until it closes.
+~
+E
+opens~
+Tiny sand devils spin about as the woven drawbridge of grass lowers and
+kicks up sand.
+~
+E
+rpulls~
+$n pulls down upon a squat, gnarled stick and the woven grass 
+drawbridge begins to move.
+~
+E
+pulls~
+As you pull down upon the squat, gnarled stick, the woven grass
+drawbridge begins to move.
+~
+E
+barred~
+It is impossible to pull down the gnarled lever.  A beam of wood has
+been placed both across the drawbridge and the lever, barring the door.
+~
+!
+0 0 0
+1554 9 1509949540 3 0
+2365 17 1509949449 -2 0
+-1
+S
+
+#63021
+Amidst Strange Sand Formations~
+In most cases, the surrounding arid land is level and flat, with its
+sands forming protective dunes around the area.  But here, the sands are
+piled in miniature dunes and mounds and are wrought with strange designs
+and shapes.  There are also a few statue-like sand sculptures as well,
+rising up from the sand.  Each formation has a creative touch to it and
+could not have been formed by nature alone.  The walls of a large,
+sandstone castle lie to the south and southeast.
+~
+*CF
+[Cyndra] what is acode 1?
+~
+167251968 10 9 0
+D0
+~
+~
+0 -1 63017 10 10 5
+D3
+~
+~
+0 -1 63001 10 10 5
+E
+piles miniature dunes mounds~
+The miniature dunes appear to have been carefully molded by hand.  They
+have spiraling arms and crisp edges.  Also, geometric designs score the
+surfaces of several of the smaller sand mounds.
+~
+E
+statues statue-like sculptures~
+Sculpted from sand, three statues stand here.  Each statue is nearly
+perfect and looks to have been made with a child's attention to detail. 
+The statues are all of crab people.  One appears to be wearing a crown,
+one a diadem, and one carries a large polearm.
+~
+E
+strange designs shapes~
+Many of the designs are geometric in origin.  But a few appear to be
+hieroglyphics.  The shapes are crudely drawn and jagged, as though made
+by a clawed hand.
+~
+E
+1 south sandstone castle~
+To the south stands one of two, twin castles, whose battlements loom at
+the southern edge of the red desert.  This tower has three towers and
+small, fluttering flags.
+~
+E
+5 southeast~
+The castle to the southeast has walls which adjoin the castle next to it. 
+Both castles are identical in every respect, except for the numbers of
+towers they have.  This one has four towers.
+~
+A
+10 rikeralpha~
+~
+send_to_room( #closebar0, find_room( 63025 ) );
+  send_to_room( #closebar0, find_room( 63022 ) );
+  close( find_room( 63022 ), north );
+  remove_rflag( status0, find_room( 63021 ) );
+  send_to_room( #closebar1, find_room( 63019 ) );
+  send_to_room( #closebar1, find_room( 63018 ) );
+  close( find_room( 63018 ), north );
+  remove_rflag( status1, find_room( 63021 ) );
+  send_to_room( #closebar2, find_room( 63020 ) );
+  send_to_room( #closebar2, find_room( 63018 ) );
+  close( find_room( 63018 ), west );
+  remove_rflag( status2, find_room( 63021 ) );
+  send_to_room( #closebar3, find_room( 63013 ) );
+  send_to_room( #closebar3, find_room( 63012 ) );
+  close( find_room( 63012 ), east );
+remove_rflag( status1, find_room( 63009 ) );
+  send_to_room( #closebar4, find_room( 63007 ) );
+  send_to_room( #closebar4, find_room( 63005 ) );
+  close( find_room( 63005 ), south );
+remove_rflag( status0, find_room( 63009 ) );
+  send_to_room( #closebar5, find_room( 63006 ) );
+  send_to_room( #closebar5, find_room( 63008 ) );
+  close( find_room( 63008 ), south );
+  remove_rflag( status2, find_room( 63009 ) );
+  send_to_room( #closebar6, find_room( 63003 ) );
+  send_to_room( #closebar6, find_room( 63002 ) );
+  close( find_room( 63002 ), south );
+  remove_rflag(status0, find_room( 63005 ) );
+  send_to_room( #closebar7, find_room( 63000 ) );
+  send_to_room( #closebar7, find_room( 63001 ) );
+  close( find_room( 63001 ), west );
+  remove_rflag( status1, find_room( 63005 ) );
+  mob = mob_in_room( 1574 , find_room( 63002 ) );
+  junk_mob( mob );
+  mob = mob_in_room( 1574 , find_room( 63008 ) );
+  junk_mob( mob );
+  mob = mob_in_room( 1574, find_room( 63012 ) );
+  junk_mob( mob );
+  mob = mob_in_room( 1574 , find_room( 63017 ) );
+  junk_mob( mob );
+  mob = mob_in_room( 1574 , find_room( 63021 ) );
+  junk_mob( mob );
+~
+E
+closebar0~
+In response to the alert raised, the slab of petrified treebark is closed
+and barred.
+~
+E
+closebar1~
+In response to the alert raised, the door of beaten chitin is closed and
+barred.
+~
+E
+closebar2~
+In response to the alert raised, the woven grass drawbridge is closed and
+barred.
+~
+E
+closebar3~
+In response to the alert raised, the opaque glass drawbridge is closed
+and barred.
+~
+E
+closebar4~
+In response to the alert raised, the beam of driftwood is
+closed and barred.
+~
+E
+closebar5~
+In response to the alert raised, the giant oyster shell door is closed
+and barred.
+~
+E
+closebar6~
+In response to the alert raised, the tower of sand is magically sealed
+against intrusion.
+~
+E
+closebar7~
+In response to the alert raised, the mat of braided grass  is closed and barred.
+~
+E
+burrow~
+Sensing danger, a young crabman burrows down, out of sight.
+~
+!
+0 0 0
+A
+~
+~
+if( !rflag( status2, find_room( 63021 ) ) ) 
+  if( mob_in_room( 1574, room ) ) {
+  act_room( #burrow, ch );
+  mob = mob_in_room( 1574, room );
+  junk_mob( mob );
+  }
+continue;
+~
+E
+burrow~
+Sensing danger, a young crabman burrows down, out of sight.
+~
+!
+1 0 9
+A
+~
+~
+send_to_room( #openbar0, find_room( 63025 ) );
+  send_to_room( #openbar0, find_room( 63022 ) );
+  set_rflag( status0, find_room( 63021 ) );
+  send_to_room( #openbar1, find_room( 63019 ) );
+  send_to_room( #openbar1, find_room( 63018 ) );
+  set_rflag( status1, find_room( 63021 ) );
+  send_to_room( #openbar2, find_room( 63020 ) );
+  send_to_room( #openbar2, find_room( 63018 ) );
+  set_rflag( status2, find_room( 63021 ) );
+  send_to_room( #openbar3, find_room( 63013 ) );
+  send_to_room( #openbar3, find_room( 63012 ) );
+  set_rflag( status1, find_room( 63009 ) );
+  send_to_room( #openbar4, find_room( 63007 ) );
+  send_to_room( #openbar4, find_room( 63005 ) );
+  set_rflag( status0, find_room( 63009 ) );
+  send_to_room( #openbar5, find_room( 63006 ) );
+  send_to_room( #openbar5, find_room( 63008 ) );
+  set_rflag( status2, find_room( 63009 ) );
+  send_to_room( #openbar6, find_room( 63003 ) );
+  send_to_room( #openbar6, find_room( 63002 ) );
+  set_rflag(status0, find_room( 63005 ) );
+  send_to_room( #openbar7, find_room( 63000 ) );
+  send_to_room( #openbar7, find_room( 63001 ) );
+  set_rflag( status1, find_room( 63005 ) );
+~
+E
+openbar0~
+In response to the scout, the slab of petrified treebark is unbarred.
+~
+E
+openbar1~
+In response to the scout, the door of beaten chitin is unbarred.
+~
+E
+openbar2~
+In response to the scout, the woven grass drawbridge is unbarred.
+~
+E
+openbar3~
+In response to the scout, the opaque glass drawbridge is unbarred.
+~
+E
+openbar4~
+In response to the scout, the beam of driftwood is unbarred.
+~
+E
+openbar5~
+In response to the scout, the giant oyster shell door is unbarred.
+~
+E
+openbar6~
+In response to the scout, the tower of sand is magically sealed against
+intrusion.
+~
+E
+openbar7~
+In response to the scout, the mat of braided grass is unbarred.
+~
+!
+0 0 0
+A
+custom~
+white pinch clump handful grain~
+acode( find_room( 63012 ), 8 );
+continue;
+~
+!
+0 0 0
+1574 9 1509949540 3 0
+1575 9 1509949540 3 0
+2365 17 1509949449 -2 0
+-1
+S
+
+#63022
+Outside of a Plain-looking Sand Castle~
+The dry, arid terrain of the red desert extends to the south.  A
+collection of dunes soar one atop the other to the west, blocking all but
+the barest glimpse of a north to south trail.  But while seemingly
+boundless desert expands to the south, here stands a sandstone castle. 
+The castle has no windows or towers; rather, it is but a simple fort
+complex with sturdy walls.  A slab of petrified tree bark lies up against
+the front of the castle.  To the east, nearly adjoining the walls of the
+plain sandstone castle, looms a large but still modest sandstone
+construction.
+~
+*show
+~
+167247872 10 9 0
+D0
+slab of petrified tree bark~
+slab petrified tree bark~
+139 -1 63025 10 10 5
+D2
+~
+~
+0 -1 63017 10 10 5
+D5
+spot beneath the castle's wall~
+spot beneath castle's wall~
+235 -1 63023 10 10 5
+E
+trail~
+Bordered to either side by blocks of smooth, polished granite, a trail
+winds itself through the desert, taking a north-south path at the eastern
+edge of the canyon.  The trail looks moderately traveled from what you
+can see from your present vantage.
+~
+E
+slab petrified tree bark 1 north~
+Cut at one time from a giant and ancient tree, this slab of bark has
+since undergone petrification.  Rectangular in shape, the slab of bark
+lies up against the face of the castle, like a door.  The slab is
+actually a fashioned cross-section of a tree, and rings can clearly be
+seen in the brown-black bark.
+~
+E
+rings ~
+One hundred.  Two hundred.  Three hundred.  After counting as many as
+four hundred rings upon the surface of this slab of bark, you grow weary
+with determining its age.  Needless to say, it is old.
+~
+E
+walls~
+Though the castle lacks battlements or towers, it does have small,
+exterior walls which merge with the castle itself.  Mounds of sand litter
+the base of the castle walls.
+~
+E
+mounds sand~
+Piles of red sand gather in heaps along the base of the castle walls.  At
+one spot, the sand appears to be obscuring something beneath the wall.
+~
+E
+castle~
+The castle which stands to the north rises maybe forty feet tall.  It has
+no windows or battlements or even a drawbridge.  In fact, there does not
+seem to be a way into the castle.  The exterior of the castle gleams
+faintly, like no sandstone should.
+~
+E
+sandstone~
+The sandstone which comprises the bulk of what the plain castle to the
+north is built from is, in fact, not sandstone at all.  As you run your
+eyes over its surface, you can see traces of an external resin, which has
+been applied to the castle.  The clear resin serves, as it seems, the
+purpose of hardening the sand to which it has been applied.  The castle
+before you is really a sand castle, built entirely of sand.
+~
+A
+bash~
+treebark door slab petrified~
+if( !is_open( room, north ) )
+  if( !rflag( status0, find_room( 63021 ) ) )
+  if( find_skill( ch, bash ) > random( 4, 10 ) )
+  if( find_stat( ch, str ) > random( 13, 21 ) ) {
+  act_tochar( #bash, ch );
+  act_notchar( #rbash, ch );
+  set_rflag( status0, find_room( 63021 ) );
+  wait( 1 );
+  act_tochar( #opens, ch );
+  open( room, west );
+}
+else {
+  act_tochar( #feeble, ch );
+  act_notchar( #rfeeble, ch );
+}
+else {
+  act_tochar( #nobash, ch );
+  act_notchar( #rnobash, ch );
+}
+else
+  act_tochar( #noneed, ch );
+else
+  act_tochar( #alreadyopen, ch );
+~
+E
+bash~
+You slam yourself into the slab of petrified treebark in an effort to
+bash the door open.
+~
+E
+rbash~
+$n slams into the slab of petrified treebark.
+~
+E
+noneed~
+There does not seem a need for that.  The slab of petrified treebark
+looks like it is easily opened.
+~
+E
+nobash~
+As you slam into the door of petrified treebark, you succeed only in rattling your
+teeth.
+~
+E
+rnobash~
+Ineptly, $n throws $mself against the door of petrified treebark. 
+Ouch, that must have hurt!
+~
+E
+feeble~
+As you slam yourself into the door of petrified treebark, it gives
+slightly, but remains firmly in place.  Perhaps if you were a bit
+stronger you could bash it open.
+~
+E
+rfeeble~
+$n makes a feeble attempt at bashing the slab of petrified 
+treebark open. Apparently its bark is better than $s bash.
+~
+E
+opens~
+You can hear the barring mechanism splinter as the slab of petrified
+treebark bursts open.
+~
+E
+alreadyopen~
+The slab of petrified treebark is already open.
+~
+!
+0 0 0
+A
+look~
+hole spot beneath~
+if( rflag( reset0, room ) ) 
+act_tochar( #spotdesc, ch );
+else
+act_tochar( #hidden, ch );
+~
+E
+spotdesc~
+The spot beneath the castle wall looks to be a small but tight opening
+into a cave.  Its interior, from what you can see, is dark and you can
+hear nothing from within.  Perhaps the hole can be cleared further.
+~
+E
+hidden~
+There appears to be a cavern entranec right below the castle wall.  Signs
+of digging around the hole show that it has been uncovered recently.  The
+hole leads deep into the ground at a steep angle.
+~
+!
+0 0 0
+A
+dig clear~
+sand spot beneath~
+if( rflag( reset0, room ) )
+  if( race( ch ) == lizardman ) {
+  act_tochar( #ldigs, ch );
+  act_notchar( #rldigs, ch );
+}
+else {
+  act_tochar( #digs, ch );
+  act_notchar( #rdigs, ch );
+}
+else {
+  act_tochar( #alreadydug, ch );
+  end;
+}
+wait( 5 );
+act_tochar( #breakthru, ch );
+act_notchar( #rbreakthru, ch );
+open( room, down );
+remove_rflag( reset0, room );
+~
+E
+ldigs~
+You begin digging at the base of the castle's wall with your claws,
+scooping the sandy earth out from beneath it.
+~
+E
+rldigs~
+With $s claws, $n begins digging below the wall of the sand castle,
+scooping out clawfuls of sand.
+~
+E
+digs~
+With your bare hands, you begin digging at the base of the castle's wall.
+~
+E
+rdigs~
+$n begins scooping sand out from beneath the castle's wall with $s
+bare hands.
+~
+E
+breakthru~
+After several moments, your digging pays off and you discover an opening
+below the castle wall.
+~
+E
+rbreakthru~
+$n's perseverance has paid off! $e has discovered an opening just
+below the castle's wall.
+~
+E
+alreadydug~
+Someone has already been digging in the sand here and has revealed a spot
+beneath the castle's wall that leads downward.
+~
+!
+0 0 0
+A
+open~
+door slab petrified treebark~
+if( !rflag( status0, find_room( 63021 ) ) )  {
+  act_tochar( #barred, ch );
+  end;
+}
+if( !is_open( room, north ) ) {
+  act_room( #opens, ch );
+  open( room, north );
+  show( ch, room, north );
+}
+else
+  act_tochar( #already, ch );
+~
+E
+barred~
+The door of petrified treebark appears to be barred from the inside.
+~
+E
+opens~
+The slab of petrified treebark swings open.
+~
+E
+already~
+The slab of petrified bark has already ben moved aside, like a door.
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+As you start down, you realize too late how long a drop it is!
+~
+E
+to_room~
+$n starts to climb down anbd suddenly $s face is overcome by surprise.
+~
+!
+3 0 32
+1575 9 1509949540 3 0
+2365 17 1509949449 -2 0
+-1
+S
+
+#63023
+Beneath a Spot in the Castle's Wall~
+Below the wall of one of the sand castles is a small limestone cavern
+which stretches back to the south.  While the hole in the cavern ceiling
+looks fresh and recent, there is no doubt that this cavern is very old. 
+The floor, which can be seen beneath patches of covering sand, has been
+scraped smoothed from constant passage and the upper walls, near the
+opening, have eroded to fine, rounded edges.  Up above, you can see some
+of the foundation stones protruding down through the cavern's ceiling.
+~
+*CF
+~
+167247880 11 5 0
+D2
+~
+~
+0 -1 63024 10 10 5
+D4
+~
+~
+235 -1 63022 10 10 5
+E
+foundation stones ceiling~
+The foundations stones sticking down through the ceiling of this chamber
+are some of the resin-coated blocks of sand that the crabmen use for
+building their castles.  These particular blocks are long and thin,
+indicating that they are projections from the castle wall.  Just by the
+precarious way some of the blocks hang out, you seriously doubt the
+crabmen know of this place.
+~
+E
+floor~
+Beneath patches of loose sand, you catch details of the smooth, limestone
+floor.  It seems as though constant traffic and rubbing has brought the
+floor to its current polish.  The only disturbing thing about the floor,
+though, is that there are deep scratches and the occasional marking that
+looks like a puncture.
+~
+E
+blocks~
+If you watch your step, the blocks are placed in such a manner as to
+climb up them, up towards the surface, through the hole.
+~
+A
+look~
+hole~
+if( is_open( room, up ) )
+  act_tochar( #open, ch );
+else
+  act_tochar( #notopen, ch );
+~
+E
+open~
+Up towards the ceiling, at the edge of a few of the foundation sandstone
+blocks, you can see the beginnings of a passage up and out of this cavern
+chamber.  Along the west wall are sandstone block protrusions, which
+might help facilitate the climb upwards.
+~
+E
+notopen~
+Up towards the ceiling, at the edge of a few of the foundation sandstone
+blocks, you can see the beginnings of a passage up and out of this cavern
+chamber.  Along the west wall are protruding blocks of cut sandstone. 
+The fissure in the ceiling, if you could only reach it, is clogged with
+rock and sand.
+~
+!
+0 0 0
+A
+~
+sandstone blocks wall 1 up~
+if( is_open( room, up ) )
+  if( !can_fly( ch ) )
+  if( find_skill( ch, climb ) > 2 ) {
+  act_tochar( #climbs, ch );
+  act_notchar( #rclimbs, ch );
+  transfer( ch, find_room( 63022 ) );
+  act_notchar( #carr, ch );
+  continue;
+}
+else
+  act_tochar( #trouble, ch );
+else {
+  act_tochar( #floatup, ch );
+  act_notchar( #rfloatup, ch );
+  transfer( ch, find_room( 63022 ) );
+  act_notchar( #farr, ch );
+}
+else
+  act_tochar( #notclear, ch );
+~
+E
+climbs~
+Using the sandstone blocks in the wall, you easily climb up and out of
+the cavern.
+~
+E
+rclimbs~
+$n climbs up the side of cavern wall, using the sand stone protrusions 
+in the walls. Within moments, $e disappears out of the fissure in the
+ceiling.
+~
+E
+floatup~
+With ease you float upwards, out of the cavern.
+~
+E
+rfloatup~
+$n floats up and out of the fissure to the desert above.
+~
+E
+notclear~
+You cannot make your way out.  Rocks and sand block the fissure in the
+ceiling.
+~
+E
+trouble~
+Even with the hand holds to help your ascent, you find that, much to your
+chagrin, that you just are not a strong enough climber to escape out the
+hole.
+~
+E
+carr~
+$n climbs up from somewhere beneath the castle's wall.
+~
+E
+farr~
+$n floats up from below the castle wall.
+~
+!
+18 0 0
+A
+up~
+*~
+if( !is_open( room, up ) ) {
+  act_tochar( #move_stuff, ch, obj );
+  end;
+}
+act_tochar( #climb, ch, obj );
+~
+E
+climb~
+Perhaps you should try climbing up the wall, or the sandstone blocks.
+~
+E
+move_stuff~
+Perhaps you should clear the rocks and sand from the fissure.
+~
+!
+0 0 0
+A
+unclog clean clear dig~
+rock sand 1 up fissure~
+if( !is_open( room, up ) ) {
+  act_tochar( #clears, ch );
+  act_notchar( #rclears, ch );
+  open( room, up );
+}
+else
+  act_tochar( #already, ch );
+~
+E
+clears~
+With great effort and much bouncing, you manage to clear the rocks and
+sand out of the fissure in the ceiling.
+~
+E
+rclears~
+$n toils hard and eventually clears enough rock and sand
+out of the crack in the ceiling to make it wide enough to pass through.
+~
+E
+already~
+The crevice in the ceiling has already been cleared out.
+~
+!
+0 0 0
+2365 17 1509949449 -2 0
+-1
+S
+
+#63024
+Scorpions' Lair~
+Little more than twenty feet wide and deep, the small, green limestone
+cavern is plain and drab.  No exotic formations of rock creep up from the
+ground nor descend from the ceiling.  The walls are coarse and the floor
+is covered with a thin layer of sand which has no doubt drifted in from
+the desert above.  The discarded remnants of many a meal lie around this
+cavernous chamber, tossed into the corners of the room.  Near one such
+macabre display stands a pool of crystal-clear water.  Reeds of some
+green plant grow around the back edge of the water, opposite the cavern's
+only entrance.
+~
+*CF
+~
+167247872 11 5 0
+D0
+~
+~
+0 -1 63023 10 10 5
+E
+reeds plant~
+Along the edges of the shore grows a variety of aquatic sedge.  The tall,
+bamboo-like plant has thin, leafy shoots jutting out from the water. 
+Each shoot is segmented and has a strong, musky scent.
+~
+E
+pool water~
+The crystal-clear waters of the pool look to be the only pure thing
+within the entire cavern.  Remarkable, all the discarded bones have
+managed not to find their way into the pool and thus it has been kept
+from contamination.
+~
+E
+bones corpses meal discarded remnants floor~
+You heave a sigh of relief as you note that not a single body amidst the
+piles of discarded corpses is fully humanoid.  In fact, a majority of the
+corpses appear to be those of crabmen and fish.
+~
+2152 17 1509949540 -2 0
+1513 17 1509949540 -2 0
+2365 17 1509949449 -2 0
+1526 9 1509949540 3 0
+1526 9 1509949540 3 0
+-1
+S
+
+#63025
+Inside a Plain-looking Sand Castle~
+The interior of the rather ordinary castle of sand is as plain as its
+outside architecture.  The walls and floor are formed from hard-packed
+red sand while the ceiling rises inward, creating a dome.  From the
+center of the domed ceiling hangs a crude, but serviceable lantern. 
+Along the floor of the castle, there are several piles of loose sand,
+some of which have depressions in them.  A slab of petrified tree bark
+stands against the wall to the south.
+~
+*CF
+*show
+~
+200806405 0 6 0
+D2
+slab of petrified tree bark~
+slab petrified tree bark~
+139 -1 63022 10 10 5
+E
+walls **M**~
+Sculpted from the bright red sands of the desert here, the walls remind
+you of barriers of blood.  The walls appear to be coated with some type
+of clear, hardening resin, to help them keep their shape.
+~
+E
+lantern serviceable **M**~
+The lantern hanging from the ceiling appears to have been, at one time, a
+work of art as well as a light source.  By now, the delicate brass
+filigree spiraling off its corners are covered in green corrosion.  You
+notice, though, that the oil the lantern burns for fuel is smokeless.
+~
+E
+domed ceiling~
+With its highest point being in the middle of the sandy room, the ceiling
+arcs slowly to create a dome over the room.  From the center of the dome,
+a slender chain has been bolted into the ceiling, from which hangs the
+lantern.  A few cracks run through the dome, but they look to have been
+recently patched up with globs of resin and handfuls of sand.
+~
+E
+piles loose sand **M**~
+In a few places inside the castle, piles of sand rest upon the floor. 
+The piles vary in side and shape, but generally, most are about twice as
+big around as a barrel of stout ale.  Depressions mar the surface of a
+couple of the piles, as though something had been recently sitting upon
+them.
+~
+E
+depressions **M**~
+The depressions in the sand look as though the crab people of this small
+community use these piles of sand as both their chairs and their beds.
+~
+E
+slab petrified tree bark~
+Hard as a rock and just as big, the stab of wood standing against the
+south wall has been petrified from quite some time.  It is hard to tell
+what type of tree the wood once came from, probably an oak or an elm. 
+The left edge of the slab is attached to interior hinges and the door
+appears to be equipped with a crude bar lock.
+~
+A
+~
+depression~
+i = random( 1, 10 );
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( is_player( ch ) )
+    if( i == 1 ) {
+    act_tochar( #findsgold, ch );
+    act_notchar( #rfindsgold, ch );
+    obj_to_char( oload( 2 ), ch );
+    remove_rflag( reset0, room );
+    end;
+  }
+  else if( i == 2 ) {
+    act_tochar( #findschiton, ch );
+    act_notchar( #rfindschitin, ch );
+    obj_to_char( oload( 1896 ), ch );
+    remove_rflag( reset0, room );
+    end;
+  }
+}
+act_tochar( #empty, ch );
+act_notchar( #rempty, ch );
+~
+E
+findsgold~
+Searching through the pile of sand, you discover two things.  The first,
+is that this mound of sand doubles as both a chair and a bed from the
+denizen of this sandy abode.  The second is a small gold coin, lying just
+beneath the bed's sandy surface.
+~
+E
+rfindsgold~
+After searching the pile of sand for a few moments, $n smiles 
+and tries to nonchalantly pocket a gold coin.
+~
+E
+findschiton~
+Searching through the pile of sand, you discover two things.  The first,
+is that this mound of sand doubles as both a chair and a bed from the
+denizen of this sandy abode.  The second is a piece of rough, red chitin,
+evidently shed from this crab person.
+~
+E
+rfindschitin~
+After searching through the sandy mound, $n holds up a
+piece of shed chitin before pocketing it.
+~
+E
+empty~
+As you search through the depressions of sand, one thing becomes evident. 
+That the denizens of the red desert must use such piles as beds and
+furniture.  Judging from the depressions, this one is obviously a bed,
+for you can make out the vague imprints of folded crabman legs.
+~
+E
+rempty~
+After searching the pile of sand, $n simply shrugs.
+~
+!
+9 0 0
+A
+bar~
+door slab treebark~
+if( !is_open( room, south ) )
+  if( rflag( status0, find_room( 63021 ) ) ){
+  act_tochar( #bars, ch );
+  act_notchar( #rbars, ch );
+  remove_rflag( status0, find_room( 63021 ) );
+}
+else 
+  act_tochar( #already, ch );
+else
+  act_tochar( "The slab of petrified treebark must be closed first in order to bar it. ", ch );
+~
+E
+bars~
+Picking up a beam of wood leaning in the corner, you slide it into groves
+to either side of the door of petrified treebark, thus barring the door.
+~
+E
+rbars~
+$n bars the door of petrified treebark with a beam of wood which
+once rested in the corner of the chamber.
+~
+E
+already~
+The door of petrified treebark has already been securely barred against
+intrusion.
+~
+!
+0 0 0
+A
+unbar~
+door slab treebark~
+if( !is_open( room, south ) )
+  if( !rflag( status0, find_room( 63021 ) ) )  {
+  act_tochar( #unbar, ch );
+  act_notchar( #runbar, ch );
+  set_rflag( status0, find_room( 63021 ) );
+}
+else
+  act_tochar( #already, ch );
+else
+  act_tochar( #need, ch );
+~
+E
+unbar~
+You lift the beam of wood out of its groves and put it back in the corner
+of the room.  The door of petrified treebark is now unbarred.
+~
+E
+runbar~
+You watch as $n removes a beam of wood from across the
+door of petrified treebark and unbars the door.
+~
+E
+already~
+There is nothing in place over the slab of petrified treebark to bar it
+against intrusion.
+~
+E
+need~
+The slab of petrified treebark is not even closed.
+~
+!
+0 0 0
+A
+open~
+door slab treebark~
+if( !rflag( status0, find_room( 63021 ) ) )  {
+  act_tochar( #barred, ch );
+  end;
+}
+if( !is_open( room, south ) ) {
+  act_room( #opens, ch );
+  open( room, south );
+  show( ch, room, south );
+}
+else
+  act_tochar( #already, ch );
+~
+E
+already~
+The slab of petrified treebark stands open already.
+~
+E
+barred~
+You cannot open the slab of petrified treebark. It is barred closed.
+~
+E
+opens~
+The door of petrified treebark opens.
+~
+!
+0 0 0
+1556 9 1509949540 3 0
+882 17 1509949510 -1 0
+871 17 1509949485 -1 0
+1018 17 1509949485 -1 0
+1008 17 1509949525 -1 0
+37 17 1509949540 -1 0
+98 17 1509949540 -1 0
+127 17 1509949490 -1 0
+977 17 1509949515 -1 0
+1194 17 1509949480 -1 0
+9 17 1509949515 -1 0
+109 17 1509949465 -1 0
+230 17 1509949540 -1 0
+2115 17 1509949490 -1 0
+2365 17 1509949449 -2 0
+-1
+S
+
+#0
+

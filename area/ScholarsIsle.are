@@ -1,0 +1,526 @@
+#M2_AREA
+2
+
+Scholars Isle~
+AzerinII~
+scholars isle~
+~
+~
+
+1 0
+3
+0
+#ROOMS
+
+#9250
+Grass plains of Thal-Kah~
+Rich grasslands spread around, their mottled greens and gold merging
+together as gusting winds fan across them.  Woodlands lie to the south,
+the savannah continues onwards in all other directions.
+~
+~
+33030147 12 5 0
+D0
+~
+~
+0 -1 9251 10 10 5
+-1
+S
+
+#9251
+Grass plains of Thal-Kah~
+Termite mounds sprout through the grasslands, their red clay surface
+coated in swarming insects.  Grass and weeds thrive in the hot
+conditions, the deep greens of the thistles in stark contrast to
+the golden hues of the grains.
+~
+~
+33030147 12 9 0
+D2
+~
+~
+0 -1 9250 10 10 5
+D3
+~
+~
+0 -1 9252 10 10 5
+-1
+S
+
+#9252
+Grass plains of Thal-Kah~
+Rocks and hard packed dirt form mini clearings in the grass, a cluster of
+hooves around their edges indicating that they have been created by some
+savannah creature.  Grass and more grass spread out in a seemingly
+endless stretch of savannah.
+~
+~
+33030147 12 9 0
+D0
+~
+~
+0 -1 9253 10 10 5
+D1
+~
+~
+0 -1 9251 10 10 5
+D3
+~
+~
+0 -1 9260 10 10 5
+-1
+S
+
+#9253
+Grass plains of Thal-Kah~
+Rich grasslands spread around, their mottled greens and gold merging
+together as gusting winds fan across them Grass and weeds thrive in the
+hot conditions, the deep greens of the thistles and dock in stark
+contrast to the golden hues of the grains.
+~
+~
+33030147 12 9 0
+D1
+~
+~
+0 -1 9254 10 10 5
+D2
+~
+~
+0 -1 9252 10 10 5
+-1
+S
+
+#9254
+Grass plains of Thal-Kah~
+Rocks and hard packed dirt form mini clearings in the grass, a cluster of
+hooves around their edges indicating that they have been created by some
+savannah creature.  Woodlands lie to the south, the savannah continues
+onwards in all other directions.
+~
+~
+33030147 12 9 0
+D0
+~
+~
+0 -1 9256 10 10 5
+D1
+~
+~
+0 -1 9255 10 10 5
+D3
+~
+~
+0 -1 9253 10 10 5
+-1
+S
+
+#9255
+Grass plains of Thal-Kah~
+A dried stream bed makes a brief appearance from under the lush grass,
+its rocky bottom long devoid of moister.  Grass and weeds thrive in the
+hot conditions, the deep greens of the thistles and dock in stark
+contrast to the golden hues of the grains.
+~
+~
+33030147 12 9 0
+D0
+~
+~
+0 -1 9257 10 10 5
+D3
+~
+~
+0 -1 9254 10 10 5
+-1
+S
+
+#9256
+Grass plains of Thal-Kah~
+Sun dried branches of long dead trees lie partially buried thought the
+grass, their splintered ends a hazard for fast moving creatures.  A dried
+stream bed makes a brief appearance from under the lush grass, its rocky
+bottom long devoid of moister.
+~
+~
+33030147 12 9 0
+D1
+~
+~
+0 -1 9257 10 10 5
+D2
+~
+~
+0 -1 9254 10 10 5
+D3
+~
+~
+0 -1 9258 10 10 5
+-1
+S
+
+#9257
+Grass plains of Thal-Kah~
+The hot winds from the north have whipped up the ground until it forms
+beds of choking dust.  A dried stream bed makes a brief appearance from
+under the lush grass, its rocky bottom long devoid of moister.
+~
+~
+33030147 12 9 0
+D2
+~
+~
+0 -1 9255 10 10 5
+D3
+~
+~
+0 -1 9256 10 10 5
+-1
+S
+
+#9258
+Grass plains of Thal-Kah~
+Grass and weeds thrive in the hot conditions, the deep greens of the
+thistles and dock in stark contrast to the golden hues of the grains. 
+Grass and more grass spread out in a seemingly endless stretch of
+savannah.
+~
+~
+33030147 12 9 0
+D1
+~
+~
+0 -1 9256 10 10 5
+-1
+S
+
+#9259
+Beach Trail~
+Fat-leaved plants swarm around the base of the mossy wall; their surface
+coated in black thorns that ward off would-be harvesters.  Beyond the
+wall to the north a courtyard opens up, four cottages clustered around it. 
+A well rests in the cobbled yards middle; a wooden bucket perched on its
+edge.  Towards the west a trail winds down to the sea, the emerald hued
+waves washing against the pebbles.  An iron gate bars the path to the
+east, a stout [padlock] keeping it shut.
+~
+[Azerin] east is to newbie zone, blocked until you have key
+~
+33030147 12 9 0
+D0
+~
+~
+0 -1 9261 10 10 5
+D1
+~
+~
+0 -1 9266 10 10 5
+D3
+~
+~
+0 -1 9262 10 10 5
+-1
+S
+
+#9260
+Grass plains of Thal-Kah~
+Sun dried branches of long dead trees lie partially buried thought the
+grass, their splintered ends a hazard for fast moving creatures.  Termite
+mounds sprout through the grasslands, their red clay surface coated in
+swarming insects.
+~
+~
+33030147 12 9 0
+D1
+~
+~
+0 -1 9252 10 10 5
+-1
+S
+
+#9261
+Cobbled Courtyard~
+The courtyard is about one hundred yards across, most of it cobbled with
+foot-long shingles however towards the southern wall a scattering of the
+cobbles have been removed and tree saplings planted in the holes.  White
+washed wooden houses sit at each compass point, plain wooden doors
+allowing access to their interior.  [Signs] dangle from above their
+entrance, each painted with a fine [illustration].  A moss covered well
+sits in the center of the yard, its crystal clear waters sparkling in the
+light.
+~
+[Azerin] - newbie guide 1 here, intro's and hads out weapon
+[Azerin] extra for signs/illustration
+[Azerin] wizard east
+[Azerin] warrior north
+[Azerin] cleric west
+~
+33030147 12 9 0
+D0
+~
+~
+0 -1 9264 10 10 5
+D1
+~
+~
+0 -1 9263 10 10 5
+D2
+~
+~
+0 -1 9259 10 10 5
+D3
+~
+~
+0 -1 9265 10 10 5
+2745 9 1509949540 3 0
+28 17 1509949540 -2 0
+7436 17 1509949540 -2 0
+5 17 1509949540 -2 0
+-1
+S
+
+#9262
+Upon the Shore~
+The emerald green waves lap gently at the pebble beach, each white capped
+surge rattling the stones into a clatter.  A small walkway meanders from
+the beachfront and up to a low moss-coated stonewall that encircles the
+islands.  Overhead the sun shines through the mid day cloud, the
+picturesque sky strangely unchanging, even the clouds failing to drift or
+fade away.
+~
+[Azerin] start location
+~
+33030147 12 9 0
+D1
+~
+~
+0 -1 9259 10 10 5
+-1
+S
+
+#9263
+House of Magic~
+The single room house has been stacked full to overflowing with books,
+tomes, scrolls and all manner of writing instruments.  A book press rests
+partially buried against the windowed north wall, a few scruffy bits of
+parchment peeking out from under it.  Along the walls high shelves have
+been stacked with alchemical apparatus, the wooden shelves requiring a
+ladder or extremely tall troll to reach.
+~
+~
+33030147 0 9 0
+D3
+~
+~
+0 -1 9261 10 10 5
+-1
+S
+
+#9264
+House of Combat~
+The room has been lined with all manner of weaponry, from the normal
+swords and axes a warrior would find useful to more exotic claws and
+knuckles that only a monk would have a use for.  A rope circle has been
+marked out in the room's center, the area clearly used for practice
+sparing.  Windows in the north, east and west let in a filtered light.
+~
+~
+33030147 0 6 0
+D2
+~
+~
+0 -1 9261 10 10 5
+2748 9 1509949540 3 0
+-1
+S
+
+#9265
+House of The Divine~
+The faint smell of incense drifts about the sunlight room, the sent
+easing aches and woes upon those who enter the house.  An altar of white
+stone rests against the north wall, a silver candelabra resting on it. 
+Before the altar pair of comfortable-looking pillows sit, their softness
+enabling someone to kneel in prayers without discomfort.  An ancient loot
+dangles from a peg above the altar, its surface covered with silvery ivy
+decorations.
+~
+~
+33030147 12 9 0
+D1
+~
+~
+0 -1 9261 10 10 5
+-1
+S
+
+#9266
+Gloomy Forest~
+Tall pine trees encircle a scattering of clearings in the gloom-shrouded
+forest, their dense foliage allowing only a trickle of light to penetrate
+down to ground level.  Ferns, bracken and rotting pine needles form the
+majority of the ground cover, a fine dusting of dew coating all of them.
+~
+~
+33030147 12 9 0
+D1
+~
+~
+0 -1 9267 10 10 5
+D3
+~
+~
+0 -1 9259 10 10 5
+-1
+S
+
+#9267
+Gloomy Forest~
+Wide flowers bloom through the grassy clearing the sent and color
+attracting a buzz of bees and wasps to drink at their nectar.  The
+remains of a rotting log sits against a pine tree to the east, the off
+cut forming a natural bench to rest upon.  Towards the south a trickling
+brook can just be seen, it's burbling sounds and splashing waters
+soothing to a weary traveler.
+~
+~
+33030147 12 9 0
+D2
+~
+~
+0 -1 9268 10 10 5
+D3
+~
+~
+0 -1 9266 10 10 5
+-1
+S
+
+#9268
+Gloomy Forest~
+Giant toadstools festoon the forests floor, the fungi feasting upon dead
+needles and rotting branches.  Some of the giants reach a good eight feet
+in height, their caps spreading out over six feet across.  Ferns and
+bracken cluster around them, the plants thriving under the shelter of the
+fungi's wide umbrella-like caps.  Towering pines send out gnarled roots
+into the earth, the splaying tendrils digging deeply into the soft earth. 
+A forest stream snakes through the fungi-garden, the fresh waters icy
+cold to the touch.
+~
+~
+33030147 12 9 0
+D0
+~
+~
+0 -1 9267 10 10 5
+D1
+~
+~
+0 -1 9272 10 10 5
+D2
+~
+~
+0 -1 9270 10 10 5
+D3
+~
+~
+0 -1 9269 10 10 5
+-1
+S
+
+#9269
+Gloomy Forest~
+Clusters of wallflowers grow against a low stone bank, their bright
+flowers gleaming in the light.  Underfoot a tangle of tree roots, dead
+bracken and fresh growth all fighting for a place in the gloomy forest
+floor.  Dinner-plate sized toadstools spread up the trunks of many trees,
+their fleshy caps a dull brown with speckles of white flecked across them.
+~
+~
+33030147 12 9 0
+D1
+~
+~
+0 -1 9268 10 10 5
+-1
+S
+
+#9270
+Gloomy Forest~
+Towering pine trees entangle each other with their wide branches to form
+a near impenetrable canopy above.  At mid level the trees branches thin
+somewhat enabling a keen explorer to push deeper into the shadow-filled
+woods.  The remains of a half- rotted wagon lie on the side besides a
+stone bank to the south, one of the wheels clearly shattered at the axel.
+~
+~
+33030147 12 9 0
+D0
+~
+~
+0 -1 9268 10 10 5
+D2
+~
+~
+0 -1 9271 10 10 5
+-1
+S
+
+#9271
+Gloomy Forest~
+The remains of an ancient wagon lie on its side here, the wood rotting
+away with the help of a scattering of red-capped toadstools.  Coal and
+stones lie strewn across the ground where they fell from the wagon, the
+dusty rubble preventing the normal forest plants from growing.  Gathered
+about the ruin in silent witness are the towering pine trees, their
+branches hopelessly entangled in each other.
+~
+~
+33030147 12 9 0
+D0
+~
+~
+0 -1 9270 10 10 5
+-1
+S
+
+#9272
+Gloomy Forest~
+Sphagnum moss drapes in curtain-like folds down the branches of the
+ancient trees, their tips dripping with muddy water.  Under the roots of
+the great trees weatherworn rocks spread, many of the softer stones
+crumpled by the digging roots.  Small clusters of foxglove and thorn
+bushes grow to the south, the land becoming increasingly marshy in that
+direction.
+~
+~
+33030147 12 9 0
+D2
+~
+~
+0 -1 9273 10 10 5
+D3
+~
+~
+0 -1 9268 10 10 5
+-1
+S
+
+#9273
+Gloomy Forest~
+Water reeds, rushes and thorn bushes jostle against a wall of foxgloves
+at the edge of a murky looking bog.  Forming an unsavory-looking pool,
+shallows of stagnant water oozes out from under a heavy blanket of
+duckweed.  A moss-encased wall of stone prevents passage way in any
+direction bar the north.
+~
+~
+33030147 12 9 0
+D0
+~
+~
+0 -1 9272 10 10 5
+-1
+S
+
+#0
+

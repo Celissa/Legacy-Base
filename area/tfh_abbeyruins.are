@@ -1,0 +1,3359 @@
+#M2_AREA
+2
+
+Abbey on the Hill~
+Azerin~
+Abbey on the Hill~
+~
+~
+
+25 0
+0
+1
+#ROOMS
+
+#6600
+Cobbled Road - Toward the Abbey~
+Flanked on each side by rubble-strewn wall, a cobbled road winds
+gradually upward toward the jutting ruins that perch atop the desolate
+hill.  A few copses of trees rise between the collapsed buildings, their
+barren, leafless branches twisted as if in agony.  Southward lies a
+wrought iron gate, its hinges torn asunder, as if struck by some great
+force.  Scattered across the ruined hill are countless tombstones, most
+of them crumbling and broken, adding to the forlorn aura of this accursed
+place.
+~
+[Guin] Connects to 14013 south.
+[Guin] Done
+~
+167247880 12 9 0
+D1
+~
+~
+0 -1 6601 10 10 5
+D2
+~
+~
+0 -1 14013 10 10 5
+E
+rubble strewn walls~
+Most of the wall has been broken down at some point, the chunks of
+mortar-covered stones scattered about the wall's base.  A few tendrils of
+rust-splotched ivy wind across the crumbling surface, the tangled mass
+helping to maintain what remains of the wall.
+~
+E
+abbey jutting ruins~
+Several stories high, the walled abbey appears to be in reasonable
+condition.  A weatherworn flag flutters bravely from the pinnacle of its
+spire, its emblem faited beyond reconition.
+~
+E
+copse trees~
+Dead and broken, the withered trees rise just above the crumbling ruins,
+their skeletal frames weaving slowly in an unfelt breeze.
+~
+E
+wrought iron gate~
+Cast in the pattern of entwined rose bushes, the wrought iron gates were
+once an impressive entrance.  At some point, they have been torn from
+their hinges with enough force to buckle and break them in two.
+~
+E
+desolate hilltop~
+Covered in the ruins of countless buildings and dotted with broken
+tombstones, the hill appears cloaked in a gloom that matches the feel of
+destruction that hangs in the air.  The abbey, perched atop the hill's
+apex, lords over the desolation, high enough so that all who approach
+must walk in its shadow.
+~
+E
+tombstones~
+Covering the hillside the ancient graveyard appears to have little order
+to its arangment, tombstones rise is haphazard fashion as if the bodies
+were buried where they fell.  Much of the stonework has erroded over
+time, leaving broken chunks scattered about.
+~
+E
+collapsed building~
+Once a fair-sized township must have lain under the watchful gaze of
+the hilltop abbey. Now, only a few walls and collapsed rafters remain. 
+Much of the woodwork shows signs of fire damage, an indication that the
+houses met with an unpleasant end.
+~
+E
+ivy~
+The sickly plant grows at the base of the wall, its creepers swarming
+over the stones.  Much of the ivy appears to be dead, its jagged leaves
+withered and brown and coated with patches of bright orange rust.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou work past the wrecked iron gate, entering the ruins of the
+buildings to the north.@n 
+~
+E
+to_room~
+@c$n works past the wrecked iron gate, entering the ruins of the
+buildings to the north.@n 
+~
+!
+3 0 4
+-1
+S
+
+#6601
+Cobbled Road - Toward the Abbey~
+The husks of once-grand houses crouch amidst the withered grass of the
+hillock, their inhabatants long since gone.  Rising above the wreckage
+are several dilapidated buildings, their skeletal frames laid bare to the
+elements.  Scattered about in chaotic fashion, countless tombstones lean
+this way and that, most of them built near or within the ruin grounds. 
+Lording it over the destruction, the gloom-shrouded abbey perches like a
+vulture atop the the hill.  An overgrown cobbled road winds through the
+desolation; it weaves eastward, rising slowly uphill toward the abbey and
+westward toward a ruined gate.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 6602 10 10 5
+D3
+~
+~
+0 -1 6600 10 10 5
+E
+grass~
+Speckled with rust-colored disease, the withered and dry grass once would
+covered the hillock in a swathe of green.  A dry wind whips across the
+ruins, briefly stiring the dead vegitation.
+~
+E
+hill tombstone ruins~
+The remains of a once-grand city spreads out around the hillside, the
+buildings only shells of their former glory.  The one remaining structure
+that rises above the tombstones and decay is a grand abbey, perched on
+the top of the hill.
+~
+-1
+S
+
+#6602
+Cobbled Road - Toward the Abbey~
+Rising from the ruins is the withered husk of huge tree, its bark and
+branches charred by an intense fire.  Black and twisted limbs drape down
+across the road like the claws of a great beast.  A partially destroyed
+wall runs along the southern portion of the cobbled road, the rotted
+stumps of more trees rising beyond it.  From this distance the abbey
+seems almost lost in the gloom that surounds it.  Several more intact
+houses perch in front of the abbey, obscuring the view slightly.  The
+cobbled road heads westward, descending slightly and winds northward
+around the tree, continuing its journey toward the hill's apex and the
+ancient wreckage there.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 6603 10 10 5
+D3
+~
+~
+0 -1 6601 10 10 5
+E
+oak tree bark branches~
+Appearing to have been struck repeatedly by lightning, the gnarled tree
+is covered with old burn scars and charred bark from the impact and
+following fires.  Its blackened roots claw at the stone work surrounding
+it, tearing up the slates and cobbles.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yDust swirls about as you head northward.@n
+~
+E
+to_room~
+@yDust swirls about $n as $e moves northward.@n
+~
+!
+3 0 1
+A
+dig~
+roots~
+act_tochar( #search, ch );
+act_notchar( #rsearch, ch, obj, mob, sight );
+if( !rflag( reset0, room ) ) {
+  act_tochar( #already, ch, obj );
+  act_notchar( #ralready, ch, obj, mob, sight );
+  end;
+}
+remove_rflag( reset0, room );
+i = random( 1, 3 );
+if( i == 1 )
+  obj = oload( 246, random( 2, 4 ) );
+if( obj ) {
+  act_tochar( #found, ch, obj, mob, sight );
+  act_notchar( #rfound, ch, obj, mob, sight );
+  obj_to_room( obj, room );
+}
+else {
+  act_tochar( #nothing, ch );
+  act_notchar( #rnothing, ch, obj, mob, sight );
+}
+~
+E
+search~
+You start poking around the roots, seeing if you can knock anything loose.
+~
+E
+rsearch~
+$n starts poking around the roots, seeing if $e can knock anything loose.
+~
+E
+already~
+You notice some sharp marks on the roots, and figure someone beat you here.
+~
+E
+found~
+You poke at the roots and $p rolls out onto the ground.
+~
+E
+rfound~
+$n pokes at the roots and $p rolls out onto the ground.
+~
+E
+ralready~
+$n pokes at the roots momentarily, but gives up.
+~
+E
+nothing~
+Nothing comes loose from your poking and prodding.
+~
+E
+rnothing~
+Nothing comes loose from $n's poking and prodding.
+~
+!
+9 0 0
+5369 9 1509949540 3 0
+837 9 1509949540 3 0
+-1
+S
+
+#6603
+Cobbled Road - Among the Tombstones~
+Rising through the dead grass and jumbled rubble are ancient looking
+tombstones.  Most are cracked and worn and jutt at odd angles, a few
+headless, winged statues intermixed with the grave markers.  A circle of
+stone lies to the west, perhaps the remains of a tower.  The cobbled road
+continues its winding journey between the ruins and graves, heading
+eastward along the hillock or southward toward the charred silhouette of
+a huge tree.  At the hill's apex, the crumbling walls and broken roof of
+an antiquated abbey are cloaked in darkly ominous shadows.
+~
+[Guin] Done.
+~
+167247872 2 9 0
+D1
+~
+~
+0 -1 6605 10 10 5
+D2
+~
+~
+0 -1 6602 10 10 5
+D3
+~
+~
+0 -1 6604 10 10 5
+E
+tombstone grave markers~
+In a disturbing trend across the graveyard, many of the tombs have been
+recently excavated, mounds of dirt lying beside each empty grave.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cSkirting the fallen rubble and tombstones, you continue onward.@n 
+~
+E
+to_room~
+@cSkirting the fallen rubble and tombstones, $n continues onward.@n
+~
+!
+3 0 10
+A
+~
+~
+send_to_room( #dust, room, sight );
+~
+E
+dust~
+@yEddies of dust spiral upward, caught in the currents of an unfelt
+breeze.@n 
+~
+!
+2 150 0
+5369 9 1509949540 3 0
+-1
+S
+
+#6604
+Amoung the Tombstones - Foundations of a Tower~
+Buried beneath the rubble are the foundations of a circular tower. 
+Rising from the broken rocks are four columns, part of the support for
+what was once the second story.  Against the sole standing wall, a
+staircase rises ascends approximately eight feet, its crumbled steps
+jutting out into the open air.  Spreading out around the tower's
+foundations are partially destroyed headstones.  Just visible through the
+ruins to the east is an overgrown cobbled road, its destination the
+gaunt, gloom-shrouded abbey that perches atop the hill.  An ivy-covered
+wall lies just to the west, blocking travel in that direction.  An open
+doorway to the north leads onward into the shell of a building, its roof
+and one wall collapsed in upon it.
+~
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 6626 10 10 5
+D1
+~
+~
+0 -1 6603 10 10 5
+D5
+~
+~
+0 -1 6607 10 10 5
+E
+foundations rubble tower columns~
+The crumbling ruin would have been an impressive tower in its heyday. 
+Now unfortunately, only the remnants of its shell remain to remind those
+that a thriving city once stood here.  A dark opening lies in the center
+of the rubble where uneven stairs disappear into the depths below.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yScattering dust from the stairs, you wander into the darkness below.@n
+~
+E
+to_room~
+@yScattering dust from the stairs, $n wanders into the darkness below.@n
+~
+!
+3 0 32
+-1
+S
+
+#6605
+Cobbled Road - Across the Hill~
+An overgrown cobblestone road winds between the jutting remains of broken
+buildings.  Weeds and dead grass poke through the cracked and chipped
+cobbles, at some points completly obscuring the trail.  A few scattered
+tombstones rise throughout the ruins, their weatherworn stones eroded and
+broken.  Toward the west, the road skirts the husk of a great tree, its
+twisted branches black and lifeless.  Eastward, the road rises towards
+the gaunt, walled abbey that spreads across the hill's crest.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 6606 10 10 5
+D3
+~
+~
+0 -1 6603 10 10 5
+E
+tombstones weatherworn~
+A spidery script covers the crumbling tombstones.  Obviously ancient, the
+language is long lost to this world.  Dried grass and thistles sprout in
+the sunken places between the graves, even the weeds struggling to grow
+in the cursed soil.
+~
+E
+tree twisted branches~
+Struck by lightning more than once, the blasted remains of the tree have
+been come warped and charred.
+~
+-1
+S
+
+#6606
+Cobbled Road - Across the Hill~
+To the north a faint path heads upward to the abbey.  The cobbled road
+continues on its eastward journey, its destination unclear.  The ruin of
+a manor house sprawls to the south, the front wall and an arched doorway
+still standing.  Dead grass and withered flowers grow beside the road,
+their shriveled leaves covered in rust and mildew.  Toward the west the
+road winds down into more destroyed buildings, each one surrounded by a
+sea of ancient tombstones.  The abbey, itself, is shrouded in perpetual
+gloom, a darkness that oozes from its shattered remains like the blood
+from a corpse.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 6609 10 10 5
+D1
+~
+~
+0 -1 6610 10 10 5
+D3
+~
+~
+0 -1 6605 10 10 5
+E
+manor house ruin arch~
+The once grand building has collapsed into itself, leaving a shell of its
+former glory to be slowly erroded by the harsh wind and rain.  Signs of
+war coat its stones; black stains from fire and brown from dried blood
+splatter across the broken surfaces.
+~
+E
+tombstones~
+Crumbling away, the tombstones mark the graves of the fallen, although
+many of them have been dug up where thieves or some unknown creature has
+exhumed the corpses.
+~
+A
+1 dig~
+grave~
+if( !rflag( reset0, room ) ) {
+  act_tochar( #already_open, ch );
+  end;
+}
+remove_rflag( reset0, room );
+if( random( 1, 2 ) == 1 ) {
+  mob = mload( 5369, room );
+  act_tochar( #uncover, ch, obj, mob );
+  act_notchar( #runcover, ch, obj, mob, sight );
+  end;
+}
+obj = oload( 4021 );
+if( obj ) {
+  act_tochar( #find, ch, obj );
+  act_notchar( #rfind, ch, obj, mob, sight );
+  obj_to_char( obj, ch );
+}
+else {
+  act_tochar( #nothing, ch );
+  act_notchar( #rnothing, ch, obj, mob, sight );
+}
+~
+E
+already_open~
+The grave has already been dug up.
+~
+E
+uncover~
+You uncover $N in your expedition.
+~
+E
+runcover~
+$n uncovers $N in $s expedition.
+~
+E
+find~
+You find $p in your digging attempts.
+~
+E
+rfind~
+$n finds $p in $s digging expedition.
+~
+E
+nothing~
+You find nothing from digging the grave up.
+~
+E
+rnothing~
+$n finds nothing from digging the grave up.
+~
+!
+0 0 0
+A
+1 look~
+3 grave~
+if( rflag( reset0, room ) )
+  act_tochar( #grave, ch );
+else
+  act_tochar( #open, ch );
+~
+E
+grave~
+The dirt lies loose upon the grave, as if freshly dug or newly exhumed.
+~
+E
+open~
+The grave has been torn open, perhaps by restless dead or grave robbers.
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yPicking your way through the tombstones, you continue northward.@n
+~
+E
+to_room~
+@yCareful to avoid the crumbling gravestones, $n heads northward@n
+~
+!
+3 0 1
+-1
+S
+
+#6607
+Under the Tower - Stairwell~
+Cut from natural rock and earth, the stairwell spirals downward into the
+gloom below.  Across the walls spread faded lines of what might have once
+been writing, the years of neglect making interpreting them impossible. 
+Arched pillars flank the stairs; at their keystones an iron bowl hangs,
+suspended by links of chain.  Sounds of scuffling and dripping water echo
+around the room, their source unseen from here.
+~
+[Guin] Done.
+~
+167247884 0 5 0
+D4
+~
+~
+0 -1 6604 10 10 5
+D5
+~
+~
+0 -1 6608 10 10 5
+E
+iron bowl links chain~
+In the past, the rusty chains and grime-coated bowls would have served as
+oil lamps, illuminating the dark halls.
+~
+E
+faded lines writing~
+Perhaps at some point, the lines would have formed a script, but now they
+are faded beyond comprehension.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou clamber up the stairs out of the catacombs.@n
+~
+E
+to_room~
+@c$n clambers up the stairs out of the catacombs.@n
+~
+!
+3 0 16
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cWith a careful step, you head down the crumbling stairs.@n
+~
+E
+to_room~
+@cWith a careful step, $n heads down the crumbling stairs.@n
+~
+!
+3 0 32
+-1
+S
+
+#6608
+Catacombs Beneath the Hill - Stairwell~
+The walls and floor of this dank place have been cobbled with smooth grey
+stones.  Cut into the eastern wall is a semi-circular alcove, a spiral
+staircase filling much of it.  At regular intervals, iron bowls hang from
+the catacomb ceiling, attached by rusted chains to the keystones above. 
+Worn into the cobbles underfoot, are countless grooves that appear to
+have been cut or clawed into the stones.  The crypt continues onward in a
+northerly direction and southward, the muffled sounds of sibilant
+movement echoing through the dark halls.
+~
+[Guin] Done.
+~
+167247876 0 5 0
+D0
+~
+~
+0 -1 6615 10 10 5
+D2
+~
+~
+0 -1 6617 10 10 5
+D4
+~
+~
+0 -1 6607 10 10 5
+E
+iron bowls chains~
+The concave bowls would normally have contained oil or some other
+flammable liquid, but now, whatever they once held has long since dried,
+leaving them of little use.
+~
+5380 9 1509949540 3 0
+5369 9 1509949540 3 0
+-1
+S
+
+#6609
+Trail to the Abbey~
+Rising from the broken remains of shattered buildings the grim and stark
+abbey perches upon the apex of the hill.  A low wall surrounds the
+building, a few holes in the rocky expanse the only sign of damage to it. 
+Directly to the north, a cobble road heads upward and into the remnants
+of a gatehouse, a rusted portcullis partially blocking the entrance. 
+Countless gargoyles sprout from the abbey's buttresses, their leering
+faces watching any who approach the shadowed portal of the abbey's main
+entrance.  Above the doorway is a circular stained glass window, most of
+its panes broken and missing.  Southward, the trail joins the road once
+more; beyond the cobbled way more derelict buildings rise.
+~
+[Guin] Done.
+~
+167247880 0 9 0
+D0
+~
+~
+0 -1 6624 10 10 5
+D2
+~
+~
+0 -1 6606 10 10 5
+E
+gargoyles~
+In ancient times the gargoyles were used to ward off evil, these however
+look far from having any benevolent purpose.  Spikes and horns cover
+their squat demonic bodies, their forked tongues poking between teeth in
+its crocodile-like mouth.
+~
+-1
+S
+
+#6610
+Cobbled Road - Across the Hill~
+To the east, the exposed rocks of a broken shelf cut into the hillside,
+forming a ravine into which the cobbled road descends.  At the ravine
+floor, a squat stone tomb juts out of the cliff side, its buttresses
+capped with rusting iron spears.  Beyond the ravine, the road climbs
+again, heading northward back toward the abbey that rests atop the hill
+above.  A few scattered, lifeless trees grow on the bank of the vale,
+their twisted broken branches black and withered.  Westward, the cobbled
+road winds between broken buildings, its destination unclear.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D3
+~
+~
+0 -1 6606 10 10 5
+D5
+~
+~
+0 -1 6612 10 10 5
+E
+twisted trees withered~
+Struck by lightning more than a few times the blackened tree leans to the
+east, its twisted branches warped by the evil earth it grows upon.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou carefully make your way down the zigzagging road and into the
+ravine.@n 
+~
+E
+to_room~
+@y$n makes $s way down the zigzagging road.@n
+~
+!
+3 0 32
+-1
+S
+
+#6611
+Cobbled Road - Across the Hill~
+Under Construction.
+~
+~
+167247872 0 9 0
+-1
+S
+
+#6612
+Cobbled Road - Ravine Floor~
+Broken monoliths of basalt rock litter the ravine's basin, many rising to
+well over ten feet in height, their hexagonal shape crafted by an unknown
+artisan.  Amongst the columnar rocks dusky brown grass spreads outward,
+its blades withered and dry.  Northward, the cobbled road leads towards a
+barrow, the entrance stone carved with swirling patterns.  To the south,
+the road zigzags up the ravine side and into the ruins beyond.
+~
+[Guin] Done.
+~
+167247880 0 9 0
+D0
+~
+~
+0 -1 6613 10 10 5
+D4
+~
+~
+0 -1 6610 10 10 5
+E
+monoliths basalt~
+The clean edges of the stone have been cut razor sharp, giving the basalt
+rock a dagger-like appearance.  A base of granite rock cements the tall
+stone into the ground.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou stride up the zigzagging road out of the ravine.@n
+~
+E
+to_room~
+@y$n strides onward up the zigzagging road and out of the ravine.@n 
+~
+!
+3 0 16
+-1
+S
+
+#6613
+Cobbled Road - Before A Stone Tomb~
+Built into the side of the western cliff face is a barrow, constructed
+from the same black basalt stone of the southern columns.  Carved upon
+the neolithic tomb's outer surface are interconnected swirling patterns,
+some almost serpent-like in appearance.  The cobbled road runs between
+menhirs of blue-black colored stone and begins to zigzag up the ravine's
+southern edge.  Beyond the crypt, the road cuts a steep path up and out
+of the ravine, the tip of the abbey just visible above the road's apex.
+~
+[Guin] Done.
+~
+167247872 0 9 0
+D2
+~
+~
+0 -1 6612 10 10 5
+D3
+crypt door~
+~
+131 -1 6622 10 10 5
+D4
+~
+~
+0 -1 6614 10 10 5
+E
+menhirs blue-black~
+The hewn standing stones are made from huge chunks of jet, the volcanic
+rock carved into a spear-like shape.
+~
+E
+serpent-like swirling patterns~
+The disturbing writings squirm and shift under direct light, perhaps some
+magical writings its meaning is now lost.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yWith a grunt of effort, you struggle up the steep hill.@n
+~
+E
+to_room~
+@yWith a grunt of effort, $n struggles up the steep hill.@n
+~
+!
+3 0 16
+5385 9 1509949540 3 0
+-1
+S
+
+#6614
+Cobbled Road - Before a Narrow Ravine~
+The broken remains of a manor house spread across the ground to the east,
+the arch of the entranceway the only part of the structure still standing. 
+To the west, rubble covers the shell of a less grand house, the
+whitewashed walls intact despite the neglect.  Running between these
+ruins is a cobbled road, tufts of dead grass poking through the cracked
+and broken surface.  Southward, it dips downward into a gloomy ravine,
+where strange monoliths of rock cover its basin.
+~
+[Guin] Done.
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 6623 10 10 5
+D5
+~
+~
+0 -1 6613 10 10 5
+E
+manor house~
+Gutted by fire and shattered by violence, the crumbling ruin of the manor
+is now succumbing to the ravages of time and neglect.  The fine mosaic
+walls and rich-timbered roof have all but faded away.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou scrabble down the slope into the long shadows of the hillside.@n
+~
+E
+to_room~
+@yWith a cloud of dust, $n scrabbles down the hillside.@n
+~
+!
+3 0 32
+-1
+S
+
+#6615
+Catacombs Beneath the Hill - Stone Door~
+The passageway ends at an arched stone door set into the northern wall. 
+At one stage, the area surrounding the door was covered in frescoes; the
+chipped and broken remnants of a few colored tiles are still evident. 
+The base-relief of a rampant tiger has been carved from the arch's
+keystone, a faint sparkle of silver gleaming from the grooves; the
+reminder of its original plated surface.  To the south, the catacomb
+continues into the darkness, a faint dripping sound echoing within the
+gloom.
+~
+[Guin] Reviewed.
+~
+167247876 0 5 0
+D0
+crypt door~
+~
+131 -1 6616 10 10 5
+D2
+~
+~
+0 -1 6608 10 10 5
+E
+frescoes tiles~
+Their patterns long faded, the tiles are mearly a remnant of a past age;
+their splender would have made these dingy halls a place of great beauty.
+~
+-1
+S
+
+#6616
+Crypt of the Tiger~
+Covering the walls and ceiling of the crypt are carvings of tigers of
+various stance and detail.  Some are mere outlines, giving vague
+impressions of the beast at hunt, while a few are so lifelike that they
+almost move as the light falls across them.  A door to the south leads
+out of the tomb back into the gloomy catacombs.
+~
+[Guin] Done.
+~
+167247876 0 6 0
+D2
+crypt door~
+~
+131 -1 6615 10 10 5
+E
+tigers~
+White tigers bound through an icy pine forest across the northern wall,
+the painting merging with a jungle scene at its northeastern corner. 
+More shadowy tigers lurk in the dense jungle growth.
+~
+2907 49 1509949540 -2 0
+983 81 1509949470 -2 0
+3150 81 1509949444 -2 0
+2599 9 1509949540 3 0
+-1
+S
+
+#6617
+Catacombs Beneath the Hill~
+Caked in the grime of countless years, the smooth stones have taken on a
+blackish hue.  Underfoot, the floor has been constructed from hexagonal
+tiles, their once flawless finish marred by chips and cracks.  Arches
+frame each of the three passageways, each one's keystone carved with a
+different animal.  Cut into the southern wall is a semi- circular alcove,
+the remains of a mummified creature lying within it.  Above the opening
+juts a base-relief in the form of a demonic face, the leering expression
+and needle-like teeth unsettlingly life-like.
+~
+[Guin] Done.
+~
+167247876 0 5 0
+D0
+~
+~
+0 -1 6608 10 10 5
+D1
+~
+~
+0 -1 6618 10 10 5
+D3
+~
+~
+0 -1 6620 10 10 5
+E
+semi-circular alcove mumified~
+The mummified creatures have been bound in silk bandages, a few patches
+of fur and bones poking through the encasing cloth.  The shape and size
+of them indicate that they are the preserved remains of animals rather
+than humans.
+~
+A
+~
+semi-circular alcove~
+act_tochar( #search, ch );
+act_notchar( #rsearch, ch, obj, mob, sight );
+if( !rflag( reset0, room ) ) {
+  act_tochar( #already, ch );
+  act_notchar( #ralready, ch, obj, mob, sight );
+  end;
+}
+remove_rflag( reset0, room );
+i = random( 1, 100 );
+if( i < 20 )
+  obj = oload( 2, random( 2, 5 ) );
+else if( i < 60 )
+  obj = oload( 3960, random( 3, 8 ) );
+if( obj ) {
+  act_tochar( #found, ch, obj );
+  act_notchar( #rfound, ch, obj, mob, sight );
+  obj_to_char( obj, ch );
+}
+else {
+  act_tochar( #nothing, ch );
+  act_notchar( #rnothing, ch, obj, mob, sight );
+}
+~
+E
+search~
+You begin searching through the alcove for anything of value.
+~
+E
+rsearch~
+$n begins searching through the alcove for anything of value.
+~
+E
+already~
+You stop searching after it becomes apparent from the way its been spread
+out, someone beat you to it.
+~
+E
+ralready~
+$n stops searching after $e becomes aware of all the debris around the alcove.
+~
+E
+found~
+You find $p in the alcove and put it in your inventory.
+~
+E
+rfound~
+$n finds $p in the alcove.
+~
+E
+nothing~
+You find nothing of interest in the alcove.
+~
+E
+rnothing~
+$n finds nothing of interest in the alcove.
+~
+!
+9 0 0
+-1
+S
+
+#6618
+Catacombs Beneath the Hill - Stone Door~
+The towering figure of a rampant bear, its rage apparent on its snarling
+face, has been carved into the door to the east.  Around the feet of the
+bear, the tattered remains of defeated foes lie scattered, their broken
+forms torn apart.  A black stone arch frames the door, light dancing
+across its gleaming surface like the ripples across a pool of still water. 
+The flagstone floor shows some sign of age, the interlocking stones
+riddled with cracks and chips.  To the west, the passageway disappears
+into the gloom, an intersection just visible in the darkness.
+~
+[Guin] Done
+~
+167247876 0 5 0
+D1
+crypt door~
+~
+131 -1 6619 10 10 5
+D3
+~
+~
+0 -1 6617 10 10 5
+E
+rampant bear~
+The rampant bear faces eastward, its claws extended and fanged mouth wide
+in a snarl.  Only somewhat lifelike, the artist has taken a few liberties
+with the claw and fang size.
+~
+5380 9 1509949540 3 0
+-1
+S
+
+#6619
+Crypt of the Bear~
+Silken effigies to the glory and destruction a bear can work upon a
+people, festoon the walls and ceiling of the tomb.  Across every surface,
+carvings depict bears tearing apart a hapless victim, show gruesome
+scenes; in one flight of fancy, hundreds of bears wreak havoc upon an
+army of thousands.  A rusty iron bowl hangs from the roof, once an oil
+lantern illuminating the room.  The only exit out of the crypt is a stone
+door to the west, a bear skull wrought in the middle of it.
+~
+[Guin] Done.
+~
+167247876 0 6 0
+D3
+crypt door~
+~
+131 -1 6618 10 10 5
+E
+iron bowl~
+Rusting away the iron bowl would have served as a lamp of sorts, now it
+collects a fine layer of dust and grime.
+~
+2907 49 1509949540 -2 0
+2 81 1509949470 -2 0
+2 81 1509949460 -2 0
+2 81 1509949450 -2 0
+7538 81 1509949450 -2 0
+2601 9 1509949540 3 0
+-1
+S
+
+#6620
+Catacombs Beneath the Hill - Stone Door~
+Dusty cobwebs drape from the corners of the musty hallway, the reminder
+of long gone arachnids.  In the northern wall, lies a stone door, the
+carving of a leaping wolf upon its surface.  Eastward, the passageway
+leads into the darkness, a gloom-shrouded intersection barely visible in
+the distance.  Uneven flagstones cover the floor, its original even
+surface now cracked and broken.
+~
+[Guin] Reviewed.
+~
+167247876 0 5 0
+D0
+crypt door~
+~
+131 -1 6621 10 10 5
+D1
+~
+~
+0 -1 6617 10 10 5
+E
+flagstones~
+The hexagonal flagstones have been crafted from a black-hued slate, its
+surface flecked with grime.  Years of water damage and neglect have
+cracked and split many of the stones.
+~
+-1
+S
+
+#6621
+Crypt of the Wolf~
+A misty forest has been carved across the stone crypt walls; towering
+trees and fern-thick ground cover blend together to form the illusion of
+depth.  The details are astonishing, a realistic sense of a woodland
+scene almost leaping from the cold walls.  Moving through the
+mist-shrouded trees is a pack of wolves, the lead male's coat a midnight
+black.  Barely visible within the forest scene, a door is cut into the
+southern wall.
+~
+[Guin] Done.
+~
+167247876 0 6 0
+D2
+crypt door~
+~
+131 -1 6620 10 10 5
+E
+pack wolves forest~
+The shadowy forest moves with the ghostly images of huge wolves, their
+heavy fur flanks passing through and around the towering trees.  Twice
+the size of the rest, the alpha male's eyes glow with a baleful green
+fire.
+~
+2907 49 1509949540 -2 0
+2 81 1509949470 -1 0
+2 81 1509949460 -1 0
+2 81 1509949450 -1 0
+2600 9 1509949540 3 0
+-1
+S
+
+#6622
+Crypt of the Snake~
+From each of the four corners of the squat room rise stone pillars,
+carved into the shape of writhing snakes.  Across the ceiling and floor
+the carvings of serpents spread, crafted to make it difficult to see
+where one snake ends and another begins.  A mosaic of snakes surrounds an
+alcove built into the western wall, the brightly colored tiles still
+vivid despite the passage of time.  The tattered remains of a humanoid
+creature rest in the alcove, entombed for many years.
+~
+~
+167247872 0 9 0
+D1
+crypt door~
+~
+131 -1 6613 10 10 5
+E
+mosaic tile~
+Masses of serpents entwine around the bones of a elephant-headed giant. 
+Under the beasts feet, the remains of hundreds of human skeletons spread
+out, most of their skulls impaled on wooden spikes.
+~
+A
+~
+remains alcove~
+act_tochar( #search, ch );
+act_notchar( #rsearch, ch, obj, mob, sight );
+if( !rflag( reset0, room ) ) {
+  act_tochar( #already, ch );
+  act_notchar( #ralready, ch, obj, mob, sight );
+  end;
+}
+remove_rflag( reset0, room );
+i = random( 1, 100 );
+if( i < 5 )
+  obj = oload( 558 );
+else if( i < 15 )
+  obj = oload( 9 );
+else if( i < 45 )
+  obj = oload( 2291 );
+if( obj ) {
+  act_tochar( #found, ch, obj );
+  act_notchar( #rfound, ch, obj, mob, sight );
+  obj_to_char( obj, ch );
+}
+else {
+  act_tochar( #nothing, ch );
+  act_notchar( #rnothing, ch, obj, mob, sight );
+}
+~
+E
+search~
+You begin looking through the remains and alcove for anything of value.
+~
+E
+rsearch~
+$n begins looking through the remains and alcove for anything of value.
+~
+E
+already~
+Someone has beat you to the alcove.
+~
+E
+ralready~
+$n has been beaten to searching the alcove.
+~
+E
+found~
+You find $p in the alcove.
+~
+E
+rfound~
+$n finds $p in the alcove.
+~
+E
+nothing~
+You find nothing of interest.
+~
+E
+rnothing~
+$n finds nothing of interest.
+~
+!
+9 0 0
+2598 9 1509949540 3 0
+-1
+S
+
+#6623
+Cobbled Road - Abbey Wall~
+A cobbled road runs beside the crumbling abbey wall, its destination to
+the west a solid-looking gatehouse.  Toward the south, the road dips
+between ruins and disappears down into a shadowy ravine.  Beyond the
+northern wall the spires of the abbey rise against the sky, their tops
+covered in iron spears and twisted carvings of demonic faces.
+~
+[Guin] Done.
+~
+167247872 0 9 0
+D2
+~
+~
+0 -1 6614 10 10 5
+D3
+~
+~
+0 -1 6624 10 10 5
+E
+abbey~
+The towering abbey has withstood both time and war to remain the dominant
+structure within the ruins.  Surrounded by a stout wall the only entrance
+to its dark halls appears to be a crumbling gatehouse to the west.
+~
+A
+~
+~
+send_to_room( #shadows, room, sight );
+wait( 1 );
+send_to_room( #throw, room, sight );
+wait( 1 );
+loop( all_in_room )
+  if( !is_mob( rch ) )
+  damage( mob, rch, 5d15+50, physical, "the cascading rocks", "thrown rocks" );
+~
+E
+shadows~
+You see shadows move up above you.
+~
+E
+throw~
+A cascade of rocks and debris pummel down.
+~
+!
+2 300 0
+-1
+S
+
+#6624
+Cobbled Road - Before the Gatehouse~
+Rising from the chaos of broken rubble and twisted, rusty iron beams is a
+re-enforced brick and wooden gatehouse.  The steeply angled walls rise
+over ten feet in height before jutting outward to form an overhang that
+would make scaling the walls a challenging feat.  Bound in iron, the
+double doors appear little less sturdy than the wall, giving the feeling
+that someone has spent some time maintaining the entrance to the abbey. 
+Marring the solid appearance is a broken and rusted portcullis, partially
+blocking access to the door.  The dusty roadway heads eastward, following
+the abbey's wall.
+~
+[Guin] Done.
+~
+167247872 0 9 0
+D0
+iron-bound door~
+~
+391 7857 6625 10 10 5
+D1
+~
+~
+0 -1 6623 10 10 5
+D2
+~
+~
+0 -1 6609 10 10 5
+E
+twisted iron rust gatehouse~
+Torn asunder in a bloody battle, the ruined gatehouse would have been the
+first line in defense of the abbey.  Despite the upper ramparts damage,
+the heavy door remains solid, its surface coated in a layer of hack and
+burn marks.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yLeaving the shadow of the wall, you head southward into the ruins.@n
+~
+E
+to_room~
+@yLeaving the shadowy wall, $n heads southward into the ruins.@n
+~
+!
+3 0 4
+5385 9 1509949540 3 0
+5385 9 1509949540 3 0
+-1
+S
+
+#6625
+Ruins of the Gatehouse~
+Gore splatters the walls and floor of the ruined gatehouse, transforming
+it into a charnel house.  Smashed bones and ruptured armor spread in
+chaotic tatters across the bloody floor.  A handprint of blood smears
+across the northern gate, perhaps where a desperate victim tried to claw
+a way out.  An ironbound door blocks the southern exit, strangely free of
+splatter marks.
+~
+[Guin] Done.
+~
+167247876 0 5 0
+D0
+iron-bound door~
+~
+391 7857 6627 10 10 5
+D2
+iron-bound door~
+~
+391 7857 6624 10 10 5
+E
+bones armor blood~
+Torn and shredded armor lies pound into the ground by some savage beast,
+a huge quantity of blood splattered across them.
+~
+2602 9 1509949540 3 0
+-1
+S
+
+#6626
+Among the Ruins~
+The four walls of the ruined building rise to little over ten feet in
+height.  A fresco of tiles lies partially buried under a swathe of rubble
+from the collapsed floors above.  Against the northern wall a staircase
+rises up to the destroyed second story.  Under the bricks and mortar of
+what would have been the two main internal walls lies the carcass of a
+horse, its bleached bones gleaming in the light.  A doorway to the south
+leads out of the house, and into the foundations of a circular tower.
+~
+[Guin] Done.
+~
+167247872 2 9 0
+D2
+~
+~
+0 -1 6604 10 10 5
+E
+walls~
+Grey mortar barely holds the crumbling bricks together; cracks and chips
+cover the ruins surface.  Under the onslaught of war or elements, several
+sections of the wall have slumped in, spreading broken rocks across the
+foundations and grassy hill.  Windows in each of the walls look out upon
+the hillside, the cheerless view of dead grass, ruins and tombstones
+visible from each of them.
+~
+E
+staircase~
+A pair of dilapidated stone steps leads upward and end at where the
+collapsed second story would have once been.  Between many of the stones,
+the mortar has turned to dust, leaving the staircase at an unsteady angle.
+~
+E
+fresco tiles rubble~
+The fading remains show a scattering of creatures gathered about a
+gleaming altar.  Although mostly destroyed, they still seem to radiate a
+strong sense of evil.
+~
+E
+horse bleached bones~
+The crushed remains of a war-horse lie under the heavy weight of the
+collapsed wall, a few rusted links of chain embedded into the bones by
+the force of the tumbling rocks.
+~
+A
+~
+carcass corpse remains~
+if( !rflag( reset0, room ) ) {
+  act_tochar( #already, ch );
+  act_notchar( #ralready, ch, obj, mob, sight );
+  end;
+}
+remove_rflag( reset0, room );
+obj = oload( 3960, random( 5, 10 ) );
+if( obj ) {
+  act_tochar( #found, ch, obj, mob );
+  act_notchar( #rfound, ch, obj, mob, sight );
+  obj_to_char( obj, ch );
+}
+else {
+  act_tochar( #nothing, ch, obj, mob );
+  act_notchar( #rnothing, ch, obj, mob, sight );
+}
+~
+E
+already~
+The carcass has already been searched.
+~
+E
+ralready~
+$n searches the remains, but finds nothing useful.
+~
+E
+found~
+You find $p in the carcass.
+~
+E
+rfound~
+$n finds $p in the carcass.
+~
+E
+nothing~
+You find nothing of use in the carcass.
+~
+E
+rnothing~
+$n finds nothing of use in the carcass.
+~
+!
+9 0 0
+-1
+S
+
+#6627
+Courtyard Before the Abbey~
+The gothic cathedral rises above the courtyard; its grand arches and
+spires lording over the landits shadow casting a chill on scraggly weeds
+that dare to grow beside its splendor.  Carved doors lead northward into
+the abbey, the wood worked into a frenzy of demonic creatures cavorting
+in a sea of flames.  To the east and west, cobblestone yards form perfect
+killing fields for wall-based archers.
+~
+[Guin] Done.
+~
+167247872 0 9 0
+D0
+abbey doors~
+~
+131 -1 6630 10 10 5
+D1
+~
+~
+0 -1 6628 10 10 5
+D2
+iron-bound door~
+~
+391 7857 6625 10 10 5
+D3
+~
+~
+0 -1 6629 10 10 5
+E
+courtyard weeds~
+Overgrown, the cobblestones give way to unhealthy weeds; often the
+thistles grow to only a few feet in height before dying, leaving dusty
+brown corpses to slowly rot away.
+~
+5385 9 1509949540 3 0
+5385 9 1509949540 3 0
+-1
+S
+
+#6628
+Courtyard Before the Abbey~
+A handful of thistles and grass grow within the abbey's shadow, the
+plants pale and thin from the lack of light or perhaps the poor soil into
+which they dig their roots.  The outer wall of the abbey stretches to the
+south, its defenses unbreeched despite the years of only having the dead
+to tend them.  The mighty abbey rises to the north, its spires and arches
+reaching skyward.
+~
+[Guin] Done.
+~
+167247872 0 9 0
+D3
+~
+~
+0 -1 6627 10 10 5
+E
+thistles grass~
+The dead weeds slowly decay amongst the cobblestones, even the tiresome
+thistles finding it impossible to grow in the accursed ground.
+~
+-1
+S
+
+#6629
+Courtyard Before the Abbey~
+An overgrown cobblestone courtyard flows eastward toward the front of the
+ruined abbey; weeds and dead grass poke through the missing or broken
+cobbles, giving it the appearance of a patchwork quilt.  Situated before
+the abbey, a gatehouse stands stoically, its stonework in much better
+condition than that of the wall or even the abbey proper.  Directly to
+the north, the abbey's four towers climb skyward, each pinnacle covered
+in slender iron spires, most of them bent or buckled.  Around the
+buttresses, leering gargoyles squat on their haunches, gaping mouths
+filled with sharp teeth and forked tongues.  The wall surrounding the
+ruins stretch to the south, its surface chipped and scarred with
+countless cracks running through the worn stone blocks.
+~
+[Guin] Done.
+[Liamie] 3rd line says rdesc
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 6627 10 10 5
+E
+gargolys buttresses~
+The leering gargoyles loom over the entrance to the abbey, their huge
+claws thankfully nothing more than unmoving stone.  Their bat-like wings
+spread out over the rdesc upper windows to protect the fragile glass from
+heavy downpours.
+~
+A
+~
+~
+send_to_room( #birds, room );
+~
+E
+birds~
+@CA murder of crows circles overhead before taking roost on the abbey's
+high, arched roof.@n 
+~
+!
+2 150 0
+-1
+S
+
+#6630
+Within the Ruined Abbey~
+Gloom-shrouded pillars rise up from the blackened walls, their bleached
+marble surfaces gleaming like the exposed ribs of a great beast.  A dull
+brass banister escorts the eastern stairwell up out of the chamber, its
+base decorated with cracked and yellowed bones.  Sturdy wooden doors set
+to the south lead back to the abbey's courtyard.  In the northern end of
+the room are two black-stone doors, the archway surrounding them inlayed
+with silver veins of ore.
+~
+[Guin] Done.
+~
+167247876 0 6 0
+D0
+black stone door~
+~
+131 -1 6632 10 10 5
+D1
+~
+~
+0 -1 6631 10 10 5
+D2
+abbey doors~
+~
+131 -1 6627 10 10 5
+D3
+stone panel~
+~
+2187 -1 6633 10 10 5
+E
+pillars ribs marble~
+Carved from a fine grade of white marble, the pillars would have cost a
+fortune to import during the abbey's construction.  Their solid base and
+graceful arches seem more for decoration than structural soundness.
+~
+A
+~
+~
+if( !is_mob( ch ) ){
+  if( mob_in_room( 2602, room ) )
+    continue;
+  if( !rflag( reset0, room ) )
+    continue;
+  remove_rflag( reset0, room );
+  mob = mload( 2602, room );
+  open( room, west );
+  act_room( #bound, mob, obj, mob, sight );
+}
+~
+E
+bound~
+$n bounds through a secret door to the west toward you.
+~
+!
+1 0 7
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYour footsteps echo through the hall.@n
+~
+E
+to_room~
+@y$n footsteps echo through the hall as $e heads eastward.@n
+~
+!
+3 0 2
+5385 9 1509949540 3 0
+-1
+S
+
+#6631
+Within the Ruined Abbey - Eastern Staircase~
+Spiraling up into the dark recesses of the abbey runs a brass-banistered
+staircase.  The ancient stonework steps have been worn slick by the
+passage of time, a lattice of fine cracks pockmarking their edges. 
+Toward the west, pillars rise up toward the high ceiling, the
+bleached-white stones gleaming like the ribs of a giant skeleton.  Under
+each of the banister rails lie the skeletal remnants of humanoids, their
+corpses strangely preserved and whole.
+~
+[Guin] Done.
+~
+167247876 0 6 0
+D3
+~
+~
+0 -1 6630 10 10 5
+D4
+~
+~
+0 -1 6641 10 10 5
+E
+skeletal remnants humanoids~
+Tightly encased in cotton bindings, the corpses have been crudely
+mummified, the process however failed to prevent the remains crumbling to
+bones.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yWith a hand upon the brass banister, you clamber up the stairs.@n
+~
+E
+to_room~
+@yUsing the banister for support, $n clambers up the stairs.@n
+~
+!
+3 0 16
+-1
+S
+
+#6632
+Within the Ruined Abbey - Great Hall~
+Blood red tapestries drape from a banistered mezzanine floor above the
+great hall, a two-headed eagle emblazoned upon each one.  Stretching down
+the middle of the hall is a sturdy-looking table, well over thirty feet
+in length.  Iron and brass candelabras jut from between each tapestry,
+the guttering flames of smoky tapers dimly illuminating the cavernous
+chamber.  At each end of the room, black stone doors allow passage into
+the rest of the abbey.
+~
+[Guin] Done.
+~
+167247876 0 9 0
+D0
+~
+~
+0 -1 6664 10 10 5
+D1
+~
+~
+0 -1 6635 10 10 5
+D2
+black-stone door~
+~
+131 -1 6630 10 10 5
+D3
+~
+~
+0 -1 6638 10 10 5
+E
+iron brass candelabras~
+Carved into the shape of entwined dragons and demons, the ornate
+candelabras branch into eight arms each holding an single taper. 
+Although impressive in is design, they fail to offer much more
+illumination than a single torch.
+~
+5385 9 1509949540 3 0
+-1
+S
+
+#6633
+A Small Alcove.~
+Hidden from view from the main chamber, the cramped room would allow one
+or two moderated-sized creatures to remain undetected while still being
+able to hear what occurs in the hall.  A strange addition for an abbey,
+such a spy hole would seem more at home in a royal court or perhaps
+thieves' den.  Scratch marks cover the walls where something, in
+desperation or boredom, has marked the passage of time on the black
+stones.
+~
+[Guin] Done.
+~
+167247872 0 9 0
+D1
+stone panel~
+~
+2187 -1 6630 10 10 5
+E
+scratch marks~
+Over one hundred scratches line the wall, where a trapped or bored
+creature marked off time's passage.
+~
+A
+peek spy~
+hole 1 east~
+transfer( ch, find_room( 6630 ), 1 );
+interpret( ch, "look" );
+transfer( ch, find_room( 6633 ), 1 );
+~
+!
+0 0 0
+-1
+S
+
+#6634
+Within the Ruined Abbey - Stone Sarcophagus~
+A dank chill oozes from the very stone of the still room.  Fingers of
+frost dance across the edges of the drab grey walls.  In the chamber's
+center, a stone sarcophagus sits, its sides and lid plain and unadorned
+save for a single rose embossed upon its head.  Draped down the northern
+wall is a blood red tapestry, its surface gleaming as if freshly dyed. 
+On the floor around the southern wall a shallow groove has been cut in
+the stone, the trails forking under the edge of what appears to be a
+moveable stone pannel.
+~
+[Guin] Add extra for tapestry/1 north/blood - I'd like to know what scene I'm seeing as I look at it.
+[Guin] Need a reference in rdesc for the stone panel since it has to be opened to get out.
+[Guin] Reviewed
+[Azerin] done
+~
+167247876 0 5 0
+D2
+stone panel~
+~
+2439 -1 6665 10 10 5
+E
+stone sarcophagus~
+The sizable coffin would be able to hold two human-sized creatures with
+ease.  Made from a pale-white stone its only decoration is a single rose
+at its head.
+~
+E
+tapestry~
+Soaked in fresh blood the tapestry drips down the wall.  Under the bloody
+covering what every it once depicted the tapestry only offers a wall of
+red.
+~
+A
+1 open~
+1 south~
+act_tochar( #to_char, ch, obj );
+act_notchar( #to_room, ch, obj, mob, sight );
+send_to_room( #to_new_room, find_room( 6665 ), sight );
+open( room, south );
+~
+E
+to_char~
+You open the stone panel to the south.
+~
+E
+to_room~
+$n opens the stone panel to the south.
+~
+E
+to_new_room~
+Someone opens the stone panel to the north.
+~
+!
+8 0 4
+2613 9 1509949540 3 0
+-1
+S
+
+#6635
+Within the Ruined Abbey - Hallway~
+Lining both sides of the shadowy hall are squat black stone daises, their
+surfaces coated in a fine layer of dust.  Dangling down from the high
+ceiling are three bone cages, each one containing a rotting corpse; how
+the cages are suspended is unclear from here.  To the west, an archway
+leads into a great hall, a wooden table dominating the room's center. 
+Northward, the hallway continues on into the darkness.
+~
+[Guin] Done
+~
+167247876 0 9 0
+D0
+~
+~
+0 -1 6636 10 10 5
+D3
+~
+~
+0 -1 6632 10 10 5
+E
+bone cages rotting corpse~
+Each black iron cage contains the remains of about ten people, although
+the years of decay have made the jumbled bones intermingle with each
+other.  A heavy chain fastened to the top of the bars ascends into the
+dark heights of the abbey ceiling.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yDust swirls underfoot as you head northward.@n
+~
+E
+to_room~
+@yDust swirls underfoot as $n heads northward.@n
+~
+!
+3 0 1
+-1
+S
+
+#6636
+Within the Ruined Abbey - Hallway~
+The hallway continues north and south with archways of black stone rising
+from pillars to the west, forming a ribcage of stone to support the roof
+and walls.  Underfoot patches of carpet scatter across the cobbled floor,
+all that remains of a once fine covering, the clumps now swarming with
+newly hatched carpet moths.  Westward, a massive hall spreads outward;
+benches and tables fill the room where it appears a strange mixture of
+dinning and worship took place.  The towering statue of a black unicorn
+rises against the far northern wall, the top of its head out of sight
+from here.
+~
+[Guin] North door is pick only.
+[Guin] Done.
+~
+167247876 0 9 0
+D0
+oak door~
+~
+391 -1 6637 10 10 5
+D2
+~
+~
+0 -1 6635 10 10 5
+D3
+~
+~
+0 -1 6664 10 10 5
+E
+carpet floor cobbled moths~
+The moth-chewed remains of the purple carpet scatter across the floor, a
+faint pattern of a great battle woven into its multi-colored threads.
+~
+2609 9 1509949540 3 0
+-1
+S
+
+#6637
+Within the Ruined Abbey - Dark Chapel~
+Used as the private chapel of the dark priests, this room would only be
+for the most distinguished of worshippers.  A neatly stacked mahogany
+bookcase takes up the majority of the eastern wall, its shelves packed
+with crumbling scrolls and books.  Two doors lead out of the room both
+made from plain oak with the symbol of a black unicorn seared into the
+pale wood.
+~
+[Guin] Done.
+~
+167247884 0 9 0
+D2
+oak door~
+~
+391 -1 6636 10 10 5
+D3
+oak door~
+~
+391 -1 6665 10 10 5
+E
+mahogany bookcase~
+The finely crafted bookcase has been crafted from mahogany heartwood, the
+wood lovingly coated in protective oil to seal in the rich grains.  Five
+shelves line the bookcase, allowing a fair amount of heavy tomes and
+scrolls to be stored off the damp ground.
+~
+A
+~
+bookcase~
+act_tochar( #search, ch );
+act_notchar( #rsearch, ch, obj, mob, sight );
+if( !rflag( reset0, room ) ) {
+  act_tochar( #already, ch );
+  act_notchar( #ralready, ch, obj, mob ,sight );
+  end;
+}
+i = random( 1, 100 );
+if( i < 11 )
+  obj = oload( 1019 );
+else if( i < 21 )
+  obj = oload( 1018 );
+if( obj ) {
+  act_tochar( #found, ch, obj );
+  act_notchar( #rfound, ch, obj, mob, sight );
+  obj_to_char( obj, ch );
+}
+else {
+  act_tochar( #nothing, ch );
+  act_notchar( #rnothing, ch, obj, mob, sight );
+}
+~
+E
+search~
+You begin looking through the bookcase.
+~
+E
+rsearch~
+$n begins looking through the bookcase.
+~
+E
+already~
+Looking at the disarray of the stuff on the bookcase, someone beat you
+here.
+~
+E
+ralready~
+$n looks at the bookcase and shakes $s head.
+~
+E
+found~
+You find $p amid the decaying scrolls.
+~
+E
+rfound~
+$n finds $p amid the decaying scrolls.
+~
+E
+nothing~
+You find no useable scrolls in the pile.
+~
+E
+rnothing~
+$n finds nothing worthwhile on the bookcase.
+~
+!
+9 0 0
+-1
+S
+
+#6638
+Within The Ruined Abbey -- Hallway~
+The hallway curves around a black stone pillar as it winds northward and
+to the east, skirting a huge hall as it progresses along.  The remnants
+of a half dozen broken benches and cracked tables lie piled at the
+pillar's base, the rotting wood starting to ooze a putrid smell.  Far to
+the north, the massive statue of a unicorn dominates the chamber, an
+sparkling crystal altar gleaming at its hooves.
+~
+[Guin] Done.
+~
+167247876 0 9 0
+D0
+~
+~
+0 -1 6639 10 10 5
+D1
+~
+~
+0 -1 6632 10 10 5
+E
+massive statue unicorn hooves~
+The giant statue is clearly a reverential offering to the dark gods; an
+unholy flame burns across its ruby-gem eye.  Over a hundred feet in
+height it dominates the northern section of the room, yet it shadow
+reaches much further.
+~
+E
+altar~
+Cut from a huge block of crystal or glass, the altar gleams with an eerie
+ghostly light.  The shadow of the great statue looms above it, the dark
+stone made even darker by the sparkling stone.
+~
+-1
+S
+
+#6639
+Within The Ruined Abbey -- Hallway~
+Webs dangle from the gloom-shrouded archways that support the hall.  A
+great hall opens up to the east, its floor filled by tables and benches. 
+Tapestries swish from the mezzanine floor above the vast room, the
+banners depicting a black unicorn.  The massive statue of the same
+creature towers to the northeast, the mighty sculpture reaching in excess
+of a hundred feet.  An altar of glass or crystal lies between its hooves,
+the reflective surface catching in the available light.
+~
+[Guin] Done.
+~
+167247876 0 9 0
+D0
+~
+~
+0 -1 6640 10 10 5
+D1
+~
+~
+0 -1 6664 10 10 5
+D2
+~
+~
+0 -1 6638 10 10 5
+E
+glass crystal altar~
+Crafted from what appears to be a single slab of crystal, the altar rests
+under the hooves of the dark god.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yBrushing the cobwebs aside, you continue onward.@n 
+~
+E
+to_room~
+@yBrushing the cobwebs aside, $n continues onward.@n
+~
+!
+3 0 5
+-1
+S
+
+#6640
+Within The Ruined Abbey -- Hallway~
+Under the shadow of the mighty unicorn statue, the hallway is as cold as
+a winter's day.  Frost and icicles drape from the edges of the stone
+pillars and fluttering tapestries.  Gold gleams from the statue's hooves,
+the precious metal sparkling with an internal luster.  Below the unicorn
+a crystal altar stands, its surface sparkling brightly.
+~
+[Guin] Done.
+~
+167248004 0 9 0
+D1
+~
+~
+0 -1 6665 10 10 5
+D2
+~
+~
+0 -1 6639 10 10 5
+E
+crystal altar~
+Gleaming in the light, the crystal altar rests between the hooves of the
+great statue, its surface clear of any mark or fracture.
+~
+5385 9 1509949540 3 0
+-1
+S
+
+#6641
+Within the Ruined Abbey - Eastern Staircase~
+Black stones have been used to create a somber feel to the abbey's
+interior.  Deep red flecks glint from within the dark stones, as if blood
+had somehow been sealed within the rock.  A lush purple carpet lines the
+floor, making movement soft and hushed.  To the north and westward,
+unadorned wooden doors lead from the hallway, a skull keystone set above
+each one.  A brass-railed stairwell descends into the first floor of the
+abbey, its stones polished through years of use.
+~
+[Guin] Done.
+~
+167247876 0 6 0
+D0
+~
+~
+0 -1 6642 10 10 5
+D3
+~
+~
+0 -1 6657 10 10 5
+D5
+~
+~
+0 -1 6631 10 10 5
+E
+purple carpet~
+The lush carpet has been woven from a dense wool, offering a snug warmth
+underfoot and drastic noise reduction.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yHolding the banister for support, you stride down the stairs.@n 
+~
+E
+to_room~
+@yHolding the banister for support, $n strides down the stairs.@n
+~
+!
+3 0 32
+A
+~
+~
+continue;
+~
+E
+to_char~
+@mQuiet as a mouse, you walk onward, upon the soft carpet.@n
+~
+E
+to_room~
+@mWith very little sound $n heads onwards, the lush carpet cloaking their
+footfall.@n 
+~
+!
+3 0 9
+5385 9 1509949540 3 0
+-1
+S
+
+#6642
+Within The Ruined Abbey -- Mezzanine Floor~
+A dense carpet of purple-dyed wool covers the floor of the hallway, its
+soft fibers cloaking the echoes of movement through the abbey.  Doors
+lead from the black stone hall, their timbers unmarked save for a light
+coating of sweet-smelling oil.  The northwestern wall has been replaced
+by a brass banister that looks out over a vast great hall; at its end a
+statue of a black unicorn rises, the carving well over a hundred feet in
+height.
+~
+[Guin] Done.
+~
+167247872 0 6 0
+D0
+~
+~
+0 -1 6643 10 10 5
+D1
+wooden door~
+~
+131 -1 6653 10 10 5
+D2
+~
+~
+0 -1 6641 10 10 5
+D3
+~
+~
+0 -1 6645 10 10 5
+E
+black unicorn~
+The symbol of Taraskatt, a dark unicorn, towers above, its evil tangible
+even from this distance.  A human-sized ruby eye blazes with fire, the
+pricless gem unreachable from here.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yLeaving the great hall behind, you stride into the dark corridors.@n
+~
+E
+to_room~
+@yLeaving the great hall behind, $n strides into the dark corridors.@n
+~
+!
+3 0 4
+-1
+S
+
+#6643
+Within The Ruined Abbey -- Mezzanine Floor~
+The hallway opens up to a high vaulted chamber, the main worship hall
+spreading out below.  Impressive tapestries drape from a brass banister
+that runs the length of the mezzanine floor, each one adorned with a
+black unicorn dancing upon a sea of bones and skulls.  A massive statue
+of the unicorn rises against the northern wall of the great hall, its
+gleaming horn touching the roof.
+~
+[Guin] Done.
+~
+167247872 0 6 0
+D0
+~
+~
+0 -1 6644 10 10 5
+D1
+wooden door~
+~
+131 -1 6654 10 10 5
+D2
+~
+~
+0 -1 6642 10 10 5
+E
+statue horn gleaming~
+Towering above the room, the huge statue of the dark lord watches over
+the temple, his spiral horn gleaming within the light.  A blazing ruby,
+the size of a human, burns within one eye socket, the flickering flames
+casting a bloody hue across the black stone.
+~
+-1
+S
+
+#6644
+Within the Ruined Abbey - Before a Door of Stone~
+A brass banister runs against the open left side of the hallway, ensuring
+that travelers can gaze upon the impressive great hall below, without the
+fear of falling to an unfortunate death.  Evenly spaced tapestries drape
+from the banister rail, dangling their white cloth into the worship hall. 
+Below rows of benches enable a huge congregation to mass before a
+gigantic statue of a black unicorn.  Two doors lead from this end of the
+hall, the north one crafted from stone, a black unicorn set on its middle. 
+The eastern door has been cut from oak, its woods polished with sweet
+smelling oil.
+~
+[Guin] Done.
+~
+167247872 0 6 0
+D0
+wooden door~
+~
+391 -1 6656 10 10 5
+D1
+wooden door~
+~
+131 -1 6655 10 10 5
+D2
+~
+~
+0 -1 6643 10 10 5
+E
+tapestries banister rail~
+The brass rail snakes around the floor; evenly spaced tapestries dangle
+from it, each one depicting the black unicorn.
+~
+-1
+S
+
+#6645
+Within The Ruined Abbey -- Mezzanine Floor~
+A banister of brass encircles the great halls mezzanine floor, to the
+east and west the corridor bends around towards the north, doors of oak
+leading from it.  Directly ahead in the massive hall is a towering statue
+of a black unicorn, its gleaming red eye the size of a horse.  An altar
+of glass or crystal sits at its cloven feet, a cluster of candelabras
+surrounding it.
+~
+[Guin] Done
+~
+167247872 0 6 0
+D1
+~
+~
+0 -1 6642 10 10 5
+D3
+~
+~
+0 -1 6646 10 10 5
+E
+black unicorn red eye~
+The blazing ruby eye sends waves of flames from its socket, the brooding
+hatred of the dark god bringing forth a heavy presence upon the room.
+~
+E
+altar glass crystal~
+The clean crystal sparkles at the feet of the giant statue, its surface
+without mark or stain.
+~
+2609 9 1509949540 3 0
+-1
+S
+
+#6646
+Within The Ruined Abbey -- Mezzanine Floor~
+A soft carpet covers the hallway both to the north and eastward.  The
+right side of the passageway is without wall; instead, a simple brass
+banister runs along the edge.  Beyond the rail, a massive chamber opens
+up, banners of white silk flapping in its vaulted expanse.  A huge statue
+of a unicorn rises against the northern wall, its carved surface a
+hundred feet or so high.  Simple oak doors lead from the hallway into the
+more private rooms of the abbey.
+~
+[Guin] Done.
+~
+167247872 0 6 0
+D0
+~
+~
+0 -1 6647 10 10 5
+D1
+~
+~
+0 -1 6645 10 10 5
+D3
+oak door~
+~
+131 -1 6652 10 10 5
+E
+banners white silk~
+Fluttering white silk banners proclaim ownership of the temple to
+Taraskatt, the black unicorn stitched upon each of them.
+~
+-1
+S
+
+#6647
+Within The Ruined Abbey -- Mezzanine Floor~
+The north and south-running corridor skirts the edge of a great hall, its
+east side open to the huge chamber.  A slender rail of brass prevents the
+unweary from a long drop to the bench filled worship hall below.  A giant
+statue of a unicorn dominates the wall to the north, its gleaming eye
+ablaze with a bloody flame.  Oak doors lead from the corridor to the
+west, the wood unmarked and without indication of what lies beyond.
+~
+[Guin] Done.
+~
+167247872 0 6 0
+D0
+~
+~
+0 -1 6648 10 10 5
+D2
+~
+~
+0 -1 6646 10 10 5
+D3
+oak door~
+~
+131 -1 6651 10 10 5
+E
+slender rail brass~
+Designed to avoid an unplesant drop, the rail runs the entire length of
+the eastern opening.  Fluttering white cloth pendants drape from its
+side, a black unicorn upon each one.
+~
+A
+~
+~
+send_to_room( #whispers, room, sound );
+~
+E
+whispers~
+@MDark prayers rise up from the halls below, the whispered chanting
+twisted and vile even in hushed tones.@n
+~
+!
+2 150 0
+-1
+S
+
+#6648
+Within The Ruined Abbey -- Mezzanine Floor~
+Doors open off the banistered walkway from the mezzanine, leading to what
+appear to be private chambers.  Below the corridor, an impressive main
+hall holds rows upon rows of benches ready to be filled by the undead
+congregation.  Tapestries of white cloth fall from the rail, each one
+emblazoned with a rampant unicorn.  A towering statue of the same
+creature rises to the north, a huge towering construct whose polished
+horn touches the high roof overhead.
+~
+[Guin] Done.
+~
+167247872 0 6 0
+D0
+oak door~
+~
+131 -1 6649 10 10 5
+D2
+~
+~
+0 -1 6647 10 10 5
+D3
+oak door~
+~
+131 -1 6650 10 10 5
+E
+tapestries white cloth~
+The slender banners flutter slowly in a light breeze, the symbol of
+Taraskatt, the black unicorn, painted upon each one.
+~
+E
+statue~
+The dark lord's symbol stretches upward of one hundred feet, its head and
+horn lurking in the brooding shadows of the ceiling.  A burning red stone
+flickers in its eye socket, the waves of heat felt even from here.
+~
+A
+~
+~
+send_to_room( #flame, room );
+~
+E
+flame~
+@RThe flame from the unicorn's eye blazes brightly then fades to a dull
+flicker.@n 
+~
+!
+2 150 0
+-1
+S
+
+#6649
+Within The Ruined Abbey -- Gloomy Room~
+As quiet as a tomb, or perhaps as quiet as a tomb not in this particular
+cemetery, the room stirs only with the faintest breeze let in by a single
+arrow slit in the western wall.  Dust swirls into piles across the bare
+stone of the floor, only disturbed for countless years by the gusts of
+wind.  Empty brass sconces, shaped like grasping claws jut from the
+walls, the tines devoid of the normal light crystals.  A door of oak
+leads from the room to the south, back into the dark stone hallway.
+~
+[Guin] Done.
+~
+167247876 0 6 0
+D2
+oak door~
+~
+131 -1 6648 10 10 5
+E
+arrow slit~
+The gloom shrouded graveyard spreads a cheerless carpet of stone and
+earth across the hillside.
+~
+E
+brass sconces grasping claws~
+A few shards of fine crystal still cling to the tines of the sconces, all
+that is left of the unusual light stones.
+~
+-1
+S
+
+#6650
+Within The Ruined Abbey -- Monk's Chamber~
+Pegs line the eastern wall beside the oaken door of the room, the
+tattered remains of robes and other garb dangling in wet, rotting strips
+from them.  A scattering of decaying sleeping mats lie in a tangled mess
+across the stone floor, the sent of rotting vegetation filling the air
+with its pungent aroma.  An arrow slit in the western wall allows a fair
+view of the gravestones below, although it is not the most cheering of
+sights.
+~
+[Azerin] search mats
+[Guin] Reviewed.
+~
+167247872 0 6 0
+D1
+oak door~
+~
+131 -1 6648 10 10 5
+E
+mat~
+The sleeping mats have been left in a chaotic jumble across the floor, a
+few of the flax cords that bind them show signs of decay.
+~
+A
+~
+mats~
+act_tochar( #search, ch );
+act_notchar( #rsearch, ch, obj, mob, sight );
+if( !rflag( reset0, room ) ) {
+  act_tochar( #already, ch );
+  act_notchar( #ralready, ch, obj, mob, sight );
+  end;
+}
+remove_rflag( reset0, room );
+mob = mload( 2224, room );
+act_room( #jump, mob, obj, mob, sight );
+init_attack( mob, ch );
+~
+E
+search~
+You begin looking through the mats for anything useful.
+~
+E
+rsearch~
+$n begins looking through the mats for anything useful.
+~
+E
+already~
+The mats have already been sprawled about.
+~
+E
+ralready~
+$n looks about the room, and shakes his head.
+~
+E
+jump~
+$n jumps out from under the mat, looking angry.
+~
+!
+9 0 0
+2608 9 1509949540 3 0
+-1
+S
+
+#6651
+Within The Ruined Abbey -- Master of Combat~
+Unlike most of the floor of the abbey, the chamber's carpeting is torn
+up, piles of it lying in a rotting heap in the northwestern corner of the
+room.  In its place, a rope bound arena of sand fills the space, blood
+and scuff marks indicating its recent use.  A single arrow slit in the
+western wall looks out upon the graveyard, the forlorn tombstones
+shrouded in clinging mist.
+~
+[Azerin] head monk guy
+[Guin] Done.
+~
+167247872 0 6 0
+D1
+oak door~
+~
+131 -1 6647 10 10 5
+E
+arrow slit graveyard~
+Clouds of mist surround the tombstones, cloaking them in a half-light
+that makes the shadows come to life.  A chill rises from the ground where
+foul deeds have cursed the very soil.
+~
+A
+~
+~
+send_to_room( #howl, room, sound );
+~
+E
+howl~
+@CThe howling of some wild creature seeps forlornly through the abbey
+walls.@n 
+~
+!
+2 0 0
+2611 9 1509949540 3 0
+-1
+S
+
+#6652
+Within The Ruined Abbey -- Monks Chamber~
+Free from the trappings of comfort, the stone walled room is cold and
+dreary, even more so than the rest of the abbey.  Beds of woven flax have
+been scattered about the room, most of them rotting quickly in the damp,
+dank air.  Luckily, the inhabitants of the cloister no longer need sleep
+otherwise a few restless nights would be spent upon the uncomfortable
+floor.
+~
+[Guin] Done.
+~
+167247876 0 6 0
+D1
+oak door~
+~
+131 -1 6646 10 10 5
+E
+beds flax woven~
+Thin flax forms what must be a very uncomfortable bed, little more
+protection than the floor itself.  Most of the mats appear unused, and
+their edges are torn and decayed.
+~
+2608 9 1509949540 3 0
+2608 9 1509949540 3 0
+-1
+S
+
+#6653
+Within The Ruined Abbey - Monk's Chamber~
+The chamber has been draped with tapestries of a rampant black unicorn,
+its eyes a blazing red.  Each one has been affixed to the wall by rings
+of polished brass.  Rotting flax sleeping beds line the northern wall,
+the current occupants not needing the rest they once required.  The smell
+of soft loam fills the air, clumps of the soil scattered about the floor,
+perhaps left by one of the more recently risen dead.
+~
+[Guin] Done.
+~
+167247876 0 6 0
+D3
+wooden door~
+~
+131 -1 6642 10 10 5
+E
+tapestries rampant unicorn~
+Taraskatt's symbol, the black unicorn, flutters upon the banners
+proclaiming that this is a house of the dark lord.
+~
+A
+~
+tapestries~
+act_tochar( #search, ch );
+act_notchar( #rsearch, ch, obj, mob, sight );
+if( !rflag( reset0, room ) ) {
+  act_tochar( #already, ch );
+  act_notchar( #ralready, ch, obj, mob, sight );
+  end;
+}
+i = random( 1, 100 );
+if( i < 30 )
+  obj = oload( 63, random( 2, 3 ) );
+else if( i < 40 )
+  obj = oload( 1027 );
+if( obj ) {
+  act_tochar( #found, ch, obj );
+  act_notchar( #rfound, ch, obj, mob, sight );
+  obj_to_room( obj, room );
+}
+else {
+  act_tochar( #nothing, ch );
+  act_notchar( #rnothing, ch, obj, mob, sight );
+}
+~
+E
+search~
+You begin searching the tapestries, moving them about, to see if they
+hide anything.
+~
+E
+rsearch~
+$n begins moving tapestries about, searching about intently.
+~
+E
+already~
+From the state of the tapestries someone has already done this.
+~
+E
+ralready~
+From the look of the alcove, it has already been searched.
+~
+E
+found~
+$p drops to the ground when you move the tapestries.
+~
+E
+rfound~
+$p drops to the ground when $n moves the tapestries.
+~
+E
+nothing~
+You find nothing of interest behind the tapestries.
+~
+E
+rnothing~
+$n finds nothing of interest behind the tapestries.
+~
+!
+9 0 0
+A
+~
+flax~
+act_tochar( #nothing, ch );
+act_notchar( #rnothing, ch, obj, mob, sight );
+~
+E
+nothing~
+You find nothing useful in the rotting flax beds.
+~
+E
+rnothing~
+$n finds nothing useful in the rotting flax beds.
+~
+!
+9 0 0
+2608 9 1509949540 3 0
+2608 9 1509949540 3 0
+-1
+S
+
+#6654
+Within The Ruined Abbey - A Quiet Study~
+Meditation mats decay slowing upon the damp stone floor, a handful of
+toadstools beginning to sprout on their outer edges.  Mildew and mould
+spreads across bookcases and rotting leather tomes that line the walls. 
+A termite-infested table lies partially collapsed on itself in the room's
+center, the oozing spread of green slimy mould licking at its crumbling
+timbers.  Despite the decay some of the books and scrolls around the
+rooms might be recoverable.
+~
+[Guin] Reviewed.
+~
+167247876 0 5 0
+D3
+wooden door~
+~
+131 -1 6643 10 10 5
+E
+meditation mats toadstools~
+Under the oozing slime, the mats have rapidly decayed into little more
+than clumps of rotting flax.  A fine collection of needle-thin toadstools
+sprout across their surface.
+~
+A
+~
+table~
+act_tochar( #search, ch );
+act_notchar( #rsearch, ch, obj, mob, sight );
+if( !rflag( reset0, room ) ) {
+  act_tochar( #already, ch );
+  act_notchar( #ralready, ch, obj, mob, sight );
+  end;
+}
+remove_rflag( reset0, room );
+mob = mload( 2610, room );
+act_tochar( #forming_slime, ch );
+act_notchar( #rforming_slime, ch, obj, mob, sight );
+~
+E
+search~
+You begin looking over the table, to see if you can find anything
+interesting.
+~
+E
+rsearch~
+$n begins looking over the table, to see if $e can find anything
+interesting.
+~
+E
+already~
+The table has already been destroyed by a previous search.
+~
+E
+ralready~
+$n looks at the table and shakes $s head.
+~
+E
+forming_slime~
+As you start searching through the papers, and books laying on the table
+you notice a slick ichor starts creeping up through the woodwork.
+~
+E
+rforming_slime~
+$n starts searching through the papers, but pulls $s hand back as
+something odd starts coming out of the wood.
+~
+!
+9 0 0
+A
+~
+bookcase~
+act_tochar( #search, ch );
+act_notchar( #rsearch, ch, obj, mob, sight );
+if( !rflag( reset1, room ) ) {
+  act_tochar( #already, ch );
+  act_notchar( #ralready, ch, obj, mob, sight );
+  end;
+}
+remove_rflag( reset1, room );
+mob = mload( 2610, room );
+act_tochar( #forming_slime, ch );
+act_notchar( #rforming_slime, ch, obj, mob, sight );
+~
+E
+search~
+You begin looking through the bookcase for anything interesting.
+~
+E
+rsearch~
+$n begins looking through the bookcase for anything interesting.
+~
+E
+already~
+The disarray of the books, most laying on the floor indicates your too
+late to find anything worthwhile.
+~
+E
+ralready~
+$n starts looking through the bookshelf, but gives up after a very short
+time.
+~
+E
+forming_slime~
+You notice a drop of a thick green fluid drops on your hand, and burns like acid.
+~
+E
+rforming_slime~
+$n yanks $s hand back, rubbing it vigorously.
+~
+!
+9 0 0
+-1
+S
+
+#6655
+Within The Ruined Abbey - Servant's Quarters~
+Soft blue-black carpet lines the floor of the chamber, its dense loom
+warm under foot.  An ornate bed lies disused in the eastern wall, its
+sheets and quilting coated in a thick layer of dust.  A writing table
+rests against the southern wall, a cane chair pushed under it.  A plain
+wooden door appears to be the only exit from the room.
+~
+[Guin] Done.
+~
+167247876 0 6 0
+D3
+wooden door~
+~
+131 -1 6644 10 10 5
+E
+carpet~
+The lush carpet has been woven from a dark wool, the softness underfoot
+allowing people to move without disturbing the hushed temple.
+~
+E
+ornate bed~
+Untouched for many years the bedding has been coated in a thick layer of
+dust, the corners of the cloth has begin to turn yellow and decay. 
+Termite holes cover the once grand wood where the tiny insects have
+feasted upon the timbers.
+~
+E
+table~
+The single person tables' surface is covered with marks from wax drips
+and ink stains.  Open draws on both sides of the chair show that it has
+been searched for valueables.
+~
+E
+cane chair~
+The decaying chair rots away in the damp conditon, its wicker threads all
+but undone by the years of neglect.
+~
+-1
+S
+
+#6656
+Within the Ruined Abbey - Bishop's Quarters~
+A tapestry of a now familiar black unicorn adorns the northern wall, its
+silk cloths stirring slightly in a faint breeze.  Before the cloth a
+white marble altar has been set up, its surface clean and polished till
+it glows.  Candle-filled sconces line the four walls, the remnants of
+bees wax candles dripping like icicles from them.  The frame of a disused
+bed lies against the east, the planks without cloth or mattress.
+~
+[Guin] Done.
+~
+167247876 0 6 0
+D2
+wooden door~
+~
+391 -1 6644 10 10 5
+E
+white marble altar~
+The smooth stone altar is clean and polished, devoid of the normal
+trappings one would expect in an evil temple.  Not even a few splotches
+of blood fleck its surface to indicate a recent sacrifice.
+~
+E
+candle-filled sconces bees wax candles icicles~
+Good quality candles have burnt in the sconces for may years by the look
+of the wax icicles that dangle from their edges.  The faint smell of
+honey wafts from the candle flame.
+~
+2607 9 1509949540 3 0
+-1
+S
+
+#6657
+Within the Ruined Abbey - Gloomy Hall~
+Archways of black-blue stone line the southern passage at even intervals. 
+Each of their keystones is carved with a gleaming white skull.  Soft
+carpet underfoot allows for hushed movement throughout the abbey,
+insuring the dark monk's meditations are not interrupted.  Oak doors
+branch from the hall; plain save for a polishing of oil, they have no
+indication as to where they would lead.
+~
+[Guin] Done.
+~
+167247876 0 5 0
+D1
+~
+~
+0 -1 6641 10 10 5
+D2
+~
+~
+0 -1 6659 10 10 5
+D3
+wooden door~
+~
+131 -1 6658 10 10 5
+E
+blue-black stone archways~
+Evenly spaced, the slender arches support the domed ceiling; a copper
+sconce jutting from each archway illuminates the hall.
+~
+-1
+S
+
+#6658
+Within the Ruined Abbey - Captain's Quarters~
+Clearly the room of a warrior, the aroma of metal and oil permeate every
+corner of the chamber.  Functional to the point of bare, the room
+contains a bookcase, chair and table.  All of the furnishings are crafted
+from a pale oak, their surfaces gleaming with a fresh polishing of oil. 
+Rusty stains mar the table's top where it appears the owner has left
+chain mail to decay to dust.
+~
+[Guin] Done.
+~
+167247876 0 5 0
+D1
+wooden door~
+~
+131 -1 6657 10 10 5
+E
+furnishings oak table~
+The fine furnishings have been crafted from rich-colored oak each one
+marked with butterfly patterns that seem completely out of place in the
+dark temple.  A single elven glyph confirms that they have been borrowed
+from another place.
+~
+2603 9 1509949540 3 0
+-1
+S
+
+#6659
+Within the Ruined Abbey - Gloomy Hall~
+Doorways of oak lead from the lush carpeted hall, besides each of the
+unadorned doors a copper sconce holds a soft glowing crystal in claw-like
+tines.  Southward, the hall spits in an east-west direction, the way lit
+by more of the strange torches and a handful of arrow slits.  A few
+cobwebs cling to the arches along the hall an indication perhaps that
+this passage sees less traffic.
+~
+[Guin] Done.
+~
+167247876 0 5 0
+D0
+~
+~
+0 -1 6657 10 10 5
+D2
+~
+~
+0 -1 6660 10 10 5
+E
+copper sconce glowing crystal claw-like tines~
+Gripping a cluster of fractured crystals in its copper tines, the sconce
+illuminates the hallway with a soft light.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@mWith the soft carpet absorbing the sounds of movement, you continue
+along the hall.@n 
+~
+E
+to_room~
+@mWith the soft carpet absorbing the sound of their movement, $n
+continues along the hall.@n 
+~
+!
+3 0 5
+-1
+S
+
+#6660
+Within the Ruined Abbey - Gloomy Hall~
+A dark purple carpet lines the stone hall, its woolen tassels creating
+both a warm and quiet walk down the passageways.  Stone arches rise from
+each side of the hall, and join together with skull-shaped keystones. 
+Sconces, holding softly glowing crystals, jut from the walls beside each
+of the oaken doors, the pale illumination casting a fair amount of
+shadows across the floor.  Arrow slits in the southern wall allow a fine
+view of the courtyard and gravestones beyond the abbey wall.
+~
+[Guin] Done
+~
+167247872 0 5 0
+D0
+~
+~
+0 -1 6659 10 10 5
+D1
+~
+~
+0 -1 6661 10 10 5
+D3
+~
+~
+0 -1 6662 10 10 5
+E
+copper sconce glowing crystal claw-like tines~
+Crafted into a grasping claw, the tines of the sconce hold a cluster of
+glowing crystals in a vice-like grip.
+~
+E
+arrow slits~
+Designed to allow archers a clear shot at the courtyard and wall below,
+the arrow slits are slim enough to allow missile fire while giving great
+cover to the archer.  A rusted iron ring sits under each ledge, allowing
+a heavy crossbow to be braced.
+~
+-1
+S
+
+#6661
+Within the Ruined Abbey -- Above The Gate~
+Arrow slits in the southern wall look out upon the cobblestone courtyard
+and abbey wall below.  The faint stir of dust and tumbleweed creates an
+air of abandonment, which unfortunately appears to be far from the truth. 
+A loop of brass juts from the wall beside each slit enabling an archer to
+place a full quiver of arrows, if required, to defend the entrance. 
+Eastward, the richly carpeted hall continues through the gloomy building,
+the faint flicker of light dancing like will-o-wisps in the distance.
+~
+[Guin] Done.
+~
+167247872 0 5 0
+D3
+~
+~
+0 -1 6660 10 10 5
+E
+arrow slits cobbled courtyard~
+The slender opening allows archers to target those in the courtyard below
+with little fear of return fire.  An iron ring at the base of each arrow
+slit allows a crossbow to be braced to fire, or perhaps extra quivers to
+be slung.
+~
+-1
+S
+
+#6662
+Within the Ruined Abbey - Gloomy Hall~
+The western wing ends at a door breaching the north wall and a single
+arrow slit in the south.  Unlike the simple oak doors in the rest of the
+abbey, this one has been decorated with spider webs and roses, each
+design painted with fine dyes.  Beyond the arrow slit, a cobblestone
+courtyard spreads before the high abbey walls, its barren cobbles home
+only to dust and a scattering of stone.
+~
+[Guin] Done.
+~
+167247872 0 5 0
+D0
+ornate door~
+~
+131 -1 6663 10 10 5
+D1
+~
+~
+0 -1 6660 10 10 5
+E
+spider webs roses~
+The silvery web spreads across the oak door, the blood red roses captured
+within their sticky net.  On closer examination it turns out to be a well
+painted decoration, its life-like details impressive.
+~
+-1
+S
+
+#6663
+Within the Ruined Abbey - Ornate Room~
+In stark contrast to the relative impoverishment of the ruined abbey,
+this room has been gilded with silver and gold, the precious metals
+gleaming.  Plated sconces clasp glowing crystals in their tines, the
+strangle lights casting enough illumination to see by.  An ornate bed
+rests against the northern wall, its four pillars carved into soaring
+winged dragons.  A netting of silk runs on a rail around the bed,
+protecting the occupants from night's insects.  A brass mirror is
+suspended on the western wall, the crystalline light reflected within it.
+~
+[Azerin] sorcerer trainer room
+[Azerin] trains 35-45 spells
+[Azerin] maybe should do a quest too
+[Guin] Done.
+~
+167247879 0 5 0
+D2
+ornate door~
+~
+131 -1 6662 10 10 5
+E
+sconces crystals~
+Crafted to resemble a hawk or similar bird claw, the copper sconces hold
+glowing crystals within their taloned tines.
+~
+E
+ornate bed netting silk rail~
+The ornate bed appears soft and comfortable, obviously made for a wealthy
+person or perhaps even a minor royal.  The ivy-pattered pillars end in
+bas-reliefs carved with swans in flight or gliding upon ponds.  A pale
+white cloth surrounds the bed, protecting the sleep from insects at night.
+~
+A
+1 look~
+mirror~
+if( !is_affected( blind, ch ) ) {
+  act_tochar( #see_self, ch );
+  act_notchar( #rsee_self, ch, obj, mob, sight );
+  act_tochar( #suck_in, ch, obj, mob, sight );
+  act_notchar( #rsuck_in, ch, obj, mob, sight );
+  transfer( ch, find_room( 6600 ) );
+}
+else
+  act_tochar( #huh, ch );
+~
+E
+see_self~
+As you look into the mirror you see an odd sight...yourself at the
+entrance.
+~
+E
+rsee_self~
+$n looks into the mirror, and blinks rapidly for a second.
+~
+E
+suck_in~
+As you reach out to touch the mirror, you get sucked into the mirror
+itself.
+~
+E
+rsuck_in~
+As $n reaches out to touch the mirror, $e gets sucked into the mirror
+itself.
+~
+E
+huh~
+How are you going to do that being blind.
+~
+!
+0 0 0
+2604 9 1509949540 3 0
+336 17 1509949465 -1 0
+3982 17 1509949540 -1 0
+3983 17 1509949515 -1 0
+4078 17 1509949540 -1 0
+3984 17 1509949540 -1 0
+-1
+S
+
+#6664
+Within the Ruined Abbey - Greathall~
+A jumble of benches and tables spill across the stone slab floor, some of
+the cluttered furniture apparently moved into piles to enable passageway
+through the chamber.  Above the hall, tapestries of black unicorns
+flutter from a mezzanine floor; the gloom-shrouded level would be a
+perfect spot for a would-be assassin to lurk.  The massive statue of a
+black-stone unicorn rises to the north, its surface somehow darker than
+the black rock that surrounds it.
+~
+[Guin] Done.
+~
+167247876 0 9 0
+D0
+~
+~
+0 -1 6665 10 10 5
+D1
+~
+~
+0 -1 6636 10 10 5
+D2
+~
+~
+0 -1 6632 10 10 5
+D3
+~
+~
+0 -1 6639 10 10 5
+E
+benches tables furniture~
+The fine oak and walnut furniture has been left to rot away; woodworms
+and termites feast upon it, hastening their demise.
+~
+E
+statue unicorn~
+The towering statue rises to the north of the room, its black stone
+oozing shadows that the flicker of torchlight fails to penatrate.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@RThe ruddy flame from the burning eye falls upon you.@n 
+~
+E
+to_room~
+@RThe flames from the burning eye reflect across $n as $e moves
+northward.@n 
+~
+!
+3 0 1
+-1
+S
+
+#6665
+Within the Ruined Abbey - Greathall~
+The hooves of a unicorn statue fill the end of the hallway, the great
+pillars of black stone rising skyward until the gloom swallows the
+details into its nightly embrace.  A ruddy glow pulsates from the single
+eye of the creature; despite its inanimate nature somehow it radiates
+malice with each flame.  An altar of glass rests between the great limbs,
+its surface rippling with crimson-hued flames as the eye's reflection
+plays across its top.  A tapestry with a bloody hand smeared across the
+white cloth flutters to the north.
+~
+[Guin] East door is pick only
+[Guin] This room needs some work. How the heck are they supposed to figure out the sacrifice thing? There is not one clue in the whole room.
+[Guin] There's a tapestry to the north, hiding a door that they can't see with no extra for the tapestry. Lets get that in so they know there's something there.
+[Guin] Reviewed.
+[Azerin] I forgot to put in the tapestry extra
+[Azerin] east is just an empty room
+[Azerin] with a scroll search
+~
+167248004 0 9 0
+D0
+stone panel~
+~
+2447 -1 6634 10 10 5
+D1
+oak door~
+~
+391 -1 6637 10 10 5
+D2
+~
+~
+0 -1 6664 10 10 5
+D3
+~
+~
+0 -1 6640 10 10 5
+E
+altar glass~
+Cut from a single flawless slab of quartz crystal, the altar has been
+carved with near-invisible patterns of roses, dragons and demons - a
+theme common to much of the abbey.  Its top however is dominated with a
+rampant unicorn, in perfect reflection to the great statue above.  Around
+the base of the altar strange grooves have been carved into the ground,
+forming a looping pattern through the floor.  Two off shoots of the
+whorls entwine their way northwards and appear to dissapear under the
+wall.
+~
+E
+tapestry~
+Stitched across the blood soaked cloth, a figure dressed in black holds
+the bloody, still-beating heart of a victim recently sacrificed.
+~
+A
+~
+~
+obj_to_room( obj, find_room( 66 ) );
+act_tochar( #setup, ch, obj );
+act_notchar( #rsetup, ch, obj, mob, sight );
+wait( 1 );
+act_tochar( #jab, ch, obj );
+act_notchar( #rjab, ch, obj, mob, sight );
+wait( 1 );
+junk_obj( obj );
+act_room( #open, ch );
+open( room, north );
+~
+E
+setup~
+You place $p carefully in the middle of the altar, preparing it for
+sacrifice.
+~
+E
+rsetup~
+$n places $p carefully in the middle of the altar, preparing it for
+sacrifice.
+~
+E
+jab~
+You take a knife, and quickly stab through the middle of $p straight into
+the altar.
+~
+E
+rjab~
+$n takes a knife, and quickly stabs through the middle of $p straight
+into the altar.
+~
+E
+open~
+A panel opens after the sacrifice is complete.
+~
+!
+5 3980 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@mWith more than a little relief you move from under the shadow of the
+dark god.@n 
+~
+E
+to_room~
+@mWith a visible shudder $n moves from under the shadow of the dark
+god.@n 
+~
+!
+3 0 14
+2609 9 1509949540 3 0
+-1
+S
+
+#0
+

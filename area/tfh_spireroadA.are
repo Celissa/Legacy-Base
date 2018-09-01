@@ -1,0 +1,2913 @@
+#M2_AREA
+2
+
+Road to Talidar~
+Azerin Druscilla Orin Roxah~
+Road to Talidar~
+~
+~
+
+0 0
+0
+1
+#ROOMS
+
+#5900
+Tar'ippal Spire~
+This is the base of the massive Tar'ippal Spire, only a few feet above
+the cavern floor.  The rough, broad stairs climb to the south, around the
+center of the spire to the southeast.  The first three steps have unusual
+markings on them; not weather or accident caused, these markings have
+been clearly cut into the stone.  At the base of the staircase a small,
+bronze plaque has been inset in the floor.
+~
+[Greth] roadway to Tar'Ippal
+[Guin] Done.
+~
+167378948 11 8 0
+D2
+~
+~
+0 -1 5901 10 10 5
+D5
+~
+~
+0 -1 4700 10 10 5
+E
+small bronze plaque floor~
+The small plaque reads:
+
+Tar'ippal Spire
+Watch Your Step
+~
+E
+markings steps~
+Old beyond reckoning, the markings are too faded to decipher, even if you
+knew the ancient language in which they were written.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CCarefully, you make your way down the worn old stairs.@n
+~
+E
+to_room~
+@CCarefully, $n makes $s way down the worn old stairs.@n
+~
+!
+3 0 32
+-1
+S
+
+#5901
+Tar'ippal Spire~
+The low, broad stairs cut into the mountain side climb steadly upward,
+spiraling around the massive spire core.  Short, thin stalactites
+decorate the cavern's ceiling; some have been broken off, their fragments
+littering the floor and making this climb more dangerous.  In the
+northeast part of the staircase, just around the spire core, several
+steps are covered in guano of unknown origin.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 9 0
+D0
+~
+~
+0 -1 5900 10 10 5
+D1
+~
+~
+0 -1 5902 10 10 5
+E
+guano~
+There isn't much to look at - guano covers the stairs near the spire
+core, but there is enough space to walk past it.  Closer examination
+reveals nothing of it's origin, but plenty about the smell that spreads
+from it.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yCarefully stepping around the guano pile, you continue your journey
+$Tward.@n 
+~
+E
+to_room~
+@yCarefully avoiding the guano pile, $n follows the staircase $Tward.
+~
+!
+3 0 3
+A
+search~
+guano~
+act_tochar( #eew, ch, obj );
+act_notchar( #reew, ch, obj, mob, sight );
+wait( 1 );
+act_tochar( #stench, ch, obj );
+act_notchar( #rstench, ch, obj, mob, sight );
+~
+E
+eew~
+@yTrying not to think about it, you plunge your hand into the guano and
+feel around for a while.@n 
+~
+E
+reew~
+@yYou can't believe your eyes - $n sticks $s arm elbow deep in the guano
+pile!@n 
+~
+E
+stench~
+@YAfter a thorough search, you are convinced there are no hidden
+treasures in this guano pile.  You are also convinced it stinks more now
+that it has been stirred up.@n 
+~
+E
+rstench~
+@YAfter a while you wish you could have stopped $m - stirring up the
+guano made the air in the cavern almost unbreathable.@n 
+~
+!
+9 0 0
+1120 9 1509949540 3 0
+-1
+S
+
+#5902
+Tar'ippal Spire~
+The cavern floor lies about sixteen feet under the lip of the spiral
+stair which climbs around the massive pillar.  The broad, rough-cut
+steps climb steadily northward, ever winding around the thick spire core. 
+Worn down and smoothed by passage of many travelers, the staircase is
+only made more treacherous by water slowly dripping on it from the short,
+thick stalactites above.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 9 0
+D0
+~
+~
+0 -1 5903 10 10 5
+D3
+~
+~
+0 -1 5901 10 10 5
+E
+stalactites~
+The stalactites are unusually thick for their length.  Looking closer,
+you realise why - they have obviously been repeatedly cleared and
+shortened, only allowed to grow to the length where they won't disturb
+the traffic that passes through here.
+~
+-1
+S
+
+#5903
+Tar'ippal Spire~
+Far above the hard stone of the cavern floor, the broad steps roughly
+hewn into the mighty limestone pillar climb as they wind to the west. 
+Water droplets glitter as they run down the mighty spire core and
+collect in small puddles on the stone steps.  Crunching under your feet
+are small stones, probably chippings from the stalactites above you.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 9 0
+D2
+~
+~
+0 -1 5902 10 10 5
+D4
+~
+~
+0 -1 5904 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gCrunching some small stones underfoot, your climb steadily onward.@n
+
+~
+E
+to_room~
+@ySmall stones crunching under $s feet, $n quickly disappears in the
+gloom above.@n 
+~
+!
+3 0 16
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yCareful not to take a wrong step, you descend the staircase to the
+south.@n 
+~
+E
+to_room~
+@y$n slowly descends the staircase, keeping as close to the spire core as
+possible.@n 
+~
+!
+3 0 4
+1120 9 1509949540 3 0
+-1
+S
+
+#5904
+Tar'ippal Spire - By the Small Alcove~
+The cavern floor disappears in the darkness below as the winding
+staircase continues to climb around the water-covered spire core to the
+west.  The stone steps are roughly cut, but smoothed by the passage of
+time and travelers.  So worn down they are, in fact, that going is slow
+and dangerous here.  In the cavern wall to the north, a small alcove
+might be reached if one were to dare the leap.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 9 0
+D0
+~
+~
+234 -1 5914 10 10 5
+D3
+~
+~
+0 -1 5905 10 10 5
+D5
+~
+~
+0 -1 5903 10 10 5
+E
+water-covered spire core~
+The massive spire core glistens with water droplets that trickle down
+it, leaving limestone traces for all eternity, making it's surface as
+wrinkled as an old man's face.
+~
+E
+alcove~
+The alcove on the northern wall resembles the gaping mouth of a giant,
+his chin stuck out in anger.  You are not close enough to inspect it's
+contents - maybe you should try leaping across.
+~
+A
+jump leap~
+n north across alcove~
+i = add( find_stat( ch, str ), find_stat( ch, dex ), 0, 0 );
+j = random( 10, 27 );
+if( i > j ) {
+  act_tochar( #leap, ch );
+  act_notchar( #rleap, ch, obj, mob, sight );
+  transfer( ch, find_room( 5914 ), 1 );
+  interpret( ch, "+look" );
+  act_notchar( #leapin, ch, obj, mob, sight );
+}
+else {
+  act_tochar( #oops, ch );
+  act_notchar( #roops, ch, obj, mob, sight );
+  transfer( ch, find_room( 4700 ), 1 );
+  act_notchar( #fallin, ch, obj, mob, sight );
+  i = 3d10+10;
+  j = current_hp( ch );
+  if( i > j )
+    i = j;
+  interpret( ch, "+look" );
+  dam_message( ch, i, "the fall" );
+  inflict( ch, ch, i, "the fall" );
+  if( current_hp( ch ) > 0 )
+    position( ch, 6 );
+}
+~
+E
+leap~
+@GYou make the leap across to the alcove!@n
+~
+E
+rleap~
+@G$n makes the leap across to the alcove.@n
+~
+E
+leapin~
+@G$n leaps in from the spire.@n
+~
+E
+oops~
+@RYou attempt the leap to the alcove, but end up falling thirty feet onto
+solid stone!@n 
+~
+E
+roops~
+@R$n jumps off the spire, falling thirty feet!@n
+~
+E
+fallin~
+@R$n falls in from the spire above!@n
+~
+!
+0 0 0
+-1
+S
+
+#5905
+Tar'ippal Spire~
+Rough-hewn steps are carved into the limestone surface of this massive
+pillar which stretches from the floor to the hundred-foot-high cavern
+ceiling still far above.  The steps are smooth and slippery due to the
+passage of time and travelers, as well as water which slowly drips from
+above.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 9 0
+D1
+~
+~
+0 -1 5904 10 10 5
+D2
+~
+~
+0 -1 5906 10 10 5
+A
+~
+~
+send_to_room( #drip, room );
+~
+E
+drip~
+@CThe sound of dripping water echoes through the darkness.@n
+~
+!
+2 150 0
+1120 9 1509949540 3 0
+-1
+S
+
+#5906
+Tar'ippal Spire~
+Just over halfway from the cavern's floor to its hundred-foot high
+ceiling overhead, the spiral staircase, carved into this massive pillar,
+winds its way up and around, soon disappearing from view.  To the west,
+the vast darkness of this underground complex obscures the far wall, if
+indeed there is an end to it at all.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 9 0
+D0
+~
+~
+0 -1 5905 10 10 5
+D1
+~
+~
+0 -1 5907 10 10 5
+-1
+S
+
+#5907
+Tar'ippal Spire~
+Tiny droplets glisten on the surface of the massive spire core that
+supports the spiral staircase winding its way up into the darkness.  The
+steps, obviously cut into the pillar itself, are unusually even; someone
+must have put a lot of thought into their construction.  The pillar is
+positioned to one side of the cavern; the curve of the spire nearly
+brushes the stone of the eastern wall.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 9 0
+D3
+~
+~
+0 -1 5906 10 10 5
+D4
+~
+~
+0 -1 5908 10 10 5
+E
+steps staircase spiral~
+The wide steps are roughly cut into the spire core itself, but they are
+quite evenly spaced to ease the difficult climb.  Water trickles down the
+pillar and onto the stairs, pauses in a small indentation on one of the
+stairs forming a puddle, before continuing on its journey downward.
+~
+A
+~
+~
+rch = rand_char( room );
+act_tochar( #drip, rch, obj );
+act_notchar( #rdrip, rch, obj, mob, sight );
+interpret( rch, "shiver" );
+~
+E
+drip~
+@CA tiny, but surprisingly cold water droplet, lands on your nose.@n
+~
+E
+rdrip~
+@CA water droplet lands on $n's face - you're glad it's not you!@n
+~
+!
+2 150 0
+1120 9 1509949540 3 0
+-1
+S
+
+#5908
+Tar'ippal Spire~
+Fifteen feet below the cavern's ceiling, the rough limestone steps carved
+into the stalagmite lead up to the north, and down to the west.  From
+this, the eastern face of the spire, the east wall of the cavern is
+within reach, if leaning over the surely fatal fall to the cavern floor
+in the darkness below is to be risked.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 9 0
+D4
+~
+~
+0 -1 5909 10 10 5
+D5
+~
+~
+0 -1 5907 10 10 5
+E
+wall~
+The cavern wall is almost within the reach here.  A closer look reveals
+something glittering in the gloom.  Now, if only your arms were a bit
+longer, or if you'd dare standing nearer to the edge...
+~
+A
+~
+~
+if( get_integer( ch, "Yrna/Spire/Reach" ) == 1 )
+  act_tochar( #noway, ch, obj );
+else
+  continue;
+~
+E
+to_char~
+@cYou almost lose your footing and fall into the darkness!@n
+~
+E
+to_room~
+@c$n waves franctically about, trying to regain $s footing.  Phew!  That
+was close!@n 
+~
+E
+noway~
+@CYou are in no position to climb the stairs at the moment.@n
+~
+!
+3 0 48
+A
+touch get~
+wall gem~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #closer, ch, obj );
+  act_notchar( #rcloser, ch, obj, mob, sight );
+  set_integer( ch, "Yrna/Spire/Reach", 1 );
+  wait( 2 );
+  act_tochar( #reach, ch, obj );
+  act_notchar( #rreach, ch, obj, mob, sight );
+  wait( 2 );
+  if( players_room( room ) < 2 ) {
+    act_tochar( #back, ch, obj );
+    act_notchar( #rback, ch, obj, mob, sight );
+    set_integer( ch, "Yrna/Spire/Reach", 0 );
+    set_rflag( reset0, room );
+    end;
+  }
+  act_tochar( #stuck, ch );
+  act_notchar( #rstuck, ch, obj, mob, sight );
+}
+else
+  act_tochar( #already, ch, obj );
+~
+E
+closer~
+@yYou shuffle forward towards the edge of the wide step, inch by inch,
+hoping you won't go too far.@n 
+~
+E
+rcloser~
+@yYou watch in horror as $n shuffles towards the edge of the stair.@n
+~
+E
+reach~
+@YHaving gone as far as you dare, you reach to touch the wall.  You reach
+further, and further, ever leaning forward...
+~
+E
+rreach~
+@YAs if that wasn't enough, $e now reaches towards the cavern wall,
+leaning ever forward over the gap!@n 
+~
+E
+back~
+@MYou lose your balance and almost tumble into the darkness!  Only by
+some miracle do you manage to back away.@n 
+~
+E
+rback~
+@MYou hold your breath as $n loses balance and starts waving $s arms and
+legs around!  By some miracle, $e manages to back off from the stair
+edge.@n 
+~
+E
+rstuck~
+@R$n slips off the ledge, but manages to catch $mself on the edge! 
+Perhaps you should help them climb back up.@n
+~
+E
+stuck~
+@RYou slip off the ledge, but manage to catch yourself on the edge!@n
+~
+E
+already~
+@mSomeone is already trying to do that!@n
+~
+!
+0 0 0
+A
+3 pull 3 help 3 yank~
+*~
+loop( all_in_room )
+  if( get_integer( rch, "Yrna/Spire/Reach" ) != 0 )
+  victim = rch;
+if( victim ) {
+  if( is_name( assist_char( ch, victim ), arg ) ) {
+    act_tochar( #pull, ch, obj, victim );
+    act_tochar( #pull_you, victim, obj, ch, sight );
+    act_neither( #rpull, ch, obj, victim );
+    set_integer( victim, "Yrna/Spire/Reach", 0 );
+    set_rflag( reset0, room );
+    end;
+  }
+  else if( is_name( arg, assist_char( ch, victim ) ) ) {
+    act_tochar( #pull, ch, obj, victim );
+    act_tochar( #pull_you, victim, obj, ch, sight );
+    act_neither( #rpull, ch, obj, victim );
+    set_integer( victim, "Yrna/Spire/Reach", 0 );
+    set_rflag( reset0, room );
+    end;
+  }
+}
+act_tochar( #help, ch );
+~
+E
+pull~
+You reach down and grab ahold of $N's forearm, and help pull $M up.
+~
+E
+pull_you~
+$N reaches down and grabs your forearm, and helps pull you up.
+~
+E
+rpull~
+$n reaches down and grabs $N's forearm, and helps pull $N up.
+~
+E
+help~
+<Type 'help' for help>
+~
+!
+0 0 0
+-1
+S
+
+#5909
+Tar'ippal Spire~
+Now very close to the cavern's ceiling, the spiral staircase climbs to
+the west, disappearing around what must be its final curve before
+reaching the top.  To the south, the staircase winds its way down and
+around, disappearing into the abbys.  The massive pillar makes up the
+spire core, accumulation of endless years of limestone deposits brought
+by the water trickling down all the rock surfaces.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 9 0
+D3
+~
+~
+0 -1 5910 10 10 5
+D5
+~
+~
+0 -1 5908 10 10 5
+-1
+S
+
+#5910
+Tar'ippal Spire~
+The ceiling of the cavern lies just overhead, and the limestone steps
+carved into the path around the spire climb out through the opening in
+the south.  You can descend the pillar to the east, following the winding
+path that quickly disappears from view.  Over the edge of the staircase
+to the north, you can see the darkness of the cavern floor over a hundred
+feet below.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 9 0
+D1
+~
+~
+0 -1 5909 10 10 5
+D2
+~
+~
+0 -1 5911 10 10 5
+A
+~
+~
+send_to_room( #wind, room );
+~
+E
+wind~
+@CThe wind whistles through the opening above.@n
+~
+!
+2 150 0
+1120 9 1509949540 3 0
+-1
+S
+
+#5911
+Tar'ippal Spire - Near the Top~
+Surrounded by the rock of a massive stalactite-covered ceiling, the
+staircase nears the top.  The wide, rough-cut steps lead down to the
+north, hewn out of the limestone of this gigantic pillar which stretches
+over a hundred feet to the cavern floor.  The whistling of the wind can
+be heard through the opening above, bringing in the fresh, but freezing
+cold, mountain air.
+~
+[Eliza] leaving up, extras, coding, expanded room desc, room name.
+[Yrna] Expanded rdesc, added extra
+[Yrna] Done.
+~
+167378948 11 9 0
+D0
+~
+~
+0 -1 5910 10 10 5
+D4
+~
+~
+0 -1 5912 10 10 5
+E
+ceiling stalactite~
+Short, thick stalactites completely cover the cavern's ceiling, almost as
+if a strong gale made ripples in the soft limestone.  The water glistens
+on every surface and trickles down the spire core in the tiniest of
+streams, leaving behind the wrinkles on otherwise smooth pillar.
+~
+1120 9 1509949540 3 0
+-1
+S
+
+#5912
+Atop the Tar'ippal Spire~
+This small cavern's floor consists mostly of a large opening containing
+large, rough-cut limestone steps leading down into the darkness below. 
+The staircase winds as it descends, and only the first quarter-turn is
+visible.  Above, the stairwell climbs along the southern wall before it
+passes through a small opening in the ceiling and disappears from view.
+~
+[Greth] Entrance to spiraling column leading down into Tar'ippal
+[Azerin] no.mob stop critters from filling hte caverns
+[Yrna] Done.
+[Guin] Done.
+~
+167378956 11 9 0
+D4
+~
+~
+0 -1 5913 10 10 5
+D5
+~
+~
+0 -1 5911 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gWith a final effort, you climb up through the small opening.@n
+~
+E
+to_room~
+@g$n disappears through the small opening above.@n
+~
+!
+3 0 16
+A
+~
+~
+continue;
+~
+E
+to_char~
+@mYou take a deep breath and prepare yourself for a long climb down.@n
+~
+E
+to_room~
+@mWith a sigh, $n starts a long climb down the spiral staircase.@n
+~
+!
+3 0 32
+-1
+S
+
+#5913
+Cave Mouth~
+A dagger-shaped crack of stone forms a cave-mouth here, a short scramble
+up from the valley to the north.  Damp brambles cluster around the hole
+and ochre mold and mildew coat the limestone thickly.  The uneven cavern
+floor is slick with mud, dark water pooling in cracks.  A cold draught
+pulls the scent of decay from further inside this crevice.  A hewn
+stairwell spirals down from the southern wall of the cavern, the rough
+steps coated in dust and debris.
+~
+[Guin] Down leads to Tar'ippal
+[Yrna] Done.
+~
+167378948 5 9 0
+D0
+~
+~
+0 -1 5915 10 10 5
+D5
+~
+~
+0 -1 5912 10 10 5
+E
+brambles~
+These brambles appear tough and wiry, with inch-long black thorns forming
+a dangerous-looking hedge. They seem to be rooted deeply into cracks in
+the limestone and mud of the slope here.
+~
+E
+cave hole crack crevice cavern 1 south~
+This crevice through the rock extends roughly southward, climbing
+slightly.  The way looks clear as far as the light extends, although the
+footing looks uneven.
+~
+E
+floor mud water pool~
+Dark, silty water is stagnant in the crevices underfoot.
+~
+E
+mold mildew limestone stone~
+The limestone walls are smooth and slick, droplets of water beading on the
+orange-hued fungus clustered near the cave mouth.
+~
+A
+~
+water crack sludge~
+act_tochar( #search, ch );
+act_notchar( #search2, ch );
+~
+E
+search~
+You probe the cracks, finding only sludge.
+~
+E
+search2~
+$n searches through the standing water, pulling back muddy hands.
+~
+!
+9 0 0
+-1
+S
+
+#5914
+Dark Alcove~
+This dark alcove sits thirty feet up the north wall of a massive
+underground cavern.  Across a perilous leap to the south, a spiral
+staircase climbs an enormous limestone pillar from floor to ceiling.  The
+alcove is shallow and round, and the floor is littered with decaying
+wood, perhaps some kind of nest.
+~
+[Nnilb] s is 5904
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 9 0
+D2
+~
+~
+234 -1 5904 10 10 5
+E
+floor wood decaying~
+Several lengthy pieces of decaying timber lie up against the northern
+wall.  Set about in a semi-circular formation, the softening wood appears
+to have been purposefully arranged by some creature that views this cosy
+alcove as its home.
+~
+A
+jump leap~
+s south across spire~
+i = add( find_stat( ch, str ), find_stat( ch, dex ), 0, 0 );
+j = random( 10, 27 );
+if( i > j ) {
+  act_tochar( #leap, ch, obj );
+  act_notchar( #rleap, ch, obj, mob, sight );
+  transfer( ch, find_room( 5904 ), 1 );
+  interpret( ch, "+look" );
+  act_notchar( #leapin, ch, obj, mob, sight );
+}
+else {
+  act_tochar( #fall, ch );
+  act_notchar( #rfall, ch, obj, mob, sight );
+  transfer( ch, find_room( 4700 ), 1 );
+  act_notchar( #fallin, ch, obj, mob, sight );
+  i = 3d10+10;
+  j = current_hp( ch );
+  if( i > j )
+    i = j;
+  interpret( ch, "+look" );
+  dam_message( ch, i, "the fall" );
+  inflict( ch, ch, i, "the fall" );
+  if( current_hp( ch ) > 0 )
+    position( ch, 6 );
+}
+~
+E
+leap~
+@GYou make the leap across to the spire!@n
+~
+E
+rleap~
+@G$n makes the leap across to the spire!@n
+~
+E
+leapin~
+@G$n leaps in from the alcove!@n
+~
+E
+fall~
+@RYou attempt the leap, but end up falling thirty feet onto solid
+stone!@n 
+~
+E
+rfall~
+@R$n jumps off the ledge, falling thirty feet!@n
+~
+E
+fallin~
+@R$n falls in from the ledge above!@n
+~
+!
+0 0 0
+A
+search~
+wood nest~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #begin, ch, obj );
+  act_notchar( #rbegin, ch, obj, mob, sight );
+  if( random( 1, 5 ) == 3 )
+    obj = oload( 2379 );
+  if( obj ) {
+    act_tochar( #found, ch, obj );
+    act_notchar( #rfound, ch, obj, mob, sight );
+    obj_to_char( obj, ch );
+  }
+  else {
+    act_tochar( #bug, ch, obj );
+    act_notchar( #rbug, ch, obj, mob, sight );
+    mload( 5395, room );
+  }
+}
+else
+  act_tochar( #already, ch, obj );
+~
+E
+begin~
+@yYou move a few pieces of wood around, checking what lies underneath.@n
+
+~
+E
+rbegin~
+@y$n starts sifting through the wood pile.@n
+~
+E
+found~
+@YAs you move some wood to the side, a faint glimmer catches your eye -
+looks like you've found something.@n 
+~
+E
+rfound~
+@Y$p stops the search and bends down picking something up.@n
+~
+E
+bug~
+@MLooks like you disturbed someone's rest!@n
+~
+E
+rbug~
+@MSomething starts coming out from under the wood!@n
+~
+E
+already~
+@yThe wood is scattered around and obviously searched.@n
+~
+!
+9 0 0
+A
+~
+~
+if( mob_in_room( 5395, room ) )
+  junk_mob( mob_in_room( 5395, room ) );
+~
+!
+16 0 0
+-1
+S
+
+#5915
+Mountain Roadway~
+The ice-covered peaks of jagged mountains rise around the road, casting
+all below in chilling shadows.  Biting winds whistle through the
+causeway, stiring up dust and freezing exposed flesh.  Around the trail a
+basin of broken rubble and frost-fractured stone spreads, the remains of
+landslides and rockfalls that have left the mountain sides sharply edged. 
+A solitary pine grows on the eastern bank, a few scattered tussock plants
+sheltering under its tangled roots.  Hacked from the hard slate and
+granite rock the road winds westward, clinging to the side of
+glacial-scared cliff.  A narrow set of stairs have been cut from the
+northern cliff side, making it possible to reach the valley floor.
+~
+[Azerin] north is valley basin and ratkin
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 7900 10 10 5
+D2
+~
+~
+0 -1 5913 10 10 5
+D3
+~
+~
+0 -1 5916 10 10 5
+E
+1 south cave~
+The entrance to the cave is dark and gloomy, perhaps further exploration
+will tell you what lies ahead.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CSnow crunches underfoot as you leave west.@n
+~
+E
+to_room~
+@CWith crunching of snow underfoot, $n leaves west.@n
+~
+!
+3 0 8
+A
+~
+~
+if( random( 1, 2 ) == 1 )
+  send_to_room( #wind, room );
+else
+  send_to_room( #tree, room, sight );
+~
+E
+wind~
+@CA strong gust of wind chills you to the bone.@n
+~
+E
+tree~
+@GThe ancient pine tree shivers in the wind.@n
+~
+!
+2 150 0
+A
+~
+~
+if( is_mob( ch ) )
+  continue;
+else {
+  act_tochar( #cave, ch, obj );
+  act_notchar( #rcave, ch, obj, mob, sight );
+  continue;
+}
+~
+E
+cave~
+@gYou enter the dark, gloomy cave.@n
+~
+E
+rcave~
+@g$n enters the dark, gloomy cave to the south.@n
+~
+!
+3 0 4
+29 0 1509949540 -2 0
+685 17 1509949540 -2 0
+-1
+S
+
+#5916
+Mountain Basin~
+Struggling up the shattered cliffside of an outcropping of basalt rock
+winds a rubble-coated road.  Cracks and landslides litter its rutted
+surface, making passage an arduous task.  High above, the mist-shrouded
+peaks cast long shadows across the landscape, encasing the basin in
+numbing gloom.  A few tufts of grass and spine-covered bushes cling to
+the shale slopes, their leaves and branches rattled by the incessant wind. 
+Northward a vale opens below the road, an icy stream dances between the
+boulders at its bottom, its source a green-watered tarn that lies nestled
+in a plateau between the great peaks.  Toward the east the road slopes
+downward, a solitary pine tree appearing to mark its end.
+~
+[Guin] Mountain Tarn area would be north.
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 5915 10 10 5
+D4
+~
+~
+0 -1 5917 10 10 5
+A
+~
+~
+if( is_mob( ch ) )
+  continue;
+else {
+  act_tochar( #struggle, ch );
+  act_notchar( #rstruggle, ch, obj, mob, sight );
+  continue;
+}
+~
+E
+struggle~
+@yStruggling through the rubble, you clamber upward.@n
+~
+E
+rstruggle~
+@yWith some difficulty, and definitely out of breath, $n continues
+upward.@n 
+~
+!
+3 0 16
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CYou pick a path along the rock-littered road.@n
+~
+E
+to_room~
+@C$n picks a path along the rock-littered road.@n
+~
+!
+3 0 2
+79 17 1509949540 -2 0
+-1
+S
+
+#5917
+Roadway Across the Everwinter Range~
+A ridge of frost-covered rock juts out from the side of the mountain, the
+road ducking between a fissure in the centre and descending into the
+shadows below.  Beyond the ledge a basin land opens up, its floor
+littered with rubble from countless landslides.  Directly north from here
+a tussock-covered plateau spreads, a windswept tarn glinting within.  A
+fast-flowing stream splashes from the tarn and cascades down toward the
+basin, forming several waterfalls as it runs.  The snowy peaks rise high
+above, their icy caps adding to the chilling winds bite.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 5 9 0
+D3
+~
+~
+0 -1 5918 10 10 5
+D5
+~
+~
+0 -1 5916 10 10 5
+205 9 1509949540 3 0
+366 9 1509949540 3 0
+-1
+S
+
+#5918
+Roadway Across the Everwinter Range~
+The road runs under an overhang of rock before cutting back on itself and
+heading upward through a jagged fissure between spires of stone.  In the
+mountains shadow, tendrils of frost cling to the ground and form beads on
+the tips of several of the tussock bushes that grow across the slopes. 
+Beside the road is a broken statue, its squat physique and beard a good
+indication that it is a dwarf.  Most of the finer features have been
+eroded by time and elements, leaving the face blank bar a small rise
+where the nose once was.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 5 9 0
+D1
+~
+~
+0 -1 5917 10 10 5
+D4
+~
+~
+0 -1 5919 10 10 5
+E
+statue dwarf broken~
+The statue is weather-worn and broken, just a nub of stone.  Fine cracks
+replace any personality.
+~
+A
+move search~
+statue~
+act_tochar( #no, ch );
+~
+E
+no~
+The statue is immovable and hides nothing.
+~
+!
+0 0 0
+244 9 1509949540 3 0
+-1
+S
+
+#5919
+Roadway Across the Everwinter Range~
+Thousands of feet high, the icy slopes of the Everwinter Mountains rise
+around the basin lands.  Landslides and glaciers have etched their marks
+into the flanks of the great spires leaving huge fissures and dark
+ravines.  The air is thin and carries with it a bite that leaves lungs
+aching and lips numb.  Across the desolate rocks and scattered tussock
+plants a windswept road winds, its surface pitted from the harsh elements.
+~
+[Guin] Alvergard links up to 6833.
+[Guin] Done.
+~
+167247872 5 9 0
+D0
+~
+~
+0 -1 5920 10 10 5
+D4
+~
+~
+0 -1 6833 10 10 5
+D5
+~
+~
+0 -1 5918 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CYou begin the arduous climb up the icy slope.@n
+~
+E
+to_room~
+@C$n begins the arduous climb up the icy slope.@n
+~
+!
+3 0 16
+A
+~
+~
+send_to_room( #ice, room, sight );
+loop( all_in_room ) {
+  if( !is_mob( rch ) )
+    damage( mob, rch, 2d5, cold, "shattering ice", "falling block of ice" );
+}
+~
+E
+ice~
+@CA large chunk of ice falls down with a SMASH!@n
+~
+!
+2 200 0
+205 9 1509949540 3 0
+114 9 1509949540 3 0
+358 17 1509949540 -2 0
+5398 9 1509949540 3 0
+-1
+S
+
+#5920
+Mountain Road - Before an Arched Tunnel~
+The jagged ridge of a mountain stretches southward, its broken surface
+covered with loose debris from slips and rock fall.  At the base of the
+ridge a wide archway opens into a cobbled tunnel that cuts into the
+mountains side.  The archway's keystone is marked with a faded symbol of
+crossed axes, perhaps an indication of its dwarven crafters.  A sheer
+wall of ice-covered rock rises at least one hundred feet overhead,
+cloaking the roadway in perpetual shadows.  Despite the gloom and ice, a
+handful of daisies grow beside the trail, their white flowers bright
+against the dull grey stones.  Toward the east a sharp drop spirals
+downward to a rubble-filled basin, a sparkling river running through its
+center, splashing eastward and out of sight behind another ridge of rock.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 5 9 0
+D2
+~
+~
+0 -1 5919 10 10 5
+D3
+~
+~
+0 -1 5921 10 10 5
+E
+symbol axe keystone archway mark~
+Two crossed axes can barely be made out, so faded they are, worn out by
+time and harsh weather conditions.  Probably dwarven in origin, they
+stand as a symbol of times long past, when this road was first built.
+~
+E
+daisy daisies~
+Pale mauve in color, tiny daisies adorn the small patch of grass by the
+trail.  Their short stems enable them to resist the strong mountain
+winds, something that even pines with their deep roots can't achieve in
+such an exposed place as this.  The daisies must be getting plenty of sun
+and water, as they seem to thrive in this unlikely environment.
+~
+A
+pick~
+daisy daisies~
+if( rflag( reset0, room ) ) {
+  i = random( 1, 7 );
+  if( i < 4 ) {
+    obj = oload( 3577 );
+    act_tochar( #daisy, ch, obj );
+    obj_to_char( obj, ch );
+  }
+  else {
+    act_tochar( #nodaisy, ch, obj );
+    remove_rflag( reset0, room );
+  }
+}
+else
+  act_tochar( #nodaisy, ch, obj );
+~
+E
+daisy~
+@WYou pick one of the mountain daisies.@n
+~
+E
+nodaisy~
+@gThere are no more daisies left to pick.@n
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@MYou continue west, entering the dark confines of the tunnel.@n
+~
+E
+to_room~
+@M$n disappears into the darkness of the tunnel to the west.@n
+~
+!
+3 0 8
+A
+~
+~
+send_to_room( #wind, room );
+~
+E
+wind~
+@CA cold mountain wind whistles around the stone-faced mountains.@n 
+~
+!
+2 150 0
+244 9 1509949540 3 0
+-1
+S
+
+#5921
+Tunnel Through the Mountain~
+The dust-coated floor has been crafted from cream stone, each one set in
+place with a slender ribbon of dull-grey mortar.  Copper bowls hang from
+rusted-iron chains in the middle of the arched ceiling.  In the middle
+of the northern wall an archway of black-hued stone has been set, however
+the archway has been blocked up with a brick and mortar wall.
+~
+[Guin] Possible zone location here.
+[Azerin] a better/intresting dwarven crypt
+[Yrna] Done.
+[Guin] Done.
+~
+167247876 5 8 0
+D1
+~
+~
+0 -1 5920 10 10 5
+D3
+~
+~
+0 -1 5922 10 10 5
+E
+copper bowl~
+Shallow bowls, no more than saucers, hang from the ceiling.  The
+undersides of the copper bowls have been etched with a variety of runes
+and axe symbols, similar to those that have been engraved on the archway
+at the entrance to this tunnel.  Each bowl appears to cradle a small
+candle that flickers uneasily in the cool tunnel.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@MYou leave the tunnel and continue on your journey $dward.@n
+~
+E
+to_room~
+@M$n leaves $d and out of the tunnel.@n
+~
+!
+3 0 10
+-1
+S
+
+#5922
+Mountain Road - Before an Arched Tunnel~
+Under the shadow of a mighty overhang the ancient road heads into the
+very mountain itself, through an arched portal and disappears into the
+darkness of a stone-worked tunnel.  Chunks of shattered rubble cling to
+the barren surface of ridge, some perched, ready to fall in the next
+landslide.  Beside the road a weather-worn road marker sits, its surface
+pitted and cracked.  Beyond the rise of rock the massive range of the
+Everwinter mountains spreads, their peaks capped with sparkling ice and
+snow.
+~
+[Azerin] perhaps a climb north along the ridge of rock
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 5 9 0
+D1
+~
+~
+0 -1 5921 10 10 5
+D2
+~
+~
+0 -1 5923 10 10 5
+E
+marker weather-worn~
+Weather-worn, chipped and cracked, this human-high stone must have been
+set here when the road was first made.  It probably serves to mark the
+road's position at times of high snow.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@mYou leave east, entering the arched tunnel.@n
+~
+E
+to_room~
+@m$n enters the arched tunnel.@n
+~
+!
+3 0 2
+5398 9 1509949540 3 0
+-1
+S
+
+#5923
+Roadway Across the Everwinter Range~
+The road crests a ridge and winds across the exposed top of a mountain
+rim, the biting cold leaving the rocks cloaked in a mantle of ice and
+frost that makes it a difficult journey.  From the ridge a panoramic view
+of the snow-covered Everwinter mountains stretches onward as far as the
+eye can see, the peaks becoming increasingly higher the further north
+they go.  Below, a valey of broken rock and rubble extends westward,
+eventually forming into undulating hills and green vales.  The road
+follows the contours of the mountain range as it heads west, away from
+the highlands.
+~
+[Galstaff] Desc checked
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 5 9 0
+D0
+~
+~
+0 -1 5922 10 10 5
+D5
+~
+~
+0 -1 5924 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CStruggling against the freezing wind, you pick your way over the
+frosted ridge.@n 
+~
+E
+to_room~
+@CVisibly struggling against the wind and cold, $n leaves north.@n
+~
+!
+3 0 1
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GHappy to leave the bitter cold, you descend toward the valley below.@n
+~
+E
+to_room~
+@G$n descends toward the green valley below.@n
+~
+!
+3 0 32
+A
+~
+~
+send_to_room( #wind, room );
+rch = rand_player( room );
+interpret( rch, "shiver" );
+~
+E
+wind~
+@CThe freezing wind lashes across the ridge, biting exposed flesh and
+making you shiver.@n 
+~
+!
+2 150 0
+-1
+S
+
+#5924
+Everwinter Mountain Road - Before a Stone Bridge~
+A stone bridge spans a jagged ravine to the west, a sizable river
+tumbling through the clefts bottom.  The rushing waters below send a
+rumble through the ice-covered rocks, shaking a few loose that tumble
+across the road and down the mountain's side.  Beyond the bridge the road
+bends sharply and ascends steeply northwards across a ridge of broken
+rock.  A cloud of mist broils up from the river, its bitterly cold
+droplets soaking the ground.  Overhead a massive cliff rises, its surface
+covered in shadow-filled fissures, the peak of the mountain at least
+another thousand feet beyond the road.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 5 9 0
+D3
+~
+~
+0 -1 5925 10 10 5
+D4
+~
+~
+0 -1 5923 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou struggle up the steep incline.@n
+~
+E
+to_room~
+@gWith considerable effort, $n leaves up.@n
+~
+!
+3 0 16
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CEntering the soaking mist, you step onto the bridge.@n
+~
+E
+to_room~
+@CEntering the soaking mist, $n steps onto the bridge.@n
+~
+!
+3 0 8
+A
+~
+~
+send_to_room( #rumble, room );
+wait( 1 );
+send_to_room( #rockslide, room );
+rch = rand_player( room );
+damage( mob, rch, 2d5, physical, "one of the falling rocks", "rockslide" );
+~
+E
+rockslide~
+@RThe rumble becomes louder as several rocks fall down on the road.@n
+~
+E
+rumble~
+@YA low rumble can be heard from above.@n
+~
+!
+2 150 0
+-1
+S
+
+#5925
+Bridge Over the Ravine~
+Just a few yards from the edge of the stone bridge pours a torrent of
+water forming into a thunderous waterfall.  Waves of soaking mist billow
+across the bridge and surrounding rocks, leaving the area soaked in
+bitterly cold water.  The noise from the fall is deafening, the echoing
+roar almost a physical assault on the senses.  The stonework shudders
+under the force of the water, a constant trickle of stone debris tumbles
+into the churning waters below.  Northwards a ravine spreads out, formed
+by the powerful flow of the mountain river.
+~
+[Azerin] spell casting/speach not possible on the bridge
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 5924 10 10 5
+D3
+~
+~
+0 -1 5926 10 10 5
+E
+waterfall ravine~
+Tumbling over a jagged overhang, the plethoric water roars deafeningly as
+it falls straight down to the ravine floor far below.  A fine mist
+emanates from out from the torrent, and sprays a fine coat of moisture
+across the area.  Countless furlongs below, a conglomeration of massive
+angular boulders lie at the foot of the ravine, the unruliness of the
+colossal rocks give them the appearance that they lie exactly where they
+fell.
+~
+E
+stone bridge stonework~
+The most remarkable thing about this bridge is the way that it curves
+slightly to veer away from the gushing water.  Clearly constructed by a
+master stonemason, each block has been squared off, edges smooth, so that
+they fit snugly in a parabolic arc.  There is a low rail running the
+length of the bridge on the water side, and similarly a low curb on the
+other.
+~
+A
+' 1 say 1 gtell 1 cast 3 gossip 2 chat~
+*~
+act_tochar( #too_loud, ch );
+~
+E
+too_loud~
+@BThe waterfall is too loud for you to do that right.@n
+~
+!
+0 0 0
+A
+~
+~
+send_to_room( #spray, room );
+~
+E
+spray~
+@COn the swift updraft, a fine mist is blown upwards from below, the cool
+water stinging your face as droplets pelt at your skin.@n 
+~
+!
+2 12 0
+-1
+S
+
+#5926
+Everwinter Mountain Road - Before a Stone Bridge~
+Hewn from the basalt rock of the windswept mountain runs a wagon-sized
+road.  A huge tear in the earth cuts across the road, the jagged sides of
+a massive landslide have ripped asunder the dark stones and hurtled them
+down into the basin-land far below.  The thunderous roar of a waterfall
+crashes down from the mountain, its foaming waters churning down the
+slip, carving a deeper ravine with the force of the water.  Waves of mist
+roll across the rocks and road, freezing anything it touches.  A
+stonework bridge crosses the rift, its side precariously close to the
+waterfall, its destination obscured by the haze of bitterly cold mist. 
+Heading away from the crumbling edge of the ravine, the road begins to
+descend, as it winds its way westwards and into the rugged hills that
+frame the Everwinter mountain range.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 5 9 0
+D1
+~
+~
+0 -1 5925 10 10 5
+D5
+~
+~
+0 -1 5927 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CYou step onto the misty bridge.@n
+~
+E
+to_room~
+@C$n steps onto the bridge and quickly disappears in the mist.@n
+~
+!
+3 0 2
+-1
+S
+
+#5927
+Everwinter Mountain Road~
+Surrounded by the towering peaks of the Everwinter range the partially
+cobbled road winds its way across an exposed ridge.  Braced against an
+overhanging northern cliff and a jagged precipice in the south, the
+narrow road seems almost a goat-track in parts.  Scars and potholes mar
+its uneven surface, wounds left from falling rocks and prying ice adding
+to the difficulty of the passage.  Below a ribbon of water splashes
+through the valley floor, a white-water river that cuts its way westwards
+until it is lost from sight.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 5 9 0
+D3
+~
+~
+0 -1 5928 10 10 5
+D4
+~
+~
+0 -1 5926 10 10 5
+-1
+S
+
+#5928
+Everwinter Mountain Road~
+The road winds under a grey stone outcropping of rock on its journey
+through the Everwinter range; the underside of it has been covered by
+countless scratch marks, left by travelers.  A cleft in the middle of the
+lip of rock allows a view of the towering peak thousands of miles above,
+the desolate cliffs scarred by the wind and ice.  Gleaming brightly the
+snow line appears deceptively close, although would still be miles away. 
+About a hundred feet up is the edge of a tussock filled plateau, and it
+looks like the cliff between the road and it could be climbable.  Far
+below the crumbling edge of the narrow road a basin land spreads, a
+silvery river winding through the valleys floor.
+~
+[Guin] Possible new zone up, high mountain plateau and river that forms waterfall.
+[Guin] Done.
+~
+167247872 5 9 0
+D1
+~
+~
+0 -1 5927 10 10 5
+D3
+~
+~
+0 -1 5929 10 10 5
+-1
+S
+
+#5929
+Everwinter Mountain Road~
+An elegant arch of peach-colored stone forms a rainbow like structure
+across the dusty,  cobbled road.  Strangely the arch appears to be free of
+the signs of erosion that mar the rest of the rocks upon the mountain. 
+At the arch's apex a tiny silver bell hangs, its surface gleaming with a
+bright lustre.  Crumbling cliffs nestle against the high road, their
+broken surface covered in deep fissures.  Eastwards the road winds under
+an overhang of dull-grey rock and dips out of sight.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 5 9 0
+D0
+~
+~
+0 -1 5930 10 10 5
+D1
+~
+~
+0 -1 5928 10 10 5
+E
+elegant arch peach-colored peach structure~
+Rising high over the dusty road, this arching parabola stretches from one
+side of the broad avenue to the other.  The stone from which the archway
+was hewn appears to be a peach-colored marble, the surfaces smoothed
+until they gleam with an almost waxy polish.  Maintaining a perfect
+symetry as it spans the road, the arch is decorated by a small silver
+bell that hangs a few inches below the apex.  The tiny bell hangs upon a
+fine strand of silver that has been expertly set into the centre of arch,
+its end disappearing into the solid marble.
+~
+A
+~
+~
+if( is_mob( ch ) )
+  continue;
+else {
+  act_tochar( #bell, ch );
+  act_notchar( #rbell, ch );
+  continue;
+}
+~
+E
+bell~
+@YAs you pass under the arch, the tiny bell rings clear, the note
+echoing throughout the mountains.@n 
+~
+E
+rbell~
+@YAs $n passes under the arch, the tiny bell rings clear, the note
+echoing throughout the mountains.@n 
+~
+!
+3 0 3
+-1
+S
+
+#5930
+Everwinter Mountain Road~
+Running across the ridge of exposed rock is a narrow road, the western
+edge against the jutting cliff, the eastern crumbling away into a valley
+far below.  Burbling streams splash down from above, turning into a
+collection of waterfalls as they hit the roadside and tumble onwards into
+the basin lands.  The road winds around a column of basalt rock and
+continues south towards a peach-colored arch.  Dropping sharply to the
+north the road begins to wind down the valley side.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 5 9 0
+D2
+~
+~
+0 -1 5929 10 10 5
+D5
+~
+~
+0 -1 5931 10 10 5
+1121 9 1509949540 3 0
+-1
+S
+
+#5931
+Everwinter Mountain Road~
+Hundreds of feet below the crumbling road a valley spreads out, a swath
+of greenery in its centre surrounding the silvery waters of a gushing
+river.  The Everwinter Mountains rise thousands of feet above the road,
+their snowy peaks gleaming brilliant white.  Far to the north, the blue
+of its waters fading into the horizon, a rippling tarn sits atop a
+tussock-rimmed plateau, a waterfall tumbling down to join the river below. 
+Toward the northwest, the remains of a bridge partially spans the basin,
+its middle section missing.
+~
+[Galstaff] Desc checked
+[Yrna] Done.
+~
+167247872 5 9 0
+D3
+~
+~
+0 -1 5932 10 10 5
+D4
+~
+~
+0 -1 5930 10 10 5
+-1
+S
+
+#5932
+Everwinter Mountain Road - Before the Ruined Bridge~
+Jutting out to the north from the cobbled road is the weathered span of a
+white stone bridge.  At one stage it would have crossed the width of the
+valley, more than three hundred feet in length.  Unfortunately at some
+point the middle of the bridge has collapsed, leaving about eighty feet
+of space between each end.  The crumbling remains of dwarven statues
+guard the bridge entrance, their weatherworn faces somehow appearing
+sorrowful.  A few hundred feet under the bridge the valley spreads out
+with a river running down the middle.
+~
+[Guin] Entrance to Duroth's Land.
+[Guin] Done.
+~
+167247872 5 9 0
+D1
+~
+~
+0 -1 5931 10 10 5
+D3
+~
+~
+0 -1 5933 10 10 5
+E
+Bridge~
+The bridge itself is only a ruin now, a reminder of times long past when
+such magnificent structures were built as a matter of course.
+~
+A
+1 look~
+statues~
+if( rflag( reset0, room ) )
+  act_tochar( #statues, ch );
+else
+  act_tochar( #rstatues, ch );
+~
+E
+statues~
+Sculpted in times long past, proud and stern, the dwarven statues
+guarding the bridge are now but remains.  The detail of the craftsmanship
+is gone, faded and worn by the elements, and yet they stand, guarding
+what no longer exists.  Carved of grey granite, these sculptings rest
+atop a smoothed marble base pointing in various directions, the seams of
+their joining are long their mortar.
+~
+E
+rstatues~
+The pair of stern and grim statues face each other, as if reminding each
+other of their duty to guard this sacred portal.
+~
+!
+0 0 0
+A
+2 move 2 push 2 pull 2 turn~
+statues~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #push_first_statue, ch );
+  act_notchar( #rpush_first_statue, ch, obj, mob, sight );
+  wait( random( 1, 2 ) );
+  act_tochar( #push_second_statue, ch );
+  act_notchar( #rpush_second_statue, ch, obj, mob, sight );
+  wait( random( 1, 2 ) );
+  obj = oload( 3937 );
+  act_room( #gate, ch, obj );
+  obj_to_room( obj, room );
+}
+else
+  act_tochar( #already, ch );
+~
+E
+push_first_statue~
+@CPlacing your hands on the first statue, you push and tug until it turns
+to the north.@n 
+~
+E
+rpush_first_statue~
+@CPlacing $s hands on the first statue, $n pushes and tugs until it turns
+to the north.@n 
+~
+E
+push_second_statue~
+@CPlacing your hands on the second statue, you tug and push until it
+turns to the south.@n 
+~
+E
+rpush_second_statue~
+@CPlacing $s hands on the second statue, $n pushes and tugs until it
+turns to the south.@n 
+~
+E
+gate~
+@GSlowly, as if its arcane powers had waned during the passing years, a
+faintly glowing portal...a gate...arises in the empty space between the
+two statues.@n 
+~
+E
+already~
+@yTurning the statues is futile.  The gate has already arisen, offering
+entrance into a place beyond.@n 
+~
+!
+0 0 0
+-1
+S
+
+#5933
+Everwinter Mountain Road~
+Eastward, the broken span of a once mighty bridge begins, statues of
+squat warriors guarding the way.  The rubble-covered remains of a cobbled
+road wind through the high mountain ridge, heading in an east-west
+direction.  A large block of grey-stone lies across part of the roadway,
+increasing the difficulty of travel.  Far below the trail's edge a
+forested valley runs, the rushing waters of a mountain river gleaming in
+the middle.  A steep mountain trail branches off from the main road,
+leading down and around the mountainside to the north.
+~
+[Guin] Down leads to Byron's.
+[Yrna] Done.
+[Guin] Done.
+~
+167247880 5 9 0
+D1
+~
+~
+0 -1 5932 10 10 5
+D3
+~
+~
+0 -1 5934 10 10 5
+D5
+~
+~
+0 -1 1665 10 10 5
+E
+1 down trail~
+Narrow and incredibly steep, a mountain trail leads off the main road,
+following the curve of the mountainside.
+~
+E
+block grey-stone stone~
+Scratched, chipped and cracked, a large block of grey-stone seems to have
+been a part of the massive bridge that once stood nearby.  Now it's only
+a large block of stone making your journey more difficult by partially
+blocking the road.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou pick your way carefully down the narrow mountain trail.@n
+~
+E
+to_room~
+@G$n picks $s way carefully down the narrow mountain trail.@n
+~
+!
+3 0 32
+A
+~
+~
+continue;
+~
+E
+to_char~
+@YYou make your way through the rubble and around the large block of
+stone.@n 
+~
+E
+to_room~
+@Y$n struggles through the rubble and around the large block of stone,
+before leaving $d.@n 
+~
+!
+3 0 8
+-1
+S
+
+#5934
+Everwinter Mountain Road~
+The crumbling road winds around a jutting slab of grey stone and
+continues its way through the bitterly cold mountains.  Southward, it
+ducks under a shelf of ice-covered rock and enters a gloomy tunnel. 
+Eastward, is partially blocked by a section of the stone slab, the trail
+becoming a goat track before widening and reaching the remains of a
+bridge.  Overhead the majestic Everwinter range rises to great heights,
+the gleaming snowy caps often obscured by pendulous black clouds.  Below
+the road a mountainous valley stretches to the east and west, the walls
+and basin becoming wider and more gentle the further east it goes. 
+Cutting through the valley floor is a foaming white-water river, the
+surging waters racing westward toward a waterfall.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 5 9 0
+D1
+~
+~
+0 -1 5933 10 10 5
+D2
+~
+~
+0 -1 5935 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@YYou make your way through the rubble and around the large block of
+stone.@n 
+~
+E
+to_room~
+@Y$n struggles through the rubble and around the large block of stone,
+before leaving $d.@n 
+~
+!
+3 0 2
+A
+~
+~
+continue;
+~
+E
+to_char~
+@MYou enter the gloomy tunnel to the south.@n
+~
+E
+to_room~
+@M$n disappears in the gloom of the tunnel to the south.@n
+~
+!
+3 0 4
+-1
+S
+
+#5935
+Everwinter Mountain Road - Tunnel~
+Cutting into the mountain side, the narrow tunnel heads in a due south
+direction, The archway at the tunnel's entrance is coated in runes and axe
+symbols.  The sides and ceiling have been lined with solid-looking stone
+slabs, a lattice of iron rails forming support for the stonework. 
+Hanging from the keystones in the roof are copper bowls, a faint
+illumination surrounding each one.  Further south the tunnel appears to
+be caved in, an opening in the wall allowing an escape from the
+passageway.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247876 5 9 0
+D0
+~
+~
+0 -1 5934 10 10 5
+D2
+~
+~
+0 -1 5936 10 10 5
+E
+copper bowls~
+Shallow bowls, no more than saucers, hang from the ceiling.  The
+undersides of the copper bowls have been etched with a variety of runes
+and axe symbols, similar to those that have been engraved on the archway
+at the entrance to this tunnel.  Each bowl appears to cradle a small
+candle that flickers uneasily in the cool tunnel.
+~
+-1
+S
+
+#5936
+Tunnel - Cave In~
+Tons of rocks have sealed off the southern section of the tunnel, broken
+bricks and stone chips scatter the cobbled floor.  An ogre-sized opening
+has been smashed in the western tunnel wall, the rugged mountains visible
+beyond.  Flickering light glows from a dented copper bowl set in the
+tunnels keystone, the dull illumination casting shadows across the floor. 
+Northwards the tunnel appears in better condition, aided no doubt by the
+slender pillars that rise up and support the ceiling.
+~
+[Azerin] road heads southward but is blocked, maybe it leads to a ruined dwarven city
+[Yrna] Ok, how about a village of dwarven builders who lived here while the road was built? And then there was some catastrophe, perhaps an earthquake, and they all died, and there's a quest involving those statues by the big broken bridge...
+[Yrna] other than that, there could be a search here instead, but I won't put it in for now
+[Yrna] Done.
+[Guin] Done.
+~
+167247876 5 6 0
+D0
+~
+~
+0 -1 5935 10 10 5
+D3
+~
+~
+0 -1 5937 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@MYou climb over the rubble and out of the tunnel.@n
+~
+E
+to_room~
+@MClimbing over rubble and through the opening, $n leaves west.@n
+~
+!
+3 0 8
+-1
+S
+
+#5937
+Everwinter Mountains - Before a Dark Opening~
+Rubble lies scattered across the narrow mountain plateau, the remnants of
+an ancient landslide.  Broken bricks and mortar surround a dark hole in
+the mountainside, a few pick marks scarring its surface.  Above the cave
+a jutting bank of icy-snow has gathered, sheltered from the wind by a
+ridge of stone.  A narrow trail winds westward, ducking and diving
+between jagged-rock spires and around the end of a steep-walled valley.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 5 9 0
+D1
+~
+~
+0 -1 5936 10 10 5
+D3
+~
+~
+0 -1 5938 10 10 5
+E
+dark hole mark~
+If you are heading east, the hole in the mountain side is your only
+option.  The only thing you can tell for sure is that there is quite a
+cave behind the mountain wall; the darkness beyond doesn't reveal
+any more than that.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@MYou climb over the rubble and into the dark hole.@n
+~
+E
+to_room~
+@MYou watch as $n climbs over the rubble and disappears into the dark
+hole.  Was that really wise?@n 
+~
+!
+3 0 2
+-1
+S
+
+#5938
+Everwinter Mountains - High Plateau~
+Scraggly clumps of tussock cling to the rocky ground of the wind-swept
+plateau.  Tiny-leafed alpine moss spreads under boulders and between
+cracks and crevices.  Broken rocks lie across the landscape, their
+surface worn smooth by wind and rain.  Running through the center is a
+narrow trail heading eastward toward a dark cave and westward down a
+scree slope.  High above, the peaks of the Everwinter mountains are hidden
+by black-hued clouds, the rolling sound of thunder echoing through the
+range.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 5 9 0
+D1
+~
+~
+0 -1 5937 10 10 5
+D5
+~
+~
+0 -1 5939 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CSlipping and sliding on the loose debris, you make your way down the
+slope.@n 
+~
+E
+to_room~
+@CSlipping and sliding on the loose debris, $n makes $s way down the
+slope.@n 
+~
+!
+3 0 32
+-1
+S
+
+#5939
+Everwinter Mountains - Before a Slope of Shale~
+A wide section of the cliff side has crashed down into the basin land,
+forming an impressive slope of shale and earth.  A narrow trail heads
+around the landslide and northwards into the basin land, heading towards
+a dense forest.  Dotting the landscape are jagged spires of stone, torn
+from the earth by some unseen force.  Further to the northwest a cracked
+and pitted cliff cuts across the valley floor, the spray from a
+waterfall filling the air.
+~
+[Azerin] north join to 7963
+[Yrna] Done.
+[Guin] Done.
+~
+167247880 5 9 0
+D0
+~
+~
+0 -1 7963 10 10 5
+D3
+~
+~
+0 -1 5940 10 10 5
+D4
+~
+~
+0 -1 5938 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@YThree steps up and two down, you slowly clamber up the shale slope.@n
+~
+E
+to_room~
+@YThree steps up and two down, $n slowly struggles up the shale slope.@n
+~
+!
+3 0 16
+-1
+S
+
+#5940
+Everwinter Mountain Road~
+Weaving around the rocks and debris of the landslides winds an ancient
+cobbled road.  Its surface is pitted and cracked from the years and harsh
+mountain weather, leaving it barely useable in several locations. 
+Overhanging shelves of rock keep most of this section in constant gloom,
+allowing patches of frost to spread in the stone cracks.  Struggling
+tussock dot the landscape, the new green tips beginning to sprout from
+the plants.
+~
+[Galstaff] desc checked
+[Yrna] Buggy leaving code, waiting for Cay to tell me to change or he'll fix
+[Guin] Don't think that is debuggable at this time.
+[Guin] Reviewed.
+[Yrna] changed only to leaving west, so at least it doesn' show [bug] now
+[Guin] Done.
+~
+167247872 5 9 0
+D1
+~
+~
+0 -1 5939 10 10 5
+D3
+~
+~
+0 -1 5941 10 10 5
+A
+~
+~
+if( is_mob( ch ) )
+  continue;
+else {
+  act_tochar( #stone, ch, obj, mob );
+  act_notchar( #rstone, ch, obj, mob, sight );
+  continue;
+}
+~
+E
+stone~
+@yKicking a few stones, you continue westward dragging your feet.@n
+~
+E
+rstone~
+@yKicking a few stones, $n continues westwards dragging $s feet.@n
+~
+!
+3 0 8
+-1
+S
+
+#5941
+Everwinter Mountain Road~
+Cutting its way across the mountain side winds a narrow, ancient roadway. 
+The remnants of a way-station lie scattered to the west, a mound of shale
+and splintered bricks all that remains.  A fire pit has been dug at the
+road side, a few charred fragments of wood and ash lining its bottom. 
+Spires of rock rise up from the southern slope, the wind howling as it
+rushes between the stones.
+~
+[Eliza] Highland cows north.
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 5 9 0
+D0
+~
+~
+0 -1 5942 10 10 5
+D1
+~
+~
+0 -1 5940 10 10 5
+-1
+S
+
+#5942
+Everwinter Mountain Road - Descent Into the Basin Lands~
+Descending suddenly, the road zig-zags down the side of a splinted cliff
+and into the valley below.  A river flows through the middle of the basin
+land, its banks lined with fir trees.  Southward, the road winds deeper
+into the mountains, its surface becoming increasingly damaged and
+partially buried beneath landslides.  Further to the west, grass-covered
+hills spread out towards a prairie.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 12 9 0
+D2
+~
+~
+0 -1 5941 10 10 5
+D5
+~
+~
+0 -1 5943 10 10 5
+A
+~
+~
+if( is_mob( ch ) )
+  continue;
+else {
+  act_tochar( #slide, ch );
+  act_notchar( #rslide, ch, obj, mob, sight );
+  continue;
+}
+~
+E
+slide~
+@yHalf walking, half sliding, you descend down the steep slope.@n
+~
+E
+rslide~
+@yHalf walking, half sliding, $n tries to keep $s balance while
+descending down the steep slope.@n 
+~
+!
+3 0 32
+-1
+S
+
+#5943
+The Everwinter Mountain Range~
+A wall of fir trees runs beside the roadway, their tangled branches
+tightly packed together.  Cutting into the cliff side, the road zigzags
+out of the basin land and heads southward, its destination unclear.  The
+sound of a rushing river fills the air, its source some way to the north. 
+Under the shade of the mountains, frost and snow still coat some of the
+rocks.  Toward the west, the roadway enters a narrow ravine, and begins
+to head into the hills that surround the Everwinter Range.
+~
+[Greth] Mountain river starts here
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 12 9 0
+D3
+~
+~
+0 -1 5944 10 10 5
+D4
+~
+~
+0 -1 5942 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yWith some difficulty, you scramble up the steep slope.@n
+~
+E
+to_room~
+@yYou watch as $n scrambles up the steep slope.@n
+~
+!
+3 0 16
+-1
+S
+
+#5944
+Ancient Roadway - Edge of the Everwinter Range~
+Wildflowers grow beside the pitted road, their speckled blooms barely
+unfurled.  The broken, tussock covered hills of the Everwinter steps
+spread out around the base of the eastern mountain range, the rolling
+hills dwarfed by the ice-covered peaks.  Walls of a canyon rise to the
+east as the road begins its long climb out of the hills and into the
+shadowy vale of a mountain pass.  Ribbons of erosion coat the roadway,
+perhaps formed by now-absent streams of water.  The road to the west
+descends through the barren hills, towards a wide swath of green, probably
+a distant forest.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 5943 10 10 5
+D3
+~
+~
+0 -1 5945 10 10 5
+5398 9 1509949540 3 0
+-1
+S
+
+#5945
+Ancient Roadway~
+Tussock and mountain daisies spread across the broken table land that
+nestles against the edge of the Everwinter mountains.  Sunset-red mounds
+of clay, covered with a sparse amount of grass dot the landscape, a few
+of the oddly-shaped structures standing over ten feet in height.  A
+lonely pine grows beside the ancient roadway, its exposed roots spreading
+over the barren ground.  The thunderous roar of a mountain river rushes
+to the north, the white waters running through a steep sided ravine. 
+Thrusting upwards to the east are the stunning Everwinter mountains,
+their icy peaks rising thousands of feet high.
+~
+[Azerin] no.mob, blocks cows from coming down
+[Yrna] These clay mounds are potential for a zone of barrows or something in that style ... say, with wights? And separate barrows connected with secret passages, or use buttons/levers to activate some sort of transfer
+[Yrna] Though... those mounds MIGHT be termite mounds, like a bit further down the road
+[Yrna] Done.
+[Guin] Done.
+~
+167247880 12 9 0
+D1
+~
+~
+0 -1 5944 10 10 5
+D3
+~
+~
+0 -1 5946 10 10 5
+E
+mounds oddly-shaped structures~
+Of varying sizes, these mounds rise out of the ground, some near to the
+road, and others further off in the distance.  A sparse covering of
+verdant green grass mottles the dusky red clay, the slender blades
+shivering in a cool mountain breeze. Although there is little ground-
+cover, it appears that the mounds have not felt the fall of a foot in
+many decades; the thin shoots of grass stand tall and unscathed.
+~
+-1
+S
+
+#5946
+Ancient Roadway~
+Fir trees form a dense forest to the north and east, the only gap in
+their verdant growth a river that churns through a narrow gorge.  The
+roadway heads northwards, perhaps intersecting the river at some point. 
+Eastwards the cliffs of the ravine join to the edge of the basin land,
+the roadway zig-zagging out of the valley.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 5947 10 10 5
+D1
+~
+~
+0 -1 5945 10 10 5
+-1
+S
+
+#5947
+Ancient Roadway~
+The dense forest of fir trees surrounds the winding roadway as it cuts
+through the hills.  Mounds of pine needles and deadfall line the trails
+edge, a few patches of frost coating the wood.  Ferns and bracken replace
+the tussock grasses, some of the plants fronds spreading over three feet
+in length.  Some way to the north a river gorge runs parallel to the
+road, a cloud of misty vapours surrounding its edge.
+~
+[Yrna] Done.
+~
+167247872 12 9 0
+D2
+~
+~
+0 -1 5946 10 10 5
+D3
+~
+~
+0 -1 5948 10 10 5
+A
+~
+~
+send_to_room( #smell, room );
+~
+E
+smell~
+@gThe overpowering scent of pine fills the air.@n
+~
+!
+2 150 0
+-1
+S
+
+#5948
+Ancient Roadway - Between the Hills~
+The rolling forest-covered hills stretch far to the east as they rise into
+a massive mountain range.  The ice-covered peaks rise thousands of feet
+high and dominate the lands to the east and north.  A river cuts its way
+through a craggy ravine to the north, the sound of rushing water echoing
+around.  Dusky-brown grass covers the low hills, a few crags of bare rock
+thrusting out towards some of the hill tops.  Towards the west the green
+and gold of a massive grassland starts, the prairie stretching as far as
+the eye can see.  Across the hills a cobbled road runs, lacking waystone
+or marker to indicate its destination.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 4 9 0
+D1
+~
+~
+0 -1 5947 10 10 5
+D3
+~
+~
+0 -1 5949 10 10 5
+A
+~
+~
+send_to_room( #river, room );
+~
+E
+river~
+@BThe sound of rushing river echoes throughout the valley.@n
+~
+!
+2 150 0
+-1
+S
+
+#5949
+Ancient Roadway - Beside the Mountain River~
+The rushing waters of a wide river pour between the rough rocks of a deep
+gorge to the north.  A few scattered stands of pine trees grow upon the
+dry-grass hills around the river, their slender trunks rising to about
+fifty feet in hight.  Clustered around the river's edge are rushes and
+irises, the whites and purples of the flowers adding a splash of color to
+the drab hills.  Cutting a path through the highlands is a cobbled road,
+the ancient stones worn and cracked.  A swathe of golden-hued grass
+stretches westward until it meets the edge of a mottled forest.
+~
+[Guin] Ironguard Dwarves north
+[Azerin] river is one that flows from both the tarn and waterfall in the mountains, as you travel westwards
+[Guin] Done.
+~
+167247872 4 9 0
+D0
+~
+~
+0 -1 2250 10 10 5
+D1
+~
+~
+0 -1 5948 10 10 5
+D3
+~
+~
+0 -1 5981 10 10 5
+A
+~
+~
+send_to_room( #sway, room, sight );
+~
+E
+sway~
+@gThe rushes and irises sway gently in the breeze.@n
+~
+!
+2 150 0
+344 17 1509949540 -2 0
+-1
+S
+
+#5981
+Ancient Roadway - Through the Grasslands~
+Wheat and barley hug the cobbled road's broken edges, flanking it until
+the hills become too rugged to the east and a forest begins towards the
+west.  A smattering of rusty-orange mounds rise from the northern
+grasslands, their undulating surfaces appearing to have been formed by
+years of erosion.  Underfoot a thin crusty layer of weeds pokes through
+the cobbles, the greens, golds and greys forming a patchwork effect.
+~
+[Yrna] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 5949 10 10 5
+D3
+~
+~
+0 -1 5982 10 10 5
+-1
+S
+
+#5982
+Road to Talidar~
+Cascading fields of grass spread out from the road on both sides, the
+heavy smell of grain carried on the blustering winds that periodically sweep
+the landscape. To the north, a river cuts a path through the grains; copses
+of trees line its banks, their rich-greens startling agains the dull
+browns of the savannah.  Further along the road towards the west a forest
+begins, the towering trees perhaps fed from the winding river's many
+tributaries.  Far to the east the hills rise upwards and beyond them a
+massive range of mountains rise, their peaks coated in gleaming ice.
+~
+[Guin] Closed north. It was the road to Marnlee.
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+511 -1 5983 10 10 5
+D1
+~
+~
+0 -1 5981 10 10 5
+D3
+~
+~
+0 -1 5984 10 10 5
+-1
+S
+
+#5983
+To Marnlee Heath~
+Under Construction.
+~
+[Greth] road northwards to Marnlee Heath
+~
+167247872 2 9 0
+D2
+~
+~
+511 -1 5982 10 10 5
+-1
+S
+
+#5984
+Road Across the Grasslands~
+An orange mound of dirt has been piled beside the road, its undulating
+surface appearing weatherworn but strangly solid.  Beyond the road the
+great plains spread, the mixture of grass and the occasional tree spread
+far to the north and south.  Westwards the landscape slowly begins to
+change, the lithe grains giving way to a heavy wodddland.  Eastwards in
+the distance a towering mountain range spreads, the cloud topped peaks
+thousands of feet high.
+~
+[Guin] Possible placement for termite mound zone.
+[Guin] Done.
+[Zuig] woddland.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 5982 10 10 5
+D3
+~
+~
+0 -1 5985 10 10 5
+E
+mound orange~
+The mound of dirt is strangely free of any vegetation, its surface fairly
+smooth and solid.  Looking closer, you notice fine cracks, almost like
+canals leading into the mound itself.
+~
+A
+~
+mound orange canal~
+act_tochar( #bite, ch, obj );
+act_notchar( #rbite, ch, obj, mob, sight );
+damage( mob, ch, 1d4, physical, "something", "termite bite" );
+~
+E
+bite~
+@RYou stick your hand in one of the canals and ... OUCH!@n
+~
+E
+rbite~
+@R$n sticks $s hand in one of the canals and $s face twists in pain! 
+Whatever it is that just bit him, it looks like it hurt.@n 
+~
+!
+9 0 0
+-1
+S
+
+#5985
+Road Across the Grassland~
+Slender-stemmed grains and grasses flank the ancient roadway, their golden
+seed-heads bobbing as gusts of wind swirl across the land.  The stands of
+trees form a forest towards the southwest, the roadway heading into its dark
+fold.  Eastwards the rich grassland continues, the dull-grey stones of
+the cobbled road clearly visible from a good distance.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 5984 10 10 5
+D3
+~
+~
+0 -1 5986 10 10 5
+-1
+S
+
+#5986
+Road Through the Grasslands~
+The stench of acrid smoke hangs heavy in the hazy air, the remnants of a
+forest fire's edge scorching the grass and scattered trees to the south. 
+Cleared by the blaze, the ancient road winds eastwards from the forest
+and into unspoilt grasslands.  Far to the east the peaks of huge
+mountains rise, filling the horizon.  The remains of the southern forest
+still smoulder, the exact damage obscured by the smoke.
+~
+[Yrna] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 5985 10 10 5
+D2
+~
+~
+0 -1 5987 10 10 5
+A
+~
+~
+send_to_room( #smoke, room );
+~
+E
+smoke~
+@CA wisp of smoke drifts from the bones of the forest to the south,
+shrouding the land in layers of grey clouds.@n 
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@mTrying not to breathe too deeply, you enter the scorched forest to the
+south.@n 
+~
+E
+to_room~
+@m$n disappears in the smoke to the south - you better stick close!@n
+~
+!
+3 0 4
+-1
+S
+
+#5987
+Forest's Edge - Roadway Through the Grasslands~
+Through the haze of wood-smoke the trees begin to thin, becoming an
+arid-looking grasslands.  Cobbles from an ancient road have resurfaced
+from the layers of ash and partially burnt stumps, forming into a
+reasonably clear causeway as it winds in a predominantly eastward
+direction.  Towards the south the tortured remnants of a forest spread, a
+forest fire having blazed through it some time ago.
+~
+[Guin] Connects to 13250.
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 5986 10 10 5
+D3
+~
+~
+0 -1 13250 10 10 5
+-1
+S
+
+#0
+

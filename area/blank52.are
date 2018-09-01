@@ -1,0 +1,338 @@
+#M2_AREA
+2
+
+Jungle Trail~
+Agnukshmi~
+~
+~
+~
+
+70 0
+3
+0
+#ROOMS
+
+#41500
+Jungle Trail~
+The trail leads through the jungle here, and you are surrounded by a lush
+assortment of jungle plants and trees.  Off the trail and deeper into the
+the jungle you can hear creatures moving about, and the cries of
+countless birds and other animals echo in your ears.  The jungle trail
+continues on to the east.
+~
+[Agnukshmi] Extra Added
+~
+33030145 12 6 0
+D1
+~
+~
+0 -1 41501 10 10 5
+E
+plants~
+The lush plants are a variety of types and sizes.  Flowers of several
+different colors bloom on some of the plants.  Some of them look
+slightly eaten, and some bear small claw marks.
+~
+-1
+S
+
+#41501
+Jungle Trail~
+Faint light filters through the tall plants, and barely touches the
+ground here.  Water drips through the plants above, and your every step
+makes a wet squishing noise as you walk.  The jungle trail continues on
+to the east and north 
+~
+~
+33030145 12 6 0
+D0
+~
+~
+0 -1 41502 10 10 5
+D1
+~
+~
+0 -1 41503 10 10 5
+D3
+~
+~
+0 -1 41500 10 10 5
+2383 9 1509949540 3 0
+-1
+S
+
+#41502
+Intersection on Jungle Trail~
+The trail intersects here, leading off to the north, south and east.  The
+dripping gets louder, as well as some of the animal noises.  The path
+ends abrubtly to the north, where you can hear something very large
+moving around, but the trail to the east and south is silent.
+~
+~
+33030153 12 6 0
+D0
+~
+~
+0 -1 41504 10 10 5
+D1
+~
+~
+0 -1 41505 10 10 5
+D2
+~
+~
+0 -1 41501 10 10 5
+-1
+S
+
+#41503
+Jungle Trail~
+The trail continues to the east, and off to the south, you can hear the
+sound of rushing water.  It looks to be a quite fast moveing river, and
+the currents are probably deadly.  A seemingly countless variety of lush
+plants adorn both sides of the trail, and there looks to be a large
+number of hanging vines that drape the trees here, some possibly climable.
+~
+[Agnukshmi] up leads to canopy, to be populated with birds and monkeys, maybe snakes
+[Azerin] use map function to keep an eye on the zone, if you see ? marks it means you have overlaps (which you do)
+[Agnukshmi] need help with an acode to climb vines up to the canopy, need climb at 3 to be able to climb
+~
+33030145 12 6 0
+D1
+~
+~
+0 -1 41506 10 10 5
+D2
+~
+~
+0 -1 41509 10 10 5
+D3
+~
+~
+0 -1 41501 10 10 5
+D4
+~
+~
+511 -1 41515 10 10 5
+A
+climb~
+1 up vine~
+if( find_skill( ch, climb ) < 3 ) {
+  act_tochar( #onnoclimb, ch );
+  act_notchar( #ronnoclimb, ch );
+  end;
+}
+else {
+  act_tochar( #yesclimb, ch );
+  act_notchar( #ryesclimb, ch );
+  transfer( ch, find_room( 41515 ) );
+  act_notchar( #rarrived, ch );
+  loop( followers ) {
+    ch = rch;
+    if( is_standing( ch ) )
+      acode( room, 1 );
+  }
+  continue;
+}
+~
+E
+onnoclimb~
+@gYou lack the skill to climb the vine.@n
+~
+E
+ronnoclimb~
+@g$n tries to climb the vine but slips back down after a short
+distance.@n 
+~
+E
+yesclimb~
+@gYou clamber up the vines and into the canopy.@n
+~
+E
+ryesclimb~
+@y$n climbs up a vine and dissapears from sight.@n
+~
+E
+rarrived~
+@y$n climbs in from below.@n
+~
+!
+0 0 0
+-1
+S
+
+#41504
+deep jungle~
+Under Construction.
+~
+~
+33030145 12 6 0
+D2
+~
+~
+0 -1 41502 10 10 5
+67 1065 1509949540 3 0
+-1
+S
+
+#41505
+Intersection on Jungle Trail~
+Under Construction.
+~
+~
+33030145 12 9 0
+D3
+~
+~
+0 -1 41502 10 10 5
+-1
+S
+
+#41506
+Jungle Trail~
+Under Construction.
+~
+~
+33030145 12 9 0
+D1
+~
+~
+0 -1 41507 10 10 5
+D3
+~
+~
+0 -1 41503 10 10 5
+-1
+S
+
+#41507
+Jungle Trail~
+Under Construction.
+~
+~
+33030145 12 9 0
+D1
+~
+~
+0 -1 41508 10 10 5
+D3
+~
+~
+0 -1 41506 10 10 5
+-1
+S
+
+#41508
+Jungle Trail~
+Under Construction.
+~
+~
+33030145 12 9 0
+D3
+~
+~
+0 -1 41507 10 10 5
+-1
+S
+
+#41509
+Swift-Flowing Jungle River~
+The River flows swifly here, and the sound of rushing water is even louder.
+~
+[Agnukshmi] populate with fish, pirahnas?
+~
+33030145 6 9 0
+D0
+~
+~
+0 -1 41503 10 10 5
+D2
+~
+~
+0 -1 41510 10 10 5
+-1
+S
+
+#41510
+Swift-Flowing Jungle River~
+Under Construction.
+~
+~
+33030145 6 9 0
+D0
+~
+~
+0 -1 41509 10 10 5
+-1
+S
+
+#41511
+The Canopy~
+Under Construction.
+~
+~
+33030145 12 9 0
+D0
+~
+~
+0 -1 41514 10 10 5
+D1
+~
+~
+0 -1 41513 10 10 5
+-1
+S
+
+#41512
+Jungle Trail~
+Under Construction.
+~
+~
+33030153 12 9 0
+D4
+~
+~
+0 -1 41511 10 10 5
+-1
+S
+
+#41513
+The Canopy~
+Under Construction.
+~
+~
+33030145 12 9 0
+D3
+~
+~
+0 -1 41511 10 10 5
+-1
+S
+
+#41514
+The Canopy~
+~
+~
+33030145 12 9 0
+D2
+~
+~
+0 -1 41511 10 10 5
+-1
+S
+
+#41515
+Jungle Trail~
+Under Construction.
+~
+~
+33030145 12 9 0
+D5
+~
+~
+511 -1 41503 10 10 5
+-1
+S
+
+#0
+

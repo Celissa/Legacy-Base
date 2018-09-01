@@ -1,0 +1,54 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+clans               : lists all publicly known clans<br>
+clans -f [acronym]  : Starts a new clan<br>
+clans [name]        : lists charter/members of a listed clan<br>
+clans -o [option]   : toggles clan options assuming permission<br>
+clans -n [name]     : sets the full name of clan<br>
+clans -c            : edits the clan charter<br>
+clans -a [abbrev]   : changes the clan abbreviation<br>
+clans expell [name] : expells a member from the clan<br>
+<br>
+The option 'g' means it works on a guild.  Eg clans -fg [acronym] to form<br>
+a guild, or clans -og [option] to toggle guild options.<br>
+<br>
+<h1> Description </h1>
+<br>
+To start a clan you must recruit people to swear allegiance to you and<br>
+your cause.  You must also be at least level 10. A starting fee of<br>
+20pp is required to begin a new clan.  Clans will require a charter that<br>
+states your clan's ideals or purpose, and at least five members to be<br>
+approved and receive the benefits of a codified institution.  A clan may<br>
+choose its members according to its charter within a few simple<br>
+guidelines.<br>
+<br>
+*Clans may have good members or evil members, but not both.<br>
+Good/neutral and evil/neutral are allowed.  (In the instance of a heavily<br>
+role-played clan, this rule 'may' be overlooked.  A clan is only<br>
+considered a roleplay clan when they have provided logs of rp to the<br>
+immortal staff.  Roleplay isn't a convenience you can claim for the sake<br>
+of bypassing rules.) <br>
+*Certain races may not be in a clan together. (For instance,<br>
+vyans and elves would not be in the same clan.)  In the instance of a clan<br>
+that takes its members from but a single alignment, racial barriers may be<br>
+crossed.<br>
+*Those who have chosen to follow a chaotic evil alignment may not<br>
+join a clan.  Chaotic evil characters are motivated solely by the desire<br>
+for personal gain and pleasure.  Since the interests of others are utterly<br>
+meaningless to them, they are unlikely to be attracted to the unity of<br>
+ideals found in a clan.<br>
+<br>
+Clans will have the option of remaining unknown.  If you do not wish your<br>
+clan to be seen on the public clan list, you may toggle the option<br>
+Exist.Known.  If you want your charter publicly displayed without your<br>
+members showing, you may toggle the option Members.Known.<br>
+<br>
+Once your options are set and your clan charter is in place, an immortal<br>
+will look it over and set your clan as approved.<br>
+<br>
+Also, the minimum level for each clan must be level 10.  You may apply<br>
+for a lower level, but it is extremely unlikely it will be approved.<br>
+</html>
+</body>

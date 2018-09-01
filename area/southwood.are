@@ -1,0 +1,4542 @@
+#M2_AREA
+2
+
+South Woods~
+Rikahn Carth Morros~
+South Woods~
+~
+~
+
+5 0
+0
+1
+#ROOMS
+
+#6400
+Winding Southern Road~
+Flanked by a rough cliff on the west side and a steep drop to the east,
+the dirt path winds in a generally southward direction.  A few stones
+scattered across the road create a hazardous walk.  Above the crumbling
+shelf of rocks, a dense forest breathes life and sounds of animals echo
+upwards from the chasm below.  Cast by the dense, verdant canopy of huge
+beech trees, deep shadows mottle the ground with varying shades of grey. 
+To the south, the road dips and turns, ducking behind a jutting rock
+before disappearing from view.  The road meanders towards a stone-white
+bridge and across the eastern valley floor.  A sea of green grass
+disperses into the area, the dusty brown and green stems swaying in the
+breeze.
+~
+[Morros] Done.
+[Estrella] done
+~
+167247880 2 9 0
+D0
+~
+~
+0 -1 5357 10 10 5
+D2
+~
+~
+0 -1 6401 10 10 5
+E
+1 south rock~
+This appears to be a large boulder that has fallen from higher up the
+cliff-face.  Taller than a troll and about as wide, it would be very
+difficult to move from it's current location where the massive stone
+blocks half the narrow path.
+~
+E
+white bridge~
+The sparkling white bridge crosses the valley in a single span, the
+ornate structure an awesome example of craftsmanship.
+~
+E
+valley floor grass~
+Long grasses, dotted with the odd bush and tree, spread along the valley
+as far as the eye can see.  From this vantage point it is possible to see
+the odd rabbit and pony grazing in the field below.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou walk around the boulder and head into the valley below.@n
+~
+E
+to_room~
+@G$n walks around the boulder and heads into the valley below.@n
+~
+!
+3 0 4
+-1
+S
+
+#6401
+Cliffside Trail - Beside a Muddy Stream~
+The trail dips as it heads in a southerly fashion, winding around a
+boulder as it descends into the grassland.  Climbing steeply, the road
+cuts across the side of the valley as it heads towards a white-stone
+bridge.  Flanking the road is a muddy stream it's swirling waters feeding
+watercress and the occasional flax stand.  Ripe seed-heads of rye and
+barley grass sway in the strong winds that whip across the valley floor.
+~
+[Morros] Done.
+[Estrella] done
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 6400 10 10 5
+D2
+~
+~
+0 -1 6402 10 10 5
+E
+boulder 1 southerly~
+This appears to be a large boulder that has fallen from higher up the
+cliff-face.  Taller than a troll and about as wide, it would be very
+difficult to move from it's current location where the massive stone
+blocks half the narrow path.
+~
+E
+stream~
+Murky silt blocks the view of the bottom of the stream, but it cannot be
+too deep as minor almost imperceptible ripples mar the otherwise smooth
+surface.  Along each bank grows thick clumps of watercress with the
+occasional stand of flax pushing through the reedy plants.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou start to trudge along the steep path as it winds up the valley side.@n
+~
+E
+to_room~
+@G$n starts trudging along the steep path as it winds up the valley side.@n
+~
+!
+3 0 1
+A
+~
+~
+send_to_room( #run, room, sight );
+~
+E
+run~
+@BThe sound of splashing can be heard as a small, dark shadow darts
+through the murky waters.@n 
+~
+!
+2 250 0
+-1
+S
+
+#6402
+Cliffside Trail - Beneath a Rock Shelf~
+A crumbling rock shelf rises to the west; the road, running beneath it,
+gaining shelter from an oncoming wind.  A muddy stream follows the road,
+the waters allowing a few ferns and flax bushes to grow in the deep
+shadow of the towering cliff.  The valley basin stretches as far as the
+eye can see, the grasslands swaying in the breeze.  To the north, the
+trail works its way up the side of the cliff.
+~
+[Morros] Done.
+[Estrella] done
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 6401 10 10 5
+D3
+~
+~
+0 -1 6403 10 10 5
+E
+ferns flax bushes~
+Growing rampantly, the ferns flourish as much as possible in such a
+small, shaded area.  The bushes rustle as the waters and wind gently sift
+through them.
+~
+E
+rocks cliff~
+Dwindling from age, the highly fissured cliff still casts shadows across
+the lands below, a few ferns and flaxes seeking shelter from the wind
+within the rocky surrounds.  Shadows dance upon the surface of the water
+as the cliff looms far above, giving the stream a deeper murkier look.
+~
+7181 17 1509949540 -2 31
+-1
+S
+
+#6403
+Cliffside Trail - Winding Path~
+Trailing alongside the murky water, the winding path continues to weave
+its way through the forest.  Small dust clouds, billowing as each gust of
+wind whips through, create a dusty visage across the eastern forest.  A
+crumbling ledge towers over the road, providing plenty of shade for any
+passers-by to sit beneath and rest.  As the path continues to follow the
+stream to the south, drifting slightly away from the riverbed in places.
+~
+[Morros] Done.
+[Estrella] done
+[Guin] Done.
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 6402 10 10 5
+D2
+~
+~
+0 -1 6404 10 10 5
+E
+muddy stream~
+The water seems to have thickened in texture as a high percentage of
+sediment is swept through the stream.  The shoreline is covered with
+miniature rocks and pebbles, unlike the grassy area of the surrounding
+vale.
+~
+E
+ledge 1 west~
+Towering to the immediate west, a cliff-face rises up, blocking movement
+in that direction, a ledge overhanging the road to provide shade during
+daylight hours.  The cliff appears to be quite stable; it's marginally
+fractured face bereft of any large loose rocks.
+~
+A
+~
+~
+rch = rand_player( room );
+if( rch ) {
+  act_tochar( #ouch, rch, obj, mob );
+  act_notchar( #thatlookslikeithurt, rch, obj, mob );
+  i = 2d2+2;
+  dam_message( rch, i, "The falling rock" );
+  inflict( rch, rch, i, "falling rocks" );
+}
+~
+E
+ouch~
+@yYou hear a quiet rumbling to the west, but before you can glance up, a piece
+of rock comes plummeting towards you.
+~
+E
+thatlookslikeithurt~
+@yA quiet rumbling emanates from the west, but before you can glance up, a piece
+of rock comes plummeting towards $n. That sure was close.
+~
+!
+2 250 2
+7181 17 1509949540 -2 0
+-1
+S
+
+#6404
+Cliffside Trail - Beside a Muddy Stream~
+Running alongside the muddy stream, the path continues in a north-south
+direction, the murky waters denying any passage to the east.  A cliff,
+deteriorating as age slowly takes a firm grasp upon it, towers to the
+west, casting elongated shadows across the trail. Redirecting the
+buffeting wind in a random direction, the massive cliff continues to the
+south.  Fragments and shards of tiny rock clutter the riverbed making
+passage a bit more difficult.
+~
+[Estrella] done
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 6403 10 10 5
+D2
+~
+~
+0 -1 6405 10 10 5
+E
+cliff rock~
+The cliff reaches for the sky, yearning for the lofty heights it once
+upheld, remembering a time where nothing could bring it into submission. 
+As the long ages take a grasp of it, the cliff has slowly been beaten
+down: the persistent weathering having whittled away at the rugged apex
+until the boulders and fragments have been brought to the ground with
+most of the other long-fallen rocks.
+~
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 )
+  send_to_room( #tumble, room, sight );
+else if( i == 2 )
+  send_to_room( #wind, room, sight );
+else if( i == 3 ) {
+  if( is_night( ) )
+    send_to_room( #crow, room, sight );
+  else
+    send_to_room( #run, room, sight );
+}
+~
+E
+tumble~
+@bA few stones tumble down the cliff landing in the muddy stream with a
+splash.@n 
+~
+E
+wind~
+@CThe wind whips bitterly through the area, stirring up a few particles
+of dirt.@n 
+~
+E
+crow~
+@yThe sounds of crows echo in the skies as they soar overhead waiting for
+a fallen prey.  @n 
+~
+E
+run~
+@GA frog jumps from rock to rock disturbing the peaceful setting as it
+croaks hoarsely.@n
+~
+!
+2 250 0
+A
+~
+~
+if( !is_mob( ch ) )
+  continue;
+if( is_pcontrolled( ch ) )
+  continue;
+~
+E
+to_char~
+@GYou make a quick journey across the pebble-filled ground as you head
+$d.@n 
+~
+E
+to_room~
+@G$n dances haphazardly around each rock as $e continues the journey
+$d.@n 
+~
+!
+3 0 5
+7181 17 1509949540 -2 0
+-1
+S
+
+#6405
+Cliffside Trail - Near a Fallen Tree~
+Towering over the trail to the north, an enormous cliff looms covetously
+over the narrow road.  The cliff abruptly veers to the west here, and the
+path continues to wind alongside its base.  Off to the east a stream can
+be seen, although the proliferation of thick grasses and bushes prevents
+any easy travel in that direction.  At some point in the recent past, a
+huge oak tree has fallen, blocking off the forest to the south.
+~
+[Morros] Done.
+[Estrella] done
+[Guin] Done
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 6404 10 10 5
+D3
+~
+~
+0 -1 6406 10 10 5
+E
+tree trunk oak~
+When alive, this tree must have been a giant among its peers in the
+forest, probably growing for hundreds upon hundreds of years.  Now,
+sadly, it has fallen from its lofty stature and is slowly decaying into
+obscurity, providing a home for many small creatures and insects.
+~
+A
+~
+tree trunk oak~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #disturb, ch, obj, mob, sight );
+  act_notchar( #disturb2, ch, obj, mob, sight );
+  mload( 244, room );
+}
+else {
+  act_tochar( #again, ch, obj, mob, sight );
+  act_notchar( #again2, ch, obj, mob, sight );
+}
+~
+E
+disturb~
+@cYou reach into the log but only seem to scare a rabbit out its home.@n
+~
+E
+disturb2~
+@c$n sticks $s hand in the log but only manages to frighten a rabbit out
+of its home.@n 
+~
+E
+again~
+@cYou seach the log again but find only your fingers, some decaying tree
+pulp, a few insects and a plenty of dirt.@n 
+~
+E
+again2~
+@c$n searches the log thoroughly and triumphantly displays all $s
+findings: some decaying tree pulp, a few insects, plenty of dirt and $s
+fingers!@n 
+~
+!
+9 0 0
+7181 17 1509949540 -2 0
+-1
+S
+
+#6406
+Forest Trail~
+Flourishing noticeably, the trees here are enormous in comparison to
+those that grow off in the distance.  The path is well worn and looks as
+though it has been travelled upon recently.  Far off, the top of a jagged
+cliff barely peeks over the tips of the towering trees.  The forest is
+far too dense to the north and west for travelling through, but there is
+a steep, yet climbable slope to the east, although the rise blocks any
+view in that direction.
+~
+[Morros] Done.
+[Estrella] done
+[Guin] Done.
+[Juire] You try to climb down the slop but slip and tumble down the hill!
+~
+167247936 3 9 0
+D1
+~
+~
+0 -1 6405 10 10 5
+D4
+~
+~
+0 -1 6407 10 10 5
+E
+trees forest 1 north 1 west~
+Oaks, beech, pines, and various other trees grow in abundance here, their
+tightly packed trunks making any journey directly west and south
+impossible.  Greens, reds, and a wide range of browns, all mixed
+together, crown the treetops in a blur of colour, like a mural in
+autumnal hues mottled into a stuccoed texture.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GSlipping and sliding, you make your way up the slope.@n
+~
+E
+to_room~
+@G$n struggles up the slope.@n
+~
+!
+3 0 16
+-1
+S
+
+#6407
+Forest Trail~
+The path rises slightly here, overlooking a portion of the surrounding
+forest.  A sharp descent drops into a more densely wooded area, the
+treetops just barely visible in the distance.  Crowding the path, thick-
+stemmed weeds grown in fat clumps, some with delicate, pale flowers and
+others gone to seed.  The path passes by a gnarled, aged tree and begins
+to gently ascend beyond.
+~
+[Morros] Done.
+[Estrella] done
+[Guin] Done.
+~
+167247872 3 9 0
+D2
+~
+~
+0 -1 6408 10 10 5
+D5
+~
+~
+0 -1 6406 10 10 5
+E
+weeds forest 1 west 1 east~
+Weeds of various colours lie just before an overcrowded forest, halting
+any trail that strays from the main path.  Many different trees fill the
+forest, no sole genus managing to dominate the area.  The floor is
+littered with many leaves, acorns, and pinecones: an indication that
+either through the interference of fauna or the tenacity of the wind
+carries them from spot to spot.
+~
+E
+flowers  pale~
+Among the many weeds, a few flowers sprout from the ground, blatantly
+visible with their pale white petals contrasting the dull hues of the
+surrounding foliage; the smell alone gives a comfortable walk through the
+woodlands.
+~
+E
+gnarled aged tree~
+Just off to the south, a colossal tree grows, its trunk gnarled and
+twisted.  Roots the size of dwarves sprout from the ground creating a
+tangled mess for the oncoming passage.
+~
+A
+~
+~
+if( !is_exhausted( ch ) )
+  if( find_stat( ch, dex ) > 14 )
+  continue;
+else {
+  act_tochar( #tumble, ch, obj, mob, sight );
+  act_notchar( #tumble2, ch, obj, mob, sight );
+  transfer( ch, find_room( 6406 ) );
+  damage( rch, ch, random( 1, 12 ), physical, "the fall" );
+}
+~
+E
+tumble~
+You try to climb down the slop but slip and tumble down the hill!
+~
+E
+tumble2~
+$n tries to scale the hill but slips and tumbles down the hill!
+~
+E
+to_char~
+You carefully descend down the hill.
+~
+E
+to_room~
+$n carefully descends down the hill.
+~
+!
+3 0 32
+A
+~
+~
+if( !is_mob( ch ) )
+  continue;
+~
+E
+to_char~
+@GLeaping from root to root, you complete the journey past the gnarled
+tree.@n 
+~
+E
+to_room~
+@G$n jumps from root to root and completes $s journey past the gnarled
+tree.@n 
+~
+!
+3 0 4
+-1
+S
+
+#6408
+Forest Trail - By a Colossal Oak Tree~
+A colossal tree, growing steadfastly in the centre of the road, splits
+the well-travelled trail in two, causing both paths to veer on either
+side of the wide bole, before coming back together just beyond.  Wild
+grasses grow in profusion around the gnarled tree, their delicate blades
+crushed by the footfalls of passers-by.  Partially obstructing the view
+of the sky, the vast canopy of this lofty oak stretches high above the
+other nearby trees.
+~
+[Morros] Done.
+[Estrella] done
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 6407 10 10 5
+D2
+~
+~
+0 -1 6409 10 10 5
+E
+tree canopy gnarled oak~
+Old and gnarled, this oak has longs since taken root in the centre of the
+road.  Towering high above the forest floor, the mighty branches dominate
+the sky and are not even swayed by an occasional brisk wind.  Each
+branch, endowed with plentiful healthy, green leaves, creating a dense
+canopy that blocks most sky from view.  Nestled in the crooks of many
+high branches are well-built birds nests, their occupants chirping
+merrily from somewhere in the treetop.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou make your way around the tree and follow the trail.@n
+~
+E
+to_room~
+@G$n makes $s way around the tree and follows the trail beyond.@n 
+~
+!
+3 0 4
+A
+~
+~
+send_to_room( #text, room, sight );
+~
+E
+text~
+@CYou hear a rustling sound and look up just in time to see a squirrel
+fling itself to another tree.@n
+~
+!
+2 200 0
+A
+~
+up tree oak~
+act_tochar( #no, ch );
+~
+E
+no~
+You try, but cannot reach the branches of the tree.  Looks like you won't
+be climbing this one.
+~
+!
+18 0 0
+-1
+S
+
+#6409
+Forest Trail - Light Woods~
+The winding trail continues through the sparsely tree-populated section
+of the forest: rays of light streaming through the branches illuminate
+the entire area.  While few in number, the trees have matured to their
+maximum potential; bright green leaves, clumped together on well-grown
+branches creates a wall of dense vegetation.  As leaves drift down from
+thick branches, they litter the forest floor with a myriad of autumnal
+hues dappling the floor; the occasional grass clump sending bright green
+blades through the groundcover.  An ancient, gnarled tree lies to the
+north, splitting the well-travelled path in half before it continues
+beyond the tree as a single path once more.
+~
+[Morros] Done.
+[Estrella] done
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 6408 10 10 5
+D2
+~
+~
+0 -1 6410 10 10 5
+E
+leaves litter autumnal floor~
+Like a mottled carpet, the decomposing leaves cover the floor with an
+abundance of colour; only the occasional clump of grass poking through. 
+The wind whips drifts of leaves around keeping the piles thin and well
+spaced; the dirt path is easily recognizable with trampled leaves sunk
+into the soft loamy soil.
+~
+E
+ancient gnarled tree~
+Towering high above the forest floor, the mighty branches dominate the
+sky and are not even swayed by an occasional brisk wind.  Each branch,
+endowed with plentiful healthy, green leaves, creating a dense canopy
+that blocks most sky from view.  Nestled in the crooks of many high
+branches are well-built birds nests, their occupants chirping merrily
+from somewhere in the treetop.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GLeaves rustle as you walk through them leaving $d.@n 
+~
+E
+to_room~
+@GLeaves rustle as $n walks through them leaving $d.@n 
+~
+!
+3 0 5
+-1
+S
+
+#6410
+Forest Trail - Base of a Craggy Hill~
+The well-travelled dirt path inclines up a steep, craggy hill; roots from
+the nearby trees protrude from the earth and have been used for leverage
+in the sharp ascent.  While not densely populated, the matured trees and
+their many leaf-filled branches still create a thick verdant canopy,
+making long distance sight rather difficult.  Smothering the forest
+floor, leaves of many shades mottle the ground, with an occasional root
+and clump of grass sprouting from the ground beneath.
+~
+[Morros] Done.
+[Estrella] done
+[Guin] Done
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 6409 10 10 5
+D4
+~
+~
+0 -1 6411 10 10 5
+E
+leaves floor ground~
+The light brown of the leaves cast upon the ground creates a striking
+contrast to the dark green shades of the foliage above.  Protected by the
+trees against the wind, several year's worth of fallen leaves lie in
+thick piles on the forest floor, slowly decomposing and bringing life
+back to the trees from whence they came.
+~
+E
+roots hill~
+The worn dirt path twists and turns as it climbs up the craggy hill to
+the south.  With roots of the nearby trees protruding frequently across
+the hard-packed soil, inadvertently making the ascent much easier than if
+it had to be scaled by hand.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yUsing the roots from nearby trees as handholds, you make the difficult
+ascent up the craggy hillside.@n 
+~
+E
+to_room~
+@yUsing the roots from nearby trees as handholds, $n makes the difficult
+ascent up the craggy hillside.@n 
+~
+!
+3 0 16
+A
+poke~
+~
+do_spell( web, ch, ch );
+~
+!
+0 0 4
+-1
+S
+
+#6411
+Forest Trail - Upon a Craggy Hill~
+The trail drops steeply to the north, winding precariously down a craggy
+hill.  The trees pull back from the edge of the hill, their roots poking
+out from its near-vertical face to provide handholds for the descent. 
+Fallen leaves, now in various shades of decay, clutter up the ground at
+the bases of the trees.  Atop the hill, the thin forest can be seen
+stretching across the vale below, a canopy of leaves, varying greatly in
+colour, nearly disallowing any view of the ground, but still in a few
+places, the leaf-strewn floor can be seen.
+~
+[Morros] Done.
+[Estrella] done
+[Guin] Done.
+~
+167247872 3 9 0
+D2
+~
+~
+0 -1 6412 10 10 5
+D5
+~
+~
+0 -1 6410 10 10 5
+E
+leaves floor ground~
+Piled up in wind-free locations, the fallen leaves have clumped together. 
+Over the years, they have decomposed into a thick layer of dark brown
+soil, rich in nutrients, the soft decaying material making the ground
+moist and slightly slippery underfoot.
+~
+E
+forest trees canopy~
+The valley to the east is filled with trees stretching as far as the eye
+can see.  Looking down and watching the leafy tops waver is somewhat
+reminiscent of gazing over a strange, deep green sea.
+~
+E
+roots hill~
+A few roots protrude from the craggy hill making the hazardous descension
+a much safer climb.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@RGrabbing hold of some roots, you quickly make your way down the steep
+slope, stumbling and skidding as you descend.@n 
+~
+E
+to_room~
+@RAfter grabbing some roots to aid $s descent, $n quickly stumbles and
+skids down the steep slope.@n 
+~
+!
+3 0 32
+-1
+S
+
+#6412
+Forest Trail~
+The dusty, well-travelled path continues here, winding its way generally
+in a north-south course between the trees.  Bright green leaves grow from
+branches overhead, filtering the sky's light and creating a dappled
+pattern of wavering shadows upon the ground below.  A few animal tracks
+are visible in the dirt just off the path.
+~
+[Morros] Done.
+[Estrella] done
+[Guin] Done.
+~
+167247880 3 9 0
+D0
+~
+~
+0 -1 6411 10 10 5
+D2
+~
+~
+0 -1 6413 10 10 5
+E
+tracks~
+Barely noticeable, the tracks wander around in a circular shape before
+disappearing completely.
+~
+E
+trees~
+Fairly a fair distance apart, the trees grow with their branches reaching
+for the sky and entwined with one another as if creating a bridge for the
+tree-dwelling creatures to traverse.
+~
+A
+~
+~
+send_to_room( #bird, room, sight );
+~
+E
+bird~
+@YBirdsongs resound within the trees, peaceful and melodic.@n 
+~
+!
+2 150 0
+-1
+S
+
+#6413
+Forest Trail - Before a Massive Tree~
+The trail splits here, avoiding one particularly massive tree that grows
+to the south.  Its gnarled roots spread over the path, leaving the
+surface uneven and precarious.  Smaller trees grow densely on either side
+of the path, their foliage bright and green.  Fallen tree leaves carpet
+the ground in varying stages of decomposition.  A break in the trees
+lying to the west leads to a more open, well-groomed path, flanked by
+younger trees.
+~
+[Morros] Done.
+[Estrella] done
+[Guin] Done
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 6412 10 10 5
+D1
+~
+~
+0 -1 6414 10 10 5
+D3
+~
+~
+0 -1 6480 10 10 5
+D4
+~
+~
+98 -1 6481 10 10 5
+E
+massive tree~
+This tree is gargantuan, looking as though it would take at least twelve
+large humans to encircle its trunk with their arms outstretched.  Its
+bark is craggy and rough, probably home to countless small burrowing
+insects.
+~
+A
+~
+~
+if( rflag( reset0, room ) ) {
+  if( find_skill( ch, searching ) > random( 1, 10 ) ) {
+    act_tochar( "A glint catches your eye! You see light reflect from under a bush.", ch );
+  }
+}
+~
+!
+1 0 11
+A
+~
+bush~
+act_notchar( #room, ch );
+
+if( rflag( reset0, room ) ) {
+  if( find_skill( ch, searching ) > random( 1, 7 ) ) {
+    remove_rflag( reset0, room );
+    i = 1d1000;
+    if( i == 1 )
+      obj = oload( 16, random( 1, 5 ) );
+    else if( i < 100 )
+      obj = oload( 657 );
+    else if( i < 300 )
+      obj = oload( 14, random( 5, 10 ) );
+    else if( i < 600 )
+      obj = oload( 24 );
+    else
+      obj = oload( 210 );
+    if( obj ) {
+      act_tochar( #found, ch, obj, mob );
+      obj_to_char( obj, ch );
+    }
+    else
+      act_tochar( #fail, ch );
+  }
+  else {
+    act_tochar( #fail, ch );
+    if( random( 1, 100 ) > 75 )
+      remove_rflag( reset0, room );
+  }
+}
+else {
+  act_tochar( #fail, ch );
+}
+~
+E
+fail~
+@rYou poke around the bushes but come up empty handed.@n
+~
+E
+room~
+@r$n starts rummaging around in one of the bushes by the side of the path. 
+What is $e doing?!@n 
+~
+E
+found~
+@gYou poke around and find $p!@n
+~
+!
+9 0 0
+A
+climb~
+massive tree up~
+if( !is_standing( ch ) ) {
+  act_tochar( "You aren't really in a position to do this!", ch );
+  end;
+}
+if( find_skill( ch, climb ) > 2 ) {
+  act_tochar( #climb, ch );
+  act_notchar( #climb2, ch );
+  transfer( ch, find_room( 6481 ) );
+  act_notchar( "$n climbs up from below.", ch );
+}
+else {
+  act_tochar( #fail, ch );
+  act_notchar( #fail2, ch );
+}
+~
+E
+climb~
+@yFinding suitable handholds you quickly climb up the tree.@n 
+~
+E
+climb2~
+@y$n scrambles up the massive tree.@n
+~
+E
+fail~
+@rYou try to climb the tree but slip and fall back to the ground!@n 
+~
+E
+fail2~
+@r$n tries to climb the tree but slips and falls back to earth with a BUMP!@n
+~
+!
+0 0 0
+-1
+S
+
+#6414
+Forest Trail - Fallen Tree~
+Winding through the dense foliage, the path runs before a massive, fallen
+tree trunk, which is much to large to cross in the north.  Long-fallen
+and ground-embedded leaves, in varying forms of decomposition, construct
+the path.  Newly fallen leaves drift silently between the towering trees,
+roving across the forest floor until they find a place to settle.  No
+particular genus of tree dominates the formation of the forest - elms,
+oaks, pines, and innumerable others filling in the empty spaces.  A small
+patch of mushrooms, growing up to and upon the long-ago fallen trunk,
+stick out from the leaf-littered floor.
+~
+[Morros] Done.
+[Estrella] done
+[Guin] Done.
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 6415 10 10 5
+D3
+~
+~
+0 -1 6413 10 10 5
+E
+massive fallen trunk 1 north~
+This huge trunk looks as though it fell a long time past, decay has
+started to soften the pale flesh and small insects have burrowed into the
+pulp, making a home within the shelter of the rotting wood.  Any limbs
+that may have branched off this wide trunk have been snapped by the crash
+to the ground and lie festering on the forest floor nearby.
+~
+E
+small mushrooms leaves leaf-littered floor~
+Well back from the path, speckled mushrooms grow in thick clusters around
+the decomposing trunk, their roots sunk deep into the decaying
+leaf-litter.  Small fungi grow on the rotting leaves, small branches and
+other less identifiable things that lay strewn between trees.
+~
+A
+pick get search~
+mushrooms~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  j = random( 1, 5 );
+  i = random( 2, 3 );
+  obj = oload( 885, i );
+  robj = oload( 885 );
+  if( j == 1 ) {
+    if( random( 1, 3 ) > 1 ) {
+      act_tochar( #find, ch, obj, mob, sight );
+      act_notchar( #find2, ch, obj, mob, sight );
+      obj_to_char( obj, ch, random( 2, 3 ) );
+    }
+    else {
+      act_tochar( #find3, ch, obj, mob, sight );
+      act_notchar( #find4, ch, obj, mob, sight );
+      obj_to_char( robj, ch );
+    }
+  }
+  else {
+    act_tochar( #no, ch, obj, mob, sight );
+  }
+}
+else {
+  act_tochar( #no, ch, obj, mob, sight );
+}
+~
+E
+find~
+@YYou rummage around and find a few edible-looking mushrooms!@n
+~
+E
+find2~
+@Y$n rummages through the leaf-litter and picks up a few mushrooms.@n 
+~
+E
+find3~
+@YYou rummage around and find an edible-looking mushroom!@n 
+~
+E
+find4~
+@Y$n rummages through the leaf-litter and picks up a mushroom.@n 
+~
+E
+no~
+@yNone of the mushrooms look healthy enough to pick.@n 
+~
+!
+0 0 0
+5259 9 1509949540 3 0
+-1
+S
+
+#6415
+Forest Trail~
+Growing in a misshapen circle to the northeast, the verdant rows of trees
+halt any travel with their tangled roots protruding from the moist earth
+and massive trunks competing for enough space to spread their leafy
+boughs.  The leaf-filled path is covered with the decomposing, tree-fall
+that has accumulated over the years, while other, more recently fallen
+debris, are tossed about the area with an occasional gust of wind.  The
+bark on nearby trees has been shredded and torn off the wide boles
+exposing the pale wood beneath, stark evidence of recent animal activity
+in the surrounding forest.  A few small tracks disturb the soft ground,
+wandering off in various directions.
+~
+[Morros] Done.
+[Estrella] done
+[Guin] Done.
+~
+167247872 3 9 0
+D2
+~
+~
+0 -1 6416 10 10 5
+D3
+~
+~
+0 -1 6414 10 10 5
+E
+bark tracks~
+The rough bark has been shredded and peeled off the base of the tree,
+some tattered strips lying on the ground nearby.  Animal tracks can be
+seen wandering off through the forest, leading this way and that, the
+disturbed soil indicating that roving fauna is still prevalent in this
+area.
+~
+A
+~
+~
+send_to_room( #scuffle, room, sight );
+~
+E
+scuffle~
+@RA gust of wind whips through sending a few leaves fluttering the
+floor.@n 
+~
+!
+2 100 0
+-1
+S
+
+#6416
+Forest Trail - Amidst the Declining Trees~
+The stature of the forest slowly dwindles away as the trees decline in
+size.  Continuing to hug the leaf-littered path, even the bushes seem to
+lessen in size, the berries dotting the scrubby plants not yet ripe
+enough to pick.  As the trail continues south, it turns from tree-fall to
+trampled wild grass, as it exits the leafy forest.  Rocks the size of
+stout dwarves lie against the immature trees greatly reducing their
+ability to grow.
+~
+[Morros] Done.
+[Estrella] done
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 6415 10 10 5
+D2
+~
+~
+0 -1 6417 10 10 5
+E
+bushes berries~
+Waist-high bushes in the north slowly diminish to barely even knee-high
+as they run south cradling the leaf-cluttered path.  The berries, a
+bright green colour, tinged with hint of yellow, are definitely too
+unripe to pick.
+~
+E
+1 south~
+The arrival of the grasslands is evident; knee-high wild grasses sway
+with every gust of wind and the rustle of creatures hidden between the
+wavering blades shake the stems and send the seeds skywards.
+~
+E
+rocks~
+In an attempt to crush every ounce of life out of these poor, half-grown
+trees, these large rocks lie hard against the stunted trunks.  Their
+jagged faces give the impression that they have not been here long, with
+no signs of weathering on the dark grey stone.
+~
+A
+pick~
+bushes berry~
+act_tochar( #no, ch, obj, mob, sight );
+~
+E
+no~
+@GThe berries are too unripe to pick.@n
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@YYou step out of the dimly lit forest and into the grass lands
+leaving south.@n 
+~
+E
+to_room~
+@Y$n steps from the darkened forest as $e leaves south, into the
+grasslands.@n 
+~
+!
+3 0 4
+78 17 1509949540 -2 0
+-1
+S
+
+#6417
+Grassy Field - Beside a Dense Hedgerow~
+Clumps of knee-high green grass sprout all over the dry ground; small
+divots ripple the soil with hair-thin cracks emanating from the compacted
+earth.  Scattered across the pastureland, small stones varying in size
+from small pebbles to large boulders lie, half-buried in the dirt, the
+more sizable rocks positioned just before the fringe of a mighty forest. 
+An occasional tree, no more than a sapling, grow with tiny branches
+barely shading the area.  A dense hedgerow grows to the west, blocking
+any movement in that direction.
+~
+[Morros] Done.
+[Estrella] done
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 6416 10 10 5
+D1
+~
+~
+0 -1 6418 10 10 5
+D2
+~
+~
+0 -1 6476 10 10 5
+E
+rocks pebbles boulders~
+Littered across the wide pastureland, these rocks and boulders crush the
+once green sea of wild grass.  Small divots, outlined with thin cracks,
+cover the floor, emanating from the base of the jagged stones.
+~
+E
+hedgerow 1 west~
+Well trimmed, the dark green foliage on the closely intertwined branches
+creates an impenetrable wall to the west.  The clipped hedge seems almost
+out of place between the vast grassy plain stretching eastwards and the
+rampant forest to the north.
+~
+A
+~
+~
+send_to_room( #chip, room, sight );
+~
+E
+chip~
+@CA chipmunk jumps atop one of the boulders and moments later, quickly
+disappears into the knee-high grass below.@n 
+~
+!
+2 100 0
+755 9 1509949540 3 0
+-1
+S
+
+#6418
+Grassy Field - Border of the Forest~
+A network of diminutive cracks criss-cross the dry earth, breaking the
+arid ground into a brickwork formation.  A lack of care and misfortune of
+weather has lead to baked, drought-ridden grassland; the only sign of
+life is an occasional wind-blown leaf floating in from the northern
+forest.  Towering trees run rampant, growing in countless numbers to the
+north where a cramped forest seals off any passage in that direction.
+~
+[Morros] Done.
+[Estrella] done
+[Guin] Done.
+~
+167247872 2 9 0
+D1
+~
+~
+0 -1 6419 10 10 5
+D2
+~
+~
+0 -1 6473 10 10 5
+D3
+~
+~
+0 -1 6417 10 10 5
+E
+cracks~
+Like clay that has been left too long in the kiln, the arid hard-packed
+earth is riddled with a network of hair-thin cracks.  In occasional
+places, a seed-head or the stem of a broken blade of grass has become
+lodged within the tiny cracks, forcing them apart to form infinitely
+small canyons.
+~
+-1
+S
+
+#6419
+Grassy Field~
+The field sprawls in all directions, sharp edged, brown-tipped grasses
+growing from the arid, dusty ground.  A fine network of cracks splits the
+surface, a few weeds lodged within as deeply as possible.  Seeds have
+begun to collect in the unoccupied fissures, but look dry and split,
+unlikely to reach maturity.  Rocks and pebbles are scattered around the
+forest's verdurous edge 
+~
+[Morros] Done.
+[Estrella] done
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 6477 10 10 5
+D1
+~
+~
+0 -1 6420 10 10 5
+D2
+~
+~
+0 -1 6472 10 10 5
+D3
+~
+~
+0 -1 6418 10 10 5
+E
+cracks~
+Like clay that has been left too long in the kiln, the arid hard-packed
+earth is riddled with a network of hair-thin cracks.  In occasional
+places, a seed-head or the stem of a broken blade of grass has become
+lodged within the tiny cracks, forcing them apart to form infinitely
+small canyons.
+~
+29 0 1509949540 -2 0
+78 17 1509949540 -2 0
+-1
+S
+
+#6420
+Grassy Field - Forest's Verge~
+Unavoidable, fine cracks rend the dry, hard ground, spreading like a
+spider's web in every direction.  Tough brown-green wild grasses grow
+across the entire field, spotted here and there with bright yellow
+dandelions.  Small rocks and pebbles lie scattered about the ground,
+especially to the south where a thick stand of trees borders the
+pastureland.
+~
+[Morros] Done.
+[Estrella] done
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 6478 10 10 5
+D1
+~
+~
+0 -1 6421 10 10 5
+D3
+~
+~
+0 -1 6419 10 10 5
+A
+~
+~
+send_to_room( #1, room, sight );
+~
+E
+1~
+@RA flock of birds soar overhead, disturbing the peaceful setting with
+every warbled caw.@n 
+~
+!
+2 150 0
+-1
+S
+
+#6421
+Grassy Field - A Lush Stand of Trees~
+The sprawling grassland ends to the east and south, where a stand of lush
+green trees grows densely.  Thin cracks meander across the hard, dry
+ground, and have begun to collect tiny pebbles and seed heads.  Browning
+grass grows all over the ground, the razor-edged blades giving way
+occasionally to a cluster of dandelions.
+~
+[Morros] Done.
+[Estrella] done
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 6479 10 10 5
+D3
+~
+~
+0 -1 6420 10 10 5
+E
+1 south 1 east trees~
+Blocking any passage southwards, the cluster of well-nourished trees grow
+close together, their roots sprawling as best they can in the limited
+amount of earth.  Arcing around from the south, the verdant wall
+continues, creating an impenetrable barricade to the east.
+~
+-1
+S
+
+#6422
+Grassy Field - Bluebells and Daisies~
+A thick fringe of deciduous trees borders the field to the north and
+west, preventing passage in those directions.  The spiny, wild grass
+begins to give way to softer, more lush grass, which spreads its way
+south.  A few bluebells have grown in the greener grass, adding a splash
+of pastel azure, and a tiny white daisy appears every so often.
+~
+[Morros] Done.
+[Estrella] done
+[Guin] Done.
+~
+167247872 2 9 0
+D1
+~
+~
+0 -1 6423 10 10 5
+D2
+~
+~
+0 -1 6461 10 10 5
+E
+grass bluebells daisy~
+The almost reedy wild grass gradually surrenders to the more supple
+blades of a richer, greener meadow.  Interspersed through the lush field,
+a smattering of bluebells and daisies cluster in little groups amidst the
+wavering stems of grass.
+~
+755 9 1509949540 3 0
+3800 17 1509949540 -2 0
+-1
+S
+
+#6423
+Grassy Field~
+The short grass underfoot appears to be of some wild variety; the sides of
+each blade are sharp and spiny, growing close to the ground. A few
+dandelions push up between the blades of grass, an occasional tiny purple
+pansy interspersed throughout.  Nearby, a road is visible to the
+northeast, and a thin forest borders the southern end of the field in the
+distance.
+~
+[Estrella] done
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 6462 10 10 5
+D1
+~
+~
+0 -1 6424 10 10 5
+D2
+~
+~
+0 -1 6460 10 10 5
+D3
+~
+~
+0 -1 6422 10 10 5
+E
+pansy purple~
+Smaller than a cultivated pansy, this purple flower wavers silently in a
+gentle breeze.  Almost perfectly round petals darken in hue to near ebon
+in the centre of bud.  A few bright yellow stamens, covered in
+sweet-smelling pollen, emerge from within, attracting insects with the
+pleasant aroma.
+~
+A
+~
+~
+send_to_room( #pansy, room );
+~
+E
+pansy~
+@mBobbing and swaying with a gentle breeze, the violaceous pansies emit a
+sweet perfume.@n 
+~
+!
+2 150 0
+78 17 1509949540 -2 0
+-1
+S
+
+#6424
+Grassy Field - Off the Road~
+The grass grows wild here, off the side of the narrow road to the north. 
+Gravel and dirt have given way to short, spiny grass, dotted with the
+occasional dandelion or other bright wildflower.  A few bare spots show
+in the grass at the side of the road.  Some trees are visible at the edge
+of the field, a little further to the south.
+~
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 8750 10 10 5
+D1
+~
+~
+0 -1 6425 10 10 5
+D2
+~
+~
+0 -1 6459 10 10 5
+D3
+~
+~
+0 -1 6423 10 10 5
+E
+trees 1 south~
+Abruptly halting at the southern edge of the field, a dense border of
+deciduous trees blocks passage in that direction, the roots and trunks
+becoming progressively thicker a little further back from the pasture.
+~
+-1
+S
+
+#6425
+Grassy Field - An Ugly Patch of Weeds~
+Wildflowers sprout up randomly throughout this grassy field.  Surrounding
+a few of the wildflowers are small piles of pebbles.  Most of the pebbles
+appear to be tightly packed into the ground, but a few have come loose
+from the rest.  Off to the east a large section of the grass has been
+taken over by a rather ugly group of weeds.
+~
+[Estrella] done
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 6437 10 10 5
+D1
+~
+~
+0 -1 6426 10 10 5
+D2
+~
+~
+0 -1 6458 10 10 5
+D3
+~
+~
+0 -1 6424 10 10 5
+E
+small piles pebbles~
+Whether placed around the flowers intentionally or not, it is difficult
+to tell, but they seem to have served some kind of purpose - the
+wildflowers grow straight up, supported at their base by the small piles
+of pebbles.  Most of the stones are between one and two inches in
+diameter, although it is possible to find larger and smaller ones on the
+ground nearby.
+~
+E
+ugly weeds group 1 east~
+Scraggly, half-dead weeds litter the ground to the east, their knotted
+tendrils a mass of spines and thorns.  Despite the lack of irrigation,
+parts of the tangled growth still flourish, although wherever they get
+sufficient nutrients and water from is an enigma.
+~
+A
+~
+small piles pebbles~
+if( rflag( reset0, room ) ) {
+  if( random( 1, 3 ) == 3 ) {
+    obj = oload( 78 );
+    act_tochar( #pebble, ch, obj );
+    act_notchar( #rpebble, ch, obj, mob, sight );
+    obj_to_char( obj, ch );
+    if( random( 1, 6 ) < 5 )
+      remove_rflag( reset0, room );
+  }
+  else {
+    act_tochar( #notnice, ch );
+    act_notchar( #rnotnice, ch, obj, mob, sight );
+    remove_rflag( reset0, room );
+  }
+}
+else
+  act_tochar( #noleft, ch );
+~
+E
+pebble~
+@YYou search the small pile of pebbles and a particularly nice one catches
+your eye.@n 
+~
+E
+rpebble~
+@Y$n crouches by the flowers and pickes up a $p.@n
+~
+E
+notnice~
+@yYou search through the pebbles but find none that you like.@n
+~
+E
+rnotnice~
+@y$n searches for something in the small pile of pebbles.@n
+~
+E
+noleft~
+@cAny nice pebbles that might have been here have already been taken.@n
+~
+!
+9 0 0
+-1
+S
+
+#6426
+Grassy Field - An Ugly Patch of Weeds~
+This grassy field is full of life, except off to the west, where an ugly
+patch of weeds grow.  The weeds are brownish in colour and appear to be
+dead, yet there are so many, they still live and flourish somehow.  To
+the east there are only more grassy fields.  While to the south it seems
+as though there is a forest of some sort.
+~
+[Estrella] done
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 6438 10 10 5
+D1
+~
+~
+0 -1 6427 10 10 5
+D2
+~
+~
+0 -1 6457 10 10 5
+D3
+~
+~
+0 -1 6425 10 10 5
+E
+ugly patch weeds 1 west~
+Scraggly, half-dead weeds litter the ground to the west, their knotted
+tendrils a mass of spines and thorns.  Despite the lack of irrigation,
+parts of the tangled growth still flourish, although wherever they get
+sufficient nutrients and water from is an enigma.
+~
+2508 9 1509949540 3 0
+203 9 1509949540 3 0
+78 17 1509949540 -2 0
+203 9 1509949540 3 0
+-1
+S
+
+#6427
+Grassy Field - Fringe of a Dense Forest~
+Verdant green grass grows profusely here, the soft blades rippling
+slightly in the breeze.  A few small rocks lie here and there,
+concentrated a little more to the south, near the fringe of a dense
+forest that cuts off the field in that direction.  A few weeds pop up
+here and there, a larger patch growing to the west.
+~
+[Estrella] done
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 6439 10 10 5
+D1
+~
+~
+0 -1 6428 10 10 5
+D3
+~
+~
+0 -1 6426 10 10 5
+E
+1 south dense forest~
+Tumbling over each, the knotted roots create a solid barrier between the
+grassy field and the rampant forest.  A few leaves litter the ground
+between the blades of grass, most no more than lacy skeletons of once
+lush foliage.
+~
+-1
+S
+
+#6428
+Grassy Field - Weather-Beaten Tree Stumps~
+The grasslands and dark woods intermingle at the forest's edge barley and
+wheat sprout up between the frequent gaps in the tangled tree roots; the
+normally lush fern's position usurped by the quicker growing grains.  A
+scattering of tree stumps continues into the field indicating that the
+forest once spread some way further northwards.
+~
+[Estrella] done
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 6440 10 10 5
+D1
+~
+~
+0 -1 6429 10 10 5
+D3
+~
+~
+0 -1 6427 10 10 5
+E
+tree stumps 1 northwards~
+The remains of once towering trees now stand about two feet in height,
+varying in width.  Devoid of all life and any reason to continue, the
+despondent stumps have passed into the hands of nature, beaten down by
+the elements and starved by the lack of ability to turn sunshine into
+nutrients.
+~
+-1
+S
+
+#6429
+Grassland and Forests Edge~
+The burrows of many small animals cover the grassy fields.  Thistles and
+milkweed grow alongside the edge of the woods to the south, their seeds
+floating between the towering trees to take root deep within.  Several
+poplar trees grow on the grasslands, their slender branches stretching
+high into the sky.  A shallow streambed winds into the forest from the
+north, its course having long since run dry.
+~
+[Estrella] done
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 6441 10 10 5
+D1
+~
+~
+0 -1 6430 10 10 5
+D3
+~
+~
+0 -1 6428 10 10 5
+E
+burrows~
+The holes extend into the ground a foot or two before twisting sharply
+around and out of sight.  The width of each hole is about the size of an
+ogre's arm, a few twigs, grass blades, and other bits and pieces lie at
+the bottom, scattered about by the comings and goings of the burrow's
+owner.
+~
+A
+~
+burrows holes~
+if( !mob_in_room( 78, room ) ) {
+  if( rflag( reset0, room ) ) {
+    remove_rflag( reset0, room );
+    act_tochar( #rabbit, ch, obj, mob );
+    act_notchar( #rrabbit, ch, obj, mob, sight );
+    mload( 755, room );
+  }
+  else
+    act_tochar( #nothing, ch );
+}
+else
+  act_tochar( #nothing, ch );
+~
+E
+rabbit~
+@GAs you reach down to search the hole, something small and fluffy runs
+out from the burrow and through your legs.  You seem to have scared a
+rabbit!@n 
+~
+E
+rrabbit~
+@G$n reaches down towards the burrow when something small and furry runs
+through his legs.  You turn around just fast enough to see a rabbit
+trying to hide in the bushes.@n
+~
+E
+nothing~
+@WThe hole appears quite empty.@n
+~
+!
+9 0 0
+755 9 1509949540 3 0
+78 17 1509949540 -2 0
+-1
+S
+
+#6430
+Forest and Fields - Before a Ruined Cottage~
+The burnt out remains of a stone and thatch cottage stands to the east,
+its door gone and shutters hanging in tatters.  Grass sprouts from what
+remains of the thatching upon the ruined roof, the green stems beginning
+to camouflage it.  The forest grows up to the southern wall of the crib
+the branches of a particularly massive beech tree overhanging the entire
+building.
+~
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 6442 10 10 5
+D1
+~
+~
+0 -1 6431 10 10 5
+D3
+~
+~
+0 -1 6429 10 10 5
+E
+stone thatch cottage crib~
+Built from squared blocks of white stone, interlaid with rich-grained
+wood around the door and window frames, the cottage seems to be in pretty
+good shape considering that it has, at some point, been subject to fire. 
+In some places on the roof, the thatching has fallen to the ground as a
+result of disrepair; soft green grass has started to sprout in the denser
+patches, camouflaging the rooftop with the surrounding forest.
+~
+E
+beech tree branches~
+Lengthy, well-leafed branches arch over the decaying roof of the small
+cottage, a few twigs and fallen leaves mottling the holey thatching. 
+Quite smooth silvery grey bark covers the trunk, with sporadic patches of
+pale brown wood on the lower portion of the tree that has been exposed
+due to recent animal activity. 
+~
+A
+~
+~
+if( size( ch ) < 4 ) {
+  act_tochar( #short, ch, obj );
+  act_notchar( #rshort, ch, obj, mob, sight );
+  transfer( ch, find_room( 6431 ) );
+}
+elseif( size( ch ) < 5 ) {
+  act_tochar( #middle, ch, obj );
+  act_notchar( #rmiddle, ch, obj, mob, sight );
+  transfer( ch, find_room( 6431 ) );
+}
+elseif( size( ch ) < 6 ) {
+  act_tochar( #tall, ch, obj );
+  act_notchar( #rtall, ch, obj, mob, sight );
+  damage( mob, ch, 1d5, physical, "low beam", "not ducking when entering the cottage" );
+  transfer( ch, find_room( 6431 ) );
+}
+~
+E
+short~
+@gPicking your way over and around the thatching that litters the floor,
+you enter the cottage.@n
+~
+E
+rshort~
+@g$n picks $s way through the tall grass and over and around the
+thatching that litters the floor, eventually disappearing in the
+cottage.@n 
+~
+E
+middle~
+@GYou enter the cottage, ducking to avoid the low beam.@n
+~
+E
+rmiddle~
+@G$n ducks to avoid the low beam as $e enters the cottage.@n
+~
+E
+tall~
+@REntering the cottage, you hit your head on the low beam at the entrance!
+Maybe you'll remember to duck the next time.@n 
+~
+E
+rtall~
+@R$n enters the cottage, hitting $s head on the low beam at the entrance. 
+Some people are just too tall!@n 
+~
+!
+3 0 2
+A
+~
+~
+send_to_room( #wind, room );
+~
+E
+wind~
+@cA gentle breeze rustles the treetops, causing some leaves to fall
+down.@n 
+~
+!
+2 0 0
+2504 9 1509949540 3 0
+-1
+S
+
+#6431
+Inside the Ruined Cottage~
+Constructed from white-stone and a rich-grained wood the cottage has
+survived without maintenance reasonably well.  The interior of the single
+roomed house shows signs of fire damage; smoke stains marring the surface
+of the windowsills.  The remnants of broken, rotting furniture lie
+scattered over the earthen floor.  The thatching is missing in several
+locations, the decaying clumps of roofing lying upon the ground.  Windows
+in each wall allow views of the outside fields and forest.  Standing
+firmly lodged in the eastern wall, the small door should open out into
+the lightly forested area, but due to long years of weathering and a lack
+of general maintenance it has been jammed shut.
+~
+[Estrella] done
+[Guin] Done.
+~
+167247872 0 6 0
+D1
+ruined door~
+~
+471 -1 6432 10 10 5
+D3
+~
+~
+0 -1 6430 10 10 5
+E
+remnants broken rotting furniture~
+Broken and burned, there appears to be the remnants of a simple wooden
+dining table and a couple of chairs piled in one corner of the room.  A
+canvas mattress filled with musty decaying straw rests in another corner,
+great holes gaping wide open in the heavy material allowing tufts of the
+damp padding to spill out onto the small rickety bed.
+~
+E
+thatching clumps roofing ground~
+Lying strewn across the earthen floor, festering clumps of thatching
+intermingle with the rather damp soil.  Patches of light filter in
+through the holes in the ceiling, the weather having long since found its
+way into this humble abode.
+~
+A
+~
+remnants broken rotting furniture mattress straw~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  i = random( 1, 50 );
+  if( i < 20 )
+    obj = oload( 12 );
+  elseif( i < 35 )
+    obj = oload( 14 );
+  elseif( i < 45 )
+    obj = oload( 2 );
+  else
+    obj = oload( 3533 );
+  act_tochar( #coin, ch, obj );
+  act_notchar( #rcoin, ch, obj, mob, sight );
+  obj_to_char( obj, ch );
+}
+else
+  act_tochar( #already, ch );
+~
+E
+coin~
+@WYou search through a decaying pile of straw and find $p!@n
+~
+E
+rcoin~
+@W$Searching through the makeshift mattress, $n appears to have found
+something!@n 
+~
+E
+already~
+@wLooks like the whole place has been thoroughly searched.@n
+~
+!
+9 0 0
+2379 17 1509949470 -2 0
+-1
+S
+
+#6432
+Cottage Before the Woodlands~
+Nestled amongst the weeping branches of an ancient willow tree stands a
+run-down cottage.  Whitewashed walls have turned slightly yellow in
+colour, and peeling layers of clay lie around its base.  The thatching on
+the roof has begun to decay, several holes appearing in it.  A solitary
+window looks out upon the woodlands here, and a small warped door stands
+fast, unable to be moved an inch.  Overrun with weeds, the remains of a
+fair sized vegetable garden stretch out beneath the trees, the once
+tilled earth now awry with rampant plants.
+~
+[Estrella] done
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 6444 10 10 5
+D1
+~
+~
+0 -1 6433 10 10 5
+D3
+ruined door~
+~
+471 -1 6431 10 10 5
+E
+cottage ancient tree white walls clay window~
+This worn-down cottage is settled deep amidst the trees of this dappled
+forest.  An ancient willow tree's branches hang over the decaying thatch
+roof.  The back door of this cottage has become warped - twisting so
+badly that it is now impossible to open.  Perhaps there is another way
+inside.
+~
+E
+weeds vegetable garden plants~
+It is possible to see where straight neatly tilled lines of earth lay in
+the garden, the ground still slightly bumpy from whenever the plot was
+last used.  A few scraggly runner beans, lettuces that have gone to seed,
+some woody marrows, and a few other vegetables now compete with the
+obdurate weeds that vie for dominance in the nutrient rich soil.
+~
+189 17 1509949540 -2 0
+-1
+S
+
+#6433
+Light Woodlands - Brambles~
+A goat track winds through the light woodlands, its leaf-littered surface
+often impossible to distinguish from the forest floor.  Spilling out from
+between the southern trees is a wall of densely packed brambles; each
+tangled vine coated with countless barbed thorns, ready to tear into
+exposed flesh.  The remains of a few unfortunate animals lie scattered
+underneath the prickly plants.
+~
+[Azerin] new zone south, maybe thorn wood where i was going to put my sprites
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 6434 10 10 5
+D3
+~
+~
+0 -1 6432 10 10 5
+E
+remains animals~
+Certainly not a sight for the faint-hearted, the less gruesome parts of
+this rankling pile of gore consist of the now fleshless bones of long
+dead creatures.  However, the putrid remains of recently deceased animals
+lie closer at hand than the old skeletons, a nauseating odour emanating
+from the rancid corpses of the newer victims.  Clearly this is no place
+for creatures with slightly higher intelligence.
+~
+A
+~
+remains animals corpses~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 8 ) == 1 )
+    obj = oload( 2085 );
+  if( obj ) {
+    act_tochar( #find, ch, obj );
+    act_notchar( #rfind, ch, obj, mob, sight );
+    obj_to_char( obj, ch );
+  }
+  else {
+    act_tochar( #notfind, ch, obj );
+    act_notchar( #rnotfind, ch, obj, mob, sight );
+  }
+}
+else
+  act_tochar( #already, ch );
+~
+E
+find~
+@MWrinkling your nose, you crouch down and thoroughly search the repugnant
+pile of corpses.
+
+After some time, you rise from wallowing in the gore, triumphantly holding
+$p, covered from head to foot in rotting flesh.
+~
+E
+rfind~
+Wrinkling $s nose, $n crouches down and starts rooting through the
+rankling pile of rotting corpses.  $e must be crazy.
+
+After a few minutes, $n emerges from the gore, covered from head to foot in
+festering flesh, brandishing $p.
+~
+E
+notfind~
+Carefully sifting through the nauseating remains, you search for buried
+treasures.
+
+After a few minutes, you become more engrossed in finding the hidden
+riches, intensifying your rummaging to the extent of tossing bones and
+entrails out of your way.
+
+Some time later, you sullenly abandon your search, picking off stray
+intestines that have become wrapped around your arms.  You smell like a
+cesspool!
+~
+E
+rnotfind~
+Starting from the outside of the pile, $n begins to carefully search the
+decaying remains.
+
+After a few minutes, $e becomes more engrossed in the putrid corpses,
+flinging bones and entrails out of the way.
+
+Some time later, $n sullenly stands up, picking stray intestines from $s
+arm.  $e smells like an open cesspool!
+~
+E
+already~
+Gnawed on bones, partially decayed flesh and putrescent entrails lie
+scattered from one side of the area to the other, some dangling from the
+low branches of trees and others flung carelessly onto the prickly
+brambles.  It is clear that some grot has spent a great deal of time
+rummaging through the festering remains.
+~
+!
+9 0 0
+711 17 1509949460 -2 0
+-1
+S
+
+#6434
+Greenvale - Southern Woods~
+Pale-green ivy sprawls over the tangled roots of the forest, its vines
+entwining up to the lower branches of many of the beech trees.  A winding
+goat-track wanders beside the sea of ivy its borders slightly overgrown
+by the vigorous plant.  A few tufts of wild barley grow on the east side
+of the path, their seeds already eaten by hungry creatures.
+~
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 6435 10 10 5
+D2
+~
+~
+0 -1 6433 10 10 5
+D3
+~
+~
+0 -1 6444 10 10 5
+E
+goat track winding~
+Erratically turning this way and that, the winding goat track follows the
+ivy as it chokes the undergrowth of this light forest.  Sometimes cutting
+through the hardy plant, the narrow track mingles with the gnarled tree
+roots, scraping the softer bark away from the pale wood pulp.
+~
+-1
+S
+
+#6435
+Greenvale - Southern Woods~
+Jutting out of the dense fern-dominated foliage is the jagged,
+moss-covered surface of rock.  The shelf of stone rises upwards as it
+continues north until its peak clears the leafy canopy by several feet. 
+A lush covering of leaf-litter and dirt cap the spire, leaving enough
+soil for slender willow and maple saplings to sprout.  Overhead the
+mature trees spread their branches in a wild canopy, the red maple leaves
+and pale-green of the oaks forming a tapestry of colour.
+~
+[Estrella] done
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 6436 10 10 5
+D2
+~
+~
+0 -1 6434 10 10 5
+D3
+~
+~
+0 -1 6449 10 10 5
+E
+rock shelf stone peak spire~
+Although coated by a thick layer of moss and soil, it is still possible
+to see the jagged, unmistakeable spire of rock.  A few adventurous
+saplings of willow and maple have managed to take root upon this
+outcropping, though how they manage to do that with the limited soil is
+anyone's guess - perhaps there is a deep crevice hidden beneath the green
+groundcover.
+~
+-1
+S
+
+#6436
+Greenvale - Southern Woods~
+Under the mottled canopy, a grass lined goat track winds.  Ferns and
+bracken encircle the path, although none grow upon it.  Speckled-flowered
+hollyhocks grow in the sun-filled glades that dot the airy woodlands.  A
+jutting shelf of rock rises to the west, its moss-covered surface rising
+above the tree's leafy canopy.
+~
+[Estrella] done
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 13334 10 10 5
+D2
+~
+~
+0 -1 6435 10 10 5
+E
+shelf rock 1 west~
+High above, the mossy shelf of rock leans precariously over the goat
+track.  Over many years, wind and rain have eroded the steep sides of the
+outcrop, so even if it were accessible, it would be a very arduous and
+challenging climb.
+~
+E
+hollyhock~
+Through the woodlands, various glades can be seen filled with a host of
+colourful flowers, the most notable of which is the long stemmed
+hollyhock.  Varying in hue from a deep burgundy to a bright scarlet red,
+these cheerful buds display an almost pristine white centre where tall
+purple stamen sprout up from.
+~
+-1
+S
+
+#6437
+Field Around a Farmstead~
+A smattering of delicate chickweed plants grow upon the muddy ground,
+their pale-green leaves and miniature white flowers covered with specks
+of dirt and dust.  A meadow of lush grass spreads east towards a ridge of
+dark forest.  The entrance to the northern farmstead lies to the west,
+the wooden fence ending at a dusty road.
+~
+[Rikahn] include farm fencing in rdesc - see inside zone for details
+[Guin] Done.
+~
+167247872 2 9 0
+D1
+~
+~
+0 -1 6438 10 10 5
+D2
+~
+~
+0 -1 6425 10 10 5
+D3
+~
+~
+0 -1 8750 10 10 5
+E
+wooden fence dusty road~
+The rickety wooden fence stands between the grassy field here and the
+farmstead to the north, while a little way westwards the barrier ends at
+the main entrance into the compound where a rutted dusty road passes over
+the threshold.
+~
+130 9 1509949540 3 0
+-1
+S
+
+#6438
+Fenceline - Patch of Clover~
+A patch of blue-tinged clover grows beside the run-down fence, the tiny
+flowers attracting a fair amount of insects to them.  The warped wood of
+the crumbling fence lies at odd angles as it runs in an east-west
+direction; lichen and moss cover much of the splintered wood.  Beyond the
+fence stands a quite large farmstead, the buildings keep in much better
+condition.
+~
+[Estrella] done
+[Yrna] All done.
+[Guin] Done.
+~
+167247872 2 9 0
+D1
+~
+~
+0 -1 6439 10 10 5
+D2
+~
+~
+0 -1 6426 10 10 5
+D3
+~
+~
+0 -1 6437 10 10 5
+E
+patch blue-tinged clover flowers~
+Running rampant in the shade of the rickety fence, several patches of
+clover, their pale blue, sweet-scented flowers wavering about in slender
+stems.  Small round leaves surround each flower, all in sets of three,
+although at times it is very difficult to tell whether they just may be a
+lucky shamrock hiding in the sea of green.
+~
+A
+get pick~
+patch clover flowers~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #search, ch, obj );
+  act_notchar( #rsearch, ch, obj, mob, sight );
+  wait( 2 );
+  if( random( 1, 20 ) == 7 )
+    obj = oload( 407 );
+  if( obj ) {
+    act_tochar( #yay, ch, obj );
+    act_notchar( #ryay, ch, obj, mob, sight );
+    obj_to_char( obj, ch );
+  }
+  else {
+    act_tochar( #nay, ch, obj );
+    act_notchar( #rnay, ch, obj, mob, sight );
+  }
+}
+else
+  act_tochar( #already, ch );
+~
+E
+search~
+@gYou take some time and thoroughly search the clover patch.@n
+~
+E
+rsearch~
+@g$n kneels down and starts searching the clover patch very, very
+carefully.@n 
+~
+E
+yay~
+@GYour patience has paid off - you hold $p high in the air so everyone
+can see it!@n 
+~
+E
+ryay~
+@G$n dances excitedly, waving $p high in the air so everyone can see
+it!@n 
+~
+E
+nay~
+@gAfter some time you realise you should give up.  Better luck next
+time.@n 
+~
+E
+rnay~
+@gWith a sigh, $n ends $s search and gets up.  Whatever $e was after,
+it's obviously not here.@n 
+~
+E
+already~
+@ySadly, the clover is all flattened and squashed.  Looks like someone
+trampled all over it.@n 
+~
+!
+9 0 0
+29 0 1509949540 -2 0
+-1
+S
+
+#6439
+Grassy Field - By a Crumbling Fence~
+Rusty wire has been lashed around the crumbling posts and rails of a
+weather-beaten fence in a desperate attempt to keep it standing.  A few
+thorn-covered thistles grow in the dusty soil around the fence, their
+purple-hued flowers attracting bees and wasps.  A farmstead lies beyond
+the fence to the north, its buildings appearing well maintained.
+~
+[Guin] Done.
+~
+167247872 2 9 0
+D1
+~
+~
+0 -1 6440 10 10 5
+D2
+~
+~
+0 -1 6427 10 10 5
+D3
+~
+~
+0 -1 6438 10 10 5
+E
+thorn thistles purple flowers~
+Downy violet flowers cover the thistles with a swath colour, breaking the
+monotony of the mid-green stems.  Biting thorns cover the slightly
+brittle shoots, protecting the plant from being viewed as a food source
+for hungry animals.  Humming around the flowers, a few bees and wasps
+collect the pollen as the flit about.
+~
+-1
+S
+
+#6440
+Fields of Grass~
+The fields of grass spread out in every direction like a sea of
+gold-tipped green.  Rising like islands in the ocean are a few scattered
+poplar trees, their branches reaching towards the heavens.  A smattering
+of colour gleams to the north where a rise of rocks is coated in bright
+orange flowers.  Northwards, beyond the fields of grain, a cluster of
+houses sit, perhaps the homesteads of the farmer who works these fields. 
+The intersecting corner of a north and west running fence pokes above the
+drooping heads of the wild grains.
+~
+[Estrella] done
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 6445 10 10 5
+D1
+~
+~
+0 -1 6441 10 10 5
+D2
+~
+~
+0 -1 6428 10 10 5
+D3
+~
+~
+0 -1 6439 10 10 5
+E
+corner fence 1 north 1 west~
+Certainly not straight, the intersecting fences created a corner that is
+not quite a right angle.  Veering with the contours of the land, the
+rickety fence is riddled with holes, where a combination of weathering
+and general wear and tear has caused the wood to split.
+~
+E
+rise rocks bright orange flowers~
+Although coated by a thick layer of moss and soil, it is still possible
+to see the jagged, unmistakeable spire of rock.  Dotting the dark
+formation, several patches of bright orange flowers speckle the uprising,
+their cheerful display a welcome break to the monotony of the grassy
+fields.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gThe tall grass rustles quietly as you move through it.@n
+~
+E
+to_room~
+@gAs $n leaves $d, the tall grass rustles all around $m.@n
+~
+!
+3 0 15
+755 9 1509949540 3 0
+-1
+S
+
+#6441
+Dry Stream Bed Through the Grasslands~
+A shallow streambed, filled with thistles and dock plants, winds in a
+north-south direction through the fields of grass and grain.  The
+sun-drenched plain has turned the tips of the grass brown and many of the
+leaves are beginning to wilt slightly.  Beneath the sea of grains the
+ground is predominantly hard-packed earth, speckled with a handful of
+smooth, weathered stones.
+~
+[Estrella] done
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 6446 10 10 5
+D1
+~
+~
+0 -1 6442 10 10 5
+D2
+~
+~
+0 -1 6429 10 10 5
+D3
+~
+~
+0 -1 6440 10 10 5
+E
+thistles~
+Downy violet flowers cover the thistles with a swath colour, breaking the
+monotony of the mid-green stems.  Biting thorns cover the slightly
+brittle shoots, protecting the plant from being viewed as a food source
+for hungry animals.  Humming around the flowers, a few bees and wasps
+collect the pollen as the flit about.
+~
+E
+streambed stones ground~
+Most of the stones are between one and two inches in diameter, although
+it is possible to find larger and smaller ones in the dried up streambed
+nearby.
+~
+2508 9 1509949540 3 0
+-1
+S
+
+#6442
+Grasslands - Near a Ruined Cottage~
+Wild wheat, barley and the occasional clump of maize make up the majority
+of the grasslands.  The swathe of grasses spread north towards the edge
+of a gloom-shrouded forest.  To the south lies the remains of a
+farmhouse, the walls and roof damaged but still standing.  The southern
+edge of the forest crowds around the cottage, the spreading branches
+covering it in shadows.
+~
+[Estrella] done
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 6447 10 10 5
+D1
+~
+~
+0 -1 6443 10 10 5
+D2
+~
+~
+0 -1 6430 10 10 5
+D3
+~
+~
+0 -1 6441 10 10 5
+E
+1 south remains farmhouse walls roof cottage~
+Built from squared blocks of white stone, interlaid with rich-grained
+wood around the door and window frames, the cottage seems to be in pretty
+good shape considering that it has, at some point, been subject to fire. 
+In some places on the roof, the thatching has fallen to the ground as a
+result of disrepair; soft green grass has started to sprout in the denser
+patches, camouflaging the rooftop with the surrounding forest.
+~
+-1
+S
+
+#6443
+Fields of Grass - Woodland Verge~
+Rows of wheat and oats bask in the open, sun drenched fields to the west. 
+Their ripening seeds bending the delicate stems under the weight of what
+promises to be a good harvest.  The remains of a cottage lie southwards,
+the roof and walls pitted with holes and cracks.  Eastwards, beech and
+maple trees increasingly dominate the landscape until they form light
+woodlands.
+~
+[Estrella] done
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 6448 10 10 5
+D1
+~
+~
+0 -1 6444 10 10 5
+D3
+~
+~
+0 -1 6442 10 10 5
+E
+remains cottage 1 southwards roof walls~
+Built from squared blocks of white stone, interlaid with rich-grained
+wood around the window frames, the cottage seems to be in pretty good
+shape considering that it has, at some point, been subject to fire.  In
+some places on the roof, the thatching has fallen to the ground as a
+result of disrepair; soft green grass has started to sprout in the denser
+patches, camouflaging the rooftop with the surrounding forest.
+~
+-1
+S
+
+#6444
+Greenvale - Lightly Wooded Verge~
+The forest verge makes byways into the dusty grasslands, a few solitary
+trees scattered far and wide.  The majority of the woodlands are open and
+filled with glades where grasses and ferns grow.  Eastwards, the woods
+become a fully-fledged forest, the maple and beech trees growing close
+together, their tangled branches forming a canopy of bright reds and
+greens.
+~
+[Estrella] done
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 6449 10 10 5
+D1
+~
+~
+0 -1 6434 10 10 5
+D2
+~
+~
+0 -1 6432 10 10 5
+D3
+~
+~
+0 -1 6443 10 10 5
+A
+~
+~
+send_to_room( #ferns, room );
+~
+E
+ferns~
+@YThe breeze causes a cloud of tiny fern spores to form.  It dissipates
+and falls down slowly, covering the glade in fine, yellow dust.@n 
+~
+!
+2 200 0
+755 9 1509949540 3 0
+-1
+S
+
+#6445
+Grasslands - Beside the Old Fence~
+A lichen-covered wooden fence runs parallel to the swathe of grasslands. 
+Heading in a north-south direction the fence is missing various posts and
+rails, making it unstable in several places.  West of the fence a
+farmstead spreads, the buildings appearing to be in good conditon.  A few
+trees rise above the eastern grasslands, their trunks encircled by the
+gold and green grains.
+~
+[Estrella] done
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 6450 10 10 5
+D1
+~
+~
+0 -1 6446 10 10 5
+D2
+~
+~
+0 -1 6440 10 10 5
+-1
+S
+
+#6446
+Field of Grass - Old Streambed~
+Running through the dusty field is a shallow streambed, its surface
+covered in lush dock plants and spine-covered thistles.  Smooth stones
+poke out from under the vegetation, their surface worn by the now absent
+water.  Sun-soaked leaves of the grasses have turned from green to gold. 
+Encircling the grasslands is a wide swathe of gloomy forest, the towering
+trees spreading as far as the northern hills.
+~
+[Estrella] done
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 6451 10 10 5
+D1
+~
+~
+0 -1 6447 10 10 5
+D2
+~
+~
+0 -1 6441 10 10 5
+D3
+~
+~
+0 -1 6445 10 10 5
+E
+streambed smooth stones~
+Most of the stones are between one and two inches in diameter, although
+it is possible to find larger and smaller ones in the dried up streambed
+that runs through the field.  Now well and truly dehydrated, the only
+plants that seem to be able to survive in the stony bed are weeds and
+thistles.
+~
+E
+new spine-covered spine dock thistles plants vegetation~
+Downy violet flowers cover the thistles with a swath colour, breaking the
+monotony of the mid-green stems.  Biting thorns cover the slightly
+brittle shoots, protecting the plant from being viewed as a food source
+for hungry animals.  A few quite large leaves spill over the stony
+terrain, lush green in colour.  Standing upright from the centre of the
+leaves are several brittle stems, of an almost black hue, the tops of
+which are crowned with tiny dark burgundy seed-heads.
+~
+-1
+S
+
+#6447
+Old Stream Bed Across the Grasslands~
+Winding through the dusty ground is a stone-littered streambed, it's
+edges flanked by rows of wheat and barley grass.  Chickweed and fennel
+grow between the rocks, their delicate stems drooping from lack of water. 
+Around the base of most of the grasses the tender new shoots have been
+nibbled at, leaving the remaining tougher leaves untouched.
+~
+[Estrella] done
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 6452 10 10 5
+D1
+~
+~
+0 -1 6448 10 10 5
+D2
+~
+~
+0 -1 6442 10 10 5
+D3
+~
+~
+0 -1 6446 10 10 5
+755 9 1509949540 3 0
+755 9 1509949540 3 0
+1846 17 1509949540 -2 0
+-1
+S
+
+#6448
+Fields of Grass~
+A stack of smooth, water-worn rocks has been piled into a rough cairn
+besides the remains of a twisted and corroded plough.  Grey lichen almost
+completely covers the crumbling wood.  The plough head is orange with
+rust, its blade pitted and worn; a split in its edge the result of an
+unseen rock.  A dry streambed winds southwards, a few thistles growing
+along side it.
+~
+[Estrella] done
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 6453 10 10 5
+D1
+~
+~
+0 -1 6449 10 10 5
+D2
+~
+~
+0 -1 6443 10 10 5
+D3
+~
+~
+0 -1 6447 10 10 5
+E
+stack rock cairn~
+A large flat rock creates the base of a cairn, the surface appears to
+have had in a small depression worn into it by time and weathering. 
+Another smooth stone rests upon the base; nestled into the dip, while
+several other chunks of rock varying in size and shape, precariously
+balance on top.  It appears that over time, passers-by have added to the
+pile, which now looks like it would be quite a challenge to do without
+causing some of the rocks to fall off the cairn.
+~
+E
+plough twisted corroded blade~
+Caused by exposure to the elements for a long period of time, the metal
+blades of the ploughshare have turned a dull russet orange colour. 
+Covered with grey, sickly lichen, the splintered wood has been gnawed on
+by passing woodland animals.
+~
+A
+place put balance add~
+pebble stone~
+if( has_obj( 78, ch ) ) {
+  if( rflag( reset0, room ) ) {
+    act_tochar( #try, ch, obj );
+    act_notchar( #rtry, ch, obj, mob, sight );
+    wait( 2 );
+    i = random( 1, 4 );
+    j = random( 1, 4 );
+    if( i == 4 ) {
+      obj = oload( 79, j );
+      act_room( #balance, ch, obj );
+      obj_to_room( obj, room );
+    }
+    else {
+      obj = oload( 141, j );
+      act_room( #crash, ch, obj );
+      obj_to_room( obj, room );
+      loop( all_in_room ) {
+        if( !is_mob( rch ) )
+          damage( mob, rch, 1d5, physical, "collapsing structure", "putting one pebble too many on an unstable cairn" );
+      }
+      remove_rflag( reset0, room );
+    }
+  }
+  else
+    act_tochar( #gone, ch, obj );
+}
+else
+  act_tochar( #nopebble, ch, obj );
+~
+E
+try~
+@gHolding your breath and taking great care, you place a pebble on the
+cairn.@n 
+~
+E
+rtry~
+@g$n holds $s breath as $e places a small pebble on the unstable cairn. 
+You shuffle back slightly, just in case.@n 
+~
+E
+balance~
+@GThe cairn rocks back and forth a few times, and amazingly, comes to a
+standstill.  For a moment nothing happens, and then only a small rock
+tumbles down, smashing into pieces as it hits the ground.@n 
+~
+E
+crash~
+@RThe cairn swings slowly back and forth, picking up momentum until the
+whole structure collapses, showering you with rocks!@n 
+~
+E
+gone~
+@yThe cairn has collapsed and is no more.@n
+~
+E
+nopebble~
+@yYou don't have a pebble to place.@n
+~
+!
+0 0 0
+A
+1 look~
+stack rock cairn~
+if( !rflag( reset0, room ) )
+  act_tochar( #collapsed, ch );
+else
+  continue;
+~
+E
+collapsed~
+The pile of rocks looks just like a ...  pile of rocks!  Going by the
+fresh chips and cracks, it appears they have recently been smashed by
+some great force.  Almost as if they fell off some height.
+~
+!
+0 0 0
+78 17 1509949540 -2 0
+-1
+S
+
+#6449
+Forests Edge - Grasslands~
+Wild wheat and barley grow in amongst the scattered oak and poplar trees
+that make up the verge of a dense forest.  The woodlands spread
+northwards, covering the rising hills in a swathe of green, and eastwards
+where they become increasingly tangled amongst each other.  Fallow
+fields, now filled with wild grasses, reach westwards, their leaves a
+mixture of emerald-green and dusky-gold.
+~
+[Estrella] done
+[Guin] Done.
+~
+167247872 2 9 0
+D1
+~
+~
+0 -1 6435 10 10 5
+D2
+~
+~
+0 -1 6444 10 10 5
+D3
+~
+~
+0 -1 6448 10 10 5
+A
+~
+~
+send_to_room( #wheat, room );
+~
+E
+wheat~
+@YStirred by the breeze, the wild wheat sways rythmically back and forth.@n
+~
+!
+2 200 0
+-1
+S
+
+#6450
+Field of Grass - Fence Line~
+The sunbaked ground lies cracked and furrowed beside an ancient-looking
+wooden fence.  Dried weed and wilted wildflowers have shrivelled and
+died, a lack of water clearly to blame.  Tiny honeybees buzz around the
+grasslands, on their journey to find a better source of nectar.  Mottled
+greens and browns of a massive woodland stretch to the north, east and
+south: a wide cul-de-sac of forest forming around the sun-drenched fields.
+~
+[Estrella] done
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 6454 10 10 5
+D1
+~
+~
+0 -1 6451 10 10 5
+D2
+~
+~
+0 -1 6445 10 10 5
+E
+ancient wooden fence~
+It is a wonder that this fence manages to stand at all, considering its
+age and current state of disrepair.  Crumbling splintered wood leans at
+skewed angles, possibly a result of the lack of railings that are still
+intact to support it.
+~
+473 9 1509949540 3 0
+-1
+S
+
+#6451
+Dry Fields~
+The fields spread onwards.  Golden kernels of wheat droop on brown stems,
+bending under the weight of the ripening grain.  Cracked and dry, the
+ground has begun to suffer from lack of rain.  However, the crops appear
+to exhibit little wilting, perhaps fed from an unseen water source. 
+Beyond the grasslands a forest spreads, the grains intermingling with
+ferns at the woodland's edge.
+~
+[Estrella] done
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 6455 10 10 5
+D1
+~
+~
+0 -1 6452 10 10 5
+D2
+~
+~
+0 -1 6446 10 10 5
+D3
+~
+~
+0 -1 6450 10 10 5
+E
+ferns~
+Florid ferns, standing quite tall on the airy forest's verge, send
+curling green fronds out from the roots, unfurling in an elegant arch as
+the stems continue their stately growth.
+~
+-1
+S
+
+#6452
+Dry Stream Bed - Fields of Grass~
+Rising above the thistle-filled streambed stands a towering poplar tree. 
+It's mass of branches stretch skyward, keeping close to the tree's trunk. 
+A smattering of wild daisies grows around the poplar's base, their
+delicate white and gold flowers drooping slightly.  Towards the north the
+land begins to rise, before becoming a dense forest.
+~
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 6456 10 10 5
+D1
+~
+~
+0 -1 6453 10 10 5
+D2
+~
+~
+0 -1 6447 10 10 5
+D3
+~
+~
+0 -1 6451 10 10 5
+E
+poplar tree~
+Thin upward growing branches reach towards the sky, the slender leaves
+spaced quite far apart.  Although the lower branches are easily within
+reach, they appear to be a little on the fragile side, probably unable to
+support much weight.
+~
+A
+climb~
+poplar tree~
+act_tochar( #no, ch );
+act_notchar( #rno, ch, obj, mob, sight );
+~
+E
+no~
+@yYou grab hold of one of the lower branches and try pulling yourself up. 
+The branch cracks, however, and you come sliding down.@n 
+~
+E
+rno~
+@Y$n grabs hold of one of the lower poplar branches and try to pull
+$mself up.  The branch breaks, however, and $e comes sliding now.  Looks
+like fun.@n 
+~
+!
+0 0 0
+203 9 1509949540 3 0
+-1
+S
+
+#6453
+Grassy Field - Before a Forest~
+The grasslands and ferns of the forest spread under the trees forming
+mottled green-brown undergrowth.  A crumbling shelf of rock juts out into
+the field, effectively blocking any progress eastwards.  A few thistles
+and milkweed grow upon the shallow ground around the ridge, despite the
+poor, rock-filled soil.
+~
+[Estrella] done
+[Guin] Done.
+~
+167247872 2 9 0
+D2
+~
+~
+0 -1 6448 10 10 5
+D3
+~
+~
+0 -1 6452 10 10 5
+E
+crumbling shelf rock~
+High above, the mossy shelf of rock leans precariously over the
+pastureland.  Although coated by a thick layer of moss and soil, it is
+still possible to see the jagged, unmistakeable spires of stone.  A few
+adventurous saplings of willow and maple have managed to take root upon
+this outcropping, though how they manage to do that with the limited soil
+is anyone's guess - perhaps there is a deep crevice hidden beneath the
+green groundcover that they can cram their roots into.
+~
+A
+~
+~
+send_to_room( #bird, room );
+~
+E
+bird~
+@YA bird chirps somewhere in the tree tops.@n
+~
+!
+2 150 0
+A
+~
+~
+send_to_room( #flight, room );
+~
+E
+flight~
+@RA small, red and orange bird takes flight, adding a splash of colour to
+the green and grey surroundings.@n 
+~
+!
+2 150 0
+79 17 1509949540 -2 0
+-1
+S
+
+#6454
+Field Beside a Run-down Fence~
+Weatherworn posts barely support the remains of rotting wooden planks
+that form the run-down fence.  Perhaps the only reason the fence still
+stands is the masses of vines that entangle it.  Slender thorns cover the
+tendrils, discouraging animals from grazing on the clusters of pale-
+yellow leaves.  Northwards, beyond the fence, lies a collection of
+buildings, perhaps the farmstead of the field's owners.  Grass and grains
+grow in masses to the east and south, their leaves turning golden-brown
+under the harsh sun.
+~
+[Estrella] done
+[Guin] Done
+~
+167247872 2 9 0
+D1
+~
+~
+0 -1 6455 10 10 5
+D2
+~
+~
+0 -1 6450 10 10 5
+E
+fence vines posts planks thorns leaves~
+Whatever gaps there might have been in the rickety fence have been
+thoroughly filled in by thorny vines.  The pale-yellow leaved tendrils
+have intertwined themselves around the decaying planks and posts that
+somehow manage to stay vertical.
+~
+E
+buildings 1 northwards farmstead~
+The outside of the house is covered with old, weathered wooden boards,
+and stained with some sort of oily material, turning it a deep brown
+colour.  A narrow set of steps rises up to the front door of the house, a
+sturdy plank of solid oak.  Sprawling animal pens surround the farmhouse,
+with a variety of livestock visible through the gaps in the fencing that
+keep the livestock within.
+~
+A
+enter climb~
+fence vines~
+act_tochar( #thorns, ch );
+act_notchar( #rthorns, ch, obj, mob, sight );
+damage( mob, ch, 1d5, physical, "thorny vine", "sneaking through thorny vines" );
+~
+E
+thorns~
+@gYou try to sneak through the fence, but can't get past the thick vines
+that are blocking your way.@n 
+~
+E
+rthorns~
+@g$n tries to find a gap in the fence to climb through, but ends up with
+scratched arms - the thorny vines that are blocking $s way are just too
+thick.@n 
+~
+!
+0 0 0
+-1
+S
+
+#6455
+Edge of the Grasslands~
+An ancient, weather-beaten wooden fence leans against the wide stump of a
+felled beech.  The rotten remains of dead rabbits hang from the top rail,
+their decomposed carcasses attracting a swarm of flies.  To the east, the
+forest becomes increasingly dense, the old tree branches forming a
+tangled canopy.  Southward, the jumble of grasslands and encroaching
+weeds spreads out for some distance before meeting another forest's edge.
+~
+[Estrella] done
+[Guin] Done.
+~
+167247872 2 9 0
+D1
+~
+~
+0 -1 6456 10 10 5
+D2
+~
+~
+0 -1 6451 10 10 5
+D3
+~
+~
+0 -1 6454 10 10 5
+E
+rotten remains rabbits carcasses~
+Putrescent corpses of maggot-ridden rabbits fester upon the top rail of
+the fence; their flesh, exposed to the elements, appears to have been
+torn by sharp beaks and claws of predatory birds.  The festering
+carcasses emit a nauseating stench as they slowly decay.
+~
+A
+~
+~
+send_to_room( #flies, room );
+~
+E
+flies~
+@mThe newly hatched flies crawl over the rotting corpses before taking
+flight, buzzing loudy and trying to land on your face.@n
+~
+!
+2 150 0
+A
+~
+~
+send_to_room( #smell, room );
+~
+E
+smell~
+@MThe putrid stench of rotten corpses turns your stomach and leaves you
+gasping for fresh air.@n 
+~
+!
+2 150 0
+-1
+S
+
+#6456
+Fields of Grain - Before A Dark Woodlands~
+An outcrop of rock forms a cul-de-sac around a shallow basin in the
+landscape.  Weeds and wildflowers grow in and around the depression and
+follow a dry streambed that runs southwards from it.  Loose angular
+stones lie scattered across the bottom of the dried pool, their surfaces
+covered in lichen.  Beyond the rise of rock, the woodlands spread,
+towering trees blocking much of the light, shrouding the area in gloom.
+~
+[Azerin] entrance point to underground zone, clear rubble of rockslide and follow dry stream
+[Estrella] done
+~
+167247872 2 9 0
+D2
+~
+~
+0 -1 6452 10 10 5
+D3
+~
+~
+0 -1 6455 10 10 5
+E
+outcrop rock rise~
+High above, the mossy shelf of rock leans precariously over the dried
+pool.  Although coated by a thick layer of moss and soil, it is still
+possible to see the jagged, unmistakeable spires of stone.  A few
+adventurous saplings of willow and maple have managed to take root upon
+this outcropping, though how they manage to do that with the limited soil
+is anyone's guess - perhaps there is a deep crevice hidden beneath the
+green groundcover that they can cram their roots into.
+~
+E
+dried pool basin depression streambed~
+Arid and cracked, what used to be the bottom of a shallow pool is now
+nothing more than a stone and weed-choked depression.  Winding southwards
+is a similarly clad streambed, the pebbles rounded at some point by
+running water.  A layer of lichen has grown across the dried pool, the
+fine leaves wilted and brown.
+~
+-1
+S
+
+#6457
+Grassy Field - Tree-fall~
+The field has become less green due to a covering of fallen twigs and
+branches that crush the grass into the ground.  To the east and south
+lies a thick grouping of trees; forming a densely tangled forest as they
+flourish back from the pastureland, making it impossible to pass in those
+directions.  Stretching westwards are similarly clad fields, the wild
+grasses wavering in a gentle breeze.  An ugly patch of weeds grows nearby.
+~
+[Estrella] done
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 6426 10 10 5
+D3
+~
+~
+0 -1 6458 10 10 5
+E
+patch weeds ugly~
+Scraggly, half-dead weeds litter the ground to the west, their knotted
+tendrils a mass of spines and thorns.  Despite the lack of irrigation,
+parts of the tangled growth still flourish, although wherever they get
+sufficient nutrients and water from is an enigma.
+~
+-1
+S
+
+#6458
+Grassy Field - Forest's Verge~
+A thick row of leafy trees borders the southern edge of the field,
+leaving it to sprawl in the other three cardinal directions.  The grass
+underfoot is short, the spiny edges of the blades giving it a rough, wild
+appearance.  Dandelions poke up sporadically around the field, giving it
+a splash of cheery colour that breaks the up monotony of green.  A
+gravelly dirt road winds its way a little further to the north.
+~
+[Estrella] done
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 6425 10 10 5
+D1
+~
+~
+0 -1 6457 10 10 5
+D3
+~
+~
+0 -1 6459 10 10 5
+E
+dandelions~
+Bright yellow flowers sprout from patches of vibrant green leaves that
+spread across the ground.  The tenacious plant seemingly unbothered by
+the rather dry conditions.
+~
+755 9 1509949540 3 0
+-1
+S
+
+#6459
+Grassy Field - Deciduous Trees~
+The field ends to the south with a thick row of deciduous trees
+congesting the landscape with a tangle of roots.  Underfoot, the grass is
+short, he edges of each blade is sharp and spiny - obviously some breed
+of wild grass.  Small clusters of dandelions are scattered across the
+field, breaking up the monotony of pallid green.  A road is visible in
+the distance stretching northwards.
+~
+[Estrella] done
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 6424 10 10 5
+D1
+~
+~
+0 -1 6458 10 10 5
+D3
+~
+~
+0 -1 6460 10 10 5
+E
+trees roots 1 south~
+Thick roots plunge deep into the earth, steadfastly interlocking the
+trees into an impenetrable wall.  With trunks mere feet apart, the
+branches have had to compensate for lack of room to spread properly, many
+growing in skewed directions, blocking any gaps there may have been
+between the tightly packed trees.
+~
+-1
+S
+
+#6460
+Grassy Field~
+The grassy field continues here, sharp blades of grass beginning to give
+way to longer, softer ones.  A few pale blue wildflowers poke up through
+the more yielding grasses; the hardier wild grass, for the most part,
+being home to dandelions and other weeds.  A forest of leafy trees
+borders the field to the southeast growing quite dense as they spread
+back from the pastureland.
+~
+[Estrella] done
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 6423 10 10 5
+D1
+~
+~
+0 -1 6459 10 10 5
+D2
+~
+~
+0 -1 6463 10 10 5
+D3
+~
+~
+0 -1 6461 10 10 5
+E
+pale blue wildflowers dandelions weeds~
+Delicate pastel blue flowers dot the verdurous field, the small round
+petals a landing pad for insects.  Interspersed throughout are bright
+yellow dandelions, a few appear close to going to seed.  A few scraggly
+weeds, unidentifiable due to their haggard appearance, sprawl across the
+broad grasslands.
+~
+473 9 1509949540 3 0
+78 17 1509949540 -2 0
+-1
+S
+
+#6461
+Field of Mottled Green Grass~
+A mixture of wild, spiny grasses, dominating the fields to the north and
+east, intersperses with the longer, softer grass to the south and west;
+interesting patterns form as the two differing shades of green mottle the
+pasture.  Dandelions, violets and the occasional daisy grow amidst the
+grass, dotting the field with a splash of colour.
+~
+[Estrella] done
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 6422 10 10 5
+D1
+~
+~
+0 -1 6460 10 10 5
+D2
+~
+~
+0 -1 6464 10 10 5
+D3
+~
+~
+0 -1 6465 10 10 5
+E
+daisy~
+Dense clumps of pristine white daisies, adorned with bright yellow
+centers, thrives here in the fertile soil.  They create a splash of
+purity amidst a sea of green.
+~
+A
+~
+~
+send_to_room( #wind, room, sight );
+~
+E
+wind~
+@mWith each gust of wind, the grass ripples like an ebbing tide; the
+fresh scent of wildflowers lingers in the air.@n 
+~
+!
+2 100 0
+755 9 1509949540 3 0
+29 0 1509949540 -2 0
+3800 17 1509949540 -2 0
+-1
+S
+
+#6462
+Amidst the Wild Grasses~
+Shorter than the rest of the grass in these fields, it appears that this
+is yet another wild breed; the pointed tips of the stunted blades are
+evidence that this area has not been cropped by grazing animals.  Along
+it's edges, the grasses are sharp and spiny - not the most suitable for
+ingesting.  A few dandelions have grown up between blades, their cheery
+yellow faces giving a splash of colour to the otherwise uniform green
+landscape.
+~
+[Estrella] done
+[Guin] Done.
+~
+167247872 2 9 0
+D1
+~
+~
+0 -1 8750 10 10 5
+D2
+~
+~
+0 -1 6423 10 10 5
+755 9 1509949540 3 0
+-1
+S
+
+#6463
+Grassy Field - Daisies and Bluebells~
+The grass underfoot grows long and green, ending to the south and east at
+a thick fringe of deciduous trees.  A few rocks and stones litter the
+ground near the edge of the forest, light glittering off their rough
+surfaces.  Small clusters of daisies and bluebells grow sporadically
+around the field.
+~
+[Estrella] done
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 6460 10 10 5
+D3
+~
+~
+0 -1 6464 10 10 5
+E
+rocks stones rough surfaces~
+The rough surfaces of these jagged rocks and stones appears almost
+gilded, although the glimmering is probably just some micaceous minerals
+that have been ground into fragments through eons of compression beneath
+the earth.
+~
+A
+~
+rocks stones minerals fragments~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 4 ) == 2 ) {
+    act_tochar( #sliver, ch, obj );
+    act_notchar( #rsliver, ch, obj, mob, sight );
+    obj_to_char( oload( 7760 ), ch );
+  }
+  else {
+    act_tochar( #none, ch );
+    act_notchar( #rnone, ch, obj, mob, sight );
+  }
+}
+else
+  act_tochar( #noneleft, ch );
+~
+E
+sliver~
+@WScrambling among rocks, you come across a small, clear crystal.@n
+~
+E
+rsliver~
+@W$n appears to have found something among the rocks.@n
+~
+E
+none~
+@wYou turn a few rocks over, but can't find any interesting enough to take.@n
+~
+E
+rnone~
+@w$n turns a few rocks over.@n
+~
+E
+noneleft~
+@wThe rocks don't look interesting enough to search.@n
+~
+!
+9 0 0
+3800 17 1509949540 -2 0
+-1
+S
+
+#6464
+Grassy Field - Edge of the Forest~
+The grassy field continues in all directions except south, where it is
+bordered by a thick fringe of leafy green trees.  A few large rocks,
+about a foot in diameter, lie in the grass the edge of the forest; light
+refracting off minerals caught in their rough faces causes them to
+glitter slightly.  Tiny daisies and bluebells grow in the shade of the
+trees.
+~
+[Morros] Done.
+[Estrella] done
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 6461 10 10 5
+D1
+~
+~
+0 -1 6463 10 10 5
+D3
+~
+~
+0 -1 6466 10 10 5
+E
+1 south trees~
+Twisting and turning, these trees tie knotted roots around the boles of
+their competitors, striving for dominion over the cramped soil.  Their
+limbs, entwined with one another, create the appearance of a vaulted
+ceiling that rises from the deformed trunks.
+~
+-1
+S
+
+#6465
+Grassy Field - Fringe of Deciduous Trees~
+A thick fringe of tall, slender deciduous trees borders the field to the
+north and west.  Wild grasses continue to the south and east, growing
+lush and green in the loose soil, the tall blades rippling slightly as a
+soft breeze passes.  The occasional daisy and bluebell grow in colourful
+patches, while more rarely a dandelion shows its round, sunny face.
+~
+[Morros] Done.
+[Estrella] done
+[Guin] Done.
+~
+167247872 2 9 0
+D1
+~
+~
+0 -1 6461 10 10 5
+D2
+~
+~
+0 -1 6466 10 10 5
+E
+1 north 1 west trees~
+Slender, closely packed trunks of tall trees form a barricade with their
+tangled roots and branches, halting any desire to travel into their
+confines.  With the lack of soil in which to firmly lodge their roots, it
+is amazing that these trees have grown to maturity, with a broad leafy
+canopy fed predominantly by sunlight - a meagre amount of nutrients
+gleaned from the scarce earth.
+~
+-1
+S
+
+#6466
+Grassy Field - Dried Riverbed~
+Slender seed heads of wild wheat and barley intermingle with the lush
+green grasses; like a broad verdant sea, the pastoral fields sway
+lullabilically in the winds.  Weaving between the fragile stems, small
+wiry vines spread, their writhing tendrils covered in thorns.  Countless
+smooth rocks lie half-buried in the soil, perhaps the remains of an
+ancient riverbed.
+~
+[Morros] Done.
+[Estrella] done
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 6465 10 10 5
+D1
+~
+~
+0 -1 6464 10 10 5
+D2
+~
+~
+0 -1 6469 10 10 5
+D3
+~
+~
+0 -1 6467 10 10 5
+473 9 1509949540 3 0
+78 17 1509949540 -2 0
+-1
+S
+
+#6467
+Amidst the Roiling Grasses~
+A fringe of young deciduous trees borders the field to the north, the
+pasture wavering away from the forest like a gently rolling sea.  Rocks,
+varying in size from tiny shards to quite large boulders, lie strewn
+across the ground.  Tiny weeds grow against the rocks, their scraggly
+tendrils partially concealed by the angular stones; in contrast, daisies
+and bluebells grow more plentifully amidst the roiling grasses.
+~
+[Morros] Done.
+[Estrella] done
+[Guin] Done.
+~
+167247872 2 9 0
+D1
+~
+~
+0 -1 6466 10 10 5
+D2
+~
+~
+0 -1 6468 10 10 5
+D3
+~
+~
+0 -1 6471 10 10 5
+E
+daisy daisies bluebells~
+The sweet scent of wild flowers permeates the area, the pleasant aroma
+scattered on the whispering winds.  Daisies and bluebells dominate the
+field; the pastel blues and whites cresting the swaying grasses.
+~
+A
+~
+~
+send_to_room( #gust, room, sight );
+~
+E
+gust~
+@wThe aroma of fresh, wild flowers wafts through the air as a gentle
+breeze passes by.@n 
+~
+!
+2 125 0
+755 9 1509949540 3 0
+-1
+S
+
+#6468
+Grassy Field - A Scraggly Bush~
+Surrounded by the dry seed heads of wild grains, a scraggly bush grows,
+its trunk and branches covered in a mass of sharp-looking thorns. 
+Oily-green leaves grow beside the thorns, protected from predators of the
+vegetation.  Around the thorn bush a lattice of fine fissures cover the
+ground, forming an intricate web of minute cracks.  The southern border
+of this pasture is awash with the tangled roots of trees, their dense
+canopy casting a little shade across the grassy field.
+~
+[Burne] South to spiderhome.
+[Estrella] done
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 6467 10 10 5
+D1
+~
+~
+0 -1 6469 10 10 5
+D3
+~
+~
+0 -1 6470 10 10 5
+E
+bush scraggly thorns~
+Twisted, brittle branches curl about themselves, barely able to rise more
+than a few feet off the ground.  Vicious thorns, a half-inch in length,
+cover the pale green stems with row upon row of pointed incisors, the
+spines proving to be an excellent deterrent to grazing animals.
+~
+A
+~
+bush scraggly~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 5 ) < 4 ) {
+    act_tochar( #thorn, ch );
+    act_notchar( #rthorn, ch, obj, mob, sight );
+    damage( mob, ch, 1d5, physical, "vicious thorn", "thorny bush" );
+  }
+  j = random( 2, 4 );
+  if( random( 1, 3 ) == 2 ) {
+    obj = oload( 2, j );
+    act_tochar( #coins, ch, obj );
+    act_notchar( #rcoins, ch, obj, mob, sight );
+    obj_to_char( obj, ch );
+  }
+  else {
+    obj = oload( 210, j );
+    act_tochar( #shard, ch, obj );
+    act_notchar( #rshard, ch, obj, mob, sight );
+    obj_to_char( obj, ch );
+  }
+}
+else
+  act_tochar( #none, ch );
+~
+E
+thorn~
+@RAs you reach under the bush, you catch your hand on a long, sharp
+thorn!@n 
+~
+E
+rthorn~
+@RYou watch as $n sticks $s arm under the bush, and of course, gets it
+scratched.@n 
+~
+E
+coins~
+@Y$p lie under the bush - it was certainly worth checking.@n
+~
+E
+rcoins~
+@YYou catch a glint of gold as $n's hand closes around whatever $e found
+under the bush.@n 
+~
+E
+shard~
+@cShards of glass!  Now, was that worth searching through thorns?@n 
+~
+E
+rshard~
+@c$n frowns as $e picks up whatever was glinting under the bush.@n
+~
+E
+none~
+@yIt must have been a trick of light, because there's certainly nothing
+glittering under the bush any more.@n 
+~
+!
+9 0 0
+A
+~
+~
+if( rflag( reset0, room ) )
+  send_to_room( #glint, room );
+~
+E
+glint~
+@YSomething flashes momentarily under the bush.@n
+~
+!
+2 200 0
+-1
+S
+
+#6469
+Amidst the Wild Grains~
+Wild maize, barley and wheat grow sparsely in the dry soil, their slender
+leaf tips browning in the hot sun.  Almost hidden in the long grasses
+lies a circle of smooth stones stacked around a shallow depression; the
+plants growing within the dip seem greener and healthier, perhaps tapping
+into underground source of water.
+~
+[Morros] Done.
+[Estrella] done
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 6466 10 10 5
+D3
+~
+~
+0 -1 6468 10 10 5
+E
+circles stones plants~
+Growing rampantly across the shallow dip, these green plants are barely
+contained within the ring of stones that encircles them.  Barely seen
+through the waist-high grass, the slate grey rocks disappear beneath a
+swath of bright green leaves; the verdurous plants a stark contrast to
+the browning ears of grain.
+~
+755 9 1509949540 3 0
+-1
+S
+
+#6470
+Grassy Field~
+Sun-browned wild grains grow amidst the grass, their dry heads dropping
+seeds as they rustle in a quiet breeze.  A few cracks rend the ground
+hesitantly edging in from the east.  Rocks of varying sizes are scattered
+about, sparkles of light glinting off reflective minerals trapped within
+their weather-beaten matrix. Several wildflowers grow towards the northern
+end of the field.
+~
+[Morros] Done.
+[Estrella] done
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 6471 10 10 5
+D1
+~
+~
+0 -1 6468 10 10 5
+E
+wild flowers~
+Patches of brightly coloured flowers grow throughout the knee-high
+grasses, the clumps lying far and few between.  Despite the sparsity of
+these unkempt shrubs, the lively hues of the small petals bring a
+youthful cheerfulness to the otherwise drab field.
+~
+2507 9 1509949540 3 0
+-1
+S
+
+#6471
+Grassy Field - Barricade of Trees~
+The dense barricade of trees continues along the northern edge of the
+field, blocking any passage in that direction.  Sprawling away from the
+tree line, the pasture is dotted with rocks of varying sized, ranging
+from small shards to relatively large boulders.  Light refracts off a
+multitude of tiny metallic particles in the rock, the glimmering
+intermittently visible through the wavering grass stems.
+~
+[Morros] Done.
+[Estrella] done
+[Guin] Done.
+~
+167247872 2 9 0
+D1
+~
+~
+0 -1 6467 10 10 5
+D2
+~
+~
+0 -1 6470 10 10 5
+D3
+~
+~
+0 -1 6472 10 10 5
+E
+rocks particles metallic shards boulders~
+Angular fragments of dark grey rock litter the ground, their surfaces
+glittering with dust-sized particles of gilded ore.  Although probably
+not gold, it is difficult to tell what kinds of mineral are trapped
+within the weathered matrix.
+~
+78 17 1509949540 -2 0
+-1
+S
+
+#6472
+Grassy Field - Clusters of Daisies~
+The grassy meadow continues between a narrowing gap in the trees, the
+lush green interrupted by patches of dried brown grass.  Encroaching on
+the southern verge, the forest grows close: proliferated branches
+crowding overhead in a verdurous canopy.  Growing in tiny clusters,
+diminutive daisies and bluebells waver in a gentle breeze.
+~
+[Morros] Done.
+[Estrella] done
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 6419 10 10 5
+D1
+~
+~
+0 -1 6471 10 10 5
+D3
+~
+~
+0 -1 6473 10 10 5
+E
+daisy daisies bluebells~
+Pale azure bluebells grow in patches throughout the mass of green
+grasses, their delicate petals bobbing slightly as they area swayed by
+the wind.  Simple white daisies, with bright yellow centres, flourish
+along the tree line, their hardy stems impervious to the crowded
+conditions.
+~
+755 9 1509949540 3 0
+3800 17 1509949540 -2 0
+-1
+S
+
+#6473
+Grasses and Wildflowers~
+The field continues to sprawl across the outlying cardinal directions,
+with the nearest trees flourishing off to the southeast; their shadows
+creep along the ground, dappling the nearby grasses.  A handful of rocks
+lie scattered amidst the pastures, the larger boulders leaving gaps
+throughout the verdant groundcover.  An occasional wildflower pops up in
+small patches, their petite buds riddling the meadow with bright colours.
+~
+[Morros] Done.
+[Estrella] done
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 6418 10 10 5
+D1
+~
+~
+0 -1 6472 10 10 5
+D2
+~
+~
+0 -1 6474 10 10 5
+D3
+~
+~
+0 -1 6476 10 10 5
+E
+wildflowers flowers buds petite~
+Petals, no more than the size of a halfling's fingernail, create a
+welcoming place for insects to land on, sweet-smelling pollen wafting
+through the air.  Bright green stems sway to and fro as a gentle breeze
+passes over them.
+~
+29 0 1509949540 -2 0
+-1
+S
+
+#6474
+Grassy Field - Forest's Verge~
+An assortment of flowers, varying in colour, sprouts from the arid soil,
+their roots probably tapping into an aquifer that lies beneath the
+parched surface.  A myriad of cracks scar the ground with a series of
+brick-like fissures; where the earth is too infertile to support life,
+patches of sun-dried grass give way to crumbling dirt.  A dense cluster
+trees curve around from the south to the east, effectively deterring
+movement in those directions.
+~
+[Morros] Done.
+[Estrella] done
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 6473 10 10 5
+D3
+~
+~
+0 -1 6475 10 10 5
+E
+flowers~
+Brightly coloured wild flowers have somehow managed to survive in the
+near-drought conditions, although their growth seems rather stunted. 
+Permeating the field, a pleasant aroma is carried on the warm wind,
+pollen and spores drifting whither they are taken.
+~
+E
+cracks~
+Like clay that has been left too long in the kiln, the arid hard-packed
+earth is riddled with a network of hair-thin cracks.  In occasional
+places, a seed-head or the stem of a broken blade of grass has become
+lodged within the tiny cracks, forcing them apart to form miniature
+canyons.
+~
+-1
+S
+
+#6475
+Grassy Field - Wall of Briars~
+The dry ground underfoot disappears beneath a rough border of young
+deciduous trees to the south, the tangled roots driving deep into the
+arid earth.  Rocks lay strewn about the area, the majority of which are
+collected beneath the tree line.  The moisture-starved soil has taken on
+a blocky brick-like structure, with a network of cracks disappearing
+amidst the swathes of grass.  Tangled briar rambles up an eight-foot tall
+trellis fence, obscuring the view of what lies beyond through the
+diamond-shaped holes.
+~
+[Morros] Done.
+[Estrella] done
+[Guin] Done.
+~
+167247872 2 9 0
+D0
+~
+~
+0 -1 6476 10 10 5
+D1
+~
+~
+0 -1 6474 10 10 5
+D2
+~
+~
+0 -1 9450 10 10 5
+E
+briar trellis fence~
+Twisted and gnarled, the brittle wood of the briar is armed with
+razor-sharp spines that protect the dark green leaves from grazing
+animals.  Where the haggard plant reaches the fence, a few scraggly
+branches have attempted to breach the trellis with little success.
+~
+-1
+S
+
+#6476
+Grassy Field - Tangled Thorns~
+Embedded in the arid earth beneath the knee-high faded green grass lie
+cracks no more than a hair-line thick; sprawling across the ground they
+give the general appearance of a web as it continues outwards in a
+circular pattern.  slight, but distracting odor emits from it.  A few
+daisies and dandelions are the only disruption amidst the swathes of
+grass their yellow buds swaying as each gust of wind whips at their
+slender stems.  A tangled wall of thorns rises to the west, stretching
+both northwards and to the south along a tall trellis.  A small sun-dried
+clay hut can be seen lying beyond the spined bushes, a slight acrid odour
+emanating from the structure.
+~
+[Morros] Done.
+[Estrella] done
+[Guin] Done.
+~
+167247880 2 9 0
+D0
+~
+~
+0 -1 6417 10 10 5
+D1
+~
+~
+0 -1 6473 10 10 5
+D2
+~
+~
+0 -1 6475 10 10 5
+E
+west hut~
+Peeking through one of the sparser patches of briar, this small and
+simple hut, made from sun-dried clay bricks, can barely be seen through
+the rambling thorn bush that clings to the wooden trellis fence, which
+separates the unkempt grassed field from the well cultivated garden on
+the other side.
+~
+E
+cracks~
+Like clay that has been left too long in the kiln, the arid hard-packed
+earth is riddled with a network of hair-thin cracks.  In occasional
+places, a seed-head or the stem of a broken blade of grass has become
+lodged within the tiny cracks, forcing them apart to form infinitely
+small canyons.
+~
+-1
+S
+
+#6477
+Grassy Field - Border of a Lush Forest~
+Lush forest rampantly flourishes to the north and west, growing thicker
+as he trees become more removed from the pastureland.  Browning,
+sharp-edged grass competes for earth with the ever-present dandelions and
+daisies.  Small pebbles and rocks lie strewn throughout the grasses, the
+smallest ones collecting in miniature fissures that riddle the ground.
+~
+[Estrella] done
+[Guin] Done.
+~
+167247872 2 9 0
+D1
+~
+~
+0 -1 6478 10 10 5
+D2
+~
+~
+0 -1 6419 10 10 5
+A
+~
+~
+send_to_room( #flutter, room, sight );
+~
+E
+flutter~
+@CA slight gust of wind rustles the leaves in the trees, a few of which
+idly fall to the ground.@n 
+~
+!
+2 150 0
+-1
+S
+
+#6478
+Grassy Field - Sheltered Glade~
+Riddling the ground with a maze of tiny fissures, the arid earth has been
+desiccated by an extensive network of fine cracks.  Dead seed heads and
+tiny pebbles have begun to collect within the crevices, causing some of
+them to split open a little more.  Brown-tinged grass spreads throughout
+the sheltered glade, stopping to the north at a dense row of trees, whose
+slender branches form an arched canopy of leaves overhead.
+~
+[Morros] Done.
+[Estrella] done
+[Guin] Done.
+~
+167247872 2 9 0
+D1
+~
+~
+0 -1 6479 10 10 5
+D2
+~
+~
+0 -1 6420 10 10 5
+D3
+~
+~
+0 -1 6477 10 10 5
+E
+trees~
+Entangled with the limbs of surrounding trees, the leafy branches rise
+overhead, creating a vaulted ceiling above the forest floor.  Uninhibited
+branches cast shadows across the grassy field, a dappled light filtering
+in through the leaves.  Knotted roots cover the ground, the treacherous
+barricade allowing no passage northwards.
+~
+755 9 1509949540 3 0
+-1
+S
+
+#6479
+Grassy Field - Fallen Branch~
+A branch has fallen from one of the trees bordering upon the edge of the
+field to the east, and lies in upon the arid ground, the broken wood
+digging into the loose topsoil.  Sharp wild grasses grow undisturbed in
+this quiet corner of the pastureland, interspersed sporadically with
+hardy dandelions and white daisies.  A few pebbles and small rocks dot
+the ground here and there, especially near the roots of the towering
+forest.
+~
+[Morros] Done.
+[Estrella] done
+[Guin] Done.
+~
+167247872 2 9 0
+D2
+~
+~
+0 -1 6421 10 10 5
+D3
+~
+~
+0 -1 6478 10 10 5
+E
+pebbles rocks~
+Strewn across the dry, cracked earth, pebbles and small rocks lie
+scattered about the grassy field, some small enough to take.
+~
+A
+~
+~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 3 ) == 1 )  {
+    act_tochar( #grab, ch, obj, mob, sight );
+    act_notchar( #grab2, ch, obj, mob, sight );
+    obj = oload( 78 );
+    obj_to_char( obj, ch );
+  }
+  else {
+    act_tochar( #no, ch, obj, mob, sight );
+  }
+}
+else {
+  act_tochar( #no, ch, obj, mob, sight );
+}
+~
+E
+grab~
+You reach down and get one of the pebbles.
+~
+E
+grab2~
+$n reaches down to the ground and grabs a pebble.
+~
+E
+no~
+@yThe remaining rocks are too big to carry.@n
+~
+!
+0 0 0
+-1
+S
+
+#6480
+Well-Groomed Path Near the Forest~
+A short, but well-groomed path leads from the wilderness of the forest
+toward an ivy-covered archway to the south.  Hedgerows, backed by younger
+trees, flank the rock-strewn surface of the trail that opens out into
+what appears to be some sort of carefully manicured gardens.  A gazebo
+can be seen in the distance, pristine white against a backdrop of green.
+~
+[Guin] Attaches to 5806
+[Guin] Done.
+~
+167247872 2 9 0
+D1
+~
+~
+0 -1 6413 10 10 5
+D2
+~
+~
+0 -1 5806 10 10 5
+E
+gazebo~
+Secluded within the small, hedged area stands a brilliant white building,
+which surrounds a towering elm tree.  A couple of steps lead up to the
+raised floor; many wooden beams create a latticework between the roof
+supports at each corner.  From here the gazebo appears to be well
+maintained, no signs of weathering marring the woodwork.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GStepping out of the forest and into the open, you proceed into a
+carefully manicured garden.@n
+~
+E
+to_room~
+@G$n steps out from the forest and into the open as $e proceeds into the
+carefully manicured garden.@n
+~
+!
+3 0 4
+-1
+S
+
+#6481
+On a Branch Up the Massive Tree~
+Roughly fifteen feet from the ground, this branch seems to be the only
+one capable of holding any weight beyond that of a squirrel. From this vantage
+point, the entire forest can be seen, stretching off to the north and
+west.  Knee-high grass with an occasional tree completes the view of the
+meadow off to the west, while to the far north a large, white bridge is
+just visible.  The only feature of interest on the tree is a large
+knothole, which once must have been the place where a much thicker
+branch once grew.
+~
+[Guin] Done.
+~
+167247872 2 9 0
+D4
+~
+~
+162 -1 6482 10 10 5
+D5
+~
+~
+98 -1 6413 10 10 5
+E
+knot hole knothole~
+This circular hole extends a little way into the massive trunk; the
+scarring around the edge of the knot indicates that the branch was
+extracted with some force.  A slight ring has formed around the torn
+flesh in an attempt to heal the amputation.  A collection of dried leaves
+and twigs have found their way into the hole, creating a soft bed of
+slowly decomposing plant matter.
+~
+A
+climb~
+tree down~
+act_tochar( "You easily find your way back down to the ground.", ch );
+act_notchar( "$n climbs back down to the ground.", ch );
+transfer( ch, find_room( 6413 ) );
+act_notchar( "$n climbs down from the tree.", ch );
+~
+!
+0 0 0
+A
+~
+knothole knot hole leaves twigs plant matter~
+act_tochar( #knothole, ch );
+act_notchar( #rknothole, ch );
+~
+E
+knothole~
+@yYou search through the dried leaves and twigs, only to find more leaves and twigs!@n
+~
+E
+rknothole~
+@y$n searches through the dried leaves and twigs, only to find more leaves and twigs!@n
+~
+!
+9 0 0
+112 9 1509949540 3 0
+-1
+S
+
+#6482
+Way, Way, WAY Above The Ground.~
+The ground is a long, long way beneath you.  Looking down you see the Sea
+of Stars looks like a birdbath.  You cannot even make out the Frost
+Giants from this height!  You feel the blood run towards your toes as you
+contemplate just how long it would take to hit the ground from up here.
+~
+This is the reset room for a trainer.  Please do not recycle or remove it! 
+:) 
+~
+167247872 9 9 0
+D5
+~
+~
+162 -1 6481 10 10 5
+A
+practice~
+~
+if( class( ch ) == paladin ) {
+  i = get_integer( ch, "/Carth/Given_Brian_DragonPart" );
+  if( i == 2 ) {
+    if( is_wearing( 4114, ch ) ) {
+      continue;
+    }
+    else {
+      interpret( mob, "say OK. I can see you have killed a dragon. Now lets see proof that you have befriended one." );
+    }
+  }
+  elseif( i == 1 ) {
+    interpret( mob, "say Are you deaf? Go kill a dragon and befriend a dragon. Then come see me again!" );
+  }
+  else {
+    act_tochar( #intro_text, ch, obj, mob, sight );
+    act_notchar( #intro_text_others, ch, obj, mob, sight );
+    act_room( #first_talk, ch, obj, mob, sight );
+    
+    wait( 1 );
+    if( char_in_room( ch, room ) ) {
+      act_room( #intro2, ch, obj, mob, sight );
+    }
+    
+    wait( 1 );
+    if( char_in_room( ch, room ) ) {
+      act_room( #intro3, ch, obj, mob, sight );
+      set_integer( ch, "/Carth/Given_Brian_DragonPart", 1 );
+    }
+  }
+}
+else {
+  act_tochar( #not_paladin, ch, obj, mob );
+}
+~
+E
+intro_text~
+@C$N sits back and gives you a long, hard look through his bushy
+eyebrows.@n 
+~
+E
+intro_text_others~
+@C$N sits back and gives $n a long, hard look through his bushy
+eyebrows.@n 
+~
+E
+first_talk~
+@Y"So," he says "you think you have the power and character to become kin
+with the Dragons eh?"@n 
+~
+E
+intro2~
+@C$e leans forward@n
+@Y"Well, $lie, I DON'T THINK SO!"@n
+~
+E
+intro3~
+@Y"You may eat of dragon steak daily," he growls, "but I'll not believe
+you until you preform two simple tasks for me.  Bring me two items.  Let
+the first be proof that you have killed a dragon and let the second be
+proof that you have befriended a dragon!"@n 
+~
+E
+not_paladin~
+@C$N looks you over and sighs
+@Y"You will never become kin with the dragons" he says.@n
+~
+!
+0 0 0
+A
+~
+~
+mob = mob_in_room( 2643, room );
+if( mob ) {
+  i = random( 1, 11 );
+  if( i == 1 )
+    transfer( mob, find_room( 912 ) );
+  elseif( i == 2 )
+    transfer( mob, find_room( 37053 ) );
+  elseif( i == 3 )
+    transfer( mob, find_room( 147 ) );
+  elseif( i == 4 )
+    transfer( mob, find_room( 27030 ) );
+  elseif( i == 5 )
+    transfer( mob, find_room( 19021 ) );
+  elseif( i == 6 )
+    transfer( mob, find_room( 20028 ) );
+  elseif( i == 7 )
+    transfer( mob, find_room( 30392 ) );
+  elseif( i == 8 )
+    transfer( mob, find_room( 63516 ) );
+  elseif( i == 9 )
+    transfer( mob, find_room( 30015 ) );
+  elseif( i == 10 )
+    transfer( mob, find_room( 21321 ) );
+  else
+    transfer( mob, find_room( 5442 ) );
+  act_notchar( #storm, mob, obj, ch, sight );
+}
+~
+E
+storm~
+@R$n storms into the room, demanding ale in a loud voice!@n
+~
+!
+16 0 0
+2643 9 1509949540 3 0
+2644 9 1509949540 3 0
+-1
+S
+
+#0
+

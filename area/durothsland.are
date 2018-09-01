@@ -1,0 +1,2645 @@
+#M2_AREA
+2
+
+Duroth's Land~
+Azerin Estrella Brunhilde~
+Duroth's Land~
+~
+~
+
+25 0
+0
+1
+#ROOMS
+
+#41250
+At The Edge Of The Mortal Plane~
+Jagged outcroppings of crystal thrust toward the high cavern's ceiling,
+their faceted surfaces gleaming with an inner fire.  Tendrils of
+purple-hued stone weave through the shale floor like the roots of a
+petrified tree, their bifurcated tips disappearing into the drab rock.  A
+swirling arch of crumbling earth and stone ries to the north, the earthen
+portal constantly collapsing in upon and rebuilding itself.
+~
+[Azerin] enter arch will transfer you to the plane of earth and stone
+[Guin] Need archway code.
+[Guin] Need placement
+[Guin] rdesc/extras reviewed.
+[Cayln] east vase here
+~
+167247880 11 7 0
+D0
+~
+~
+0 -1 41251 10 10 5
+E
+jagged outcropping crystal ceiling inner fire~
+Clusters of crystalline spears thrust upward from the ground, their
+icy-blue surfaces covered in fine fractures and chips.  A pale glow
+radiates from within the stone, illuminating the surroundings like soft,
+cool candle-light.
+~
+E
+swirling arch crumbling earth stone~
+An enormous archway, created from the earth itself, spans the cavern from
+floor to ceiling.  Chunks of grey-white granite blend with black earth to
+give the gateway a very awe-inspiring prescence.  As it crumbles and
+reforms the occasional fleck of red iron surfaces from within the frame
+of the arch.
+~
+A
+2 enter 1 jump~
+4 archway 4 gateway~
+act_tochar( #jump, ch );
+act_notchar( #rjump, ch );
+transfer( ch, find_room( 5932 ) );
+act_notchar( #arrive, ch, obj, mob, sight );
+~
+E
+jump~
+@yYou jump through the constantly shifting archway, and wind up somewhere
+else...@n 
+~
+E
+rjump~
+@y$n jumps through the constantly shifting archway, when you look around
+the back of it, $e is not there.@n 
+~
+E
+arrive~
+@Y$n appears suddenly from somewhere...miraculously.@n
+~
+!
+0 0 0
+A
+~
+~
+if( find_skill( ch, searching ) > random( 3, 6 ) ) {
+  improve_skill( ch, searching );
+  act_tochar( #notice, ch );
+}
+~
+E
+notice~
+@rYou notice a slight flash of orange from the crumbling earth and stone.@n
+~
+!
+1 0 1
+A
+~
+crumbling earth stone~
+if( mob_in_room( 1305, room ) || mob_in_room( 1356, room ) ) {
+  act_tochar( #busy, ch );
+  end;
+}
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #search, ch );
+  act_notchar( #rsearch, ch );
+  if( random( 1, 100 ) == 3 )
+    mob = mload( 1305, room );
+  else
+    mob = mload( 1356, room );
+  act_tochar( #dragon_bite, ch, obj, mob );
+  act_notchar( #rdragon_bite, ch, obj, mob );
+  damage( mob, ch, 5d8+20, physical, "strong bite" );
+  end;
+}
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  if( random( 1, 5 ) == 3 ) {
+    obj = oload( 3453 );
+    if( can_handle( ch, obj ) )
+      obj_to_char( obj, ch );
+    else
+      obj_to_room( obj, room );
+  }
+}
+if( obj ) {
+  act_tochar( #found, ch, obj );
+  act_notchar( #rfound, ch, obj );
+}
+else {
+  act_tochar( #nothing, ch );
+  act_notchar( #rnothing, ch );
+}
+~
+E
+search~
+@cAs you search through the crumbling stone, you disturb what looks like
+a dragon's nest.@n 
+~
+E
+rsearch~
+@cAs $n searches through the crumbling stone, $e disturbs what appears to
+be a dragon's nest.@n 
+~
+E
+busy~
+@rThe dragon has you a little busy to do that.@n
+~
+E
+dragon_bite~
+@c$N bites you as you bumped $M searching through the rubble.@n
+~
+E
+rdragon_bite~
+@c$N bites $n as $e bumped it searching through the rubble.@n
+~
+E
+found~
+@eYou find $p wedged between a couple small rocks.@n
+~
+E
+rfound~
+@e$n finds $p wedged between some small rocks.@n
+~
+E
+nothing~
+You find nothing of interest.
+~
+E
+rnothing~
+$n finds nothing of interest.
+~
+!
+9 0 0
+2752 9 1509949540 3 0
+-1
+S
+
+#41251
+Vaulted Cavern - Gate To The Mortal Realm~
+Hanging in mid-air is a swirling circle of callico stones, each one a
+perfect sphere without blemish or flaw.  A faint breeze whispers from
+them, the rich smell of loam carried with it.  Pillars of stacked rock
+rise in jumbled mounds around an arched gateway; the grey stones,
+without any visible support, rise to an imposing height of a hundred feet
+and more.  Shards of crystal spiral from the gloom-shrouded ceiling,
+their sparkling surfaces carved like a unicorn's horn.  Slabs of stone
+form a floating path through the darkness to the east and west, and a
+more mundane trail winds through the caverns heading in a northerly
+direction.
+~
+[Guin] If random acodes are combined, it is less spammy and a true random.
+[Guin] acode/extras/rdesc Reveiewed.
+~
+167378948 11 7 0
+D0
+~
+~
+0 -1 41253 10 10 5
+D1
+~
+~
+0 -1 41252 10 10 5
+D2
+~
+~
+0 -1 41250 10 10 5
+D3
+~
+~
+0 -1 41254 10 10 5
+E
+pillar stacked mounds~
+Flat-surfaced rocks have been stacked here in numberous piles to an
+extremely imposing height.  These pillars look as if they would topple
+and fall at any moment, but the fact that they are obviously archaic
+relics belies their fragility.
+~
+E
+shards crystal spiral horn unicorn~
+Crystaline stalagtites twist in an ever-decreasing spiral, their surface
+gleaming with brilliant sparkles.  The stunning array of rose-hued shards
+clinging to the ceiling bring life to an otherwise barren cavern.
+~
+A
+~
+~
+send_to_room( #rock, room );
+~
+E
+rock~
+@YA spherical rock rolls across the floating slab and tumbles off the
+edge into darkness.@n 
+~
+!
+2 150 0
+A
+~
+~
+send_to_room( #sparkle, room );
+~
+E
+sparkle~
+@CThe crystal spirals sparkle with a shimmering inner light.@n
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yWith a small leap, you land upon the floating flagstone, the slab moving
+slightly underfoot.@n 
+~
+E
+to_room~
+@yWith a leap, $n lands upon the flagstone, the floating rock moving
+slightly under $s weight.@n 
+~
+!
+3 0 10
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yWinding around the sphere of swirling stones, you head onward into the
+northern caverns.@n 
+~
+E
+to_room~
+@y$n wanders around the swirling stone gate and heads northward into the
+earthen-formed caverns.@n 
+~
+!
+3 0 1
+A
+~
+~
+continue;
+~
+E
+send_to_room~
+@Y$n bounds into the room, $s landing sending a shower of pebbles
+spraying across the floor.@n 
+~
+!
+1 0 10
+1971 9 1509949540 3 0
+-1
+S
+
+#41252
+Floating Slabstones~
+A wide slab of stone hangs in the darkness, its green-grey edges blurred
+until the rock's exact outline is unclear.  Steps of basalt stone descend
+from the hovering ledge, their surfaces flecked with silver and gold. 
+Glimmering shards of crystal spiral close to the trail, their jagged
+edges seeping illumination into the air.  The light forms ghostly
+tendrils that flicker like a serpent's tongue.
+~
+[Guin] Done
+[Cragg] 41252 to read properly should say 'its surface worn smooth' when you 'look at  stone'
+~
+167247872 11 7 0
+D3
+~
+~
+0 -1 41251 10 10 5
+D5
+~
+~
+0 -1 41255 10 10 5
+E
+slab stone~
+The wagon-sized boulder hangs in the darkness, its smooth surface worn
+and smooth.  Rivers of minerals spiral through it, the fractured crystals
+glowing softly.
+~
+E
+steps basalt~
+The spiraling steps descend into the lands below, half-seen shadows
+appear to move at their base.
+~
+E
+shards crystal~
+Just out of reach, the glowing quartz hangs in the air, the illumination
+pushing back the wall of midnight.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yThe floating stones move slightly underfoot as you descend into the
+darkness below.@n 
+~
+E
+to_room~
+@yThe floating stones move slightly underfoot as $n descends into the
+darkness below.@n 
+~
+!
+3 0 32
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yWith a few strides you leap from the floating stone and land upon the
+solid ground to the west.@n
+
+~
+E
+to_room~
+@yWith a few strides, $n leaps from the foating stone and lands upong the
+solid ground to the west@n.
+~
+!
+3 0 8
+-1
+S
+
+#41253
+Tunnel Through The Rocks~
+The smooth-bored tunnel winds in an north-south direction, its undulating
+surface slick as if worn by water or ice.  Whorls of apricot-hued
+minerals dance across its surface, the occasional cluster jutting from
+the stone like a wart.  Shimmering shards of crystal hang in the air
+throughout the tunnel, each of the chunks a few feet in length and about
+an inch across.
+~
+[Guin] Done.
+~
+167247876 11 7 0
+D0
+~
+~
+0 -1 41261 10 10 5
+D2
+~
+~
+0 -1 41251 10 10 5
+E
+whorls apricot minerals cluster~
+Splashes of apricot crystals deck the hall of this long tunnel.  Clusters
+the size of closed fists appear on the wall close to the floor, and
+masses of a deeper orange crystals, the diameter of a small round shield
+are fixed across the ceiling and upper walls.
+~
+E
+shimmering shards crystal chunk~
+Daggers of iridescent crystal pierce through into the tunnel from the
+smooth roof above you.  These crystal knives are a beautiful shade of
+orange, reminiscent of a maple leaf in the autumn.  Interspersed within
+the midst of these dagger-like crystals are clusters of apricot-hued
+minerals.
+~
+A
+random~
+~
+send_to_room( #dance, room );
+~
+E
+dance~
+@CSoft filigrees of light dance from the crystals, the illuminations
+flittering through the air like midsummer fairies.@n 
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou stride southward, leaving the tunnels behind.@n
+~
+E
+to_room~
+@y$n strides southward from the earthern tunnels.@n
+~
+!
+3 0 4
+A
+pry~
+minerals~
+act_tochar( #pry, ch );
+~
+E
+pry~
+@YYou pry at the minerals for some time but they appear to be firmly set
+into the earthen walls.@n 
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@ySteadying yourself against an outcropping of crystal, you manage to
+navigate the slick passageway and continue northward.@n 
+~
+E
+to_room~
+@y$n grabs hold of a crystal outcropping for support as $s heads
+northward through the slick tunnel.@n 
+~
+!
+3 0 1
+2461 9 1509949540 3 0
+-1
+S
+
+#41254
+Floating Slabstones~
+Underfoot, the stone seems to be awash in a sea of shadows, the inky
+darkness flowing around its edge.  Deep grooves have been clawed into its
+flat surface, the trenches revealing clusters of blue-hued fungi that
+appear to be living within the very rock itself.  A dragon-headed pillar
+rises to the north, its marbled surface covered with ochre-hued runes.
+~
+[Guin] Done.
+~
+167247872 11 7 0
+D0
+~
+~
+0 -1 41272 10 10 5
+D1
+~
+~
+0 -1 41251 10 10 5
+E
+grooves trenches clusters fungi~
+Deep scars have been gouged into the solid surface of the rock by an
+unknown force.  Within the clefts, a vibrant blue fungus thrives, its
+scant roots seemingly merged with the dense rock.
+~
+E
+dragon head pillar~
+Forming a great pillar in the likeness of an ancient dragon, the dazzling
+white marble gleams in the inky blackness.  The runes on its surface burn
+with an intense shade of deep earthy orange.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yWith a small leap, you jump back to the solid ground, sending a shower
+of pebbles flying as you land.@n 
+~
+E
+to_room~
+@yWith a leap, $n jumps back to solid ground, sending a shower of sparks
+flying as $e lands@n.
+~
+!
+3 0 2
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yThe stone moves slightly underfoot as you stride northward.@n 
+~
+E
+to_room~
+@yThe stone moves sightly underfoot as $n moves northward.@n
+~
+!
+3 0 1
+A
+pick~
+blue fungus fungi~
+act_tochar( #unbalance, ch );
+act_notchar( #runbalance, ch );
+~
+E
+unbalance~
+@cYou start to stoop to retrieve some of the fungi, but decide it would
+unbalance the stone@n.
+~
+E
+runbalance~
+@c$n partially stoops to retrieve some of the fungi, but changes $s
+mind@n.
+~
+!
+0 0 0
+-1
+S
+
+#41255
+Floating Stone Stairwell~
+Spiraling through the darkness winds the smooth stone staircase, the
+steps held in place with a strange magic that appears to remove the need
+for mortar and allow the path to hang within the blackness.  Silver and
+gold flecks gleam in the rocks, the ore illuminated by tendrels of light
+that flicker from floating crystaline pillars.  Barely visible in the
+soft light to the east are several towers of marbled rock, the
+shadow-covered structures to far to allow much detail to be gleamed.
+~
+[Azerin] para-elemental reset
+[Azerin] extras added
+~
+167247872 11 7 0
+D4
+~
+~
+0 -1 41252 10 10 5
+D5
+~
+~
+0 -1 41256 10 10 5
+E
+smooth stone staircase~
+Glowing with a soft shell of magic, the steps appear to be hanging
+mid-air.
+~
+E
+silver gold ore~
+Intermixed with quartz and base rock the flecks of ore add a touch of
+color to the drab stones.
+~
+E
+east towers marbled~
+The twin towers socket-like windows look out upon the stairs, the shadowy
+surface a bone white in coloration.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yThe floating stairwell shifts underfoot as you descend into the
+darkness.@n 
+~
+E
+to_room~
+@yThe floating stairwell shifts underfoot as $n descends into the
+darkness.@n 
+~
+!
+3 0 32
+A
+~
+~
+send_to_room( #light, room, sight );
+~
+E
+light~
+@CA radiant burst of illumination pours from the crystal shards, the
+light bathing the stairs briefly before receding back to a dull glow.@n
+
+~
+!
+2 200 0
+2461 9 1509949540 3 0
+-1
+S
+
+#41256
+Bloodstone Cavern - Floating Stairwell~
+An ore-flecked stairwell hangs in the center of the chamber, the strange
+stairs leading upwards into the darkness, their smooth steps acompanied
+by glowing shards of crystal.  Natural pillars of bloodstone thrust from
+the uneven cavern floor to the north like a forest of petrifed trees, the
+columns apex forming a spreading latice of interwoven tendrels of rock. 
+A jagged vent slashes through the ground to the west, a ruddy glow
+eminates from its steaming edge.
+~
+[Estrella] extras done
+[Cayln] south vase here
+[Cragg] 41256 latice should be lattice
+~
+167247872 11 7 0
+D0
+~
+~
+0 -1 41257 10 10 5
+D4
+~
+~
+0 -1 41255 10 10 5
+E
+stairwell steps~
+Spiralling upwards, the circular stairway hovers, each step completely
+detached from any solid surface.  Each dark step is coated with a fine
+layer of crystal shards, which illuminate this strange staircase.
+~
+E
+pillars bloodstone forest~
+Towering stone trees grow out of the rock floor, spreading their
+fractured branches outwards, the weight of the gem encrusted bloodstone
+canopy resting on the sturdy limbs.
+~
+E
+vent glow ruddy~
+A vicious looking chasm steams with burning hot liquefied rock bubbling
+at its edge.  The sweltering heat, almost overpowering, sends ripples of
+distortion in the air above the red-hot furnace.
+~
+A
+~
+~
+if( find_skill( ch, searching ) > random( 6, 9 ) ) {
+  improve_skill( ch, searching );
+  act_tochar( #notice, ch );
+}
+~
+E
+notice~
+@cYou notice a black object seems to block the ruddy glow from the crack
+every once in awhile.@n 
+~
+!
+1 0 17
+A
+1 get~
+vase crack vent glow~
+act_tochar( #search, ch );
+act_notchar( #rsearch, ch );
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  mob = mload( 1500, room );
+  act_room( #disturb, mob_in_room( 1500, room ) );
+  damage( mob, ch, 5d10+20, fire, "super hot temperature" );
+  attack_element( mob, ch, 1d10+20, fire, "steamy fist" );
+  end;
+}
+mob = mob_in_room( 1500, room );
+if( mob ) {
+  act_tochar( #busy, ch, obj, mob );
+  end;
+}
+wait( 1 );
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  if( random( 1, 5 ) == 3 )
+    obj = oload( 3488 );
+}
+if( obj ) {
+  act_tochar( #found, ch, obj );
+  act_notchar( #rfound, ch, obj );
+  if( can_handle( ch, obj ) )
+    obj_to_char( obj, ch );
+  else
+    obj_to_room( obj, room );
+}
+else {
+  act_tochar( #nothing, ch );
+  act_notchar( #rnothing, ch );
+}
+~
+E
+search~
+@cYou reach into the vent, trying to get at the dark object blocking the
+ruddy glow.@n 
+~
+E
+rsearch~
+@c$n reaches into the vent, trying to reach something $e spotted down
+there.@n 
+~
+E
+disturb~
+@R$n comes hissing out of the heat to the attack!@n
+~
+E
+busy~
+@rYou are a little busy to be doing that.@n
+~
+E
+found~
+@cYou retrieve $p from the edge of the vent.@n
+~
+E
+rfound~
+@c$n retrieves $p from the edge of the vent.@n
+~
+E
+nothing~
+You find nothing of interest.
+~
+E
+rnothing~
+$n finds nothing of interest.
+~
+!
+9 0 0
+-1
+S
+
+#41257
+Bloodstone Forest~
+Pillars of bloodstone rise from the ground to form a jumble of tree-like
+columns.  In keeping with the woodland feel a tangled roots of stone
+spread from each one, their grasping tendrels tearing into the softer
+stone of the caverns floor.  Uneven cobbles of ocean-green stabs wind
+through the "forest" in a northernly direction.
+~
+[Estrella] extras done
+~
+167247872 11 7 0
+D0
+~
+~
+0 -1 41258 10 10 5
+D1
+~
+~
+0 -1 41262 10 10 5
+D2
+~
+~
+0 -1 41256 10 10 5
+E
+pillars columns roots~
+Towering stone trees dominate the surrounding area, their blood-coloured
+trunks seeming to be coated in a thick, coagulated liquid.  Causing the
+demise of the greenstone path that wends its way amidst the thick trees,
+large roots protrude out of the dense shingle-littered floor.
+~
+-1
+S
+
+#41258
+Bloodstone Forest - Cobbled Road~
+Running through the bloodstone pillars is a greenstone path, its uneven A
+towering spire of bleached-bone rock rises to the north, unable to
+continue through it.  the roadway splits into a T-junction, trails
+meandering east, west around the stone and one retreating from it,
+towards the south.  A draconic face has been carved into the outcrop, its
+jagged teeth well over a metre in lengh and as thick as an ogres arm.
+~
+[Estrella] SECOND DRAGON
+[Estrella] extras done
+~
+167247872 11 7 0
+D1
+~
+~
+0 -1 41260 10 10 5
+D2
+~
+~
+0 -1 41257 10 10 5
+D3
+~
+~
+0 -1 41259 10 10 5
+E
+outcrop draconic face spire~
+The large white rock lunges down in the form of an ancient dragon, its
+archaic features terrifyingly realistic.  The structure of its jaw looks
+like it has at some point in the past able to be set open at varying
+widths.
+~
+A
+throw piff~
+blood crystal dragon mouth~
+obj = has_obj( 2586, ch );
+if( !obj ) {
+  act_tochar( #noitem, ch );
+  end;
+}
+act_tochar( #throw, ch, obj );
+act_notchar( #othrow, ch, obj );
+junk_obj( obj, 1 );
+wait( 1 );
+act_room( #fireball, ch );
+loop( all_in_room ) {
+  if( race( rch ) != elemental )
+    do_spell( fireball, rch );
+}
+wait( 2 );
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  obj = oload( 2621 );
+  act_room( #clear, ch, obj );
+  obj_to_room( obj, room );
+}
+else
+  act_room( #nclear, ch );
+~
+E
+noitem~
+<Type 'help' for help>
+~
+E
+throw~
+You piff $p into the mouth of the dragon...
+~
+E
+othrow~
+$n piffs $p into the mouth of the dragon...
+~
+E
+fireball~
+suddenly a massive fireball envelops the room
+~
+E
+clear~
+as the smoke clears, you can see $p lying on the floor
+~
+E
+nclear~
+the smoke clears (but you find nothing)
+~
+!
+0 0 0
+-1
+S
+
+#41259
+Edge Of The Sea Of Dust~
+The pillared forest edges at a rocky outcrop that looks upon a vast ocean
+of undulating dust and earth.  Lapping waves of sand crash against the
+lands edge in a bazzar parady of a normal sea.  A handful of bloodstone
+trees spread at the lip of the dust, their tangled roots grasping at the
+swirling stone.  A cobbled road of emerald-green stone winds from the
+beach and enters the petrified forest, its uneven surfaces broken and
+overrun with the bloodstone roots of the strange columns.
+~
+[Azerin] as you cant swim in sand and cant walk, this might be a dead end for now
+[Azerin] till i can figgure out a way to build a tick timed floating stone trail
+[Azerin] elemental reset
+[Estrella] extras done
+[Cayln] vase of the west here.
+~
+167247872 11 7 0
+D1
+~
+~
+0 -1 41258 10 10 5
+E
+ocean waves sand~
+Wave after wave of dust and sand pound against the base of the rocky
+outcrop with the deafening roar of rock grating against rock.  Swirling
+away as the tide retreats small fragments of the embankment flake off the
+rocky surface, the constant erosion wearing away the solid ground.
+~
+E
+bloodstone trees roots petrified columns~
+Knotted roots of petrified bloodstone trees cling to the shore of sand
+and soil.  Westward, the stone trees grow thicker, their gnarled trunks
+supporting a blood-coloured canopy of stone.
+~
+A
+~
+~
+if( find_skill( ch, searching ) > random( 4, 9 ) ) 
+  act_tochar( #notice, ch );
+~
+E
+notice~
+@rYou see out of the corner of your eye a flash of dark blue in the
+sand.@n 
+~
+!
+1 0 2
+A
+~
+beach sand~
+act_tochar( #sand, ch );
+act_notchar( #rsand, ch );
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+    mob = mload( 300, room );
+    act_room( #sand_monster, mob );
+    attack( mob, rand_player( room ), 4d4, "swing" );
+  end;
+}
+mob = mob_in_room( 300, room );
+if( mob ) {
+  act_tochar( #busy, ch, obj, mob );
+  end;
+}
+if( !rflag( reset1, room ) ) {
+  act_tochar( #nothing, ch );
+  act_notchar( #rnothing, ch, obj, mob, sight );
+  end;
+}
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  if( random( 1, 5 ) == 3 ) {
+    obj = oload( 3477 );
+    act_tochar( #vase, ch, obj );
+    act_notchar( #rvase, ch, obj );
+    if( can_handle( ch, obj ) )
+      obj_to_char( obj, ch );
+    else
+      obj_to_room( obj, room );
+  }
+}
+if( !obj ) {
+  act_tochar( #nothing, ch );
+  act_notchar( #rnothing, ch, obj, mob, sight );
+}
+~
+E
+sand~
+@yYou search through the sand, trying to find the blue thing you spotted.@n
+~
+E
+rsand~
+@y$n searches through the sand, trying to find something.@n
+~
+E
+vase~
+@cYou find $p in the sand.@n
+~
+E
+rvase~
+@c$n finds $p in the sand.@n
+~
+E
+sand_monster~
+@y$n climbs from the sand to attack!@n
+~
+E
+busy~
+@r$N is keeping you a little occupied for that.@n
+~
+E
+nothing~
+You don't find the object you spotted.
+~
+E
+rnothing~
+$n doesn't find anything.
+~
+!
+9 0 0
+1971 9 1509949540 3 0
+-1
+S
+
+#41260
+Bloodstone Forest - Cobbled Road~
+A collection of uneven tiles desperatly clings together to form a twisted
+road through the stands of mightly bloodstone pillars, its cracked and
+crumbling surface torn at by the tangling roots of the stone trees.  Sand
+filled depressions scout the roads edge, the swirling grit oddly
+animated, ripples and waves washing across it like water in a pool.
+~
+[Estrella] extras done
+~
+167247872 11 7 0
+D1
+~
+~
+0 -1 41266 10 10 5
+D2
+~
+~
+0 -1 41262 10 10 5
+D3
+~
+~
+0 -1 41258 10 10 5
+E
+tiles roots road~
+Chipped and fragmented cobbles lie in a haphazard formation that, over
+the course of many years, has gradually shifted and contorted into its
+currently crumbling form.
+~
+E
+sand depression grit~
+The pitted road edge writhes as the fine sand and grit swirl about as
+though they were liquid, the rippling surfaces changing in colour and
+density.
+~
+-1
+S
+
+#41261
+Before The Gates Of Mithril And Gold~
+Double gates of mithril and gold have been set into the northern wall of
+the cavern, the priceless entrance framed with an ice-blue arch of
+rune-covered stone.  Shimmering shards of crystal hang in the air
+throughout the cavern, each of the chunks a few feet in length and about
+an inch across.  A worn circular tunnel winds from the chamber in the
+southern wall, the floating crystals flanking its path.
+~
+[Guin] Blood Crystal Key for north, #2621
+[Guin] Done.
+~
+167247872 11 7 0
+D0
+gold and mithril gate~
+~
+391 2621 41280 10 10 5
+D2
+~
+~
+0 -1 41253 10 10 5
+E
+double gates mithril gold~
+A heavy gate with vicious mithril barbs resides here, its hinges facing
+towards you.  Thick bars of mithril bend and twist in an intricate
+vine-like pattern, and leaves fashioned from red gold adorn the gate and
+give it an eerie appearance.
+~
+E
+priceless entrance framed ice-blue arch rune-coverd stone~
+Blue stone, the color of pristine ice, has been carved delicately with
+runes to give the mithril gate a sturdy border.  Runes of indeterminable
+meaning cover the arch over its pale surface, but as you look closer at
+the top of the arch you can make out the word "Welcome".
+~
+E
+floating crystals shards shimmering chunks~
+Unknown forces hold slim slivers of crystal in midair a few inches from
+the cold floor.  These blood-red crystals have countless fracture lines
+snaking their way down to the pointed base near the floor.  The pointed
+apex of several of these shards have been shattered, crimson splinters of
+crystal littering the floor.
+~
+A
+get~
+crystal shard~
+act_tochar( #shard, ch );
+act_notchar( #rshard, ch );
+~
+E
+shard~
+@yDespite your best efforts the crystal doesn't move a fraction from its
+floating spot.@n 
+~
+E
+rshard~
+@y$n attempts to snatch a floating crystal from the air but it appears to
+be unmoved by $s attempts.@n 
+~
+!
+0 0 0
+-1
+S
+
+#41262
+Bloodstone Forest~
+Clinging tendrels of steel-leafed ivy grasp at the bloodstone roots and
+trunks of the petrified forest, their razor edges making for difficult
+passage though the woodlands.  The canopy of stone spreads overhead, a
+tangle of stones and gems forming replicas of leaves and branches.  A
+wall of segmented rock rises to the south, its crumbling surface covered
+with a dense layer of crystaline thorn bushes.
+~
+[Estrella] extras done
+~
+167247872 11 7 0
+D0
+~
+~
+0 -1 41260 10 10 5
+D1
+~
+~
+0 -1 41263 10 10 5
+D3
+~
+~
+0 -1 41257 10 10 5
+E
+ivy gems~
+Long tendrils of entwining ivy choke the roots and trunks of the
+bloodstone trees, their steel edges honed to razor sharp.  Emerging from
+beneath the silvery ivy, a myriad of different coloured and sized gems
+sparkle, their gleaming forms seem to be etched into the shape of half
+open buds.
+~
+E
+thorn canopy~
+Barely grasping to the side of the cavern wall, ragged thorn bushed
+sprout from every nook in the pitted wall's surface, with crystalline
+prickles that, while being very small in size, have the menacing look of
+an overly toothed jaw.
+~
+-1
+S
+
+#41263
+Bloodstone Forest~
+A graveyard of broken bloodstone and cracked and tumbled pillars make up
+an uneven clearing in the forest of stone.  Silver ferns grow from around
+the blocks, their sparkling leaves bend with crystal dew.  The collumns
+of rock spread in all directions from the ruins, a tangle of bloodstone
+roots supporting the "trees".
+~
+[Azerin] earth elemental reset
+[Estrella] extras done
+~
+167247872 11 7 0
+D0
+~
+~
+0 -1 41266 10 10 5
+D1
+~
+~
+0 -1 41265 10 10 5
+D2
+~
+~
+0 -1 41264 10 10 5
+D3
+~
+~
+0 -1 41262 10 10 5
+E
+ferns leaves dew~
+Long fronds of gleaming silver unfurl as the lacy ferns drape over the
+shattered stumps.  Filling the clearing with a sparkling luminescence,
+small rain-drop-shaped crystals bespeckle the fine tendrils of the
+silvery ferns.
+~
+E
+ruins broken cracked~
+Destitute remains of what once were towering bloodstone trees now litter
+the ground, their trunks cracked and fragmented.  A thick layer of debris
+covers the ground; included in the rubble, small shards of crystal can be
+seen glittering through the chaos.
+~
+1971 9 1509949540 3 0
+-1
+S
+
+#41264
+Bloodstone Forest~
+Walls of jet studded rock rise in a semi-cirle around the towering
+bloodstone trees to form a secluded cul-de-sac.  Purple hued toadstools
+spread around its fringe, their spreading caps a feet in diamater.  A
+carved basin of basalt rock sits in the clearings middle, its lip
+overflowing with swirling sand.  Crystaline ferns and brambles spread
+under the stone forest, their sparking leaves and stems an almost perfect
+replica of a living plant.
+~
+[Azerin] search pool
+[Estrella] extras done
+[Trest] room 41264 should be purple hued
+[Trest] room 41264 should be purple-hued
+[Cragg] 41264 feet should be foot
+~
+167247872 11 7 0
+D0
+~
+~
+0 -1 41263 10 10 5
+E
+basin sand~
+Elegantly sculptured and chiselled until smooth, the dark basalt basin
+stands upon a finely crafted pedestal, the base of which has been etched
+into a close resemblance of a wall of ivy.  Like a cascading waterfall,
+the sand tumbles gracefully over the side of the basin and disappears
+into small cracks in the ground.
+~
+E
+ferns brambles~
+The gem encrusted undergrowth glitters as a faint light rebounds off its
+many surfaces.  Unfurling fronds, gossamer thin, drape over the
+bloodstone roots, their lacy leaves would probably disintegrate if
+touched.
+~
+-1
+S
+
+#41265
+Bloodstone Forest~
+An onyx statue of a sleeping cat rests in amongst the bloodstone trees,
+its jet black surface reflecting the light back into the clearing.  A
+handfull of smooth-topped stone slabs encircle the feline, as if you were
+suppose to sit and watch its sleeping form.  A wall of jagged spiked
+crystal rises to the east, the sharp barbs presenting an impenitrable
+barrier.
+~
+[Azerin] drake reset [Azerin] do stuff with cat statue [Azerin] cat
+quest, as cat has head of bloodstone hammer [Azerin] cat is a lesser god
+whos essence has been split into four parts, he wants them back - find
+quest buy offering cat god a dead mouse 
+[Estrella] extras done
+~
+167247872 11 7 0
+D3
+~
+~
+0 -1 41263 10 10 5
+E
+onyx statue cat feline~
+Lithe and muscular, the figure of this large feline rests upon the trunk
+of a felled bloodstone tree.  With a composed expression of slumber, the
+monument seems to perceive all sounds and movements made in the general
+vicinity.  Two massive paws seem to twitch slightly with the skeletal
+remains of a very small creature, and the very tip of the long slender
+tail swishes backward and forward at random intervals, giving the
+impression that this cat is on the prowl.
+~
+E
+paws~
+Lieing between the statues paws is a small skelton of a mouse.  It
+appears to have been there for quite some time. 
+~
+A
+3 offer~
+dead mouse~
+obj = has_obj( 1598, ch );
+if( has_quest( ch, 81 ) || done_quest( ch, 81 ) ) {
+act_tochar( #smile, ch, obj );
+  junk_obj( obj, 1 );
+  end;
+}
+if( obj ) {
+  act_tochar( #offer, ch, obj );
+  act_notchar( #roffer, ch, obj );
+  junk_obj( obj, 1 );
+  wait( 1 );
+  obj = oload( 3838 );
+  act_tochar( #request, ch, obj );
+  act_notchar( #rrequest, ch, obj );
+  wait( 1 );
+  act_tochar( #vase, ch );
+  assign_quest( ch, 81 );
+  junk_obj( obj );
+}
+else
+  act_tochar( #offerwhat, ch );
+~
+E
+offer~
+@yYou offer $p to the cat statue.@n
+~
+E
+roffer~
+@y$n offers $p to the cat statue.@n
+~
+E
+request~
+@r$p comes alive as you place the offer between its paws, it then relates
+its story to you.
+
+@CI was imprisoned within this statue you see before you, my fellows did
+not take well to my independent nature and how well the mortals took to
+my appearance.  I was never feared or despised anywhere like they were. 
+So one night they lured me out here, looking for a child that was crying
+for help.  When they struck, I cast my soul into this statue to try and
+escape them, I didn't realize they had prepared this receptacle, to split
+my soul into four parts, which were then entrapped within a cat headed
+vase.  If you would be willing to help restore me to my true power I
+would be greatly appreciative.@n
+~
+E
+rrequest~
+@r$p comes alive as $n places the offer between its paws, it then
+whispers something to $n.@n 
+~
+E
+vase~
+@CMy soul has been entrapped within four different vases, just bring them
+here and break them before me to release my soul.@n 
+~
+E
+offerwhat~
+Your going to offer what?
+~
+E
+smile~
+@cYou offer $p to the cat statue, it smiles marginally for your gift.@n 
+~
+!
+0 0 0
+A
+2 break 2 smash~
+vase cat spirit east north west south~
+if( !rflag( reset0, room ) ) {
+  act_tochar( #notrightnow, ch );
+  end;
+}
+if( !has_quest( ch, 81 ) ) {
+  act_tochar( #why, ch );
+  end;
+}
+if( done_quest( ch, 81 ) ) {
+  act_tochar( #already, ch );
+  end;
+}
+remove_rflag( reset0, room );
+obj = has_obj( 3453, ch );
+if( obj ) {
+  act_tochar( #vase, ch, obj );
+  act_notchar( #rvase, ch, obj );
+  set_integer( ch, "/Cayln/CatHeadedQuest/Vase1", 1 );
+  act_notchar( #rvase, ch, obj );
+  junk_obj( obj, 1 );
+}
+wait( 1 );
+obj = has_obj( 3469, ch );
+if( obj ) {
+  act_tochar( #vase, ch, obj );
+  set_integer( ch, "/Cayln/CatHeadedQuest/Vase2", 1 );
+  junk_obj( obj, 1 );
+}
+wait( 1 );
+obj = has_obj( 3477, ch );
+if( obj ) {
+  act_tochar( #vase, ch, obj );
+  act_notchar( #rvase, ch, obj );
+  set_integer( ch, "/Cayln/CatHeadedQuest/Vase3", 1 );
+  junk_obj( obj, 1 );
+}
+wait( 1 );
+obj = has_obj( 3488, ch );
+if( obj ) {
+  act_tochar( #vase, ch, obj );
+  act_notchar( #rvase, ch, obj );
+  set_integer( ch, "/Cayln/CatHeadedQuest/Vase4", 1 );
+  junk_obj( obj, 1 );
+}
+wait( 1 );
+if( get_integer( ch, "/Cayln/CatHeadedQuest/Vase1" ) == 1 )
+  if( get_integer( ch, "/Cayln/CatHeadedQuest/Vase2" ) == 1 )
+  if( get_integer( ch, "/Cayln/CatHeadedQuest/Vase3" ) == 1 )
+  if( get_integer( ch, "/Cayln/CatHeadedQuest/Vase4" ) == 1 ) {
+  set_integer( ch, "/Cayln/CatHeadedQuest/Vase1", 0 );
+  set_integer( ch, "/Cayln/CatHeadedQuest/Vase2", 0 );
+  set_integer( ch, "/Cayln/CatHeadedQuest/Vase3", 0 );
+  set_integer( ch, "/Cayln/CatHeadedQuest/Vase4", 0 );
+  act_tochar( #thanks, ch );
+  obj = oload( 3515 );
+  obj_to_char( obj, ch );
+  update_quest( ch, 81 );
+}
+set_rflag( reset0, room );
+~
+E
+why~
+@cWhy would you want to do that?@n
+~
+E
+already~
+@cYou have already smashed all the vases.@n
+~
+E
+vase~
+@CYou throw $p against the base of the bloodstone tree, it shatters into many pieces.@n
+
+@rYou see a slight fog arise from the pieces, and enter the cat statue.@n
+~
+E
+rvase~
+@C$n throws $p against the base of the bloodstone tree, it shatters into many pieces.@n
+
+@rYou see a slight fog arise from the pieces, and enter the cat statue.@n
+~
+E
+thanks~
+@cAs the last bit of soul enters the statue, there is a resolving sigh, as of relief.@n
+
+@CThank you for you help mortal, in return for your assistance, take this block of
+bloodstone.@n
+~
+E
+notrightnow~
+@cYou can't do that right now.@n
+~
+!
+0 0 0
+A
+2 ask~
+cat feline onyx statue~
+if( !has_quest( ch, 81 ) && !done_quest( ch, 81 ) ) {
+  act_tochar( #nothing, ch );
+  end;
+}
+if( !is_name( "vase", arg ) && !is_name( "spirit", arg ) && !is_name( "soul", arg ) ) {
+  act_tochar( #no_response, ch );
+  end;
+}
+act_tochar( #think, ch );
+wait( random( 1, 3 ) );
+act_tochar( #northvase, ch );
+wait( random( 1, 3 ) );
+act_tochar( #southvase, ch );
+wait( random( 1, 3 ) );
+act_tochar( #westvase, ch );
+wait( random( 1, 3 ) );
+act_tochar( #eastvase, ch );
+~
+E
+nothing~
+Nothing interesting happens.
+~
+E
+northvase~
+The first vase is protected by a quartz cat, the misbegotten creature, it
+should be my follower.
+~
+E
+no_response~
+@cThere is no response from the feline statue.@n
+~
+E
+southvase~
+The second vase is protected by an elemental of water and heat, it
+resides in a crack somewhere.
+~
+E
+westvase~
+The third vase has been sunk in the sand, I hate the sand, gets between
+my toes and irritates me all day.
+~
+E
+eastvase~
+The last vase is protected by a drake, somewhere near a portal, she has
+been trying to escape from here for years.
+~
+E
+think~
+@CThe onyx statue says, "Let me think, you wish to know the whereabouts
+of my soul parts?  Give me a few seconds while I recall the details of
+those who despised me, each took one part of my soul.@n 
+~
+!
+0 0 0
+2463 9 1509949540 3 0
+-1
+S
+
+#41266
+Bloodstone Forest - Cobbled Road~
+A squat stone rampart boarders the eastern forest, its slabs of black
+stone roughly cut and stacked without any sign of mortar.  The bloodstone
+pillars rise beyond the wall, their spreading branches supporting the
+chambers roof.  A cobbled path meanders along their boarder, the uneven
+surface cracked by prying roots and general disuse.
+~
+[Azerin] guant reset
+[Estrella] extras done
+~
+167247872 11 7 0
+D0
+~
+~
+0 -1 41267 10 10 5
+D2
+~
+~
+0 -1 41263 10 10 5
+D3
+~
+~
+0 -1 41260 10 10 5
+E
+rampart wall~
+Stout yet sturdy, this stone wall winds with the path as it leads through
+the dense stone forest.  Large boulders have been carefully stacked as to
+negate the need for a mortar infilling.
+~
+E
+bloodstone pillars branches~
+Diverging from the trunks of the great stone trees, the sturdy branches
+reach upwards to provide support for the dense canopy, which forms the
+roof of this dimly lit chamber.
+~
+2464 9 1509949540 3 0
+-1
+S
+
+#41267
+Bloodstone Forest - Cobbled Road~
+The roadway ends at a semi-circle of ashen-hued standing stones that rise
+before a massive black-stone cliff.  Broken cobbles and shattered
+bloodstone pillars lie scattered through the monoliths, their crumbling
+surfaces flecked with a silvery moss.  A forest of bloodstone pillars
+spreads southwards like a petrified forest, the tall columns supporting
+the roof with a tangled mass of branches.
+~
+[Estrella] extras done
+~
+167247872 11 7 0
+D0
+~
+~
+0 -1 41268 10 10 5
+D2
+~
+~
+0 -1 41266 10 10 5
+E
+ashen stones monoliths~
+Giant monoliths made from a soft, crumbling stone gather in a circle at
+the end of the cobbled path, their ashen surfaces riddled with fractures.
+~
+E
+forest pillars columns roof branches~
+Casting deep shadows over the stone glade, towering blood-red trees,
+turned to stone by the long years of compression, spread their thick
+branches to form a network of supports, which carry the weight of the
+pitted rock canopy.
+~
+-1
+S
+
+#41268
+Bloodstone Forest - Stairs Up a Blackstone Cliff~
+A near-invisible stairway has been hacked into the black stone of the
+cliffs, the narrow steps absorbed by the darkness of the rock and the
+deep shadows that cloak the land in perpetual gloom.  Spirals of rusted
+iron rise around the steps, the twisted metal forming strange pillars. 
+Shards of pale blue quartz have been embedded in the metal, their
+fractured surfaces oozing with a faint luminessance.
+~
+[Estrella] extras done
+~
+167247872 11 7 0
+D2
+~
+~
+0 -1 41267 10 10 5
+D4
+~
+~
+0 -1 41269 10 10 5
+E
+stairway steps cliffs~
+Shallow steps, cut into the side of the black onyx cliff disappear from
+sight as the gloom descends upon the area, casting deep shadows about the
+cavern.  From far above, a faint glimmering can be seen, as though a
+gentle light were dazzling off a sea of reflective surfaces.
+~
+E
+iron twisted metal pillars quartz~
+Rising from either side of the stairs, great pillars of twisted iron seem
+to grow out of the rock, the wrought iron structures entwined with
+fragmented shards of glowing quartzite, which gently illuminates the area.
+~
+-1
+S
+
+#41269
+Stairs Across The Blackstone Cliff~
+The stairwell winds across the black stone cliff, its narrow steps
+covered with a soft crystaline dust and scatterings of pebbles.  An
+overhang of quartz juts from the cliff above, a circular hole carved
+through the stone.  Above the quartz, fingers of crystal thrust from the
+onyx walls to form a gleaming wall.  Below a forest of stone spreads, the
+pillars of rock covered in mantle of shadow.
+~
+[Estrella] extras done
+~
+167247872 11 7 0
+D4
+~
+~
+0 -1 41270 10 10 5
+D5
+~
+~
+0 -1 41268 10 10 5
+E
+quartz fingers crystal~
+Pristine white quartz protrudes from the black wall, the hole chiselled
+into the large block creating an archway through which the path passes. 
+Above the fragmented quartzite the polished black onyx gradually becomes
+covered with sparkling crystal shards, which send a dazzling light in all
+directions.
+~
+E
+forest pillars mantle~
+Far below, in the dimly lit depths of the earth, a deep blood-red mantle
+spreads across the cavern below.  Piercing the stone cover, fractured
+pillars of rock, akin to petrified trees, branch out to support the less
+dense upper canopy.
+~
+-1
+S
+
+#41270
+Crystal Caverns - Edge of A Blackstone Cliff~
+A wall of crystal surrounds the cracked and pitted edge of a sheer cliff
+face, a slender stairwell cutting down its blacken side.  Fractured
+spears of quartz fill the rest of the chamber, the sharp edged stones
+making journing onwards somewhat difficult.  Overhead a web of ruby-red
+stone spreads across the ceiling, the delicate strands sparkling in the
+light.  A cleft in the rock forms a jagged exit in the southern wall, the
+surrounded rock pitted and cracked as if struck by a massive blow.
+~
+[Azerin] earth elemental reset
+[Estrella] extras done
+[Cayln] north vase here
+~
+167247872 11 7 0
+D2
+~
+~
+0 -1 41271 10 10 5
+D5
+~
+~
+0 -1 41269 10 10 5
+E
+wall cliff stairwell~
+Providing a dazzling light that refracts off the sparkling wall, the
+jagged crystal surface looks as though someone has carefully removed the
+easily accessible loose shards.  Dropping vertically downwards the sheer
+black rock suddenly changes from floor to wall.  Hacked into the jet
+rock, a narrow stairway leads down into the depths of the earth, its fine
+steps polished by the erosion of many footfalls.
+~
+E
+web ruby ceiling~
+Fine tendrils of ruby webbing lace the ceiling as they span from one side
+of the cave to another.  Interlocking in the centre of the ceiling, the
+gemmed web becomes a woven mass of deep red stone.
+~
+A
+~
+sharp edge stones spears quartz fractured~
+act_tochar( #search, ch );
+act_notchar( #rsearch, ch );
+wait( 1 );
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  mob = mload( 369, room );
+  act_room( #disturb, mob_in_room( 369, room ) );
+  attack( mob, ch, 4d10+30, "quick leap" );
+  end;
+}
+mob = mob_in_room( 369, room );
+if( mob ) {
+  act_tochar( #busy, ch, obj, mob );
+  end;
+}
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  if( random( 1, 5 ) == 3 )
+    obj = oload( 3469 );
+}
+if( obj ) {
+  act_tochar( #found, ch, obj );
+  act_notchar( #rfound, ch, obj );
+  if( can_handle( ch, obj ) )
+    obj_to_char( obj, ch );
+  else
+    obj_to_room( obj, room );
+}
+else {
+  act_tochar( #nothing, ch );
+  act_notchar( #rnothing, ch );
+}
+~
+E
+search~
+@EYou search through the clutter, looking for what caught your eye.@n
+~
+E
+rsearch~
+@E$n is searching through the clutter for something...@n
+~
+E
+disturb~
+@C$n was obviously disturbed by your presence, as $e leaps to attack!.@n
+~
+E
+found~
+@mYou find $p almost crushed by some of the fallen quartz.@n
+~
+E
+rfound~
+@m$n finds $p hidden in the fallen quartz.@n
+~
+E
+nothing~
+You don't find what you were looking for.
+~
+E
+rnothing~
+$n doesn't find whatever $e was looking for.
+~
+E
+busy~
+@RYou are a little preoccupied to be doing that right now...@n
+~
+!
+9 0 0
+A
+~
+~
+if( find_skill( ch, searching ) > random( 6, 8 ) ) {
+  improve_skill( ch, searching );
+  act_tochar( #notice, ch );
+}
+~
+E
+notice~
+@cYou see an odd flash of color from beneath one of the piles of quartz.@n
+~
+!
+1 0 36
+1971 9 1509949540 3 0
+-1
+S
+
+#41271
+Greenstone Cave~
+Interspersed with wide panels of pale marble, the dark green rock
+encroaches on the small cavern.  An extensive swirling pattern adorns the
+walls, melding together the two rock types with an almost seamless
+transition.  A narrow fissure extends across the floor and several feet
+up the wall; from within the crevice a dim light filters up from the
+limestone camber below.  To the north the cave continues, rapidly
+metamorphosing into the glassy crystal rock that has been erratically
+dispersed throughout.
+~
+[Estrella] desc/extras done :)
+~
+167247872 11 7 0
+D0
+~
+~
+0 -1 41270 10 10 5
+D5
+~
+~
+0 -1 41279 10 10 5
+E
+panels marble swirling pattern walls~
+Great arcs of marble span across the cavern walls and ceiling, where the
+white panels meet the greenstone rock, large swirling patterns interlace
+the different rocks together with a smooth transition.  Interspersed
+throughout at random intervals are several intrusions of clear crystal.
+~
+E
+narrow fissure crevice~
+A fine crack slowly widens into a narrow fissure as it runs down the wall
+and onto the floor.  The edges of the crevice are slightly rounded, they
+appear to be roughly chiselled into shape.  Within the crack it appears
+that the rock transforms into soft limestone; a nearby stalactite has had
+notches hewn out of its side to form a viable ladder.
+~
+E
+dim light limestone chamber~
+Filtering up through the crevice, a dim, oddly coloured light penetrates
+the darkness, its source undeterminable save for glowing walls of the
+limestone below.  Growing out of the ceiling and floor, large rock
+formations reach toward each other, and some connect to make pale pink,
+water covered columns.
+~
+-1
+S
+
+#41272
+Solid Ground~
+A single pillar of white marble rises beside a wagon-sized hole in the
+ground.  The opening's edges are surrounded by blue-stone cobbles, the
+cleft a perfect circle of rock.  Gleaming seams of crystal ooze from the
+bottom of the hole some thirty feet below.  A floating stone hangs in the
+darkness to the south, its worn surface flecked with shadows.
+~
+[Azerin] climb 10 to go down or jump
+[Estrella] FIRST DRAGON
+[Guin] climb 10 not possible at this time.
+[Guin] Add climb down/fall/jump for damage code.
+[Guin] Reviewed.
+~
+167247872 11 7 0
+D2
+~
+~
+0 -1 41254 10 10 5
+D5
+~
+~
+0 -1 41273 10 10 5
+E
+pillar marble~
+Created out of gleaming white marble, the tall pillar takes the form of
+an ancient dragon, its horned head both beautiful and terrifying.  Its
+large jaw hangs slightly ajar and hidden in the back of the mouth there
+seems to be a small crevice that previously contained a stone of some
+kind.
+~
+E
+floating stone flecked~
+Surrounded by an almost silky darkness, the slab of stone to the south
+appears to hover amidst the encroaching blackness.  It is almost
+impossible to discern where the floor, or walls for that matter, joins
+the slab.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yThe ground moves slightly underfoot as you stride onward.@n 
+~
+E
+to_room~
+@yThe ground moves slightly underfoot as $n strides onward@n.
+~
+!
+3 0 4
+A
+~
+dragon pillar mouth~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #bite, ch );
+  act_notchar( #obite, ch );
+  damage( mob, ch, 3d8+30, physical, "the dragon statue's rending bite", "dragon statue" );
+  wait( 2 );
+  obj = oload( 2586 );
+  act_room( #form, ch, obj );
+  obj_to_room( obj, room );
+  end;
+}
+act_tochar( #nothing, ch );
+~
+E
+bite~
+@CThe dragon statue comes to life for a brief instant, and tries to bite
+your arm off.@n
+~
+E
+obite~
+@CThe dragon statue comes to life for a brief instant, and tries to bite
+$n's arm off.@n
+~
+E
+form~
+@RThe blood on the ground, from your wound pools into a crystal shaped
+opening.  The blood then hardens into a crystal made of pure blood.@n
+~
+E
+nothing~
+You search the statue's mouth, but find nothing of interest.
+~
+!
+9 0 0
+A
+1 down~
+*~
+act_tochar( #jump_climb, ch );
+~
+E
+jump_climb~
+@cYou will need to jump or climb down to move on.@n
+~
+!
+0 0 0
+A
+2 climb 2 jump~
+1 down~
+if( find_skill( ch, climb ) < random( 6, 10 ) ) {
+  act_tochar( #climb, ch, obj, mob, sight );
+  act_tochar( #fall, ch, obj, mob, sight );
+  act_notchar( #rclimb, ch, obj, mob, sight );
+  act_notchar( #rfall, ch, obj, mob, sight );
+  transfer( ch, find_room( 41273 ) );
+  act_notchar( #arrive, ch, obj, mob, sight );
+}
+else {
+  act_tochar( #succeed, ch, obj, mob, sight );
+  act_notchar( #rsucceed, ch, obj, mob, sight );
+  transfer( ch, find_room( 41273 ) );
+  act_notchar( #suc_arrive, ch, obj, mob, sight );
+}
+if( is_mob( ch ) )
+  continue;
+~
+E
+climb~
+@cYou attempt to climb down the walls.@n
+~
+E
+fall~
+You slip, and tumble down the walls.@n
+~
+E
+rclimb~
+@c$n tries to climb down the wall.@n
+~
+E
+rfall~
+@c$n hands slip out of the crevices $e was using, and $e tumbles below.@n
+~
+E
+arrive~
+@c$n crashes into the ground with a thud.@n
+~
+E
+suc_arrive~
+@c$n arrives in the room with a thud.@n
+~
+E
+succeed~
+You begin your descent, easily finding the holds you need.
+~
+E
+rsucceed~
+$n begins $s descent, $e looks to be having an easy time of it.
+~
+!
+0 0 0
+-1
+S
+
+#41273
+Crystal Caverns - Opening In The Roof~
+Filtering through the dense crystal walls, a bright rainbow-hued light
+illuminates the cavern, revealing broad panels of mottled white and black
+marble.  A large circular opening in the roof can be distinguished at the
+top of a lengthy chute, the marble band providing a few widely spaced
+handholds.  Sparkling to the east, a crystalline river runs through the
+earthen tunnel, a brilliant luminescence glowing from beneath its thick
+ripples.
+~
+[Azerin] crystal para-elemental reset
+[Azerin] Ests area
+[Estrella] room desc/extras done
+~
+167247872 11 7 0
+D1
+~
+~
+0 -1 41274 10 10 5
+D4
+~
+~
+0 -1 41272 10 10 5
+E
+walls crystal marble panels~
+Alternating bands of crystal and marble, several feet wide, extend from
+the floor to the towering ceiling, their surfaces polished smooth.
+~
+E
+chute opening handholds roof~
+A long tunnel surrounded by gleaming marble walls ends at a circular
+opening about the size of a wagon wheel.  Intermittent handholds have
+been etched into the smooth marble panels.
+~
+2461 9 1509949540 3 0
+-1
+S
+
+#41274
+Floating Slabstones~
+Sluggishly lapping at the solid granite floor, the molten river of
+ice-cold crystal flows northward, its surface forming domes as bubbles of
+air rise from deep below.  Floating on the surface several large slabs of
+granite drift lazily in the gentle current, their edges coated thickly by
+slowly solidifying crystal.
+~
+[Estrella] room desc/extras done
+~
+167247872 11 7 0
+D0
+~
+~
+0 -1 41275 10 10 5
+D3
+~
+~
+0 -1 41273 10 10 5
+E
+river molten crystal ripples~
+Refracting light glistens as it filters through the current and opposing
+undertow of the crystal river, showering the area with a myriad of bright
+colours.  Translucent eel-like creatures glide through the thick liquid,
+sending small ripples across the surface of the river.
+~
+E
+slabs granite~
+Wide granite slabs float along the molten river, their surfaces gleaming
+as clear crystal solidifies on the rough dark grey rock.
+~
+-1
+S
+
+#41275
+Gilded Hall~
+Great blocks of schist rise up from the bowels of this earthen plane,
+their gilded surfaces gleaming in the brilliant luminescence of the musty
+hall.  Running alongside the sparkling floor, the liquid crystal river
+emits a radiant glow as it refracts light through its shimmering ripples. 
+To the south, the molten river sharply turns westward the only way to
+cross it is via a series of floating basalt blocks that slowly move with
+the ebbing current.  Extending northwards, the glinting floor tapers into
+a narrow ledge that cautiously winds around a protruding bend in the
+cavern wall.
+~
+[Estrella] extras done
+~
+167247872 11 7 0
+D0
+~
+~
+0 -1 41276 10 10 5
+D2
+~
+~
+0 -1 41274 10 10 5
+E
+schist gilded floor ledge~
+Golden flecks bespeckle the dark grey rock, their metallic surfaces
+glimmering as a rainbow-hued light descends upon the area.  Jutting out
+from the wall, a narrow ledge winds to the north, its underside eroded
+somewhat by the crystal river.
+~
+E
+crystal river ripples basalt blocks~
+Gently surging in wide ripples, the molten river slowly rises and falls
+as it meanders through the underground cavern.  Floating on the surface
+of the liquid crystal, large basalt blocks are sluggishly pushed about by
+the dense river.  Oddly shaped scratch marks mar the surface of the
+stepping-stones, a clear indication that some creatures have crossed to
+the other side.
+~
+-1
+S
+
+#41276
+Greywacke Alcove~
+The smooth greywacke walls, resplendent as if they had been polished with
+wax, reflect the surroundings of the cosy alcove on their near black
+surfaces.  Nestled behind a sheer ledge that falls away to the south,
+this darkened hollow sits on the west bank of a molten crystal river.  A
+bright luminescence sparkles about the alcove as bright, rainbow-hued
+light refracts through the liquid rock, sending vast displays of colour
+in all directions.  Westward, floating on the surface of the river, a
+large slab of greywacke seems to be held in stasis by the gently eddying
+current.
+~
+[Estrella] extras done
+~
+167247872 11 7 0
+D1
+~
+~
+0 -1 41277 10 10 5
+D2
+~
+~
+0 -1 41275 10 10 5
+E
+walls alcove black~
+The dark walls of the alcove mirror each other on their glossy black
+surfaces, making the hollow seem a lot deeper than it actually is.  The
+reflection of the gleaming crystal river glistens off the walls in
+luminescent brilliance.
+~
+E
+ledge sheer~
+Dropping steeply toward the thick river, the narrow ledge winds around a
+large outcrop of rock where the greywacke gradually metamorphoses into a
+glittering passage of schist.
+~
+E
+river crystal molten luminescence~
+Sluggishly meandering from south to north the icy liquid rock swirls
+about as it rebounds from the deep channel in which it flows.  As light
+filters through the molten crystal it refracts off small blocks of the
+precious stone, casting rainbow coloured light around the area.
+~
+E
+slab greywacke~
+Floating on the molten crystal river, the large slab of greywacke rises
+and falls with the ebbing current.  The edges of the block are thickly
+coated in solid crystal.  A faint gleam on the surface of this large
+stepping-stone indicates that it has, on occasion, been fully submerged
+in the liquid rock.
+~
+-1
+S
+
+#41277
+Unstable Stepping Stone~
+Floating on the surface of the liquid rock a slightly gem-encrusted block
+of greywacke drifts on the icy mass.  Long slender stalactites reach down
+from the roof of the cavern, their lengthy fingers slippery from the
+slowly oozing water that trickles down them.  To the east, gleaming halls
+of pale limestone open into a great cathedral of soft rock.  The walls
+shimmer as water seeps through the whitish stone.  Westward, a glossy
+blackened alcove rises out of the crystalline river 
+~
+[Estrella] extras done
+~
+167247872 11 7 0
+D1
+~
+~
+0 -1 41278 10 10 5
+D3
+~
+~
+0 -1 41276 10 10 5
+E
+gem encrusted block greywacke~
+Filling in the fissures and cracks that riddle the surface of the
+greywacke stepping stone, solidifying crystal adheres itself to the rough
+rock creating a smooth coating that makes the surface rather slippery.
+~
+E
+stalactites slender fingers~
+The wide base of the stalactites slowly tapers into a smoothly rounded
+con as the pale-pink coloured limestone extends towards the crystal
+river, their entirety covered in a slimy coat of stagnating water.
+~
+E
+river crystal molten~
+The dense mass of molten rock gradually oozes down the deep canal that
+divides greywacke from limestone.  Filtering all through the coagulated
+liquid a colourful brilliance radiates light around the area, besparkling
+the cavern with a rainbow-hued brightness.
+~
+-1
+S
+
+#41278
+Watery Limestone Hall~
+Seeping through the pale limestone, beading water oozes down the rock
+walls.  Stalagmites, rising up from the floor of the cave, are mirrored
+by the stalactites that reach down from the cavern's ceiling, in some
+places the two meet, creating large pillars of moist rock.  To the east,
+the limestone continues, forming a darkened cave, where a chilling draft
+emanates from; whilst to the west a sparkling molten crystal river exudes
+in a northerly direction.  Floating on the wide ice-cold rock, a large
+greywacke boulder drifts about its scratched surface indicates that it
+has been used as a means to cross the river.
+~
+[Estrella] extras done
+~
+167247872 11 7 0
+D1
+~
+~
+0 -1 41279 10 10 5
+D3
+~
+~
+0 -1 41277 10 10 5
+E
+stalactites stalagmites pillars~
+Large conical shaped formations rise from the floor of the cavern, their
+pale pink surfaces glowing with a gentle luminescence that emanates from
+the molten crystal river.  Slowly feeding the stalagmites with drips of
+mineralised water, stalactites reach down toward the towers of limestone,
+in some places the stalagmites and stalactites meet, forming natural
+pillars of rock that reach from the floor to the ceiling.
+~
+E
+molten crystal river~
+Roiling in thick profusion, the icy rock smoothly flows in a mass
+migration to the north.  Refracting within the slowly oozing crystal a
+bright rainbow hued luminescence sparkles throughout the dense liquid.
+~
+E
+greywacke boulder~
+Seemingly held in stasis, the dark stone drifts marginally along the
+surface of the river, its movements restricted by a miniature whirlpool. 
+Deep scratches have been gouged into the surface of the boulder by some
+unearthly creatures.
+~
+E
+limestone walls cave~
+Coating the limestone walls with a layer of slimy material, freely
+flowing water seeps through the soft rock and onto the floor of the
+cavern.  Glinting on the wet surfaces, the brilliant luminescence that
+emanates from the river catches on the uneven rock wall; the colourful
+light causes the limestone to take on unnatural hues.
+~
+-1
+S
+
+#41279
+Limestone Chamber~
+Pale walls, rounded by the erosion of constantly flowing water, rise up
+creating a large domed ceiling.  Pillars of amalgamated mineral deposits
+form great arches that span from one side of the chamber to the other.  A
+cool draft of musty air descends from a fissure in the roof of the rock
+cavern.  To the west, the limestone continues, with slowly forming
+stalactite and stalagmite columns.  A dim rainbow-hued light filters
+across the chamber, its only discernable source a molten crystal river
+that flows sluggishly beyond the columns to the west.
+~
+[Azerin] Ests area
+[Estrella] desc/extras done :)
+~
+167247872 11 7 0
+D3
+~
+~
+0 -1 41278 10 10 5
+D4
+~
+~
+0 -1 41271 10 10 5
+E
+walls domed ceiling~
+Shimmering in the gentle light, the pale pink limestone walls rise up and
+slowly form a gracefully domed ceiling.  Eroded by the omnipresent water
+that flows in rivulets, the chamber walls have been worn smooth,
+providing no hand or foot holds.
+~
+E
+mineral deposits pillars arches~
+Drips of water infused with the mineral ore of limestone, have slowly
+formed great stalagmites that rise out of the cavern floor.  Merged with
+stalactites, the conical rock formations create pillars of slippery
+stone; the base of the stalactites, where they join with the ceiling are
+curved into elliptical archways that span across the domed chamber.
+~
+E
+fissure~
+Hardly more than a crack, this narrow opening extends along the roof of
+the chamber for several feet.  Dividing a natural arch, the fissure runs
+close to a pale limestone pillar.  The column appears to have had chunks
+of rock hewn out of its smooth surface, providing a stable ladder.
+~
+-1
+S
+
+#41280
+Cavern Of Mithril And Gold~
+Mounds of iron sand and unprocessed ore lie around the cavern's edges,
+barrels and tarps stacked amongst them.  Walls of wrought iron form a
+woven defence against would-be thevies, the dull metal bars covered with
+thorns and fingernail-sized blades.  A basket of earth and stone drapes
+from the high ceiling, its laticework fine enough to hold a human sized
+occupant.  An archway to the west leads into a winding cavern of
+glimmering metal and rock, a cobbled red-brick path winding through it. 
+Bisecting the southern wall are double doors of mithril and gold, their
+rich surfaces oozing wealth and untold riches.
+~
+[Estrella] extras done
+~
+167247872 11 7 0
+D2
+gold and mithril doors~
+~
+131 -1 41261 10 10 5
+D3
+~
+~
+0 -1 41281 10 10 5
+E
+walls defence bars blades~
+Twisted and malformed bars of wrought iron surround the interior of the
+cavern, their blackened prison-like structure evoking a powerful negative
+tension over the large cavern.  Fine slivers of iron cover the bars that
+form the cell, the razor-sharp edges protruding in such a way as to
+lacerate anything that comes in contact with it.
+~
+E
+basket latticework ceiling~
+Hanging from the lofty ceiling a large lattice basket dangles.  The
+interwoven strands of finely spun rock and earth form a close mesh that
+could keep most humanoid creatures trapped inside the earthen netting.
+~
+-1
+S
+
+#41281
+Cavern Of Mithril And Gold~
+Blocks of basalt stone jutt from the undulating surface of the cavern
+walls, their edges chisseled until they form perfect cubes.  Runnels of
+mithril and gold drap between the outcrops, their solidifed surface like
+sparkling rivers.  An archway leads eastwards from the chamber, its
+opening framed with blood-red stone.  A cobbled red-brick path winds
+across the cave, leading out to the west and into a crossway beyond.
+~
+[Estrella] extras done
+~
+167247872 11 7 0
+D1
+~
+~
+0 -1 41280 10 10 5
+D3
+~
+~
+0 -1 41282 10 10 5
+E
+archway opening cobbled path~
+Pillars of red brick rise out of the ground on the eastern side of the
+cave, each brick immaculately laid to form perfect symmetry of both
+pillars.  Meeting in a vaulted peak, the two pillars form an archway over
+a blood-red cobbled path, which follows the lie of the land.
+~
+E
+runnels mithril gold basalt cubes~
+Large slabs of dark grey basalt jut out from the walls at carefully
+measured distances.  Dangling between the blocks of basalt, swathes of
+rippled gold and mithril shimmer in the dim lightning.
+~
+-1
+S
+
+#41282
+Cavern Of Mithril And Gold~
+Mammoth statues of beared warriors crouch at each of the four exits from
+the chamber, their helmeted heads forming impressive support for the
+vaulted cieling.  Each one of the titans would stand excess of three
+hundred feet high, and at least half as wide.  Slabs of silver, gold and
+mithril coat the walls of the cavern, the shield sized plates fastened
+with black chains and iron rivits.  Underfoot a sandstone path winds from
+the east to the west, its surface clean and clear.
+~
+[Estrella] extras done
+~
+167247872 11 7 0
+D0
+~
+~
+0 -1 41283 10 10 5
+D1
+~
+~
+0 -1 41281 10 10 5
+D2
+~
+~
+0 -1 41285 10 10 5
+D3
+~
+~
+0 -1 41284 10 10 5
+E
+statues bearded warriors titans~
+Poised as if waiting for battle, the great statues are crouched with one
+massive knee on the ground.  In one clenched fist each brandish an
+impressive war hammer which have been chiselled out of heavy onyx.  On
+the other arm they bear a great shield with the mark of Duroth on it. 
+Cold eyes shaded somewhat by their elaborate helms glare as these statues
+wield the weight of the cavern roof on their enormous heads.
+~
+-1
+S
+
+#41283
+Cavern Of Mithril And Gold~
+Strands of bent and twisted metal form an intricately woven monolith in
+the chambers heart, its conical peak rising about thirty feet skyward
+before expanding to encase a jagged shard of purple quartz, the gem at
+least the size of a cow or horse.  Cobbles of blue and black hued stones
+splay from the middle, each slab cut into a perfect hexagonal and tightly
+fitted to the next.  An archway of smooth bone-colored stone becons to
+the south, its pristeen whites gleaming.  Set in the northern wall is a
+semi-circle of black stone, its center stacked with ruddy coals.
+~
+[Azerin] climb monolith gets a zapping from the gem
+[Estrella] extras done
+[Estrella] perhaps get gem should be included int zap acode
+[Guin] what the heck does this guy sell/custom/do?
+[Cayln] hes a fucking forge worker, he melts things only
+~
+167251981 11 7 0
+D2
+~
+~
+0 -1 41282 10 10 5
+E
+monolith metal~
+It appears that the offcasts of broken or partially made armour have been
+used to create this monolith of woven metal.  The base of this large
+structure spans about twenty feet in diameter and the area surrounding it
+is strewn with twisted strands of metal.
+~
+E
+jagged gem~
+The sizeable quartz gem sits in the heart of the giant monolith, its
+royal purple surfaces radiating a faint glow.  Looking as though it had
+been torn roughly from the depths of the earth, the jagged edges of this
+precious stone appear sharp and unmarred by erosion.
+~
+17 9 1509949540 3 0
+365 9 1509949540 3 0
+1466 17 1509949540 -2 0
+-1
+S
+
+#41284
+Cavern Of One Thousand Forges~
+Countless forges, anvils and metal sand spreads through the chamber,
+waves of heat wash from the blazing coals in a infernal that hadies would
+be proud of.  Sparks of molten metal dance on the blustering winds that
+gust through the cave, the sound of twisting and tearing metals playing a
+discordant melody upon it.  Massive doors of mithril and gold lie set in
+the western wall, the ground around them covered with offerings of broken
+arms and armor.
+~
+[Estrella] extras done
+~
+167247872 11 7 0
+D1
+~
+~
+0 -1 41282 10 10 5
+D3
+gold and mithril door~
+~
+131 -1 41286 10 10 5
+E
+forge anvil~
+Burning at infernal temperatures, the multitude of forges radiate a
+stifling heat, the coals in their heart glow a fiery orange that
+brightens the otherwise dark cavern.  Row upon row of wrought ion anvils
+stretch from one side of the vast hall to the other, their metallic
+surfaces blackened by the scalding heat which has bee transferred from
+the forges.
+~
+E
+doors mithril gold~
+Resplendent in the orange light that emanates from the multitude of
+forges, the golden doors dominate the western wall, their surfaces framed
+by mithril runes reminiscent of ancient dwarvish.
+~
+E
+broken arms armour~
+Destitute offcasts of weapons and armour litter the floor of the cavern,
+their misshapen, incomplete forms abandoned by their creator.
+~
+17 9 1509949540 3 0
+17 9 1509949540 3 0
+-1
+S
+
+#41285
+Hall of Amber~
+Thirty foot slabs of amber-hued stone have been set into the walls of the
+massive chamber, their edges sealed with an inch of gold and mithril. 
+Clusters of gems form pictures of peacocks, horses and wild flowers
+across their smooth surface.  A loop of forest-green stone hangs by
+silver chains from the ceiling, a spiderweb of rainbow light dancing
+within its center, through the flicking colors brief glimps of worlds
+dance for a fleeting moment before vanishing into the swirling light.
+~
+[Estrella] extras done
+~
+167247872 11 7 0
+D0
+~
+~
+0 -1 41282 10 10 5
+E
+loop forest green chain~
+Almost as verdant as a temperate rainforest, the stone loop is suspended
+from the vaulted ceiling by two silver chains attached to either side of
+it.
+~
+E
+rainbow light centre swirling~
+Pausing momentarily, the eddying light in the centre of the stone loop
+transgresses between a dazzling rainbow of colour and the images of
+strange worlds, the like of which have never been seen before.
+~
+-1
+S
+
+#41286
+Center Of The Plane Of Duroth~
+Pillars of jet rise in the chambers center, their black flected surface
+reflecting the illumnation cast from floating crystal shards.  Steps have
+been carved into the edge of the chamber to allow a sizable number of
+creatures to sit within the room.  A massive sphere of spinning stone
+hovers in the chambers heart, flickers of ruddy fire dancing across its
+surface.  A pair of gold and mithril doors have been set into the eastern
+wall, the only visable exit from the vaulted room.
+~
+[Azerin] touch stone sends you back to the mortal plane to the temple of kha-dar
+[Estrella] extras done
+~
+167251972 11 7 0
+D1
+gold and mithril door~
+~
+131 -1 41284 10 10 5
+D3
+holy door~
+~
+471 -1 41287 10 10 5
+E
+pillars jet black flected~
+Spanning from the floor to the lofty vaulted ceiling the jet-black
+pillars form straight rows of smooth rock that reflect the meagre light
+that infiltrates the area.
+~
+E
+crystal shards~
+Fine slivers of crystal drift about like specks of dust reflecting the
+red light that emanates from the spinning stone.
+~
+E
+sphere spinning stone~
+Gyrating rapidly in an anticlockwise direction, the distinct form of the
+spherical stone becomes a haze of motion.  The glow of the fire on its
+surface fluctuates into and out of the image of crossed war hammers.
+~
+E
+gold mithril doors~
+Heavy arched doors set between two pillars on the eastern wall shiver as
+the firelight from the stone illuminates the resplendent gold and mithril. 
+Down the centre of the two doors, elaborate mithril runes have been cast
+in a language reminiscent of that of ancient dwarvish.
+~
+A
+touch~
+stone sphere spinning~
+act_tochar( #touch, ch );
+act_notchar( #otouch, ch );
+transfer( ch, find_room( 27038 ) );
+act_notchar( #oappear, ch );
+~
+E
+touch~
+You touch the stone and suddenly the world changes around you
+~
+E
+otouch~
+$n touches the stone and disappears suddenly
+~
+E
+oappear~
+$n suddenly appears out of nowhere
+~
+!
+0 0 0
+A
+open~
+door west holy w~
+if( has_obj( 4116, ch ) ) {
+   act_tochar( #open, ch, obj, mob );
+   act_notchar( #ropen, ch, obj, mob );
+   open( room, west );
+}
+else if( is_wearing( 4116, ch ) ) {
+   act_tochar( #open, ch, obj, mob );
+   act_notchar( #ropen, ch, obj, mob );
+   open( room, west );
+}
+else {
+   act_tochar( #close, ch, obj, mob );
+   act_notchar( #rclose, ch, obj, mob );
+}
+~
+E
+open~
+@CAs you reach toward the holy door, as you approach the amulet of
+Durgoth glows.  The seal on the breaks and door opens wide.
+~
+E
+ropen~
+@C$n reaches toward the holy door, as $e approaches the amulet of Durgoth
+glows.  The seal on the breaks and door opens wide.
+~
+E
+close~
+@YYou approach the holy door, and try as you might the holy seal will
+not break.@n 
+~
+E
+rclose~
+@Y$n approaches the holy door, and try as $e might the holy seal will not
+break.
+~
+!
+0 0 0
+2465 9 1509949540 3 0
+-1
+S
+
+#41287
+Lord of The Smith~
+A great iron forge dominates the center of the chamber, metal sparks
+dancing from its surface as if a hammer were beating upon it.  The walls
+have been forged from sheets of metal, each of the primary ores
+represented in the work.  A glowing door has been set in the east, a
+complex set of cogs ticking slowly on it.
+~
+~
+167247878 11 9 0
+D1
+holy door~
+~
+471 -1 41286 10 10 5
+2637 9 1509949540 3 0
+-1
+S
+
+#0
+

@@ -1,0 +1,17 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+show( char, room, direction )<br>
+<br>
+PARAMETERS<br>
+<br>
+char - pointer to who to reveal the room to<br>
+room - pointer to which room to show the entrance in<br>
+direction - pointer to which direction to reveal<br>
+<br>
+DESCRIPTION:<br>
+<br>
+Reveals a door (if revealable) in room in direction.<br>
+</html>
+</body>

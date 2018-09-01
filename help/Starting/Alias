@@ -1,0 +1,29 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+alias                  : lists your aliases<br>
+alias [abbrev] [subst] : create a new alias<br>
+alias [abbrev]         : deletes the alias<br>
+<br>
+<h1> Description </h1>
+<br>
+This command allows you to replace a commonly used phrase by a shortened<br>
+version.  Anywhere you type the abbreviation it replaces it with the<br>
+substitution.  If the first letter of the abbreviation is a * then the<br>
+alias only takes affect if the first word on the line.  <br>
+<br>
+EXAMPLES:<br>
+<br>
+alias df drink fountain  : to drink from a fountain, type df.<br>
+alias df                 : deletes df alias.<br>
+<br>
+Preceding an alias with an * makes the alias only take effect if it is<br>
+the first thing typed on a line.<br>
+<br>
+EXAMPLES<br>
+<br>
+alias *ef eat food : to eat food, type ef, and it will only occur if<br>
+typed at the beginning of the line.<br>
+</html>
+</body>

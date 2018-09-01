@@ -1,0 +1,2142 @@
+#M2_AREA
+2
+
+Sha'kymor'al Outpost~
+Azerin II~
+Sha'kymor'al~
+~
+~
+
+0 0
+0
+1
+#ROOMS
+
+#1300
+Intersection of Two Caverns~
+The caverns here are significantly larger than they are to the south; the
+ceiling reaches higher overhead and the walls aren't as opressively close
+together.  A faint breeze blows in from the north, moving the still but
+not bringing any fresh air in.  Also from the north come muted creaks,
+groans and unintelligible shouts.  Faint wisps of moisture seem to hang
+in the air, possible evidence of a large body of water nearby.  Several
+small specks of dried blood cling to the road and lower walls, having
+seeped deeply into the rock.
+~
+[Ciani] Docks north, Sha'Darci west
+[Azerin] area south use to connect to 1202
+~
+167378945 0 9 0
+D0
+~
+~
+0 -1 1302 10 10 5
+D2
+~
+~
+0 -1 5024 10 10 5
+D3
+~
+~
+0 -1 1301 10 10 5
+E
+specks blood~
+Spattered across the floor and lower walls are dozens of tiny drops of
+blood, flung seemingly without pattern.  Evidence of a brawl, perhaps, or
+a mugging, or an assassination...
+~
+-1
+S
+
+#1301
+Sha'Darci~
+The walls and ceiling press close together along this section of roadway,
+creating a very claustrophobic feeling.  Shadows lick at each other
+across the floor, reaching and grasping at passersby.  The caverns open
+up somewhat to the east, as two roads intersect.  The lightest touch of
+moisture hangs in the air, suggesting the possible nearby presence of
+water.
+~
+~
+167378945 0 9 0
+D0
+~
+~
+0 -1 1314 10 10 5
+D1
+~
+~
+0 -1 1300 10 10 5
+-1
+S
+
+#1302
+Sharp Bend in the Trail~
+The cavern trail bends sharply; the tunnel to the south leading into
+shadow while the tunnel widens into a massive natural cavern to the east. 
+From the east comes the sound of waves and flowing water, as if there is
+a large underground lake nearby.  Visible in the same direction are three
+parallel docks jutting out northward, reinforcing the possible existance
+of water.
+~
+~
+167378945 0 9 0
+D1
+~
+~
+0 -1 1303 10 10 5
+D2
+~
+~
+0 -1 1300 10 10 5
+E
+docks~
+Extending out into the underground lake are three parallel docks of
+differing lengths.  The closest two appear to be old and rickety, while
+the third, and largest, one is made of newly hewn boards.
+~
+E
+1 east~
+Extending out into the underground lake are three parallel docks of
+differing lengths.  The closest two appear to be old and rickety, while
+the third, and largest, one is made of newly hewn boards.
+~
+-1
+S
+
+#1303
+Wide Cavern Trail Near the Docks~
+The cavern here is massively larger than two the east, blooming out to
+reach for unknown heights above.  Light glints off the waters of an
+underground lake just to the north-east, and the muted sound of breaking
+waves accompanies a faint stench on the breeze.  The air is humid, heavy,
+almost thick-feeling, and is mostly unstirred by the mild breeze.  The
+docks and surrounding areas show evidence of extreme business: muddy
+footsteps cover most of the shoreline docks, and the docks themselves
+show evidence of repeated use and abuse.
+~
+~
+167378945 0 9 0
+D1
+~
+~
+0 -1 1304 10 10 5
+D3
+~
+~
+0 -1 1302 10 10 5
+E
+muddy footsteps~
+Wet, dirty footprints have been tracked all over the wood of the docks
+and boardwalk.  Feet of all sizes have created these prints, goblin-sized
+footprints walk along next to troll- and ogre-sized ones.
+~
+E
+lake~
+Filling the massive cavern to the east are the thick, slimy green waters
+of an underground lake.  Small waves ripple along its surface, breaking
+occasionally against the uprights supporting the docks.
+~
+-1
+S
+
+#1304
+Before The Docks~
+The nearest of the docks leaps forward just to the northeast, its rough
+planking covered in scratches, scuffs and small dents in the wood from
+constant usage.  Sand has been tracked across the stone floor underfoot,
+creating something of a safety concern.  The stone floor gives way to the
+wood of a boardwalk not much further to the east.  Something dark has
+stained the road nearby, small specks and drops scattered all about.
+~
+~
+167378945 0 9 0
+D1
+~
+~
+0 -1 1305 10 10 5
+D3
+~
+~
+0 -1 1303 10 10 5
+E
+dark specks drops~
+A large smattering of something dark has seeped deeply into the wood of
+the docks and boardwalk, refusing to be removed even by the repeated
+abrasions of the nearby water.  The pattern they take suggest they might
+be old blood spilled in a past brawl.
+~
+E
+docks~
+Three parallel docks jut forth into the murky waters of the underground
+lake.  The dock in the middle is by far the shortest, and the dock to the
+far east looks as though it reaches the furthest, though not much further
+than the nearest one.  The nearest two are made of roughly planed boards
+of dark wood, and look to be very old.  Bright, new boards form the third
+dock, looking as though they were newly laid.
+~
+-1
+S
+
+#1305
+Start of a Rough Dock~
+A long wooden dock stretches north of this point, its rough planks
+intersecting neatly with the boardwalk underfoot.  Stout wooden poles
+descend through the water to support the dock.  Scratches and markings of
+all kinds mar the surface of the supporting poles.  Hemp fibres of
+various lengths have been caught on their splintered surfaces, testament
+to repeated moorings of ships.  The ground drops away to the north side
+of the boardwalk, a steep incline leading down to the water.  A single
+board, set on end, provides the only barrier between the boardwalk and
+the drop.
+~
+[Ciani] Maybe have a "get fibre" thing, 2% or so chance of getting twine or a fibre or something for a custom?
+[Ciani] Also, maybe have some sort of customs agent guy wholl keep the undesirables out of the city?
+[Eliza] poles/hemp/scratches - they can all be one.
+~
+167378945 0 9 0
+D0
+~
+~
+0 -1 1306 10 10 5
+D1
+~
+~
+0 -1 1307 10 10 5
+D3
+~
+~
+0 -1 1304 10 10 5
+-1
+S
+
+#1306
+Along a Rough Dock~
+The splintery, weathered planks of the pier extend north and south from
+this point.  Thick poles rise up from the water below, supporting this
+beaten dock.  Water laps around their bases, each wave leaving a fine
+film of scum around the wooden uprights.  A faint smell of filth pervades
+the area.  The dock creaks slightly as larger waves crash against it.  A
+small building has been built to the east, standing dock-height on sturdy
+wooden stilts.
+~
+[Eliza] extra building/stilts
+[Ciani] will add something for building when i figure out what i want it to be
+~
+167378945 0 9 0
+D0
+~
+~
+0 -1 1309 10 10 5
+D2
+~
+~
+0 -1 1305 10 10 5
+D3
+~
+~
+0 -1 1308 10 10 5
+-1
+S
+
+#1307
+Along the Boardwalk~
+The rough boardwalk continues along the shoreline, periodically
+intersected by the jutting docks.  Stains both dark and faint mar the
+splintery boards, evidence of past brawls.  The dock just north from here
+is shorter than the docks flanking it on either side, perhaps because it
+serves a different purpose.  The cavern wall rises dozens of feet
+overhead, curving up and around to create a dome over this massive
+natural cavern.  On the north side of the boardwalk the ground falls
+away, a sharp drop down to the water level.  A single board acts as a
+wall along the north edge of the boardwalk.
+~
+~
+167378945 0 9 0
+D0
+~
+~
+0 -1 1310 10 10 5
+D1
+~
+~
+0 -1 1311 10 10 5
+D3
+~
+~
+0 -1 1305 10 10 5
+E
+stains~
+These stains are of a dark crimson substance, probably blood.  Scattered
+about in clusters of droplets, they seem to have been spilled from a
+single wound during a long passed fight.
+~
+E
+cavern wall dome~
+Carved countless years ago from the dark stone, the wall to the south has
+been worn smooth by passing time and pedestrians.  It rises up to perhaps
+half a hundred feet overhead before reaching into the curving of the high
+ceiling overhead.  Dark grey flecks are scattered throughout its surface,
+lacking enough lustre to reflect the light.
+~
+-1
+S
+
+#1308
+Old Boat House~
+The dilapidated building slopes slightly downwards to the north, a
+trapdoor at the wall warped by the movement until it appears jammed.  A
+low door in the east allows access to the docks, their woodwork far more
+secure than this decaying shop.  The remains of partially completed boats
+lie in a tangled heap against the south wall, the woodwork rotting
+quickly in the damp.
+~
+[Ciani] Not sure what to put here. Bob's Souvenirs, maybe?
+[Ciani] Or maybe a waterfront cafe. For those who like to smell the shit dumped in the water while they eat.
+~
+167378945 0 9 0
+D1
+~
+~
+0 -1 1306 10 10 5
+-1
+S
+
+#1309
+The End of the Dock~
+The edge of the pier juts out over the water here.  The thick poles
+supporting the dock are grey and weather-worn, their sides showing
+chafing from the moorings of countless large vessels.  Lapping gently at
+the bases of the poles, the water is a murky, sickly green-brown shade. 
+A faint smell wafts up with the breaking of each wave, evidence that the
+water has been used as some sort of dumping ground.
+~
+[Eliza] hard to make extras here. The rdescs say basically all that needs saying.
+~
+167378945 0 9 0
+D2
+~
+~
+0 -1 1306 10 10 5
+E
+poles~
+These poles holding up the dock look to be extremely old; perhaps they
+are the first ones that were built.  Although constant use has smoothed
+them down, it has also cut deeply into the surface, creating a morass of
+criss-crossing scratches and gouges.
+~
+-1
+S
+
+#1310
+End of a Dock~
+This dock is short; jutting only eighteen feet into the natural lake, it
+is easily dwarfed by the other two piers.  The planks underfoot are a
+little smoother than those of the docks to the east and west, and the
+upright supports are more slender, yet just as worn.  Scum, tinged a vile
+green hue, floats on the water here, collecting around the bases of the
+thick poles holding up the dock.  A prominent @esign@n has been posted at
+the end of the dock.
+~
+[Ciani] How about an easter egg type thing here -- some kind of search requiring multiple rextras for hints that gives some sort of output involving a gremlin somehow?
+[Ciani] I personally will forever associate old docks with gremlins ;)
+~
+167378945 0 9 0
+D2
+~
+~
+0 -1 1307 10 10 5
+E
+prominent sign~
+Somebody has erected a large, bright sign at the end of the pier:
+@RPrivate craft ONLY at this dock.@n
+~
+E
+upright supports~
+Several hardwood trees have been turned into thick logs which hold up
+this dock.  The logs are covered with scratches and dents from dozens,
+maybe hundreds of moorings by ships of all sizes.  One seems especially
+badly torn up, almost as if something raked claws along its length.
+~
+-1
+S
+
+#1311
+End of the Boardwalk~
+The rough-planked boardwalk ends with the start of the pier to the north. 
+From this perspective, it appears to jut out farther than the other two
+docks, but then again it may just be a trick of the light.  Small waves
+roll in from the north, crashing against the rough wall of stone upon
+which the boardwalk perches.  A faint smell of filth permeates the air,
+becoming a little stronger with each breaking wave.
+~
+~
+167378945 0 9 0
+D0
+~
+~
+0 -1 1312 10 10 5
+D3
+~
+~
+0 -1 1307 10 10 5
+E
+stone~
+Rising from the surf is a short wall of stone.  The boardwalk has been
+built upon this wall, perhaps to keep dry the feet of rich merchants. 
+The waves lack the power to crash hard enough to send spray up onto the
+boards, so merely break softly against the lower third of the wall.
+~
+-1
+S
+
+#1312
+Along the New Dock~
+Though rough, the boards forming the dock underfoot are the shiny
+green-brown color of new wood.  Their surfaces lack almost conspicuously
+in stains, as if they were recently laid in replacement of an older dock. 
+However new the boards may be, the supporting poles look to be the
+originals; splinters crack off their mostly rounded sides and one has
+begun to rot.  The dock continues northward, and the shore and boardwalk
+are just to the south.
+~
+~
+167378945 0 9 0
+D0
+~
+~
+0 -1 1313 10 10 5
+D2
+~
+~
+0 -1 1311 10 10 5
+E
+poles rot splinters~
+Contrasting sharply with the new boards are the old supporting planks. 
+Although worn smooth from constant usage, the rough ropes used for
+mooring have cut deeply into their surfaces, forever marring them, and
+raising splinters to threaten the hands of sailors.  One of the poles
+just to the east has begun to rot away near the bottom.
+~
+-1
+S
+
+#1313
+End of the New Dock~
+The new boards of the dock end abruptly here, continuing slightly further
+into the water than both docks to the west.  Supporting the new planks
+are old upright poles, splintering and chipped from dozens of moorings by
+massive ships.  Reaching uncountable feet overhead is the ceiling of this
+massive natural cavern, nearly invisible above a layer of fog.  Waves
+break sullenly against the dock's supports, leaving sickly green foam
+against the old wood.
+~
+~
+167378945 0 9 0
+D2
+~
+~
+0 -1 1312 10 10 5
+E
+water foam~
+The waves have left a thick foam against the supporting poles.  It pools
+around their bases, bubbling slightly with each wave that passes
+underneath.  The water itself is murky and green-tinged, from constant
+dumping of waste and filth.
+~
+E
+ceiling fog~
+The ceiling has been lost from sight by the thin layer of fog collecting
+overhead.  Slender wisps of moisture curl around each other midway to the
+ceiling, creating a mostly translucent second ceiling.
+~
+A
+~
+~
+ch = rand_player( room );
+act_room( #wave, ch );
+wait( 1 );
+act_room( #spray, ch );
+damage( mob, ch, 6d4, acid, "an acidic spray of water" );
+~
+E
+wave~
+@CAn especially large wave rolls in, crashing against a nearby pole!@n
+~
+E
+spray~
+@GThe spray of water from the impact burns your skin!@n
+~
+!
+2 50 0
+-1
+S
+
+#1314
+Sha'Darci~
+The road moves into a straight stretch here.  Shadows fill the narrow
+corridor, preventing one from seeing in either direction.  They lick
+across the floor and reach across the ceiling, creating a dusky cocoon. 
+Sounds of bustling activity drift in from the south, and faint droplets
+of moisture hang in the still, thick air, which is heavy with the smell
+of damp mustiness.
+~
+~
+167247877 0 9 0
+D0
+~
+~
+0 -1 1315 10 10 5
+D2
+~
+~
+0 -1 1301 10 10 5
+-1
+S
+
+#1315
+Sha'Darci~
+Shadows rise up the walls of the cavern, reaching across the tunnel and
+along the ceiling to lick at each other.  Worn smooth by countless years
+of passing people, the walls of the tunnel are noticeably rounded.  The
+tunnel twists west and south, nothing visible around the corners due to
+the lurking shadows.  The air is thick, stifling and musty; the faint
+hints of moisture clinging in the air doing nothing to freshen it.
+~
+~
+167247877 0 9 0
+D2
+~
+~
+0 -1 1314 10 10 5
+D3
+~
+~
+0 -1 1316 10 10 5
+-1
+S
+
+#1316
+Sha'Darci~
+Shadows rise up along the walls and cloak the ceiling in dusky gloom. 
+They flicker across the floor and ceiling, grasping with insubstantial
+fingers.  The slightly-rounded walls have been worn smooth by years -
+centuries maybe - of use, and the dark, moist floor is filthy from the
+same.  Thick layers of debris have accumulated in the dank gutters
+bordering the road, and a sickly scent is released with each faint
+stirring of the air.
+~
+[Ciani] will add an extra for debris when i have something to write, maybe for part of a quest or somethin
+~
+167247877 0 9 0
+D0
+~
+~
+0 -1 1317 10 10 5
+D1
+~
+~
+0 -1 1315 10 10 5
+-1
+S
+
+#1317
+Sha'Darci~
+The road moves into another straight stretch; the shadows licking and
+dancing along the walls and ceiling of this narrow corridor block all
+vision to the noth and south.  From time to time a faint breeze touches
+the air, so faint in fact it can barely be felt at all.  The air is heavy
+and still save for the breeze; it carries with it the smell of ancient
+mustiness.
+~
+~
+167247877 0 9 0
+D0
+~
+~
+0 -1 1318 10 10 5
+D2
+~
+~
+0 -1 1316 10 10 5
+-1
+S
+
+#1318
+Sha'Darci~
+Shadows loom up around the walls and reach across the ceiling and floor
+with insubstantial flickering fingers.  The walls and ceiling form a
+rough cynlindrical shape, bored through the rock countless years ago and
+worn smooth with the passage of time.  The air hangs thick and heavy,
+nearly stifling in its stillness.  The reek of mustiness pervades the
+area, as though the air hasn't moved in weeks.
+~
+~
+167247877 0 9 0
+D2
+~
+~
+0 -1 1317 10 10 5
+D3
+~
+~
+0 -1 1319 10 10 5
+-1
+S
+
+#1319
+Sha'Darci~
+The tunnel twists onces more, the flickering, insubstantial shadows
+veiling all further areas of the narrow corridor from sight.  Thin
+accumulations of dirt and debris have collected in the gutters along the
+edges of the road, their stagnating and rotting only adding to the
+oppressive atmosphere of this tiny cave trail.  The air is still; however
+an occasional abrupt noise from the north breaks the silence from time to
+time.
+~
+~
+167247877 0 9 0
+D0
+~
+~
+0 -1 1320 10 10 5
+D1
+~
+~
+0 -1 1318 10 10 5
+-1
+S
+
+#1320
+Sha'Darci~
+A trickling ribbon of water runs down the eastern roadside gutter, the
+tiny flow not even enough to wet the lips of a parched traveler.  The
+night hunters roadway continues northwards heading deeper from the city,
+the hidden tunnels allowing vyan spies and assassins to sneak about unseen
+by the watchful eye of dwarf or man.
+~
+~
+167247877 0 9 0
+D0
+~
+~
+0 -1 1321 10 10 5
+D2
+~
+~
+0 -1 1319 10 10 5
+-1
+S
+
+#1321
+Sha'Darci~
+Graceful archways intertwine across the dark roadway, their slender
+pillars offering little support for the roof but adding a great amount of
+artistic flare to the otherwise drab tunnels.  A shallow gutter runs
+along the southern wall, a trickle of water dribbling down it. 
+Northwards the air becomes increasingly still, the deep earth allowing
+very little ventilation.
+~
+~
+167247877 0 9 0
+D0
+~
+~
+0 -1 1322 10 10 5
+D2
+~
+~
+0 -1 1320 10 10 5
+-1
+S
+
+#1322
+Sha'Darci~
+Bending through the underdark the roadway leads from natural tunnel to
+vyan crafted and back again on its endless journey though the land. 
+Without waystone or sign travelers along its black stone passageways are
+assumed to know where they are going.  Far to the south the sound of
+running water echoes faintly in the still tunnels.
+~
+~
+167247877 0 9 0
+D2
+~
+~
+0 -1 1321 10 10 5
+D3
+~
+~
+0 -1 1323 10 10 5
+-1
+S
+
+#1323
+Gates of Sha'kymor'al Outpost~
+The roadway ends at a sturdy iron gate, its surface coated in spiderweb
+designs and snaking writing.  The black stones around the doorway have
+been worked until smooth as ice, there surface reflecting any light. 
+Eastwards the road of Sha'Darci - The dark way - continues onwards as it
+name suggests, into the darkness.
+~
+[Azerin] west was 1324
+~
+167247877 0 9 0
+D1
+~
+~
+0 -1 1322 10 10 5
+D3
+spider-web door~
+~
+1 -1 870 10 10 5
+-1
+S
+
+#1324
+sha'darci~
+Under Construction.
+~
+[Azerin] east was 1323
+~
+167247877 0 9 0
+D2
+~
+~
+0 -1 1325 10 10 5
+D3
+~
+~
+0 -1 1326 10 10 5
+-1
+S
+
+#1325
+sha'darci~
+Under Construction.
+~
+~
+167247877 0 9 0
+D0
+~
+~
+0 -1 1324 10 10 5
+-1
+S
+
+#1326
+sha'darci~
+Under Construction.
+~
+~
+167247877 0 9 0
+D1
+~
+~
+0 -1 1324 10 10 5
+D2
+~
+~
+0 -1 1336 10 10 5
+D3
+~
+~
+0 -1 1335 10 10 5
+-1
+S
+
+#1327
+The Great Stair~
+Built by the dwarves, the stairs are a marvel of their creative skill,
+each step perfectly set against each other, remaining firm and damage
+free for hundreads of years.  Narrow slots in the walls allow air to
+filter in from far above, ensuring that enough air remains to breath at
+these deep depths.
+~
+~
+167247877 0 9 0
+D4
+~
+~
+0 -1 1383 10 10 5
+D5
+~
+~
+195 -1 1360 10 10 5
+-1
+S
+
+#1328
+sha'darci~
+Under Construction.
+~
+~
+167247877 0 9 0
+D0
+~
+~
+0 -1 1329 10 10 5
+D3
+~
+~
+0 -1 1330 10 10 5
+-1
+S
+
+#1329
+sha'darci~
+Under Construction.
+~
+~
+167247877 0 9 0
+D2
+~
+~
+0 -1 1328 10 10 5
+-1
+S
+
+#1330
+sha'darci~
+Under Construction.
+~
+~
+167247877 0 9 0
+D0
+~
+~
+0 -1 1331 10 10 5
+D1
+~
+~
+0 -1 1328 10 10 5
+D3
+~
+~
+0 -1 1332 10 10 5
+-1
+S
+
+#1331
+sha'darci~
+Under Construction.
+~
+~
+167247877 0 9 0
+D2
+~
+~
+0 -1 1330 10 10 5
+D3
+~
+~
+0 -1 1351 10 10 5
+-1
+S
+
+#1332
+sha'darci~
+Under Construction.
+~
+~
+167247877 0 9 0
+D1
+~
+~
+0 -1 1330 10 10 5
+D2
+~
+~
+0 -1 1333 10 10 5
+-1
+S
+
+#1333
+sha'darci~
+Under Construction.
+~
+~
+167247877 0 9 0
+D0
+~
+~
+0 -1 1332 10 10 5
+D1
+~
+~
+0 -1 1334 10 10 5
+D2
+~
+~
+0 -1 1335 10 10 5
+D3
+~
+~
+0 -1 1340 10 10 5
+-1
+S
+
+#1334
+sha'darci~
+Under Construction.
+~
+~
+167247877 0 9 0
+D3
+~
+~
+0 -1 1333 10 10 5
+-1
+S
+
+#1335
+sha'darci~
+Under Construction.
+~
+~
+167247877 0 9 0
+D0
+~
+~
+0 -1 1333 10 10 5
+D1
+~
+~
+0 -1 1326 10 10 5
+-1
+S
+
+#1336
+sha'darci~
+Under Construction.
+~
+~
+167247877 0 9 0
+D0
+~
+~
+0 -1 1326 10 10 5
+D3
+~
+~
+0 -1 1337 10 10 5
+-1
+S
+
+#1337
+sha'darci~
+Under Construction.
+~
+~
+167247877 0 9 0
+D1
+~
+~
+0 -1 1336 10 10 5
+D3
+~
+~
+0 -1 1338 10 10 5
+-1
+S
+
+#1338
+sha'darci~
+Under Construction.
+~
+~
+167247877 0 9 0
+D0
+~
+~
+0 -1 1339 10 10 5
+D1
+~
+~
+0 -1 1337 10 10 5
+D3
+~
+~
+0 -1 1341 10 10 5
+-1
+S
+
+#1339
+sha'darci~
+Under Construction.
+~
+~
+167247877 0 9 0
+D0
+~
+~
+0 -1 1340 10 10 5
+D2
+~
+~
+0 -1 1338 10 10 5
+-1
+S
+
+#1340
+sha'darci~
+Under Construction.
+~
+~
+167247877 0 9 0
+D0
+~
+~
+0 -1 1349 10 10 5
+D1
+~
+~
+0 -1 1333 10 10 5
+D2
+~
+~
+0 -1 1339 10 10 5
+D3
+~
+~
+0 -1 1347 10 10 5
+-1
+S
+
+#1341
+sha'darci~
+Under Construction.
+~
+~
+167247877 0 9 0
+D1
+~
+~
+0 -1 1338 10 10 5
+D3
+~
+~
+0 -1 1342 10 10 5
+-1
+S
+
+#1342
+sha'darci~
+Under Construction.
+~
+~
+167247877 0 9 0
+D0
+~
+~
+0 -1 1343 10 10 5
+D1
+~
+~
+0 -1 1341 10 10 5
+-1
+S
+
+#1343
+sha'darci~
+Under Construction.
+~
+~
+167247877 0 9 0
+D1
+~
+~
+0 -1 1346 10 10 5
+D2
+~
+~
+0 -1 1342 10 10 5
+D3
+~
+~
+0 -1 1344 10 10 5
+-1
+S
+
+#1344
+sha'darci~
+Under Construction.
+~
+~
+167247877 0 9 0
+D0
+~
+~
+0 -1 1358 10 10 5
+D1
+~
+~
+0 -1 1343 10 10 5
+D2
+~
+~
+0 -1 1345 10 10 5
+-1
+S
+
+#1345
+sha'darci~
+Under Construction.
+~
+~
+167247877 0 9 0
+D0
+~
+~
+0 -1 1344 10 10 5
+-1
+S
+
+#1346
+sha'darci~
+Under Construction.
+~
+~
+167247877 0 9 0
+D0
+~
+~
+0 -1 1347 10 10 5
+D3
+~
+~
+0 -1 1343 10 10 5
+-1
+S
+
+#1347
+sha'darci~
+Under Construction.
+~
+~
+167247877 0 9 0
+D0
+~
+~
+0 -1 1355 10 10 5
+D1
+~
+~
+0 -1 1340 10 10 5
+D2
+~
+~
+0 -1 1346 10 10 5
+D3
+~
+~
+0 -1 1348 10 10 5
+-1
+S
+
+#1348
+sha'darci~
+Under Construction.
+~
+~
+167247877 0 9 0
+D1
+~
+~
+0 -1 1347 10 10 5
+-1
+S
+
+#1349
+sha'darci~
+Under Construction.
+~
+~
+167247877 0 9 0
+D0
+~
+~
+0 -1 1350 10 10 5
+D2
+~
+~
+0 -1 1340 10 10 5
+-1
+S
+
+#1350
+sha'darci~
+Under Construction.
+~
+~
+167247877 0 9 0
+D1
+~
+~
+0 -1 1351 10 10 5
+D2
+~
+~
+0 -1 1349 10 10 5
+D3
+~
+~
+0 -1 1352 10 10 5
+-1
+S
+
+#1351
+sha'darci~
+Under Construction.
+~
+~
+167247877 0 9 0
+D1
+~
+~
+0 -1 1331 10 10 5
+D3
+~
+~
+0 -1 1350 10 10 5
+-1
+S
+
+#1352
+sha'darci~
+Under Construction.
+~
+~
+167247877 0 9 0
+D1
+~
+~
+0 -1 1350 10 10 5
+D3
+~
+~
+0 -1 1353 10 10 5
+-1
+S
+
+#1353
+sha'darci~
+Under Construction.
+~
+~
+167247877 0 9 0
+D1
+~
+~
+0 -1 1352 10 10 5
+D2
+~
+~
+0 -1 1354 10 10 5
+-1
+S
+
+#1354
+sha'darci~
+Under Construction.
+~
+~
+167247877 0 9 0
+D0
+~
+~
+0 -1 1353 10 10 5
+D1
+~
+~
+0 -1 1355 10 10 5
+D3
+~
+~
+0 -1 1356 10 10 5
+-1
+S
+
+#1355
+sha'darci~
+Under Construction.
+~
+~
+167247877 0 9 0
+D2
+~
+~
+0 -1 1347 10 10 5
+D3
+~
+~
+0 -1 1354 10 10 5
+-1
+S
+
+#1356
+sha'darci~
+Under Construction.
+~
+~
+167247877 0 9 0
+D0
+~
+~
+0 -1 1357 10 10 5
+D1
+~
+~
+0 -1 1354 10 10 5
+D2
+~
+~
+0 -1 1358 10 10 5
+D3
+~
+~
+0 -1 1359 10 10 5
+-1
+S
+
+#1357
+sha'darci~
+Under Construction.
+~
+~
+167247877 0 9 0
+D2
+~
+~
+0 -1 1356 10 10 5
+-1
+S
+
+#1358
+sha'darci~
+Under Construction.
+~
+~
+167247877 0 9 0
+D0
+~
+~
+0 -1 1356 10 10 5
+D2
+~
+~
+0 -1 1344 10 10 5
+-1
+S
+
+#1359
+Before the Gates of Sha'darci~
+Under Construction.
+~
+~
+167247877 0 9 0
+D1
+~
+~
+0 -1 1356 10 10 5
+-1
+S
+
+#1360
+Before The Great Stairs of Sha'darci~
+The bleached bones of fallen animals lie upon rocks and pine needles at
+the stairs base, the ancient bones cracked and crumbled like the stone
+work around them.  Upwards the stairs spiral out of sight, the steps worn
+smooth by the harsh weather.  Southwards a roadway cuts into the
+darkness, leading a traveler to even greater depths of the Everwinter
+Range.  A heavy set of iron bars have been recently erected in the
+tunnel, the stout grate preventing further travel upwards.
+~
+[Azerin] stairs upwards me thinks
+[Azerin] east was 1359
+[Azerin] closed till up is finished
+~
+167247877 0 9 0
+D2
+~
+~
+0 -1 1361 10 10 5
+D4
+iron grate~
+~
+195 -1 1327 10 10 5
+-1
+S
+
+#1361
+Road to Sha'darci~
+Ice layers the rocks of the bitterly cold tunnel with a sparkling array
+of crystals, the air so cold down at these depths that it appears to
+never melt.  Crawling through the chilling darkness runs a single lane
+roadway, heading southwards into the deep mountain or cutting northwards
+towards the base of a spiraling staircase.
+~
+~
+167247877 0 9 0
+D0
+~
+~
+0 -1 1360 10 10 5
+D2
+~
+~
+0 -1 1362 10 10 5
+-1
+S
+
+#1362
+Road to Sha'darci~
+The stonework has been covered with deep fractures caused by prying ice
+and frost working its way into the rocks.  Mounds of frost-covered stone
+lie scattered across the trail, most of the rubble appearing undisturbed
+by the passage of creatures.  Westwards the road heads deeper into the
+mountain while to the north it reaches a sprialing staircase.
+~
+~
+167247877 0 9 0
+D0
+~
+~
+0 -1 1361 10 10 5
+D3
+~
+~
+0 -1 1363 10 10 5
+-1
+S
+
+#1363
+Road to Sha'darci~
+Specks of blue stone fleck across the rock face of the tunnel, the
+mineral vein extending in a wide band through the dark rock.  Icy patches
+cake the tunnel, their spreading frost tendrils prying at the flaking
+stone.  A frozen stream gleams in a shallow gutter to the east of the
+road, the ice filled with branches and rotting pine needles.
+~
+~
+167247877 0 9 0
+D1
+~
+~
+0 -1 1362 10 10 5
+D2
+~
+~
+0 -1 1364 10 10 5
+-1
+S
+
+#1364
+Road to Sha'darci~
+The stone begins to show signs of the growing chill, flecks of frost dart
+across the walls and ceiling of the roadway the frost eating into the
+rock, the ice expanding slight flaws until over time they become cracks
+and fissures.  Northwards the chill gets worse, the stones shimmering
+with a dusting of ice, while to the south the road appears to have been
+struck by a cave-in, chunks of rubble lying across the path.
+~
+~
+167247877 0 9 0
+D0
+~
+~
+0 -1 1363 10 10 5
+D2
+~
+~
+0 -1 1365 10 10 5
+-1
+S
+
+#1365
+Road to Sha'darci~
+Chunks of fallen rubble spill out from the west where a great cave-inn
+has sealed the way onwards.  Northwards the roadway rises upwards,
+beginning to draw near to the steps while to the east the roadway winds
+into the darkness.  Broken pillars lie stacked against the southern wall
+the white stones cracked and split from their violent deaths.
+~
+~
+167247877 0 9 0
+D0
+~
+~
+0 -1 1364 10 10 5
+D1
+~
+~
+0 -1 1367 10 10 5
+D3
+~
+~
+0 -1 1366 10 10 5
+-1
+S
+
+#1366
+trail to sha'myrsa and sha'rheza~
+Mounds of rock and scree have piled up sealing the tunnel, the collaps
+appearing to have sealed the way for all time.  Cracks split through the
+rocks over head, perhaps the cave-in has not finished its deadly work. 
+Eastwards the passage appears more stable, the roadway continuing onwards
+in that direction.
+~
+[Kaelana] Trail to Sha'myrsa runs west
+[Azerin] another day maybe
+~
+167247877 0 9 0
+D1
+~
+~
+0 -1 1365 10 10 5
+-1
+S
+
+#1367
+Road to Sha'darci~
+Rubble lies strewn across the roadway, cast from the west where the
+tunnel appears to have suffered a minor collapse.  Overhead the ceiling
+has been carved apart by fissures where the shifting earth has torn
+across the granite.  The normally stout pillars show signs of damage, some
+sheered off at roof level leaving the crumbling stone above the road
+without much support.
+~
+~
+167247877 0 9 0
+D2
+~
+~
+0 -1 1368 10 10 5
+D3
+~
+~
+0 -1 1365 10 10 5
+-1
+S
+
+#1368
+Road to Sha'darci~
+The roadway winds through the dark caverns of the mountain, its path
+allowing a swifter travel for a night creature than across the ravine
+lands above.  The remains of dwarven sculptures dot the walls, the finer
+features of each one obliterated by pick and hammer.  Southwards the
+tunnel constricts making the journey difficult for a larger creature. 
+Towards the north an earthquake or similar event has shattered the rock
+leaving chunks of rubble strewn across the road.
+~
+~
+167247877 0 9 0
+D0
+~
+~
+0 -1 1367 10 10 5
+D2
+~
+~
+0 -1 1369 10 10 5
+-1
+S
+
+#1369
+Road to Sha'darci~
+The tunnel squeezes through the rocks, barely wide enough for an ogre to
+push their bulk through - in fact several of the jutting stones appear to
+have the remains of dried skin, left where a larger creature struck them. 
+The narrowness appears to abate further to the north, the path returning
+to its reasonable side before disappearing into the darkness beyond.
+~
+~
+167247877 0 9 0
+D0
+~
+~
+0 -1 1368 10 10 5
+D1
+~
+~
+0 -1 1370 10 10 5
+-1
+S
+
+#1370
+Road to Sha'darci~
+The air becomes increasingly still has one travels westwards through the
+under mountain pass, as it winds the tunnel constricts, making for a more
+claustrophobic journey.  Eastwards the passage widens, allowing for a
+much more pleasant travel without fear of bashing limb or head upon a
+rogue outcrop of stone.
+~
+~
+167247877 0 9 0
+D1
+~
+~
+0 -1 1371 10 10 5
+D3
+~
+~
+0 -1 1369 10 10 5
+-1
+S
+
+#1371
+Road to Sha'darci~
+Dust and cobwebs cover the roadway as it proceeds into the deeper
+mountain, its path becoming less trod by casual travelers.  Pillars of
+stone support the low ceiling, their sides chipped away until the appear
+rough and almost natural.  As it winds westwards the tunnel begins to
+narrow, the already low ceiling dipping lower still until a troll or
+ogre would have to hunch down to avoid scraping their head on the rough
+stone.
+~
+~
+167247877 0 9 0
+D2
+~
+~
+0 -1 1372 10 10 5
+D3
+~
+~
+0 -1 1370 10 10 5
+-1
+S
+
+#1372
+Road to Sha'darci~
+Leaving the sounds of civilization behind it the roadway journeys forth
+into the great darkness of the under mountain, its way supported by stout
+pillars and heavy beams.  A few marks on the walls appear to be figures
+of dwarven warriors, most of their features have been destroyed however,
+where someone to offence to the decoration.
+~
+~
+167247877 0 9 0
+D0
+~
+~
+0 -1 1371 10 10 5
+D2
+~
+~
+0 -1 1373 10 10 5
+-1
+S
+
+#1373
+Road to Sha'darci~
+Dust and debris spill across the roadway, a clear indication that its
+disuse is beginning to show.  Across the roof and walls a few fractured
+splits have appeared, an more alarming sign that the road is begining to
+crumble.  The road continues norwards towards the endless steps or
+southwards towards the vyan outpost.
+~
+~
+167247877 0 9 0
+D0
+~
+~
+0 -1 1372 10 10 5
+D2
+~
+~
+0 -1 1374 10 10 5
+-1
+S
+
+#1374
+Road to Sha'darci~
+Deep under the mountains the road to Sha'darci runs, heading from the
+outposts of the vyan to the endless steps that ancient dwarves hewn from
+the rock.  Now under the control of the Vyan nation the roadway has
+become a dark and dangerous place to roam.  Built by the dwarves for
+trade it is rumoured that the assassins and priests of the city use it
+for stealthy travel.
+~
+~
+167247877 0 9 0
+D0
+~
+~
+0 -1 1373 10 10 5
+D3
+~
+~
+0 -1 1375 10 10 5
+-1
+S
+
+#1375
+Road to Sha'darci~
+Whispers of sound drift from the darkness to the north, the roadway to
+Sha'darci, the endless steps, is not frequented by travelers since the
+time of the dwarves.  Under the deep mountain the road winds far north,
+avoiding the bitter cold of the high Everwinter Peaks.  Tiny bettles
+scuttle across the stones, proving that life can exsist even at the very
+roots of the earth.
+~
+~
+167247877 0 9 0
+D1
+~
+~
+0 -1 1374 10 10 5
+D2
+~
+~
+0 -1 1376 10 10 5
+-1
+S
+
+#1376
+Intersection in the Roadway~
+A road from the west intersects the long north-south road here.  The
+intersecting road is short, ending a short ways to the west at a carved
+obsidian gateway.  Dim rays of light filter in from the west, slipping
+between the shadows to light this area in a red glow.  The sound of metal
+clinking against metal is audible from the west as well.
+~
+[Kaelana] west to Sha'rheza
+[Jilious] was here
+[Jilious] north is not done, didnt go there
+North continues under Everwinter
+[Azerin] north is done to stairs, blocked at that point
+~
+167378949 0 9 0
+D0
+~
+~
+0 -1 1375 10 10 5
+D2
+~
+~
+0 -1 1377 10 10 5
+D3
+~
+~
+0 -1 800 10 10 5
+E
+carved obsidian gateway~
+Beautifully carved obsidian panels serve as a large gate, keeping
+undesireables out of the city, to the west.
+~
+-1
+S
+
+#1377
+An Underground Roadway~
+The road curves here, leading north and west.  The dark stone walls are
+mostly smooth here, rough only in the southwest corner where the main
+bend is.  Shadows seem to hide everything to the north and east, although
+the road appears to continue for a long way northwards.  Sounds of life
+drift in from the near north.
+~
+[Jilious] no extras
+[Jilious] was here
+[Ciani] nothing to extra
+~
+167378949 0 9 0
+D0
+~
+~
+0 -1 1376 10 10 5
+D1
+~
+~
+0 -1 1378 10 10 5
+-1
+S
+
+#1378
+An Underground Roadway~
+The dark stone of the walls seem to pull back a little here, as the road
+widens to the east.  A massive set of elaborate gates are visible further
+to the east, and the light of torches glints sullenly off the shining
+metal.  The road grows narrow to the west, shadows obscuring whatever
+might lie in that direction.
+~
+[Jilious] no extras
+[Jilious] was here
+[Ciani] rextra added
+~
+167378949 0 9 0
+D1
+~
+~
+0 -1 1379 10 10 5
+D3
+~
+~
+0 -1 1377 10 10 5
+E
+massive set elaborate gates~
+These massive metal gates are covered in elaborate scrollwork, and cover
+the entire tunnel.
+~
+-1
+S
+
+#1379
+Before the Gates of Sha'kechani~
+A massive pair of steel-grey gates have been set deep into the stone and
+block all passage to the east.  Arm-thick poles, wrought into elaborate
+curlicues, have been laid on top of huge, thick sheets of dark metal to
+create this ornate, yet highly functional gates.  A small guardpost has
+been carved into the face of the rock itself on either side of the gate,
+and a vertical slit in the side of each building shows that the occupants
+mean business.  Torch brackets have been spiked into the north and south
+walls, the stone around them is blackened from years of use.
+~
+[Jilious] desc, second line:   Armthick poles  (Poles as thick as arms?)
+[Jilious] no extras
+[Jilious] was here
+[Ciani] hyphenated arm-thick, probably should have had it that way to start
+[Ciani] extra added, rdesc changed a bit
+[Jilious] was here
+~
+167378949 0 9 0
+D1
+~
+~
+0 -1 1139 10 10 5
+D3
+~
+~
+0 -1 1378 10 10 5
+E
+guardpost~
+These guarposts have been carved into the actual rock wall, and seem to
+bulge out like fungus.  The slit in each one is exactly the right size
+for an arrow to be shot through.
+~
+-1
+S
+
+#1380
+A Narrow, Shadowy Street~
+The walls around seem to close in upon each other, the floor lost in
+pools of inky blackness.  The shadows seem to be reaching in from the
+east, grasping with insubstantial fingers.  They seem to be less
+concentrated to the west, and the dim light glints and gleams off a large
+metal something to the far west.  Faint noises echo throughout the
+cavernous tunnels from all directions.
+~
+~
+167378949 0 9 0
+D1
+~
+~
+0 -1 1200 10 10 5
+D3
+~
+~
+0 -1 1381 10 10 5
+-1
+S
+
+#1381
+Approaching the Gates of Sha'kechani~
+The cavern tunnels are wider here than to the east, and the shadows are
+less substantial.  Somebody has set a torch in the north wall, and its
+feeble flicker does little to dispel the darkness.  Looming to the west
+is a massive, elaborate gate of dull silver metal, closed tight.  There
+appears to be some sort of guard post to either side, slits in the walls
+behind which an archer might stand.  A pair of shallow ruts run down the
+middle of the trail, collecting some sort of fetid, malodorous liquid.
+~
+[Jilious] was here
+~
+167378949 0 9 0
+D1
+~
+~
+0 -1 1380 10 10 5
+D3
+~
+~
+0 -1 1382 10 10 5
+E
+torch north wall~
+This torch is large - at least a foot long - and has been set into a
+steel ring driven into the rock wall.  The wall all around the bracket is
+blackened by scorch marks, evidence of how long it's been there.
+~
+E
+massive elaborate gate~
+Although the details of the gate aren't quite visible from this distance,
+it still appears to be absolutely massive.  There appears to be some
+intricate scrollwork done on the surface of the gate, perhaps being
+closer to the gate would provide more detail.
+~
+E
+guard post slit~
+These small guard buildings look like they're growing out of the walls of
+the cave, like a fungus.  There doesn't appear to be any entrance to
+them, from this angle at least.  Perhaps the entrance is on the other
+side of the gate.  Narrow slits in their walls provide a safe place for a
+defensive archer to stand, from whence to riddle an intruder with sharp
+arrows.
+~
+E
+shallow rut trail~
+These ruts move in a straight line along the road cavern, worn down by
+countless passing marching feet and wagon wheels.  They have begun to
+collect a dark mix of liquids in their depths, which gives off a rather
+pungent, unpleasant odor.  Tiny rainbows swirl across the greasy-looking
+surface, glimmering sullenly in the dim light.
+~
+-1
+S
+
+#1382
+Before the Gates of Sha'kechani~
+A pair of massive steel-grey gates have been set into the rock of the
+tunnel just to the west.  Made of massive sheets of dark metal overlaid
+with arm-thick poles wrought in elaborate curlicues, these imposing gates
+look to be extremely thick and massively heavy.  Set into the wall on
+each side of the gate is a small guard post, with arrow slits in the
+walls.  Faint noises of movement emanate from within the posts, and the
+dull light glints from metal visible through the slits.  Some sort of
+malodorous liquid is pooling along the walls of the cavern, its slick
+surface reflecting the dim light of the flickering torches set into the
+north and south walls.
+~
+[Ciani] need a gate acode here
+[Ciani] i dont know who we want to keep out, kae will know
+[Ciani] whoever writes this -- i want the gates to swing smoothly and silently out towards thepeople standing here
+[Jilious] was here
+~
+167247877 0 9 0
+D1
+~
+~
+0 -1 1381 10 10 5
+D3
+~
+~
+0 -1 1161 10 10 5
+E
+massive gate~
+These gates are huge, blocking the entire tunnel from ceiling to floor. 
+There appears to be no method of opening them from this side - perhaps
+banging on them would yield some results.
+~
+E
+small guard post arrow slits walls~
+These guard posts look like stone fungus, growing out of the walls of the
+cavern trail.  The only noticeable feature from this side are the two
+arrow slits in each one, and light gleams dully off the serrated tips of
+the arrows that poke out from therein.  Light occasionally glints off of
+a piece of plate mail, and a click can be heard from time to time as a
+guard shifts his position slightly.
+~
+E
+malodorous liquid pooling pools walls slick surface north south~
+The areas where the north and south walls meet the floor are hidden under a thick layer of some viscous liquid, which gives off a rather rancid stink.
+~
+-1
+S
+
+#1383
+The Great Stair~
+A faint breeze of cold fresh air flows through here brought in from above
+by narrow slots carved into the wall.  The stairs lead up and down into
+darkness, each craved and placed with perfection.  Down towards the bottom
+of one of the middle steps you notice a small set of carvings.  It
+appears one of the builders got bored and decided to leave his mark on
+this masterpiece.
+~
+~
+167247877 0 9 0
+D4
+~
+~
+0 -1 1384 10 10 5
+D5
+~
+~
+0 -1 1327 10 10 5
+-1
+S
+
+#1384
+The Great Stair~
+Small rivlets of water run down the steps from above.  Some of the
+smaller streams freeze on the lower steps in the cold air that swirls
+here.  The air flows in from above through slots carved into the walls. 
+The walls are perfectly smooth stone surrounding the staircase that leads
+up and down into darkness.
+~
+~
+167247877 0 9 0
+D4
+~
+~
+0 -1 1385 10 10 5
+D5
+~
+~
+0 -1 1383 10 10 5
+-1
+S
+
+#1385
+The Great Stair~
+A smell of snow and pines assails your senses here.  Looking around for
+the source you see many notches cut into the walls bringing fresh air in
+from above.  These notches have been cut and smoothed with the greatest
+care to bring the vital fresh air to these depths.  Darkness shrouds the
+stairs as the lead up and down.  A thin layer of ice covers a couple of
+the stone stairs cause undoubtly by the cold air brought from above.
+~
+~
+167247877 0 9 0
+D4
+~
+~
+0 -1 1386 10 10 5
+D5
+~
+~
+0 -1 1384 10 10 5
+-1
+S
+
+#1386
+The Great Stair~
+Your feeble light sorce has difficulty pushing back the darkness that
+presses in on you from every direction.  The stairway has widened here
+making it hard to illuminate both walls at the same time.  The steps
+continue into the darkness above and below you.  A faint wisp of fresh
+air weaves finds its way to you through the thick and still air that lies
+here.  The fresh air is cold and crisp with the smell of snow.
+~
+~
+167247877 0 9 0
+D4
+~
+~
+0 -1 1387 10 10 5
+D5
+~
+~
+0 -1 1385 10 10 5
+-1
+S
+
+#1387
+The Great Stair~
+Darkness swallows the stairs both up and down at the edge of your light. 
+All around you is silence.  The slightest noise echos off the walls
+loudly.  The air here has become very thick and still making breathing
+harder and harder.  The stairs you stand on here are of the same flawless
+craftmanship you have seen along this grand staircase.
+~
+~
+167247877 0 9 0
+D4
+~
+~
+0 -1 1388 10 10 5
+D5
+~
+~
+0 -1 1386 10 10 5
+-1
+S
+
+#1388
+The Great Stair~
+Darkness swallows the stairs both up and down at the edge of your light. 
+All around you is silence.  The slightest noise echos off the walls
+loudly.  The air here has become very thick and still making breathing
+harder and harder.  The stairs you stand on here are of the same flawless
+craftmanship you have seen along this grand staircase.
+~
+~
+167247877 0 9 0
+D4
+~
+~
+0 -1 1389 10 10 5
+D5
+~
+~
+0 -1 1387 10 10 5
+-1
+S
+
+#1389
+The Great Stair~
+The stairs contiue up and down from here.  Above you the faint sounds of
+life can bearly be heard, below you is all silence and darkness.  The air
+is a little stale and difficult to breath, but nothing unbearable.  Like
+all the other steps you have seen these are perfect, a true testement to
+dwarven skill.  A thin layer of ice covers the top couple stairs, but
+quickly melts the farther down the stairs you look.
+~
+~
+167247877 0 9 0
+D4
+~
+~
+0 -1 1390 10 10 5
+D5
+~
+~
+0 -1 1388 10 10 5
+-1
+S
+
+#1390
+The Great Stair~
+You are near the top of a grand stair case.  Built by the dwarves, the
+stairs are a marvel of their creative skill, each step perfectly set
+against each other, remaining firm and damage free for hundreads of years. 
+Above you you can see a glimmer of light and hear the sounds of life. 
+Below you is a stark contrast darkness swallows everything no sounds can
+be heard.  Ice and light snow covers most of the steps here crunching
+under your steps.
+~
+~
+167247877 0 9 0
+D4
+~
+~
+0 -1 1391 10 10 5
+D5
+~
+~
+0 -1 1389 10 10 5
+-1
+S
+
+#1391
+Circular Chamber - Above The Great Stair~
+A circular chamber spreads around a stairwell its stone walls and floor
+coated in a thin layer of ice.  A strange nest of pine branches, leaves
+and animal bones rests against the western wall, the pungent aroma of
+animals wafting from it.  An opening in the east allows passage out of
+the chamber, its floor covered in mounds of fresh snow.
+~
+[Azerin] search nest
+~
+167247877 0 6 0
+D1
+~
+~
+0 -1 9550 10 10 5
+D5
+~
+~
+0 -1 1390 10 10 5
+-1
+S
+
+#0
+

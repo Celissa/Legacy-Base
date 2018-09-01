@@ -1,0 +1,3491 @@
+#M2_AREA
+2
+
+Raging Storms~
+Haine~
+~
+~
+~
+
+70 0
+4
+1
+#ROOMS
+
+#10750
+Before a Shimmering Silver Portal~
+A ceiling of pitch-black sky expands overhead, blocking any source of
+external light from radiating downward.  The vast expanse of the darkness
+overhead gives an ugly feeling of lonely nothingness, like being shut off
+from everything.  All around, dark cumulonimbus clouds tower into the
+black landscape.  Underfoot and extending south, a more densely-packed
+mass of cloud than the wispy ones along the sides, forms a path that
+apparently supports weight.  Formed of arcane magics, no mundane cloud
+could possibly form a traversible trail.  The shimmering portal sparkles
+here, its silver spirals gyrating slowly admist the clouds that hover
+about it.
+~
+[Haine] area acodes for thunder, lightning bolt, chain lightning
+[Haine] rain rain rain. everywhere.
+[Haine] acode magic to move players
+[Haine] lower mobs will do the psuedo-blink thing, and the duplicate thing
+[Haine] elemental thunder, lightning, cloud, dark water
+[Haine] storm giants cyclops with the elemental powers
+[Haine] fallen angels, elementals, storm giants, dream codes, demons/stormlord
+[Haine] mystmare, thunder stallion, lightning stallion
+*******
+[Eliza] rdesc Use overhead twice in first two sentences. I would change the first to expands outward.
+[Eliza] Not sure if eradicating is the exact word you want to use. Often simple is better. In this case, preventing or blocking would serve the purpose better.
+[Eliza] I changed obviously in the supports weight line to apparently. Obviously is hard to determine unless you have prior knowledge
+[Eliza] last part of that sentence is somewhat awkward.. weight. Formed of arcane magics, no mundane cloud could possibly form a traversible trail.
+[Eliza] rdesc reviewed
+******
+rdesc fixed.
+*******
+rextras in
+[Guin] Connects to TTG via portal in 47315
+~
+33030168 0 7 0
+D2
+~
+~
+0 -1 10751 10 10 5
+E
+sky black overhead~
+The darkness of the dome overhead is like that of coal, stretching from
+all along the horizon for as far as the eye can see.  The warmth of any
+radiating light is completely absent.  The cold settles in as the dark
+clouds move and shift around.
+~
+E
+clouds cumulonimbus~
+Dark, mal-formed cumulonimbus clouds tower overhead like big pillars that
+rise with an evil majesty.  In all directions, these clouds seem to move
+and shift in the cold air, overtaking the sky.  Where this is not cloud,
+all that is seen is the darkness of the sky above.
+~
+E
+underfoot densely-packed mass path trail~
+Underfoot, a more dense mass of clouds than the ones in the air around
+seems to magically coalesce.  Appearing solid, it forms a visible path
+that leads southwards into the towering clouds.
+~
+E
+shimmering silver portal spiral~
+Sparkling like a lost gem amongst the dark clouds that overrun it, a
+shimmering silver portal spins slowly, its magical properties radiating a
+soft aura.
+~
+A
+enter~
+silver portal~
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+You $t $T, starting your journey into the darkened landscape.
+~
+!
+3 0 4
+A
+~
+~
+i = random( 1, 15 );
+if( i == 1 )
+  send_to_area( #1, room );
+else if( i == 2 )
+  send_to_area( #2, room );
+else if( i == 3 )
+  send_to_area( #3, room );
+else if( i == 4 )
+  send_to_area( #4, room );
+else if( i == 5 )
+  send_to_area( #5, room );
+else if( i == 6 )
+  send_to_area( #6, room );
+else if( i == 7 )
+  send_to_area( #7, room );
+else if( i == 8 )
+  send_to_area( #8, room );
+else if( i == 9 )
+  send_to_area( #9, room );
+else if( i == 10 )
+  send_to_area( #10, room );
+else if( i == 11 )
+  send_to_area( #11, room );
+else if( i == 12 )
+  send_to_area( #12, room );
+else if( i == 13 )
+  send_to_area( #13, room );
+else if( i == 14 )
+  send_to_area( #14, room );
+else if( i == 15 )
+  send_to_area( #15, room );
+~
+E
+1~
+@cA bolt of lightning illuminates the black sky.@n
+~
+E
+2~
+The sound of distant thunder echoes throughout the clouds.
+~
+E
+3~
+A powerful wind whistles throughout.
+~
+E
+4~
+Drops of rain fall silently through the clouds to the abyss below.
+~
+E
+5~
+A black cloud mass floats in, impairing vision.
+~
+E
+6~
+@cA chain of lightning crackles through the clouds.@n
+~
+E
+7~
+The low roar of thunder resounds through the air.
+~
+E
+8~
+Strong winds from above blow chilling air down in a vortex of vapors.
+~
+E
+9~
+Rain drops fly in horizontally from the strong winds.
+~
+E
+10~
+Wispy vapors snake around snake slowly through the still sky.
+~
+E
+11~
+A wave of thunder rushes through like a stampede of horses.
+~
+E
+12~
+@cA luminous lightning bolt comes down from the sky, stabbing the clouds
+like an electric dagger.@n 
+~
+E
+13~
+A soul-deep gust of air cuts through the clouds.
+~
+E
+14~
+Numbing precipitation falls from far above.
+~
+E
+15~
+A choking mist floats between the dark clouds.
+~
+!
+2 50 0
+7012 17 1509949540 -2 0
+-1
+S
+
+#10751
+Raging Storms~
+Stygian formations wrought of wispy vapors rise on each side of the
+groundlike-clouds, adding a nefarious air to the emptiness here.  The
+shapes and tendrils of the dark matter that swirl in the air seem to move
+and shift in all directions, never still but in perpetual motion.  From
+the dark, hovering masses overhead, cold drops of rain fall slowly,
+reducing visibility somewhat.  Underfoot, the walkable clouds flow
+southward, with another branch breaking off to the west.
+~
+[Eliza] Yeah, I know that clouds is clouds and hard to find other words for but.. wispy clouds 'could' be wispy vapors and groundlike-clouds would be better as cloud-formed path.
+[Eliza] emptiness already felt is saying too much. It might be better as emptiness here. or nothingness here.
+[Eliza] wisps and wispy both used. Change wisps to tendrils.
+[Eliza] dark, hovering masses of air.. leave out 'of air'.. sounds better.
+'are starting to slowly fall'.. leave out are starting to and use fall slowly,
+[Eliza] just a tad is to modern. reducing visibility somewhat...;)
+[Eliza] Last sentence. Underfoot, the walkable clouds flow southward, with another branch breaking off to the west.
+[Eliza] seem to move in in all directions, alluding to etc.. that's awkward. Try move and shift in all directions, never still but in perpetual motion.
+[Eliza] If you have questions on this room the typos are out of order.. ask me.;)
+[Eliza] reviewed rdesc
+*******
+rdesc fixed.
+*****
+rextras in
+*****
+no.mob to seperate west side from elementals
+~
+33030152 0 7 0
+D0
+~
+~
+0 -1 10750 10 10 5
+D2
+~
+~
+0 -1 10757 10 10 5
+D3
+~
+~
+0 -1 10752 10 10 5
+E
+stygian formations wispy vapors~
+Snaking up from the sides of the path, wisps of air rise slowly into the
+thick black clouds above, almost like smoke.  The way they dance they
+seem to have a mind of their own, and something about them seems wrong.
+~
+E
+masses overhead hovering rain~
+From the dark clouds overhead, cold drops of rain seem to drift to their
+own rhythm down to the pseudo-ground here in the sky, then continue past
+it, to the depths below.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+You take the west branch, parting the misty vapors in the air.
+~
+E
+to_room~
+$n takes the west branch, parting the misty vapors in the air.
+~
+!
+3 0 8
+A
+~
+~
+continue;
+~
+E
+to_char~
+You $t $T, pushing forward into the cold rain.
+~
+E
+to_room~
+$n $t $T, moving deeper into the cloud-filled landscape.
+~
+!
+3 0 4
+A
+~
+~
+continue;
+~
+E
+to_char~
+You eagerly move $T, where the bad weather appears to clear off.
+~
+E
+to_room~
+$n eagerly moves $T, where the bad weather appears to clear off.
+~
+!
+3 0 1
+-1
+S
+
+#10752
+Raging Storms~
+Obfuscating clouds roll ponderously in the cold air, like a dark fog that
+overshadows and blankets the mind.  Raindrops slowly fall downward into
+the black mists, straight through the very ground of the path underfoot. 
+Still having the same solid appearance, the road of dark clouds below
+bends here from the east to the south.
+~
+[Eliza] very ground that supports you.. very ground of the path underfoot.
+[Eliza] road of dark air below.. road of dark clouds..
+[Eliza] after thinking awhile.. Do storm clouds dance? To me dancing clouds are light and airy, bright. What do you think about changing dance to roll ponderously?
+[Eliza] reviewed rdesc
+******
+rdesc fixed.
+*******
+rextras in
+~
+33030144 0 7 0
+D1
+~
+~
+0 -1 10751 10 10 5
+D2
+~
+~
+0 -1 10753 10 10 5
+E
+obfuscating clouds air rain~
+The black clouds that hang in the air above move slowly in the directions
+of the every changing wind.  Cold rains fall at a steady pace from them,
+falling through the supposedly solid clouds underfoot.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+You $t east on the vaporous path, pushing through the dark clouds.
+~
+E
+to_room~
+$n $t east on the vaporous path, pushing through the dark clouds.
+~
+!
+3 0 2
+A
+~
+~
+continue;
+~
+E
+to_char~
+You move $T down the narrow path of coalesced air.
+~
+E
+to_room~
+$n moves $T down the narrow path of coalesced air.
+~
+!
+3 0 4
+-1
+S
+
+#10753
+Raging Storms~
+Wisps of dark air coalesce high in the air to the southwest, seeming to
+form, a geyser of black water.  The eternal rain pours down in
+ever-thickening sheets as the distance away from the silver portal
+increases.  The course that the thick clouds underfoot form, seems to be
+purposely wrapped around the odd behavior of the geyser-like clouds to
+the southwest.
+~
+[Eliza] second sentence. The eternal rain pours down in ever-thickening sheets as the distance way from the silver portal increases.
+[Eliza] underneath.. underfoot.
+[Eliza] reviewed rdesc
+*******
+rdesc fixed.
+********
+rextras in
+~
+33030144 0 7 0
+D0
+~
+~
+0 -1 10752 10 10 5
+D2
+~
+~
+0 -1 10756 10 10 5
+D3
+~
+~
+0 -1 10754 10 10 5
+E
+wisps dark air geyser black water~
+To the southwest, a tall formation towers high into the air.  A thick
+stream of black mass flows upwards like a dark geyser, with wisps of
+cloud spilling over.  The irregularity of this makes it very magical and
+unnatural indeed.
+~
+E
+eternal rain sheets~
+Falling in heavy sheets now, the never-ending rains falling from the dark
+clouds overhead are completely drenching in nature.  Oddly, they seem to
+not fall on the air of the dark geyser to the southwest.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+You hurry north, the rain pouring down on you.
+~
+E
+to_room~
+$n moves quickly north, the rain pouring down on $m.
+~
+!
+3 0 1
+5087 9 1509949460 3 0
+-1
+S
+
+#10754
+Raging Storms~
+Dark, vaporous clouds rise like majestic pillars to one side of the path,
+while to the southeast an odd, spiraling column of cyclonic tendrils
+ascend skyward...a seemingly arcane-crafted formation.  The path
+underfoot wraps around to the south and east, forming a circle completely
+around the mysterious abnormality in the middle.
+~
+Geyser access.
+************
+[Eliza] Dark, vaporous clouds rise like majestic pillars to one side of
+the path, while to the southeast an odd, spiraling column of cyclonic
+tendrils ascend skyward...a seemingly arcane-crafted formation.
+[Eliza] keep second sentence as is.
+[Eliza] reviewed rdesc.
+*******
+rdesc fixed.
+********
+rextras in
+~
+33030144 0 7 0
+D1
+~
+~
+0 -1 10753 10 10 5
+D2
+~
+~
+0 -1 10755 10 10 5
+E
+dark vaporous majestic pillars~
+Looking solid except for a calm swaying action, vaporous formations of
+black clouds rise high up into the canopy of dark air above, almost
+appearing to form a sort of wall along the northwest.
+~
+E
+spiraling column of cyclonic tendrils arcane-crafted formation mysterious abnormality geyser~
+Closer to the path here than at any other parts, the dark geyser of gray
+air is more closely observed.  Through the pouring rains, it is now
+noticeable that no rain falls in the area of it, but falls around it. 
+Also, the dark air speeds upwards at a high rate of speed, coming through
+the clouds beneath it mysteriously and heading skyward.  At the top, it
+spills over, letting tendrils of dark matter drift off and disappear,
+like the mist of a black waterfall.  The cyclonic column almost seems
+close enough, with a stretch, you could reach out and touch the ethereal
+air that spins upwards.
+~
+A
+touch~
+geyser arcane column geyser~
+act_tochar( #reach, ch );
+act_notchar( #reach1, ch );
+wait( 1 );
+if( class( ch ) != mage ) {
+  act_tochar( #short, ch );
+  act_notchar( #short1, ch );
+  damage( mob, ch, 20d18+60, cold, "The geyser's cold air" );
+  end;
+}
+wait( 1 );
+act_tochar( #touch, ch );
+act_notchar( #touch1, ch );
+wait( 2 );
+act_tochar( #woah, ch );
+act_notchar( #woah1, ch );
+transfer( ch, find_room( 10802 ) );
+if( mob_in_room( 5077, find_room( 10802 ) ) )
+  acode( find_room( 10802 ), 5 );
+~
+E
+reach~
+@eYou stand at the edge of the path, and reach out towards the spiraling
+mass of air..@n 
+~
+E
+reach1~
+@e$n stands at the edge of the path, and reaches out towards the
+spiraling mass of air..@n 
+~
+E
+short~
+@cYou reach out and touch the geyser, the cold, wet air freezing your
+hand!@n 
+~
+E
+touch~
+Stretching as far as possible, your hand finally comes in contact with
+the geyser of air.
+~
+E
+touch1~
+Stretching as far as possible, $n's hand finally comes in contact with
+the geyser of air.
+~
+E
+short1~
+@c$n reaches out and touches the geyser, the cold, wet air freezing $s
+hand!@n 
+~
+E
+woah~
+@eThe strong force of the geyser of air pulls you into it, sucking you
+upwards!@n 
+~
+E
+woah1~
+@eThe strong force of the geyser of air pulls $n into it, sucking $m
+upwards!@n 
+~
+!
+0 0 0
+-1
+S
+
+#10755
+Raging Storms~
+This is the outer limits of the cloud-formed path as no more progression
+can be made to the south or west.  In these directions, only sporadic
+wisps of cloud can be seen drifting by, much too thin to support any
+weight.  The tenebrious lanscape outstretches as far as the eye can see,
+holding at bay all light from this dark and gloomy domain.
+~
+[Haine] acoded lightning shows brief glance of land underneath here.
+*********
+[Eliza] Goodness and badness are not tangible things you can see and storm clouds, which these are, not signify a lack of goodness nor the presence of badness.
+[Eliza] outstretches - stretches outward
+[Eliza] sporadic pieces - sporadic wisps
+[Eliza] way too thin - much too thin... way too thin is too modern sounding.
+[Eliza] walkable clouds - cloud-formed path
+[Eliza] to the south or west - to either the south or west.
+[Eliza] no more progression - no further progress
+[Eliza] This seems to be as far out as - This is the outer limits of
+[Eliza] typos are all out of order, ask if you have questions.
+[Eliza] reviewed rdesc.
+*******
+rdesc fixed.
+********
+rextras in
+~
+33030144 0 7 0
+D0
+~
+~
+0 -1 10754 10 10 5
+D1
+~
+~
+0 -1 10756 10 10 5
+E
+sporadic wisps~
+Looking out into the black landscape to the west, the thick cloud
+formations present all around to the east seem to disappear, replaced by
+a few tendrils of black air that float in the even blacker sky of eternal
+night.
+~
+E
+tenebrious landscape domain~
+Below and around all the wispy clouds to the west, blackness for as far
+as the eye can see, like a pitch blanket around an ethereal world of rain. 
+Looking downward, it would appear almost as if some sort of landscape
+could be made out, but the lack of light makes anything there nearly
+impossible to see.
+~
+A
+~
+~
+send_to_room( #light, room );
+~
+E
+light~
+@cA streaking bolt of lightning darts down from the sky into the abyss
+below, giving a brief glimpse of the countryside.@n 
+~
+!
+2 50 0
+-1
+S
+
+#10756
+Raging Storms~
+Heavy rains pound downward, slicing through the clouds like knives that
+cause the dark vaporous wisps to shift and move.  The drumming
+precipitation reduces visibility to little more than an arm's span in all
+directions, and the temperature noticeably drops from something nearly
+normal in feel to unpleasantly chill.  Each falling droplet is like a
+jabbing, painful needle of cold...rather painful and bothersome.
+~
+[Eliza] sentence 1: Heavy rains pound downward, slicing through the clouds like knives that cause the dark vaporous wisps to shift and move.
+[Eliza] sentence 2: The drumming precipitation reduces visibility to little more than an arm's span in all directions, and the temperature noticeably drops from something nearly normal in feel to unpleasantly chill.
+[Eliza] sentence 3: Each falling droplet is like a jabbing, painful needle of cold...not painful but bothersome.
+[Eliza] reviewed rdesc.
+*********
+rdesc fixed.
+*******
+rextras in
+~
+33030144 0 7 0
+D0
+~
+~
+0 -1 10753 10 10 5
+D3
+~
+~
+0 -1 10755 10 10 5
+E
+droplet rain drumming precipitation~
+The rain no longer seems to fall, but rather thunders downward at an
+amazing rate.  Not only drenching, but also painful is the rain as it
+hits, like pebbles falling from the sky.  The sheets of white in the air
+make visibility very poor, and the claps of loud thunder add to the chaos. 
+It is extremely puzzling and almost discerning at how the rain falls
+right through the very ground formed of clouds that were thought to be
+solid, as they supported such considerable weight.
+~
+5095 9 1509949460 3 0
+-1
+S
+
+#10757
+Raging Storms~
+The solidified cloud road narrows as it winds past the ascending wisps of
+ashen pillars that line the sides of it.  The path is wide enough for a
+reasonable number of people to walk upon, yet its clear definition fades
+off into airy tendrils along is sides.  The heavy rains that fall from
+the blackness overhead still descend with humdrum rythym.  The narrow
+path winds its way through the translucent clouds at its flanks, bending
+north and east.
+~
+[Haine] elementals start here
+***********
+[Eliza] seemingly-solidified. If you're walking on it then it is solidified, not seemingly so. So just make it solidified.
+[Eliza] reasonable amount - amount refers more to things than people imho. I think reasonable number would sound better.
+[Eliza] walk on it,.. walk upon,
+[Eliza] hrm.. second sentence is way too long and rambling and awkward. replace second part with something similar to.. yet its clear definition fades off into airy tendrils along is edges. You don't have to tell them they speculate if it supports weight or not. They can determine it by looking at it.
+[Eliza] blackness and clouds. I'm not sure you need to use clouds there as clouds are mentioned 8000 times of necessity in all the rdesc.I would just say.. blackness overhead.
+[Eliza] drop down.. better put descend
+[Eliza] amongst the forms of translucent clouds.. through the translucent clouds
+[Eliza] rdesc reviewed
+******
+rdesc fixed.
+******
+rextras in
+[Tyrone] this acode here will be very spam-o-rific with even a 4 person group
+~
+33030152 0 7 0
+D0
+~
+~
+0 -1 10751 10 10 5
+D1
+~
+~
+0 -1 10758 10 10 5
+E
+solidified cloud road~
+The coalesced molecules of dark air underfoot form a path wide enough for
+a fair amount of travelers, but its bounds are visible by the vapor-like
+tendrils that fall slowly downward at its side, leading to believe that
+if a foot were to fall past there, it would not be supported.  The path
+wraps around from the north and heads east from here.
+~
+E
+ascending wisps ashen pillars~
+Floating in the cold air to the sides of the path, towering clouds form
+pillar-like structures that raise high into the dome of obfuscating
+clouds above.
+~
+A
+~
+~
+act_room( #water, ch );
+mload( 5187, room );
+ch = rand_player( room );
+attack( mob, ch, 5d10, "wave-like body" );
+~
+E
+water~
+@eAn entity of black liquid rises up from the clouds and molds
+itself into a dark, fluid shape!@n 
+~
+!
+0 0 0
+A
+~
+~
+if( !mob_in_room( 5187, room ) ) {
+  if( rflag( reset1, room ) ) {
+    remove_rflag( reset1, room );
+    acode( room, 1 );
+    }
+  else
+    continue;
+  }
+~
+!
+1 0 3
+A
+~
+~
+if( players_room( room ) > 1 )
+  continue;
+else
+  if( mob_in_room( 5187, room ) ) {
+  junk_mob( mob_in_room( 5187, room ) );
+  set_rflag( reset1, room );
+  }
+continue;
+~
+E
+dive~
+@eA dark water elemental dives into the clouds!@n
+~
+E
+to_char~
+You push $T through the downpour of rain.
+~
+E
+to_room~
+$n pushes $T through the downpour of rain.
+~
+!
+3 0 3
+-1
+S
+
+#10758
+Raging Storms~
+The claps of thunder seem to be more prevalent here, while the rains
+still pour down, disappearing into the darkness below.  On this corner of
+the path, the eastern clouds seem to be more wispy and translucent,
+allowing a clearer glimpse into the darkness under the clouds. 
+Occasionally flashes of lightning gives the glimpse of a mountain peak
+far below.  The solid but narrow path bends here, heading either west or
+south.  A heavier downpour of rains to the south really makes it hard to
+tell how far the path continues in that direction, if at all.
+~
+[Haine] thunder elemental
+*******
+rextras in
+~
+33030144 0 7 0
+D2
+~
+~
+0 -1 10759 10 10 5
+D3
+~
+~
+0 -1 10757 10 10 5
+E
+corner eastern clouds wispy translucent darkness mountain peak below~
+Falling off the side of the path, tendrils of translucent air mark the
+boundaries of the path which runs from west to the south.  An occasional
+flash of lightning allows for a view into the landscape below, where a
+mountain peak is barely visible, extending high into the air, but still
+far below the clouds here.
+~
+A
+~
+~
+if( !mob_in_room( 5190, room ) ) {
+  if( rflag( reset1, room ) ) {
+    remove_rflag( reset1, room );
+    acode( room, 2 );
+    }
+  else
+    continue;
+  }
+~
+!
+1 0 12
+A
+~
+~
+act_room( #sound, ch );
+mload( 5190, find_room( 10758 ) );
+ch = rand_player( room );
+attack( mob, ch, 5d10, "barrage of soundwaves" );
+~
+E
+sound~
+@eA loud thunder sounds, leaving a dark entity!@n
+~
+!
+0 0 0
+A
+~
+~
+if( players_room( room ) > 1 )
+  continue;
+else
+  if( mob_in_room( 5190, room ) ) {
+  junk_mob( mob_in_room( 5190, room ) );
+  set_rflag( reset1, room );
+  }
+continue;
+~
+E
+disperse~
+@eA dark thunder elemental disperses into the cold air!@n
+~
+E
+to_char~
+You $t cautiously $T through the dark clouds.
+~
+E
+to_room~
+$n $t $T, moving cautiously through the dark clouds.
+~
+!
+3 0 12
+-1
+S
+
+#10759
+Raging Storms~
+Oddly, the heavy downpour of rain seems to stop, replaced by a heavy mist
+that hangs in the air like stagnant smoke from a bonfire.  Blinding sight
+for more than a few inches, this thick fog sharpens the other senses and
+is unnerving at the same time.  Looking down under the fog, the
+supporting path of clouds is barely visible, leading north to where rain
+is barely seen; however, where the road continues south is undeterminable.
+~
+[Haine] lightning elemental
+*******
+rextras in
+******
+no.mob to keep other mobs out of elementals
+~
+33030152 0 7 0
+D0
+~
+~
+0 -1 10758 10 10 5
+D2
+~
+~
+0 -1 10760 10 10 5
+E
+smoke fog mist~
+The thick gray fog lingers in the air, snaking around with sly motions. 
+The room temperature is a bit warmer compared to the cold conditions of
+the rainer areas.  This probably because the heat here is trapped in the
+fog's heavy vapors.
+~
+E
+1 down supporting path~
+Underfoot, below the thick heavy fog, the path of clouds flows from south
+to north.  How far in either direction is totally undetectable though,
+because of the lack of visibility.
+~
+A
+~
+~
+if( !mob_in_room( 5513, room ) ) {
+  if( rflag( reset1, room ) ) {
+    remove_rflag( reset1, room );
+    acode( room, 2 );
+    }
+  else
+    continue;
+  }
+~
+!
+1 0 5
+A
+~
+~
+if( players_room( room ) > 1 )
+  continue;
+else
+  if( mob_in_room( 5513, room ) ) {
+  junk_mob( mob_in_room( 5513, room ) );
+  set_rflag( reset1, room );
+  }
+continue;
+~
+E
+disperse~
+@eA dark lightning elemental explodes in a blast of electrical energy!@n
+~
+E
+to_char~
+You $t $T, moving carefully along the misty path.
+~
+E
+to_room~
+$n $t $T, moving carefully along the misty path.
+~
+!
+3 0 5
+-1
+S
+
+#10760
+Raging Storms~
+The rains pick back up again, noticeably, as they fall heavily from the
+darker clouds above.  The ground-like path of cloud widens from the
+narrow path of the north, into what appears to be a much larger area--a
+courtyard in the clouds per se.  Pillar-like clouds that shift very
+little, and are almost still, rise every so often from the almost flat
+ground-base of opaque clouds.  At eye level and higher, patches of dark
+air float in the air and move around, occasionally dismantled by the
+onslought of raindrops.
+~
+*******
+rextras in
+~
+33030144 0 7 0
+D0
+~
+~
+0 -1 10759 10 10 5
+D2
+~
+~
+0 -1 10765 10 10 5
+D3
+~
+~
+0 -1 10761 10 10 5
+E
+1 down ground-like path~
+The path that flows from the waterless area to the north comes southward
+to where it opens up into a much larger area, and a much wetter one.
+~
+E
+pillar-like clouds~
+Rising in almost orderly, set positions in the clouds, pillar like masses
+of dark air stem upwards disappearing into the sea of sky overhead. 
+Seeming almost still as the cold winds blow on them, they could pass for
+columns of marble.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+You $t north, lightning illuminating the dark path.
+~
+E
+to_room~
+$n $t north, lightning lighting the clouds around $m.
+~
+!
+3 0 1
+-1
+S
+
+#10761
+Raging Storms~
+The pitch ceiling of sky that was once visible overhead is now blocked by
+the large, overshadowing cloud form that is overhead.  Dense rains pour
+from the cloud above and somehow fall through the seemingly-solid clouds
+underfoot, making their exact chemistry a mystery.  The floating, ashen
+clouds mixed with the cold, pouring rains makes any distant view
+impossible, although it does appear the cloud road gets more open and
+broad as it extends to the south, west, and east.  To the north, the
+edges of the path where it becomes much more translucent marks the
+boundaries, and where their is hardly any cloud at all, the darkness
+below is barely visible, hints of a mountain peak far below visible in
+the flashes of lightning.
+~
+*******
+rextras in
+~
+33030144 0 7 0
+D1
+~
+~
+0 -1 10760 10 10 5
+D2
+~
+~
+0 -1 10763 10 10 5
+D3
+~
+~
+0 -1 10762 10 10 5
+E
+1 north below~
+Looking past the edge of translucent clouds, the darkness below is
+visible, despite there not being much to see except black and more black. 
+An occasional flash of lightning shows the outline of a moutain peak, but
+that is about it.  black clouds drops huge drops of cold, pouring rain
+down.  The rain falls right through the ground underfoot as if by magic.
+~
+5049 9 1509949520 3 0
+-1
+S
+
+#10762
+Raging Storms~
+The edges of the path appear to almost be purposely walled in by towering
+cumulonimbus clouds that extend high into the shadowy sky.  The peculiar
+and enormous cloud of thick black overhead darkens all that is beneath
+it, as well as dropping rain down.  It appears in the air like a
+nefarious pirate's ship anchored in dark water, waiting to spread its
+evil.  The cloud path dead ends here at the wall of thin air, only
+leading back to the east.
+~
+********
+rextras in
+~
+33030144 0 7 0
+D1
+~
+~
+0 -1 10761 10 10 5
+E
+1 up nefarious pirate's ship above anchored~
+The dark cloud overhead sways gently in the harsh winds, like a ship in
+anchored in water.  Its incredibly mass throws down rain and lightning
+below it, the claps of thunder like the sound of waves crashing on its
+hull.  transparent vapors, nearly opaque walls of flat ashen clouds rise
+upwards, like walls to this "room." 
+~
+-1
+S
+
+#10763
+Raging Storms~
+The rains thunder down extremely hard here, as bolts of lightning drop
+down sharply from overhead.  From what can be ascertained due to the poor
+visibility, this is about the center of the this part of the area--that
+is a larger opening in the clouds.  The swirling mass of clouds is
+centered perfectly above here, spiraling slowly in the dark-hued air and
+drenching rains.  The magical ground formed from the clouds extends in
+all cardinal directions, the pillars of clouds that rise up into the
+vortex cloud seeming to divide the area up in sections.
+~
+********
+rextras in
+~
+33030144 0 7 0
+D0
+~
+~
+0 -1 10761 10 10 5
+D1
+~
+~
+0 -1 10765 10 10 5
+D2
+~
+~
+0 -1 10766 10 10 5
+D3
+~
+~
+0 -1 10764 10 10 5
+E
+1 up above swirling mass overhead spiraling~
+Stretching the entire expanse of the dark sky overhead, a swirling mass
+of electrified black air, spins evily in the night sky.  This spot would
+likely be the center of this oddly open area, as the clouds overhead seem
+to spin around this point, and an entire view of the surroundings is
+visible, actually making it look quite large.
+~
+E
+magical ground pillars~
+The magical ground underfoot rolls out all around, extending to the
+wall-like boundaries of this area.  Rising in a very particular order,
+pillars of dense gas rise majestically and black into the dark, ominous
+sky overhead.
+~
+5095 9 1509949520 3 0
+-1
+S
+
+#10764
+Raging Storms~
+The nearly translucent clouds to the west here indicate that the ground
+ends here with darkness spilling over the edge.  Streaks of lightning
+flash brightly, illuminating the landscape far below, showing a mountain,
+but anything farther than that is totally indescriable, as it only
+appears to be a flat shadows, possibly a plain of some sort.  Falling
+rains keep a chill in the air as they continue to pour from an unlimited
+source.  The path dead-ends here, leaving the east as the only exit back
+to the open part of the clouds.
+~
+*******
+rextras in
+~
+33030144 0 7 0
+D1
+~
+~
+0 -1 10763 10 10 5
+E
+1 west translucent~
+Looking west, the edge of the plane becomes visible as vapors of dark air
+start to spill over and drift slowly downward into some abyss--occasional
+flashes of lightning allude to a possible mountain range down below.
+~
+E
+1 west translucent edge~
+Like a black waterfall, a stream of gaseous vapors pour over the edge of
+the magical flooring formed of thicker clouds.  Marking the edge of this
+part of the area, the black oblivion below looks quite unyielding as
+streaks of lightning light up the miles of nothingness.
+~
+-1
+S
+
+#10765
+Raging Storms~
+The atramentous clouds here move frantically about in the nigrescent air. 
+Some sort of magic, as there is no wind felt, seems to be stirring them
+to swirl in a large circle around the entire area, spiraling upwards into
+the raven sky.  The wet precipitation still pours downward at a steady
+rate, keeping visibility down.  The stable clouds underfoot follow along
+the pillar-like clouds that make up the edges of the path to east, while
+westward there seems to be no edge, allowing passage in that direction,
+or north and south.
+~
+******
+rextras in
+~
+33030144 0 7 0
+D0
+~
+~
+0 -1 10760 10 10 5
+D2
+~
+~
+0 -1 10768 10 10 5
+D3
+~
+~
+0 -1 10763 10 10 5
+E
+atramentous clouds~
+Flowing and swirling, tendrils of dark clouds move about, but no wind can
+be felt at all.  They move as if they have a mind of their own telling
+them to wiggle their tells and squirm.
+~
+E
+1 down underfoot pillar-like edges 1 west 1 east~
+The ground underfoot extends out in almost all directions, except to the
+east where it ends abruptly into nothingness.  Heading west, south, or
+north, it snakes around the pillars that rise from the ground.
+~
+5087 9 1509949520 3 0
+-1
+S
+
+#10766
+Raging Storms~
+Misty rains roll in from the east and west as dark, sinister clouds soar
+overhead, satellites of the large vortex of clouds that omniscently
+circles overhead.  Lightning bolts streak out of the midnight sky
+followed closely by booms of thunder that echo menacing harmonics
+throughout the damp, cold air.  The ground formed by the stiffened clouds
+comes to a T here, where the open courtyard in the clouds to the north
+appears to end, narrowing down again into a small path through the pitch
+air leading south.
+~
+******
+rextras in
+~
+33030144 0 7 0
+D0
+~
+~
+0 -1 10763 10 10 5
+D1
+~
+~
+0 -1 10768 10 10 5
+D2
+~
+~
+0 -1 10791 10 10 5
+D3
+~
+~
+0 -1 10767 10 10 5
+E
+ground stiffened clouds T courtyard 1 north 1 south~
+The black air beneath that forms this mystical landmass in the sky comes
+to a T here.  To the north, pillars of ashen clouds rise high into the
+sky, met by a swirling mass of clouds and plenty of rainfall.  South the
+gaseous land-bottom narrows out and seems to form an odd-path, the rains
+keeping the mind guessing.
+~
+E
+1 up overhead sinister satellites vortex~
+Running across the sky like winged demons, black masses of air glide with
+perfect smoothness in the wake of a massive swirling cloud.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+You head south, the path becoming noticeable more narrow.
+~
+E
+to_room~
+$n heads south along the narrow path.
+~
+!
+3 0 4
+5049 9 1509949520 3 0
+-1
+S
+
+#10767
+Raging Storms~
+The edge of the large almost room in the clouds is marked here by the
+wispy pillars of ashen cloud thats rise high up here, making it obvious
+that the ground is no longer capable of sustataining weight where it gets
+less dense.  View into the darkness over the edge is obscured by the fast
+moving pieces of clouds that float quietly in the cold winds and the
+torrent rains that thunder from overhead, straight downward.  The only
+means away from here is back on the cloud path east to where it opens up
+under the massive swirling cloud overhead.
+~
+*******
+rextras in
+~
+33030144 0 7 0
+D1
+~
+~
+0 -1 10766 10 10 5
+E
+1 west edge wispy pillars~
+Dark pillars of vaporous clouds stop abruptly where the ground-like
+clouds beneath are no more, forming the west edge here.  Down below,
+lightning illuminates swiftly moving clouds that dominate the sub-sky.
+~
+-1
+S
+
+#10768
+Raging Storms~
+Devastating rains pour violenty down through the omniscent clouds that
+drift slowly overhead.  The main cloud that circles above to a magical
+rythym is almost hypnotic in nature.  The eery silence is oft broke with
+a loud crash of thunder.  Blue-white are the flashes of lightning that
+streak down through the ethereal floor of clouds to the abyss
+below--never such a close examination of lightning possible.  The gloomy
+path turns here as the less dense tufts of clouds mark the edges of it,
+while looking back to the northwest, the ground of air seems to open up,
+no edges visible, or so it appears through the falling rains.
+~
+*******
+rextras in
+~
+33030144 0 7 0
+D0
+~
+~
+0 -1 10765 10 10 5
+D3
+~
+~
+0 -1 10766 10 10 5
+E
+gloomy path tufts edges~
+The edges of this part of the area is marked with thick black clouds
+along the southeaster corner.  The thick, vapors suddenly become less
+dense as they slowly begin to fall over the sides, the nothingness below
+welcoming them with eery arms.
+~
+E
+1 northwest~
+A view of the northwest is obscured greatly by the continuously pounding
+rain, but it is certain that it is quite open and expansive.  The
+swirling mass overhead seems to focus down on a point not far from here.
+~
+E
+1 up above main cloud circles~
+The outer parts of an enourmous spinning mass in the air, seemingly
+formed of black air and matter, swirls mysteriously in the air above.  A
+consisent rhythm and pace is kept, and it almost seems alive with energy
+as it hypnotically twirls.
+~
+-1
+S
+
+#10769
+Raging Storms~
+Rains, again, come pummeling down from the puffy, black cumulonimbus
+clouds that soar overhead.  Strong winds high up in the air mold and
+shape each cloud form into various sundry objects.  This marks the
+opening of the path formed of dense clouds underfoot into a very large
+opening, its true size undeterminable through the downpour of rain, but
+indeed massive.  To the north the road narrows and the rains appear to
+clear off, while east, south, or west mark further endeavouring into this
+large room of sorts.
+~
+[Haine] beginning of maze-ish rooms
+*******
+1) s,s,s,s,s,e,s,w,e,w,s,w,e
+2) w,s,w
+*****
+rextras in
+~
+33030144 0 7 0
+D0
+~
+~
+0 -1 10791 10 10 5
+D1
+~
+~
+0 -1 10778 10 10 5
+D2
+~
+~
+0 -1 10774 10 10 5
+D3
+~
+~
+0 -1 10770 10 10 5
+E
+1 up overhead puffy cumulonimbus~
+Dark, swirling clouds peer ominously down as they dump loads of
+precipitation.  Winds blow harshly from every direction, blowing the
+menacing masses of air into almost life-like forms that sneer and laugh
+as they enforce the awful weather.
+~
+E
+1 south 1 east 1 west~
+Rains thunder down in all directions, casting a blanket of pure white
+over the eyes.  Literally, visibility is reduced to nothing.  The
+ferocity of the storm is quite intense.  The chaos of the clouds creates
+a disturbing atmosphere.
+~
+E
+1 north narrow road~
+The land formed underfoot by the coalesced cloud vapors breaks off north
+into a narrow path.  The rain appears to have completely stopped in that
+direction, unlike the downpour farther south.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+You $t north onto the narrow path of air.
+~
+E
+to_room~
+$n $t north onto the narrow path of air.
+~
+!
+3 0 1
+A
+~
+~
+if( is_player( ch ) ) {
+  act_tochar( #char, ch );
+  act_notchar( #room, ch );
+  transfer( ch, find_room( 10777 ) );
+  act_notchar( #arrive, ch );
+  loop( followers ) {
+    if( !is_sleeping( rch ) ) {
+      if( !is_resting( rch ) ) {
+        act_notchar( #move2, ch );
+        transfer( rch, find_room( 10777 ) );
+        act_notchar( #arrive, rch );
+        }
+      }
+    else
+      continue;
+    }
+  }
+else
+  continue;
+~
+E
+char~
+You continue onward through the heavy rains and dark clouds.
+~
+E
+room~
+$n leaves, continuing onward through the heavy rains and dark clouds.
+~
+E
+move2~
+You follow $n through the dark rain and clouds.
+~
+E
+arrive~
+$n enters the room, wet and disoriented.
+~
+!
+3 0 2
+A
+~
+~
+if( is_player( ch ) ) {
+  act_tochar( #char, ch );
+  act_notchar( #room, ch );
+  transfer( ch, find_room( 10777 ) );
+  act_notchar( #arrive, ch );
+  loop( followers ) {
+    if( !is_sleeping( rch ) ) {
+      if( !is_resting( rch ) ) {
+        act_notchar( #move2, ch );
+        transfer( rch, find_room( 10777 ) );
+        act_notchar( #arrive, rch );
+        }
+      }
+    else
+      continue;
+    }
+  }
+else
+  continue;
+~
+E
+char~
+You continue onward through the heavy rains and dark clouds.
+~
+E
+room~
+$n leaves, continuing onward through the heavy rains and dark clouds.
+~
+E
+move2~
+You follow $n through the dark rain and clouds.
+~
+E
+arrive~
+$n enters the room, wet and disoriented.
+~
+!
+3 0 8
+-1
+S
+
+#10770
+Raging Storms~
+Lost in the dark, heavy mist and pouring rains, the sense of direction
+diminishes as loud bangs of thunder make concentration impossible.  Cold,
+harsh winds blow sharply down on the backs of the freezing rain, driving
+them downwards like nails.  The blue-white lightning continues to shoot
+from the monstrous black clouds that loom overhead.  The heavy, black fog
+combined with the torrential downpour make visibility impossible in all
+directions.
+~
+~
+33030144 0 7 0
+D1
+~
+~
+0 -1 10769 10 10 5
+D2
+~
+~
+0 -1 10773 10 10 5
+D3
+~
+~
+0 -1 10771 10 10 5
+5196 9 1509949540 3 0
+-1
+S
+
+#10771
+Raging Storms~
+Lost in the dark, heavy mist and pouring rains, the sense of direction
+diminishes as loud bangs of thunder make concentration impossible.  Cold,
+harsh winds blow sharply down on the backs of the freezing rain, driving
+them downwards like nails.  The blue-white lightning continues to shoot
+from the monstrous black clouds that loom overhead.  The heavy, black fog
+combined with the torrential downpour make visibility impossible in all
+directions.
+~
+~
+33030144 0 7 0
+D1
+~
+~
+0 -1 10770 10 10 5
+D2
+~
+~
+0 -1 10772 10 10 5
+A
+~
+~
+if( is_player( ch ) ) {
+  act_notchar( #room, ch );
+  act_tochar( #char, ch );
+  transfer( ch, find_room( 10770 ) );
+  act_notchar( #arrive, ch );
+  loop( followers ) {
+    if( !is_sleeping( rch ) ) {
+      if( !is_resting( rch ) ) {
+        act_notchar( #move2, ch );
+        transfer( rch, find_room( 10770 ) );
+        act_notchar( #arrive, rch );
+        }
+      }
+    else
+      continue;
+    }
+  }
+else
+  continue;
+~
+E
+char~
+You continue onward through the heavy rains and dark clouds.
+~
+E
+room~
+$n leaves, continuing onward through the heavy rains and dark clouds.
+~
+E
+move2~
+You follow $n through the dark rain and clouds.
+~
+E
+arrive~
+$n enters the room, wet and disoriented.
+~
+!
+3 0 4
+-1
+S
+
+#10772
+Raging Storms~
+Lost in the dark, heavy mist and pouring rains, the sense of direction
+diminishes as loud bangs of thunder make concentration impossible.  Cold,
+harsh winds blow sharply down on the backs of the freezing rain, driving
+them downwards like nails.  The blue-white lightning continues to shoot
+from the monstrous black clouds that loom overhead.  The heavy, black fog
+combined with the torrential downpour make visibility impossible in all
+directions.
+~
+~
+33030144 0 7 0
+D0
+~
+~
+0 -1 10771 10 10 5
+D1
+~
+~
+0 -1 10773 10 10 5
+D2
+~
+~
+0 -1 10777 10 10 5
+A
+~
+~
+if( is_player( ch ) ) {
+  act_tochar( #to_char, ch );
+  act_notchar( #to_room, ch );
+  transfer( ch, find_room( 10783 ) );
+  act_notchar( #arrive, ch );
+  loop( followers ) {
+    if( !is_sleeping( rch ) ) {
+      if( !is_resting( rch ) ) {
+        act_notchar( #move2, ch );
+        transfer( rch, find_room( 10783 ) );
+        act_notchar( #arrive, rch );
+        }
+      }
+    else
+      continue;
+    }
+  }
+else
+  continue;
+~
+E
+to_char~
+You continue onward through the heavy rains and dark clouds.
+~
+E
+to_room~
+$n leaves, continuing onward through the heavy rains and dark clouds.
+~
+E
+move2~
+You follow $n through the dark rain and clouds.
+~
+E
+arrive~
+$n enters the room, wet and disoriented.
+~
+!
+3 0 2
+5196 9 1509949490 3 0
+-1
+S
+
+#10773
+Raging Storms~
+Lost in the dark, heavy mist and pouring rains, the sense of direction
+diminishes as loud bangs of thunder make concentration impossible.  Cold,
+harsh winds blow sharply down on the backs of the freezing rain, driving
+them downwards like nails.  The blue-white lightning continues to shoot
+from the monstrous black clouds that loom overhead.  The heavy, black fog
+combined with the torrential downpour make visibility impossible in all
+directions.
+~
+~
+33030144 0 7 0
+D0
+~
+~
+0 -1 10770 10 10 5
+D1
+~
+~
+0 -1 10774 10 10 5
+D2
+~
+~
+0 -1 10776 10 10 5
+D3
+~
+~
+0 -1 10772 10 10 5
+A
+~
+~
+if( is_player( ch ) ) {
+  act_tochar( #char, ch );
+  act_notchar( #room, ch );
+  transfer( ch, find_room( 10773 ) );
+  act_notchar( #arrive, ch );
+  loop( followers ) {
+    if( !is_sleeping( rch ) ) {
+      if( !is_resting( rch ) ) {
+        act_notchar( #move2, ch );
+        transfer( rch, find_room( 10773 ) );
+        act_notchar( #arrive, rch );
+        }
+      }
+    else
+      continue;
+    }
+  }
+else
+  continue;
+~
+E
+char~
+You continue onward through the heavy rains and dark clouds.
+~
+E
+room~
+$n leaves, continuing onward through the heavy rains and dark clouds.
+~
+E
+move2~
+You follow $n through the dark rain and clouds.
+~
+E
+arrive~
+$n enters the room, wet and disoriented.
+~
+!
+3 0 8
+-1
+S
+
+#10774
+Raging Storms~
+Lost in the dark, heavy mist and pouring rains, the sense of direction
+diminishes as loud bangs of thunder make concentration impossible.  Cold,
+harsh winds blow sharply down on the backs of the freezing rain, driving
+them downwards like nails.  The blue-white lightning continues to shoot
+from the monstrous black clouds that loom overhead.  The heavy, black fog
+combined with the torrential downpour make visibility impossible in all
+directions.
+~
+~
+33030144 0 7 0
+D0
+~
+~
+0 -1 10769 10 10 5
+D1
+~
+~
+0 -1 10781 10 10 5
+D2
+~
+~
+0 -1 10775 10 10 5
+D3
+~
+~
+0 -1 10773 10 10 5
+5196 9 1509949465 3 0
+-1
+S
+
+#10775
+Raging Storms~
+Lost in the dark, heavy mist and pouring rains, the sense of direction
+diminishes as loud bangs of thunder make concentration impossible.  Cold,
+harsh winds blow sharply down on the backs of the freezing rain, driving
+them downwards like nails.  The blue-white lightning continues to shoot
+from the monstrous black clouds that loom overhead.  The heavy, black fog
+combined with the torrential downpour make visibility impossible in all
+directions.
+~
+~
+33030144 0 7 0
+D0
+~
+~
+0 -1 10774 10 10 5
+D1
+~
+~
+0 -1 10782 10 10 5
+D2
+~
+~
+0 -1 10794 10 10 5
+D3
+~
+~
+0 -1 10776 10 10 5
+A
+~
+~
+if( is_player( ch ) ) {
+  act_tochar( #to_char, ch );
+  act_notchar( #to_room, ch );
+  transfer( ch, find_room( 10772 ) );
+  act_notchar( #arrive, ch );
+  loop( followers ) {
+    if( !is_sleeping( rch ) ) {
+      if( !is_resting( rch ) ) {
+        act_notchar( #move2, ch );
+        transfer( rch, find_room( 10772 ) );
+        act_notchar( #arrive, rch );
+        }
+      }
+    else
+      continue;
+    }
+  }
+else
+  continue;
+~
+E
+to_char~
+You continue onward through the heavy rains and dark clouds.
+~
+E
+to_room~
+$n leaves, continuing onward through the heavy rains and dark clouds.
+~
+E
+move2~
+You follow $n through the dark rain and clouds.
+~
+E
+arrive~
+$n enters the room, wet and disoriented.
+~
+!
+3 0 4
+-1
+S
+
+#10776
+Raging Storms~
+Lost in the dark, heavy mist and pouring rains, the sense of direction
+diminishes as loud bangs of thunder make concentration impossible.  Cold,
+harsh winds blow sharply down on the backs of the freezing rain, driving
+them downwards like nails.  The blue-white lightning continues to shoot
+from the monstrous black clouds that loom overhead.  The heavy, black fog
+combined with the torrential downpour make visibility impossible in all
+directions.
+~
+~
+33030144 0 7 0
+D0
+~
+~
+0 -1 10773 10 10 5
+D1
+~
+~
+0 -1 10775 10 10 5
+D2
+~
+~
+0 -1 10795 10 10 5
+D3
+~
+~
+0 -1 10777 10 10 5
+-1
+S
+
+#10777
+Raging Storms~
+Lost in the dark, heavy mist and pouring rains, the sense of direction
+diminishes as loud bangs of thunder make concentration impossible.  Cold,
+harsh winds blow sharply down on the backs of the freezing rain, driving
+them downwards like nails.  The blue-white lightning continues to shoot
+from the monstrous black clouds that loom overhead.  The heavy, black fog
+combined with the torrential downpour make visibility impossible in all
+directions.
+~
+~
+33030144 0 7 0
+D0
+~
+~
+0 -1 10772 10 10 5
+D1
+~
+~
+0 -1 10776 10 10 5
+D2
+~
+~
+0 -1 10796 10 10 5
+A
+~
+~
+if( is_player( ch ) ) {
+  act_tochar( #to_char, ch );
+  act_notchar( #to_room, ch );
+  transfer( ch, find_room( 10780 ) );
+  act_notchar( #arrive, ch );
+  loop( followers ) {
+    if( !is_sleeping( rch ) ) {
+      if( !is_resting( rch ) ) {
+        act_notchar( #move2, ch );
+        transfer( rch, find_room( 10780 ) );
+        act_notchar( #arrive, rch );
+        }
+      }
+    else
+      continue;
+    }
+  }
+else
+  continue;
+~
+E
+to_char~
+You continue onward through the heavy rains and dark clouds.
+~
+E
+to_room~
+$n leaves, continuing onward through the heavy rains and dark clouds.
+~
+E
+move2~
+You follow $n through the dark rain and clouds.
+~
+E
+arrive~
+$n enters the room, wet and disoriented.
+~
+!
+3 0 4
+A
+~
+~
+if( is_player( ch ) ) {
+  act_tochar( #char, ch );
+  act_notchar( #room, ch );
+  transfer( ch, find_room( 10796 ) );
+  act_notchar( #arrive, ch );
+  loop( followers ) {
+    if( !is_sleeping( rch ) ) {
+      if( !is_resting( rch ) ) {
+        act_notchar( #move2, ch );
+        transfer( rch, find_room( 10796 ) );
+        act_notchar( #arrive, rch );
+        }
+      }
+    else
+      continue;
+    }
+  }
+else
+  continue;
+~
+E
+char~
+You continue onward through the heavy rains and dark clouds.
+~
+E
+room~
+$n leaves, continuing onward through the heavy rains and dark clouds.
+~
+E
+move2~
+You follow $n through the dark rain and clouds.
+~
+E
+arrive~
+$n enters the room, wet and disoriented.
+~
+!
+3 0 1
+-1
+S
+
+#10778
+Raging Storms~
+Lost in the dark, heavy mist and pouring rains, the sense of direction
+diminishes as loud bangs of thunder make concentration impossible.  Cold,
+harsh winds blow sharply down on the backs of the freezing rain, driving
+them downwards like nails.  The blue-white lightning continues to shoot
+from the monstrous black clouds that loom overhead.  The heavy, black fog
+combined with the torrential downpour make visibility impossible in all
+directions.
+~
+~
+33030144 0 7 0
+D1
+~
+~
+0 -1 10779 10 10 5
+D2
+~
+~
+0 -1 10781 10 10 5
+D3
+~
+~
+0 -1 10769 10 10 5
+5196 9 1509949540 3 0
+-1
+S
+
+#10779
+Raging Storms~
+Detritus clouds of raven hues mingle with the dense, ashen fog that
+blankets this whole corner, and continues to the west.  Rain sprinkles in
+from above, adding chill to the already damp air.  Claps of thunder are
+easily audible coming from somewhere to the south, while an eerie silence
+is all that is detectable to the north east.  Odd cloud formations line
+up along the path that follows north east.
+~
+*******
+rextras in
+~
+33030144 0 7 0
+D1
+~
+~
+0 -1 10786 10 10 5
+D2
+~
+~
+0 -1 10780 10 10 5
+D3
+~
+~
+0 -1 10778 10 10 5
+E
+detritus clouds raven dense ashen blanket~
+Moving through the cold night sky, raven clouds dnace with the hovering
+grey fog that hangs heavy in the cold air.  Rain falls from them slowly,
+but picks up to the west of here.
+~
+E
+east odd formations~
+Looking east and a bit to the north, formations line the cloud-formed
+path that seem odd.  Closer inspection is necessary though for any kind
+of identifcation of something truly unique.
+~
+-1
+S
+
+#10780
+Raging Storms~
+Lost in the dark, heavy mist and pouring rains, the sense of direction
+diminishes as loud bangs of thunder make concentration impossible.  Cold,
+harsh winds blow sharply down on the backs of the freezing rain, driving
+them downwards like nails.  The blue-white lightning continues to shoot
+from the monstrous black clouds that loom overhead.  The heavy, black fog
+combined with the torrential downpour make visibility impossible in all
+directions.
+~
+~
+33030144 0 7 0
+D0
+~
+~
+0 -1 10779 10 10 5
+D2
+~
+~
+0 -1 10783 10 10 5
+D3
+~
+~
+0 -1 10781 10 10 5
+A
+~
+~
+if( is_player( ch ) ) {
+  act_tochar( #char, ch );
+  act_notchar( #room, ch );
+  transfer( ch, find_room( 10779 ) );
+  act_notchar( #arrive, ch );
+  loop( followers ) {
+    if( !is_sleeping( rch ) ) {
+      if( !is_resting( rch ) ) {
+        act_notchar( #move2, ch );
+        transfer( rch, find_room( 10779 ) );
+        act_notchar( #arrive, rch );
+        }
+      }
+    else
+      continue;
+    }
+  }
+else
+  continue;
+~
+E
+char~
+You continue onward through the heavy rains and dark clouds.
+~
+E
+room~
+$n leaves, continuing onward through the heavy rains and dark clouds.
+~
+E
+move2~
+You follow $n through the dark rain and clouds.
+~
+E
+arrive~
+$n enters the room, wet and disoriented.
+~
+!
+3 0 8
+A
+~
+~
+if( is_player( ch ) ) {
+  act_tochar( #char, ch );
+  act_notchar( #room, ch );
+  transfer( ch, find_room( 10792 ) );
+  act_notchar( #arrive, ch );
+  loop( followers ) {
+    if( !is_sleeping( rch ) ) {
+      if( !is_resting( rch ) ) {
+        act_notchar( #move2, ch );
+        transfer( rch, find_room( 10792 ) );
+        act_notchar( #arrive, rch );
+        }
+      }
+    else
+      continue;
+    }
+  }
+else
+  continue;
+~
+E
+char~
+You continue onward through the heavy rains and dark clouds.
+~
+E
+room~
+$n leaves, continuing onward through the heavy rains and dark clouds.
+~
+E
+move2~
+You follow $n through the dark rain and clouds.
+~
+E
+arrive~
+$n enters the room, wet and disoriented.
+~
+!
+3 0 1
+5196 9 1509949490 3 0
+-1
+S
+
+#10781
+Raging Storms~
+Lost in the dark, heavy mist and pouring rains, the sense of direction
+diminishes as loud bangs of thunder make concentration impossible.  Cold,
+harsh winds blow sharply down on the backs of the freezing rain, driving
+them downwards like nails.  The blue-white lightning continues to shoot
+from the monstrous black clouds that loom overhead.  The heavy, black fog
+combined with the torrential downpour make visibility impossible in all
+directions.
+~
+~
+33030144 0 7 0
+D0
+~
+~
+0 -1 10778 10 10 5
+D1
+~
+~
+0 -1 10780 10 10 5
+D2
+~
+~
+0 -1 10782 10 10 5
+D3
+~
+~
+0 -1 10774 10 10 5
+-1
+S
+
+#10782
+Raging Storms~
+Dark cumulonimbus clouds continue to congregate overhead in enormous
+masses.  The occurence of the once occasional lightning and thunder seems
+to have picked up considerably.  The fierce rains continue to fall, and
+southward it almost looks like it is snowing the rain is hammering down
+so thick.
+~
+~
+33030144 0 7 0
+D0
+~
+~
+0 -1 10781 10 10 5
+D1
+~
+~
+0 -1 10783 10 10 5
+D2
+~
+~
+0 -1 10793 10 10 5
+D3
+~
+~
+0 -1 10775 10 10 5
+-1
+S
+
+#10783
+Raging Storms~
+Lost in the dark, heavy mist and pouring rains, the sense of direction
+diminishes as loud bangs of thunder make concentration impossible.  Cold,
+harsh winds blow sharply down on the backs of the freezing rain, driving
+them downwards like nails.  The blue-white lightning continues to shoot
+from the monstrous black clouds that loom overhead.  The heavy, black fog
+combined with the torrential downpour make visibility impossible in all
+directions.
+~
+~
+33030144 0 7 0
+D0
+~
+~
+0 -1 10780 10 10 5
+D2
+~
+~
+0 -1 10792 10 10 5
+D3
+~
+~
+0 -1 10782 10 10 5
+-1
+S
+
+#10784
+Raging Storms~
+The atmosphere seems to change completely here, as the dark mists have
+lifted off the ground.  Rain pours down in sheets, white as sleet, and
+just as cold.  Chains of lightning dart every which way from the
+obfuscate clouds above, making an electric web everytime they strike. 
+The thunder is painful to the ears and very frequent.  All aspects of the
+weather seem to have intensified.  To the north, the rain looks quite
+thick and forceful, making everything undistinguishable in that direction. 
+Southward, the rain looks just as intensive if not worse.
+~
+no.mob to allow players a rest between giants/stormlord
+*******
+rextras in
+~
+33030152 0 7 0
+D0
+~
+~
+0 -1 10798 10 10 5
+D2
+~
+~
+0 -1 10785 10 10 5
+E
+up above obfuscate clouds electric web~
+The dark, menacing clouds above thrash in the night sky, dropping their
+clouds and illuminate the night sky, showing off all the grinning faces
+of the devilish cloud forms.
+~
+E
+1 north~
+The rain to the north falls as heavily here, making visibility quite low,
+and any detection of things other than clouds and rain almost impossible.
+~
+E
+1 south~
+If it were possible, as the path continues southward, the weather seems
+to worsen to indescribable rains.  Visibility is completely lost.
+~
+-1
+S
+
+#10785
+Raging Storms~
+Thin black clouds toss and turn in the night sky, snaking around each
+other in a perpetual dance.  Rain drops from their wicked mouths like
+drops of saliva.  The continual fall of the precipitation makes
+visibility almost null.  The vapors lower to the ground wrap around the
+room and almost close it off.  The occasional flash of lightning
+illuminates a very flat, table-like object in the middle of the room.
+~
+[Adakar] Altar here ;)
+*******
+rextras in
+~
+33030144 0 7 0
+D0
+~
+~
+0 -1 10784 10 10 5
+E
+black clouds~
+High up in the cold night sky, clouds of ashen air move and toss about,
+blown by high, cold winds.  Drops of rain fall one after another in rapid
+progression, looking like snow in the cold, black air.
+~
+7515 17 1509949540 -2 0
+-1
+S
+
+#10786
+Raging Storms~
+Defying all gravity, rain drops seems to float in the air as they please. 
+Up and down, side to side, the precipitation falls in every which way,
+yet no sign of wind is apparent.  Clouds seemed to be shaped magically
+over the path underfoot, creating arches that start north of here.  A
+thick mist hangs under the arch, disguising everything in that direction. 
+Back west, the thick mass of clouds and vapor that hang in the air
+completely opaque the visibility.
+~
+no.mob to keep storm giants out.
+******
+rextras in
+~
+33030152 0 7 0
+D0
+~
+~
+0 -1 10787 10 10 5
+D3
+~
+~
+0 -1 10779 10 10 5
+E
+1 west thick mass~
+The thick clouds and fog present in the air mix to form a complete wall,
+blocking all vision in that direction.
+~
+E
+rain drops precipitation~
+Drops of rain fall from the clouds overhead, but then pause in mid-air. 
+Some drop slowly back and forth as they continue to fall downward, while
+others defy gravity and move sideways and even back upwards a bit.  The
+strange behavior of these dripplets cannot be explained, there is no
+wind--the air is completely still.  It is quite a mysterious sight to
+behold.
+~
+E
+magically arches 1 north~
+To the north, the now mundane cloud forms apparent throughout this place
+have turned into mysterious formations that arch over the pathway.  The
+purpose for this adornment however, is not apparent.
+~
+-1
+S
+
+#10787
+Raging Storms~
+The rain appears to no longer fall here, the air becoming stagnant and
+dry, but not hot.  A thick tuft of black clouds drapes across the path
+underfoot, creating an archway of sorts.  The visible sky is so black it
+swallows up the landscape.  A purple, almost indigo, haze floats in the
+air, snaking around everything in its way.
+~
+[Haine] dream acodes start here
+*1853->to dreamland
+***NOTE****
+code block for dreamland does not function properly under this codebase
+-- it will be fixed when new codebase functions are available, it was
+designed to work under it, not this one.
+*********
+rextras in
+~
+33030144 0 7 0
+D2
+~
+~
+0 -1 10786 10 10 5
+E
+purple indigo haze snaking~
+A purple, almost indigo haze lingers in the air.  Very translucent, it is
+faintly visible againt the black background of the cold dark sky.  It
+snakes around with a slow, slyness, as black vapors have in other parts
+of this place.
+~
+E
+thick tuft drapes archway~
+A thick tuft of dark clouds wraps around the path here like a black
+wreath, lending a saddened, cold atmosphere.  The purpose of why they are
+draped so neatly is totally unknown, but there is certainly a purpose
+indeed, everything is done too perfectly.
+~
+A
+~
+~
+wait( 4 );
+if( players_room( room ) > 1 ) {
+  act_room( #fog, ch );
+  wait( 2 );
+  loop( all_in_room ) {
+    do_spell( mists of sleep, ch );
+    transfer_all( room, find_room( 10803 ); );
+    }
+  acode( find_room( 10803 ), 1 );
+  }
+~
+E
+fog~
+@eA thick cloud of dark mist drips down from the ominous vapors overhead,
+pouring into the mind like ink...@n 
+~
+!
+1 0 4
+-1
+S
+
+#10788
+Raging Storms~
+Far above in the night sky, large balls of black air float and roll madly
+across the pitchen sky.  Like a black on black polka-dot pattern, these
+cloud formations bounce around with their own will.  The air is still and
+quiet, and rather cool.  The black fog in the air blinds most views of
+the eastern and western sides of the path.
+~
+******
+rextras in
+~
+33030144 0 7 0
+D1
+~
+~
+0 -1 10789 10 10 5
+D3
+~
+~
+0 -1 10803 10 10 5
+E
+large balls polka-dot~
+Black and almost perfectly round, masses of black air roll and dane in
+the night sky, like tiny particles in a much grander world.
+~
+-1
+S
+
+#10789
+Raging Storms~
+Powerful crosswinds blow forcefully from to the south, shaking the cloud
+cover overhead like a flower in the wind, yet it still remains firm in
+place, draped over the coalesced ashen air underfoot.  The heavy mist in
+the air is blown sharply in whirls that spin and dance like violent
+demons.  Whatever lies east or west is hidden as the hazy air spills both
+ways, barely translucent.
+~
+*******
+rextras in
+~
+33030144 0 7 0
+D1
+~
+~
+0 -1 10790 10 10 5
+D3
+~
+~
+0 -1 10788 10 10 5
+E
+cloud cover overhead flower draped~
+High in the air, a single mass of black cloud covers the road here, like
+an umbrella over the path here.  Strong winds from the south blow against
+it, shaking it, bu it does not float off.
+~
+E
+coalesced ashen underfoot~
+Underfoot, coalesced molecules of air form a dense path that is able to
+provide enough substance to hold up weight.  The path is not extremely
+wide, but it is a decent width for a reasonable amount of people.
+~
+E
+heavy mist spin dance demons~
+The mist that floats down from the stygian clouds settles in the air,
+grey and translucent.  The winds that blow in push the mist around,
+causing it to dance, like a demon in the night sky.
+~
+E
+1 west 1 east~
+The fog and clouds that floats slowly around act as walls to the east and
+west, blocking much of what lies in those directions, isolating this room.
+~
+-1
+S
+
+#10790
+Raging Storms~
+Coming to a dead end, the hardened path underfoot seems to vaporize as it
+begins to fall rapidly like a waterfall into the raven abyss below.  The
+obfuscate air seems to almost flow into here from the west, and then
+vortex downward slowly until it disappears in the cloud cover below.
+~
+******
+rextras in
+~
+33030144 0 7 0
+D3
+~
+~
+0 -1 10789 10 10 5
+E
+hardened path underfoot waterfall raven abyss below vortex~
+As the pathway comes to an end, the hardened vapors underfoot that have
+provided passage here, terminate.  Loosing their cohesive, solidity, the
+vapors pour over the edge and fall like a waterfall into the nothingness
+down below.
+~
+-1
+S
+
+#10791
+Raging Storms~
+This narrow path acting as an isthmus seems very peculiar indeed.  The
+path is much narrower and more defined than in any other place--there is
+a definite edge on the sides here.  The path here, however, also
+is considerably more dense, almost appearing like a road carved of hazy
+black stone.  The harsh rains that were consistent elsewhere are reduced
+to none; the sky overhead is void of any of the clouds, allowing a clear
+view into the evil, hellishy-black sky overhead.  North or south mark
+exits off this narrow path to areas in the clouds that seem to open up
+allowing for less squeezed passage.  Rains along with thunder and
+lightning also appear to pour down in both directions.
+~
+[Adakar] bridge -- connection point between the clouds?
+*********
+rextras in
+*****
+no.mob, dont want giants wandering north.
+~
+33030152 0 9 0
+D0
+~
+~
+0 -1 10766 10 10 5
+D2
+~
+~
+0 -1 10769 10 10 5
+E
+narrow path isthmus road hazy black stone~
+Like a road carved of a black opal or something similiarly black and
+mysterious, the road here has sharp, definite edges that lend no room for
+mistake.  Probably best described as a darkly-formed isthmus, this strip
+of land connects the two larger land masses of both the north and south
+areas of land.
+~
+E
+1 north~
+The path opens up north into a much larger area it appears.  Rains
+thunder down for as far as visible.
+~
+E
+1 south~
+As the path opens up south, thundering rains become clear, as vision
+becomes very unclear.  The outline of a great expanse of land is clear,
+but how big it really is cannot be determined.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+You $t $T, the narrow path opening up to a large area.
+~
+E
+to_room~
+$n $t, following the narrow path $Tward.
+~
+!
+3 0 5
+-1
+S
+
+#10792
+Raging Storms~
+Lost in the dark, heavy mist and pouring rains, the sense of direction
+diminishes as loud bangs of thunder make concentration impossible.  Cold,
+harsh winds blow sharply down on the backs of the freezing rain, driving
+them downwards like nails.  The blue-white lightning continues to shoot
+from the monstrous black clouds that loom overhead.  The heavy, black fog
+combined with the torrential downpour make visibility impossible in all
+directions.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 10783 10 10 5
+D2
+~
+~
+0 -1 10797 10 10 5
+D3
+~
+~
+0 -1 10793 10 10 5
+A
+~
+~
+if( is_player( ch ) ) {
+  act_tochar( #to_char, ch );
+  act_notchar( #to_room, ch );
+  transfer( ch, find_room( 10796 ) );
+  act_notchar( #arrive, ch );
+  loop( followers ) {
+    if( !is_sleeping( rch ) ) {
+      if( !is_resting( rch ) ) {
+        act_notchar( #move2, ch );
+        transfer( rch, find_room( 10796 ) );
+        act_notchar( #arrive, rch );
+        }
+      }
+    else
+      continue;
+    }
+  }
+else
+  continue;
+~
+E
+to_char~
+You continue onward through the heavy rains and dark clouds.
+~
+E
+to_room~
+$n leaves, continuing onward through the heavy rains and dark clouds.
+~
+E
+move2~
+You follow $n through the dark rain and clouds.
+~
+E
+arrive~
+$n enters the room, wet and disoriented.
+~
+!
+3 0 8
+A
+~
+~
+if( is_player( ch ) ) {
+  act_tochar( #char, ch );
+  act_notchar( #room, ch );
+  transfer( ch, find_room( 10782 ) );
+  act_notchar( #arrive, ch );
+  loop( followers ) {
+    if( !is_sleeping( rch ) ) {
+      if( !is_resting( rch ) ) {
+        act_notchar( #move2, ch );
+        transfer( rch, find_room( 10782 ) );
+        act_notchar( #arrive, rch );
+        }
+      }
+    else
+      continue;
+    }
+  }
+else
+  continue;
+~
+E
+char~
+You continue onward through the heavy rains and dark clouds.
+~
+E
+room~
+$n leaves, continuing onward through the heavy rains and dark clouds.
+~
+E
+move2~
+You follow $n through the dark rain and clouds.
+~
+E
+arrive~
+$n enters the room, wet and disoriented.
+~
+!
+3 0 4
+5196 9 1509949490 3 0
+-1
+S
+
+#10793
+Raging Storms~
+Lost in the dark, heavy mist and pouring rains, the sense of direction
+diminishes as loud bangs of thunder make concentration impossible.  Cold,
+harsh winds blow sharply down on the backs of the freezing rain, driving
+them downwards like nails.  The blue-white lightning continues to shoot
+from the monstrous black clouds that loom overhead.  The heavy, black fog
+combined with the torrential downpour make visibility impossible in all
+directions.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 10782 10 10 5
+D1
+~
+~
+0 -1 10792 10 10 5
+D2
+~
+~
+0 -1 10798 10 10 5
+D3
+~
+~
+0 -1 10794 10 10 5
+A
+~
+~
+if( is_player( ch ) ) {
+  act_tochar( #to_char, ch );
+  act_notchar( #to_room, ch );
+  transfer( ch, find_room( 10799 ) );
+  act_notchar( #arrive, ch );
+  loop( followers ) {
+    if( !is_sleeping( rch ) ) {
+      if( !is_resting( rch ) ) {
+        act_notchar( #move2, ch );
+        transfer( rch, find_room( 10799 ) );
+        act_notchar( #arrive, rch );
+        }
+      }
+    else
+      continue;
+    }
+  }
+else
+  continue;
+~
+E
+to_char~
+You continue onward through the heavy rains and dark clouds.
+~
+E
+to_room~
+$n leaves, continuing onward through the heavy rains and dark clouds.
+~
+E
+move2~
+You follow $n through the dark rain and clouds.
+~
+E
+arrive~
+$n enters the room, wet and disoriented.
+~
+!
+3 0 8
+A
+~
+~
+if( is_player( ch ) ) {
+  act_tochar( #char, ch );
+  act_notchar( #room, ch );
+  transfer( ch, find_room( 10775 ) );
+  act_notchar( #arrive, ch );
+  loop( followers ) {
+    if( !is_sleeping( rch ) ) {
+      if( !is_resting( rch ) ) {
+        act_notchar( #move2, ch );
+        transfer( rch, find_room( 10775 ) );
+        act_notchar( #arrive, rch );
+        }
+      }
+    else
+      continue;
+    }
+  }
+else
+  continue;
+~
+E
+char~
+You continue onward through the heavy rains and dark clouds.
+~
+E
+room~
+$n leaves, continuing onward through the heavy rains and dark clouds.
+~
+E
+move2~
+You follow $n through the dark rain and clouds.
+~
+E
+arrive~
+$n enters the room, wet and disoriented.
+~
+!
+3 0 4
+-1
+S
+
+#10794
+Raging Storms~
+Lost in the dark, heavy mist and pouring rains, the sense of direction
+diminishes as loud bangs of thunder make concentration impossible.  Cold,
+harsh winds blow sharply down on the backs of the freezing rain, driving
+them downwards like nails.  The blue-white lightning continues to shoot
+from the monstrous black clouds that loom overhead.  The heavy, black fog
+combined with the torrential downpour make visibility impossible in all
+directions.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 10775 10 10 5
+D1
+~
+~
+0 -1 10793 10 10 5
+D2
+~
+~
+0 -1 10799 10 10 5
+D3
+~
+~
+0 -1 10795 10 10 5
+5196 9 1509949490 3 0
+-1
+S
+
+#10795
+Raging Storms~
+Lost in the dark, heavy mist and pouring rains, the sense of direction
+diminishes as loud bangs of thunder make concentration impossible.  Cold,
+harsh winds blow sharply down on the backs of the freezing rain, driving
+them downwards like nails.  The blue-white lightning continues to shoot
+from the monstrous black clouds that loom overhead.  The heavy, black fog
+combined with the torrential downpour make visibility impossible in all
+directions.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 10776 10 10 5
+D1
+~
+~
+0 -1 10794 10 10 5
+D2
+~
+~
+0 -1 10800 10 10 5
+D3
+~
+~
+0 -1 10796 10 10 5
+A
+~
+~
+if( is_player( ch ) ) {
+  act_tochar( #to_char, ch );
+  act_notchar( #to_room, ch );
+  transfer( ch, find_room( 10782 ) );
+  act_notchar( #arrive, ch );
+  loop( followers ) {
+    if( !is_sleeping( rch ) ) {
+      if( !is_resting( rch ) ) {
+        act_notchar( #move2, ch );
+        transfer( rch, find_room( 10782 ) );
+        act_notchar( #arrive, rch );
+        }
+      }
+    else
+      continue;
+    }
+  }
+else
+  continue;
+~
+E
+to_char~
+You continue onward through the heavy rains and dark clouds.
+~
+E
+to_room~
+$n leaves, continuing onward through the heavy rains and dark clouds.
+~
+E
+move2~
+You follow $n through the dark rain and clouds.
+~
+E
+arrive~
+$n enters the room, wet and disoriented.
+~
+!
+3 0 8
+A
+~
+~
+if( is_player( ch ) ) {
+  act_tochar( #char, ch );
+  act_notchar( #room, ch );
+  transfer( ch, find_room( 10800 ) );
+  act_notchar( #arrive, ch );
+  loop( followers ) {
+    if( !is_sleeping( rch ) ) {
+      if( !is_resting( rch ) ) {
+        act_notchar( #move2, ch );
+        transfer( rch, find_room( 10800 ) );
+        act_notchar( #arrive, rch );
+        }
+      }
+    else
+      continue;
+    }
+  }
+else
+  continue;
+~
+E
+char~
+You continue onward through the heavy rains and dark clouds.
+~
+E
+room~
+$n leaves, continuing onward through the heavy rains and dark clouds.
+~
+E
+move2~
+You follow $n through the dark rain and clouds.
+~
+E
+arrive~
+$n enters the room, wet and disoriented.
+~
+!
+3 0 2
+-1
+S
+
+#10796
+Raging Storms~
+Lost in the dark, heavy mist and pouring rains, the sense of direction
+diminishes as loud bangs of thunder make concentration impossible.  Cold,
+harsh winds blow sharply down on the backs of the freezing rain, driving
+them downwards like nails.  The blue-white lightning continues to shoot
+from the monstrous black clouds that loom overhead.  The heavy, black fog
+combined with the torrential downpour make visibility impossible in all
+directions.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 10777 10 10 5
+D1
+~
+~
+0 -1 10795 10 10 5
+D2
+~
+~
+0 -1 10801 10 10 5
+5196 9 1509949465 3 0
+-1
+S
+
+#10797
+Raging Storms~
+Lost in the dark, heavy mist and pouring rains, the sense of direction
+diminishes as loud bangs of thunder make concentration impossible.  Cold,
+harsh winds blow sharply down on the backs of the freezing rain, driving
+them downwards like nails.  The blue-white lightning continues to shoot
+from the monstrous black clouds that loom overhead.  The heavy, black fog
+combined with the torrential downpour make visibility impossible in all
+directions.
+~
+due to acodes, this room can't be accessed.
+~
+33030152 0 9 0
+D0
+~
+~
+0 -1 10792 10 10 5
+D3
+~
+~
+0 -1 10798 10 10 5
+5203 9 1509949540 3 0
+-1
+S
+
+#10798
+Raging Storms~
+Dark cumulonimbus clouds continue to congregate overhead in enormous
+masses.  The occurence of the once occasional lightning and thunder seems
+to have picked up considerably.  The fierce rains continue to fall, and
+southward it almost looks like it is snowing the rain is hammering down
+so thick.
+~
+******
+rextras in
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 10793 10 10 5
+D1
+~
+~
+0 -1 10797 10 10 5
+D2
+~
+~
+0 -1 10784 10 10 5
+D3
+~
+~
+0 -1 10799 10 10 5
+E
+1 up overhead cumulonimbus~
+Soaring overhead like ominous, black birds with magnificent, dark
+wingspans, many cumulonimbus clouds drop rain as quick as possible.  Far
+above, the bleak, black sky stretches from horizon to horizon, like a
+dark blanket hiding the light of good from this dark, dismal place.
+~
+E
+1 south snow fierce rain~
+Fierce rains thunder harshly downward not far south from here.  It
+appears to almost be sleeting, it is coming down so thick.  The
+temperature does seem to grow colder, so it might be possible.
+~
+5196 9 1509949445 3 0
+-1
+S
+
+#10799
+Raging Storms~
+Lost in the dark, heavy mist and pouring rains, the sense of direction
+diminishes as loud bangs of thunder make concentration impossible.  Cold,
+harsh winds blow sharply down on the backs of the freezing rain, driving
+them downwards like nails.  The blue-white lightning continues to shoot
+from the monstrous black clouds that loom overhead.  The heavy, black fog
+combined with the torrential downpour make visibility impossible in all
+directions.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 10794 10 10 5
+D1
+~
+~
+0 -1 10798 10 10 5
+D3
+~
+~
+0 -1 10800 10 10 5
+-1
+S
+
+#10800
+Raging Storms~
+Lost in the dark, heavy mist and pouring rains, the sense of direction
+diminishes as loud bangs of thunder make concentration impossible.  Cold,
+harsh winds blow sharply down on the backs of the freezing rain, driving
+them downwards like nails.  The blue-white lightning continues to shoot
+from the monstrous black clouds that loom overhead.  The heavy, black fog
+combined with the torrential downpour make visibility impossible in all
+directions.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 10795 10 10 5
+D1
+~
+~
+0 -1 10799 10 10 5
+D3
+~
+~
+0 -1 10801 10 10 5
+A
+~
+~
+if( is_player( ch ) ) {
+  act_tochar( #char, ch );
+  act_notchar( #room, ch );
+  transfer( ch, find_room( 10801 ) );
+  act_notchar( #arrive, ch );
+  loop( followers ) {
+    if( !is_sleeping( rch ) ) {
+      if( !is_resting( rch ) ) {
+        act_notchar( #move2, ch );
+        transfer( rch, find_room( 10801 ) );
+        act_notchar( #arrive, rch );
+        }
+      }
+    else
+      continue;
+    }
+  }
+else
+  continue;
+~
+E
+char~
+You continue onward through the heavy rains and dark clouds.
+~
+E
+room~
+$n leaves, continuing onward through the heavy rains and dark clouds.
+~
+E
+move2~
+You follow $n through the dark rain and clouds.
+~
+E
+arrive~
+$n enters the room, wet and disoriented.
+~
+!
+3 0 2
+5196 9 1509949465 3 0
+-1
+S
+
+#10801
+Raging Storms~
+Lost in the dark, heavy mist and pouring rains, the sense of direction
+diminishes as loud bangs of thunder make concentration impossible.  Cold,
+harsh winds blow sharply down on the backs of the freezing rain, driving
+them downwards like nails.  The blue-white lightning continues to shoot
+from the monstrous black clouds that loom overhead.  The heavy, black fog
+combined with the torrential downpour make visibility impossible in all
+directions.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 10796 10 10 5
+D1
+~
+~
+0 -1 10800 10 10 5
+-1
+S
+
+#10802
+Raging Storms~
+The ground underneath is formed of dark air that seems to shoot up from
+below, making it impossible to keep from shaking as the dark air
+underneath moves and shifts.  All around dark clouds encircle, dropping
+rain to the ground below, thereby eliminating all visibility of anything
+but atop the geyser.
+~
+reset1 --> so battle can begin
+reset0 --> to know if yes/no response is to challenge
+*****
+rextras in
+~
+33030176 0 9 0
+E
+1 down below geyser ground underneath~
+The upward force of the geyser blows air and clouds around, making it
+virtually impossible to examine anything below it.  The geyser itself
+shoots into the air from far down below, a black stream of
+seemingly-solid air.  Classification is truly hard, for this geyser is a
+mysterious occurence.
+~
+E
+dark clouds~
+All around, dark and ominous looking clouds move and form, like a blanket
+of evil around this nether world.  Rains blow from high up in them,
+carried by strong currents of cold air.
+~
+A
+challenge~
+cloud guardian~
+act_tochar( #challenge, ch );
+wait( 1 );
+mob = mob_in_room( 5077, find_room( 10802 ) );
+interpret( mob, "grin" );
+wait( 1 );
+i = 0;
+if( players_room( find_room( 10753 ) ) >= 1 )
+  i = 1;
+if( players_room( find_room( 10754 ) ) >= 1 )
+  i = 2;
+if( players_room( find_room( 10755 ) ) >= 1 )
+  i = 3;
+if( players_room( find_room( 10756 ) ) >= 1 )
+  i = 4;
+if( i == 0 ) {
+  send_to_room( #well, room );
+  wait( 1 );
+send_to_room( #float, room );
+  remove_rflag( reset1, room );
+  remove_rflag( no.magic, room );
+  attack( mob, ch, 10d12, "haymaker" );
+  end;
+  }
+wait( 1 );
+send_to_room( #well1, room );
+remove_rflag( reset0, room );
+~
+E
+well~
+The Cloud Guardian bellows,
+
+@c"You do not stand much chance against me alone.
+You are a fool for coming here. Prepare to die."@n
+~
+E
+well1~
+The Cloud Guardian bellows,
+
+@c"You do not stand much chance against me alone.
+Would you like me to bring your friends to help you?
+I might as well rid this realm of all it's plagues."@n
+~
+E
+challenge~
+You challenge him.
+~
+E
+float~
+@CA Cloud Guardian floats down to the surface of the geyser.@n
+~
+!
+0 0 0
+A
+' say~
+yes~
+room = find_room( 10802 );
+if( rflag( reset0, room ) )
+  continue;
+act_tochar( #yes, ch );
+act_notchar( #yes1, ch );
+wait( 2 );
+send_to_room( #ok, room );
+wait( 1 );
+send_to_room( #fog, room );
+send_to_room( #fog, find_room( 10753 ) );
+send_to_room( #fog, find_room( 10754 ) );
+send_to_room( #fog, find_room( 10755 ) );
+send_to_room( #fog, find_room( 10756 ) );
+wait( 1 );
+transfer_all( find_room( 10753 ), room );
+transfer_all( find_room( 10754 ), room );
+transfer_all( find_room( 10755 ), room );
+transfer_all( find_room( 10756 ), room );
+send_to_room( #gone, room );
+wait( 1 );
+send_to_room( #float, room );
+wait( 1 );
+send_to_room( #rumble, room );
+wait( 1 );
+remove_rflag( reset1, room );
+remove_rflag( no.magic, room );
+rch = rand_player( room );
+attack( mob, rch, 10d12, "haymaker" );
+~
+E
+ok~
+A Cloud Guardian bellows,
+
+@c"Very well."
+~
+E
+yes~
+You reply 'yes' to the Cloud Guardian.
+~
+E
+yes1~
+$n replies 'yes' to the Cloud Guardian.
+~
+E
+fog~
+@eA dark fog envelops the room suddenly.@n
+~
+E
+gone~
+@eThe fog disappears as quickly as it came.@n
+~
+E
+float~
+@CA Cloud Guardian floats down to the surface of the geyser.@n
+~
+E
+rumble~
+A Cloud Guardian bellows,
+
+@c"Prepare to die."@n
+~
+!
+0 0 0
+A
+' say~
+no~
+if( rflag( reset0, room ) )
+  continue;
+act_tochar( #no, ch );
+act_notchar( #no1, ch );
+wait( 2 );
+send_to_room( #ok, room );
+wait( 1 );
+send_to_room( #float, room );
+remove_rflag( reset1, room );
+remove_rflag( no.magic, room );
+attack( mob, ch, 10d12, "haymaker" );
+~
+E
+ok~
+A Cloud Guardian bellows,
+
+@c"Very well. Defend yourself!"@n
+~
+E
+no~
+You reply 'no' to the Cloud Guardian.
+~
+E
+no1~
+$n replies 'no' to the Cloud Guardian.
+~
+E
+float~
+@CA Cloud Guardian floats down to the surface of the geyser.@n
+~
+!
+0 0 0
+A
+kill bash~
+all cloud guardian~
+if( rflag( reset1, room ) )
+  act_tochar( #sorry, ch );
+else
+  continue;
+~
+E
+sorry~
+He is floating too high for you to hit.
+~
+!
+0 0 0
+A
+~
+~
+room = find_room( 10802 );
+interpret( mob, "growl" );
+wait( 2 );
+send_to_room( #greet, room );
+wait( 2 );
+send_to_room( #greet1, room );
+~
+E
+greet~
+The Cloud Guardian bellows,
+
+@c"It is not often I see the presence of a mortal.
+This realm was created by my master, and it is his
+wish that no unworthy being remain here."@n
+~
+E
+greet1~
+@c"You may only prove your worth by killing me.
+It is not a decision for you to make, you either kill me,
+or I kill you. You can prepare as much as you like, just
+challenge me when ready for combat."@n
+~
+!
+0 0 0
+A
+ql qlook look l~
+cloud guardian~
+if( rflag( reset1, room ) ) {
+  act_notchar( #look, ch );
+  act_tochar( #before, ch );
+  end;
+  }
+else {
+  act_notchar( #look, ch );
+  act_tochar( #after, ch );
+  end;
+  }
+~
+E
+look~
+$n looks at a Cloud Guardian.
+~
+E
+before~
+Drifting pieces of cloud vapor magically come together in the air, to
+form a very large face.  Slightly translucent, this giant's body forms
+down from his large head, composed of the same ashen clouds.  The
+life-giving vapors of black air form very defined muscles that like the
+rest of his body, are enormous.  He floats high in the air, looming over
+the geyser and the surrounding area as he keeps watch.
+~
+E
+after~
+Drifting pieces of cloud vapor magically come together in the air, to
+form a very large face.  Slightly translucent, this giant's body forms
+down from his large head, composed of the same ashen clouds.  The
+life-giving vapors of black air form very defined muscles that like the
+rest of his body, are enormous.  He floats a few feet above the geyser,
+poised in a position of battle.
+~
+!
+0 0 0
+A
+jump~
+1 down geyser~
+if( mob_in_room( 460, room ) )
+  act_tochar( #cant, ch );
+else {
+  act_tochar( #jump, ch );
+  act_notchar( #jump1, ch );
+  transfer( ch, find_room( 10754 ) );
+  }
+~
+E
+cant~
+The upward force of the geyser prevents you from doing that.
+~
+E
+jump~
+You move to the edge of the geyser...then take a flying leap!
+~
+E
+jump1~
+$n moves to the edge of the geyser, then leaps off!
+~
+!
+0 0 0
+5077 9 1509949540 3 0
+-1
+S
+
+#10803
+Raging Storms~
+Appearing to be far above the level of clouds that were established as
+the ground before, the vapors underfoot here coalesce to again support
+weight.  The air up here is much cooler, cold winds blowing harder and
+whistling in all directions; however, there is something about this
+place, that is almost soothing, every breath more relaxing.  It is
+strange to think this dark, dreary place could lend any thoughts of
+contentedness.
+~
+*1837->back to raging storms
+******
+rextras in
+~
+33030144 0 9 0
+D1
+~
+~
+0 -1 10788 10 10 5
+E
+underfoot vapors~
+The vapors underfoot seem considerably higher up in the cold air then the
+previous ones, like a second level in the clouds.  The black vapors have
+coalesced here to form a path that heads east.
+~
+A
+~
+~
+victim = rand_player( room );
+loop( all_in_room ) {
+  if( rch != victim ) {
+    do_spell( neutralize, mob, rch );
+    act_notvict( #toss, victim );
+    }
+  }
+if( class( victim ) == mage )
+  act_room( "Mage!", victim );
+else if( class( victim ) == monk )
+  act_room( "Monk!", victim );
+else if( class( victim ) == warrior )
+  act_room( "Warrior!", victim );
+else if( class( victim ) == paladin )
+  act_room( "paladin!", victim );
+else if( class( victim ) == cleric )
+  act_room( "cleric!", victim );
+else if( class( victim ) == ranger )
+  act_room( "ranger!", victim );
+else if( class( victim ) == thief )
+  act_room( "thief!", victim );
+~
+E
+toss~
+@MWaking up from your mysterious sleep, you notice $n tossing about,
+still appearing asleep.@n 
+~
+!
+0 0 0
+-1
+S
+
+#0
+

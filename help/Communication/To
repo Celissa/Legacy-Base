@@ -1,0 +1,20 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+to [person in same room with you] [message] : sends a player an 'in<br>
+character' tell <br>
+to [mob] [message] : sends a mob a tell<br>
+<br>
+<h1> Description </h1>
+<br>
+This command is used to speak to others 'in character' and is in the<br>
+language which you are currently speaking.  Often times, you can talk to<br>
+various NPC's in the game which often starts with to [mob] [message]<br>
+where the message is often 'hi' or 'hello'.  It is also used when you're<br>
+in the portal room or Death to get transported to a city.  This is done<br>
+by typing 'to [portal] [city]' or 'to [death] [city]'.<br>
+<br>
+Also see helpfiles on: tell, say, ask<br>
+</html>
+</body>

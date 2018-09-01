@@ -1,0 +1,3819 @@
+#M2_AREA
+2
+
+Cloud Giants~
+Estrella~
+~
+~
+~
+
+3 0
+4
+0
+#ROOMS
+
+#76000
+Eye of the Storm~
+Turbulent winds howl eerily as they tempestuously circle around the area,
+forming a small sphere of tranquillity in their centre.  Ascending into
+the cloudbank far above, an ambient column of still air rises out of the
+globe, creating a long passage that heads into the lower layers of the
+troposphere.  Swirling around the inner edges of the opalescent dome, a
+gusty updraft spirals its way around the narrow column with enough force
+to elicit movements towards the airy destinations high above the towering
+mountains.
+~
+[Estrella] enter hurricane/cyclone/vortex etc for exit/entrance
+[Estrella] want to have random(ish) popping exits.. like POD
+[Estrella] hold off on leaving acodes 'til a way of running the zone gets sorted out
+[Estrella] mebbe have item which is required to run here..
+[Estrella] done
+[Estrella] aze reckons could connnect to 9551ish
+~
+569901120 17 5 0
+D4
+~
+~
+0 -1 76001 10 10 5
+E
+dome sphere column~
+Surrounded by dark, nearly ebon, clouds, which buffet about in a
+vorticular manner, the centre of this sphere is perfectly calm. 
+Untouched by the violent storm, a still column rises upwards, conveying a
+release of pressure from the raging tempest.
+~
+A
+enter~
+cyclone vortex hurricane~
+// act_tochar( #step, ch, obj, mob );
+// act_notchar( #isstep, ch, obj, mob );
+~
+!
+0 0 0
+-1
+S
+
+#76001
+Still Pocket in the Clouds~
+Part way up the slowly widening channel of sedate air, this small pocket
+of tranquillity barely moves as it is held in stasis by equal amounts of
+pressure from both above and below.  Far beneath the gently billowing
+clouds, a raging storm buffets around in circles, its attempts to cause
+vast destruction perturbed by an almost imperceptible globe of stillness. 
+High above the curious pocket, a dense cloudbank extends across the sky
+to the north and west.
+~
+[Estrella] done
+~
+569901120 17 5 0
+D4
+~
+~
+0 -1 76002 10 10 5
+D5
+~
+~
+0 -1 76000 10 10 5
+E
+raging storm globe stillness~
+Near black storm clouds spiral toward the ground at an incredibly high
+velocity, the force with which they harry the earth is forceful enough to
+uproot trees.  Resolutely withstanding the onslaught of the buffeting
+gales, a perfectly still circle of air patiently waits for the winds to
+die down.
+~
+E
+cloudbank cloud bank~
+Thick pale grey clouds span across the sky, their underbellies lined with
+a thunderous darkness.  It appears that the turbulent winds emanate from
+within these banks, spiralling down towards the ground with a raging
+ferocity.
+~
+-1
+S
+
+#76002
+Within the Clouds~
+Stretching as far as the eye can see, the cloudbank dominates this layer
+of the troposphere with stormy clouds.  Below, the clouds darken and
+become denser as turbulent winds whirl down toward the patchwork terrain
+of the land.  Thick walls of cumulus cloud bar any exit save for down to
+the raging storm below, and up into the unforseen middle layers of the
+darkening stratosphere.  All around, the dense clouds seem almost solid;
+as though they were being held in formation by some arcane means.
+~
+[Estrella] done
+~
+569901120 17 5 0
+D4
+~
+~
+0 -1 76003 10 10 5
+D5
+~
+~
+0 -1 76001 10 10 5
+E
+cloudbank cloud bank stratosphere~
+Dark grey, almost black, clouds loom overhead, their oppressive murkiness
+a prelude to a ferocious storm.  A chill descends upon the area as
+turbulent winds emanate from within these banks, spiralling about as they
+gradually pick up momentum before they become the tirade that batters the
+earth below.
+~
+E
+patchwork terrain~
+A patchwork blanket of forest, farm and township mottle the earth far
+below with varying hues of green and brown.  The vast sea glistens like a
+trove of diamonds as the light dances off its undulating surface.
+~
+-1
+S
+
+#76003
+In the Cloudbank~
+With the ground no longer visible it is clear that the natural laws of
+gravity do not apply here.  Shrouded by a sea of darkening clouds, the
+surrounding areas are almost impossible to perceive.  Stretching away to
+the west, an unstable corridor of cloud opens up, revealing an arched
+walkway reminiscent of flower covered palisades.  To the north a large
+fortification rises out of the high cloudbank, its domineering gate made
+of thick wrought iron bars.
+~
+[Estrella] done
+~
+33030208 17 5 0
+D0
+~
+~
+0 -1 76004 10 10 5
+D3
+dense cloud~
+~
+0 -1 76017 10 10 5
+D5
+~
+~
+0 -1 76002 10 10 5
+E
+palisade arched corridor~
+The clouds appear to be formed like a lattice archway, the small gaps in
+the eerie framework entwined with thin tendrils of ethereal jasmine and
+climbing roses.
+~
+E
+fortification gate wrought iron bars~
+Looming high above the misty cloudbank, a towering fort casts deep shadows
+across the pale grey clouds.  The thick iron grate, blocking the
+entrance, looks formidable set in a thick archway of near ebon-hued cloud.
+~
+2088 9 1509949540 3 0
+-1
+S
+
+#76004
+Before an Eerie Fort~
+Thick walls of solid cloud form the outer fortification of what looks
+like a settlement of some kind.  Towering turrets rise above the
+insubstantial ground, their windowless structures reaching over a hundred
+feet into the stratosphere.  Looming darkly overhead, the impenetrable
+iron portcullis pierces the ground with foot-long spikes; the grill of
+this formidable gate seems to have an opalescent pane between the closely
+spaced bars, effectively blocking any unauthorised access to the massive
+fort.
+~
+[Estrella] want a sneaky dig cloud thing that could lead into the fortres.. but want them to have a chance of wandering blindly through some rooms of cloud first.. minimum 1 room.. max mebbe 5?
+[Estrella] done
+~
+569901120 17 5 0
+D2
+~
+~
+0 -1 76003 10 10 5
+D4
+gate~
+~
+0 -1 76005 10 10 5
+E
+walls fortification turrets structure~
+The vast edifice of the giant fort seems to drift slightly on its
+ethereal foundations.  Although completely stable, it is somewhat
+unsettling to see such a formidable structure moving with the gusty winds.
+~
+A
+1 move 2 clear~
+clouds~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #move, ch, obj, mob );
+  act_notchar( #rmove, ch, obj, mob, sight );
+  end;
+}
+act_tochar( #already, ch );
+~
+E
+move~
+You wave your hand through the clouds, and notice they reveal an entrance.
+~
+E
+rmove~
+$n waves $s hand through the clouds, and you notice $m reveal an entrance.
+~
+E
+already~
+The entrance has already been revealed.
+~
+!
+0 0 0
+A
+1 enter~
+clouds~
+if( rflag( reset0, room ) ) {
+  act_tochar( #why, ch );
+  end;
+}
+i = random( 76065, 76067 );
+remove_rflag( status0, find_room( i ) );
+act_tochar( #enter, ch );
+act_notchar( #renter, ch, obj, mob, sight );
+transfer( ch, find_rooM( i ) );
+act_notchar( #arrive, ch, obj, mob, sight );
+loop( followers )
+  if( is_standing( rch ) ) {
+  act_tochar( #enter, rch );
+  act_notchar( #renter, rch, obj, mob, sight );
+  transfer( rch, find_room( i ) );
+  act_notchar( #arrive, rch, obj, mob, sight );
+}
+~
+E
+why~
+Now why would you want to do that?
+~
+E
+enter~
+You enter the clouds, and come out somewhere else.
+~
+E
+renter~
+$n enters the clouds, and vanishes from sight.
+~
+E
+arrive~
+$n appears from above, climbing through the clouds.
+~
+!
+0 0 0
+-1
+S
+
+#76005
+Portcullis~
+Greatly contrasting the swathes of white-grey, billowing clouds, which
+form the formidable portcullis, ebon-hued iron bars, as thick as the
+trunk of a mighty oak, completely seal the entrance to the giant fortress. 
+Despite the misty dampness, the iron shows no sign of corrosion; the
+thick black spikes gleaming evilly in the limelight.  Below, a very faint
+path amidst the dense cloudbank can be seen toward the south and west.
+~
+[Estrella] will figure out a way to open the gate soon
+[Estrella] mebbe: command gate to open in the name of Xirithlhach..
+[Estrella] will need to work that into the game somehow...  mebbe have a history on cloudies in a library..  or have a mob chattering inanely about them..
+[Void] wont be easy to do :P
+[Estrella] coding done
+[Estrella] done
+~
+569901120 17 5 0
+D0
+portcullis~
+~
+407 -1 76006 10 10 5
+D5
+~
+~
+0 -1 76004 10 10 5
+E
+iron portcullis spikes grill gate~
+Thick as tree trunks the spears that form the grill of this domineering
+gate interlock closely, preventing any unwanted visitors from entering
+the settlement.  The lower portion of the grill has been fashioned into
+thick spikes, their surfaces riddled with fine slivers of razor sharp
+iron shards.  Behind the bars, a pane of opalescent material seals the
+gaps between each spike.
+~
+A
+4 command~
+3 xirithlhach~
+if( !is_open( room, north ) ) {
+  act_tochar( #openup, ch );
+  act_notchar( #ropenup, ch );
+  wait( 1 );
+  act_room( #opening, ch );
+  unlock( room, north );
+  open( room, north );
+  wait( 12 );
+  act_room( #closing, ch );
+  close( room, north );
+  lock( room, north );
+}
+else {
+  act_tochar( #already, ch );
+  act_notchar( #ralready, ch );
+}
+~
+E
+openup~
+@CIn a commanding voice you order the gates to open in the name of
+Xirithlhach!@n 
+~
+E
+ropenup~
+@CIn a commanding voice $n orders the gates to open in the name of
+Xirithlhach.@n 
+~
+E
+opening~
+@WWith an eerie grinding of gears, the iron portcullis slowly rises.@n
+~
+E
+closing~
+@BSilently the iron grill descends to the ground.@n
+~
+E
+already~
+@MYou adopt a commanding pose and order the gate to open in the name of
+Xirithlhach.  The gate, obviously already open, summarily ignores you.@n
+~
+E
+ralready~
+@M$n adopts a commanding pose and orders the gate to open in the name of
+Xirithlhach.  The gate, obviously already open, summarily ignores $m.@n
+~
+!
+0 0 0
+A
+~
+~
+act_tochar( #pass_gate, ch );
+act_notchar( #rpass_gate, ch );
+continue;
+~
+E
+pass_gate~
+@WYou pass through the massive gateway into the compound of the
+fortress.@n 
+~
+E
+rpass_gate~
+@W$n passes through the massive gateway into the compound of the
+fortress.@n 
+~
+!
+3 0 1
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou slowly drift $d through the cool, moisture-laden clouds.@n
+~
+E
+to_room~
+@c$n slowly drifts $d through the cloudbank, $s form distorting in the mist.@n
+~
+!
+3 0 32
+2334 9 1509949540 3 0
+-1
+S
+
+#76006
+Inside the Gates of Aerodulin~
+Lifelike monuments of pegacorns, pegasi, giant eagles, and other highly
+revered creatures of the sky, decorate the inner courtyard of this great
+fort.  An extensive path leads from the formidable portcullis in the
+south, toward a colossal building in the northern end of the compound. 
+On either side of the cloud-paved walkway vast masses of misty air swirl
+about in eccentric circles, sometimes forming walls of cloud that are too
+dense to penetrate, and sometimes dispersing enough to reveal small
+snippets of the broad courtyard.
+~
+[Estrella] acode for south: pull lever to open gates
+[Estrella] if you look at/touch the monuments they come to life and leap to attack
+[Estrella] well.... summons one creature at any rate ;)
+[Void] gate done - can play with later perhaps to make it a bit nicer... add some waits and more text?
+[Estrella] have a random pop on what statue comes to life ;)
+[Estrella] needs gate code tweaked
+[Cayln] 3 different mobs, undefined as of yet
+[Estrella] mebbe have some fancy acode that may or may not block passage east/west
+[Estrella] done
+[Estrella] make this the only room that you actually have to look at the statues.. in all other rooms just let them jump :)
+~
+569901120 17 5 0
+D0
+~
+~
+0 -1 76042 10 10 5
+D1
+~
+~
+0 -1 76044 10 10 5
+D2
+portcullis~
+~
+407 -1 76005 10 10 5
+D3
+~
+~
+130 -1 76045 10 10 5
+E
+monuments pegacorns pegasi pegasus giant eagle~
+Exquisitely carved out of the most pure white cloud these statues are
+neither supported from beneath by a dais nor are they suspended from
+above by any visible means; it appears that they hover off the misty
+ground held in perfect formation by some unseen power.
+~
+E
+portcullis~
+The great iron bars pierce the greyish cloud that lies in thick shadows
+beneath the looming portcullis.  Between the closely spaced bars an
+opalescent material provides a solid pane across the entire gate.  To the
+left of the grill, a large lever protrudes from the cloud, it appears to
+be attached to a pulley system that looks as though it would open the
+gate if used.
+~
+A
+pull~
+lever~
+if( is_open( room, south ) ) {
+  act_tochar( #already_done, ch );
+  end;
+}
+open( room, south );
+act_tochar( #opens_door, ch );
+act_notchar( #ropens_door, ch );
+send_to_room( #door_opens, find_room( 76005 ) );
+~
+E
+opens_door~
+You pull the lever and the portcullis slowly rises allowing access to the
+south.
+~
+E
+ropens_door~
+$n pulls a lever and the portcullis slowly rises allowing access to the
+south.
+~
+E
+already_done~
+The gate is already open.
+~
+E
+door_opens~
+The portcullis slowly rises allowing access to the north.
+~
+!
+0 0 0
+2088 9 1509949540 3 0
+-1
+S
+
+#76007
+Gilded Foyer~
+Ornately formed walls of cloud rise out of the shifty ground like smooth
+white blankets of gleaming marble.  Detailed etchings of pegasi in
+flight, pegacorns in battle, and giant eagles soaring high above the
+mountaintops, have been lined with thin slivers of gold.  To the north,
+an elaborately sculptured door of cloud, shaped like clasped hands, is
+hinged to open into the foyer.  The western wall is covered from floor to
+ceiling by an extensive mural of a fiery phoenix, its blazing wings
+spread wide.
+~
+[Estrella] for the western exit:
+[Estrella] get/place gem/ruby/emerald touch wall/heart - summon phoenix mob
+[Estrella] phoenix to die in hellish fire.. need ashes for something ;)
+[Estrella] would there be a way of having the phoenix respawn if it's ashes aren't picked up?
+[Estrella] north acode to open double doors... mebbe strength test ;)
+[Estrella] done
+[Estrella] am thinking ashes get used to open cabinent with sword in
+~
+569901061 17 5 0
+D0
+sculptured door~
+~
+131 -1 76008 10 10 5
+D1
+~
+~
+131 -1 76047 10 10 5
+D3
+mural~
+~
+171 -1 76011 10 10 5
+E
+1 western fiery phoenix mural blazing wings~
+Gold and rubies held within the wall form the bedazzling mural of the
+fabled bird of fire and life.  Emeralds the size of an ogres fist are
+placed as the eyes for this magnificent bird.  A patch of wall is exposed
+where the heart should be.  Perhaps the stone has been misplaced.
+~
+E
+1 north door sculptured~
+Interlacing fingers of cloud fit together perfectly, forming a tightly
+sealed door.  Dense shadows give depth to the already darkened doorway,
+the light trapped within the room dissipating around the edges. Eloquently
+sculptured, a series of notches has been carved on either side of door, a
+slender tendril of mist weaving between the eyelets providing a pivot on
+which to swing.
+~
+A
+1 get 1 take 1 place 1 touch~
+gem ruby emerald wall heart~
+if( mob_in_room( 2408, room ) ) {
+  remove_rflag( reset0, room );
+  end;
+}
+if( !rflag( reset0, room ) ) {
+  act_tochar( #nothing, ch );
+  act_notchar( #rnothing, ch, obj, mob, sight );
+  end;
+}
+remove_rflag( reset0, room );
+mob = mload( 2408, room );
+act_room( #flare, mob, obj, mob, sight );
+init_attack( mob, ch );
+~
+E
+nothing~
+As you try to touch the mural, nothing happens.
+~
+E
+rnothing~
+As $n tries to touch the mural, nothing happens.
+~
+E
+flare~
+$n bursts out of the mural, in all its glory, the heat of the flames
+drawing moisture straight from your skin.
+~
+!
+0 0 0
+A
+touch~
+cloud~
+if( is_open( room, west ) ) {
+  act_tochar( #why, ch, obj, mob, sight );
+  end;
+}
+act_tochar( #touch, ch, obj, mob, sight );
+act_notchar( #rtouch, ch, obj, mob, sight );
+wait( random( 1, 2 ) );
+act_room( #open, ch, obj, mob, sight );
+open( room, west );
+~
+E
+why~
+The door to the west has already been opened.
+~
+E
+touch~
+You reach up and press on the cloud by the mural, and there is an audible
+click.
+~
+E
+rtouch~
+$n reaches up and presses on the cloud by the mural, there is an audible
+click.
+~
+E
+open~
+The mural to the west slides out of the way, revealing an opening.
+~
+!
+0 0 0
+A
+~
+~
+obj = obj_in_room( 7081, room );
+if( obj ) {
+  send_to_room( #respawn, room, sight );
+  mob = mload( 2408, room );
+  junk_obj( obj );
+  rch = rand_player( room );
+  if( rch )
+    if( !is_mob( rch ) )
+    init_attack( mob, rch );
+}
+~
+E
+respawn~
+You hear a shrieking scream from the ashes, as the phoenix is reborn.
+~
+!
+2 250 0
+A
+~
+~
+if( find_stat( ch, str ) < random( 18, 26 ) ) {
+  act_tochar( #weak, ch, obj, mob );
+  act_notchar( #rweak, ch, obj, mob, sight );
+  end;
+}
+continue;
+~
+E
+weak~
+You struggle, attempting to open the doors, but fail.
+~
+E
+rweak~
+$n strains, attempting to open the northern doors, but $s strength is to
+puny.
+~
+E
+to_char~
+With great effort you open $1.
+~
+E
+to_room~
+With great effort $n opens $2.
+~
+E
+to_side~
+$1 opens very slowly, under great effort from someone.
+~
+!
+8 0 1
+-1
+S
+
+#76008
+Banquet Hall of Aerodulin~
+Positioned in the centre of this extensive hall, a long table on a raised
+dais stretches out, filling the expanse of this otherwise empty room. 
+Four-foot tall candelabra are evenly spaced along the deep mahogany
+surface; between these, large bowls of oversized fruit spill their
+contents onto the dark wood.  Running the length of the room, on either
+side of the table, a row of circular pillars, entwined with misty
+tendrils in the shape of grape vines, are used more for decoration than
+for supporting the vast weightless ceiling.
+~
+[Estrella] south acode to open double doors... strength test
+[Estrella] acod for search in the fruit bowl.. i want the cherries/strawberries/grapes to be too big to carry.. you can get them but the not move :)
+[Estrella] vnums for fruit bowl search 3397, 3395, 3399
+[Estrella] maybe have the doors swing open as you go to leave south.. they are cloud after all ;)
+[Estrella] done
+~
+1643642885 17 5 0
+D2
+double doors~
+~
+131 -1 76007 10 10 5
+D3
+door~
+~
+513 -1 76009 10 10 5
+E
+fruit bowl exotic~
+Succulent looking fruit of immense proportions have been piled to
+overflowing in the ethereal cloud-made bowls.  Cherries the size of a
+cartwheel...  strawberries as big as a cottage...  bunches of round
+grapes, each three feet in diameter...  A feast fit for a king.
+~
+2367 9 1509949540 3 0
+-1
+S
+
+#76009
+Kitchen~
+Lining the walls of the kitchen are rows of cooking utensils, pots, pans
+and silverware, all neatly stacked on shelves or hanging from pegs above
+the benches, gleam in the pure white room.  Cascading down from halfway
+up the northern wall, a glistening spring of fresh chilling water emerges
+from the cloud and burbles merrily as it swirls about a basin set deep in
+the bench.  In the centre of the room a massive stove radiates warmth, as
+the furnace within burns hot to roast the daily feast.  An archway in the
+western wall leads to a well-tended herb garden, which smells of sweet
+basil and rosemary.
+~
+[Estrella] i want the chef to come when called.. hence open door
+[Estrella] done
+[Estrella] code for water (maybe be able to fill water containers here?)
+~
+569901061 17 5 0
+D1
+kitchen door~
+~
+513 -1 76008 10 10 5
+D3
+~
+~
+0 -1 76010 10 10 5
+E
+spring water basin~
+Emanating from within the dense cloud wall, a brightly sparkling spring
+of fresh water flows down an ornately carved channel, which leads to the
+deep basin.  Although there is no apparent drain from the sink, the water
+level seems to stay at exactly the same height - about three inches from
+the lip of the basin.
+~
+2262 9 1509949540 3 0
+-1
+S
+
+#76010
+Herb Garden~
+Towering like the lofty canopy of a mighty forest, the herbs here have
+grown to a maxim in the warm, well-tended pocket of cloud.  Stems the
+size of fully matured oaks, bare the weight of the fragrant leaves that
+droop down to gently skirt the misty ground.  Sprigs of rosemary drape
+over the narrow path of cobbled cloud, which winds its way around the
+neatly arranged plots of aromatic sweet basil and thyme.  To the west, an
+archway of cloud separates the small garden from the pristine kitchen of
+the fortress, its' rounded pillars a mottled greyish white.
+~
+[Estrella] might add a few rooms to the herb garden... maybe
+[Estrella] done
+~
+569901120 17 5 0
+D1
+~
+~
+0 -1 76009 10 10 5
+D3
+~
+~
+0 -1 76053 10 10 5
+E
+path cobbled plots~
+Chiselled out of the thick cloudbank, this cobbled trail runs from the
+archway of the kitchen to the farthest reaches of this peculiar herb
+garden, its path somewhat erratic as it twists and turns between the
+plots of aromatic plants.  Spilling their fragrant leaves over the neatly
+carved sleeper logs, which form the well-tended beds, the giant herbs
+undulate slightly as the ground they are growing in ebbs with the flowing
+air currents.
+~
+-1
+S
+
+#76011
+A Statued Vault~
+Row upon row of monolithic statues stand proudly atop high daises that
+look as though they have been chiselled out of the dense cloud.  Each
+statue stands before a towering pillar whose broad girths are enveloped
+by seething tendrils of mist that drape negligently down from the vaulted
+ceiling.  Swirling before the westernmost wall, a dizzying vortex of
+dark, near ebon, cloud gyrates towards the lofty ceiling.
+~
+[Estrella] not sure if i have done the right thing with the up exit..
+[Estrella] i want you to enter the vortex to go up (i realise that will need code)..
+[Estrella] would like statues to come to life
+[Estrella] *ponders* mist giants
+[Estrella] done
+~
+569901125 17 5 0
+D1
+swirling cloud~
+~
+171 -1 76007 10 10 5
+D3
+~
+~
+0 -1 76059 10 10 5
+D4
+spinning vortex~
+~
+0 -1 76012 10 10 5
+E
+statues monolithic~
+Colossal statues in the likeness of the most noble of cloud giants lines
+the epic vault, their proud posture and omnipotent expressions fill the
+chamber with a revered sense of awe.
+~
+E
+vortex ebon swirling cloud~
+Nearly pitch black, the turbulent vortex of rapidly spinning winds spiral
+upward toward the vaulted ceiling.  The air around the miniature cyclone
+is pulled into the wild whirl causing a brisk draft to flow through the
+chilling chamber.
+~
+A
+~
+wall cloud 1 eastern~
+if( is_open( room, east ) ) {
+  act_tochar( #why, ch );
+  end;
+}
+act_tochar( #search, ch );
+act_notchar( #rsearch, ch, obj, mob, sight );
+open( room, east );
+~
+E
+why~
+There is nothing to search to the east.
+~
+E
+search~
+You search the wall to the east, and push a button by accident.
+~
+E
+rsearch~
+$n searches the wall to the east, and a look of surprise and worry
+crosses $s face.
+~
+!
+9 0 0
+A
+~
+~
+act_tochar( #vortex, ch );
+~
+E
+vortex~
+The vortex is blocking the way, perhaps you could enter it.
+~
+!
+3 0 16
+A
+enter~
+vortex~
+act_tochar( #worry, ch );
+act_notchar( #rworry, ch, obj, mob, sight );
+wait( random( 1, 2 ) );
+act_tochar( #jump, ch );
+act_notchar( #rjump, ch, obj, mob, sight );
+transfer( ch, find_room( 76012 ) );
+act_notchar( #spit, ch, obj, mob, sight );
+~
+E
+worry~
+You walk up to the edge of the vortex and look into it with a bit of worry.
+~
+E
+rworry~
+$n walks up to the edge of the vortex and looks into it with a bit of worry.
+~
+E
+jump~
+You jump into the vortex, and it spins you up into the air.
+~
+E
+rjump~
+$n jumps into the vortex and its spins $m into the air.
+~
+E
+spit~
+$n gets spit out of the vortex.
+~
+!
+0 0 0
+-1
+S
+
+#76012
+Above the Vault~
+Stark and sterile, this chamber is solely used as a hallway from the
+vault below to the watchtower above.  The walls are a dreary dull grey
+colour, solemn as the attendants of a dirge; chiselled brusquely out of
+the clouds in a manner which states that this is not a place for
+indolence.  To the east is a room almost as sparse as this, with scant
+few personal items and an officious desk and chair.  Northwards appears
+to be a chamber that is used to prepare for battle, its walls lined with
+armour and weapons.  On the floor by the westernmost wall, a miniature
+cyclone spirals downwards.
+~
+[Estrella] need acode for down.. enter cyclone to go down
+[Estrella] done
+~
+569901061 17 5 0
+D0
+~
+~
+0 -1 76014 10 10 5
+D1
+~
+~
+0 -1 76013 10 10 5
+D5
+cyclone~
+~
+0 -1 76011 10 10 5
+E
+walls cloud~
+Bleak as the weather on a stormy day, the bare walls bespeak of the
+militant usage of this area.  No florid decorations or designs have been
+etched to lighten the oppressive feeling in this room.
+~
+A
+~
+~
+act_tochar( #enter_cyclone, ch );
+~
+E
+enter_cyclone~
+The cyclone is preventing you from going that way, perhaps entering it?
+~
+!
+3 0 32
+A
+enter jump~
+cyclone~
+act_tochar( #enter_cyc, ch );
+act_notchar( #renter_cyc, ch, obj, mob, sight );
+wait( random( 1, 2 ) );
+act_tochar( #dissipate, ch );
+wait( 1 );
+transfer( ch, find_room( 76011 ) );
+act_notchar( #crash, ch, obj, mob, sight );
+damage( mob, ch, 5d10+50, physical, "the unforgiving ground", "the unforgiving ground" );
+~
+E
+enter_cyc~
+You stride up to the cyclone and jump into it.
+~
+E
+renter_cyc~
+$n strides up to the cyclone and jumps in.
+~
+E
+dissipate~
+The cyclone dissipates as you enter it. Throwing you down.
+~
+E
+crash~
+$n crashes into the ground.
+~
+!
+0 0 0
+-1
+S
+
+#76013
+Guard's Room~
+Two blazing torches illuminate this room, one beside the door in the
+centre of the west wall, the other above the desk on the southern wall. 
+Crafted out of smooth mahogany, the desk occupies a great portion of the
+southeastern corner of the room.  Behind the large desk sits a
+practical-looking chair; it also made from the dark wood.  Three other
+identical chairs sit in the northwest corner, facing each other in a
+triangular formation.  In the northeastern corner a gleaming suit of
+golden armour stands, presumably, on display.
+~
+[Estrella] done
+~
+569901061 17 5 0
+D3
+~
+~
+0 -1 76012 10 10 5
+E
+suit golden armour~
+Like the flaming sun on the horizon at dawn, this suit of armour glows
+with the glory of many an epic battle.  Jewel-studded helm and
+breastplate proudly bare the markings of the most prestigious of all
+giant-kind.
+~
+E
+desk mahogany~
+Varnished to boast the eloquent grain of the dark wood, this desk has a
+well cared for look about it.  Not a scratch mars the sleek surface - no
+blemish or dent or imperfection.  The surface is bare, save for a quill
+and sheet of unmarked parchment.
+~
+2334 9 1509949540 3 0
+-1
+S
+
+#76014
+Armoury and Weaponry~
+Lining the western and northern wall of this wide chamber are shelves of
+weapons packed to their fullest extent; a wide selection from daggers to
+arrows, broadswords to spears.  In the centre of the room, an ample
+supply of armour stands ready for wearing, the crest of the cloud giant
+distinctly marked on every helm.  A gleaming sword of mithril and ruby
+stands on lonesome display in a cabinet made from an opalescent substance. 
+To the east lies a small room; a ladder on the northern wall disappears
+through the cloudy ceiling.
+~
+[Estrella] need some groovey way of getting sword..
+[Estrella] done
+~
+569901061 17 5 0
+D1
+~
+~
+0 -1 76015 10 10 5
+D2
+~
+~
+0 -1 76012 10 10 5
+E
+gleaming sword mithril ruby cabinet~
+Lord Xirithlhach, the fabled general of the cloud giants' army, who lost both
+life and weapon to a devastating enemy.  Many years later the sword was
+retrieved and placed under mystical lock until Xirithlhach's equal was found.
+~
+2088 9 1509949540 3 0
+-1
+S
+
+#76015
+Beneath the Watchtower~
+The broad hallway from the west ends here in a patch of pale grey cloud. 
+Rivulets of condensation bead on the walls as the chilling temperature
+from outside seeps through the stormy-looking clouds.  To the west, a
+room lined with row upon row of arms and armament gleams in the subdued
+lighting as orange flames from the few torches mounted within the wall
+flicker across the metallic items.  A ladder made out of dense, near
+ebon-hued cloud disappears through the dark, fluctuating ceiling as it
+ascends up towards the unseen solitary watchtower.
+~
+[Estrella] climb ladder to go up
+[Estrella] done
+~
+569901061 17 5 0
+D3
+~
+~
+0 -1 76014 10 10 5
+D4
+ladder through the cloud~
+~
+2218 -1 76016 10 10 5
+E
+ladder ebon-hued ebon~
+Finely swirling clouds, as dark as wrought iron, form the rungs of this
+enormous ladder.  Each step lies about two yards above the previous one,
+their turbulent consistencies gyrating wildly from left to right as they
+are held in stasis by some arcane means.
+~
+A
+~
+ladder 1 up~
+act_tochar( #grab_ladder, ch );
+act_notchar( #rgrab_ladder, ch, obj, mob, sight );
+wait( 1 );
+act_tochar( #struggle, ch );
+transfer( ch, find_room( 76016 ) );
+act_notchar( #rstruggle, ch, obj, mob, sight );
+~
+E
+grab_ladder~
+You grab the ladder and begin your ascent.
+~
+E
+rgrab_ladder~
+$n grabs the ladder and begins $s ascent.
+~
+E
+struggle~
+You struggle up the ladder, the last few inches and drag yourself up.
+~
+E
+rstruggle~
+$n's pulls $mself over the edge, and pants a little before standing.
+~
+!
+18 0 16
+-1
+S
+
+#76016
+Lookout's Post~
+From the top of this monumental watchtower, the vista of the surrounding
+area appears as one great sea of grey-white clouds.  Thick clumps of hazy
+mist undulate and swirl with eerie breezes that wash over the ethereal
+scape, yet they somehow manage to maintain their land-like structure
+through the turmoil caused by the winds.  Far off to the northwest it is
+only just possible to discern an island of cloud, its secrets lying
+shrouded by a blanket of dense fog.
+~
+[Estrella] climb ladder to go down
+[Estrella] maybe a couple more rooms
+[Estrella] done
+~
+569901120 17 5 0
+D2
+~
+~
+0 -1 76064 10 10 5
+D3
+~
+~
+0 -1 76062 10 10 5
+D5
+ladder through the cloud~
+~
+2218 -1 76015 10 10 5
+E
+island blanket fog~
+Little more than a blur on the horizon, the vague form of the island
+wavers as wispy clouds, barely more than shadows, pass fleetingly over
+its vast expanse.
+~
+A
+~
+ladder 1 down~
+act_tochar( #grab_ladder, ch );
+act_notchar( #rgrab_ladder, ch, obj, mob, sight );
+wait( 1 );
+act_tochar( #struggle, ch );
+transfer( ch, find_room( 76015 ) );
+act_notchar( #rstruggle, ch, obj, mob, sight );
+~
+E
+grab_ladder~
+You grab onto the ladder, and drop yourself down onto it.
+~
+E
+rgrab_ladder~
+$n grabs the ladder and drops $mself down onto it.
+~
+E
+struggle~
+You drop the last few feet to the ground, tired of your descent.
+~
+E
+rstruggle~
+$n drops the last few feet to the ground, tired of $s descent.
+~
+!
+18 0 32
+1513 9 1509949540 3 0
+-1
+S
+
+#76017
+Cloudy Palisade~
+Curving high above the wispy ground, a pale grey trellis archway of cloud
+stretches as far as the eye can see to both the east and west.  Entwined
+within and without the fine diamonds that form the arch, fleeting
+tendrils of cloud writhe and loop about the ethereal structure, many
+taking on the shape of climbing roses, jasmine and ivy. Through the
+swathes of cloud, it is difficult to determine the length of this
+flowered palisade.
+~
+[Estrella] done
+~
+569901120 17 5 0
+D1
+dense cloud~
+~
+0 -1 76003 10 10 5
+D3
+~
+~
+0 -1 76018 10 10 5
+E
+climbing roses jasmine ivy tendrils~
+Buds of the climbing roses, though small to a giant, span about a foot in
+length.  Ethereal tendrils of vine, thick as an ogres arm, entangle
+themselves along the trellis-like cloud.  Sprigs of jasmine loop around
+and throughout the rose plants, an occasional tumble of ivy also
+intermingled along the palisade.
+~
+2334 9 1509949540 3 0
+-1
+S
+
+#76018
+Along the Cloudbank~
+The arched palisade continues on its east west heading, its trellis-like
+structure bedecked with tumbling tendrils of plant-shaped clouds. 
+Fingers of wispy mist spread out along the wide walkway, their
+whimsically woven patterns instilling a deathly chill on the
+stratospheric temperatures.  Through a small clearing on the northern
+wall, the blurred outline of a craggy perch can be discerned; although
+not made of rock, the spectacular sculpture looks unerringly real.
+~
+[Estrella] code for tendrils of mist - some cold damage.. or at least a shiver ;)
+[Estrella] done
+~
+569901120 17 5 0
+D1
+~
+~
+0 -1 76017 10 10 5
+D3
+~
+~
+0 -1 76019 10 10 5
+E
+craggy perch rock sculpture clearing~
+Aside from an occasional wisp of cloud, which gives away its true nature,
+the outcropping that forms the angular perch looks deceptively rocky.
+~
+E
+fingers mist woven patterns~
+Like long slender vines, the tendrils of mist seem to seek out any
+warmth, wrapping themselves about it, to choke and smother it until all
+is as cold as ice.
+~
+A
+~
+~
+rch = rand_player( room );
+act_tochar( #mist, rch, obj );
+act_notchar( #rmist, rch, obj, mob, sight );
+damage( mob, rch, 2d20+30, cold, "tendrils of mist" );
+interpret( rch, "shiver" );
+~
+E
+mist~
+@CTendrils of mist curl around you, enveloping you in an icy embrace!@n
+~
+E
+rmist~
+@CTendrils of mist curl around $n, chilling $m to the bone.@n
+~
+!
+2 300 0
+-1
+S
+
+#76019
+Before a Craggy Perch~
+The cloud here has thinned dramatically and a hazy view of the ground far
+below is now visible; the stunning vista a welcome change from the
+monotonous grey-white cloud.  Stretching off to the east, a vast palisade
+of trellis-shaped cloud, covered with a variety of climbing flowers,
+leads towards a looming fortress.  To the north, an intricately sculptured
+perch sits proudly at the end of the cloudbank, its occupant presumably
+the legendary giant roc.
+~
+[Estrella] done
+~
+569901120 17 5 0
+D0
+~
+~
+0 -1 76020 10 10 5
+D1
+~
+~
+0 -1 76018 10 10 5
+E
+vista ground view~
+Pristine white mountaintops flow into the bluish-grey forested alpine
+slopes, which in turn give way to lush green forests and rolling pastures. 
+Sparkling in azure glory, the vast waters of the ocean undulate with the
+pull of solar and lunar influences.
+~
+2334 9 1509949540 3 0
+2088 9 1509949540 3 0
+-1
+S
+
+#76020
+Upon a Craggy Perch~
+Hard as rock and sharply angular, the cloud forms a stark craggy perch in
+the likeness of jagged outcroppings found only in the high unreachable
+spires of vast mountain ranges.  Around the area, the cloud cover has
+thinned enough to reveal a stunning vista of the world below.  To the
+south, a large arched palisade stretches eastward, its' trellis-like
+formation appears to be covered by a writhing network of lush climbing
+plants and vines.  Hazy and more than a little indistinct, there looks to
+be another expanse of thick cloud away to the north, although there does
+not appear to be any way of accessing it.
+~
+[Estrella] ride on the giant condor starts here
+[Estrella] need to lure/bribe the condor with sommat
+[Estrella] forget about the condor.. they are f***ing ugly birds... new bird = roc m1847
+[Estrella] done
+~
+569901120 17 5 0
+D2
+~
+~
+0 -1 76019 10 10 5
+D5
+~
+~
+0 -1 76038 10 10 5
+E
+expanse thick cloud 1 north~
+Little more than a shadow off to the north, the cloud seems to thicken
+once more, in a similar fashion to the cloudbank here.  The colouration
+of the vast expanse seems dark and stormy, with an almost electrifying
+presence just within the bounds of its thick borders.  It is difficult to
+determine the extent of the mass to the north; perhaps it is no more than
+an ordinary formation in the stratosphere.
+~
+A
+hang place~
+meat~
+obj = has_obj( 7614, ch );
+mob = mob_in_room( 1847, room );
+if( !obj ) {
+  act_tochar( #nomeat, ch, obj );
+  end;
+}
+if( mob ) {
+  act_tochar( #already, ch, obj, mob );
+  end;
+}
+act_tochar( #hang, ch, obj, mob );
+act_notchar( #rhang, ch, obj, mob, sight );
+wait( random( 1, 2 ) );
+mob = mload( 1847, room );
+act_room( #roc_arrive, mob, obj, mob, sight );
+wait( random( 1, 2 ) );
+act_room( #eat, mob, obj, mob, sight );
+junk_obj( obj );
+~
+E
+nomeat~
+You don't have the meat that will attract what you wish to.
+~
+E
+eat~
+$n rips $p into small strips and eats them.
+~
+E
+roc_arrive~
+$n's shadow passes over you, and $e lands nearby.
+~
+E
+hang~
+You hang $p on the edge of the perch.
+~
+E
+rhang~
+$n hangs $p on the edge of the perch.
+~
+E
+already~
+$N is already here.
+~
+!
+0 0 0
+A
+3 mount~
+gigantic roc bird~
+if( get_integer( ch, "/Cayln/Roc/Mounted" ) == 0 ) {
+mob = mob_in_room( 1847, room );
+if( mob ) {
+  set_integer( ch, "/Cayln/Roc/Mounted", 1 );
+  act_tochar( #mount, ch, obj, mob );
+  act_notchar( #rmount, ch, obj, mob, sight );
+  end;
+}
+} else {
+   act_tochar( #already, ch );
+   end;
+}
+continue;
+~
+E
+error~
+You climb up onto the feathered back of $N.
+~
+E
+mount~
+You climb up onto the feathered back of the roc.
+~
+E
+rmount~
+$n climbs up onto the feathered back of $N.
+~
+E
+already~
+You are already mounted on top of the roc.
+~
+!
+0 0 0
+-1
+S
+
+#76021
+Ride on the Back of a Giant Roc~
+The high vistas are as breath-takingly beautiful as the wind is bitterly
+cold; the thin atmosphere coated with biting ice crystals that tear at
+the throat and mouth with every chilling gasp.  Stormy clouds brood over
+head; their menacing rumbles threaten to split into a downpour that could
+be disastrous for anyone this close to them.  Far below, a scattering of
+hills and mountains spread, their details muted by the distance; a
+sparkling river winds through the land, a handful of glowing dots from
+villages surrounding its edge.
+~
+[Estrella] rdesc done
+~
+33030149 17 9 0
+D1
+~
+~
+0 -1 76022 10 10 5
+D3
+~
+~
+0 -1 76038 10 10 5
+-1
+S
+
+#76022
+Ride on the Back of a Giant Roc~
+With wings braced open, the roc effortlessly glides on a steady jet
+stream; the air currents gently urging the giant avian forward.  The
+surrounding skies are darkened, near ebon in hue, and it appears that a
+turbulent storm is threatening to break overhead.  Far below, hidden
+beneath misty layers of cloud, the mottled colours of the earth, its
+fields and forests, lakes and mountains, seas and deserts, seem quite
+hazy, but no less enthralling for their paled tones.  Wind rifles through
+the thick feathers of the mightly roc, an intense chill held within its
+deceptive fingers.
+~
+[Estrella] rdesc done
+~
+33030149 17 9 0
+D3
+~
+~
+0 -1 76021 10 10 5
+D5
+~
+~
+0 -1 76039 10 10 5
+-1
+S
+
+#76023
+Ride on the Back of a Giant Roc~
+Veering sharply around, the roc hurriedly leaves the downward air-stream
+and begins to curve back on its flight path.  Unable to gage the distance
+travelled thus far, it is nigh impossible to tell where this avian is
+headed.  Lost in the damp chilling clouds, the wind howling eerily, it
+seems as though the intentions of this giant bird may be somewhat
+questionable, although nestled into its warm feathers, this seems like a
+trivial matter that is best not thought about.
+~
+[Estrella] rdesc done
+~
+33030149 17 9 0
+D2
+~
+~
+0 -1 76039 10 10 5
+D4
+~
+~
+0 -1 76040 10 10 5
+-1
+S
+
+#76024
+Ride on the Back of a Giant Roc~
+Soaring effortlessly upon the jet stream, the roc effortlessly cuts
+through the cloud that has begun to swirl in from all around.  A fine
+mist swathes the area with a bone chilling moisture and cloaks the world
+in a dull grey haze, tinging everything with a grim murkiness.  Huddled
+into the warm feathers of the roc, the icy temperatures are barely
+noticeable.  Ahead, the clouds thicken and darken menacingly, their
+underbellies near ebon in hue.
+~
+[Estrella] rdesc done
+~
+33030149 17 9 0
+D1
+~
+~
+0 -1 76040 10 10 5
+D3
+~
+~
+0 -1 76041 10 10 5
+-1
+S
+
+#76025
+Inside a Cloudy Roost~
+Comprised entirely of cloud, this lofty nest looks out over the patchwork
+land far below; the sun glistens off the surface of the slowly undulating
+ocean.  Twigs and branches jut out at awkward angles, their lengths
+snapped in more than one place.  Lining the peculiar roost, a spongy
+layer of dense cloud adds insulation to the gigantic eyrie.  To the west,
+the cloudbank thickens and darkens as they arc across the sky in a
+northerly direction.  To the south, the hazy indistinct form of another
+island drifts on the ardent breeze.
+~
+[Estrella] not sure how to go about the east exit... requires mount ride
+[Estrella] ride ends in this room
+[Estrella] done
+~
+569901120 17 5 0
+D3
+~
+~
+0 -1 76026 10 10 5
+D5
+~
+~
+0 -1 76041 10 10 5
+E
+twigs branches spongy insulation~
+Ashen-hued branches and twigs fabricated entirely out of cloud have been
+intertwined to form a circular nest.  Their ethereal lengths appear to be
+broken in order to better shape the rounded roost.  A soft layer of plush
+cloud lines the interior of the nest adding extra padding and warmth to
+this strange abode.
+~
+A
+ride~
+fast~
+set_integer( ch, "/Esh/Roc/Mounted", 1 );
+set_integer( ch, "/Cayln/Roc/Mounted", 0);
+set_integer( ch, "/Esh/Roc/MountedReturn/", 0 );
+set_integer( ch, "/Esh/Roc/MountedReturn", 0 );
+set_integer( ch, "/Esh/Roc/Mounted/", 0 );
+~
+!
+0 0 0
+-1
+S
+
+#76026
+Edge of a Giant Nest~
+Nestled in the crook of a cloud-made cliff-face, the roost for an
+enormous bird precariously balances on the verge of the vast cloudbank. 
+Crammed into a small crevice in the pseudo rock-face are branches and
+twigs of varying sizes, their broken lengths provide a viable ladder down
+to the spongy, wafting ground on the inland side of the cliff.  To the
+west, the cloud transforms into a mass of dense fog, the colouration of
+which darkens drastically in a stormy manner.  Southwards, a misty haze
+thickens, forming the dense island from whose depth a looming fortress
+protrudes.
+~
+[Estrella] done
+~
+569901120 17 5 0
+D1
+~
+~
+0 -1 76025 10 10 5
+D3
+~
+~
+0 -1 76027 10 10 5
+E
+cliff-face rock-face crevice ladder~
+Riddled with nooks and crannies, the fragmented and fractured rock-face
+looms upward, its bleak colouration a parody of chipped basalt.  Deeply
+cut into the face of the cliff, crevices have been formed by intensive
+weathering over the long passage of time.  Jutting out of a series of
+cracks in the pseudo-rock, the broken lengths of twigs and branches wend
+their way from the nest to the to cloudbank at the base of the cliff.
+~
+-1
+S
+
+#76027
+Thickening Clouds~
+Deep within the dark, near ebon, cloudbank, the misty haze thickens until
+it is almost stifling.  Writhing tendrils snake about as a chilling draft
+stirs the dense cloud matter; although quite brisk, it does not seem to
+clear the choking stratospheric conditions.  The only visible exit from
+these intensely clinging clouds is to the east where the formation takes
+on the appearance of a craggy mountain spire and the descending closeness
+of the thick fog slowly dissipates as a warmer temperature lifts the
+cloud cover.
+~
+[Estrella] require search for north exit
+[Estrella] done
+~
+569901120 17 5 0
+D0
+~
+~
+2219 -1 76028 10 10 5
+D1
+~
+~
+0 -1 76026 10 10 5
+E
+tendrils misty haze~
+Weaving about like writhing serpents, the fine tendrils of mist seem to
+form an impenetrable wall of cloud around three sides of this area. 
+Dense enough to get lost in, the oppressing closeness of the stratosphere
+seems particularly thick towards the north, as though it were trying to
+hide a dark secret.
+~
+A
+~
+1 north mist haze tendril wall~
+if( is_open( room, north ) )
+  act_tochar( #nothing, ch );
+else {
+  if( find_skill( ch, searching ) < 4 ) {
+    act_tochar( #invain, ch );
+    act_notchar( #rinvain, ch, obj, mob, sight );
+  }
+  else {
+    act_tochar( #passage, ch );
+    act_notchar( #rpassage, ch, obj, mob, sight );
+    open( room, north );
+  }
+}
+~
+E
+nothing~
+@cWhy do you want to search there?@n
+~
+E
+invain~
+@cYou search and almost get lost in the thick mist, finding nothing.@n
+~
+E
+rinvain~
+@c$n disappears in the mist to the north, only to return some moments
+later looking very confused.@n 
+~
+E
+passage~
+@CYou search the thickening clouds and realise that there is a passage
+behind the, seemingly impenetrable, wall of mist!@n 
+~
+E
+rpassage~
+@C$n disappears into the thick cloud to the east, returns from the west,
+disappears to the north again and after a few moments, emerges with a
+superior grin on $s face.@n 
+~
+!
+9 0 0
+-1
+S
+
+#76028
+Before a Pristine Cavern~
+Blazing with a blinding pure-white light, the clouds that form the mouth
+of this ethereal cave emit a bone-chilling temperature as they drift
+ponderously about in the highest reaches of the stratosphere.  The
+pseudo-rock, chipped and angular, arches high overhead, its depth and
+breadth indiscernible as no shadows mar the pristine interior of the
+cavern beyond.  All around, the dense mist hangs heavily over the gently
+undulating ground its moisture laden particles seem to spread out a fine
+mesh of dampness, which seeps small beads of water into the very
+substance of any material being.
+~
+[Estrella] should i leave the cave dinosaur sized for the dragon... its not like anyone will be brining a packmule up here ;)
+[Estrella] besides.. i want the dragon to be able to wander a little...
+[Estrella] it is her lair therefore she should be able to walk through it ;)
+[Estrella] south exit search
+[Estrella] done
+[Estrella] need extra re searching through mist
+~
+569901120 17 7 0
+D1
+~
+~
+0 -1 76029 10 10 5
+D2
+~
+~
+2219 -1 76027 10 10 5
+E
+mouth cave rock pseudo-rock~
+Riddled with a multitude of crevices, the face of the cloud-made rock
+spans high overhead as it delves into the deepest reaches of this
+mystical island in the sky.  Along the edges of the cavern wall, the
+cloud appears smudged, almost as though a sizeable creature had
+repeatedly brushed against the surfaces.
+~
+A
+~
+1 south mist cloud wall~
+if( is_open( room, south ) )
+  act_tochar( #nothing, ch );
+else {
+  if( find_skill( ch, searching ) < 4 ) {
+    act_tochar( #invain, ch );
+    act_notchar( #rinvain, ch, obj, mob, sight );
+  }
+  else {
+    act_tochar( #passage, ch );
+    act_notchar( #rpassage, ch, obj, mob, sight );
+    open( room, south );
+  }
+}
+~
+E
+nothing~
+@cNothing of interest there.@n
+~
+E
+invain~
+@cYou search and almost get lost in the thick mist, finding nothing.@n
+~
+E
+rinvain~
+@c$n disappears in the mist to the east, emerges from the west, tries
+going north, changes $s mind and leaves south.  After some time, $e
+returns looking very confused.@n 
+~
+E
+passage~
+@CYou search the thick clouds and realise there is a passage behind the
+seemingly impenetrable wall of mist!@n 
+~
+E
+rpassage~
+@C$n disappears into the thick cloud to the east, returns from the west,
+disappears to the south again and after a few moments, emerges with a
+superior grin on $s face.@n 
+~
+!
+9 0 0
+-1
+S
+
+#76029
+Inside the Cave's Mouth~
+Glowing bright white the cloud, which forms this ethereal cave, has been
+fashioned in the likeness of a twisting granitic cavern.  The extensive
+walls and vaulted ceiling appear rough-hewn and angular, their surfaces
+riddled with a myriad of nooks and crannies.  Running an indeterminate
+distance to the west, the enormous cave winds hither and thither, deeper
+into the cold masses of cloud, which form this arcane island.  Along the
+northern wall, a chilling mist descends upon the area its bitter dampness
+shrouded close together forming a barricade of impenetrable fog.
+~
+[Estrella] search/climb for up exit
+[Estrella] done
+[Yrna] Not entirely sure what are we searching to reveal up
+~
+569901120 17 9 0
+D3
+~
+~
+0 -1 76028 10 10 5
+D4
+~
+~
+3243 -1 76030 10 10 5
+E
+1 northern barricade fog~
+Forming what appears to be a solid wall of cloud, the fog seems to sit in
+an almost stepped formation, retreating back by a foot at a time as the
+barrier rises upwards into the ceiling of the cave.  Several notches have
+been hacked into the side of the cavern in an attempt to form a viable
+ladder over the dense mist.
+~
+A
+~
+barricade cloud 1 up~
+if( is_open( room, up ) ) {
+  act_tochar( #why, ch );
+  end;
+}
+act_tochar( #peer, ch );
+act_notchar( #rpeer, ch, obj, mob, sight );
+wait( 1 );
+open( room, up );
+act_tochar( #open, ch );
+act_notchar( #ropen, ch, obj, mob, sight );
+~
+E
+why~
+Why would you want to do that?
+~
+E
+peer~
+You look up, and notice the clouds are hiding something, after a little
+effort you reveal an opening.
+~
+E
+rpeer~
+$n looks up, and peers intently at something.
+~
+E
+open~
+You move some of the obstructing clouds from the opening, revealing the
+way up.
+~
+E
+ropen~
+$n moves some of the obstructing clouds from the opening, revealing the
+way up.
+~
+!
+9 0 0
+-1
+S
+
+#76030
+Mist-Filled Tunnel~
+A dense bed of fog slowly rises and falls as the deep cave is gently
+moved with the flowing undulations of the island.  A thick shroud of mist
+seeps dampness into every particle that ebbs amidst the pure white cavern
+walls; the length and breadth of the moisture-laden fog is difficult to
+perceive as the clouds blend into a mass of brilliant blinding light. 
+The cloud cover toward the southern end of this passage seems to thin out
+remarkably, although the unstable ground never quite reveals a clear
+downward exit.
+~
+[Estrella] search/climb for down exit
+[Estrella] done
+~
+569901120 17 9 0
+D0
+~
+~
+0 -1 76031 10 10 5
+D5
+~
+~
+3243 -1 76029 10 10 5
+E
+1 down ground 1 southern cover~
+As the ground shifts with a chilling draft, a steep series of oversized
+steps appears and disappears from sight with the swirling of the cloudy
+cavern floor.  The tread of the massive stairs seem to be etched with
+broad whorls that arc from one side to the other; the remains of vast
+footprints intermittently disturb the otherwise smoothed surfaces.
+~
+A
+~
+stairs ground floor 1 down~
+if( is_open( room, down ) ) {
+  act_tochar( #why, ch );
+  end;
+}
+act_tochar( #peer, ch );
+act_notchar( #rpeer, ch, obj, mob, sight );
+wait( 1 );
+open( room, down );
+act_tochar( #open, ch );
+act_notchar( #ropen, ch, obj, mob, sight );
+~
+E
+why~
+Why would you want to do that?
+~
+E
+peer~
+You look carefully at the ground, and notice the clouds are obstructing
+something.
+~
+E
+rpeer~
+$n is looking carefully at the ground.
+~
+E
+open~
+You waft away some of the clouds, and reveal an exit.
+~
+E
+ropen~
+$n wafts away some of the clouds, and reveals an exit.
+~
+!
+9 0 0
+-1
+S
+
+#76031
+Mist-Filled Tunnel~
+Arching high overhead, it is only just possible to discern the lofty
+ceiling of this vaulted room.  Filled with a thick choking fog, the wide
+passage wends its way through the depths of the troposphere, its ethereal
+composition gently drifting underfoot as the entire island rises and
+falls with the flowing wind currents which stir amidst the dense
+cloudbank.  The undulating cover of mist seems to ebb from the western
+side of this harrowing tunnel; a very dim greyish light seeping in from
+this direction bespeaks of a chamber which is free from the stifling and
+chilling dampness of this corridor.
+~
+[Estrella] acode for west exit..something like: <Player> disappears from sight as <s/he> step into the thick clouds to the west.
+[Estrella] done
+[Guin] Crash course in simple leaving codes
+[Guin] Start by typing aed new
+[Guin] then its aed trigger leaving
+[Guin] Then you must set the direction flag, in this case aflag west
+[Guin] Next is the code itself.. ac continue;
+[Guin] You must have the parser off for the semicolon to work.
+[Guin] Next is the adata
+[Guin] Ad new to_char is the first. that's what the player sees.
+[Guin] Add your message.
+[Guin] then ad exit
+[Guin] then ad new to_room - what the room sees.
+[Guin] Add your message.
+[Guin] all done
+[Estrella] only problem being.. this isn't such a simple one... w is gonna have to be a search or something
+~
+569901120 17 9 0
+D2
+~
+~
+0 -1 76030 10 10 5
+D3
+~
+~
+170 -1 76032 10 10 5
+E
+1 western dim greyish light~
+With a very gradual transition, the clouds to the west begin to thin as
+they are stirred by a gentle, warm draft.  Glimmering from somewhere
+within the masses of thinning cloud, a faint greyish-white illumination
+emanates across the mist, the brightness ever increasing as the fog to
+the west thins out, allowing slightly more light into the unlit corridor.
+~
+A
+~
+mist 1 west~
+act_tochar( #search, ch, obj );
+act_notchar( #rsearch, ch, obj, mob, sight );
+transfer( ch, find_room( 76032 ) );
+act_notchar( #arrive, ch, obj, mob, sight );
+~
+E
+search~
+You search the clouds to the west, and press your way through them.
+~
+E
+rsearch~
+$n disappears from sight as $e steps into the thick clouds to the west.
+~
+E
+arrive~
+$n steps out from the clouds, pressing $s way through them.
+~
+!
+9 0 0
+-1
+S
+
+#76032
+Silver-Lined Antechamber~
+From deep within the walls of white cloud, a faint silvery glow emanates
+across the wispy cavern floor, like the beams of bright moonlight across
+the docile ocean on a clear winter's night.  Occasional tendrils of mist
+swirl about on a tepid draft, which flows into the chamber from the
+north; the warmth dissipates the bitter cold temperatures that seep in
+from the east.  Fleeting glimpses from beneath the writhing curtain of
+cloud reveal a fine latticework of silver ore; the diamond-shaped links
+support the structure of this unnatural cavern.  To the east, a dense
+wall of mist chokes the corridor as it winds throughout the interior of
+this mysterious island.
+~
+[Estrella] acode for east exit..something like: <Player> disappears from sight as <s/he> step into the thick clouds to the east
+[Estrella] some funky search for silver block/ore etc
+[Estrella] done
+~
+569901120 17 9 0
+D0
+~
+~
+0 -1 76033 10 10 5
+D1
+~
+~
+170 -1 76031 10 10 5
+E
+curtain latticework silver ore~
+In an almost covetous manner, the wispy tendrils of cloud weave
+themselves about the trellis, pulling a tight shroud of protective mist
+across the pure silver ore, secreting the precious metal from the
+openness of this large cavern.
+~
+A
+~
+mist 1 east~
+act_tochar( #search, ch );
+act_notchar( #rsearch, ch, obj, mob, sight );
+transfer( ch, find_room( 76031 ) );
+act_notchar( #arrive, ch, obj, mob, sight );
+~
+E
+search~
+You search the clouds to the west, and press your way through them.
+~
+E
+rsearch~
+$n disappears from sight as $e steps into the thick clouds to the west.
+~
+E
+arrive~
+$n steps out from the clouds, pressing $s way through them.
+~
+!
+9 0 0
+A
+~
+curtain latticework silver ore~
+act_tochar( #search, ch );
+act_notchar( #rsearch, ch, obj, mob, sight );
+if( !rflag( reset0, room ) ) {
+  act_tochar( #nothing, ch );
+  act_notchar( #rnothing, ch, obj, mob, sight );
+  end;
+}
+remove_rflag( reset0, room );
+i = random( 1, 100 );
+if( i < 15 )
+  obj = oload( 932, random( 2, 4 ) );
+else if( i < 20 )
+  obj = oload( 1426 );
+else if( i < 25 )
+  obj = oload( 1811 );
+if( obj ) {
+  act_tochar( #found, ch, obj );
+  act_notchar( #rfound, ch, obj, mob, sight );
+  obj_to_char( obj, ch );
+}
+else {
+  act_tochar( #nothing, ch );
+  act_notchar( #rnothing, ch, obj, mob, sight );
+}
+~
+E
+search~
+You start searching for some usable ore.
+~
+E
+rsearch~
+$n starts searching for soem usable ore.
+~
+E
+nothing~
+You find no usable ore.
+~
+E
+rnothing~
+$n finds no usable ore.
+~
+E
+found~
+You find $p amongst the ore.
+~
+E
+rfound~
+$n finds $p amongst the ore.
+~
+!
+9 0 0
+-1
+S
+
+#76033
+Hall of Gilded Clouds~
+Streaking the pale white walls, long bands of gold ore unravel themselves
+along the dense cloudbank as it twists and turns deep within the heart of
+the island.  A vast wall of mist rises to the west, its rock-like
+surfaces undulating with every slight movement of the cloud.  To the
+south, a similar cavern, only of a silvery hue, glimmers faintly as a
+gentle light catches itself on the incisions of ore.  Northwards, a
+chamber of flaming vermilion refracts its reddish colourations towards
+this cave in an attempt to taint the pure gold with a fiery crimson glow.
+~
+[Estrella] some funky search for gold ore/block etc
+[Estrella] some funky acode for arriving from the west (oneway entrance)
+[Estrella] done
+~
+569901120 17 9 0
+D0
+~
+~
+0 -1 76034 10 10 5
+D2
+~
+~
+0 -1 76032 10 10 5
+E
+bands gold ore~
+Narrow streaks of gold send their incandescent spears through the
+cloud-made surface of the walls.  Gleaming along the thin strips,
+brilliant light snares itself on the precious ore, casting a warm yellow
+luminescence around the chamber.
+~
+A
+~
+bands gold ore~
+act_tochar( #search, ch );
+act_notchar( #rsearch, ch, obj, mob, sight );
+if( !rflag( reset0, room ) ) {
+  act_tochar( #nothing, ch );
+  act_notchar( #rnothing, ch, obj, mob, sight );
+  end;
+}
+remove_rflag( reset0, room );
+i = random( 1, 100 );
+if( i < 15 )
+  obj = oload( 927, random( 1, 4 ) );
+else if( i < 20 )
+  obj = oload( 1223 );
+if( obj ) {
+  act_tochar( #found, ch, obj );
+  act_notchar( #rfound, ch, obj, mob, sight );
+  obj_to_char( obj, ch );
+}
+else {
+  act_tochar( #nothing, ch );
+  act_notchar( #rnothing, ch, obj, mob, sight );
+}
+~
+E
+search~
+You start searching for some usable ore.
+~
+E
+rsearch~
+$n starts searching for soem usable ore.
+~
+E
+nothing~
+You find no usable ore.
+~
+E
+rnothing~
+$n finds no usable ore.
+~
+E
+found~
+You find $p amongst the ore.
+~
+E
+rfound~
+$n finds $p amongst the ore.
+~
+!
+9 0 0
+-1
+S
+
+#76034
+Ruby-Hued Chamber~
+Deep vermilion hues stain the walls of this wide chamber from somewhere
+beneath the pseudo rock faces.  The cloud has been etched into the shape
+of raging flames; the tongues of fire flickering up towards the ceiling,
+their movements accentuated by an arcane magic - or perhaps it is merely
+an illusion caused by the undulations of the island within the wavering
+troposphere.  As the cloud shifts, a passing glimpse of blazing red gems
+wavers on the borders of sight, never quite being revealed.  Contrasting
+the scarlet hues of this cavern, a verdant green grotto lies to the west,
+the leafy formations encroaching on the flames.  To the south, a golden
+chamber glimmers amidst the light clouds.
+~
+[Estrella] some funky search for rubies/garnets etc
+[Estrella] done
+~
+569901120 17 9 0
+D2
+~
+~
+0 -1 76033 10 10 5
+D3
+~
+~
+0 -1 76035 10 10 5
+E
+vermilion blazing red gems~
+Hiding in swathes of cloud, great piles of rubies line the cavern floor,
+their vermilion hues lighting up the walls like the flames of a hellish
+inferno.  Each gem has been perfectly cut to resemble the elegantly
+curved talon of a giant winged beast.
+~
+A
+~
+vermillion blazing red gems~
+act_tochar( #search, ch );
+act_notchar( #rsearch, ch, obj, mob, sight );
+if( !rflag( reset0, room ) ) {
+  act_tochar( #nothing, ch );
+  act_notchar( #rnothing, ch, obj, mob, sight );
+  end;
+}
+remove_rflag( reset0, room );
+i = random( 1, 100 );
+if( i < 15 )
+  obj = oload( 31 );
+else if( i < 20 )
+  obj = oload( 2698 );
+else if( i < 25 )
+  obj = oload( 3498 );
+else if( i < 30 )
+  obj = oload( 373 );
+if( obj ) {
+  act_tochar( #found, ch, obj );
+  act_notchar( #rfound, ch, obj, mob, sight );
+  obj_to_char( obj, ch );
+}
+else {
+  act_tochar( #nothing, ch );
+  act_notchar( #rnothing, ch, obj, mob, sight );
+}
+~
+E
+search~
+You start searching for some usable ore.
+~
+E
+rsearch~
+$n starts searching for soem usable ore.
+~
+E
+nothing~
+You find no usable ore.
+~
+E
+found~
+You find $p amongst the ore.
+~
+E
+rnothing~
+$n finds no usable ore.
+~
+E
+rfound~
+$n finds $p amongst the ore.
+~
+!
+9 0 0
+-1
+S
+
+#76035
+Cavern of Glowing Emeralds~
+Glowing a deep verdant green, the clouds here take on the form of a
+secluded grotto.  A moss-covered tumble of ethereal rocks lie along the
+northern wall; a mass of negligently draping ferns unfurl their lacy
+leaves over the soft ground.  Along the southern edge of this hidden
+grove, a curtain of water cascades from over the lip of a tall cliff, the
+cool spray of mist coats the nearby surfaces with a thin film of dampness. 
+Flickering in from the east, a faint ruddy light mingles amidst the
+flourishing trees, the fiery amber a bold contrast to the subdued
+limelight of this arcane glen.
+~
+[Estrella] some funky search for jade/emeralds etc
+[Estrella] acode for entering waterfall
+[Estrella] done
+~
+569901120 17 9 0
+D1
+~
+~
+0 -1 76034 10 10 5
+D2
+~
+~
+138 -1 76036 10 10 5
+E
+curtain water 1 southern mist~
+Tumbling freely from over the verge of a tall cliff, the misty waterfall
+cascades over the ethereal rock formations.  Through occasional reprises
+of the cool waters a splendid white cavern wavers in and out of
+visibility.
+~
+E
+moss tumble ethereal rocks ferns leaves~
+Where the cliff-face has collapsed, a small fragmented scree blocks any
+access to the north.  A variety of mosses, lichen and ferns have taken
+the crumbling rocks into the tight grip of their fine network of roots,
+leaves draping to over the landslide, casting perpetual shade over it.
+~
+A
+~
+moss tumble rocks ferns leaves~
+act_tochar( #search, ch );
+act_notchar( #rsearch, ch, obj, mob, sight );
+if( !rflag( reset0, room ) ) {
+  act_tochar( #nothing, ch );
+  act_notchar( #rnothing, ch, obj, mob, sight );
+  end;
+}
+remove_rflag( reset0, room );
+i = random( 1, 100 );
+if( i < 15 )
+  obj = oload( 7816 );
+else if( i < 20 )
+  obj = oload( 633 );
+else if( i < 25 )
+  obj = oload( 3313 );
+else if( i < 30 )
+  obj = oload( 992 );
+if( obj ) {
+  act_tochar( #found, ch, obj );
+  act_notchar( #rfound, ch, obj, mob, sight );
+  obj_to_char( obj, ch );
+}
+else {
+  act_tochar( #nothing, ch );
+  act_notchar( #rnothing, ch, obj, mob, sight );
+}
+~
+E
+search~
+You start searching for some usable ore.
+~
+E
+rsearch~
+$n starts searching for soem usable ore.
+~
+E
+nothing~
+You find no usable ore.
+~
+E
+rnothing~
+$n finds no usable ore.
+~
+E
+found~
+You find $p amongst the ore.
+~
+E
+rfound~
+$n finds $p amongst the ore.
+~
+!
+9 0 0
+A
+1 enter~
+waterfall 1 south~
+act_tochar( #enter, ch );
+act_notchar( #renter, ch, obj, mob, sight );
+transfer( ch, find_room( 76036 ) );
+act_notchar( #arrive, ch, obj, mob, sight );
+~
+E
+enter~
+You bravely duck through the water crashing down.
+~
+E
+renter~
+$n bravely ducks through the water crashing down.
+~
+E
+arrive~
+$n arrives from the north, shaking water off $s body.
+~
+!
+0 0 0
+A
+~
+~
+mob = mob_in_room( 2387, room );
+if( mob ) {
+  if( !is_fighting( mob ) && !is_resting( mob ) && !is_sleeping( mob ) )
+    interpret( mob, "enter waterfall" );
+}
+~
+!
+2 100 0
+2387 9 1509949540 3 0
+-1
+S
+
+#76036
+Horde of Glistening Diamonds~
+Slender spears of carefully chiselled diamond protrude from within the
+mesh of cloud that forms this arcane isle, their razor sharp edges
+sparkling in the light.  Scattered across the floor, precious stones the
+size of a giant's fist catch the subdued rays of light and distort them
+into a rainbow of colour.  Arching whorls span from one side of the
+cavern to the other, disturbing the placid cloud from its resting place. 
+Cascading down the northern wall, a chilling curtain of water hides the
+treasure-filled cave from prying eyes.  To the east, it is possible to
+see a chamber of gilded cloud through the hazy wall.
+~
+[Estrella] repop spot for dragon..
+[Estrella] acode for entering waterfall
+[Estrella] some funky search for diamonds/crystals/quartz/opals
+[Estrella] oneway exit to the east..
+[Estrella] i want her to wander a bit ;)
+[Estrella] done
+[Estrella] need codes in cave to if == dragon ignore code
+~
+569901120 17 9 0
+D0
+waterfall~
+~
+138 -1 76035 10 10 5
+D1
+cloudy wall~
+~
+0 -1 76033 10 10 5
+E
+slender spears diamond stones~
+Rippling the cloudy walls, narrow slivers of exquisitely cut diamond
+incise the rock-like surfaces, their sharp edges catching the light as it
+flickers through the vast cavern.  Carelessly brushed to either side of
+the cave, large diamonds pile up on the floor.
+~
+A
+~
+slender spears diamond stones~
+if( !rflag( reset0, room ) ) {
+  act_tochar( #nothing, ch, obj, mob );
+  act_notchar( #rnothing, ch, obj, mob, sight );
+  end;
+}
+remove_rflag( reset0, room );
+i = random( 1, 100 );
+if( i < 4 )
+  obj = oload( 77 );
+else if( i < 10 )
+  obj = oload( 594 );
+else if( i < 15 )
+  obj = oload( 2396 );
+else if( i < 25 )
+  obj = oload( 2507, random( 2, 5 ) );
+else if( i < 35 )
+  obj = oload( 688 );
+else if( i < 40 )
+  obj = oload( 2343 );
+if( obj ) {
+  if( can_handle( ch, obj ) ) {
+    act_tochar( #handle_to, ch, obj );
+    act_notchar( #rhandle_to, ch, obj, mob, sight );
+    obj_to_char( obj, ch );
+  }
+  else {
+    act_tochar( #not_handle, ch, obj );
+    act_notchar( #rnot_handle, ch, obj, mob, sight );
+    obj_to_room( obj, room );
+  }
+}
+else {
+  act_tochar( #nothing, ch, obj, mob );
+  act_notchar( #rnothing, ch, obj, mob, sight );
+}
+~
+E
+nothing~
+You are unable to find any stone worth anything.
+~
+E
+rnothing~
+$n tries to look through the stones for something worthwhile, but shakes
+$s in disgust.
+~
+E
+handle_to~
+@cYou slip into your pockets $p.@n
+~
+E
+rhandle_to~
+@c$n slips into $s pockets $p.@n
+~
+E
+not_handle~
+@cYou carefully set aside $p from your search.@n
+~
+E
+rnot_handle~
+@c$n carefully sets aside $p from $s search.@n
+~
+!
+9 0 0
+A
+1 enter~
+water curtain cave 1 north~
+act_tochar( #enter, ch );
+act_notchar( #renter, ch, obj, mob, sight );
+transfer( ch, find_room( 76035 ) );
+act_notchar( #arrive, ch, obj, mob, sight );
+~
+E
+enter~
+You duck under the water crashing down, heading north.
+~
+E
+renter~
+$n ducks under the water crashing down, heading north.
+~
+E
+arrive~
+$n comes through the waterfall, shaking water off $s body.
+~
+!
+0 0 0
+A
+~
+~
+send_to_room( #shadow, find_room( 76033 ) );
+act_tochar( #mist, ch, obj, mob, sight );
+transfer( ch, find_room( 76033 ) );
+act_notchar( #arrive, ch, obj, mob, sight );
+~
+E
+shadow~
+A shadowy form appears in the mist.
+~
+E
+arrive~
+$n appears from the mist.
+~
+E
+mist~
+You enter the mist to the east, cloaking yourself in it.
+~
+!
+3 0 2
+A
+~
+~
+mob = mob_in_room( 2387, room );
+if( mob ) {
+  if( !is_fighting( mob ) && !is_resting( mob ) && !is_sleeping( mob ) ) {
+    act_room( #leaves, mob, obj, ch, sight );
+    transfer( mob, find_room( 76033 ) );
+    act_room( #arriving, mob, obj, ch, sight );
+  }
+}
+~
+E
+leaves~
+$n stalks into the mist, vanishing from sight.
+~
+E
+arriving~
+$n appears from the mist.
+~
+!
+2 100 0
+2387 9 1509949540 3 0
+-1
+S
+
+#76037
+Within the Savage Storm~
+Ravaging winds spin rapidly about at an immeasurable velocity.  Amidst
+the turmoil created by the ferocious gusts are bits of debris that have
+been sucked into the whirling vortex as the hurricane passed over the
+lands.  Unable to escape from the gale-force winds, the accumulated
+detritus hurtles around in haphazard circles, sometimes rising sometime
+sinking in the swirling winds.  dark clouds overhead block the sky
+completely from vision.
+
+-----
+This is the hurricane that takes you to
+cloudies....generic terrain (it could be anywhere, on a beach in a tree,
+up a mountain) 
+~
+[Estrella] done
+~
+569901122 17 9 0
+D0
+~
+~
+0 -1 76037 10 10 5
+D1
+~
+~
+0 -1 76037 10 10 5
+D2
+~
+~
+0 -1 76037 10 10 5
+D3
+~
+~
+0 -1 76037 10 10 5
+D4
+~
+~
+0 -1 76037 10 10 5
+D5
+~
+~
+0 -1 76037 10 10 5
+A
+<disabled til ready to open, needs a level limit in it>~
+~
+i = random( 1, 1 );
+
+//* add new rooms here*
+//* be sure to also modify line 1 *
+// 1 = room 6810 in avergaard
+if( i == 1 )
+j = 6810;
+
+//set variable to vnum of room
+set_integer( room, "/Squeed/CloudGiants/Entrance", j );
+
+//message the room that hurricane has appeared
+room = find_room( j );
+send_to_room( #zephyr, room );
+wait( 1 );
+send_to_room( #herald, room );
+wait( 1 );
+send_to_room( #appear, room );
+wait( 1 );
+//transfer all here
+transfer_all( room, find_room( 76037 ) );
+~
+E
+appear~
+@CA huge funnel of whind and debris descends from the sky about you!@n
+~
+E
+zephyr~
+The wind picks up slightly, looks like bad weather ahead.
+~
+E
+herald~
+The wind is definately getting stronger, it is becoming had to remain upright.
+~
+!
+0 100 0
+A
+~
+~
+if( vnum( room ) == get_integer( find_room( 76037 ), "/Squeed/CloudGiants/Entrance" ) ) {
+  act_tochar( #sucked, ch, obj, mob );
+  act_notchar( #issucked, ch, obj, mob );
+  transfer( ch, find_room( 76037 ) );
+  act_notchar( #isarrived, ch, obj, mob );
+}
+~
+E
+sucked~
+@CThe awesome power of the wind picks you up and flings you about like a rag doll!@n
+~
+E
+issucked~
+@CThe awesome power of the wind picks $n up and flings $m about like a rag doll!@n
+~
+E
+isarrived~
+@CHelpless to resist, $n comes spiraling up the great funnel of air.@n
+~
+!
+0 0 0
+A
+~
+~
+if( random( 0, 50 ) < find_stat( ch, dex ) ) {
+  act_tochar( #fling, ch, obj, ch );
+  act_notchar( #isfling, ch, obj, ch );
+  transfer( ch, find_room( get_integer( room, "/Squeed/CloudGiants/Entrance" ) ) );
+  act_notchar( #arrive, ch, obj, mob );
+  i = random( 1, add( max_hit( ch ), -1 ) );
+  dam_message( ch, i, "The fall" );
+  inflict( ch, ch, i, "Plummeting to earth" );
+}
+else
+  continue;
+~
+E
+isfling~
+@y$n floats close to the edge of the vortex and gets flung out, disappearing from view.@n
+~
+E
+fling~
+@yYou float close to the edge of the vortex and get flung out.  Gravity
+once again asserts its authority and you plumet towards the ground!@n
+
+~
+E
+arrive~
+@y$n appears out of the swirling vortex, plummeting to earth!@n
+~
+!
+3 0 47
+A
+~
+~
+if( random( 0, 50 ) < find_stat( ch, dex ) ) {
+  act_tochar( #fly, ch, obj, mob );
+  act_notchar( #isfly, ch, obj, mob );
+  transfer( ch, find_room( 76000 ) );
+  act_notchar( #arrive, ch, obj, mob );
+}
+else
+  continue;
+~
+E
+fly~
+@BYou angle your body upwards and flap your arms gaining height.@n
+~
+E
+isfly~
+@B$n angles $s body upwards and flaps $s arms gaining height, and disappears through the haze.@n
+~
+E
+arrive~
+@C$n comes tumbling up the centre of the vortex and lands lightly amongst the clouds.@n
+~
+!
+3 0 16
+-1
+S
+
+#76038
+flight~
+Bitingly cold air whistles past as the giant roc plummets towards the
+ground.  Although partially sheltered amidst the ruffled feathers, the
+chill somehow manages to find exposed patches of skin to nip at.  Over
+the broad shoulders and mammoth wingspan, breath-taking vistas of the
+world below come in and out of view as the great avian twists on the
+wind; ribbons of water lace the patchwork grounds with sparkling lines of
+crystalline jewels, while the snowcapped mountains veil the rugged
+terrain in a blanket of glistening white.
+~
+[Estrella] rdesc done
+~
+569901120 17 9 0
+D1
+~
+~
+0 -1 76021 10 10 5
+D4
+~
+~
+0 -1 76020 10 10 5
+-1
+S
+
+#76039
+Ride on the Back of a Giant Roc~
+A sudden downward current swiftly plunges the roc toward the ground at
+terrifying speeds, breaking the steady gliding along the airstream. 
+Reacting seamlessly to the change in conditions, the great avian
+gracefully swoops into a smooth dive.  Following the gusty current, the
+roc spirals around, causing the view of the earth to spin rabidly about,
+the effect of which is a dizzying display of whirling colours, all
+blending into each other.  At the last moment, the roc opens it's vast
+wingspan and easily slides into its well-accustomed soaring.
+~
+[Estrella] rdesc done
+~
+33030149 17 9 0
+D0
+~
+~
+0 -1 76023 10 10 5
+D4
+~
+~
+0 -1 76022 10 10 5
+-1
+S
+
+#76040
+Ride on the Back of a Giant Roc~
+Spreading its wings once more, the giant roc begins its effortless
+gliding upon the swiftly moving airstream.  Feathers rustling all around,
+the freezing temperatures are not quite so unbearable due to the warmth
+that is ensnared by the insulating coat.  Breathtaking vistas spread out
+below, the world no more than a patchwork quilt of fields, forests,
+mountains, oceans and deserts; clusters of townships dot the vast scape,
+a handful of rivers winding across the vast distances between each
+settlement.
+~
+[Estrella] rdesc done
+~
+33030149 17 9 0
+D3
+~
+~
+0 -1 76024 10 10 5
+D5
+~
+~
+0 -1 76023 10 10 5
+-1
+S
+
+#76041
+flight~
+Beating its wings hurriedly, the roc gracefully rises up through the
+dense layers of cloud heading towards what appears to be a lonesome perch
+of some kind, high up on a craggy outcropping.  All around, swirling
+mists ripple and waver as gentle zephyrs run invisible fingers through
+the clouds.  Brooding darkly overhead, the cloudbank threatens violent
+storms although there seems to be little other manifestations of the
+pending tempests.
+~
+[Estrella] rdesc done
+~
+569901120 17 9 0
+D1
+~
+~
+0 -1 76024 10 10 5
+D4
+~
+~
+0 -1 76025 10 10 5
+A
+~
+~
+i = random( 1, 20 );
+j = random( mult( num_in_room( room ), 3 ), mult( num_in_room( room ), 5 ) );
+
+if( num_in_room( room ) < 4 ) {
+  send_to_room( #moving, room );
+}
+if( num_in_room( room ) > 4 ) {
+  if( num_in_room( room ) < 7 ) {
+    send_to_room( #moving_heavy, room );
+  }
+}
+if( num_in_room( room ) > 7 ) {
+  send_to_room( #moving_stressed, room );
+}
+~
+E
+moving~
+The roc seems to move along steadily without much strain.
+~
+E
+moving_heavy~
+The roc seems to be struggling somewhat with the number of people riding.
+~
+E
+moving_stressed~
+The roc is apparently stressing under the load it is carrying.  It looks
+to be unsure as to whether or not it is going to make it.
+~
+!
+2 100000 0
+-1
+S
+
+#76042
+Inner Courtyard - Before a Towering Edifice~
+A long bank of clouds stretches in an east-west direction, completely
+blocking off passage to the north.  Rising out of the cobble-like
+courtyard, a towering edifice soars skyward, its turrets obscured by
+drifts of swirling cloud.  Looming not far to the south, a menacing
+portcullis prevents the outside world from entering this airy haven.  Set
+into the wall, a narrow rivulet drains water that has become trapped
+within the cloudbank, the small cascade tinkling as it flows down the
+watercourse.
+~
+[Estrella] done
+~
+569901120 17 9 0
+D1
+~
+~
+0 -1 76043 10 10 5
+D2
+~
+~
+0 -1 76006 10 10 5
+D3
+~
+~
+0 -1 76046 10 10 5
+E
+narrow rivulet water cascade watercourse~
+Sunken into the cloudbank a little, a shallow channel zigzags down the
+wall until it disappears underfoot.  A strange opalescent material
+appears to cover the waterway as it is impossible to actually touch the
+water.  Perhaps the rivulet is merely an illusion.
+~
+-1
+S
+
+#76043
+Inner Courtyard - Corner of the Fortress~
+Although the general overtones of this area are in varying shades of
+grey, it appears that there is a distinct end to the cloud immediately to
+the northwest, where two intersecting walls meet.  A few life-size cloud
+statues watch over the courtyard, their likenesses to the creatures they
+resemble both unnervingly realistic and, at the same time, completely
+surreal.  It is difficult to discern how often the courtyard is used, as
+any signs of wear and tear are lost to the enigma of the cloud-made
+ground.
+~
+[Estrella] more statues coming to life here
+[Estrella] done
+~
+569901120 17 9 0
+D0
+~
+~
+0 -1 76047 10 10 5
+D1
+~
+~
+0 -1 76049 10 10 5
+D2
+~
+~
+0 -1 76044 10 10 5
+D3
+~
+~
+0 -1 76042 10 10 5
+E
+statues creatures~
+Exquisitely carved out of the most pure white cloud these statues are
+neither supported from beneath by a dais nor are they suspended from
+above by any visible means; it appears that they hover off the misty
+ground held in perfect formation by some unseen power.
+~
+-1
+S
+
+#76044
+Inner Courtyard - At the Outer Wall~
+Continuing both to the east and west, the immense wall of cloud dominates
+the sky to the south, admitting no entry to the fortress save only for
+that through the main gate that lies westward.  Swirls of mist thread
+through the legs of the life-like statues so realistic in their
+appearance that they could easily be mistaken from the living creatures
+that they represent.  Obscured slightly by the writing mists, the ground
+underfoot feels spongy to tread upon, despite the cold, hard appearance
+of cobbled stones that it portrays.
+~
+[Estrella] more statues here to come to life :)
+[Estrella] done
+~
+569901120 17 9 0
+D0
+~
+~
+0 -1 76043 10 10 5
+D1
+~
+~
+0 -1 76048 10 10 5
+D3
+~
+~
+0 -1 76006 10 10 5
+E
+statues creatures~
+Exquisitely carved out of the most pure white cloud these statues are
+neither supported from beneath by a dais nor are they suspended from
+above by any visible means; it appears that they hover off the misty
+ground held in perfect formation by some unseen power.
+~
+-1
+S
+
+#76045
+Inner Courtyard - Secluded Alcove~
+Rising high into the troposphere, the walls of cloud cast deepening
+shadows across the courtyard.  It is impossible to tell exactly where the
+outer wall of the fortress ends and the wall of the keep begins as there
+is no blatant difference between the two; it appears that the bank to the
+west is a part of the building on account of thinning clouds that open
+into vast windows along that wall.  In the southwestern corner, amidst
+the turmoil of the merging cloudbanks, a deep alcove has been carved into
+the cloud; an ornately formed seat nestled in the secluded shelter.
+~
+[Estrella] have this room as the exit to sneaking under the wall.. if they make it through ;)
+[Estrella] done
+~
+569901120 17 9 0
+D0
+~
+~
+0 -1 76046 10 10 5
+D1
+~
+~
+130 -1 76006 10 10 5
+E
+alcove seat secluded shelter~
+Set back in the wall, the large seat is almost cowled by the alcove in
+which it sits.  The curved back, boasting a swirling filigree pattern,
+drifts to and fro with the undulations of the cloudbank, the seat
+sometimes merging with the wall.  Tucked away in one corner of the
+alcove, a patch of mist seems to be thinning out a little, perhaps this
+has been caused by someone purposefully trying to move the cloud out of
+the way.
+~
+-1
+S
+
+#76046
+Inner Courtyard~
+Stretching to the east and south, a vast cloudbank dominates the sky,
+forming a solid structure that wavers slightly with the gentle drifting
+of the stratosphere.  Translucent patches along the western wall provide
+windows that look into the adjacent room, although it is very difficult
+to see what may lie within, as the general colouration of inside is very
+much like that of the outer world; all distinguishing features lost in a
+haze of grey.  Life sized statues and monuments stand proudly in the
+courtyard, as if they were merely sleeping - awaiting the call of their
+master.
+~
+[Estrella] more statues coming to life here
+[Estrella] done
+~
+569901120 17 9 0
+D1
+~
+~
+0 -1 76042 10 10 5
+D2
+~
+~
+0 -1 76045 10 10 5
+E
+monuments statues~
+Exquisitely carved out of the most pure white cloud these statues are
+neither supported from beneath by a dais nor are they suspended from
+above by any visible means; it appears that they hover off the misty
+ground held in perfect formation by some unseen power.
+~
+-1
+S
+
+#76047
+Before an Ebon-Hued Door~
+Dark swirls of cloud wreath the frame in which the massive door to the
+fortress is set.  Bordered by a jet-black glossy substance, panels of
+polished ebony, intricately carved with a series of whorls, are held
+rigidly in place.  Opening outwards into a spacious courtyard the
+menacing door is the only visible entrance to the halls within Aerodulin. 
+Stretching off in all directions except west, a spacious paved courtyard
+is graced with elegantly formed statues of winged creatures, the details
+unbelievably real.
+~
+[Estrella] done
+[Estrella] some funky code for the door... be imaginitive ;)
+~
+569901120 17 9 0
+D0
+~
+~
+0 -1 76051 10 10 5
+D1
+~
+~
+0 -1 76050 10 10 5
+D2
+~
+~
+0 -1 76043 10 10 5
+D3
+~
+~
+131 -1 76007 10 10 5
+-1
+S
+
+#76048
+Inner Courtyard - Before a Monolithic Giant~
+Culminating in the southeastern quadrant of the courtyard, the two banks
+of cloud that stretch west and north merge together as they form a corner
+of the enclosure.  Proudly standing over thirty feet in height, the
+statue that dominates the corner must be an honorary likeness of Lord
+Xirithlhach.  Robes of cloud flow around the enormous figure, and the
+ethereal cloth seems to waver as if caught by a gentle breeze.  Looking
+upwards, it is possible to see the head of the statue, though it is
+difficult to any distinguishing details from this distance.
+~
+[Estrella] done
+~
+569901120 17 9 0
+D0
+~
+~
+0 -1 76049 10 10 5
+D3
+~
+~
+0 -1 76044 10 10 5
+E
+statue lord xirithlhach~
+You can quite clearly see the big toe of this enormous statue.  It looks
+like a @every@n big toe.
+~
+-1
+S
+
+#76049
+Inner Courtyard~
+It appears that the cloud stretches on as far as the eye can see in every
+direction, yet the cloud immediately to the east seems considerably
+denser than anywhere else; the overall grey tones of the area make it
+impossible to tell exactly how wide this cloudbank actually is.  Floating
+just above the ground are several statues of winged creatures, companions
+who share the sky with the inhabitants of this fortress.  Each rendition
+has been carefully sculptured to capture the stately form of the creature
+it portrays.
+~
+[Estrella] more statues coming to life here
+[Estrella] done
+~
+569901120 17 9 0
+D0
+~
+~
+0 -1 76050 10 10 5
+D2
+~
+~
+0 -1 76048 10 10 5
+D3
+~
+~
+0 -1 76043 10 10 5
+E
+statues winged creatures~
+Exquisitely carved out of the most pure white cloud these statues are
+neither supported from beneath by a dais nor are they suspended from
+above by any visible means; it appears that they hover off the misty
+ground held in perfect formation by some unseen power.
+~
+-1
+S
+
+#76050
+Inner Courtyard - Arched Window~
+Leading up to an elegantly arched window, a raised dais lined with
+towering pillars extends across part of the courtyard until it reaches
+the eastern wall.  A short flight of stairs is attached to the northern
+side of the platform.  Set within the dense wall that surrounds the
+fortress, the arched window looks out over a vast expanse of cumulus
+cloud.  Spiralling around each pillar, fine tendrils of mist swirl down
+the posts and dissipate across the dais.
+~
+[Estrella] done
+~
+569901120 17 9 0
+D0
+~
+~
+0 -1 76052 10 10 5
+D2
+~
+~
+0 -1 76049 10 10 5
+D3
+~
+~
+0 -1 76047 10 10 5
+-1
+S
+
+#76051
+Inner Courtyard - North Quadrant of the Courtyard~
+An impenetrable wall of cloud rises to the north, its beginning and end
+indistinguishable from the rest of the cloudbank.  Very little disrupts
+the vast expanse of empty courtyard that stretches off to the east and
+away to the south.  An occasional loose cobble gives the appearance that
+this particular area has seen little use and little maintenance in the
+recent past.  A tumble of cloud in the form of clinging ivy drapes
+negligently from small cracks in the ethereal wall.
+~
+[Estrella] done
+~
+569901120 17 9 0
+D1
+~
+~
+0 -1 76052 10 10 5
+D2
+~
+~
+0 -1 76047 10 10 5
+E
+ivy~
+The fine rootlets of this hardy plant are embedded deep within the cracks
+that riddle the cloud wall.  Unnervingly, however, it is possible to see
+the roots as they writhe and wrap themselves about the brickwork of the
+fluctuating edifice.
+~
+-1
+S
+
+#76052
+Inner Courtyard - Gleaming Marble Basin~
+This remote corner of the courtyard is home to an elegantly structured
+basin that stands upon an ornate pillar, which, while being made entire
+of cloud, strongly bears the resemblance of polished white marble;
+perfectly still water sits in the centre, it's surface glassy and
+reflective.  A small arch in the eastern wall reveals a small alcove
+wherein a low bench resides.  Curls of jasmine create a fragrant curtain
+that has been drawn apart both in an effort to remove the hinderance from
+visitors to the alcove, and to prevent any unnecessary damage being done
+to the fragile plant.
+~
+[Estrella] random: From out of nowhere, a stray tendril of mist passes across the silent water.
+[Estrella] need acode that takes players appearance and inserts it into adata..
+[Estrella] want it to read something like this:
+
+Staring up from the glassy water is the image of <players appearance>. 
+It seems strangely familiar, yet it is difficult to say where it might
+have been espied before; perhaps sketched roughly in a book or on a sign.
+
+[Estrella] code needs to add a/an before the appearance too
+[Estrella] done
+~
+569901120 17 9 0
+D2
+~
+~
+0 -1 76050 10 10 5
+D3
+~
+~
+0 -1 76051 10 10 5
+-1
+S
+
+#76053
+Herb Garden - Neatly Laid Plots~
+Continuing around the carefully aligned plots, the cobbled path separates
+a thick stand of parsley from a rambling growth of thyme.  Wafting on a
+gentle breeze, the aromatic scent of sage fills the air, the pleasant
+smell mingling with a faint hint of rosemary.  As the path extends
+northwards, the thyme gives way to a swath of marjoram, the
+elliptical-shaped leaves forming a light canopy overhead.
+~
+[Estrella] done
+~
+569901120 17 9 0
+D0
+~
+~
+0 -1 76054 10 10 5
+D1
+~
+~
+0 -1 76010 10 10 5
+-1
+S
+
+#76054
+Herb Garden - Beneath a Canopy of Aromatic Leaves~
+Sweet smelling leaves arch overhead, the verdant foliage diffusing most
+of the light that filters through the greenery, dappling the cobbled
+cloud path as it divides rosemary from thyme.  Emanating from somewhere
+beneath the dense growth, the sound of burbling water resounds through
+the forest of herbs.  A clear, cool ambience descends upon the oversized
+plants, the soft touch of wind rustling the leaves.
+~
+[Estrella] done
+~
+569901120 17 9 0
+D0
+~
+~
+0 -1 76055 10 10 5
+D2
+~
+~
+0 -1 76053 10 10 5
+-1
+S
+
+#76055
+Herb Garden - Before an Arched Bridge~
+Giving way to a neatly constructed stone-like bridge, the aromatic plants
+part their leaves allowing a narrow shaft of sunlight to flitter across
+the ground.  A pillar rises on either side of the bridge, the ornate post
+terminating the elaborate rails that mirror the curve of the arch. 
+Flowing beneath the well-sculptured bridge, a small stream burbles
+merrily as it winds through the plants, bringing life and music with it
+on its travels.
+~
+[Estrella] done
+~
+569901120 17 9 0
+D1
+~
+~
+0 -1 76068 10 10 5
+D2
+~
+~
+0 -1 76054 10 10 5
+-1
+S
+
+#76056
+Herb Garden - Beside an Arched Stone Bridge~
+Standing twelve feet in height, the pillars that form the end of each
+handrail cast deep shadows across the cobbled cloud path.  Sweeping
+leaves of basil droop close to the ground, their broad leaves infusing
+the air with a pleasant aroma.  Trickling beneath the bridge and
+disappearing into the undergrowth, a small stream burbles to itself as it
+flows through the garden.  Continuing southwards, the path disappears
+beneath a swathe of verdurous foliage, entering a less used part of the
+herbary.
+~
+[Estrella] done
+~
+569901120 17 9 0
+D2
+~
+~
+0 -1 76057 10 10 5
+D3
+~
+~
+0 -1 76068 10 10 5
+-1
+S
+
+#76057
+Herb Garden - Thick Canopy of Fragrant Leaves~
+Stirring the plants from their roots up, a cool breeze rifles invisible
+fingers through the aromatic leaves, the movement enticing a pleasant
+scent to imbue the air.  A faint trickling can be heard emanating from
+somewhere to the west, the unseen watercourse hidden behind verdant
+foliage and dense cloud.  Filtering out most of the light, the broad
+leaves of these oversized herbs form a thick canopy that stretches above
+the path, an occasional leaf drooping close to the cobble-like cloud
+walkway.
+~
+[Estrella] done
+~
+569901120 17 9 0
+D0
+~
+~
+0 -1 76056 10 10 5
+D1
+~
+~
+0 -1 76058 10 10 5
+-1
+S
+
+#76058
+Herb Garden - Tangled Plots~
+Tangled tendrils of marjoram interweave themselves with the stringent
+branches of thyme, the corroboration running rampant across the
+unattended ground, blocking access further east.  Gnarled and twisted
+roots vie for footing within the unkempt plots, a few of the more hardy
+plants have firmly entrenched themselves between the loosely cobbled
+cloud path.  A pleasant fragrance drifts on the air as the aromatic
+plants are stirred by a whispering wind.  Clearing westwards, the path
+winds its way around the other, well maintained garden plots.
+~
+[Estrella] done
+~
+569901120 17 9 0
+D3
+~
+~
+0 -1 76057 10 10 5
+-1
+S
+
+#76059
+A Statued Vault~
+Along the vault, arches of crackling energy dance across a backdrop of
+tumescent black clouds.  Rising to greet the lightning are ethereal blue
+pillars, their edges warped and blurred into a haze.  To the south the
+vaulted chamber continues, banked at all sides by the thunderous roar of
+the angry cloud.  Guarding each of the pillars rise ghostly statues of
+giants, their weapons drawn and snarls upon their faces.
+~
+[Estrella] dark clouds, pillars, statues (mist-giant) types ;)
+[Estrella] done
+~
+569901125 17 9 0
+D1
+~
+~
+0 -1 76011 10 10 5
+D2
+~
+~
+0 -1 76060 10 10 5
+-1
+S
+
+#76060
+A Statued Vault~
+Billowing storm clouds gather around a swirling mist of a room, its
+borders blurring and merging.  Rising through the foggy-chaos are pillars
+of shimmering blue energy, their tops blazing with ethereal energy. 
+Ghostly statues of giants rest between each pillar, their details
+obscured by their displaced nature.
+~
+[Estrella] dark clouds, pillars, statues (mist-giant) types ;)
+[Estrella] done
+~
+569901125 17 9 0
+D0
+~
+~
+0 -1 76059 10 10 5
+D2
+~
+~
+0 -1 76061 10 10 5
+-1
+S
+
+#76061
+A Statued Vault~
+Storm clouds gather overhead, their rumblings a prelude to what is going
+to be a massive tempest as a solid wall of dark mist surrounds the vault,
+flecks of electricity dancing across their surface.  Pillars of icy-blue
+fog rise to the stormy roof, their surfaces solid enough to show details
+of dragons at fight and giants at war, yet when touched they swirl away
+like the mist they are.
+~
+[Estrella] dark clouds, pillars, statues (mist-giant) types ;)
+[Estrella] done
+~
+569901125 17 9 0
+D0
+~
+~
+0 -1 76060 10 10 5
+-1
+S
+
+#76062
+Lookout's Post~
+Soaring turrets of dense cloud form the parapet at the top of this airy
+fortress, the thick swathes lightening in colour from a brooding grey at
+the base to the wispy white tendrils that try to escape from the peak of
+each spire.  Across the sky to the west it is possible to discern the
+hazy form of a second cloudbank, similar in nature to this fortress and
+it's grounds.  Although plainly not a building, it is difficult to tell
+exactly what the wavering shape is, or whether it holds any inhabitants
+worthy of note.  A grey mist, which shelters this area from prying eyes,
+obscures the rest of the sky.
+~
+[Estrella] done
+~
+569901120 17 9 0
+D1
+~
+~
+0 -1 76016 10 10 5
+D2
+~
+~
+0 -1 76063 10 10 5
+-1
+S
+
+#76063
+Lookout's Post~
+Soaring turrets crown the fortress with a mantle of wispy white cloud
+that writhes against the omnipotent magic that keeps them in formation. 
+From this vantage point it is possible to see the entire surroundings of
+the fortress; a near ebon-hued vortex of turbulent clouds far below
+towering walls of the keep to the south, a corridor of paler grey cloud
+stretching off to the west that opens up into a patch of clear blue sky,
+and away in the distance beyond, a dense shroud of dim, misty cloud -
+suffice to say that, all in all, the only plainly visible entity is
+cloud, albeit somewhat unnatural in form and substance.
+~
+[Estrella] this is purple... well... grey actually..
+[Estrella] done
+~
+569901120 17 9 0
+D0
+~
+~
+0 -1 76062 10 10 5
+D1
+~
+~
+0 -1 76064 10 10 5
+-1
+S
+
+#76064
+Lookout's Post~
+Spires of cloud pierce the stratosphere as they soar upwards, their peaks
+reminiscent of snow-capped mountains.  Despite the swathes of cloud, the
+innumerable variations of grey shades, impeccably detailed structures and
+deep shadows that form the fortress' watchtower, give this edifice the
+look of a solid stone turret.  From this vantage, it is possible to see
+the surrounding area, mist and cloud the predominant features.  Rare
+glimpses through the cloud-layer show a sparkling body of water and
+intermittent patches of land, green, grey and brown, no more than vague
+forms that make up an impressionist painting.
+~
+[Estrella] done
+~
+569901120 17 9 0
+D0
+~
+~
+0 -1 76016 10 10 5
+D3
+~
+~
+0 -1 76063 10 10 5
+-1
+S
+
+#76065
+Within the Misty Clouds~
+Dense swirls of cloud, which appear almost impenetrable, shroud the
+immediate surroundings with a bleak greyness that chills to the bone. 
+Creeping tendrils of mist writhe about; their sinewy lengths seem to seek
+out anything that radiates even the smallest amount of warmth.  The thick
+fog stifles all sounds making it impossible to tell where noises are
+emanating from.  It is impossible to tell where the main cardinal points
+lie, as the swathes of cloud block out anything that could be used to
+gage direction.
+~
+[Estrella] done
+~
+569901120 17 9 0
+D0
+~
+~
+0 -1 76066 10 10 5
+A
+~
+~
+i = random( 76065, 76067 );
+act_tochar( #leave, ch );
+act_notchar( #rleave, ch, obj, mob, sight );
+transfer( ch, find_room( i ) );
+act_notchar( #arrive, ch, obj, mob, sight );
+loop( followers )
+  if( is_standing( rch ) ) {
+  act_tochar( #leave, rch );
+  act_notchar( #rleave, rch, obj, mob, sight );
+  transfer( rch, find_room( i ) );
+  act_notchar( #arrive, rch, obj, mob, sight );
+}
+~
+E
+leave~
+You leave to the north, passing by clouds to the sides.
+~
+E
+rleave~
+$n leaves to the north, passing by clouds to the sides.
+~
+E
+arrive~
+$n passes through the clouds, arriving here.
+~
+!
+3 0 1
+A
+~
+clouds~
+if( rflag( status0, room ) ) {
+  act_tochar( #nothing, ch );
+  end;
+}
+act_tochar( #cloud, ch, obj, mob );
+act_notchar( #rcloud, ch, obj, mob, sight );
+transfer( ch, find_room( 76045 ) );
+act_notchar( #arrive, ch, obj, mob, sight );
+loop( followers )
+  if( is_standing( rch ) ) {
+  act_tochar( #follow, rch, obj, ch );
+  act_notchar( #rfollow, rch, obj, ch, sight );
+  transfer( rch, find_room( 76045 ) );
+  act_notchar( #arrive, rch, obj, mob, sight );
+}
+set_rflag( status0, room );
+~
+E
+nothing~
+That action has no purpose here.
+~
+E
+cloud~
+You move some clouds out of the way, and find a way out.
+~
+E
+rcloud~
+$n searches around the clouds, and climbs out.
+~
+E
+arrive~
+$n climbs up through the clouds to here.
+~
+E
+follow~
+You follow $N out.
+~
+E
+rfollow~
+$n follows $N out.
+~
+!
+9 0 0
+-1
+S
+
+#76066
+Within the Misty Clouds~
+Stretching in every direction, for as far as they eye can see, lay dense
+swathes of almost suffocating fog.  The main reason why the cloud seems
+to stretch so far is primarily because it is impossible to see more than
+a few feet in any given direction.  The air is very close, imposing
+itself upon the area from all around, and an unsettling chill descends
+with the lynching tendrils of mist.
+~
+[Estrella] done
+~
+569901120 17 9 0
+D0
+~
+~
+0 -1 76067 10 10 5
+D2
+~
+~
+0 -1 76065 10 10 5
+A
+~
+~
+i = random( 76065, 76067 );
+act_tochar( #leave, ch );
+act_notchar( #rleave, ch, obj, mob, sight );
+transfer( ch, find_room( i ) );
+act_notchar( #arrive, ch, obj, mob, sight );
+loop( followers )
+  if( is_standing( rch ) ) {
+  act_tochar( #leave, rch );
+  act_notchar( #rleave, rch, obj, mob, sight );
+  transfer( rch, find_room( i ) );
+  act_notchar( #arrive, rch, obj, mob, sight );
+}
+~
+E
+leave~
+You leave through the clouds.
+~
+E
+rleave~
+$n leave through the clouds.
+~
+E
+arrive~
+$n climbs up through the clouds.
+~
+!
+3 0 5
+A
+~
+~
+if( rflag( status0, room ) ) {
+  act_tochar( #nothing, ch );
+  end;
+}
+act_tochar( #cloud, ch, obj, mob );
+act_notchar( #rcloud, ch, obj, mob, sight );
+transfer( ch, find_room( 76045 ) );
+act_notchar( #arrive, ch, obj, mob, sight );
+loop( followers )
+  if( is_standing( rch ) ) {
+  act_tochar( #follow, rch, obj, ch );
+  act_notchar( #rfollow, rch, obj, ch, sight );
+  transfer( rch, find_room( 76045 ) );
+  act_notchar( #arrive, rch, obj, mob, sight );
+}
+set_rflag( status0, room );
+~
+E
+nothing~
+That action has no purpose here.
+~
+E
+cloud~
+You move some clouds out of the way, and find a way out.
+~
+E
+rcloud~
+$n searches around the clouds, and climbs out.
+~
+E
+arrive~
+$n climbs up through the clouds to here.
+~
+E
+follow~
+You follow $N out.
+~
+E
+rfollow~
+$n follows $N out.
+~
+!
+0 0 0
+-1
+S
+
+#76067
+Within the Misty Clouds~
+Looking in a southwest direction, though there are no certainties about
+that, it is possible to see a dense bank of grey cloud.  Slowly observing
+the rest of the area, turning presumably in a clockwise direction, it
+appears that the cloud may lighten in density and colour, though it could
+just be the workings of an overactive imagination trying to find
+variation within all this monotony.
+~
+[Estrella] done
+~
+569901120 17 9 0
+D2
+~
+~
+0 -1 76066 10 10 5
+A
+~
+~
+i = random( 76065, 76067 );
+act_tochar( #leave, ch );
+act_notchar( #rleave, ch, obj, mob, sight );
+transfer( ch, find_room( i ) );
+act_notchar( #arrive, ch, obj, mob, sight );
+loop( followers )
+  if( is_standing( rch ) ) {
+  act_tochar( #leave, rch );
+  act_notchar( #rleave, rch, obj, mob, sight );
+  transfer( rch, find_room( i ) );
+  act_notchar( #arrive, rch );
+}
+~
+E
+leave~
+You leave through the clouds, heading off to the south.
+~
+E
+rleave~
+$n leaves through the clouds, heading off to the south.
+~
+E
+arrive~
+$n arrives through the clouds.
+~
+!
+3 0 4
+A
+~
+clouds~
+if( rflag( status0, room ) ) {
+  act_tochar( #nothing, ch );
+  end;
+}
+act_tochar( #cloud, ch, obj, mob );
+act_notchar( #rcloud, ch, obj, mob, sight );
+transfer( ch, find_room( 76045 ) );
+act_notchar( #arrive, ch, obj, mob, sight );
+loop( followers )
+  if( is_standing( rch ) ) {
+  act_tochar( #follow, rch, obj, ch );
+  act_notchar( #rfollow, rch, obj, ch, sight );
+  transfer( rch, find_room( 76045 ) );
+  act_notchar( #arrive, rch, obj, mob, sight );
+}
+set_rflag( status0, room );
+~
+E
+nothing~
+That action has no purpose here.
+~
+E
+cloud~
+You move some clouds out of the way, and find a way out.
+~
+E
+rcloud~
+$n searches around the clouds, and climbs out.
+~
+E
+arrive~
+$n climbs up through the clouds to here.
+~
+E
+follow~
+You follow $N out.
+~
+E
+rfollow~
+$n follows $N out.
+~
+!
+9 0 0
+-1
+S
+
+#76068
+Herb Garden - Upon a Sturdy Bridge~
+Although made entirely from cloud, this sculptured bridge takes on a
+remarkable resemblance to the stonework counterparts that appear across
+the lands far below.  Tinkling happily as it splashes in an abundant
+watercourse the stream flows in from the north and carries on to the
+south, disappearing into the thickening cloud not far in the distance. 
+At periodic intervals, ornate stone-like structures provide support for a
+broad handrail on either side of the walkway.
+~
+[Estrella] done
+~
+569901120 17 9 0
+D1
+~
+~
+0 -1 76056 10 10 5
+D3
+~
+~
+0 -1 76055 10 10 5
+-1
+S
+
+#0
+

@@ -1,0 +1,19 @@
+CREATE TABLE noteboard (
+  noteboard_id            CHAR( 36 )        NOT NULL PRIMARY KEY,
+  noteboard_name          VARCHAR( 255 )    NOT NULL UNIQUE,
+  noteboard_readlevel     INTEGER,
+  noteboard_writelevel    INTEGER,
+  noteboard_modifylevel   INTEGER,
+  noteboard_iflaglevel    INTEGER
+) ENGINE=INNODB
+
+CREATE TABLE note (
+  note_id                 CHAR( 36 )        NOT NULL PRIMARY KEY,
+  note_noteboard_id       CHAR( 36 )        NOT NULL,
+  note_title              VARCHAR( 255 )    NOT NULL,
+  note_author             VARCHAR( 255 )    NOT NULL,
+  note_date               DATETIME          NOT NULL,
+  note_text               TEXT,
+  FOREIGN KEY( note_noteboard_id ) REFERENCES noteboard( noteboard_id ) ON DELETE RESTRICT
+) ENGINE=INNODB
+

@@ -1,0 +1,1484 @@
+#M2_AREA
+2
+
+Sylfaen~
+ariellen~
+~
+~
+~
+
+0 0
+3
+1
+#ROOMS
+
+#5100
+A Narrow Road through a Forest~
+Ancient trees rise up around the path like the walls of a great fortress,
+their branches and undergrowth preventing passage into the northern and
+southern woods.  A narrow road snakes east and westwards through the
+trees, the path picking its way between gnarled roots and dense fern and
+brakens on its journey.
+~
+~
+33030144 2 9 0
+D1
+~
+~
+0 -1 45085 10 10 5
+D3
+~
+~
+0 -1 5101 10 10 5
+-1
+S
+
+#5101
+Forest~
+The forest opens up briefly, allowing for three paths to intersect at the
+wide stump of an old feld tree.  A slender stream cuts through the
+tangled roots and ferns to the south west, its surface coated in duckweed
+and crowed by watercress and reeds.  Northwards the roadway bends around
+the towering trees and begins to head in a more western direction. 
+Towards the south the ferns cover much of the track, making any travel
+along it damp and shadowy.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 5104 10 10 5
+D1
+~
+~
+0 -1 5100 10 10 5
+D2
+~
+~
+0 -1 5102 10 10 5
+-1
+S
+
+#5102
+Forest - Fern Lined Trail~
+Dogtongue ferns intermingle with bracken and tall tree ferns to form a
+dense forest floor.  The great roots of the ancient beech twist their way
+into the soft ground, the grasping tendrils often several feet in
+diamater.  A spire of grey stone breaks through the solid wall of green
+to the west, the craig all that remains of an ancient volcanic flow.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 5101 10 10 5
+D3
+~
+~
+0 -1 5103 10 10 5
+-1
+S
+
+#5103
+Forest - Dead End~
+Under Construction.
+~
+[Azerin] spire of volcanic rock
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 5102 10 10 5
+-1
+S
+
+#5104
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 5179 10 10 5
+D2
+~
+~
+0 -1 5101 10 10 5
+D3
+~
+~
+0 -1 5105 10 10 5
+-1
+S
+
+#5105
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 5106 10 10 5
+D1
+~
+~
+0 -1 5104 10 10 5
+D2
+~
+~
+0 -1 5110 10 10 5
+-1
+S
+
+#5106
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 5105 10 10 5
+D3
+~
+~
+0 -1 5107 10 10 5
+-1
+S
+
+#5107
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 5108 10 10 5
+D1
+~
+~
+0 -1 5106 10 10 5
+-1
+S
+
+#5108
+Forest~
+Under Construction.
+~
+northern trail concealed from all but elves/vodekyn/rangers
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 5121 10 10 5
+D1
+~
+~
+0 -1 5109 10 10 5
+D2
+~
+~
+0 -1 5107 10 10 5
+-1
+S
+
+#5109
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 5178 10 10 5
+D3
+~
+~
+0 -1 5108 10 10 5
+-1
+S
+
+#5110
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 5105 10 10 5
+D3
+~
+~
+0 -1 5111 10 10 5
+-1
+S
+
+#5111
+Forest~
+Under Construction.
+~
+[Ariellen] forested cliff edge overlooking a swamp to the southwest.
+[Ariellen] south is the lizardman swamp area outside thier village
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 5110 10 10 5
+D2
+~
+~
+0 -1 5137 10 10 5
+D3
+~
+~
+0 -1 5112 10 10 5
+-1
+S
+
+#5112
+Forest~
+Under Construction.
+~
+[Ariellen] forested cliff edge overlooking a swamp to the south.
+[Ariellen] south is the lizardman swamp area outside thier village
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 5113 10 10 5
+D1
+~
+~
+0 -1 5111 10 10 5
+-1
+S
+
+#5113
+Forest~
+Under Construction.
+~
+[Ariellen] south is the lizardman swamp area outside thier village
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 5112 10 10 5
+D3
+~
+~
+0 -1 5114 10 10 5
+-1
+S
+
+#5114
+Forest~
+Under Construction.
+~
+[Ariellen] forested cliff edge overlooking a swamp to the south.
+[Ariellen] south is the lizardman swamp area outside thier village
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 5122 10 10 5
+D1
+~
+~
+0 -1 5113 10 10 5
+-1
+S
+
+#5115
+Forest~
+Under Construction.
+~
+west entrance hidden to all but elves/vodekyn/rangers
+[Ariellen] forested cliff edge overlooking a swamp to the south.
+[Ariellen] south is the lizardman swamp area outside thier village
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 5116 10 10 5
+D3
+~
+~
+0 -1 5136 10 10 5
+-1
+S
+
+#5116
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 5117 10 10 5
+D1
+~
+~
+0 -1 5122 10 10 5
+D2
+~
+~
+0 -1 5115 10 10 5
+D3
+~
+~
+0 -1 5123 10 10 5
+-1
+S
+
+#5117
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 5126 10 10 5
+D2
+~
+~
+0 -1 5116 10 10 5
+-1
+S
+
+#5118
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 5177 10 10 5
+D1
+~
+~
+0 -1 5119 10 10 5
+D2
+~
+~
+0 -1 5122 10 10 5
+-1
+S
+
+#5119
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 5120 10 10 5
+D3
+~
+~
+0 -1 5118 10 10 5
+-1
+S
+
+#5120
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 5121 10 10 5
+D2
+~
+~
+0 -1 5119 10 10 5
+-1
+S
+
+#5121
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 5108 10 10 5
+D3
+~
+~
+0 -1 5120 10 10 5
+-1
+S
+
+#5122
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 5118 10 10 5
+D2
+~
+~
+0 -1 5114 10 10 5
+D3
+~
+~
+0 -1 5116 10 10 5
+-1
+S
+
+#5123
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 5124 10 10 5
+D1
+~
+~
+0 -1 5116 10 10 5
+-1
+S
+
+#5124
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 5123 10 10 5
+D3
+~
+~
+0 -1 5125 10 10 5
+-1
+S
+
+#5125
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 5124 10 10 5
+-1
+S
+
+#5126
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 5127 10 10 5
+D2
+~
+~
+0 -1 5117 10 10 5
+-1
+S
+
+#5127
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 5126 10 10 5
+D3
+~
+~
+0 -1 5128 10 10 5
+-1
+S
+
+#5128
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 5127 10 10 5
+D2
+~
+~
+0 -1 5129 10 10 5
+-1
+S
+
+#5129
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 5128 10 10 5
+D3
+~
+~
+0 -1 5130 10 10 5
+-1
+S
+
+#5130
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 5129 10 10 5
+D3
+~
+~
+0 -1 5131 10 10 5
+-1
+S
+
+#5131
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 5130 10 10 5
+D2
+~
+~
+0 -1 5132 10 10 5
+-1
+S
+
+#5132
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 5131 10 10 5
+D2
+~
+~
+0 -1 5133 10 10 5
+-1
+S
+
+#5133
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 5132 10 10 5
+D1
+~
+~
+0 -1 5134 10 10 5
+-1
+S
+
+#5134
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 5135 10 10 5
+D3
+~
+~
+0 -1 5133 10 10 5
+-1
+S
+
+#5135
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 5134 10 10 5
+D1
+~
+~
+0 -1 5136 10 10 5
+-1
+S
+
+#5136
+Forest~
+Under Construction.
+~
+[Ariellen] forested cliff edge overlooking a swamp to the south.
+[Ariellen] south is the lizardman swamp area outside thier village
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 5115 10 10 5
+D3
+~
+~
+0 -1 5135 10 10 5
+-1
+S
+
+#5137
+Forest~
+Under Construction.
+~
+[Ariellen] forested cliff edge overlooking a swamp to the south and west.
+[Ariellen] south is the lizardman swamp area outside thier village
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 5111 10 10 5
+-1
+S
+
+#5138
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 5139 10 10 5
+D3
+~
+~
+0 -1 5140 10 10 5
+-1
+S
+
+#5139
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D3
+~
+~
+0 -1 5138 10 10 5
+-1
+S
+
+#5140
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 5138 10 10 5
+D2
+~
+~
+0 -1 5141 10 10 5
+-1
+S
+
+#5141
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 5140 10 10 5
+D3
+~
+~
+0 -1 5142 10 10 5
+-1
+S
+
+#5142
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 5141 10 10 5
+D3
+~
+~
+0 -1 5143 10 10 5
+-1
+S
+
+#5143
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 5144 10 10 5
+D1
+~
+~
+0 -1 5142 10 10 5
+D2
+~
+~
+0 -1 5145 10 10 5
+-1
+S
+
+#5144
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 5143 10 10 5
+D3
+~
+~
+0 -1 5147 10 10 5
+-1
+S
+
+#5145
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 5143 10 10 5
+D1
+~
+~
+0 -1 5146 10 10 5
+-1
+S
+
+#5146
+Forest~
+Under Construction.
+~
+[Guin] connect south to 7263
+~
+33030144 3 9 0
+D3
+~
+~
+0 -1 5145 10 10 5
+-1
+S
+
+#5147
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 5148 10 10 5
+D1
+~
+~
+0 -1 5144 10 10 5
+D2
+~
+~
+0 -1 5149 10 10 5
+-1
+S
+
+#5148
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 5154 10 10 5
+D2
+~
+~
+0 -1 5147 10 10 5
+-1
+S
+
+#5149
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 5147 10 10 5
+D2
+~
+~
+0 -1 5176 10 10 5
+D3
+~
+~
+0 -1 5150 10 10 5
+-1
+S
+
+#5150
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 5151 10 10 5
+D1
+~
+~
+0 -1 5149 10 10 5
+D3
+~
+~
+0 -1 5173 10 10 5
+-1
+S
+
+#5151
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 5150 10 10 5
+D3
+~
+~
+0 -1 5152 10 10 5
+-1
+S
+
+#5152
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 5153 10 10 5
+D1
+~
+~
+0 -1 5151 10 10 5
+-1
+S
+
+#5153
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 5152 10 10 5
+D3
+~
+~
+0 -1 5169 10 10 5
+-1
+S
+
+#5154
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 5155 10 10 5
+D2
+~
+~
+0 -1 5148 10 10 5
+D3
+~
+~
+0 -1 5156 10 10 5
+-1
+S
+
+#5155
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D3
+~
+~
+0 -1 5154 10 10 5
+-1
+S
+
+#5156
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 5157 10 10 5
+D1
+~
+~
+0 -1 5154 10 10 5
+-1
+S
+
+#5157
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 5158 10 10 5
+D2
+~
+~
+0 -1 5156 10 10 5
+D3
+~
+~
+0 -1 5159 10 10 5
+-1
+S
+
+#5158
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 5160 10 10 5
+D3
+~
+~
+0 -1 5157 10 10 5
+-1
+S
+
+#5159
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 5163 10 10 5
+D1
+~
+~
+0 -1 5157 10 10 5
+D3
+~
+~
+0 -1 5164 10 10 5
+-1
+S
+
+#5160
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 5161 10 10 5
+D2
+~
+~
+0 -1 5158 10 10 5
+D3
+~
+~
+0 -1 5162 10 10 5
+-1
+S
+
+#5161
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D3
+~
+~
+0 -1 5160 10 10 5
+-1
+S
+
+#5162
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 5160 10 10 5
+D3
+~
+~
+0 -1 5163 10 10 5
+-1
+S
+
+#5163
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 5165 10 10 5
+D1
+~
+~
+0 -1 5162 10 10 5
+D2
+~
+~
+0 -1 5159 10 10 5
+-1
+S
+
+#5164
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 5159 10 10 5
+D2
+~
+~
+0 -1 5166 10 10 5
+-1
+S
+
+#5165
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 5163 10 10 5
+-1
+S
+
+#5166
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 5164 10 10 5
+D3
+~
+~
+0 -1 5167 10 10 5
+-1
+S
+
+#5167
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 5166 10 10 5
+D2
+~
+~
+0 -1 5168 10 10 5
+-1
+S
+
+#5168
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 5167 10 10 5
+D1
+~
+~
+0 -1 5169 10 10 5
+D2
+~
+~
+0 -1 5170 10 10 5
+-1
+S
+
+#5169
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 5153 10 10 5
+D3
+~
+~
+0 -1 5168 10 10 5
+-1
+S
+
+#5170
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 5168 10 10 5
+D1
+~
+~
+0 -1 5171 10 10 5
+D2
+~
+~
+0 -1 5180 10 10 5
+D3
+~
+~
+0 -1 5178 10 10 5
+-1
+S
+
+#5171
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 5172 10 10 5
+D3
+~
+~
+0 -1 5170 10 10 5
+-1
+S
+
+#5172
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 5171 10 10 5
+D1
+~
+~
+0 -1 5173 10 10 5
+-1
+S
+
+#5173
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 5150 10 10 5
+D2
+~
+~
+0 -1 5174 10 10 5
+D3
+~
+~
+0 -1 5172 10 10 5
+-1
+S
+
+#5174
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 5173 10 10 5
+D1
+~
+~
+0 -1 5175 10 10 5
+-1
+S
+
+#5175
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 5176 10 10 5
+D3
+~
+~
+0 -1 5174 10 10 5
+-1
+S
+
+#5176
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 5149 10 10 5
+D3
+~
+~
+0 -1 5175 10 10 5
+-1
+S
+
+#5177
+Forest - Dead End~
+Under Construction.
+~
+~
+33030144 3 9 0
+D2
+~
+~
+0 -1 5118 10 10 5
+-1
+S
+
+#5178
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D1
+~
+~
+0 -1 5170 10 10 5
+D2
+~
+~
+0 -1 5179 10 10 5
+D3
+~
+~
+0 -1 5109 10 10 5
+-1
+S
+
+#5179
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 5178 10 10 5
+D1
+~
+~
+0 -1 5180 10 10 5
+D2
+~
+~
+0 -1 5104 10 10 5
+-1
+S
+
+#5180
+Forest~
+Under Construction.
+~
+~
+33030144 3 9 0
+D0
+~
+~
+0 -1 5170 10 10 5
+D3
+~
+~
+0 -1 5179 10 10 5
+-1
+S
+
+#0
+

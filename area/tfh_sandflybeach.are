@@ -1,0 +1,900 @@
+#M2_AREA
+2
+
+Sandfly Beach~
+burne~
+~
+~
+~
+
+1 0
+2
+1
+#ROOMS
+
+#5750
+Path - Sandfly Head~
+u
+~
+[Guin] beach area for somewhere.
+~
+33030144 0 9 0
+D1
+~
+~
+0 -1 5751 10 10 5
+D2
+~
+~
+0 -1 5753 10 10 5
+A
+~
+~
+act_room( #waves, ch );
+~
+E
+waves~
+@bThe roar of distant waves echoes from the hills.@n
+~
+!
+2 100 0
+-1
+S
+
+#5751
+Path - Sandfly Head~
+Under Construction.
+~
+~
+33030144 0 9 0
+D2
+~
+~
+0 -1 5752 10 10 5
+D3
+~
+~
+0 -1 5750 10 10 5
+-1
+S
+
+#5752
+Path - Sandfly Head~
+Under Construction.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 5751 10 10 5
+D3
+~
+~
+0 -1 5753 10 10 5
+-1
+S
+
+#5753
+Path - Sandfly Head~
+Under Construction.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 5750 10 10 5
+D1
+~
+~
+0 -1 5752 10 10 5
+D2
+~
+~
+0 -1 5754 10 10 5
+D3
+~
+~
+0 -1 5756 10 10 5
+-1
+S
+
+#5754
+Path - Sandfly Head~
+Under Construction.
+~
+boulder - climb boulder to continue
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 5753 10 10 5
+D2
+~
+~
+226 -1 5755 10 10 5
+-1
+S
+
+#5755
+Path - Sandfly Head~
+Under Construction.
+~
+climb boulder to contine north
+~
+33030144 0 9 0
+D0
+~
+~
+226 -1 5754 10 10 5
+D1
+~
+~
+0 -1 5757 10 10 5
+D2
+~
+~
+0 -1 5758 10 10 5
+D3
+~
+~
+0 -1 5760 10 10 5
+-1
+S
+
+#5756
+Sandfly Head~
+Under Construction.
+~
+~
+33030144 0 9 0
+D1
+~
+~
+0 -1 5753 10 10 5
+D3
+~
+~
+0 -1 5761 10 10 5
+-1
+S
+
+#5757
+Path - Sandfly Head~
+Under Construction.
+~
+~
+33030144 0 9 0
+D2
+~
+~
+0 -1 5759 10 10 5
+D3
+~
+~
+0 -1 5755 10 10 5
+-1
+S
+
+#5758
+Path - Sandfly Head~
+Under Construction.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 5755 10 10 5
+D1
+~
+~
+0 -1 5759 10 10 5
+D2
+~
+~
+0 -1 5764 10 10 5
+-1
+S
+
+#5759
+Path - Sandfly Head~
+Under Construction.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 5757 10 10 5
+D3
+~
+~
+0 -1 5758 10 10 5
+D5
+~
+~
+0 -1 5765 10 10 5
+-1
+S
+
+#5760
+Path - Sandfly Head~
+Under Construction.
+~
+~
+33030144 0 9 0
+D1
+~
+~
+0 -1 5755 10 10 5
+D3
+~
+~
+0 -1 5762 10 10 5
+-1
+S
+
+#5761
+Sandfly Head~
+Under Construction.
+~
+~
+33030144 0 9 0
+D1
+~
+~
+0 -1 5756 10 10 5
+-1
+S
+
+#5762
+Path - Sandfly Head~
+Under Construction.
+~
+path around outcrops
+cliff west
+~
+33030144 0 9 0
+D1
+~
+~
+0 -1 5760 10 10 5
+D2
+~
+~
+0 -1 5763 10 10 5
+-1
+S
+
+#5763
+Path - Sandfly Head~
+Under Construction.
+~
+slab of rock up east
+cliff further west
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 5762 10 10 5
+-1
+S
+
+#5764
+Path - Sandfly Head~
+Under Construction.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 5758 10 10 5
+-1
+S
+
+#5765
+Path - Sandfly Head~
+Under Construction.
+~
+descending path
+~
+33030144 0 9 0
+D1
+~
+~
+0 -1 5766 10 10 5
+D4
+~
+~
+0 -1 5759 10 10 5
+-1
+S
+
+#5766
+Path - Sandfly Head~
+Under Construction.
+~
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 5767 10 10 5
+D3
+~
+~
+0 -1 5765 10 10 5
+-1
+S
+
+#5767
+Path - Sandfly Head~
+Under Construction.
+~
+descnding path through bush
+~
+33030144 0 9 0
+D2
+~
+~
+0 -1 5766 10 10 5
+D5
+~
+~
+0 -1 5768 10 10 5
+-1
+S
+
+#5768
+Path - Sandfly Head~
+Under Construction.
+~
+top of sand dune
+~
+33030144 0 9 0
+D4
+~
+~
+0 -1 5767 10 10 5
+D5
+~
+~
+226 -1 5769 10 10 5
+-1
+S
+
+#5769
+Path - Sandfly Head~
+Under Construction.
+~
+base of large dune
+~
+33030144 0 9 0
+D1
+~
+~
+0 -1 5770 10 10 5
+D4
+~
+~
+226 -1 5768 10 10 5
+-1
+S
+
+#5770
+Path - Sandfly Head~
+Under Construction.
+~
+Valley between dunes
+climb dune
+~
+33030144 0 9 0
+D0
+~
+~
+0 -1 5772 10 10 5
+D2
+~
+~
+0 -1 5771 10 10 5
+D3
+~
+~
+0 -1 5769 10 10 5
+-1
+S
+
+#5771
+Windswept Beach~
+Under Construction.
+~
+~
+33030144 10 9 0
+D0
+~
+~
+0 -1 5770 10 10 5
+D1
+~
+~
+0 -1 5777 10 10 5
+D2
+~
+~
+0 -1 5778 10 10 5
+D3
+~
+~
+0 -1 5792 10 10 5
+5488 41 1509949540 3 0
+5487 73 1509949540 3 0
+-1
+S
+
+#5772
+Path - Sandfly Head~
+Under Construction.
+~
+cliff corner
+~
+33030144 0 9 0
+D1
+~
+~
+0 -1 5773 10 10 5
+D2
+~
+~
+0 -1 5770 10 10 5
+-1
+S
+
+#5773
+Path - Sandfly Head~
+Under Construction.
+~
+climb dune
+cliff clroern
+~
+33030144 0 9 0
+D1
+~
+~
+0 -1 5774 10 10 5
+D3
+~
+~
+0 -1 5772 10 10 5
+-1
+S
+
+#5774
+Path - Sandfly Head~
+Under Construction.
+~
+climb dune east
+~
+33030144 10 9 0
+D0
+~
+~
+0 -1 5788 10 10 5
+D1
+~
+~
+226 -1 5791 10 10 5
+D2
+~
+~
+0 -1 5775 10 10 5
+D3
+~
+~
+0 -1 5773 10 10 5
+-1
+S
+
+#5775
+Path - Sandfly Head~
+Under Construction.
+~
+climb dune west
+~
+33030144 10 9 0
+D0
+~
+~
+0 -1 5774 10 10 5
+D1
+~
+~
+0 -1 5782 10 10 5
+D2
+~
+~
+0 -1 5776 10 10 5
+-1
+S
+
+#5776
+Driftwood Tangle~
+Under Construction.
+~
+~
+33030144 10 9 0
+D0
+~
+~
+0 -1 5775 10 10 5
+D1
+~
+~
+0 -1 5781 10 10 5
+D2
+~
+~
+0 -1 5780 10 10 5
+D3
+~
+~
+0 -1 5777 10 10 5
+-1
+S
+
+#5777
+Dried Lagoon~
+Under Construction.
+~
+sand flat section
+~
+33030144 10 9 0
+D1
+~
+~
+0 -1 5776 10 10 5
+D2
+~
+~
+0 -1 5779 10 10 5
+D3
+~
+~
+0 -1 5771 10 10 5
+-1
+S
+
+#5778
+Shoreline~
+Under Construction.
+~
+~
+33030144 10 9 0
+D0
+~
+~
+0 -1 5771 10 10 5
+D1
+~
+~
+0 -1 5779 10 10 5
+D3
+~
+~
+0 -1 5793 10 10 5
+-1
+S
+
+#5779
+Shoreline~
+Under Construction.
+~
+~
+33030144 10 9 0
+D0
+~
+~
+0 -1 5777 10 10 5
+D1
+~
+~
+0 -1 5780 10 10 5
+D3
+~
+~
+0 -1 5778 10 10 5
+-1
+S
+
+#5780
+Shoreline~
+Under Construction.
+~
+~
+33030144 10 9 0
+D0
+~
+~
+0 -1 5776 10 10 5
+D3
+~
+~
+0 -1 5779 10 10 5
+-1
+S
+
+#5781
+Shoreline~
+Under Construction.
+~
+~
+33030144 10 9 0
+D0
+~
+~
+0 -1 5782 10 10 5
+D1
+~
+~
+0 -1 5784 10 10 5
+D3
+~
+~
+0 -1 5776 10 10 5
+-1
+S
+
+#5782
+Path - Sandfly Head~
+Under Construction.
+~
+climb dune
+~
+33030144 10 9 0
+D0
+~
+~
+226 -1 5791 10 10 5
+D1
+~
+~
+0 -1 5783 10 10 5
+D2
+~
+~
+0 -1 5781 10 10 5
+D3
+~
+~
+0 -1 5775 10 10 5
+-1
+S
+
+#5783
+Path - Sandfly Head~
+Under Construction.
+~
+~
+33030144 10 9 0
+D0
+~
+~
+0 -1 5785 10 10 5
+D1
+~
+~
+0 -1 5789 10 10 5
+D2
+~
+~
+0 -1 5784 10 10 5
+D3
+~
+~
+0 -1 5782 10 10 5
+-1
+S
+
+#5784
+Shoreline~
+Under Construction.
+~
+~
+33030144 10 9 0
+D0
+~
+~
+0 -1 5783 10 10 5
+D3
+~
+~
+0 -1 5781 10 10 5
+-1
+S
+
+#5785
+Path - Sandfly Head~
+Under Construction.
+~
+~
+33030144 10 9 0
+D0
+~
+~
+0 -1 5786 10 10 5
+D1
+~
+~
+0 -1 5790 10 10 5
+D2
+~
+~
+0 -1 5783 10 10 5
+D3
+~
+~
+226 -1 5791 10 10 5
+-1
+S
+
+#5786
+Path - Sandfly Head~
+Under Construction.
+~
+~
+33030144 10 9 0
+D2
+~
+~
+0 -1 5785 10 10 5
+D3
+~
+~
+0 -1 5787 10 10 5
+-1
+S
+
+#5787
+Path - Sandfly Head~
+Under Construction.
+~
+climb dune south
+cliff, more dunes north
+view of back of valley
+~
+33030144 10 9 0
+D1
+~
+~
+0 -1 5786 10 10 5
+D2
+~
+~
+226 -1 5791 10 10 5
+D3
+~
+~
+0 -1 5788 10 10 5
+-1
+S
+
+#5788
+Path - Sandfly Head~
+Under Construction.
+~
+cliff backend
+~
+33030144 10 9 0
+D1
+~
+~
+0 -1 5787 10 10 5
+D2
+~
+~
+0 -1 5774 10 10 5
+-1
+S
+
+#5789
+Path - Sandfly Head~
+Under Construction.
+~
+~
+33030144 10 9 0
+D0
+~
+~
+0 -1 5790 10 10 5
+D3
+~
+~
+0 -1 5783 10 10 5
+-1
+S
+
+#5790
+Path - Sandfly Head~
+Under Construction.
+~
+~
+33030144 10 9 0
+D2
+~
+~
+0 -1 5789 10 10 5
+D3
+~
+~
+0 -1 5785 10 10 5
+-1
+S
+
+#5791
+Dune Crest~
+Under Construction.
+~
+~
+33030144 10 9 0
+D0
+~
+~
+226 -1 5787 10 10 5
+D1
+~
+~
+226 -1 5785 10 10 5
+D2
+~
+~
+226 -1 5782 10 10 5
+D3
+~
+~
+226 -1 5774 10 10 5
+-1
+S
+
+#5792
+Rippled Sand~
+Under Construction.
+~
+other base of large dune
+cliff west
+~
+33030144 10 9 0
+D1
+~
+~
+0 -1 5771 10 10 5
+D2
+~
+~
+0 -1 5793 10 10 5
+-1
+S
+
+#5793
+Shoreline~
+Under Construction.
+~
+cliff west
+~
+33030144 10 9 0
+D0
+~
+~
+0 -1 5792 10 10 5
+D1
+~
+~
+0 -1 5778 10 10 5
+-1
+S
+
+#0
+

@@ -1,0 +1,988 @@
+#M2_AREA
+2
+
+Savannah Ants~
+AzerinII~
+savannah ants~
+~
+~
+
+10 0
+0
+1
+#ROOMS
+
+#11250
+Grasslands~
+A large crater bursts out of the ground in the middle of the grassland, a
+wide scattering of dirt and rock surrounding its rim.  Bones of animals
+and a handful of humanoids lie partially buried under the rubble.  An
+unpleasant musky aroma drifts from the dark opening below, a faint
+scuttling sound warning that it is occupied.
+~
+~
+167247880 2 5 0
+D1
+~
+~
+0 -1 9455 10 10 5
+D5
+~
+~
+0 -1 11251 10 10 5
+-1
+S
+
+#11251
+Red Clay Tunnel~
+The dusty tunnel spreads out from a central chamber in all directions,
+faint clouds of debris falling from the ceiling of each of the low round
+passages.  The echoing sound of scuttling drifts in from each tunnel way. 
+Gnawed bones spill across the floor, the larger ones split open and their
+marrow sucked out.
+~
+[Azerin] extra added
+[Agnukshmi] bones searchable?
+[Larken] search bone = heartstone
+~
+167247876 11 5 0
+D0
+~
+~
+0 -1 11252 10 10 5
+D1
+~
+~
+0 -1 11253 10 10 5
+D2
+~
+~
+0 -1 11254 10 10 5
+D3
+~
+~
+0 -1 11255 10 10 5
+D4
+~
+~
+0 -1 11250 10 10 5
+E
+debris~
+Clumps of earth and rock constantly fall from the roof, the matted roots
+of the savannah grass doing a fairly poor job at containing the flow of
+rubble.
+~
+E
+bone bones~
+Piles of humanoid bones lay scattered around the chamber, some almost
+complete skeletons, some no more than gnawed chunks.
+~
+A
+~
+bones~
+if( random( 1, 100 ) <= 5 ){
+  act_tochar( #get, ch );
+  obj_to_char( oload( 4186 ), ch );
+}
+else{
+  act_tochar( #fail, ch );
+}
+~
+E
+get~
+@GYou find an intersting object amoung the bones.@n
+~
+E
+fail~
+@yYou fail to find anything of use amoung the bones.@n
+~
+!
+9 0 0
+2669 9 1509949540 3 0
+2669 9 1509949540 3 0
+2670 9 1509949540 3 0
+-1
+S
+
+#11252
+Red Clay Tunnel~
+Running in a north-south direction the tunnel widens to a good six feet
+across before beginning to narrow again further to the north.  Brick
+walls make up the majority of the tunnels, either the remains of a buried
+ruin or the work of very creative ants.  The sound of dripping water
+echoes from the musty northern air.  Southwards the tunnel opens into a
+chamber, a large hole in its ceiling.
+~
+[Azerin] extra added
+~
+167247876 11 5 0
+D0
+~
+~
+0 -1 11266 10 10 5
+D2
+~
+~
+0 -1 11251 10 10 5
+E
+brick walls~
+The clay bricks have been set into the way with a dusky-grey mortar; the
+years underground have shattered many of them but somehow the wall still
+remains.  The ants appear to have patched up the worst of the decay with
+a strange web-like coating.
+~
+-1
+S
+
+#11253
+Red Clay Tunnel~
+Cut out of the red clay and stones that lie beneath the grasslands, the
+cavern is surprisingly cool and dry.  The scrabbled claw marks of ants
+fill the tunnels and cavern, often the ants walking upon the roof and
+walls as well as floor of their home.  The sickly sweet smell of rotting
+fruit drifts in from the eastern tunnel.  A narrow opening in the north
+allows the brave to continue onwards in that direction while more open
+tunnels wind westwards and southwards.
+~
+~
+167247876 11 5 0
+D0
+~
+~
+0 -1 11262 10 10 5
+D1
+~
+~
+0 -1 11264 10 10 5
+D2
+~
+~
+0 -1 11265 10 10 5
+D3
+~
+~
+0 -1 11251 10 10 5
+2670 9 1509949540 3 0
+-1
+S
+
+#11254
+Red Clay Tunnel~
+Twisting and turning the tunnel runs in a vague north south direction as
+it continues onwards under the grasslands above.  Roots of shrubs dangle
+from the roof, some of the longer ones tangling the passage, making it
+difficult to continue onwards.  The strong aroma of musky animal fills
+the tunnel, the air getting stuffier the further south one travels.
+~
+[Agnukshmi] extra added
+~
+167247876 11 5 0
+D0
+~
+~
+0 -1 11251 10 10 5
+D2
+~
+~
+0 -1 11256 10 10 5
+E
+Root roots~
+Many roots from plants above dangle into the chamber, some so low that it
+makes passing through difficult.  Some of the roots are covered with dirt
+that crumbles at your touch.
+~
+-1
+S
+
+#11255
+Red Clay Tunnel~
+A honeycomb of rocks dot the passageway, the stones showing signs of wind
+and water erosion that suggests they were once upon the surface.  Ash and
+pumice intermingle with the red clay the volcanic rock left from an
+ancient eruption.  Eastwards the narrow tunnel opens into a circular
+chamber, a hole cut into its into its roof.  Other root-filed tunnels
+head off to the north, west and south, the cramped passages leading
+deeper in to the ant's lair.
+~
+[Agnukshmi] extra added
+~
+167247876 11 5 0
+D0
+~
+~
+0 -1 11273 10 10 5
+D1
+~
+~
+0 -1 11251 10 10 5
+D2
+~
+~
+0 -1 11271 10 10 5
+D3
+~
+~
+0 -1 11274 10 10 5
+E
+Rock stone~
+These reddish stones are extremely weathered, and covered with holes and
+tiny weblike cracks.
+~
+-1
+S
+
+#11256
+Red Clay Tunnel~
+The tunnel dips down steeply as it bends southwards and opens into a
+large chamber; the ground underfoot is a mixture of loose gravel and soft
+dirt that swirls about at the slightest disturbance.  Tuberous roots poke
+through the low ceiling, the tough fibrous roots becoming an increasing
+traveller down the passageways.  The smell of damp decay mixes with a
+musky aroma in a cacophony of smells that would make even a troll gag.
+~
+~
+167247876 11 5 0
+D0
+~
+~
+0 -1 11254 10 10 5
+D5
+~
+~
+0 -1 11258 10 10 5
+2670 9 1509949540 3 0
+-1
+S
+
+#11257
+Red Clay Tunnel~
+Under Construction.
+~
+~
+167247876 11 5 0
+-1
+S
+
+#11258
+Red Clay Tunnel~
+The southern tunnel slopes downwards, spiralling around until it opens
+into a t-junction.  A narrow passageway runs east west, its dusty floor
+covered in strange tracks.  A black rock juts out from the southern wall,
+the slab a good twenty feet across.  Patches of damp ground begin to
+appear in the floor were underground water seeps into the foundations, a
+dusting of black mushrooms growing around the muddy patches.
+~
+[Agnukshmi] extra added
+~
+167247876 11 5 0
+D1
+~
+~
+0 -1 11259 10 10 5
+D3
+~
+~
+0 -1 11260 10 10 5
+D4
+~
+~
+0 -1 11256 10 10 5
+E
+rock~
+This massive rock is made of a shiny black stone, and is covered with
+many tiny scratches and hairline fractures You can barely make out some
+faint writing in a language foreign to you.
+~
+E
+mushroom~
+These sickly-looking black mushrooms grow around some of the muddy
+patches, producing a faint blackish luminescence of some kind.
+~
+2669 9 1509949540 3 0
+-1
+S
+
+#11259
+Red Clay Tunnel~
+A neatly circular chamber opens up in the red earth, its walls and
+ceiling smooth as if worked by hands.  A single exit from the room leads
+westwards back into the winding tunnels.  A shallow layer of muddy water
+fills the chambers bottom; piles of rotting vegetation have been mounded
+up throughout it.  Large black toadstools festoon the decaying plants,
+the fungi thriving in the dampness.
+~
+~
+167247876 11 5 0
+D3
+~
+~
+0 -1 11258 10 10 5
+2670 9 1509949540 3 0
+-1
+S
+
+#11260
+Red Clay Tunnel~
+The tunnel curves around to the east and south, the walls cut from the
+red hued clay and occasional boulder that make up the savannah
+underground.  Strangely, a few bits of crockery and rusted metal lie
+scattered across the floors.  Partially ruined amphora and vases jut from
+the northern wall, the collection of buried pottery now unearthed by the
+industrial ant tunnels.
+~
+~
+167247876 11 5 0
+D1
+~
+~
+0 -1 11258 10 10 5
+D2
+~
+~
+0 -1 11261 10 10 5
+2670 9 1509949540 3 0
+-1
+S
+
+#11261
+Red Clay Tunnel~
+Hacked from the hard clay and rock the chamber is a little over thirty
+feet in diameter and just under six feet in hight.  Roots and old tree
+branches droop from the roof where an ancient forest appears to be buried
+beneath the grasslands.  A square cut wall blocks any expanse to the
+south, the masonry clearly part of a buried ruin.  A cobbled road runs a
+short distance eastwards before disappearing under the clay wall 
+~
+[Larken] elven gladius 5% pop on the ground
+~
+167247876 11 5 0
+D0
+~
+~
+0 -1 11260 10 10 5
+D3
+~
+~
+163 -1 11275 10 10 5
+A
+~
+~
+if( doing_quest( ch, 91 ) ){
+  act_tochar( #wall, ch );
+}
+continue;
+~
+E
+wall~
+@YThe dirt in the western wall looks particularly loose.  Perhaps you can
+dig through it.
+~
+!
+1 0 1
+A
+dig~
+wall west~
+if( doing_quest( ch, 91 ) ){
+   act_tochar( #leave, ch, obj, mob );
+   transfer( ch, find_room( 11275 ) );
+   act_notchar( #rleave, ch, obj, mob );
+}
+else
+  act_tochar( #nowall, ch );
+~
+E
+nowall~
+<Type 'help' for help>
+~
+E
+leave~
+@YAs you are digging you fall through a hole!!
+~
+E
+rleave~
+@YAs $n are digging $n fall through a hole!!
+~
+!
+0 0 0
+2670 9 1509949540 3 0
+2671 9 1509949540 3 0
+4185 17 1509949445 -2 0
+-1
+S
+
+#11262
+Red Clay Tunnel~
+Bloodstone pillars lie askew across the clay tunnel; their ancient
+surfaces caked with cracks and dirt from when they fell.  Underfoot the
+ground is a mixture of cobbles, rubble and damp earth, making for an
+arduous journey.  The partially broken figurehead of an elven or vyan
+woman lies partially submerged in the wall, her features worn by the
+years of entombment beneath the savannah.  The tunnel heads southwards
+from the ruins and eastwards into rubble filed chamber 
+~
+[Agnukshmi] extra added
+~
+167247876 11 5 0
+D1
+~
+~
+0 -1 11263 10 10 5
+D2
+~
+~
+0 -1 11253 10 10 5
+E
+broken figurehead~
+It is clear that the statue of whom the vyan is fashioned was very
+beautiful, but age has taken its toll on the stone.  The bone-white stone
+is chipped and cracked in many places, and one arm and part of a leg is
+entirely broken off, and lays next to the figurehead.
+~
+-1
+S
+
+#11263
+Red Clay Tunnel~
+The partially excavated rubble of ancient ruins spill out from the walls
+and floor of the ant's chamber, the industrial insects have dug around
+much of the stone work, prying it out of the way where they could.  Black
+stone cobbles fill the northern floor, mounds of rotting leaf litter
+piled upon them.
+~
+[Agnukshmi] extra added
+[Agnukshmi] leaf litter searchable?
+[Larken] sear leaf litter = 10% strongarm orc mace
+~
+167247876 11 5 0
+D3
+~
+~
+0 -1 11262 10 10 5
+E
+black stone cobbles~
+Ruined black cobbles cover much of the room, the stone cracked and
+scarred in hundreds of places.  Mounds of rotting leaf little are piled
+haphazardly on the cobbles here and there.
+~
+A
+~
+leaf litter~
+if( random( 1, 100 ) <= 10 ){
+act_tochar( #get, ch );
+obj_to_char( oload( 4188 ), ch );
+}
+else{
+act_tochar( #fail, ch );
+}
+~
+E
+get~
+@RYou find a strange weapon amoung the leaves.@n
+~
+E
+fail~
+@yYou find nothing of intrest amoung the leaves.@n
+~
+!
+9 0 0
+2670 9 1509949540 3 0
+-1
+S
+
+#11264
+Red Clay Tunnel~
+A spiral staircase rises in the red-clay chamber, the stairs reaching
+only a few feet in height before searing off into jagged remains.  Broken
+pillars and unearthed cobblestones clutter the southern section of the
+room where the ants appear to have dragged much of the ruins out of their
+way.  Mounds of toadstool-covered leafs have been stuffed between the
+rocks, the tiny fungi aparently the ants' main food source.
+~
+[Agnukshmi] fungi searchable?
+[Larken] need fungi extra here.
+[Xai'Naga] room extra completed.
+~
+167247876 11 5 0
+D3
+~
+~
+0 -1 11253 10 10 5
+E
+fungi~
+These small mushrooms are a light brown in color.  They have sprouted
+from the many damp leafs which have been stuffed between the rocks in the
+room.  You notice that some of the mushrooms have been nibbled on, while
+others, appear to have been harvested.
+~
+2670 9 1509949540 3 0
+-1
+S
+
+#11265
+Red Clay Tunnel~
+The slumped remains of a buildings roof spill across the floor from the
+eastern wall, the crafted tiles mostly broken from the collapse and then
+burying.  Ash and white pebbles coat much of the structure; perhaps it
+was a victim of a long ago volcanic eruption.  The opportunistic ants
+have begun to use the wall to store fresh branches and leaf litter off
+the floor.
+~
+[Agnukshmi] leaf litter searchable?
+[Larken] tattered cloth pants reset on groudn 15%
+~
+167247876 11 5 0
+D0
+~
+~
+0 -1 11253 10 10 5
+4187 17 1509949455 -2 0
+-1
+S
+
+#11266
+Red Clay Tunnel~
+Four tunnels branch from the chambers stone and red-clay walls each one
+wide enough to accommodate a reasonable amount of ant traffic.  The
+broken remains of a cobbled courtyard lie to the east, the collapsed
+remains of a graceful archway splitting across it.  The sound of running
+water drifts in from the northern entrance while the other openings carry
+the scrabbling of active ants.
+~
+[Azerin] extra added
+~
+167247876 11 5 0
+D0
+~
+~
+0 -1 11269 10 10 5
+D1
+~
+~
+0 -1 11267 10 10 5
+D2
+~
+~
+0 -1 11252 10 10 5
+D3
+~
+~
+0 -1 11268 10 10 5
+E
+archway~
+The pale blue-stone arch has been carved with swans in flight and cranes
+wading across lilly ponds.  The graceful structure has shatted in two,
+and the keystone lies split across the floor in thousands of pieces.
+~
+2670 9 1509949540 3 0
+-1
+S
+
+#11267
+Red Clay Tunnel~
+The shattered remnants of black stone pillars lie partially buried under
+ash and earth in the chambers centre, the ruins filling much of the
+available space.  Around the rubble the ants have excavated shallow
+depressions where they can store developing eggs and pupa.  A single
+narrow tunnel leads from the room back westwards, the opening partially
+blocked by a lopsided pillar.
+~
+[Azerin] search egg/pupa
+~
+167247876 11 5 0
+D3
+~
+~
+0 -1 11266 10 10 5
+E
+black stone pillars~
+These massive pillars are made of weathered and cracked black stone. 
+They look to be ancient, and look like they could possibly crumble at any
+moment.
+~
+-1
+S
+
+#11268
+Red Clay Tunnel~
+The tunnel abruptly ends in a section of bricked wall; the ants appear to
+have begun to dig around the obstacle but have yet to make much progress. 
+The faint remains of a tile fresco coat the bottom portion of the wall,
+with careful examination it appears to be of a forested scene.  The only
+option onwards from here is to backtrack east. 
+~
+[Azerin] extra added
+[Yuilden] look fresco -  A few elf-like figgures appear to be moving through the trees - figures.
+~
+167247876 11 5 0
+D1
+~
+~
+0 -1 11266 10 10 5
+E
+fresco~
+The faint pattern still visible on the cracked and broken tiles are of
+tall beech trees, their high branches set with platforms and strange
+houses.  A few elf-like figgures appear to be moving through the trees.
+~
+2670 9 1509949540 3 0
+-1
+S
+
+#11269
+Red Clay Tunnel~
+A sunken pool lined with pink quarts tiles sits in the rooms centre.  A
+fountain of water slowly dribbles out the base of a broken statue, the
+statues feet all that remain of what was perhaps an elven maiden or
+similar lithe creature.  The water in the pool appears fresh enough to
+quench ones thirst.  A muddy trail of ant prints lead in and out of the
+pool.
+~
+[Azerin] needs pool object
+[Azerin] extra added
+[Agnukshmi] add action here, search pool and find something
+~
+167247876 11 6 0
+D1
+~
+~
+0 -1 11270 10 10 5
+D2
+~
+~
+0 -1 11266 10 10 5
+E
+statue~
+The bare feet are slight and delicate, perhaps once belonging to a statue
+of an elf maiden.
+~
+A
+~
+pool water~
+if( !rflag( reset0, room ) ) {
+  act_tochar( #fail, ch, obj );
+  end;
+}
+remove_rflag( reset0, room );
+if( random( 1, 100 ) <= 5 ){
+  act_tochar( #get, ch );
+  obj_to_char( oload( 4189 ), ch );
+}
+else{
+  act_tochar( #fail, ch );
+}
+~
+E
+get~
+@BYou find someting shiny at the bottom of the pool.@n
+~
+E
+fail~
+@yYou find nothing of intrest in the pool.@n
+~
+!
+9 0 0
+2670 9 1509949540 3 0
+2669 9 1509949540 3 0
+1388 17 1509949540 -2 0
+-1
+S
+
+#11270
+Red Clay Tunnel~
+Big enough to accommodate a single ant tiny chamber has been filled with
+grasses and grains, a light layer of mildew coating much of the
+vegetation.  A broken stone wall blocks the tunnel to the east and south,
+the ants covering the bricks in deep scratches in their attempts to move
+the obstacle.  Strangely the northern wall appears untouched, for some
+reason the ants not expanding through the easy clay.
+~
+[Azerin] put ant-eatter mob in north wall, if you dig north it attacks
+[Azerin] extra done
+~
+167247876 11 5 0
+D3
+~
+~
+0 -1 11269 10 10 5
+E
+grasses grains~
+The rotting vegetation is used by the ants to grow their fungi, the
+stench of decay is almost overwelming.  Bits of bones and torn skin
+scatter through the grass, perhaps the ants have begun to add a more
+organic mulch to their gardens.
+~
+-1
+S
+
+#11271
+Red Clay Tunnel~
+The ash-covered remains of tree branches lie partially exposed along the
+floor of the tunnel, the crumbling wood charred from an intense fire. 
+The foundations of a building thrust through the southern wall, the squat
+pillars cracked and pitted from years beneath the red clay.  A scattering
+of humanoid bones spill out from between the pillars, the sad remains of
+some unfortunate soul who was killed during the cataclysm that befell the
+ruins.
+~
+[Agnukshmi] extra added
+~
+167247876 11 5 0
+D0
+~
+~
+0 -1 11255 10 10 5
+D3
+~
+~
+0 -1 11272 10 10 5
+E
+tree branches~
+These ash-covered tree branches are nothing more than burnt-out hulks. 
+They look to have come from a brownish-black colored tree of some type.
+~
+E
+scattering humanoid bones~
+Many piles of humanoid bones lay scattered between the pillars here. 
+They all look old, but some look older than others, so evidently, they
+didnt all die at the same time.
+~
+-1
+S
+
+#11272
+Red Clay Tunnel~
+The slender chamber has been dug between the crumbling pillars of black
+stone, the clay walls worked until flush with the ruins.  The heavy smell
+of musk hangs in the air perhaps from the amount of ant traffic this room
+sees.  Newly laid eggs sit in sticky piles across the floor.
+~
+[Agnukshmi] extra added
+~
+167247876 11 5 0
+D1
+~
+~
+0 -1 11271 10 10 5
+E
+egg eggs~
+Small piles of eggs lay in dissaray around the room.  They are covered in
+a thick, drippy, sticky, greenish-yellow liquid.
+~
+2670 9 1509949540 3 0
+2669 9 1509949540 3 0
+-1
+S
+
+#11273
+Red Clay Tunnel~
+Cut from the red clay the muddy chamber is little more than enough space
+for an ant to turn about in.  Rotting vegetation fill much of the eastern
+wall where a fungi garden has been planted.  Southwards a narrow
+root-filled tunnel heads onwards.  A pillar of black stone lies partially
+exposed in the northern wall, the gleaming stone marked by thousands of
+scratches where the ants appear to have attempted to move the stonework.
+~
+[Agnukshmi] extra added
+~
+167247876 11 5 0
+D2
+~
+~
+0 -1 11255 10 10 5
+E
+fungi garden~
+Against the eastern wall of the chamber grows a massive fungi garden
+Mushrooms and toadstools of all types grow here, big and little,
+normal-looking ones, and exotic ones youve never seen before.  The smell
+emanating from some of the fungi is awful.
+~
+-1
+S
+
+#11274
+Red Clay Tunnel~
+The chamber opens out into a rough L shape, the northern wall bending
+away to form the top of it.  Across the floor mounds of ant eggs have
+been stacked in sticky looking piles.  The walls, floor and ceiling are
+coated with countless ant tracks, this room far the busiest of the small
+ant colony.  A single opening in the east wall allows the ant traffic to
+move eggs to other nursery sites.
+~
+[Agnukshmi] extra added
+~
+167247876 11 6 0
+D1
+~
+~
+0 -1 11255 10 10 5
+E
+mound pile~
+Huge mounds of eggs have been piled high in this room, some reaching at
+least 8 feet.  They are covered with a sticky greenish-yellow fluid, and
+the smell wafting from the piles is awful.
+~
+2670 9 1509949540 3 0
+2669 9 1509949540 3 0
+-1
+S
+
+#11275
+Red Clay Tunnel~
+More of the cobblestone road has been uncovered here.  It appears to
+continue under the walls to the east and west.  Red clay walls surround
+you the only light appears to eminate from a box on the floor.
+~
+[Larken] scribe traped here
+~
+167247876 11 9 0
+D1
+~
+~
+163 -1 11261 10 10 5
+A
+drop~
+tear~
+if( obj_in_room( 4462, room ) ) {
+  if( has_obj( 4254, ch ) || has_obj( 4255, ch ) ) {
+    if( has_obj( 4254, ch ) ) {
+      obj = has_obj( 4254, ch );
+    }
+    else if( has_obj( 4255, ch ) ) {
+      obj = has_obj( 4255, ch );
+    }
+    act_notchar( #rdrop, ch, obj, mob );
+    act_tochar( #drop, ch, obj, mob );
+    act_room( #eat, ch, obj, mob );
+    junk_obj( obj );
+    mob = mob_in_room( 2750, room );
+    act_room( #free, ch, obj, mob );
+    wait( 5 );
+    obj = obj_in_room( 4462, room );
+    act_room( #explode, ch, obj, mob );
+    junk_obj( obj );
+    if( class( ch ) == blade dancer ) {
+      set_integer( ch, "/elemental/dancer", 4462 );
+      obj_to_room( oload( 4446 ), room );
+    }
+    if( class( ch ) == mage ) {
+      obj_to_room( oload( 4457 ), room );
+    }
+    if( class( ch ) == thief ) {
+      obj_to_room( oload( 4446 ), room );
+    }
+    if( class( ch ) == monk ) {
+      obj_to_room( oload( 4446 ), room );
+    }
+    if( class( ch ) == cleric ) {
+      obj_to_room( oload( 4458 ), room );
+    }
+    if( class( ch ) == warrior ) {
+      obj_to_room( oload( 4256 ), room );
+    }
+    if( class( ch ) == ranger ) {
+      obj_to_room( oload( 4447 ), room );
+    }
+    if( class( ch ) == paladin ) {
+      obj_to_room( oload( 4256 ), room );
+    }
+    if( class( ch ) == sorcerer ) {
+      obj_to_room( oload( 4444 ), room );
+    }
+    if( class( ch ) == druid ) {
+      obj_to_room( oload( 4453 ), room );
+    }
+    update_quest( ch, 91 );
+  }
+}
+continue;
+~
+E
+eat~
+The multi-colored flashing box shoots forth tendrils that engulf $p.
+~
+E
+rdrop~
+@Y$n drops $p into the multi-colored flashing box.
+~
+E
+drop~
+@YYou drops $p into the multi-colored flashing box.
+~
+E
+free~
+@CThe bounds around the gnomish scribe burst, freeing the gnomish scribe.
+~
+E
+explode~
+@R$p glows brightly and bursts in particles of
+multi-colored light, and the light reforms on the ground.
+~
+!
+0 0 0
+A
+dig~
+1 east~
+if( get_integer( ch, "/elemental/dancer" ) == 4462 ) {
+   set_integer( ch, "/elemental/dancer", -1 );
+   act_notchar( #rwait, ch, obj, mob );
+   act_tochar( #wait, ch, obj, mob );
+   act_tochar( #gift, ch );
+   obj_to_char( oload( 4461 ), ch );
+   set_integer( ch, "/elemental/dancer", 0 );
+}
+wait( 1 );
+act_tochar( #fall, ch, obj, mob );
+act_notchar( #rrfall, ch, obj, mob );
+transfer( ch, find_room( 11261 ) );
+act_tochar( #moved, ch, obj, mob );
+act_notchar( #rfall, ch, obj, mob );
+~
+E
+fall~
+@YYou fall into the hole.
+~
+E
+rfall~
+@Y$n falls through the hole from the west.
+~
+E
+rwait~
+@YThe gnomish scribe calls out for $n to wait.
+~
+E
+wait~
+@YThe gnomish scribe calls out for you to wait.
+~
+E
+gift~
+For freeing me, please take this.  It seems you might need it.
+~
+E
+rrfall~
+@Y$n falls through a hole to the east.
+~
+E
+moved~
+@YYou come tumbling into the queen's lair.
+~
+!
+0 0 0
+A
+~
+~
+send_to_room( #hole, room );
+~
+E
+hole~
+@YA beam of light come through a small hole to the east, perhaps if you
+dig you could make it larger.
+~
+!
+2 125 0
+2750 9 1509949540 3 0
+4462 17 1509949540 -2 0
+-1
+S
+
+#0
+

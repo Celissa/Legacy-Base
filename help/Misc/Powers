@@ -1,0 +1,45 @@
+<html>
+<body>
+These are the old powers, as now we have flags that circumvent having/not<br>
+having powers, but they still apply for the most part.<br>
+<br>
+92 - Apprentice:<br>
+Apprentice builder.<br>
+Most rdesc and aedit commands within a small starting area.<br>
+<br>
+93 - Builder:<br>
+Standard builder's level.<br>
+Stat most everything in the game, but only able to modify rooms, mob,<br>
+objects and scripts of their own creating.<br>
+   <br>
+94 - Architect:<br>
+A more experienced builder.<br>
+Edit shops though only in areas where they have write permission.<br>
+<br>
+95 - Immortal:<br>
+Experienced builder position.<br>
+Edit all rooms and mobs.  Can edit help files.<br>
+<br>
+96 - Spirit:<br>
+The senior builder level.<br>
+Edit all objects.  Can mstat, mset, imprison mortals.  This is the lowest<br>
+level immortal which has permission to interfere with mortals and deal<br>
+with problems associated with them except in extreme cases.  Has the<br>
+ban/allow command though this should only be used in cases of intentional<br>
+misbehavior.<br>
+<br>
+97 - Angel:<br>
+Lowest level immortal permitted to reimburse players.<br>
+Can edit some tables.<br>
+Can rename players.<br>
+Has permission to reimburse players when the backup files fail.<br>
+<br>
+98 - Demigod:<br>
+Can advance immortals to level 97, can view login addresses.<br>
+Permission to approve others' areas for opening, supervise builders.<br>
+<br>
+99 - God:<br>
+Able to change what they can do.  This implies you should stay away from<br>
+god when he has modified the no mloading wabbits rule.<br>
+</html>
+</body>

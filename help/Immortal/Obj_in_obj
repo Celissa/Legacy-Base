@@ -1,0 +1,27 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+obj_in_obj( obj, int );<br>
+<br>
+PARAMETERS<br>
+<br>
+obj - the object to be looking into<br>
+int - which # of the content to check..<br>
+<br>
+<h1> Description </h1>
+<br>
+This function returns an object that resides inside another object at the<br>
+integer position requested.<br>
+<br>
+EXAMPLES<br>
+<br>
+// for basic examples the object will be a bag with 50 items in it.<br>
+robj = obj_in_obj( obj, 40 ); // this will return object-]contents[40]<br>
+robj = obj_in_obj( obj, -1 ); // errors as int can not be less than 0,<br>
+same will happen if you try for 50, as thats more than obj-]contents <br>
+// last example, checking a weapon<br>
+robj = obj_in_obj( obj, [some number of your choice] ); // this will bug<br>
+as it shouldn't have anything inside of it.<br>
+</html>
+</body>

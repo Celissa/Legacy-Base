@@ -1,0 +1,4968 @@
+#M2_AREA
+2
+
+Icefinger Woods~
+Azerin Estrella Hazen Chione Teleute~
+Icefinger Woods~
+~
+~
+
+60 0
+0
+1
+#ROOMS
+
+#8500
+Passageway of Roots~
+Tangled roots form a narrow passageway to the north, their grasping
+tendrils and gnarled bark making the going difficult.  The sweet aroma of
+pinesap permeates the air, each breath seeming to infuse itself deeper
+into the lungs.  Spotted toadstools and basket fungi nestle upon the
+rotting leaf litter and decaying tree fall.  Southward, the tunnel of
+roots ends at a cobbled road.  A wrecked @Rsign@n lies on its side beside
+the path.
+~
+[Guin] Connects to 4462 southward.
+[Hazen] Don't delete acode 2.
+[Guin] Done.
+~
+167247880 3 6 0
+D0
+~
+~
+0 -1 8501 10 10 5
+D2
+~
+~
+0 -1 4462 10 10 5
+E
+roots tunnel~
+Covered in beads of pine sap, the gnarled roots form a tunnel through the
+waterlogged forest.  A fine collection of fungi grows underfoot.
+~
+E
+toadstools basket fungi~
+Thriving in the dank loam, the toadstools and fungi quickly turn the
+leaf litter into a greasy mush.
+~
+E
+cobbled road~
+Cutting its way through the pine forest, the ancient road winds in a
+north to south direction.
+~
+E
+sign~
+The sign, what you can make of it, reads:
+
+Beware the forested area to the north. It.......
+
+The rest of the sign is broken off and missing.
+~
+A
+take get pick~
+toadstools basket fungi mushrooms~
+act_tochar( #nope, ch );
+act_notchar( #onope, ch );
+~
+E
+nope~
+@gThe soft toadstools collapse in on themselves at your touch, leaving
+your fingers caked with fine white spores.@n 
+~
+E
+onope~
+@g$n tries to pick a toadstool, but the bulbous things prove too
+fragile.@n 
+~
+!
+0 0 0
+A
+1 east 1 west~
+*~
+act_tochar( #nope, ch );
+~
+E
+nope~
+@yThe wiry roots are tangled thickly together, impenetrable.@n
+~
+!
+0 0 10
+-1
+S
+
+#8501
+Fork in the Passageway~
+The passage of roots splits at a t-junction that offers an east and west
+exit as well as the southern entrance way.  Overhead, a tangled roof of
+foliage has been bound by sticky webs that block out most light, leaving
+the under-passages shrouded in gloom.  Dusky brown bracken and spotted
+fungi appear to be the only plants that can survive in the barren sea of
+gnarled roots and pine needles.
+~
+[Guin] Done.
+~
+167247872 3 6 0
+D1
+~
+~
+0 -1 8503 10 10 5
+D2
+~
+~
+0 -1 8500 10 10 5
+D3
+~
+~
+0 -1 8502 10 10 5
+E
+roots~
+The spread of roots is almost as impressive as the towering trees they
+support.  Patches of moss and lichen cling to the gnarled bark, trickling
+water dripping from their leaves.
+~
+E
+foliage web~
+Tangles of webs and branches form what appear to be walkways and
+platforms high in the canopy.  The dense silken layers must have been
+spun by huge spiders.
+~
+E
+bracken fungi~
+Speckled with dew, the bright toadstools thrive on the rotting needles. 
+Shadowing the fungi are the scraggly fronds of bracken, the only other
+plant hardy enough to grown in these conditions.
+~
+A
+1 north~
+~
+acode( find_room( 8500 ), 2 );
+~
+!
+0 0 0
+A
+take get pick~
+toadstools basket fungi~
+acode( find_room( 8500 ), 1 );
+~
+!
+0 0 0
+-1
+S
+
+#8502
+Rocky Clearing~
+A ridge of rock allows for a small clearing, centered in the otherwise
+mire of roots.  A scattering of bamboo shoots, growing in the shallow
+soil, break in colour from the drab browns and blacks of the pines.  A
+dense curtain of webs and branches has been draped across most of the
+ceiling.  The vegetation to the north appears to be a tad clearer;
+perhaps a determined person could squeeze through it and continue onward.
+~
+[Guin] Done.
+~
+167247872 3 6 0
+D0
+~
+~
+0 -1 8510 10 10 5
+D1
+~
+~
+0 -1 8501 10 10 5
+E
+ridge rock clearing~
+Orange flecks of minerals run through the hard black rock, their
+crystaline structure sparkling in the light.  Thanks to the ridge of
+stone, the landscape is a tad clearer, the normally choking roots forced
+to find a purchase further out.
+~
+E
+bamboo shoots~
+The stands of bamboo rise into the web canopy, their slender trunks
+without any leaves or branches.  A few immature spears thrust from around
+the adult plants.
+~
+E
+pine trees~
+The brown and black pines dominate the landscape, the gnarled bark of the
+brown and the smoother textured black the easiest way to tell the two trees
+apart.
+~
+E
+web branches~
+The tangled webbing entwines the pine trees, the mass of white silk
+forming an obscuring canopy overhead.
+~
+A
+1 south 1 west~
+*~
+acode( find_room( 8500 ), 2 );
+~
+!
+0 0 0
+2441 9 1509949540 3 0
+-1
+S
+
+#8503
+Water-Filled Clearing~
+A burbling stream bubbles out of the ground and forms a shallow pool in
+the center of a small clearing.  Duckweed and watercress cover the pond
+and at the edges, a few bulrushes grow between the grasping roots of the
+massive pine trees.  A fallen white pine has carved a swathe of
+destruction to the east, allowing passage some way along its shattered
+trunk.  The ribbon of water escapes the pool and runs northward, the wall
+of roots preventing attempts to follow its path.
+~
+[Guin] Pool reset here.
+[Guin] Done.
+~
+167247872 13 6 0
+D1
+~
+~
+0 -1 8504 10 10 5
+D3
+~
+~
+0 -1 8501 10 10 5
+E
+stream bubbles shallow pool~
+A shallow pool of fresh spring water is caught in a basin in the centre
+of the clearing.  The crystal clear stream, sparkling as it catches the
+sunlight, rushes down a narrow, gravelly course and disappears beneath a
+barricade of roots.  The merry burbling of the stream brings tranquility
+to this primeval glade.
+~
+E
+duckweed watercress bullrushes~
+Thriving around the edges of the pool, spindly bulrushes sway as a passing
+fish gently nudges them.  Gleaming leaves of watercress intertwine with
+duckweed to create a covering over most of the pool.  The small white
+watercress flowers and the occasional pale yellow flowers of the duckweed
+add a touch of colour to this sanctuary.
+~
+E
+roots pine tree~
+Ominous pine trees tower high above the clearing, their roots planted
+firmly in the ground.  The tangled roots twist into an impenetrable wall
+preventing all but the smallest of creatures from weaving a path through
+their blockade.  The ground is sprinkled with a light covering of pine
+needles and remnants of some cones lay strewn about the area.
+~
+E
+white pine fallen destruction~
+Although the wood of a large white pine is soft from the years of
+decaying, part of it is still strong enough to serve as a pathway for
+anyone travelling in this direction.  New undergrowth encroaches over
+trees and ferns that were uprooted when the pine crashed to the ground. 
+A myriad of insects make their homes in the decomposing trunk, and the
+skeletal remains of leaves and long abandoned spider webs lace the fallen
+tree with an eeriness of time gone by.
+~
+A
+1 north 1 south~
+*~
+acode( find_room( 8500 ), 2 );
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou work your way around the tangled knot of overgrown roots onto the
+trunk eastward.@n 
+~
+E
+to_room~
+@G$n circles the tangled and webbed roots of the fallen tree, climbing
+onto the trunk eastward.@n 
+~
+!
+3 0 2
+1519 17 1509949540 -2 0
+398 17 1509949540 -2 0
+1519 17 1509949540 -2 0
+-1
+S
+
+#8504
+Along a Fallen Tree.~
+Shattered branches and torn bark form a difficult but not impossible
+passage along the length of a fallen tree.  Widely splayed roots form an
+umbrella of dirt and debris to the west, a curtain of branches and spider
+webs entangled in its top.  The remaining pine trees crowd close to the
+fallowed ground, their outstretched branches attempting to grab as much
+light and rain as possible.
+~
+[Guinafaer] Don't erase acode 1
+[Guin] Done.
+~
+167247872 3 6 0
+D1
+~
+~
+0 -1 8505 10 10 5
+D3
+~
+~
+0 -1 8503 10 10 5
+E
+shattered branches torn bark~
+Crushed branches of the fallen pine, protrude at awkward angles from
+beneath the trunk.  Large portions of bark have been ripped from the
+pine, exposing the borer-infested pale wood.  Termite and ant drones
+swarm over the log carrying out important duties for their colonies.
+~
+E
+roots umbrella debris~
+Dirt and debris tangled across the roots of the fallen pine create an
+alcove that provides some shelter from most elements.  Unfortunate trees,
+uprooted when the white pine fell, add to the chaotic umbrella.  A
+massive cohesion of young trees fight for room to grow in the newly
+available ground.
+~
+E
+curtain spider webs entangled~
+Spider webs, draped from the roots of the fallen pine, decorate the
+surroundings with their lacy traps.  Insects caught in the webs struggle
+helplessly for freedom as the owners approach their victims with
+malicious intent.
+~
+E
+pine trees fallowed ground~
+The fallowed ground, leeched of all its nutrients, struggles to support
+the towering pines.  Standing in densely packed formations, the trees
+crowd into the void created by the fallen pine, reaching toward the sky,
+seeking light, rain and minerals that the stark ground does not offer.
+~
+A
+1 north 1 south~
+*~
+act_tochar( #nope, ch );
+~
+E
+nope~
+@yThe pines wind closely together that way.@n
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GSliding carefully off the slick trunk, you work your way around the
+tangle of roots.@n 
+~
+E
+to_room~
+@G$n clambers off the trunk and down around the tangle of roots to the
+west.@n 
+~
+!
+3 0 8
+-1
+S
+
+#8505
+Before a Woven Hut~
+Dense curtains of intricately woven webs drape across the fallen tree's
+former canopy, the broken branches and leaves pulled into together to
+form a strange dwelling place.  A web and leaf-litter doorway has been
+set into the eastern wall.  Underfoot a lush layer of sphagnum moss and
+umbrella fungi spread across the rotting bark.  Below the tree trunk a
+narrow opening offers the possibility of continuing northward.
+~
+[Guin] Done.
+~
+167247872 3 6 0
+D0
+~
+~
+0 -1 8507 10 10 5
+D1
+web curtain~
+~
+131 -1 8506 10 10 5
+D3
+~
+~
+0 -1 8504 10 10 5
+E
+curtains webs canopy branches~
+High above the hut, a glimmer of sky can be seen through the gap in the
+canopy.  Where once stood an enormous tree, there now drapes a dense
+curtain of webs.  Softly the leaves filter down through the tangle of
+branches and vines, to rest peacefully on the ground.
+~
+E
+dwelling doorway leaf litter~
+Lashed together with strands of thick web, the broken branches create a
+dome-shaped structure.  A door, made of twigs and leaves interwoven with
+web and vine, covers the arch that gives access to this peculiar building. 
+Almost imperceptible rustling exudes from the forest floor as a subtle
+breeze sweeps a leaf into an erotic tango on the doorstep.
+~
+E
+sphagnum moss umbrella fungi~
+Rotting bark, crumbled under the footfalls of many creatures, now
+provides sphagnum moss and umbrella fungi with an ideal location in which
+to spread their spores.  The nutrients leeched from the decaying tree
+encourage vibrant colours to emerge in the moss and fungus as they grow
+liberally.
+~
+E
+tree trunk opening~
+Beneath the trunk of the pine a debris-clogged opening allows some
+passage through the tangle of branches and tendrils.  A few broken webs,
+draped across the gap, create an eerie, unsettling atmosphere of long
+abandoned hope.
+~
+A
+1 south~
+*~
+acode( find_room( 8504 ), 1 );
+~
+!
+0 0 0
+A
+~
+~
+act_tochar( #go , ch );
+act_notchar( #ogo, ch ) ;
+continue;
+~
+E
+go~
+@GYou slide through the opening into a gloomy hollow.@n
+~
+E
+ogo~
+@G$n slides down northwards into the gloom.@n
+~
+!
+3 0 1
+-1
+S
+
+#8506
+Inside a Woven Hut~
+Surprisingly spacious, the woven hut has been crafted from dense layers
+of web and tree branches.  A few gaps in the ceiling allow some air to
+circulate.  Dangling around the opening are four globes, each one
+emitting a soft illumination.  In the middle of the room a stump of a
+sizable tree branch has been polished and carved into a serviceable desk. 
+A web and leaf litter door has been set in the western wall.
+~
+[Guin] Done.
+[Mirkassa] Change red to something else on search
+~
+167247876 0 6 0
+D3
+web curtain~
+~
+131 -1 8505 10 10 5
+E
+globes~
+Four perfectly round orbs of light are strung from the ceiling by thick
+strands of web.  Their gentle luminescence radiates around the room
+casting deep shadows into the corners, obscuring them slightly.
+~
+E
+stump branch desk~
+Carved from the branch of a mighty pine, the desk reflects the gentle
+light from the globes on its polished surface.  Down the right-hand side
+are three average-sized draws, set back a couple of inches from the edge
+of the desk.
+~
+E
+gaps ceiling web~
+Several gaps in the ceiling have been created, between the interwoven
+branches, to allow for some inflow of fresh air.  The silken web
+covering, both the indoors and out, insulates the hut from the elements,
+keeping an ambient temperature inside all year round.
+~
+A
+search~
+desk stump~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #no, ch );
+  act_notchar( #ono, ch );
+  }
+else {
+  act_tochar( #done, ch );
+  act_notchar( #ono, ch );
+  }
+~
+E
+no~
+@rYou look through the desk for valuables, but find nothing.@n
+~
+E
+ono~
+@r$n ransacks the desk, but finds nothing.@n
+~
+E
+done~
+@rThe desk has already been ransacked.  @n 
+~
+!
+0 0 0
+2441 9 1509949540 3 0
+-1
+S
+
+#8507
+Under a Fallen Tree~
+A rich muddy loam has formed under the fallen tree, the combination of
+water, earth and leaf litter coated in a fine dusting of mould and mildew. 
+Duckweed and algae coat the edge of the brackish pools and many of the
+tangled tree roots.  The dense canopy overhead lets little light filter
+to the ground, leaving the area in perpetual twilight.  A waterlogged gap
+in the mass of tree roots to the north allows access onward.
+~
+[Guin] Done.
+[Khari] In extra 'pool', it should be 'algae also flourish'
+~
+167247872 3 6 0
+D0
+~
+~
+0 -1 8508 10 10 5
+D2
+~
+~
+0 -1 8505 10 10 5
+E
+loam leaf mould mildew~
+Dark and moist, this place is perfect for mould and mildew to run rampant
+across the leaf-littered ground.  Soft loam, rich and fertile with caked
+minerals and decay, is the perfect breeding ground.
+~
+E
+duckweed algae brackish pools roots~
+Reeking of decay, these stale pools cannot deter duckweed from occupying
+the area around the edges of the putrid water.  Where gaps in the weed
+allow, algae also flourishes on the surface of the brackish pools.  Tree
+roots rising out of the rank water are slime covered and slippery from
+the omnipresent algae.
+~
+E
+canopy waterlogged gap~
+A somewhat depressing luminescence casts dim shadows around this grotto,
+as a token gesture of light sifts its way through the crowded canopy and
+down to the swampy ground.  Tangled roots reluctantly clear a path
+northward through the marshy area and on into a less gloomy part of the
+forest.
+~
+A
+~
+~
+act_tochar( #go, ch );
+act_notchar( #ogo, ch );
+continue;
+~
+E
+go~
+@GYou scale the tree-trunk.@n
+~
+E
+ogo~
+@G$n scales the tree-trunk, climbing up southwards.@n
+~
+!
+3 0 4
+A
+1 east 1 west~
+*~
+acode( find_room( 8500 ), 2 );
+~
+!
+0 0 0
+-1
+S
+
+#8508
+Pine Forest Stream~
+A slow moving stream meanders through the tangled walls of roots and
+ferns.  At several points its muddy waters spill across the forest floor,
+forming miniature bogs that duckweed and watercress thrive upon.  The
+tunnels of gnarled trees gather tightly together encircling the water,
+their hungry roots digging deep into the ground.  A narrow seam to the
+south allows a determined person a way onward.  An equally challenging
+opening to the north offers similar opportunity to continue in that
+direction. 
+~
+[Guin] Need search for obj 3572 here. Skill based.
+[Guin] Reviewed.
+~
+167247872 3 6 0
+D0
+~
+~
+0 -1 8509 10 10 5
+D2
+~
+~
+0 -1 8507 10 10 5
+E
+stream muddy waters bogs~
+Sedately meandering through the root-choked soil, a muddy stream
+passively erodes the riverbanks, creating many unstable overhangs.  In
+places where the banks have collapsed, water seeps onto the forest floor,
+turning the firm earth into a marshy slurry of liquids and solids.  With
+hardly a ripple on the surface, the stream winds its way out of this
+area, on the path to its final destination.
+~
+E
+roots ferns duckweed watercress~
+Barely supported by the undercut riverbank, shady pine and fern trees
+strive to set their roots firmly in the swampy ground.  The marshy soil
+is green with watercress and duckweed that greedily extract minerals from
+the muddy water.
+~
+E
+tunnels gnarled trees~
+Twisted trees seem to writhe about, encroaching the murky water in a
+tunnel of thick roots.  Amidst the tangle of gnarled roots, branches to
+the north and south have been broken to create an arduous, but passable,
+trail.
+~
+A
+1 east 1 west~
+*~
+acode( find_room( 8500 ), 2 );
+~
+!
+0 0 0
+A
+~
+~
+if( random( 2, 25 ) > find_stat( ch, dex ) ) {
+  position( ch, 6 );
+  act_tochar( #slip, ch );
+  act_notchar( #rslip, ch );
+  end;
+}
+continue;
+~
+E
+to_char~
+You cross the meandering stream, heading towards the $T.
+~
+E
+to_room~
+$n crosses the meandering stream, heading towards the $T.
+~
+E
+slip~
+You slip on the rocks, crossing the stream and fall down.
+~
+E
+rslip~
+$n slips crossing on the rocks, getting all wet.
+~
+!
+3 0 5
+A
+~
+stream muddy waters bogs~
+act_tochar( #search, ch );
+act_notchar( #rsearch, ch, obj, mob, sight );
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 3 ) == 1 )
+    obj = oload( 3572 );
+}
+if( obj ) {
+  act_tochar( #found, ch, obj );
+  act_notchar( #rfound, ch, obj, mob, sight );
+  if( can_handle( ch, obj ) )
+    obj_to_char( obj, ch );
+  else
+    obj_to_room( obj, room );
+}
+else {
+  act_tochar( #nada, ch );
+  act_notchar( #rnada, ch, obj, mob, sight );
+}
+~
+E
+found~
+@GYou find a small watercress close enough for you to snare from the water.@n
+~
+E
+rfound~
+@G$n snatches a small watercress from the water.@n
+~
+E
+nada~
+You find nothing of interest.
+~
+E
+rnada~
+$n finds nothing of interest.
+~
+E
+search~
+You start searching through the muddy water, looking for anything
+interesting.
+~
+E
+rsearch~
+$n starts searching through the muddy water.
+~
+!
+9 0 0
+-1
+S
+
+#8509
+Before a Massive Pine~
+Dominating the sea of roots are the massive, gnarled tendrils of a
+towering pine tree.  With a rough-bark trunk at least ten yards in
+diameter, it could be hundreds, if not thousands, of years old.  Some
+twenty feet overhead, the tangle of web-coated branches spreads outward,
+forming what appears to be a serviceable platform.  An opening under the
+looping tree root cords allows travelers to continue westward.
+~
+[Hazen] If you climb up, and there's a limbrunner above, then it's
+transferred down here and attacks the climber.
+[Hazen] If you climb up and there's no limbrunner, you're transferred upwards.
+[Guin] Done.
+[Guin] Dex check is ridiculous
+[Guin] Khari failed it with over 20 dex.
+~
+167247872 3 6 0
+D2
+~
+~
+0 -1 8508 10 10 5
+D3
+~
+~
+0 -1 8511 10 10 5
+D4
+~
+~
+0 -1 8518 10 10 5
+E
+pine tree bark trunk~
+Set into the trunk of the massive pine are many alcoves of a size that
+would provide shelter for most creatures.  Delicately draped about the
+tree, spider webs create beautiful lacy patterns.  Passing creatures that
+have sharpened their claws against the trunk have left swathes of
+paper-thin bark dangling from the tree.
+~
+E
+roots gnarled tendrils~
+Twisting and turning, the roots of this massive pine are set securely in
+the depths of the earth.  Thick tendrils entwine themselves throughout
+the knotted roots and branches, adding to the chaos of the area.  Tightly
+interwoven, the tendrils form a somewhat passable ladder.
+~
+E
+web branches platform~
+Reaching out from the tree trunk, branches of immense proportions create
+a sturdy platform, which looks to be accessible by clambering up the
+knotted tendrils.  For the inattentive, it would be easy to inadvertently
+get trapped by the sticky tangle of webs that hangs thick around the
+gigantic pine.
+~
+A
+1 east 1 north~
+~
+acode( find_room( 8500 ), 2 );
+~
+!
+0 0 0
+A
+climb~
+up tree~
+act_tochar( #start, ch );
+act_notchar( #ostart, ch );
+mob = mob_in_room( 2441, find_room( 8518 ) );
+if( mob ) {
+  if( !is_fighting( mob ) ) {
+    act_room( #oleave, mob );
+    transfer( mob, find_room( 8509 ) );
+    act_tochar( #arrive, ch );
+    act_notchar( #oarrive, ch );
+    attack( mob, ch, 4d6, "charge" );
+    end;
+    }
+  }
+if( is_mounted( ch ) ) {
+  send_to_char( #nomount, ch );
+  end;  }
+if( can_fly( ch ) ) {
+  send_to_char( #fly, ch );
+  act_notchar( #flying, ch );
+  transfer( ch, find_room( 8518 ) );
+  act_notchar( #farrive, ch );
+  end;  }
+if( find_skill( ch, climb ) > random( 0, 5 ) ) {
+  act_tochar( #climb, ch );
+  act_notchar( #oclimb, ch );
+  transfer( ch, find_room( 8518 ) );
+  act_notchar( #oclimb2, ch );
+  } else {
+act_tochar( #fail, ch );
+act_notchar( #ofail, ch );
+}
+~
+E
+start~
+@gYou start to climb up the rough, ladder-like bark.@n
+~
+E
+ostart~
+@g$n eyes up the rough bark of the massive pine, and begins to ascend.@n
+~
+E
+oleave~
+@rThe drider starts, sensing something, and scuttles silently down the
+tree.@n 
+~
+E
+arrive~
+@rSilently as a shadow, something large and dark descends on you!@n
+~
+E
+oarrive~
+@rA dusky form descends on $n from the platform!@n
+~
+E
+climb~
+@gIt's not a tricky climb. You reach the platform after a quick ascent.@n
+~
+E
+oclimb~
+@g$n nimbly scales the tree, disappearing over a platform above.@n
+~
+E
+oclimb2~
+@g$n climbs nimbly over the side of the platform from below.@n
+~
+E
+fail~
+@yA foothold proves slicker than you thought, and you tumble back among
+the roots.@n 
+~
+E
+ofail~
+@y$n slips on the moss-covered bark, tumbling back to the tree base.@n
+~
+E
+nomount~
+You can not scale the tree while mounted.
+~
+E
+fly~
+@gYou launch yourself into the air and fly up to the platform after a
+quick ascent.@n 
+~
+E
+flying~
+@g$n flys upwards in the tree, disappearing over a platform above.@n
+~
+E
+farrive~
+@g$n gracefully flys upwards from below and arrives at the height of the
+the platform.@n 
+~
+!
+0 0 0
+A
+~
+~
+if( find_stat( ch, level ) > 91 ) {
+continue;
+end; }
+else
+act_tochar( #nope, ch );
+~
+E
+nope~
+@yYou'll have to climb.@n
+~
+!
+3 0 16
+2441 9 1509949540 3 0
+-1
+S
+
+#8510
+A Tangled Forest~
+Roots of the massive trees rise up into a wall of tangled, gnarled
+tendrils.  Sphagnum moss and lichen drape from the wood, their mottled
+surfaces dripping with moisture.  Muddy pools of water spread underfoot,
+a quagmire of mud and watercress making movement a challenge.  Toward the
+north, a rise of rock allows the determined to scrabble onward out of the
+pools of fetid muck.
+~
+[Guin] Done.
+~
+167247872 3 6 0
+D0
+~
+~
+0 -1 8516 10 10 5
+D2
+~
+~
+0 -1 8502 10 10 5
+E
+root tangled gnarled tendrils~
+Precariously balanced roots, reaching up through the surface of the fetid
+mire, seem to have been an after-thought of the trees that vied for
+sunlight and life.  The gnarled, twisted roots appear to yearn for
+fertile soil as they emerge from the depths of the repugnant water. 
+Ropes of tangled tendrils hang from the canopy of the massive trees,
+choking the undergrowth and denying all a clear path through the
+encroaching lianas.
+~
+E
+sphagnum moss lichen~
+Moss and lichen cling to the exposed roots and lower trunks of the trees,
+stippling the area with patches of dull green and brown. Sphagnum moss
+floats on the surface of the water creating the false impression of solid
+ground, while the lichens slowly disintegrate rock into soil.  It is clear
+from the sickly colour of the moss and lichen that sunlight has not touched
+these parts in many years.
+~
+E
+muddy pools quagmire mud~
+The air hangs thick with mosquitos as they breed in profusion on the
+murky water.  A frog negligently whips its tongue out at this abundant
+food source.  The scungy skeleton of a stag lies half submerged in the
+stagnant pools - a sure sign that unseen treacheries lie beneath the
+surface.  The reek emanating from the quagmire discourages even the most
+hardy of creatures from lingering in this part of the forest.
+~
+E
+watercress~
+The white flowers of the ever-persistent watercress give some relief from
+the monotony of the dank forest.  Heart-shaped leaves glimmer faintly as
+they reflect the meagre light that manages to invade this dingy area. 
+Poisonous marshwort, an almost spitting image of watercress, lures the
+untrained with its pale flowers and slender leaves.  Confusing one with
+the other could prove to be a fatal mistake.
+~
+E
+rise rock~
+Jutting out of the dirty brown mire is a slime-covered rock, still rough
+from the lack of exposure to the more corrosive elements.  Beetles and
+slaters scurry over the rock, thriving off the rancid vegetation.  Fresh
+scratch marks exposing the rock indicate that a creature has recently
+struggled in this direction, seeking firmer ground.
+~
+A
+1 west 1 east~
+~
+acode( find_room( 8500 ) , 2 );
+~
+!
+0 0 0
+-1
+S
+
+#8511
+At the Edge of a Fairy Ring~
+The remnant of an ancient tree stump sits in the center of a grassy
+clearing.  Encircling it is a swathe of brightly capped toadstools,
+forming an almost perfect ring.  Walls of tangled roots rise up around
+the clearing, the mass of wood stretching over ten feet in height.  The
+dark-green needles of the towering pine trees spread out above the
+ground, their matted branches encased in webs.
+~
+[Guin] Done.
+~
+167247872 3 6 0
+D0
+the tangled roots~
+~
+162 -1 8512 10 10 5
+D1
+~
+~
+0 -1 8509 10 10 5
+D3
+~
+~
+0 -1 8513 10 10 5
+E
+ancient remnants stump~
+Shrouded in a tangle of abandoned webs are the hollowed-out remains of
+what must have been a towering pine.  The wood of the stump is smooth
+from elemental exposure and a wreath of pale blue forget-me-nots grows in
+its centre.  Sparkling with dewdrops, a magical ambiance emanates from
+the ancient stump.
+~
+E
+toadstools ring swath~
+Toadstools, flecked with luminescent white spots, rise out of the ground
+like a scarlet sea and surround the ancient stump in an almost perfectly
+round circle.  The earth inside the ring has been trampled into a mottled
+pulp of limp brown grass, whilst outside the circle, the grass is plush
+and vibrant.
+~
+E
+roots needles webs wood~
+A wall of knotted roots rises out of the ground and towers high above the
+clearing.  Drifts of pine needles lie thick against the wood, where
+prevalent breezes have neatly stacked them.  Tyrannous strands of web
+choke the branches and entwine the spindly needles in a deceitfully
+fragile trap.
+~
+A
+1 south~
+*~
+acode( find_room( 8500 ), 2 );
+~
+!
+0 0 0
+A
+~
+~
+act_notchar( #arrives, ch );
+~
+E
+arrives~
+@g$n crawls from the tangle of roots to the north.@n
+~
+!
+1 0 1
+A
+1 north~
+*~
+if( find_skill( ch, track ) < 6 ) {
+  act_tochar( #nope, ch );
+  end;
+}
+if( rflag( reset0, room ) ) {
+  act_tochar( #nope, ch );
+  end;
+}
+if( class( ch ) == ranger ) {
+  act_tochar( #yep, ch );
+  act_notchar( #oyep, ch );
+  transfer( ch, find_room( 8512 ) );
+  act_notchar( #oarrive, ch );
+  acode( find_room( 8512 ), 3 );
+  end;
+}
+else {
+  if( rflag( reset1, room ) ) {
+    act_tochar( #search, ch );
+    end;
+  }
+  act_tochar( #yep, ch );
+  act_notchar( #oyep, ch );
+  transfer( ch, find_room( 8512 ) );
+  act_notchar( #oarrive, ch );
+  acode( find_room( 8512 ), 3 );
+  end;
+}
+act_tochar( #nope, ch );
+~
+E
+yep~
+@gYou examine the vines and roots for a moment, and spot a well-hidden
+path.  Slipping through, you reach a glade.@n 
+~
+E
+oyep~
+@g$n peers at the roots here for a moment, before disappearing into
+seemingly impenetrable undergrowth.@n 
+~
+E
+oarrive~
+@g$n arrives from the south, wriggling through the roots.@n
+~
+E
+nope~
+@yThe wiry roots are tangled thickly together, impenetrable.@n
+~
+E
+search~
+You know you spotted something here, but you can't quite find the path.
+~
+!
+0 0 0
+A
+~
+~
+if( find_skill( ch, track ) > random( 5, 9 ) ) {
+  improve_skill( ch, track );
+  act_tochar( #hmm, ch );
+  remove_rflag( reset0, room );
+}
+~
+E
+hmm~
+@cYou spot an animal track leading into the bushes northward.@n
+~
+!
+1 0 10
+A
+~
+1 north 3 vines 3 bushes~
+if( rflag( reset0, room ) ) {
+  act_tochar( #why?, ch );
+  end;
+}
+if( rflag( reset2, room ) )
+  if( find_skill( ch, searching ) > random( 6, 9 ) ) {
+  act_tochar( #found_trail, ch );
+  act_notchar( #rfound_trail, ch );
+  remove_rflag( reset1, room );
+  end;
+}
+remove_rflag( reset2, room );
+act_tochar( #nothing_before, ch );
+~
+E
+why?~
+Why would you want to search here.
+~
+E
+found_trail~
+You have found that trail you spotted.
+~
+E
+rfound_trail~
+$n looks to have found something interesting.
+~
+E
+nothing_before~
+You didn't find anything there before, so why look again?
+~
+!
+9 0 0
+-1
+S
+
+#8512
+Rainbow Pool~
+Surrounded by lush bulrushes and flax sits a rainbow hued pool.  The
+multicolored waters ripple as water bubbles up from the center, perhaps
+from an underground stream.  A tricking stream burbles way from the
+enchanted pond and flows eastwards, as it goes it turns to a mundane
+muddy color.  The towering trees spread their roots across the ground
+forming an impenetrable barrier in all directions.
+~
+[Guin] Weapons used - 7212, 7390, 3848, 3850, 3847, 3843, 3851, 3849
+[Guin] Weapons created - 3597, 3598, 3603, 3876, 3596, 3566, 3866, 978, 3569, 3864
+[Cayln] the dip code can only be performed once per character
+[Guin] Missing two weapons from the weapons used list. There were 8 listed and 10 created weapons.
+~
+-1443364856 3 6 0
+D2
+~
+~
+0 -1 8511 10 10 5
+E
+pool rainbow enchanted stream~
+Dazzling with varicoloured brilliance, the enchanted pool swirls about as
+it emerges from its unseen source.  Gentle ripples, disturbing the
+surface, cause the opalescent colours to shimmer and fade as the water
+slowly forms an ordinary, quietly burbling stream.
+~
+E
+bulrushes flax~
+Bulrushes thrive on the edges of the enchanted pool, growing taller than
+average as they drink the magical water.  Shrouded by a gentle mist
+rising off the surface of the pool, magnificent flaxes drape their waxy
+leaves the waters and covet the mystical pool from open view.
+~
+E
+tree roots barrier~
+Sprawled across the ground in this enchanted clearing, the thick roots
+entwine themselves into an impenetrable barrier.  Disappearing into the
+knotted tangle, the shallow stream wends its way eastward as it starts on
+its mundane course through the dingy forest.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou examine the vines and roots for a moment, and spot a well-hidden
+path.  Slipping through, you reach the path.@n 
+~
+!
+3 0 4
+A
+~
+pool pond stream water~
+act_tochar( #search, ch );
+act_notchar( #rsearch, ch );
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  i = random( 1, 100 );
+  if( i < 21 )
+    obj = oload( 105 );
+  else if( i < 26 )
+    obj = oload( 2155 );
+  else if( i < 31 )
+    obj = oload( 633 );
+  else if( i < 36 )
+    obj = oload( 7037 );
+  else if( i < 41 )
+    obj = oload( 7337 );
+  else if( i < 42 )
+    obj = oload( 7381 );
+}
+wait( 1 );
+if( obj ) {
+  act_tochar( #found, ch, obj );
+  act_notchar( #rfound, ch, obj );
+  if( can_handle( ch, obj ) )
+    obj_to_char( obj, ch );
+  else
+    obj_to_room( obj, room );
+}
+else {
+  act_tochar( #nothing, ch );
+  act_notchar( #rnothing, ch );
+}
+~
+E
+search~
+@cYou search through the water, looking for anything interesting.@n
+~
+E
+rsearch~
+@c$n searches through the water.@n
+~
+E
+found~
+@cYou find $p along the bottom of the pool.@n
+~
+E
+rfound~
+@c$n finds $p along the bottom of the pool.@n
+~
+E
+nothing~
+You find nothing of interest.
+~
+E
+rnothing~
+$n finds nothing of interest.
+~
+!
+9 0 0
+A
+~
+~
+if( get_integer( ch, "/Cayln/Byrons/UniqueWeapon" ) == 0 )
+  end;
+if( mob_in_room( 2540, find_room( 8512 ) ) )
+  end;
+if( !rflag( reset0, find_room( 8512 ) ) )
+  end;
+remove_rflag( reset0, find_room( 8512 ) );
+wait( 1 );
+mob = mload( 2540, find_room( 8512 ) );
+act_room( #pool, mob );
+wait( 1 );
+act_room( #pool2, mob );
+~
+E
+pool~
+@CThe pool, starts to swirl in the middle, and you see a shadow of
+something in the centre.  The water starts to lift as if a head was
+coming out of the pool.
+
+After a short time you see a beautiful creature in the water, only
+half-exposed to the air.@n
+~
+E
+pool2~
+@C$n says, "I can help you create a great magical weapon, but I can only
+do this once for you, for some I can make multiple different types of
+weapons, you need but ask of me what you wish to craft, and I will tell
+you whether I can help you make something of that nature."@n 
+~
+!
+1 0 4
+-1
+S
+
+#8513
+Sluggish Stream~
+Choked with waterweeds and young-growth bulrushes, the muddy stream slows
+here to a gentle trickle.  A layer of duckweed, the tiny green leaves
+home to a swarm of mosquitos and water beetles, spreads across the
+rippling surface.  Drinking thirstily from the water's edge are tangled
+masses of tree roots, the stream barely providing enough liquid for the
+towering giants.
+~
+[Guin] Done.
+~
+167247872 3 6 0
+D1
+~
+~
+0 -1 8511 10 10 5
+D3
+~
+~
+0 -1 8514 10 10 5
+E
+waterweeds bulrushes duckweed~
+Crowding the narrow trickle of water, densely packed waterweed eagerly
+occupies any available space.  At numerous intervals, bulrushes pry
+through the sea of weeds, to rise several feet high and offer their
+seedlings to the gently whispering wind.  A latticework of duckweed,
+resplendent with tiny green leaves, flourishes on the barely moving
+surface of the stream.
+~
+E
+stream water beetles mosquitos~
+Sedately flowing in a wide, weed-covered riverbed, a narrow stream
+quietly wends its way across the muddy course.  Hovering a few inches
+above the surface, a thick swarm of mosquitos dart hither and thither,
+making the most out of their short lives that they can.  Swaying with the
+gently ebbing water, the weeds provide a constantly moving home for the
+industrious locusts and water beetles.
+~
+A
+1 north 1 south~
+~
+acode( find_room( 8500 ), 2 );
+~
+!
+0 0 0
+-1
+S
+
+#8514
+Heavy Woods~
+Densely packed trees rise in a mass of green and brown, forming an
+impenetrable barrier to the south.  Their tangled roots spread across the
+ground, many of them as thicks an ogre's arm and often reaching over
+twenty feet in length.  Curtains of web drape from the branches overhead,
+their sticky strands coated in dead insects and leaf litter.  A thick
+tangle of thorns rises westward, a barrier of inch-long blades.
+~
+[Hazen] Rangers can go west through the thorns, otherwise must go around.
+[Guin] Done
+~
+167247872 3 6 0
+D1
+~
+~
+0 -1 8513 10 10 5
+D3
+~
+~
+0 -1 8515 10 10 5
+E
+trees wall roots~
+A mosaic of brown tree trunks and roots entwine together with the leafy
+green branches to rise high above the forest floor, creating an
+impenetrable wall of solid wood.  Roots, thick and twisted, writhe about
+each other like a crowded nest of interweaving snakes.
+~
+E
+curtains web strand~
+Draped thickly from the branches of the trees are long strands of web. 
+Swaying gently, they snare many insects that are not deft enough to avoid
+their random paths.  Many fallen leaves have also been caught as they
+sedately drift towards the forest floor.
+~
+E
+insects leaf litter~
+Caught amidst the sticky strands of web are the tiny corpses of
+unfortunate insects that were unable to free themselves from the lacy
+death traps.  Covered with fallen leaves and pine needles, the webs
+rustle almost imperceptibly as they are gently moved by a quiet breeze.
+~
+A
+1 north 1 south~
+~
+acode( find_room( 8500 ), 2 );
+~
+!
+0 0 0
+A
+1 west~
+~
+if( is_player( ch ) ) {
+  if( class( ch ) == ranger ) {
+    act_tochar( #go, ch );
+    act_notchar( #ogo, ch );
+    continue;
+    } else {
+  act_tochar( #nope, ch );
+  end;
+  }
+} else {
+act_tochar( #go, ch );
+act_notchar( #ogo, ch );
+continue;
+}
+~
+E
+go~
+@yYou find a weakness in the thorn barrier, and slide nimbly through.@n
+~
+E
+ogo~
+@y$n disappears into the thorns westward.@n
+~
+E
+nope~
+@yA savage thicket of thorns blocks your way.@n
+~
+!
+0 0 0
+2441 9 1509949540 3 0
+-1
+S
+
+#8515
+Bramble Wall~
+A verdant wall of thorns encircles a clearing filled with a patchwork of
+clover and thistles.  The tightly packed brambles encase the roots and
+lower branches of the towering trees, effectively blocking any movement
+except to the south.  The upper branches and vines have been coated in
+layers of web, a few cocoons dangling down from them.
+~
+[Hazen] Rangers can go east through the thorns, otherwise go around.
+[Guin] Done.
+[Khari] Cocoons spelled wrong in extras
+~
+167247872 3 6 0
+D1
+~
+~
+0 -1 8514 10 10 5
+D2
+~
+~
+0 -1 8516 10 10 5
+E
+thorns~
+The sharp prickles of the brambles form an impassable wall of vicious
+thorns.  Tangled about the trunks, the brambles climb up to encase
+themselves around the lower branches - effectively stopping any creature
+from scaling the wall of trees in this area.
+~
+E
+clover thistles~
+Thistles, several feet high, and clovers thickly spread, adorn the
+ground with hues of soft lilac and pale moonlight-white.  Casting gloomy
+shadows over the verdant sea of flowers, the immense trees belittle the
+radiant budding plants that cover the otherwise barren ground.
+~
+E
+branches trees~
+Ensconced in a dense covering of brambles, the tall trees penetrate
+through the thorns and rise high above the floor.  The lower branches are
+riddled with brambles, while the upper branches are laced with fragile
+webs.  Spanning high above the ground, the thick branches meld together,
+blocking most light from this area.
+~
+E
+web coccoons~
+Strung high above the forest floor, the coccoons hold their captives in a
+sticky mesh of white web.  An occasional withered leaf has been caught on
+the outside of the coccoons, giving the impression that these hanging
+coffins have not been tended in quite a while.
+~
+A
+1 north 1 west~
+*~
+act_tochar( #nope, ch );
+~
+E
+nope~
+@yA savage thicket of thorns blocks your way.@n
+~
+!
+0 0 0
+A
+1 east~
+~
+if( is_player( ch ) ) {
+  if( class( ch ) == ranger ) {
+    act_tochar( #go, ch );
+    act_notchar( #ogo, ch );
+    continue;
+  }
+  else {
+    act_tochar( #nope, ch );
+    end;
+  }
+}
+else {
+  act_tochar( #go, ch );
+  act_notchar( #ogo, ch );
+  continue;
+}
+~
+E
+go~
+@yYou find a weakness in the thorn barrier, and slide nimbly through.@n
+~
+E
+ogo~
+@y$n disappears into the thorns eastward.@n
+~
+E
+nope~
+@yA savage thicket of thorns blocks your way.@n
+~
+!
+0 0 0
+-1
+S
+
+#8516
+Before a Stygian Opening~
+Tendrils of moss and ivy drape across the cave mouth, their leaves and
+tips strangely brown as if dried by the sun.  Mounds of neatly stacked
+boulders lie to the side of the cavern, their surfaces covered in chip
+marks from picks or other tools.  Barely visible upon the ground are the
+drag marks of a serpentine creature; perhaps a large lizard has made this
+its lair.
+~
+[Estrella] Extras done
+[Guin] Done
+~
+167247872 3 6 0
+D0
+~
+~
+0 -1 8515 10 10 5
+D2
+~
+~
+0 -1 8510 10 10 5
+D3
+~
+~
+0 -1 8517 10 10 5
+E
+tendrils moss ivy~
+Sickly brown moss dangles limply over the entrance to a dank cave.  The
+sun-dried moss easily crumbles at the slightest touch.  Leafy tendrils of
+ivy twine about the place, clinging to every surface on the rocky slope.
+~
+E
+mounds boulders~
+In neat piles, large boulders have been carefully stacked, creating
+mounds of dark grey rock.  In horizontal cracks, that look as though they
+were artificially made, small fronds of moss desperately clutch at the
+rough surfaces.
+~
+E
+drag marks~
+Barely perceptible swirls of disturbed debris cover the ground, showing a
+vague trail that winds from side to side.  The drag marks lead towards
+the cave mouth, disappearing into the depths of some creatures' dark lair.
+~
+A
+1 east~
+*~
+acode( find_room( 8500 ), 2 );
+~
+!
+0 0 0
+A
+1 west~
+*~
+continue;
+~
+E
+to_char~
+@GYou enter the cave, brushing the wisps of moss away as you stoop.@n
+~
+E
+to_room~
+@G$n brushes aside some wisps of moss and enters the cavern opening to
+the west.@n 
+~
+!
+3 0 8
+-1
+S
+
+#8517
+Inside the Cavern~
+A dry heat radiates from the rocks around the cavern entrance, strange
+runes encrusting their surface.  Although not hot enough to burn, they
+quickly make things feel like a desert.  The floor of the cave has been
+worn smooth, strange whorls covering the ground where something has
+repeatedly crawled or dragged itself along.  Splitting the western wall
+of the cavern, a narrow opening spirals away into the darkness.  Years of
+the acrid smoke have formed a scattering of crystal fragments upon the
+rocks within the opening, their hexagonal structures reaching a few
+inches in length before shearing off.
+~
+[Guin] West exit blocked permanently.
+[Azerin] maybe new zone later on
+[Guin] Done.
+[Guin] Add pry crystal code here for obj 4031, 15%.
+~
+167247872 11 6 0
+D1
+~
+~
+0 -1 8516 10 10 5
+D3
+~
+~
+0 -1 8559 10 10 5
+E
+rocks cavern entrance runes surface~
+Blackened rocks lie carelessly strewn about the entrance of the cavern,
+their radiating heat quickly dissipating the cool drafts that enter the
+warm cave.  Etched deeply into the surface of the rocks, the strange
+runes seem to faintly glow and pulsate in syncopated time with the
+emanating heat waves.
+~
+E
+floor whorls~
+Smoothed by many years of repeated friction, the eroded floor displays
+the well-worn trail of a large, heavy creature.  Whorls, pitted slightly
+into the smooth floor lead from the entrance into the consuming darkness. 
+A thin layer of debris covers the less used areas of the cave.
+~
+E
+opening darkness~
+A narrow opening, set into back in the west wall, admits a draft of stale
+air to circulate around the cave.  Deep booming disturbs the silence as
+it quietly echoes from the darkness beyond the fissure.  Twisting down
+into the void below, a narrow trail spirals away from the cavern, its
+destination undiscernible.
+~
+E
+crystal~
+Created by the strange smog of the cave, the crystals might be valuable
+to the right collector.  The vast majority of them are little more than
+specks of shards, but further to the back at a full arm's reach there
+might be some worth taking.
+~
+A
+~
+~
+act_tochar( #go, ch );
+act_notchar( #ogo, ch );
+continue;
+~
+E
+go~
+@gYou emerge into the forest.@n
+~
+E
+ogo~
+@g$n brushes through the vegetation over the cave mouth.@n
+~
+!
+3 0 2
+A
+~
+~
+send_to_room( #gust, room );
+~
+E
+gust~
+@cAn acrid smelling gust of wind issues from the crack in the western
+wall.@n 
+~
+!
+2 150 0
+A
+3 climb~
+3 opening 3 crack 3 narrow 1 west~
+if( size( ch ) < 4 ) {
+  act_tochar( #to_char, ch );
+  position( ch, 6 );
+  damage( rch, ch, 50d2, physical, "the strong wind" );
+}
+else
+  act_tochar( #to_big, ch );
+~
+E
+to_char~
+You push your way into the opening, but then get pushed back by the force
+of the wind coming from the crack.
+~
+E
+to_big~
+You are to big to get into the opening.
+~
+!
+0 0 8
+A
+~
+~
+if( size( ch ) < 4 )
+act_tochar( #to_char, ch );
+else
+act_tochar( #to_big, ch );
+~
+E
+to_char~
+You will have to try climbing into the opening.
+~
+E
+to_big~
+You are to big to even try getting in there.
+~
+!
+3 0 8
+A
+1 get 1 pry~
+crystal~
+act_tochar( #attempt, ch, obj );
+act_notchar( #rattempt, ch, obj, mob, sight );
+if( !rflag( reset0, room ) ) {
+  act_tochar( #nothing, ch, obj );
+  act_notchar( #rnothing, ch, obj, mob, sight );
+  end;
+}
+remove_rflag( reset0, room );
+if( random( 1, 100 ) < 16 )
+  obj = oload( 4031 );
+if( obj ) {
+  act_tochar( #found, ch, obj );
+  act_notchar( #rfound, ch, obj, mob, sight );
+  obj_to_char( obj, ch );
+}
+else {
+  act_tochar( #nofound, ch, obj );
+  act_notchar( #rnofound, ch, obj, mob, sight );
+}
+~
+E
+attempt~
+@CYou pry at the crystals, trying to free one.@n
+~
+E
+rattempt~
+@C$n pries at the crystals, trying to free one.@n
+~
+E
+nothing~
+All the crystals have been removed.
+~
+E
+rnothing~
+@YThe crystal shatters as $n pries at it.@n
+~
+E
+found~
+@CYou manage to pry one crystal free of its lodging.@n
+~
+E
+rfound~
+@C$n manages to pry one crystal free of its lodging.@n
+~
+E
+nofound~
+@YThe crystal shatters as you pry at it.@n
+~
+E
+rnofound~
+@YThe crystal shatters as $n pries at it.@n
+~
+!
+0 0 0
+1897 9 1509949540 3 0
+-1
+S
+
+#8518
+In a Massive Pine~
+The massive tree bifurcates sending branches in all directions, the main
+trunk of the tree continuing upward through the sea of leaves and wood. 
+A particularly stout beam juts out to the south; its surface levelled to
+allow it to be traversed with ease.  Densely woven webs drape between the
+clustered trees, several entangled together to form a branch highway. 
+Wooden slats have been spiked into the main tree trunk, creating a
+passageway around its sizable girth to the west or north.  The lush
+growth and spreading webs obscure what lurks below, although a fall from
+this height would not be pleasant.
+~
+[Guin] Dex determines results of jump down. Transfer for climb.
+[Hazen] This limbrunner is sentinel to ensure that people climbing up get attacked.
+[Guin] Done.
+~
+167247872 3 6 0
+D0
+~
+~
+0 -1 8521 10 10 5
+D2
+~
+~
+0 -1 8519 10 10 5
+D3
+~
+~
+0 -1 8520 10 10 5
+D5
+~
+~
+0 -1 8509 10 10 5
+E
+stout beam~
+Carved from the sturdy branch, the beam extends southward to bridge the
+platforms together, far above the forest floor.  With no safety rails to
+prevent falling, it is clear that the inhabitants of this dreary forest
+have an innate sense of perfect balance.
+~
+E
+wooden slats tree~
+Evenly spaced slats, hewn out of the finest wood, jut out from the trunk,
+forming a spiral that winds about the tree to give access to the other
+platforms.  Intricately etched designs decorate the surfaces of each
+slat, depicting the marvels of the forest and the skill of its
+inhabitants.
+~
+E
+webs branch highway~
+Secured tightly together by sticky webs, the branches construct a wide
+highway.  Most of the bridge is wide enough for several drider to
+traverse at a time, making movement between the platforms easy.  Some
+distance beneath the bridge, the lower branches of the tree, laced with
+excess web, spread out, hiding all that lies below.
+~
+A
+~
+~
+if( find_stat( ch, level ) > 91 ) {
+continue;
+end; }
+else
+act_tochar( #nope, ch );
+end;
+~
+E
+nope~
+@yYou'll need to climb down - it's rather too far to jump so casually.@n
+~
+!
+3 0 32
+A
+jump~
+1 down~
+mob = mob_in_room( 1, find_room( 1 ) );
+act_tochar( #jump, ch );
+act_notchar( #ojump, ch );
+transfer( ch, find_room( 8509 ) );
+if( find_stat( ch, dex ) > random( 9, 18 ) ) {
+  act_tochar( #landwell, ch );
+  act_notchar( #olandwell, ch );
+  }
+else {
+  act_tochar( #landbad, ch );
+  act_notchar( #olandbad, ch );
+  i = 8d10;
+  dam_message( ch, i, "The impact" );
+  inflict( ch, mob, i, "making friends with the ground" );
+  }
+~
+E
+jump~
+@gYou casually vault over the edge, unconcerned about the drop.@n
+~
+E
+ojump~
+@g$n casually leaps from the platform, disappearing into the dim light
+below.@n 
+~
+E
+landwell~
+@gYou nimbly land among the roots, rolling to absorb the impact.@n
+~
+E
+olandwell~
+@g$n plummets from above, landing nimbly among the roots. Nice.@n
+~
+E
+landbad~
+@rYou not-so-nimbly crash full-force into the ground.  Your attempt at
+rolling to break the impact saved your legs from the fall, but moved most
+of the damage into your neck instead.@n 
+~
+E
+olandbad~
+@r$n plummets from above, landing quite accurately on $s head with a
+lovely *crunch*.@n 
+~
+!
+0 0 0
+A
+climb~
+tree 1 down~
+if( can_fly( ch ) ) {
+  send_to_char( #fly, ch );
+  act_notchar( #flying, ch );
+  transfer( ch, find_room( 8509 ) );
+  act_notchar( #farrive, ch );
+ end;  }
+act_tochar( #climb, ch );
+act_notchar( #oclimb, ch );
+transfer( ch, find_room( 8509 ) );
+act_notchar( #oarrive, ch );
+~
+E
+climb~
+@gYou shinny down the tree.@n
+~
+E
+oclimb~
+@g$n descends the tree.@n
+~
+E
+oarrive~
+@g$n descends the rough ladderlike bark.@n
+~
+E
+farrive~
+@g$n swoops downward from the platform above, arriving at ground level.@n
+~
+E
+fly~
+@gYou swoop off the edge of the platform heading towards the ground.@n
+~
+E
+flying~
+@g$n swoops off the edge of the platform, disapearing from sight.@n
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@YYou carefully make your way around the massive central trunk, the
+boards creaking underfoot.@n 
+~
+E
+to_room~
+@Y$n carefully makes $s way around the massive tree trunk, the wooden
+slates underfoot creak and groan with each step.@n 
+~
+!
+3 0 1
+A
+~
+~
+continue;
+~
+E
+to_char~
+@YWith some hesitation you begin the journey westward, around the mighty
+tree trunk.@n 
+~
+E
+to_room~
+@YPausing briefly $n begins the journey westward around the mighty tree
+trunk.@n 
+~
+!
+3 0 8
+2441 137 1509949540 3 0
+-1
+S
+
+#8519
+Branch Highway~
+Clear of lesser branches and cut until it is almost level, the massive
+branch stretches outward toward another towering tree.  Bridging the gap
+between the two firs is a narrow walkway of silk and pine planks, its
+center dipping below the edge of the branch's end.  Overhead another
+walkway cuts through the forest canopy, the strands of silk and pine
+needles forming a seemingly solid bridge.
+~
+[Guin] Done.
+~
+167247872 3 6 0
+D0
+~
+~
+0 -1 8518 10 10 5
+D2
+~
+~
+0 -1 8523 10 10 5
+E
+massive branch~
+Hewn to be almost horizontal, the unerringly straight branch extends
+towards a nearby tree, offering a sturdy bridge across the canopy.  Knots
+adorn the length of the branch where smaller branches used to grow.  A
+small groove in the centre of the branch allows rain to trickle off the
+branch, without causing it to become slippery.
+~
+E
+narrow walkway planks~
+Linking the two branches together, the wooden walkway lies securely
+fastened in a silken web cradle, which is suspended from the branches
+overhead.  The weatherworn, matted planks neatly lined up with each
+other, cause the cradle to dip under their weight.  Lace-like rails run
+the length of the gently swaying bridge.
+~
+E
+canopy solid bridge~
+Dominating the overhead canopy, a vast tangle of drider web has been spun
+between the trunks of the trees in the vicinity.  The interlocking design
+appears to be the structural support for walkways and bridges in the
+upper canopy.
+~
+A
+~
+~
+send_to_room( #bird, room );
+~
+E
+bird~
+@RWith a cry of alarm, a sparrow flies into a cluster of webs and becomes
+tangled.@n 
+~
+!
+2 150 0
+-1
+S
+
+#8520
+End of the Branch~
+A sizable branch thrustss out from the main trunk, enabling those with
+reasonable dexterity to traverse the beam with little difficulty.  Web
+and slender needles rise around the walkway, their entangled strands
+forming a low guardrail that might prevent a fall.  From the trees above
+a silken-textured web rope dangles, its length knotted to allow for a
+better grip.
+~
+[Guin] Swing west to 8537 and fall to 8511.
+[Guin] Done.
+[Tarion] Thrussts -> thrussts
+~
+167247872 3 6 0
+D1
+~
+~
+0 -1 8518 10 10 5
+D3
+~
+~
+430 -1 8536 10 10 5
+E
+branch beam~
+Rough bark, worn smooth in the centre of the narrow beam, is slightly
+cracked and pulling away from the trunk in some places.  The jagged edges
+look sharp and would be uncomfortable to stand on.  The green foliage
+encroaches along the extent of the branch, while an occasional cluster of
+leaves and needles drape across the pathway.
+~
+E
+web needles guardrail~
+Piles of carelessly brushed aside needles have accumulated along the
+edges of the walkway.  These drifts, having been caught amidst the tangle
+of thick white web, create a rather low rail that encourages the use of a
+well-worn trail in the centre of the branch, effectively reducing the
+likelihood of falling from the branch.
+~
+E
+silken rope knotted~
+Woven out of delicate silken threads, the rope dangles from an unseen
+secure location high in the upper canopy.  At regular intervals, knots
+have been tied along the rope's length to make hand and footholds for
+those who wish to climb up the silk ladder.
+~
+A
+2 swing~
+3 vine 1 west 2 rope~
+if( find_stat( ch, dex ) < random( 5, 18 ) )
+  i = 1;
+if( find_skill( ch, climb ) < random( 4, 8 ) )
+  i = 1;
+if( i == 1 ) {
+  act_tochar( #slip, ch );
+  act_notchar( #rslip, ch );
+  transfer( ch, find_room( 8511 ) );
+  act_notchar( #slip_arrive, ch );
+  damage( mob, ch, 50d2, physical, "the fall" );
+  end;
+}
+act_tochar( #swing, ch );
+act_notchar( #rswing, ch );
+transfer( ch, find_room( 8537 ) );
+act_notchar( #arrive, ch );
+~
+E
+slip~
+You slip into the darkness, as your grip on the rope lets go.
+~
+E
+rslip~
+$n slips into the darkness, as $s grip lets go.
+~
+E
+slip_arrive~
+$n plummets into the ground.
+~
+E
+swing~
+You swing across the gap to the east.
+~
+E
+rswing~
+$n swings across the gap to the east.
+~
+E
+arrive~
+$n lands on the branch.
+~
+!
+18 0 0
+A
+~
+~
+act_tochar( #to_char, ch );
+wait( 2 );
+act_tochar( #back_off, ch );
+~
+E
+to_char~
+You find yourself close to the edge of the branch when it starts to give
+under you.
+~
+E
+back_off~
+You back up from that point and ponder the situation.
+~
+!
+3 0 8
+2441 9 1509949540 3 0
+-1
+S
+
+#8521
+Before a Woven Hut~
+Pressed against the rough bark of the main trunk, it is possible to see a
+single room hut woven from branches and web, a narrow walkway of wooden
+slats and web rope stretching out to its entrance.  A few feet below,
+steps have been cut into the tree allowing someone to scrabble down to
+the walkways beginning.  Jutting from the gnarled surface of the trunk,
+are pine beams, allowing passageway around the trunk, to the south.
+~
+[Guin] Done.
+~
+167247872 3 6 0
+D0
+woven door~
+~
+131 -1 8522 10 10 5
+D2
+~
+~
+0 -1 8518 10 10 5
+E
+hut slats web rope~
+Delicately poised against the tree trunk, a small structure fades into
+its natural surroundings.  A narrow walkway of neatly laid slats, tiles
+the path as it leads to the entrance of the camouflaged hut.  A few feet
+above the branch, a braided web rail provides minimal protection from
+falling.
+~
+E
+steps tree walkway~
+Hewn into the side of the tree, several deep notches form footholds,
+giving relatively easy access to the short walkway.  The edges of each
+step are still rough and splintered, although the wood in the centre has
+been worn smooth by years of use.
+~
+E
+pine beams gnarled trunk~
+Great chunks have been hacked out from the girth of the twisted and
+gnarled trunk to allow for sturdy pine beams to be attached there.  The
+solid beams to be attached there, protruding out from the massive trunk
+and encircling it, give access to those who wish to traverse the branch
+highway on either side of the massive tree.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou step into the hut lying northward.@n
+~
+E
+to_room~
+@g$n steps into the hut lying to the north.@n
+~
+!
+3 0 1
+-1
+S
+
+#8522
+Inside the Hut~
+Webs, branches and pine needles have been entwined into a spherical room,
+a circular doorway set in the southern end the only break in its
+entangled surface.  A walkway of wooden slats leads into the room's
+center, and a shard of topaz-hued crystal dangling above it.  Flickering
+light, cast by the gem, sparkles across the ground, the illumination
+gleaming off countless strands of webbing.
+~
+[Azerin] get crystal, touch and crystal explodes - then load crystal shards into room
+[Cayln] could also be part of the 'quest'
+[Guin] Done.
+~
+167247872 0 6 0
+D2
+woven door~
+~
+131 -1 8521 10 10 5
+E
+spherical room circular door~
+Seamlessly set into the spherical wall, a perfectly round door pivots on
+a single strong hinge.  An elegantly carved wooden handle protrudes from
+a branch that forms part of the door, its surface polished and gleaming
+in the dim light.
+~
+E
+shard topaz crystal gem~
+Gently twisting as it dangles from a fine strand of web, the crystal
+gleams in the subdued illumination of the hut.  The wooden slats that
+lead to a circular platform directly beneath the gem shimmer in the
+dappled light.
+~
+E
+web branches pine needles~
+Finely spun netting encases the branches and pine needles that insulate
+the woven hut.  An occasional leaf and several needles have managed to
+penetrate the tight mesh covering.  Stray tendrils of web glow with the
+pale luminescence of the crystal shard.
+~
+A
+2 get 2 take 3 touch~
+3 shard 3 crystal~
+if( !rflag( reset0, room ) )
+  act_tochar( #already, ch );
+else {
+  remove_rflag( reset0, room );
+  act_tochar( #search, ch );
+  act_notchar( #osearch, ch );
+  wait( 1 );
+  act_tochar( #boom, ch );
+  loop( all_in_room )
+    if( rch )
+    damage( victim, rch, 2d6, physical, "a shard of crystal" );
+  if( random( 1, 3 ) == 1 )
+    obj_to_room( oload( 869 ), room );
+}
+~
+E
+already~
+The crystal has already been damaged.
+~
+E
+search~
+@gYou reach up and touch the crystal shard.@n
+~
+E
+osearch~
+@g$n reaches up and touches the hanging crystal.@n
+~
+E
+no~
+@yYou can't reach the shard to touch it.@n
+~
+E
+boom~
+@CThe crystal cracks, spraying fragments of razor-sharp crystal
+everywhere!@n 
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou duck through the circular doorway, leaving south.@n
+~
+E
+to_room~
+@g$n ducks through the circular doorway, leaving south.@n
+~
+!
+3 0 4
+-1
+S
+
+#8523
+Platform Among the Pines~
+A wooden platform encircles the mighty pine, its planks held in place by
+woven silk rope.  A bridge of pine slats and silk stretches northward,
+its center dipping down below the platform's level.  Cut into the trunk
+to the south, a circular opening offers access to the inner tree, the
+wood around its circumference smooth and polished.  A grass-green curtain
+dangles in the doorway.  A walkway of branches winds westward, the
+tangled trees forming a tunnel of growth around it.
+~
+[Guin] Done.
+~
+167247872 3 6 0
+D0
+~
+~
+0 -1 8519 10 10 5
+D1
+~
+~
+0 -1 8527 10 10 5
+D2
+~
+~
+0 -1 8525 10 10 5
+D3
+~
+~
+0 -1 8524 10 10 5
+E
+wooden platform planks~
+An intricate structure formed from a mass entanglement of web spun
+around the girth of the tree, supports the platform that encircles the
+enormous trunk.  The uneven planks, hewn from solid pine, catch the fine
+strands of web on their rough, splintered surface.
+~
+E
+bridge slats~
+Nestled in a cradle of drider web, the bridge extends northward, dipping
+in the centre where the pull of gravity forces the taut silk to sag. 
+Carefully honed to a fine sliver of wood, the slats lie securely in
+their web hammock.  Overlapping slightly, the slender slats look like
+the scaly skin of a mottled snake.
+~
+E
+trunk opening circular curtain~
+A fine, verdant green gossamer curtain drapes across the circular opening
+in the trunk of the tree.  Glimmering gently, the smooth and polished
+edges of the opening slowly transform into the rough, pitted surface of
+the tree as the visible signs of obsessive scrubbing disappear.
+~
+E
+walkway branches tunnel~
+Shrouded by a flourish of vegetation, the walkway winds along the crooked
+branch.  Encroaching on the aerial pathway, the surrounding foliage forms a
+leafy covering over the branch, encasing it in a verdant tunnel that
+sways gently as weight is put onto it.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou pull aside the curtain and enter the tree heart.@n 
+~
+!
+3 0 4
+A
+~
+~
+continue;
+~
+E
+to_char~
+@YThe boards underfoot creak and groan as you walk upon them.@n
+~
+E
+to_room~
+@YThe boards underfoot creak and groan as $n walks across them.@n
+~
+!
+3 0 10
+2441 9 1509949540 3 0
+-1
+S
+
+#8524
+At the End of a Branch~
+The stout branch ends at a plummeting drop that spirals to the tangled
+roots far below; broken tree limbs lie scattered around the tip, their
+oozing sap filling the air with a sweet perfume.  Dangling down from an
+overhead branch is a knotted rope, allowing the brave to swing westward
+toward a canopy of web and pine needles.  Eastward, a wooden platform
+encircles the massive trunk of a fir tree, the uneven slats bound with
+slender cords.
+~
+[Guin] Swing west to 8530 or fall to 8504
+[Guin] Done.
+~
+167247872 3 6 0
+D1
+~
+~
+0 -1 8523 10 10 5
+D3
+~
+~
+430 -1 8529 10 10 5
+E
+stout branch tangled roots~
+Thick and sturdy, the stunted branch abruptly ends about twenty-five feet
+from the tree trunk, the surrounding branches extending to over twice its
+length.  Far below the branch, the tangled mass of tree roots crowd each
+other, leaving very little earth visible.  With no lower branches or web
+nets below the stout branch, a fall from this height would result in many
+broken bones.
+~
+E
+broken limbs sap~
+Syrupy sap forms droplets where it seeps out from the broken branches. 
+Slowly oozing over the open wound, the sap exudes a sickly sweet perfume. 
+The jagged edges of the snapped branch snare stray tendrils of web and an
+occasional clump of fur from the carcass of a drider's prey, as it has
+roughly been dragged into one of the woven huts for storage.
+~
+E
+knotted rope canopy~
+Draped from the overhead canopy, a durable rope, spun from thick strands
+of drider silk, hangs at arms length from the end of the branch.  Knots,
+tied at irregular intervals, provide convenient holds along the length
+that help prevent slipping when the rope is wet.
+~
+E
+wooden platform wooden slats~
+Looking eastward, a sizeable platform of pinewood sits, supported by an
+elaborate construction of thick branch poles lashed together by long
+strands of web.  Weather worn slats protrude from the massive tree
+trunk, overlapping in some places.  Although some of the planks are
+misshapen and contorted, they are securely held in formation by the
+tautly pulled webbing.
+~
+A
+2 swing~
+3 vine 1 west 2 rope~
+if( find_stat( ch, dex ) < random( 5, 18 ) )
+  i = 1;
+if( find_skill( ch, climb ) < random( 4, 8 ) )
+  i = 1;
+if( i == 1 ) {
+  act_tochar( #slip, ch );
+  act_notchar( #rslip, ch );
+  transfer( ch, find_room( 8524 ) );
+  act_notchar( #slip_arrive, ch );
+  damage( mob, ch, 50d2, physical, "the fall" );
+  end;
+}
+act_tochar( #swing, ch );
+act_notchar( #rswing, ch );
+transfer( ch, find_room( 8530 ) );
+act_notchar( #arrive, ch );
+~
+E
+slip~
+You slip from the rope as you are trying to swing across.
+~
+E
+rslip~
+$n slips from the rope as $e is trying to swing across.
+~
+E
+slip_arrive~
+$n crashes into the ground.
+~
+E
+swing~
+You swing across to the next branch.
+~
+E
+rswing~
+$n swings graciously across to the next branch.
+~
+E
+arrive~
+$n nimbly drops onto the branch.
+~
+!
+18 0 0
+A
+~
+~
+act_tochar( #to_char, ch );
+wait( 2 );
+act_tochar( #back_off, ch );
+~
+E
+to_char~
+You find yourself close to the edge of the branch when it starts to give
+under you.
+~
+E
+back_off~
+You back up from that point and ponder the situation.
+~
+!
+3 0 8
+-1
+S
+
+#8525
+Tree Trunk Hut~
+Carved from the heart of the pine tree, the wooden hut appears warm and
+dry.  The floor and walls have been polished to reveal a fine grain. 
+Despite the damage to the tree it appears to be in good health,
+apparently not affected by the sizable excavation.  A spiral staircase
+has been cut into the southern wall, the wide steps winding upward and
+through an opening in the roof.  A mound of bracken and fern has been
+molded into a nest in the room's center, the vegetation bound by copious
+amounts of webbing.
+~
+[Guin] Done.
+~
+167247872 3 6 0
+D0
+~
+~
+0 -1 8523 10 10 5
+D4
+~
+~
+0 -1 8526 10 10 5
+E
+tree hut excavation trunk~
+The meticulously hollowed out trunk has been transformed into a
+comfortable abode for an opportunistic drider.  Hours upon hours of work
+have been invested in the smoothing of the interior, the polished walls,
+ceiling and especially the floor clearly showing the many rings of age on
+the tree's exposed surfaces.
+~
+E
+staircase step opening roof~
+Winding around the curve of the southern wall, the staircase rises
+steeply to meet a hole in the ceiling of the hut.  The entire stairway
+has been carved into the trunk of the living tree.  With no banister
+protecting the outer edge of the narrow staircase, the climb through the
+ceiling looks treacherous at best.
+~
+E
+mound bracken fern nest~
+Brittle, dried fern and bracken have been piled into a mound in the
+centre of the room.  The withered fronds, curled and crumbling, provide a
+little padding on the twiggy nest.  A few fresh branches drape across the
+top of the nest and spill out onto the polished floor.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@YWith a stride, you begin the climb up the spiraling steps.@n
+~
+E
+to_room~
+@YWith a springing step, $n beings the climb up the spiral staircase.@n
+~
+!
+3 0 16
+2443 9 1509949540 3 0
+-1
+S
+
+#8526
+Tree Trunk Stairwell~
+The hollowed trunk is encrusted with carved webs and spider motifs, their
+likenesses to living arachnids alarming.  A spiral staircase descends
+from the southern wall; without a banister and with shallow steps, the
+journey should be taken with care by all but the most agile.  A silken
+tunnel, crafted in similar fashion to that of a trapdoor spider's, leads
+out of the room to the north, its dense webbing supported by captive
+branches and silken rope.
+~
+[Guin] Done.
+~
+167247872 0 6 0
+D0
+~
+~
+0 -1 8541 10 10 5
+D5
+~
+~
+0 -1 8525 10 10 5
+E
+hollowed trunk carved motif~
+Carved deeply into the trunk of the pine, this room provides shelter for
+those who wish to attempt climbing the stairs.  The smoothed and polished
+surface of the hollowed trunk is wrought with carvings of fine web and
+figures of spindly-legged spiders that seem to almost scuttle along the
+wooden walls.
+~
+E
+spiral staircase shallow steps~
+Winding down through the circular hole in the floor, the spiral staircase
+descends into the hollowed room below.  The shallow steps are covered
+with a slippery coat of varnish, which preserves the wood from being worn
+down by excessive use.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@YYou clamber down the stairs into the lower branches.@n
+~
+E
+to_room~
+@Y$n clambers down the stairs and into the lower branches.@n 
+~
+!
+3 0 32
+-1
+S
+
+#8527
+Before a Woven Hut~
+Bundles of branches, pine needles and webbing have been woven together to
+form a circular hut at the end of the slate platform.  A trapdoor,
+similar to those of a spider appears to be its only entrance.  Beyond the
+structure, the towering fir trees rise upward over fifty feet, their
+dappled needles gold and green.  The wooden platform encircles the
+massive trunk to the west, its pine boards bound with silken rope.
+~
+[Guin] Done.
+~
+167247872 3 6 0
+D1
+woven door~
+~
+131 -1 8528 10 10 5
+D3
+~
+~
+0 -1 8523 10 10 5
+E
+branches needles webbing hut~
+Secured beneath the platform, the thick branches form a circular base for
+the woven hut.  Lesser branches have been entwined with web and their
+leafy tops pulled closely together, creating a surprisingly weatherproof
+outer shell.
+~
+E
+trapdoor spiders entrance~
+A large bulbous disc, etched into a striking resemblance of a spider,
+protrudes from the centre of the circular entrance.  Eight long, spindly
+branches hold the disc in place.  The four branches on the left side
+disappear into the foliage that forms the woven hut, whilst the four on
+the right appear to be hardly touching the outer shell.
+~
+E
+wooden trunk platform boards rope~
+Solid beams jut out from the tree to the west, supporting the weight of a
+pinewood platform.  Interwoven between the planks, adhesive web firmly
+holds the boards in formation.  In the distance it appears that paths
+lead away from the massive trunk in the other main compass directions.
+~
+A
+~
+~
+send_to_room( #fall, room );
+~
+E
+fall~
+@GA swirling pine needle spirals down past the branch and is caught in
+the lower webbing.@n 
+~
+!
+2 300 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GThe branch sways a little as you meander westwards.@n 
+~
+!
+3 0 8
+2443 9 1509949540 3 0
+-1
+S
+
+#8528
+Woven Hut~
+Spun from shimmering silk and tree branches the woven hut is both strong
+and flexable, enabling it to move with the shifting canopy.  Mounds of
+leaves have been piled against the eastern wall, their mottled colors
+turning slowly from green to brown.  A circular door in the western wall
+appears to be the only exit from the room.
+~
+[Azerin] search leaves
+[Estrella] extras done
+[Guin] finish acode
+~
+167247872 0 6 0
+D3
+woven door~
+~
+131 -1 8527 10 10 5
+E
+silk branches hut~
+Lesser branches, still attached to the living tree, have been gathered
+into a domed-ceiling structure.  Glinting with the dimmed light of the
+hut's interior, a massive cascade of drider silk covers the entirety of
+the shifting house.
+~
+E
+mounds leaves eastern~
+Roughly swept aside, the colour of the curling leaves varies from fresh
+green to dusky brown.  Snared on drider silk, the lacy, skeletal remains
+of long decayed leaves sway with the gentle rocking of the hut.  A quiet
+rustling can be heard emanating from the mounds, but no discernable
+movement can be seen in the leaves.
+~
+E
+door exit western~
+Slightly elliptical in shape and rather bulbous towards the base of the
+door, the wooden likeness of a spider covers the only exit of the hut. 
+Protruding from the right side of the doorway are four peculiar branch
+stubs that seem to be used as pivots for opening and closing of the door,
+as there is a sizeable gap surrounding each one that has been roughly
+patched with a fine coating of the durable drider silk.
+~
+A
+~
+leaves~
+act_tochar( #already, ch, obj );
+act_notchar( #ralready, ch, obj, mob, sight );
+~
+E
+already~
+You search casually through the leaves, but having noticed they are
+spread out alot already, you figure someone beat you to it.
+~
+E
+ralready~
+$n casually pushes some leaves aside, but doesn't search very much.
+~
+!
+9 0 0
+2442 9 1509949540 3 0
+-1
+S
+
+#8529
+At the End of a Branch~
+Under Construction.
+~
+[Azerin] blank room for building
+~
+167247872 3 6 0
+D1
+~
+~
+430 -1 8524 10 10 5
+D3
+~
+~
+430 -1 8530 10 10 5
+-1
+S
+
+#8530
+Landing Platform~
+A net of rope and vines spreads out at the fork of a solid-looking
+branch, a knotted rope dangling down from a higher limb, offers the bold
+an opportunity to swing eastward.  Toward the west the wide canopy of a
+massive fir tree spreads its limbs outward.  Jutting from the main trunk
+is a woven hut; the structure precariously perched on the northern limbs.
+~
+[Guin] Swing east to 8524, fall to 8501.
+[Guin] Done.
+~
+167247872 3 6 0
+D1
+~
+~
+430 -1 8529 10 10 5
+D3
+~
+~
+0 -1 8531 10 10 5
+E
+net rope vines knotted~
+Thickly spun drider silk and leafy tendrils of web have been loosely
+woven to provide some elasticity to the netting that stretches between
+the forked branches.  A nearby rope dangles close by, its knots providing
+hand and foot holds for those who wish to swing on the rope.
+~
+E
+canopy fir tree~
+Piercing the upper layer of the dense canopy, the massive fir tree,
+supported by the girth of its giant trunk, rises like a spire above the
+other great trees in this part of the ancient forest.  Branches extend
+from the mighty trunk in all directions, most of them up to fifty feet in
+length.
+~
+E
+woven hut~
+Perched at the end of a branch, the woven hut strains the silken supports
+that hold it in place.  Strung over the branches and trunk of the tree,
+thick tendrils of web lash the hut to the tip of the limb.  The outer
+shell is a multi-hued mosaic of fallen leaves that have adhered
+themselves to the tangled webs.
+~
+A
+2 swing~
+2 rope 3 vine 1 east~
+if( find_stat( ch, dex ) < random( 5, 18 ) )
+  i = 1;
+if( find_skill( ch, climb ) < random( 4, 8 ) )
+  i = 1;
+if( i == 1 ) {
+  act_tochar( #slip, ch );
+  act_notchar( #rslip, ch );
+transfer( ch, find_room( 8501 ) );
+  act_notchar( #slip_arrive, ch );
+  i = random( 50, 100 );
+  inflict( ch, mob, i, "the fall" );
+  dam_message( ch, i, "the fall" );
+  end;
+}
+improve_skill( ch, climb );
+act_tochar( #swing, ch );
+act_notchar( #rswing, ch );
+transfer( ch, find_room( 8524 ) );
+act_notchar( #arrive, ch );
+~
+E
+slip~
+You slip from the rope as you are trying to swing across.
+~
+E
+rslip~
+$n slips from the rope as $e is trying to swing across.
+~
+E
+slip_arrive~
+$n crashes into the ground.
+~
+E
+swing~
+You swing across to the next branch.
+~
+E
+rswing~
+$n swings graciously across to the next branch.
+~
+E
+arrive~
+$n nimbly drops onto the branch.
+~
+!
+0 0 0
+A
+~
+~
+act_tochar( #noway, ch );
+wait( 2 );
+act_tochar( #backup, ch );
+~
+E
+noway~
+As you get closer to the end of the branch it starts to bend dangerously.
+~
+E
+backup~
+You back up from the end of the branch to reconsider your options.
+~
+!
+3 0 2
+-1
+S
+
+#8531
+Branch Highway~
+The narrow bough has been reinforced with slats of pinewood, allowing for
+a relatively easy passage in either an eastern or western direction. 
+Overhead the tangled canopy of branches spreads outward, the dark green
+needles drenched with sparkling dew and sticky webs.  Toward the north a
+wagon-sized hut perches on the ends of the northerly branches, its
+circular doorway painted a deep blood red.  The massive trunk of a
+towering fir tree stretches skyward to the west, its highest limbs
+reaching well over three hundred feet in height.
+~
+[Guin] Done
+~
+167247872 3 6 0
+D0
+blood red door~
+~
+131 -1 8532 10 10 5
+D1
+~
+~
+0 -1 8530 10 10 5
+D3
+~
+~
+0 -1 8533 10 10 5
+E
+narrow bough slats pinewood~
+Although very sturdy, the narrow bough is supported by a latticework of
+wooden slats that run along the branch at evenly spaced intervals. 
+Lashing the planks to the branch, the thickly spun web weaves between
+each slot on either side of the lengthy branch.
+~
+E
+canopy needles dew web~
+Towering above this layer of the forest, the dense canopy blocks the
+natural lighting and casts dappled shadows across the walkways. 
+Dew-dropped webs glimmer with the gentle lighting in the middle canopy. 
+Pine needles, caught by the glistening web, spin on their axis as a
+subtle breeze gently moves the lacy webs.
+~
+E
+hut circular doorway~
+Carefully crafted out of the remarkably durable drider web and interwoven
+with strands of tree bark, the circular hut sits precariously balanced on
+the tip of a nearby branch.  An ominous, blood red doorway dominates the
+facade of the large hut, overtly intruding on the all-natural
+surroundings.
+~
+A
+~
+~
+send_to_room( #sparkle, room, sight );
+~
+E
+sparkle~
+@CThe dew across the web sparkles like diamonds.@n 
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@YWith the boards creaking underfoot, you continue westward around the
+massive tree.@n 
+~
+E
+to_room~
+@YWith boards creaking underfoot, $n continues westward around the
+massive tree.@n 
+~
+!
+3 0 8
+2441 9 1509949540 3 0
+-1
+S
+
+#8532
+Woven Hut~
+A blanket of webbing encases the bark, branch and vine walls of the
+circular hut.  Wooden slates have been interlocked to form the floor, the
+uneven surface reminiscent of the scales of a lizard.  An oval window in
+the northern wall looks out upon the branches of the mighty fir canopy. 
+Set into the southern wall is a round door, its surface painted a dark
+blood red.
+~
+[Guin] Done.
+~
+167247872 2 6 0
+D2
+blood red door~
+~
+131 -1 8531 10 10 5
+E
+blanket webbing walls~
+A montage of subdued colours decorates the interior of the circular hut. 
+Leaves, branches and tendrils of vine protrude from beneath their woven
+casing, creating a well-insulated cuccoon.  Entangled amidst the strands
+of adhesive web appears to be an occasional shank of deer, secured to the
+wall.
+~
+E
+wooden slats floor~
+The smoothly polished tiles overlap slightly where they connect with each
+other, creating a jutted, uneven floor in the base of the hut.  Dappled
+lighting reflects off the slightly tilted surface, shimmering like gently
+rippled water.
+~
+E
+round door surface red~
+Intruding on the subdued, natural colours of the interior, the blood red
+door stands starkly in the centre of the wall.  Arcane markings, hewn
+deeply into the wooden door read 'Death be with all' - a clear indication
+of the drider's true demeanour.
+~
+A
+~
+3 planks~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 4, 10 ) < find_skill( ch, searching ) ) {
+    i = random( 1, 10 );
+    if( i == 1 )
+      obj = oload( 7337 );
+    else if( i == 2 )
+      obj = oload( 7037 );
+    else if( i == 3 )
+      obj = oload( 16, random( 1, 3 ) );
+    if( obj )
+      if( can_handle( ch, obj ) ) {
+      act_tochar( #found, ch, obj );
+      act_notchar( #rfound, ch );
+      obj_to_char( obj, ch );
+      end;
+    }
+  }
+}
+act_tochar( #nothing, ch );
+act_notchar( #rnothing, ch );
+~
+E
+found~
+You found $p.
+~
+E
+rfound~
+$n found something of interest by the planks.
+~
+E
+nothing~
+You find nothing of interest.
+~
+E
+rnothing~
+$n doesn't seem to find anything by the planks.
+~
+!
+9 0 0
+2442 9 1509949540 3 0
+-1
+S
+
+#8533
+High Platform~
+A platform of white-washed wood spreads among the forest greens.  A
+netting of spider silk stretches from their tips to the overhead
+branches, forming what appears to be slender pillars of web.  Slats of
+wood cover the limbs that thrust from the fir tree's trunk, allowing
+travelers access to the forested canopy to the east and north.  A spiral
+stairway, cut into the bole of the tree, leads upward into the high
+canopy.
+~
+[Guin] Swing code doesn't work.
+[Guin] Reviewed.
+~
+167247872 3 6 0
+D0
+~
+~
+430 -1 8535 10 10 5
+D1
+~
+~
+0 -1 8531 10 10 5
+D4
+~
+~
+0 -1 8534 10 10 5
+E
+platform whitewashed wood~
+Almost the same colour as the nearby web, this platform is precariously
+balanced at the end of two massive branches, parting the leaves and
+bridging the gap between the limbs of the giant trees.  Surrounding the
+whitewashed platform, a tangle of web and debris form a guardrail that
+prevents anyone from falling off the dais.
+~
+E
+netting silk pillars web~
+Stalactites and stalagmites of web reach toward each other, rising from
+the platform and dangling from the canopy, forming great white pillars of
+web around the whitewashed podium.  Lacy curtains, with gaping holes
+throughout the layers of web, are adorned with an array of fallen leaves
+and needles.  The corpses of many insects have also been trapped by the
+adhesive material.
+~
+E
+spiral staircase canopy~
+Hewn into the massive tree's trunk, a winding stairway disappears into
+the boughs far above.  The intricately carved wide banister twists with
+the staircase, its supports, rising from the steps, are still attached to
+the living tree's trunk.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@YGrabbing a branch for support, you clamber up the slat stairs and into
+the high canopy.@n
+~
+E
+to_room~
+@yGrabbing a branch for support, $n clambers up the slat stairs and into
+the high canopy.@n 
+~
+!
+3 0 16
+A
+3 swing~
+vine 1 north~
+if( find_skill( ch, climb ) > random( 6, 8 ) ) {
+  improve_skill( ch, climb );
+  act_tochar( #swing, ch );
+  act_notchar( #rswing, ch );
+  transfer( ch, find_room( 8535 ) );
+}
+else {
+  act_tochar( #fall, ch );
+  act_notchar( #rfall, ch );
+  transfer( ch, find_room( 8517 ) );
+  damage( mob, ch, 10d10, physical, "Your fall" );
+}
+~
+E
+swing~
+@gYou swing across the chasm to the north.@n
+~
+E
+rswing~
+@g$n swings $mself across the chasm to the north.@n
+~
+E
+fall~
+@cYou slip as you try to swing across the chasm.@n
+~
+E
+rfall~
+@c$n slips as $e tries to swing across the chasm.@n
+~
+!
+0 0 0
+2443 9 1509949540 3 0
+2441 9 1509949540 3 0
+-1
+S
+
+#8534
+Web Wrought Chamber~
+A domed room of web encases the trunk of a massive pine tree, the spun
+strands of silk forming a flexible but sturdy marque.  Paper lanterns
+dangle from the high ceiling, a soft moon-hued light escaping from each
+one.  A tunnel of web, reminiscent of trapdoor spiders, winds across the
+branches from the room, its silken surface shimmering in the light.  A
+more mundane set of stairs winds down the trunk and into the lower tree
+boughs.
+~
+[Guin] Done.
+~
+167247872 0 6 0
+D1
+~
+~
+0 -1 8550 10 10 5
+D5
+~
+~
+0 -1 8533 10 10 5
+E
+domed silk marque~
+The low ceiling, carved into the interior of the trunk, has been rounded
+into a perfectly spherical dome.  Extending eastward from the centre of
+the roof, a silken marque protrudes from the trunk, its thickly spun
+strands attached to the wood.
+~
+E
+tunnel branches~
+A multitude of web clogs the narrow exit that follows the thick branches
+pathway.  A dense, matted-web tunnel covers the entirety of the lofty
+passage, sheltering it from the elements and blocking out all natural
+light.
+~
+E
+stairs bough floor~
+Through a hole in the floor by the southern arc of the room, a carved
+wooden staircase spirals down to the lower branches.  A meticulously
+sculptured handrail follows the downward curve of the stairs,
+disappearing into the bowels of the giant tree.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@YGrabbing hold of a near by branch, you carefully descend into the lower
+canopy.@n 
+~
+E
+to_room~
+@YGrabbign hold of a near by branch, $n carefully descends into the lower
+canopy.@n 
+~
+!
+3 0 32
+-1
+S
+
+#8535
+Branch Highway~
+Tufts of apricot-hued vines entangle the tree branch, clusters of cream
+flowers covering their ends.  The sweet smell of nectar fills the air
+from the blooms, a handful of mason bees darting between each of the
+petals.  The high canopy rises around the walkway, the trees towering
+over fifty feet before their branches end.  A woven hut dangles from
+silken cords to the north, a circular door allowing access to its webbed
+interior.  More huts dot the forest to the east and north, their mottled
+colors blending into the foliage.
+~
+[Guin] Swing south should land you in the room south or fall should land you in 8517.. the room with the slam you around code.
+[Guin] Done.
+~
+167247872 3 6 0
+D0
+circular door~
+~
+131 -1 8540 10 10 5
+D2
+~
+~
+430 -1 8533 10 10 5
+E
+tufts apricot vines cream flowers~
+Negligently draped from the boughs in the middle canopy, apricot coloured
+vines decorate the nearby tree branches.  Small, creamy-white flowers
+flourish in clusters along the wiry vines' knotted tendrils.  A few
+groups of bees flit about, between the pale flowers, collecting the
+sugary nectar to take back to their hives.
+~
+E
+walkway canopy trees branches~
+Roughly hewn out of the immense branches, sturdy walkways span the
+distances between the towering pines, connecting one platform to another. 
+Along the centre of the branches, the wood is very smooth from years of
+use.  The walkway has been coated in fine strands of sticky web to allow
+hurried movement across the bridges without fear of falling.
+~
+E
+woven huts silken cord~
+The adhesive drider-web hut, mottled with foliage varying from freshly
+fallen green leaves to the lacy fragile skeleton of the long decayed,
+hangs on a silken cord from a branch in the upper canopy.  The thick cord
+appears to be made of countless strands of web plaited into a durable
+rope, the strength of which is sufficient to support a drider's eerie hut.
+~
+A
+~
+~
+act_tochar( #cant, ch );
+~
+E
+cant~
+You can't leave that way, perhaps you can swing across.
+~
+!
+3 0 4
+A
+3 swing~
+vine 1 south~
+if( find_skill( ch, climb ) > random( 6, 8 ) ) {
+  improve_skill( ch, climb );
+  act_tochar( #swing, ch );
+  act_notchar( #rswing, ch );
+  transfer( ch, find_room( 8533 ) );
+}
+else {
+  act_tochar( #fall, ch );
+  act_notchar( #rfall, ch );
+  transfer( ch, find_room( 8517 ) );
+  damage( mob, ch, 10d10, physical, "Your fall" );
+}
+~
+E
+swing~
+@gYou grab the vine and swing yourself to the south.@n
+~
+E
+rswing~
+@g$n grabs the vine and swings $mself to the south.@n
+~
+E
+fall~
+@cYou slip as you are swing across the chasm.@n
+~
+E
+rfall~
+@c$n slips as $e is swinging across the chasm.@n
+~
+!
+0 0 0
+-1
+S
+
+#8536
+Midair~
+Under Construction.
+~
+[Azerin] blank room for building
+[Hazen] Needs a desc, since people can blink here.
+[Hazen] random code to drop poeple
+[Hazen] do the limbrunners swing?
+[Azerin] i dont think they should, if we can make these rooms able to let drider thru then it would be good
+[Azerin] will delete this room and use transfer
+~
+167247872 3 6 0
+D1
+~
+~
+430 -1 8520 10 10 5
+D3
+~
+~
+430 -1 8537 10 10 5
+-1
+S
+
+#8537
+Along the Branches~
+Wooden beams, bound with drider webbing, form a circular platform, the
+entire structure a little over three feet in diameter.  Branches rise
+around the platform, devising a interwoven basket of leaves and twigs. 
+Dangling from the canopy overhead are silken ropes; their knotted lengths
+allow purchase to either climb up or swing across to another tree to the
+east.
+~
+[Guin] swing east to 8520, fall to 8514
+[Guin] Done.
+~
+167247872 3 6 0
+D1
+~
+~
+430 -1 8536 10 10 5
+D3
+~
+~
+0 -1 8538 10 10 5
+E
+wooden beam platform circular~
+Tightly bound together by the clinging webs, wooden beams create a small
+platform, almost perfectly circular, that is delicately balanced on the
+branches between two massive trees, where the limbs interlock amidst the
+middle canopy of this grim forest.
+~
+E
+basket leaves twigs~
+Neatly interwoven twigs and web form a nest-like basket around the
+circular platform the walls of which rising to about waist height. 
+Leaves protruding at various orientations give the basket a snug,
+sheltered feeling and the enclosed area is well protected from the
+elements.
+~
+E
+silken ropes knotted~
+Disappearing into the dense foliage, thick ropes, constructed from smooth
+silken threads, dangle from the towering canopy.  Along the length of
+each rope are conveniently spaced knots that allow the adventurous to
+utilise these ropes as either ladders to climb into the upper canopy, or
+swings to explore further on this layer.
+~
+A
+~
+~
+act_tochar( #cant, ch );
+~
+E
+cant~
+You can't just walk there, looks like you will have to swing across.
+~
+!
+3 0 2
+A
+swing~
+1 east 2 rope 3 vine~
+if( find_stat( ch, dex ) < random( 5, 18 ) )
+  i = 1;
+if( find_skill( ch, climb ) < random( 4, 8 ) )
+  i = 1;
+if( i == 1 ) {
+  act_tochar( #slip, ch );
+  act_notchar( #rslip, ch );
+  transfer( ch, find_room( 8514 ) );
+  act_notchar( #slip_arrive, ch );
+  damage( mob, ch, 50d2, physical, "the fall" );
+  end;
+}
+act_tochar( #swing, ch );
+act_notchar( #rswing, ch );
+transfer( ch, find_room( 8520 ) );
+act_notchar( #arrive, ch );
+~
+E
+slip~
+You slip from the rope and tumble below into the darkness.
+~
+E
+rslip~
+$n slips from the rope, tumbling into the darkness below.
+~
+E
+slip_arrive~
+$n crashes hard into the ground.
+~
+E
+swing~
+You swing across the gap successfully.
+~
+E
+rswing~
+$n swings across the gap, landing on the other side.
+~
+E
+arrive~
+$n lands on this side of the gap.
+~
+!
+0 0 0
+-1
+S
+
+#8538
+Branch Platform~
+Woven bamboo poles spiral out from the main tree trunk like the spokes of
+a wagon wheel, their dusky brown stems creaking and groaning under any
+weight.  Walkways cut from the platform wind in each compass direction
+save for the south, the northern and western trails ending in the
+swinging branch huts.  Overhead, the forest stretches out in all
+directions, the swinging bridges stretching between the high boughs just
+visible from this location.
+~
+[Guin] done
+~
+167247872 3 6 0
+D0
+woven door~
+~
+0 -1 8539 10 10 5
+D1
+~
+~
+0 -1 8537 10 10 5
+D3
+woven door~
+~
+131 -1 8540 10 10 5
+E
+canopy swinging bridges~
+Lashed tightly together with strips of pale bamboo shoots, the poles jut
+out and spiral around the wide tree trunk, their shaky limbs creating a
+serviceable but highly unstable platform for the nimble to traverse
+swiftly.
+~
+E
+walkway platform huts~
+Winding walkways twist and turn throughout this level of the canopy as
+they head away from the platform, the northerly and westerly paths ending
+at the entrances of the driders' woven huts.  Sealed tightly with sticky
+web, the huts unobtrusively blend into the foliage as falling leaves
+adhere themselves to the outer shell of these intriguing structures.
+~
+E
+canopy woven bridges~
+Half hidden amidst the upper canopy, densely matted bridges can be seen
+between gaps in the branches, the white colour of their underside
+proclaiming the material that they are constructed out of.  Where each
+bridge intersects with a tree, the trunk disappears from sight,
+completely engulfed by finely interwoven web.
+~
+A
+~
+~
+send_to_room( #scutle, room );
+~
+E
+scutle~
+@MA wagon-sized creature scuttles in the canopy above, a rasping sound of
+many feet echoing from it.@n 
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou step through the open doorway into the hut's interior.@n
+~
+E
+to_room~
+@G$n steps through the open doorway into the hut's interior.@n
+~
+!
+3 0 1
+2441 9 1509949540 3 0
+-1
+S
+
+#8539
+Woven Hut~
+Slats of wood have been woven together with ample cords of spider silk,
+the entire structure then coated with branches and leaves to camouflage
+it from the ground for any but the keenest eyesight.  Set in the center
+of the room is a round table, its surface covered in scars and runes.  An
+opening in the south allows access back to the main branch highway.
+~
+[Guin] Done.
+~
+167247872 0 6 0
+D2
+woven door~
+~
+0 -1 8538 10 10 5
+E
+slats cords branches beams~
+Barely visible beneath the dense coating of leaves and branches, it is
+possible to see the wooden slats that form the integral supports of the
+woven structure.  Cords of silk, thin but exceptionally strong, secure
+the leafy branches to the outer shell of the hut.
+~
+E
+round table runes scars~
+Carved from the remnants of a massive pine, the round, polished table
+dominates the limited space of the woven hut.  The surface of the table
+has been defiled with harsh ancient runes that have been hacked into the
+polished wood.  Amidst the vile markings of the ancient language, a
+broken fragment of a sentence begins "He who believes ti..." and appears
+to end further across the table "...shall fulfil the prophecy." 
+~
+A
+3 read~
+runes~
+if( find_skill( ch, vyanian ) == 10 ) {
+  act_tochar( #detect_good, ch );
+  if( !is_affected( detect.good, ch ) ) {
+    do_spell( detect good, ch );
+    interpret( ch, "leech detect.good" );
+  }
+  end;
+}
+act_tochar( #dontunderstand, ch );
+~
+E
+detect_good~
+@CYou sense the good intentions of others...@n
+~
+E
+dontunderstand~
+@CYou can't quite make out all the runes.@n
+~
+!
+0 0 0
+2441 9 1509949540 3 0
+-1
+S
+
+#8540
+Woven Hut~
+Cocooned in layers of spider silk and branches, the woven hut would be
+near impossible to detect from the ground.  About thirty feet in diameter
+and a near perfect circular shape, it consists of a single room with
+openings in the southern and eastern walls.  In the chambers middle, a
+nest of bracken and ferns make up a serviceable bed.  The desiccated
+husks of deer and birds dangle from cords in the ceiling; their grim
+remains obviously a driders snack. 
+~
+[Guin] Done.
+~
+167247872 0 6 0
+D1
+woven door~
+~
+131 -1 8538 10 10 5
+D2
+circular door~
+~
+131 -1 8535 10 10 5
+E
+silk branches woven hut~
+Tightly entwined with silken web, the branches have been gathered
+together to form an inconspicuous hut.  Meticulously woven between the
+branches and webs, leaves ranging in colour from fresh green to autumn
+gold cause the hut to be almost indistinguishable from the real branches
+of the tree.
+~
+E
+nest bracken fern bed~
+Dipped slightly in the middle, the dishevelled bracken and ferns create a
+mattress of broken twigs and dried leaves.  A little movement beneath the
+foliage indicates that this bed is occupied by creatures other than the
+drider.
+~
+E
+desiccated husks deer birds~
+Disturbingly suspended from the hut's ceiling the brutally flayed
+carcasses of myriad woodland creatures dangle just above eye level.  From
+the look of the jagged flesh, it appears that the hapless victims' limbs
+have been torn from their sockets.  The driders apparently can't be
+bothered with the ritualisting cleansing ofr their prey that most hunters
+feel a necessity for.
+~
+A
+~
+3 desiccated 3 husks 3 remains~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 4, 10 ) < find_skill( ch, searching ) ) {
+    i = random( 1, 10 );
+    if( i == 1 )
+      obj = oload( 7337 );
+    else if( i == 2 )
+      obj = oload( 7037 );
+    else if( i == 3 )
+      obj = oload( 16, random( 1, 3 ) );
+    if( obj )
+      if( can_handle( ch, obj ) ) {
+      act_tochar( #found, ch, obj );
+      act_notchar( #rfound, ch );
+      obj_to_char( obj, ch );
+      end;
+    }
+  }
+}
+act_tochar( #nothing, ch );
+act_notchar( #rnothing, ch );
+~
+E
+found~
+You found $p.
+~
+E
+rfound~
+$n found something of interest by the planks.
+~
+E
+nothing~
+You find nothing of interest.
+~
+E
+rnothing~
+$n doesn't seem to find anything by the planks.
+~
+!
+9 0 0
+2442 9 1509949540 3 0
+-1
+S
+
+#8541
+Funnel Web Tunnel~
+The layers of soft silk have been spun together to form an opaque tunnel,
+reminiscent of a spider's lair.  Tangled branches and web-twined rope
+reach outward from the structure, adding stability to the woven
+passageway.  Toward the south, the tunnel ends at a circular hole carved
+into the trunk of a massive tree.  To the north, the tunnel branches into
+a side corridor, cutting westward while the rest of the walkway continues
+onward.
+~
+[Guin] Done.
+~
+167247872 0 6 0
+D0
+~
+~
+0 -1 8543 10 10 5
+D2
+~
+~
+0 -1 8526 10 10 5
+E
+branch rope silk~
+Delicately interwoven with thin strips of bark, the silken tunnel becomes
+entwined about the tree trunk, sealing the entranceway into the hollowed
+hut.  Thickly braided web ropes, strung across the tunnel and wound
+tightly about sturdy branches, provide stability for the fragile passage.
+~
+E
+circular hole trunk tree~
+Hacked into the living wood of the tree, a large circular opening looms
+before the inky blackness of the tree house.  Around the opening, rough
+bark snares tendrils of web on its jagged edges, the wispy strands gently
+swaying in a silent draft.
+~
+A
+~
+~
+send_to_room( #bird, room );
+~
+E
+bird~
+@CThe hush of the surrounding forest is shattered by the quickly silenced
+cry of a single, courageous bird.@n 
+~
+!
+2 150 0
+-1
+S
+
+#8542
+Woven Hut~
+Under Construction.
+~
+~
+167247872 2 6 0
+-1
+S
+
+#8543
+Funnel Web Tunnel~
+Acrid bands of black ash lash the pale silken walls, as if a burning whip
+had scourged the tunnel.  The desiccated remains of humanoid forms lie
+entombed within the spiders' webs, their twisted limbs distorted into a
+hideous visage.  Underfoot, a scattering of bones and leaf litter mix
+together.  A broken paper lantern dangles from the high ceiling, its torn
+panels revealing a wicker frame and a gleaming gemstone within.
+~
+[Guin] Done.
+~
+167247872 0 6 0
+D0
+~
+~
+0 -1 8545 10 10 5
+D2
+~
+~
+0 -1 8541 10 10 5
+D3
+~
+~
+0 -1 8544 10 10 5
+E
+lantern gemstone panels~
+The tattered remains of what once must have been an elaborately crafted
+lantern, now hangs askew on its high hook, it's ragged panels wavering
+with a chilling draft.  Glinting from inside the shabby remnants, a
+brilliant viridian-hued gem lies, collecting dust and debris on its
+uncut, dimpled surface.
+~
+E
+bands ash walls tunnel~
+A thick layer of ash covers the edges of the floor, while the more
+well-traveled part of the corridor are less black from excessive
+disturbances.  Thin black streaks mar the otherwise pristine white walls. 
+Charred foliage lies scattered along the musty passage, a rank, fetid
+odour emanating from the putrid material.
+~
+E
+humanoids limbs bones~
+Encased in a fine sheath of silken web, the disfigured forms of decaying
+carcasses slowly fester into the driders' favoured meals.  Arms and legs,
+snapped like twigs, protrude from their woven coffins at awkward angles. 
+A scattering of dried bones lies neglected on the floor, the scratched
+surfaces evidence enough that whoever they belonged to was considered a
+tasty meal.
+~
+A
+take get~
+gem lantern~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( find_skill( ch, searching ) > random( 6, 9 ) ) {
+    improve_skill( ch, searching );
+    act_tochar( #gem, ch );
+    act_notchar( #rgem, ch );
+    if( random( 1, 20 ) == 5 ) {
+      obj = oload( 3314 );
+      if( can_handle( ch, obj ) )
+        obj_to_char( obj, ch );
+      else
+        obj_to_room( obj, room );
+    }
+    else {
+      act_tochar( #crumble, ch );
+      act_notchar( #rcrumble, ch );
+    }
+  }
+  end;
+}
+act_tochar( #get, ch );
+act_notchar( #rget, ch );
+~
+E
+get~
+@GTry as you might, the lantern is just out of reach.@n
+~
+E
+rget~
+@G$n attempts to reach the lanterns above but they appear just out of
+reach.@n 
+~
+E
+gem~
+@cYou grab the gem from the lantern.@n
+~
+E
+rgem~
+@c$n grabs something from within the lantern.@n
+~
+E
+crumble~
+@yThe gem you grabbed crumbled into dust.@n
+~
+E
+rcrumble~
+@y$n dusts $s hands off.@n
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CYou slip through the silk-lined passageway, heading $T.@n
+~
+E
+to_room~
+@C$n slips through the silk-lined passageway, heading $T.@n
+~
+!
+3 0 5
+-1
+S
+
+#8544
+Funnel Web Tunnel~
+The woven tunnel bends around the gnarled branch of one of the towering
+pines, the silken road cutting through the trees in an easterly and
+southerly direction.  Bone white paper lanterns illuminate the way, their
+outer surfaces painted with skittering spiders and slithering serpents. 
+Underfoot, the sturdy, lace-like lattice of web and branch provides solid
+footing, allowing for ease of travel among the high trees.
+~
+[Guin] Done.
+~
+167247872 0 6 0
+D1
+~
+~
+0 -1 8543 10 10 5
+D2
+~
+~
+0 -1 8546 10 10 5
+E
+gnarled web branch road~
+Now secured tightly to the knotted branch, the silken tunnel veers with
+every turn that the branch makes.  Piled along the edges of the wall,
+drifts of pine needles lie scattered by the movement of the passageway,
+their fine lengths snapped in several places.
+~
+E
+paper lantern~
+The dark blues and greens used to decorate these fragile lanterns
+contrasts distinctly with the pure white background.  Images of writhing
+serpents and terrifying arachnids cover the sides of the ornate lanterns,
+the painted likenesses of the creatures stunning in their similarities.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou follow the winding tunnel to the $T.@n
+~
+E
+to_room~
+@G$n follows the winding tunnel to the $T.@n
+~
+!
+3 0 6
+-1
+S
+
+#8545
+Funnel Web Tunnel~
+A silken door has been set into the northern end the tunnel. 
+Silvery-hued strands of web, woven into the walls around the portal,
+glitter daintily in the soft illumination of yet another paper lantern. 
+The funnel web passage leads southward from the door, its delicate fibers
+supported by interwoven branches.  The swaying pine trees are barely
+visible through the roof, their shapes muted by the opaque weaving.
+~
+[Guin] Done.
+~
+167247872 0 6 0
+D0
+silken door~
+~
+131 -1 8551 10 10 5
+D2
+~
+~
+0 -1 8543 10 10 5
+E
+silken door silvery hue~
+Fine strands of smooth web, shimmering in a candlelit luminescence, have
+been loosely interwoven to create a lace-like silken doorway.  A second
+layer of the delicate material hangs a fingers-width behind the first,
+the woven pattern on this one an exact reverse that covers all the gaps,
+effectively causing the door to be impossible to see through.
+~
+E
+pine trees roof opaque webbing~
+Ghostly forms of towering trees sway behind the gossamer-thin veil of
+web, their gnarled trunks distorted by the opacity of the walls.  Caught
+on the outside of the tunnel, a light covering of pine needles quiver on
+the swaying roof as the tunnel winds among the lofty trees.
+~
+A
+~
+~
+send_to_room( #shake, room );
+~
+E
+shake~
+@yThe web-woven tunnel sways in the wind.@n
+~
+!
+2 150 0
+-1
+S
+
+#8546
+Funnel Web Tunnel~
+Crafted from fine-spun spiders' silk, the circular tunnel winds through
+the swaying boughs of the high canopy.  The gossamer strands, strong as
+iron and supple, permit them to move with the ever-shifting,
+needle-bedecked branches.  Paper lanterns dangle from the ceiling
+overhead, the pale illumination of silvery candle light escaping from
+their heart.
+~
+[Guin] Done.
+~
+167247872 0 6 0
+D0
+~
+~
+0 -1 8544 10 10 5
+D3
+~
+~
+0 -1 8547 10 10 5
+E
+tunnel boughs canopy~
+Twisting amidst the treetops, the silken tunnel continues to wind it's
+way from branch to branch.  An occasional break in the webbing allows
+small glimpses of the otherwise hidden canopy.  A dappled shaft of light
+penetrates through a small opening on the side of the wall, illuminating
+the gloomy passage.
+~
+E
+paper lanterns illumination~
+Spaced at even intervals, these flimsy hexagonal lanterns cast a mottled
+dim light along the corridor.  Amidst the finely painted images of
+menacing arachnids and serpents, small holes have been cut into the
+sides, exposing the flickering flame of a waxy black candle.
+~
+A
+~
+~
+send_to_room( #shadow, room, sight );
+~
+E
+shadow~
+@cThe web-crafted tunnel sways with the canopy, creating dancing shadows
+along the walls.@n 
+~
+!
+2 150 0
+2441 9 1509949540 3 0
+2441 9 1509949540 3 0
+-1
+S
+
+#8547
+Funnel Web Tunnel~
+Silken ropes stretch from the branches of the trees, securing the tunnel
+of web in place.  The strong fibres sway with the forest, insuring the
+flexible structure avoids being torn apart in the ever-moving pines. 
+Slats of wood form a more solid foundation underfoot, the red pine beams
+polished and smooth.  Paper lanterns dangle from the ceiling, each of
+their hexagonal sides painted with pictures of arachnids and spider webs.
+~
+[Guin] Done.
+~
+167247872 0 6 0
+D1
+~
+~
+0 -1 8546 10 10 5
+D3
+~
+~
+0 -1 8548 10 10 5
+E
+ropes branches~
+Multitudes of thick twine, lashed across the spine of the tunnel, have
+been left slack, allowing them to stretch as needed with the ever-moving
+canopy of the forest.  Where possible, the tunnel has been secured to
+nearby branches, adding some stability to the fragile structure.
+~
+E
+slates red pine beams~
+Gleaming in the soft lantern light, the hard wood floor seals the base of
+the tunnel, a scattering of pine needles strewn across its width. 
+Extending down the twisting corridor, sturdy pine beams form part of the
+infrastructure, their polished lengths thickly coated in varnish.
+~
+E
+lantern picture paper~
+Long silken ropes, draped along the length of the passageway, are secured
+at even intervals down the entire length.  Lanterns made of fine paper
+dangle from the cord as it disappears from sight around a twist in the
+tunnel.  Intricately painted pictures adorn each side of the lanterns,
+the varicoloured light mottling the walls in subdued colours.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CYou continue along the web-formed tunnel to the $T.@n
+~
+E
+to_room~
+@C$n continues along the web-formed tunnel to the $T.@n
+~
+!
+3 0 10
+-1
+S
+
+#8548
+Funnel Web Tunnel~
+The circular tunnel runs in an east and west direction, its walls and
+ceiling spun from glimmering spider silk.  A circular curtain of web
+dangles in the northern wall, an elegant emblem of crossed sabres somehow
+woven into the design.  Hanging above the web-wrought tapestry,
+moon-silver light escapes from the base of a single paper lantern. 
+Branches rise around the doorway, the wood woven into a living archway.
+~
+[Guin] Done.
+~
+167247872 0 6 0
+D0
+silken curtain~
+~
+131 -1 8549 10 10 5
+D1
+~
+~
+0 -1 8547 10 10 5
+D3
+~
+~
+0 -1 8550 10 10 5
+E
+curtain emblem sabres cloth~
+Draped across the doorway, a shimmering cascade of silk covers the
+opening.  Entwined about the individual strands of web that create the
+curtain are fine, coloured threads that form the emblem of red sabres
+crossed before an azure shield bearing the symbol of a black ash tree. 
+Each tendril of web is weighted at the bottom by varicoloured stone loops.
+~
+E
+paper lantern~
+Casting a dim light down the eerie corridor, the paper lantern sways
+slightly as it dangles from a thickly spun web bracket.  A small candle
+sits in the base of the lantern, it's golden flame barely flickering in
+the sheltered tunnel.
+~
+E
+branches wood archway~
+Malleable young branches sprout from somewhere beneath the floor of the
+web tunnel, their green shoots entwined about each other, creating a
+twisted wooden archway.  Several leaves have been caught by the adhesive
+web surroundings, the imprint of their shape marring the otherwise smooth
+wall.
+~
+A
+~
+~
+send_to_room( #flicker, room, sight );
+~
+E
+flicker~
+@CThe wavering light flickers dimly from within the lantern.@n
+~
+!
+2 150 0
+A
+get~
+lantern~
+acode( find_room( 8543 ), 1 );
+~
+!
+0 0 0
+-1
+S
+
+#8549
+Silk Wall Barracks~
+Last year's needles lie across the floor, scattered like the dead from a
+bloody battle.  A few insects brave the encasing web to feast upon the
+decaying matter.  Out the southern door, the web tunnel weaves like an
+exposed intestine, the silken structure cutting sharply through the high
+branches.  Pristine white walls have been bound to the spear-like
+branches of the mighty pines, reinforcing the silk against the buffeting
+winds.  Scattered throughout the room at even intervals are paper
+lanterns, the soft candle-glow sending ripples across the walls.
+~
+[Guin] Blade dumps you into 8531.
+[Guin] Done.
+~
+167247872 0 6 0
+D2
+silken curtain~
+~
+131 -1 8548 10 10 5
+E
+needles floor insects~
+Strewn across the floor of the barracks, the remaining debris from the
+previous autumn festers into a mottled pulp of organic matter. 
+Broken-tipped pine needles, caused to stand on their ends by the thick
+silken floor, have had their brittle lengths snapped in several places
+from the weight of passing creatures.  Rustling amidst the decaying
+material, a handful of insects scuttle about, seeking out the nutrients
+as they are slowly leeched by the suffocating web.
+~
+E
+tunnel structure branches~
+The tunnel continues predominantly in an east to west direction outside
+the drider's sleeping quarters, weaving from branch to branch in an
+attempt to create a somewhat stable structure.  Sharply honed branches
+run along the length of the tunnel, providing integral supports to the
+lofty corridor.
+~
+E
+walls paper lantern~
+Made from fine crepe paper and accordion-folded, the delicate lanterns
+dangle from ornately designed web brackets.  The faint radiating glow,
+emitting from the fragile lanterns, casts dim circles of light that
+overlap along the glossy wall of the barracks.
+~
+2448 9 1509949540 3 0
+-1
+S
+
+#8550
+Funnel Web Tunnel~
+Bands of densely woven rope form rib-like supports in the walls and
+ceiling of the funnel web tunnel.  Strong but flexible, they move with
+the swaying trees and in doing so avoid be torn apart.  The floor has
+been cut from a stout branch, an intricate grain running through the wood. 
+A few steps to the west the branch ends, the passage crafted solely from
+the spun silk.
+~
+[Guin] Done.
+~
+167247872 0 6 0
+D1
+~
+~
+0 -1 8548 10 10 5
+D3
+~
+~
+0 -1 8534 10 10 5
+E
+rope rib-like supports walls~
+Countless strands of web, spun and plaited into thick durable rope, form
+the supports of the tunnel.  The evenly spaced infrastructure, with a
+lengthy spine extending along the ceiling, gives the appearance of a
+giant ribcage.
+~
+E
+floor stout branch wood~
+Hewn almost in half, the floor of the tunnel has been cut out of the
+living tree.  Smoothed to be decisively flat, and polished until the fine
+grain of the wood is plainly visible, the dark resonant varnish gloomily
+reflects the dim lighting of the woven tunnel.
+~
+E
+tunnel web silk funnel~
+As the branch ends in a leafy flourish, the wooden floor of the tunnel
+suddenly becomes spongy and rather sticky.  The tunnel, now made entirely
+of web, sways gently as it is tugged by the movement of the trees.
+~
+A
+~
+~
+send_to_room( #shake, room );
+~
+E
+shake~
+@YThe entire tunnel shakes alarmingly under the onslaught of a strong
+gust of wind.@n 
+~
+!
+2 150 0
+-1
+S
+
+#8551
+Webbed Chamber~
+Curtains of web drape down from the vaulted chamber's roof, their silken
+strands sparkling like faerie lights on a moonless night.  Faceted orbs
+of rainbow-hued crystals have been set in the high ceiling, their
+multi-planed surfaces cut in a sunburst pattern.  Woven portals have been
+set in all but the eastern wall, and threadlike filaments around each of
+the openings undulate as if in a faint breeze.  Underfoot, a latticework
+of branches entwine to form a sturdy floor, the rough bark in stark
+contrast to the smoothness of the remaining room.
+~
+[Estrella] extras done
+[Guin] Done.
+~
+167247872 0 6 0
+D0
+woven door~
+~
+131 -1 8553 10 10 5
+D2
+silken door~
+~
+131 -1 8545 10 10 5
+D3
+silken door~
+~
+131 -1 8552 10 10 5
+E
+curtains web roof~
+Dangling from the highest point in the roof, several silk curtains
+cascade down the shimmering web walls, their delicate strands gleaming as
+the light catches their pristine white threads.  The lacy curtains are
+covered sporadically with the tiny corpses of unfortunate insects that
+found their way into this picturesque death trap.
+~
+E
+orbs crystals ceiling~
+Bespeckling the lofty ceiling, a myriad of vari-hued crystal orbs sparkle
+as the light catches on their sharply pointed surfaces.  Refracting off
+the jaggedly cut orbs, slender shafts of rainbow-coloured light filter
+around the room.
+~
+E
+branches sturdy floor~
+Long thin strips of sturdy pine form a fine, crosshatched latticework
+floor, the tightly interlocked planks of wood leaving minute gaps between
+their rasp-like surfaces.  Fine tendrils of web have been ensnared along
+the rough bark that covers the lengthy boards.
+~
+A
+~
+~
+send_to_room( #sparkle, room, sight );
+~
+E
+sparkle~
+@CWith a shower of light, the faceted crystals overhead spin tightly in a
+dizzying pirouette.@n 
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@MYou leave the chamber through the $Tward-lying portal.@n
+~
+E
+to_room~
+@M$n leaves the chamber through the $Tward-lying portal.@n
+~
+!
+3 0 13
+2447 9 1509949540 3 0
+-1
+S
+
+#8552
+Vaulted Chamber~
+Four stout branches thrust through the woven floor and rise to form
+natural pillars in the chamber's center.  Ethereal-looking paper lanterns
+dangle from the outstretched limbs, a blue-hued flame flickering within
+each one.  The trunk of a massive tree dominates the western wall; an
+archway cut into its very heart allows entrance into a polished room. 
+Soft silk curtains drape across doorways to the north, east and south. 
+Through the spun web of the ceiling, the outline of the high canopy can
+be discerned, the opaque strands of silk muting their details until they
+burl into a kaleidoscope of mottled colors.
+~
+[Guin] Done.
+~
+167247872 0 6 0
+D0
+~
+~
+0 -1 8554 10 10 5
+D1
+silken door~
+~
+131 -1 8551 10 10 5
+D2
+~
+~
+0 -1 8555 10 10 5
+D3
+~
+~
+0 -1 8556 10 10 5
+E
+paper lanterns~
+Round paper lanterns hang on outstretched branches.  Carefully painted in
+light earthy colours, matching the web mottled colours of the canopy.  A
+blue flame flickers in the middle.
+~
+E
+silk curtains~
+Blue silk curtains cover the north, east and south doorways.  Fine
+patterns of leaves and webs have been painted in silver and white along
+the curtain edges.  They drape down to the floor.
+~
+E
+archway~
+A simple archway has been carved into the western wall, leading into the
+heartwood chamber.  Simple, small decorations of leaves have been carved
+across the top of the arch.
+~
+A
+~
+~
+send_to_room( #shake, room );
+~
+E
+shake~
+@yWith a shudder, the entire room shakes under the force of an
+unnaturally strong gale.@n 
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yPulling aside the curtain you continue to the $T.@n
+~
+E
+to_room~
+@yPulling aside the curtain, $n continues to the $T.@n 
+~
+!
+3 0 5
+-1
+S
+
+#8553
+Midnight Chamber~
+Black silk drape the four walls of the wagon-sized chamber, the inky
+darkness seeming to flow from the fabric and smudge the air with its
+midnight hues.  A flicker of starlight dances across the stygian cloths,
+the only light to caress their surfaces.  A surprisingly mundane curtain
+hangs to the south, allowing an exit from the oppressive room.
+~
+[Estrella] extras done
+~
+-906493932 0 6 0
+D2
+woven curtain~
+~
+131 -1 8551 10 10 5
+E
+black silks walls fabric~
+Yards of long flowing silk cover the walls of this dingy room.  The
+ebony-black material drapes copiously from the ceiling, covering every
+inch of the web and branch infrastructure.  An omnipresent eeriness
+infuses the dark bolts with an almost touchable layer of dread.
+~
+E
+starlight light stygian surfaces~
+Seemingly trapped within the individual strands of silk that form the
+black material, the light of captured stars almost imperceptibly traverse
+the plutonian cloth.  The slight glimmering light embosses the dark bolts
+with a mystical luminescence.
+~
+A
+~
+~
+send_to_room( #gloom, room );
+~
+E
+gloom~
+@BDarkness washes across the floor like death on a storm-tossed sea.@n 
+~
+!
+2 300 0
+2444 9 1509949540 3 0
+-1
+S
+
+#8554
+Lavish Throne Room~
+A woven tapestry drapes from the branched ceiling of the valted chamber,
+its black background covered in a silver web, a blood-red spider sitting
+in its middle.  The walls have been crafted from spider silk, veins of
+color entertwined within them.  A bleached wood throne sits in the center
+of the chamber, its polished grain studded with precious gems.  A curtain
+of soft-blue silk ripples in the southern wall, the only obvious exit
+from the chamber.
+~
+Pry gem when drider is dead =
+[Azerin] flawless emerald (old terek) vn 3314
+[Azerin] diamond is 77 (bracer kind)
+[Azerin] sapphire is 105
+[Guin] Done.
+~
+167247872 0 6 0
+D2
+~
+~
+0 -1 8552 10 10 5
+E
+woven tapestry~
+A large woven tapestry, reaching from the ceiling to just above the floor,
+stands out in this silvery room.  A black silk background lies under a
+layer of silvery web causing the blood red embroidered spider to stand
+out in the middle.
+~
+E
+bleached wood throne~
+An impressive bleached wood throne, possibly made from Huon pine, sits in the
+centre of the room.  Intricate patterns of webs and spiders decorate the
+throne along with a number of precious gems like diamonds, sapphires and
+rubies.
+~
+E
+soft-blue silk curtain~
+A soft-blue silk curtain drapes from the ceiling to the floor over the
+southern doorway.  Silver and white patterns of webs and leaves have been
+painted along the curtain edge.
+~
+E
+precious gems~
+A number of precious gems have been set into the throne.  Rubies,
+sapphires and diamonds have been used as eyes for some of the spiders. 
+One of the gems appears to be poorly set, as if someone had been
+deliberately trying to loosen it.
+~
+A
+pry~
+gems~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  mob = mob_in_room( 2449, room );
+  if( mob ) {
+    act_tochar( #notrightnow, ch, obj, mob );
+    end;
+  }
+  else {
+    i = random( 1, 100 );
+    if( i < 11 )
+      obj = oload( 3314 );
+    else if( i < 16 )
+      obj = oload( 77 );
+    else if( i < 41 )
+      obj = oload( 105 );
+    if( obj ) {
+      act_tochar( #found_gem, ch, obj, mob );
+      act_notchar( #rfound_gem, ch, obj, mob );
+      if( can_handle( ch, obj ) )
+        obj_to_char( obj, ch );
+      else
+        obj_to_room( obj, room );
+    }
+  }
+  if( !obj ) {
+    act_tochar( #struggle, ch, obj, mob );
+    act_notchar( #rstruggle, ch );
+  }
+}
+else
+  act_tochar( #already, ch );
+~
+E
+notrightnow~
+@R$N is keeping you from doing that right now.@n
+~
+E
+found_gem~
+@eYou pry $p out of the throne.@n
+~
+E
+rfound_gem~
+@e$n pries $p out of the throne.@n
+~
+E
+struggle~
+@eYou struggle trying to retrieve a gem, but to no avail.@n
+~
+E
+rstruggle~
+@e$n struggles trying to retrieve a gem from the throne.@n
+~
+E
+already~
+@CThere's nothing left here.@n
+~
+!
+0 0 0
+2449 9 1509949540 3 0
+-1
+S
+
+#8555
+Silken Room~
+Bolts of dyed silks bedeck the branch-formed walls of the circular room,
+the bright cloth gleaming with a soft luster.  A high desk rests against
+the southern wall; its redwood polished and carved with inserts of
+flights of cranes and mountain scenes.  A hammock of spun silk has been
+draped between two branches, allowing the room's occupants to rest above
+the floor.  A curtained arch in the northern wall appears to be the only
+exit from the room.
+~
+[Guin] Reset key for west exit?
+[Guin] Done.
+~
+167247872 0 6 0
+D0
+~
+~
+0 -1 8552 10 10 5
+D3
+silken panel~
+~
+139 -1 8558 10 10 5
+E
+bolts dyed silk cloth~
+Draping negligently from the leafy branches that form the walls of this
+large circular room are cascading bolts of silk dyed garishly bold
+colours.  The flowing cloth adheres to the web wrought walls in loosely
+overlapping folds.
+~
+E
+desk redwood carved inserts~
+Shaped to perfectly fit the curve of the wall, the high desk dominates
+the majority of the southern arc.  Ornately etched into the solid wood,
+depictions of soaring cranes flying high above jagged mountain ranges
+cover the polished surfaces.
+~
+E
+hammock~
+Thick strands of elastin web have been loosely woven to create a
+supportive hammock.  Strung between two sturdy branches, the hammock
+swings about waist-height off the floor.
+~
+E
+curtain arch~
+Draped across the archway in the northern wall, a gossamer thin curtain
+hangs in luxuriant folds.  The arch itself is constructed by two flexible
+branches, one on the east side, the other on the west, which have been
+drawn together by a large quantity of durable web.
+~
+A
+~
+~
+act_tochar( #leave, ch );
+act_notchar( #rleave, ch );
+continue;
+~
+E
+leave~
+@YYou pull aside the curtain and wander northward.@n
+~
+E
+rleave~
+@Y$n pulls aside the curtain and wander northward.@n
+~
+!
+3 0 1
+A
+~
+silk 1 west bolt~
+if( find_skill( ch, searching ) > random( 5, 8 ) ) {
+  if( rflag( reset0, room ) ) {
+    remove_rflag( reset0, room );
+    act_tochar( #found, ch );
+    act_notchar( #rfound, ch );
+    open( room, west );
+    end;
+  }
+}
+act_tochar( #nothing, ch );
+act_notchar( #rnothing, ch );
+~
+E
+found~
+@cYou notice that some of the silk panels, are hiding a small opening in
+the wall.@n 
+~
+E
+rfound~
+@c$n pushes aside some of the silk panels by the wall, revealing an
+opening.@n 
+~
+E
+nothing~
+@yYou find nothing of interest.@n
+~
+E
+rnothing~
+@y$n searches around, but doesn't appear to find anything interesting.@n
+
+~
+!
+9 0 0
+-1
+S
+
+#8556
+Heartwood Chamber~
+Carved from the richly grained heart of the ancient pine tree, the
+circular chamber stretches over twenty feet in circumference.  The wooden
+floor and walls have been worked with sweet-smelling oil until their
+grain gleams with a luster.  An archway in the eastern wall leads into a
+vaulted chamber, the walls and ceiling formed from woven silk.  An
+opening in the north leads out on to a balcony, the web-coated forest
+spreading out beyond it.
+~
+[Guin] Done.
+~
+167247876 0 6 0
+D0
+~
+~
+0 -1 8557 10 10 5
+D1
+~
+~
+0 -1 8552 10 10 5
+E
+archway~
+A simple archway has been carved in the wooden wall, leading into the
+vaulted chamber.  Across the top of the archway small decorations of
+leaves have been carved into the wood.
+~
+E
+1 east~
+The vault chamber lies to the east.  It seems it is made mostly from webs
+unlike this room.  Four branches form the pillars for the room and paper
+lanterns hang on the outstretched limbs.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou make your way from the tree's heart onto the northern balcony.@n
+~
+E
+to_room~
+@yY$n heads from the tree's heart onto the northern balcony.@n
+~
+!
+3 0 1
+2446 137 1509949540 3 0
+2441 9 1509949540 3 0
+-1
+S
+
+#8557
+Branch Lookout~
+The emerald hued canopy spreads across the landscape, the flickering of
+paper lanterns dancing between the foliage.  Below the branch lookout the
+dense forest gathers its limbs close together between the pines run
+silken walkways, their looping strands connecting a scattering of web
+houses that between the massive trees.  An opening in the trunk to the
+south allows entrance into a chamber carved from the very heart of the
+tree 
+~
+[Azerin] jump off?
+[Guin] Acode needs to dump them in 8516 with inflict 500 damage.
+[Guin] Seltha says - "you should make a fun script with a bunch of rooms
+on the way down, each room does damage..  eg: falling thru the tree: as
+you continute to plummet toward the ground, a branch whacks you in the
+face ** DISMEMBERS ** ...  that way by the time they hit the ground you
+could have done more than 1000 damage 
+[Guin] Reviewed.
+[Cayln] 8560 is the room players bounce off in the jump code
+[Irmo] Missing a period at the end of the rdesc
+~
+167247872 0 6 0
+D2
+~
+~
+0 -1 8556 10 10 5
+D5
+~
+~
+255 -1 8560 10 10 5
+E
+canopy foliage~
+The dense foliage hides the drider houses from the ground below.  A
+smattering of orange and golden leaves intermingle with the dominant pine
+needles to create a mosaic of color.
+~
+E
+paper lanterns~
+Elegant round paper lanterns swing gently in the breeze. Painted in dusky
+reds and yellows, with black patterns of fine spider webs and leaves
+around the edges, a soft glow flickers in the centre of the lanterns.
+~
+E
+silken walkways~
+Nets of silvery white webs form these silken walkways.  Tightly
+intertwined they look strong but flexible, providing sheltered paths
+between each house.
+~
+E
+houses~
+Small white circular web houses hang amoungst the trees.  Made from
+tightly spun strands of silvery white web, each connected by a silken
+walkway.
+~
+A
+~
+~
+send_to_room( #bird, room, sight );
+~
+E
+bird~
+@CFar to the north a screeching hawk dives for some unseen prey.@n
+~
+!
+2 300 0
+A
+3 jump~
+3 over 1 down~
+if( get_integer( ch, "/Cayln/AreYouStupid" ) == 1 ) {
+  set_integer( ch, "/Cayln/AreYouStupid", 0 );
+  act_tochar( #stupid, ch );
+  act_notchar( #rstupid, ch );
+  wait( 2 );
+  transfer( ch, find_room( 8560 ) );
+  i = random( 500, 1000 );
+  dam_message( ch, i, "bouncing off the tree" );
+  inflict( ch, mob, i, "bouncing off the tree" );
+  wait( 2 );
+  transfer( ch, find_room( 8516 ) );
+  i = random( 500, 1000 );
+  dam_message( ch, i, "smashing into the ground" );
+  inflict( ch, mob, i, "smashing into the ground" );
+}
+else {
+  act_tochar( #areyousure, ch );
+  set_integer( ch, "/Cayln/AreYouStupid", 1 );
+}
+~
+E
+stupid~
+This has to be one of the stupidest things you've done.
+~
+E
+rstupid~
+$n does perhaps the stupidest thing you can imagine, as $e jumps off the edge.
+~
+E
+areyousure~
+@yAre you really sure you want to do that?@n
+~
+!
+0 0 0
+-1
+S
+
+#8558
+Hidden Chamber~
+Pine panels have been woven together with silk rope to form the room,
+their surfaces unfinished and sightly rough.  A strip of bark runs along
+one edge, clearly the crafter spent little time on their construction.  A
+single paper lantern dangles from the roof, its soft moonlight
+illuminating the room.  Underfoot, sheets of webbing have been bound with
+branches to form a mostly stable floor.
+~
+[Azerin] chest here(tm)
+[Guin] Done.
+~
+167247872 0 6 0
+D1
+silken panel~
+~
+139 -1 8555 10 10 5
+E
+pine panels silk rope~
+Unevenly cut panels of pinewood are lashed together by haphazardly spun
+silk rope.  In several places along the plaited rope, desperate attempts
+of repair have been undertaken to prevent the twine from unravelling
+fully.  Many gaps are present between the hurriedly constructed walls,
+inadvertently allowing plenty of ventilation to flow through the room.
+~
+E
+paper lantern~
+Hanging on a short silken rope, the solitary paper lantern swings gently
+on an elliptical path as a cold draft whistles through the room.  The
+fine panels on the fragile wicker frame sit rather skewed, and their
+battered surfaces look as though they have been caught in the middle of a
+violent crossfire.
+~
+E
+sheets webbing branches floor~
+Dense sheets of web cover the floor of this shoddy room with a layer of
+grimy material.  Roughly hewn branches protrude through the grey-white
+mesh, their leaves a rusty brown colour.  Extensive repairs have been
+made in several places in order to keep the floor in a relatively good
+condition.
+~
+A
+~
+silk 1 east bolt~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #found, ch );
+  act_notchar( #rfound, ch );
+  open( room, east );
+  end;
+}
+act_tochar( #nothing, ch );
+act_notchar( #rnothing, ch );
+~
+E
+found~
+@cYou notice that some of the silk panels, are hiding a small opening in the wall.@n
+~
+E
+rfound~
+@c$n pushes aside some of the silk panels by the wall, revealing an opening.@n
+~
+E
+nothing~
+@yYou find nothing of interest.@n
+~
+E
+rnothing~
+@y$n searches around, but doesn't appear to find anything interesting.@n
+~
+!
+9 0 0
+887 49 1509949540 -2 0
+3551 81 1509949444 -2 0
+305 80 1509949445 -2 0
+902 81 1509949490 -2 0
+908 81 838860805 -2 0
+396 81 1509949540 -2 0
+3829 81 1509949443 -2 0
+3830 80 1509949443 -2 0
+2 65 1509949540 -2 0
+16 81 1509949490 -2 0
+16 81 1509949465 -2 0
+-1
+S
+
+#8559
+Tight Crack~
+This narrow patch of cavern is too small for anything larger than a mouse. 
+A very tight squeeze leads eastwards.
+~
+[Guin] room needs work.
+~
+167247872 11 6 0
+D1
+~
+~
+0 -1 8517 10 10 5
+-1
+S
+
+#8560
+Falling.......~
+Falling...midway down the length of the ancient pine.  Trees and branches
+intertwine to form a semi-solid barrier, reaching out to grab at skin and
+clothes, arms, legs..even face.  Just below, a thick bough, the size of a
+giant's arm lays in wait...
+~
+~
+167247872 0 6 0
+D4
+~
+~
+255 -1 8557 10 10 5
+A
+~
+~
+loop( objects ) {
+send_to_room( #object, find_room( 8516 ) );
+  obj_to_room( robj, find_room( 8516 ) );
+}
+~
+E
+object~
+@RSomething plummets into the ground with a dull thud.@n
+~
+!
+2 1000 0
+-1
+S
+
+#0
+

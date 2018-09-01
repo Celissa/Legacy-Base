@@ -1,0 +1,7414 @@
+#M2_AREA
+2
+
+The Forgotten Grove~
+Fenlyn Eliza~
+~
+~
+~
+
+0 0
+0
+0
+#ROOMS
+
+#73001
+At the Edge of a Small Forest Grove~
+It is as though there were an invisible, one directional barrier between
+the desert to the north and the small grove here which spreads out before
+you.  The barrier, though, is nothing that you can see or even feel. 
+Rather, it remains as a nebulous 'sensation' that crawls through your
+mind like a boring beetle.  Two stone columns, twins in every respect,
+stand at the edge of the perceived barrier, just to the north.  Through
+the columns, you can feel the hot and blazing winds of the desert
+sweeping through into the cool and moist climate here.  A border of tall,
+tightly-spaced cedar trees grow to the east while a cornucopia of other
+trees and colorful forest plants lie to east, west and south.  An
+intangible feeling, that this forest has somehow remained untouched by
+man, hangs heavily in the air.
+~
+~
+-369623040 10 9 0
+D0
+~
+~
+235 -1 78168 10 10 5
+D1
+~
+~
+0 -1 73002 10 10 5
+D2
+~
+~
+0 -1 73023 10 10 5
+D3
+~
+~
+0 -1 73016 10 10 5
+E
+barrier~
+Examining the barrier, you notice that it is quite invisible.  The only
+perceivable way across it lies through the threshold of the twin columns
+which stand to either side.  Through them, you can see the desert beyond.
+~
+E
+twin stone columns~
+Identical in every respect, the columns of stone which stand amidst the
+barrier are carved from pale white marble.  A variety of things have been
+inset and inscribed into the columns, including a series of valuable gems
+and hieroglyphics.
+~
+E
+gems~
+The gems set into the twin columns are cut into tear-drop shapes and have
+gleaming facets which reflect the light.  In all cases, the gems are
+securely set into the marble of the columns.
+~
+E
+hieroglyphics~
+~
+E
+border cedar trees~
+Most of the secluded, forest grove is ringed by either tightly-spaced oak
+or cedar trees.  Here, mighty cedars grow together in a tight band to the
+east.
+~
+E
+cornucopia plants other colorful~
+A variety of different trees and plants thrive within the confines of
+this ancient grove.  Among them you can see an ancient rowan tree, a
+stand of ashwood trees, yet more oak and cedar trees, pine trees, and
+even a weeping willow.  Clusters of wild flowers, thistle vines, orchids,
+holly bushes, and other plants grow en masse throughout the rest of the
+grove as well.
+~
+A
+1 north~
+*~
+if( cflag( 46, ch ) ) {
+  act_tochar( #parts, ch );
+  act_notchar( #rparts, ch );
+  transfer( ch, find_room( 78168));
+  act_notchar( #arrive, ch );
+  loop( followers ) {
+    act_tochar( #parts, rch );
+    act_notchar( #rparts, rch );
+    transfer( rch, find_room( 78168 ) );
+    act_notchar( #arrive, rch );
+  }
+}
+else {
+  act_tochar( #nobless, ch );
+  act_notchar( #rnobless, ch );
+  damage( mob, ch, 4d25, physical, "the wrath of a goddess" );
+}
+~
+E
+parts~
+@b@M
+A visible ripple passes through the barrier to the north, and the
+invisible curtain of energy parts to let you through.
+~
+E
+rparts~
+@b@M
+With a visible quivering, the field of energy to the north which has been
+an otherwise invisible barrier, parts to allow $n through it.
+~
+E
+nobless~
+A booming voice fills your head:
+
+" For being in her forest without her blessing, you shall be punished!  "
+~
+E
+rnobless~
+A vortex of energy shimmers violently around $n.
+~
+E
+arrive~
+$n passes through the barrier.
+~
+!
+0 0 0
+A
+track~
+unicorn~
+if( find_skill( ch, track ) > 5 )
+  if( !rflag( reset0, find_room( 73023 ) ) ) {
+  act_tochar( #trail, ch );
+  remove_rflag( reset0, room );
+}
+else
+  act_tochar( #losetrail, ch );
+else
+  act_tochar( #notenough, ch );
+~
+E
+trail~
+The unicorn's trail, which seems magically preserved, leads to the west.
+~
+E
+losetrail~
+Try as you might, you lose the unicorn's trail.
+~
+E
+notenough~
+You are not adroit enough to follow the trail.
+~
+!
+0 0 0
+A
+look~
+hieroglyphics glyphics~
+if( has_obj( 1549, ch ) ){
+  obj = has_obj( 1549, ch );
+  act_tochar( #ctrans, ch, obj );
+  act_notchar( #rctrans, ch, obj );
+  wait( 1 );
+  act_tochar( #trans1, ch, obj );
+}
+else
+  act_tochar( #desc, ch  );
+~
+E
+ctrans~
+For a moment, $p becomes warm and
+begins to glow as you examine the hieroglyphics.
+~
+E
+rctrans~
+Momentarily, $p in $n's possession glows as $e 
+examines a section of  hieroglyphics. 
+~
+E
+desc~
+The hieroglyphics are much too complex to understand.
+~
+E
+trans1~
+With the aid of $p, you are finally able to fully 
+understand the hieroglyphics here. They read: 
+
+This grove is all that remains of Her once fertile valley.  Peace be with
+you.  If you should ever seek to leave this place, head but north.
+~
+!
+0 0 0
+A
+translate~
+hieroglyphics glyphics~
+i = get_integer( ch, "/Cayln/TabletEnduraba" );
+obj = has_obj( 1548, ch );
+if( obj ) {
+  j = get_integer( obj, "/Cayln/TabletEnduraba" );
+  if( i == j ) {
+    act_notchar( #rtmess, ch, obj );
+    act_tochar( #trans1, ch, obj );
+  }
+  else {
+    act_tochar( #study, ch, obj );
+    act_notchar( #rstudy, ch, obj );
+  }
+  end;
+}
+obj = has_obj( 1549, ch );
+if( obj ) {
+  act_tochar( #ctrans, ch, obj, mob );
+  act_notchar( #rctran, ch, obj, mob );
+  wait( 2 );
+  act_tochar( #trans1, ch, obj, mob );
+  end;
+}
+act_tochar( #notrans, ch );
+act_notchar( #rnotrans, ch );
+~
+E
+trans1~
+With the aid of $p, you are finally able to fully 
+understand the hieroglyphics here. They read: 
+
+This grove is all that remains of Her once fertile valley.  Peace be with
+you.  If you should ever seek to leave this place, head but north.
+~
+E
+ctrans~
+For a moment, $p becomes warm and
+begins to glow as you examine the hieroglyphics.
+~
+E
+rctran~
+Momentarily, $p in $n's possession glows as $e 
+examines a section of  hieroglyphics. 
+~
+E
+rtmess~
+$n's brow furrows in thought as $e tries to translate a section 
+of hieroglyphics using $p as a guide.
+~
+E
+notrans~
+The hieroglyphics are much too complex to understand.
+~
+E
+rnotrans~
+$n's frowns with frustration as $e finishes examining a portion
+of the hieroglyphics.
+~
+E
+study~
+You will need to study $p some more.
+~
+E
+rstudy~
+$n needs to study $p more to decipher the hieroglyhs.
+~
+!
+0 0 0
+1578 9 1509949540 3 0
+755 17 1509949540 -2 0
+2942 17 1509949540 -2 0
+1576 9 1509949540 3 0
+-1
+S
+
+#73002
+Northeast Corner of a Small Forest Grove~
+A majestic grove of innumerable years stretches out before you in all its
+splendor.  At one time, you can tell this grove was probably the pride of
+the valley.  But now, there are relatively few trees and those which
+remain huddle about one another almost protectively.  The climate here is
+very much different from that of the desert to the north.  In all other
+directions, the assortment of trees and plant varieties are simply
+astounding.
+~
+*CF
+~
+-369623040 10 9 0
+D2
+~
+~
+0 -1 73003 10 10 5
+D3
+~
+~
+0 -1 73001 10 10 5
+E
+trees~
+If there were more hours in the day, you still could not attach a name to
+every tree found in this small yet vibrant grove.  For the most part, the
+grove is ringed by oak or cedar trees.  Somewhere to the south you can
+see the tell-tale peaks of pine trees.  You can also see a stand of
+ashwood trees, a rowan tree, and a weeping willow, all near each other.
+~
+E
+plants~
+A wide array of plants have taken root in this small, sheltered grove. 
+There are a lot of thistle vines growing up and along a lot of the trees. 
+A few holly bushes grow to the far west.  There are even a few patches of
+beautiful flowers like orchids and angel's feather strewn throughout the
+grove.  You have but to look around you to discover the lush plants which
+abound.
+~
+E
+angel feather~
+The angel feather plant looks almost in bloom.  It has brilliant yellow
+and green-gold leaves which are speckled with silver.
+~
+A
+pray~
+plant angel feather~
+if( !is_player( ch ) ) {
+  act_tochar( #end, ch );
+  end;
+}
+if( rflag( reset0, room ) ) 
+  if( !is_evil( ch ) )
+  if( random( 1, 20 ) == 1 ) {
+  act_tochar( #prays, ch );
+  act_notchar( #rprays, ch );
+  remove_rflag( reset0, room );
+  wait( 2 );
+  act_room( #dimglow, ch );
+  wait( 2 );
+  act_room( #shootsup, ch );
+  acode( room, 2 );
+}
+else {
+  act_tochar( #nothinghappens, ch );
+  end;
+}
+else {
+  act_tochar( #evilandwilts, ch );
+  remove_rflag( reset0, room );
+  acode( room, 3 );
+}
+else {
+  act_tochar( #alreadybloom, ch );
+  end;
+}
+~
+E
+prays~
+You kneel down and pray before the gossamer plant.
+~
+E
+rprays~
+$n kneels down and begins to pray at the foot of a gossamer plant.
+~
+E
+shootsup~
+Suddenly, a tiny creature with feathery wings shoots up out of the open
+blossom.
+~
+E
+dimglow~
+A dim light surrounds the plant and a single bloom opens up widely on the
+plant.
+~
+E
+floats~
+As the creature shoots upward, a single white feather floats down to the
+ground, landing at your feet.
+~
+E
+rfloats~
+As the creature shoots upward, a single white feather floats down to the
+ground, landing at $n's feet.
+~
+E
+rgfloats~
+As the creature shoots upward, a single golden feather floats
+down to the ground, landing at $n's feet.
+~
+E
+alreadybloom~
+The feathery, gossamer plant has already bloomed and there are no other
+buds on the flowering plant.
+~
+E
+evilandwilts~
+The tiny, gossamer plant and its single bloom wilt as they sense the evil
+in your nature.
+~
+E
+gfloats~
+As the creature shoots upward, a single golden feather floats down to the
+ground, landing at your feet.
+~
+E
+end~
+You cannot pray enough to aid the plant.
+~
+E
+nothinghappens~
+You pray over the plant but nothing happens.
+~
+!
+0 0 0
+A
+~
+~
+wait( 2 );
+if( class( ch ) == cleric ) {
+  act_tochar( #gfloats, ch );
+  act_notchar( #rgfloats, ch );
+  obj_to_room( oload( 2030 ), room );
+  }
+else {
+  act_tochar( #floats, ch );
+  act_notchar( #rfloats, ch );
+  obj_to_room( oload( 2029 ), room );
+  }
+~
+E
+floats~
+As the creature shoots upward, a single white feather floats down to the
+ground, landing at your feet.
+~
+E
+rgfloats~
+As the creature shoots upward, a single golden feather floats
+down to the ground, landing at $n's feet.
+~
+E
+rfloats~
+As the creature shoots upward, a single white feather floats down to the
+ground, landing at $n's feet.
+~
+E
+gfloats~
+As the creature shoots upward, a single golden feather floats down to the
+ground, landing at your feet.
+~
+!
+0 0 0
+A
+~
+~
+wait( 2 );
+if( class( ch ) == cleric ) {
+  obj = oload( 2030 );
+  act_tochar( #eats_floats, ch, obj );
+  act_notchar( #reats_floats, ch, obj );
+  obj_to_room( obj, room );
+}
+else {
+  obj = oload( 2029 );
+  act_tochar( #weats_floats, ch, obj );
+  act_notchar( #rweats_floats, ch, obj );
+  obj_to_room( obj, room );
+}
+~
+E
+eats_floats~
+@YAs the flower starts to wilt, there is a burst of white from the
+flower, followed by red.  There is a brief flash as the colors meet, and
+the white spot vanishes.  You see a demonic little creature with a gold
+feather in its teeth, that it drops at your feet.@n 
+~
+E
+reats_floats~
+@YAs the flower starts to wilt, there is a burst of white from the
+flower, followed by red.  There is a brief flash as the colors meet, and
+the white spot vanishes.  You see a demonic little creature with a gold
+feather in its teeth, that it drops at $n's feet.@n 
+~
+E
+weats_floats~
+@CAs the flower starts to wilt, there is a burst of white from the
+flower, followed by red.  There is a brief flash as the colors meet, and
+the white spot vanishes.  You see a demonic little creature with a white
+feather in its teeth, that it drops at your feet.@n 
+~
+E
+rweats_floats~
+@YAs the flower starts to wilt, there is a burst of white from the
+flower, followed by red.  There is a brief flash as the colors meet, and
+the white spot vanishes.  You see a demonic little creature with a white
+feather in its teeth, that it drops at $n's feet.@n 
+~
+!
+0 0 0
+1577 9 1509949540 3 0
+2942 17 1509949540 -2 0
+-1
+S
+
+#73003
+Near the Heart of the Forest Grove~
+The trees in this part of the ancient valley grove grow tall and
+straight, with few branches sprouting off their trunks for at least the
+first twenty feet.  Pieces of stone, shiny from a slick, wet moss
+covering their surfaces, lie here and there at the base of a few of the
+trees.  As light shines down through the leafy canopy, shadows play
+across the wrinkled bark of the trees, giving you the impression of faces.
+~
+*CF
+~
+-369623040 10 9 0
+D0
+~
+~
+0 -1 73002 10 10 5
+D2
+~
+~
+0 -1 73004 10 10 5
+D3
+~
+~
+0 -1 73023 10 10 5
+E
+trees~
+In this part of the grove, there is something quite unusual about the
+trees.  For one thing, they are all of the same variety, though exactly
+what you have no idea.  Secondly, every single tree looks to be of the
+same height.  Last but not least, the trees appear to have only two
+thick, massive branches supporting a host of green leaves.
+~
+E
+slick wet moss~
+So green it is almost black, thick moss covers almost every inch of the
+rocks and stones lying amidst the leaves on the forest floor.  Strangely,
+the moss cannot be found anywhere on the trees here, as though it dare
+not touch them.
+~
+E
+pieces stone~
+A few slabs of stone lie on the ground and look like perfect places to
+sit.  Mostly, the slabs are made of granite, but one or two of them have
+been cut from orange quarry stone and appear to have been dragged here.
+~
+E
+4 bases~
+At the base of each tree, two huge roots can be seen plunging down into
+the earth, undoubtedly in search of nutrients.  Usually, trees have more
+than just two roots holding them in place but these mighty trees
+apparently need only two.
+~
+E
+wrinkled bark faces~
+As you examine the tree trunks more carefully, you are amazed at how
+close some of them resemble faces.
+~
+A
+1 east~
+*~
+acode( find_room( 73015 ), 1 );
+~
+!
+0 0 0
+A
+look~
+wrinkled bark faces~
+i = random( 1, 10 );
+if( rflag( reset0, room ) )
+  if( i == 10 ) {
+  act_tochar( #desc, ch );
+  wait( random( 3, 15 ) );
+  act_room( #emerges, ch );
+  mload( 1474, room );
+  remove_rflag( reset0, room );
+}
+else {
+  act_tochar( #desc, ch );
+  remove_rflag( reset0, room );
+}
+else {
+  act_tochar( #desc, ch );
+  remove_rflag( reset0, room );
+}
+~
+E
+desc~
+As you examine the tree trunks more carefully, amazed at how close some
+of them resemble faces.
+~
+E
+emerges~
+Suddenly, the branches of the trees begin to move all about you and one
+of them uproots itself and approaches.
+~
+!
+0 0 0
+A
+track~
+unicorn~
+if( find_skill( ch, track ) > 4 )
+  if( !rflag( reset0, find_room( 73004 ) ) ) {
+  act_tochar( #trail, ch );
+  remove_rflag( reset0, room );
+}
+else
+  act_tochar( #losetrail, ch );
+else
+  act_tochar( #notenough, ch );
+~
+E
+trail~
+The unicorn's trail, which seems magically preserved, leads to the west.
+~
+E
+losetrail~
+Try as you might, you lose the unicorn's trail.
+~
+E
+notenough~
+You are not adroit enough in tracking to follow the trail.
+~
+!
+0 0 0
+1588 9 1509949540 3 0
+2168 17 1509949540 -2 0
+189 17 1509949450 -2 0
+2942 17 1509949540 -2 0
+-1
+S
+
+#73004
+At the Heart of the Small Forest Grove~
+This may not be the geographic center of the small grove, but something
+whispers into your mind that this its true heart.  There is a feeling of
+peace and serenity higher than anything else you have felt here.  Much of
+the forest floor is covered with dry and dead leaves and broken branches. 
+The parts of the forest floor which are not have been overrun by dark
+green wildgrass.  Tall, sheltering trees of every type stand like natural
+sentinels in every direction.  Unlike most of the trees, though, the ones
+to the west appear strangely different and perhaps a bit...nervous.
+~
+*CF
+~
+-369623040 10 9 0
+D0
+~
+~
+0 -1 73003 10 10 5
+D1
+~
+~
+0 -1 73005 10 10 5
+D2
+~
+~
+0 -1 73009 10 10 5
+D3
+~
+~
+0 -1 73024 10 10 5
+E
+trunks branches~
+Between the smaller gaps in between the encircling trees, masses of wiry
+green vines grow in abundance, clogging up the gaps.
+~
+E
+leaves~
+Heaps of dead and dried leaves already on their way to being reclaimed by
+nature lie strewn about the forest floor.  The only thing these leaves
+are good for are playing and jumping in.
+~
+E
+grass~
+In most places, the canopy of leaves formed by the surrounding trees make
+it impossible for ordinary grass, a plant that loves sunlight, to grow. 
+The grass here is no exception.  The only grass which grows along the
+dark forest floor is a strange, pallid yellow grass with forked blades. 
+Tiny mounds of purple and yellow stick up out of the grass in a few
+places.
+~
+E
+purple yellow mounds~
+On closer examination, the tiny 'mounds' turn out to be mushrooms. 
+Minuscule purple mushrooms with yellow dots along their caps protrude out
+of the wild grass no more than a couple of inches.  The mushrooms smell
+delectable.
+~
+E
+trees 1 west~
+The trees to the west shift to and fro, both with and against the fresh,
+fragrant breeze.  If you did not know better, you would attribute the
+motions of the trees to sentient nervousness.
+~
+A
+~
+grass~
+if( rflag( reset0, room ) )
+  act_tochar( #findmush, ch );
+else
+  act_tochar( #nripe, ch );
+~
+E
+nripe~
+You find nothing of interest in the grass besides some unripe mushrooms.
+~
+E
+findmush~
+Searching through the grass, you can see the caps of several ripe and
+ripening mushrooms.
+~
+!
+9 0 0
+A
+pick~
+mushroom~
+i = random( 1, 4 );
+if( is_player( ch ) )
+  if( rflag( reset0, room ) ) 
+  if( i != 4 ) {
+  act_tochar( #picks, ch );
+  act_notchar( #rpicks, ch );
+  obj_to_char( oload( 1522 ), ch );
+}
+else {
+  act_tochar( #picklast, ch );
+  act_notchar( #rpicklast, ch );
+  obj_to_char( oload( 1522 ), ch );
+  remove_rflag( reset0, room );
+}
+else
+  act_tochar( #noneripe, ch );
+else
+  act_tochar( #playeronly, ch );
+~
+E
+picks~
+You pick a fresh and colorful mushroom out of the tall grass.
+~
+E
+rpicks~
+$n picks what looks to be a mushroom out of the tall grass.
+~
+E
+picklast~
+Sadly, the mushroom which you pick out of the tall grass is the last
+fully mature mushroom in the area.
+~
+E
+rpicklast~
+$n picks a mushroom out of the tall grass. There does not 
+seem to be any more left worth grabbing.
+~
+E
+noneripe~
+There does not seem to be any mushrooms large enough to warrant picking.
+~
+E
+playeronly~
+Try as you might, the mushroom seems tightly rooted into the ground.
+~
+!
+0 0 0
+A
+jump play~
+leaves~
+if( rflag( reset1, room ) )
+  if( random( 1, 4 ) == 3 ) {
+  act_tochar( #jump, ch );
+  act_notchar( #rjump, ch );
+  wait( 2 );
+  act_tochar( #feelslab, ch );
+  remove_rflag( reset1, room );
+}
+else {
+  act_tochar( #jump, ch );
+  act_notchar( #rjump, ch );
+}
+else
+  act_tochar( #jump, ch );
+~
+E
+jump~
+Gleefully, you jump up and down in the pile of leaves - WHEE!
+~
+E
+rjump~
+Gleefully, $n jumps up and down in the pile of leaves - WHEE!
+~
+E
+feelslab~
+Just as you landing in the pile of leaves, you lose your balance and fall
+down hard on a slab of stone which lies beneath the pile.
+~
+!
+0 0 0
+A
+look~
+slab stones~
+if( !rflag( reset1, room ) )
+  act_tochar( #desc, ch );
+else
+  act_tochar( #donesee, ch );
+~
+E
+desc~
+The slab of stones beneath the pile of leaves is carved from granite and
+has been deliberately placed here as it is not naturally occurring. 
+Carved into its rocky surface are a series of indecipherable designs.
+~
+E
+donesee~
+You don't see that here.
+~
+!
+0 0 0
+A
+track~
+unicorn~
+if( find_skill( ch, track ) > 4 )
+  if( !rflag( reset0, find_room( 48006 ) ) ) {
+  act_tochar( #trail, ch );
+  remove_rflag( reset0, room );
+}
+else
+  act_tochar( #losetrail, ch );
+else
+  act_tochar( #notenough, ch );
+~
+E
+trail~
+The unicorn's trail, which seems magically preserved, leads to the north.
+~
+E
+losetrail~
+Try as you might, you lose the unicorn's trail.
+~
+E
+notenough~
+You are not adroit enough in tracking to follow the trail.
+~
+!
+0 0 0
+A
+look~
+hieroglyphics glyphics~
+if( !rflag( reset1, room ) )
+  if( has_obj( 1549, ch ) ){
+  obj = has_obj( 1549, ch );
+  act_tochar( #ctrans, ch, obj );
+  act_notchar( #rctrans, ch, obj );
+  wait( 1 );
+  act_tochar( #trans1, ch, obj );
+}
+else
+  act_tochar( #desc, ch  );
+else
+  act_tochar( #dont, ch );
+~
+E
+ctrans~
+For a moment, $p becomes warm and
+begins to glow as you examine the hieroglyphics.
+~
+E
+rctrans~
+Momentarily, $p in $n's possession glows as $e 
+examines a section of  hieroglyphics. 
+~
+E
+desc~
+The hieroglyphics are much too complex to understand.
+~
+E
+trans1~
+With the aid of $p, you are finally able to fully 
+understand the hieroglyphics here. They read: 
+
+(Numerous lines of hieroglyphics have been rubbed away along the top of
+the inscription.) 
+
+.....  .n..  ...s ...ley was gained thro...  but a single ....  and it
+took ...  ...  ...  .....  ..  . ......  ..  ..............................................................................................................................
+................................................................................................................................ 
+................................................................................................................................ 
+...ss...  wor.  ..d t...  it took to build ...  m....ent, but the People
+....ed a way to put down for all time the ....  ...  .......  they had
+pledged to the .......  so .....ful were they.  When finished, ......................................................................................................... 
+marked distaste for them.  Ins.....  ...  ..v...te fl....  was placed ... 
+the marble ........  May the l....  .......  be as a symbol ..  her pow..................................................................... 
+.....................................................
+~
+E
+dont~
+You don't see that here.
+~
+!
+0 0 0
+A
+translate~
+slab hieroglyphics glyphics~
+if( rflag( reset1, room ) ) {
+  act_tochar( #dont, ch );
+  end;
+}
+i = get_integer( ch, "/Cayln/TabletEnduraba" );
+obj = has_obj( 1548, ch );
+if( obj ) {
+  j = get_integer( obj, "/Cayln/TabletEnduraba" );
+  if( i == j ) {
+    act_notchar( #rtmess, ch, obj );
+    act_tochar( #trans1, ch, obj );
+  }
+  else {
+    act_tochar( #study, ch, obj );
+    act_notchar( #rstudy, ch, obj );
+  }
+  end;
+}
+obj = has_obj( 1549, ch );
+if( obj ) {
+  act_tochar( #ctrans, ch, obj, mob );
+  act_notchar( #rctran, ch, obj, mob );
+  wait( 2 );
+  act_tochar( #trans1, ch, obj, mob );
+  end;
+}
+act_tochar( #notrans, ch );
+act_notchar( #rnotrans, ch );
+~
+E
+dont~
+<Type 'help' for help>
+~
+E
+trans1~
+With the aid of $p, you are finally able to fully 
+understand the hieroglyphics here. They read: 
+
+(Numerous lines of hieroglyphics have been rubbed away along the top of the 
+inscription.)
+
+.....  .n..  ...s ...ley was gained thro...  but a single ....  and it
+took ...  ...  ...  .....  ..  . ......  ..
+..............................................................
+..............................................................
+..............................................................
+..............................................................
+..............................................................
+..............................................................
+...ss...  wor.  ..d t...  it took to build ...  m....ent, but the People
+....ed a way to put down for all time the ....  ...  .......  they had
+pledged to the .......  so .....ful were they.  When finished,
+.................................................................
+........................................
+marked distaste for them.  Ins.....  ...  ..v...te fl....  was placed ... 
+the marble ........  May the l....  .......  be as a symbol ..  her
+pow................................................................
+.....................................................
+~
+E
+ctrans~
+For a moment, $p becomes warm and
+begins to glow as you examine the hieroglyphics.
+~
+E
+rctran~
+Momentarily, $p in $n's possession glows as $e 
+examines a section of hieroglyphics. 
+~
+E
+rtmess~
+$n's brow furrows in thought as $e tries to translate a section 
+of hieroglyphics using $p as a guide.
+~
+E
+notrans~
+The hieroglyphics are much too complex to understand.
+~
+E
+rnotrans~
+$n's frowns with frustration as $e finishes examining a portion
+of the hieroglyphics.
+~
+E
+study~
+You will need to study $p some more.
+~
+E
+rstudy~
+$n will need to study $p some more.
+~
+!
+0 0 0
+1577 9 1509949540 3 0
+415 17 1509949465 -2 0
+2942 17 1509949540 -2 0
+-1
+S
+
+#73005
+Near the Heart of the Forest Grove~
+Though the lush and green grove is calm and serene, the clearing to the
+west seems even more so.  Here, the trees grow at a slight angle in an
+effort from their branches to break through the existing canopy formed
+from the larger and taller trees around them.  Tiny saplings and sprigs
+of grass grow along the forest floor in the spots where sunlight is able
+to cascade down through the woven blanket of greenery.  To the east looms
+a tall but strange-looking tree and to the south, at the edge of the
+grove, stands a massive but ancient rowan tree.
+~
+*CF
+~
+-369623040 10 9 0
+D1
+~
+~
+0 -1 73006 10 10 5
+D2
+~
+~
+0 -1 73008 10 10 5
+D3
+~
+~
+0 -1 73004 10 10 5
+E
+sprigs grass~
+Where the sunlight cascades down through the open spots in the canopy,
+patches of thick green grass thrive.  The grass is also tall enough to
+obscure anything in its depths.
+~
+E
+tiny saplings~
+Supple little saplings of all varieties grow up out of the forest floor,
+desperately striving to reach the sunlight.
+~
+E
+canopy~
+Like a quilted blanket or a tightly woven wicker basket, the branches of
+the tallest trees intertwine to create a sheet of leafy darkness up above. 
+A few gaps in the living tapestry allow for light to fall down onto the
+forest floor.
+~
+E
+rowan~
+Far to the south, a rowan tree with ebony bark and fluttering golden
+leaves stands out like a torch flickering in the darkness.
+~
+E
+strange 1 east~
+A tree, both strange in shape and color looms to the east.  It is unclear
+as to whether or not it is even a tree.
+~
+A
+1 north~
+*~
+acode( find_room( 73015 ), 1 );
+~
+!
+0 0 0
+1588 9 1509949540 3 0
+2942 17 1509949540 -2 0
+-1
+S
+
+#73006
+Before an Incredibly Strange Tree~
+You have seen a lot of unusual and odd trees in your lifetime, but this
+one has to be the strangest.  While it has branches, leaves, and a trunk,
+that is where the similarities between it and a normal tree end.  This
+particular tree has bright orange bark, blue leaves shaped like
+five-pointed stars and branches which end in human-like hands.  Several
+pieces of cone-shaped fruit also hang from the tree, suspended from a few
+of the fingered hands.  At the southeast corner of the grove rises a
+small stand of ashwood trees and to the west the old but peaceful grove
+continues.  The top of a massive rowan tree can barely be seen through
+the canopy, to the southwest.
+~
+*CF
+~
+-369623040 10 9 0
+D2
+~
+~
+0 -1 73007 10 10 5
+D3
+~
+~
+0 -1 73005 10 10 5
+E
+strange tree bright orange bark~
+The trunk and branches of the tree are covered with a brilliant orange
+bark.  The bark itself, rather than being an outer layer of dead plant
+material, is composed of tiny, interlocking, triangular scales.
+~
+E
+leaves star five-pointed blue~
+About as big around as your palm, star-shaped leaves cling to the orange
+tree branches.  Each leaf has five points, like a pentagram.  Wide veins
+of red run from each tip of the leaf to converge at the stem, which folds
+under some of the triangular orange bark scales.  The leaves cover nearly
+every each of the strange tree's branches, except their ends, which end
+in human-like fingers.
+~
+E
+branches human-like hands~
+As the trunk of the strange tree diverges into branches, the branches
+rise upwards.  At the end of each branch are finger-like twigs, which are
+black and not orange in color.  In the "grasp" of some of these "hands,"
+there are unusual, cone-shaped fruits.
+~
+E
+cone-shaped fruit~
+Pieces of cone-shaped fruit hang from the hand-like ends of some of the
+tree's branches.  Never before have you seen such fruit!  Each has a
+circular base which is deep red in color but as the fruit tapers and
+extends upwards, the color fades, until it is a creamy white color.  A
+faint, minty odor hands around the fruit.
+~
+E
+rowan~
+The golden leaves of an ancient, hardy rowan tree can be seen to the
+distant southwest.
+~
+A
+1 east 1 north~
+*~
+acode( find_room( 73015 ), 1 );
+~
+!
+0 0 0
+A
+pick~
+fruit cone-shaped~
+act_tochar( #trying, ch );
+act_notchar( #rtrying, ch );
+wait( 2 );
+act_tochar( #swats, ch );
+act_notchar( #rswats, ch );
+damage( mob, ch, 10d5, physical, "a strange tree's swatting branch" );
+wait( 1 );
+act_room( #myfruit, ch );
+~
+E
+trying~
+Standing on the tips of your feet, you strain and try to pick one of the
+cone-shaped pieces of fruit.
+~
+E
+rtrying~
+$n stands on $s tip toes and tries to pick one of the colorful
+pieces of cone-shaped fruit.
+~
+E
+swats~
+Suddenly, one of the arm-like branches takes a swat at you!
+~
+E
+rswats~
+Suddenly, one of the arm-like branches takes a swat at $n.
+~
+E
+myfruit~
+The strange, living tree yells: 
+"My fruit! Get your own and leave me alone!"
+~
+!
+0 0 0
+A
+~
+~
+ch = rand_player( room );
+if( ch ) {
+  if( is_resting( ch ) )
+    if( random( 1, 5 ) == 1 )
+    if( !has_obj( 2033, ch ) ) {
+    act_tochar( #hands, ch );
+    act_notchar( #rhands, ch );
+    obj_to_char( oload( 2033 ), ch );
+    }
+  }
+~
+E
+hands~
+The strange tree smiles and hands you a piece of fruit.
+~
+E
+rhands~
+The strange tree hands $n a piece of fruit.
+~
+!
+2 800 0
+A
+~
+~
+send_to_room( #offer, room );
+~
+E
+offer~
+The branches of the strange tree sway gently, as if inviting you to rest
+beneath its boughs.
+~
+!
+2 200 0
+1587 9 1509949540 3 0
+755 17 1509949450 -2 0
+2942 17 1509949540 -2 0
+-1
+S
+
+#73007
+Southeast Corner - A Stand of Ashwood Trees~
+At the southeastern fringe of the secluded grove, just inside the stout
+ring of encircling oak trees, stands a small copse of ashwood trees.  The
+trees vary in height, from a sapling which barely reaches up to your
+knees to a gigantic brute of an ashwood who stands a good forty feet tall. 
+At the foot of one of the ashwood trees, there are fresh scratches in the
+dirt.  To the north rise the branches of a strange and gnarled tree while
+to the west the golden yellow leaves of an ancient rowan tree weave in a
+near-hypnotic pattern.
+~
+*CF
+~
+-369623040 10 9 0
+D0
+~
+~
+0 -1 73006 10 10 5
+D3
+~
+~
+0 -1 73008 10 10 5
+E
+ashwood copse~
+The small copse at the southeastern edge of the grove contains only
+ashwood trees of varying sizes and heights.  For the most part, the
+younger and shorter trees grow in a circle around the gigantic one.
+~
+E
+sapling~
+The two foot tall, ashwood sapling looks pliable enough to break in two. 
+Its soft bark is grey in color and has a tiny knot hole already set into
+its exterior.
+~
+E
+gigantic ashwood brute~
+The largest tree in the copse, an ancient ashwood tree stands nearly at
+the center of the gathering of trees, ringed protectively by the other,
+younger ashwoods.  This incredible tree sports massive, compound leaves
+and clusters of tiny green flowers.
+~
+E
+foot scratches dirt~
+The fresh gouges in the dirt seem indicative of some type of animal's
+tracks.
+~
+A
+1 south east~
+*~
+acode( find_room( 73015 ), 1 );
+~
+!
+0 0 0
+A
+track~
+unicorn~
+if( find_skill( ch, track ) > 4 )
+if( !rflag( reset0, room ) ) {
+  act_tochar( #trail, ch );
+  remove_rflag( reset0, room );
+  }
+else
+  act_tochar( #losetrail, ch );
+else
+  act_tochar( #notenough, ch );
+~
+E
+trail~
+The unicorn's trail, which seems magically preserved, leads to the west.
+~
+E
+losetrail~
+Try as you might, you lose the unicorn's trail.
+~
+E
+notenough~
+You are not adroit enough in tracking to follow the trail.
+~
+!
+0 0 0
+A
+look~
+trail tracks~
+if( find_skill( ch, track ) > 4 ) {
+  act_tochar( #trail, ch );
+  remove_rflag( reset0, room );
+}
+else
+  act_tochar( #normaldesc, ch );
+~
+E
+trail~
+The tracks, on closer examination, belong to that of a unicorn, a
+heretofore fabled creature.  The trail, though, leads to the west but
+soon disappears.
+~
+E
+normaldesc~
+You have no idea what the hoofed tracks belong to and you cannot tell for
+certain where they go.
+~
+!
+0 0 0
+1577 9 1509949540 3 0
+1588 9 1509949540 3 0
+2942 17 1509949540 -2 0
+-1
+S
+
+#73008
+An Ancient Rowan Tree~
+While there are oak trees to the south and lush greenery all around,
+there is only one tree here in the immediate vicinity.  But, oh, what a
+tree it is.  The tree has near-ebony roots which are partly exposed, a
+trunk thicker than a pachyderm covered with dark brown bark, and immense
+branches that look like they could buckle under their own weight at any
+moment.  Juxtaposed against the burly and massive features of the tree, a
+spray of delicate golden yellow leaves cover nearly every inch of its
+branches.  If this tree is not the oldest in the grove, it is very close
+to being so.
+~
+~
+-369623040 10 9 0
+D0
+~
+~
+0 -1 73005 10 10 5
+D1
+~
+~
+0 -1 73007 10 10 5
+D3
+~
+~
+0 -1 73009 10 10 5
+E
+rowan tree~
+Unlike most rowan trees who have clusters of orange-red berries and
+sprays of gentle white flowers up and down their branches, this deciduous
+tree is devoid of both.  Instead, the ancient tree has leaves of a golden
+yellow color that even a blind man would find beautiful.
+~
+E
+branches~
+With a tree as ancient as this one must be, it suffers from an affliction
+that it cannot get away from: weight death.  Judging from the looks of
+the sagging branches, it is only a short amount of time before the tree
+folds under its own weight.  One well placed kick or shake would probably
+send the poor tree crashing to its grave.
+~
+E
+thick trunk~
+The bark of this deciduous tree is of a dark brown color and has several
+places where branches were removed from its lower trunk in the distant
+past.  Large knot holes are evidence of this.  Around a couple of the
+knot holes, a wispy moss clings to the bark of the tree.
+~
+E
+wispy moss~
+In a couple of places, the wispy golden moss covers the trunk of the
+tree, resembling facial hair and eye brows.
+~
+E
+knot holes~
+Though several knot holes mar the smooth, dark brown deciduous trees
+bark, the two which look the most interesting stand side by side, almost
+like eyes.  And as you look closer, a trail of golden moss runs down the
+front of the tree as if to form a beard and eyebrows.  In fact, the trunk
+of the tree looks so much like a face that you are tempted to talk to it.
+~
+E
+near-ebony roots~
+In several places, the near ebony roots of the grand rowan tree have been
+almost gnawed in to.  Where this has occurred, a thick, viscous sap as
+red as blood collects in small pools beneath the roots.
+~
+E
+small pool blood-colored sap~
+A rich blood-colored sap gathers beneath some of the exposed roots.  It
+has an earthy yet sweet smell.
+~
+A
+1 south~
+*~
+acode(find_room(48130),1);
+acode( find_room( 73015 ), 1 );
+~
+!
+0 0 0
+A
+track~
+unicorn~
+if( find_skill( ch, track ) > 4 )
+  if( !rflag( reset0, find_room( 73007 ) ) ) {
+  act_tochar( #trail, ch );
+  remove_rflag( reset0, room );
+}
+else
+  act_tochar( #losetrail, ch );
+else
+  act_tochar( #notenough, ch );
+~
+E
+trail~
+The unicorn's trail, which seems magically preserved, leads to the west.
+~
+E
+losetrail~
+Try as you might, you lose the unicorn's trail.
+~
+E
+notenough~
+You are not adroit enough in tracking to follow the trail.
+~
+!
+0 0 0
+A
+look~
+leaves butterfly~
+if( rflag( reset1, room ) )
+  if( random( 1, 10 ) == 1 ) {
+  act_tochar( #desc, ch );
+  wait( random( 4, 8 ) );
+  act_room( #leaves, ch );
+  mload( 1475, room );
+  remove_rflag( reset1, room );
+}
+else 
+  act_tochar( #desc, ch );
+else 
+  act_tochar( #desc, ch );
+~
+E
+desc~
+Silvery veins cover the large but delicate golden yellow leaves which
+sprout from the tree's branches.  And as the wind gentle moves through
+the branches, many of the leaves flutter to and fro, their leafy folds
+like the wings of butterflies.
+~
+E
+leaves~
+A host of the silvery-veined leaves fall off the tree and descend on you. 
+Too late, you realize, that the leaves are really large and hungry
+butterflies.
+~
+!
+0 0 0
+A
+shake kick move~
+tree rowan~
+act_tochar( #shake, ch );
+act_notchar( #rshake, ch );
+wait( random( 2, 5 ) );
+if( !mob_in_room( 1475, room ) )
+  if( rflag( reset1, room ) ) {
+  act_room( #flutter, ch );
+  mload( 1475, room );
+  remove_rflag( reset1, room );
+  }
+else
+  act_room( #booming, ch );
+else
+  act_room( #booming, ch );
+~
+E
+shake~
+You give the ancient rowan tree a good shake, sending its branches and
+golden leaves swaying.
+~
+E
+rshake~
+$n gives the ancient rowan tree a good shake, sending its branches and
+golden leaves swaying.
+~
+E
+flutter~
+@YA host of yellow butterflies swarm down out of the tree!@n
+~
+E
+booming~
+@RIn a boming voice, the rowan tree shouts:
+"Leave me alone! I won't speak to anyone until She is restored!"
+~
+!
+0 0 0
+2942 17 1509949540 -2 0
+-1
+S
+
+#73009
+Forest Grove - Near a Rowan Tree~
+Massive and tall oak trees surround this small grove, providing a natural
+fence for the vibrant forest.  Flowering bushes and plants grow around
+and near most of the fruit trees here, adding their own little splashes
+of color to an already colorful and tranquil scene.  Situated as far away
+from the trees as possible, there is a circle of stones set deep into the
+ground.  Most of the stones are rough pieces of granite, but a couple
+appear to be of pale green limestone.  Rustling in the breeze, the golden
+yellow leaves of an ancient rowan tree, whose branches are thicker than
+your waist, beckon to you.
+~
+[Sinlaeshel] 'look tree'  Last line 'yellowish-red fruit hand from their branches'  think it should be hang
+~
+-369623040 10 9 0
+D0
+~
+~
+0 -1 73004 10 10 5
+D1
+~
+~
+0 -1 73008 10 10 5
+D3
+~
+~
+0 -1 73010 10 10 5
+E
+circle stones~
+Situated a safe distance from anything flammable, someone has built a
+modest fire pit.  The pit is built deep and has been encircled with small
+chunks and wedges of stone.  Whoever built this fire pit respected the
+forest a great deal to take so much time and caution in building it away
+from the trees and foliage.
+~
+E
+granite~
+Most of the granite rocks in the circle of stones are grey granite, a
+fairly common rock, especially in the canyon of the Southern Narak Desert. 
+Since you have not seen any other sources of granite near here, you
+presume that the pieces here came from the desert.
+~
+E
+pale green limestone~
+Mixed in with the wedges of grey granite, there are a few fragments of
+limestone.  Each piece of the pale green stone is slightly blackened on
+both sides and tiny, hairline fractures riddle through the pieces as
+though some great force impacted them.
+~
+E
+fruit trees~
+While there is an abundance of edible things within the small grove, the
+trees here are the only ones which bear fruit.  And in fact, there are
+two types of fruit trees here.  The first set of fruit trees look to be
+pear trees, for they have glossy green leaves, white flowers, and pieces
+of fruit which are spherical at the bottom and taper at the end towards
+the stem.  The other trees can be nothing else but orange trees, for
+globes of yellowish-red fruit hang from their many branches.
+~
+E
+bushes flowering plants~
+Among all the growing bushes and flowers, there is a large patch of red
+clover flourishing beneath the fruit trees.  The clover covers much of
+the ground where little grass will grow and it has leaflets in bunches of
+three.  Globular heads of fragrant, rose-purple flowers peek up out of
+the clover beds.
+~
+A
+1 south~
+*~
+acode( find_room( 73015 ), 1 );
+~
+!
+0 0 0
+A
+pick~
+apples~
+i = random( 1, 4 );
+if( is_player( ch ) )
+  if( rflag( reset0, room ) ) 
+  if( i < 3 ) {
+  act_tochar( #picks, ch );
+  act_notchar( #rpicks, ch );
+  obj_to_char( oload( 49 ), ch );
+}
+else {
+  act_tochar( #picklast, ch );
+  act_notchar( #rpicklast, ch );
+  obj_to_char( oload( 49 ), ch );
+  remove_rflag( reset0, room );
+}
+else
+  act_tochar( #noneripe, ch );
+else
+  act_tochar( #playeronly, ch );
+~
+E
+picks~
+You pick an apple from one of the apple trees.
+~
+E
+rpicks~
+$n picks an apple from one of the apple trees.
+~
+E
+picklast~
+You pick an apple from one of the apple trees.  Unfortunately, it appears
+that the apple is the last ripe apple on any of the trees.
+~
+E
+rpicklast~
+$n picks an apple from one of the apple trees. Unfortunately,
+it appears that the apple is the last ripe apple on any of the trees.
+~
+E
+noneripe~
+There are no ripe apples on the apple trees to pick.
+~
+E
+playeronly~
+You tug and tug and tug, but the tree just does not seem to want to give
+up its apples to you.
+~
+!
+0 0 0
+A
+~
+~
+~
+!
+0 0 0
+A
+pick~
+orange~
+i = random( 1, 4 );
+if( is_player( ch ) )
+  if( rflag( reset1, room ) ) 
+  if( i < 3  ) {
+  act_tochar( #picks, ch );
+  act_notchar( #rpicks, ch );
+  obj_to_char( oload( 50 ), ch );
+}
+else {
+  act_tochar( #picklast, ch );
+  act_notchar( #rpicklast, ch );
+  obj_to_char( oload( 50 ), ch );
+  remove_rflag( reset1, room );
+}
+else
+  act_tochar( #noneripe, ch );
+else
+  act_tochar( #playeronly, ch );
+~
+E
+picks~
+You pick an orange from one of the fruit trees growing in the area.
+~
+E
+rpicks~
+$n picks an orange from one of the fruit trees growing in the area.
+~
+E
+picklast~
+You seem to have picked the last ripe orange from any of the trees here.
+~
+E
+rpicklast~
+$n seems to have picked the last ripe orange from the orange
+trees here.
+~
+E
+noneripe~
+There are no more ripe oranges to be had in this small orchard of fruit
+trees.
+~
+E
+playeronly~
+You cannot seem to get a good grip on the golden orbs of fruit.
+~
+!
+0 0 0
+A
+pick~
+clover red~
+if( is_player( ch ) )
+  if( rflag( reset2, room ) )
+  if( random( 1, 100 ) == 11 )
+  if( !has_obj( 2047, ch ) ) {
+  remove_rflag( reset2, room );
+  act_tochar( #search, ch );
+  act_notchar( #rsearch, ch );
+  wait( 4 );
+  act_tochar( #findred, ch );
+  act_notchar( #rfindred, ch );
+  obj_to_char( oload( 2047 ), ch );
+  }
+else {
+  act_tochar( #search, ch );
+  act_notchar( #rsearch, ch );
+  remove_rflag( reset2, room );
+  wait( 4 );
+  act_room( #fades, ch );
+  }
+else
+  act_tochar( #notspecial, ch );
+else
+  act_tochar( #notspecial, ch );
+else
+  act_tochar( #findbut, ch );
+~
+E
+search~
+With a careful eye, you begin to search through the bed of red clover.
+~
+E
+rsearch~
+With a careful eye, $n begins to search through the bed of red clover.
+~
+E
+fades~
+Deep in the bed of red clover, you find a special one with five leaves. 
+As you tough it though, it fades away and disappears completely.
+~
+E
+notspecial~
+You find many clovers with red leaves, but none of them look special.
+~
+E
+findbut~
+You find a single red clover with five leaves, but decide to leave it
+where it is.
+~
+E
+findred~
+You can only smile gleefully as you find a single red-leaf clover with
+five leaves in the bed of ordinary red clover.
+~
+E
+rfindred~
+$n begins jabbering and carrying on. Apparently $e found something
+in the bed of clover.
+~
+!
+9 0 0
+A
+~
+firepit campsite stones circle~
+if( !rflag( reset0, find_room( 48005 ) ) ) {
+  act_tochar( #nothing, ch );
+  end;
+  }
+if( !is_player( ch ) )
+  end;
+remove_rflag( reset0, find_room( 48005 ) );
+act_tochar( #search, ch );
+act_notchar( #rsearch, ch );
+wait( 2 );
+if( random( 1, 10 ) == 1 ) {
+  act_tochar( #findstone, ch );
+  act_notchar( #rfindstone, ch );
+  obj_to_char( oload( 2048 ), ch );
+  end;
+  }
+act_tochar( #nothing, ch );
+~
+E
+search~
+You begin to search through the firepit, looking for something useful.
+~
+E
+rsearch~
+$n begins rummaging through the firepit.
+~
+E
+nothing~
+You find nothing of interest in the firepit.
+~
+E
+findstone~
+While searching through the stone firepit, you find a section of stone
+with strange designs on it.
+~
+E
+rfindstone~
+While searching through the stone firepit, $n seems
+to have found something.
+~
+!
+9 0 0
+A
+track~
+unicorn~
+if( find_skill( ch, track ) > 4 )
+  if( !rflag( reset0, find_room( 73008 ) ) ) {
+  act_tochar( #trail, ch );
+  remove_rflag( reset0, find_room( 48006 ) );
+}
+else
+  act_tochar( #losetrail, ch );
+else
+  act_tochar( #notenough, ch );
+~
+E
+trail~
+The unicorn's trail, which seems magically preserved, leads to the north.
+~
+E
+losetrail~
+Try as you might, you lose the unicorn's trail.
+~
+E
+notenough~
+You are not adroit enough in tracking to follow the trail.
+~
+!
+0 0 0
+1588 9 1509949540 3 0
+2942 17 1509949540 -2 0
+-1
+S
+
+#73010
+Forest Grove - Near a Weeping Willow~
+All around you, there are trees of every shape and size imaginable.  From
+apple trees to zrelbark trees, this small, secluded grove plays host to a
+chorus of life.  Dark green vines hang from the boughs of a giant weeping
+willow which lies to the west and to the northwest stands a circle of
+trees more ancient than any in this forest if their size is any clue. 
+Though the ground is covered with dead, fallen leaves and the occasional
+broken branch, a carpet of lush vegetation rolls out through the grove. 
+In the shadow of one of the larger trees, a single orchid plant pokes
+through the vegetation.  In the distance to the far east, you can barely
+see the golden-yellow leaves of a magnificently large rowan tree.
+~
+~
+-369623040 10 9 0
+D0
+~
+~
+0 -1 73024 10 10 5
+D1
+~
+~
+0 -1 73009 10 10 5
+D3
+~
+~
+0 -1 73011 10 10 5
+E
+dead fallen leaves piles branches~
+Piles of fallen leaves and branches lie scattered about, decomposing and
+being reclaimed by nature.
+~
+E
+orchid exotic vegetation~
+A single orchid plant grows in the shadow of one of the larger trees here. 
+What is special about this small plant is that its irregularly shaped
+flowers are black as night.
+~
+E
+dark vines~
+The thistle vines hang from the branches of the tree in an odd but
+symbiotic relationship with the mighty wooded plants.  Thorns more than
+an inch long protrude from the sides of the thick, coiling vines.
+~
+A
+1 south~
+*~
+acode( find_room( 73015 ), 1 );
+~
+!
+0 0 0
+A
+~
+~
+acode( find_room( 73012 ), 2 );
+~
+!
+1 0 11
+A
+pick~
+black orchid bloom~
+if( is_player( ch ) )
+  if( rflag( reset0, room ) )
+  if( random( 1, 20 ) == 13 ) {
+  act_tochar( #pick, ch );
+  act_notchar( #rpick, ch );
+  obj_to_char( oload( 2046 ), ch );
+  remove_rflag( reset0, room );
+  }
+else {
+  act_tochar( #notinbloom, ch );
+  remove_rflag( reset0, room );
+  }
+else
+  act_tochar( #nomorebloom, ch );
+else {
+  act_tochar( #find20, ch );
+  wait( 1 );
+  act_tochar( #disappear, ch );
+  }
+~
+E
+pick~
+Gingerly, with care not to touch its petals, you pick a single black
+orchid bloom off of the orchid plant.
+~
+E
+rpick~
+With a more delicate touch than you ever thought possible, $n
+picks a black orchid bloom from a parcially obscured orchid plant growing
+in the grove.
+~
+E
+nomorebloom~
+There are no more blooms on the orchid plant which are ready to be picked.
+~
+E
+notinbloom~
+The orchid does not appear to be in bloom just this moment.
+~
+E
+find20~
+As you pick the black orchid bloom, it suddenly shifts and twists in your hands, and
+changes into several platinum coins.
+
+You get twenty platinum coins.
+~
+E
+disappear~
+The platinum coins suddenly disappear and you can hear the mischievous
+laughter of a forest sprite in the distance.
+~
+!
+0 0 0
+2942 17 1509949540 -2 0
+-1
+S
+
+#73011
+Before a Grand Weeping Willow~
+Massive oak trees rise up to the south, providing a natural border for
+the ancient forest grove.  While there are pine tress to the west, and a
+lot of exotic vegetation growing en masse to the east, only a single tree
+inhabits the clearing here.  And yet, the tree, a colossal weeping willow
+whose height rivals any tree you have seen before, seems to be both a
+tree and not a tree at the same time.  Its branches droop in graceful
+arcs and its deep brown bark looks smooth and soft.  Besides its enormous
+size, the only unusual feature about the ancient weeping willow are two
+dark, pitted holes in its trunk.
+~
+~
+-369623040 10 9 0
+D1
+~
+~
+0 -1 73010 10 10 5
+D3
+~
+~
+0 -1 73012 10 10 5
+E
+trunk bark deep brown~
+Though deep brown in color and obviously made of bark, the outer covering
+of the weeping willow's bark resembles nothing more or less than soft
+skin.
+~
+E
+branches~
+The branches of the grand weeping willow are slender and droop in
+graceful arcs.  At times, the branches bob up and down, as though the
+tree were actually weeping.
+~
+E
+eyes pitted holes~
+As you look at the pitted holes set side by side in the middle of the
+weeping willow's trunk, you are overcome by how much they resemble closed
+eyes.
+~
+E
+1 west pine trees~
+A stand of arrow-straight pine trees loom gentle to the west, their
+number filled with both ancient and younger trees.  Some of the trees
+look to have been damaged by lightning at one time.
+~
+E
+1 east vegetation exotic~
+The variety of flora preserved and packed into this small grove are
+astounding.  Among the piles of dead leaves and lush green carpet of
+grass to the east, a single orchid plant grows in the shadow of one of
+the larger trees.
+~
+E
+oak~
+As with the other fringes of the ancient grove, tall oak trees grow
+together along the edges to the south, as though to prevent anything
+foreign from getting in...or out.
+~
+A
+1 north 1 south~
+*~
+acode( find_room( 73015 ), 1 );
+~
+!
+0 0 0
+A
+~
+~
+send_to_room( #weeping, room, sight );
+wait( 1 );
+if( !rflag( reset2, room ) ) {
+  i = random( 1, 6 );
+  if( i == 1 )
+    send_to_room( #message1, room, sight );
+  if( i == 2 )
+    send_to_room( #message2, room, sight );
+  if( i == 3 )
+    send_to_room( #message3, room, sight );
+  if( i == 4 )
+    send_to_room( #message4, room, sight );
+  if( i > 4 )
+    send_to_room( #message5, room, sight );
+  end;
+}
+send_to_room( #forming, room, sight );
+wait( random( 2, 3 ) );
+send_to_room( #falling, room, sight );
+wait( random( 1, 3 ) );
+loop( all_in_room ) {
+  if( !cflag( 45, rch ) ) {
+    act_tochar( #shatters2, ch );
+    end;
+  }
+  else
+    i = random( 1, 4 );
+  if( i == 1 ) {
+    act_tochar( #catchtear,  rch );
+    remove_rflag( reset2, room );
+    obj_to_char( oload( 1791 ), rch );
+  }
+  else
+    act_tochar( #shatters, rch );
+}
+~
+E
+weeping~
+The branches of the ancient weeping willow shudder as the tree literally
+begins to weep.
+~
+E
+forming~
+@CActual tears begin to form at the corners of the two holes which
+before only resembled eyes.  Now, the eyes are wide open and as you stare
+into their sea green depths, there is no question as to whether or not
+this tree is sentient.  It clearly is.@n 
+~
+E
+falling~
+@CAs the tears begin to roll out from the corner of the willow's eyes,
+you notice, that instead of being made out of water or even sap, the
+tears are actually tear-shaped jewels!  How unusual indeed.@n
+~
+E
+message1~
+For a moment, as the limbs of the ancient willow shake to and fro, an
+image of a young woman takes the place of the tree.  As you stare at the
+vision, you cannot help but wonder what it means.  As quickly as the
+image appears, it fades, and once again only a weeping willow tree stands
+before you.
+~
+E
+message2~
+The wails become louder and louder and the branches of the willow tree
+shake violently with grief.
+~
+E
+message3~
+All of a sudden, the willow tree ceases all motion but the two holes in
+its trunk open wide, revealing sea green eyes of vast wisdom and
+intelligence.
+~
+E
+message4~
+For several moments, the weeping willow continues to cry but at last, it
+seems, it has tired itself out.
+~
+E
+message5~
+All of a sudden, the weeping willow ceases to cry, as though the very
+sight of you has given it added hope.
+~
+E
+shatters2~
+@RUnchecked in their course, the sapphire tears shed by the willow tree
+fall to the ground and shatter into a million tiny pieces.  The sun
+slowly disappears in the west.@n
+~
+E
+catchtear~
+@GCarefully, you place your hand beneath one of the willow's eyes and
+catch one of its delicate blue tears.@n 
+~
+E
+shatters~
+@GTry as you might, you are unable to catch the delicate blue teardrop. 
+It falls to the ground and shatters into a million pieces.@n 
+~
+!
+2 300 10
+A
+catch ~
+teardrop~
+if( cflag( 45, ch ) ) {
+  act_tochar( #alreadycatching, ch, obj, mob, sight ) ;
+  end;
+}
+if( rflag( status0, room ) ) {
+  act_tochar( #catching, ch, obj, mob, sight );
+  set_cflag( 45, ch );
+  remove_rflag( status0, room );
+  end; 
+}
+if( rflag( status1, room ) ) {
+  act_tochar( #catching, ch, obj, mob, sight );
+  set_cflag( 45, ch );
+  remove_rflag( status1, room );
+  remove_rflag( reset0, room );
+  end; 
+}
+if( rflag( status2, room ) ) {
+  act_tochar( #catching, ch, obj, mob, sight );
+  set_cflag( 45, ch );
+  remove_rflag( reset0, room );
+  remove_rflag( status2, room );
+  end;
+}
+act_tochar( #toomany, ch, obj, mob, sight );
+~
+E
+catching~
+Kneeling down before the tree, you pick out a safe spot just beneath
+one of its eyes in a hope to catch a falling tear drop.
+~
+E
+toomany~
+@b@G
+There are already too many people standing around the base of the tree,
+trying to catch one of its delicate tears.  You might have better luck
+another day.
+~
+E
+alreadycatching~
+@b@GYou are already trying to catch a tear.@n
+~
+!
+0 0 0
+1588 9 1509949540 3 0
+2942 17 1509949540 -2 0
+-1
+S
+
+#73012
+Southwest Corner - A Stand of Pine Trees~
+Broad, massive oak trees rise up along the edges of the grove, their
+trunks so close together that you can barely see between them.  Just
+before the edge, though, stands a copse of pine trees, whose soft needles
+whisper in the breeze.  A few of the larger, older trees show obvious
+signs of lightning and storm damage.  A pair of pillow-like rocks lie at
+the base of a couple of pine trees, their granite surfaces covered with
+soft and inviting moss.  The branches of an incredibly grand willow tree
+droop sorrowfully to the east.
+~
+*CF
+~
+-369623040 10 9 0
+D0
+~
+~
+0 -1 73013 10 10 5
+D1
+~
+~
+0 -1 73011 10 10 5
+E
+1 east willow~
+A gigantic weeping willow stands in solitude to the east.  Its branches
+droop so low and the tree looks so pitiful, that you can understand quite
+well how it got its name.
+~
+E
+pillow-like rocks~
+Situated towards the center of the stand of pine trees, a pair of
+pillow-like stones rest protectively, their surfaces covered with a bed. 
+of soft and feathery moss.  The natural seats look comfortable and
+inviting.
+~
+E
+carpet moss~
+Appropriately named 'carpet moss,' the mass of tiny, fibrous plants
+covering the pillow-like stones is of a rich, blue-green color and is
+soft and squishes to the touch.
+~
+E
+lightning damage storm~
+At one time, severe lightning and heavy winds must have tore at this
+secluded copse of pine trees, for some of their branches still bear
+visible signs of damage.  Twisted and cracked in some places and broken
+and charred in others, some of the damaged branches are still attached to
+the mighty pines.
+~
+A
+1 west 1 south~
+*~
+acode( find_room( 73015 ), 1 );
+~
+!
+0 0 0
+A
+~
+~
+if( is_player( ch ) ) {
+  i = random( 1, 20 );
+  if( random( 1, 2 ) == 1 ) {
+    wait( i );
+    send_to_room( #weeping, room );
+  }
+  loop( all_in_room ) {
+    remove_cflag( 45, rch );
+  }
+  if( random( 1,4 ) > 3 ) {
+    room = find_room( 73011 );
+    set_rflag( status0, room );
+    set_rflag( status1, room );
+    set_rflag( status2, room );
+  }
+}
+~
+E
+weeping~
+Somewhere in the distance, you can hear the faint sobs of a weeping young
+woman.
+~
+!
+1 0 3
+2168 17 1509949540 -2 0
+1577 9 1509949540 3 0
+755 17 1509949540 -2 0
+2942 17 1509949540 -2 0
+-1
+S
+
+#73013
+Tall Trees Surounding Ruins~
+Tall cedar and pecan trees rise high into the sky, where they splay their
+leafy branches to create a canopy of greenery.  Neither the light of the
+sun nor the moons can penetrate too deeply through the blanket of life
+overhead.  Piles of dead leaves, rotten pecans, and discarded pecan
+shells litter the forest floor.  In many places, the trees grow close
+enough together that not enough a gnome or a sprite could hope to get
+between or past them.  What catches your eye most about about the grove
+here are the stone ruins which you can see resting in heaps to the
+northeast.  From the way the forest has encroached upon the broken stone
+formation, it appears they have been in such a state for a long time.
+~
+*CF
+~
+-369623040 10 9 0
+D0
+~
+~
+0 -1 73014 10 10 5
+D2
+~
+~
+0 -1 73012 10 10 5
+E
+trees cedar~
+Among all the trees growing in the grove, here, there are tall cedars and
+big, branching pecan trees.  Currently, the pecan trees have no pecans on
+them whatsoever, though the ground is covered with last season's
+downfalls.
+~
+E
+canopy~
+Created from the meshing of both leafy cedar branches and pecan branches,
+the canopy above blocks out most natural light.  Here and there, where a
+spot in the canopy lies open, there is a patch of grass growing on the
+forest floor.
+~
+E
+piles dead leaves~
+Having fallen from their cedar or pecan trees, dead or dying leaves lie
+in piles beneath the trees, covering a significant portion of the forest
+floor.
+~
+E
+rotten pecans~
+Rotten pecans lie in abundant little heaps all over the sparsely
+overgrown forest floor.  The pecans look to have reached fruition and
+then to have went unpicked, for many still cling to twigs.
+~
+E
+shells~
+Providing a natural mulch for next season's vegetation, lots of pecan
+shells, empty ones, lie all over the forest floor.  Most of the shells
+show some type of gnaw marks.
+~
+E
+stone ruins~
+The ruins to the east look to be the remains of a monument which probably
+stood about a fourth as tall as the great pyramid.  The blocks of quarry
+stone from which the obelisk was constructed lie in fallen heaps, and are
+riddled with cracks and fissures.  The pale green limestone which once
+covered the surface of the obelisk seems to have fared no better for the
+chunks of it you see are charred and fractured.
+~
+A
+1 west 1 east~
+*~
+acode( find_room( 73015 ), 1 );
+~
+!
+0 0 0
+A
+~
+leaves~
+if( rflag( reset0, room ) ) {
+  act_tochar( #searching, ch );
+  act_notchar( #rsearching, ch );
+  remove_rflag( reset0, room );
+  wait( 3 );
+  act_tochar( #nothing, ch );
+}
+else
+  act_tochar( #nothing2, ch );
+~
+E
+searching~
+Carefully, you begin to search through the pile of leaves, leaf by leaf.
+~
+E
+rsearching~
+Examining a leaf at a time, $n searches through a pile of leaves.
+~
+E
+nothing~
+All your toils have been for nothing.  There is nothing in the pile of
+leaves.
+~
+E
+nothing2~
+The pile of leaves looks to have been already thoroughly examined with
+minimal results.
+~
+!
+9 0 0
+A
+~
+pecans piles~
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  if( random( 1, 10 ) == 1 ){
+    act_tochar( #searching, ch );
+    act_notchar( #rsearching, ch );
+    wait( 3 );
+    act_tochar( #find, ch );
+    act_notchar( #rfind, ch );
+    obj_to_room( oload( 2038 ), room );
+    }
+  else {
+    act_tochar( #searching, ch );
+    act_notchar( #rsearching, ch );
+    wait( 3 );
+    act_tochar( #nothing1, ch );
+    }
+  }
+else
+  act_tochar( #nothing1, ch );
+~
+E
+searching~
+Wading through their midst, you begin searching through a pile of pecan
+shells.
+~
+E
+rsearching~
+$n begins to wade through and search a pile of pecan shells.
+~
+E
+find~
+Hidden beneath some of the rotten pecan shells you find a single pecan!
+~
+E
+rfind~
+$n finds a single pecan during $s search.
+~
+E
+nothing1~
+You find nothing but dried and rotten pecan shells in the pile of old
+pecans.
+~
+!
+9 0 0
+A
+pick~
+pecans~
+act_tochar( #noreach, ch );
+act_notchar( #cantreach2, ch );
+~
+E
+noreach~
+You cannot reach the pecans.
+~
+E
+cantreach2~
+$n tries to pick a pecan off of one of the trees, but
+is not tall enough.
+~
+!
+0 0 0
+2942 17 1509949540 -2 0
+-1
+S
+
+#73014
+Forest Grove - At the Edge of a Fallen Monument~
+Though chunks of limestone and pale orange quarry stone litter the forest
+floor from the broken monument which lies to the east, the plants and
+trees do not seem to mind.  In fact, in some places the roots of trees or
+maturing saplings have grown at unusual angles around the pieces of stone. 
+In other places, the stones have been sundered in half by growing
+vegetation forcing cracks in the stone wider.  Whatever the case, it
+appears that the forest has undertaken the task of reclaiming the remains
+of the fallen pillar of stone.  Patches of red and yellow lichen cover a
+majority of the broken stone shards.
+~
+~
+-369623040 10 9 0
+D0
+~
+~
+0 -1 73015 10 10 5
+D1
+~
+~
+0 -1 73017 10 10 5
+D2
+~
+~
+0 -1 73013 10 10 5
+E
+limestone chunks pale orange quarry stone~
+Much of the limestone is riddled with minute cracks and fractures, as
+though some great force struck the once great obelisk.  And as for the
+pieces of limestone which surround the broken chunks of quarry stone,
+most possess blackened surfaces and char marks.  Markings or
+hieroglyphics of some kind at one time had been etched over the surface
+of the limestone, but time has worn the ancient writings smooth off.
+~
+E
+broken monument 1 east~
+To the east lies the broken remains of an obelisk which, at one time,
+must have rose a couple of feet into the air.  Some of the quarry stone
+blocks which lie about in cluttered heaps are ten to fifteen feet in
+diameter.  The only part of the obelisk seemingly intact is its tip,
+which must have fallen straight off when the monument collapsed.
+~
+E
+roots~
+While some of the roots have plunged willy-nilly down through the very
+stone remains of the obelisk, others have grown down around the fragments
+of stone, as if they were reluctant to touch the charred and broken stone
+bits.
+~
+E
+trees~
+The trees in this part of the forest are a lot younger than those in
+surrounding parts of the grove.  Both cedar trees and maple trees grow up
+around the remains of the monument almost as sentinels.
+~
+E
+shirds~
+The stone shirds consists of smaller pieces of limestone and quarry
+stones and many of the tiny fragments are covered with colorful red and
+yellow lichens.
+~
+E
+red yellow lichen~
+Small patches of red and yellow lichen grow along the surfaces of many of
+the tinier fragments of limestone and quarry stone which litter the
+forest floor around the tumbled monument.  The lichen gives off an
+incredibly sweet aroma which makes your mouth water.
+~
+E
+vegetation~
+Among some of the vegetation, you find a series of small, scrubby bushes
+with curved, crescent-shaped yellow berries.
+~
+A
+1 west~
+*~
+acode( find_room( 73015 ), 1 );
+~
+!
+0 0 0
+A
+pick get~
+red yellow lichen~
+i = random( 1, 4 );
+if( is_player( ch ) )
+  if( rflag( reset0, room ) ) 
+  if( i != 4 ) {
+  act_tochar( #picks, ch );
+  act_notchar( #rpicks, ch );
+  obj_to_char( oload( 2031 ), ch );
+}
+else {
+  act_tochar( #picklast, ch );
+  act_notchar( #rpicklast, ch );
+  obj_to_char( oload( 2031 ), ch );
+  remove_rflag( reset0, room );
+}
+else
+  act_tochar( #none, ch );
+else
+  act_tochar( #playeronly, ch );
+~
+E
+picks~
+You pick a piece of aromatic red and yellow lichen off of one of the
+rocks.
+~
+E
+rpicks~
+$n picks a piece of aromatic red and yellow lichen off of one 
+of the rocks
+~
+E
+none~
+There is not a piece of lichen that looks mature enough to get.
+~
+E
+playeronly~
+Oh please! What would you use a piece of lichen for?
+~
+E
+picklast~
+You pick the last piece of mature, aromatic red and yellow lichen off of
+the rocks.
+~
+E
+rpicklast~
+$n picks the last piece of mature, aromatic red and yellow
+lichen off of one of the rocks.
+~
+!
+0 0 0
+A
+get pick~
+moon crescent berry~
+i = random( 1, 20 );
+if( is_player( ch ) )
+  if( rflag( reset1, room ) ) 
+  if( i < 5 ) {
+  act_tochar( #picks, ch );
+  act_notchar( #rpicks, ch );
+  obj_to_char( oload( 2032 ), ch );
+}
+else if( i == 20 ) 
+  if( rflag( reset2, room ) ) {
+  act_tochar( #picks, ch );
+  act_notchar( #rpicks, ch );
+  obj_to_char( oload( 2032 ), ch );
+  wait( 2 );
+  act_tochar( #notice, ch );
+  act_notchar( #rnotice, ch );
+  obj_to_room( oload( 304 ), room );
+  remove_rflag( reset2, room );
+}
+else {
+  act_tochar( #picklast, ch );
+  act_notchar( #rpicklast, ch );
+  obj_to_char( oload( 2032 ), ch );
+  remove_rflag( reset1, room );
+}
+else {
+  act_tochar( #picklast, ch );
+  act_notchar( #rpicklast, ch );
+  obj_to_char( oload( 2032 ), ch );
+  remove_rflag( reset1, room );
+}
+else
+  act_tochar( #none, ch );
+else
+  act_tochar( #playeronly, ch );
+~
+E
+picks~
+Reaching over, you carefully pick one of the crescent-shaped berries.
+~
+E
+rpicks~
+Reaching over, $n picks a crescent-shaped berry from one of
+the trees.
+~
+E
+none~
+There are no more ripe berries on the bush.
+~
+E
+playeronly~
+There are no more ripe berries on the bush that you can reach.
+~
+E
+picklast~
+Taking a crescent-shaped berry from the topmost branch, you pick the last
+ripe berry from the plant.
+~
+E
+rpicklast~
+$n takes the last ripe, crescent-shaped berry from one of 
+the bushes.
+~
+E
+notice~
+As you are picking one of the crescent-shaped berries, you discover a
+man-shaped root growing at the bash of the bush.
+~
+E
+rnotice~
+While picking one of the crescent-shaped berries, $n uncovers
+a man-shaped root growing beneath the plant.
+~
+!
+0 0 0
+1588 9 1509949540 3 0
+189 17 1509949465 -2 0
+2942 17 1509949540 -2 0
+-1
+S
+
+#73015
+Northwest Corner - Amidst Tall Oak Trees~
+Unlike the desert which lies just a few hundred yards to the north, the
+climate here is cool and welcoming.  All around you, trees and plants of
+both ordinary and exotic varieties thrive in a celebration of life.  Most
+of the trees in this part of the grow are tall, sturdy oaks, whose
+sheltering branches creates a canopy which is almost impervious to
+sunlight.  To the east, past a large stump there is clear evidence of an
+ancient stone structure while to the south, the forest flora is in full
+bloom.  The trees and vegetation along the north and west grow in a
+tangled mass, forming a natural barrier against trespassing.
+~
+~
+-369623040 10 9 0
+D1
+~
+~
+0 -1 73016 10 10 5
+D2
+~
+~
+0 -1 73014 10 10 5
+E
+1 east stump~
+Just to the east there is a large tree stump.  From here it is hard to
+tell what type of tree it once was, but judging from its size, one thing
+is for certain.  It used to be a very ancient tree.
+~
+E
+oak trees~
+All around you loom mighty oak trees of every size and shape.  Some have
+many branches while others have but a few.  The most remarkable thing
+about the tall oak trees, aside from their bright green leaves, is that,
+without fail, the tallest of the oaks lie at the edge of the grove.  Many
+of the oaks' branches arc gracefully overhead forming part of the canopy
+above.
+~
+E
+canopy~
+The canopy of leaves and branches up overhead allows but little light, be
+it moon or sun, to pass down through to the ground.  Much of the canopy
+consists of the upper branches of the mighty oak trees which surround the
+outside of the grove in a protective circle.
+~
+E
+plants~
+All sorts of green and unusual plants can be found growing along around
+the base of some of the trees and along the forest floor.  Several rubber
+plants, a couple of holly berry bushes, and a host of thistle vines are
+just a few of the many species of plants growing in the forest.
+~
+E
+flowers~
+Clusters of red and yellow wild flowers grow at the base of each oak
+tree, adding a splash of color to their dark brown and grey bark-covered
+trunks.  Also, in scattered patches along the forest floor, purple sage
+bushes and white orchids flourish.
+~
+E
+vegetation~
+In terms of grass and other lower forms of vegetation, there is not much
+for there is not enough sunlight for much to prosper in the ancient
+forest.  Out of what little grass and vegetation that can grow, there are
+three varieties.  The first two look to be of ordinary vines, but the
+third appears to be of a hybrid grass which is dark green on the upside
+and a velvet blue on the underside.
+~
+E
+holly bushes~
+The holly bushes clustered around a couple of the trees are just now in
+full bloom.  With their smooth but jagged leaves protecting its crop of
+fresh, new berries, most predators would probably think twice about being
+lured in by the attractive berry.
+~
+A
+1 west 1 north~
+*~
+act_tochar( #prevent, ch );
+act_notchar( #rprevent, ch );
+~
+E
+prevent~
+The trees shift and move to block your passage, as though they were
+sentient.
+~
+E
+rprevent~
+The trees shift and sway, and move to intercept $n, blocking
+$s passage in $s chosen direction.
+~
+!
+0 0 0
+A
+pick~
+bush holly berry~
+i = random( 1, 4 );
+if( is_player( ch ) )
+  if( rflag( reset0, room ) ) 
+  if( i != 4 ) {
+  act_tochar( #picks, ch );
+  act_notchar( #rpicks, ch );
+  obj_to_char( oload( 663 ), ch );
+  }
+else {
+  act_tochar( #picklast, ch );
+  act_notchar( #rpicklast, ch );
+  obj_to_char( oload( 663 ), ch );
+  remove_rflag( reset0, room );
+  }
+else
+  act_tochar( #none, ch );
+else
+  act_tochar( #playeronly, ch );
+~
+E
+picks~
+You pick a bright red holly berry from the bush.
+~
+E
+rpicks~
+$n picks a bright red holly berry from a bush.
+~
+E
+none~
+There are no more ripe berries clinging to the bush.
+~
+E
+playeronly~
+As you pick the holly berry, you brush up against one of the bush's
+prickly leaves, and you drop it instantly.  The berry rolls away and
+disappears into the undergrowth.
+~
+E
+picklast~
+You pick the last ripe holly berry from the bush.
+~
+E
+rpicklast~
+$n mutters as $e picks the last ripe holly berry from the bush.
+~
+!
+0 0 0
+1577 9 1509949540 3 0
+1578 9 1509949540 3 0
+415 17 1509949540 -2 0
+2942 17 1509949540 -2 0
+-1
+S
+
+#73016
+A Forest Grove Surrounding Ruins~
+Leaving little room from movement in between, a series of tall cedar
+trees rise up with their branches reaching up into the sky as if in
+supplication.  Their leaves are of the deepest green and their bark shows
+no signs of either animal or insect bites.  In a couple of places,
+though, the roots of the trees are exposed.  While the edge of the forest
+grove appears to be to the east, the grove continues onward to the west,
+where there are oak trees of amazing size and proportions.  There is
+enough of a clearing through the trees to the south for you to
+distinguish the ruins of a once-great pillar of stone.
+~
+~
+-369623040 10 9 0
+D1
+~
+~
+0 -1 73001 10 10 5
+D2
+~
+~
+0 -1 73017 10 10 5
+D3
+~
+~
+0 -1 73015 10 10 5
+E
+pillar stone ruins~
+To the south, it is apparent that at one time, a massive pillar of stone
+once reached up into the sky like a cleric begging mercy from the gods. 
+But now, as is often the fate of such grand structures, its time has
+passed, and it lies in crumbled ruins.  Not much remains of the obelisk
+save its giant, pyramidal tip, which is still sheathed in pale green
+limestone.
+~
+E
+roots~
+In a few places, the roots of the grand cedar trees are exposed.  The
+reason for this has nothing to do with infestation or animal inhabitation
+but rather age.  As old as they are, the cedar trees do not look capable
+of withstanding the weight of their own limbs for many more centuries.  A
+couple of chunks of rock lie wedged beneath some of the exposed roots.
+~
+E
+chunks rock~
+These chunks of rock are fractured pieces of quarry stone and look to
+belong to the broken monument to the south.  The fragments of stone are
+more than just wedged in between the roots of the cedars; they are a part
+of them.  The roots have plunged directly through the stones in an effort
+to reach the ground.
+~
+E
+cedar trees~
+Taller than stone giants and as straight as an arrow, you have seen few
+trees as mighty as these cedar trees.  Only those of Medienne forest or
+perhaps some of the greater Shuvana trees can rival these green giants. 
+The leaves, which cover the cedar trees' branches, are of a rich verdant
+and nearly twice the size of your hand and their bark is smooth and thick.
+~
+E
+stump~
+Obscured by shadow and the mighty presence of all the living cedar trees,
+this large tree stump looks freshly cut.  You can still see the sap
+oozing down its sides.  At the foot of one of the stump's roots, there is
+a leafy green shoot branching outward off of the stump.  Perhaps the tree
+might one day regain its place among its kin.
+~
+A
+1 north~
+*~
+acode( find_room( 48130 ), 1 );
+~
+!
+0 0 0
+A
+track~
+unicorn~
+if( rflag( reset2, room ) )
+  if( find_skill( ch, track ) > 4 )
+  if( !rflag( reset0, find_room( 73001 ) ) ) {
+  act_tochar( #trailends, ch );
+  remove_rflag( reset0, room );
+}
+else
+  act_tochar( #notrail, ch );
+else
+  act_tochar( #notenough, ch );
+else
+  act_tochar( #already, ch );
+~
+E
+notrail~
+There is no track or trail of that type to follow.
+~
+E
+notenough~
+Your tracking skills are not adroit enough to find such a trail.
+~
+E
+already~
+The trail has already been obliterated by the passing of others to find a
+trail.
+~
+E
+trailends~
+The unicorn's trail ends here, right before a thick patch of foliage.
+~
+!
+0 0 0
+A
+look~
+foliage~
+if( rflag( reset2, room ) )
+  if( !rflag( reset0, room ) )
+  if( !obj_in_room( 2028, room ) ) {
+  act_tochar( #lookandpull, ch );
+  act_notchar( #rlookandpull, ch );
+  remove_rflag( reset1, room );
+  obj_to_room( oload( 2028 ), room );
+  }
+else
+  act_tochar( #already, ch );
+else
+  act_tochar( #foliage, ch );
+else
+  act_tochar( #already, ch );
+~
+E
+lookandpull~
+Looking into the patch of foliage, you catch a glimpse of silver hidden
+behind the patch of foliage.  Out of curiosity, you pull aside the
+foliage and there, lying beneath its green branches and leaves, lies the
+crumpled form of a unicorn.  It does not look to be breathing.
+~
+E
+rlookandpull~
+$n pulls aside the foliage,  revealing the crumpled form of
+a unicorn. It does not look to be breathing.
+~
+E
+foliage~
+Several bushes and vines intertwine like a net to cover much of a part of
+the forest floor.  Their lush, green leaves spread outward, with moist
+dew collecting on their tips.
+~
+E
+already~
+There is nothing to be found in the dense foliage.  It simply spreads out
+like a net, covering a bit of the forest floor.  At one time, it looks
+like something used to lie hidden behind it.
+~
+!
+0 0 0
+A
+place replace~
+horn alicorn~
+if( rflag( reset2, room ) )
+  if( find_stat( ch, level ) > 19 )
+  if( !rflag( reset1, room ) )
+  if( has_obj( 2027, ch ) ) {
+  act_tochar( #placing, ch );
+  act_notchar( #rplacing, ch );
+  obj = has_obj( 2027, ch );
+  junk_obj( obj, 1 );
+  wait( 1 );
+  act_room( #brightflash, ch );
+  wait( 3 );
+  act_room( #music, ch );
+  wait( 3 );
+  act_room( #getsup, ch );
+  obj = obj_in_room( 2028, room );
+  junk_obj( obj );
+  mload( 1473, room );
+  remove_rflag( reset2, room );
+  set_rflag( reset1, room );
+  set_rflag( reset0, room );
+  acode( room, 5 );
+}
+else {
+  act_tochar( #noalicorn, ch );
+  end;
+}
+else {
+  act_tochar( #nounihere, ch );
+  end;
+}
+else {
+  act_tochar( #toolowlev, ch );
+  end;
+}
+else {
+  act_tochar( #alreadyfreed, ch );
+  end;
+}
+~
+E
+placing~
+Kneeling before the crumpled, stone-like form of the unicorn, you gently
+place the broken alicorn up to the beast's forehead, where the horn was
+broken from.
+~
+E
+rplacing~
+$n kneels before the crumpled unicorn's body and holds an alicorn
+up against the creatures forehead.
+~
+E
+brightflash~
+Suddenly, a bright flash issues forth from the alicorn, bathing it and
+the unicorn in a nimbus of blue light.
+~
+E
+music~
+The sound of a harp's melody runs through the grove briefly, and a
+feeling of life and wonderment fills your being before it fades away.
+~
+E
+getsup~
+Suddenly, the blue nimbus around the unicorn ceases and the horned beast
+rises steadily to its feet, alicorn and all.
+~
+E
+alreadyfreed~
+The unicorn has already been freed.  The only evidence of its presence
+are hoof prints in the ground.
+~
+E
+toolowlev~
+You try replacing the alicorn on the unicorn's head, but cannot muster
+enough power and concentration to will it back together with the beast. 
+Perhaps it will work better when you are more experienced.
+~
+E
+wrongclass~
+Try as you might to replace the alicorn on the unicorn's head, you just
+do not know enough about woodland lore and beasts to manage the feat.
+~
+E
+nounihere~
+You don't see that here.
+~
+E
+noalicorn~
+Sadly, you do not have an alicorn to try and place on the crumpled
+unicorn.
+~
+!
+0 0 0
+A
+~
+~
+wait( 3 );
+if( doing_quest( ch, 39 ) ) {
+  act_tochar( #thankyou1, ch );
+  act_notchar( #bows, ch );
+  update_quest( ch, 39 );
+  wait( 2 );
+  act_room( #teleports, ch );
+  mob = mob_in_room( 1473, room );
+  junk_mob( mob );
+  end;
+  }
+if( done_quest( ch, 39 ) ) {
+  act_tochar( #thankyou2, ch );
+  act_notchar( #bows, ch );
+  wait( 2 );
+  act_room( #teleports, ch );
+  mob = mob_in_room( 1473, room );
+  junk_mob( mob );
+  end;
+  }
+if( !has_quest( ch, 39 ) ) {
+  act_tochar( #thankyou3, ch );
+  act_notchar( #bows, ch );
+  wait( 2 );
+  act_room( #teleports, ch );
+  mob = mob_in_room( 1473, room );
+  junk_mob( mob );
+  end;
+  }
+~
+E
+teleports~
+The tip of the unicorn's horn begins to glow and the unicorn sudden
+disappears.
+~
+E
+thankyou1~
+The unicorn looks straight into your eyes and you hear its voice in your head:
+" I cannot thank you enough for freeing me. I have been in this grove for 
+ centuries, waiting for someone like you to take up the task of freeing me.
+ I am forever in your debt. Perhaps one day I can return the favor. "
+~
+E
+thankyou2~
+The unicorn looks straight into your eyes and you hear its voice in your head:
+" Even though I sense that this task is not new to you, I am still 
+ very grateful for been freed from my waking sleep. Thank you. "
+~
+E
+thankyou3~
+The unicorn looks straight into your eyes and you hear its voice in your head:
+" Though I normally might find suspect one who helps another for 
+ no apparent  reason, I am too grateful to care. You have my most
+ profound thanks. "
+~
+E
+bows~
+The unicorn bows its head to $n as if in thanks.
+~
+!
+0 0 0
+1579 9 1509949540 3 0
+2942 17 1509949540 -2 0
+-1
+S
+
+#73017
+Tip of an Obelisk~
+Shattered sections of pale orange quarry stone and green limestone lie
+all around in a debris field.  Amidst the ruins stands but a single piece
+of stone in the shape of a pyramid which has survived destruction.  The
+pyramid stands about ten feet tall and rests at the base of the broken
+obelisk.  Indeed, the pyramid is actually what remains of the obelisk's
+tip and remains fairly intact, save for a bit of charring around the
+edges. Wiry, leaf-covered vines grow all over the stone remains.  To
+the south a group of trees circle together, their trunks so close
+together that not an inch of space stands between them.
+~
+*CF
+[Cyndra] what's with disabled acode 11?
+look at acode 4
+also need to move vines first to get a real action :P prolly should be
+there are vines in the way rather than you don't see that 
+~
+-369623040 0 5 0
+D0
+~
+~
+0 -1 73016 10 10 5
+D1
+~
+~
+0 -1 73023 10 10 5
+D3
+~
+~
+0 -1 73014 10 10 5
+D5
+tip of an obelisk~
+~
+235 -1 73018 10 10 5
+E
+1 south trees ~
+The trees to the south seem to be encircling an area of the grove,
+towards its center.  Though you cannot see in between the trees, because
+they are so close together, you can heard the faint, musical trickle of
+cascading water.
+~
+E
+tip~
+Amazingly, the very tip of the once mighty obelisk which once stood very
+near hear, stands almost completely intact.  Small cracks and fractures
+occur along the base of the pyramidal structure and the edges and very
+tip of the stone construction are blackened as though from fire or
+lightning.  Engraved in the pale-green limestone, hieroglyphics adorn
+each of the four sides of the obelisk, starting with the northside.
+~
+E
+northside crook~
+A panel of hieroglyphics has been etched into the northside of the
+obelisk's tip and you can barely make out the remains of a blue pigment
+which once filled in the engravings.  Carved into the panel are images of
+an owl, a twisted crook, a jackal-like creature, and several geometric
+shapes.
+~
+E
+westside feather~
+The western side of the tip of the obelisk contains an intricately
+bordered hieroglyphics panel.  Yet, inside the panel there is but one
+symbol: a feather.
+~
+E
+eastside arm~
+Engraved into the limestone sheeting of the obelisk's tip, there is a
+hieroglyphics panel which sports a series of interesting yet cryptic
+symbols.  Among them, there are scarabs, crescent moons, a feather, and
+an arm reaching across the feather from east to west.
+~
+E
+shattered sections stone~
+The shattered sections of stone strewn all about the clearing consists of
+sheets of pale green limestone and precision-cut, square blocks of orange
+quarry stone.  At one time, it is apparent that the sections of stone
+rested atop one another with the pyramidal structure on top, but some
+force has brought the ancient monument down into ruins.  Judging from all
+the vegetation grown up around the sections of stone, from bushes to
+trees, the monument has lain like this for quite some time.  Perhaps
+decades or even centuries.
+~
+E
+obelisk~
+Judging from what remains of the monument, this was once a great obelisk
+which towered over most everything except for the colossal pyramid which
+lies somewhere to the north, in the Naraki Desert.  Its widest point was
+at its base, and as it rose upwards the structure gently tapered, until
+capped by the tip of stone which lies here.
+~
+E
+southside wings~
+Once the vines have been cleared from the southside of the obelisk's tip,
+you can make out a panel of hieroglyphics.  This panel consists of a bird
+in flight, several saucer or cup-shaped images, an open eye, and an urn.
+~
+A
+1 south~
+*~
+acode( find_room( 73015 ), 1 );
+~
+!
+0 0 0
+A
+move~
+vines~
+if( rflag( reset0, room ) ) {
+  act_tochar( #move, ch );
+  act_notchar( #rmoves, ch );
+  remove_rflag( reset0, room );
+}
+else 
+  act_tochar( #already, ch );
+~
+E
+move~
+Gently, you move some of the vines aside, revealing a panel of
+hieroglyphics on the southside of the obelisk.
+~
+E
+rmoves~
+You watch as $n moves some of the  vines covering 
+the southern portion of the obelisk's tip to one side.
+~
+E
+already~
+The tangle of vines have already been moved, revealing a panel of
+hieroglyphics on the southside of the obelisk.
+~
+!
+0 0 0
+A
+look~
+vines~
+if( rflag( reset0, room ) )
+  act_tochar( #desc, ch );
+else
+  act_tochar( #newdesc, ch );
+~
+E
+desc~
+Unlike thistle vines, these vines have no thorns and their leaves are
+much smaller and of a lighter shade of green.  Coils of vine creep over
+the surface remains of the monument, especially along the southside.
+~
+E
+newdesc~
+Unlike thistle vines, these vines have no thorns and their leaves are
+much smaller and of a lighter shade of green.  Coils of vine creep over
+the surface remains of the monument, but a large portion of them have
+been moved aside, to reveal hieroglyphics along the southside of the
+obelisk's tip.
+~
+!
+0 0 0
+A
+look~
+southside wings~
+if( rflag( reset0, room ) )
+  act_tochar( #dontsee, ch );
+else
+  acode( find_room( 73015 ), 11 );
+~
+E
+dontsee~
+You don't see that here.
+~
+E
+southside~
+Once the vines have been cleared from the southside of the obelisk's tip,
+you can make out a panel of hieroglyphics.  This panel consists of a bird
+in flight, several saucer or cup-shaped images, an open eye, and an urn.
+~
+!
+0 0 0
+A
+twist turn~
+arm~
+if( rflag( status0, room ) )
+  if( rflag( status1, room ) )
+  if( rflag( status2, room ) )
+  if( rflag( reset2, room ) )
+  if( rflag( reset1, room ) ) {
+  act_tochar( #moves, ch );
+  act_notchar( #rmoves, ch );
+  remove_rflag( reset1, room );
+}
+else
+  act_tochar( #already, ch );
+else 
+  act_tochar( #wontbudge, ch );
+else {
+  act_tochar( #southbroke, ch );
+  remove_rflag( status2, room );
+}
+else {
+  act_tochar( #westbroke, ch );
+  remove_rflag( status1, room );
+}
+else {
+  act_tochar( #eastbroke, ch );
+  remove_rflag( status0, room );
+}
+~
+E
+moves~
+Careful not to touch any of the other hieroglyphs, you twist down upon
+the hieroglyphic of the arm on the eastside of the obelisk.
+~
+E
+rmoves~
+$n twists down upon one of the hieroglyphics on the 
+eastside of the obelisk.
+~
+E
+eastbroke~
+The hieroglyphic of the arm refuses to budge and from the broken edges it
+sports, it looks jammed.
+~
+E
+southbroke~
+As you twist the hieroglyphic of the arm, you can hear, from the south
+side of the obelisk, the crunch of stone breaking.
+~
+E
+wontbudge~
+Try as you might, the arm hieroglyphic will not budge.
+~
+E
+already~
+The hieroglyphic has already been twisted down it seems.
+~
+E
+westbroke~
+As you twist the hieroglyphic of the arm, you can hear, from the west
+side of the obelisk, the crunch of stone breaking.
+~
+!
+0 0 0
+A
+touch press~
+feather~
+if( rflag( status0, room ) )
+  if( rflag( status1, room ) )
+  if( rflag( status2, room ) )
+  if( rflag( reset2, room ) )
+  if( !rflag( reset1, room ) ) {
+  act_tochar( #moves, ch );
+  act_notchar( #rmoves, ch );
+  remove_rflag( reset2, room );
+}
+else {
+  act_tochar( #westbreaks, ch );
+  remove_rflag( status1, room );
+}
+else
+  act_tochar( #already, ch );
+else 
+  act_tochar( #southbroke, ch );
+else 
+  act_tochar( #westbroke, ch );
+else 
+  act_tochar( #eastbroken, ch );
+~
+E
+moves~
+You place your finger on the feather hieroglyph and push slightly.
+~
+E
+rmoves~
+$n places a single finger on the westside of the obelisk and pushes.
+~
+E
+eastbroken~
+Judging from the sounds of grating stone coming from the eastside of the
+obelisk's tip, part of the mechanism has been broken.
+~
+E
+southbroke~
+Judging from the sounds of grating stone coming from the southside of the
+obelisk's tip, part of the mechanism has been broken.
+~
+E
+westbroke~
+The feather hieroglyph will not budge at all.  Judging from the cracks
+running through it, it looks to have been broken.
+~
+E
+westbreaks~
+You hear the sound of crunching stone coming from this side of the
+obelisk as something inside breaks.
+~
+E
+already~
+The feather hieroglyphic has already been pressed for it is sunk into the
+side of the obelisk.
+~
+!
+0 0 0
+A
+pinch~
+wings~
+if( !rflag( reset0, room ) )
+  if( rflag( status0, room ) )
+  if( rflag( status1, room ) )
+  if( rflag( status2, room ) )
+  if( !rflag( reset2, room ) )
+  if( !rflag( reset1, room ) ) {
+  act_tochar( #slides, ch );
+  act_notchar( #rslides, ch );
+  wait( 3 );
+  open( room, down );
+  act_room( #opens, ch );
+  wait( 10 );
+  close( room, down );
+  act_room( #closes, ch );
+  wait( 2 );
+  act_room( #resetpanels, ch );
+  set_rflag( reset1, room );
+  set_rflag( reset2, room );
+}
+else {
+  act_tochar( #eastbreaks, ch );
+  remove_rflag( status0, room );
+}
+else 
+  act_tochar( #onlypartial, ch );
+else
+  act_tochar( #southbroken, ch );
+else
+  act_tochar( #westbroken, ch );
+else
+  act_tochar( #eastbroken, ch );
+else
+  act_tochar( #vines, ch );
+~
+E
+slides~
+You carefully pinch the hieroglyphic bird's wings, sliding them closer to
+one another.
+~
+E
+rslides~
+With a pinching motion, $n manipulates the hieroglyphics on
+the southern side of the obelisk.
+~
+E
+opens~
+Suddenly, after hearing much stone grinding, the entire obelisk's tip
+moves backward, revealing a passage below.
+~
+E
+closes~
+After hearing much stone grinding, the entire obelisk's tip moves
+forward, sealing the passage which once lay below.
+~
+E
+southbroken~
+You hear a ferocious crack run through the south side of the obelisk,
+leading you to believe that the mechanism on that side is broken.
+~
+E
+westbroken~
+You hear a ferocious crack run through the west side of the obelisk,
+leading you to believe that the mechanism on that side is broken.
+~
+E
+eastbroken~
+You hear a ferocious crack run through the east side of the obelisk,
+leading you to believe that the mechanism on that side is broken.
+~
+E
+eastbreaks~
+As you force the wings of the bird hieroglyphic together, you hear the
+crack of stone from within the western part of the obelisk.
+~
+E
+onlypartial~
+The wings of the bird refuses to move, but the head of the bird turns to
+an awkward angle, as if to look to the west.
+~
+E
+resetpanels~
+With an audible *snap* you hear the side panels of hieroglyphics sliding
+back to their normal positions.
+~
+E
+vines~
+You see nothing but vines along the southside of the obelisk.
+~
+!
+0 0 0
+A
+straighten straight~
+crook~
+if( !rflag( status0, room ) )
+  if( !rflag( status1, room ) )
+  if( !rflag( status2, room ) ) {
+  act_tochar( #wontbudge, ch );
+  end;
+}
+if( random( 1, 2 ) == 1 ) 
+  if( !rflag( status0, room ) ) {
+  act_tochar( #fixeast, ch );
+  act_notchar( #rfixeast, ch );
+  set_rflag( status0, room );
+  end;
+}
+else 
+  act_tochar( #enobudge, ch );
+else
+  act_tochar( #enobudge, ch );
+wait( 3 );
+if( random( 1, 3 ) == 1 ) 
+  if( !rflag( status1, room ) ) {
+  act_tochar( #fixwest, ch );
+  act_notchar( #rfixwest, ch );
+  set_rflag( status1, room );
+}
+else 
+  act_tochar( #wnobudge, ch );
+else
+  act_tochar( #wnobudge, ch );
+wait( 3 );
+if( random( 1, 10 ) == 1 ) 
+  if( !rflag( status2, room ) ) {
+  act_tochar( #fixsouth, ch );
+  act_notchar( #rfixsouth, ch );
+  set_rflag( status2, room );
+}
+else 
+  act_tochar( #snobudge, ch );
+else
+  act_tochar( #snobudge, ch );
+~
+E
+rfixeast~
+As soon as $n manipulates one of the hieroglyphics, the eastside
+panel of  hieroglyphics resets to its normal positions.
+~
+E
+fixeast~
+As soon as you straighten the crook hieroglyphic, the hieroglyphics to
+the east reset to their normal position.
+~
+E
+rfixwest~
+Soon after $n manipulates one of the hieroglyphics, the eastside
+panel of  hieroglyphics resets to its normal positions.
+~
+E
+fixwest~
+Soon after you straighten the crook hieroglyphic, the hieroglyphics to
+the west reset to their normal position.
+~
+E
+rfixsouth~
+A few moments after  $n manipulates one of the hieroglyphics, the eastside
+panel of  hieroglyphics resets to its normal positions.
+~
+E
+fixsouth~
+A few moments after you straighten the crook hieroglyphic, the
+hieroglyphics to the south reset to their normal position.
+~
+E
+enobudge~
+You can hear the faint grinding of stone and witness the eastern panel of
+hieroglyphics trying to shift back to its original position, but it fails
+to do so.
+~
+E
+wnobudge~
+You can hear the faint grinding of stone and witness the western panel of
+hieroglyphics trying to shift back to its original position, but it fails
+to do so.
+~
+E
+snobudge~
+You can hear the faint grinding of stone and witness the southern panel
+of hieroglyphics trying to shift back to its original position, but it
+fails to do so.
+~
+E
+wontbudge~
+Try as you might, you cannot seem to straighten the crook hieroglyphic. 
+It appears to be stuck.
+~
+!
+0 0 0
+A
+look~
+eastside arm~
+if( has_obj( 1549, ch ) ){
+  obj = has_obj( 1549, ch );
+  act_tochar( #ctrans, ch, obj );
+  act_notchar( #rctrans, ch, obj );
+  wait( 1 );
+  act_tochar( #trans1, ch, obj );
+}
+continue;
+act_tochar( #desc, ch  );
+~
+E
+ctrans~
+For a moment, $p becomes warm and
+begins to glow as you examine the hieroglyphics.
+~
+E
+rctrans~
+Momentarily, $p in $n's possession glows as $e 
+examines a section of  hieroglyphics. 
+~
+E
+desc~
+The hieroglyphics are much too complex to understand.
+~
+E
+trans1~
+With the aid of $p, you are finally able to fully 
+understand the hieroglyphics here. They read: 
+
+The path towards enlightenment begins with opening the entrance into the
+unknown.  To start down this path, one must oft be forced to twist the
+arm of destiny.
+~
+!
+0 0 0
+A
+look~
+westside feather~
+if( has_obj( 1549, ch ) ){
+  obj = has_obj( 1549, ch );
+  act_tochar( #ctrans, ch, obj );
+  act_notchar( #rctrans, ch, obj );
+  wait( 1 );
+  act_tochar( #trans1, ch, obj );
+}
+else
+  continue;
+~
+E
+ctrans~
+For a moment, $p becomes warm and
+begins to glow as you examine the hieroglyphics.
+~
+E
+rctrans~
+Momentarily, $p in $n's possession glows as $e 
+examines a section of  hieroglyphics. 
+~
+E
+des~
+The hieroglyphics are much too complex to understand.
+~
+E
+trans1~
+With the aid of $p, you are finally able to fully 
+understand the hieroglyphics here. They read: 
+
+The second path towards opening the way, you must trend lightly.  With as
+little force as pressing on a feather, your foot steps should be soft.
+~
+!
+0 0 0
+A
+10 sdfhasdjfhsdfgj~
+10 sdfhdgjsdhfgk~
+if( has_obj( 1549, ch ) ){
+obj = has_obj( 1549, ch );
+act_tochar( #ctrans, ch, obj );
+act_notchar( #rctrans, ch, obj );
+wait( 1 );
+act_tochar( #trans1, ch, obj );
+}
+else
+act_tochar( #desc, ch );
+~
+E
+ctrans~
+For a moment, $p becomes warm and
+begins to glow as you examine the hieroglyphics.
+~
+E
+rctrans~
+Momentarily, $p in $n's possession glows as $e 
+examines a section of  hieroglyphics. 
+~
+E
+trans1~
+With the aid of $p, you are finally able to fully 
+understand the hieroglyphics here. They read: 
+
+Along the path you choose to walk, often you encounter foes who try to
+thwart you.  Like Anupex the I, you must find a way to pinch their wings,
+so that they and their evil actions are not allowed to fly against you. 
+When your enemies cannot stand in your way, the entrance shall be without
+obstacle.
+~
+E
+desc~
+Once the vines have been cleared from the southside of the obelisk's tip,
+you can make out a panel of hieroglyphics.  This panel consists of a bird
+in flight, several saucer or cup-shaped images, an open eye, and an urn.
+~
+!
+0 0 0
+A
+look~
+northside crook~
+if( has_obj( 1549, ch ) ){
+obj = has_obj( 1549, ch );
+act_tochar( #ctrans, ch, obj );
+act_notchar( #rctrans, ch, obj );
+wait( 1 );
+act_tochar( #trans1, ch, obj );
+}
+else
+continue;
+~
+E
+ctrans~
+For a moment, $p becomes warm and
+begins to glow as you examine the hieroglyphics.
+~
+E
+rctrans~
+Momentarily, $p in $n's possession glows as $e 
+examines a section of  hieroglyphics. 
+~
+E
+des~
+The hieroglyphics are much too complex to understand.
+~
+E
+trans1~
+With the aid of $p, you are finally able to fully 
+understand the hieroglyphics here. They read: 
+
+If all else fails and you lose your way along the path to the unknown,
+then you must straighten your path just as the pharoah waves his rod of
+rulership.
+~
+!
+0 0 0
+A
+translate~
+eastside arm~
+i = get_integer( ch, "/Cayln/TabletEnduraba" );
+obj = has_obj( 1548, ch );
+if( obj ) {
+  j = get_integer( obj, "/Cayln/TabletEnduraba" );
+  if( i == j ) {
+    act_notchar( #rtmess, ch, obj );
+    act_tochar( #trans1, ch, obj );
+  }
+  else {
+    act_tochar( #study, ch, obj );
+    act_notchar( #rstudy, ch, obj );
+  }
+  end;
+}
+obj = has_obj( 1549, ch );
+if( obj ) {
+  act_tochar( #ctrans, ch, obj, mob );
+  act_notchar( #rctran, ch, obj, mob );
+  wait( 2 );
+  act_tochar( #trans1, ch, obj, mob );
+  end;
+}
+act_tochar( #notrans, ch );
+act_notchar( #rnotrans, ch );
+~
+E
+trans1~
+With the aid of $p, you are finally able to fully 
+understand the hieroglyphics here. They read: 
+
+The path towards enlightenment begins with opening the entrance into the
+unknown.  To start down this path, one must oft be forced to twist the
+arm of destiny.
+~
+E
+ctrans~
+For a moment, $p becomes warm and
+begins to glow as you examine the hieroglyphics.
+~
+E
+rctran~
+Momentarily, $p in $n's possession glows as $e 
+examines a section of hieroglyphics. 
+~
+E
+rtmess~
+$n's brow furrows in thought as $e tries to translate a section 
+of hieroglyphics using $p as a guide.
+~
+E
+notrans~
+The hieroglyphics are much too complex to understand.
+~
+E
+rnotrans~
+$n's frowns with frustration as $e finishes examining a portion
+of the hieroglyphics.
+~
+E
+study~
+You will need to study $p some more.
+~
+E
+rstudy~
+$n will need to study $p some more.
+~
+!
+0 0 0
+A
+translate~
+westside feather~
+i = get_integer( ch, "/Cayln/TabletEnduraba" );
+obj = has_obj( 1548, ch );
+if( obj ) {
+  j = get_integer( obj, "/Cayln/TabletEnduraba" );
+  if( i == j ) {
+    act_notchar( #rtmess, ch, obj );
+    act_tochar( #trans1, ch, obj );
+  }
+  else {
+    act_tochar( #study, ch, obj );
+    act_notchar( #rstudy, ch, obj );
+  }
+  end;
+}
+obj = has_obj( 1549, ch );
+if( obj ) {
+  act_tochar( #ctrans, ch, obj, mob );
+  act_notchar( #rctran, ch, obj, mob );
+  wait( 2 );
+  act_tochar( #trans1, ch, obj, mob );
+  end;
+}
+act_tochar( #notrans, ch );
+act_notchar( #rnotrans, ch );
+~
+E
+trans1~
+With the aid of $p, you are finally able to fully 
+understand the hieroglyphics here. They read: 
+
+The second path towards opening the way, you must trend lightly.  With as
+little force as pressing on a feather, your foot steps should be soft.
+~
+E
+ctrans~
+For a moment, $p becomes warm and
+begins to glow as you examine the hieroglyphics.
+~
+E
+rctran~
+Momentarily, $p in $n's possession glows as $e 
+examines a section of hieroglyphics. 
+~
+E
+rtmess~
+$n's brow furrows in thought as $e tries to translate a section 
+of hieroglyphics using $p as a guide.
+~
+E
+notrans~
+The hieroglyphics are much too complex to understand.
+~
+E
+rnotrans~
+$n's frowns with frustration as $e finishes examining a portion
+of the hieroglyphics.
+~
+E
+study~
+You will need to study $p some more.
+~
+E
+rstudy~
+$n will need to study $p more to understand the hieroglyphs.
+~
+!
+0 0 0
+A
+translate~
+southside wings~
+i = get_integer( ch, "/Cayln/TabletEnduraba" );
+obj = has_obj( 1548, ch );
+if( obj ) {
+  j = get_integer( obj, "/Cayln/TabletEnduraba" );
+  if( i == j ) {
+    act_notchar( #rtmess, ch, obj );
+    act_tochar( #trans1, ch, obj );
+  }
+  else {
+    act_tochar( #study, ch, obj );
+    act_notchar( #rstudy, ch, obj );
+  }
+  end;
+}
+obj = has_obj( 1549, ch );
+if( obj ) {
+  act_tochar( #ctrans, ch, obj, mob );
+  act_notchar( #rctran, ch, obj, mob );
+  wait( 2 );
+  act_tochar( #trans1, ch, obj, mob );
+  end;
+}
+act_tochar( #notrans, ch );
+act_notchar( #rnotrans, ch );
+~
+E
+trans1~
+With the aid of $p, you are finally able to fully 
+understand the hieroglyphics here. They read: 
+
+Along the path you choose to walk, often you encounter foes who try to
+thwart you.  Like Anupex the I, you must find a way to pinch their wings,
+so that they and their evil actions are not allowed to fly against you. 
+When your enemies cannot stand in your way, the entrance shall be without
+obstacle.
+~
+E
+ctrans~
+For a moment, $p becomes warm and
+begins to glow as you examine the hieroglyphics.
+~
+E
+rctran~
+Momentarily, $p in $n's possession glows as $
+examines a section of hieroglyphics. 
+~
+E
+rtmess~
+$n's brow furrows in thought as $e tries to translate a section 
+of hieroglyphics using $p as a guide.
+~
+E
+notrans~
+The hieroglyphics are much too complex to understand.
+~
+E
+rnotrans~
+$n's frowns with frustration as $e finishes examining a portion
+of the hieroglyphics.
+~
+E
+study~
+You will need to study $p some more.
+~
+E
+rstudy~
+$n will need to study $p some more.
+~
+!
+0 0 0
+A
+translate~
+northside crook~
+i = get_integer( ch, "/Cayln/TabletEnduraba" );
+obj = has_obj( 1548, ch );
+if( obj ) {
+  j = get_integer( obj, "/Cayln/TabletEnduraba" );
+  if( i == j ) {
+    act_notchar( #rtmess, ch, obj );
+    act_tochar( #trans1, ch, obj );
+  }
+  else {
+    act_tochar( #study, ch, obj );
+    act_notchar( #rstudy, ch, obj );
+  }
+  end;
+}
+obj = has_obj( 1549, ch );
+if( obj ) {
+  act_tochar( #ctrans, ch, obj, mob );
+  act_notchar( #rctran, ch, obj, mob );
+  wait( 2 );
+  act_tochar( #trans1, ch, obj, mob );
+  end;
+}
+act_tochar( #notrans, ch );
+act_notchar( #rnotrans, ch );
+~
+E
+trans1~
+With the aid of $p, you are finally able to fully 
+understand the hieroglyphics here. They read: 
+
+If all else fails and you lose your way along the path to the unknown,
+then you must straighten your path just as the pharoah waves his rod of
+rulership.
+~
+E
+ctrans~
+For a moment, $p becomes warm and
+begins to glow as you examine the hieroglyphics.
+~
+E
+rctran~
+Momentarily, $p in $n's possession glows as $e 
+examines a section of hieroglyphics. 
+~
+E
+rtmess~
+$n's brow furrows in thought as $e tries to translate a section 
+of hieroglyphics using $p as a guide.
+~
+E
+notrans~
+The hieroglyphics are much too complex to understand.
+~
+E
+rnotrans~
+$n's frowns with frustration as $e finishes examining a portion
+of the hieroglyphics.
+~
+E
+study~
+You will need to study $p some more.
+~
+E
+rstudy~
+$n will need to study $p more.
+~
+!
+0 0 0
+1587 9 1509949540 3 0
+1578 9 1509949540 3 0
+2942 17 1509949540 -2 0
+-1
+S
+
+#73018
+Inside a Broken Monument~
+At one time, this chamber must have served as some grandiose ritual
+center.  The walls are constructed of pale orange quarry stone which has
+been cut and fitted together with greater skill than even the best
+dwarven craftsman could muster.  While the quarry stone walls are covered
+with panel after panel of hieroglyphics, it is the floor and ceiling of
+the chamber which lends to the unusual.  Along the floor there is an
+inlaid, silver etching of a square design.  The ceiling bears a similar
+etching, but of gold and a circle.  To the east, framed by vertical
+strips of hieroglyphics, there is a passage into another part of what
+remains of the obelisk.  A single ray of light streams down from the top
+of the chamber, to land just outside the inlaid square.
+~
+*CF
+~
+167247880 0 5 0
+D1
+~
+~
+0 -1 73019 10 10 5
+D4
+~
+~
+235 -1 73017 10 10 5
+E
+gold circle ceiling~
+A perfect circle has been etched into the ceiling and filled with gold. 
+You are not certain as to what purpose the circle serves or once served,
+but it clearly seems to be ceremonial or part of some ritual.  Directly
+below the golden circle, etched in a similar manner on the floor of the
+chamber, is a silver square.
+~
+E
+silver square floor~
+Directly below a circle of gold etched into the ceiling rests a similar
+etching.  But this one is square in shape and is filled with silver, not
+gold.  The square and circle look like they once served a ceremonial
+purpose, but as to what, you have no idea.  There is evidence that
+something large, a block of stone or an altar, perhaps, at one time
+rested at the center of the square.
+~
+E
+passage~
+The passage east, which leads into another chamber, appears to have been
+hastily and newly crafted.  Or at least the construction is new in
+comparison with the rest of the structure.
+~
+E
+hieroglyphics~
+Out of all the hieroglyphics, only the second, fifth, and ninth panels of
+them have remained intact through the ages.  The rest have either been
+torn apart by deep, rending cracks in the quarry stone or have faded away
+into illegibility.
+~
+E
+vertical strips~
+Unlike the majority of the hieroglyphics adorning the walls, the two
+vertical strips standing to either side of the eastern passage remain
+completely intact.
+~
+E
+walls~
+At one time, panels of hieroglyphics decorated the walls of this chamber,
+three panels each.  But deep cracks have destroyed many of them, scoring
+their surfaces completely with small fissures.  Also, along the walls are
+various hieroglyphic symbols standing alone by themselves.  They include
+a skull, a coin, an eye, and a holy symbol of sorts and a mask.
+~
+E
+eye open oval~
+Engraved into one of the walls is a hieroglyphic of an eye.  The eye is
+wide open and blue and brimming with wisdom.
+~
+E
+skull~
+On the lower right hand corner of the southmost wall there is a
+hieroglyphic of a skull.  Though just a drawing, it conveys a deep sense
+of death.
+~
+E
+gold coin~
+Depicted with a yellowish-gold paint, a drawing of a golden coin adorns
+one of the walls.  On its obverse side, the only one visible, there is a
+picture of a roaring dragon curled about a tremendous hoard of treasure.
+~
+E
+holy symbol~
+One of the hieroglyphics on the wall is that of a lone symbol.  Shaped
+like a cross with a looped top, the symbol is rendered in a silvery paint.
+~
+E
+mask beautiful~
+One of the lone hieroglyphics remaining intact on the cracked walls is
+that of a mask.  The features on the mask are quite beautiful by any
+standard.  So beautiful are they that it seems almost like an expression
+of vanity.
+~
+A
+press push touch~
+eye oval opening~
+if( !is_open( room, up ) ) {
+  act_tochar( #push, ch );
+  act_notchar( #rpush, ch );
+  wait( 2 );
+  act_room( #moves, ch );
+  remove_rflag( reset0, room );
+  wait( 2 );
+  act_room( #reflect, ch );
+  wait( 2 );
+  act_room( #glow, ch );
+  wait( 2 );
+  act_room( #open, ch );
+  open( room, up );
+wait( 1 );
+  act_tochar( #cwise, ch );
+  act_notchar( #wize, ch );
+  }
+else
+  act_tochar( #already, ch );
+~
+E
+push~
+Gently, you push the hieroglyphic of the open eye.
+~
+E
+rpush~
+$n pushes down upon one of the hieroglyphics.
+~
+E
+moves~
+A tiny, mirror-like gem rises out of the floor, into the path of light.
+~
+E
+reflect~
+The light reflects off the gem, striking the center of the silver pattern.
+~
+E
+glow~
+Both the silver inlaid square and the gold circle set into the ceiling
+begin to glow.  A soft, sweet harmony, half song and half humming, fills
+the air.  The beam of light widens until it fills the entire space
+between the two metallic patterns.
+~
+E
+open~
+Like an eye opening, an upward passage is revealed.
+~
+E
+already~
+That does not seem to do anything.
+~
+E
+wize~
+$n has chosen wisely.
+~
+E
+cwise~
+You have chosen...wisely.
+~
+!
+0 0 0
+A
+press move push~
+skull coin gold beautiful mask holy symbol~
+if( !is_open( room, up ) ) {
+  act_tochar( #press, ch );
+  act_notchar( #rpress, ch );
+  wait( 2 );
+  act_tochar( #lightning, ch );
+  act_notchar( #rlightning, ch );
+  damage( mob, ch, 9d10+28, shock, "the lightning bolt" );
+  wait( 1 );
+  act_tochar( #poor, ch );
+  act_notchar( #rpoor, ch );
+}
+else
+  act_tochar( #cant, ch );
+~
+E
+press~
+You press down upon the ancient symbol and it moves under your touch.
+~
+E
+rpress~
+$n presses down upon an ancient symbol on the wall.
+~
+E
+lightning~
+A bolt of lightning erupts violently toward you from the gylph.
+~
+E
+rlightning~
+Lightning shoots from the glyph, striking $n squarely!
+~
+E
+poor~
+You have chosen...poorly.
+~
+E
+rpoor~
+$n has chosen...poorly.
+~
+E
+cant~
+The ancient glyph refuses to budge.
+~
+!
+0 0 0
+A
+look~
+second~
+if( has_obj( 1549, ch ) ){
+obj = has_obj( 1549, ch );
+act_tochar( #ctrans, ch, obj );
+act_notchar( #rctrans, ch, obj );
+wait( 1 );
+act_tochar( #trans1, ch, obj );
+}
+else
+act_tochar( #desc, ch  );
+~
+E
+ctrans~
+For a moment, $p becomes warm and
+begins to glow as you examine the hieroglyphics.
+~
+E
+rctrans~
+Momentarily, $p in $n's possession glows as $e 
+examines a section of  hieroglyphics. 
+~
+E
+desc~
+The hieroglyphics are much too complex to understand.
+~
+E
+trans1~
+With the aid of $p, you are finally able to fully 
+understand the hieroglyphics here. They read: 
+
+As proclaimed by the Goddess in Her last moments, there is a twelve-fold
+path which must be walked in order to restore unto Her Her powers and
+essence, so that She might once again guide the People.  So, let the
+second step be written for all time to witness, so that one day it shall
+come to pass: 
+
+'Communing with the Goddess is only possible through a Vessel or through
+a statue to the Goddess, all of which have perished, save one.  And this
+one is not whole.' 
+~
+!
+0 0 0
+A
+look~
+fifth~
+if( has_obj( 1549, ch ) ){
+obj = has_obj( 1549, ch );
+act_tochar( #ctrans, ch, obj );
+act_notchar( #rctrans, ch, obj );
+wait( 1 );
+act_tochar( #trans1, ch, obj );
+}
+else
+act_tochar( #desc, ch  );
+~
+E
+ctrans~
+For a moment, $p becomes warm and
+begins to glow as you examine the hieroglyphics.
+~
+E
+rctrans~
+Momentarily, $p in $n's possession glows as $e 
+examines a section of  hieroglyphics. 
+~
+E
+desc~
+The hieroglyphics are much too complex to understand.
+~
+E
+trans1~
+With the aid of $p, you are finally able to fully
+understand the hieroglyphics here. They read: 
+
+As proclaimed by the Goddess in Her last moments, there is a twelve-fold
+path which must be walked in order to restore unto Her Her powers and
+essence, so that She might once again guide the People.  So, let the
+fifth step be written for all time to witness, so that one day it shall
+come to pass: 
+
+'In order to gather the essences of Her betrayers, one must travel into
+the Sacred grove with Her blessing and gather them at the golden font,
+which was once the well spring of their powers.' 
+~
+!
+0 0 0
+A
+look~
+ninth~
+if( has_obj( 1549, ch ) ){
+obj = has_obj( 1549, ch );
+act_tochar( #ctrans, ch, obj );
+act_notchar( #rctrans, ch, obj );
+wait( 1 );
+act_tochar( #trans1, ch, obj );
+}
+else
+act_tochar( #desc, ch  );
+~
+E
+ctrans~
+For a moment, $p becomes warm and
+begins to glow as you examine the hieroglyphics.
+~
+E
+rctrans~
+Momentarily, $p in $n's possession glows as $e 
+examines a section of  hieroglyphics. 
+~
+E
+desc~
+The hieroglyphics are much too complex to understand.
+~
+E
+trans1~
+With the aid of $p, you are finally able to fully 
+understand the hieroglyphics here. They read: 
+
+As proclaimed by the Goddess in Her last moments, there is a twelve-fold
+path which must be walked in order to restore unto Her Her powers and
+essence, so that She might once again guide the People.  So, let the
+ninth step be written for all time to witness, so that one day it shall
+come to pass: 
+
+'After the demigod of strength and she of knowledge has been defeated
+then must fall the winged one.  With his swift aid, the Goddess' advisor,
+the most powerful of all Her siblings, must surely fall.  His essences
+must then be sacrificed upon his own altar.' 
+~
+!
+0 0 0
+A
+translate~
+second~
+i = get_integer( ch, "/Cayln/TabletEnduraba" );
+obj = has_obj( 1548, ch );
+if( obj ) {
+  j = get_integer( obj, "/Cayln/TabletEnduraba" );
+  if( i == j ) {
+    act_notchar( #rtmess, ch, obj );
+    act_tochar( #trans1, ch, obj );
+  }
+  else {
+    act_tochar( #study, ch, obj );
+    act_notchar( #rstudy, ch, obj );
+  }
+  end;
+}
+obj = has_obj( 1549, ch );
+if( obj ) {
+act_tochar( #ctrans, ch, obj, mob );
+  act_notchar( #rctran, ch, obj, mob );
+  wait( 2 );
+  act_tochar( #trans1, ch, obj, mob );
+  end;
+}
+act_tochar( #notrans, ch );
+act_notchar( #rnotrans, ch );
+~
+E
+trans1~
+With the aid of $p, you are finally able to fully 
+understand the hieroglyphics here. They read: 
+
+As proclaimed by the Goddess in Her last moments, there is a twelve-fold
+path which must be walked in order to restore unto Her Her powers and
+essence, so that She might once again guide the People.  So, let the
+second step be written for all time to witness, so that one day it shall
+come to pass: 
+
+'Communing with the Goddess is only possible through a Vessel or through
+a statue to the Goddess, all of which have perished, save one.  And this
+one is not whole.' 
+~
+E
+ctrans~
+For a moment, $p becomes warm and
+begins to glow as you examine the hieroglyphics.
+~
+E
+rctran~
+Momentarily, $p in $n's possession glows as $e 
+examines a section of hieroglyphics. 
+~
+E
+rtmess~
+$n's brow furrows in thought as $e tries to translate a section 
+of hieroglyphics using $p as a guide.
+~
+E
+notrans~
+The hieroglyphics are much too complex to understand.
+~
+E
+rnotrans~
+$n's frowns with frustration as $e finishes examining a portion
+of the hieroglyphics.
+~
+E
+study~
+You will need to study $p some more.
+~
+E
+rstudy~
+$n will need to study $p some more.
+~
+!
+0 0 0
+A
+translate~
+fifth~
+i = get_integer( ch, "/Cayln/TabletEnduraba" );
+obj = has_obj( 1548, ch );
+if( obj ) {
+  j = get_integer( obj, "/Cayln/TabletEnduraba" );
+  if( i == j ) {
+    act_notchar( #rtmess, ch, obj );
+    act_tochar( #trans1, ch, obj );
+  }
+  else {
+    act_tochar( #study, ch, obj );
+    act_notchar( #rstudy, ch, obj );
+  }
+  end;
+}
+obj = has_obj( 1549, ch );
+if( obj ) {
+  act_tochar( #ctrans, ch, obj, mob );
+  act_notchar( #rctran, ch, obj, mob );
+  wait( 2 );
+  act_tochar( #trans1, ch, obj, mob );
+  end;
+}
+act_tochar( #notrans, ch );
+act_notchar( #rnotrans, ch );
+~
+E
+trans1~
+With the aid of $p, you are finally able to fully 
+understand the hieroglyphics here. They read: 
+
+As proclaimed by the Goddess in Her last moments, there is a twelve-fold
+path which must be walked in order to restore unto Her Her powers and
+essence, so that She might once again guide the People.  So, let the
+fifth step be written for all time to witness, so that one day it shall
+come to pass: 
+
+'In order to gather the essences of Her betrayers, one must travel into
+the Sacred grove with Her blessing and gather them at the golden font,
+which was once the well spring of their powers.' 
+~
+E
+ctrans~
+For a moment, $p becomes warm and
+begins to glow as you examine the hieroglyphics.
+~
+E
+rctran~
+Momentarily, $p in $n's possession glows as $e
+examines a section of hieroglyphics. 
+~
+E
+rtmess~
+$n's brow furrows in thought as $e tries to translate a section 
+of hieroglyphics using $p as a guide.
+~
+E
+notrans~
+The hieroglyphics are much too complex to understand.
+~
+E
+rnotrans~
+$n's frowns with frustration as $e finishes examining a portion
+of the hieroglyphics.
+~
+E
+study~
+You will need to study $p some more.
+~
+E
+rstudy~
+$n will need to study $p some more.
+~
+!
+0 0 0
+A
+translate~
+ninth~
+i = get_integer( ch, "/Cayln/TabletEnduraba" );
+obj = has_obj( 1548, ch );
+if( obj ) {
+  j = get_integer( obj, "/Cayln/TabletEnduraba" );
+  if( i == j ) {
+    act_notchar( #rtmess, ch, obj );
+    act_tochar( #trans1, ch, obj );
+  }
+  else {
+    act_tochar( #study, ch, obj );
+    act_notchar( #rstudy, ch, obj );
+  }
+  end;
+}
+obj = has_obj( 1549, ch );
+if( obj ) {
+  act_tochar( #ctrans, ch, obj, mob );
+  act_notchar( #rctran, ch, obj, mob );
+  wait( 2 );
+  act_tochar( #trans1, ch, obj, mob );
+  end;
+}
+act_tochar( #notrans, ch );
+act_notchar( #rnotrans, ch );
+~
+E
+trans1~
+With the aid of $p, you are finally able to fully 
+understand the hieroglyphics here. They read: 
+
+As proclaimed by the Goddess in Her last moments, there is a twelve-fold
+path which must be walked in order to restore unto Her Her powers and
+essence, so that She might once again guide the People.  So, let the
+ninth step be written for all time to witness, so that one day it shall
+come to pass: 
+
+'After the demigod of strength and she of knowledge has been defeated
+then must fall the winged one.  With his swift aid, the Goddess' advisor,
+the most powerful of all Her siblings, must surely fall.  His essences
+must then be sacrificed upon his own altar.' 
+~
+E
+ctrans~
+For a moment, $p becomes warm and
+begins to glow as you examine the hieroglyphics.
+~
+E
+rctran~
+Momentarily, $p in $n's possession glows as $e 
+examines a section of hieroglyphics. 
+~
+E
+rtmess~
+$n's brow furrows in thought as $e tries to translate a section 
+of hieroglyphics using $p as a guide.
+~
+E
+notrans~
+The hieroglyphics are much too complex to understand.
+~
+E
+rnotrans~
+$n frowns with frustration as $e finishes examining a portion
+of the hieroglyphics.
+~
+E
+study~
+You will need to study $p some more.
+~
+E
+rstudy~
+$n will need to study $p some more.
+~
+!
+0 0 0
+2942 17 1509949540 -2 0
+-1
+S
+
+#73019
+Inside a Monument~
+The walls of this rectangular chamber are framed by gigantic blocks of
+orange quarry stone.  Down and through many of the stones, though, run
+deep cracks, as though great stress has been placed upon the cool, stone
+walls.  Hieroglyphics adorn nearly every square inch of the walls and
+ceiling, painted in neat rows using a variety of pigments.  Two passages
+lead out of the chamber, one to the west and one to the south.  Both
+thresholds appear to be hastily crafted and lack the same precision and
+attention to exactness that is shared throughout the construction of the
+rest of the chamber.
+~
+*CF
+~
+167247872 0 5 0
+D2
+~
+~
+0 -1 73020 10 10 5
+D3
+~
+~
+0 -1 73018 10 10 5
+E
+1 west~
+The passage west seems to lead into another chamber of roughly the same
+size.  The edges of the passageway are rough and jagged, as though it has
+been torn away from another chamber.
+~
+E
+1 south~
+The edges of the passageway to the south are cracked and rough, like it
+has been ripped away suddenly from another section or chamber.  Jagged
+shirds stick out of the passageway, making it dangerous to pass through
+safely.
+~
+E
+panels hieroglyphics walls cracks~
+Deep cracks run diagonally across the surface of the quarry stone walls,
+rendering many of the delicate drawings and hieroglyphics illegible.  In
+fact, out of twelve hieroglyphic panels, nine have been shattered
+completely, leaving only the third, tenth, and twelfth panel at all
+legible.
+~
+A
+look~
+third~
+if( has_obj( 1549, ch ) ){
+obj = has_obj( 1549, ch );
+act_tochar( #ctrans, ch, obj );
+act_notchar( #rctrans, ch, obj );
+wait( 1 );
+act_tochar( #trans1, ch, obj );
+}
+else
+act_tochar( #desc, ch  );
+~
+E
+ctrans~
+For a moment, $p becomes warm and
+begins to glow as you examine the hieroglyphics.
+~
+E
+rctrans~
+Momentarily, $p in $n's possession glows as $e 
+examines a section of  hieroglyphics. 
+~
+E
+desc~
+The hieroglyphics are much too complex to understand.
+~
+E
+trans1~
+With the aid of $p, you are finally able to fully
+understand the hieroglyphics here. They read: 
+
+As proclaimed by the Goddess in Her last moments, there is a twelve-fold
+path which must be walked in order to restore unto Her Her powers and
+essence, so that She might once again guide the People.  So, let the
+third step be written for all time to witness, so that one day it shall
+come to pass: 
+@R
+'So, one must destroy Her statue first in order to get Her blessings.'
+@n
+[These hieroglyphics appear in red.]
+~
+!
+0 0 0
+A
+look~
+tenth~
+if( has_obj( 1549, ch ) ){
+obj = has_obj( 1549, ch );
+act_tochar( #ctrans, ch, obj );
+act_notchar( #rctrans, ch, obj );
+wait( 1 );
+act_tochar( #trans1, ch, obj );
+}
+else
+act_tochar( #desc, ch  );
+~
+E
+ctrans~
+For a moment, $p becomes warm and
+begins to glow as you examine the hieroglyphics.
+~
+E
+rctrans~
+Momentarily, $p in $n's possession glows as $e 
+examines a section of  hieroglyphics. 
+~
+E
+desc~
+The hieroglyphics are much too complex to understand.
+~
+E
+trans1~
+With the aid of $p, you are finally able to fully 
+understand the hieroglyphics here. They read: 
+
+As proclaimed by the Goddess in Her last moments, there is a twelve-fold
+path which must be walked in order to restore unto Her Her powers and
+essence, so that She might once again guide the People.  So, let the
+tenth step be written for all time to witness, so that one day it shall
+come to pass: 
+
+'Finally, Her advisor and best loved sister must be defeated, for it is
+She who was lured in by Setmos' promises of power and servitude.  She is
+the one who convinced the others to turn against her sister.  She holds
+the loyalty of the other three demigods and should any still survive
+before the Advisor is defeated, they shall swiftly come to her aid.  Her
+essences must then be sacrificed upon her own altar.' 
+~
+!
+0 0 0
+A
+look~
+twelfth~
+if( has_obj( 1549, ch ) ){
+obj = has_obj( 1549, ch );
+act_tochar( #ctrans, ch, obj );
+act_notchar( #rctrans, ch, obj );
+wait( 1 );
+act_tochar( #trans1, ch, obj );
+}
+else
+act_tochar( #desc, ch  );
+~
+E
+ctrans~
+For a moment, $p becomes warm and
+begins to glow as you examine the hieroglyphics.
+~
+E
+rctrans~
+Momentarily, $p in $n's possession glows as $e 
+examines a section of  hieroglyphics. 
+~
+E
+desc~
+The hieroglyphics are much too complex to understand.
+~
+E
+trans1~
+With the aid of $p, you are finally able to fully 
+understand the hieroglyphics here. They read: 
+
+As proclaimed by the Goddess in Her last moments, there is a twelve-fold
+path which must be walked in order to restore unto Her Her powers and
+essence, so that She might once again guide the People.  So, let the
+twelfth step be written for all time to witness, so that one day it shall
+come to pass: 
+
+'Finally, should Her blessings still be with you, the Goddess shall arise
+out of the well of souls, with her powers restored.' 
+~
+!
+0 0 0
+A
+translate~
+third~
+i = get_integer( ch, "/Cayln/TabletEnduraba" );
+obj = has_obj( 1548, ch );
+if( obj ) {
+  j = get_integer( obj, "/Cayln/TabletEnduraba" );
+  if( i == j ) {
+    act_notchar( #rtmess, ch, obj );
+    act_tochar( #trans1, ch, obj );
+  }
+  else {
+    act_tochar( #study, ch, obj );
+    act_notchar( #rstudy, ch, obj );
+  }
+  end;
+}
+obj = has_obj( 1549, ch );
+if( obj ) {
+  act_tochar( #ctrans, ch, obj, mob );
+  act_notchar( #rctran, ch, obj, mob );
+  wait( 2 );
+  act_tochar( #trans1, ch, obj, mob );
+  end;
+}
+act_tochar( #notrans, ch );
+act_notchar( #rnotrans, ch );
+~
+E
+trans1~
+With the aid of $p, you are finally able to fully
+understand the hieroglyphics here. They read: 
+
+As proclaimed by the Goddess in Her last moments, there is a twelve-fold
+path which must be walked in order to restore unto Her Her powers and
+essence, so that She might once again guide the People.  So, let the
+third step be written for all time to witness, so that one day it shall
+come to pass: 
+@R
+'So, one must destroy Her statue first in order to get Her blessings.'
+@n
+[These hieroglyphics appear in red.]
+~
+E
+ctrans~
+For a moment, $p becomes warm and
+begins to glow as you examine the hieroglyphics.
+~
+E
+rctran~
+Momentarily, $p in $n's possession glows as $e 
+examines a section of hieroglyphics. 
+~
+E
+rtmess~
+$n's brow furrows in thought as $e tries to translate a section 
+of hieroglyphics using $p as a guide.
+~
+E
+notrans~
+The hieroglyphics are much too complex to understand.
+~
+E
+rnotrans~
+$n's frowns with frustration as $e finishes examining a portion
+of the hieroglyphics.
+~
+E
+study~
+You will need to study $p some more.
+~
+E
+rstudy~
+$n will need to study $p some more.
+~
+!
+0 0 0
+A
+translate~
+tenth~
+i = get_integer( ch, "/Cayln/TabletEnduraba" );
+obj = has_obj( 1548, ch );
+if( obj ) {
+  j = get_integer( obj, "/Cayln/TabletEnduraba" );
+  if( i == j ) {
+    act_notchar( #rtmess, ch, obj );
+    act_tochar( #trans1, ch, obj );
+  }
+  else {
+    act_tochar( #study, ch, obj );
+    act_notchar( #rstudy, ch, obj );
+  }
+  end;
+}
+obj = has_obj( 1549, ch );
+if( obj ) {
+  act_tochar( #ctrans, ch, obj, mob );
+  act_notchar( #rctran, ch, obj, mob );
+  wait( 2 );
+  act_tochar( #trans1, ch, obj, mob );
+  end;
+}
+act_tochar( #notrans, ch );
+act_notchar( #rnotrans, ch );
+~
+E
+trans1~
+With the aid of $p, you are finally able to fully 
+understand the hieroglyphics here. They read: 
+
+As proclaimed by the Goddess in Her last moments, there is a twelve-fold
+path which must be walked in order to restore unto Her Her powers and
+essence, so that She might once again guide the People.  So, let the
+tenth step be written for all time to witness, so that one day it shall
+come to pass: 
+
+'Finally, Her advisor and best loved sister must be defeated, for it is
+She who was lured in by Setmos' promises of power and servitude.  She is
+the one who convinced the others to turn against her sister.  She holds
+the loyalty of the other three demigods and should any still survive
+before the Advisor is defeated, they shall swiftly come to her aid.  Her
+essences must then be sacrificed upon her own altar.' 
+~
+E
+ctrans~
+For a moment, $p becomes warm and
+begins to glow as you examine the hieroglyphics.
+~
+E
+rctran~
+Momentarily, $p in $n's possession glows as $e 
+examines a section of hieroglyphics. 
+~
+E
+rtmess~
+$n's brow furrows in thought as $e tries to translate a section 
+of hieroglyphics using $p as a guide.
+~
+E
+notrans~
+The hieroglyphics are much too complex to understand.
+~
+E
+rnotrans~
+$n's frowns with frustration as $e finishes examining a portion
+of the hieroglyphics.
+~
+E
+study~
+You will need to study $p some more.
+~
+E
+rstudy~
+$n will need to study $p more.
+~
+!
+0 0 0
+A
+translate~
+twelfth~
+i = get_integer( ch, "/Cayln/TabletEnduraba" );
+obj = has_obj( 1548, ch );
+if( obj ) {
+  j = get_integer( obj, "/Cayln/TabletEnduraba" );
+  if( i == j ) {
+    act_notchar( #rtmess, ch, obj );
+    act_tochar( #trans1, ch, obj );
+  }
+  else {
+    act_tochar( #study, ch, obj );
+    act_notchar( #rstudy, ch, obj );
+  }
+  end;
+}
+obj = has_obj( 1549, ch );
+if( obj ) {
+  act_tochar( #ctrans, ch, obj, mob );
+  act_notchar( #rctran, ch, obj, mob );
+  wait( 2 );
+  act_tochar( #trans1, ch, obj, mob );
+  end;
+}
+act_tochar( #notrans, ch );
+act_notchar( #rnotrans, ch );
+~
+E
+trans1~
+With the aid of $p, you are finally able to fully 
+understand the hieroglyphics here. They read: 
+
+As proclaimed by the Goddess in Her last moments, there is a twelve-fold
+path which must be walked in order to restore unto Her Her powers and
+essence, so that She might once again guide the People.  So, let the
+twelfth step be written for all time to witness, so that one day it shall
+come to pass: 
+
+'Finally, should Her blessings still be with you, the Goddess shall arise
+out of the well of souls, with her powers restored.' 
+~
+E
+ctrans~
+For a moment, $p becomes warm and
+begins to glow as you examine the hieroglyphics.
+~
+E
+rctran~
+Momentarily, $p in $n's possession glows as $e 
+examines a section of hieroglyphics. 
+~
+E
+rtmess~
+$n's brow furrows in thought as $e tries to translate a section 
+of hieroglyphics using $p as a guide.
+~
+E
+notrans~
+The hieroglyphics are much too complex to understand.
+~
+E
+rnotrans~
+$n's frowns with frustration as $e finishes examining a portion
+of the hieroglyphics.
+~
+E
+study~
+You will need to study $p more.
+~
+E
+rstudy~
+$n will need to study $p more.
+~
+!
+0 0 0
+1519 9 1509949540 3 0
+2942 17 1509949540 -2 0
+-1
+S
+
+#73020
+Lopsided Chamber~
+It appears as if some great earthquake has assaulted this rectangular
+chamber, whose height decreases slightly from west to east.  The room is
+drastically slanted, with its southwest corner dipping down.  Thus, it is
+also very difficult to maintain your balance in here.  Although the pale,
+orange quarry stone walls are covered with rows of hieroglyphics, many of
+the enigmatic depictions have been rendered unreadable by wide cracks
+that run down and over them like a series rampaging river tributaries. 
+The floor and ceiling are made of hard-packed sand, which shows no signs
+of giving way.  Rough and seemingly makeshift passages branch off from
+the room, to other oddly-constructed chambers to the north, west, and
+east.
+~
+*CF
+~
+167247872 0 5 0
+D0
+~
+~
+0 -1 73019 10 10 5
+D1
+~
+~
+0 -1 73022 10 10 5
+D3
+~
+~
+0 -1 73021 10 10 5
+E
+walls quarry stone~
+The interior walls of this chamber are build from chiseled blocks of
+pale, orange quarry stone.  The sides have been hand smoothed and set
+into place with an eye to precision rivaled by none.  Each block of stone
+is about five feet long and three feet high and must weigh in excess of
+five thousand pounds.
+~
+E
+ceiling floor hard-pack sand ~
+The ceiling and floor of this chamber are made of hard-packed tan sand,
+and not quarry stone.  Judging from the cracks running along the
+stonework of them both, it seems apparent that at one time, this chamber
+had a stone ceiling and floor in place of the sand.  Someone has gone to
+a lot of trouble to reconstruct this chamber after whatever natural
+disaster is suffered.
+~
+E
+corner~
+A lot of sand and flecks of stone have collected in a pile in the corner,
+where it dips downward sharply.  Most of the pieces of stone lodged in
+the corner appear to be from the walls, where fissures have destroyed the
+wall surfaces.
+~
+E
+hieroglyphics enigmatic depictions~
+From birds, to lizards, serpents to scarabs, all manner of creatures and
+designs decorate the remaining two hieroglyphic panels which adorn the
+walls of the chamber.  All the other stone chiseled panels have been
+destroyed as cracks and fissures have descended down through their
+surfaces.  This leaves only the fourth and seventh panel of hieroglyphics
+at all legible.
+~
+A
+look~
+fourth~
+if( has_obj( 1549, ch ) ){
+obj = has_obj( 1549, ch );
+act_tochar( #ctrans, ch, obj );
+act_notchar( #rctrans, ch, obj );
+wait( 1 );
+act_tochar( #trans1, ch, obj );
+}
+else
+act_tochar( #desc, ch  );
+~
+E
+ctrans~
+For a moment, $p becomes warm and
+begins to glow as you examine the hieroglyphics.
+~
+E
+rctrans~
+Momentarily, $p in $n's possession glows as $e 
+examines a section of  hieroglyphics. 
+~
+E
+desc~
+The hieroglyphics are much too complex to understand.
+~
+E
+trans1~
+With the aid of $p, you are finally able to fully 
+understand the hieroglyphics here. They read: 
+
+As proclaimed by the Goddess in Her last moments, there is a twelve-fold
+path which must be walked in order to restore unto Her Her powers and
+essence, so that She might once again guide the People.  So, let the
+fourth step be written for all time to witness, so that one day it shall
+come to pass: 
+
+'Then, you must find and defeat the four who betrayed the Goddess.  But
+the four who participated in Her usurpation cannot truly be defeated lest
+essences of their former glory be present and sacrificed within moments
+of their defeat.' 
+~
+!
+0 0 0
+A
+look~
+seventh~
+if( has_obj( 1549, ch ) ){
+obj = has_obj( 1549, ch );
+act_tochar( #ctrans, ch, obj );
+act_notchar( #rctrans, ch, obj );
+wait( 1 );
+act_tochar( #trans1, ch, obj );
+}
+else
+act_tochar( #desc, ch  );
+~
+E
+ctrans~
+For a moment, $p becomes warm and
+begins to glow as you examine the hieroglyphics.
+~
+E
+rctrans~
+Momentarily, $p in $n's possession glows as $e 
+examines a section of  hieroglyphics. 
+~
+E
+desc~
+The hieroglyphics are much too complex to understand.
+~
+E
+trans1~
+With the aid of $p, you are finally able to fully 
+understand the hieroglyphics here. They read: 
+
+As proclaimed by the Goddess in Her last moments, there is a twelve-fold
+path which must be walked in order to restore unto Her Her powers and
+essence, so that She might once again guide the People.  So, let the
+seventh step be written for all time to witness, so that one day it shall
+come to pass: 
+
+'The demigod of strength and muscle but be defeated first.  His powers
+are the weakest.  Without his strength, the other three are weakened
+considerably.  His essences must then be sacrificed upon his own 
+altar.'
+~
+!
+0 0 0
+A
+translate~
+fourth~
+i = get_integer( ch, "/Cayln/TabletEnduraba" );
+obj = has_obj( 1548, ch );
+if( obj ) {
+  j = get_integer( obj, "/Cayln/TabletEnduraba" );
+  if( i == j ) {
+    act_notchar( #rtmess, ch, obj );
+    act_tochar( #trans1, ch, obj );
+  }
+  else {
+    act_tochar( #study, ch, obj );
+    act_notchar( #rstudy, ch, obj );
+  }
+  end;
+}
+obj = has_obj( 1549, ch );
+if( obj ) {
+  act_tochar( #ctrans, ch, obj, mob );
+  act_notchar( #rctran, ch, obj, mob );
+  wait( 2 );
+  act_tochar( #trans1, ch, obj, mob );
+  end;
+}
+act_tochar( #notrans, ch );
+act_notchar( #rnotrans, ch );
+~
+E
+trans1~
+With the aid of $p, you are finally able to fully 
+understand the hieroglyphics here. They read: 
+
+As proclaimed by the Goddess in Her last moments, there is a twelve-fold
+path which must be walked in order to restore unto Her Her powers and
+essence, so that She might once again guide the People.  So, let the
+fourth step be written for all time to witness, so that one day it shall
+come to pass: 
+
+'Then, you must find and defeat the four who betrayed the Goddess.  But
+the four who participated in Her usurpation cannot truly be defeated lest
+essences of their former glory be present and sacrificed within moments
+of their defeat.' 
+~
+E
+ctrans~
+For a moment, $p becomes warm and
+begins to glow as you examine the hieroglyphics.
+~
+E
+rctran~
+Momentarily, $p in $n's possession glows as $e 
+examines a section of hieroglyphics. 
+~
+E
+rtmess~
+$n's brow furrows in thought as $e tries to translate a section 
+of hieroglyphics using $p as a guide.
+~
+E
+notrans~
+The hieroglyphics are much too complex to understand.
+~
+E
+rnotrans~
+$n's frowns with frustration as $e finishes examining a portion
+of the hieroglyphics.
+~
+E
+study~
+You will need to study $p more.
+~
+E
+rstudy~
+$n will need to study $p more.
+~
+!
+0 0 0
+A
+translate~
+seventh~
+i = get_integer( ch, "/Cayln/TabletEnduraba" );
+obj = has_obj( 1548, ch );
+if( obj ) {
+  j = get_integer( obj, "/Cayln/TabletEnduraba" );
+  if( i == j ) {
+    act_notchar( #rtmess, ch, obj );
+    act_tochar( #trans1, ch, obj );
+  }
+  else {
+    act_tochar( #study, ch, obj );
+    act_notchar( #rstudy, ch, obj );
+  }
+  end;
+}
+obj = has_obj( 1549, ch );
+if( obj ) {
+  act_tochar( #ctrans, ch, obj, mob );
+  act_notchar( #rctran, ch, obj, mob );
+  wait( 2 );
+  act_tochar( #trans1, ch, obj, mob );
+  end;
+}
+act_tochar( #notrans, ch );
+act_notchar( #rnotrans, ch );
+~
+E
+trans1~
+With the aid of $p, you are finally able to fully 
+understand the hieroglyphics here. They read: 
+
+As proclaimed by the Goddess in Her last moments, there is a twelve-fold
+path which must be walked in order to restore unto Her Her powers and
+essence, so that She might once again guide the People.  So, let the
+seventh step be written for all time to witness, so that one day it shall
+come to pass: 
+
+'The demigod of strength and muscle but be defeated first.  His powers
+are the weakest.  Without his strength, the other three are weakened
+considerably.  His essences must then be sacrificed upon his own altar.' 
+~
+E
+ctrans~
+For a moment, $p becomes warm and
+begins to glow as you examine the hieroglyphics.
+~
+E
+rctran~
+Momentarily, $p in $n's possession glows as $e 
+examines a section of hieroglyphics. 
+~
+E
+rtmess~
+$n's brow furrows in thought as $e tries to translate a section 
+of hieroglyphics using $p as a guide.
+~
+E
+notrans~
+The hieroglyphics are much too complex to understand.
+~
+E
+rnotrans~
+$n's frowns with frustration as $e finishes examining a portion
+of the hieroglyphics.
+~
+E
+study~
+You will need to study $p more.
+~
+E
+rstudy~
+$n will need to study $p some more.
+~
+!
+0 0 0
+1519 9 1509949540 3 0
+2942 17 1509949540 -2 0
+-1
+S
+
+#73021
+Broken Chamber~
+It looks as though this rectangular chamber, which narrows slightly from
+west to east, at one time was part of the obelisk's mid-section.  The
+west wall is nothing but a sheer barrier of broken orange quarry stone
+while the edges of the east wall are jagged and sharp, as though it has
+been snapped apart from another part of the obelisk.  The ceiling, walls,
+and floor give credence to this notion for they are covered with neat
+little rows of carefully penned hieroglyphics.  This in itself is not
+unusual.  But the fact that the rows run horizontal and not vertical
+indicates that they, and the entire chamber, are lying on their side.
+~
+*CF
+~
+167247872 0 5 0
+D1
+~
+~
+0 -1 73020 10 10 5
+E
+1 west~
+Judging from the amount of debris clogging the west passage, a
+significant portion of the broken obelisk must lie in that direction. 
+There are no gaps in the debris and no hope of getting past it.
+~
+E
+1 east~
+The edges of the eastern passageway are rough and jagged.  It seems as
+though a section of the obelisk which once connected to this chamber was
+suddenly and brutally ripped away, leaving but sections of quarry stone
+intact.  Hastily done patchwork has been utilized to patch the stone into
+a new chamber.
+~
+E
+ceiling floor panels hieroglyphics ~
+The ceiling, floor, and the north and south walls of this chamber are
+covered with horizontal panels of hieroglyphs.  For the most part, the
+hieroglyphics are a crumbled mess, with cracks running down the middle of
+most of them.  However, a few hieroglyphic panels, the first and sixth
+one, are entirely whole.
+~
+A
+look~
+first~
+if( has_obj( 1549, ch ) ){
+obj = has_obj( 1549, ch );
+act_tochar( #ctrans, ch, obj );
+act_notchar( #rctrans, ch, obj );
+wait( 1 );
+act_tochar( #trans1, ch, obj );
+}
+else
+act_tochar( #desc, ch  );
+~
+E
+ctrans~
+For a moment, $p becomes warm and
+begins to glow as you examine the hieroglyphics.
+~
+E
+rctrans~
+Momentarily, $p in $n's possession glows as $e 
+examines a section of  hieroglyphics. 
+~
+E
+desc~
+The hieroglyphics are much too complex to understand.
+~
+E
+trans1~
+With the aid of $p, you are finally able to fully 
+understand the hieroglyphics here. They read: 
+
+As proclaimed by the Goddess in Her last moments, there is a twelve-fold
+path which must be walked in order to restore unto Her Her powers and
+essence, so that She might once again guide the People.  So, let the
+first step be written for all time to witness, so that one day it shall
+come to pass: 
+
+'One must first commune with the Goddess and establish a link to Her, so
+that She might bestow upon one Her Blessing.  Be mindful that the pyramid
+and grove require Her blessing to enter.  Should it come to pass that you
+should ever bring harm against the Goddess, Her blessing shall be
+revoked.' 
+~
+!
+0 0 0
+A
+look~
+sixth~
+if( has_obj( 1549, ch ) ){
+obj = has_obj( 1549, ch );
+act_tochar( #ctrans, ch, obj );
+act_notchar( #rctrans, ch, obj );
+wait( 1 );
+act_tochar( #trans1, ch, obj );
+}
+else
+act_tochar( #desc, ch  );
+~
+E
+ctrans~
+For a moment, $p becomes warm and
+begins to glow as you examine the hieroglyphics.
+~
+E
+rctrans~
+Momentarily, $p in $n's possession glows as $e 
+examines a section of  hieroglyphics. 
+~
+E
+desc~
+The hieroglyphics are much too complex to understand.
+~
+E
+trans1~
+With the aid of $p, you are finally able to fully 
+understand the hieroglyphics here. They read: 
+
+As proclaimed by the Goddess in Her last moments, there is a twelve-fold
+path which must be walked in order to restore unto Her Her powers and
+essence, so that She might once again guide the People.  So, let the
+sixth step be written for all time to witness, so that one day it shall
+come to pass: 
+
+'Each of Her betrayers, Her demigod siblings, can only be summoned by
+shattering a heartstone of onyx on their altars, once their High Priest
+has been defeated.' 
+~
+!
+0 0 0
+A
+translate~
+first~
+i = get_integer( ch, "/Cayln/TabletEnduraba" );
+obj = has_obj( 1548, ch );
+if( obj ) {
+  j = get_integer( obj, "/Cayln/TabletEnduraba" );
+  if( i == j ) {
+    act_notchar( #rtmess, ch, obj );
+    act_tochar( #trans1, ch, obj );
+  }
+  else {
+    act_tochar( #study, ch, obj );
+    act_notchar( #rstudy, ch, obj );
+  }
+  end;
+}
+obj = has_obj( 1549, ch );
+if( obj ) {
+  act_tochar( #ctrans, ch, obj, mob );
+  act_notchar( #rctran, ch, obj, mob );
+  wait( 2 );
+  act_tochar( #trans1, ch, obj, mob );
+  end;
+}
+act_tochar( #notrans, ch );
+act_notchar( #rnotrans, ch );
+~
+E
+trans1~
+With the aid of $p, you are finally able to fully 
+understand the hieroglyphics here. They read: 
+
+As proclaimed by the Goddess in Her last moments, there is a twelve-fold
+path which must be walked in order to restore unto Her Her powers and
+essence, so that She might once again guide the People.  So, let the
+first step be written for all time to witness, so that one day it shall
+come to pass: 
+
+'One must first commune with the Goddess and establish a link to Her, so
+that She might bestow upon one Her Blessing.  Be mindful that the pyramid
+and grove require Her blessing to enter.  Should it come to pass that you
+should ever bring harm against the Goddess, Her blessing shall be
+revoked.' 
+~
+E
+ctrans~
+For a moment, $p becomes warm and
+begins to glow as you examine the hieroglyphics.
+~
+E
+rctran~
+Momentarily, $p in $n's possession glows as $e 
+examines a section of hieroglyphics. 
+~
+E
+rtmess~
+$n's brow furrows in thought as $e tries to translate a section 
+of hieroglyphics using $p as a guide.
+~
+E
+notrans~
+The hieroglyphics are much too complex to understand.
+~
+E
+rnotrans~
+$n's frowns with frustration as $e finishes examining a portio
+of the hieroglyphics.
+~
+E
+study~
+You will need to study $p more.
+~
+E
+rstudy~
+$n will need to study $p more.
+~
+!
+0 0 0
+A
+translate~
+sixth~
+i = get_integer( ch, "/Cayln/TabletEnduraba" );
+obj = has_obj( 1548, ch );
+if( obj ) {
+  j = get_integer( obj, "/Cayln/TabletEnduraba" );
+  if( i == j ) {
+    act_notchar( #rtmess, ch, obj );
+    act_tochar( #trans1, ch, obj );
+  }
+  else {
+    act_tochar( #study, ch, obj );
+    act_notchar( #rstudy, ch, obj );
+  }
+  end;
+}
+obj = has_obj( 1549, ch );
+if( obj ) {
+  act_tochar( #ctrans, ch, obj, mob );
+  act_notchar( #rctran, ch, obj, mob );
+  wait( 2 );
+  act_tochar( #trans1, ch, obj, mob );
+  end;
+}
+act_tochar( #notrans, ch );
+act_notchar( #rnotrans, ch );
+~
+E
+trans1~
+With the aid of $p, you are finally able to fully 
+understand the hieroglyphics here. They read: 
+
+As proclaimed by the Goddess in Her last moments, there is a twelve-fold
+path which must be walked in order to restore unto Her Her powers and
+essence, so that She might once again guide the People.  So, let the
+sixth step be written for all time to witness, so that one day it shall
+come to pass: 
+
+'Each of Her betrayers, Her demigod siblings, can only be summoned by
+shattering a heartstone of onyx on their altars, once their High Priest
+has been defeated.' 
+~
+E
+ctrans~
+For a moment, $p becomes warm and
+begins to glow as you examine the hieroglyphics.
+~
+E
+rctran~
+Momentarily, $p in $n's possession glows as $e 
+examines a section of hieroglyphics. 
+~
+E
+rtmess~
+$n's brow furrows in thought as $e tries to translate a section 
+of hieroglyphics using $p as a guide.
+~
+E
+notrans~
+The hieroglyphics are much too complex to understand.
+~
+E
+rnotrans~
+$n's frowns with frustration as $e finishes examining a portion
+of the hieroglyphics.
+~
+E
+study~
+You will need to study $p more.
+~
+E
+rstudy~
+$n will need to study $p more.
+~
+!
+0 0 0
+1548 9 1509949490 3 0
+1548 9 1509949490 3 0
+1524 9 1509949490 3 0
+2942 17 1509949540 -2 0
+-1
+S
+
+#73022
+Lopsided Chamber~
+Like the chamber to the west, this one has a ceiling and floor formed
+from hard-packed sand. It also looks like part of the chamber, the northwest part, is
+sinking like a rock cast into quicksand.  The rectangular chamber tapers
+slightly from west to east, being the narrowest down towards the east
+side.  Though hieroglyphics grace most of the surface walls, the ones
+along the east, are special.  Rather than being applied to the pale,
+orange quarry stone walls with pigments, these have been sculpted into
+the walls.  And unlike any other wall in this chamber, it is hewn, not
+from coarse quarry rock, but from a single piece of rose quartz, which
+has been polished until it gleams.
+~
+*CF
+~
+167247872 0 5 0
+D3
+~
+~
+0 -1 73020 10 10 5
+E
+1 east rose quartz~
+To the east stands a wall made of pure rose quartz, a very rare shade of
+mineral.  Etched into the surface of the mineral are panels of
+hieroglyphics which have remained completely intact through the ages and
+through an apparent earthquake, if the cracks and fissures riddling the
+walls are any indication.
+~
+E
+hieroglyphics~
+Twelve panels of hieroglyphics adorn the walls of this chamber.  For the
+most part, deep fissures and stone fractures have streamed down through
+the quarry stone, ripping the hieroglyphics away from the walls, along
+with the stone.  Only two panels of hieroglyphics remain even partly
+intact: the eleventh and eighth ones.  Both are etched into a wall of
+pure rose quartz.
+~
+E
+ceiling floor~
+The ceiling and floor of this chamber are constructed from hard-packed
+sand.  Incidentally, it is obvious that this was not the original layout
+or design of the structure.  Instead, it looks as if the ceiling and
+floor have been makeshifted together, just to make this chamber habitable.
+~
+A
+look~
+eleventh~
+if( has_obj( 1549, ch ) ){
+obj = has_obj( 1549, ch );
+act_tochar( #ctrans, ch, obj );
+act_notchar( #rctrans, ch, obj );
+wait( 1 );
+act_tochar( #trans1, ch, obj );
+}
+else
+act_tochar( #desc, ch  );
+~
+E
+ctrans~
+For a moment, $p becomes warm an
+begins to glow as you examine the hieroglyphics.
+~
+E
+rctrans~
+Momentarily, $p in $n's possession glows as $e 
+examines a section of  hieroglyphics. 
+~
+E
+desc~
+The hieroglyphics are much too complex to understand.
+~
+E
+trans1~
+With the aid of $p, you are finally able to fully 
+understand the hieroglyphics here. They read: 
+
+As proclaimed by the Goddess in Her last moments, there is a twelve-fold
+path which must be walked in order to restore unto Her Her powers and
+essence, so that She might once again guide the People.  So, let the
+eleventh step be written for all time to witness, so that one day it
+shall come to pass: 
+
+'Proof of each demigods defeat must then be tossed into the Well of
+Souls, where they shall temporarily release the Vile One's hold upon the
+Goddess.' 
+~
+!
+0 0 0
+A
+look~
+eighth~
+if( has_obj( 1549, ch ) ){
+obj = has_obj( 1549, ch );
+act_tochar( #ctrans, ch, obj );
+act_notchar( #rctrans, ch, obj );
+wait( 1 );
+act_tochar( #trans1, ch, obj );
+}
+else
+act_tochar( #desc, ch  );
+~
+E
+ctrans~
+For a moment, $p becomes warm and
+begins to glow as you examine the hieroglyphics.
+~
+E
+rctrans~
+Momentarily, $p in $n's possession glows as $e 
+examines a section of  hieroglyphics. 
+~
+E
+desc~
+The hieroglyphics are much too complex to understand.
+~
+E
+trans1~
+With the aid of $p, you are finally able to fully 
+understand the hieroglyphics here. They read: 
+
+As proclaimed by the Goddess in Her last moments, there is a twelve-fold
+path which must be walked in order to restore unto Her Her powers and
+essence, so that She might once again guide the People.  So, let the
+eighth step be written for all time to witness, so that one day it shall
+come to pass: 
+@R
+'First to fall must be his ally and consort, the deity of technology.  If
+this comes to pass in this order, chaos shall ensue and the deities shall
+bring aid to one another.  Her essences must then be sacrificed upon her
+own altar.' 
+@n
+[These hieroglyphics appear in red.]
+~
+!
+0 0 0
+A
+translate~
+eleventh~
+i = get_integer( ch, "/Cayln/TabletEnduraba" );
+obj = has_obj( 1548, ch );
+if( obj ) {
+  j = get_integer( obj, "/Cayln/TabletEnduraba" );
+  if( i == j ) {
+    act_notchar( #rtmess, ch, obj );
+    act_tochar( #trans1, ch, obj );
+  }
+  else {
+    act_tochar( #study, ch, obj );
+    act_notchar( #rstudy, ch, obj );
+  }
+  end;
+}
+obj = has_obj( 1549, ch );
+if( obj ) {
+  act_tochar( #ctrans, ch, obj, mob );
+  act_notchar( #rctran, ch, obj, mob );
+  wait( 2 );
+  act_tochar( #trans1, ch, obj, mob );
+  end;
+}
+act_tochar( #notrans, ch );
+act_notchar( #rnotrans, ch );
+~
+E
+trans1~
+With the aid of $p, you are finally able to fully 
+understand the hieroglyphics here. They read: 
+
+As proclaimed by the Goddess in Her last moments, there is a twelve-fold
+path which must be walked in order to restore unto Her Her powers and
+essence, so that She might once again guide the People.  So, let the
+eleventh step be written for all time to witness, so that one day it
+shall come to pass: 
+
+'Proof of each demigods defeat must then be tossed into the Well of
+Souls, where they shall temporarily release the Vile One's hold upon the
+Goddess.' 
+~
+E
+ctrans~
+For a moment, $p becomes warm and
+begins to glow as you examine the hieroglyphics.
+~
+E
+rctran~
+Momentarily, $p in $n's possession glows as $e 
+examines a section of hieroglyphics. 
+~
+E
+rtmess~
+$n's brow furrows in thought as $e tries to translate a section 
+of hieroglyphics using $p as a guide.
+~
+E
+notrans~
+The hieroglyphics are much too complex to understand.
+~
+E
+rnotrans~
+$n's frowns with frustration as $e finishes examining a portion
+of the hieroglyphics.
+~
+E
+study~
+You need to study $p more.
+~
+E
+rstudy~
+$n needs to study $p more.
+~
+!
+0 0 0
+A
+translate~
+eighth~
+i = get_integer( ch, "/Cayln/TabletEnduraba" );
+obj = has_obj( 1548, ch );
+if( obj ) {
+  j = get_integer( obj, "/Cayln/TabletEnduraba" );
+  if( i == j ) {
+    act_notchar( #rtmess, ch, obj );
+    act_tochar( #trans1, ch, obj );
+  }
+  else {
+    act_tochar( #study, ch, obj );
+    act_notchar( #rstudy, ch, obj );
+  }
+  end;
+}
+obj = has_obj( 1549, ch );
+if( obj ) {
+  act_tochar( #ctrans, ch, obj, mob );
+  act_notchar( #rctran, ch, obj, mob );
+  wait( 2 );
+  act_tochar( #trans1, ch, obj, mob );
+  end;
+}
+act_tochar( #notrans, ch );
+act_notchar( #rnotrans, ch );
+~
+E
+trans1~
+With the aid of $p, you are finally able to fully 
+understand the hieroglyphics here. They read: 
+
+As proclaimed by the Goddess in Her last moments, there is a twelve-fold
+path which must be walked in order to restore unto Her Her powers and
+essence, so that She might once again guide the People.  So, let the
+eighth step be written for all time to witness, so that one day it shall
+come to pass: 
+@R
+'First to fall must be his ally and consort, the deity of technology.  If
+this comes to pass in this order, chaos shall ensue and the deities shall
+bring aid to one another.  Her essences must then be sacrificed upon her
+own altar.' 
+@n
+~
+E
+ctrans~
+For a moment, $p becomes warm and
+begins to glow as you examine the hieroglyphics.
+~
+E
+rctran~
+Momentarily, $p in $n's possession glows as $e 
+examines a section of hieroglyphics. 
+~
+E
+rtmess~
+$n's brow furrows in thought as $e tries to translate a section 
+of hieroglyphics using $p as a guide.
+~
+E
+notrans~
+The hieroglyphics are much too complex to understand.
+~
+E
+rnotrans~
+$n's frowns with frustration as $e finishes examining a portion
+of the hieroglyphics.
+~
+E
+study~
+You need to study $p.
+~
+E
+rstudy~
+$n needs to study $p.
+~
+!
+0 0 0
+1519 9 1509949540 3 0
+2942 17 1509949540 -2 0
+-1
+S
+
+#73023
+Clearing in the Forest - Near a Fallen Obelisk~
+While trees and plants lie in every direction elsewhere, here they
+recede, leaving a quaint little clearing, perfect for picnics or just
+lounging around and taking in the wondrous view of exotic flora.  Several
+slabs of pale orange quarry stone and limestone lie about the clearing,
+covered with moss and colorful patches of lichen.  The chunks of stone
+appear to be fragments of debris which have broken off of a much larger
+stone formation, which rests on its side, in ruins, to the west.  Judging
+from the vegetation growing on and over the stones, it has rested thus
+for quite some time.
+~
+*CF
+~
+-369623040 10 9 0
+D0
+~
+~
+0 -1 73001 10 10 5
+D1
+~
+~
+0 -1 73003 10 10 5
+D2
+~
+~
+0 -1 73024 10 10 5
+D3
+~
+~
+0 -1 73017 10 10 5
+E
+flora~
+The most exotic pieces of flora in this part of the wood have to be a
+series of snapdragon flowers who grow in a protective semi-circle around
+half the clearing.
+~
+E
+snapdragon flowers~
+The snapdragon flowers growing along the edges of half the clearing stand
+about a foot and a half tall and have petals either of a solid red,
+yellow, or orange color with shades of the other two along the fringes.
+~
+E
+clearing~
+The ground, at last, is covered with a thin carpet of deep green grass,
+for there are enough gaps in the canopy to allow ground cover to grow
+here.  There are several rocks on which to sit on and a particularly flat
+rock that would serve as a nice picnic table.
+~
+E
+slabs orange quarry stone limestone chunks  fragments~
+The pieces of stone scattered about come in two varieties: limestone and
+quarry stone.  The quarry stone is of a faint orange color and composes a
+bulk of the debris.  The limestone on the other hand is of a pale shade
+of green and is far less abundant.  Both types of stone have suffered
+severely, for cracks and charring score their surfaces deeply.
+~
+E
+moss~
+On the surface of both the rocks and trees grow a blood-red moss.  Unlike
+most mosses which are soft and wet to the touch when in their prime, this
+moss is coarse and dry.
+~
+E
+lichen~
+A foul-smelling lichen covers a fair amount of the rocks and trees in
+this section of the grove.  While the lichen does not look to be of a
+poisonous nature, you can never tell for sure.
+~
+E
+ruins 1 west~
+To the west lie the toppled ruins of a once tall and tapering monument. 
+Blocks of quarry stone and limestone sheets rest in tumbled messes all
+over.  At the center of the mess if a pyramidal structure, which at one
+time probably was the tip of the monument.
+~
+E
+vegetation~
+Thick, sturdy vines creep and crawl over, under, around, and through all
+the dark recess and over the stone ruins themselves.  For the most part,
+the vines encompass most of the rocks, except in a few rare cases where a
+sprig of some wild herb grows.
+~
+A
+get take~
+sprig germander~
+i = random( 1, 10 );
+if( is_player( ch ) )
+  if( rflag( reset0, room ) ) 
+  if( i > 2 ) {
+  act_tochar( #nothing, ch );
+  remove_rflag( reset0, room );
+  end; 
+}
+else {
+  act_tochar( #pullup, ch );
+  act_notchar( #rpullup, ch );
+  obj_to_char( oload( 284 ), ch );
+  remove_rflag( reset0, room );
+}
+else
+  act_tochar( #nothing, ch );
+else
+  act_tochar( #nothing, ch );
+~
+E
+nothing~
+You don't see that here.
+~
+E
+pullup~
+Bending down, you pull up a sprig of something green.
+~
+E
+rpullup~
+Bending down, $n pulls up a green spring and pockets it.
+~
+!
+0 0 0
+A
+track~
+unicorn~
+if( find_skill( ch, track ) > 4 )
+  if( !rflag( reset0, find_room( 73003 ) ) ) {
+  act_tochar( #trail, ch );
+  remove_rflag( reset0, room );
+}
+else
+  act_tochar( #losetrail, ch );
+else
+  act_tochar( #notenough, ch );
+~
+E
+trail~
+The unicorn's trail, which seems magically preserved, leads to the north.
+~
+E
+losetrail~
+Try as you might, you lose the unicorn's trail.
+~
+E
+notenough~
+You are not adroit enough to follow the trail.
+~
+!
+0 0 0
+1586 9 1509949540 3 0
+2942 17 1509949540 -2 0
+-1
+S
+
+#73024
+Near a Copse of Shifting Trees~
+The trees in this part of the ancient grove are by far older than you
+have seen almost anywhere.  Thick and sturdy trees rise powerfully to the
+west in a complete circle, their trunks and branches so close together
+and interwoven that it would be impossible for even a rabbit to wiggle
+its way past.  In fact, it looks as though the only way through the
+encircling grove to the west is to cut some of the trees down, which
+would take more effort than its worth.  The encompassing trees act in a way
+you have never seen before, swaying to and fro not with the cool and
+gentle breeze, but against it.  It is as though the trees are wary of
+your presence.  The forest looks much more peaceful and calm to the east,
+and to the south, you can barely make out the drooping branches of an
+enormous weeping willow.
+~
+*CF
+~
+-369623040 3 5 0
+D0
+~
+~
+0 -1 73023 10 10 5
+D1
+~
+~
+0 -1 73004 10 10 5
+D2
+~
+~
+0 -1 73010 10 10 5
+D3
+~
+~
+235 -1 73025 10 10 5
+E
+encircling swaying grove trees~
+Grown so close together as to provide a natural barrier against
+intrusion, the trees seem huddled together as if they had purpose.  If
+you were a superstition person, you might, just might believe that this
+part of the grove was haunted.
+~
+E
+trunks branches~
+Between the smaller gaps in between the encircling trees, masses of wiry
+green vines grow in abundance, clogging up the gaps.
+~
+E
+weeping willow~
+Larger than any you have ever seen, a willow tree, with drooping boughs
+and weak leaves lies to the south.  As the wind blows through the
+branches, shaking them, the tree actually seems to weep.
+~
+A
+greet~
+trees~
+act_tochar( #greet, ch );
+act_notchar( #rgreet, ch );
+wait( 2 );
+act_tochar( #cshifts, ch );
+act_notchar( #shifts, ch );
+wait( 2 );
+act_tochar( #parts, ch );
+open( room, west );
+wait( 3 );
+close( room, west );
+send_to_room( #closes, room );
+send_to_room( #closes, find_room( 73025 ) );
+~
+E
+rgreet~
+$n bows and begins to greet the trees in a rather unusual manner.  One
+would think you might be hanging around more sane company.
+~
+E
+cshifts~
+@b@G
+In response to your greeting, the trees seem somewhat more subdued if not
+more trustworthy of you.
+~
+E
+shifts~
+@b@G
+Oddly enough, whatever $n was doing, has worked. The trees
+have stopped shifting and seem less wary of your presence.
+~
+E
+parts~
+@b@G
+The trees seem to consider you for a moment.  After a few seconds,
+couple of the more massive trees literally get up, roots and all, and
+settle down elsewhere, leaving a gap into a forest clearing to the west.
+~
+E
+rparts~
+@b@G
+The trees seem to consider $n for a moment.  After a few seconds, a
+couple of the more massive trees literally get up, roots and all, and
+settle down elsewhere, leaving a gap into a forest clearing to the west.
+~
+E
+closes~
+The gap enter the small clearing closes as trees move in once again to
+fill it.
+~
+E
+greet~
+You warmly greet the trees, trying to convince them you mean no harm.
+~
+!
+0 0 0
+A
+~
+~
+i = random( 1, 20 );
+if( random( 1, 2 ) == 1 ) {
+  wait( i );
+  send_to_room( #shifting, room );
+  }
+~
+E
+shifting~
+The trees to the west shift nervously in your presence, as though they
+are extremely wary of you.  It probably would not be a good idea to light
+any fires here.
+~
+!
+1 0 7
+A
+cut~
+trees~
+if( rflag( reset2, room ) ) {
+  if( rflag( reset1, room ) ) {
+    act_tochar( #trycut, ch );
+    act_notchar( #rtrycut, ch );
+    wait( 2 );
+    act_tochar( #treebranch, ch );
+    act_notchar( #rtreebranch, ch );
+    damage( mob, ch, 3d10+10, physical, "the stout tree branch", "being crushed by a stout tree branch" );
+    remove_rflag( reset1, room );
+  }
+  else {
+    act_tochar( #trycut, ch );
+    act_notchar( #rtrycut, ch );
+    wait( 2 );
+    act_tochar( #treebranch2, ch );
+    act_notchar( #rtreebranch2, ch );
+    damage( mob, ch, 6d10+20, physical, "A group of tree branches", "being impaled on stout tree branches" );
+    remove_rflag( reset2, room );
+  }
+}
+else {
+  act_tochar( #trycut, ch );
+  act_notchar( #rtrycut, ch );
+  wait( 2 );
+  act_tochar( #treebranch3, ch );
+  act_notchar( #rtreebranch3, ch );
+  damage( mob, ch, 9d10+30, physical, "A mass of wicked tree branches", "being impaled ona  hundred stout tree branches" );
+  act_room( #noheed, ch );
+  mload( 1484, room );
+  set_rflag( reset1, room );
+  set_rflag( reset2, room );
+}
+~
+E
+trycut~
+Determined to get through the thick, forest trees, you begin cutting at
+them with the nearest thing at hand.
+~
+E
+rtrycut~
+$n pulls out something sharp and begins trying to cut a path 
+through the trees.
+~
+E
+treebranch~
+Suddenly, a single tree branch swoops downward at you.
+~
+E
+rtreebranch~
+Suddenly, a single tree branch swoops downward at $n
+~
+E
+treebranch2~
+Two tree branches, one to either side of you, swing down and strike you.
+~
+E
+rtreebranch2~
+Two tree branches, one to either side of $n, swing down 
+and strike $m.
+~
+E
+treebranch3~
+As if the forest were alive, a host of tree branches swing madly down on
+top of you.
+~
+E
+rtreebranch3~
+As if the forest were alive, a host of tree branches swing madly down
+on top of $n.
+~
+E
+noheed~
+A voice calls out from somewhere up above:
+"Twice you were warned, now you shall pay for bringing harm
+  into this forest. "
+
+Something then steps out from between the trees.
+~
+!
+0 0 0
+1587 9 1509949540 3 0
+2942 17 1509949540 -2 0
+-1
+S
+
+#73025
+A Golden Font Hidden Deep within the Grove~
+Surrounded on all sides by trees and vines, this clearing lies virtually
+hidden at the center of the grove.  A golden, three-tiered fountain
+stands in the middle of the clearing, with water gurgling upwards out of
+the fountain and falling musically from the topmost tier.  The font
+appears to be made entire of gold, as do the statues which adorn it. 
+Around the fountain, tiny honeysuckle bushes grow in abundance, filling
+the tranquil clearing with a sweet-smelling fragrance.  All around you,
+the trees shift and sway with the cool forest breeze.  Somehow, though,
+while a sense of peace surrounds this place, the trees seem wary of your
+presence all the same.
+~
+~
+-369623040 2 9 0
+D1
+~
+~
+235 -1 73024 10 10 5
+E
+statues~
+Each corner of the fountain is graced by a different statue.  The first
+statue is that of a fairly attractive woman with six arms in a gossamer
+dress.  Diagonal from her stands another female statue, but this one is
+of a water nymph with serpentine hair.  Next to her is a statue of a
+fabled wemic - the leonine equivalent of a centaur.  And across from him
+is a handsome humanoid with feathery wings.  Each statue holds some type
+of vessel from which a liquid pours down into the fountains basin.
+~
+E
+wemic leonine~
+Seemingly mixed together from both a lion and a man, the statue which
+stands before you is like none you have ever seen before.  Like a
+centaur, the upper portion of the wemic is that of a muscular man, with
+bulging biceps and a mane of long, braided hair.  The man's face,
+intelligent enough, resembles the ferocious features of a lion more than
+anything.  Between the statues hands, he holds a wineskin, and from it a
+pale red liquid flows into the fountain.  The lower portion of the statue
+has the characteristics of a lion.  Its paws are quite large and tipped
+with claws and it has powerful-looking legs.  A long, curving tail
+protrudes from the hind end of the statue.  At the base of the statue is
+a small, engraved placard.
+~
+E
+handsome humanoid wings feathery~
+In some ancient stories, there are tales of beautiful, winged beings who
+serve the gods; they are called angels.  Gazing at the life- size statue
+before you, you can understand why.  Clad only in a tight loincloth, the
+statue has the form and features of a very handsome human male.  The
+statue has both large and powerful arm and leg muscles.  Short crop hair
+frames the statue's heavenly face and amazingly deep eyes.  At waist
+level, the statue holds out a slender flask, from which pours a bright
+blue liquid.  And as the liquid enters the fountain, some of it splashes
+upwards, to drip down the statue's incredible pecs and abdominal muscles
+and back into the fountain.  The only unusual thing about the statue,
+aside from its incredible beauty, which even a troll might appreciate,
+are the two massive, feathery wings sprouted from its back.  At the base
+of the statue, there is an etching.
+~
+E
+water nymph serpentine~
+This golden statue is buxom and shapely beyond belief.  Wearing nothing
+but a smile and her ankle-long hair, which, sadly, coils like a serpent
+about her body strategically, the statue stands opposite another feminine
+statue whose beauty can only pale in comparison.  The statue's face
+resembles an elven maiden's; cool, serene, and beautiful.  In her hands,
+the water nymph (for there is no mistaking her features for anything
+less) holds an urn, from which a somber grey liquid pours into the
+fountain.  Near the petite toes of the nymph, there is a small carving in
+the gold.
+~
+E
+woman six arms~
+Neither attractive nor ugly, this statue is of an ordinary- looking woman. 
+Her hair is of medium length and her garments those of a modest woman. 
+About her head she wears a diadem of sorts, which encircles the crown of
+her hair.  The only thing not ordinary about this female is that she has
+six arms.  Count them, six.  Two of her hands she holds steepled, as
+though praying.  Two more she holds out in supplication.  In her third
+set of hands she holds a bowl, and pours from it a burgundy liquid which
+falls into the fountain, to be mixed with its sparkling waters.  At the
+statue's feet, there is an engraved plaque.
+~
+E
+plaque~
+A series of unreadable hieroglyphics have been etched into the plaque.
+~
+E
+placard~
+A series of unreadable hieroglyphics have been etched into the placard.
+~
+E
+etching~
+A series of unreadable hieroglyphics have been carved into the etching.
+~
+E
+carving~
+A series of unreadable hieroglyphics have been etched into the carving.
+~
+E
+water glitters field stars~
+Until the water of the fountain mixes with the waters of the four
+statues, it looks like an ordinary liquid.  But once it touches the floor
+of the bottom basis and merges with the waters being poured out by the
+four corner statues, it takes on a life of its own.
+~
+E
+honeysuckle bushes~
+A host of vine-like bushes with tender green leaves and clusters of
+bright yellow, orange, and white flowers grow up around the base of the
+fountain, filling the air with their sweet perfume.
+~
+E
+shifting trees~
+About the found stands a circle of tightly spaced trees, whose branches
+rustles nervously on the wind.  The only section of trees here which
+looks close to inviting are the shifting trees to the east.
+~
+A
+~
+~
+i = random( 1, 20 );
+if( random( 1, 2 ) == 1 ) {
+  wait( i );
+  send_to_room( #weeping, room );
+  }
+~
+E
+weeping~
+From somewhere to the south, you can here the faint, wracking sobs of a
+young woman.
+~
+!
+1 0 2
+A
+bow~
+trees~
+act_tochar( "You bow before the trees.", ch );
+act_notchar( #rbows, ch );
+wait(3);
+act_tochar( #cshifts, ch );
+act_notchar( #shifts, ch );
+wait(3);
+act_tochar( #parts, ch );
+act_notchar( #rparts, ch );
+open( room, east );
+wait(2);
+close( room, east );
+send_to_room( #closes, room );
+send_to_room( #closes, find_room( 73024 ));
+~
+E
+shifts~
+@b@G
+The trees seem pleased with $n's show of homage.
+~
+E
+parts~
+@b@G
+Two of the larger trees, an oak and a pine, bend against the breeze and
+seperate themselves from one another, creating a gap into the rest of the
+forest grove.
+~
+E
+rparts~
+The trees, after seemingly studying $n, part before $m, creating a gap
+into the forest beyond.
+~
+E
+closes~
+The trees shift back into position to cover up the gap.
+~
+E
+cshifts~
+@b@G
+The trees stop shifting nervously and seem pleased with your homage.
+~
+E
+rbows~
+$b bows before the trees.
+~
+!
+0 0 0
+A
+drink~
+fountain golden font~
+if( find_stat( ch, level ) < 20 ) {
+  act_tochar( #barrier, ch );
+  act_notchar( #rbarrier, ch );
+  end; 
+}
+if( !rflag( status0, room ) ) {
+  act_tochar( #empty, ch );
+  end;
+}
+else {
+  act_tochar( #drinking, ch );
+  act_notchar( #rdrinking, ch );
+  wait( 2 );
+  act_room( #dryup, ch );
+  remove_rflag( status0, room );
+  acode( room, 4 );
+}
+~
+E
+barrier~
+@b@C
+A barrier snaps into visibility before you.  The barrier surrounds the
+golden font on all sides and you have the feeling you do not possess the
+power to counter it.
+~
+E
+rbarrier~
+@b@C
+You watch as $n is held back from the fountain by a barrier which
+makes itself visible at $s approach.
+~
+E
+drinking~
+@b@B
+Braver than most, you cup your hands and drink a hearty mouthful of the
+unknown liquid which flows from the fountain.
+~
+E
+rdrinking~
+@b@G
+Without knowing what liquid fills the incredible golden font,
+$n reaches down and drinks some of it.
+~
+E
+empty~
+On second glance, there is nothing to drink from the golden fountain. The
+only liquid pouring forth from it disappears before collecting.
+~
+E
+dryup~
+The sound of the liquid bubbling down the side of the fountain changes as
+the liquid disappears once it reaches the bottom.  You cannot tell where
+the water-like liquid goes, but for all intents and purposes, the font is
+now dry.
+~
+!
+0 0 0
+A
+~
+fountain golden font~
+wait( 2 );
+i = random( 1, 9 );
+j = random( 50, 80 );
+if( i == 1 ) {
+  i = random( -6, 6 );
+  drain_stat( ch, str, j, i );
+  act_tochar( #str, ch );
+  act_notchar( #diff, ch );
+  end;
+}
+if( i == 2 ) {
+  i = random( -6, 6 );
+  drain_stat( ch, wis, j, i );
+  act_tochar( #wis, ch );
+  act_notchar( #diff, ch );
+  end;
+}
+if( i == 3 ) {
+  i = random( -6, 6 );
+  drain_stat( ch, int, j, i );
+  act_tochar( #int, ch );
+  act_notchar( #diff, ch );
+  end;
+}
+if( i == 4 ) {
+  i = random( -6, 6 );
+  drain_stat( ch, dex, j, i );
+  act_tochar( #dex, ch );
+  act_notchar( #diff, ch );
+  end;
+}
+if( i == 5 ) {
+  i = random( -6, 6 );
+  drain_stat( ch, con, j, i );
+  act_tochar( #con, ch );
+  act_notchar( #diff, ch );
+  end;
+}
+if( i == 6 ) {
+  act_tochar( #drainexp, ch );
+  act_notchar( #rdrainexp, ch );
+  drain_exp( ch, 10d100+5000 );
+  end;
+}
+if( i == 7 ) {
+  act_tochar( #acid, ch );
+  act_notchar( #racid, ch );
+  damage( mob, ch, 6d12+40, acid, "the acidic water" );
+  end;
+}
+if( i == 8 ) {
+  act_tochar( #poison, ch );
+  act_notchar( #rpoison, ch );
+  poison( ch );
+  end;
+}
+if( i == 9 ) {
+  act_tochar( #plague, ch );
+  act_notchar( #rplague, ch );
+  plague( ch );
+  end;
+}
+~
+E
+str~
+@b
+After drinking from the fountain, your limbs burn as though someone had
+reached into your body and pulled on them.
+~
+E
+diff~
+You cannot put your finger on it, but $n looks quite different
+after having drank from the fountain.
+~
+E
+wis~
+@b
+In the blink of an eye, your mind fades from consciousness.  But when you
+awake, your understand of the world at large is different.
+~
+E
+int~
+@b
+Soon after drinking from the fountain, your head explodes in pain and you
+feel your intellect assaulted.
+~
+E
+dex~
+@b
+Suddenly, your limbs are seized by an incredible feeling.  When the
+sensation fades, you perceive that your nimbleness has changed.
+~
+E
+con~
+@b
+Strangely, not much seems to happen once you have drank from the fountain. 
+You might feel a little more or less alive, but then again, that could
+have been something you ate too.
+~
+E
+poison~
+@b@R
+You heart begins to beat faster and your vision blurs slightly as you
+realize that you just drank poison from the golden fountain.
+~
+E
+rpoison~
+$n doubles over in pain and begins to twitch as though poisoned.
+~
+E
+acid~
+@b@G
+Suddenly, the liquid from the fountain begins to burn and sear both your
+hands and your insides as though it were acid.
+~
+E
+racid~
+You watch in horror as $n's throat is parcially eaten away and $e
+screams a mangled scream of torture and agony. 
+~
+E
+plague~
+@b@M
+Soon after drinking from the golden font, you begin to feel a bit
+nauseous and begin to break out in a cold sweat.
+~
+E
+rplague~
+Other than looking a little pale after drinking from the fountain, $n
+looks fine.
+~
+E
+drainexp~
+@G
+Shortly after drinking the liquid from the fountain, you begin to feel
+pain.  Suddenly, the pain is so great that it knocks you to the ground
+and all you can do is writhe agony.  You can feel energy ebbing from your
+body at an alarming rate.
+~
+E
+rdrainexp~
+@G
+Soon after $n drinks from the fountain, $e begins to writhe
+and collapses to the ground. For a split second, you can see precious
+life energy ebbing from $s body, leaving $m parcially drained.
+~
+!
+0 0 0
+A
+look~
+fountain golden font~
+if( rflag( status0, room ) )
+act_tochar( #desc1, ch );
+else
+act_tochar( #desc2, ch );
+~
+E
+desc1~
+Square in shape, the fountain is indeed made from pure gold.  Tiny blue
+tiles of lapis lazuli decorate each of the three tiers of the fountain,
+as well as the bases of the four statues which stand on each corner of
+the lowest tier.  Water emerges from the top of the fountain and fills
+the basin of the first tier before trickles down the edges and filling
+the next basin and so forth.  When the water reaches the bottom tier, it
+mixes with the waters being poured out by the four statues and glitters
+like a field of stars.
+~
+E
+desc2~
+Square in shape, the fountain is indeed made from pure gold.  Tiny blue
+tiles of lapis lazuli decorate each of the three tiers of the fountain,
+as well as the bases of the four statues which stand on each corner of
+the lowest tier.  Water emerges from the top of the fountain and fills
+the basin of the first tier before trickles down the edges and filling
+the next basin and so forth.  When the water reaches the bottom tier, it
+mysteriously vanishes after a second or two.
+~
+!
+0 0 0
+A
+~
+~
+if( random( 1, 20 ) == 20 )
+set_rflag( status0, room );
+continue;
+~
+!
+3 0 2
+A
+gather~
+down silver feathers~
+if( !is_player( ch ) ) {
+  act_tochar( #end, ch );
+  end;
+}
+if( !rflag( reset0, room ) ) {
+  act_tochar( #already, ch );
+  end;
+}
+if( doing_quest( ch, 40 ) ) {
+  if( random( 1, 4 ) == 3 ) {
+    act_tochar( #gather, ch );
+    act_notchar( #rgather, ch );
+    obj_to_char( oload( 2034 ), ch );
+    end;
+  }
+}
+remove_rflag( reset0, room );
+act_tochar( #dontsee, ch );
+~
+E
+gather~
+Reaching up behind his wings, you pluck a single soft, downy feather out
+of the winged statue's back.  The feather appears real in every detail.
+~
+E
+rgather~
+$n reaches up and takes something from the winged statue of a man.
+~
+E
+already~
+It looks as though someone has already the statue's esscense.
+~
+E
+dontsee~
+You don't see that here.
+~
+E
+end~
+You can't reach that.
+~
+!
+0 0 0
+A
+gather~
+mane clumps~
+if( !rflag( reset1, room ) ) {
+  act_tochar( #already, ch );
+  end;
+}
+remove_rflag( reset1, room );
+if( is_player( ch ) )
+  if( doing_quest( ch, 40 ) ) 
+  if( random( 1, 5 ) == 3 ) {
+  act_tochar( #gather, ch );
+  act_notchar( #rgather, ch );
+  obj_to_char( oload( 2035 ), ch );
+  end;
+}
+act_tochar( #dontsee, ch );
+~
+E
+gather~
+Reaching carefully up to the statue of the leonine man, you find a clump
+of its mane which feels very real and very soft.
+~
+E
+rgather~
+$n reaches up and takes something from the statue of the wemic.
+~
+E
+already~
+It looks as though someone has already removed something from the statue.
+~
+E
+dontsee~
+You don't see that here.
+~
+E
+end~
+You can't reach that.
+~
+!
+0 0 0
+A
+gather~
+vial water~
+if( !rflag( reset0, find_room( 63004 ) ) ) {
+  act_tochar( #already, ch );
+  end;
+}
+remove_rflag( reset0, find_room( 63004 ) );
+if( is_player( ch ) )
+  if( doing_quest( ch, 40 ) ) 
+  if( random( 1, 5 ) == 3 )  {
+  act_tochar( #gather, ch );
+  act_notchar( #rgather, ch );
+  obj_to_char( oload( 2036 ), ch );
+  end;
+}
+act_tochar( #dontsee, ch );
+~
+E
+gather~
+Tucked behind the ear of the water nymph, there is a tiny vial tucked
+behind her ear.  The vial is tightly stoppered and contains a vivid blue
+liquid.
+~
+E
+rgather~
+$n reaches up and plucks something out from behind the water nymph
+statue's ear.
+~
+E
+already~
+It looks that there use to be something behind the water nymph's ear, but
+it is no longer there.
+~
+E
+dontsee~
+You don't see that here.
+~
+E
+end~
+You find nothing special.
+~
+!
+0 0 0
+A
+gather~
+circlet crown~
+if( !rflag( reset0, find_room( 48004 ) ) ) {
+  act_tochar( #already, ch );
+  end;
+}
+remove_rflag( reset0, find_room( 48004 ) );
+if( is_player( ch ) )
+  if( doing_quest( ch, 40 ) ) 
+  if( random( 1, 5 ) == 3 ) {
+  act_tochar( #gather, ch );
+  act_notchar( #rgather, ch );
+  obj_to_char( oload( 2037 ), ch );
+  end;
+}
+act_tochar( #dontsee, ch );
+~
+E
+gather~
+As you examine the statue of the woman with six arms, it seems as if her
+head bows forward.  Part of the circlet worn about her head falls
+directly into your hands.
+~
+E
+rgather~
+The statue of the six-armed woman bows slightly to $n and something
+falls from her head into $s hands.
+~
+E
+already~
+There seems to be nothing special hidden in or around the statue.
+~
+E
+dontsee~
+You don't see that here.
+~
+E
+no~
+Your instincts tell you to leave that alone.
+~
+!
+0 0 0
+A
+look~
+plaque enserpina serpent~
+if( has_obj( 1549, ch ) ){
+obj = has_obj( 1549, ch );
+act_tochar( #ctrans, ch, obj );
+act_notchar( #rctrans, ch, obj );
+wait( 1 );
+act_tochar( #trans1, ch, obj );
+}
+else
+act_tochar( #desc, ch  );
+~
+E
+ctrans~
+For a moment, $p becomes warm and
+begins to glow as you examine the hieroglyphics.
+~
+E
+rctrans~
+Momentarily, $p in $n's possession glows as $e 
+examines a section of  hieroglyphics. 
+~
+E
+desc~
+The hieroglyphics are much too complex to understand.
+~
+E
+trans1~
+With the aid of $p, you are finally able to fully 
+understand the hieroglyphics here. They read: 
+
+May this idol of the lesser deity Enserpina stand as a lasting tribute to
+her once kind and thoughtful nature.  As a demigoddess to the People,
+crafts and technology were her domain.  It is she who designed the Great
+Pyramid, hoping to please her sister, the Goddess of the People.  A
+fragment of her essence has been imbued into part of a stone circlet this
+idol wears.  Only by gathering it and the essence of her siblings may the
+Goddess of the People be restored to power.  Once this is done, She may
+choose to restore unto Enserpina her once true and beautiful form.  Until
+then, as payment for her betrayal, Enserpina, like all of the Goddess'
+siblings, must endure whatever shattered bodies the Goddess thrust upon
+them with the last vestiges of her fading will for their betrayal.
+~
+!
+0 0 0
+A
+look~
+placard leonemus lionine ~
+if( has_obj( 1549, ch ) ){
+obj = has_obj( 1549, ch );
+act_tochar( #ctrans, ch, obj );
+act_notchar( #rctrans, ch, obj );
+wait( 1 );
+act_tochar( #trans1, ch, obj );
+}
+else
+act_tochar( #desc, ch  );
+~
+E
+ctrans~
+For a moment, $p becomes warm and
+begins to glow as you examine the hieroglyphics.
+~
+E
+rctrans~
+Momentarily, $p in $n's possession glows as $e 
+examines a section of  hieroglyphics. 
+~
+E
+desc~
+The hieroglyphics are much too complex to understand.
+~
+E
+trans1~
+With the aid of $p, you are finally able to fully 
+understand the hieroglyphics here. They read: 
+
+Until the Goddess is restored to power, this statue alone shall recall
+and remind others of Lionemus' former strength and prowess.  It was
+through his skills and brute strength that allowed the People to lay the
+first stones of the Great Pyramid's foundation.  Were it not for his part
+in the betrayal of the goddess, he would still walk the realms in his
+true form.  But what was done is done and can only be undone by restoring
+unto the Goddess her powers.  Though this idol be made of stone, a part
+of it still retains Lionemus' former essence.  With it, in part, lies the
+key to Her salvation.
+~
+!
+0 0 0
+A
+look~
+ramuset etching angel~
+if( has_obj( 1549, ch ) ){
+obj = has_obj( 1549, ch );
+act_tochar( #ctrans, ch, obj );
+act_notchar( #rctrans, ch, obj );
+wait( 1 );
+act_tochar( #trans1, ch, obj );
+}
+else
+act_tochar( #desc, ch  );
+~
+E
+ctrans~
+For a moment, $p becomes warm and
+begins to glow as you examine the hieroglyphics.
+~
+E
+rctrans~
+Momentarily, $p in $n's possession glows as $e 
+examines a section of  hieroglyphics. 
+~
+E
+desc~
+The hieroglyphics are much too complex to understand.
+~
+E
+trans1~
+With the aid of $p, you are finally able to fully 
+understand the hieroglyphics here. They read: 
+
+Never was there a more youthful, more handsome deity, as was the demigod
+Ramuset.  And at times his want for merriment would fill the entire
+valley, enlivening the spirits of the People, no matter what the occasion. 
+And on his wings arrived many messages more swiftly than thought.  But
+out of jealously, he joined his siblings in a fight against their sister,
+the Goddess of the People.  And though they won the battle, banishing the
+Goddess' powers and form from this plane, it was not without consequence
+for it is said that now Ramuset must walk the land in the form of a
+manbat, a creature as ugly as Ramuset was once beautiful.  Part of
+Ramuset's essence has been imbued into part of this statue in hopes that
+it might help right the grand betrayal of the heavens.
+~
+!
+0 0 0
+A
+look~
+multiplina carving nymph~
+if( has_obj( 1549, ch ) ){
+obj = has_obj( 1549, ch );
+act_tochar( #ctrans, ch, obj );
+act_notchar( #rctrans, ch, obj );
+wait( 1 );
+act_tochar( #trans1, ch, obj );
+}
+else
+act_tochar( #desc, ch  );
+~
+E
+ctrans~
+For a moment, $p becomes warm and
+begins to glow as you examine the hieroglyphics.
+~
+E
+rctrans~
+Momentarily, $p in $n's possession glows as $e 
+examines a section of  hieroglyphics. 
+~
+E
+desc~
+The hieroglyphics are much too complex to understand.
+~
+E
+trans1~
+With the aid of $p, you are finally able to fully 
+understand the hieroglyphics here. They read: 
+
+As daughter of the Keeper and bringer of light, Multiplina was once the
+Goddess best friend and advisor.  When the Goddess of the valley was
+betrayed by Multiplina and her other siblings, it startled Her most that
+the daughter of the Balance would seek to overthrow Her.  As punishment,
+the Goddess used her last influences upon this place to transform
+Multiplina and her siblings into whatever their hearts most reflected at
+the moment of their betrayal.  In hopes that one day the Goddess shall be
+brought back among us, I, her last living vessel and priestess, have
+imbued part of this idol with Multiplina's godly essence, for only
+through it and the eccenses of the other demigods shall a way to bring
+back the goddess be found.
+~
+!
+0 0 0
+A
+translate~
+plaque enserpina serpent~
+i = get_integer( ch, "/Cayln/TabletEnduraba" );
+obj = has_obj( 1548, ch );
+if( obj ) {
+  j = get_integer( obj, "/Cayln/TabletEnduraba" );
+  if( i == j ) {
+    act_notchar( #rtmess, ch, obj );
+    act_tochar( #trans1, ch, obj );
+  }
+  else {
+    act_tochar( #study, ch, obj );
+    act_notchar( #rstudy, ch, obj );
+  }
+  end;
+}
+obj = has_obj( 1549, ch );
+if( obj ) {
+  act_tochar( #ctrans, ch, obj, mob );
+  act_notchar( #rctran, ch, obj, mob );
+  wait( 2 );
+  act_tochar( #trans1, ch, obj, mob );
+  end;
+}
+act_tochar( #notrans, ch );
+act_notchar( #rnotrans, ch );
+~
+E
+trans1~
+With the aid of $p, you are finally able to fully 
+understand the hieroglyphics here. They read: 
+
+May this idol of the lesser deity Enserpina stand as a lasting tribute to
+her once kind and thoughtful nature.  As a demigoddess to the People,
+crafts and technology were her domain.  It is she who designed the Great
+Pyramid, hoping to please her sister, the Goddess of the People.  A
+fragment of her essence has been imbued into part of a stone circlet this
+idol wears.  Only by gathering it and the essence of her siblings may the
+Goddess of the People be restored to power.  Once this is done, She may
+choose to restore unto Enserpina her once true and beautiful form.  Until
+then, as payment for her betrayal, Enserpina, like all of the Goddess'
+siblings, must endure whatever shattered bodies the Goddess thrust upon
+them with the last vestiges of her fading will for their betrayal.
+~
+E
+ctrans~
+For a moment, $p becomes warm and
+begins to glow as you examine the hieroglyphics.
+~
+E
+rctran~
+Momentarily, $p in $n's possession glows as $
+examines a section of  hieroglyphics. 
+~
+E
+rtmess~
+$n's brow furrows in thought as $e tries to translate a section 
+of hieroglyphics using $p as a guide.
+~
+E
+notrans~
+The hieroglyphics are much too complex to understand.
+~
+E
+rnotrans~
+$n's frowns with frustration as $e finishes examining a portion
+of the hieroglyphics.
+~
+E
+study~
+You will need to study $p some more.
+~
+E
+rstudy~
+$n will need to study $p some more.
+~
+!
+0 0 0
+A
+translate~
+placard lion lionemus lionine~
+i = get_integer( ch, "/Cayln/TabletEnduraba" );
+obj = has_obj( 1548, ch );
+if( obj ) {
+  j = get_integer( obj, "/Cayln/TabletEnduraba" );
+  if( i == j ) {
+    act_notchar( #rtmess, ch, obj );
+    act_tochar( #trans1, ch, obj );
+  }
+  else {
+    act_tochar( #study, ch, obj );
+    act_notchar( #rstudy, ch, obj );
+  }
+  end;
+}
+obj = has_obj( 1549, ch );
+if( obj ) {
+  act_tochar( #ctrans, ch, obj, mob );
+  act_notchar( #rctran, ch, obj, mob );
+  wait( 2 );
+  act_tochar( #trans1, ch, obj, mob );
+  end;
+}
+act_tochar( #notrans, ch );
+act_notchar( #rnotrans, ch );
+~
+E
+trans1~
+With the aid of $p, you are finally able to fully 
+understand the hieroglyphics here. They read: 
+
+Until the Goddess is restored to power, this statue alone shall recall
+and remind others of Lionemus' former strength and prowess.  It was
+through his skills and brute strength that allowed the People to lay the
+first stones of the Great Pyramid's foundation.  Were it not for his part
+in the betrayal of the goddess, he would still walk the realms in his
+true form.  But what was done is done and can only be undone by restoring
+unto the Goddess her powers.  Though this idol be made of stone, a part
+of it still retains Lionemus' former essence.  With it, in part, lies the
+key to Her salvation.
+~
+E
+ctrans~
+For a moment, $p becomes warm and
+begins to glow as you examine the hieroglyphics.
+~
+E
+rctran~
+Momentarily, $p in $n's possession glows as $e 
+examines a section of  hieroglyphics. 
+~
+E
+rtmess~
+$n's brow furrows in thought as $e tries to translate a section 
+of hieroglyphics using $p as a guide.
+~
+E
+notrans~
+The hieroglyphics are much too complex to understand.
+~
+E
+rnotrans~
+$n's frowns with frustration as $e finishes examining a portion
+of the hieroglyphics.
+~
+E
+study~
+You will need to study $p more.
+~
+E
+rstudy~
+$n will need to study $p more.
+~
+!
+0 0 0
+A
+translate~
+etching angel ramuset~
+i = get_integer( ch, "/Cayln/TabletEnduraba" );
+obj = has_obj( 1548, ch );
+if( obj ) {
+  j = get_integer( obj, "/Cayln/TabletEnduraba" );
+  if( i == j ) {
+    act_notchar( #rtmess, ch, obj );
+    act_tochar( #trans1, ch, obj );
+  }
+  else {
+    act_tochar( #study, ch, obj );
+    act_notchar( #rstudy, ch, obj );
+  }
+  end;
+}
+obj = has_obj( 1549, ch );
+if( obj ) {
+  act_tochar( #ctrans, ch, obj, mob );
+  act_notchar( #rctran, ch, obj, mob );
+  wait( 2 );
+  act_tochar( #trans1, ch, obj, mob );
+  end;
+}
+act_tochar( #notrans, ch );
+act_notchar( #rnotrans, ch );
+~
+E
+trans1~
+With the aid of $p, you are finally able to fully 
+understand the hieroglyphics here. They read: 
+
+Never was there a more youthful, more handsome deity, as was the demigod
+Ramuset.  And at times his want for merriment would fill the entire
+valley, enlivening the spirits of the People, no matter what the occasion. 
+And on his wings arrived many messages more swiftly than thought.  But
+out of jealously, he joined his siblings in a fight against their sister,
+the Goddess of the People.  And though they won the battle, banishing the
+Goddess' powers and form from this plane, it was not without consequence
+for it is said that now Ramuset must walk the land in the form of a
+manbat, a creature as ugly as Ramuset was once beautiful.  Part of
+Ramuset's essence has been imbued into part of this statue in hopes that
+it might help right the grand betrayal of the heavens.
+~
+E
+ctrans~
+For a moment, $p becomes warm and
+begins to glow as you examine the hieroglyphics.
+~
+E
+rctran~
+Momentarily, $p in $n's possession glows as $e 
+examines a section of  hieroglyphics. 
+~
+E
+rtmess~
+$n's brow furrows in thought as $e tries to translate a section 
+of hieroglyphics using $p as a guide.
+~
+E
+notrans~
+The hieroglyphics are much too complex to understand.
+~
+E
+rnotrans~
+$n's frowns with frustration as $e finishes examining a portion
+of the hieroglyphics.
+~
+E
+study~
+You will need to study $p some more.
+~
+E
+rstudy~
+$n will have to study $p more.
+~
+!
+0 0 0
+A
+translate~
+multiplina carving nymph~
+i = get_integer( ch, "/Cayln/TabletEnduraba" );
+obj = has_obj( 1548, ch );
+if( obj ) {
+  j = get_integer( obj, "/Cayln/TabletEnduraba" );
+  if( i == j ) {
+    act_notchar( #rtmess, ch, obj );
+    act_tochar( #trans1, ch, obj );
+  }
+  else {
+    act_tochar( #study, ch, obj );
+    act_notchar( #rstudy, ch, obj );
+  }
+  end;
+}
+obj = has_obj( 1549, ch );
+if( obj ) {
+  act_tochar( #ctrans, ch, obj, mob );
+  act_notchar( #rctran, ch, obj, mob );
+  wait( 2 );
+  act_tochar( #trans1, ch, obj, mob );
+  end;
+}
+act_tochar( #notrans, ch );
+act_notchar( #rnotrans, ch );
+~
+E
+trans1~
+With the aid of $p, you are finally able to fully 
+understand the hieroglyphics here. They read: 
+
+As daughter of the Keeper and bringer of light, Multiplina was once the
+Goddess best friend and advisor.  When the Goddess of the valley was
+betrayed by Multiplina and her other siblings, it startled Her most that
+the daughter of the Balance would seek to overthrow Her.  As punishment,
+the Goddess used her last influences upon this place to transform
+Multiplina and her siblings into whatever their hearts most reflected at
+the moment of their betrayal.  In hopes that one day the Goddess shall be
+brought back among us, I, her last living vessel and priestess, have
+imbued part of this idol with Multiplina's godly essence, for only
+through it and the eccenses of the other demigods shall a way to bring
+back the goddess be found.
+~
+E
+ctrans~
+For a moment, $p becomes warm and
+begins to glow as you examine the hieroglyphics.
+~
+E
+rctran~
+Momentarily, $p in $n's possession glows as $e 
+examines a section of  hieroglyphics. 
+~
+E
+rtmess~
+$n's brow furrows in thought as $e tries to translate a section 
+of hieroglyphics using $p as a guide.
+~
+E
+notrans~
+The hieroglyphics are much too complex to understand.
+~
+E
+rnotrans~
+$n's frowns with frustration as $e finishes examining a portion
+of the hieroglyphics.
+~
+E
+study~
+You will need to study $p more.
+~
+E
+rstudy~
+$n will need to study $p more.
+~
+!
+0 0 0
+1581 9 1509949540 3 0
+2942 17 1509949540 -2 0
+-1
+S
+
+#0
+

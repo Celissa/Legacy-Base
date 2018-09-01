@@ -1,0 +1,1087 @@
+#M2_AREA
+2
+
+Lost outpost of El'Tharin~
+Ahriman~
+~
+~
+~
+
+0 0
+3
+0
+#ROOMS
+
+#75500
+Faint Trail Through the Swamp~
+This trail seems to be highly overgrown, and presses on into the swamp to
+the south.  To the north, a large mound fallen trunks lie, while to the
+south, the trail continues on for the most part unobstructed.  Overhead,
+the canopy grows like the roof of a large, growing building.  The trail
+itself looks to be unused for the most part as the vegation tries to
+claim back the area that was cleared for a trail.
+~
+~
+33030144 2 5 0
+D2
+~
+~
+0 -1 75501 10 10 5
+-1
+S
+
+#75501
+Faint Trail Through the Swamp~
+The trail you are continues on to the south from here, meandering through
+the swamp.  Not much of where this this trail leads can be seen, as the
+dense vegation makes seeing any distance quite impossible.  The trail
+itself appears to be constructed of regular shaped stones, and looks to
+be quite ancient indeed.  Off to one side of the trail, a large stone
+sits an irregular angle, and is overgrown with vines.
+~
+~
+33030144 2 9 0
+D0
+~
+~
+0 -1 75500 10 10 5
+D2
+~
+~
+0 -1 75502 10 10 5
+E
+stone~
+This stone appears to be completely overgrown with vines.  For some
+reason, it just appears to be slightly out of place here in the swamp. 
+Faintly visible underneath the vines, traces of silver can be seen
+glimmering darkly in the light.
+~
+E
+silver runes~
+Underneath the vines are what clearly appear to be runes of some kind. 
+From their elegance, they appear to be elven in nature, but looking at
+them, they appear to be quite ancient indeed.  Of the runes inscribed
+here, only one word makes any sense to you, and that is the word
+"Danger." 
+~
+-1
+S
+
+#75502
+Bend in the Trail~
+The trail makes a turn here, leading off the east, or going back to the
+north.  All along the trail, thick ferns grow along the sides of the
+path, obstructing your vision.  The humiditiy seems overbearing, as no
+trace of a wind can be felt this deep in the swamp.  Overheard, only
+faint glimpes of the sky can be seen ast the tree's canopy grows so
+thickly together.
+~
+~
+33030144 2 9 0
+D0
+~
+~
+0 -1 75501 10 10 5
+D1
+~
+~
+0 -1 75503 10 10 5
+-1
+S
+
+#75503
+Faint Trail Through the Swamp~
+The trail still seems to meandre through the swamp without any real
+direction or purpose.  To the north and south, thick vegation blocks out
+any possible movement in either direction, while to the east and west,
+the trail continues on.  As you look further down the trail to the east,
+it seems as if the trail seems to be getting just a little less
+overgrown, or it could be just your imagination.
+~
+~
+33030144 2 9 0
+D1
+~
+~
+0 -1 75504 10 10 5
+D3
+~
+~
+0 -1 75502 10 10 5
+-1
+S
+
+#75504
+Faint Trail Through the Swamp~
+To the east, a small clearing appears to have been made in the dense
+vegatation, as the sky can be seen through a hole in the canopy.  To the
+west, the trail continues on through the swamp, winding amongst the
+vegitation.  To the north and south, the vines and trees grow so thick as
+to block any movement in either direction.  You're attention seems to be
+draw to one of the ferns however, as it appears to be moving slightly.
+~
+[Ahriman] add acode to have some critter hop out of the ferns and attack
+~
+33030144 2 9 0
+D1
+~
+~
+0 -1 75505 10 10 5
+D3
+~
+~
+0 -1 75503 10 10 5
+-1
+S
+
+#75505
+Clearing in the Trail~
+The trail here seems to be obstructed by a large tree trunk lying across
+it.  The felling of this tree has resulted in a rare opening in the the
+oppresive canopy, and you can feel the faintest of breezes wafting in
+from the opening that it created.  To the east and west, the trail
+continues on through the swamp, while to the north and south, progress is
+blocked by the vegetation.
+~
+~
+33030144 2 9 0
+D1
+~
+~
+0 -1 75506 10 10 5
+D3
+~
+~
+0 -1 75504 10 10 5
+E
+trunk~
+The tree that has fallen appears to have been quite massive indeed.  The
+tree has allready begun to decompose however and looks as if it is being
+reclaimed by the swamp.  Near the bottom of it, a myriad assortment of
+fungus grows here, shaded from the light.
+~
+-1
+S
+
+#75506
+Faint Trail Through the Swamp~
+The trail here takes another turn, leading off to the south and to the
+west.  Any progress to the east and west is blocked by the thick
+vegatation which grows so densely here.  The path seems to be a little
+better maintained here, and not so many of the stones which make up this
+road are as cracked as they were further up the trail.  To the south, the
+trail becomes wider and more pronouncd, while to the west, it barely
+squeezes through the swamp.
+~
+~
+33030144 2 9 0
+D2
+~
+~
+0 -1 75507 10 10 5
+D3
+~
+~
+0 -1 75505 10 10 5
+-1
+S
+
+#75507
+Faint Trail Through the Swamp~
+The trail can no longer truly be called a trail, as it becomes much
+larger and resembles more of a road.  The stones that make up this road
+appear to be quite ancient however, and do show a good bit of wear, but
+for the most part the trail is kept clear by someone or something.  The
+road continues on to the south and north, but encroaching vegetation
+blocks any progress to the east or west.
+~
+~
+33030144 2 9 0
+D0
+~
+~
+0 -1 75506 10 10 5
+D2
+~
+~
+0 -1 75508 10 10 5
+-1
+S
+
+#75508
+Faint Trail Through the Swamp~
+To the south, the swamp seems to open up a bit, and from here, you can
+make out what appears to be ruined buildings.  The ruins appear to be
+quite overgrown with vines and ferns however, and from here you can't
+make out much detail about them.  The trail continues on to the north,
+leading back through the swamp, or to the south, to whatever may lie in
+those ruins.
+~
+~
+33030144 2 9 0
+D0
+~
+~
+0 -1 75507 10 10 5
+D2
+~
+~
+0 -1 75509 10 10 5
+-1
+S
+
+#75509
+Before a Ruined Settlement~
+To the east and west, what appears to be the remains of two stone
+watchtowers lay in a pile of rubble, torn down from either the the
+elements or some other cause.  To the south, more ruined stone building
+can be seen intermingled amongst the vegetation.  To the north, the road
+leads out from here back through the swamp.
+~
+~
+33030144 2 9 0
+D0
+~
+~
+0 -1 75508 10 10 5
+D1
+~
+~
+0 -1 75510 10 10 5
+D2
+~
+~
+0 -1 75512 10 10 5
+D3
+~
+~
+0 -1 75511 10 10 5
+-1
+S
+
+#75510
+Beside a Ruined Watchtower~
+This tower is not as completely destroyed as the other tower across the
+road, but it has definately seen better days.  A stone door can be seen
+in the side of the tower, and it might be possible to make your way into
+it with some effort.  The swamp seems eager to reclaim the space taken up
+by this tower however, as large vines grow up and down the side of the
+tower.
+~
+[Ahriman] add command for opening door to the east
+~
+33030144 2 9 0
+D1
+~
+~
+0 -1 75516 10 10 5
+D3
+~
+~
+0 -1 75509 10 10 5
+-1
+S
+
+#75511
+Beside a Ruined Watchtower~
+Here lies a rather large pile of rubble.  From what you can tell from it,
+it appears to at one time to have been a watchtower constructed of stone. 
+Other then that not much can be discerened about its origins.  Large
+ferns grow over most of the rubble, making it hard to explore most of the
+ruined building.
+~
+[Ahriman] need to conceal exit down
+~
+33030144 2 9 0
+D1
+~
+~
+0 -1 75509 10 10 5
+D5
+~
+~
+0 -1 75515 10 10 5
+E
+rubble~
+Some of the rubble appears to have fallen almost straight down on its
+base, and would take a considerable amount of effort to discover if
+anything at all lies beneath it.
+~
+-1
+S
+
+#75512
+Along a Large Road~
+The road is more clearly defined here now, and seems to lead through the
+remains of what was at one time a rather sizeable settlement.  All that
+remains of this place now is just overgrown and collapsing buildings. 
+The road leads on to the south, winding amongst the buildings, while to
+the north, it leads out to the swamp.
+~
+~
+33030144 2 9 0
+D0
+~
+~
+0 -1 75509 10 10 5
+D2
+~
+~
+0 -1 75513 10 10 5
+-1
+S
+
+#75513
+Intersection on the Road~
+The road splits now, and leads off to the east and west through the
+ruins, and heads back out into the swamp to the north.  All around you,
+ruined buildings are overgrown with a miriad assortment of plant life, as
+the swamp seeks to reclaim what was once its own.  As you head further
+into this place, a sense of foreboding overcomes you, as if something
+truly tragic happened here.
+~
+~
+33030144 2 9 0
+D0
+~
+~
+0 -1 75512 10 10 5
+D1
+~
+~
+0 -1 75514 10 10 5
+D3
+~
+~
+0 -1 75517 10 10 5
+-1
+S
+
+#75514
+Along the Main Road~
+The road, if you can call it that, continues off to the east and west. 
+Ruined buildings lie along either side of this road, overgrown with vines
+and other thick vegetation.  To the west, it looks as if there is some
+kind of intersection for the road, while of to the east, the path
+continues on through the swamp.
+~
+~
+33030144 2 9 0
+D1
+~
+~
+0 -1 75522 10 10 5
+D3
+~
+~
+0 -1 75513 10 10 5
+-1
+S
+
+#75515
+In an Ancient Storeroom~
+Unerneath the rubble appears to be what was at one time the store room
+for the watchtower.  Most of the contents of this room appear to be
+intact for the most part, as all the rubble that covered the entrance
+kept out the elements and any other people that might want to rummage
+about.  Along the east wall, several large ceramic jars are stacked very
+neatly, with the seals still firmly in place.  Along the west wall, a
+large weapon rack rests, with several spears still visible upon it.
+~
+~
+33030144 2 9 0
+D4
+~
+~
+0 -1 75511 10 10 5
+-1
+S
+
+#75516
+Inside a Ruined Watchtower~
+The inside of this tower is full of loose stones, and making your way in
+here is very difficult.  A set of stairs can be seen leading up the
+eastern wall, and would have lead to the top of the tower, but now the
+stairs stop about halfway up the wall, destroyed now.  The ceiling
+appears to be mostly intact, and for the most part, you can not see any
+of the sky above you.
+~
+~
+33030144 2 9 0
+D3
+~
+~
+0 -1 75510 10 10 5
+-1
+S
+
+#75517
+Faint Trail Through the Swamp~
+Under Construction.
+~
+~
+33030144 2 9 0
+D1
+~
+~
+0 -1 75513 10 10 5
+D3
+~
+~
+0 -1 75518 10 10 5
+-1
+S
+
+#75518
+Faint Trail Through the Swamp~
+Under Construction.
+~
+~
+33030144 2 9 0
+D1
+~
+~
+0 -1 75517 10 10 5
+D3
+~
+~
+0 -1 75519 10 10 5
+-1
+S
+
+#75519
+Faint Trail Through the Swamp~
+Under Construction.
+~
+~
+33030144 2 9 0
+D0
+~
+~
+0 -1 75520 10 10 5
+D1
+~
+~
+0 -1 75518 10 10 5
+D3
+~
+~
+0 -1 75521 10 10 5
+-1
+S
+
+#75520
+Faint Trail Through the Swamp~
+Under Construction.
+~
+~
+33030144 2 9 0
+D2
+~
+~
+0 -1 75519 10 10 5
+-1
+S
+
+#75521
+Faint Trail Through the Swamp~
+Under Construction.
+~
+~
+33030144 2 9 0
+D1
+~
+~
+0 -1 75519 10 10 5
+D3
+~
+~
+0 -1 75535 10 10 5
+-1
+S
+
+#75522
+Faint Trail Through the Swamp~
+Under Construction.
+~
+~
+33030144 2 9 0
+D1
+~
+~
+0 -1 75523 10 10 5
+D3
+~
+~
+0 -1 75514 10 10 5
+-1
+S
+
+#75523
+Faint Trail Through the Swamp~
+Under Construction.
+~
+~
+33030144 2 9 0
+D0
+~
+~
+0 -1 75524 10 10 5
+D1
+~
+~
+0 -1 75526 10 10 5
+D2
+~
+~
+0 -1 75525 10 10 5
+D3
+~
+~
+0 -1 75522 10 10 5
+-1
+S
+
+#75524
+Inside of a Ruined House~
+You are standing inside of what was probablly someones home, but now the
+only things residing here are various forms of flora and fauna.  The
+walls that once made up this house are now nothing more then mere piles
+of rubble, having succumbed to time and the elements.  In one corner, the
+vegetation appears to be quite thick.
+~
+~
+33030144 2 9 0
+D2
+~
+~
+0 -1 75523 10 10 5
+-1
+S
+
+#75525
+Faint Trail Through the Swamp~
+Under Construction.
+~
+~
+33030144 2 9 0
+D0
+~
+~
+0 -1 75523 10 10 5
+D2
+~
+~
+0 -1 75527 10 10 5
+-1
+S
+
+#75526
+Inside of a Ruined Store~
+Under Construction.
+~
+~
+33030144 2 9 0
+D3
+~
+~
+0 -1 75523 10 10 5
+-1
+S
+
+#75527
+Faint Trail Through the Swamp~
+Under Construction.
+~
+~
+33030144 2 9 0
+D0
+~
+~
+0 -1 75525 10 10 5
+D2
+~
+~
+0 -1 75529 10 10 5
+D3
+~
+~
+0 -1 75528 10 10 5
+-1
+S
+
+#75528
+Faint Trail Through the Swamp~
+Under Construction.
+~
+~
+33030144 2 9 0
+D1
+~
+~
+0 -1 75527 10 10 5
+-1
+S
+
+#75529
+Faint Trail Through the Swamp~
+Under Construction.
+~
+~
+33030144 2 9 0
+D0
+~
+~
+0 -1 75527 10 10 5
+D2
+~
+~
+0 -1 75530 10 10 5
+-1
+S
+
+#75530
+Faint Trail Through the Swamp~
+Under Construction.
+~
+~
+33030144 2 9 0
+D0
+~
+~
+0 -1 75529 10 10 5
+D1
+~
+~
+0 -1 75531 10 10 5
+D2
+~
+~
+0 -1 75532 10 10 5
+-1
+S
+
+#75531
+Faint Trail Through the Swamp~
+Under Construction.
+~
+~
+33030144 2 9 0
+D3
+~
+~
+0 -1 75530 10 10 5
+-1
+S
+
+#75532
+Faint Trail Through the Swamp~
+Under Construction.
+~
+~
+33030144 2 9 0
+D0
+~
+~
+0 -1 75530 10 10 5
+D3
+~
+~
+0 -1 75533 10 10 5
+-1
+S
+
+#75533
+Faint Trail Through the Swamp~
+Under Construction.
+~
+~
+33030144 2 9 0
+D1
+~
+~
+0 -1 75532 10 10 5
+D3
+~
+~
+0 -1 75534 10 10 5
+-1
+S
+
+#75534
+Faint Trail Through the Swamp~
+Under Construction.
+~
+~
+33030144 2 9 0
+D0
+~
+~
+0 -1 75549 10 10 5
+D1
+~
+~
+0 -1 75533 10 10 5
+D3
+~
+~
+0 -1 75548 10 10 5
+-1
+S
+
+#75535
+Faint Trail Through the Swamp~
+Under Construction.
+~
+~
+33030144 2 9 0
+D1
+~
+~
+0 -1 75521 10 10 5
+D3
+~
+~
+0 -1 75536 10 10 5
+-1
+S
+
+#75536
+Faint Trail Through the Swamp~
+Under Construction.
+~
+~
+33030144 2 9 0
+D1
+~
+~
+0 -1 75535 10 10 5
+D2
+~
+~
+0 -1 75537 10 10 5
+-1
+S
+
+#75537
+Faint Trail Through the Swamp~
+Under Construction.
+~
+~
+33030144 2 9 0
+D0
+~
+~
+0 -1 75536 10 10 5
+D1
+~
+~
+0 -1 75555 10 10 5
+D2
+~
+~
+0 -1 75538 10 10 5
+-1
+S
+
+#75538
+Faint Trail Through the Swamp~
+Under Construction.
+~
+~
+33030144 2 9 0
+D0
+~
+~
+0 -1 75537 10 10 5
+D2
+~
+~
+0 -1 75539 10 10 5
+-1
+S
+
+#75539
+Faint Trail Through the Swamp~
+Under Construction.
+~
+~
+33030144 2 9 0
+D0
+~
+~
+0 -1 75538 10 10 5
+D1
+~
+~
+0 -1 75554 10 10 5
+D2
+~
+~
+0 -1 75540 10 10 5
+-1
+S
+
+#75540
+Faint Trail Through the Swamp~
+Under Construction.
+~
+~
+33030144 2 9 0
+D0
+~
+~
+0 -1 75539 10 10 5
+D2
+~
+~
+0 -1 75541 10 10 5
+-1
+S
+
+#75541
+Faint Trail Through the Swamp~
+Under Construction.
+~
+[Ahriman] add a gate here
+~
+33030144 2 9 0
+D0
+~
+~
+0 -1 75540 10 10 5
+D1
+~
+~
+0 -1 75543 10 10 5
+D2
+~
+~
+0 -1 75542 10 10 5
+-1
+S
+
+#75542
+Faint Trail Through the Swamp~
+Under Construction.
+~
+~
+33030144 2 9 0
+D0
+~
+~
+0 -1 75541 10 10 5
+D3
+~
+~
+0 -1 75552 10 10 5
+-1
+S
+
+#75543
+Faint Trail Through the Swamp~
+Under Construction.
+~
+~
+33030144 2 9 0
+D1
+~
+~
+0 -1 75544 10 10 5
+D3
+~
+~
+0 -1 75541 10 10 5
+-1
+S
+
+#75544
+Faint Trail Through the Swamp~
+Under Construction.
+~
+~
+33030144 2 9 0
+D1
+~
+~
+0 -1 75545 10 10 5
+D3
+~
+~
+0 -1 75543 10 10 5
+-1
+S
+
+#75545
+Faint Trail Through the Swamp~
+Under Construction.
+~
+~
+33030144 2 9 0
+D0
+~
+~
+0 -1 75551 10 10 5
+D1
+~
+~
+0 -1 75546 10 10 5
+D3
+~
+~
+0 -1 75544 10 10 5
+-1
+S
+
+#75546
+Faint Trail Through the Swamp~
+Under Construction.
+~
+~
+33030144 2 9 0
+D1
+~
+~
+0 -1 75547 10 10 5
+D3
+~
+~
+0 -1 75545 10 10 5
+-1
+S
+
+#75547
+Faint Trail Through the Swamp~
+Under Construction.
+~
+~
+33030144 2 9 0
+D1
+~
+~
+0 -1 75548 10 10 5
+D2
+~
+~
+0 -1 75550 10 10 5
+D3
+~
+~
+0 -1 75546 10 10 5
+-1
+S
+
+#75548
+Faint Trail Through the Swamp~
+Under Construction.
+~
+~
+33030144 2 9 0
+D1
+~
+~
+0 -1 75534 10 10 5
+D3
+~
+~
+0 -1 75547 10 10 5
+-1
+S
+
+#75549
+Faint Trail Through the Swamp~
+Under Construction.
+~
+~
+33030144 2 9 0
+D2
+~
+~
+0 -1 75534 10 10 5
+-1
+S
+
+#75550
+Faint Trail Through the Swamp~
+Under Construction.
+~
+~
+33030144 2 9 0
+D0
+~
+~
+0 -1 75547 10 10 5
+-1
+S
+
+#75551
+Faint Trail Through the Swamp~
+Under Construction.
+~
+~
+33030144 2 9 0
+D2
+~
+~
+0 -1 75545 10 10 5
+-1
+S
+
+#75552
+Faint Trail Through the Swamp~
+Under Construction.
+~
+~
+33030144 2 9 0
+D1
+~
+~
+0 -1 75542 10 10 5
+D2
+~
+~
+0 -1 75553 10 10 5
+-1
+S
+
+#75553
+Faint Trail Through the Swamp~
+Under Construction.
+~
+~
+33030144 2 9 0
+D0
+~
+~
+0 -1 75552 10 10 5
+-1
+S
+
+#75554
+Faint Trail Through the Swamp~
+Under Construction.
+~
+~
+33030144 2 9 0
+D3
+~
+~
+0 -1 75539 10 10 5
+-1
+S
+
+#75555
+Faint Trail Through the Swamp~
+Under Construction.
+~
+~
+33030144 2 9 0
+D3
+~
+~
+0 -1 75537 10 10 5
+-1
+S
+
+#0
+

@@ -1,0 +1,17 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+iflag                       : displays the settings of your iflags<br>
+iflag [flag name]           : turns a info sub-channel off<br>
+iflag [flag name] [setting] : sets an iflag to a given level<br>
+<br>
+<h1> Description </h1>
+<br>
+Iflags are a method to control how much information about various happens<br>
+on the mud is conveyed to you.  Iflags can range from level 0 to level 3<br>
+where level 0 is off and level 3 is most verbose.<br>
+<br>
+See also: message, info, options<br>
+</html>
+</body>

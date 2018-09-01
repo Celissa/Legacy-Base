@@ -1,0 +1,1959 @@
+#M2_AREA
+2
+
+The Chamber of the Aspects~
+Kiian Talis~
+The Chamber of the Aspects~
+~
+~
+
+0 0
+0
+0
+#ROOMS
+
+#48500
+Within the Heart of the Flame~
+Tongues of fire rise from a pit of molten lava, wreathing the room with
+dancing flames.  The cloying odour of sulphur assails your nostrils,
+pervading the air with its heavy scent.  The reddish-orange hue of the
+flames lights the surrounding area with a crimson glow.  Far along the
+northern wall of this vast cavern, a lazy flow of lava pours into the
+room like a burning waterfall of molten stone.
+~
+~
+167247893 0 9 0
+D3
+~
+~
+0 -1 48501 10 10 5
+A
+~
+~
+if( !is_player( ch ) )
+  end;
+room = find_room( 48500 );
+if( mob_in_room( 2269, room ) )
+  if( is_fighting( mob_in_room( 2269, room ) ) )
+  end;
+if( rflag( reset0, room ) ) {
+  if( mob_in_room( 2269, room ) ) {
+    damage( mob, ch, 5d7+10, fire, #flames );
+    wait( 1 );
+    act_room( #already, ch );
+    mob = mob_in_room( 2269, room );
+  }
+  else {
+    if( rflag( reset0, room ) ) {
+      remove_rflag( reset0, room );
+      act_room( #rising, ch );
+      wait( 2 );
+      act_room( #rising2, ch );
+      mob = mload( 2269, room );
+      wait( 1 );
+      damage( mob, ch, 5d7+10, fire, #flames );
+    }
+  }
+}
+~
+E
+already~
+The phoenix tilts its head to one side, considering you.
+~
+E
+comeback~
+A scorching burst of flame
+~
+E
+rising~
+@RThe dancing flames suddenly gather close to the center of the lava pit!@n
+~
+E
+flames~
+blast of white hot flame.
+~
+E
+rising2~
+@RA magnificent phoenix bursts into view from amidst the tongues of
+flame, sending a ring of fire rippling through the area!@n 
+~
+!
+1 0 8
+-1
+S
+
+#48501
+Into the Burning Depths~
+A dull red haze lights your way through this twisted passage.  The very
+stones of the floor and walls radiate an almost unbearable heat, glowing
+ever so faintly red from the incredible warmth.  The curiously shaped
+stones forming the ceiling of this passageway, however, are only slightly
+warm to the touch.  The sickly sweet stench of sulphur hangs in the
+still, heavy air.  From the cavern to the east, the hazy reddish orange
+light intensifies into a steady glow of pulsating energy.
+~
+~
+167247893 0 9 0
+D1
+~
+~
+0 -1 48500 10 10 5
+D4
+teardrop-shaped stone~
+teardrop-shaped stone~
+227 -1 48502 10 10 5
+A
+~
+~
+act_tochar( #heat, ch );
+damage( mob, ch, 1d10+10, fire, "the searing heat", "a wave of searing heat" );
+continue;
+~
+E
+heat~
+@rAs you enter this place, a wave of searing heat washes over you!@n
+~
+!
+1 0 18
+A
+push move~
+teardrop-shaped stone~
+if( is_open( room, up ) )
+act_tochar( #already, ch );
+else {
+act_tochar( #open, ch );
+act_notchar( #ropen, ch );
+open( room, up );
+}
+~
+E
+already~
+The teardrop-shaped stone has already been pushed aside, revealing a small opening.
+~
+E
+open~
+Straining a little, you push the teardrop-shaped stone out of the way, revealing a small opening.
+~
+E
+ropen~
+$n pushes aside a teardrop-shaped stone in the ceiling, revealing a small opening.
+~
+!
+0 0 0
+-1
+S
+
+#48502
+Beyond Time and Memory~
+This chamber is long and narrow, having been tunneled from the bare, dull
+rock of the hills.  The ceiling here is arched and low, forcing you to
+stoop over as you move about.  The fine stonework present elsewhere in
+the complex is unfinished here.  The customary strangely-shaped stones
+only rise a foot or so above floor level here, construction having been
+apparently suspended due to some unknown cause.  The room is pleasantly
+warm, in contrast to most of the surrounding chambers.
+~
+reset flag for action
+no magic, no recall
++ dam
+~
+167247925 0 7 0
+D0
+~
+~
+0 -1 48503 10 10 5
+D5
+teardrop-shaped stone~
+teardrop-shaped stone~
+227 -1 48501 10 10 5
+E
+stonework floor~
+The fine tiles of the stone floor fit closely together, edges melting
+smoothly together.  Many of them are carved in the forms of different
+objects, among them the shape of a tear, a rose, and a sword.
+~
+E
+tear~
+Almost as big as a man, the graceful teardrop form looks, perhaps, to
+stand out from the other floor tiles, with deep grooves around its edges.
+~
+A
+~
+~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  wait( 15 );
+  if( random( 1, 2 ) == 1 ) {
+    if( !char_in_room( ch, find_room( 48502 ) ) )
+      end;
+    act_room( #room, ch );
+    }
+  }
+~
+E
+room~
+@b@BA pale blue flame appears in midair, flickers momentarily, and then
+disappears.
+~
+!
+1 1000 1
+A
+~
+~
+act_room( #drain, ch );
+modify_mana( ch, -50 );
+modify_move( ch, -50 );
+damage( mob, ch, 1d25, cold, "the cold rush of air" );
+~
+E
+drain~
+@b@BA cold rush of air passes through the darkness about you.
+~
+!
+2 1000 0
+A
+move pull open~
+teardrop-shaped stone~
+if( is_open( room, down ) )
+  act_tochar( #already, ch );
+else {
+  act_tochar( #open, ch );
+  act_notchar( #ropen, ch );
+  open( room, down );
+}
+~
+E
+already~
+The teardrop-shaped stone in the floor has already been cast aside.
+~
+E
+open~
+As you tug on the curious stone in the shape of a teardrop, it pulls away from the floor, leaving a small opening.
+~
+E
+ropen~
+$n tugs at one of the floorstones, finally pulling away a teardrop-shaped panel.
+~
+!
+0 0 0
+-1
+S
+
+#48503
+Before the Darkness~
+A large stone chamber opens up around you, its walls and floor
+constructed with strangely-shaped, smooth stones.  The ceiling above you
+looms high, the darkness overhead undaunted by your feeble light source. 
+A steep ramp constructed from the oddly-shaped flagstones descends further
+into the depths below, creeping its way downward along the chamber's
+southern wall.
+~
+~
+167247876 0 9 0
+D0
+~
+~
+0 -1 48504 10 10 5
+D2
+~
+~
+0 -1 48502 10 10 5
+D3
+~
+~
+0 -1 48505 10 10 5
+D5
+~
+~
+0 -1 48507 10 10 5
+E
+ramp southern~
+The ramp descends into the darkness at a steep angle, and seems as if it
+might be slippery.
+~
+A
+1 down~
+~
+send_to_char( #down, ch );
+continue;
+~
+E
+down~
+You head down the ramp.
+~
+!
+0 -1 0
+A
+~
+~
+ch = rand_char( room );
+if( mob_in_room( 802, find_room( 48509 ) ) ) 
+  act_tochar( #shiver, ch );
+if( mob_in_Room( 802, find_room( 48508 ) ) )
+  act_tochar( #shiver, ch );
+~
+E
+shiver~
+@b@BYou sense a dark presence down below.
+~
+!
+2 50 0
+-1
+S
+
+#48504
+Corners Bypassed and Forgotten~
+This out of the way niche is tucked deep into a hidden recess of the
+network of tunnels.  The stones forming the walls of this chamber are
+smoothly joined together with near seamless perfection, though none of
+the elaborations seen through the rest of this place are evident here.  A
+shroud of inkly blackness hovers in the air, muting any light that should
+happen to stray into this forgotten place.
+~
+[Merior] silver key resets on this guy
+~
+167247877 0 5 0
+D2
+~
+~
+0 -1 48503 10 10 5
+E
+masonry~
+The finished stonework here is flawless, the stones fitting together to
+form a smooth surface which has remained undamaged for ages.
+~
+E
+stones~
+Strangely shaped, with many odd angles darting back and forth, they are
+somehow fitted together with one another - perfectly, and all done
+without mortar.
+~
+A
+~
+~
+if( is_follower( ch ) )
+  end;
+if( mob_in_room( 806, room ) )
+  end;
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  wait( 1 );
+  act_room( #apparition, ch );
+  mload( 806, room );
+  }
+~
+E
+apparition~
+@RAs you step into the small chamber, a spirit rises up from the
+darkness and attacks!@n
+~
+!
+1 -1 5
+-1
+S
+
+#48505
+A Shadowy Vault~
+The fine stonework that has characterized the tunnels so far gives way
+here to a natural, unworked rock floor, as if this place had been left
+incomplete for some tacit cause.  Carefully tooled stone panels melt away
+into harshly unshaped rock, leaving an eerie effect of uncompleted work. 
+Walls only barely smoothed from the shape given them by nature angle up
+to meet in a low, gentle dome.
+~
+w is 39276
+[Conner] fix messages
+~
+167247877 0 5 0
+D1
+~
+~
+0 -1 48503 10 10 5
+D3
+star-shaped stone~
+star-shaped stone~
+235 -1 48506 10 10 5
+E
+walls angled overhead up ceiling~
+Smooth and cold to the touch, the strangely shaped stones meet one
+another in an almost perfect fit.
+~
+E
+natural rock floor down~
+The floor is rough and uneven, left unworked and unfinished by the
+creators of this subterranean complex.
+~
+E
+star~
+The star stone is huge, perhap 8' in diameter.  Its edge is intricate,
+with its zigzagging line mimicing that of a single great star shining
+down from avbove in the midsummer sky.
+~
+A
+look~
+stones stonework~
+if( find_skill( ch, searching ) > random( 2, 11 ) ) {
+  wait( 1 );
+  send_to_char( #notice, ch );
+  end;
+  }
+send_to_char( #duh, ch );
+~
+E
+duh~
+The stones are joined together in typically careful fashion.
+~
+E
+notice~
+The stones are joined together in typically careful fashion.  You notice
+a particularly large star-shaped stone in the center of the west wall.
+~
+!
+0 -1 0
+A
+push move lift~
+star-shaped stone~
+if( !is_open( room, west ) ) {
+  send_to_char( #push, ch );
+  act_notchar( #push2, ch );
+  wait( 2 );
+  if( !char_in_room( ch, find_room( 48505 ) ) )
+    end;
+  open( room, west );
+  act_room( #falls, ch );
+  wait( 5 );
+  if( !char_in_room( ch, find_room( 48505 ) ) )
+    end;
+  send_to_room( #quiet, find_room( 48505 ) );
+  }
+send_to_char( #already, ch );
+~
+E
+quiet~
+All is still.
+~
+E
+falls~
+The great star-shaped stone falls away into the darkness, leaving a dark
+opening in the west wall.
+~
+E
+already~
+You don't see the star-shaped stone.
+~
+E
+push2~
+With a heave, $n pushes the great star-shaped stone.
+~
+E
+push~
+With a heave, you push the great star-shaped stone.
+~
+!
+0 0 0
+A
+look~
+west~
+if( is_open( room, west ) )
+  send_to_char( #open, ch );
+else
+  send_to_char( #closed, ch );
+~
+E
+closed~
+A large star-shaped stone sits in the center of the west wall.
+~
+E
+open~
+A dark opening in the west wall leads to parts unknown.
+~
+!
+0 0 0
+-1
+S
+
+#48506
+In that Quiet Earth~
+The jagged, bare walls of untamed rock seem almost pulsing with malicious
+life, their frenetic lines somehow sullen and spiteful towards all
+warm-blooded life daring to invade this domain.  The very air holds the
+portent of some lingering prescence not quite willing to relinquish its
+grasp on this place, always hovering just beyond the bounds of mortal
+sight.  This haunting chamber seems older even than the chill embrace of
+the dull stone of the ancient hills cradling you in its unfeeling grasp.
+~
+entrance to mallander's tomb
+e is 39265
+~
+167247877 0 9 0
+D1
+star-shaped stone~
+star-shaped stone~
+235 -1 48505 10 10 5
+E
+rock walls jagged bare~
+The walls are entirely unfinished and natural, except for a single star
+shaped stone in the west wall.
+~
+A
+pull move~
+star~
+if( !is_open( room, east ) ) {
+  send_to_char( #pull, ch );
+  act_notchar( #pull2, ch );
+  wait( 2 );
+  if( !char_in_room( ch, find_room( 48506 ) ) )
+    end;
+  open( room, east );
+  act_room( #falls, ch );
+  wait( 5 );
+  if( !char_in_room( ch, find_room( 48506 ) ) )
+    end;
+  send_to_room( #quiet, find_room( 48506 ) );
+  }
+send_to_char( #already, ch );
+~
+E
+quiet~
+All is still.
+~
+E
+falls~
+The great star-shaped stone falls to the floor, leaving a dark opening in
+the east wall.
+~
+E
+already~
+You don't see the star-shaped stone.
+~
+E
+pull2~
+With a heave, $n pulls the great star-shaped stone.
+~
+E
+pull~
+With a heave, you pull the great star-shaped stone.
+~
+!
+0 -1 0
+A
+~
+~
+if( is_follower( ch ) )
+  end;
+if( mob_in_room( 805, room ) )
+  end;
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  wait( 1 );
+  act_room( #undying, ch );
+  mload( 805, room );
+  }
+~
+E
+undying~
+@b@RFrom the darkest of shadows emerges a gaunt figure!
+~
+!
+1 -1 2
+A
+look~
+east~
+if( is_open( room, east ) )
+  send_to_char( #open, ch );
+else
+  send_to_char( #closed, ch );
+~
+E
+closed~
+A large star-shaped stone sits in the center of the east wall.
+~
+E
+open~
+A dark opening in the east wall leads to parts unknown.
+~
+!
+0 0 0
+-1
+S
+
+#48507
+Slippery Stone Ramp~
+The smoothly polished stone forming this ramp into the darkness is quite
+slick, the closely jointed stone providing little traction.  Sinuous
+tendrils of mist swirl through the air, their moisture adding a
+glistening sheen of dampness upon the cold stone of the walls of the
+surrounding chamber and the floor of the steeply angled ramp.
+~
+~
+167247876 0 7 0
+D4
+~
+~
+0 -1 48503 10 10 5
+D5
+~
+~
+0 -1 48508 10 10 5
+A
+~
+~
+if( !can_fly( ch ) ) {
+  if( find_stat( ch, dex ) < random( 1, 10 ) ) {
+    send_to_char( #slip, ch );
+    act_notchar( #slip2, ch );
+    wait( 1 );
+    transfer( ch, find_room( 48508 ) );
+    damage( mob, ch, 1d10, physical, "the fall" );
+    position( ch, 6 );
+    act_notchar( #arrives, ch );
+  }
+ continue;
+}
+~
+E
+arrives~
+$n comes tumbling down the ramp from above.
+~
+E
+slip2~
+$n slips on the smooth stone and falls down the ramp!
+~
+E
+slip~
+You slip on the smooth stone and fall head over heels into the darkness below!
+~
+!
+1 0 48
+A
+~
+~
+ch = rand_player( room );
+if( ch )
+  if( !can_fly( ch ) ) {
+  if( find_stat( ch, dex ) < random( 1, 20 ) ) {
+    if( is_sleeping( ch ) ) {
+      act_tochar( #slslip, ch );
+      act_notchar( #rslslip, ch );
+    }
+    else if( is_resting( ch ) ) {
+      act_tochar( #reslip, ch );
+      act_notchar( #rreslip, ch );
+    }
+    else {
+      send_to_char( #slip, ch );
+      act_notchar( #slip2, ch );
+    }
+    transfer( ch, find_room( 48508 ) );
+    damage( mob, ch, 1d10, physical, "the fall" );
+    position( ch, 6 );
+    act_notchar( #arrives, ch );
+  }
+}
+~
+E
+arrives~
+$n comes tumbling down the ramp from above.
+~
+E
+slip2~
+$n slips on the smooth stone and falls down the ramp!
+~
+E
+slip~
+You slip on the smooth stone and fall head over heels into the darkness below!
+~
+E
+slslip~
+@cYou dream about yourself falling into an abyss.@n
+~
+E
+rslslip~
+@c$n starts sliding down the ramp while $e sleeps.@n
+~
+E
+reslip~
+@cYou thought you had a safe spot to rest, but then start sliding down the ramp.@n
+~
+E
+rreslip~
+@c$n starts sliding down the ramp, $e is unable to get back on $s feet
+before being down the ramp alot.@n
+~
+!
+2 300 0
+A
+~
+~
+if( !can_fly( ch ) ) {
+  if( find_skill( ch, climb ) < random( 1, 7 ) ) {
+    send_to_char( #slip, ch );
+    act_notchar( #slip2, ch );
+    transfer( ch, find_room( 48508 ) );
+    damage( mob, ch, 1d10, physical, "the fall" );
+    position( ch, 6 );
+    act_notchar( #arrives, ch );
+    end;
+  }
+  continue;
+}
+continue;
+~
+E
+arrives~
+$n comes tumbling down the ramp from above.
+~
+E
+slip2~
+$n slips on the smooth stone and falls down the ramp!
+~
+E
+slip~
+You slip on the smooth stone and fall head over heels into the darkness below!
+~
+!
+3 0 48
+A
+up~
+*~
+send_to_char( #up, ch );
+continue;
+~
+E
+up~
+You head up the smooth stone ramp.
+~
+!
+0 1000 0
+A
+down~
+*~
+send_to_char( #down, ch );
+continue;
+~
+E
+down~
+You head down the smooth stone ramp.
+~
+!
+0 0 0
+-1
+S
+
+#48508
+Afoot on the Dark Stone~
+The finely-joined stones create a flawless plane here, at the foot of a
+stone ramp leading up a steep incline.  Aside from the smooth stone
+surfaces of the stone ramp, which climbs the west wall up and out of
+sight, the floor beneath you is the only other finished surface around
+you.  Everywhere else, jagged stone outcroppings and rough stone
+surfaces dart here and there, opening up to reveal a huge natural
+cavern all around you.
+~
+redo exiting
+stones, ramp, floor, outcroppings cavern
+~
+167247876 0 9 0
+D1
+~
+~
+0 -1 48509 10 10 5
+D4
+~
+~
+0 -1 48507 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+You head up the ramp.
+~
+!
+3 -1 16
+A
+~
+~
+room = find_room( 48508 );
+if( mob_in_Room( 802, find_room( 48509 ) ) ) {
+  wait( 2 );
+  send_to_room( #lights, find_room( 48508 ) );
+  }
+if( mob_in_room( 802, find_room( 48508 ) ) ) {
+  wait( 1 );
+  send_to_room( #lights2, find_room( 48508 ) );
+  }
+~
+E
+lights2~
+A cloud of strange shimmering lights engulfs you.
+~
+E
+lights~
+You spy some strange lights off to the east.
+~
+!
+2 200 58
+-1
+S
+
+#48509
+Cleave the Midnight Dark~
+An immense cave of natural rock opens up here, seeming all the more vast
+because of its jagged roughness, so different than the carefully worked
+stone of most of this network of chambers.  Though the flooring is formed
+of the elegantly simple paving-stones, the walls and ceiling of the
+cavern are dramatically unfinished, harsh, and enduring.  Along the
+eastern wall, a smoothly hewn ramp curves upwards into the blackness
+above.
+~
+mpda of y'va'an
+~
+167247876 0 9 0
+D3
+~
+~
+0 -1 48508 10 10 5
+D4
+~
+~
+0 -1 48510 10 10 5
+A
+~
+~
+room = find_room( 48508 );
+if( mob_in_room( 802, room ) ) {
+  wait( 2 );
+  send_to_room( #lights, find_room( 48509 ) );
+}
+if( mob_in_room( 802, find_room( 48509 ) ) ) {
+  wait( 1 );
+  send_to_room( #lights2, find_room( 48509 ) );
+}
+~
+E
+lights2~
+A cloud of strange shimmering lights engulfs you.
+~
+E
+lights~
+You spy some strange lights off to the west.
+~
+!
+2 200 58
+A
+up~
+*~
+if( !mob_in_room( 802, room ) ) {
+  send_to_char( #up, ch );
+  continue;
+  }
+continue;
+~
+E
+up~
+You head up the smooth stone ramp.
+~
+!
+0 -1 0
+802 9 1509949540 3 0
+-1
+S
+
+#48510
+Descent to Night Unyielding~
+This narrow spiral of stone curves ever downwards into a haze of eerie
+purplish-blue mist.  No walls or railings lie between this precarious
+passageway and the unyielding darkness surrounding, the footing wide
+enough for only a single wary soul at a time.  Elegant runic script
+trails along the spiraling edges of the ramp, the carving faded and
+blurred by the passage of time immemorial.
+~
+no_mob
+how cruel would it be to put a minor dex check on this ramp, with a
+failure tumbling a clumsy person into the next room?
+~
+167247884 0 7 0
+D4
+~
+~
+0 -1 48511 10 10 5
+D5
+~
+~
+0 -1 48509 10 10 5
+A
+~
+~
+if( find_stat( ch, dex ) < random( 1, 20 ) ) {
+  send_to_char( #slip, ch );
+  act_notchar( #slip2, ch );
+  wait( 1 );
+  transfer( ch, find_room( 48509 ) );
+  damage( mob, ch, 1d10, physical, "the fall" );
+  position( ch, 6 );
+  act_notchar( #arrives, ch );
+}
+~
+E
+arrives~
+$n comes tumbling down the ramp from above.
+~
+E
+slip2~
+$n slips on the smooth stone and falls down the ramp!
+~
+E
+slip~
+You slip on the smooth stone and fall head over heels into the darkness below!
+~
+!
+1 -1 48
+A
+~
+~
+send_to_char( #up, ch );
+continue;
+~
+E
+up~
+You head up the smooth stone ramp.
+~
+!
+3 -1 16
+A
+~
+~
+send_to_char( #down, ch );
+continue;
+~
+E
+down~
+You head down the smooth stone ramp.
+~
+!
+3 0 32
+-1
+S
+
+#48511
+On a Dark Ramp~
+A spiraling ramp slices through the surrounding shroud of chill
+blackness, narrowing as it descends into the unknown.  The stone of which
+it is formed is without blemish, almost as if sculpted all of a piece
+from some massive block of rock in antiquity.  The curving walkway is
+wide enough only for a single person, and with no guard between the edge
+of the night-colored stone and the shadowy haze below, any who wish to
+tread would do well to watch their step.  A border of runes runs along
+the edges of the ramp, though badly marred by the ravages of time.
+~
+~
+167247876 0 9 0
+D4
+~
+~
+0 -1 48512 10 10 5
+D5
+~
+~
+0 -1 48510 10 10 5
+-1
+S
+
+#48512
+Before the Darkness~
+A large stone chamber opens up around you, its walls and floor
+constructed with strangely-shaped, smooth stones.  The ceiling above you
+looms high, the darkness overhead undaunted by your feeble light source. 
+A steep ramp constructed from the oddly-shaped flagstones descends further
+into the depths below, creeping its way downward along the chamber's
+southern wall.
+~
+~
+167247876 0 9 0
+D4
+~
+~
+0 -1 48513 10 10 5
+D5
+~
+~
+0 -1 48511 10 10 5
+E
+ramp southern~
+The ramp descends into the darkness at a steep angle, and seems as if it
+might be slippery.
+~
+A
+1 down~
+~
+send_to_char( #down, ch );
+continue;
+~
+E
+down~
+You head down the ramp.
+~
+!
+0 -1 0
+A
+~
+~
+ch = rand_char( room );
+if( mob_in_room( 802, find_room( 48509 ) ) ) 
+  act_tochar( #shiver, ch );
+if( mob_in_Room( 802, find_room( 48508 ) ) )
+  act_tochar( #shiver, ch );
+~
+E
+shiver~
+@b@BYou sense a dark presence down below.
+~
+!
+2 50 0
+-1
+S
+
+#48513
+Descent to Night Unyielding~
+This narrow spiral of stone curves ever downwards into a haze of eerie
+purplish-blue mist.  No walls or railings lie between this precarious
+passageway and the unyielding darkness surrounding, the footing wide
+enough for only a single wary soul at a time.  Elegant runic script
+trails along the spiraling edges of the ramp, the carving faded and
+blurred by the passage of time immemorial.
+~
+no_mob
+how cruel would it be to put a minor dex check on this ramp, with a
+failure tumbling a clumsy person into the next room?
+~
+167247884 0 7 0
+D1
+~
+~
+0 -1 48516 10 10 5
+D3
+~
+~
+0 -1 48514 10 10 5
+D5
+~
+~
+0 -1 48512 10 10 5
+A
+~
+~
+if( find_stat( ch, dex ) < random( 1, 20 ) ) {
+  send_to_char( #slip, ch );
+  act_notchar( #slip2, ch );
+  wait( 1 );
+  transfer( ch, find_room( 48509 ) );
+  damage( mob, ch, 1d10, physical, "the fall" );
+  position( ch, 6 );
+  act_notchar( #arrives, ch );
+}
+~
+E
+arrives~
+$n comes tumbling down the ramp from above.
+~
+E
+slip2~
+$n slips on the smooth stone and falls down the ramp!
+~
+E
+slip~
+You slip on the smooth stone and fall head over heels into the darkness below!
+~
+!
+1 -1 48
+A
+~
+~
+send_to_char( #up, ch );
+continue;
+~
+E
+up~
+You head up the smooth stone ramp.
+~
+!
+3 -1 16
+A
+~
+~
+send_to_char( #down, ch );
+continue;
+~
+E
+down~
+You head down the smooth stone ramp.
+~
+!
+3 0 32
+-1
+S
+
+#48514
+Long Chamber~
+A narrow chamber extends for a great distance to the east and west. 
+Finely joined stones complete the carefully constructed walls and ceiling
+here, curves in a lazy arc as the walls rise to meet the ceiling looms
+high overhead.  Several pieces of twisted metal lie scattered on the
+floor here, covered by a thick blanket of dust.
+~
+xtra - metal, dust, floor
+nd sentence 
+metal, dust, stones wall ceiling
+~
+167247876 0 9 0
+D1
+~
+~
+0 -1 48513 10 10 5
+D3
+~
+~
+0 -1 48515 10 10 5
+A
+~
+~
+i = random( 5, 15 );
+ch = rand_player( room );
+if( random( 1, 5 ) == 1 ) {
+  wait( i );
+  act_room( #light, ch );
+  }
+~
+E
+light~
+@b@BYou spy a momentary flash of wan blue light off to the west; as soon
+as it appears it is gone, leaving you in darkness once more.
+~
+!
+2 50 0
+-1
+S
+
+#48515
+Long Chamber~
+The indifferent stone floor rises along a steady curve upwards to the
+west, ending in front of a strange diamond-shaped stone set in the center
+of the wall.  The fine construction continues here, with little evidence
+to be found that human hands or manual labor of any kind was responsible
+for the construction of this dark and forgotten place.
+~
+stone in west
+r/w
+~
+167247876 0 9 0
+D1
+~
+~
+0 -1 48514 10 10 5
+A
+~
+~
+i = random( 1, 10 );
+if( rflag( reset0, room ) ) {
+  wait( i );
+  send_to_room( #chant, room );
+  remove_rflag( reset0, room );
+  }
+~
+E
+chant~
+@b@BA distant chant echoes through the darkness.
+~
+!
+1 -1 10
+-1
+S
+
+#48516
+Before a Dark and Sinister Portal~
+A featureless slab of obsidian looms upon the northern wall.  The large,
+semicircular chamber is otherwise quite bare, though the masonry of the
+stonework of the floors and walls is very fine, the patterned edges of
+each stone joined effortlessly to those surrounding it.  A thin lever of
+warped, aged wood is embedded in the floor beside the wall to the north,
+while on the southern side of the room, a perfectly squared opening has
+been carved.
+~
+[Eliza] add extra for north/slab
+[Eliza] reviewed
+~
+166723588 0 7 0
+D0
+northern door~
+northern door~
+235 -1 48518 10 10 5
+D1
+~
+~
+0 -1 48517 10 10 5
+D2
+~
+~
+0 -1 48519 10 10 5
+D3
+~
+~
+0 -1 48513 10 10 5
+E
+lever~
+This thin piece of wood is warped and discolored by age.  Small cracks
+run up and down the length of the rough, unpolished wood.
+~
+E
+north slab~
+A large slab of glossy obsidian forms a door to the north.  Its smooth
+surface is unblemished, as if preserved somehow from the ravages of time. 
+No hinges or sliding panels seem apparent on the slab, but a small wooden
+lever stands to one side, perhaps providing a way to move the massive
+slab.
+~
+A
+pull~
+lever~
+if( !is_open( room, north ) ) {
+  act_tochar( #pull, ch );
+  act_notchar( #rpull, ch );
+  open( room, north );
+  send_to_room( #open, room, sight );
+  send_to_room( #n-open, find_room(  48518 ) );
+}
+else {
+  act_tochar( #close, ch );
+  act_notchar( #rclose, ch );
+  close( room, north );
+  send_to_room( #close1, room, sight );
+  send_to_room( #n-close1, find_room(  48518 ) );
+}
+~
+E
+stuck~
+Nothing happens.
+~
+E
+open~
+The portal to the north slides silently away.
+~
+E
+rpull~
+$n pulls the wooden lever.
+~
+E
+pull~
+You pull the wooden lever.
+~
+E
+close~
+You pull the wooden lever.
+~
+E
+rclose~
+$n pulls the wooden lever.
+~
+E
+close1~
+The portal to the north slides silently closed.
+~
+E
+n-close1~
+The portal to the south slides silently closed.
+~
+E
+n-open~
+The portal to the south slides silently open.
+~
+!
+0 0 0
+A
+~
+~
+i = random( 1, 4 );
+if( i == 1 ) {
+  loop( all_in_room ) {
+    if( !is_mob( rch ) ) {
+      send_to_room( #cool, room );
+      damage( mob, rch, 1d5+5, unholy, "the darkness" );
+    }
+  }
+}
+~
+E
+cool~
+The cool darkness washes over you.
+~
+!
+4 200 0
+A
+~
+~
+i = random( 1, 5 );
+j = random( 1, 5 );
+if( rflag( reset0, room ) ) {
+  if( i == 1 ) {
+    wait( j );
+    act_room( #warning, ch );
+    remove_rflag( reset0, room );
+    }
+  }
+~
+E
+warning~
+@b@BFrom nowhere, an emaciated figure bathed in pale blue light appears. 
+"Beware their hunger!", he croaks, and then disappears as suddenly as he
+came.
+~
+!
+1 0 14
+-1
+S
+
+#48517
+Corners Small and Forgotten~
+The walls, floors and ceiling of this humble chamber are covered with
+finely-fitted stones, each carved in an intricate pattern.  Despite the
+seemingly random shapes of each stone, they are joined very closely
+together.  The room obviously has been left undisturbed for quite some
+time, as a thick layer of dust covers the fine stones in their unending
+slumbers.
+~
+~
+167247876 0 5 0
+D3
+~
+~
+0 -1 48516 10 10 5
+E
+stones floor ceiling~
+Smooth and joined together without any mortar.  Quite a marvel.
+~
+621 137 1509949540 3 0
+-1
+S
+
+#48518
+Rough Hewn Tunnel~
+This small, rough room has hardly enough space across for an ogre's
+shoulders.  The walls, floor and ceiling are carved out of solid rock,
+left unfinished and jagged.  South is a colossal, carved door of glossy
+obsidian, covered with archaic script.
+~
+[Cyndra] acode for look south - door has archaic script that glows softly, casting a soft purple glow.
+add rooms for tunnel when area's broken up.
+[Cyndra] acode for look south door, script. maybe only glow if door's closed.
+[Cyndra] new way to open south :P
+[Cyndra] acode to reveal word to those with high enough int
+[Eliza] reviewed
+[Kaelana] Changed the acodes for going south just a bit. :P
+[Kaelana] runes on the door should flare only if closed now, I think
+[Atrax] The wall final moves aside (finally)
+[Lyb] Seeing message while sleeping
+[Lyb] The stone wall to the north pivots, revealing an exit. - Was asleep.
+~
+167378949 11 7 0
+D0
+cavern wall~
+cavern wall~
+235 -1 37229 10 10 5
+D2
+~
+~
+235 -1 48516 10 10 5
+A
+~
+~
+if( !is_open( room, south ) )
+  send_to_room( #glow, room, sight );
+~
+E
+glow~
+@BThe script on the door glows brightly for a moment, then dies down again.@n
+~
+!
+2 50 0
+A
+push move shove pull press~
+1 north wall stone~
+if( get_integer( room, "/Cayln/DoorIsBeingOpened" ) == 0 ) {
+  if( !is_open( room, north ) ) {
+    set_integer( room, "/Cayln/DoorIsBeingOpened", 1 );
+    act_tochar( #wpush, ch, obj, mob, sight );
+    act_notchar( #owpush, ch, obj, mob, sight );
+    wait( 2 );
+    if( find_stat( ch, str ) > random( 10, 25 ) ) {
+      send_to_room( #open, room, sight );
+      open( room, north );
+      send_to_room( #ropen, find_room( 37229 ), sight );
+    }
+    else
+      send_to_room( #nobudge, room, sight );
+    set_integer( room, "/Cayln/DoorIsBeingOpened", 0 );
+  }
+  else {
+    act_tochar( #epush, ch, obj, mob, sight );
+    act_notchar( #oepush, ch, obj, mob, sight );
+    wait( 2 );
+    if( find_stat( ch, str ) > random( 10, 25 ) ) {
+      send_to_room( #close, room, sight );
+      close( room, north );
+      send_to_room( #rclose, find_room( 37229 ), sight );
+    }
+    else
+      send_to_room( #nobudge, room, sight );
+  }
+  set_integer( room, "/Cayln/DoorIsBeingOpened", 0 );
+}
+~
+E
+epush~
+You put your shoulder to the edge of the stone, pushing against it.
+~
+E
+oepush~
+$n presses $s shoulder to the stone wall, straining against it.
+~
+E
+wpush~
+You press your shoulder to the stone wall, straining against it.
+~
+E
+owpush~
+$n puts $s shoulder against the edge of the stone, pushing against it.
+~
+E
+nobudge~
+The stone wall refuses to budge.
+~
+E
+open~
+The wall final moves aside, pivoting to reveal a way north.
+~
+E
+ropen~
+The stone wall to the south pivots, revealing an exit.
+~
+E
+close~
+The stone wall finally budges and pivots, closing the way north.
+~
+E
+rclose~
+The stone wall to the south pivots, concealing the exit.
+~
+!
+0 0 0
+A
+look~
+1 north wall stone~
+if( is_open( room, north ) )
+  act_tochar( #open, ch, obj, mob, sight );
+else
+  act_tochar( #closed, ch, obj, mob, sight );
+~
+E
+closed~
+To the north is a stone wall, its surface rough.  There are spots, about
+shoulder level, that are worn smooth.  A faint crack delineates a
+rectangle going up about an ogre's height and width.
+~
+E
+open~
+To the north is a stone slab, facing you on an edge.  It seems to be set
+upon a pivot and has been swung open.
+~
+!
+0 0 0
+A
+say~
+darkness~
+if( !is_open( room, south ) ) {
+  if( find_stat( ch, int ) > random( 10, 20 ) ) {
+    act_tochar( #say, ch, obj, mob, sight );
+    act_notchar( #say2, ch, obj, mob, sight );
+    wait( 1 );
+    send_to_room( #opens, room, sight );
+    send_to_room( #opens2, find_room( 48516 ), sight );
+    open( room, south );
+    end;
+  }
+  act_tochar( #try, ch, obj, mob, sight );
+  act_notchar( #try2, ch, obj, mob, sight );
+  wait( 1 );
+  send_to_room( #nope, room );
+}
+else
+  act_tochar( #isopen, ch, obj, mob, sight );
+~
+E
+say~
+You smile slightly in understanding and say "Darkness."
+~
+E
+say2~
+$n smiles confidently and murmurs a word.
+~
+E
+opens~
+The runic script on the obsidian door flares slightly as the door slides
+silently away.
+~
+E
+opens2~
+With a flash of light, the portal to the north slides silently away.
+~
+E
+try~
+You frown in concentration and stutter out your answer to the riddle.
+~
+E
+try2~
+$n frowns in concentration, muttering unintelligibly.
+~
+E
+nope~
+@b@MThe runes on the door flare violently, but the portal remains sealed.@n
+~
+E
+isopen~
+The door is open already, and nothing further happens.
+~
+!
+0 0 0
+A
+look~
+markings runes script writing door 1 south~
+if( find_stat( ch, int ) > random( 10, 20 ) ) {
+  act_tochar( #riddle, ch, obj, mob, sight );
+  act_notchar( #riddle2, ch, obj, mob, sight );
+  }
+else {
+  act_tochar( #nope, ch, obj, mob, sight );
+  act_notchar( #nope2, ch, obj, mob, sight );
+  }
+~
+E
+riddle~
+As you look at the runic script covering the door, you notice a
+particular inscription carved in the center: 
+
+             The more there is, the less you see.
+~
+E
+riddle2~
+$n carefully studies the runic script carved on the obsidian door.
+~
+E
+nope~
+You carefully study the script carved on the door, but can't seem to make
+out anything in particular.
+~
+E
+nope2~
+$n scratches $s head in confusion, unable to find anything of interest in
+the runic script.
+~
+!
+0 0 0
+-1
+S
+
+#48519
+Cut through the Darkest of Stone~
+Vertical lines and right angles cleave the stone passage into a perfectly
+square tunnel.  Faded runes are traced along the eastern wall, and though
+the indiviual characters are almost blurred beyond recognition, the
+glowing script casts a faint blue glow through the area.  The erratically
+shaped stones forming the floor and walls somehow fit together perfectly,
+their strange angles and curves exactly joined each to another in an
+eye-catching pattern.
+~
+~
+167247876 0 9 0
+D0
+~
+~
+0 -1 48516 10 10 5
+D2
+~
+~
+0 -1 48521 10 10 5
+D3
+~
+~
+0 -1 48520 10 10 5
+E
+runes~
+An elegant runic script trails along the eastern wall of the tunnel. 
+Graceful curves and lines can be made out, though the majority of the
+characters are faded and marred beyond even an attempt at translation. 
+Every now and then, a faint pulse of blue light gleams from the heart of
+the runes.
+~
+-1
+S
+
+#48520
+Of Labours Past~
+Smashed beakers, vials and work stations fill this dusty chamber, the
+remnants of past explorations into the arcane.  The stones here and there
+appear damaged, blackened spots signaling the location of past explosions
+and experiments gone awry.
+~
+[Merior] up initiate level?
+~
+167247876 0 9 0
+D1
+~
+~
+0 -1 48519 10 10 5
+E
+spots blackened~
+Scorched stones show the aftereffects of mishaps past.
+~
+-1
+S
+
+#48521
+Through the Unfeeling Dark~
+The walls and ceiling of this tunnel are carefully constructed to form a
+perfectly square passageway.  The eastern side of the tunnel bears much
+of the elegant, archaic script seen throughout this place, only slightly
+faded by the hand of time.  The fine masonry of the stones shaping the
+floor and walls is done in a very irregular, yet distinctive pattern,
+with odd angles and lines somehow forming an intriguing mosaic.
+~
+~
+167247876 0 9 0
+D0
+~
+~
+0 -1 48519 10 10 5
+D2
+~
+~
+0 -1 48523 10 10 5
+D3
+~
+~
+0 -1 48522 10 10 5
+E
+stone~
+The stones are smooth and ancient, and covered by a thick layer of dust.
+~
+E
+runic script runes~
+Etched into the stone by a master craftsman, the archaic script bears no
+resemblance to anything seen in this age.
+~
+A
+~
+~
+if( is_follower( ch ) )
+  end;
+if( rflag( reset0, room ) ) {
+  wait( 3 );
+  if( random( 1, 3 ) == 1 ) {
+    act_room( #room, ch );
+    remove_rflag( reset0, room );
+    }
+  }
+~
+E
+room~
+A single blue flame appears from nowhere, hovers in the air for a
+moment, and then vanishes from sight.
+~
+!
+1 -1 13
+-1
+S
+
+#48522
+The Overlooked and the Forgotten~
+A generous layer of dust coats everything in this small side chamber,
+evidencing its state of disuse.  Several immense blocks of granite and
+marble are stacked in one corner, their smooth surfaces marred solely by
+a thick layer of dust and the silken strands of a few stray cobwebs.  A
+solitary sconce is mounted upon the southern wall, though it appears to
+have been quite some time since any light penetrated this forgotten
+chamber.
+~
+r/w
+~
+167247876 0 9 0
+D1
+~
+~
+0 -1 48521 10 10 5
+787 9 1509949540 3 0
+-1
+S
+
+#48523
+Facing the Silver Door~
+The square tunnel opens up here somewhat, creating a small chamber at its
+endpoint.  Like the rest of the length of the tunnel, the stones here are
+irregular in shape, with their strange angles and lines somehow fitted
+perfectly with one another.  A large silver door is set in the center of
+the southern wall, its surface perfectly smooth and unmarked except for a
+single keyhole in its center.
+~
+~
+167247876 0 9 0
+D0
+~
+~
+0 -1 48521 10 10 5
+D2
+silver door~
+silver door~
+391 870 48524 10 10 5
+E
+south silver door~
+Inscribed in elegant lettering, you read:
+
+     @CThe fate of sentient minds
+     are sins that last through time.
+     Seven are these mortal Sins,
+     Their worldly Aspects lie within.
+~
+786 9 1509949540 3 0
+803 9 1509949540 3 0
+618 9 1509949540 3 0
+-1
+S
+
+#48524
+Circular Chamber~
+The smooth, curved stone walls of an immense circular chamber open up
+around you.  The air is moist and cool, the ceiling overhead domed, and a
+slight, inexplicable breeze blows through the room.  An incessant feeling
+of an impermable spirit, ever in search of rest, hangs about the smooth
+stone chamber.
+~
+mosaic
+~
+167247876 0 9 0
+D0
+silver door~
+silver door~
+391 870 48523 10 10 5
+D1
+~
+~
+0 -1 48531 10 10 5
+D2
+~
+~
+0 -1 48532 10 10 5
+D3
+~
+~
+0 -1 48525 10 10 5
+808 9 1509949540 3 0
+-1
+S
+
+#48525
+Circular Chamber~
+The smooth stone is slick underfoot, and you tread carefully lest you
+stumble in the dimness which surrounds you.  The curved walls arc from
+northeast to southwest here, their odd forms carefully merged to form a
+watertight seal.
+~
+r/w
+imp. proc.
+~
+167247876 0 9 0
+D1
+~
+~
+0 -1 48524 10 10 5
+D2
+~
+~
+0 -1 48526 10 10 5
+811 9 1509949540 3 0
+-1
+S
+
+#48526
+Circular Chamber~
+A large circular stone chamber, with a giant mosaic laid out on the floor. 
+Several small alcoves are cut into the walls at regular intervals.  The
+ceiling is domed here, with its height over the center of the room
+reaching forty feet or more.
+~
+~
+167247876 0 9 0
+D0
+~
+~
+0 -1 48525 10 10 5
+D1
+~
+~
+0 -1 48532 10 10 5
+D2
+~
+~
+0 -1 48527 10 10 5
+812 9 1509949540 3 0
+-1
+S
+
+#48527
+Circular Chamber~
+A large circular stone chamber, with a giant mosaic laid out on the floor. 
+Several small alcoves are cut into the walls at regular intervals.  The
+ceiling is domed here, with its height over the center of the room
+reaching 40' or more.
+~
+~
+167247876 0 9 0
+D0
+~
+~
+0 -1 48526 10 10 5
+D1
+~
+~
+0 -1 48528 10 10 5
+810 9 1509949540 3 0
+-1
+S
+
+#48528
+Circular Chamber~
+A large circular stone chamber, with a giant mosaic laid out on the floor. 
+Several small alcoves are cut into the walls at regular intervals.  The
+ceiling is domed here, with its height over the center of the room
+reaching 40' or more.
+~
+[Soren] 40' should be 40 feet
+~
+167247876 0 9 0
+D0
+~
+~
+0 -1 48532 10 10 5
+D1
+~
+~
+0 -1 48529 10 10 5
+D3
+~
+~
+0 -1 48527 10 10 5
+-1
+S
+
+#48529
+Circular Chamber~
+The air here seems slightly less damp, but a soft, shifting breeze
+constantly blows about the area.  The domed ceiling curves upwards here
+toward the northwest and the center of the chamber, where the
+impenetrable darkness overhead obscures its exact height.
+~
+~
+167247876 0 9 0
+D0
+~
+~
+0 -1 48530 10 10 5
+D3
+~
+~
+0 -1 48528 10 10 5
+814 137 1509949540 3 0
+-1
+S
+
+#48530
+Circular Chamber~
+The smooth stone walls continue here in their circular journey, with the
+domed ceiling and smooth stone underfoot mimicking their movements to a
+surprising extent.  A small, circular opening has been cut into the
+eastern wall here, its purpose unknown.
+~
+opening/alcove
+~
+167247876 0 9 0
+D0
+~
+~
+0 -1 48531 10 10 5
+D2
+~
+~
+0 -1 48529 10 10 5
+D3
+~
+~
+0 -1 48532 10 10 5
+E
+circular opening~
+The opening is no larger than a handspan across and regularly shaped. 
+There is no way to detect its purpose.
+~
+809 9 1509949540 3 0
+-1
+S
+
+#48531
+Circular Chamber~
+The smooth, curved walls arch in a slow curve here through the dark stone. 
+Here and there, beads of water run down the walls, the condensation from
+the damp air of the great chamber.
+~
+r/w
+~
+167247876 0 9 0
+D2
+~
+~
+0 -1 48530 10 10 5
+D3
+~
+~
+0 -1 48524 10 10 5
+-1
+S
+
+#48532
+Skies Infinite and Dark~
+The ceiling here looms somewhere in the indefinite darkness overhead. 
+A soft breeze circles the area, the damp air brushing against your cheek.
+The smooth stone floor echoes flatly underfoot as you move about, sounds
+deadened by the masses of cold dark rock of the hills.
+~
+~
+167247876 0 9 0
+D0
+~
+~
+0 -1 48524 10 10 5
+D1
+~
+~
+0 -1 48530 10 10 5
+D2
+~
+~
+0 -1 48528 10 10 5
+D3
+~
+~
+0 -1 48526 10 10 5
+813 9 1509949540 3 0
+-1
+S
+
+#0
+

@@ -1,0 +1,18 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+yell [string] : sends a string to all rooms in your area<br>
+<br>
+<h1> Description </h1>
+<br>
+Use yell to send a message to everyone in your present area.  It costs no<br>
+gossip points, and can be useful if, for instance, you become separated<br>
+from your group in a perilous place (and you like to roleplay).  It is also<br>
+of use when communicating with others not in your group, but still nearby.<br>
+If you wish to send a string to the entire mud, see the Shout command.<br>
+<br>
+Note that like Chat, Gossip, Auction, and even Shout, this is a channel in<br>
+which profanity is not acceptable.<br>
+</html>
+</body>

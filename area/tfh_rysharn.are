@@ -1,0 +1,3229 @@
+#M2_AREA
+2
+
+Rysharn Woods~
+Glynis~
+Rysharn Wood~
+~
+~
+
+7 0
+0
+1
+#ROOMS
+
+#1700
+End of the Road~
+The road dead-ends here.  Long-abandoned shovels, pickaxes and
+wheelbarrows are strewn about in varying states of disrepair.  Part of a
+misty forest covering the hills to the east, an ancient oak lies on the
+forest's fringe.  Near the point where the trunk thrusts itself from the
+ground, a gaping axe mark lies.  The air is strangely still and no sounds
+-- natural or otherwise -- can be heard issuing from the forest.
+~
+[Guin] Done.
+~
+200802312 3 8 0
+D1
+~
+~
+0 -1 1701 10 10 5
+D2
+~
+~
+0 -1 1738 10 10 5
+D4
+~
+~
+447 -1 1708 10 10 5
+E
+shovel~
+Orange and brittle from years of rust, the triangular heads on these
+shovels have been rendered useless by the elements.
+~
+E
+pickaxes~
+Scattered about are pieces of various pick-axes, with shattered handles
+and worn decrepit blades.
+~
+E
+wheelbarrows~
+Solitary wheels and long-rotten oaken tubs are scattered about.  Not a
+single one of these former wheelbarrows are functional.
+~
+E
+oak trunk mark tree~
+This oak is several ogre-lengths in girth and a deep blackened notch has
+been chopped low on its gaping trunk.  The tree appears to be dying and
+its bark is smooth and shines when viewed from the right angle.  Despite
+its frailties, it seems sturdy and ominous against the shrouded
+background of the misty forest beyond.
+~
+A
+~
+shovel pick axe wheel barrow tools~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 33 ) == 3 ) {
+    act_tochar( #search, ch );
+    act_notchar( #nsearch, ch );
+    obj_to_char( oload( 7731 ), ch );
+    end;
+  }
+}
+act_tochar( #fail, ch );
+act_notchar( #rfail, ch );
+~
+E
+search~
+@CYou pick through a pile of discarded tools and find a shiny pendant.@n
+~
+E
+nsearch~
+@C$n searches through a pile of discarded tools and finds something
+shiny.@n 
+~
+E
+fail~
+@CYou pick through a pile of discarded tools but find nothing.@n
+~
+E
+rfail~
+@C$n picks through a pile of discarded tools but finds nothing.@n
+~
+!
+9 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou step off the road and head off into the forest beyond the massive
+scarred oak.@n 
+~
+E
+to_room~
+@G$n steps off the road and heads off towards the misty forest.@n 
+~
+!
+3 0 2
+-1
+S
+
+#1701
+Dense Forest of Pine, Oak, and Elm~
+Thick wisps of mist swirl through the air and obscure vision of
+everything not within an arm's length.  A verdant canopy, supported by
+ancient oak, pine, and maple trees, allows little light to reach the
+forest floor.  Sharp stones protrude from the boggy ground, many covered
+with bright orange lichen.  Through the fog, the lichen glows like little
+beacons, reassurance that the the ground is still there.
+~
+Group Separation Point 1/1
+[Guin] Add extras for mist/fog and perhaps canopy.
+[Guin] Done.
+~
+200802304 2 8 0
+D1
+~
+~
+0 -1 1702 10 10 5
+D3
+~
+~
+0 -1 1700 10 10 5
+D5
+~
+~
+171 -1 1733 10 10 5
+E
+stones lichen~
+The shadows of these blackened rocks are barely visible as they bite
+against your feet.  Bright orange lichen glows upon several of the
+stones, giving the only natural light source that seems to follow some
+erratic path deep into the forest.
+~
+E
+mist fog~
+Haunting and eerie, the dense fog and mist permeate the area as the
+still, moisture-laden air hangs heavily over the ancient tree branches. 
+Faintly illuminating the fog, the iridescent patches of orange lichen
+glow from the stones that protrude from beneath the saturated ground, the
+soft light acting as a guide through the mist shrouded forest.
+~
+E
+canopy ancient oak pine maple trees~
+A leafy canopy of oak, pine and maple spreads out overhead, the thick
+cover of leaves blocking out all natural light and allowing not even the
+slightest of breezes to lift the stifling fog.  A muted silence resounds
+throughout the ancient forest, and all signs of life seem to have been
+swallowed up by the close-growing trees.
+~
+A
+~
+~
+mob = rand_player( room );
+i = 0;
+if( rflag( reset0, room ) ) {
+  loop( followers ) {
+    if( mob == rch ) {
+      mob = mob_in_room( 0, room );
+      remove_rflag( reset0, room );
+      act_tochar( #pit, rch );
+      act_notchar( #npit, rch, obj, mob, sight );
+      transfer( rch, find_room( 1733 ) );
+      damage( mob, rch, 2d5+5, physical, "the ground's knockout-punch", "the ground" );
+      end;
+    }
+  }
+}
+continue;
+~
+E
+pit~
+@eBefore you can scream, the ground falls from beneath your feet!@n
+~
+E
+npit~
+@eA slight rustle behind you - a tiny yelp and $n has vanished into thin
+air!
+~
+!
+3 0 2
+A
+~
+~
+send_to_room( #creak, room );
+~
+E
+creak~
+@GWind blows through the trees causing the branches to creak eerily.@n
+~
+!
+2 150 0
+5005 9 1509949540 3 0
+672 17 1509949540 -2 0
+-1
+S
+
+#1702
+Edge of a Misty Gully~
+Thick mist obscures the depths of the gully east of here.  The vapors
+rise up out of it and slowly roll over the cool, moist ground.  From the
+bowels of the ravine protrude the branches of a long-fallen oak.  Many of
+its gnarled, dying branches still bear leaves and acorns.  Sand pine and
+live oak trees reach skyward like great wooden columns, supporting the
+lush foliage above.  As light drizzles through the thick canopy, it
+bathes each leaf and needle in its own particular shade of green.
+~
+[Glynis] 'cross oak' transfers to room 1705
+[Guin] Done.
+~
+200804360 2 8 0
+D1
+~
+~
+0 -1 1703 10 10 5
+D3
+~
+~
+0 -1 1701 10 10 5
+E
+oak tree trees~
+Flowing water has eroded away the ground beneath a great oak leaving its
+roots exposed.  Long since fallen, both ends of this tree are equally as
+massive.  It has fallen across the gully and its top rests on the other
+side.
+~
+E
+pine~
+Layers of flaky bark, some auburn, some black, and some red, cover these
+titans of the forest.  Their trunks are straight as their green,
+needle-like leaves hanging from above.  Massive pine cones litter the
+ground beneath the branches.
+~
+A
+~
+~
+if( !is_player( ch ) )
+  continue;
+if( is_hidden( ch ) )
+  continue;
+if( !rflag( reset0, room ) )
+  continue;
+if( mob_in_room( 5009, find_room( 1703 ) ) )
+  continue;
+remove_rflag( reset0, room );
+act_tochar( #leave, ch );
+act_notchar( #nleave, ch );
+wait( 1 );
+transfer( ch, find_room( 1703 ) );
+act_notchar( #nfall, ch );
+act_tochar( #fall, ch );
+damage( mob, ch, 1d5+3, physical, "the landing", "sliding down the hill" );
+wait( 1 );
+mob = mload( 5009, find_room( 1703 ) );
+do_spell( web, mob, ch );
+if( is_affected( web.spider, ch ) ) {
+  act_room( #yell, ch );
+  act_room( #aha, ch );
+} else {
+act_room( #missed, ch );
+}
+~
+E
+leave~
+@GAs you walk down the rocky hill, you trip over something and go sliding
+down the steep slope!@n 
+~
+E
+nleave~
+@G$n tries to leave east and goes sliding down the hill!!@n
+~
+E
+nfall~
+@G$n practically falls on you from above!@n
+~
+E
+fall~
+You land in a heap on the floor of the gully!
+~
+E
+yell~
+@YTiny voices yell from the bushes, "@GAye!  We got 'em now!@Y"@n 
+~
+E
+missed~
+@YTiny voices yell from the bushes, "@GDarn!  We missed 'em!@Y"@n
+~
+E
+aha~
+@YHearing the others call out, a fynn prankster jumps out of the bushes to inspect the catch.@n
+~
+E
+peek~
+@YA fynn prankster pokes his head out from the safety of the bushes, and quickly hides himself again.@n
+~
+!
+3 0 2
+A
+cross climb~
+oak fallen tree~
+act_tochar( #cross, ch );
+act_notchar( #ncross, ch );
+transfer( ch, find_room( 1705 ) );
+act_notchar( #arrive, ch );
+~
+E
+cross~
+@GCarefully, you climb up onto the fallen oak and ease your way over the
+gully.@n 
+~
+E
+ncross~
+@GCarefully, $n climbs up onto the fallen oak and eases $s way over the
+gully.@n 
+~
+E
+arrive~
+$n arrives, slowly making $s way through the twisted, rotten boughs.@n 
+~
+!
+0 0 0
+A
+pick get take~
+leaf oak foliage tree~
+i = random( 1, 5 );
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( i < 3 ) {
+    act_tochar( #oak, ch );
+    act_notchar( #noak, ch );
+    obj_to_char( oload( 805 ), ch );
+    }
+  else {
+    act_tochar( #nothing, ch );
+    act_notchar( #nnothing, ch );
+    }
+  }
+else {
+  act_tochar( #nothing, ch );
+  act_notchar( #nnothing, ch );
+  }
+~
+E
+oak~
+You rummage about and find a beautifully colored oak leaf.
+~
+E
+noak~
+$n reaches down and picks up a beautifully colored oak leaf.
+~
+E
+nothing~
+You find nothing of interest.
+~
+E
+nnothing~
+$n rummages about but finds nothing.
+~
+!
+0 0 0
+685 17 1509949540 -2 0
+-1
+S
+
+#1703
+Within a Deep, Boggy Gully~
+Drops of moisture drip down into pools of thick mud that line the gully
+floor.  Gnarled roots protrude from the three-troll-high, muddy walls
+like wooden stakes on a battlement.  The stagnant water and lack of air
+movement makes this a prime breeding ground for insects of all types.  A
+thick vapor rises slowly, covering the canopy above and limiting sight to
+a boulder's throw.  Small white mushrooms infest the decaying trunk of a
+long-fallen live oak that blocks passage northward out of the bog.
+~
+[Guin] Done.
+~
+200802304 2 8 0
+D1
+~
+~
+0 -1 1705 10 10 5
+D3
+~
+~
+0 -1 1702 10 10 5
+E
+oak tree fallen decay trunk north n~
+Water runoff has eroded the ground beneath this tree causing it to fall
+east across the gully.  The great girth of the trunk has sunk deep into
+the muddy floor.  A few of the once-great oak's bare withered boughs
+remain free from decay and may be climbable.
+~
+E
+mushrooms~
+Growing in communities of about seven, these coin-sized mushrooms are
+white as milk.  Their caps are perfectly round and the larger of them
+grow in the middle of the groups.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+You climb up and out of the gully, being careful not to slip on the muddy
+ground.
+~
+E
+not_char~
+$n climbs up the slippery west bank of the gully.
+~
+!
+3 0 8
+A
+climb~
+tree oak 1 north fallen decaying trunk~
+if( find_skill( ch, climb ) > 1 ) {
+  act_tochar( #climb, ch );
+  act_notchar( #nclimb, ch );
+  transfer( ch, find_room( 1704 ) );
+if( find_stat( ch, dex ) > 9 ) {
+    act_tochar( #nimble, ch );
+    act_notchar( #nnimble, ch );
+    end;
+    }
+  else {
+    act_tochar( #notnimble, ch );
+    act_notchar( #nnotnimble, ch );
+    dam_message( ch, 2d5+5, "the fall" );
+    inflict( ch, mob, 2d5+5, "falling from a tree" );
+    end;
+    }
+  }
+if( can_fly( ch ) ) {
+  act_tochar( #fly, ch );
+  act_notchar( #nfly, ch );
+  transfer( ch, find_room( 1704 ) );
+  act_notchar( #nnnflying, ch );
+  end;
+  }
+loop( followers ) {
+  ch = rch;
+acode( room, 2 );
+  }
+~
+E
+climb~
+@G
+Using some of the less decayed branches as footholds, you carefully climb
+over the ancient tree.
+@n
+~
+E
+nclimb~
+@G
+Using some of the less decayed branches as footholds, $n carefully climbs
+over the ancient tree.
+@n
+~
+E
+nimble~
+@G
+As you begin your descent down the far side of the tree, a decayed branch
+crumbles to dust beneath your foot.  Nimbly, you catch hold of a more
+solid branch before you fall, averting a head-on collision with the
+ground.
+@n
+~
+E
+nnimble~
+@G
+As $n begins $s descent down the far side of the tree, a decayed branch
+crumbles to dust beneath $s foot.  Nimbly, $n catches hold of a more
+solid branch before falling, averting a head-on collision with the
+ground.
+@n
+~
+E
+notnimble~
+@G
+You make a poor choice in footholds as a decayed branch crumbles beneath
+your foot.  You catch a branch in a desperate attempt to avert a nasty
+spill however, the branch snaps and you tumble to the ground!
+@n
+~
+E
+nnotnimble~
+@G
+$n makes a poor choice in footholds as a decayed branch crumbles beneath
+$s foot.  $e catches a branch in a desperate attempt to avert a nasty
+spill however, the branch snaps and $e tumbles to the ground!
+@n
+~
+E
+fly~
+@G
+You fly up over the tree, weaving between branches.
+@n
+~
+E
+nfly~
+@G
+$n flies up over the tree, weaving between branches.
+@n
+~
+E
+nnnflying~
+@G
+$n floats over the ancient oak.
+@n
+~
+!
+0 0 0
+A
+~
+~
+act_tochar( #rope, ch );
+~
+E
+rope~
+@GAs you release your grip on the rope, it disappears over the top of the
+east gully wall.  @n 
+~
+!
+1 0 2
+A
+climb~
+wall bank 1 east 1 west~
+act_tochar( #noclimb, ch );
+act_notchar( #nope, ch );
+~
+E
+noclimb~
+@GYou begin to climb out of the gully but the muddy walls give way and
+you slide down into a pool of stagnant water.@n 
+~
+E
+nope~
+@G$n begins the climb out of the gully but the muddy walls give way and
+$e slide down into a pool of stagnant water.@n 
+~
+!
+0 0 0
+A
+~
+~
+send_to_room( #mosquito, room );
+if( random( 0, 5 ) == 1 ) {
+  rch = rand_player( room );
+  act_tochar( #sting, rch );
+  if( rch )
+    if( !is_mob( rch ) )
+    damage( mob, rch, 1d2+2, physical, "the bite of a tiny mosquito", "an insignificant mosquito smaller than the little toenail of a gnome" );
+}
+~
+E
+mosquito~
+@WSmelling your flesh and the sweet nectar of their existence within,
+swarms of mosquitoes buzz drunkenly towards you.@n 
+~
+E
+sting~
+@YDespite your best efforts to swat the mosquitoes and save your skin,
+one manages to break through your defenses and sinks its feeding tube
+into you!@n 
+~
+!
+2 350 0
+A
+get pick~
+mushroom~
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  act_tochar( #mush, ch );
+  act_notchar( #nmush, ch );
+  obj_to_char( oload( 7777 ), ch );
+  }
+else
+  act_tochar( #nothing, ch );
+~
+E
+mush~
+You reach into one of many mushroom colonies and pick the largest capped
+mushroom you can find.
+~
+E
+nmush~
+$n reaches down and picks a mushroom with an abnormally large cap.
+~
+E
+nothing~
+You find no mushrooms of reasonable size.
+~
+!
+0 0 0
+2441 17 1509949540 -2 0
+-1
+S
+
+#1704
+Forested Gully - Beyond a Fallen Oak~
+The gully takes a turn to the east here.  A small lake, the source of the
+stream that carved this gully out, can be seen in that direction.  The
+large fallen oak acts like a natural dam, causing the stream to back-up. 
+Murky water, neck-deep on a halfling, fills the shallow ravine.  The
+northern bank is less sloped than the other and is littered with fallen
+oak limbs the width of elephant legs.  The limbs provide a ladder of
+sorts into the forest beyond the gully.
+~
+No.mob room
+[Guin] Done.
+~
+200802312 13 8 0
+D0
+~
+~
+0 -1 1709 10 10 5
+D1
+~
+~
+0 -1 1707 10 10 5
+E
+1 limb 1 trunk 1 tree~
+Though their bark has been worn away by the water flowing through this
+part of the forest floor, these long-fallen oak branches look sturdy
+enough to allow passage into the forest above.
+~
+E
+lake stream water~
+Though the standing water here is quite murky and sediment filled, the
+dark outlines of small schools of fish can be seen beneath the surface. 
+Countless sunken oak and pine branches provide ample hiding places for
+them.  Reaching the small lake to the east involves fighting the water
+that flows from it, feeding this pool.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@BThe sound of flowing water babbling quietly along the rocky streambed
+relaxes you as you head east towards the lake.@n 
+~
+!
+3 0 2
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GTree roots and limbs make the ground hard enough for travel on this
+side of the gully.  Choosing your footholds carefully, you climb up onto
+dry land.@n 
+~
+!
+3 0 1
+A
+climb~
+tree fallen oak dead rotting south~
+act_tochar( #tree, ch );
+act_notchar( #ntree, ch );
+transfer( ch, find_room( 1703 ) );
+act_notchar( #arrive, ch );
+~
+E
+tree~
+@GYou clamber up the tree, picking only the strongest branches to pull
+yourself up.@n 
+~
+E
+ntree~
+@g$n clambers up the fallen oak and disappears over the top of its
+massive trunk.@n 
+~
+E
+arrive~
+@G$n arrives, crossing over the log.@n
+~
+!
+0 0 0
+A
+~
+~
+send_to_room( #mist, room );
+~
+E
+mist~
+Mist swirls through the air, performing a delicate ballet with the wind
+and trees.
+~
+!
+2 100 0
+-1
+S
+
+#1705
+Gully Overlook - Fynn Outpost~
+A serene lake, blanketed with fog and flanked by elm and willow trees,
+lies far below to the north, like a sleeping child covered in woolen
+blankets.  A rocky ledge juts out from atop this hill allowing for a
+spectacular view that every painter dreams of discovering and capturing
+on canvas.  The smoldering remains of a tiny campfire glow gently,
+increasing in intensity as wind brushes through.  Several nets of woven
+vine lie ready to be tossed onto an unsuspecting victim in the gully to
+the east.
+~
+[Glynis] throw rope opens west exit.
+[Glynis] jump north takes you to room 1706.
+[Rikahn] Add an acode for moving east - tell character how to get down there
+[Eliza] several of the different type fynn's have the same mdesc. It would be nice if they varied slightly.
+[Eliza] acode 5 isn't doing what you want it to do.. Its not finding the exits. Ask Rik how to do this or look at some of his code in kob, hobs or whatever.
+[Eliza] you 'could' add a campfire object.
+[Eliza] reviewed.
+~
+200802304 2 8 0
+D0
+~
+~
+171 -1 1706 10 10 5
+D3
+~
+~
+0 -1 1703 10 10 5
+E
+northwest lake fog nw~
+A rocky outcropping hangs over a mist-blanketed lake to the northeast. 
+The lake's exact size is not discernable through the thick fog.  The
+water below this ledge looks fairly deep.
+~
+E
+gully east~
+A steep, muddy embankment to the east leads down into a moist,
+insect-filled gully.  Something has worn away bits of the gully edge.
+~
+E
+ropes woven nets~
+Made of woven strands of a thick, brown vine, these nets and ropes appear
+strong enough to support the weight of bear-sized creatures.  They are
+laid out, ready to be hurled onto their unsuspecting victim in the gully. 
+One particular vine-rope is tied around a wooden stake and, the ground
+east of it is well-worn.
+~
+E
+campfire~
+This fire is smaller than a typical campfire.  Twigs no wider than a gold
+coin and no longer than a human hand provide fuel for the smoking embers.
+~
+A
+throw toss lower~
+rope~
+if( !is_open( find_room( 1705 ), east ) ) {
+  act_tochar( #rope, ch );
+  act_notchar( #nrope, ch );
+  open( room, west );
+  }
+~
+E
+rope~
+@GYou throw the woven-vine rope over the edge of the gully.@n
+~
+E
+nrope~
+@G$n throws the woven-vine rope over the edge of the gully.@n
+~
+!
+0 0 0
+A
+~
+~
+act_tochar( #leave, ch );
+act_notchar( #nleave, ch );
+continue;
+~
+E
+leave~
+@GYou get a good grip on the woven-vine rope and lower yourself into the
+misty gully.@n
+~
+E
+nleave~
+@G$n gets a good grip on the woven-vine rope and lowers $sself into the
+misty gully.  @n 
+~
+!
+3 0 8
+A
+jump leap~
+lake cliff ledge 1 north~
+if( find_skill( ch, swimming ) > 5 ) {
+  act_tochar( #leap, ch );
+  act_notchar( #nleap, ch );
+  wait( 1 );
+  transfer( ch, find_room( 1706 ) );
+  act_tochar( #splash, ch );
+  act_notchar( #nsplash, ch );
+  }
+else
+  act_tochar( #fear, ch );
+~
+E
+leap~
+Holding your breath, you leap off the rocky outcropping leaving nothing
+but air between you and the quickly approaching lake.
+~
+E
+nleap~
+Holding $s breath, $n leaps off the rocky outcropping.
+~
+E
+nsplash~
+$n comes flying off the ledge above you.  He splashes down in the lake,
+drenching you with water.
+~
+E
+splash~
+@BEvery muscle in your body tenses as your feet break the surface
+tension of the cool water.  In an instant you are below the surface of
+the crystal clear lake, kicking towards the surface.  @n 
+~
+E
+fear~
+@eYou take one good look at the cool, clear water below and fear wells up
+inside of you.  @n 
+~
+!
+0 0 0
+A
+~
+~
+send_to_room( #firelight, room );
+~
+E
+firelight~
+@MSmall bits of dust and ash from the smoldering firepit are lifted by a
+slight breeze and begin a graceful dance over the ledge north of here. 
+@n 
+~
+!
+2 100 0
+A
+1 north 1 east~
+*~
+send_to_room( #nope, room );
+~
+E
+nope~
+@GA high, rocky outcropping prevents movement in this direction . The
+surface of a small lake lies close to six ogre lengths below.  The water
+is a deep blue directly beneath here and the rocky bottom cannot be seen.@n
+~
+!
+0 0 3
+5000 9 1509949540 3 0
+5000 9 1509949540 3 0
+7406 17 1509949465 -2 0
+2689 17 1509949540 -2 0
+-1
+S
+
+#1706
+Quiet Mist-Blanketed Lake~
+Cypress knees rise out of the south shore shallows like stalagtites from
+a cavern floor; tiny ripples emanate in ever increasing concentric
+circles from the knees' bottoms.  A rocky cliff to the southwest and the
+trecherous cypress knees to the southeast make travel in those directions
+impossible.  A thick fog floats about half-a-gnome above the lake,
+obscuring the northern and eastern lakeshore.  Moitsture droplets float
+by like a swarm of silent insects.
+~
+[Guin] Aillse Lake will build out from here. Roomblock 1500
+[Guin] Done.
+~
+200802304 6 8 0
+D1
+~
+~
+0 -1 1713 10 10 5
+D2
+~
+~
+171 -1 1705 10 10 5
+D3
+~
+~
+0 -1 1707 10 10 5
+E
+cypress knees shallows shore~
+The cypress knees so prevalent along this shoreline thin out a bit here. 
+There is little room for their growth, and not two human strides into the
+lake, the bottom drops out abruptly.
+~
+E
+cliff~
+Rising abruptly from the water to a height of at least six stacked
+trolls, a wall of light greystone dominates the southeastern part of this
+area.  It's smooth surface has few nooks, and those it does have are too
+far apart to be used as hand or footholds.
+~
+A
+splash~
+water~
+act_tochar( #splash, ch );
+act_notchar( #ssplash, ch );
+rch = rand_char( room );
+act_tochar( #nsplash, rch );
+act_notchar( #rnsplash, rch );
+~
+E
+splash~
+@CYou create a huge wave by moving your arm in a graceful arc around you.@n
+~
+E
+nsplash~
+@CThe wave topples over, it's entire mass soaking you!@n
+~
+E
+rnsplash~
+~
+E
+ssplash~
+@C$n creates a huge wave by moving $s in a graceful arc around $s body.@n
+~
+!
+0 0 0
+A
+~
+~
+act_tochar( #leaving, ch );
+wait( 1 );
+act_tochar( #leaving1, ch );
+transfer( ch, find_room( 1707 ) );
+acode( find_room( 1707 ), 3 );
+~
+E
+leaving~
+@CThe cool clear water tickles your skin as you swim towards the shore. 
+The blanket of mist floats a few inches off the lake's surface.  It
+swirls around you as you move through it in much the same manner as the
+water.@n
+~
+E
+leaving1~
+@CThe stone covered lake bottom comes up beneath your feet.@n
+~
+E
+me~
+$n arrives from the west.
+~
+!
+3 0 8
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 )
+  send_to_room( #earth, room );
+if( i == 2 )
+  send_to_room( #wind, room );
+if( i == 3 )
+  send_to_room( #fire, room );
+~
+E
+earth~
+@CBeneath the thin layer of cotton-like fog, water laps against the
+smooth round stones lining the shore.@n 
+~
+E
+wind~
+@CA cool breeze flows through the fog causing it to swirl; the slight
+scent of pine is carried with it.@n 
+~
+E
+fire~
+@CUnseen birds flutter their wings and chirp from their distant
+perches.@n 
+~
+!
+4 300 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@eThe air becomes much heavier as you swim off to the east.  The mist
+becomes so thick you can feel the moisture condensing in your lungs. 
+Visibility is limited and most navigation is achieved through touch alone. 
+The lake bottom comes back up beneath your feet, assuring you that you're
+not swimming to your death.@n 
+~
+E
+to_room~
+@e$n leaves a wake of swirling mist in $s wake as $e wades eastward.@n
+~
+!
+3 0 2
+-1
+S
+
+#1707
+Brook, Gully and Quiet Lakeshore~
+Cypress trees grow right up to the waterfront, many taking root within
+the clear shallows.  The odd stalagtite-like protrusions the roots of
+this species produce, often dubbed 'knees,' litter the shoreline and make
+navigation difficult.  A sandy-bottomed brook babbles east into the
+forest, providing passage through the thick foliage along the shore.  To
+the south, a rocky cliff of greystone rises off the shoreline.  Small
+plants and vines cling to the wall adding a little spice to the othewise
+monotone rock.
+~
+[Guin] Done.
+~
+200802304 13 8 0
+D1
+~
+~
+0 -1 1706 10 10 5
+D3
+~
+~
+0 -1 1704 10 10 5
+E
+roots knees protrustions~
+These roots push up through the ground to a peak where they make a sharp
+bend and run parallel back beneath the earth.  Their chestnut coloring
+acts as camouflage, mixing with the muddy floor to make progress a
+faltering test of balance.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CThe water grows deeper as you wade further out into the quiet lake.@n
+~
+E
+to_room~
+@CThe water deepens as $n wades further out into the lake.@n
+~
+!
+3 0 2
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CWater drips to the ground from your soaked gear as you step out of the
+lake and follow the brook into the lush forest.  @n 
+~
+E
+to_room~
+@C$n steps out of the lake, water dripping from $s body.@n
+~
+!
+3 0 8
+A
+~
+~
+if( is_player( ch ) ) {
+  if( can_fly( ch ) )
+    end;
+  if( find_stat( ch, dex ) < random( 4, 6 ) ) {
+    act_tochar( #trip, ch );
+    act_notchar( #rtrip, ch );
+  }
+  else {
+    act_tochar( #not_trip, ch );
+    act_notchar( #rnot_trip, ch );
+  }
+}
+~
+E
+trip~
+@yYou stumble over one of the roots, barely managing to keep your balance.
+~
+E
+not_trip~
+@gYou nimbly avoid tripping over any of the roots.
+~
+E
+rtrip~
+@y$n stumbles over some roots and narrowly avoids falling on $s face.
+~
+E
+rnot_trip~
+@g$n gracefully avoids tripping over any of the roots.
+~
+!
+1 0 15
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 )
+  send_to_room( #water, room );
+if( i == 2 )
+  send_to_room( #wind, room );
+if( i == 3 )
+  send_to_room( #fire, room );
+~
+E
+water~
+@CBeneath the thin layer of cotton-like fog, water laps against the
+smooth round stones lining the shore.@n
+~
+E
+wind~
+@CA cool breeze flows through the fog causing it to swirl; the slight
+scent of pine is carried with it.@n
+~
+E
+fire~
+@CUnseen birds flutter their wings and chirp from their distant perches.@n
+~
+!
+2 100 0
+-1
+S
+
+#1708
+Glynis Note Room~
+This is where I think. Get out. :P
+~
+**** Add pop for woven vines.
+**** Add silver oak and pop for silver acorn.
+**** Fynn area cavern rdescs
+**** Finih trap meage.
+** DONE ** Force no.mount in area.
+** DONE ** Add proviion for wimming in 1705 (jump ledge).
+** DONE ** Leaving acode motly finihed.
+** DONE ** Make traps reset dependant.
+** DONE ** Provision for solo chars in traps.
+** DONE ** Work bugs out of trap in 1715 and 1501.
+~
+200802304 11 8 0
+D5
+~
+~
+447 -1 1700 10 10 5
+-1
+S
+
+#1709
+Pine Copse - Thick Underbrush~
+As far as the eye can see, great pine trees reach up like great wooden
+columns supporting the sky.  Carpeted in various species of bush-like
+palms, navigation on the forest floor is difficult.  There are no animal
+trails here, and everything shorter than a halfling is engulfed by the
+undergrowth.  It thins out a bit to the north, and that seems to be the
+only logical direction to move.
+~
+[Guin] Done.
+~
+200802304 2 8 0
+D0
+~
+~
+0 -1 1710 10 10 5
+D2
+~
+~
+0 -1 1704 10 10 5
+E
+pine tree~
+Trunks straight and clad in thick bark that flakes off in chips, these
+trees rise high into the mist.  Their tops appear as mere shadows beneath
+the cloud.  Closer examination of the bark reveals that each chip is
+composed of many paper thin layers which produce the flaking affect.
+~
+E
+undergrowth palms bush~
+Palm fronds, the size of a hill giant hand, grow in bunches close to the
+ground.  Their stems are covered with stiff pointy spines; they sprout
+everywhere and make navigation painful.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@BYou climb down the side of the gully into dog-high murky water.@n 
+~
+!
+3 0 4
+A
+~
+~
+if( is_pet( ch ) || is_player( ch ) )
+  if( random( 1, 3 ) == 3 )
+  damage( mob, ch, 1d5+5, physical, "spiny palm fronds" );
+continue;
+~
+E
+to_char~
+@GSmall spines on the palm fronds snag and scratch at your legs as you
+trample through them, searching for a clearing.@n 
+~
+!
+3 0 1
+A
+~
+~
+send_to_room( #mist, room );
+~
+E
+mist~
+@CA particularly thick cloud of mist floats past, obscuring your vision
+momentarily.@n 
+~
+!
+2 300 0
+5001 9 1509949540 3 0
+5055 9 1509949540 3 0
+685 17 1509949490 -2 0
+-1
+S
+
+#1710
+Giant Pines - Thinning Undergrowth~
+Thick pines cover a steep hillside to the north and west and are all but
+devoured by a hammock of live oak trees to the northeast.  Patches of wet
+dirt can be seen through the underbrush; many of the palm bushes covering
+the ground have been cut.  Despite the thinning underbrush, movement is
+still like wading through a halfling-deep bog.  A thin layer of mist-free
+air floats wedged between the top of the palms and the bottom of the fog.
+~
+[Glynis] 1/3 group seperation points
+[Guin] Done.
+~
+200802304 2 8 0
+D0
+~
+~
+0 -1 1711 10 10 5
+D2
+~
+~
+0 -1 1709 10 10 5
+E
+palm bushes~
+Leaves like forest green fans made for a vodekyn spread forth from the
+ends of spiny-sided stems.  The leaves are thick, sturdy, and fairly
+inflexible.  Many of the plants are missing fronds near their bottoms;
+signs of sawing are evident.
+~
+E
+ground~
+A thin layer of dark wet dirt covers grey sugar sand.  Tiny footprints of
+some presumably humanoid creature abound.
+~
+A
+~
+~
+room = find_room( 1710 );
+i = 0;
+mob = rand_char( room );
+if( rflag( reset0, room ) ) {
+  loop( followers ) {
+    i = add( i, 1, 0, 0 );
+    if( mob == rch ) {
+      remove_rflag( reset0, room );
+      act_tochar( #lost, rch );
+      transfer( rch, find_room( 1712 ) );
+      act_tochar( #nlost, ch, obj, mob );
+      loop( followers ) {
+        act_tochar( #nlost, rch, obj, mob );
+        }
+      continue;
+      }
+    }
+  if( i != 0 )
+    acode( room, 1 );
+  }
+continue;
+~
+E
+lost~
+@GThe giant palm leaves obscure your view of the other group members. 
+Your less-than-silent movement through them as you frantically hasten to
+catch your companions makes hearing impossible.  After wandering through
+the thick undergrowth for what seems like an eternity, you realize that
+you are very lost.@n 
+~
+E
+nlost~
+@G$N is no longer with you.  Try as you might, the thick undergrowth
+prevents you from tracking $M.@n
+~
+!
+3 0 1
+A
+~
+~
+send_to_room( #mist1, room, sight );
+~
+E
+mist1~
+@cThe fog curls around and through the trees, tendrils of haze obscuring
+vision in several directiins at ince.@n 
+~
+!
+2 150 0
+5186 9 1509949540 3 0
+-1
+S
+
+#1711
+Oak Hammock - Small Clearing~
+The pines and their entourage of underbrush thin out here, giving way to
+an ancient grove of oaks.  Fallen broad oak leaves and grey loosely-
+packed sand cover the ground.  The oaks keep much of the undergrowth at
+bay as they absorb most of the nutrients contained within the soil.  The
+moisture soaked bark of these trees appears almost black in contrast to
+the green-white lichen growing upon their cracked skins.  Sheets of fog
+roll off a placid lake to the southeast.  Encountering the warmth of air
+over the forest floor, it floats upward and lingers in the canopy.
+~
+[Guin] Done.
+~
+200802304 2 8 0
+D1
+~
+~
+0 -1 1714 10 10 5
+D2
+~
+~
+0 -1 1710 10 10 5
+E
+leaves~
+Broad oak leaves mingle with pine needles and wet dirt to create a carpet
+for the forest floor.
+~
+E
+tree oak~
+Great oaks grow about five ogre strides apart, their roots pushing up out
+of the ground, and tangling with each other.  Many of the lower branches
+hang close enough to the ground to hinder travel.  Fallen branches,
+leafless and lifeless, leave their marks -- slowly returning to the
+planet.
+~
+-1
+S
+
+#1712
+Top of a Steep Rocky Hill~
+A steep embankment, littered with sharp dagger-like rocks, slopes downward
+toward an overgrown trail.  Sturdy vines, which almost seem out of place,
+cling to some of the stones and lead eastward down the hillside.  Rain
+erosion has compromised the topsoil here, leaving nothing but gravel,
+boulders, and fallen trees.  Nearby, one particularly large grouping of
+boulders lies across the western side of the crest, preventing movement
+in that direction.
+~
+[Guin] Done.
+[Guin] DONE!
+~
+200802304 2 8 0
+D5
+~
+~
+0 -1 1722 10 10 5
+E
+vines~
+Hardy vines cling to the bare rock that has been exposed on the steep
+hillside, the wiry roots and tendrils seeking out even the smallest of
+cracks to secure themselves.  Small dark green leaves choke what little
+groundcover there is, the tangled mess vying for dominance of the meagre
+about of nutrients that can be gleaned from the gravelly ground.
+~
+E
+large grouping boulders~
+Completely blocking the western side of the hill, a large outcropping of
+rocks and boulders rise above the crest, their rounded surfaces beaten by
+years of weathering.  Deep cracks and fissures mar the surface of the
+large boulders, the crevices infilled with decaying leaves and twigs that
+have chanced to become snared within the jagged gouges.
+~
+A
+1 down~
+*~
+act_tochar( #climb, ch );
+~
+E
+climb~
+@gYou will have to climb down the vines.@n
+~
+!
+0 0 0
+A
+3 climb~
+vines 1 down~
+if( find_stat( ch, dex ) > random( 4, 19 ) ) {
+  if( find_skill( ch, climb ) > random( 3, 6 ) ) {
+    act_tochar( #climb, ch );
+    act_notchar( #rclimb, ch, obj, mob, sight );
+    transfer( ch, find_room( 1722 ) );
+    act_notchar( #arrive, ch, obj, mob, sight );
+    end;
+  }
+}
+act_tochar( #slip, ch );
+act_notchar( #rslip, ch, obj, mob, sight );
+transfer( ch, find_room( 1722 ) );
+act_notchar( #farrive, ch, obj, mob, sight_sound );
+damage( mob, ch, 1d4+3, physical, "falling into the ground" );
+~
+E
+climb~
+@gYou begin climbing down the vines, carefully managing your way down.@n
+~
+E
+rclimb~
+@g$n begins climbing down the vines, carefully managing $s way down.@n 
+~
+E
+arrive~
+@g$n drops the last few feet to the ground.@n
+~
+E
+slip~
+@gYour hands slip on the vines, and you go crashing to the ground.@n
+~
+E
+rslip~
+@g$n hands slip on the vines, and $e goes crashing to the ground.@n
+~
+E
+farrive~
+@g$n crashes into the ground, with a loud thud.@n
+~
+!
+0 0 0
+A
+~
+vines sturdy stones~
+if( !rflag( reset0, room ) ) {
+  act_tochar( #already, ch, obj, mob );
+  act_notchar( #ralready, ch, obj, mob );
+  end;
+}
+if( random( 1, 100 ) < 9 )
+  obj = oload( 7719 );
+if( obj ) {
+  act_tochar( #found, ch, obj, mob );
+  act_notchar( #rfound, ch, obj, mob, sight );
+  obj_to_char( obj, ch );
+}
+else {
+  act_tochar( #nothing, ch );
+  act_notchar( #rnothing, ch, obj, mob, sight );
+}
+~
+E
+already~
+@gIt looks like someone else has already searched through the vines for
+anything of value.@n 
+~
+E
+ralready~
+@g$n searches through the vines, even though it appears someone beat $m
+to it.@n 
+~
+E
+found~
+@gYou find $p in amongst the vines.@n
+~
+E
+rfound~
+@g$n finds $p in amongst the vines.@n
+~
+E
+rnothing~
+$n finds nothing of interest.
+~
+E
+nothing~
+You find nothing of interest.
+~
+!
+9 0 0
+7531 17 1509949540 -2 0
+-1
+S
+
+#1713
+Dead-End~
+Water weaves it's way down a near vertical slope, trickling between brown
+rocks and carrying muddy sediment from above.  The flow is steady, and
+provides moisture to the multitude of hay-colored, stringy moss which
+clings to the stone.  All of the lake is obscured by the V-shaped slope
+and the alcove is no larger than a thennish pub.  There is no sign of the
+sky here, the lush foliage atop the rocks form a thick canopy.  Thick
+mist fills the alcove, kept stationary by the trees above and the
+surrounding cliffs.
+~
+[Guin] Done.
+~
+200802304 13 8 0
+D2
+curtain of moss~
+moss curtain~
+163 -1 1520 10 0 5
+D3
+~
+~
+0 -1 1706 10 10 5
+E
+1 south wall moss grey stone~
+The greystone wall shimmers as light bounces off its moist surface. 
+Although the moss covers much of the area beneath the trickling water, the
+growth is not thick enough to totally cover the rock beneath.  A small
+stream of smoke rises from beneath the mossy growth.
+~
+E
+1 rocks 2 trees~
+Thick-trunked pines line the clifftops, surrounding this cove in a veil
+of mist-filled shade.  No topsoil appears to cover their finger-like
+roots which cling to the rocky ground for support.  The roots have grown
+down from atop the cliff into the murky pool below to supplement their
+water intake.
+~
+E
+roots~
+Thick gnarled roots, not so thick as to be inflexible, clutch the rocky
+walls of this cove.  Very little of the jagged, brown sandstone shows
+through the twisting support system of the trees above.
+~
+E
+smoke~
+A thin stream of grey smoke rises from beneath a particularly dark patch
+of moss.  It seems to seep out from within the wall.
+~
+A
+move 2 open~
+1 moss 1 south 1 wall 1 cliff~
+act_tochar( #show, ch );
+act_notchar( #nshow, ch );
+open( room, south );
+~
+E
+show~
+You reach out towards the stringy moss covering the wall and discover it
+to be an intricately woven curtain.  Lifting it aside, you reveal a
+flooded cavern.
+~
+E
+nshow~
+$n searches the mossy wall to the south.
+~
+!
+0 0 0
+A
+~
+~
+ch = rand_player( room );
+act_tochar( #closing, ch );
+act_notchar( #nclosing, ch );
+close( room, south );
+~
+E
+closing~
+@GCareful not to reveal the netweaver's workshop, you wisely place the
+curtain of moss back in its place.  @n 
+~
+E
+nclosing~
+$n carefully places the moss curtain back into place, concealing the
+netweavers lair.
+~
+!
+1 0 4
+A
+~
+~
+continue;
+~
+E
+to_char~
+@YYour feet slide over the slippery, algae-covered rocks beneath the
+surface of the lake.  The lake water overflows into the cavern, flooding
+the floor.@n 
+~
+E
+notchar~
+@Y$n carefully walks into the cavern.@n
+~
+!
+3 0 4
+A
+~
+~
+send_to_room( #drip, room );
+~
+E
+drip~
+@CCool water drips off the flora above you landing on the ground with a
+tiny splash.@n 
+~
+!
+2 200 0
+-1
+S
+
+#1714
+Beneath the Oak Hammock~
+Four great oak trees stand as silent sentinels, casting comfortable
+shadows on the leaf-covered sand beneath them.  The trees' great arching
+boughs appear as dark outlines behind a curtain of slowly swirling vapor. 
+Beneath the oak canopy, the ground is free of undergrowth.  No plant dares
+take root beneath the massive trees.  The sound of lapping water rides a
+slight breeze in from the south.
+~
+[Guin] Done.
+~
+200802304 3 8 0
+D0
+~
+~
+0 -1 1715 10 10 5
+D3
+~
+~
+0 -1 1711 10 10 5
+E
+oak tree~
+The four oaks have taken root in a perfect square, each standing about
+twenty ogre strides apart.  So perfect is the shade of the canopy formed
+by the intermingling of the oaks branches that none but tiny speckles of
+the sky can be glimpsed through them.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@WPractically swimming your way through the thick mist, you head north,
+emerging within an ancient oak grove.  @n 
+~
+!
+3 0 1
+5002 9 1509949540 3 0
+5055 9 1509949540 3 0
+5186 9 1509949540 3 0
+672 17 1509949490 -2 0
+331 17 1509949540 -2 0
+-1
+S
+
+#1715
+Misty Grove of Ancient Oaks~
+The oaks here are obviously the parents of the surrounding forest. 
+Walking through the grove feels like walking through a temple to some
+ancient nameless god.  Huge oaks stand like great carved columns, their
+leaves allowing beams of light through like stained-glass windows.  The
+beams of light illuminate the mist, creating perfect rays of light that
+could have been sent by the gods.  The ground slopes slightly upward to
+the north and is covered with naught but fallen oak leaves and acorns.
+~
+[Glynis] 2/3 group separation point
+[Glynis] trans to room 1500
+[Guin] Done.
+~
+200802304 2 8 0
+D0
+~
+~
+0 -1 1716 10 10 5
+D2
+~
+~
+0 -1 1714 10 10 5
+A
+~
+~
+room = find_room( 1715 );
+i = 0;
+mob = rand_char( room );
+if( rflag( reset0, room ) ) {
+  loop( followers ) {
+    i = add( i, 1, 0, 0 );
+    if( mob == rch ) {
+      remove_rflag( reset0, room );
+      i = 2d5+5;
+      act_tochar( #dart, rch );
+      dam_message( rch, i, "a small prick in the side of the neck" );
+      inflict( rch, mob, i, "a poison-tipped dart" );
+      transfer( rch, find_room( 1501 ) );
+      loop( followers ) {
+        act_tochar( #missing, rch, obj, mob );
+        }
+      act_tochar( #missing, ch, obj, mob );
+      continue;
+      }
+    }
+  if( i != 0 )
+    acode( room, 1 );
+  }
+continue;
+~
+E
+dart~
+@BA small prick in your neck draws your attention.  Figuring it to be one
+of the multitude of insects who call this forest home, you quickly
+attempt to brush it away.  Something fairly heavy falls to the ground... 
+then the world goes black.@n 
+~
+E
+missing~
+@GYou hear a thud and some shuffling noises, when you turn around $N is
+gone.@n 
+~
+!
+3 0 1
+A
+~
+~
+send_to_room( #misty, room );
+~
+E
+misty~
+@GThe entire forest seems to breathe with a life of its own.  The mist
+rises and falls with each breath.@n 
+~
+!
+2 450 0
+-1
+S
+
+#1716
+Misty Grove of Ancient Oaks~
+Oak trunks, like the thick legs of enormous elephants, stand solidly
+supporting the canopy.  Tiny beams of light burst through the green
+ceiling.  They create perfect light rays in the lingering mist to trace
+their path from the heavens - as if to ensure their return.  Small
+patches of loose white sand lay exposed beneath the leafy rug, covering
+most of the floor.  The tiny offspring of the ancient oaks sprout from
+the ground, bearing only two tiny leaves upon their toothpick-sized
+trunks.
+~
+[Guin] Done.
+~
+200802304 2 8 0
+D0
+~
+~
+0 -1 1719 10 10 5
+D2
+~
+~
+0 -1 1715 10 10 5
+D3
+~
+~
+0 -1 1718 10 10 5
+E
+offspring oak sprout ground~
+Tops of acorns, cracked and dry -- not lucky enough to have found their
+place beneath the dirt -- litter the ground.  Their brethren have begun
+to take root, though many have naught but two leaves.
+~
+E
+mist air beams~
+In the beams of light shooting through the canopy, drops of moisture
+float like a school of fish.  When they leave the beams, they lose their
+glow and become wispy trails of mist again.
+~
+A
+~
+~
+continue;
+~
+!
+3 0 15
+A
+~
+~
+send_to_room( #squirrel, room );
+~
+E
+squirrel~
+@GSquirrels, surprised by your appearance, leap for the oak trunks with
+their tails quivering in the wake.@n 
+~
+!
+2 150 0
+672 17 1509949515 -2 0
+-1
+S
+
+#1717
+Amongst the Silver Limbs and Leaves~
+Silver leaves, silver acorns, silver branches -- with the ground obscured
+by thick white mist, the view from here is heavenly.  Even the various
+species of moss and air plants, growing in these boughs, have a glint of
+silver in their leaves.  These ancient branches are massive as an ogre's
+torso and two humans can easily stand abreast on them.  Something has
+constructed what looks to be a nest here.  Oddly, there is a tiny wooden
+stool in it.
+~
+[Guin] Add search ground/leaves/boughs here for 7380. 8%. No higher than search 1 skills if you had one.
+[Guin] Reviewed.
+~
+200802304 2 8 0
+D5
+~
+~
+171 -1 1719 10 10 5
+E
+nest stool chair~
+Made entirely of small silver twigs and grey-white feathers, this ovular
+nest lies just out of reach upon a branch to the north.  A crude wooden
+stool with silver sticks for legs and a pine bark chip for a seat sits
+within.  The stool stands tall as a dagger from blade to hilt.
+~
+E
+air plants moss~
+The stringy grey-brown moss, so prevalent in the branches of the
+surrounding oaks, distinguishes itself from its brethrn by taking on the
+traits of this, the host tree.  Streaks of silver run through the moss as
+though they contained some type of metal.
+~
+A
+climb~
+1 down~
+if( find_skill( ch, climb ) > 3 ) {
+act_tochar( #climb, ch );
+act_notchar( #nclimb, ch );
+transfer( ch, find_room( 1719 ) );
+}
+else {
+act_tochar( #fall, ch );
+if( find_stat( ch, dex ) < 13 ) {
+dam_message( ch, i, "a fall from a low tree branch" );
+inflict( ch, mob, i, "falling from a tree" );
+}
+act_notchar( #nfall, ch );
+}
+~
+E
+climb~
+@GWith some difficulty, you find a sturdy branch and shinny down the
+tree.@n 
+~
+E
+nclimb~
+@GWith some difficulty, $n finds a sturdy branch and shinnies down the
+tree.@n 
+~
+E
+fall~
+@G Clumsily, you place your foot where you thought there was a branch. 
+Unfortunatly, all that your foot finds to rest on is air.  Your foot
+falls and the rest of you follows...all the way to the ground.@n 
+~
+E
+nfall~
+@G$n clumsily misses a foothold and plunges down to the forest floor.@n
+~
+!
+0 0 32
+A
+~
+~
+send_to_room( #birds, room );
+~
+E
+birds~
+@CSilhouettes streak through the fog with the sound of flapping wings. 
+They hop from branch to branch with no fear of falling.  An occasional
+chirp can be heard issuing from some remote region of the forest.@n 
+~
+!
+2 50 0
+A
+~
+ground leaves boughs~
+if( !rflag( reset0, room ) ) {
+  act_tochar( #already, ch );
+  end;
+}
+if( find_skill( ch, searching ) <= 1 ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 100 ) < 9 )
+    obj = oload( 7380 );
+}
+if( obj ) {
+  act_tochar( #found, ch, obj );
+  act_notchar( #rfound, ch, obj, mob, sight );
+  obj_to_char( obj, ch );
+}
+else {
+  act_tochar( #playing, ch, obj );
+  act_notchar( #rplaying, ch, obj, mob, sight );
+}
+~
+E
+already~
+@cThe way the leaves look tossed around you doubt you'll find anything.@n
+~
+E
+found~
+@cYou find $p after your thorough search through the leaves.@n
+~
+E
+rfound~
+@c$n finds $p after $s thorough search through the leaves.@n
+~
+E
+playing~
+@cYou find nothing of interest in the leaves.@n
+~
+E
+rplaying~
+@c$n looks to be playing around in the leaves, maybe $e lost something.@n
+~
+!
+9 0 0
+5004 9 1509949540 3 0
+5005 9 1509949540 3 0
+-1
+S
+
+#1718
+The Forest's Fringe~
+Here on the fringes of the oak grove, the mist makes its exit.  It rolls
+up a steep rocky hill which pokes a castle sized hole in the forest's
+canopy.  Where the hill begins, the forest ends; the sides of the hill
+are too steep and rocky for anything to grow.  Standing much like a
+druidic temple, the hill's base is shaded, and only its very top peeks
+above the canopy.  As if attempting to catch anything that might fall
+while climbing the hill, an oak tree contorts itself in many odd shapes
+uncommon among its species.  A thick grey moss covers the hill-facing
+side of all plant growth on the edge of the forest.
+~
+[Eliza] reviewed
+~
+200802304 2 8 0
+D1
+~
+~
+0 -1 1716 10 10 5
+D3
+~
+~
+0 -1 1722 10 10 5
+E
+oak moss branches~
+The trunk of this oak splits in two, very near the ground.  Both parts
+have bent under their great weight and grow almost horizontally. 
+Somehow, despite its peculiar growth pattern, this tree has managed to
+flourish.  It's vein-like trunk and branches seem to have no trouble
+supporting the great weight of its leaves and twigs.
+~
+E
+moss grey~
+Strings of grey moss grow in clumps on any part of anything they can
+drape themselves over.  They form a curtain that anyone hoping to climb
+the hill east of here must pass through to do so.  The strings seperate
+the thick wisps of mist as they roll out of the forest.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou wander through the forest, heading $dward.@n
+~
+E
+to_room~
+@G$n wanders through the forest, heading $dward.@n
+~
+!
+3 0 10
+A
+~
+~
+send_to_room( #mist, room );
+~
+E
+mist~
+@CThe thick mist begins to disperse, disappearing entirely as it climbs
+the distant hill.@n 
+~
+!
+2 150 0
+5002 9 1509949540 3 0
+5001 9 1509949540 3 0
+672 17 1509949540 -2 0
+-1
+S
+
+#1719
+Before a Silver Oak~
+Mist floats through the air, dancing with light beams from above and
+swirling in the wake of small insects.  Glimmering like a carved pillar
+of ice, a silver oak grows here.  Silver leaves, fallen from the great
+silver branches of this tree, lay scattered about the ground like
+glittering coins.  The crown jewel dominates this corner of the grove
+and, nothing grows within ten strides of it.
+~
+[Guin] Done.
+~
+200802304 2 8 0
+D2
+~
+~
+0 -1 1716 10 10 5
+D4
+~
+~
+171 -1 1717 10 10 5
+E
+oak~
+Silver roots protrude from and disapper into the soil like a serpent
+through water.  The unnatural silver coloring runs in vein-like streaks
+through it's bark.  By far, this is the most massive member of the family
+of oaks who occupy this corner of the wood.
+~
+E
+leaves~
+Broad oak leaves streaked with veins of silver cover the ground.  These
+silver leaves are larger than the occasional standard green leaves which
+have wandered here following the wind.  Oddly, these leaves do not lose
+their silver hue when dead.
+~
+A
+climb~
+1 silver 1 tree 1 oak~
+if( find_skill( ch, climb ) > 3 ) {
+  act_tochar( #climb, ch );
+  act_notchar( #nclimb, ch );
+  transfer( ch, find_room( 1717 ) );
+  }
+else {
+  act_tochar( #fall, ch );
+  if( find_stat( ch, dex ) < 13 ) {
+    dam_message( ch, i, "a fall from a low tree branch" );
+    inflict( ch, mob, i, "falling from a tree" );
+    }
+  act_notchar( #nfall, ch );
+  }
+~
+E
+climb~
+@GWith much ease, you find some strong lower tree branches and hoist
+yourself into the great silver boughs.@n 
+~
+E
+nclimb~
+@G$n climbs the great silver tree with little difficulty.@n 
+~
+E
+fall~
+@G Clumsily, you place your foot where you thought there was a branch. 
+Unfortunatly, all that your foot finds to rest on is air.  Your foot
+falls and the rest of you follows...all the way to the ground.@n 
+~
+E
+nfall~
+@Y$n clumsily misses a foothold and plunges back down to the forest
+floor.@n 
+~
+!
+0 0 0
+A
+~
+~
+i = random( 1, 2 );
+if( i == 1 )
+  send_to_room( #birds, room );
+if( i == 2 )
+  send_to_room( #mist, room );
+~
+E
+birds~
+@GA small bird streaks through the mist leaving little spirals in its
+wake.@n 
+~
+E
+mist~
+@GThe forest breathes as through it were a giant lung and the mist its
+breath.@n 
+~
+!
+2 200 0
+672 17 1509949490 -2 0
+672 17 1509949490 -2 0
+-1
+S
+
+#1720
+Narrow Path - Bressel Wood~
+Winding through the light woods, the narrow track continues both to the
+north and south, jogging an ancient oak that dangles over the path. 
+Underfoot, the ground is uneven and rough, blanketed with layer upon
+layer of fallen leaves and crushed acorns.  Ferns and nettles grow on the
+forest floor, thriving in the open spaces between the trees.
+~
+[Guin] Done.
+[Guin] Connects to 13292
+~
+200802304 3 8 0
+D0
+~
+~
+0 -1 1721 10 10 5
+D2
+~
+~
+0 -1 13292 10 10 5
+E
+ancient oak~
+An ancient oak, hundreds of years old, towers over the neighboring trees. 
+The trunk is covered in brittle brown bark, cracked and split in spots
+from age.  Its gnarled limbs droop gracefully over the path to create a
+naturally formed tunnel.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou wander $dward beneath the gracefully arched limbs of an ancient
+oak.@n 
+~
+E
+to_room~
+@G$n wanders $dward beneath the gracefully arched limbs of an ancient oak.@n
+~
+!
+3 0 5
+A
+~
+~
+send_to_room( #bird, room );
+~
+E
+bird~
+@CA tiny bird hops from limb to limb of an giant oak, knocking a single
+leaf loose to float slowly to the ground.@n 
+~
+!
+2 150 0
+130 9 1509949540 3 0
+5018 9 1509949540 3 0
+672 17 1509949490 -2 0
+-1
+S
+
+#1721
+Narrow Path - Bressel Wood~
+A gnarled branch lies across the path, struck from its tree by a bolt of
+lightning some time ago.  A colony of beetles has taken up residence on
+its decaying bark and toadstools thrive in the dark damp places beneath
+the log.  Nettles and faerie ferns blanket the ground between the light
+tree growth, where a few clusters of brilliant-hued wildflowers make
+their presence known.
+~
+[Guin] Done.
+~
+200802304 3 8 0
+D1
+~
+~
+0 -1 1737 10 10 5
+D2
+~
+~
+0 -1 1720 10 10 5
+E
+wildflowers~
+Tiny star-shaped wildflowers poke through the clusters of green, serrated
+leaves surrounding them.  The blooms are various colors and hues, from
+lavender to pink and yellow.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CYou step over the log and continue along the path to the $d.@n
+~
+E
+to_room~
+@C$n steps over the log and continues along the path to the $d.@n
+~
+!
+3 0 6
+755 9 1509949540 3 0
+755 9 1509949540 3 0
+358 17 1509949540 -2 0
+-1
+S
+
+#1722
+Steep Rocky Hillside~
+Sharp, lichen covered, fragmented rocks protrude from the hillside. 
+Between the dry leaves that slip beneath every footstep and the rocks,
+movement is like walking on glass.  Defying the inclined hillside,
+flexible trunks of fledgling pine trees which are scattered on the
+hillside grow straight up out of the hill.  A draft of cold air drifts
+out from an ogre-sized crack in the side of the hill.
+~
+[Guin] Done.
+~
+200802304 2 8 0
+D1
+~
+~
+0 -1 1718 10 10 5
+D2
+~
+~
+41 -1 1723 10 10 5
+D4
+~
+~
+0 -1 1712 10 10 5
+E
+crack ogre hill~
+Vines and moss grow upon the rough stone and hang over the opening.  They
+sway gently as the a cool draft passes by.  Most of the smoothe grey
+stone is covered with a fuzzy lime green lichen.
+~
+E
+pine tree fledgling~
+Bent and waving in the wind, these fledgling pines are water starved. 
+They look more like weeping willows than pines.  Their roots desparately
+grasp the rocky hillside, frantically slurping up any nutrients within
+the rocky soil.
+~
+A
+~
+~
+act_tochar( #leaving, ch );
+transfer( ch, find_room( 1718 ) );
+~
+E
+leaving~
+@GUsing tree trunks and some rounder rocks for support, you carefully
+make your way down the hill.@n 
+~
+!
+3 0 2
+A
+enter~
+crack hill~
+act_tochar( #leaving, ch );
+act_notchar( #rleaving, ch, obj, mob, sight );
+transfer( ch, find_room( 1723 ) );
+act_notchar( #arrival, ch, obj, mob, sight );
+~
+E
+leaving~
+@GYou squeeze through the crack in the hillside.  The moist air inside is
+heavy and reeks of decay.@n 
+~
+E
+rleaving~
+@G$n disappears through a crack in boulder.@n
+~
+E
+arrival~
+@G$n squeezes through the crack.@n
+~
+!
+3 0 12
+A
+3 climb~
+vines 1 up~
+if( find_stat( ch, dex ) > random( 4, 19 ) ) {
+  if( find_skill( ch, climb ) > random( 3, 6 ) ) {
+    act_tochar( #climb, ch );
+    act_notchar( #rclimb, ch, obj, mob, sight );
+    transfer( ch, find_room( 1712 ) );
+    act_notchar( #arrive, ch, obj, mob, sight );
+    end;
+  }
+}
+act_tochar( #slip, ch );
+act_notchar( #rslip, ch, obj, mob, sight );
+damage( mob, ch, 1d4+3, physical, "falling into the ground" );
+~
+E
+climb~
+@gYou grab the vines, and begin your ascent up.@n
+~
+E
+rclimb~
+@g$n grabs the vines, and begins $s ascent up.@n
+~
+E
+arrive~
+@g$n pulls $mself up the last little bit.@n
+~
+E
+slip~
+@gYou feel your hands slip on something wet, and you crash back into the
+ground.@n 
+~
+E
+rslip~
+@g$n slips as $e is part way up the vines, resulting in $s crash into the
+ground.@n 
+~
+!
+0 0 0
+A
+1 up~
+*~
+act_tochar( #climb, ch );
+~
+E
+climb~
+@gYou will need to climb the vines to get up there.@n
+~
+!
+0 0 0
+-1
+S
+
+#1723
+Damp Cavern - Drafty Room~
+Twisted roots protrude from moist earthen walls of this cavern.  Hungrily
+eating each speck of light it can get, green furry lichen covers most of
+the rocks here.  While this caven is easily large enough for most humans,
+anything larger than a halfling endures a constant assault from root tips
+and dips in ceiling height.  Light tears through a gaping crack in a
+moss-covered boulder to the east.
+~
+West to Fynn Village - future expansion plan.
+[Guin] Done.
+~
+200802308 11 5 0
+D0
+~
+~
+41 -1 1722 10 10 5
+D2
+~
+~
+0 -1 1724 10 10 5
+D3
+earth covered wooden panel~
+earth covered wooden panel~
+511 -1 1734 10 10 4
+E
+roots~
+Like the fingers of a skeleton covered in strings of cobwebs, roots
+protrude from the earthen cavern walls.  The roots themselves are quite
+thick and give very little when brushed.  With enough force, one could
+impale themself on one.
+~
+E
+lichen~
+Small rocks embedded in the earthen cavern walls are covered with a furry
+green lichen.  It is wet to the touch and grows only in the spots where
+sunlight reaches.
+~
+E
+crack boulder east~
+Compared with the complete and utter darkness of the rest of this cavern,
+the crack in the boulder is like the sun.
+~
+A
+enter~
+crack boulder rock light~
+act_tochar( #leaving, ch );
+act_notchar( #rleaving, ch, obj, mob, sight );
+transfer( ch, find_room( 1722 ) );
+act_notchar( #arrival, ch, obj, mob, sight );
+~
+E
+leaving~
+@GYou squeeze through the cracked boulder into daylight.  Thankful to be
+out in the open air, you take a deep fresh breath.@n 
+~
+E
+rleaving~
+@G$n disappears through a crack in boulder.@n
+~
+E
+arrival~
+@G$n squeezes through the crack.@n
+~
+!
+0 0 2
+A
+1 west~
+*~
+if( !is_open( room, west ) ) {
+  act_tochar( #noexit, ch );
+  end;
+}
+continue;
+~
+E
+noexit~
+You see no exit to the west
+~
+!
+0 0 0
+5445 9 1509949540 3 0
+-1
+S
+
+#1724
+Bend in the Cavern~
+Sparse patches of furry green lichen grow in the few places where the sun
+can nurture them.  The damp earthen floor of the cavern is uneven, save
+the smooth narrow path along the eastern wall.  A deep rumble, like a
+stampeding herd of elephants, reaches your ears from behind the northwest
+wall.  The rock walls of the cavern are rough to the touch, the ancient
+stone cold and unyielding.  A faint musty smell saturates the still,
+heavy air, lending the area a subtle sense of decay.
+~
+[Guin] Done.
+~
+200802308 11 5 0
+D0
+~
+~
+0 -1 1723 10 10 5
+D3
+~
+~
+0 -1 1725 10 10 5
+E
+lichen furry green~
+Furry and green, this lichen grows only in small beams of light that
+reach this corner of the cavern.  It has little psuedo-leaves which are
+webbed.  Crimson 'roots' hold it to whatever surface it calls home.
+~
+7955 17 1509949465 -2 0
+-1
+S
+
+#1725
+Damp Earthen Cavern~
+Faint light bleeds into this cramped space from the east.  An ever
+present rumbling, accompanied by a vibration of equal intensity, seeps
+through the northern wall.  In what is otherwise a completely natural
+cavern, a flattened narrow shelf runs the length of the northern wall
+continuing out of sight in said directions.  A particularly large section
+of root protruding from the ceiling has a family of grubs munching away
+on it.
+~
+[Guin] Done.
+~
+200802308 11 5 0
+D1
+~
+~
+0 -1 1724 10 10 5
+D3
+~
+~
+0 -1 1726 10 10 5
+E
+shelf flattened north~
+In contrast to the uneven damp earthen floor around it, this little shelf
+of dirt has been flattened and squared by something.  Tiny little
+footprints cover the shelf which runs out of sight to the east and west.
+~
+E
+root ceiling grub~
+This large filthy root pokes right through the muddy ceiling.  Long
+stringy root hairs, intertwined with small bits of dirt and stone hang
+down from it.  A family of small white grubs, hundreds in number, call
+this root home.
+~
+-1
+S
+
+#1726
+Beyond the Crack - Damp Cavern~
+A human-sized crack in the grey-streaked granite wall to the west allows
+light into this cavern.  Massive elephant ear leaves hang down from above
+the crack and filter the light, adding to it an eerie greenish hue.  A
+species of fuzzy garnet lichen dwells on whatever patch of stone they can
+find to cling to.  Tiny beads of moisture condense on what little exposed
+rock there is and stream down the wall when their weight becomes too much
+for them.
+~
+[Guin] Done.
+~
+200802308 11 5 0
+D1
+~
+~
+0 -1 1725 10 10 5
+D2
+~
+~
+0 -1 1727 10 10 5
+E
+lichen garnet~
+Fuzzy, yet hardly soft, this lichen leeches to every piece of exposed
+rock within reach of light.  It is slightly spongy and moist to the touch.
+~
+E
+elephant ear leaves leaf~
+These massive leaves are shaped and sized much like the ears of their
+namesake.  They are a deep shade of green and have lighter green veins
+running through them.  In spots on each leaf, small holes exist some
+insect decided to have a little snack.  A thin ribbon of pink runs around
+the edge of the leaves and a bright orange sunburst eminates from their
+centers.  a bright orange sunburst eminates from its center.
+~
+A
+~
+~
+send_to_room( #wind, room );
+~
+E
+wind~
+@GAn eerie howl resonates through the cavern as a gust of wind blows
+across the opening in the rock.@n 
+~
+!
+2 370 0
+A
+get take grab pick~
+elephant ear leaf leaves~
+i = random( 1, 5 );
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  if( i == 1 ) {
+    act_tochar( #get, ch );
+    act_notchar( #nget, ch );
+    obj_to_char( oload( 7718 ), ch );
+    end;
+  }
+}
+act_tochar( #nothing, ch );
+act_notchar( #nnothing, ch );
+~
+E
+get~
+@GYou pluck a giant, elephant ear-shaped leaf from the plant.@n
+~
+E
+nget~
+@G$n plucks a giant, elephant ear-shaped leaf from the plant.@n
+~
+E
+nothing~
+@GNone of the leaves are large enough to take.@n
+~
+E
+nnothing~
+@G$n searches among the leaves but finds none that suit $m.@n
+~
+!
+0 0 0
+5445 9 1509949540 3 0
+5445 9 1509949540 3 0
+7955 17 1509949465 -2 0
+-1
+S
+
+#1727
+Damp Cavern - Protruding Roots~
+A complex tapestry of roots and root-hairs hangs from the roof of the
+cavern as though woven by the multitude of worms, grubs, and spiders
+which call them home.  The ground slants slightly downward towards the
+south where a large hairy root protrudes sharply from the wall.  A cool
+draft from somewhere near the root chills the air here.  The sound of
+dripping water issue from somewhere below here -- or is it above?  -- the
+acoustics of the cavern make it impossible to tell.
+~
+[Guin] Reviewed.
+~
+200802304 11 5 0
+D0
+~
+~
+0 -1 1726 10 10 5
+D5
+~
+~
+171 -1 1728 10 10 5
+E
+root~
+A large hairy root protrudes from the muddy wall to the south.  About as
+thick as a human wrist and hairy as a halfling foot, the root looks
+fairly strong.  It hangs over a small hole, the bottom of which cannot be
+seen.
+~
+A
+climb~
+root hole~
+act_tochar( #root, ch, obj, mob, sight );
+act_notchar( #nroot, ch, obj, mob, sight );
+transfer( ch, find_room( 1728 ) );
+act_notchar( #nroot, ch, obj, mob, sight );
+~
+E
+root~
+@GYou grab on to the root and it bends slightly under your weight... 
+but holds.  Carfully, you lower yourself down through a small hole in the
+floor.@n 
+~
+E
+nroot~
+@G$n grabs hold of a root and puts $s weight on it.  Seeing that it
+holds, $e climbs it down into a small hole.@n 
+~
+E
+arrive~
+@G$n drops to the ground beside you.@n
+~
+!
+0 0 0
+A
+1 down~
+*~
+act_tochar( #nope, ch );
+~
+E
+nope~
+@GTry climbing instead.@n
+~
+!
+0 0 0
+A
+~
+root floor ground 1 down~
+if( is_open( room, down ) ) {
+  act_tochar( #open, ch );
+  end;
+}
+if( find_skill( ch, searching ) < 0 ) {
+  act_tochar( #nada, ch );
+  act_notchar( #rnada, ch, obj, mob, sight );
+  end;
+}
+act_tochar( #found, ch );
+act_notchar( #rfound, ch, obj, mob, sight );
+open( room, down );
+~
+E
+open~
+What are you looking for in the hole?
+~
+E
+nada~
+You find nothing there.
+~
+E
+rnada~
+$n finds nothing of itnerest on the ground.
+~
+E
+found~
+@cYou find that the dirt by the hole is weaker than you thought and it
+breaks free.@n 
+~
+E
+rfound~
+@c$n breaks away at the dirt by the root, and it collapses completely.@n
+~
+!
+9 0 0
+-1
+S
+
+#1728
+Under the Hole - Wet Spot~
+No natural light reaches this part of the cavern.  The sounds of
+creatures slithering through wet dirt haunts the otherwise silent tunnel. 
+The floor is an ankle-deep soupy blend of mud, pebbles, and roots. 
+Passing too close to any of the earthen, root and rock strewn walls
+grants unlucky travelers a faceful of spiderwebs.  The earthen,
+root-ripped walls become more narrow to the south and appear none too
+stable.
+~
+[Guin] Reviewed.
+~
+200933380 2 8 0
+D2
+~
+~
+0 -1 1729 10 10 5
+D4
+~
+~
+171 -1 1727 10 10 5
+E
+root walls earthen~
+One particularly large root juts down through a small opening in the
+ceiling.  All is dark and you can see nothing above the opening.
+~
+A
+climb~
+root up~
+act_tochar( #root, ch );
+act_notchar( #nroot, ch );
+transfer( ch, find_room( 1727 ) );
+~
+E
+root~
+@GYou grab the bottom of the large root and pull yourself up through the
+opening.  Spiderwebs glue themselves to your face and gear as you climb. 
+@n 
+~
+E
+nroot~
+@G$n grabs the bottom of the large root and climbs up through an opening
+in the cavern roof.@n 
+~
+!
+0 0 0
+81 17 1509949480 -2 0
+81 17 1509949540 -2 0
+5444 9 1509949540 3 0
+-1
+S
+
+#1729
+Dank Dirty and Cold Cavern~
+Not much wider than a human, this section of the cavern is next to
+impossible to navigate.  Every step brings a fist or faceful of something
+new.  One step fastens thick spiderwebs to one's gear, the next fills
+one's boots with murky water.  Looking forward or backward tells you
+nothing of where you're going or where you've been; through the thick
+hanging roots and spiderwebs you can see naught.  The floor slopes
+slightly downward to the south where the murky water covering the floor
+becomes a bit more shallow.
+~
+[Guin] Done.
+~
+200933380 11 8 0
+D0
+~
+~
+0 -1 1728 10 10 5
+D2
+~
+~
+0 -1 1730 10 10 5
+E
+roots~
+Like a thick curtain hang these roots and their heavy hairs.  Each is
+slighly moist, slurping up what water they can from the pool below. 
+Small bits of dirt, along with a host of grubs and worms, call these
+roots home.  Anything hoping to travel through this caven must push
+through this system of roots -- and in so doing, disturb all of their
+tiny inhabitants.
+~
+A
+~
+~
+ch = rand_player( room );
+act_tochar( #grub, ch );
+act_notchar( #ngrub, ch );
+continue;
+~
+E
+grub~
+@YDisturbing some feasting grubs with your movements, a small army of
+them fall onto you, crawling through your gear.@n 
+~
+E
+ngrub~
+@Y$n disturbs a family of feasting grubs causing them to fall all over $s
+body, infesting $s gear.@n 
+~
+!
+3 0 4
+81 17 1509949490 -2 0
+-1
+S
+
+#1730
+Earthen Root-Filled Cavern~
+A crease, where water has eroded the ground, begins to form here.  To the
+south it becomes more of a fold, angling the floor in such a way that it
+is more a part of the walls than an actual floor.  Water pools here,
+filling the bottom of the crease with cold murky mud.  Roots poke through
+the dirt and their root-hairs hang like an old womans unkempt hair.  To
+the south, the walls close in a bit and the angle of the crease becomes
+much more severe.  The water filling the crease is so murky, there's no
+telling how deep it becomes.
+~
+[Guin] Done.
+~
+200933380 13 8 0
+D0
+~
+~
+0 -1 1729 10 10 5
+D2
+~
+~
+0 -1 1731 10 10 5
+E
+water mud murky~
+Black, soupy, thick, and sticky, the water -- if it can indeed be called
+that -- forms a pool of unknown depth on the floor of the cavern.  Small
+and large chunks, some of which could be mud-covered rat corpses and
+others which could be choclate-covered grubs, float in the gumbo.  Each
+step through it reveals a different depth, sometimes ankle deep and
+sometimes waist deep.
+~
+E
+roots hairs~
+Like the bony fingers of death or the death spikes left behind tauting
+the heads of slain warriors after an orcish raid, these roots reach out
+from the earthen walls of the cavern.
+~
+A
+~
+~
+send_to_room( #rustle, room );
+~
+E
+rustle~
+@GDisturbed by your presence, a large rock falls from the muddy wall.  It
+lands on the soupy mud-covered floor, soaking your gear and covering your
+skin with little dots of dried mud.@n 
+~
+!
+2 400 0
+-1
+S
+
+#1731
+Low Spot Through the Cavern~
+The web of root hairs and solid roots becomes almost wall-like here. 
+Both the floor and ceiling of the dank cavern become angled and are
+really more a part of the walls than anything.  Travel through here is
+more climbing and less walking.  Water seeps through the earthen walls
+and pools at the lowest possible point.  Climbing from root to root is
+the only way to remain dry.  Not knowing how deep the water is dosen't
+make walking through it any more inviting.
+~
+[Guin] Change acode 1 to do slight group damage damage.
+[Guin] Done.
+~
+200933380 13 8 0
+D0
+~
+~
+0 -1 1730 10 10 5
+D1
+~
+~
+0 -1 1732 10 10 5
+A
+1 look 1 hairs~
+roots hairs~
+act_tochar( #fall, ch );
+act_notchar( #nfall, ch );
+loop( all_in_room )
+  if( !is_mob( rch ) )
+  damage( mob, rch, 1d3, physical, "falling dirt", "falling dirt" );
+~
+E
+fall~
+@YYou grab hold of one of the many thick strands of root hair to examine
+it closer.  The vibrations from your commotion causes part of the roof to
+collapse, spilling black wet dirt all over you and your gear!@n 
+~
+E
+nfall~
+@Y$n grabs a root hair to get a closer look.  As $e does, $e somehow
+manages to collapse a part of the roof causing dirt, rock and root to
+rain down all over you!@n 
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GWorking your way through, around, over and under the tangle of roots,
+you continue through the tunnel $dward.@n 
+~
+E
+to_room~
+@GWorking $n way through, around, over and under the tangle of roots, $n
+continues through the tunnel $dward.@n 
+~
+!
+3 0 3
+5446 9 1509949540 3 0
+5446 9 1509949540 3 0
+-1
+S
+
+#1732
+Damp Earthen Cavern~
+A beam of white light, wide as a human doorway, stands to the west, like
+a pillar holding up the cavern roof.  Strange luminous orange spots can
+be seen in the darkness surrounding the pillar.  Through the thick mist
+filling the cavern little else can be seen.  Touch reveals that the walls
+are mostly earthen with roots protruding from the ceiling.  The ground is
+muddy and slick and a wrong step could send one sprawling onto a sharp
+root or rock.
+~
+[Guin] Done.
+~
+200933380 11 8 0
+D1
+~
+~
+0 -1 1733 10 10 5
+D3
+~
+~
+0 -1 1731 10 10 5
+A
+~
+~
+if( is_player( ch ) ) {
+  if( find_stat( ch, dex ) < 12 ) {
+    act_tochar( #slip, ch );
+    act_notchar( #nslip, ch );
+    dam_message( ch, 1d4+3, "a sharp, mud-caked rock" );
+    inflict( ch, mob, 1d4+3, "falling on a rock" );
+    continue;
+    }
+  else {
+    act_tochar( #noslip, ch );
+    act_notchar( #nnoslip, ch );
+    continue;
+    }
+  }
+~
+E
+slip~
+@GThe slick mud lining the floor shifts just enough to throw you off
+balance!  You slip and land right on a sharp rock!@n 
+~
+E
+nslip~
+@G$n slips on the slick mud lining the floor.  After flailing wildly for
+a moment, $e lands with a thud on a sharp rock.@n 
+~
+E
+noslip~
+@GYou carefully step through the muddy caven, using small rocks as
+stepping stones when possible.@n 
+~
+E
+nnoslip~
+@G$n nimbly steps through the muddy cavern, using small rocks as stepping
+stones where possible.@n 
+~
+!
+3 0 8
+-1
+S
+
+#1733
+Damp Earthen Cavern~
+Glowing bright orange, a strange luminous lichen leeches on to any and
+every spot of rock it can find.  A narrow hole breaches the ceiling
+overhead.  Through it, light beams into this damp cavern, exposing each
+drop of moisture daring to cross its path.  Unfortunately, the luminous
+lichen does not seem to grow in the parts of the cavern where the light
+cannot reach.  Everything outside the reach of the light is dark; sight
+has no power here.
+~
+[Guin] Done.
+~
+200933389 11 8 0
+D3
+~
+~
+0 -1 1732 10 10 5
+D4
+~
+~
+171 -1 1701 10 10 5
+E
+light ceiling hole~
+About as wide as a barrel of dwarven stout, the hole in the cavern roof
+would probably collapse if anything tried to crawl through it.  The
+earthen, rock-strewn walls of the cavern surely could not support much
+weight and could collapse at any moment.
+~
+A
+get pick take pluck grab~
+lichen orange glowing luminous~
+if( rflag( Reset0, room ) ) {
+  remove_rflag( Reset0, room );
+  act_tochar( #take, ch );
+  act_notchar( #ntake, ch );
+  obj_to_char( oload( 7542 ), ch );
+  }
+else {
+  act_tochar( #nothing, ch );
+  act_notchar( #nnothing, ch );
+  }
+~
+E
+take~
+Using some small rock fragments, you scrape a clump of the luminous
+lichen from the cavern wall.
+~
+E
+ntake~
+$n finds some small rock fragments and, with them, scrapes some of the
+orange lichen off the cavern wall.
+~
+E
+nothing~
+You try to remove some of the luminous lichen but it crumbles to dust in
+your hand.
+~
+E
+nnothing~
+$n tries to remove some of the luminous lichen but it crumbles to dust in
+$s hand.
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou step into the darkeness of the earthen cavern; the orange lichen
+becomes mere spots behind you.@n 
+~
+E
+to_room~
+@G$n steps into the darkness of the earthen cavern; the orange lichen
+becomes mere spots behind you.@n 
+~
+!
+3 0 8
+A
+~
+~
+send_to_room( #breeze, room, sight );
+~
+E
+breeze~
+@GA gust of wind blows a clump of pine needles and acorns down through
+the hole.@n 
+~
+!
+2 400 0
+-1
+S
+
+#1734
+Cave~
+Under Construction.
+~
+~
+200802308 2 8 0
+D1
+earth covered wooden panel~
+earth covered wooden panel~
+511 -1 1723 10 10 4
+D3
+~
+~
+0 -1 1735 10 10 5
+-1
+S
+
+#1735
+Cave~
+Under Construction.
+~
+~
+200802308 2 8 0
+D0
+~
+~
+0 -1 1736 10 10 5
+D1
+~
+~
+0 -1 1734 10 10 5
+-1
+S
+
+#1736
+Fynn Encampment~
+Under Construction.
+Rocky Alcove Above a Quiet Lake
+~
+[Glynis] Begin Fynn City.
+~
+200802308 2 8 0
+D2
+~
+~
+0 -1 1735 10 10 5
+-1
+S
+
+#1737
+Narrow Path - Bressel Wood~
+The forest begins to close in here, where scattered pines intermingle
+with the deciduous trees seen further to the south.  Underfoot the path
+is more irregular and rough; tree roots break the plane of its surface,
+their menace hidden beneath an aeons accumulation of debris.  Toadstools
+thrive in the damp dark soil of the forest floor, and creeping vines swag
+from one tree to the next, creating a lacy webwork of green.
+~
+[Guin] Done.
+~
+200802304 3 8 0
+D1
+~
+~
+0 -1 1738 10 10 5
+D3
+~
+~
+0 -1 1721 10 10 5
+E
+toadstool~
+Sickly white toadstools thrive on the forest gloor, clustering in thick
+clumps between the trees' roots.  The caps of the fungi are slightly
+darker than the stems, and pale red spots color their fringed edges and
+underside.
+~
+A
+~
+~
+send_to_room( #shadow, room );
+~
+E
+shadow~
+@CScurrying from tree to tree, a diminutive shadow hides in the darkness
+of the forest floor.@n 
+~
+!
+2 150 0
+2509 41 1509949540 3 0
+2508 73 1509949540 3 0
+246 17 1509949490 -2 0
+415 17 1509949490 -2 0
+-1
+S
+
+#1738
+Copse of Ancient Pines~
+A tall stand of pines grows close together, crowding the path, the only
+way through them a slight gap to the west and north where the trees seem
+to clear.  The ground underfoot is thick with fallen pine cones and
+dropped needles and scattered slabs of hairy, rough bark.  Between the
+trees, the fertile soil of the forest floor is bare of anything except a
+few scraggly nettles and ferns that thrive in dark and dank condtions.
+~
+[Guin] Done
+~
+200802304 3 8 0
+D0
+~
+~
+0 -1 1700 10 10 5
+D3
+~
+~
+0 -1 1737 10 10 5
+E
+1 north~
+Beyond the trees to the north, the is another area of lighter woods.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou pass through the pines, ducking to avoid the groping branches.@n
+~
+E
+to_room~
+@g$n passes through the pines, ducking to avoid the groping branches.@n
+~
+!
+3 0 1
+5392 9 1509949540 3 0
+587 17 1509949540 -2 0
+-1
+S
+
+#0
+

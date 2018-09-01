@@ -1,0 +1,3934 @@
+#M2_AREA
+2
+
+Road to Talidar II~
+Greth Azerin Druscilla~
+Road to Talidar~
+~
+~
+
+7 0
+0
+1
+#ROOMS
+
+#13250
+Rutted Road Through a Charred Forest~
+A bitter-smelling cloud of acrid ash hangs heavy on the air.  The cracked
+and charred remains of trees lie scattered beside the dusty road.  The
+delicate green tips of new growth poke through the burned layer as
+grasses quickly move to replace the fallen woods.  Eastward, the forest
+begins to reappear, the scars of the fire still visible upon their trunks.
+The plains of ash continue to the west, the haze of dissipating wood-smoke
+obscuring the road.
+~
+[Guin] no.mob
+[Guin] Connects to 5987
+[Guin] Done.
+~
+167247880 12 9 0
+D1
+~
+~
+0 -1 5987 10 10 5
+D3
+~
+~
+0 -1 13350 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@YYou continue along the trail, a cloud of ash following in your wake.@n
+~
+E
+to_room~
+@Y$n continues along the trail, an ash cloud following in $s wake.@n
+~
+!
+3 0 8
+-1
+S
+
+#13251
+Rutted Road Through a Charred Forest~
+Covered in a mantle of ash and charred wood, the rutted road runs through
+the fire-lashed skeletons of ancient oak trees.  The broken branches and
+blackened stumps rise like tombstones in a forgotten graveyard across the
+sundered landscape.  A scattering of grime-covered weeds struggle from
+under the ash, their singed leaves turning brown in the sun.  Toward the
+south, the devestation appears less, the fire leaving several stands of
+trees untouched.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 6712 10 10 5
+D1
+~
+~
+0 -1 13349 10 10 5
+D2
+~
+~
+0 -1 6702 10 10 5
+D3
+~
+~
+0 -1 13252 10 10 5
+E
+ash charred wood fire weed leave~
+Ash and charred wood are nearly all that remain of the forest here; the
+ground is covered in ash, with little plant life visible.  Some weeds
+attempt to grow out of the ash, but one glance at the weeds leaves
+indicate the lack of nutrients available.
+~
+E
+branches stumps~
+Emerging from the charred landscape, tree remains are clearly visible. 
+Some burnt and charred branches remain scattered across the ground, but
+are so brittle with fire damage, they seem likely to shatter with the
+lightest touch.  Several blackened stumps remain rooted in places, split
+asunder and destroyed by the terrible fire which swept through this area.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cKicking up a fine cloud of soot and ash, you continue $dward through
+the burned out forest.@n 
+~
+E
+to_room~
+@cKicking up a fine cloud of soot and ash, $n continues $dward through
+the burned out forest.@n 
+~
+!
+3 0 10
+246 17 1509949540 -2 0
+-1
+S
+
+#13252
+Rutted Road Through a Charred Forest~
+Covered in a thick layer of ash and charred branches, the dirt-packed
+road winds beside what remains of a fire-ravished forest.  Swirls of dust
+rise at the slightest movement, giving the air a haze like morning mist. 
+Blackened tree stumps line the roadside, a few singed weeds poking
+through the charred earth.  Beyond the decimated trees, a half- dozen
+slender saplings strive to grow where the forest quickly attempts to
+reclaim the land as its own.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 6711 10 10 5
+D1
+~
+~
+0 -1 13251 10 10 5
+D2
+~
+~
+0 -1 6701 10 10 5
+D3
+~
+~
+0 -1 13253 10 10 5
+E
+layer ash branches dust~
+Swirls of ash pivot about with every movement, the dense layer still
+unsettled through time.  Blackened branches lay half buried beneath the
+sooty remains of the burned forest.
+~
+E
+stump tree weed saplings~
+Despondent stumps of once mighty trees remain visible through the
+mist-like haze; the brutal reminder of a recent blaze.  Desperately
+trying to overcome the layer of black ash, frail saplings and persistent
+weeds strive for dominance over the bare land.
+~
+A
+~
+~
+send_to_room( #char, room );
+~
+E
+char~
+@CA cloud of dust and ash pirouettes across the landscape, sent there by
+the fall of a fire-decimated branch from a nearby tree.@n
+~
+!
+2 150 0
+-1
+S
+
+#13253
+Rutted Road~
+A smattering of weeds worms their way through the hard-packed dirt of the
+old rutted road.  The passage of wagons has left wheel indentations at
+the road's verge, which have filled with rain that evaporated away into
+muddy ruts.  The sound of a river reverberates across the landscape,
+punctuated by the shrill cry of a single bird perched on skeletal arm of
+a nearby tree.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 6710 10 10 5
+D1
+~
+~
+0 -1 13252 10 10 5
+D2
+~
+~
+0 -1 6700 10 10 5
+D3
+~
+~
+0 -1 13254 10 10 5
+E
+weeds dirt road rutted~
+Withered and drooping, the meagre covering of plant matter is a clear
+indication of how well used this road is.  Deep ruts mar the hard-packed
+earth, the soil getting no reprieve from the constant stream of
+travellers who pass along the twisting byway.
+~
+E
+wagons wheel indentations edge rain water~
+Overuse has caused deep gouges to form along the dirt road, repetitive
+passing of wheels carving out deep ruts in the hard-packed earth. 
+Although the moisture has mostly evaporated from the muddy tracks, after
+a rainfall this road would closely resemble a saturated mire.
+~
+-1
+S
+
+#13254
+Rutted Road Through a Charred Forest~
+Broad enough to allow two wagons to pass each other with ease, a packed
+dirt bed serves as a road through the countryside.  Deep wheel ruts mar
+the otherwise flat surface, gouged out during a past rainfall.  The road
+shifts slightly as it heads off both south and east, leaning slightly
+into the curves in both directions.  The nearby trees are blackened and
+devoid of any leaves, the results of a fiery blaze that decimated the
+forest.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 6709 10 10 5
+D1
+~
+~
+0 -1 13253 10 10 5
+D2
+~
+~
+0 -1 13255 10 10 5
+D3
+~
+~
+0 -1 6707 10 10 5
+246 17 1509949540 -2 0
+-1
+S
+
+#13255
+Rutted Road~
+A deeply rutted road intersects the field of charred grasses.  The
+grooves in the hard-packed dirt are filled with bits of ash and larger
+chunks of charred wood.  To the east, the field begins to give way to a
+loose stand of trees, showing heavy scarring from a recent wild fire. 
+The acrid smell of smoke clings to the nearby vegetation.
+~
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 13254 10 10 5
+D1
+~
+~
+0 -1 6700 10 10 5
+D3
+~
+~
+0 -1 13256 10 10 5
+E
+rutted road ash chunks wood~
+Clogging the deep ruts in the dirt road, chunks and fragments of charred
+wood lie buried beneath a covering of ash.  Blackened by a recent fire,
+the debris from the trees crumbles into cinders.
+~
+E
+trees scarring vegetation 1 east~
+Of the trees that are still standing, there are very few that have been
+left unscathed by the recent blaze.  Many of the trunks are blackened,
+some charred even to the point of crumbling away.  Most of the leaves
+have been incinerated by the heat of the fire, those that weren't,
+withered from a lack of moisture and nutrients.
+~
+-1
+S
+
+#13256
+Rutted Road~
+The wide dirt road curves to avoid a dense growth of trees to the west. 
+The near edges of the vegetation are singed and charred, and some of its
+debris has fallen into the road's ruts.  The grass filling the nearby
+field is stubby and blackened, consumed entirely by fire.
+~
+[Guin] Done
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 13255 10 10 5
+D2
+~
+~
+0 -1 13257 10 10 5
+E
+dense growth trees 1 west vegetation~
+Clustering close together, the dense stand of trees grows along the edge
+of the deeply rutted road.  Singed a little at the tips, the brown leaves
+have curled over themselves in an attempt to avoid the heat of a recent
+fire.  The lower portions of the trunks are slightly charred, unable to
+escape the searing flames.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou follow the road $dward, skirting the edge of the trees.@n
+~
+E
+to_room~
+@G$n follows the road $dward, skirting the edge of the trees.@n
+~
+!
+3 0 6
+-1
+S
+
+#13257
+Road to Talidar~
+A large space has been cleared out between the trees to the west and
+east; it is this space through which the wide dirt road passes.  The
+branches reaching towards the rutted road are blackened but not entirely
+charred; many of them still have wholly intact green leaves.  A few
+tenacious blades of grass poke up along the road's edges, but for the
+most part it has been superceded by low-growing shrubs and brush.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 13256 10 10 5
+D2
+~
+~
+0 -1 13258 10 10 5
+3881 17 1509949540 -2 0
+3881 17 1509949540 -2 0
+-1
+S
+
+#13258
+Road to Talidar~
+The dirt road moves through the forest in as straight a line as possible,
+curving whenever necessary to avoid dense stands of trees.  A few of the
+bright leaves overhanging the road have small holes burned through them
+and others are curled along their edges, evidence of a nearby fire.  The
+shallow ruts in the road have accumulated small bits of ash, gravel and
+crushed plant matter.
+~
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 13257 10 10 5
+D3
+~
+~
+0 -1 13259 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou follow the road through the trees.@n
+~
+E
+to_room~
+@G$n follows the road through the trees.@n
+~
+!
+3 0 5
+-1
+S
+
+#13259
+Road to Talidar~
+The deeply rutted dirt road winds its way between slender, leafy trees. 
+Green-laden branches overhang the roadway, shading and sheltering it. 
+The faint sounds of a living forest permeate the landscape: leaves
+rustling, birds singing, water flowing.  Gravel, twigs and a small amount
+of ash have accumulated in the ruts in the road.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 13258 10 10 5
+D3
+~
+~
+0 -1 13260 10 10 5
+246 17 1509949540 -2 0
+-1
+S
+
+#13260
+Road to Talidar~
+The hard-packed dirt of the forest trail broadens to a road-sized width
+to the east, the forest pulling back almost as if to accommodate it.  The
+trees grow fairly densely all around, their branches arching high
+overhead to shade the trail and forest floor.  A loose web of greenery
+covers most of the forest floor, interspersed sporadically with a splash
+of colour on a blooming vine.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 13259 10 10 5
+D3
+~
+~
+0 -1 13261 10 10 5
+755 9 1509949540 3 0
+358 17 1509949540 -2 0
+-1
+S
+
+#13261
+Road to Talidar~
+The wide dirt foot trail curves to move through a gap in the trees.  The
+branches overhead form a leafy ceiling which rustles slightly as the wind
+touches it.  Dense, scrubby underbrush covers much of the forest floor,
+which looks to be rich and damp.  There are indications of wildlife
+everywhere -- tracks on the dusty trail, birdsong, soft animal calls --
+but no sign of the animals themselves.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 13262 10 10 5
+D1
+~
+~
+0 -1 13260 10 10 5
+755 9 1509949540 3 0
+587 17 1509949540 -2 0
+-1
+S
+
+#13262
+Road To Talidar~
+A hard dirt trail meanders between the slim trees of the forest,
+sheltered by their arching branches.  Wide green leaves hide the sky from
+view, allowing only the occasional glimpse of the sky.  Most of the
+forest floor is obscured by wiry brush and scrub which clings tenaciously
+to exposed rocks and roots.  The occasional sound of wildlife disturbs
+the still air, which otherwise betrays no evidence of local fauna.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 13263 10 10 5
+D2
+~
+~
+0 -1 13261 10 10 5
+-1
+S
+
+#13263
+Road To Talidar~
+The dirt footpath curves gently through the forest, avoiding the dense
+stands of trees.  A ceiling has been formed by the leafy branches
+overhead, blocking all sight of the sky.  Thin brush covers much of the
+nearby forest floor, which is invisible under a layer of browning fallen
+leaves.  The occasional call of a bird or rodent pierces the air, which
+for the most part is still and quiet.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D2
+~
+~
+0 -1 13262 10 10 5
+D3
+~
+~
+0 -1 13264 10 10 5
+203 9 1509949540 3 0
+-1
+S
+
+#13264
+Near the Ceanshire Turn-Off~
+The young trees grow straight and tall, their leaf-laden branches
+reaching overhead to form a ceiling of sorts.  The dense growth of trees
+looks as though it extends in all directions, although there are a few
+thinner areas which the creators of this path have taken advantage of. 
+Fallen leaves and verdant scrub brush cover much of the forest floor.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 13263 10 10 5
+D3
+~
+~
+0 -1 13265 10 10 5
+2508 9 1509949540 3 0
+-1
+S
+
+#13265
+Ceanshire Turn-Off~
+The straight footpath forks here, a small trail leading away to the north. 
+Overhanging the dirt trails are skeletal branches, charred by a recent
+fire.  The undergrowth between the trees is mostly scrub brush; tough
+low-growing bushes and vines cover the leafy forest floor.  It sounds as
+though there might be a river somewhere in the distance.  An old @Csign@n
+tilts drunkenly beside the road, its wording crudely written in fading
+letters.
+~
+[Guin] Ceanshire Road will connect here someday.
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 13264 10 10 5
+D3
+~
+~
+0 -1 13266 10 10 5
+E
+sign wording letters~
+The old sign, marked on a flat slab of dusty brown bark, reads:
+
+@C+----------------------+@n
+@C|@nCeanshire - North     @C|@n
+@C|@nTalidar's Spire - West@C|@n
+@C|@nTar'ippal - East      @C|@n
+@C+----------------------+@n
+
+A smaller shard of bark has been tacked to the post beneath the original
+sign.  The writing on this one is dark and fresh but no less crudely
+penned. It reads:
+
+@RCeanshire road closed by flooding!@n
+~
+755 9 1509949540 3 0
+-1
+S
+
+#13266
+Near the Ceanshire Turn-Off~
+The hard dirt road follows a mostly straight path through the trees,
+which show some signs of fire damage.  Small rocks litter the ground,
+interrupting the trail and showing through the low-growing foliage.  The
+grasses growing nearby are charred and have the reek of something
+recently burned.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 13265 10 10 5
+D3
+~
+~
+0 -1 13267 10 10 5
+544 17 1509949540 -2 0
+-1
+S
+
+#13267
+Ceanshire Trail - East of a Wooden Bridge~
+Burnt clumps of grass run beside the hard dirt-packed road; the stench of
+a recent fire hangs in the air. A few unlucky trees jut from the ash-
+covered ground, their branches charred and devoid of any sign of life. 
+Cracked stones litter the ground, the heat of the blaze splitting them
+into jagged shards.  A rushing river flows to the west, a gleaming
+dark wooden bridge spanning the foaming waters.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 13266 10 10 5
+D3
+~
+~
+0 -1 13268 10 10 5
+E
+bridge dark wood river~
+A few yards to the west, the earth gives way to a gushing river, the
+banks somewhat undercut by the swiftly moving waters.  Spanning the
+torrid river, the dark, almost black, wooden bridge stretches in a broad
+arc, the timbers covered by a thin layer of moisture.  A low railing of
+sagging rope runs on either side of the bridge, to prevent carts and
+wagons from accidentally veering over the edge of the bridge.
+~
+473 9 1509949540 3 0
+672 17 1509949540 -2 0
+-1
+S
+
+#13268
+Ceanshire Trail - Across a Wooden Bridge~
+The wooden bridge shudders under the force of the swirling waters
+below, the span swaying slightly in time with the currents.  Heavy hemp
+ropes run either side of the wooden planks forming a crude rail.  Soaking
+mists swirls over the structure soaking everything in cold dew.  Beyond
+the bridge a charred landscape of fire ravaged forest spreads, the
+blackened remains of trees rising like tombstones.
+~
+[Guin] The river is the River Duil
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 13267 10 10 5
+D3
+~
+~
+0 -1 13269 10 10 5
+E
+wooden bridge hemp rope planks~
+Long planks of dark, near ebon, wood stretch above the swift river as it
+rushes beneath the bridge.  Coating the timbers, a spray of soaking mist
+rises from the gushing waters, the cold dew creating a slippery layer of
+moisture on the worn smooth wood.  Sagging on either side of the bridge,
+waterlogged hemp rope spans the entire length, providing a barrier that
+is there more for the sake of appearances than for any practical use.
+~
+130 9 1509949540 3 0
+-1
+S
+
+#13269
+Ceanshire Trail - Across a Wooden Bridge~
+The rich vibrant grain of the wood bridge gleams with the mist from the
+rushing water below. Scorch marks stain a few beams, where a fire as
+lashed at its edges, but the bridge appears solid enough.  Two rope rails
+run each side of the bridge, the tough hemp soaked and drooping.  The
+force of the water sends a rumble throughout the entire structure.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 13268 10 10 5
+D3
+~
+~
+0 -1 13270 10 10 5
+E
+water river~
+Torridly rushing beneath the wooden bridge, the river harries at the
+supports that jut out from the white water.  Churning over unseen rocks,
+a cool mist constantly sprays across the wooden structure, covering it in
+a layer of slippery moisture.
+~
+2509 9 1509949540 3 0
+-1
+S
+
+#13270
+Ceanshire Trail - West of a Wooden Bridge~
+A wide dirt trail leads north, following the curve of the river, toward a
+wood not far to the north and west.  A sturdy-looking, newly-built bridge
+has been erected, a wooden monument that stretches across a narrow
+portion of the river to the east.  It is built from a dark brown wood
+that is black and burnt in places, but the bridge appears solid
+nonetheless.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 13271 10 10 5
+D1
+~
+~
+0 -1 13269 10 10 5
+755 9 1509949540 3 0
+587 17 1509949540 -2 0
+-1
+S
+
+#13271
+Edge of a Light Wood~
+This wide road narrows a little as it reaches the borders of a lightly
+wooded area to the west.  Just to the northeast, through a narrow stand
+of trees, a river quietly flows, its waters trickling over a layer of
+pebbled rock.  The path into the forest seems to follow the riverbank as
+the river curves westward, while the trail out of the woods lies to the
+south.
+~
+[Guin] Add sign sometime.
+[Guin] Reviewed.
+~
+167247872 12 9 0
+D2
+~
+~
+0 -1 13270 10 10 5
+D3
+~
+~
+0 -1 13272 10 10 5
+203 41 1509949540 3 0
+2508 73 1509949540 3 0
+78 17 1509949540 -2 0
+415 17 1509949540 -2 0
+-1
+S
+
+#13272
+Bressel Wood - Path Along the River~
+So close to the river, the forest here is strangely bare of vegetation. 
+South and west, the forest grows thicker with the huddled together limbs
+and boles of young beech saplings, but the ground around this wide dirt
+trail consists mostly of dry, blackened earth that doesn't appear to be
+fertile.  Nothing but small, dying weeds and the occasional tuft of grass
+grow in it.  A narrow track leads off to the north where a cluster of
+buildings is surrounded by a dark green hedge.  A @Gsign@n stands beside
+the road, freshly painted and clearly written.
+~
+[Guin] north is the Butterfly Garden.
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 4400 10 10 5
+D1
+~
+~
+0 -1 13271 10 10 5
+D3
+~
+~
+0 -1 13273 10 10 5
+E
+sign~
+Neatly painted sign stands beside the road, its message written in
+several languages.  It reads: 
+
+@CButterfly Garden - North@n
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CYou wade across the shallow river to the north.@n
+~
+E
+not_char~
+@C$n wades across the shallow river to the north.@n
+~
+!
+3 0 1
+2506 9 1509949540 3 0
+358 17 1509949540 -2 0
+344 17 1509949540 -2 0
+-1
+S
+
+#13273
+Bressel Wood - Path Along the River~
+A light undergrowth of smaller vegetation exists where the forest has
+begun to thin to the east.  A wide dirt path runs from west to east here,
+running along the banks of a river which has begun to change direction as
+it flows from west to north.  Very little else grows in this part of the
+forest, although a few tiny saplings have begun to sprout up from the
+ground to the south.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 13272 10 10 5
+D3
+~
+~
+0 -1 13274 10 10 5
+2507 9 1509949540 3 0
+29 1 1509949540 -2 0
+-1
+S
+
+#13274
+Bressel Wood - Path Along the River~
+Following a tight path along the banks of the river to your northeast,
+this well-traveled road weaves its way through the young, delicate flora
+of the forest.  The forest is quite young; small beeches and oaks stretch
+up toward a low-lying, thin canopy.  A few weeds and flowers have begun
+to grow along the edge of the road, but the woods themselves are mostly
+bare of low brush and other greenery.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 13275 10 10 5
+D1
+~
+~
+0 -1 13273 10 10 5
+755 9 1509949540 3 0
+29 0 1509949540 0 0
+-1
+S
+
+#13275
+Bressel Wood - Path Along the River~
+A wide path winds its way along the river, bending to the south and west
+as it skirts the sloping bank.  The woods is very light, dotted with
+young saplings no more than a few years old.  A reminder of the ancient
+forest that once thrived here, a scattering of older trees can be seen,
+but most are rotting stumps or fallen logs whose roots still cling
+desperately to the rich black dirt.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D2
+~
+~
+0 -1 13274 10 10 5
+D3
+~
+~
+0 -1 13276 10 10 5
+203 9 1509949540 3 0
+5392 9 1509949540 3 0
+-1
+S
+
+#13276
+Bressel Wood - A Clearing in the Forest~
+The trail has given way to a large circular clearing in the forest here. 
+Rough tufts of grass have grown over the path, and weeds and other
+vegetation thrive here as well.  In the very center of the clearing, the
+ashes and stones of an old camp can be seen.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 13277 10 10 5
+D1
+~
+~
+0 -1 13275 10 10 5
+E
+ashes stones camp~
+Although exposed to the hazards of the elements, the ashes and stones of
+an old campsite remain visible in the center of the clearing.  Arranged
+in a circular shape, the stones were obviously used to contain a small
+cooking fire.  A few incinerated branches lie in a crumbling state of
+decomposition in the midst of the stone ring.
+~
+78 17 1509949540 -2 0
+246 17 1509949540 -2 0
+-1
+S
+
+#13277
+Bressel Wood - Road Along the River~
+Light trees and brush grow along the side of this wide dirt trail.  The
+blackened boles of some large walnut trees can be seen off the trail, but
+the majority of trees in this forest are young beeches and oaks.  Not far
+to the east, a river can be seen through the thick shrubs and greenery
+that grow near it.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 13278 10 10 5
+D2
+~
+~
+0 -1 13276 10 10 5
+130 9 1509949540 3 0
+-1
+S
+
+#13278
+Bressel Wood - Road Along the River~
+This road follows the bank of a wide river that flows northward.  Most of
+the view of the river is obscured by thick greenery which grows near the
+water's edge.  To the west, young saplings and smaller trees form a thin
+line of growth up a steep hill.  Much of the hill is darkened by fallen
+logs and huge blackened stumps, perhaps the burnt remains of an ancient
+forest.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 13279 10 10 5
+D2
+~
+~
+0 -1 13277 10 10 5
+2504 9 1509949540 3 0
+672 17 1509949540 -2 0
+755 17 1509949540 -2 0
+-1
+S
+
+#13279
+Bressel Wood - Near a Great Waterfall~
+The trail bends sharply to the west and south here where it meets the
+open bank of a wide, swift-flowing river.  A short distance away, to the
+north and east, a cascading waterfall spills into the river from an
+intersecting stream.  Nearby, young tree and saplings grow a fair
+distance apart, and low stands of nettles and ferns thrive across the
+forest floor.  Thick fingers of misty fog curl through the trees and
+infiltrate the open spaces between the undergrowth.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D2
+~
+~
+0 -1 13278 10 10 5
+D3
+~
+~
+0 -1 13280 10 10 5
+E
+1 north 1 east waterfall~
+Where the tributary meets the river, the coalescing waters churn in a
+torrid swirl of foaming white spray at the base of a fair sized fall. 
+Jagged boulders line the path of the stream, the last one standing about
+five feet above the gushing river.
+~
+A
+~
+~
+send_to_room( #falls, room );
+~
+E
+falls~
+@CThe rush of the waterfall is near deafening where the stream crashes
+into the river below.@n 
+~
+!
+2 150 0
+215 9 1509949540 3 0
+2508 9 1509949540 3 0
+415 17 1509949540 -2 0
+-1
+S
+
+#13280
+Misty Path Along the Riverbank~
+The curling tendrils of mist runs vaguely east and west through this
+dark, quiet section of the forest, snaking its way between the trees and
+skirting thick clumps of nettles and low-growing ferns.  Beyond the muddy
+bank, the River Duil flows swiftly yet smoothly onward, its waters
+reflecting back the surrounding terrain.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 13279 10 10 5
+D3
+~
+~
+0 -1 13281 10 10 5
+122 9 1509949540 3 0
+7760 17 1509949540 -2 0
+-1
+S
+
+#13281
+Bressel Wood - Along the Edge of a Steep Gorge~
+A wide trail runs through this section of the woods, winding around the
+thick, blackened boles of ancient walnut trees.  The land begins to slope
+gently downward.  The woods is bordered to the north by a steep cliff and
+a river far below it.  Somewhere to the south, a burbling stream splashes
+along, the sound of the gurgling waters very faint.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 13280 10 10 5
+D3
+~
+~
+0 -1 13282 10 10 5
+2500 9 1509949540 3 0
+-1
+S
+
+#13282
+Bressel Wood - Along the Edge of a Steep Gorge~
+The ground slopes upward to the west, winding around the large blackened
+boles of ancient walnut trees and a smattering of younger saplings.  To
+the north, the land drops off where it overlooks the white waters of
+rapids far below.  Thicker brush and trees make travel to the south
+difficult, while a trail gently weaves its way downward to the east.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 13281 10 10 5
+D3
+~
+~
+0 -1 13283 10 10 5
+755 9 1509949540 3 0
+78 17 1509949540 -2 0
+-1
+S
+
+#13283
+Bressel Wood - Along the Edge of a Steep Gorge~
+This wide trail winds through a thin forest of scattered beech and oak
+trees.  Below, to the north, a great river roars as it rapidly flows
+westward over a riverbed of sharp rocks and jutting boulders.  The path
+is never less than a few feet from the dropoff of the gorge.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 13282 10 10 5
+D3
+~
+~
+0 -1 13284 10 10 5
+2504 9 1509949540 3 0
+2507 9 1509949540 3 0
+-1
+S
+
+#13284
+Bressel Wood - East of a Rickety Rope Bridge~
+The forest has thinned here at a large rocky outcropping.  To the west is
+a deep gorge, through which the white waters of a river rapids flow. 
+Spanning the gap between the two cliff faces is a thin rope bridge.  Its
+handrails have been cut and the bridge sways dangerously over the edge. 
+Many of its planks are missing or half-broken.  There are places where
+arrows have pierced into the wood or rope; they are centered primarily in
+the middle of the bridge.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 13283 10 10 5
+D2
+~
+~
+0 -1 13285 10 10 5
+A
+1 west~
+~
+send_to_char( #death, ch );
+~
+E
+death~
+Attempting to cross the bridge, would surely lead to death in the gorge
+bottom far below.
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CAvoiding the rickety bridge, you follow the trail southward along the
+gorge.@n 
+~
+E
+to_room~
+@CAvoiding the rickety bridge, $n follows the trail southward along the
+gorge.@n 
+~
+!
+3 0 4
+203 9 1509949540 3 0
+29 0 1509949540 -2 0
+-1
+S
+
+#13285
+Bressel Wood - Forested Path~
+The path winds through the forest, a dirt trail surrounded by thick,
+ancient walnuts and young beeches and oaks.  The road slopes steeply
+upward as it curves north, and where it begins to slope, several broken
+cartwheels can be seen, shattered pieces of heavy oak which lie near the
+well-marked bole of a walnut.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 13284 10 10 5
+D3
+~
+~
+0 -1 13286 10 10 5
+78 17 1509949540 -2 0
+-1
+S
+
+#13286
+Bressel Wood - Forested Path~
+The trail here slopes ever gently down from west to east, through a thin
+forest of younger sapling trees.  The road itself is beset on either side
+by tall, ancient walnut trees whose branches darken the path.  The trail
+is marked in places with the deep gashes of wagon and cart wheels.  The
+roar of flowing water comes from the north but the sound is muffled by
+the treeline.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 13285 10 10 5
+D3
+~
+~
+0 -1 13287 10 10 5
+3055 17 1509949540 -2 0
+-1
+S
+
+#13287
+Bressel Wood - Forested Path~
+Low hanging vines and stray branches have crept across the trail, but the
+path is easily wide enough for wagons and carts to run abreast.  The
+trail curves and the path makes a sort of quarter spiral as it slopes
+gently downward to the east.  A few larger trees grow on the side of the
+road, mostly the gnarled trunks of older walnuts interspersed with
+younger beeches here and there.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 13288 10 10 5
+D1
+~
+~
+0 -1 13286 10 10 5
+215 9 1509949540 3 0
+2506 9 1509949540 3 0
+-1
+S
+
+#13288
+Bressel Wood - West of a Rickety Rope Bridge~
+The forest gives way to an outcropping of stone, overlooking a deep gorge
+that splits the trail in twain.  At the bottom of the gorge, a raging
+river forks the majority of its waters westward and southward under a
+tight crevice in the rock.  A rope bridge spans the gap between the two
+sides of the ravine, but its handrails are missing and it sways
+dangerously over the foaming rapids of the smaller fork.  Leading around
+the failing bridge, beaten down underbrush and grass marks the beginnings
+of a narrow track...a safer alternative to the bridge.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D2
+~
+~
+0 -1 13287 10 10 5
+D3
+~
+~
+0 -1 13289 10 10 5
+A
+1 east~
+~
+send_to_char( #death, ch );
+~
+E
+death~
+@CCrossing the bridge will lead to certain death in the gorge bottom far
+below.@n 
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CDeciding not to try the bridge, you take the newer trail that leads
+southward.@n 
+~
+E
+to_room~
+@CDeciding not to try the bridge, $n takes the newer trail that leads
+southward.@n 
+~
+!
+3 0 4
+29 0 1509949540 -2 0
+-1
+S
+
+#13289
+Bressel Wood - Along the Edge of a Steep Gorge~
+This forest road winds along the edge of a steep gorge which drops off to
+river rapids to the north.  The trail here is riddled with the marks of a
+past battle.  The remnants of a white cloth lie torn over the brambles of
+a nearby shrub; spattered with dried blood, a long stick is half-attached
+to it.  The butt half of a spear lies on the ground, partially covered
+with dirt, and broken cart wheel lies not far off from the southern edge
+of the trail, riddled with arrows as it rests against a tree trunk.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 13288 10 10 5
+D3
+~
+~
+0 -1 13290 10 10 5
+672 17 1509949540 -2 0
+-1
+S
+
+#13290
+Bressel Wood - Along the Edge of a Steep Gorge~
+The wide trail winds along the edge of steep gorge, flanked by stands of
+old trees and young.  The forest, attempting to reclaim the trail, has
+been kept in check by the careful trimming of branch and limb, and the
+cutting back of the light undergrowth between the trees.  To the north,
+beyond a few sparse bushes and large boulders, the ground drops steeply
+into the raging river at the gorge's bottom.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 13289 10 10 5
+D3
+~
+~
+0 -1 13291 10 10 5
+2505 9 1509949540 3 0
+-1
+S
+
+#13291
+Bressel Wood - At the Edge of a Steep Gorge~
+Thick brush forms a wall along the southern edge of this trail, blocking
+movement in that direction.  To the northeast, over a thin line of young
+evergreen trees that overlook the gorge, a raging river flows, its roar
+loud even from this height.  The path, curling between trees and saplings
+and skirting other impediments, continues along to the east and or north,
+its surface littered with decaying leaf matter.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 13292 10 10 5
+D1
+~
+~
+0 -1 13290 10 10 5
+544 17 1509949540 -2 0
+-1
+S
+
+#13292
+Bressel Wood - At the Edge of a Steep Gorge~
+The forest has thinned here at the edge of a steep gorge which overlooks
+a churning torrent of river rapids.  To the south, the trail continues,
+dancing a path along the edge of the gorge.  To the southeast you can
+make out a thin rope bridge.  Its railings have been cut off and it sways
+dangerously above the river.  A narrow trail, little more than a goat
+track, winds northward through the trees.
+~
+[Guin] North goes to Rysharn Woods and Allyse Lake
+[Guin] Connects 1720
+[Guin] Done.
+~
+167247880 12 9 0
+D0
+~
+~
+0 -1 1720 10 10 5
+D2
+~
+~
+0 -1 13291 10 10 5
+D3
+~
+~
+0 -1 13293 10 10 5
+E
+1 north narrow trail~
+A narrow trail, little more than a goat track branches off from the main
+path and sneaks northward through the trees.  The growth there is dense
+and the underbrush thick; little can be seen within the blanketing
+shadows beneath the trees.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou squeeze between two trees, following the narrow track northward.@n
+~
+E
+to_room~
+@G$n squeezes between two trees, following the narrow track northward.@n
+~
+!
+3 0 1
+755 9 1509949540 3 0
+81 17 1509949490 -2 0
+-1
+S
+
+#13293
+Bressel Wood - Blackened Stumps~
+The trail widens here, helped by the light growth in this section of the
+woods; only a scattering of oak saplings seem to be thriving.  The
+majority of the vegetation consists of blackened stumps and half-decayed,
+half-burned husks of old-growth walnuts trees.  The ground does, however,
+look hospitable to trees, and many smaller plants and shrubs have grown
+through the rich black soil of the forest.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 13292 10 10 5
+D3
+~
+~
+0 -1 13294 10 10 5
+2509 9 1509949540 3 0
+2508 9 1509949515 3 0
+-1
+S
+
+#13294
+Bressel Wood - South of a Steep Ravine~
+Just to the north of the road, the land slopes downward into a steep
+ravine before trailing over the edge of a gorge; the sounds of a roaring
+river can be heard far below it.  The road here is surrounded by young
+deciduous growth...here and there a beech or oak sapling, in some places
+dogwood shrubs or tiny bushes growing bright red berries.  The trail
+continues to the west and east.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 13293 10 10 5
+D3
+~
+~
+0 -1 13295 10 10 5
+78 17 1509949540 -2 0
+832 17 1509949540 -2 0
+-1
+S
+
+#13295
+Bressel Wood - Stand of Walnut Trees~
+The woods looks much older here where the blackened trunks of huge walnut
+trees grow.  Smaller oak and beech saplings have encroached upon the
+forest; none of them appear to be much older than a few years.  A narrow
+trail runs through the forest, winding its way to the north toward open
+land and eastward more deeply through the trees.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 13296 10 10 5
+D1
+~
+~
+0 -1 13294 10 10 5
+5392 9 1509949540 3 0
+78 17 1509949540 -2 0
+-1
+S
+
+#13296
+Bressel Wood - Edge of the Wood~
+The light stands of trees give way to an outcropping of rock which hangs
+over a roaring river far below.  In the distant northwest, where the
+river winds underneath a huge rope bridge that hangs over a rocky gorge. 
+The gorge appears to have widened since, and now the gap between the top
+of the outcropping and the river is a good fifty feet.  Faint scuff marks
+appear toward the edge of the rock.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D2
+~
+~
+0 -1 13295 10 10 5
+D3
+~
+~
+0 -1 13297 10 10 5
+E
+scuff marks~
+These appear to be the scramblings of a desperate animal that suddenly
+attempted to change direction at the edge of the cliff, although, by the
+looks of things, the effort was futile, as a scurry of claw marks inch
+closer and closer to the fatal drop before disappearing over the edge.
+~
+130 9 1509949540 3 0
+-1
+S
+
+#13297
+Bressel Wood - A Walnut Grove~
+The light path carves through a stand of walnut trees which grow in a
+thin arrangement beside the path.  Their dark, brown trunks and smooth,
+round oval-like leaves darken the forest a bit here, and the air has an
+odorless yet bitter taste.  The trees look much older than the other
+trees in the forest, and there is a similar blackened quality to the
+walnuts bordering this part of the wood.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 13296 10 10 5
+D3
+~
+~
+0 -1 13298 10 10 5
+78 17 1509949540 -2 0
+-1
+S
+
+#13298
+Bressel Wood - East of a Small Creek~
+A wide path winds its way through the forest in a relatively straight
+course from west to east.  Smaller brush and trees divide the path in
+places but much of undergrowth has been cut away rather recently; dead
+brush and cut logs are strewn alongside the trail.  A small creek winds
+its way to the northwest, trickling along a downward slope westward.  A
+few planks form a makeshift bridge across the shallow creek.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 13297 10 10 5
+D3
+~
+~
+0 -1 13299 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GPlacing a foot tentatively upon the wooden planks, you continue
+westward along the unsteady bridge.@n 
+~
+E
+to_room~
+@GPlacing a foot tentatively upon the wooden planks, $n continues
+westward along the unsteady bridge.@n 
+~
+!
+3 0 8
+114 9 1509949540 3 0
+473 9 1509949540 3 0
+-1
+S
+
+#13299
+Bressel Wood - West of a Small Creek~
+The trail here runs a straight course eastward and westward through the
+forest.  It is easily wide enough for a large wagon to pass through;
+however, several newly cut tree stumps along the side of the road seem to
+indicate that the forest has begun to encroach upon its hard dirt surface. 
+A shallow creek bed bubbles its way northwest, trickling under fallen
+logs and over the rocky bed of pebbles it flows upon.  A short bridge,
+consisting of a few planks, spans the creek from bank to bank.
+~
+[Guin] Done
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 13298 10 10 5
+D3
+~
+~
+0 -1 13300 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GPlacing a foot tentatively upon the wooden planks, you continue
+eastward along the unsteady bridge.@n 
+~
+E
+to_room~
+@GPlacing a foot tentatively upon the wooden planks, $n continues
+eastward along the unsteady bridge.@n 
+~
+!
+3 0 2
+203 9 1509949540 3 0
+7760 17 1509949540 -2 0
+660 17 1509949540 -2 0
+-1
+S
+
+#13300
+Bressel Wood - Bend in the Path~
+The trail winds its way through light brush and the occasional full-grown
+tree, narrowing to the east but still wide enough for a large wagon to
+pass.  Many of the trees are quite young; saplings and younger trees
+thrive in the absence of older growth.  Underfoot, the path is rutted and
+hard-packed with only a thin layer of fallen leaves and twigs covering
+its surface.
+~
+[Guin] Forest area to the south at some point?
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 13301 10 10 5
+D1
+~
+~
+0 -1 13299 10 10 5
+-1
+S
+
+#13301
+At the Edge of a Light Wood~
+The trail narrows toward the south where it leads into the edge of a
+light woods.  The forest consists of smaller brush for the undergrowth
+beneath a smattering of different trees, beech and walnut being the most
+prevalent.  Directly to the north, a long bridge spans a gorge carved by
+a surging river flowing along its bottom.
+
+A small wooden @esign@n has been crookedly driven into the ground here.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 13302 10 10 5
+D2
+~
+~
+0 -1 13300 10 10 5
+E
+small wooden crooked sign~
+The sign looks relatively new.
+
+@e The sign reads:@n
+
+@y _________________________________________
+@y/@n  ___  ___  ____   __   __  ____         @y\
+@y\@n  |  \ |  \ |     /    /    |     |   |  @y/
+@y/@n  |__/ |__/ |__   \__  \__  |__   |   |  @y\
+@y\@n  |  \ |  \ |        \    \ |     |   |  @y/
+@y/@n  |__/ |   \|___   __/  __/ |___  |__ |__@y\
+@y\_________________________________________/
+@y/                                         \
+@y\@n                 ___    ___    __        @y/
+@y/@n       \      / /   \  /   \  |  \       @y\
+@y\@n        \    /  |   |  |   |  |   |      @y/
+@y/@n         \/\/   \___/  \___/  |__/       @y\
+@y\_________________________________________/
+@R                  |      |@n
+@R                  |      |@n
+~
+544 17 1509949540 -2 0
+78 17 1509949540 -2 0
+-1
+S
+
+#13302
+South of The Great Rope Bridge~
+The land drops off here at the edge of a gorge high above the foaming
+rapids of a river.  Spanning northward across this wide river is a
+massive rope bridge.  Great spikes have been driven into the ground here;
+they support the majority of the bridge's weight.  A particularly massive
+spike, set in the middle, has been driven into the rocky earth here and
+supports a thick rope which runs directly underneath the bridge.
+~
+[Guin] Possibly location of a town at some point.
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 13303 10 10 5
+D2
+~
+~
+0 -1 13301 10 10 5
+755 9 1509949540 3 0
+215 9 1509949540 3 0
+-1
+S
+
+#13303
+The Great Rope Bridge~
+Made of thick planks of hard wood and thick lengths of rope, the bridge
+is quite sturdy and sways very little.  Not far below lies the river, its
+rapids spewing out white foam as it roars westward over the rockbed.  The
+bridge ends not far to the south, high at the upper bank of the gorge.
+~
+[Guin] Done.
+~
+167247872 12 6 0
+D0
+~
+~
+0 -1 13304 10 10 5
+D2
+~
+~
+0 -1 13302 10 10 5
+-1
+S
+
+#13304
+The Great Rope Bridge~
+This wide rope bridge extends northward and southward across the white
+foam of river rapids twenty feet or so below.  A sturdy rope on either
+side of the bridge provides a helpful handrail to prevent injury.  The
+bridge is quite solid and from the look of the wood from which it is
+made, it is quite new.
+~
+[Guin] Done.
+~
+167247872 12 6 0
+D0
+~
+~
+0 -1 13305 10 10 5
+D2
+~
+~
+0 -1 13303 10 10 5
+E
+bridge rope 1 northward 1 southward~
+Secured with huge wooden spikes driven into the ground on either side of
+the landings, a great rope bridge has been constructed across the
+turbulent waters.  A massive middle spike ties a particularly thick piece
+of rope to the ground, providing stability across the bottom of the
+bridge.  Thick, broad wooden planks have been tightly lashed to the rope
+backbone, creating a sturdy support for the viaduct, and although the
+structure does sway under the weight of passing caravans, it looks safe
+enough for several to cross without worry.
+~
+-1
+S
+
+#13305
+The Great Rope Bridge~
+This grand structure is quite sturdy for a rope bridge; although it does
+wobble slightly with the wind, it does not appear to be unsafe.  Twenty
+feet or so below lie swift river rapids.  They spew out a thick white
+mist as the water churns and bubbles across the rockbed, but the spray
+does not reach the level of the bridge.  The bridge ends just to the
+north at a riverbank high upon a gorge.
+~
+[Greth] town area - twin cities?
+[Guin] Done.
+~
+167247872 12 6 0
+D0
+~
+~
+0 -1 13306 10 10 5
+D2
+~
+~
+0 -1 13304 10 10 5
+A
+~
+~
+send_to_room( #creak, room );
+~
+E
+creak~
+@RThe bridge creaks and groans loudly when a particularly strong gust of
+wind pushes against it, forcing it to sway violently.@n 
+~
+!
+2 150 0
+-1
+S
+
+#13306
+North of The Great Rope Bridge~
+The vertical gap between river and road has widened as the land rises up
+to form a gorge on either side of the river.  A great rope bridge has
+been built across the river here, secured with huge wooden spikes driven
+into the ground on either side of the bridge.  A massive middle spike
+ties a particularly thick piece of rope to the ground as well; the
+middle rope serves to secure the bridge across the bottom.  Thick, wide
+wooden planks have been secured to the rope backbone and look to provide
+a sturdy support to the bridge, and although the structure does sway
+slightly with the breeze, it looks safe enough for several wagons to
+cross without worry.
+~
+[Greth] bridge s
+[Guin] Done.
+~
+167247872 12 9 0
+D2
+~
+~
+0 -1 13305 10 10 5
+D3
+~
+~
+0 -1 13307 10 10 5
+587 17 1509949540 -2 0
+-1
+S
+
+#13307
+Greenvale Passage - Path Along the River~
+The river that lies to the south flows in white torrents, spraying a thin
+drizzle across the road that winds beside it.  The ground here rises
+upward to the east; not too far toward the southeast, a long length of
+bridge extends across the river.  The great bridge rises at least twenty
+feet above the river and spans a good several hundred feet between the
+riverbanks.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 13306 10 10 5
+D3
+~
+~
+0 -1 13308 10 10 5
+2506 9 1509949540 3 0
+-1
+S
+
+#13308
+Greenvale Passage - A Marshy Path Along the River~
+The wide trail follows the line of the narrow stretch of river that lies
+southward.  Great tails of white spume spew over and around vast boulders
+as the river surges into white water rapids, making it impossible to ford
+the waterway in this location.  The ground underfoot slopes gently as the
+past continues to the east, out of the marsh.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 13307 10 10 5
+D3
+~
+~
+0 -1 13309 10 10 5
+203 9 1509949540 3 0
+2504 9 1509949540 3 0
+-1
+S
+
+#13309
+Greenvale Passage - A Marshy Path Along the River~
+This wide, muddy road that runs from east to west is strewn with the wet
+husks of dead and rotting grasses.  Water indundates the vegetation to
+the north and south of the road, and the pungent aroma of plant decay can
+be traced to small, swirling rainbows which bubble with some sort of swamp
+gas.  The path is pockmarked with shallow depressions, pools of water and
+places where the road has eroded into marshland.  Wooden planks form
+makeshift bridges over these gaps, although their placement is seemingly
+at random.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 13308 10 10 5
+D3
+~
+~
+0 -1 13310 10 10 5
+189 17 1509949500 -2 0
+81 17 1509949500 -2 0
+7760 17 1509949480 -2 0
+-1
+S
+
+#13310
+Greenvale Passage - A Marshy Path Along the River~
+The road curves around to the north and east, following the banks of a
+wide and mighty river.  The ground here is soft and muddy but the road is
+elevated somewhat from the more depressed grasses which are half-sunk or
+entirely engulfed in marshy waters.  The ground slopes upward to the
+north, while to the east it takes a straight path and rides along the
+riverbed.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 13311 10 10 5
+D1
+~
+~
+0 -1 13309 10 10 5
+755 9 1509949540 3 0
+-1
+S
+
+#13311
+Greenvale Passage - A Sloping Brae~
+The hillside widens to the south, toward a flat grassy section of the
+terrain.  The ground grows muddier in that direction, where lush are
+interspersed with rushes, marking the beginings of a marsh-like area. 
+Far to the northwest, the black silhouette of a tower rises from atop a
+tall hill.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 13312 10 10 5
+D2
+~
+~
+0 -1 13310 10 10 5
+2501 9 1509949515 3 0
+29 0 1509949515 -2 0
+-1
+S
+
+#13312
+Greenvale Passage - East of a Lookout Point~
+The dusty, serpentine road climbs toward the west, winding up a large
+hill that is topped by a sturdy-looking lookout tower.  The terrain to
+the south begins to flatten out as the land slides downward into a
+depressed area of marshy grasslands and slow-flowing river beyond. 
+Further to the east, the grey-green outline of a forest rises out of the
+prairie, obscure against the distant horizon.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D2
+~
+~
+0 -1 13311 10 10 5
+D3
+~
+~
+0 -1 13313 10 10 5
+2441 17 1509949540 -2 0
+78 17 1509949540 -2 0
+-1
+S
+
+#13313
+Greenvale Passage - A Lookout Point~
+The apex of this great grassy hill is augmented by an old wooden and
+stone-crafted lookout tower, long since abandoned.  The base of the tower
+is covered in a thick layer of mud and mildew; the ever-present grass
+crowds the walls, trying to reclaim them as its own.  Not far to the
+south a great river can be seen, its crystal waters no longer hidden by
+the wash of green that surrounds it.  The treeline of light forest rises
+against the horizon to the southeast of the road.
+~
+[Greth] Perhaps can climb it at some point.
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 13314 10 10 5
+D1
+~
+~
+0 -1 13312 10 10 5
+473 9 1509949540 3 0
+-1
+S
+
+#13314
+Greenvale Passage - Endless Grasslands~
+Tall grass grows thick around the winding road, tufting out of dry cracks
+as it rises toward a sloping hill to the south.  Atop the hill, a
+makeshift lookout tower was constructed of old wood and dull grey stone. 
+The grasslands seem to have no end; blue-green colors everything but the
+pale blue sky and the narrow dirt road that runs to the north and south.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 13315 10 10 5
+D2
+~
+~
+0 -1 13313 10 10 5
+E
+tower lookout 1 south~
+Rising from the sea of tall grasses, the rickety tower at the crown of
+the hill looms overhead.  Infilling the cracks in the weather-beaten
+timbers, a thick layer of mud cakes the lower portion of the walls. 
+Thriving on the slightly damp wood, the amount of green-black mildew
+indicates that this tower is seldom maintianed, and then only to ensure
+structural integrity as opposed to general appearance.
+~
+755 9 1509949520 3 0
+755 9 1509949520 3 0
+672 17 1509949540 -2 0
+-1
+S
+
+#13315
+Greenvale Passage - East of a Bridge~
+The road here weaves between tall, green-blue stalks of grass, its
+hard-packed surface deep-rutted and uneven.  This section of the
+landscape is shrouded in a thick, drizzly mist which clings to everything
+in tight bubbles of dew.  Westward, a a wooden bridge spans the burbling
+stream flowing merrily beneath it; the bridge looks stury enough despite
+its weathered condition.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D2
+~
+~
+0 -1 13314 10 10 5
+D3
+~
+~
+0 -1 13316 10 10 5
+2576 17 1509949540 -2 0
+78 17 1509949540 -2 0
+-1
+S
+
+#13316
+Greenvale Passage - Over a Sturdy Wooden Bridge~
+A ribbon of water flows slowly southward, snaking its way around and
+through weed-choked banks.  A weathered wooden bridge spans the
+crystal-clear stream; originally a fine piece of construction, the bridge
+faces the ravages of time and weather with dignity.  Dry, mud-encrusted
+tracks make their way from the road's dusty surface across the solid
+planks underfoot.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 13315 10 10 5
+D3
+~
+~
+0 -1 13317 10 10 5
+E
+dry mud-encrusted tracks~
+These tracks were probably caused by wagons or carts passing over the bridge.
+~
+E
+bridge stream~
+Spanning across the sluggish water, the wooden bridge arches from one
+bank to the other.  Once an ornate piece of craftsmanship, the well-
+constructed bridge is now fading into degradation, the weather-beaten
+timbers caked with mud from countless passages.  Barely rippling at all,
+the water silently passes beneath the aged viaduct.
+~
+-1
+S
+
+#13317
+Greenvale Passage - West of a Bridge~
+The road curves sharply here, leading eastward onto a sturdy-looking
+wooden bridge that crosses over a slow-moving stream and more deeply into
+a sea of grass toward the north.  The grass gives way to thin brown reeds
+which comb the water, creating v-shaped flow lines along the crystalline
+surface.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 13318 10 10 5
+D1
+~
+~
+0 -1 13316 10 10 5
+E
+bridge stream~
+Stretching eastwards over the sluggish water, the wooden bridge arches
+from bank to bank.  Once an ornate piece of craftsmanship, the well-built
+bridge is now fading into degradation, the weather-beaten timbers caked
+with mud from countless passages.  Barely rippling at all, the water
+silently passes beneath the aged viaduct.
+~
+122 9 1509949540 3 0
+2506 9 1509949510 3 0
+7760 17 1509949540 -2 0
+-1
+S
+
+#13318
+Greenvale Passage - A Sharp Turn in the Path~
+A decaying wagon wheel leans sideways on its half-rotted frame in a
+shallow ditch beside the road; the wheel's spokes are black with moss and
+mildew and infested with termites.  Having been resting there several
+years, grass and other local vegetation have already grown through it in
+several places.  The dirt road is wider through this section of the
+grasslands, its hard-packed surface dusty and deeply rutted.
+~
+~
+167247872 12 9 0
+D2
+~
+~
+0 -1 13317 10 10 5
+D3
+~
+~
+0 -1 13319 10 10 5
+78 17 1509949540 -2 0
+29 0 1509949465 -2 0
+-1
+S
+
+#13319
+Greenvale Passage - Muddy Pass~
+The road narrows here as it weaves through the rolling grasslands.  The
+black soil is soft and fertile, and long furrows have been cut through it
+where wagons and carts have passed by.  To the west, the road climbs
+upward, cresting at the top of a tall hill.  The amber-colored grasses
+are abuzz with tiny insects, attracted by the ripening seed heads.
+~
+[Guin] Reviewed.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 13318 10 10 5
+D3
+~
+~
+0 -1 13320 10 10 5
+2508 9 1509949540 3 0
+-1
+S
+
+#13320
+Abandoned Campsite - Greenvale Passage~
+Cart tracks and wagon wheel grooves form deep ruts in the hard-packed
+road at the top of the tall hill.  Sheltered beneath an old tree, a ring
+of stones holds ashes from a burned out fire; the rocks are black from
+campfire soot.  The road follows the hillside's curve downward to the
+east and south.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 13319 10 10 5
+D2
+~
+~
+0 -1 13321 10 10 5
+E
+ring stones ashes fire rocks soot~
+A firepit, circled by stones, holds the memory of an abandoned campsite. 
+Within the pit, sodden ashes and charred sticks and twigs, show that the
+fire was doused with water to prevent it spreading.
+~
+A
+~
+ring ashes campfire~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 20 ) > 10 ) {
+    act_tochar( #search, ch, obj, mob, sight );
+    act_notchar( #search2, ch, obj, mob, sight );
+    obj = oload( 246 );
+    obj_to_char( obj, ch );
+  }
+  else if( random( 1, 20 ) < 5 ) {
+    act_tochar( #search3, ch, obj, mob, sight );
+    act_notchar( #search4, ch, obj, mob, sight );
+    obj = oload( 2 );
+    obj_to_char( obj, ch );
+  }
+  else {
+    act_tochar( #no, ch, obj, mob, sight );
+  }
+}
+else {
+  act_tochar( #no2, ch, obj, mob, sight );
+}
+~
+E
+search~
+@GSearching through the ring of ashes, you find a burnt stick.@n 
+~
+E
+search2~
+@G$n searches through the ring of ashes and finds something.@n 
+~
+E
+search3~
+@GLooking through the ring of ashes, you manage to find a gold coin.@n 
+~
+E
+search4~
+@G$n searches through the ring of ashes briefly before pocketing
+something.@n 
+~
+E
+no~
+You search through the ring of ashes but find nothing.
+~
+E
+no2~
+The ashes have already been searched.
+~
+!
+9 0 0
+81 17 1509949525 -2 0
+-1
+S
+
+#13321
+Greenvale Passage - Nearing the Top of the Hill~
+The road here bends to the west and north as it climbs up toward to the
+top of this great hill.  The road leads north and dips slightly before
+continuing, rising steadily towards the top.  The grasslands on all other
+sides give a magnificent view of the area in all directions.  To the
+southeast there appears to be a river of some sort, hidden in the folds
+of sea-green grass.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 13320 10 10 5
+D3
+~
+~
+0 -1 13322 10 10 5
+203 9 1509949540 3 0
+587 17 1509949540 -2 0
+-1
+S
+
+#13322
+Greenvale Passage - Along a Steep Trail~
+The ground is uneven here, largely due to the steep roadway which follows
+the curve of a grassy hill that rises to the east.  The prairie extends
+in all directions and there seems to be an endless abundance of grass,
+although there may be a river or stream of some sort far to the south
+where the grass thins.  Westward, the trail dips into a narrow gully.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 13321 10 10 5
+D3
+~
+~
+0 -1 13323 10 10 5
+78 17 1509949540 -2 0
+-1
+S
+
+#13323
+Greenvale Passage - Along a Steep Trail~
+The road here levels a little along a steep trail that dips far below to
+the west and rises every higher eastward.  Low, black mounds of dirt can
+be seen in certain places, dotted among the hills, possibly the dwellings
+of prairie animals.  Little else is visible except rolling hills and
+grasslands, although a shallow pool can be seen to the west.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 13322 10 10 5
+D3
+~
+~
+0 -1 13324 10 10 5
+A
+~
+mound dirt~
+if( !rflag( reset0, room ) ) {
+  act_tochar( #already, ch );
+  end;
+}
+remove_rflag( reset0, room );
+mob = mload( 5186, room );
+act_tochar( #leap, ch, obj, mob );
+act_notchar( #rleap, ch, obj, mob, sight );
+init_attack( mob, ch );
+~
+E
+already~
+@GYou search around in the mound of dirt, and find nothing of interest.@n
+~
+E
+leap~
+@R$N leaps out of the dirt at you!@n
+~
+E
+rleap~
+@R$N leaps out of the dirt to attack $n!@n
+~
+!
+9 0 0
+2505 9 1509949520 3 0
+474 17 1509949540 -2 0
+-1
+S
+
+#13324
+Greenvale Passage - A Pool in the Road~
+The road reaches a low point at a narrow pass between two, sharply
+sloping hills swept with grass.  A shallow @Cpool@n, looking more like
+the product of recent rainfall than a natural occurrence, fills the
+bottom of the depression.  It looks to be only a few inches deep, and the
+hills are not so steep that the puddle cannot be walked around.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 13323 10 10 5
+D3
+~
+~
+0 -1 13325 10 10 5
+1513 17 1509949540 -2 0
+29 1 1509949540 -2 0
+755 17 1509949490 -2 0
+-1
+S
+
+#13325
+Greenvale Passage - Grasslands~
+The road here is rough and bumpy, following the lowlands between the
+flowing, endless sea-green hills of grass.  The land rises to the west,
+where a sole tree grows at the apex of a tall hill.  Eastward the path
+dips further downward, where a recent rain created a muddy pool in the
+road.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 13324 10 10 5
+D3
+~
+~
+0 -1 13326 10 10 5
+2509 9 1509949530 3 0
+203 9 1509949525 3 0
+189 17 1509949510 -2 0
+-1
+S
+
+#13326
+Greenvale Passage - At the Top of the Hill~
+From this vantagepoint you can make much of the surrounding terrain.  The
+trail dips below to the south and east, but the road winds through the
+hills, camouflaged by the tall grassland.  A single oak tree grows here
+at the top of the hill; its bole is old and gnarled, although it still
+bears leaves and would probably provide comfortable shade.
+~
+[Guin] Done.
+~
+167247872 15 9 0
+D1
+~
+~
+0 -1 13325 10 10 5
+D2
+~
+~
+0 -1 13327 10 10 5
+544 17 1509949540 -2 0
+-1
+S
+
+#13327
+Greenvale Passage - The Winding Trail~
+The road follows a sinuous path, bending to the east and west past the
+base of a grassy hilltop.  A lone oak tree, old beyond the ken of man,
+holds a solitary vigil over the surrounding landscape, paying homage to
+the sky.  Nestled amid the tree's highest branches, a nest of grass and
+leaves provides a home for one of the local, airborn denizens.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 13326 10 10 5
+D3
+~
+~
+0 -1 13328 10 10 5
+755 9 1509949540 3 0
+2504 9 1509949490 3 0
+316 9 1509949540 3 0
+-1
+S
+
+#13328
+Greenvale Passage - Between Two Hills~
+Dipping between two grass-shrouded hills, the dusty road's course
+proceeds in an easterly and westerly direction in a vaguely zigzag
+pattern.  Thick tufts of grass overrun the hard-packed trail in places,
+filling the long, irregular wagon tracks.  A patch of drying mud lies
+nearby, reminders of a recent rain.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 13327 10 10 5
+D3
+~
+~
+0 -1 13329 10 10 5
+832 17 1509949540 -2 0
+755 17 1509949515 -2 0
+-1
+S
+
+#13329
+Greenvale Passage - A Narrow Cut Through the Plain~
+The dusty dirt road follows a nearly straight course through the
+grasslands here, where grooves and ruts made by wagons and carts created
+dried mud folds in the ground.  A vast forest appears against the
+northwestern horizon, barely discernible above the sea-green wash of
+grassy hills that roll through the plains.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 13328 10 10 5
+D3
+~
+~
+0 -1 13330 10 10 5
+215 9 1509949540 3 0
+203 9 1509949505 3 0
+-1
+S
+
+#13330
+Greenvale Passage - A Bend in the Path~
+The grassy plain continues along this road that leads north and east
+through rolling hills.  The grass swells and ebbs with the wind that
+flows quickly across the plain.  Not far to the north, a looming green
+forest rises out of the prairie land.  More than a half-dozen
+rabbit-sized holes are scattered beside the road, tiny footprints
+surrounding each of them 
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 13331 10 10 5
+D1
+~
+~
+0 -1 13329 10 10 5
+E
+hole footprint road~
+Burrowing deep into the earth at the side of the road, a riddle of
+foot-wide holes disappear into the tall grasses.  Scurrying footprints
+litter the dirt with a confusing mess of contradiction directions, the
+owner, or owners, of these tiny prints obviously coming and going fairly
+frequently.  At first glance, the footprints look like they belong to a
+benign creature, although it is difficult to ascertain which creature
+that may be on account of the haphazard tracks.
+~
+A
+~
+hole footprint road~
+if( !rflag( reset0, room ) ) {
+  act_tochar( #nada, ch );
+  act_notchar( #rnada, ch, obj, mob, sight );
+  end;
+}
+remove_rflag( reset0, room );
+mob = mload( 2513, room );
+act_tochar( #disturb, ch, obj, mob );
+act_notchar( #rdisturb, ch, obj, mob, sight );
+init_attack( mob, ch );
+~
+E
+nada~
+@CYou find nothing of interest in the hole.@n
+~
+E
+rnada~
+$n finds nothing of interest in the hole.
+~
+E
+disturb~
+@RYou reach into the hole, and disturb $N.@n
+~
+E
+rdisturb~
+@R$n reaches into a hole, and disturbs $N.@n
+~
+!
+9 0 0
+29 0 1509949515 -2 0
+-1
+S
+
+#13331
+Greenvale Passage - At the Edge of a Dark Forest~
+The road narrows here, tapering to a little more than a game trail as it
+enters the forest.  Tall beeches and maple trees loom over the path,
+casting patchwork shadows of light and dark over the ground below.  Pale,
+yellow-green ferns and clusters of berry bushes grow randomly in the
+fertile soil between the trees, nestling among the roots.  To the south,
+the road winds between hillocks of tall, blue-green grass.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 13332 10 10 5
+D2
+~
+~
+0 -1 13330 10 10 5
+473 9 1509949540 3 0
+2576 17 1509949540 -2 0
+-1
+S
+
+#13332
+Greenvale Passage - At the Forest's Edge~
+The road narrows here, the old-growth beeches and maples seeking to
+reclaim what man has wrought.  Overhanging branches, heavy with leaves,
+cast delicate dappled patterns of light and shadow across the uneven
+surface where thick roots dig deep into the earth, eroding the
+hard-packed dirt of the path.  At ground level, scattered patches of
+nettles and a few droopy ferns sprout stubbornly beneath the trees.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D2
+~
+~
+0 -1 13331 10 10 5
+D3
+~
+~
+0 -1 13333 10 10 5
+-1
+S
+
+#13333
+Greenvale Passage - Through a Dark Forest~
+Hardly more than a game trail, the passage is nearly lost among the
+intertwining branches of ancient trees, growing close together near the
+edge of the virgin forest.  Underfoot, the twisted roots of majestic
+maples burrow deep into the ground, seeking sustenance from soil buried
+beneath a deep layer of fallen leaves and debris.  The beginnings of a
+wall of dark, twisting vines stretches between the maple and beech
+trunks, growing thicker where the path continues on toward the west.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 13332 10 10 5
+D3
+~
+~
+0 -1 13334 10 10 5
+755 9 1509949525 3 0
+-1
+S
+
+#13334
+Greenvale Passage - Three-Way Junction~
+Three roads come together here, forming a junction where the old trees
+grow less dense, allowing younger trees a chance at life.  Northward, the
+path takes a turn around a great boulder before continuing on along the
+forest's edge, disappearing in the distance beneath the trees.  The
+southern trail forges deeper into the dense growth of maples and beeches
+that make up the South Woods.  Little can be seen to the east, where
+overhanging branches cast dark shadows across the narrow track.
+
+A rectangular sign hangs on a wooden post to one side of the road.
+~
+[Guin] Talidar's Spire north.
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 13335 10 10 5
+D1
+~
+~
+0 -1 13333 10 10 5
+D2
+~
+~
+0 -1 6436 10 10 5
+A
+look~
+rectangular wooden sign post~
+act_tochar( #sign, ch );
+~
+E
+sign~
+@y+-------------------------+@n
+@y| @GNorth - Talidar's Spire @n@y|@n
+@y| @GSouth - Curahl Farm     @n@y|@n
+@y| @GEast  - Tar'ippal       @n@y|@n
+@y+-------------------------+@n
+~
+!
+0 0 0
+A
+~
+~
+send_to_room( #birds, room, sight );
+~
+E
+birds~
+@MA flock of birds take flight, startled into the air by the noise of
+your passage.@n 
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou head into the gloom of the forested path to the east.@n
+~
+E
+to_room~
+@G$n heads into the gloom of the forested path to the east.@n
+~
+!
+3 0 2
+78 17 1509949540 -2 0
+-1
+S
+
+#13335
+Path to Talidar's Spire~
+Moss-covered boulders litter the ground around the prying roots of
+ancient maples, walnuts and oaks.  As the forest sprawls outward, it
+becomes increasingly tangled and encased in a shadowy gloom.  The rutted
+road that meanders between the mighty trees is flanked by lush ferns and
+speckled-brown bracken, and even patches of struggling grass encroach
+into the low places in the path.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 13336 10 10 5
+D2
+~
+~
+0 -1 13334 10 10 5
+E
+moss boulders~
+Rough stone boulders of various sizes stand interspersed among the
+groping roots of the surrounding trees.  Dense patches of thriving moss
+cover the rocky surfaces, growing more thickly near where they touch the
+soil.
+~
+E
+roots maple walnut oak~
+Tall trees line the sides of the road, their roots emerging from the
+ground in several places.  Scattered among the roots are boulders of
+various sizes, their rocky faces covered in moss.  The further in the
+forest goes, the less passable it looks, as the roots and tree trunks
+begin to overwhelm the clear passages through the undergrowth.
+~
+E
+ferns lush bracken~
+Creeping onto the road, seemingly unchecked by the amount of travel
+through the area, ferns and bracken grow in abundance.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou follow the path to the north, avoiding the deep wagon ruts in the
+road.@n 
+~
+E
+to_room~
+@G$n follows the path to the north, avoiding the deep wagon ruts in the
+road.@n 
+~
+!
+3 0 5
+78 17 1509949540 -2 0
+-1
+S
+
+#13336
+Path to Talidar's Spire~
+A colorful red-leaved maple shades the road under its protective expanse
+of branches.  Its spreading roots dig into the ground, churning up the
+roadside and forest floor.  Growing among the trees are purple-spotted
+hemlock plants, their umbrella-shaped seed heads bending the stems under
+their weight.  The sound of a trickling stream can be heard to the north.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D2
+~
+~
+0 -1 13335 10 10 5
+D3
+~
+~
+0 -1 13337 10 10 5
+E
+maple branches roots~
+To the north, a large maple tree provides shade and cover to the road as
+it swings south to west.  Its large roots have erupted from the earth
+near the roadside, forcing wagons to swerve around them or face a
+vigorous bump.
+~
+E
+hemlock plants seed heads~
+Growing in abundance near the base of the trees are a number of hemlock
+plants.  Swaying in the wind, barely holding up the weight of the seed
+heads, the fragile stems stand above other bushes and can be seen from
+anywhere on the road.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GSkirting the old maple, you continue along the path $dward.@n
+~
+E
+to_room~
+@GSkirting the old maple, $n continues along the path $dward.@n
+~
+!
+3 0 12
+2504 9 1509949540 3 0
+-1
+S
+
+#13337
+Path to Talidar's Spire~
+A broken wagon lies in the shallow ditch to the north.  The rotting wood
+reveals some sign of fire damage, its surface coated in patches of char. 
+The shallow ditch it rests in is choked with broken wheels, boards and
+watercress; a trickling of hidden water reveals that somewhere under the
+debris, the stream continues to flow.  Bedecked with leaf-litter and
+weeds, the road is little more than a goat track in parts.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 13336 10 10 5
+D3
+~
+~
+0 -1 13338 10 10 5
+E
+1 north broken wagon ditch~
+Lying in a wide ditch, this old wagon seems to have been destroyed by a
+fire.  Most of the upper parts are burned, and the rest of the wagon is
+black with char.  Bits of debris and wagon parts scatter throughout the
+ditch admist the litter of leaves and other such things.
+~
+E
+trickling water leaf-litter weeds~
+Beneath the wagon, a tiny trickle of water can be seen flowing through
+the ditch.  Leaf-litter, weeds, and bits of wagon are all seen floating
+in the ditch, not doing much for the natural beauty of the area.
+~
+A
+search~
+wagon~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  i = random( 1, 6 );
+  if( i <= 2 ) {
+    act_tochar( #nothing, ch );
+    act_notchar( #nothing1, ch );
+    }
+  else if( i == 3 ) {
+    obj_to_char( oload( 14 ), ch );
+    act_tochar( #coin, ch );
+    act_notchar( #something, ch );
+    }
+  else if( i == 4 ) {
+    obj_to_char( oload( 246 ), ch );
+    act_tochar( #stick, ch );
+    act_notchar( #something, ch );
+    }
+  else if( i == 5 ) {
+    obj_to_char( oload( 210 ), ch );
+    act_tochar( #glass, ch );
+    act_notchar( #something, ch );
+    }
+  else if( i == 6 ) {
+    obj_to_char( oload( 2119 ), ch );
+    act_tochar( #lantern, ch );
+    act_notchar( #something, ch );
+    }
+  else {
+    act_tochar( #nothing, ch );
+    act_notchar( #nothing1, ch );
+    }
+  }
+else
+  act_tochar( #already, ch, obj, mob );
+~
+E
+nothing~
+@gYou rummage through the wagon and find nothing of interest.@n
+~
+E
+nothing1~
+@g$n rummages through the wagon and finds nothing of interest.@n
+~
+E
+coin~
+@gYou rummage through the wagon and come across a small loot of coins.@n
+~
+E
+something~
+@g$n rummages through the wagon and seems to find something.@n
+~
+E
+stick~
+@gYou rummage through the wagon and can only find an old stick.@n
+~
+E
+glass~
+@gYou rummage through the wagon and find something sharp.@n
+~
+E
+lantern~
+@yYou rummage through the wagon and find an old lantern.@n
+~
+E
+already~
+The wagon looks like it has already been ransacked.
+~
+E
+already~
+The wagon seems to have been searched already.
+~
+!
+9 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou continue $T as you walk by the old, broken-down wagon.@n
+~
+E
+to_room~
+@g$n continues $T down the old dirt path.@n
+~
+!
+3 0 10
+2506 9 1509949515 3 0
+474 17 1509949490 -2 0
+-1
+S
+
+#13338
+Path to Talidar's Spire~
+Tucked into the cleft between two sizable boulders, a squat shack nestles
+snuggly, its wooden-tiled roof covered in leaf-litter and fallen branches. 
+A shallow ditch winds fitfully beside the road, weeds and watercress,
+thriving in the trickling water.  Maple and oak trees gather close to the
+road and shack, their branches bent low.  Beyond the ruined structure,
+the ground rises slightly, beech trees beginning to dominate the forest
+flora.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 13339 10 10 5
+D1
+~
+~
+0 -1 13337 10 10 5
+E
+shack 1 south~
+The decrepit shack lies off to the side of the road, nestled between two
+huge boulders.  What remains of the roof is covered in decaying leaf
+litter and broken branches, and in several places the roof has collapsed
+under the growing weight.  The insides of the shack are clearly visible,
+and it appears to have been deserted for some time.
+~
+E
+boulders~
+Large boulders form a barrier to the south.  Old and smooth, the moss
+covered edges provide the only decoration to the otherwise boring rocks.
+~
+E
+ditch weeds watercress~
+Murky water runs through the shallow ditch, struggling past the tangled
+mass of weeds and watercress.
+~
+E
+maple oak road forest beech~
+As the road winds north to east, it is followed closely by maple and oak
+trees.  The shack in particular is framed by a motley collection of young
+trees, their trunks growing around the boulders.  Beyond the maple and
+oak trees to the south, beech trees take over as the predominate trees,
+and seem to form the bulk of the forest in that direction.
+~
+A
+~
+shack~
+if( !rflag( reset0, room ) ) {
+  act_tochar( #nofind, ch );
+  act_notchar( #rnofind, ch, obj, mob, sight );
+  end;
+}
+remove_rflag( reset0, room );
+obj = oload( 2, random( 2, 4 ) );
+act_tochar( #find, ch, obj, mob, sight );
+act_notchar( #rfind, ch, obj, mob, sight );
+obj_to_char( obj, ch );
+~
+E
+nofind~
+You search through the ruins of the shack, but don't find anything of
+note.
+~
+E
+rnofind~
+$n rummages through the ruined shack to the south, but doesn't seem to
+find anything.
+~
+E
+find~
+@YYou search through the ruins of the shack, and find $p.@n 
+~
+E
+rfind~
+@Y$n searches through the ruins of the shack and finds $p.@n
+~
+!
+9 0 0
+189 17 1509949475 -2 0
+-1
+S
+
+#13339
+Path to Talidar's Spire~
+Growing beside the trail are several stands of slender bamboo.  Fine
+oval-shaped leaves extend from delicate branches, intertwining to form a
+flowing canopy of green.  Beyond the wall of bamboo, a shallow ditch
+hedges the road, its bottom covered in pond weeds and watercress. 
+Although thinning in parts, the forest here is still too closely packed
+to move through.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 13340 10 10 5
+D2
+~
+~
+0 -1 13338 10 10 5
+E
+stands slender bamboo~
+Stretching well over ten feet in height, the slender bamboo remains
+leafless until its very top, where it balloons out into a cascade of
+greenery.  At the slightest breeze the stems bend and creak together.
+~
+E
+branches canopy~
+Gnarled and bent branches spread out across the road, their leafy mass
+casting strange shadows upon the ground.
+~
+E
+ditch pond weeds watercress~
+Filled to the brim with waterweeds, the shallow ditch's sluggish water
+barely flows at all.  A swarm of tiny midges dance across the water's
+surface.
+~
+114 9 1509949535 3 0
+418 137 1509949540 3 0
+189 17 1509949515 -2 0
+-1
+S
+
+#13340
+Path to Talidar's Spire~
+A low stone wall survives beneath the tangled mantle of the forest, its
+weatherworn grey stones covered with mounds of sea-green moss.  A cluster
+of dead and decaying fruit trees stand beyond the wall, the sad remains
+of an long abandoned orchard.  Mounds of rotting pea-straw still cover
+the roots of the trees.  A weed-choked ditch runs beside the road, a
+silvery ribbon of water trickling down its middle.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 13341 10 10 5
+D2
+~
+~
+0 -1 13339 10 10 5
+E
+wall stone grey moss~
+Once part of a longer wall marking the boundary of someone's property,
+the wall has fallen into complete disrepair.  A thick layer of moss
+covers the crumbling stones.
+~
+E
+cluster fruit trees orchard~
+Overgrown with weeds and wildflowers, the tangle of trees looks in need
+of some maintenance.
+~
+E
+rotting pea-straw roots~
+Piles of straw, once used to protect the fruit trees during the winter
+months, are now little more than rotting mounds.
+~
+E
+ditch~
+Filled to the brim with reeds and rushes, the narrow ditch offers enough
+water for the semi-aquatic plants to thrive.
+~
+A
+~
+straw~
+if( rflag( reset0, room ) ) {
+  if( random( 1, 2 ) == 1 ) {
+    act_tochar( #foundcoin, ch );
+    act_notchar( #rfoundcoin, ch );
+    obj_to_char( oload( 2 ), ch );
+  }
+  remove_rflag( reset0, room );
+}
+else {
+  act_tochar( #nothing, ch );
+  act_notchar( #rnothing, ch );
+}
+~
+E
+foundcoin~
+You search through the straw, and find a gold coin!
+~
+E
+rfoundcoin~
+$n searches through the straw and finds something small.
+~
+E
+nothing~
+You search through the straw, but find nothing of interest.
+~
+E
+rnothing~
+$n searches through the straw and finds nothing of interest.
+~
+!
+9 0 0
+7865 17 1509949540 -2 0
+-1
+S
+
+#13341
+Path to Talidar's Spire~
+The road winds through the dappled greens of the woodlands, its course
+leading up the side of a steep, fern-draped bank.  The leafy ground rises
+to the north and west, forming a cul-de-sac of sorts in this section of
+the forest.  Lush grass grows along the path, the green carpet soaked in
+dew.  A smattering of colorful flowers sprouts amid the gnarled roots of
+a stout oak tree.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 13342 10 10 5
+D2
+~
+~
+0 -1 13340 10 10 5
+E
+bank fern~
+Lacy green ferns blanket much of the slope to either side of the road,
+their graceful fronds sprinkled with droplets of dew.
+~
+E
+grass dew~
+The plush green grass extends like a carpet on either side of the road. 
+Growing healthy and thick, the layers of soft grass are covered in
+droplets of glistening dew.
+~
+E
+flowers roots oak~
+Tall, majestic oaks stand to the north and west, dominated over by one
+particularly ancient one next to the road.  Its long, twisted roots
+cradle stands of colorful flowers...a stark contrast against the dark
+bark of the trunk.
+~
+2509 9 1509949540 3 0
+2508 9 1509949505 3 0
+2441 17 1509949540 -2 0
+-1
+S
+
+#13342
+Path to Talidar's Spire~
+A clover-filled clearing sprawls around the road, framed by walls of
+young oak and beech trees, most of them little over twenty feet in height. 
+Toward the east, the crumbling remains of a building rests amongst older
+trees.  The burbling sound of a distant stream echoes through the
+woodlands, only the occasional bird call breaking the tranquility of the
+forest.  Westward, the road winds around a fallen tree before
+disappearing from view.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 13343 10 10 5
+D3
+~
+~
+0 -1 13341 10 10 5
+E
+clover clearing road~
+The road enters a clover-rich clearing in this section of the forest, the
+tiny three-leaved plants dotted with an occasional, delicate white flower. 
+Faintly, the diminutive ground-hugging plant releases its fragrant scent
+into the air.
+~
+E
+oak beech~
+With wide, strong trunks, the oak trees dominate the surrounding forest,
+the beech trees blending in against their larger neighbours.
+~
+E
+fallen tree 1 west~
+A fallen oak tree blocks direct passage to the west, forcing the
+well-traveled road around its rotting hulk.
+~
+A
+~
+~
+i = 1d3;
+if( i == 1 )
+  send_to_room( #bird, room );
+elseif( i == 2 )
+  send_to_room( #insects, room );
+~
+E
+bird~
+@CA colorful bird takes wing, erupting from a nearby bush with a keening
+cry.@n 
+~
+E
+insects~
+@RA swarm of insects zips past, buzzing your head.@n
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+duck~
+@GYou duck under a particularly low branch and continue along the path.@n
+~
+E
+to_room~
+@G$n ducks under a particularly low branch and continues along the
+path.@n 
+~
+!
+3 0 8
+A
+~
+~
+continue;
+~
+E
+clover~
+@CThe fragrant scent of clover fills the air as you wander through the
+clearing toward the east.@n 
+~
+E
+to_room~
+@CThe fragrant scent of clover fills the air as $n wanders through the
+clearing toward the east.@n 
+~
+!
+3 0 2
+A
+~
+clovers field road~
+act_tochar( #search, ch );
+act_notchar( #rsearch, ch, obj, mob, sight );
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  i = random( 1, 100 );
+  if( i < 9 )
+    obj = oload( 407 );
+  else if( i < 50 )
+    obj = oload( 1619 );
+}
+if( obj ) {
+  act_tochar( #found, ch, obj );
+  act_notchar( #rfound, ch, obj, mob, sight );
+  obj_to_char( obj, ch );
+}
+else {
+  act_tochar( #nothing, ch );
+  act_notchar( #rnothing, ch, obj, mob, sight );
+}
+~
+E
+found~
+@GYou find $p in the clearing.@n.
+~
+E
+rfound~
+@G$n finds $p in the clearing.@n
+~
+E
+search~
+You start searching through the fields of clover, looking for anything
+useful.
+~
+E
+rsearch~
+$n starts searching through the fields of clover.
+~
+E
+nothing~
+You find nothing useful.
+~
+E
+rnothing~
+$n finds nothing useful.
+~
+!
+9 0 0
+5392 9 1509949540 3 0
+-1
+S
+
+#13343
+Path to Talidar's Spire~
+The crescent-shaped ruins of a crumbling stone keep lie just off the
+road, its broken walls draped in ivy and climbing wild roses. 
+Moss-covered rubble lies scattered across the road and through the forest. 
+Ironwood beams decay within the gatehouse, pale yellow fungi sprouting on
+their rotting surfaces.  Towering over the road and ancient tower are
+majestic oak trees, their twisted limbs stretching skyward.
+~
+[Guin] Connects to 4326
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 13344 10 10 5
+D1
+~
+~
+0 -1 4326 10 10 5
+D3
+~
+~
+0 -1 13342 10 10 5
+E
+keep walls stone remains 1 east~
+Not far from the road, the ruins of an ancient keep bow to the weight of
+age and clime, its surrounding walls in an even worse state of repair. 
+The wall itself is overgrown with tangled vines of brilliant green ivy
+and thick clusters of pale pink roses.
+~
+E
+oak trees branches~
+Where the forest is reclaiming the old keep, moss blankets the piles of
+stone and debris.  Elsewhere oak trees, once chopped down to make room
+for the tower, crowd the road and even, in spots, provide support for the
+crumbling walls.
+~
+A
+~
+~
+if( random( 1, 3 ) == 1 )
+  send_to_room( #scream, room );
+~
+E
+scream~
+@CAn ear-piercing screech ehoes through the forest, reverberating into
+nothingness in a few brief moments.@n 
+~
+!
+2 200 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GSqueezing past a break in the trees, you follow a rubble-strewn path to
+the east.@n 
+~
+E
+to_room~
+@GSqueezing past a break in the trees, $n follows a rubble-strewn path to
+the east.@n 
+~
+!
+3 0 2
+-1
+S
+
+#13344
+Path to Talidar's Spire~
+A weed-choked pool huddles in the shade of a stand of weeping willows,
+its source a burbling stream that flows from the north.  Duckweed and
+watercress grow wild at the water's edge.  An overgrown road winds around
+the pool, following the creek bank northward.  Hiding in the undergrowth
+of the forest floor, a fern-covered game trail disappears into the
+shadows of the forest to the south.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 13345 10 10 5
+D2
+~
+~
+0 -1 13343 10 10 5
+E
+weeping willows trees~
+Arching dramatically, the weeping willow's graceful limbs gently caress
+the water's surface, providing both food and shade for the aquatic
+denizens of the pool below.
+~
+E
+pool weed stream water~
+As the stream winds its way in from the north, bouncing merrily over
+rocks and submerged stones, the stream joins a weed-filled pool.  The
+pool itself is quite small, but there is plenty to feed the surrounding
+trees.  In places the weeds are thick enough to prevent viewing the
+bottom of the pool.
+~
+A
+~
+~
+send_to_room( #weedsmove, room, sight );
+~
+E
+weedsmove~
+@CSomething stirs beneath the pool's surface, sending ripples outward
+from the clustering weeds.@n 
+~
+!
+2 150 0
+2152 17 1509949540 -2 0
+473 9 1509949540 3 0
+7918 17 1509949540 -2 0
+-1
+S
+
+#13345
+Path to Talidar's Spire~
+Flowing though the tangled undergrowth is a burbling stream, its waters
+foaming and dancing around rocks and fallen branches as it flows across
+the path and eastward into the dense woods.  The native beech trees begin
+to loose their dominance here, being replaced by exotics such as oak and
+maples.  As the woodlands change so too does the wildlife, the more open
+forests enabling a habitat in which larger animals can survive.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D2
+~
+~
+0 -1 13344 10 10 5
+D3
+~
+~
+0 -1 13346 10 10 5
+E
+beech trees exotics oak maples~
+Slowly but surely the number of native trees begins to drop as the forest
+enters an area where exotics such as tall oaks and beautiful maples have
+begun to overtake the area.
+~
+A
+~
+~
+if( random( 1, 4 ) == 1 )
+  send_to_room( #stream1, room );
+elseif( random( 1, 2 ) == 1 )
+  send_to_room( #stream2, room );
+elseif( random( 1, 2 ) == 1 )
+  send_to_room( #bush, room );
+~
+E
+stream1~
+@CA burbling stream dances by, twigs and fallen afloat atop it.@n
+~
+E
+stream2~
+@CA diminutive bird lands in the shallows beside the stream, wings
+flapping as he bathes in the clear cool water.@n 
+~
+E
+bush~
+@GA dying bush rustles in the undergrowth where a timid forest creature
+forages for food.@n 
+~
+!
+2 150 0
+358 17 1509949540 -2 0
+1690 17 1509949540 -2 0
+5193 9 1509949540 3 0
+29 0 1509949540 -2 0
+-1
+S
+
+#13346
+Path to Talidar's Spire~
+A leaf-littered road runs beneath the boughs of gnarled branches.  At the
+side of the trail scattered patches of lilies bloom, growing upward
+toward the light.  Echoing throughout the woodlands are the calls of
+birds as they bob from branch to branch in search of food.  A rough,
+moss-covered stone rests against a tree to the west, the remains of a
+wagon spread around it.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 13347 10 10 5
+D1
+~
+~
+0 -1 13345 10 10 5
+E
+boughs gnarled branches trees forest~
+Crowding close to the road's edge, the gnarled trunks of ancient trees
+stand close together, creating a formidable barrier to travel off the
+path.  Thick branches, some leaf-bedecked and others all but dead, dangle
+over the path, forming an natural archway.
+~
+E
+lily lilies patches~
+Clusters of lilies grow in the few open spaces between the crowding
+trees, their velvety white and yellow blossoms a splotch of color in the
+otherwise verdant shadows of the forest floor.
+~
+E
+stone 1 west wagon remains~
+Scattered around the standing stone, the broken remnants of a shattered
+wagon seem to have been here for some time.  The gray-hued wood is
+rotting and warped, and the moss on the stone is beginning to claim the
+remains as its own.  The stone itself is quite large, as high as a horse
+at its apex and completely covered in leafy moss.
+~
+A
+~
+~
+send_to_char( #duck, ch );
+continue;
+~
+E
+duck~
+@GDucking beneath a particularly low branch, you head north along the
+path.@n 
+~
+!
+3 0 1
+A
+~
+~
+send_to_char( #leaves, ch );
+continue;
+~
+E
+leaves~
+@GYou skirt the wagon's debris on your way eastward.@n
+~
+!
+3 0 2
+A
+get take~
+moss~
+if( rflag( reset0, room ) ) {
+  if( can_handle( ch, oload( 12 ) ) ) {
+    act_tochar( #gotmoss, ch );
+    act_notchar( #rgotmoss, ch );
+    obj_to_char( oload( 2857 ), ch );
+    remove_rflag( reset0, room );
+    }
+  else {
+    act_tochar( #nomoss, ch );
+    act_notchar( #rnomoss, ch );
+    }
+  }
+else {
+  act_tochar( #nomoss, ch );
+  act_notchar( #rnomoss, ch );
+  }
+~
+E
+gotmoss~
+You scrape some moss off the stone, and manage to capture a handful
+intact.
+~
+E
+rgotmoss~
+$n scrapes some moss off the large stone.
+~
+E
+nomoss~
+You try, unsuccessfully, to gather some moss from the stone.
+~
+E
+rnomoss~
+$n tries unsuccessfully to gather some moss from the stone.
+successful.
+~
+!
+0 0 0
+A
+~
+remains wagon~
+act_tochar( #nothing, ch );
+act_notchar( #rnothing, ch );
+~
+E
+nothing~
+After searching for several moments, it is obvious the remains have been
+carefully picked over already.
+~
+E
+rnothing~
+$n searches through the wagons remains, but gives up fairly quickly.
+~
+!
+9 0 0
+A
+move trace read~
+rune stone moss~
+act_tochar( #trace_stone, ch, obj, mob );
+act_notchar( #rtrace_stone, ch, obj, mob, sight );
+if( !is_in_clan( ch, "FLEE" ) )
+  end;
+wait( 1 );
+act_tochar( #run_hand, ch, obj, mob );
+act_notchar( #rrun_hand, ch, obj, mob, sight );
+wait( 1 );
+act_tochar( #transfer, ch, obj, mob );
+act_notchar( #rtransfer, ch, obj, mob, sight );
+transfer( ch, find_room( 51047 ) );
+act_notchar( #arrival, ch, obj, mob, sight );
+set_integer( ch, "/Cayln/Stronghold/Flee/NCEntrance", 1 );
+~
+E
+trace_stone~
+You move the moss aside on the stone, and find an intricate set of runes
+on it.  The runes look like a new inscription though, added within the
+recent past.
+~
+E
+rtrace_stone~
+$n moves the moss aside on the stone, and finds an intricate set of runes on it.
+~
+E
+run_hand~
+You trace your finger along the archaic runes, and as your finger draws
+along them, they glow an indigo blue.
+~
+E
+rrun_hand~
+$n traces $s finger along the archaic runes, and as $s fingers draw along
+them, they glow an indigo blue.
+~
+E
+arrival~
+$n appears in the midst of a blue sigilistic magic.
+~
+E
+transfer~
+The blue magics of the stone, entwine around your hands, and snake around
+your body.  You feel your body being moved through time and space.
+~
+E
+rtransfer~
+The blue magics of the stone, entwine around $n's hands, and then snake
+around $s body.  $n then vanishes from sight.
+~
+!
+0 0 0
+122 9 1509949540 3 0
+-1
+S
+
+#13347
+Path to Talidar's Spire~
+An ancient tree lies beside the road, its roots splayed and branches
+broken from when it fell some time ago.  A multitude of toadstools covers
+its rotting bark, invaded by clusters of tiny ants and beetles that
+scurry amid the fungal forest.  Poking out from under the trees are
+clumps of fern trees, their fronds dangling daintily along the forest
+floor.  The sound of trickling water can be heard from somewhere close
+by, although the source is unseen from here.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 13348 10 10 5
+D2
+~
+~
+0 -1 13346 10 10 5
+E
+ancient tree roots branches~
+Vast in both girth and height, the felled tree lies rotting beside the
+road, its roots given way long ago.  The trunk, sketchily covered in
+rotting bark, offers some shelter from inclement weather when the need
+for it arises.
+~
+E
+toadstools rotting bark ants beetles fungal~
+Amassed in large clusters, the toadstools display a wide variety of color
+from the their creamy white caps to the red-hued fluting on the underside. 
+Some of the deadly fungi are large as a dinner plate, while some are no
+larger than a copper coin.
+~
+E
+ferns fronds~
+Thriving near the base of the felled tree and among it distended roots,
+delicate, yellow-green ferns bring a spark of brightness to the darkness
+of the forest floor.
+~
+A
+~
+~
+send_to_room( #bird, room, sight );
+~
+E
+bird~
+@CA bird call sounds from among the trees, its song echoing through the
+woods.@n 
+~
+!
+2 100 0
+203 9 1509949540 3 0
+78 17 1509949540 -2 0
+-1
+S
+
+#13348
+Forest Road~
+Covered in leaf litter and rotting branches, the trail winds down the
+side of the spire hills, heading into the dense gloom-shrouded forest. 
+Masses of beech trees form a wall of wood, flanking the road.  Between
+the trees thornbushes and hound-tongue ferns flourish.  Visible among the
+bushes and trees, the man-sized statue of a humanoid creature stands
+staunchly, its details obscured by the tangle of ivy clinging to it.
+~
+[Guin] Done.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 5474 10 10 5
+D2
+~
+~
+0 -1 13347 10 10 5
+E
+leaf litter rotting branches trail~
+The narrow trail works its way through the hills towards the dark forest
+below.  On either side of the trail the trees grow so close together,
+that passage off the trail is nigh impossible.  Underfoot, the
+combination of leaf litter and rotting wood forms a thin layer atop the
+trail's surface.
+~
+E
+forest beech trees wood~
+On either side of the trail, the trees grow so close together in the
+competition for water and light, that passage off the trail is impossible. 
+In the distance, the forest fans outward, and a variety of tree types
+appear among the surrounding beeches.
+~
+E
+thornbush hound-tongue ferns bush 1 east 1 west~
+The thorn bushes grow in fair-sized clumps at the base of the beech
+trees; their spiky stems look quite daunting between the closely rooted
+trees.  In spaces where the prickly shrubs do not grow, faerie-like
+hounds-tongue ferns flourish in the rich loam of the forest floor.  The
+light green of the fronds blends in well with the surrounding flora,
+resembling flanged spearheads in the gloomy light.
+~
+E
+statue man-sized humanoid creature ivy details~
+Who the statue was meant to represent is impossible to determine covered
+as it is by a wild tangle of vines.  The pose struck by the vaguely
+humanoid-shaped statue in heroic in stanceleft hand on hip, right arm
+raised magnificently, until time and weather conspired to remove the
+right hand at the elbow.  Glinting at the base of the rdesc statue, a
+tarnished bronze plaque is covered in fading letters.
+~
+E
+plaque~
+Almost impossible to read through the vines, what can be seen of the
+plaque states "Dedicated to Talidar, may your ".  The rest is unreadable.
+~
+A
+~
+~
+send_to_room( #scurry, room );
+~
+E
+scurry~
+@CSomething scurries unseen through the dense grown of the forest
+floor.@n 
+~
+!
+2 150 0
+-1
+S
+
+#13349
+Rutted Road Through a Charred Forest~
+Deep gouges have formed along the arid plains, the moisture-starved earth
+cracked and crumbling like kiln-baked clay.  The rutted roadway veers in
+a wide curve from the north to the west, avoiding a particularly large
+branch that has been charred in a devastating blaze.  A slender shoot or
+two of vegetation pokes through the swathes of dark grey ash, struggling
+to survive between the smouldering heat of the sun-warmed ash and the
+blistering rays of the sun itself - what little reprieve is available, is
+given after the sun sets for the day.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 13350 10 10 5
+D3
+~
+~
+0 -1 13251 10 10 5
+E
+branch charred~
+All that remains of this sizable branch is a blackened skeleton of a once
+verdant limb.  Halfway along, the charred piece of wood dips a little,
+indicating that a lesser branch extended off in another direction, and,
+presumably, was incinerated with the rest of the greenery.
+~
+-1
+S
+
+#13350
+Rutted Road Through a Charred Forest~
+Veering from the south to the east, the rutted roadway sweeps in a wide
+arc as it follows a small depression in the arid plains.  An acrid cloud
+of bitter-smelling ash hangs heavily on the parched air.  Desperately
+vying with a thick layer of charred grasses, delicate tips of new growth
+slowly reclaim the devastation that has swept through the plains leaving
+nothing but a layer of blackened tree stumps, a glimmering hope of a new
+life that will soon be brought to the area.
+~
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 13250 10 10 5
+D2
+~
+~
+0 -1 13349 10 10 5
+E
+growth delicate tips~
+Slender shoots of grass poke through the thick layer of ash that has
+settled upon the plains, the thin green blades wilting slightly at the
+tip as the long days without reprieve from the heat try to evaporate all
+the life out of them.
+~
+-1
+S
+
+#0
+

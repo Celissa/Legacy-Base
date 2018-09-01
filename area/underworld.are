@@ -1,0 +1,5690 @@
+#M2_AREA
+2
+
+Everwinter Caverns~
+Aegrim~
+Everwinter Caverns~
+~
+~
+
+40 0
+0
+1
+#ROOMS
+
+#46250
+Jagged Fissure - Cleft in the Mountainside~
+A narrow fissure that cuts into the mountain exposes itself to the
+sunlight at a sharply oblique angle to the west.  The fissure is wide
+enough here for a bear to pass through, but narrows quickly as it
+progresses further east.  To the south, the fissure fractures into
+another branch along which a variety of bones and skulls litter the way.
+~
+[Guin] will connect to 7980
+[Guin] Need you to set approximate level on the zone.
+[Guin] Done.
+~
+167378956 11 6 0
+D1
+~
+~
+0 -1 46253 10 10 5
+D2
+~
+~
+0 -1 46251 10 10 5
+D3
+~
+~
+234 -1 7980 10 10 5
+E
+fissure~
+A narrow fissure opens up to the west, letting just enough light in to
+see by.  Its rocky edges are blunted, as if something brushed past them
+many a time.  To the east, the fissure narrows further, making it more
+difficult, but not impossible to continue that way.  Etched into the
+fissure walls are some crude markings.
+~
+E
+markings~
+@Y***Kami Rulz!***@n
+~
+A
+~
+~
+send_to_room( #wind, room );
+~
+E
+wind~
+@cA light breeze rushes past as the wind whistles through the fissure
+opening.@n 
+~
+!
+2 150 0
+A
+enter~
+fissure opening~
+if( is_standing( ch ) ) {
+  act_tochar( #squeeze, ch );
+  act_notchar( #rsqueeze, ch, obj, mob, sight );
+  transfer( ch, find_room( 7980 ) );
+  act_notchar( #arrive, ch, obj, mob, sight );
+  loop( followers ) {
+    ch = rch;
+    acode( room, 2 );
+  }
+}
+else
+  act_tochar( #resting, ch, obj, mob, sight );
+~
+E
+squeeze~
+@WYou squeeze between the dark rocks and head towards the light.@n
+~
+E
+rsqueeze~
+@W$n squeezes past the rocks and disappears from view.@n
+~
+E
+arrive~
+@W$n squeezes $s way through the rocks.@n
+~
+E
+resting~
+You are resting and can't follow right now.
+~
+!
+0 0 0
+1 17 1509949540 -2 0
+-1
+S
+
+#46251
+Bone-Strewn Passage~
+Ghostly pale bones litter the floor of the passage, grimly warning
+intruders of the menacing danger that dwells nearby.  A faint aroma of
+decay clings to the walls, only occasionally relieved by a faint rush of
+air whistling through the fissured opening to the north.
+~
+[Yrna] done.
+[Guin] Done.
+~
+167378948 11 6 0
+D0
+~
+~
+0 -1 46250 10 10 5
+D2
+~
+~
+0 -1 46252 10 10 5
+E
+bones~
+Bones of many sorts lie haphazardly strewn across the floor.  Although
+the majority of them are fish, or smaller grassland creatures, there is
+the odd humanoid bone, though from a creature of small stature.
+~
+-1
+S
+
+#46252
+Musky Den~
+The rock walls of the fissure smoothen as they come to an end in a
+roughly circular den.  The musky smell of continuous habitation permeates
+the dank air, along with the slightly odourous aroma of decay emanating
+from the bones of freshly devoured meals.  To the north a faint sliver of
+light pierces the otherwise dim passage that leads into the den.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 6 0
+D0
+~
+~
+0 -1 46251 10 10 5
+E
+bones remains~
+The bones are piled up at the back of the cave, still bearing traces of
+uneaten flesh, attracting what seems to be hundreds of flies.  Among the
+bones you can see patches of different colour furs, some dirty feathers
+and a piece of faded red cloth.  The rank smell of decay hangs in the
+air, stagnant and heavy.
+~
+A
+search~
+bones~
+mob = mob_in_room( 2502, room );
+if( mob ) {
+send_to_room( #attack, room );
+  attack( mob, ch, 4d6+5, "enraged swipe" );
+  end;
+}
+if( rflag( reset1, room ) ) {
+  if( random( 1, 4 ) == 1 ) {
+act_tochar( #warg, ch );
+act_notchar( #rwarg, ch );
+    obj_to_char( oload( 208 ), ch );
+    remove_rflag( reset1, room );
+    end;
+  }
+}
+remove_rflag( reset1, room );
+send_to_char( #nope, ch );
+act_notchar( #rnope, ch );
+~
+E
+attack~
+@REnraged at being disturbed, the grizzly attacks!@n
+~
+E
+warg~
+@wLittered amongst the bones is the remains of a warg. You deftly skin it.@n
+~
+E
+rwarg~
+@w$n skins the remains of a warg that was buried beneath the bones.@n
+~
+E
+nope~
+@wYou find nothing except the clinging odour of decay amongst the bones.@n
+~
+E
+rnope~
+@w$n searches through the pile of bones.@n
+~
+!
+0 0 0
+2502 9 1509949540 3 0
+-1
+S
+
+#46253
+Jagged Fissure - Winding Passage~
+The fissure cleaving the mountainside sharply changes direction here,
+finding a path that traces flawed weaknesses in the surrounding rock. 
+It diminishes greatly to the north and collapses in height until an ogre
+would have to stoop to continue in that direction.  To the west, a narrow
+curtain of light streams into the fissure, given substance by a fine
+layer of dust that hangs suspended in the air.
+~
+[Guin] Reviewed.
+[Yrna] Done.
+~
+167378948 11 6 0
+D0
+~
+~
+0 -1 46254 10 10 5
+D3
+~
+~
+0 -1 46250 10 10 5
+E
+fissure~
+Etched into the fissure walls are some crude markings.
+~
+E
+markings~
+@r***Kazi Rulz!***@n
+~
+2472 9 1509949540 3 0
+-1
+S
+
+#46254
+Jagged Fissure~
+Following a change in the rock formations, the fissure abruptly changes
+direction.  Here it widens to the south, while to the east it closes in
+on either side.  Many footprints, particularly those of some large
+canines, pad their way along the floor of the fissure in all directions.
+~
+[Aegrim] acode crawl cleft to the north.
+[Aegrim] acode - as group crawls through, fat races have a chance of being momentarily stuck.
+[Aegrim] group follows unless the fat man is stuck
+[Guin] Reviewed.
+[Tarion] Should be no.mob on each side, rather dangerous for anyone to have to fight six of these or so at a time.
+[Cayln] thats the life of an adventurer
+~
+167378948 11 6 0
+D0
+cliff~
+~
+235 -1 46256 10 10 5
+D1
+~
+~
+0 -1 46255 10 10 5
+D2
+~
+~
+0 -1 46253 10 10 5
+E
+footprints canine~
+Footprints akin to those left by giant wolves pad their way all over this
+portion of the fissure's floor.
+~
+E
+north wall northern~
+Upon inspection of the tracks near the base of the northern wall, you
+discover a tiny cleft in the rock.  Although not large, you may be able
+to crawl through.
+~
+A
+~
+~
+send_to_room( #growl, room );
+~
+E
+growl~
+@mA low rumbling growl issues from beyond the wall to the north.@n
+~
+!
+2 200 0
+A
+~
+~
+if( !is_standing( ch ) )
+  end;
+if( size( ch ) != 5 ) {
+  acode( room, 4 );
+  end;
+}
+if( random( 1, 5 ) > 1 ) {
+  acode( room, 4 );
+  end;
+}
+act_tochar( #narrow, ch );
+act_notchar( #rnarrow, ch, obj, mob, sight );
+remove_rflag( reset0, room );
+wait( 2 );
+act_notchar( #jiggle, ch, obj, mob, sight );
+wait( 2 );
+set_rflag( reset0, room );
+act_tochar( #wishelf, ch );
+act_notchar( #flailing, ch, obj, mob, sight );
+transfer( ch, find_room( 46256 ) );
+act_notchar( #flushed, ch, obj, mob, sight );
+~
+E
+narrow~
+@wYou enter the narrow cleft, but despite your slimmest efforts, you find
+yourself wedged stuck!@n 
+~
+E
+rnarrow~
+@w$n tries to squeeze their way into a narrow cleft in the northern wall,
+but gets stuck!@n 
+~
+E
+jiggle~
+@w$n's bottom jiggles in flustered desperation.@n
+~
+E
+wishelf~
+@wAlmost wishing you were elvish, but not quite, you finally squirm
+through into a dank cave!@n 
+~
+E
+flailing~
+@wLegs flailing in despair, $n finally wriggles through!@n
+~
+E
+flushed~
+@wWith a flushed face, $n emerges from the cleft in the southern wall.@n
+~
+!
+0 0 0
+A
+enter crawl~
+cleft 1 north~
+if( rflag( reset0, room ) )
+  acode( room, 2 );
+else {
+  act_tochar( #disregard, ch );
+  act_notchar( #rdisregard, ch, obj, mob, sight );
+  end;
+}
+loop( followers ) {
+  ch = rch;
+  if( rflag( reset0, room ) )
+    acode( room, 2 );
+  else {
+    act_tochar( #attempt, ch );
+    end;
+  }
+}
+~
+E
+disregard~
+@wDisregarding all notions of good sense, your search for a way around
+the expansive posterior obstructing the cleft comes to no avail.@n 
+~
+E
+rdisregard~
+@wShowing a profound lack of wisdom, $n searches up close for a way past
+the expansive posterior obstructing the cleft.@n 
+~
+E
+attempt~
+@wYou attempt to follow, but here's simply no way past that expansive rump!@n
+~
+!
+0 0 0
+A
+~
+~
+act_tochar( #squeeze, ch );
+act_notchar( #rsqueeze, ch, obj, mob, sight );
+transfer( ch, find_room( 46256 ) );
+act_notchar( #emerge, ch, obj, mob, sight );
+~
+E
+squeeze~
+@wYou squeeze your way into the cleft and emerge in a dank cave on the
+far side.@n 
+~
+E
+rsqueeze~
+@w$n crawls under the cleft in the northern wall.@n
+~
+E
+emerge~
+@w$n emerges from the narrow cleft in the southern wall.@n
+~
+!
+0 0 0
+-1
+S
+
+#46255
+Jagged Fissure - Winding Passage~
+The fissure becomes inreasingly cramped as it travels further into the
+mountain to the east, forcing you to stoop now and then to avoid
+overhanging clefts high in the fissure walls.  Pawed footprints pad their
+way down the fissure in both directions, proliferating more to the west
+where the floor becomes markedly dustier.
+~
+[Aegrim] acode - fresh air gusting from the west
+[Guin] Reviewed.
+[Yrna] Done.
+~
+167378948 11 6 0
+D1
+~
+~
+0 -1 46264 10 10 5
+D3
+~
+~
+0 -1 46254 10 10 5
+E
+footprints~
+Pawprints left behind by something akin to a giant sized wolf pad their
+way east and west.
+~
+A
+~
+~
+send_to_room( #wind, room );
+~
+E
+wind~
+@cA faint breath of fresh air whisks in from the west.@n
+~
+!
+2 500 0
+-1
+S
+
+#46256
+Warg Den~
+You find yourself at the rear of a spacious cave that shows every sign of
+being inhabitated for many years.  Bones litter the cave to your east and
+niches in the cave to the west and north show signs of having been used
+as resting places.  Pawed footprints leave their mark in the dusty floor
+as they lead in a myriad of directions throughout the cave.
+~
+[Aegrim] ent cleft to get back to the fissure
+[Aegrim] Is some danger to a group crawling through, but that danger can always be checked out by
+[Aegrim] hidden classes.
+[Guin] Reviewed.
+[Yrna] Added random - done.
+~
+167378948 11 6 0
+D0
+~
+~
+0 -1 46258 10 10 5
+D1
+~
+~
+0 -1 46259 10 10 5
+D2
+~
+~
+235 -1 46254 10 10 5
+D3
+~
+~
+0 -1 46257 10 10 5
+E
+pawed footprints~
+Canine tracks of all sizes leave their mark here, but of particular note
+are some tracks that duck into an almost hidden cleft in the southern
+wall at floor level.
+~
+E
+cleft~
+With your light source in position, you notice shadows leaping into the
+expanse of a tunnel on the far side of the cleft.  Although a tight
+squeeze, you suspect that you may be able to crawl through to the other
+side.
+~
+A
+enter crawl~
+cleft~
+if( rflag( reset0, room ) )
+  acode( room, 2 );
+else {
+  act_tochar( #disregard, ch, obj, mob, all );
+  act_notchar( #rdisregard, ch, obj, mob, sight );
+  end;
+}
+loop( followers ) {
+  ch = rch;
+  if( rflag( reset0, room ) )
+    acode( room, 2 );
+  else {
+    act_tochar( #rump, ch, obj, mob );
+    end;
+  }
+}
+~
+E
+disregard~
+@wDisregarding all notions of common sensee, you search for a way around
+the expansive rump that blocks the cleft to no avail.@n 
+~
+E
+rdisregard~
+@wShowing a profound lack of wisdom, $n searches for a way past the
+expansive posterier obstructing the cleft.@n 
+~
+E
+rump~
+@wYou try to follow, but there's simply no getting past that expansive rump!@n
+~
+!
+0 0 0
+A
+~
+~
+if( !is_standing( ch ) )
+  end;
+if( size( ch ) != 5 ) {
+  acode( room, 3 );
+  end;
+}
+if( random( 1, 5 ) > 1 ) {
+  acode( room, 3 );
+  end;
+}
+act_tochar( #narrow, ch );
+act_notchar( #rnarrow, ch, obj, mob, sight );
+remove_rflag( reset0, room );
+wait( 2 );
+act_notchar( #wiggle, ch, obj, mob, sight );
+wait( 2 );
+set_rflag( reset0, room );
+act_tochar( #wishelvish, ch );
+act_notchar( #flailing, ch, obj, mob, sight );
+transfer( ch, find_room( 46254 ) );
+act_notchar( #flushed, ch, obj, mob, sight );
+~
+E
+narrow~
+@wYou enter the narrow cleft, but despite your slimmest efforts, you find
+yourself wedged stuck!@n 
+~
+E
+rnarrow~
+@w$n tries to squeeze their way into a narrow cleft in the northern wall,
+but gets stuck!@n 
+~
+E
+wiggle~
+@w$n's bottom jiggles in flustered desperation.@n
+~
+E
+wishelvish~
+@wAlmost wishing you were elvish, but not quite, you finally squirm
+through into a jagged fissure!@n 
+~
+E
+flailing~
+@wLegs flailing in despair, $n finally wriggles through!@n
+~
+E
+flushed~
+@wWith a flushed face, $n emerges from the cleft in the northern wall.@n
+~
+!
+0 0 0
+A
+~
+~
+act_tochar( #squeeze, ch );
+act_notchar( #rsqueeze, ch, obj, mob, sight );
+transfer( ch, find_room( 46254 ) );
+act_notchar( #emergy, ch, obj, mob, sight );
+~
+E
+squeeze~
+@wYou squeeze your way into the cleft and emerge in a jagged fissure on
+the far side.@n 
+~
+E
+rsqueeze~
+@w$n crawls under the cleft in the southern wall.@n
+~
+E
+emergy~
+@w$n emerges from the narrow cleft in the northern wall.@n
+~
+!
+0 0 0
+A
+~
+~
+send_to_room( #sound, room );
+~
+E
+sound~
+@yA low growl echoes through the cavern.@n
+~
+!
+2 150 0
+2472 9 1509949540 3 0
+-1
+S
+
+#46257
+Warg Den - Musky Niche~
+A slight depression in the cavern floor carves out this little niche
+attached to the periphery of the larger cave without.  The base of the
+walls are smoothed where it seems the inhabitants of the den have found
+an ideal resting spot tucked away from the comings and goings throughout
+the rest of the cave.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 6 0
+D1
+~
+~
+0 -1 46256 10 10 5
+E
+depression floor niche~
+Nestled beneath a slight overhang, this shallow depression in the cavern
+floor is covered by a layer of matted fur.  Now brittle and dry, a few
+gnawed on bones lie scattered around the lip of the depression; it
+appears that they have been purposefully left around the niche as an
+indication of territory.
+~
+2472 9 1509949540 0 0
+-1
+S
+
+#46258
+Warg Den - Beneath the Ledge~
+A large slab of granite partially protrudes into this part of the cave,
+forming a ledge overhead.  Just above the ledge, and barely seen, a
+rough circular hole in the hillside opens up to the skies of the
+highlands.  Crisp highland air sinks from the opening, creating a draft
+that initially threatens to invade the warmth of the den, but is quickly
+mingled with the warmer air nearer the rear of the cave to provide a
+comfortable shelter.
+~
+[Guin] would there be some sort of draft here, from the hole above?
+[Guin] Reviewed.
+[Yrna] Added random - feel free to change.
+[Yrna] Done.
+~
+167378948 11 6 0
+D0
+~
+~
+0 -1 46276 10 10 5
+D1
+~
+~
+0 -1 46260 10 10 5
+D2
+~
+~
+0 -1 46256 10 10 5
+E
+slab~
+An immense slab of smooth granite, there does not appear to be any
+suitable handholds with which you may clamber atop.  To the east however,
+several rocks litter the side of the cave where it appears they form a
+natural, if haphazard stairway to the top of the ledge.
+~
+A
+~
+~
+send_to_room( #breeze, room );
+~
+E
+breeze~
+@CThe wind hums and whistles through the opening above, chilling the air
+at this part of the cave.@n 
+~
+!
+2 200 0
+2472 9 1509949540 3 0
+-1
+S
+
+#46259
+Warg Den - Bone Littered Corner~
+A rocky overhang drops sharply here, forcing you to stoop to travel under
+it.  The floor is littered with a motley collection of gnawed upon bones,
+most of these you find half-buried within niches on the very fringe of
+the cavern's floor.
+~
+[Guin] Reviewed.
+[Yrna] Added search here
+[Yrna] Done.
+~
+167378948 11 6 0
+D0
+~
+~
+0 -1 46260 10 10 5
+D3
+~
+~
+0 -1 46256 10 10 5
+E
+bones~
+Bones and skulls of a variety of animals and humanoid creatures make up
+this varied collection.  The most eerie is a diminutive skull that glares
+back at you with mischevious eye sockets.
+~
+E
+skull~
+The skull rests at an oblique angle, giving it a slightly manic look. 
+Given its small size and the untamed nature of the wilds about, you
+assume it must be goblinoid of origin.
+~
+A
+~
+bones skull litter collection~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #search, ch, obj );
+  act_notchar( #rsearch, ch, obj, mob, sight );
+  wait( 1 );
+  if( random( 1, 5 ) == 5 )
+    obj = oload( 14 );
+  if( obj ) {
+    act_tochar( #coin, ch, obj );
+    act_notchar( #rcoin, ch, obj, mob, sight );
+    obj_to_char( obj, ch );
+  }
+  else {
+    act_tochar( #skull, ch, obj );
+    act_notchar( #rskull, ch, obj, mob, sight );
+    obj_to_room( oload( 856 ), room );
+  }
+}
+else
+  act_tochar( #already, ch, obj );
+~
+E
+search~
+@yYou move a few bones around, looking for anything of value in the pile
+of sorry remains.@n 
+~
+E
+rsearch~
+@y$n sifts through the bones, looking for anything of value.@n
+~
+E
+coin~
+@YYou find a dirty, blood-stained coin among the bones.@n
+~
+E
+rcoin~
+@Y$n appears to have found something among the bones.@n
+~
+E
+skull~
+@RYou disturb a small skull which falls off the top of the bone pile and
+rolls under your feet.@n 
+~
+E
+rskull~
+@R$n disturbs a small skull which falls off the top of the bone pile and
+rolls under $s feet.@n 
+~
+E
+already~
+@yThe bones have been disturbed recently, so there's probably nothing
+worth taking here.@n 
+~
+!
+9 0 0
+2472 9 1509949540 3 0
+-1
+S
+
+#46260
+Warg Den - Below a Rocky Ledge~
+A shelf of rock juts into the cave a couple of feet above the cavern
+floor.  Smoothed rocks provide a natural purchase to clamber atop the
+ledge, and have obviously been used by the cave's inhabitants for many a
+year.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 6 0
+D2
+~
+~
+0 -1 46259 10 10 5
+D3
+~
+~
+0 -1 46258 10 10 5
+D4
+~
+~
+0 -1 46261 10 10 5
+E
+smoothed rocks~
+Haphazardly scattered near the cavern wall, they nonetheless provide a
+natural means for clambering atop the ledge.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cWith some difficulty, you step up on the shelf.@n
+~
+E
+to_room~
+@c$n climbs up on the smooth rock shelf.@n
+~
+!
+3 0 16
+2472 9 1509949540 3 0
+-1
+S
+
+#46261
+Rocky Ledge - Inside the Den~
+A rocky shelf barely within this cave provides shelter from the crisp
+highland air that whips past a roughly circular opening leading outside
+to the west.  The cave has been inhabited for many years, as suggested by
+the smoothly worn series of rocks that lead down to the floor below.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 6 0
+D3
+~
+~
+0 -1 46262 10 10 5
+D5
+~
+~
+0 -1 46260 10 10 5
+E
+shelf~
+The shelf is less a rocky outcropping than a large slab of granite wedged
+into the hillside.  It extends to the west and north, where it juts forth
+from the hill, and is continually raked by the cold highland air.
+~
+-1
+S
+
+#46262
+Rocky Ledge - In the Highlands~
+Perched halfway up a rocky slope too steep to climb, you find yourself on
+a narrow ledge overlooking the highlands of the north.  The ledge has
+been worn smooth from frequent activity, and is even dusty in places.  It
+is also perfectly placed to bask in the midday warmth and watch the
+setting sun.  A roughly circular opening is the only apparent exit from
+the ledge, entering the hillside to the east.
+~
+[Aegrim] tracks are seen only once per repop.
+[Yrna] Done.
+[Guin] Done.
+~
+167247884 5 6 0
+D0
+~
+~
+0 -1 46263 10 10 5
+D1
+~
+~
+0 -1 46261 10 10 5
+D4
+cliff~
+~
+235 -1 46277 10 10 5
+A
+~
+~
+if( rflag( reset0, room ) ) {
+  if( players_room( room ) > 0 ) {
+    remove_rflag( reset0, room );
+    send_to_room( #tracks, room );
+  }
+}
+~
+E
+tracks~
+@wYou glimpse some wolven tracks that find a seemingly impossible path up
+the hillside.@n 
+~
+!
+2 150 3
+A
+follow track~
+tracks prints wolven footprints~
+if( !rflag( reset0, room ) ) {
+  if( !is_resting( ch ) && !is_sleeping( ch ) )
+    if( find_skill( ch, track ) > 1 ) {
+    act_tochar( #follow, ch );
+    act_notchar( #rfollow, ch );
+    transfer( ch, find_room( 46277 ) );
+    act_notchar( #arrival, ch );
+    loop( followers )
+      if( !is_resting( rch ) && !is_sleeping( rch ) ) {
+      act_tochar( #shown, rch );
+      act_notchar( #rshown, rch );
+      transfer( rch, find_room( 46277 ) );
+      act_notchar( #fol_arrival, rch );
+    }
+  }
+  else {
+    act_tochar( #vanish, ch );
+    act_notchar( #rvanish, ch );
+  }
+}
+else
+  act_tochar( #notracks, ch );
+~
+E
+follow~
+@GFollowing the tracks, you find an almost imperceptible path up the
+treacherous slope.@n 
+~
+E
+rfollow~
+@G$n finds an almost imperceptible path up the treacherous rocky slope.@n
+~
+E
+arrival~
+@Y$n clambers up the treacherous rocky slopes from below.@n
+~
+E
+shown~
+@gHaving been shown the way, you navigate your way up the treacherous
+slope.@n 
+~
+E
+rshown~
+@gHaving been shown the way, $n clambers up the treacherous slope.@n
+~
+E
+fol_arrival~
+@Y$n clambers up the treacherous rocky slopes from below.@n
+~
+E
+vanish~
+@wThe sparse indications of a trail up the rocky slope appear to vanish
+as soon as they begin.@n 
+~
+E
+rvanish~
+@y$n walks over to the edge of the ledge with a bemused expression on $s
+face.@n 
+~
+E
+notracks~
+@wYou don't see any tracks to follow.@n
+~
+!
+0 0 0
+2474 137 1509949540 3 0
+-1
+S
+
+#46263
+Rocky Ledge - In the Highlands~
+The crisp highland air allows the scenic vista that stretches out before
+to be seen with crystal clarity for many leagues into the distance.  Far
+to the northwest a shimmering lake rests nestled amongst the highland
+hills, surrounded by a dense ring of conifers.  The ledge you stand upon
+is found perhaps halfway up a rocky incline too steep to climb with ease. 
+The ledge continues to the south, where lies the only apparent exit from
+this narrow perch on the hillside - a roughly circular opening that leads
+into a small cavern.
+~
+[Aegrim] ranger pet put on hold at the moment till seltha writes the script.
+[Aegrim] If not doable, then can fiddle this code later to make it work
+[Aegrim] without the use of wait functions.
+[Guin] Pups are cute.
+[Guin] how did the pups as pets work?
+[Guin] Reviewed.
+[Yrna] pups aren't set as tameable
+[Yrna] Done.
+~
+167247876 5 6 0
+D2
+~
+~
+0 -1 46262 10 10 5
+E
+lake~
+Reflecting the sky as easily as a mirror, it lies nestled amongst the
+hills within a ring of mountains that circle its position to the north
+and northeast.  Capped with snow, and looming ever so remotely, these
+mountains stand as the last grim barrier to the unknown lands of the far
+north.
+~
+E
+incline hillside hill~
+The incline is almost steep enough to be considered a cliff.  It
+overlooks a narrow pass below, and is only sparsely littered with the
+most hardy of plants.
+~
+A
+~
+~
+send_to_room( #dragon, room );
+~
+E
+dragon~
+@wBarely visible, you scry the diminutive image of a winged beast
+circling the northern peaks.@n 
+~
+!
+2 150 0
+2475 137 1509949540 3 0
+2475 137 1509949540 3 0
+2476 137 1509949460 3 0
+-1
+S
+
+#46264
+Jagged Fissure - Winding Passage~
+The fissure closes in so tightly on either side it is a cramped struggle
+to pass through.  To the north however, the fissure has successfully
+penetrated an underground cavern enveloped in a gloomy and muffled
+silence.  In the opposite direction the fissure broadens and the way
+becomes less rocky.
+~
+[Guin] Done.
+~
+167378948 11 6 0
+D0
+~
+~
+0 -1 46265 10 10 5
+D3
+~
+~
+0 -1 46255 10 10 5
+A
+~
+~
+acode( find_room( 46255 ), 1 );
+~
+!
+2 400 0
+A
+~
+~
+if( size( ch ) > 4 ) {
+  act_tochar( #tight, ch );
+  act_notchar( #rtight, ch, obj, mob, sight );
+}
+else {
+  act_tochar( #clamber, ch );
+  act_notchar( #rclamber, ch, obj, mob, sight );
+}
+transfer( ch, find_room( 46265 ) );
+act_notchar( #emerge, ch, obj, mob, sight );
+loop( followers ) {
+  ch = rch;
+  acode( room, 2 );
+}
+~
+E
+tight~
+@WWith a grimace, you work your way into the underground cavern.@
+~
+E
+rtight~
+@WWith a grimace, $n squeezes their way through the last few yards of the
+fissure.@n 
+~
+E
+clamber~
+@WClambering through, you emerge into a large underground cavern.@n
+~
+E
+rclamber~
+@W$n slips through the last few yards of the fissure to the north.@n
+~
+E
+emerge~
+@W$n emerges from the crack in the cavern's southern wall.@n
+~
+!
+3 0 1
+2472 9 1509949540 3 0
+-1
+S
+
+#46265
+Fissured Formations~
+An expansive cavern loses itself in the darkness beyond you, stretching
+out beyond your vision to the north and east.  Fathoming its size is
+reliant on the myriad sounds that echo off the cavern walls.  A slender
+crack in the southern wall escapes the cavern's confines as it fissures
+two opposing rock formations.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 6 0
+D0
+~
+~
+0 -1 46267 10 10 5
+D1
+~
+~
+0 -1 46266 10 10 5
+D2
+~
+~
+0 -1 46264 10 10 5
+E
+crack fissure~
+On either side the rock formations close in irrepressibly, leaving little
+room for someone to squeeze through.
+~
+A
+~
+~
+send_to_room( #whisper, room, sight );
+~
+E
+whisper~
+@cA faint whisper of fresh air whistles through the crack in the southern
+wall.@n 
+~
+!
+2 200 0
+A
+~
+~
+if( size( ch ) > 4 ) {
+  act_tochar( #tight, ch );
+  act_notchar( #rtight, ch, obj, mob, sight );
+}
+else {
+  act_tochar( #slip, ch );
+  act_notchar( #rslip, ch, obj, mob, sight );
+}
+transfer( ch, find_room( 46264 ) );
+act_notchar( #squeeze, ch, obj, mob, sight );
+loop( followers ) {
+  ch = rch;
+  acode( room, 2 );
+}
+~
+E
+tight~
+@WWith some discomfort, you work your way into the crack.@n
+~
+E
+rtight~
+@WWith a grimace, $n squeezes $s way into the crack.@n
+~
+E
+slip~
+@WYou slip into the crack in the southern wall.@n
+~
+E
+rslip~
+@W$n slips into the crack in the southern wall.@n
+~
+E
+squeeze~
+@W$n squeezes into the fissure from the north.@n
+~
+!
+3 0 4
+-1
+S
+
+#46266
+Limestone Cavern~
+Limestone cavern walls bound the cavern to the south, their surfaces
+etched out by centuries of freefalling moisture trickling down from above. 
+Elsewhere the cavern expands into the darkness all around you.  Just
+beyond your vision the sounds of small creatures scuttling and larger
+ones shambling, reaches your ears.
+~
+[Guin] Reviewed.
+[Yrna] Done.
+~
+167378948 11 6 0
+D0
+~
+~
+0 -1 46269 10 10 5
+D1
+~
+~
+0 -1 46268 10 10 5
+D3
+~
+~
+0 -1 46265 10 10 5
+E
+walls~
+Runnels of water trickling from above have etched divots and niches
+throughout the walls.  A quick search however finds nothing remarkable
+about the holes at all.
+~
+-1
+S
+
+#46267
+Before a Gossamer-Strewn Tunnel~
+At the western end of an expansive cave a tunnel breaks off to the north. 
+It climbs very slightly as it winds its way through a naturally eroded
+passage.  The cavern to the east fans out and heightens considerably,
+disgorging a landscape peppered with stalagmites and stalactites.
+~
+[Aegrim] acode - random for cobwebs brushing you as you arrive from the north.
+[Guin] Reviewed.
+[Guin] If the dwarf is supposed to custom something, he will need to be mflag sentinal I believe.
+[Aegrim] Partially revised - customs and chat mpcodes yet.
+[Yrna] I like this room entering code - very neat
+[Yrna] Done.
+~
+167378948 11 6 0
+D0
+~
+~
+0 -1 46271 10 10 5
+D1
+~
+~
+0 -1 46269 10 10 5
+D2
+~
+~
+0 -1 46265 10 10 5
+E
+tunnel~
+Naturally carved by the fortunes of nature, it winds a crooked way north
+and is quickly lost to sight as it turns west.  Strange sticky filaments
+dangle from the tunnel's roof.
+~
+A
+~
+~
+if( !is_mob( ch ) ) {
+  if( random( 0, 2 ) == 1 ) {
+    if( is_affected( fire.shield, ch ) )
+      act_tochar( #ignite, ch, obj );
+    else {
+      if( rflag( reset0, room ) ) {
+        act_tochar( #thread, ch, obj );
+        obj_to_char( oload( 81 ), ch );
+        remove_rflag( reset0, room );
+      }
+    }
+  }
+}
+~
+E
+ignite~
+@RGossamer-thin threads spontaneously ignite as they brush your
+fireshield.@n 
+~
+E
+thread~
+@WGossamer-thin threads cling to you as you pass through the tangled webs.@n
+~
+!
+1 0 1
+2495 137 1509949540 3 0
+-1
+S
+
+#46268
+Southwest of the Stalagmite Group~
+One giant stalagmite rises out of the cavern floor directly north of you. 
+Its knobbly point reaches futilely towards a crooked stalactite hanging
+from the cavern's ceiling far above you.  From here you may pass through
+the cavern to the west and south, but to the north and east a
+conglomeration of stalagmites bars the way as effectively as the cavern
+walls.
+~
+[Aegrim] drip drip code
+[Aegrim] cave sloth random here
+[Guin] Reviewed.
+[Yrna] Acode fixed
+[Yrna] Done.
+~
+167378948 11 6 0
+D2
+~
+~
+0 -1 46288 10 10 5
+D3
+~
+~
+0 -1 46266 10 10 5
+D4
+~
+~
+235 -1 46333 10 10 5
+E
+stalagmite~
+Rings resembling the rings of a gnarled old oak trunk band this giant
+stalagmite, providing a timeline of its long history.  Each band is of a
+varying width and shade, giving a general indication of the moisture
+trickling through these caverns.
+~
+A
+~
+~
+send_to_room( #drip_drop, room );
+~
+E
+drip_drop~
+@cThe drip-drop of water gently falling from a stalactite pierces the
+cavern's ambience.@n 
+~
+!
+2 200 0
+A
+~
+~
+mob = mob_in_room( 170, find_room( 46333 ) );
+if( mob ) {
+  send_to_room( #sloth, room );
+  transfer( mob, room );
+  end;
+}
+mob = mob_in_room( 170, room );
+if( mob ) {
+  send_to_room( #sloth_up, room );
+  transfer( mob, find_room( 46333 ) );
+}
+~
+E
+sloth~
+@GA cave sloth clambers down the nearest stalagmite to graze on a patch
+of moss.@n 
+~
+E
+sloth_up~
+@gThe sloth ever so slowly clambers up a stalagmite and into the gloom.@n
+~
+!
+2 150 0
+170 9 1509949540 3 0
+-1
+S
+
+#46269
+Shallow Contour~
+The compacted sediment underfoot mingles with traces of guano, staining
+the cavern floor in long streaks that follow a shallow contour that winds
+its way eastwards through the gloomy cavern.  To the southeast a
+conglomeration of stalagmites have found strength in numbers against the
+unthinking damage caused by the inhabitants of the cavern over the many
+centuries.
+~
+[Aegrim] Ghost bat attacks here
+[Guin] Reviewed.
+[Yrna] Done.
+~
+167378948 11 6 0
+D0
+~
+~
+0 -1 46282 10 10 5
+D1
+~
+~
+0 -1 46270 10 10 5
+D2
+~
+~
+0 -1 46266 10 10 5
+D3
+~
+~
+0 -1 46267 10 10 5
+E
+stalagmites~
+Founded upon a base centuries old, the group of stalagmites are large
+enough to effectively block the way through that section of the cavern.
+~
+A
+~
+~
+if( random( 0, 2 ) == 1 ) {
+    if( is_player( ch ) )
+    if( rflag( reset0, room ) ) {
+    send_to_room( #screech, room );
+    remove_rflag( reset0, room );
+    rch = rand_player( room );
+    mload( 2480, room );
+    mob = mob_in_room( 2480, room );
+    if( rch )
+      if( mob )
+      init_attack( mob, rch );
+  }
+}
+~
+E
+screech~
+@MA high pitched screech splinters the air as a shadow materialises from
+the gloom!@n 
+~
+!
+1 0 15
+-1
+S
+
+#46270
+Northwest of the Stalagmite Group~
+Dark mosses grow feverishly along the guano stains streaking along a
+shallow depression that is forcibly diverted around a wall of stalagmites
+to the east and south.  The stalagmites must be centuries old, even the
+smallest of them possess a girth greater than an ogre's.
+~
+[Aegrim] drip-drip code for stalagmites.
+[Aegrim] Ghost bat attacks here.
+[Aegrim] cave sloth random here
+[Guin] Reviewed.
+[Yrna] Did I already mention how much I hate these called codes all over the place?
+[Yrna] Done.
+~
+167378948 11 6 0
+D0
+~
+~
+0 -1 46283 10 10 5
+D3
+~
+~
+0 -1 46269 10 10 5
+E
+stalagmite~
+Crystalline water constantly drips from the stalactites above, sending
+runnels of water that spiral around the profusion of stalagmites to the
+east.  For limestone relics the size of these gargantuan statues, their
+exact age must be beyond the measure or memory of even the longest lived
+races of the world.
+~
+A
+~
+~
+acode( find_room( 46268 ), 1 );
+~
+!
+2 1000 0
+A
+~
+~
+if( random( 0, 2 ) == 1 )
+  acode( find_room( 46283 ), 2 );
+~
+!
+1 0 9
+A
+~
+~
+acode( find_room( 46268 ), 2 );
+~
+!
+2 5000 0
+-1
+S
+
+#46271
+Crooked Tunnel~
+Maintaining a crooked path that could be determined only by the whims of
+nature, this eroded tunnel twists upon itself as it follows an old
+waterway.  Although presently dry, you expect that it still flows when
+the snowmelt cascades down every waterway available in the highlands.  To
+the south, the tunnel opens into an expansive cavern.  Dangling from the
+ceiling of the cavern are multitudes of sticky web; there ends disappear
+high above in the obscurity of a darkness that appears to be caused by a
+wide ledge.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 6 0
+D2
+~
+~
+0 -1 46267 10 10 5
+D3
+~
+~
+0 -1 46272 10 10 5
+D4
+~
+~
+1258 -1 46278 10 10 5
+E
+sticky web ceiling~
+Hanging from cracks and crevices in the ceiling of this tunnel, the
+sticky web chokes the crooked tunnel with a dense forest of tendrils. 
+Some of the fissures in the ceiling and down the walls appear to be of
+unnatural origin; the deep scratches look almost as if they were caused
+by a frantically struggling creature.
+~
+A
+~
+~
+acode( find_room( 46267 ), 1 );
+~
+!
+1 0 12
+A
+climb~
+ledge~
+if( find_skill( ch, climb ) > 3 ) {
+  act_tochar( #climb, ch );
+  act_notchar( #rclimb, ch, obj, mob, sight );
+  wait( 1 );
+  transfer( ch, find_room( 46278 ) );
+  act_notchar( #arrive, ch, obj, mob, sight );
+}
+loop( followers ) {
+  ch = rch;
+  acode( room, 2 );
+}
+~
+E
+climb~
+@wThe handholds are scarce, and the climb takes a few moments.@n
+~
+E
+rclimb~
+@w$n starts climbing up the cliff, but pauses from time to time as $e
+tries to find a handhold.@n 
+~
+E
+arrive~
+@w$n climbs up from the cliff, and pants after having dragged $mself
+up.@n 
+~
+!
+0 0 0
+A
+~
+~
+if( random( 1, 5 ) != 1 )
+  continue;
+else {
+  if( is_pet( ch ) )
+    continue;
+  if( is_player( ch ) ) {
+    if( class( ch ) == ranger ) {
+      act_tochar( #ranger, ch, obj );
+      continue;
+    }
+    if( find_stat( ch, level ) > 40 )
+      continue;
+    if( is_affected( fire.shield, ch ) )
+      continue;
+    rch = leader( ch );
+    if( class( rch ) == ranger ) {
+      if( rch != ch )
+        act_tochar( #follow, ch, obj );
+      continue;
+    }
+    room = find_room( 46278 );
+    mob = mob_in_room( 2478, room );
+    if( players_room( room ) < 1 ) {
+      if( mob ) {
+        if( random( 0,3 ) == 0 ) {
+          act_tochar( #pulled, ch, obj );
+          act_notchar( #rpulled, ch, obj, mob, sight );
+          transfer( ch, room );
+          do_spell( web, mob, ch );
+          init_attack( mob, ch );
+          end;
+        }
+      }
+    }
+  }
+  continue;
+}
+~
+E
+ranger~
+@WYou deftly duck past a curtain of threads left behind by a cave fisher.@n
+~
+E
+follow~
+@gYou take care to follow the path clearly marked before you.@n
+~
+E
+pulled~
+@CSticky, high tensile filaments catch you and pull you to the ledge
+above!@n 
+~
+E
+rpulled~
+@CSticky, high tensile filaments catch $n and pull $m to the ledge
+above!@n
+~
+!
+0 0 0
+-1
+S
+
+#46272
+Cocooned Corpse~
+Nestled between two large rocks lies a desiccated corpse enveloped in a
+silky thread.  More strands of the sticky fibre can be seen draped across
+other parts of the tunnel, slightly obscuring the way to the north and
+east.  Several yards up the eastern wall, a craggy ledge juts out from
+the rough cavern wall, though it is difficult to discern its width and
+breadth as the webs that fill this tunnel obscure the view.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 6 0
+D0
+~
+~
+0 -1 46273 10 10 5
+D1
+~
+~
+0 -1 46271 10 10 5
+D4
+~
+~
+234 -1 46279 10 10 5
+E
+corpse cocoon~
+Desiccated and shrivelled until its gaunt features are barely discernable,
+it appears this corpse has met a gruesome death, having had its vital
+juices extracted until nothing remained but the empty shell.  Its
+remaining features are small, possibly those of a goblin.
+~
+E
+1 eastern craggy ledge~
+Far and few between are the handholds that protrude from the eastern wall. 
+Partially obscured by tendrils of webbing, the ledge appears to be quite
+substantial in size, running the length of both the eastern and northern walls.
+~
+A
+~
+~
+acode( find_room( 46267 ), 1 );
+~
+!
+1 0 3
+A
+climb~
+ledge~
+if( find_skill( ch, climb ) > 3 ) {
+  act_tochar( #handholds, ch );
+  act_notchar( #rhandholds, ch, obj, mob, sight );
+  wait( 1 );
+  transfer( ch, find_room( 46279 ) );
+  act_notchar( #arrive, ch, obj, mob, sight );
+}
+loop( followers ) {
+  ch = rch;
+  acode( room, 2 );
+}
+~
+E
+handholds~
+1 @wThe handholds are few, and the climb takes a few moments.@n
+~
+E
+rhandholds~
+@w$n grabs some handholds and begins climbing down the cliff.@n
+~
+E
+arrive~
+@w$n drops the last few feet to the ground.@n
+~
+!
+0 0 0
+A
+~
+~
+if( random( 1, 10 ) != 1 )
+  continue;
+else {
+  if( is_pet( ch ) )
+    continue;
+  if( is_player( ch ) ) {
+    if( class( ch ) == ranger ) {
+      act_tochar( #ranger, ch, obj );
+      continue;
+    }
+    if( find_stat( ch, level ) > 40 )
+      continue;
+    if( is_affected( fire.shield, ch ) )
+      continue;
+    rch = leader( ch );
+    if( class( rch ) == ranger ) {
+      if( rch != ch )
+        act_tochar( #follow, ch, obj );
+      continue;
+    }
+    room = find_room( 46279 );
+    mob = mob_in_room( 2478, room );
+    if( players_room( room ) < 1 ) {
+      if( mob ) {
+        if( random( 0,3 ) == 0 ) {
+          act_tochar( #pulled, ch, obj );
+          act_notchar( #rpulled, ch, obj, mob, sight );
+          transfer( ch, room );
+          do_spell( web, mob, ch );
+          init_attack( mob, ch );
+          end;
+        }
+      }
+    }
+  }
+  continue;
+}
+~
+E
+ranger~
+@WYou deftly duck past a curtain of threads left behind by a cave
+fisher.@n 
+~
+E
+follow~
+@gYou take care to follow the path clearly marked before you.@n
+~
+E
+pulled~
+@CSticky, high tensile filaments catch you and pull you to the ledge
+above!@n 
+~
+E
+rpulled~
+@CSticky, high tensile filaments catch $n and pull $m to the ledge
+above!@n 
+~
+!
+0 0 0
+-1
+S
+
+#46273
+Tangled Weave~
+Strands and filaments proliferate in this corner of the tunnel, and
+hacking your way through only seems to result in miring yourself even
+more inextricably within their tangled web.  To the east the weave of
+webs seems to lessen, while to the south the tunnel follows the natural
+watercourse.  Lost in the obscurity of darkness and web, it is possible
+to discern what appears to be a narrow ledge running around the eastern
+and southern walls.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 6 0
+D1
+~
+~
+0 -1 46274 10 10 5
+D2
+~
+~
+0 -1 46272 10 10 5
+D4
+~
+~
+107 -1 46280 10 10 5
+E
+strands filaments web~
+Chaotically dispersed across every niche and cranny throughout the
+tunnel, this disorganised weave seems to find method only in its madness.
+~
+E
+ledge 1 eastern 1 southern walls~
+Far and few between are the handholds that protrude from the eastern wall. 
+Partially obscured by tendrils of webbing, the ledge appears to be rather
+narrow, probably no more than a couple of feet in width, and runs the
+length of both the eastern and southern walls.
+~
+A
+~
+~
+acode( find_room( 46267 ), 1 );
+~
+!
+1 0 6
+A
+climb~
+ledge~
+if( find_skill( ch, climb ) > 3 ) {
+  act_tochar( #handhold, ch );
+  act_notchar( #rhandhold, ch, obj, mob, sight );
+  wait( 1 );
+  transfer( ch, find_room( 46280 ) );
+  act_notchar( #arrive, ch, obj, mob, sight );
+}
+loop( followers ) {
+  ch = rch;
+  acode( room, 2 );
+}
+~
+E
+handhold~
+@wThe handholds are few, and the climb takes a few moments.@n
+~
+E
+rhandhold~
+@w$n begins $s ascent up the cliff, pausing from tiem to time searching
+for a handhold.@n 
+~
+E
+arrive~
+@w$n is panting as $e pulls $mself up the last few feet.@n 
+~
+!
+0 0 0
+A
+~
+~
+if( random( 1, 5 ) != 5 )
+  continue;
+else {
+  if( is_pet( ch ) )
+    continue;
+  if( is_player( ch ) ) {
+    if( class( ch ) == ranger ) {
+      act_tochar( #ranger, ch, obj );
+      continue;
+    }
+    if( find_stat( ch, level ) > 40 )
+      continue;
+    if( is_affected( fire.shield, ch ) )
+      continue;
+    rch = leader( ch );
+    if( class( rch ) == ranger ) {
+      if( rch != ch )
+        act_tochar( #follow, ch, obj );
+      continue;
+    }
+    room = find_room( 46280 );
+    mob = mob_in_room( 2478, room );
+    if( players_room( room ) < 1 ) {
+      if( mob ) {
+        if( random( 0,3 ) == 0 ) {
+          act_tochar( #pulled, ch, obj );
+          act_notchar( #rpulled, ch, obj, mob, sight );
+          transfer( ch, room );
+          do_spell( web, mob, ch );
+          init_attack( mob, ch );
+          end;
+        }
+      }
+    }
+  }
+  continue;
+}
+~
+E
+ranger~
+@WYou deftly duck past a curtain of threads left behind by a cave fisher.@n
+~
+E
+follow~
+@gYou take care to follow the path clearly marked before you.@n
+~
+E
+pulled~
+@CSticky, high tensile filaments catch you and pull you to the ledge
+above!@n 
+~
+E
+rpulled~
+@CSticky, high tensile filaments catch $n and pull $m to the ledge
+above!@n 
+~
+!
+0 0 0
+-1
+S
+
+#46274
+Haunted Bend~
+A prickly sensation tingles down the back of your neck as you sense a
+watchful presence staring at you, eyes boring into the back of your head,
+from the dark shadows in the tunnel.  The haphazard accumulation of
+boulders and rocks that forms the walls and ceiling of this tunnel provide
+numerous places for malevolent threats to lurk behind.  Adding to the
+mysterious feeling, sticky weblike strands cling to many of the rocks,
+giving this section of the tunnel a haunted feel.  Shrouded in the gloomy
+darkness in the upper reaches of the cavern, a sizable ledge seems to run
+the entire length of the northern and western walls; the webbing seems to
+suddenly start from this height.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378956 11 6 0
+D0
+~
+~
+0 -1 46275 10 10 5
+D3
+~
+~
+0 -1 46273 10 10 5
+D4
+~
+~
+234 -1 46281 10 10 5
+E
+boulders rocks~
+You begin to investigate the many niches and holes formed by the
+haphazardly piled boulders, and quickly realise it would take too long to
+hunt down whatever is giving you that prickly sensation.
+~
+E
+narrow ledge 1 northern 1 western walls~
+Far and few between are the handholds that protrude from the western wall. 
+Partially obscured by tendrils of webbing, the ledge appears to be quite
+substantial in size, running the length of both the western and southern
+walls.
+~
+A
+~
+~
+acode( find_room( 46267 ), 1 );
+~
+!
+1 0 9
+A
+climb~
+ledge~
+if( find_skill( ch, climb ) > 3 ) {
+  act_tochar( #handhold, ch );
+  act_notchar( #rhandhold, ch, obj, mob, sight );
+  wait( 1 );
+  transfer( ch, find_room( 46281 ) );
+  act_notchar( #arrive, ch, obj, mob, sight );
+}
+loop( followers ) {
+  ch = rch;
+  acode( room, 2 );
+}
+~
+E
+handhold~
+@wThe handholds are few, and the climb takes a few moments.@n
+~
+E
+rhandhold~
+@w$n starts $s climb, pausing from time to time as $e looks for a
+handhold.@n 
+~
+E
+arrive~
+$n drops the last few feet in the climb.
+~
+!
+0 0 0
+A
+~
+~
+if( random( 1, 10 ) != 5 )
+  continue;
+else {
+  if( is_pet( ch ) )
+    continue;
+  if( is_player( ch ) ) {
+    if( class( ch ) == ranger ) {
+      act_tochar( #ranger, ch, obj );
+      continue;
+    }
+    if( find_stat( ch, level ) > 40 )
+      continue;
+    if( is_affected( fire.shield, ch ) )
+      continue;
+    rch = leader( ch );
+    if( class( rch ) == ranger ) {
+      if( rch != ch )
+        act_tochar( #follow, ch, obj );
+      continue;
+    }
+    room = find_room( 46281 );
+    mob = mob_in_room( 2478, room );
+    if( players_room( room ) < 1 ) {
+      if( mob ) {
+        if( random( 0,3 ) == 0 ) {
+          act_tochar( #pulled, ch, obj );
+          act_notchar( #rpulled, ch, obj, mob, sight );
+          transfer( ch, room );
+          do_spell( web, mob, ch );
+          init_attack( mob, ch );
+          end;
+        }
+      }
+    }
+  }
+  continue;
+}
+~
+E
+ranger~
+@WYou deftly duck past a curtain of threads left behind by a cave fisher.@n
+~
+E
+follow~
+@gYou take care to follow the path clearly marked before you.@n
+~
+E
+pulled~
+@CSticky, high tensile filaments catch you and pull you to the ledge
+above!@n 
+~
+E
+rpulled~
+@CSticky, high tensile filaments catch $n and pull $m to the ledge
+above!@n 
+~
+!
+0 0 0
+-1
+S
+
+#46275
+Irregular Tunnel~
+Following an irregular path, the tunnel ducks its way back and forth to
+the north and south.  The floor of the tunnel has been eroded by frequent
+flooding, most likely due to the seasonal snowmelts from the highland
+mountains.  Strands of a gossamer thin web straddle the tunnel to the
+south, quickly obscuring the way beyond.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 6 0
+D0
+~
+~
+0 -1 46317 10 10 5
+D2
+~
+~
+0 -1 46274 10 10 5
+E
+strands gossamer web~
+The tangled weave sprawls across the tunnel walls and ceiling, until the
+natural rock is almost obscured behind a chaotic web that holds no trace
+of a pattern or sense of order.
+~
+-1
+S
+
+#46276
+Warg Den - Gloomy Crevice~
+Unkept and dishevelled, this narrow crevice contrasts with the habitual
+order present throughout the rest of the cave.  Scattered bone fragments
+and shed hair litter the dusty floor, and cobwebs spread their traps
+across the niches and pockets at the far end of the crevice.
+~
+[Aegrim] add search for part of amulet custom here.
+[Guin] Add search here re:rbug?
+[Guin] What is the amulet?
+[Guin] Reviewed.
+[Yrna] Didn't add search because of lack of info about the amulet, but it can be easily added at later date.
+~
+167378956 11 6 0
+D2
+~
+~
+0 -1 46258 10 10 5
+E
+bone fragment hair shed~
+A light shedding of canine fur is loosely draped across the assorted bone
+fragments.  Much of it is a faded grey in colour, and lacking any sheen
+of vitality whatsoever.
+~
+2473 137 1509949540 3 0
+-1
+S
+
+#46277
+Shale-Covered Mountain Slope~
+Treacherously blanketed in a loose covering of shale, the rocky slope is
+continually buffeted by the cold highland winds that race through the gap
+in the mountains to the northwest.  A slight depression, forming a dusty
+bowl forms the only break in the sea of shale that continues up the
+mountain.  Pawprints leave lingering impressions leading out of the bowl
+to find an almost imperceptible path down the slope.
+~
+[Guin] Reviewed?
+[Guin] Done.
+~
+167247872 5 6 0
+D4
+~
+~
+0 -1 46315 10 10 5
+D5
+~
+~
+235 -1 46262 10 10 5
+E
+pawprints~
+Pawprints of a wolven kind, though much larger, travel both away and
+towards your position by the side of the dusty bowl.  Further down, they
+arrive at a ledge on the rocky cliffside.
+~
+A
+follow track~
+tracks prints wolven~
+if( is_standing( ch ) ) {
+  act_tochar( #follow, ch, obj, mob, sight );
+  act_notchar( #rfollow, ch, obj, mob, sight );
+  transfer( ch, find_room( 46262 ) );
+  act_notchar( #arrive, ch, obj, mob, sight );
+}
+loop( followers ) {
+  ch = rch;
+  acode( room, 1 );
+}
+~
+E
+follow~
+@wFollowing the tracks, you find an almost imperceptible path down the
+treacherous slope.@n" 
+~
+E
+rfollow~
+@w$n finds an almost imperceptible path down the treacherous rocky slope.@n
+~
+E
+arrive~
+@w$n clambers onto the ledge's edge from the treacherous rocky slopes
+above.@n 
+~
+!
+0 0 0
+-1
+S
+
+#46278
+Narrow Ledge~
+You find yourself on a narrow ledge overhanging the tunnel below, mired
+in webs so tangled, movement is nigh on impossible.  The lack of freedom
+is heightened by the cramped position you are forced into by the
+enclosing walls and ceiling that leave little space for anything but
+crawling along the shelf's lip.
+~
+[Aegrim] remove continue from within aedit 1
+[Aegrim] remove down exit before opening
+[Guin] Reviewed.
+[Yrna] Done.
+~
+167378948 11 6 0
+D3
+~
+~
+0 -1 46279 10 10 5
+D5
+~
+~
+1258 -1 46271 10 10 5
+A
+~
+~
+acode( find_room( 46280 ), 1 );
+~
+!
+3 0 8
+A
+climb~
+down~
+acode( find_room( 46280 ), 2 );
+transfer( ch, find_room( 46271 ) );
+acode( find_room( 46280 ), 3 );
+~
+!
+0 0 0
+2478 9 1509949540 3 0
+-1
+S
+
+#46279
+Narrow Ledge~
+Atop an extremely narrow ledge, you find yourself coccooned amidst a
+chaotic jungle of webs.  Tucked into the side wall is a purposely
+burrowed niche, most probably the lair of some small creature.  The ledge
+continues to the east and the north, overhanging the tunnel below.
+~
+[Aegrim] acode for search niche
+[Aegrim] remove continue from within aedit 1
+[Aegrim] remove down exit before opening
+[Guin] No search acode re:your rbug.
+[Guin] Reviewed.
+[Yrna] Search not added - wasn't sure what was intended here
+[Yrna] done.
+~
+167378948 11 6 0
+D0
+~
+~
+0 -1 46280 10 10 5
+D1
+~
+~
+0 -1 46278 10 10 5
+D5
+~
+~
+234 -1 46272 10 10 5
+E
+niche~
+Burrowing into the wall of the tunnel, this niche has obviously been self
+styled by some small creature intent on creating itself a permanent
+residence.  A random collection of assorted treasures can be seen
+scattered within.
+~
+A
+climb~
+down~
+acode( find_room( 46280 ), 2 );
+transfer( ch, find_room( 46272 ) );
+acode( find_room( 46280 ), 3 );
+~
+!
+0 0 0
+A
+~
+~
+acode( find_room( 46280 ), 1 );
+~
+!
+3 0 3
+A
+~
+niche~
+act_tochar( #search, ch, obj, mob );
+act_notchar( #rsearch, ch, obj, mob, sight );
+if( !rflag( reset0, room ) ) {
+  act_tochar( #nothing, ch, obj, mob );
+  act_notchar( #rnothing, ch, obj, mob, sight );
+  end;
+}
+remove_rflag( reset0, room );
+i = random( 1, 100 );
+if( i < 10 )
+  obj = oload( 638 ); // bronze ingot
+else if( i < 17 )
+  obj = oload( 639 ); // iron ingot
+else if( i < 22 )
+  obj = oload( 640 ); // steel ingot
+else if( i < 24 )
+  obj = oload( 641 ); // mithril ingot
+else if( i < 26 )
+  obj = oload( 642 ); // liridium ingot
+else if( i < 28 )
+  obj = oload( 643 ); // electrum ingot
+else if( i < 29 )
+  obj = oload( 2396 ); // starite (woohoo)
+else if( i < 39 )
+  obj = oload( 2, random( 4, 6 ) ); // gold coin
+else if( i < 54 )
+  obj = oload( 12, random( 20, 60 ) ); // copper coin
+else if( i < 64 )
+  obj = oload( 14, random( 10, 30 ) ); // silver coin
+else if( i < 69 )
+  obj = oload( 16, random( 1, 3 ) ); // platinum coin
+if( obj ) {
+  act_tochar( #found, ch, obj, mob );
+  act_notchar( #rfound, ch, obj, mob, sight );
+  obj_to_char( obj, ch );
+}
+else {
+  act_tochar( #nothing, ch, obj, mob );
+  act_notchar( #rnothing, ch, obj, mob, sight );
+}
+~
+E
+nothing~
+@cTry as you might you can't reach far enough into the niche to acquire
+anything.@n 
+~
+E
+search~
+@cYou start reaching into the niche, hoping to get something out of it.@n
+~
+E
+rsearch~
+@c$n stretches $s arm into the niche, attempting to retrieve something.@n
+~
+E
+rnothing~
+@c$n comes up empty handed.@n
+~
+E
+found~
+@cYou manage to grasp $p and drag it out of the niche.@n
+~
+E
+rfound~
+@c$n manages to grasp something in the niche, and drags it out.@n
+~
+!
+9 0 0
+2478 9 1509949540 3 0
+-1
+S
+
+#46280
+Narrow Ledge~
+Perched upon a narrow ledge overhanging the tunnel below, a momentary
+sensation of vertigo sweeps over you as a portion of the ledge's lip
+crumbles and falls away.  The ledge otherwise clings to the tunnel wall,
+appearing as though it is held in place by the profusion of webs that
+obscure the way to the east and the south.
+~
+[Aegrim] remove continue from within aedit 1
+[Aegrim] remove down exit before opening
+[Guin] Connect to 46273.
+[Guin] should the webs to the east and south cling to you like others in the zone?
+[Guin] Reviewed.
+[Yrna] About the webs clinging - no, because you can't actually leave room
+[Yrna] Codes tidied up - done.
+~
+167378948 11 6 0
+D1
+~
+~
+0 -1 46281 10 10 5
+D2
+~
+~
+0 -1 46279 10 10 5
+D5
+~
+~
+107 -1 46273 10 10 5
+A
+~
+~
+act_tochar( #no, ch, obj );
+~
+E
+no~
+@WYou struggle in vain against the impenetrable veil of webbing.@n
+~
+!
+3 0 6
+A
+~
+~
+act_tochar( #climb, ch, obj );
+~
+E
+climb~
+@yGently slipping over the lip of the ledge, you fall to the tunnel floor
+below.@n 
+~
+!
+0 0 0
+A
+~
+~
+act_notchar( #rclimb, ch, obj, mob, sight );
+~
+E
+rclimb~
+@C$n drops down from the ledge above.@n
+~
+!
+0 0 0
+A
+climb~
+down~
+acode( room, 2 );
+transfer( ch, find_room( 46273 ) );
+acode( room, 3 );
+~
+!
+0 0 0
+2478 9 1509949540 3 0
+-1
+S
+
+#46281
+Narrow Ledge~
+Swathed in a myriad assortment of webs haphazardly strewn across every
+niche and cranny, you find yourself tucked upon a narrow ledge high above
+the tunnel floor below with very little room to move.  Dessicated
+leftovers of a spidery meal share your position, strewn across the floor
+of the ledge, and emitting a slightly rancid aroma.  The ledge continues
+its precarious position to the west.
+~
+[Aegrim] remove continue from within aedit 1
+[Aegrim] remove down exit before opening
+[Guin] Might want to add an 'the webs have already been search/moved' message to that action.
+[Guin] Reviewed.
+[Yrna] Acode fixed
+[Yrna] Done.
+~
+167378956 11 6 0
+D1
+tangled weave~
+web~
+2283 -1 46321 10 10 5
+D3
+~
+~
+0 -1 46280 10 10 5
+D5
+~
+~
+234 -1 46274 10 10 5
+E
+dessicated leftovers meal~
+Gnawed on remains of some goblinoid creature, laced with a poison that
+mingle the decaying odour with a sharp, distinctly biting scent, litter
+the floor of the ledge.  A finger here, an ear there, all mummified in a
+spidery web, you find nothing of note and decide it would be better to
+allow your thoughts to dwell on something else.
+~
+A
+~
+~
+acode( find_room( 46280 ), 1 );
+~
+!
+3 0 8
+A
+climb~
+down~
+acode( find_room( 46280 ), 2 );
+transfer( ch, find_room( 46274 ) );
+acode( find_room( 46280 ), 3 );
+~
+!
+0 0 0
+A
+clear search~
+web niche crannies cranny~
+if( !is_open( room, east ) ) {
+  act_tochar( #brush, ch, obj );
+  act_notchar( #rbrush, ch, obj, mob, sight );
+  open( room, east );
+}
+else
+act_tochar( #huh, ch, obj );
+~
+E
+brush~
+@WBrushing aside a few of the webs, you find a niche leading to a tunnel
+beyond.@n 
+~
+E
+rbrush~
+@W$n brushes the webs aside, revealing a niche that leads into a tunnel
+beyond.@n 
+~
+E
+huh~
+@CThe niche is as clear as it's going to get.@n
+~
+!
+0 0 0
+A
+~
+~
+acode( find_room( 46267 ), 1 );
+~
+!
+1 0 2
+2478 9 1509949540 3 0
+-1
+S
+
+#46282
+Teeth of Stone~
+Sheltered in an obscure corner of the cave here, several stalactites have
+been allowed to form almost unfettered by the destructive elements that
+sweep throughout the rest of the cavern.  The floor descends away from
+the corner, dropping slightly as it merges with a shallow contour that
+forms a perimeter around your position.
+~
+[Aegrim] giant carrion crawler here
+[Aegrim] no.mob room - stops things going in and out of tunnel north
+[Guin] Reviewed.
+[Yrna] Done.
+~
+167378956 11 6 0
+D0
+~
+~
+2283 -1 46330 10 10 5
+D1
+~
+~
+0 -1 46283 10 10 5
+D2
+~
+~
+0 -1 46269 10 10 5
+E
+teeth stone~
+Slender stalactites drape this corner of the cave like a ferocious beast
+snarling at the darkness.  They are just out of reach, and behind them
+the cavern ceiling glistens with moistness that slides along the teeth in
+tiny rivulets.  The moistness dripping down the teeth lining the northern
+wall has allowed a luxuriant curtain of moss to proliferate.
+~
+E
+moss~
+A deep blue-green hue, it abounds in the moist conditions, completely
+obscuring the rock face of the north wall.
+~
+A
+clear move~
+moss curtain~
+if( !is_open( room, north ) ) {
+  act_tochar( #move, ch, obj );
+  act_notchar( #rmove, ch, obj, mob, sight );
+  open( room, north );
+}
+else
+  act_tochar( #stoopid, ch, obj );
+~
+E
+move~
+@gYou brush the curtain of moss to the side.@n
+~
+E
+rmove~
+@g$n brushes the curtain of moss to the side, revealing a tunnel
+beyond.@n 
+~
+E
+stoopid~
+@YLook again! The curtain of moss has already been moved.@n
+~
+!
+0 0 0
+2403 137 1509949540 3 0
+419 17 1509949540 -2 0
+-1
+S
+
+#46283
+Shallow Contour~
+Channeling its way from the cavern into an eroded tunnel to the north, a
+shallow contour dips slightly below the level of the cavern floor on both
+sides to the east and west.  Only slightly moist at the moment, you
+suspect it serves as a run-off for the snow-melts that flood down the
+mountainsides as winter loses its grip on the highlands.
+~
+[Aegrim] Ghost bat here
+[Aegrim] entry from the cooler tunnel north
+[Aegrim] no.mob room (prevents east-west movement)
+[Guin] Reviewed
+[Yrna] Could really use an extra here
+[Yrna] Done.
+~
+167378956 11 6 0
+D0
+~
+~
+0 -1 46289 10 10 5
+D1
+~
+~
+0 -1 46284 10 10 5
+D2
+~
+~
+0 -1 46270 10 10 5
+D3
+~
+~
+0 -1 46282 10 10 5
+A
+~
+~
+act_tochar( #air, ch, obj );
+~
+E
+air~
+@mThe warmer air of the cavern envelops you.@n
+~
+!
+1 0 1
+A
+~
+~
+if( find_stat( ch, level ) < 91 )
+  if( is_player( ch ) )
+  if( rflag( reset0, room ) ) {
+  send_to_room( #screech, room );
+  remove_rflag( reset0, room );
+  mob = mload( 2480, room );
+  rch = rand_player( room );
+  init_attack( mob, rch );
+}
+~
+E
+screech~
+@MA high pitched screech splinters the air as a shadow materialises from
+the gloom!@n 
+~
+!
+1 0 15
+-1
+S
+
+#46284
+Northeast of a Stalagmite Group~
+The cavern vaults upwards to the east and south of you, engulfing the
+darkness like a voracious predator.  To the west, the cavern encloses
+around on all sides and leaves the consuming emptiness behind.  Outlined
+faintly, almost beyond the reach of your light source, is a conglomeration
+of stalagmites to the southwest, and a rambling mountain of rubble to the
+southeast.
+~
+[Aegrim] climb pile/mountain/rubble here
+[Guin] Description for netta, first sentence, needs to be reworded.
+[Guin] Reviewed.
+[Yrna] I can't even work out what first sentence in netta's desc is supposed to mean. So ... leaving this to someone else.
+[Yrna] Done.
+~
+167378948 11 6 0
+D1
+~
+~
+0 -1 46293 10 10 5
+D2
+~
+~
+0 -1 46285 10 10 5
+D3
+~
+~
+0 -1 46283 10 10 5
+E
+walls rubble mountain~
+Its not very often you see an image that shatters the illusion of safety
+provided by stone walls, yet here something has undeniably scoffed at the
+strength of the mountain and rampantly caused havoc throughout this part
+of the cavern.  Fragments of the cavern floor are strewn in a shifting
+and somewhat unstable formation near the rupture, to venture closer to it
+would be hazardous in the least and also present you with a difficult
+climb through the boulders.
+~
+A
+climb~
+pile mountain rubble~
+acode( find_room( 46295), 1 );
+~
+!
+0 0 0
+-1
+S
+
+#46285
+East of a Stalagmite Group~
+Wending its way between two impassable barriers, a struggling path fights
+for its existence around a smattering of obstacles falling across its way. 
+Recently demolished rubble invades the path from the east where a
+mountain of dislodged earth has been violently displaced from its rest. 
+In contrast, the path skirts its way around the group of ancient and
+gigantic stalagmites to the west.
+~
+[Aegrim] drip drip code
+[Aegrim] climb mountain/pile/rubble here
+[Aegrim] cave sloth random here
+[Guin] Reviewed.
+[Yrna] Done.
+~
+167378948 11 6 0
+D0
+~
+~
+0 -1 46284 10 10 5
+D2
+~
+~
+0 -1 46286 10 10 5
+E
+mountain pile rubble~
+Its not  very often you see an image that shatters the illusion of safety
+provided by stone walls, yet here something has undeniably scoffed at the
+strength of the mountain and rampantly caused havoc throughout this part
+of the cavern.  Fragments of the cavern floor are strewn in a shifting
+and somewhat unstable formation near the rupture, to venture closer to
+the rupture would be hazardous in the least and also present you with a
+difficult climb through the boulders.
+~
+E
+stalagmite~
+Crystalline water constantly drips from the stalactites above, sending
+runnels of water that spiral around the profusion of stalagmites to the
+west. For limestone relics the size of these gargantuan statues, their
+exact age must be beyond the measure or memory of even the longest lived
+races of the world.
+~
+A
+~
+~
+acode( find_room( 46268 ), 1 );
+~
+!
+2 1000 0
+A
+climb~
+pile mountain rubble~
+acode( find_room( 46295), 1 );
+~
+!
+0 0 0
+A
+~
+~
+acode( find_room( 46268 ), 2 );
+~
+!
+2 5000 0
+2480 9 1509949540 3 0
+-1
+S
+
+#46286
+East of a Stalagmite Group~
+A bumbling profusion of stalagmites grow in their slumbering fashion to
+the west, blocking the way westward through the cavern completely.  The
+spires are unclimbable, their surfaces slick with the moisture that
+trickles from cracks in the cavern's roof above.  To the northeast, a
+mountain of rubble lies heaped high and wide, encompassing a significant
+portion of the cavern's floor.
+~
+[Aegrim] drip drip code
+[Aegrim] climb pile/mountain/rubble here
+[Aegrim] cave sloth random here
+[Guin] Reviewed.
+[Yrna] I don't want to talk about this
+[Yrna] Done.
+~
+167378948 11 6 0
+D0
+~
+~
+0 -1 46285 10 10 5
+D1
+~
+~
+0 -1 46297 10 10 5
+D2
+~
+~
+0 -1 46287 10 10 5
+E
+stalagmite~
+The profusion of stalagmites dwell in almost eternal slumber, unaware of
+the day to day goings on of life in the cavern, and only dimly aware of
+the much longer decades that continue relentlessly down through the ages.
+~
+E
+mountain pile rubble~
+Its not  very often you see an image that shatters the illusion of safety
+provided by stone walls, yet here something has undeniably scoffed at the
+strength of the mountain and rampantly caused havoc throughout this part
+of the cavern.  Fragments of the cavern floor are strewn in a shifting
+and somewhat unstable formation near the rupture, to venture closer to
+the rupture would be hazardous in the least and also present you with a
+difficult climb through the boulders.
+~
+A
+~
+~
+acode( find_room( 46268 ), 1 );
+~
+!
+2 1000 0
+A
+climb~
+pile mountain rubble~
+acode( find_room( 46295), 1 );
+~
+!
+0 0 0
+A
+~
+~
+acode( find_room( 46268 ), 2 );
+~
+!
+2 5000 0
+2483 41 1509949540 3 0
+2484 73 1509949540 3 0
+-1
+S
+
+#46287
+Southeast of a Stalagmite Group~
+Eastward and northward the cavern soars into the darkness, engulfing
+your tiny light source in its all consuming maw.  Like a bat, your only
+sense of the cavern in that direction is through the myriad of sounds
+that come echoing to you from the unseen boundaries of the cavern that
+lie beyond the veil of darkness.  To the west, a narrow path wedges its
+way between the cavern wall and a conglomeration of stalagmites that lie
+to the northwest.
+~
+[Aegrim] echoing sounds of movement throughout the cavern.
+[Guin] Reviewed.
+[Yrna] No extras here... could have one for stalagmites, at least
+[Yrna] Done.
+~
+167378948 11 6 0
+D0
+~
+~
+0 -1 46286 10 10 5
+D1
+~
+~
+0 -1 46300 10 10 5
+D3
+~
+~
+0 -1 46288 10 10 5
+A
+~
+~
+if( random( 0, 2 ) == 1 )
+  send_to_room( #echo, room );
+~
+E
+echo~
+@cEchoes of movement drift across the veil of darkness that blankets the
+cavern to the east.@n 
+~
+!
+2 200 0
+2480 9 1509949540 3 0
+-1
+S
+
+#46288
+South of a Stalagmite Group~
+An oft-frequented path forces its way into a narrow gap between the
+stalagmite group and the cavern wall to the south.  The path underfoot is
+well worn, with claw marks and padded footprints embedded in the
+moistened dirt that continually fights against the encroaching sprawl of
+the stalagmites threatening to close the gap.  Gossamer threads tangle
+themselves haphazardly across the stalagmites.
+~
+[Aegrim] drip drip code
+[Aegrim] cave fisher here
+[Aegrim] no.mob room (prevents east-west movement)
+[Guin] Reviewed.
+[Yrna] fixed acodes, connected up and hid it
+[Yrna] Done.
+~
+167378956 11 6 0
+D0
+~
+~
+0 -1 46268 10 10 5
+D1
+~
+~
+0 -1 46287 10 10 5
+D4
+~
+~
+234 -1 46322 10 10 5
+E
+stalagmite stalactite~
+The conglomeration of stalagmites grow in a profusion to the north of
+you, creating an impassable barrier across this end of the cavern.
+~
+A
+~
+~
+acode( find_room( 46268 ), 1 );
+~
+!
+2 200 0
+A
+~
+~
+send_to_room( #thread, room );
+~
+E
+thread~
+@WA sticky gossamer like thread falls out of the gloom.@n
+~
+!
+2 200 0
+A
+~
+~
+if( random( 1, 10 ) != 1 )
+  continue;
+else {
+  if( is_pet( ch ) )
+    continue;
+  if( is_player( ch ) ) {
+    if( class( ch ) == ranger ) {
+      act_tochar( #ranger, ch, obj );
+      continue;
+    }
+    if( find_stat( ch, level ) > 40 )
+      continue;
+    if( is_affected( fire.shield, ch ) )
+      continue;
+    rch = leader( ch );
+    if( class( rch ) == ranger ) {
+      if( rch != ch )
+        act_tochar( #follow, ch, obj );
+      continue;
+    }
+    room = find_room( 46322 );
+    mob = mob_in_room( 2478, room );
+    if( players_room( room ) < 1 ) {
+      if( mob ) {
+        if( random( 0,3 ) == 0 ) {
+          act_tochar( #pulled, ch, obj );
+          act_notchar( #rpulled, ch, obj, mob, sight );
+          transfer( ch, room );
+          do_spell( web, mob, ch );
+          init_attack( mob, ch );
+          end;
+        }
+      }
+    }
+  }
+}
+~
+E
+ranger~
+@WYou deftly duck past a curtain of threads left behind by a cave
+fisher.@n 
+~
+E
+follow~
+@gYou take care to follow the path clearly marked before you.@n
+~
+E
+pulled~
+@CSticky, high tensile filaments catch you and pull you to the ledge
+above!@n 
+~
+E
+rpulled~
+@CSticky, high tensile filaments catch $n and pull $m to the ledge
+above!@n 
+~
+!
+0 0 0
+-1
+S
+
+#46289
+Tubular Tunnel~
+Surprisingly free from the limestone growths throughout the cavern to the
+south, this tubular tunnel delves further into the mountainside to the
+east, where it begins to descend.  Small cracks in the otherwise smoothly
+eroded walls trickle with moisture, leaving the floor of the tunnel as
+slippery as an eel.
+~
+[Aegrim] acode for entry from south into a cooler tunnel.
+[Guin] Reviwed.
+[Yrna] needs extra ... maybe for wall/floor
+[Yrna] Done.
+~
+167378948 11 6 0
+D1
+~
+~
+0 -1 46290 10 10 5
+D2
+~
+~
+0 -1 46283 10 10 5
+A
+~
+~
+act_tochar( #air, ch, obj );
+~
+E
+air~
+@CThe air is cooler here, and somewhat damp.@n
+~
+!
+1 0 4
+-1
+S
+
+#46290
+Tubular Tunnel~
+A light covering of lichen sprawls across the tunnel walls like a
+patchwork blanket.  The mossy covering only adds to the difficulty in
+finding a firm footing on the damp limestone floor which descends
+slightly to the east.
+~
+[Aegrim] roaring sound from the east.
+[Aegrim] acode slip to the east
+[Guin] Reviewed.
+[Yrna] Oh, wow, what a surprise! No extras found! ... Can someone please add some? Say, for moss?
+[Yrna] Done.
+~
+167378948 11 6 0
+D1
+~
+~
+0 -1 46291 10 10 5
+D3
+~
+~
+0 -1 46289 10 10 5
+A
+~
+~
+i = random( 0, 20 );
+if( find_stat( ch, dex ) > i ) {
+  act_tochar( #firm, ch, obj );
+}
+else {
+  act_tochar( #slip, ch, obj );
+  act_notchar( #rslip, ch, obj, mob, sight );
+  transfer( ch, find_room( 46291 ) );
+}
+~
+E
+firm~
+@WYou carefully maintain a firm footing on the slippery floor.@n
+~
+E
+slip~
+@GYou err on the slippery surface and suddenly find yourself sliding down
+the tunnel!@n 
+~
+E
+rslip~
+@GWith a yelp, $n loses his footing and slides down the tunnel!@n
+~
+!
+1 0 8
+-1
+S
+
+#46291
+Tubular Tunnel~
+A meandering series of runnels weaves its way along the tunnel floor,
+skirting calcified protrusions that trap small pools of inky black water. 
+Just to the east the tunnel ends in a tight niche, while to the west, the
+quiet clamoring of a screeching choir echoes down the tube.
+~
+[Aegrim] acode slip to the east
+[Aegrim] roaring sound from the east.
+[Guin] might want to reset some sort of pool here.. water or otherwise.:)
+[Guin] Reviewed.
+[Yrna] Added object 3219 here, a murky pool... seemed fitting
+[Yrna] Done.
+~
+167378948 11 6 0
+D1
+~
+~
+0 -1 46292 10 10 5
+D3
+~
+~
+0 -1 46290 10 10 5
+A
+~
+~
+i = random( 0, 20 );
+if( find_stat( ch, dex ) > i ) {
+  act_tochar( #firm, ch, obj );
+}
+else {
+  act_tochar( #slip, ch, obj );
+  act_notchar( #rslip, ch, obj, mob, sight );
+  transfer( ch, find_room( 46292 ) );
+}
+~
+E
+firm~
+@WYou carefully maintain a firm footing on the slippery floor.@n"
+~
+E
+slip~
+@GYou err on the slippery surface and suddenly find yourself sliding down
+the tunnel!@n 
+~
+E
+rslip~
+@GWith a yelp, $n loses his footing and slides down the tunnel!@n
+~
+!
+1 0 8
+A
+~
+~
+send_to_room( #roar, room );
+~
+E
+roar~
+@BA deep roaring can be heard from down the tube to the east.@n
+~
+!
+2 150 0
+-1
+S
+
+#46292
+Tubular Tunnel~
+A tumultuous rumble shakes the limestone foundation beneath your feet
+heralding the nearby presence of a river violently burrowing through the
+mountain seeking its escape.  The tunnel slithers its way westwards in a
+tubular fashion like the tunnel fashioned by a giant worm.
+~
+[Aegrim] spray of water coming from over a ledge.
+[Aegrim] climb ledge
+[Azerin] check out naga bud happy to build one here but can you keep to the naga theme started? :)
+[Aegrim] ledge leads to the next 'wilderness' area - huge cavern with
+lake and roving behomoth (cave like mammoths) 
+[Guin] Look up action doesn't work correctly.
+[Guin] Climb ledge action doesn't work properly.
+[Guin] Is static charge in naga's mpc supposed to go off every round?
+[Guin] Reviewed.
+[Tarion] After it dies, have it to some cold damage with that spray of icy cold water.
+[Yrna] All acodes fixed
+[Yrna] Dark naga fixed
+[Yrna] Done.
+~
+167378948 11 6 0
+D3
+~
+~
+0 -1 46291 10 10 5
+D4
+~
+~
+234 -1 46332 10 10 5
+E
+ledge~
+Very easily missed at a first glance, you discern the shadows
+concentrating beyond its lip.  The edge of the ledge lies within reach,
+though it would be a slippery climb.
+~
+A
+~
+~
+send_to_room( #spray, room );
+  if( players_room( room ) > 0 )
+    remove_rflag( reset2, room );
+~
+E
+spray~
+@CA fine spray of icy cold water showers you from above.@n
+~
+!
+2 500 0
+A
+look~
+1 up~
+if( rflag( reset2, room ) )
+  act_tochar( #nothing, ch, obj );
+else {
+  act_tochar( #ledge, ch, obj );
+  remove_rflag( reset1, room );
+}
+~
+E
+ledge~
+@WHitherto unseen, you now glimpse a ledge from which the occasional
+sprays of icy water are coming.@n 
+~
+E
+nothing~
+@WYou can't spot anything of interest up there.@n
+~
+!
+0 0 0
+A
+look~
+ledge~
+if( rflag( reset1, room ) ) {
+  act_tochar( #noledge, ch, obj );
+  end;
+}
+else {
+  act_tochar( #ledge, ch, obj );
+  act_notchar( #rledge, ch, obj, mob, sight );
+  remove_rflag( reset0, room );
+}
+~
+E
+noledge~
+@yYou cant see any ledges, though they may be one hidden in the
+darkness.@n 
+~
+E
+ledge~
+@YYou now discern the shadows that concentrate beyond its lip that
+separate it from the rest of the darkness.  You think you may be able to
+find enough purchase on the slippery rocks to clamber up.@n 
+~
+E
+rledge~
+@Y$n points out to you the ledge that was hitherto hidden in the
+darkness.@n 
+~
+!
+0 400 0
+A
+climb~
+ledge~
+if( rflag( reset0, room ) ) {
+  act_tochar( #noclimb, ch, obj );
+  end;
+}
+else {
+  act_tochar( #climb, ch, obj );
+  act_notchar( #rclimb, ch, obj, mob, sight );
+  transfer( ch, find_room( 46332 ) );
+}
+~
+E
+noclimb~
+@yWhat ledge?@n
+~
+E
+climb~
+@YWith considerable effort, you manage to clamber up the ledge.@n
+~
+E
+rclimb~
+@YHuffing and puffing, $n manages to clamber up the ledge.@n
+~
+!
+0 0 0
+2482 137 1509949540 3 0
+-1
+S
+
+#46293
+On Fractured Ground~
+Fractures rend the cavern floor here, creeping out imperturbably from a
+massive rupture buried partially beneath a mountain of rubble to the
+south.  Fractures are also becoming evident in the cavern wall to the
+north, tracing their way along weaker lines in the limestone formations. 
+To the east and west however, the cavern floor appears more stable, and
+the natural state of things is as eternal as the mountain itself.
+~
+[Aegrim] climb pile/mountain/rubble here
+[Guin] Reviewed.
+[Yrna] Done.
+~
+167378948 11 6 0
+D1
+~
+~
+0 -1 46294 10 10 5
+D3
+~
+~
+0 -1 46284 10 10 5
+E
+mountain pile rubble~
+Its not very often you see an image that shatters the illusion of safety
+provided by stone walls, yet here something has undeniably scoffed at the
+strength of the mountain and rampantly caused havoc throughout this part
+of the cavern.  Fragments of the cavern floor are strewn in a shifting
+and somewhat unstable formation near the rupture, to venture closer to
+the rupture would be hazardous in the least and also present you with a
+difficult climb through the boulders.
+~
+A
+climb~
+pile mountain rubble~
+acode( find_room( 46295), 1 );
+~
+!
+0 0 0
+2480 9 1509949540 3 0
+-1
+S
+
+#46294
+Northeast of the Rupture~
+Taking care to avoid stepping into the fractures that fissure their way
+across the cavern floor, you weave your away around the smaller boulders
+that have been thrown clear of the massive pile of rubble lying to the
+southwest.  To the west the ground becomes even more fractured where the
+devastating effects can be seen working away at the strength of the
+cavern's walls.  To the southeast however, the cavern continues
+uninterrupted, lost in the darkening void that swarms beyond the
+perimeter of your light source.
+~
+[Aegrim] climb pile/mountain/rubble here
+[Guin] Reviewed.
+[Yrna] Done.
+~
+167378944 11 6 0
+D1
+~
+~
+0 -1 46308 10 10 5
+D2
+~
+~
+0 -1 46295 10 10 5
+D3
+~
+~
+0 -1 46293 10 10 5
+E
+mountain pile rubble~
+Its not  very often you see an image that shatters the illusion of safety
+provided by stone walls, yet here something has undeniably scoffed at the
+strength of the mountain and rampantly caused havoc throughout this part
+of the cavern.  Fragments of the cavern floor are strewn in a shifting
+and somewhat unstable formation near the rupture, to venture closer to
+the rupture would be hazardous in the least and also present you with a
+difficult climb through the boulders.
+~
+A
+climb~
+pile mountain rubble~
+acode( find_room( 46295), 1 );
+~
+!
+0 0 0
+2483 9 1509949540 3 0
+-1
+S
+
+#46295
+On Fractured Ground~
+Creeping fractures crawl out from their source, a massive rent in the
+cavern floor to the west.  Only partially visible, the rent is buried
+beneath a mountain of displaced rubble.  Elsewhere the cavern's depths
+are lost in the lightless gloom.
+~
+[Aegrim] climb pile/mountain/rubble here
+[Guin] One of the rooms with the climb pile code needs an exit linking it to the zone.
+[Guin] Reviewed.
+[Yrna] Done.
+~
+167378944 11 6 0
+D0
+~
+~
+0 -1 46294 10 10 5
+D1
+~
+~
+0 -1 46307 10 10 5
+D2
+~
+~
+0 -1 46296 10 10 5
+E
+mountain pile rubble~
+Its not  very often you see an image that shatters the illusion of safety
+provided by stone walls, yet here something has undeniably scoffed at the
+strength of the mountain and rampantly caused havoc throughout this part
+of the cavern.  Fragments of the cavern floor are strewn in a shifting
+and somewhat unstable formation near the rupture, to venture closer to
+the rupture would be hazardous in the least and also present you with a
+difficult climb through the boulders.
+~
+A
+climb~
+pile mountain rubble~
+act_tochar( "@wYou clamber over the rubble, making for the centre of the rupture.@n", ch );
+transfer( ch, find_room( 46298 ) );
+act_notchar( "@w$n clambers over a final boulder and peers uncertainly at the rent in the cavern floor.@n", ch );
+loop( followers ) {
+  if( !is_resting( rch ) ) {
+    if( !is_sleeping( rch ) ) {
+      act_tochar( "@wYou clamber over the rubble to the heart of the fracture.@n", rch );
+      transfer( rch, find_room( 46298 ) );
+      act_notchar( "@w$n arrives moments later.@n", rch );
+    }
+  }
+}
+wait( 1 );
+if( rflag( reset0, find_room( 46298 ) ) ) {
+  act_room( "@yThe fractured ground erupts as a bulette charges forth!@n", ch );
+  room = find_room( 46298 );
+  loop( all_in_room ) {
+    if( is_player( rch ) || is_pet( rch ) ) {
+      if( random( 0, 0 ) == 0 ) {
+        act_tochar( "@wYou are thrown violently to the ground!@n", rch );
+        act_notchar( "@w$n falls to the ground.@n", rch );
+        position( rch, 6 );
+      }
+    }
+  }
+  rch = rand_char( find_room( 46298 ) );
+  mob = mload( 2491, find_room( 46298 ) );
+  attack( mob, rch, 5d5+20, "headlong charge" );
+  remove_rflag( reset0, find_room( 46298 ) );
+}
+~
+!
+0 0 0
+2483 41 1509949540 3 0
+2484 73 1509949540 3 0
+-1
+S
+
+#46296
+Southeast of the Rupture~
+Small fissures creep along the cavern floor, though not to the
+devastating extent elsewhere around the massive rupture in the cavern
+floor to the northwest.  The ground underfoot is strewn with loose shards
+and broken fragments of the boulders shattered in whatever has caused the
+violent upheaval.  To the east and south however, the cavern continues
+unperturbed, content in wrapping itself in its gloomy blanket of darkness.
+~
+[Aegrim] climb pile/mountain/rubble here
+[Guin] Reviewed
+[Yrna] Done.
+~
+167378944 11 6 0
+D0
+~
+~
+0 -1 46295 10 10 5
+D1
+~
+~
+0 -1 46306 10 10 5
+D2
+~
+~
+0 -1 46301 10 10 5
+D3
+~
+~
+0 -1 46297 10 10 5
+E
+mountain pile rubble~
+Its not  very often you see an image that shatters the illusion of safety
+provided by stone walls, yet here something has undeniably scoffed at the
+strength of the mountain and rampantly caused havoc throughout this part
+of the cavern.  Fragments of the cavern floor are strewn in a shifting
+and somewhat unstable formation near the rupture, to venture closer to
+the rupture would be hazardous in the least and also present you with a
+difficult climb through the boulders.
+~
+A
+climb~
+pile mountain rubble~
+acode( find_room( 46295), 1 );
+~
+!
+0 0 0
+-1
+S
+
+#46297
+On Fractured Ground~
+Fractured almost to the point of instablity, the ground underfoot tilts
+back and forth like the crest of a wave rolling forth in an ocean of
+turmoil.  The source of the fractures is immediately visible to your
+north where the cavern floor has ruptured violently, and the displaced
+rubble lies strewn atop it in a massive heap.
+~
+[Aegrim] climb pile/mountain/rubble here
+[Guin] Reviewed.
+[Yrna] done.
+~
+167378948 11 6 0
+D1
+~
+~
+0 -1 46296 10 10 5
+D2
+~
+~
+0 -1 46300 10 10 5
+D3
+~
+~
+0 -1 46286 10 10 5
+E
+mountain pile rubble~
+Its not very often you see an image that shatters the illusion of safety
+provided by stone walls, yet here something has undeniably scoffed at the
+strength of the mountain and rampantly caused havoc throughout this part
+of the cavern.  Fragments of the cavern floor are strewn in a shifting
+and somewhat unstable formation near the rupture, to venture closer to
+the rupture would be hazardous in the least and also present you with a
+difficult climb through the boulders.
+~
+A
+climb~
+pile mountain rubble~
+acode( find_room( 46295), 1 );
+~
+!
+0 0 0
+-1
+S
+
+#46298
+Rupture Amidst the Rubble~
+Amidst the heart of the rubble sent sprawling elsewhere across the cavern
+floor, a massive rupture leaves a jagged gash where it has rent the
+packed earth beneath your feet from its slumber.
+~
+[Aegrim] Room you arrive at upon climbing the rubble.
+[Aegrim] At a later stage will add a series of spider tunnels below.
+~
+167378948 11 6 0
+D0
+~
+~
+0 -1 46293 10 10 5
+D1
+~
+~
+0 -1 46295 10 10 5
+D2
+~
+~
+0 -1 46297 10 10 5
+D3
+~
+~
+0 -1 46285 10 10 5
+E
+gash jagged rupture~
+It is hard to determine the exact nature of the rupture, the opening is
+clouded with loose gravel and obstructed by boulders that have fallen
+back in on the opening.
+~
+A
+1 bash~
+bulette~
+if( mob_in_room( 2491, room ) )
+  act_tochar( #bash, ch, obj );
+~
+E
+bash~
+@YYou bounce off the bulette's armored body, it may as well have been a
+stone wall.@n 
+~
+!
+0 0 0
+A
+~
+~
+if( random( 0, 1 ) == 1 ) {
+  send_to_room( #shift, room );
+  loop( all_in_room ) {
+    if( !is_mob( rch ) ) {
+      if( !is_standing( rch ) )
+        end;
+      if( random( 0, 2 ) == 0 ) {
+        act_tochar( #fall, rch, obj );
+        act_notchar( #rfall, rch, obj, mob, sight );
+        position( rch, 6 );
+      }
+    }
+  }
+}
+~
+E
+shift~
+@yThe ruptured cavern floor shifts dangerously beneath your feet.@n
+
+~
+E
+fall~
+@RYou lose your balance and are thrown to the ground@n
+~
+E
+rfall~
+@R$n falls to the ground.@n
+~
+!
+2 1000 0
+A
+~
+~
+if( random( 0, 3 ) == 0 ) {
+  mob = mob_in_room( 2491, room );
+  if( mob ) {
+    if( rflag( reset0, room ) ) {
+      send_to_room( #burrow, room, sight );
+      junk_mob( mob );
+    }
+  }
+}
+~
+E
+burrow~
+@yThe bulette burrows back into the mountain.@n
+~
+!
+16 5000 0
+A
+~
+~
+act_tochar( #pause, ch, obj );
+wait( 2 );
+i = random( 1, 4 );
+act_tochar( #dangerous, ch, obj, mob );
+act_notchar( #rdangerous, ch, obj, mob, sight );
+if( i == 1 ) {
+  j = 46295;
+  transfer( ch, find_room( j ) );
+  act_notchar( #leader_west, ch, obj, mob, sight );
+}
+else if( i == 2 ) {
+  j = 46285;
+  transfer( ch, find_room( j ) );
+  act_notchar( #leader_east, ch, obj, mob, sight );
+}
+else if( i == 3 ) {
+  j = 46293;
+  transfer( ch, find_room( j ) );
+  act_notchar( #leader_south, ch, obj, mob, sight );
+}
+else if( i == 4 ) {
+  j = 46297;
+  transfer( ch, find_room( j ) );
+  act_notchar( #leader_north, ch, obj, mob, sight );
+}
+loop( followers ) {
+  if( is_standing( rch ) ) {
+    act_tochar( #clamber, rch );
+    act_notchar( #rclamber, rch, obj, mob, sight );
+    transfer( rch, find_room( j ) );
+    act_notchar( #follower_arrival, rch, obj, mob, sight );
+  }
+}
+~
+E
+pause~
+@cYou pause briefly as you search for a path through the rubble.@n
+~
+E
+dangerous~
+@wAmidst the dangerously unstable rubble, you head along the only safe path you can find.@n
+~
+E
+leader_west~
+@w$n appears from amongst the rubble to the west.@n
+~
+E
+rdangerous~
+@w$n heads along the only safe path $e can find.@n
+~
+E
+clamber~
+@wYou clamber across the rubble.@n
+~
+E
+follower_arrival~
+@w$n arrives moments later.@n
+~
+E
+rclamber~
+$n clambers across the rubble.@n
+~
+E
+leader_east~
+@w$n appears from amongst the rubble to the east.@n
+~
+E
+leader_south~
+@w$n appears from amongst the rubble to the south.@n
+~
+E
+leader_north~
+@w$n appears from amongst the rubble to the north.@n
+~
+!
+3 0 15
+A
+climb~
+pile 1 down~
+acode( room, 4 );
+~
+!
+0 0 0
+-1
+S
+
+#46299
+Atop the Rubble Heap~
+Should I make ghost bats mimic?
+~
+~
+167378948 11 6 0
+-1
+S
+
+#46300
+Southeast of a Stalagmite Group~
+Smaller shards and rocks scatter the floor of the cavern, thrown far from
+the eruption of rubble and boulders to the north.  The cavern wall also
+shows signs of damage from the hurtling projectiles, no longer smooth as
+it is further to the east and west in the cavern.
+~
+[Aegrim] ledge to climb here, though not visible from this room.
+[Aegrim] acode for mysterious fresh breeze
+[Guin] No ledge here?
+[Guin] Reviewed.
+[Yrna] Still no ledge acode, I say we skip it. Also, there are no extras, could have something about wall? Or floor?
+[Yrna] Done.
+~
+167378948 11 6 0
+D0
+~
+~
+0 -1 46297 10 10 5
+D1
+~
+~
+0 -1 46301 10 10 5
+D3
+~
+~
+0 -1 46287 10 10 5
+A
+~
+~
+send_to_room( #chill, room );
+~
+E
+chill~
+@cYou are startled by a crisp breath of chilled air that sinks to the
+floor of the cavern.@n
+~
+!
+2 180 0
+2483 41 1509949540 3 0
+2484 73 1509949540 3 0
+-1
+S
+
+#46301
+Southeast of a Stalagmite Group~
+Scuffling footprints vaguely make themselves apparent in the fine dust
+coating the cavern floor.  The cavern wall turns to the south and west
+here, vaulting upwards into the gloom which seems to absorb the muffled
+screechings of the smaller bats high above.
+~
+[Aegrim] fat goblin which runs in panic to the troll here
+[Aegrim] run code is mixed up in sentry's mpcode, and also in
+[Aegrim] the acode of the stone troll's room
+[Aegrim] (note he runs only in mid fight)
+[Guin] Reviewed.
+[Yrna] Ugh, oh ... done.
+~
+167378948 11 6 0
+D0
+~
+~
+0 -1 46296 10 10 5
+D1
+~
+~
+0 -1 46305 10 10 5
+D2
+~
+~
+0 -1 46302 10 10 5
+D3
+~
+~
+0 -1 46300 10 10 5
+E
+footprints~
+Left behind by a small humanoid, most probably those of a goblin, these
+prints dart to and fro in every direction except towards the south, where
+only one or two tracks may be seen.
+~
+2486 137 1509949540 3 0
+-1
+S
+
+#46302
+Shattered Tunnel~
+Shattered boulders and their fragments have accumulated across the floor. 
+Cracks in the western wall seem to indicate a veritable pounding from
+these once giant boulders.  To the east a dark tunnel winds alongside the
+main cavern which opens up to the north.
+~
+[Aegrim] Troll throws a boulder at you here.
+[Guin] Reviewed.
+~
+167378948 11 6 0
+D0
+~
+~
+0 -1 46301 10 10 5
+D1
+~
+~
+0 -1 46303 10 10 5
+E
+wall crack western~
+The cracks are accompanied by segments of limestone which have shattered
+under impact and left indelible imprints on the western wall.  The source
+of this destruction is no doubt lost in the mystery of the shattered
+boulders at your feet.
+~
+A
+~
+~
+if( char_in_room( ch, room ) == 0 )
+  end;
+if( mob_in_room( 2487, find_room( 46304 ) ) ) {
+  rch = rand_player( room );
+  send_to_room( #boulder, room );
+  if( rch )
+    if( !is_mob( rch ) )
+    damage( mob, rch, 5d10+50, physical, "the flying boulder", "a flying boulder" );
+}
+~
+E
+boulder~
+@mYou hear a gleeful rumble as a giant boulder emerges from the gloom to
+the east!@n 
+~
+!
+2 400 0
+-1
+S
+
+#46303
+Shattered Tunnel~
+The tunnel bends crookedly as it skirts about a large rocky protrusion
+that justs out from the northern wall.  Every other feature in the tunnel,
+however, has been obliterated amidst a pile of rubble and boulders.  A
+thick layer of fragmented rock and crushed bone matter lies strewn across
+the narrow passage; the debris littered here and there with torn scraps
+of clothing.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 6 0
+D1
+~
+~
+0 -1 46304 10 10 5
+D3
+~
+~
+0 -1 46302 10 10 5
+E
+protrusion~
+An orange hued formation, it mysteriously defies the destruction that has
+swept through the rest of the tunnel.  Nonetheless, it has not escaped
+unscathed. Splattered across the eastern face of the protrusion are the
+unidentifiable remains of a goblin, squished beyond recognition.  Giant
+finger trails smear across the garish abstraction.
+~
+E
+debris torn scraps clothing~
+Hidden amidst the shards of shattered rock, torn pieces of cloth lie
+partially buried beneath the rubble.  For the most part, the material
+appears to be tattered remains of shoddily tailored clothing, though the
+state of many pieces has gone beyond all recognition as a garment of any
+kind.
+~
+A
+~
+~
+acode( find_room( 46302 ), 1 );
+~
+!
+2 400 0
+-1
+S
+
+#46304
+Grizzled Cave~
+The tunnel ends here in a spacious cave, surprisingly free of the
+destruction that has swept throughout the rest of the tunnel.  In fact
+the cave might be spacious if not for the grizzled remains crunched
+underfoot and dangling from the outcroppings on the walls.  To the west,
+the tunnel disappears into the gloom.
+~
+[Aegrim] chased goblin ends up here - can distract the troll mid fight
+[Guin] Probably don't understand acode 1 but I can't seem to get it to go off.
+[Guin] mdesc for troll could be fleshed out.
+[Guin] Reviewed.
+[Yrna] first acode works fine
+[Yrna] Done.
+~
+167378948 11 6 0
+D3
+~
+~
+0 -1 46303 10 10 5
+E
+grizzled remains~
+Little is left to be discovered, the bones that remain behind have been
+licked clean, and smashed underfoot by an awesome weight, and the bodies
+that linger on the walls are dessicated beyond a worthwhile inspection.
+~
+A
+~
+~
+if( !rflag( reset0, find_room( 46301 ) ) ) {
+  if( rflag( reset0, room ) ) {
+    act_room( #vanish, ch );
+    remove_rflag( reset0, room );
+  }
+}
+~
+E
+vanish~
+@YYou hear a final squeal as two flailing legs vanish into a monolithic
+face set in stone.@n 
+~
+!
+1 0 8
+A
+smash pound~
+boulder~
+if( is_fighting( ch ) )
+  act_tochar( "@wYou cannot do that while fighting.@n", ch );
+obj = obj_in_room( 2963, room );
+if( obj ) {
+  if( find_stat( ch, str ) > 16 ) {
+    if( weapon_type( ch, 5, 3, 3 ) || weapon_type( ch, 5, 3, 6 ) ) {
+      act_tochar( #pound, ch );
+      act_notchar( #rpound, ch, obj, mob, sight );
+      junk_obj( obj, 1 );
+    }
+    else
+      act_tochar( #wrong, ch, obj );
+  }
+}
+else
+  act_tochar( #none, ch, obj );
+~
+E
+pound~
+@RYou pound the boulder into oblivion with a mighty swing!@n
+~
+E
+rpound~
+@R$n pounds the boulder mightily, leaving behind a pile of rubble.@n
+~
+E
+wrong~
+@YYou need a weapon more suitable for crushing.@n
+~
+E
+none~
+@yYou see no boulders worthy of pounding into oblivion.@n
+~
+!
+0 0 0
+2487 137 1509949540 3 0
+2963 17 1509949490 -2 0
+2963 17 1509949540 -2 0
+-1
+S
+
+#46305
+Footprints in the Guano~
+Goblinoid footprints track all over this part of the cavern floor in the
+most haphazard manner.  A scuffle appears to have broken out here
+recently, evidenced by the broken stalacmite by the southern wall, and
+smeared guano piles nearby.
+~
+[Guin] hunta boss mdesc could be fleshed out some.
+[Guin] Reviewed.
+[Yrna] No extras found - how about for footprints?
+[Yrna] Done.
+~
+167378948 11 6 0
+D0
+~
+~
+0 -1 46306 10 10 5
+D1
+~
+~
+0 -1 46309 10 10 5
+D3
+~
+~
+0 -1 46301 10 10 5
+2483 41 1509949540 3 0
+2484 73 1509949540 3 0
+-1
+S
+
+#46306
+Scorched Ring~
+The scorched fringes of a blackened campfire creep outward where once it
+sought to consume fresh fuel.  Given its irregular shape, little effort
+was made to confine the small blaze.  Elsewhere, the cavern echoes with
+the sounds of the creatures that hide behind the veil of darkness that
+quickly consumes your light.
+~
+[Aegrim] gobbo hunting party around here
+[Aegrim] gobbos hunt the bats in netter/stickas pairs.
+[Aegrim] cooked bat wing can be found if you search the campfire.
+[Guin] Reviewed.
+[Yrna] Acode fixed
+[Yrna] Done.
+~
+167378948 11 6 0
+D0
+~
+~
+0 -1 46307 10 10 5
+D1
+~
+~
+0 -1 46310 10 10 5
+D2
+~
+~
+0 -1 46305 10 10 5
+D3
+~
+~
+0 -1 46296 10 10 5
+E
+scorched blackened campfire~
+Something uniquely different bothers you about this campfire until you
+realise its source of fuel was dried guano rather than wood.  Crumbling
+guano sheafs dissolve into a fine ash at the slightest touch, unlike the
+lingering coal remains of an outdoor campfire.
+~
+A
+search~
+campfire~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 0, 1 ) == 1 ) {
+    act_tochar( #wing, ch, obj );
+    obj_to_char( oload( 3586 ), ch );
+  } else
+  act_tochar( #bleah, ch, obj );
+}
+else
+  act_tochar( #bleah, ch, obj );
+act_notchar( #other, ch, obj, mob, sight );
+~
+E
+wing~
+@YIn the crumbling ashes, you find the wing of a ghost bat.@n
+~
+E
+bleah~
+@yYou search through the remains of the campfire, but find nothing worth
+keeping.@n 
+~
+E
+other~
+@y$n searches through the remains of the campfire.@n
+~
+!
+0 0 0
+2488 9 1509949540 3 0
+-1
+S
+
+#46307
+Guano Sea~
+The floor underfoot is slightly softer than the rocky sedimentation
+further to the west, mostly due to being largely composed from fresh
+guano.  Far to the west a massive eruption has fractured the cavern
+floor, its source a mystery cloaked beneath a mountain of rubble.
+~
+[Aegrim] ghost bat randomly pops on entering
+[Guin] Reviewed.
+[Yrna] Could really use an extra for guano here
+[Yrna] Done.
+~
+167378956 11 6 0
+D0
+~
+~
+0 -1 46308 10 10 5
+D1
+~
+~
+0 -1 46311 10 10 5
+D2
+~
+~
+0 -1 46306 10 10 5
+D3
+~
+~
+0 -1 46295 10 10 5
+A
+~
+~
+if( random( 0, 6 ) == 1 )
+  acode( find_room( 46283 ), 2 );
+else {
+  acode( find_room( 46308 ), 3 );
+  continue;
+}
+~
+!
+1 0 15
+A
+~
+~
+acode( find_room( 46308 ), 4 );
+continue;
+~
+!
+3 0 12
+-1
+S
+
+#46308
+Guano Sea~
+Moist underfoot, you find yourself trudging through fresh layers of guano. 
+Unlike the gradual sedimentation that forms in most bat caves, the guano
+supply here seems to be falling in more than plentiful quantities. 
+Scrying the cavern walls for signs of the bats, you glimpse several ideal
+niches immersed in the gloom that blankets the rest of the cavern.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 6 0
+D2
+~
+~
+0 -1 46307 10 10 5
+D3
+~
+~
+0 -1 46294 10 10 5
+E
+niche walls~
+Shrouded in a thick cloak of darkness, the upper reaches of the cavern
+are riddled with nooks and crannies that extend into the rough walls and
+ceiling.  Some of the fissures appear quite deep, disappearing in the
+musty gloom.
+~
+E
+guano~
+A thick layer of soft, moist guano covers the entire floor of the cavern,
+the slightly sticky faecal matter adhering to the rock surfaces.  A foul
+odour of decomposition lies heavily on the stifling air, as there is no
+flow of fresh air into the dingy cavern.
+~
+A
+look search~
+niches~
+if( !rflag( reset0, room ) )
+  act_tochar( #empty, ch, obj );
+else {
+  send_to_room( #bat, room );
+  remove_rflag( reset0, room );
+  mob = mload( 2480, room );
+  rch = rand_player( room );
+  init_attack( mob, rch );
+}
+~
+E
+empty~
+@cThe niches have been vacated.@n
+~
+E
+bat~
+@CA high-pitched screech splinters the air as a shadow materialises from
+the gloom!@n 
+~
+!
+0 0 0
+A
+~
+~
+send_to_room( #shakin, room );
+if( random( 0, 5 ) == 1 )
+  obj_to_room( oload( 78 ), room );
+~
+E
+shakin~
+@YA violent rumbling shakes the walls, sending showers of pebbles falling
+from above.@n 
+~
+!
+2 200 0
+A
+~
+~
+act_tochar( #guano, ch, obj );
+continue;
+~
+E
+guano~
+@gYour footfalls suddenly find themselves sinking into a sea of guano.@n
+~
+!
+1 0 8
+A
+~
+~
+act_tochar( #floor, ch, obj );
+continue;
+~
+E
+floor~
+@yThe cavern floor is slightly firmer here.@n
+~
+!
+3 0 8
+2480 9 1509949540 3 0
+-1
+S
+
+#46309
+Guano Mountains~
+Sloshing piles of fresh guano steam in the corner of the cavern, its hard
+to believe the deposits were made by a mere bat.  A cursory glance at the
+cavern walls to the south and east however, fails to betray the owner of
+the steamy guano mountains.
+~
+[Aegrim] acodes for looking walls for races of good eyesight. Giant Ghost Bat swoops down.
+[Aegrim] acode for trolls eating the mountains
+[Aegrim] search guano for sheep/corn/mage corpse and reagants
+[Guin] What are the affects of eating the guano?
+[Guin] What are races of good eyesight.
+[Guin] Reviewed.
+[Yrna] Deleted the eating for trolls because it didn't do anything
+[Yrna] Fixed looking at wall thing - races/classes with good eyesight are dwarves, vyans, rangers and thieves (as Aegrim wrote the code)
+[Yrna] Saying that, anyone in here will have a light source anyway, does it make any sense to have a code that tells you you can't see something because it's too dark?
+[Yrna] Done
+~
+167378948 11 6 0
+D0
+~
+~
+0 -1 46310 10 10 5
+D3
+~
+~
+0 -1 46305 10 10 5
+E
+guano mountain pile~
+Standing waist high, the putrescent mountains are still fresh and oozing
+a steamy vapour that defies your sense of smell.
+~
+A
+~
+pile guano mountain~
+if( !rflag( reset0, room ) ) {
+  act_tochar( #again, ch, obj, mob, sight );
+  act_notchar( #again2, ch, obj, mob, sight );
+  drain_stat( ch, int, 3, -1 );
+  end;
+}
+act_tochar( #search, ch, obj, mob, sight );
+act_notchar( #search2, ch, obj, mob, sight );
+wait( 1 );
+i = random( 3, 9 );
+if( i < 5 ) {
+  send_to_room( #goat, room, sight );
+  mload( 161, room );
+}
+if( i == 5 ) {
+  act_tochar( #corn, ch, obj, mob, sight );
+  act_notchar( #corn2, ch, obj, mob, sight );
+  obj_to_char( oload( 1597), ch );
+}
+if( i == 6 ) {
+  act_tochar( #mage, ch, obj, mob, sight );
+  wait( 1 );
+  act_tochar( #bag, ch, obj, mob, sight );
+  act_notchar( #bag2, ch, obj, mob, sight );
+  acode( room, 2 );
+}
+if( i > 6 ) {
+  act_tochar( #nada, ch, obj, mob, sight );
+  act_notchar( #nada2, ch, obj, mob, sight );
+  drain_stat( ch, int, 3, -1 );
+}
+remove_rflag( reset0, room );
+~
+E
+yum~
+@yApart from a few splattered leftovers, the guano mountain is no more.@n
+~
+E
+again~
+@yDespite already having been searched, you throw yourself wholeheartedly
+into the pile of guano.@n 
+~
+E
+again2~
+@y$n frolics in the guano mountain some more, even though it has already
+been searched.@n" 
+~
+E
+search~
+@gTrying not to think about it twice, you start sloshing around inside
+the guano mountain.@n 
+~
+E
+search2~
+@g$n sloshes around for a bit in the guano mountain.@n 
+~
+E
+goat~
+@WYou hear a muffled 'baaa' as the head of a most miserable sheep breaks
+free from the guano mountain.@n 
+~
+E
+corn~
+@YYou find a recently plucked, though perhaps not quite so fresh ear of
+corn.@n 
+~
+E
+corn2~
+@Y$n finds a not so fresh ear of corn!@n 
+~
+E
+mage~
+@MYou find the garish remains of a gnomish mage and the crumbling
+remnants of his reagants bag.@n 
+~
+E
+bag~
+@mThe bag falls to tatters, but leaves behind an assorted collection of
+reagents.@n 
+~
+E
+bag2~
+@M$n finds the tattered and consumed remains of a gnomish mage.@n 
+~
+E
+nada~
+@yAfter a fruitless search, all you seem to have picked up is a charming
+odour, and the need for a dip.@n 
+~
+E
+nada2~
+@yLooking sheepish, $n climbs out of the guano mountain with nothing to
+show for $s efforts@n 
+~
+!
+9 0 0
+A
+~
+~
+obj_to_char( oload( 872 ), ch );
+if( random( 0, 2 ) == 1 )
+  obj_to_char( oload( 872 ), ch );
+if( random( 0, 2 ) == 1 )
+  obj_to_char( oload( 872 ), ch );
+if( random( 0, 2 ) == 1 )
+  obj_to_char( oload( 1269 ), ch );
+if( random( 0, 2 ) == 1 )
+  obj_to_char( oload( 249 ), ch );
+obj_to_char( oload( 1460 ), ch );
+if( random( 0, 2 ) == 1 )
+  obj_to_char( oload( 1460 ), ch );
+if( random( 0, 2 ) == 1 )
+  obj_to_char( oload( 1460 ), ch );
+if( random( 0, 2 ) == 1 )
+  obj_to_char( oload( 127 ), ch );
+~
+!
+0 0 0
+A
+look~
+cavern walls~
+if( !rflag( reset2, room ) ) {
+  acode( room, 4 );
+  end;
+}
+if( race( ch ) != dwarf )
+  if( race( ch ) != vyan )
+  if( class( ch ) != ranger )
+  if( class( ch ) != thief ) {
+  acode( room, 4 );
+  end;
+}
+/* Code below is triggered if ch passed one of the previous ifs */
+act_tochar( #bat, ch, obj, mob, sight );
+act_notchar( #bat2, ch, obj, mob, sight );
+remove_rflag( reset2, room );
+wait( 1 );
+send_to_area( #noise, room, sight );
+wait( 1 );
+send_to_room( #swoop, room, sight );
+mob = mload( 2481, room );
+rch = rand_player( room );
+if( rch ) {
+  init_attack( mob, rch );
+}
+else {
+  if( char_in_room( ch, find_room( 46310 ) ) )
+    interpret( mob, "n" );
+  if( char_in_room( ch, find_room( 46305 ) ) )
+    interpret( mob, "w" );
+}
+~
+E
+bat~
+@wHidden deep in the gloom, two @Rred specks@n@w peer right back at
+you.@n 
+~
+E
+bat2~
+@w$n shivers as his gaze focuses on something unseen.@n 
+~
+E
+noise~
+@cA spine-chilling screech ruptures the silence.@n 
+~
+E
+swoop~
+@RAn ancient ghost bat swoops down from out of the gloom!@n 
+~
+!
+0 0 0
+A
+~
+~
+act_tochar( #gloom, ch, obj );
+~
+E
+gloom~
+@GThe gloom is impenetrable, obscuring everything of note beyond a couple of feet.@n
+~
+!
+0 0 0
+-1
+S
+
+#46310
+Eastern Cavern Opening~
+Guano has almost swamped a paved entrance into an old dwarven tunnel to
+the east.  Its relentless approach is only hampered by the apparent
+frequent use of the tunnel despite its dilapidated condition.  Westwards
+the cavern vaults upwards beyond your vision, enveloping its boundaries
+in a cloak of gloom.
+~
+[Guin] Reviewed.
+[Yrna] No extras ... could have something about guano, I suppose
+[Yrna] Done.
+~
+167378948 11 6 0
+D0
+~
+~
+0 -1 46311 10 10 5
+D1
+~
+~
+0 -1 46312 10 10 5
+D2
+~
+~
+0 -1 46309 10 10 5
+D3
+~
+~
+0 -1 46306 10 10 5
+2483 41 1509949540 3 0
+2484 73 1509949540 3 0
+-1
+S
+
+#46311
+Guano Sea~
+Slicker than an ogre's drooling double chin, the fresh coating of guano
+that smears everything here makes traversing this corner of the cavern
+hazardous, at least to your pride if not physically should you fall.  To
+the south the cavern floor becomes less slippery as it approaches a
+tunnel that leads out of the cavern to the east.
+~
+[Guin] Reviewed.
+[Yrna] Yet again, no extras found.
+[Yrna] Done.
+~
+167378948 11 6 0
+D2
+~
+~
+0 -1 46310 10 10 5
+D3
+~
+~
+0 -1 46307 10 10 5
+A
+~
+~
+acode( find_room( 46308 ), 4 );
+continue;
+~
+!
+3 0 4
+A
+~
+~
+acode( find_room( 46308 ), 3 );
+continue;
+~
+!
+1 0 4
+2483 41 1509949540 3 0
+2484 73 1509949540 3 0
+-1
+S
+
+#46312
+Dwarven Tunnel~
+Ill maintained, the tunnel grimly despairs at its present state whilst it
+still retains a memory of its past strength.  The tunnel walls still
+indomitably hold fast, yet cobwebbed niches and rusting sconces betray
+its recently acquired dishevelled state.  To the south, the tunnel
+continues, while to the west it enters a gloomy cavern.
+~
+[Aegrim] no.mob room
+[Yrna] Done.
+[Guin] Done.
+~
+167378956 11 6 0
+D2
+~
+~
+0 -1 46313 10 10 5
+D3
+~
+~
+0 -1 46310 10 10 5
+E
+niche web cobweb~
+Deep niches riddle the webbed ceiling and walls of the low tunnel. 
+Adhesive strands of dusty web cover the majority of the fissures; some of
+the ghostly strands dangle across the narrow cave as it twists to the
+south and west.
+~
+A
+~
+niches webs~
+if( rflag( reset0, room ) ) {
+  act_tochar( #search, ch );
+  act_notchar( #rsearch, ch, obj, mob, sight );
+  obj_to_char( oload( 81), ch );
+  remove_rflag( reset0, room );
+  end;
+}
+act_tochar( #cleared, ch );
+~
+E
+search~
+@CSearching the niches, you find naught but a sticky handful of webs.@n
+~
+E
+rsearch~
+@C$n searches the niches.@n
+~
+E
+cleared~
+@cThe niches have already been cleared.@n
+~
+!
+9 0 0
+-1
+S
+
+#46313
+Dwarven Tunnel~
+Enormous limestone blocks frame the tunnel as its continues its way in a
+north-south direction.  The paving underfoot is also cut from the same
+limestone, and worn smooth from many years of use.  The paved passage
+would pass on a feeling of strength and endurance if it were not for the
+grubby goblin footprints that smear the blocks underfoot with a mixture
+of guano and mud.
+~
+[Guin] Reviewed.
+[Yrna] No extras found - how about limestone blocks? Or footprints?
+[Yrna] Done.
+~
+167378948 11 6 0
+D0
+~
+~
+0 -1 46312 10 10 5
+D2
+~
+~
+0 -1 46314 10 10 5
+-1
+S
+
+#46314
+Dwarven Tunnel - Fortified Archway~
+A runic archway encloses the tunnel walls to the south.  Its surface is
+chipped and shattered, a broken relic to its former power.  Across the
+passage a slipshod gate and surrounding barricade have been thrown up in
+gobbo fashion, that is to say no fashion at all.  Nonetheless, it appears
+an effective and immovable barrier blocking the way further south.
+~
+[Guin] Entrance to another zone possibly. See Aegrim's rbugs.
+[Aegrim] gobbo gate, unpassable
+[Aegrim] gobbo archers pincushion groups who sit here
+[Aegrim] to add later:
+[Aegrim] - taunting causes some gobbos to charge out
+[Aegrim] - some secrets for the gobbo area discovered here
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 6 0
+D0
+~
+~
+0 -1 46313 10 10 5
+E
+archway runic~
+Up either side of the arch, dwarvish runes crumble into decay, having
+long forgotten their original purpose as it succumbs to the ravages of
+a goblin occupation.
+~
+E
+gate barricade~
+A haphazard collection of boulders, dwarven-crafted blocks and rubble lie
+heaped across the tunnel.  Goblin eyes peer over the rim of the barricade
+and through bolt holes in a crookedly aligned iron gate that has been set
+amidst the fortification.
+~
+A
+~
+~
+i = random( 0, 4 );
+if( i < 3 ){
+  loop( all_in_room )
+    if( !is_mob( rch ) )
+    damage( mob, rch, 2d10+8, physical, "a hail of gobbo arrows", "a goblinoid arrow" );
+}
+if( i == 3 ) {
+  if( players_room( room ) > 0 ) {
+    send_to_room( #snide, room, sight );
+  }
+}
+if( i == 4 )
+  if( players_room( room ) > 0 )
+  send_to_room( #hurl, room, sight );
+~
+E
+snide~
+@cA snide little goblin taunts you from behind the barricade.@n
+~
+E
+hurl~
+@cA gobbo hurls a snot statue over the barricade in your direction.@n
+~
+!
+2 1000 0
+A
+south~
+*~
+act_tochar( #barricade, ch );
+~
+E
+barricade~
+@cThe barricade is impassable - even you could not handle the horde of goblins beyond.@n
+~
+!
+0 0 4
+-1
+S
+
+#46315
+Shale-Covered Mountain Slope~
+The continually shifting, treacherous sea of loose shale and shattered
+granite covers the barren mountain slope here.  Travelling further up or
+down the slope is a slow, precarious task.  Despite the bleakness of the
+mountain slope however, the vista that stretches before you is at the
+same time enchanting and humbling.  Although comparitively not as high up
+as many of the forgotten paths through the Everwinter Mountains, the view
+here stretches uninterrupted from horizon to horizon, giving you a clear
+picture of the valleys to the south, and a crystalline lake nestled in
+the highlands to the northwest.
+~
+[Guin] Finally a troll with really bad fire resist. Thank you.:)
+[Guin] ooh, the troll is cool.;) Nice job on him.
+[Guin] Love this room too.:)
+[Guin] Done.
+~
+167247872 5 6 0
+D4
+~
+~
+0 -1 46316 10 10 5
+D5
+~
+~
+0 -1 46277 10 10 5
+E
+lake crystalline~
+Enshrouded in mists and encircled by a dense conifer forest, the highland
+lake lies ringed on all sides by the dominating peaks of the Everwinter
+Mountain Range.  The only break in the mountains is via a narrow pass
+that connects the southern edge of the lake with the valleys to the south.
+~
+E
+pass mountain~
+The pass weaves through the fringes of the mountain range where it
+appears to follow an ancient, partially ruined roadway.  Nowhere is this
+more evident, then at its southern end as it approaches the valleys
+beyond.  At this point a landslide has carved away the mountains on
+either side, smothering the pass completely.
+~
+-1
+S
+
+#46316
+Highland Ledge~
+A smooth slab has wedged itself firmly into the mountainside here,
+providing the only firm footing on the continually shifting bed of shale
+that is now laced with a sheet of ice and snow.  Hanging over the slab,
+an icy maw rimmed with frost opens into the mountainside.  The mountain
+however, climbs ever upwards until its snowy peaks are lost somewhere as
+they merge with an everpresent canopy of clouds that blankets the
+Everwinter Mountains.  However, the treacherous slope of shale only
+becomes increasingly dangerous, and such a climb would be nigh on
+impossible.
+~
+[Guin] Done.
+~
+167247872 5 6 0
+D0
+~
+~
+0 -1 46331 10 10 5
+D5
+~
+~
+0 -1 46315 10 10 5
+E
+slab~
+The slab has been wedged horizontally in such a fashion that it almost
+appears to have been purposely placed, like some massive piece of
+furniture that a clan of hill giants might dine at.  That is, if you
+could describe such a crude affair with such an elegant term. 
+Nevertheless, there is no distinct evidence that this is so, and you can
+only assume that it is just another of nature's whims.
+~
+3380 17 1509949540 -2 0
+-1
+S
+
+#46317
+Irregular Tunnel~
+A light moss grows unfettered across the worn rocks that lie scattered
+across this natural waterway.  They appear to be a natural response to
+the dim light sliding through from the north that paints the tunnel in
+shades of grey.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378948 11 6 0
+D0
+~
+~
+0 -1 46318 10 10 5
+D2
+~
+~
+0 -1 46275 10 10 5
+E
+moss~
+Covering the lower walls of the tunnel, an almost iridescent pale green
+moss flourishes just above the line on the wall that has been stained by
+slowly ebbing water.  From within the damp crevices and fissures, the
+moss proliferates all the more, thriving on the nutrient rich moisture
+that lingers in the dark cracks.
+~
+2403 9 1509949540 3 0
+-1
+S
+
+#46318
+Irregular Tunnel~
+The waterway twists and turns with the tunnel, encircling a rocky
+outcropping that only briefly interrupts it as it dips sharply and
+penetrates through the shell of the mountain.  Just up from you a
+refreshing breeze swirls into the tunnel, quickly losing itself in the
+myriad crannies and niches that occupy the twists and turns of the
+waterway.
+~
+[Guin] Sentence one is run-on and a bit awkward, lots of 'as its' in it.
+[Guin] Maybe something like this: The waterway twists and turns with the tunnel, encircling a rocky outcropping that only briefly interrupts it as it dips sharply and penetrates through the shell of the mountain.
+[Guin] Maybe add a leaving code for up.
+[Guin] Reviewed.
+[Yrna] Fixed first sentence as per Guin's rbug
+[Yrna] Added random
+[Yrna] Added leaving up
+[Yrna] Done.
+~
+167378948 11 6 0
+D2
+~
+~
+0 -1 46317 10 10 5
+D4
+~
+~
+0 -1 46319 10 10 5
+A
+~
+~
+send_to_room( #breeze, room );
+~
+E
+breeze~
+@CA breath of air comes in from above, carrying with it the smell of
+snow.@n 
+~
+!
+2 0 0
+A
+~
+~
+if( is_player( ch ) ) {
+  act_tochar( #climb, ch, obj );
+  act_notchar( #rclimb, ch, obj, mob, sight );
+  transfer( ch, find_room( 46319  ) );
+}
+continue;
+~
+E
+climb~
+@BCareful not to fall in the water, you pull yourself upward.@n
+~
+E
+rclimb~
+@BSlightly unsure on $s feet, $n disappears through an opening above.@n
+~
+!
+3 0 16
+-1
+S
+
+#46319
+Icy Cave~
+You find yourself at the rear of a cave cluttered with loose boulders
+around which many cracks and crevices work their way through into the
+mountain, following the seams of softer rock that have been eroded by the
+seasonal melts over the centuries.  In the far corner, one particular
+waterway has obviously been used from time to time as a tunnel through to
+the lower caverns.  To the north a fresh, but icy breeze can be felt as
+it slices into the cave's interior.
+~
+[Aegrim] no.mob room - to stop crawler coming up
+[Guin] extra for the one waterway used as a tunnel. What makes it obvious that it has been?
+[Guin] Reviewed.
+[Yrna] Done.
+~
+167378952 11 6 0
+D0
+~
+~
+0 -1 46320 10 10 5
+D5
+~
+~
+0 -1 46318 10 10 5
+-1
+S
+
+#46320
+Icy Cave~
+Giant fingers of glacial ice yawn over the cavern's opening which looks
+out over the northern glacial valleys.  Beyond these, the Everwinter
+Peaks stretch across the horizon guarding the world from whatever
+mysteries lie in the bleakness beyond.  Running along the edge of the
+mountain to the north, a trail interrupts the smooth sheet of snow as it
+heads towards a ruined keep that hangs on a precipice overlooking the
+valley and lake to the northwest.
+~
+[Guin] did you look at that boulder description? Did you want it to appear that acid had pocked it?
+[Guin] Hrm, mpc on the troll says, "Guin grabs a boulder and hurls it lustily!"
+[Guin] Reviewed.
+[Yrna] The boulder description was not changed - maybe we should?
+[Yrna] Troll's mpc seemed fine
+[Yrna] Done.
+~
+167378944 11 6 0
+D2
+~
+~
+0 -1 46319 10 10 5
+2487 137 1509949540 3 0
+2963 17 1509949490 -2 0
+2963 17 1509949540 -2 0
+-1
+S
+
+#46321
+Gossamer-Woven Tunnel~
+The tunnel comes to an end here at a webbed wall filled with crannies and
+niches.  Then again, almost every other available space is strewn with
+webs, new and old, the ones at the western end of the tunnel here are
+simply a little thicker than usual.
+~
+[Guin] Reviewed.
+[Yrna] Needs extra for webs/niches/crannies because there's an acode for them
+[Yrna] Done.
+~
+167378948 11 6 0
+D1
+~
+~
+0 -1 46326 10 10 5
+D3
+tangled weave~
+web~
+2283 -1 46281 10 10 5
+A
+clear search~
+web niche crannies~
+if( !is_open( room, west ) ) {
+  act_tochar( #clear, ch, obj );
+  act_notchar( #rclear, ch, obj, mob, sight );
+  open( room, west );
+}
+else
+act_tochar( #stoopid, ch, obj );
+~
+E
+clear~
+@CBrushing aside the webs, you find a niche leading to a ledge beyond.@n
+~
+E
+rclear~
+@C$n sweeps the webs aside, revealing a niche leading to a ledge beyond.@n
+~
+E
+stoopid~
+@cWhat web? There isn't any left to clear.@n
+~
+!
+0 0 0
+A
+~
+~
+acode( find_room( 46267 ), 1 );
+~
+!
+1 0 10
+-1
+S
+
+#46322
+Gossamer-Spun Ledge~
+Looking out to the east, the cavern expands to what you're convinced is a
+great height.  However, the impenetrable gloom descends before you get a
+glimpse of the cavern's roof, and so you rely on a bat's senses to get a
+feel for the area.  To the north, the ledge breaks into a low-hanging
+tunnel, strewn in disarray with a tangled weave of webs.
+~
+[Aegrim] remove down exit before opening
+[Guin] Reviewed.
+[Yrna] Done.
+~
+167378956 11 6 0
+D0
+~
+~
+0 -1 46323 10 10 5
+D5
+~
+~
+234 -1 46288 10 10 5
+A
+~
+~
+acode( find_room( 46267 ), 1 );
+~
+!
+1 0 1
+A
+~
+~
+send_to_room( #wings, room );
+~
+E
+wings~
+@cA rush of wings drum the air as a giant bat swoops through the gloom nearby.@n
+~
+!
+2 150 0
+A
+climb~
+down~
+act_tochar( #climb, ch, obj );
+act_notchar( #rclimb, ch, obj, mob, sight );
+wait( 1 );
+act_tochar( #high, ch, obj );
+wait( 1 );
+act_tochar( #naah, ch, obj );
+act_notchar( #rnaah, ch, obj, mob, sight );
+~
+E
+climb~
+@yYou approach the edge tentatively and peer over.@n
+~
+E
+rclimb~
+@y$n approaches the edge tentatively and peers over.@n
+~
+E
+high~
+@YDismayed, you realise the ledge is located so high in the cavern that
+darkness obscures the cavern floor far below.@n 
+~
+E
+naah~
+@RJumping from such a height would probably see you impaled on a
+stalagmite.@n 
+~
+E
+rnaah~
+@RAfter some consideration, $n nervously backs away from the edge.@n
+~
+!
+0 0 0
+2478 137 1509949540 3 0
+-1
+S
+
+#46323
+Gossamer-Woven Tunnel~
+Wispy threads dangle across the tunnel, many of them discarded and
+broken, hanging from the tunnel roof like the haunted visage of a lost
+soul.  Like a fog, it shrouds the way along the tunnel to the north and
+south.
+~
+[Guin] Reviewed.
+[Yrna] Should have extra for threads/webs
+[Yrna] Done.
+~
+167378956 11 6 0
+D0
+~
+~
+0 -1 46324 10 10 5
+D2
+~
+~
+0 -1 46322 10 10 5
+A
+~
+~
+acode( find_room( 46267 ), 1 );
+~
+!
+1 0 5
+2478 9 1509949540 3 0
+-1
+S
+
+#46324
+Gossamer-Woven Tunnel~
+The tunnel continues in its unusual fashion to the north and south from
+here.  Unlike most tunnels that have been disturbed by the frequent
+passage of creatures dwelling within, this one is worn smooth not only
+on the floor, but on the walls and roof of the tunnel itself.  Although
+completely natural, the consequences leave an odd visual impression.
+~
+[Guin] Reviewed.
+[Yrna] Should have some sort of extra - perhaps for those smooth walls/floors?
+[Yrna] Done.
+~
+167378956 11 6 0
+D0
+~
+~
+0 -1 46325 10 10 5
+D2
+~
+~
+0 -1 46323 10 10 5
+A
+~
+~
+acode( find_room( 46267 ), 1 );
+~
+!
+1 0 5
+2478 9 1509949540 3 0
+-1
+S
+
+#46325
+Gossamer-Woven Tunnel~
+Tattered patches of a gossamer-like thread ensnare anything that brushes
+past.  Most of the webs here are old, and unlikely to trap the unwary. 
+The tunnel continues to the north and south, obscured in part by the
+tangled mess of webs that frames the tunnel walls.
+~
+[Guin] Reviewed
+[Yrna] Needs extra for thread/web
+[Yrna] Done.
+~
+167378956 11 6 0
+D0
+~
+~
+0 -1 46326 10 10 5
+D2
+~
+~
+0 -1 46324 10 10 5
+A
+~
+~
+acode( find_room( 46267 ), 1 );
+~
+!
+1 0 5
+2479 9 1509949540 3 0
+-1
+S
+
+#46326
+Gossamer-Woven Tunnel~
+The tunnel crests a natural breach in the tunnel wall as it swings around
+a bend leading both west and south from here.  Draping the opening like a
+tattered curtain, a chaotic tangle of webs partially obscures what lies
+beyond.
+~
+[Aegrim] add clambering through the breach acode
+[Guin] No clambering through the breech re:your rbug.
+[Guin] Reviewed.
+[Yrna] There is clambering code now, maybe was added afterwards.
+[Yrna] Done.
+~
+167378956 11 6 0
+D0
+~
+~
+0 -1 46327 10 10 5
+D2
+~
+~
+0 -1 46325 10 10 5
+D3
+~
+~
+0 -1 46321 10 10 5
+A
+~
+~
+acode( find_room( 46267 ), 1 );
+~
+!
+1 0 4
+A
+~
+~
+act_tochar( #web, ch, obj );
+continue;
+~
+E
+web~
+@wThe tangle of webs yields haphazardly as you clamber through the breach.@n
+~
+!
+3 0 1
+2478 9 1509949540 3 0
+-1
+S
+
+#46327
+Trembling Lip~
+Small fragments of rubble have accumulated on a narrow lip that protrudes
+into a natural chute, traveling vertically through the mountain.  The
+rock surfaces also have a dangerous moistness that leaves any viable
+handholds slick with a thin film of water.  Nevertheless you could
+possibly clamber the first couple of feet down before jumping to the
+floor not far below.  To the south, a tangled weave haphazardly covers a
+breach in the rock wall that leads to a tunnel beyond.
+~
+[Aegrim] no.mob room, prevents the cave fishers from wandering too much.
+[Aegrim] exit down is a one way experience.
+[Guin] Add extra for tangled weave?
+[Guin] Reviewed.
+[Yrna] Done.
+~
+167378956 11 6 0
+D2
+~
+~
+0 -1 46326 10 10 5
+D5
+~
+~
+0 -1 46328 10 10 5
+A
+~
+~
+acode( find_room( 46326 ), 2 );
+continue;
+~
+!
+3 0 4
+A
+~
+~
+act_tochar( #down, ch, obj );
+continue;
+~
+E
+down~
+@gThe handholds gradually become too slippery so you leap the last few
+feet to the floor below.@n 
+~
+!
+3 0 32
+-1
+S
+
+#46328
+Slippery Enclave~
+Pools of turbid water gleam unnaturally as they appear to consume with a
+ravishing apetite the light that casts leaping shadows on the boulder
+strewn floor.  The dank tunnel comes to an end by the murky pools and
+opens into a natural chute that drives vertically up through the heart of
+the mountain's core.  The boulders lining the walls of the chute glisten
+with a thin layer of moisture, yet even so you are unable to determine
+the extent of its length.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378956 11 6 0
+D3
+~
+~
+0 -1 46329 10 10 5
+D4
+~
+~
+0 -1 46327 10 10 5
+E
+rocks boulders~
+Forming a thick barricade, a tumble of large boulders has blocked the
+tunnel ahead.  The haphazard confusion caused by the scattered boulders
+has resulted in shallow depressions being formed by the tightly packed
+rock.  Trapped by the boulders, murky water lies in undisturbed pools in
+the musty cave.
+~
+A
+climb~
+up~
+act_tochar( #to_char, ch );
+~
+E
+to_char~
+@gA thin film of moisture makes any handhold you can find too slick to
+aid your climb.@n 
+~
+!
+3 0 16
+A
+~
+~
+acode( find_room( 46330 ), 2 );
+~
+!
+16 0 0
+-1
+S
+
+#46329
+Haunting Silence~
+Deep crevices hew the jagged rock walls as they twist sharply in this
+narrow tunnel.  Coating the horizontal surfaces along the walls and
+floor, a thick layer of dust and rock particles lie undisturbed by the
+living.  An eerie silence blankets the tunnel here as it awkwardly bends
+to the east and the south.  The atmosphere is a complete contrast to the
+bustling caverns elsewhere, you guess that this path is little used.
+~
+[Yrna] Done.
+[Guin] Done.
+~
+167378956 11 6 0
+D1
+~
+~
+0 -1 46328 10 10 5
+D2
+~
+~
+0 -1 46330 10 10 5
+E
+crevices rock walls~
+Gouged deep into the rock-face, fissures and crevices of varying sizes
+break the already jagged walls and floor.  Infilling a number of the
+larger cracks are shards and particles of broken granite, the angular
+grey fragments rough to the touch.
+~
+A
+~
+~
+if( !mob_in_room( 2494, find_room( 46328 ) ) )
+  if( !mob_in_room( 2494, find_room( 46329 ) ) )
+  if( !mob_in_room( 2494, find_room( 46330 ) ) )
+  if( rflag( reset0, room ) ) {
+  send_to_room( #noise, room );
+  remove_rflag( reset0, room );
+  mload( 2494, find_room( 46328 ) );
+  send_to_room( #ankheg, find_room( 46328 ) );
+  if( players_room( find_room( 46328 ) ) ) {
+    rch = rand_player( find_room( 46328 ) );
+    mob = mob_in_room( 2494, find_room( 46328 ) );
+    init_attack( mob, rch );
+  }
+  send_to_room( #ankheg, find_room( 46330 ) );
+  mload( 2494, find_room( 46330 ) );
+  if( players_room( find_room( 46330 ) ) ) {
+    rch = rand_player( find_room( 46330 ) );
+    mob = mob_in_room( 2494, find_room( 46330 ) );
+    init_attack( mob, rch );
+  }
+}
+~
+E
+noise~
+@CA brief scurrying and sharp clicking noises is momentarily followed by
+an eerie silence.@n 
+~
+E
+ankheg~
+@RA chittering ankheg drops from the ceiling of the tunnel!@n
+~
+!
+1 0 6
+A
+~
+~
+acode( find_room( 46330 ), 2 );
+~
+!
+16 0 0
+-1
+S
+
+#46330
+Encroaching Stillness~
+A choking stillness grips the fringes of the tunnel in its grasp, as
+though the sounds of life you can hear reaching you from a cavern
+somewhere to the south had suddenly been terminated.  The south wall of
+the rock face is liberally coated with a vibrant curtain of moss, so much
+so that the rock face itself is entirely smothered beneath its billowing
+sheaths.
+~
+[Guin] Ankheg needs an long_s and long_p.
+[Guin] Probaby ought to fix that move moss code to not work while the mob is in the room.
+[Guin] Also needs a weight.
+[Guin] Reviewed.
+[Yrna] Added a short extra for moss, feel free to expand
+[Yrna] Ankheg's weight set, long s and p fixed
+[Yrna] Acode fixed - you can't open south if ankheg is in the room now
+[Yrna] Done.
+~
+167378956 11 6 0
+D0
+~
+~
+0 -1 46329 10 10 5
+D2
+~
+~
+2283 -1 46282 10 10 5
+E
+moss curtain~
+A deep blue-green hue, the moss flourishes in the moist conditions here,
+growing long and thick and completely obscuring the view to the south.
+~
+A
+clear move~
+curtain moss~
+if( mob_in_room( 2494, room ) )
+  act_tochar( #ankh, ch, obj );
+else {
+  if( !is_open( room, south ) ) {
+    act_tochar( #move, ch, obj );
+    act_notchar( #rmove, ch, obj, mob, sight );
+    open( room, south );
+  }
+  else
+    act_tochar( #stoopid, ch, obj );
+}
+~
+E
+move~
+@gYou brush the curtain of moss to the side.@n
+~
+E
+rmove~
+@g$n brushes the curtain of moss to the side, revealing an opening into
+the cavern beyond.@n 
+~
+E
+stoopid~
+@YDo pay attention! Someone has already moved the moss.@n
+~
+E
+ankh~
+@GThe ankheg is blocking your way to the moss curtain.@n
+~
+!
+0 0 0
+A
+~
+~
+if( players_room( room ) == 0 ) {
+  loop( mob_in_room( 2494, room ) ) {
+    junk_mob( mob_in_room( 2494, room ) );
+  }
+}
+~
+!
+16 0 0
+-1
+S
+
+#46331
+Glacial Cave~
+A thin layer of frosted ice covers the cave like the varnish on a
+delicately preserved collage.  Gnawed at bones are partially preserved
+from going rancid on the ice crusted floor that hides many trinkets and
+treasures frozen in time within its glacial grasp.
+~
+[Guin] Done.
+[Guin] Done.
+~
+167378952 11 6 0
+D2
+~
+~
+0 -1 46316 10 10 5
+E
+treasures trinkets~
+Prismatic reflections of light gleam through the thin layer of ice
+covering the floor, betraying the locations of metallic trinkets and
+belongings that once had a place in the world before their owner became a
+hearty feast.  Little you see is of value, either crudely fashioned by
+goblins, or the remnants of dwarven fashioned camping gear.
+~
+E
+bones~
+Partially coated by a layer of ice, the remaining flesh that has not been
+torn off the bone has started to take on crystalline formations as the
+frost freezes the last drops of blood and moisture that lie splattered
+across the gnawed on limb.
+~
+A
+search~
+trinkets treasures~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 3 ) == 1 ) {
+    act_tochar( #platinum, ch, obj, mob, sight );
+    act_notchar( #rplatinum, ch, obj, mob, sight );
+    obj_to_char( oload( 16 ), ch );
+  }
+  else {
+    act_tochar( #gold, ch, obj, mob, sight );
+    act_notchar( #rgold, ch, obj, mob, sight );
+    obj_to_char( oload( 12 ), ch );
+  }
+}
+else {
+  act_tochar( #nada, ch, obj, mob, sight );
+}
+~
+E
+platinum~
+@wChipping away at a likely prize, you manage to pull free a platinum coin!@n
+~
+E
+rplatinum~
+@wChipping away at a likely prize, $n pries free a platinum coin!@n
+~
+E
+gold~
+@wChipping away at a likely prize, you moan in dismay at your discovery.@n
+~
+E
+rgold~
+@wChipping away at a likely prize, $n moans in dismay at $s discovery.@n
+~
+E
+nada~
+@wYou dig around, but find nothing of value.@n
+~
+!
+0 0 0
+2515 137 1509949540 3 0
+2515 9 1509949540 3 0
+-1
+S
+
+#46332
+Tubular Tunnel~
+Jutting out from the cavern wall, this narrow ledge is shrouded in the
+obscurity of darkness.  Not too far away from the ledge, a fine spray of
+icy water falls to the cavern's floor below, a few droplets splattering
+across the stone platform.  Small crystals have been embedded into
+slender fissures in the rock face, the glimmering shards apparently stuck
+fast in the dark grey stone.
+~
+[Guin] Done.
+~
+167378948 11 6 0
+D5
+~
+~
+234 -1 46292 10 10 5
+E
+crystals fissures shards~
+It appears that many attempts have been made at removing the crystal
+shards from their resting place, as the rock surface is marred with
+scratches that do not look natural in origin.  What little can be seen of
+the crystal appears to be sharply angular, the rough-hewn edges of this
+violet coloured gem look as though they could easily slice through skin. 
+It may be this attribute that has left the crystal lying unperturbed for
+so long.
+~
+A
+get cut break chisel~
+crystals shards gems~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( has_obj( 3044, ch ) ) {
+    if( random( 1, 5 ) == 3 ) {
+      obj = oload( 7544 );
+      act_tochar( #gem, ch, obj );
+      act_notchar( #rgem, ch, obj, mob, sight );
+      obj_to_char( obj, ch );
+    }
+    else {
+      act_tochar( #nogem, ch, obj );
+      act_notchar( #rnogem, ch, obj, mob, sight );
+    }
+  }
+  else {
+    if( random( 1, 10 ) == 7 ) {
+      obj = oload( 7544 );
+      act_tochar( #gem2, ch, obj );
+      act_notchar( #rgem2, ch, obj, mob, sight );
+      damage( mob, ch, 4d5, physical, "a rough-hewn crystal", "a rough crystal edge" );
+      obj_to_char( obj, ch );
+    }
+    else {
+      act_tochar( #bleh, ch, obj );
+      act_notchar( #rbleh, ch, obj, mob, sight );
+      damage( mob, ch, 4d5, physical, "a rough-hewn crystal", "a rough crystal edge" );
+    }
+  }
+}
+else
+  act_tochar( #none, ch );
+~
+E
+gem~
+@MWith amazing skill you manage to chisel off a piece of rough crystal!@n
+
+~
+E
+rgem~
+@M$n successfully chisels off a piece of crystal.@n
+~
+E
+nogem~
+@mUnfortunately, all you manage to do is break the crystals into tiny
+fragments not worth taking.@m 
+~
+E
+rnogem~
+@m$n hits the crystals with $s chisel a few times, but all he ends up
+with are tiny fragments and purple dust.@n 
+~
+E
+gem2~
+@MYou break off a smallish piece of rough crystal, cutting yourself in
+the process.  Maybe if you used some sort of a tool this wouldn't have
+happened.@n 
+~
+E
+rgem2~
+@M$n breaks off a smallish piece of crystal, cutting $mself in the
+process.@n 
+~
+E
+bleh~
+@mYou try to break off some crystal clusters, but end up with badly cut
+up hand.  Maybe you should use some sort of a tool.@n 
+~
+E
+rbleh~
+@mIt is almost painful to watch $n trying to get the crystals with $s
+bare hands.  Stand further back or $e may bleed on your shoes.@n 
+~
+E
+none~
+@cAll the crystals worth taking have already been taken.@n
+~
+!
+0 0 0
+A
+~
+down cliff side~
+act_tochar( #climb, ch, obj );
+act_notchar( #rclimb, ch, obj, mob, sight );
+transfer( ch, find_room( 46292 ) );
+act_notchar( #rclimb, ch, obj, mob, sight );
+~
+E
+climb~
+@yWorking slowly you ease yourself over the edge.@n
+~
+E
+rclimb~
+@Y$n lowers himself over ledge.@n
+~
+!
+18 0 0
+A
+~
+~
+act_notchar( #rarrive, ch, obj, mob, sight );
+act_tochar( #arrive, ch, obj );
+~
+E
+rarrive~
+@YWith much effort $n clambers over the ledge.@n
+~
+E
+arrive~
+@yBreathing heavily you finally manage to make it to the top of the ledge.@n
+~
+!
+1 0 48
+2026 9 1509949540 3 0
+-1
+S
+
+#46333
+Southwest of the Stalagmite Group~
+Under Construction.
+~
+~
+167378948 11 9 0
+D5
+~
+~
+235 -1 46268 10 10 5
+-1
+S
+
+#0
+

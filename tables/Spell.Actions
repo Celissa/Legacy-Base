@@ -1,0 +1,3002 @@
+#M2_TABLE
+
+0
+428
+
+~
+~
+~
+~
+~
+~
+
+Above_head~
+You hold $p above your head.~
+$n holds $p high above $s head.~
+$n holds $p high above $s head.~
+You hold $p high above your head.~
+$n holds $p high above $s head.~
+
+acid_arrow~
+You point your finger at $N and trace an arrow in the air.~
+$n points $s finger at you and traces an arrow in the air.~
+$n points $s finger at $N and traces an arrow in the air.~
+You point your finger at yourself and trace an arrow in the air.~
+$n points $s finger at $mself and traces an arrow in the air.~
+
+acid_spread~
+A milky-green nimbus flows out of $p, encompassing $N.~
+A milky-green nimbus flows out of $p, encompassing you.~
+A milky-green nimbus flows out of $p, encompassing $N.~
+A milky-green nimbus flows out of $p, encompassing you.~
+A mliky-green nimbus flows out of $p, encompassing $n.~
+
+Add_Powder~
+You add the powder to $p.~
+$n adds the powder to $p.~
+$n adds the powder to $p.~
+You add the powder to $p.~
+$n adds the powder to $p.~
+
+air_flames~
+The air around $N begins to crackle with fire.~
+The air around you begins to crackle with fire.~
+The air around $N begins to crackle with fire.~
+The air around you begins to crackle with fire.~
+The air around $n begins to crackle with fire.~
+
+animate1~
+You hold $p over $P, urging it to rise again.~
+$n holds $p over $P, urging it to rise again.~
+$n holds $p over $P, urging it to rise again.~
+You hold $p over $P, urging it to rise again.~
+$n holds $p over $P, urging it to rise again.~
+
+Anoint~
+You anoint $N with $p.~
+$n anoints you with $p.~
+$n anoints $N with $p.~
+You anoint yourself with $p.~
+$n anoints $mself with $p.~
+
+apply_poultice~
+You apply the poultice to $n's wounds using the edge of $p.~
+$n applies the poultice to your wounds using the edge of $p.~
+$n applies the poultice to $N's wounds using the edge of $p.~
+You apply the poultice to your wounds using the edge of $p.~
+$n applies the poultice to $s wounds using the edge of $p.~
+
+arcane_obj~
+You place $p in your palm and mutter some arcane phrases.~
+$n places $p in $s palm and mutters some arcane phrases.~
+$n places $p in $s palm and mutters some arcane phrases.~
+You place $p in your palm and mutter some arcane phrases.~
+$n places $p in $s palm and mutters some arcane phrases.~
+
+arcane_will~
+Murmuring arcane words, you shape the energy about $p.~
+Murmuring arcane words, $n shapes the energy about $p.~
+Murmuring arcane words, $n shapes the energy about $p.~
+Murmuring arcane words, you shape the energy about $p.~
+Murmuring arcane words, $n shapes the energy about $p.~
+
+armor_dust~
+The dust sparkles as it forms a protective envelope around $N.~
+The dust sparkles as it forms a protective envelope around you.~
+The dust sparkles as it forms a protective envelope around $N.~
+The dust sparkles as it forms a protective envelope about your body.~
+The dust sparkles as it forms a protective envelope about $n.~
+
+arrange_corpse~
+You carefully and reverently arrange $P.~
+$n carefully and reverently arranges $P.~
+$n carefully and reverently arranges $P.~
+You carefully and reverently arrange $P.~
+$n carefully and reverently arranges $P.~
+
+Ashes~
+You sprinkle the ashes on the ground.~
+$n sprinkles the ashes on the ground.~
+$n sprinkles the ashes on the ground.~
+You sprinkle the ashes on the ground.~
+$n sprinkles the ashes on the ground.~
+
+Aura~
+You create a glowing aura around $N which slowly fades.~
+You are surrounded by a glowing aura which slowly fades.~
+$N is surrounded by a glowing aura which slowly fades.~
+You create a glowing aura around yourself which slowly fades.~
+$n is surrounded by a glowing aura which slowly fades.~
+
+ball_orbit~
+The globe begins to orbit $p rapidly.~
+The globe begins to orbit $p rapidly.~
+The globe begins to orbit $p rapidly.~
+The globe begins to orbit $p rapidly.~
+The globe begins to orbit $p rapidly.~
+
+barkskin~
+$N's skin begins to take on a thicker texture as the bark fades away.~
+Your skin begins to take on a thicker texture as the bark fades away.~
+$N's skin begins to take on a thicker texture as the bark fades away.~
+Your skin begins to take on a thicker texture as the bark fades away.~
+$n's skin begins to take on a thicker texture as the bark fades away.~
+
+beckon_gently~
+You beckon gently to $N.~
+$n beckons gently to you.~
+$n beckons gently to $N.~
+You beckon gently to yourself.~
+$n beckons gently to $mself.~
+
+between~
+You place $p between two fingers.~
+$n places $p between two fingers.~
+$n places $p between two fingers.~
+You place $p between two fingers.~
+$n places $p between two fingers.~
+
+between_eyes~
+You touch $N between the eyes with $p.~
+$n touches you between the eyes with $p.~
+$n touches $N between the eyes with $p.~
+You touch yourself between the eyes with $p.~
+$n touches $mself between the eyes with $p.~
+
+black_flame~
+@mBlack flames dance across $N then fade away with a hiss.@n~
+@mBlack flames dance across you then fade away with a hiss.@n~
+@mBlack flames dance across $N then fade away with a hiss.@n~
+@mBlack flames dance across you then fade away with a hiss.@n~
+@mBlack flames dance across $n then fade away with a hiss.@n~
+
+bless_item~
+You mumble some phrases of blessing on $p.~
+$n mumbles some phrases of blessing on $p.~
+$n mumbles some phrases of blessing on $p.~
+You mumble some phrases of blessing on yourself.~
+$n mumbles some phrases of blessing on $mself.~
+
+Bless_Self~
+You bless yourself with $p.~
+$n blesses $mself with $p.~
+$n blesses $mself with $p.~
+You bless yourself with $p.~
+$n blesses $mself with $p.~
+
+blinding_flash~
+@C$p pulses softly once then sends forth a blinding white.@n~
+@C$p pulses softly once then sends forth a blinding white.@n~
+@C$p pulses softly once then sends forth a blinding white.@n~
+@C$p pulses softly once then sends forth a blinding white.@n~
+@C$p pulses softly once then sends forth a blinding white.@n~
+
+blow~
+You blow gently at $p in your hand.~
+$n blows gently at $p.~
+$n blows gently at $p.~
+You blow gently at $p in your hand.~
+$n blows gently at $p.~
+
+bone_blood~
+You crush $p in your hand, cutting deep into your palm.~
+$n crushes $p in $s hand, cutting deep into $s palm.~
+$n crushes $p in $s hand, cutting deep into $s palm.~
+You crush $p in your hand, cutting deep into your palm.~
+$n crushes $p in $s hand, cutting deep into $s palm.~
+
+bone_tear~
+Delighting in the pain, you fling droplets of blood at $N.~
+$n flings droplets of blood from the bleeding wound at you.~
+$n flings droplets of blood from the bleeding wound at $N.~
+~
+~
+
+break_ice~
+You break the tip of $p as though it were a fragile icicle.~
+$n breaks the tip of $p as if it were a fragile icicle.~
+$n breaks the tip of $p as if it were a fragile icicle.~
+You break the tip of $p as though it were a fragile icicle.~
+$n breaks the tip of $p as if it were a fragile icicle.~
+
+Bubble~
+You mumble some mystical words and $p begins to bubble.~
+$n mumbles some mystical words and $p begins to bubble.~
+$n mumbles some mystical words and $p begins to bubble.~
+~
+~
+
+Burns~
+$p burns with a bright white light and soon becomes ash.~
+$p burns with a bright white light and soon becomes ash.~
+$p burns with a bright white light and soon becomes ash.~
+$p burns with a bright white light and soon becomes ash.~
+$p burns with a bright white light and soon becomes ash.~
+
+burst_light~
+@CA multi-colored star pattern of light emanates from the crystalline pyramid, striking each prayer bead.@n~
+@CA multi-colored star pattern of light emanates from the crystalline pyramid, striking each prayer bead.@n~
+@CA multi-colored star pattern of light emanates from the crystalline pyramid, striking each prayer bead.@n~
+~
+~
+
+bweave~
+You wrap $p around your finger weaving furiously, and looking at $N.~
+$n wraps $p around a finger weaving furiously, and looking at you.~
+$n wraps $p around a finger weaving furiously, and looking at $N.~
+You wrap $p around your finger weaving furiously, and looking at $N.~
+$n wraps $p around a finger weaving furiously, and looking at $N.~
+
+bweave2~
+You place $p between your thumb and forefinger.~
+$n places $p between thumb and forefinger.~
+$n places $p between thumb and forefinger.~
+You place $p between your thumb and forefinger.~
+$n places $p between thumb and forefinger.~
+
+call_heavens~
+You call upon the powers of the heavens.~
+$n calls upon the powers of the heavens.~
+$n calls down the powers of the heavens.~
+You call upon the powers of the heavens.~
+$n calls upon the powers of the heavens.~
+
+call_smite~
+You call upon $g to smite $N.~
+$n calls upon $g to smite you.~
+$n calls upon $g to smite $N.~
+~
+~
+
+Calm~
+You utter calming words.~
+$n utters calming words.~
+$n utters calming words.~
+You utter calming words.~
+$n utters calming words.~
+
+censor_smell~
+A pleasant aroma of burning incense fills the air about you.~
+A pleasant aroma of burning incense fills the air about you.~
+A pleasant aroma of burning incense fills the air about $m.~
+A pleasant aroma of burning incense fills the air about you.~
+A pleasant aroma of burning incense fills the air about $n.~
+
+Chant~
+You begin chanting a haunting tune.~
+$n begins chanting a haunting tune.~
+$n begins chanting a haunting tune.~
+You begin chanting a haunting tune.~
+$n begins chanting a haunting tune.~
+
+chant_and_dance ~
+You dance in a circle around $N while chanting.~
+$n dances around you in a complete circle while chanting.~
+$n dances around $N in a complete circle while chanting.~
+Dancing and chanting, you turn around in a complete circle.~
+Dancing and chanting, $n turns about in a complete circle.~
+
+Chant_End~
+You end the chant.~
+$n ends the chant.~
+$n ends the chant.~
+You end the chant.~
+$n ends the chant.~
+
+check_circle~
+You carefully examine your circle, checking for any mistakes.~
+~
+$n carefully examines $s circle, checking for any mistakes.~
+~
+~
+
+circle~
+You draw an invisible circle with $p.~
+$n draws something on the floor with $p.~
+$n draws something on the floor with $p.~
+You draw an invisible circle with $p.~
+$n draws something on the floor with $p.~
+
+Clap~
+You clap your hands.~
+$n claps $s hands.~
+$n claps $s hands.~
+You clap your hands.~
+$n claps $s hands.~
+
+Cleanse~
+You cleanse yourself with $p.~
+$n cleanses $mself with a $p.~
+$n cleanses $mself with a $p.~
+~
+~
+
+clear_ribbon~
+A translucent ribbon of energy wraps itself around $n's eyes.~
+A translucent ribbon of energy wraps itself around your eyes.~
+A translucent ribbon of energy wraps itself around $N's eyes.~
+A translucent ribbon of energy wraps itself around your eyes.~
+A translucent ribbon of energy wraps itself around $n's eyes.~
+
+close2_eyes~
+You close your eyes while concentrating.~
+~
+$n closes $s eyes.~
+You close your eyes while concentrating.~
+$n closes $s eyes.~
+
+Close_Eyes~
+You momentarily close your eyes while concentrating.~
+$n momentarily closes $s eyes.~
+$n momentarily closes $s eyes.~
+You momentarily close your eyes while concentrating.~
+$n momentarily closes $s eyes.~
+
+cold_shield~
+A blizzard in miniature swirls about $N.~
+A blizzard in miniature swirls about you.~
+A blizzard in miniature swirls about $N.~
+A blizzard in miniature swirls about you.~
+A blizzard in miniature swirls about $n.~
+
+cold_spread~
+A chill-blue light emanates from $p, surrounding $N.~
+A chill-blue light emanates from $p, surrounding you.~
+A chill-blue light emanates from $p, surrounding $N.~
+A chill-blue light emanates from $p, surrounding you.~
+A chill-blue light emanates from $p, surrounding $n.~
+
+collect_elect~
+Chanting, magical electricity begins to surround both of your hands.~
+Chanting, magical electricity begins to surround both of $n's hands.~
+Chanting, magical electricity begins to surround both of $n's hands.~
+Chanting, magical electricity begins to surround both of your hands.~
+Chanting, magical electricity begins to surround both of $n's hands.~
+
+Colour_dance~
+The colours dance within the globe, swirling faster and faster.~
+The colours dance within the globe, swirling faster and faster.~
+The colours dance within the globe, swirling faster and faster.~
+The colours dance within the globe, swirling faster and faster.~
+The colours dance within the globe, swirling faster and faster.~
+
+command_word~
+You speak a mystical word of command over $N.~
+$n speaks a mystical word of command at you.~
+$n speaks a mystical word of command over $N.~
+You speak a mystical word of command.~
+$n speaks a mystical word of command.~
+
+commune_deity~
+You bow your head and commune with $g.~
+$n bows $s head and communes with $g.~
+$n bows $s head and communes with $g.~
+You bow your head and commune with $g.~
+$n bows $s head and communes with $g.~
+
+Concentrate~
+You concentrate your mental energy on $p.~
+$n stares intently at $p.~
+$n stares intently at $p.~
+You concentrate your mental energy at $p.~
+$n stares intently at $p.~
+
+concentrate~
+You close your eyes and concentrate on $p.~
+$n closes $s eyes and concentrates on $p.~
+$n closes $s eyes and concentrates on $p.~
+You close your eyes and concentrate on $p.~
+$n closes $s eyes and concentrates on $p.~
+
+corpse_dust~
+A ghoulish light rises from $p as it crumbles to dust.~
+~
+A ghoulish light rises from $p as it crumbles to dust.~
+A ghoulish light rises from $p as it crumbles to dust.~
+A ghoulish light rises from $p as it crumbles to dust.~
+
+corpse_fire~
+Black flames dance across $p.~
+Black flames dance across $p.~
+Black flames dance across $p.~
+Black flames dance across $p.~
+Black flames dance across $p.~
+
+corpse_light~
+You gather the energy of the dead from $p.~
+~
+$n gathers energy of the dead from $p.~
+You gather the energy of the dead from $p.~
+$n gathers energy of the dead from $p.~
+
+crescendo~
+You end your chanting with a flamboyant crescendo.~
+$n ends $s chanting in a flamboyant crescendo.~
+$n ends $s chanting in a flamboyant crescendo.~
+You end your chanting with a flamboyant crescendo.~
+$n ends $s chanting in a flamboyant crescendo.~
+
+grass_crush~
+You crush $p releasing a strong grass-like odor.~
+$n crushes $p releasing a strong grass-like odor.~
+$n crushes $p releasing a strong grass-like odor.~
+You crush $p releasing a strong grass-like odor.~
+$n crushes $p releasing a strong grass-like odor.~
+
+Crush~
+You crush $p in your hand.~
+$n crushes $p in $s hand.~
+$n crushes $p in $s hand.~
+You crush $p in your hand.~
+$n crushes $p in $s hand.~
+
+crush_part~
+You crush part of $p in your hand.~
+$n crushes part of $p in $s hand.~
+$n crushes part of $p in $s hand.~
+You crush part of $p in your hand.~
+$n crushes part of $p in $s hand.~
+
+crush_sprinkle~
+You crush $p and sprinkle it outward in the cardinal directions.~
+$n crushes $p and sprinkles it before $m in the cardinal directions.~
+$n crushes $p and sprinkles it before $m in the cardinal directions.~
+You crush $p and sprinkle it outward in the cardinal directions.~
+$n crushes $p and sprinkles it before $m in the cardinal directions.~
+
+crystal_glow~
+The lattice of $p becomes radiant with magical energy.~
+The lattice of $p becomes radiant with magical energy.~
+The lattice of $p becomes radiant with magical energy.~
+The lattice of $p becomes radiant with magical energy.~
+The lattice of $p becomes radiant with magical energy.~
+
+Curse~
+You curse $N.~
+$n curses you.~
+$n curses $N.~
+You curse yourself.~
+$n curses $mself.~
+
+dip_sliver~
+You dip the sliver into $p.~
+$n dips the sliver into $p.~
+$n dips the sliver into $p.~
+You dip the sliver into $p.~
+$n dips the sliver into $p.~
+
+Disappear~
+$p disappear from your hands.~
+$p disappear from $n's hands.~
+$p disappear from $n's hands.~
+$p disappears from your hands.~
+$p disappears from $n's hands.~
+
+draw_circle~
+You draw the intricate pattern of a casting circle with $p.~
+~
+$n draws an intricate circle on the ground with $p.~
+You draw the intricate pattern of a casting circle with $p.~
+$n draws an intricate circle on the ground with $p.~
+
+draw_rune~
+You draw an intricate rune in the air.~
+$n draws an intricate rune in the air.~
+$n draws an intricate rune in the air.~
+You draw an intricate rune in the air.~
+$n draws an intricate rune in the air.~
+
+drinks_mixture~
+You pour the steaming mixture over $P.~
+$n pours the steaming mixture over $P.~
+$n pours the steaming mixture over $P.~
+You pour the steaming mixture over $P.~
+$n pours the steaming mixture over $P.~
+
+Drop_Petals~
+You toss the petals in a gentle arc over $N's head.~
+$n tosses the petals in a gentle arc over your head.~
+$n tosses the petals in a gentle arc over $N's head.~
+You toss the petals in a gentle arc over your head.~
+$n tosses the petals in a gentle arc over $s head.~
+
+droplet_splatter~
+@G$N is covered in a rain of acid, smoke begins to coil from $S body.@n~
+@GYou are covered in a rain of acid, smoke begins to coil from your body.@n~
+@G$N is covered in a rain of acid, smoke begins to coil from $S body.@n~
+@GYou are covered in a rain of acid, smoke begins to coil from your body.@n~
+@G$n is covered in a rain of acid, smoke begins to coil from $S body.@n~
+
+dull_appearance~
+$p fades and looks dull.~
+$p fades and looks dull.~
+$p fades and looks dull.~
+$p fades and looks dull.~
+$p fades and looks dull.~
+
+dust_swirl~
+A red cloud of dust and twilight swirls over $p.~
+A red cloud of dust and twilight swirls over $p.~
+A red cloud of dust and twilight swirls over $p.~
+A red cloud of dust and twilight swirls over $p.~
+A red cloud of dust and twilight swirls over $p.~
+
+eagle_eye~
+Your mind soars like an eagle, searching for its prey.~
+~
+$n closes $s eyes and becomes still for a moment.~
+Your mind soars like an eagle, searching for its prey.~
+$n closes $s eyes and becomes still for a moment.~
+
+eat~
+You eat $p.~
+$n eats $p.~
+$n eats $p.~
+You eat $p.~
+~
+
+Eats~
+You eat $p, swallowing quickly.~
+$n eats $p, swallowing quickly.~
+$n eats $p, swallowing quickly.~
+You eat $p, swallowing quickly.~
+$n eats $p, swallowing quickly.~
+
+emplore_god~
+You emplore $g to grant $N the courage to stand before $S foes.~
+$n emplores $g to grant you the courage to stand before your foes.~
+$n emplores $g to grant $N the courage to stand before $S foes.~
+You emplore $g to grant you the courage to stand before your foes.~
+$n emplores $g to grant $m the courage to stand before $s foes.~
+
+enchat_over~
+~
+~
+~
+Chanting words of dark power you trace mystical symbols over $p.~
+Chanting words of dark power $n traces mystical symbols over $p.~
+
+energy_beam~
+Magical energy leaves your fingertip, striking $p.~
+Magical energy leaves $n's fingertip, striking $p.~
+Magical energy leaves $n's fingertip, striking $p.~
+Magical energy leaves your fingertip, striking $p.~
+Magical energy leaves $n's fingertip, striking $p.~
+
+energy_fingers~
+@CArcs of energy spark between your fingers.@n~
+@CArcs of energy spark between $n's fingers.@n~
+@CArcs of energy spark between $n's fingers.@n~
+@CArcs of energy spark between your fingers.@n~
+@CArcs of energy spark between $n's fingers.@n~
+
+energy_wrap~
+You place your hands on $N, letting the energy enfold $S body.~
+$n places $s hands on you, letting the energy enfold your body.~
+$n places $s hands on $N, letting the energy enfold $S body.~
+You place your hands on yourself, letting the energy enfold your body.~
+$n places $s hands on $mself, letting the energy enfold $s body.~
+
+entrails~
+You place $p on the ground, invoking $g.~
+$n places $p on the ground, invoking $g.~
+$n places $p on the ground, invoking $g.~
+You place $p on the ground, invoking $g.~
+$n places $p on the ground, invoking $g.~
+
+explode_release~
+Fragments of $p explode, releasing raw power.~
+Fragments of $p explode, releasing raw power.~
+Fragments of $p explode, releasing raw power.~
+Fragments of $p explode, releasing raw power.~
+Fragments of $p explode, releasing raw power.~
+
+Fades_nothing~
+$p fades into nothingness.~
+$p held by $n fades into nothingness.~
+$p held by $n fades into nothingness.~
+$p fades into nothingness.~
+$p held by $n fades into nothingness.~
+
+find_north~
+You place $p on your palm and it spins slowly to a stop, pointing north.~
+$n places $p on $s palm and it spins slowly to a stop.~
+$n places $p on $s palm and it spins slowly to a stop.~
+You place $p on your palm and it spins slowly to a stop, pointing north.~
+$n places $p on $s palm and it spins slowly to a stop.~
+
+fire_droplets~
+Before the droplets hit the ground you extend your palm forcing them to fly at $N!~
+Before the droplets hit the ground $n extends $s palm forcing them to fly at you!~
+Before the droplets hit the ground $n extends $s palm forcing them to fly at $N!~
+Before the droplets hit the ground you extend your palm forcing them to fly at you!~
+Before the droplets hit the ground $n extends $s palm forcing them to fly at $m!~
+
+flail_form~
+$p expands to take on the form of a mighty flail.~
+$p expands to take on the form of a mighty flail.~
+$p expands to take on the form of a mighty flail.~
+$p expands to take on the form of a mighty flail.~
+$p expands to take on the form of a mighty flail.~
+
+flame_rain~
+@RWith a rumble of thunder flames being to rain from the smoggy cloud!@n~
+@RWith a rumble of thunder flames being to rain from the smoggy cloud!@n~
+@RWith a rumble of thunder flames being to rain from the smoggy cloud!@n~
+@RWith a rumble of thunder flames being to rain from the smoggy cloud!@n~
+@RWith a rumble of thunder flames being to rain from the smoggy cloud!@n~
+
+flames_gather~
+The flames grow white-hot as you gather them into your outstretched hands.~
+The flames grow white-hot as $n gathers them into $s outstretched hands.~
+The flames grow white-hot as $n gathers them into $s outstretched hands.~
+The flames grow white-hot as you gather them into your outstretched hands.~
+The flames grow white-hot as $n gathers them into $s outstretched hands.~
+
+flare1~
+You point to $p and it flares with crimson flame.~
+$n points to $p and it flares with crimson flame.~
+$n points to $p and it flares with crimson flame.~
+You point to $p and it flares with crimson flame.~
+$n points to $p and it flares with crimson flame.~
+
+Flash~
+$p snakes around and then disappears in a flash of light.~
+$p snakes around and then disappears in a flash of light.~
+$p snakes around and then disappears in a flash of light.~
+$p snakes around and then disappears in a flash of light.~
+$p snakes around and the disappears in a flash of light.~
+
+Fling~
+You fling $p at the ground.~
+$n flings $p at the ground.~
+$n flings $p at the ground.~
+You fling $p at the ground.~
+$n flings $p at the ground.~
+
+Flint_burns~
+A small piece of flint bursts into flames.~
+A small piece of flint held by $n bursts into flames.~
+A small piece of flint held by $n bursts into flames.~
+A small piece of flint bursts into flames.~
+A small piece of flint held by $n bursts into flames.~
+
+float_hand~
+$p floats back down to your hand.~
+$n deftly catches $p from the air.~
+$n deftly catches $p from the air.~
+$p floats back down to your hand.~
+$n deftly catches $p from the air.~
+
+food_wave~
+You wave your hand in a circle while concentrating on food.~
+$n waves $s hand in a circle.~
+$n waves $s hand in a circle.~
+You wave your hand in a circle while concentrating on food.~
+$n waves $s hand in a circle.~
+
+freeze_fist~
+Your hand becomes unbearably cold as $p drains all the heat around it.~
+$n shivers as all the blood drains from $s hand.~
+$n shivers as all the blood drains from $s hand.~
+Your hand becomes unbearably cold as $p drains all the heat around it.~
+$n shivers as all the blood drains from $s hand.~
+
+frost_spread~
+Tendrils of frost form a sphere around $p.~
+Tendrils of frost form a sphere around $p.~
+Tendrils of frost form a sphere around $p.~
+Tendrils of frost form a sphere around $p.~
+Tendrils of frost form a sphere around $p.~
+
+gather_power~
+You raise your hands to the stars and gather power for your spell.~
+$n raises $s hands to the stars and gathers power for $s spell.~
+$n raises $s hands to the stars and gathers power for $s spell.~
+You raise your hands to the stars and gather power for your spell.~
+$n raises $s hands to the stars and gathers power for $s spell.~
+
+Gesture~
+You make some arcane gestures with your hands.~
+$n makes some arcane gestures with $s hands.~
+$n makes some arcane gestures with $s hands.~
+??~
+??~
+
+ghost.chain~
+Ghostly chains rise up around $N attempting to ensnare $M.~
+Ghostly chains rise up around you attempting to ensnare you.~
+Ghostly chains rise up around $N attempting to ensnare $M.~
+~
+~
+
+ghost_about~
+Howling specters swirl around you clawing with their ethereal talons.~
+Howling specters swirl around $n clawing with their ethereal talons.~
+Howling specters swirl around $n clawing with their ethereal talons.~
+Howling specters swirl around you clawing with their ethereal talons.~
+Howling specters swirl around $n clawing with their ethereal talons.~
+
+gloom~
+You call down the curse of $g upon $N.~
+$n calls down the curse of $g upon you.~
+$n calls down the curse of $g upon $N.~
+~
+$n calls down the curse of $g upon you.~
+
+glory~
+You sing a song of glory, battle, valor and courage.~
+$n sings a song of glory, battle, courage and valor.~
+$n sings a song of glory, battle, courage and valor.~
+You sing a song of glory, battle, valor and courage.~
+$n sings a song of glory, battle, courage and valor.~
+
+Glow_Blue~
+$p glows with a soft blue light.~
+$p glows with a soft blue light.~
+$p glows with a soft blue light.~
+$p glows with a soft blue light.~
+~
+
+Glow_Green~
+$p glows with a soft green light.~
+$p glows with a soft green light.~
+$p glows with a soft green light.~
+$p glows with a soft green light.~
+$p glows with a soft green light.~
+
+Glow_Red~
+$p glows with a soft red light.~
+$p glows with a soft red light.~
+$p glows with a soft red light.~
+$p glows with a soft red light.~
+$p glows with a soft red light.~
+
+glow_white~
+A burst of white light pulses from $p.~
+~
+A burst of white light pulses from $p.~
+~
+~
+
+Glow_White~
+$p glows with brilliant, white light.~
+$p glows with brilliant, white light.~
+$p glows with brilliant, white light.~
+$p glows with brilliant, white light.~
+$p glows with brilliant, white light.~
+
+Glows~
+$p glows faintly.~
+$p glows faintly.~
+$p glows faintly.~
+~
+~
+
+glows2~
+$p glows violently and then fades out of existence.~
+$p glows violently and then fades out of existence.~
+$p glows violently and then fades out of existence.~
+$p glows violently and then fades out of existence.~
+$p glows violently and then fades out of existence.~
+
+Glows_Faintly~
+$p glows faintly.~
+$p glows faintly.~
+$p glows faintly.~
+$p glows faintly.~
+$p glows faintly.~
+
+Glows_Softly~
+$p glows with a soft white light.~
+$p held by $n glows with a soft white light.~
+$p held by $n glows with a soft white light.~
+$p glows with a soft white light.~
+$p held by $n glows with a soft white light.~
+
+Glows_Violet~
+$p glows with an eerie @Mviolet@n light.~
+$p held by $n glows with an eerie @Mviolet@n light.~
+$p held by $n glows with an eerie @Mviolet@n light.~
+$p glows with an eerie @Mviolet@n light.~
+$p held by $n glows with an eerie @Mviolet@n light.~
+
+green_tendril~
+@GA sickly green tendril snakes from $p to $N.@n~
+@GA sickly green tendril snakes from $p to you.@n~
+@GA sickly green tendril snakes from $p to $N.@n~
+@GA sickly green tendril snakes from $p.@n~
+@GA sickly green tendril snakes from $p.@n~
+
+green_view~
+$N's eyes are enfolded by a brilliant, green energy.~
+A brilliant green glow fills your vision.~
+$N's eyes are enfolded by a brilliant, green energy.~
+A brilliant green glow fills your vision.~
+$n's eyes are enfolded by a brilliant, green energy.~
+
+grind_hand~
+You grind up $p in your hand, creating a fine powder.~
+$n grinds up $p in $s hand, creating a fine powder.~
+$n grinds up $p in $s hand, creating a fine powder.~
+You grind up $p in your hand, creating a fine powder.~
+$n grinds up $p in $s hand, creating a fine powder.~
+
+grow_sphere~
+The sphere of force grows to an enormous size and surrounds $N.~
+The sphere of force grows to an enormous size and surrounds you.~
+The sphere of force grows to an enormous size and surrounds $N.~
+The sphere of force grows to an enormous size and surrounds you.~
+The sphere of force grows to an enormous size and surrounds $n.~
+
+Gryphon1~
+You close your eyes and let your mind wander.~
+~
+$n closes $s eyes, $s muscles tensing in concentration.~
+You close your eyes and let your mind wander.~
+$n closes $s eyes, $s muscles tensing in concentration.~
+
+Gryphon2~
+Your mind fills with images and you quickly find the one you seek.~
+~
+$e holds $s breath for a moment.~
+Your mind fills with images and you quickly find the one you seek.~
+$e holds $s breath for a moment.~
+
+Hands_Glo2~
+Your hands begin to glow a deep violet.~
+$n's hands begin to glow a deep violet.~
+$n's hands begin to glow a deep violet.~
+Your hands begin to glow a deep violet.~
+$n's hands begin to glow a deep violet.~
+
+Hands_Glow~
+Your hands begin to glow a deep amber.~
+$n's hands begin to glow a deep amber.~
+$n's hands begin to glow a deep amber.~
+Your hands begins to glow a deep amber.~
+$n's hands begin to glow a deep amber.~
+
+harmony~
+In a musical voice, you invoke the latent power of $p.~
+In a musical voice, $n invokes the latent power of $p.~
+In a musical voice, $n invokes the latent power of $p.~
+In a musical voice, you invoke the latent power of $p.~
+In a musical voice, $n invokes the latent power of $p.~
+
+hawk_woosh~
+An ethereal image of a hawk flares into existence for a brief second.~
+~
+A brief flash of light emenates out from $n's hand.~
+~
+~
+
+healing_bolt~
+@CA heavenly bolt of healing energy jumps between your hands.@n~
+A cobalt-blue bolt of healing energy jumps between $n's hands.~
+A cobalt-blue bolt of healing energy jumps between $n's hands.~
+@CA heavenly bolt of healing energy jumps between your hands.@n~
+A cobalt-blue bolt of healing energy jumps between $n's hands.~
+
+healing_energy~
+@cTendrils of healing energy dance up and down your hands.@n~
+Tendrils of healing energy dance up and down $n's hands.~
+Tendrils of healing energy dance up and down $n's hands.~
+@cTendrils of healing energy dance up and down your hands.@n~
+Tendrils of healing energy dance up and down $n's hands.~
+
+heartstone~
+@RYou point $p directly at $N and incant a single word.@n~
+@R$n points $p directly at you and incants a single word.@n~
+@R$n points $p directly at $N and incants a single word.@n~
+@RYou point $p directly at yourself and incant a single word.@n~
+@R$n points $p directly at $mself and incants a single word.@n~
+
+heavens_crackle~
+The heavens crackle with thunder and lightning.~
+The heavens crackle with thunder and lightning.~
+The heavens crackle with thunder and lightning.~
+The heavens crackle with thunder and lightning.~
+The heavens crackle with thunder and lightning.~
+
+hold_aloft~
+You hold $p aloft and towards the sky.~
+$n holds $p aloft and towards the sky.~
+$n holds $p aloft and towards the sky.~
+You hold $p aloft and towards the sky.~
+$n holds $p aloft and towards the sky.~
+
+Hold_beads~
+You hold some prayer beads in your hands.~
+$n holds some prayer beads in $s hands.~
+$n holds some prayer beads in $s hands.~
+You hold some prayer beads in your hands.~
+$n holds some prayer beads in $s hands.~
+
+hold_before~
+You hold $p before you defiantly.~
+$n defiantly holds $p at you.~
+$n defiantly holds $p before $m.~
+You hold $p before you defiantly.~
+$n defiantly holds $p before $m at $mself.~
+
+hold_crystal~
+Holding $p high above your head, you enter the circle.~
+Holding $p high above $s head, $n enters the circle.~
+Holding $p high above $s head, $n enters the circle.~
+Holding $p high above your head, you enter the circle.~
+Holding $p high above $s head, $n enters the circle.~
+
+hold_fist~
+You hold $p in your fist.~
+$n holds $p in $s fist.~
+$n holds $p in $s fist.~
+You hold $p in your fist.~
+$n holds $p in $s fist.~
+
+Hold_High~
+You hold $p high above your head.~
+$n holds $p high above $s head.~
+$n holds $p high above $s head.~
+You hold $p high above your head.~
+$n holds $p high above $s head.~
+
+hold_palm~
+You place $p in your hand and bring your open palm to your mouth.~
+$n places $p in $s hand and brings $s open palm to $s mouth.~
+$n places $p in $s hand and brings $s open palm to $s mouth.~
+You place $p in your hand and bring your open palm to your mouth.~
+$n places $p in $s hand and brings $s open palm to $s mouth.~
+
+holy_brand~
+A bright blue light floods your vision as you bring $p away from your head.~
+$n brings $p away from $s head revealing a bright glowing symbol of $g.~
+$n brings $p away from $s head revealing a bright glowing symbol of $g.~
+A bright blue light floods your vision as you bring $p away from your head.~
+$n brings $p away from $s head revealing a bright glowing symbol of $g.~
+
+holy_gesture~
+Thrusting $p at $N, you invoke the name of $g.~
+Thrusting $p at $N, $n invokes the name of $g.~
+Thrusting $p at $N, $n invokes the name of $g.~
+Holding $p to yourself, you invoke the name of $g.~
+Holding $p to $mself, $n invokes the name of $g.~
+
+ice_claw~
+Frost white energy courses through $p.~
+$n channels frost white energy though $p.~
+$n channels frost white energy though $p.~
+Frost white energy courses through $p.~
+$n channels frost white energy though $p.~
+
+Ignite~
+You hold $p in your hand and ignite it with a touch of magic.~
+$n holds $p in $s hand and it suddenly bursts in flame.~
+$n holds $p in $s hand and it suddenly bursts in flame.~
+You hold $p in your hand and ignite it with a touch of magic.~
+$n holds $p in $s hand it suddenly bursts into flame.~
+
+ignite_sunburst~
+@BStarting at the edges, the sunburst ignites in a dazzle of blue flame.@n~
+@BStarting at the edges, the sunburst ignites in a dazzle of blue flame.@n~
+@BStarting at the edges, the sunburst ignites in a dazzle of blue flame.@n~
+@BStarting at the edges, the sunburst ignites in a dazzle of blue flame.@n~
+@BStarting at the edges, the sunburst ignites in a dazzle of blue flame.@n~
+
+image_appear~
+A misty, blurred image forms within $p.~
+~
+$n's brow arches as $e stares deeper into $p.~
+A misty, blurred image forms within $p.~
+$n's brow arches as $e stares deeper into $p.~
+
+Incant_Phrase~
+You incant a mystical phrase.~
+$n incants a mystical phrase.~
+$n incants a mystical phrase.~
+You incant a mystical phrase.~
+$n incants a mystical phrase.~
+
+incense_smell~
+A pleasant aroma of burning incense fills the air about you.~
+A pleasant aroma of burning incense fills the air about you.~
+A pleasant aroma of burning incense fills the air about $m.~
+A pleasant aroma of burning incense fills the air about you.~
+A pleasant aroma of burning incense fills the air around $n.~
+
+item_heart~
+You place $p just over $N's heart.~
+$n places $p just over your heart.~
+$n places $p just over $N's heart.~
+You place $p just over your heart.~
+$n places $p just over $s heart.~
+
+join_hawk~
+Your vision suddenly blurs as your mind momentarily joins with the ethereal hawk.~
+~
+$n's eyes momentarily glaze over.~
+~
+~
+
+juice_splash~
+@YJuice splashes from $p onto $N as you incant over it.@n~
+@YJuice splashes from $p onto you as $n incants a phrase.@n~
+@YJuice splashes from $p onto $N as $n incants a phrase.@n~
+@YJuice splashes from $p as you incant powerful syllables over it.@n~
+@YYou incant a powerful phrase and the juice from $p sprays you.@n~
+
+Kneel~
+You kneel down on the ground.~
+$n kneels down on the ground.~
+$n kneels down on the ground.~
+You kneel down on the ground.~
+$n kneels down on the ground.~
+
+Kneel_Before~
+You kneel before $p praying to $g for divine intervention.~
+~
+$n kneels before $p praying to $g.~
+You kneel before $p praying to $g for divine intervention.~
+$n kneels before $p praying to $g.~
+
+kneel_over~
+You kneel over $p, stirring it around.~
+$n kneels over $p, stirring it around.~
+$n kneels over $p, stirring it around.~
+You kneel over $p, stirring it around.~
+$n kneels over $p, stirring it around.~
+
+leaf_pull~
+You pull a fresh leaf off of $p.~
+$n pulls a fresh leaf off of $p.~
+$n pulls a fresh leaf off of $p.~
+You pull a fresh leaf off of $p.~
+$n pulls a fresh leaf off of $p.~
+
+light_aura~
+@GBrilliant green light expands from the gem, surrounding you completely.@n~
+@GBrilliant green light expands from the gem, completely surrounding $n.@n~
+@GBrilliant green light expands from the gem, completely surrounding $n.@n~
+@GBrilliant green light expands from the gem, surrounding you completely.@n~
+@GBrilliant green light expands from the gem, completely surrounding $n.@n~
+
+light_embrace~
+A golden halo of light shines down and embraces $N protectively.~
+A golden halo of light shines down and embraces you protectively.~
+A golden halo of light shines down and embraces $N protectively.~
+A golden halo of light shines down and embraces you protectively.~
+A golden halo of light shines down and embraces $n protectively.~
+
+light_heart~
+A beam of bright light shoots forth and pierces $n's heart!~
+A beam of bright light shoots forth and pierces your heart!~
+A beam of bright light shoots forth and pierces $N's heart!~
+A beam of bright light shoots forth and pierces your heart!~
+A beam of bright light shoots forth and pierces $n's heart!~
+
+lightning_object_person~
+Lightning arcs from $p engulfing you in a crackling aura of energy.~
+Lightning arcs from $p engulfing $n in a crackling aura of energy.~
+Lightning arcs from $p engulfing $n in a crackling aura of energy.~
+Lightning arcs from $p engulfing you in a crackling aura of energy.~
+Lightning arcs from $p engulfing $n in a crackling aura of energy.~
+
+Location~
+You concentrate your powers on their location.~
+The world around you begins to fade.~
+$n mumbles some strange, undecipherable phrases.~
+You concentrate your powers on your location.~
+$n mumbles some strange, undecipherable phrases.~
+
+mark_corpse~
+You mark $p with arcane runes.~
+$n marks $p with arcane runes.~
+$n marks $p with arcane runes.~
+You mark $p with arcane runes.~
+$n marks $p with arcane runes.~
+
+midnight_bolt~
+You snap your fingers and the midnight-blade falls on $N.~
+$n snaps $s fingers and the midnight-blade falls on you.~
+$n snaps $s fingers and the midnight-blade falls on $N.~
+You snap your fingers and the midnight-blade falls on you.~
+$n snaps $s fingers and the midnight-blade falls on $m.~
+
+midnight_sword~
+A sword of midnight-black energy appears over $N's head.~
+A sword of midnight-black energy appears over your head.~
+A sword of midnight-black energy appears over $N's head.~
+A sword of midnight-black energy appears over your head.~
+A sword of midnight-black energy appears over $n's head.~
+
+mind_blank~
+You fall into a stolic state as all thoughts and feelings drain from your mind.~
+$n face becomes completely impassive.~
+$n face becomes completely impassive.~
+You fall into a stolic state as all thoughts and feelings drain from your mind.~
+$n face becomes completely impassive.~
+
+mint_smell~
+A soothing smell of peppermint fills the area as they are combined.~
+A soothing smell of peppermint fills the area as they are combined.~
+A soothing smell of peppermint fills the area as they are combined.~
+A soothing smell of peppermint fills the area as they are combined.~
+A soothing smell of peppermint fills the area as they are combined.~
+
+mix_poultice~
+You mix the fresh aloe together with the peppermint leaf.~
+$n mixes the fresh aloe together with the peppermint leaf.~
+$n mixes the fresh aloe together with the peppermint leaf.~
+You mix the fresh aloe together with the peppermint leaf.~
+$n mixes the fresh aloe together with the peppermint leaf.~
+
+mixture_steams~
+The mixture in $p steams and changes to a dark brown colour.~
+The mixture in $p steams and changes to a dark brown colour.~
+The mixture in $p steams and changes to a dark brown colour.~
+The mixture in $p steams and changes to a dark brown colour.~
+The mixture in $p steams and changes to a dark brown colour.~
+
+Mumble~
+You mumble some strange phrases.~
+$n mumbles some strange phrases.~
+$n mumbles some strange phrases.~
+You mumble some strange phrases.~
+$n mumbles some strange phrases.~
+
+Mumble_over~
+You mumble some words over $p.~
+$n mumbles some words over $p.~
+$n mumbles some words over $p.~
+You mumble some words over $p.~
+$n mumbles some words over $p.~
+
+murmur_ritual~
+Murmuring a ritual phrase, you focus your mental energies on $N.~
+Murmuring a ritual phrase, $n focuses $s mental energies on you.~
+Murmuring a ritual phrase, $n focuses $s mental energies on $N.~
+Murmuring a ritual phrase, you focus your mental energies.~
+Murmuring a ritual phrase, $n focuses $s mental energies.~
+
+Mutters_Ash~
+You mutter a mystical phrase and the ashes disappear.~
+$n mutters a mystical phrase and closes $s hand over the ashes.~
+$n mutters a mystical phrase and closes $s hand over the ashes.~
+You mutter a mystical phrase and the ashes disappear.~
+$n mutters a mystical phrase and closes $s hand over the ashes.~
+
+mystic_shield~
+@cA silvery veil of light surrounds $N for a mere second before fading.@n~
+@cA silvery veil of light surrounds you for a mere second before fading.@n~
+@cA silvery veil of light surrounds $N for a mere second before fading.@n~
+@cA silvery veil of light surrounds you for a mere second before fading.@n~
+@cA silvery veil of light surrounds $n for a mere second before fading.@n~
+
+Obj_spin~
+Holding $p, you spin it in a circle before $N.~
+$n holds $p and spins it in a circle about you.~
+$n holds $p and spins it in a circle about $N.~
+Holding $p, you spin it in a circle before you.~
+$n holds $p and spins it in a circle about $m.~
+
+offer_drink~
+You offer $N the mixture to drink.~
+$n offers you the mixture to drink.~
+$n offers $N the mixture to drink.~
+You prepare to drink the mixture.~
+$n prepares to drink the mixture.~
+
+open_bag~
+You carefully open $p.~
+$n carefully opens $p.~
+$n carefully opens $p.~
+You carefully open $p.~
+$n carefully opens $p.~
+
+Open_Eyes~
+You open your eyes.~
+$n opens $s eyes.~
+$n opens $s eyes.~
+You open your eyes.~
+$n opens $s eyes.~
+
+palm_supplication~
+You hold your hands palm upwards in supplication to $g.~
+$n holds $s hands palm upwards in supplication to $g.~
+$n holds $s hands palm upwards in supplication to $g.~
+You hold your hands palm upwards in supplication to $g.~
+$n holds $s hands palm upwards in supplication to $g.~
+
+palm_up~
+You extend your palm towards $N.~
+$n extends $s palm toward you.~
+$n extends $s palm toward $N.~
+You extend your palm in front of you.~
+$n extends $s palm before $mself.~
+
+pass_over~
+You pass $p over and around $P.~
+$n passes $p over and around $P.~
+$n passes $p over and around $P.~
+You pass $p over and around $P.~
+$n passes $p over and around $P.~
+
+phase~
+Briefly your skin tingles and shimmers, becoming almost transparent.~
+Briefly, your skin tingles and shimmers, becoming almost transparent.~
+Briefly $n's skin shimmers, becoming almost transparent.~
+Briefly, your skin tingles and shimmers, becoming almost transparent.~
+Briefly, $n's skin shimmers, becoming almost transparent.~
+
+place_bead~
+You place $p in the silk bag.~
+$n places $p in the silk bag.~
+$n places $p in the silk bag.~
+You place $p in the silk bag.~
+$n places $p in the silk bag.~
+
+place_circle~
+You place $p in the center of the casting circle.~
+~
+$n places $p in the center of the circle.~
+You place $p in the center of the casting circle.~
+$n places $p in the center of the circle.~
+
+place_ground~
+@CYou draw a sunburst on the ground and place $p within it.@n~
+@C$n draws a sunburst on the ground and places $p within it.@n~
+@C$n draws a sunburst on the ground and places $p within it.@n~
+@CYou draw a sunburst on the ground and place $p within it.@n~
+@C$n draws a sunburst on the ground and places $p within it.@n~
+
+Place_Hands~
+You place your hands on $N.~
+$n places $s hands on you.~
+$n places $s hands on $N.~
+You place your hands on yourself.~
+$n places $s hands on $mself.~
+
+place_left~
+You place $p in your left hand.~
+$n places $p in $s left hand.~
+$n places $p in $s left hand.~
+You place $p in your left hand.~
+$n places $p in $s left hand.~
+
+Place_Obj~
+You carefully place $p in your hand.~
+~
+$n carefully places $p in $s hand.~
+You carefully place $p in your hand.~
+$n carefully places $p in $s hand.~
+
+Point~
+You point at $N.~
+$n points at you.~
+$n points at $N.~
+You point at yourself.~
+$n points at $mself.~
+
+point_at~
+You point at $p.~
+$n points at $p.~
+$n points at $p.~
+You point at $p.~
+$n points at $p.~
+
+Point_Obj~
+You point at $p.~
+$n points at $p.~
+$n points at $p.~
+You point at $p.~
+$n points at $p.~
+
+Pour~
+You pour $p over $P.~
+$n pours $p over $P.~
+$n pours $p over $P.~
+You pour $p over $P.~
+$n pours $p over $P.~
+
+pour_crystal~
+You pour part of $p into the crystal bowl.~
+~
+$n pours part of $p into a crystal bowl.~
+You pour part of $p into the crystal bowl.~
+$n pours part of $p into a crystal bowl.~
+
+pour_wounds~
+You pour the curative mixture over $N's wounds.~
+$n pours the curative mixture over your wounds.~
+$n pours the curative mixture over $N's wounds.~
+You pour the curative mixture over your wounds.~
+$n pours the curative mixture over $s wounds.~
+
+Pray~
+You pray to $g.~
+$n prays to $g.~
+$n prays to $g.~
+You pray to $g.~
+$n prays to $g.~
+
+pray_aid~
+You pray for an ally to join your cause.~
+$n prays for an ally to join $s cause.~
+$n prays for an ally to join $s cause.~
+You pray for an ally to join your cause.~
+$n prays for an ally to join $s cause.~
+
+pray_globe~
+You pray to $g and a nacreous energy orb appears in your hand.~
+$n prays to $g and a nacreous energy orb appears in $s hand.~
+$n prays to $g and a nacreous energy orb appears in $s hand.~
+You pray to $g and a nacreous energy orb appears in your hand.~
+$n prays to $g and a nacreous energy orb appears in $s hand.~
+
+pray_over~
+You murmur a prayer over $p.~
+$n murmurs a prayer over $p.~
+$n murmurs a prayer over $p.~
+You murmur a prayer over $p.~
+$n murmurs a prayer over $p.~
+
+press_temples~
+You press your forefingers to your temples and concentrate.~
+$n presses $s forefingers to $s temples and concentrates.~
+$n presses $s forefingers to $s temples and concentrates.~
+You press your forefingers to your temples and concentrate.~
+$n presses $s forefingers to $s temples and concentrates.~
+
+Pull_Petals~
+You pull the petals from $p.~
+$n pulls the petals from $p.~
+$n pulls the petals from $p.~
+You pull the petals from $p.~
+$n pulls the petals from $p.~
+
+pulse_dim~
+$p pulses with brilliant while light, then goes dim.~
+$p pulses with brilliant while light, then goes dim.~
+$p pulses with brilliant while light, then goes dim.~
+$p pulses with brilliant while light, then goes dim.~
+$p pulses with brilliant while light, then goes dim.~
+
+pulse_white~
+A burst of white light pulses from $p.~
+A burst of white light momentarily blinds you.~
+A burst of white light pulses from $p.~
+A burst of white light momentarily blinds you.~
+A burst of white light pulses from $p.~
+
+pyro_flash~
+$p explodes in a gentle, pyrotechnic spray of color.~
+$p explodes in a gentle, pyrotechnic spray of color.~
+$p explodes in a gentle, pyrotechnic spray of color.~
+$p explodes in a gentle, pyrotechnic spray of color.~
+$p explodes in a gentle, pyrotechnic spray of color.~
+
+racid_asplash~
+You shake a red vial of acid allowing a few drops to splash out.~
+$n shakes a red vial of acid allowing a few drops to splash out.~
+$n shakes a red vial of acid allowing a few drops to splash out.~
+You shake a red vial of acid allowing a few drops to splash out.~
+$n shakes a red vial of acid allowing a few drops to splash out.~
+
+raise_arms~
+You raise your arms into the air.~
+$n raises $s arms into the air.~
+$n raises $s arms into the air.~
+You raise your arms into the air.~
+$n raises $s arms into the air.~
+
+raise_command~
+You raise your hands in a commanding gesture.~
+$n raises $s hands in a commanding gesture.~
+$n raises $s hands in a commanding gesture.~
+You raise your hands in a commanding gesture.~
+$n raises $s hands in a commanding gesture.~
+
+recall~
+You offer a quick prayer to whichever god may be listening at the moment.~
+$n appears to be praying frantically.~
+$n appears to be praying frantically.~
+You offer a quick prayer to whichever god may be listening at the moment.~
+$n appears to be praying frantically.~
+
+recite_scroll~
+Holding aloft $p you begin to carefully recite the words of power.~
+Holding aloft $p $n begins to carefully recite the words of power.~
+Holding aloft $p $n begins to carefully recite the words of power.~
+Holding aloft $p you begin to carefully recite the words of power.~
+Holding aloft $p, $n begins to carefully recite the words of power.~
+
+Redish_Gas~
+A strange cloud of @Rreddish@n gas begins to form around $N.~
+A strange cloud of @Rreddish@n gas begins to form around you.~
+A strange cloud of @Rreddish@n gas begins to form around $N.~
+A strange cloud of @Rreddish@n gas begins to form around you.~
+A strange cloud of @Rreddish@n gas begins to form around $n.~
+
+revelry~
+Visions of revelry dance in your mind's eye.~
+~
+~
+Visions of revelry dance in your mind's eye.~
+Smiling slightly, $n's eyes glaze over.~
+
+reverent_use~
+You take up $p with great reverence.~
+$n takes up $p with great reverence.~
+$n takes up $p with great reverence.~
+You take up $p with great reverence.~
+$n takes up $p with great reverence.~
+
+Rub_fingers~
+You rub $p between your hands.~
+$n rubs $p between $s hands.~
+$n rubs $p between $s hands.~
+You rub $p between your hands.~
+$n rubs $p between $s hands.~
+
+Rub_hands~
+You rub your hands and intone mystical phrases.~
+$n rubs $s hands and intones mystical phrases.~
+$n rubs $s hands and intones mystical phrases.~
+You rub your hands and intone mystical phrases.~
+$n rubs $s hands and intones mystical phrases.~
+
+rub_into~
+You rub the juices over your arms.~
+$n rubs the juices over $s arms.~
+$n rubs the juices over $s arms.~
+~
+~
+
+Rub_iron~
+You rub some iron filings between your fingers.~
+$n rubs some iron filings between $s fingers.~
+$n rubs some iron filings between $s fingers.~
+You rub some iron filings between your fingers.~
+$n rubs some iron fingers between $s fingers.~
+
+rub_juice~
+You knead the juice from $p into $N's skin.~
+$n kneads the juice from $p into your skin.~
+$n kneads the juice from $p into $N's skin.~
+You knead the juice from $p into your skin.~
+$n kneads the juice from $p into $s skin.~
+
+Rub_Mithril~
+You rub some mithril filings between your fingers.~
+$n rubs some mithril filings between $s fingers.~
+$n rubs some mithril filings between $s fingers.~
+You rub some mithril filings between your fingers.~
+$n rubs some mithril filings between $s fingers.~
+
+rub_with_sliver~
+You rub $P with the sliver of $p.~
+$n rubs $P with the sliver of $p.~
+$n rubs $P with the sliver of $p.~
+You rub $P with the sliver of $p.~
+$n rubs $P with the sliver of $p.~
+
+rub_wounds~
+You rub your hands over $N's wounds, working the herbs in.~
+$n rubs $s hands over your wounds, working the herbs in.~
+$n rubs $s hands over $N's wounds, working the herbs in.~
+You rub your hands over your wounds, working the herbs in.~
+$n rubs $s hands over $s wounds, working the herbs in.~
+
+ruddy_skin~
+$N's skin becomes flush with a ruddy glow that fades away in seconds.~
+Your skin becomes flush with a ruddy glow that fades away in seconds.~
+$N's skin becomes flush with a ruddy glow that fades away in seconds.~
+Your skin becomes flush with a ruddy glow that fades away in seconds.~
+$n's skin becomes flush with a ruddy glow that fades away in seconds.~
+
+Sacrifices~
+You sacrifice $p to $g.~
+$n sacrifices $p to $g.~
+$n sacrifices $p to $g.~
+You sacrifice $p to $g.~
+$n sacrifices $p to $g.~
+
+scoop~
+You scoop up $p.~
+You see $n scoop up $p.~
+You see $n scoop up $p.~
+~
+~
+
+Scratch~
+You scratch some arcane symbols in the ground.~
+$n scratches some arcane symbols in the ground.~
+$n scratches some arcane symbols in the ground.~
+You scratch some arcane symbols in the ground.~
+$n scratches some arcane symbols in the ground.~
+
+Scream~
+You scream wildly and clutch at $N.~
+$n screams wildly and clutches at you.~
+$n screams wildly and clutches at $N.~
+You scream wildly and clutch at yourself.~
+$n screams wildly and clutches at $mself.~
+
+scrutiny~
+You peer at $N with much scrutiny.~
+$n peers at you with much scrutiny.~
+$n peers at $N with much scrutiny.~
+You peer down at yourself with much scrutiny.~
+$n peers down at $mself with much scrutiny.~
+
+seal_enchant~
+You trace an arcane rune in the air, sealing the spell about $N.~
+$n traces an arcane rune in the air, sealing the spell around you.~
+$n traces an arcane rune in the air, sealing the spell about $N.~
+You trace an arcane rune in the air, sealing the enchantment.~
+$n traces an arcane rune in the air, sealing the enchantment about $m.~
+
+sear_flesh~
+The water bubbles and boils, searing the flesh from $p.~
+The water bubbles and boils, searing the flesh from $p.~
+The water bubbles and boils, searing the flesh from $p.~
+The water bubbles and boils, searing the flesh from $p.~
+The water bubbles and boils, searing the flesh from $p.~
+
+Search~
+You close your eyes and search the world for your victim.~
+You feel someone searching for you.~
+$n goes into a trance.~
+You close your eyes and search the world for your victim.~
+$n goes into a trance.~
+
+seep_darkness~
+A tendril of darkness slithers its way out of $N's body.~
+A tendril of darkness slithers its way out of your body.~
+A tendril of darkness slithers its way out of $N's body.~
+A tendril of darkness slithers its way out of your body.~
+A tendril of darkness slithers its way out of $n's body.~
+
+shadow_embrace~
+All the shadows around $N come to life and embrace $M protectively.~
+All the shadows around you come to life and embrace you protectively.~
+All the shadows around $N come to life and embrace $M protectively.~
+All the shadows around you come to life and embrace you protectively.~
+All the shadows around $n come to life and embrace $m protectively.~
+
+shadow_heart~
+Shadows rise up and swirl around $N's heart.~
+Shadows rise up and swirl around your heart.~
+Shadows rise up and swirl around $N's heart.~
+Shadows rise up and swirl around your heart.~
+Shadows rise up and swirl around $n's heart.~
+
+shadow_rise~
+A chorus of shadows rises up before $N.~
+A chorus of shadows rises up before you.~
+A chorus of shadows rises up before $N.~
+A chorus of shadows rises up before $N.~
+A chorus of shadows rises up before $n.~
+
+Shake~
+You shake $p vigorously.~
+$n shakes $p vigorously.~
+$n shakes $p vigorously.~
+You shake $p vigorously.~
+$n shakes $p vigorously.~
+
+shave_reagent~
+You carefully shave a sliver from $p.~
+$n carefully shaves a sliver from $p.~
+$n carefully shaves a sliver from $p.~
+You carefully shave a sliver from $p.~
+$n carefully shaves a sliver from $p.~
+
+shiver_ice~
+You shiver as frost white energy dances across your hands.~
+$n shivers as frost white energy dances across $s hands.~
+$n shivers as frost white energy dances across $s hands.~
+You shiver as frost white energy dances across your hands.~
+$n shivers as frost white energy dances across $s hands.~
+
+Shivers~
+You shiver involuntarily.~
+$n shivers involuntarily.~
+$n shivers involuntarily.~
+~
+~
+
+shock_spread~
+A field of blue-white energy arcs from $p, encircling $N.~
+A field of blue-white energy arcs from $p, encircling you.~
+A field of blue-white energy arcs from $p, encircling $N.~
+A field of blue-white energy arcs from $p, encircling you.~
+A field of blue-white energy arcs from $p, encircling $n.~
+
+skin_tingle~
+$N shivers slightly as $S skin becomes harder than stone.~
+You feel a strange, tingling sensation as your skin hardens.~
+$N shivers slightly as $S skin becomes harder than stone.~
+You feel a strange, tingling sensation as your skin hardens.~
+$n shivers slightly as $s skin becomes harder than stone.~
+
+smite_all~
+You raise $p before you and call on $g to smite the unbelievers!~
+$n raises $p before $m calling on $g to smite the unbelievers!~
+$n raises $p before $m calling on $g to smite the unbelievers!~
+You raise $p before you and call on $g to smite the unbelievers!~
+$n raises $p before $m calling on $g to smite the unbelievers!~
+
+Smoke~
+Smoke pours from your hands as you rub them together.~
+Smoke pours from $n's hands as $e rubs them together.~
+Smoke pours from $n's hand as $e rubs them together.~
+Smoke pours from your hands as you rub them together.~
+Smoke pours from $n's hands as $e runs them together.~
+
+smoke_reagent~
+A sliver of $p smokes gently.~
+A sliver of $p smokes gently.~
+A sliver of $p smokes gently.~
+A sliver of $p smokes gently.~
+A sliver of $p smokes gently.~
+
+Snap~
+You snap your fingers at $N.~
+$n snaps $s fingers at you.~
+$n snaps $s fingers at $N.~
+You snap your fingers at yourself.~
+$n snaps $s fingers at $mself.~
+
+sor_abolt~
+With a cry you throw the acrid orb at $N~
+With a cry $n throws an acrid orb directly at you!~
+With a cry $n throws an acrid orb at $N.~
+~
+~
+
+sor_acid~
+@GChanting softly you splash a droplet from $p on to the ground.@n~
+@GChanting softly $n splashs a droplet from $p on to the ground.@n~
+@GChanting softly $n splashs a droplet from $p on to the ground.@n~
+@GChanting softly you splash a droplet from $p on to the ground.@n~
+@GChanting softly $n splashs a droplet from $p on to the ground.@n~
+
+sor_bswirl~
+Swirling shards of gleaming bone surround you.~
+Swirling shards of gleaming bone surround $n.~
+Swirling shards of gleaming bone surround $n.~
+Swirling shards of gleaming bone surround you.~
+Swirling shards of gleaming bone surround $n.~
+
+sor_call~
+Concentrating on the dark powers you call for a servant to aid you.~
+Concentrating on the dark powers $n calls for a servant to aid $s.~
+Concentrating on the dark powers $n calls for a servant to aid $s.~
+Concentrating on the dark powers you call for a servant to aid you.~
+~
+
+point_obj_sky_ground~
+You point $p at the sky and then the ground.~
+$n points $p at the sky and then the ground.~
+$n points $p at the sky and then the ground.~
+~
+~
+
+sor_cloud~
+$p burst into flames, the smoke and embers forming a cloud overhead.~
+$p burst into flames, the smoke and embers forming a cloud overhead.~
+$p burst into flames, the smoke and embers forming a cloud overhead.~
+$p burst into flames, the smoke and embers forming a cloud overhead.~
+$p burst into flames, the smoke and embers forming a cloud overhead.~
+
+sor_cut~
+You slash your palm with $p, you wince as the blood flows.~
+$n slashes $s palm with $p, $e winces as the blood flows.~
+$n slashes $N's palm with $p, letting the blood flow freely.~
+You slash your palm with $p watching as the blood flows.~
+$n slashes $s palm with $p letting the blood flow freely.~
+
+sor_dead~
+~
+~
+~
+You feel your life drain from you.~
+$n goes as pale as a corpse.~
+
+sor_demon~
+Lightning arcs into the ground as a black vortex rents through the fabric of the mortal plane.~
+Lightning arcs into the ground as a black vortex rents through the fabric of the mortal plane.~
+Lightning arcs into the ground as a black vortex rents through the fabric of the mortal plane.~
+Lightning arcs into the ground as a black vortex rents through the fabric of the mortal plane.~
+Lightning arcs into the ground as a black vortex rents through the fabric of the mortal plane.~
+
+sor_digout~
+The ground buckles underfoot as something digs itself out of the earth.~
+The ground buckles underfoot as something digs itself out of the earth.~
+The ground buckles underfoot as something digs itself out of the earth.~
+The ground buckles underfoot as something digs itself out of the earth.~
+The ground buckles underfoot as something digs itself out of the earth.~
+
+sor_eye~
+~
+~
+~
+With an eerie light $p floats from your hand and swirls about your head.~
+With an eerie light $p floats from $n hand and swirls about $s head.~
+
+sor_fire~
+Whispering words of hate and fury you evoke the unholy fires.~
+Whispering words of hate and fury $n evokes dark magics.~
+Whispering words of hate and fury $n evokes dark magics.~
+Whispering words of hate and fury you evoke the unholy fires.~
+Whispering words of hate and fury $n evokes the unholy fires.~
+
+sor_gskull~
+~
+~
+~
+Ghostly skulls swirl about you.~
+Ghostly skulls swirl about $n.~
+
+sor_infuse~
+Whispering arcane words you infuse $p with the spirit of disease.~
+Whispering arcane words $n infuses $p with the spirit of disease.~
+Whispering arcane words $n infuses $p with the spirit of disease.~
+Whispering arcane words you infuse $p with the spirit of disease.~
+Whispering arcane words $n infuses $p with the spirit of disease.~
+
+sor_mark~
+You mark $N with the symbol of Khalmor.~
+$n marks you with the symbol of Khalmor.~
+$n marks $N with the symbol of Khalmor.~
+With great care you mark yourself with the symbol of Khalmor.~
+$n marks $mself with the symbol of Khalmor.~
+
+sor_nightm~
+Conjuring dark terrors, you cast your nightmarish thoughts into the mind of $N.~
+Waves of hate and terror wash across you as $n chants dark magics.~
+$N staggers as $E is attacked by an unseen force.~
+~
+~
+
+sor_pillar~
+@RYou scream in agony as you offer $p to the dark gods and it is consumed in the flames.@n~
+@R$n screams in agony as $e offers $p to the dark gods and it is consumed in the flames.@n~
+@R$n screams in agony as $e offers $p to the dark gods and it is consumed in the flames.@n~
+@RYou scream in agony as you offer $p to the dark gods and it is consumed in the flames.@n~
+@R$n screams in agony as $e offers $p to the dark gods and it is consumed in the flames.@n~
+
+sor_shadow~
+With a howl of madness shadow creatures tear at $N.~
+With a howl of madness shadow creatures tear at you!~
+With a howl of madness shadow creatures tear at $N.~
+~
+~
+
+sor_smearb~
+$N places $S hand in the air, shadows start entering the wound.~
+You place your hand in the air, shadows start entering the wound.~
+$N places $S hand in the air, shadows start entering the wound.~
+You place your hand out in the air, and shadows writhe around it.~
+$n holds $s hand out in the air, and shadows writhe around it.~
+
+sor_soulatt~
+With a tearing motion you unleash demonic magic into $N's life energy.~
+With a tearing motion $n unleash a wave of black flames at you.~
+With a tearing motion $n unleashes black flames at $N.~
+~
+~
+
+sor_soulpeer~
+Closing your eyes you let your dark magic focus on $N's life energies.~
+Closing $s eyes $n turns to face you.~
+Closing $s eyes $n turns to face $N.~
+~
+~
+
+sor_sum~
+Holding forth $p you recite the verses of the damned.~
+~
+$n holds forth $p and recites the verses of the damned.~
+Holding forth $p you recite the verses of the damned.~
+$n holds forth $p and recites the verses of the damned.~
+
+sor_sumfist~
+You clench your fist the blood swirling from it into tendrils of @Renergy@n.~
+$n clenchs $e fist blood swirling from it into tendrils of @Renergy@n.~
+$n clenchs $e fist blood swirling from it into tendrils of @Renergy@n.~
+You clench your fist the blood swirling from it into tendrils of @Renergy@n.~
+$n clenchs $e fist blood swirling from it into tendrils of @Renergy@n.~
+
+sor_taunt~
+Taunting $N, you chant while holding $p at $M.~
+Taunting you, $n chants while holding $p at you.~
+$n taunts $N with $p.~
+You chant while holding $p.~
+$n chants while holding $p.~
+
+sor_teach~
+You teach $N the dark truths from $p.~
+$n teaches you from $p.~
+$n teaches $N from $p.~
+You recite the dark truths from $p.~
+$n recites the dark truths from $p.~
+
+sor_tendril~
+Acrid smoke pours from the ground forming into a swirling orb in front of you.~
+Acrid smoke pours from the ground forming into a swirling orb in front of $n.~
+Acrid smoke pours from the ground forming into a swirling orb in front of $n.~
+Acrid smoke pours from the ground forming into a swirling orb in front of you.~
+Acrid smoke pours from the ground forming into a swirling orb in front of $n.~
+
+sor_volley~
+With a shrieking whistle the shards of bone shoot towards $N.~
+With a shrieking whistle shards of bone shoot towards you!~
+With a shrieking whistle the shards of bone shoot towards $N.~
+~
+~
+
+spectrum~
+A rainbow of @Cl@Yi@Bg@Gh@Rt@n from $p enfolds $N.~
+A rainbow of @Cl@Yi@Bg@Gh@Rt@n from $p enfolds you.~
+A rainbow of @Cl@Yi@Bg@Gh@Rt@n from $p enfolds $N.~
+A rainbow of @Cl@Yi@Bg@Gh@Rt@n from $p enfolds you.~
+A rainbow of @Cl@Yi@Bg@Gh@Rt@n from $p enfolds $n.~
+
+sphere_force~
+A translucent globe of pure force appears in $N's hand.~
+A translucent globe of pure force appears in your hand.~
+A translucent globe of pure force appears in $N's hand.~
+A translucent globe of pure force appears in your hand.~
+A translucent globe of pure force appears in $n's hand.~
+
+Spin~
+You spin $p in a ritualistic pattern.~
+$n spins $p in a ritualistic pattern.~
+$n spins $p in a ritualistic pattern.~
+You spin $p in a ritualistic pattern.~
+$n spins $p in a ritualistic pattern.~
+
+Spin_obj~
+You spin $p in your hands.~
+$n spins $p in $s hands.~
+$n spins $p in $s hands.~
+You spin $p in your hands.~
+$n spins $p in $s hands.~
+
+splay~
+You spread your fingers and splay your hands.~
+$n spreads $s fingers and splays $s hands.~
+$n spreads $s fingers and splays $s hands.~
+You spread your fingers and splay your hands.~
+$n spreads $s fingers and splays $s hands.~
+
+Sprinkle_Dust~
+You sprinkle the dust over $p, lightly covering it.~
+$n sprinkles the dust over $p, lightly covering it.~
+$n sprinkles the dust over $p, lightly covering it.~
+You sprinkle the dust over $p, lightly covering it.~
+$n sprinkles the dust over $p, lightly covering it.~
+
+sprinkle_in~
+You sprinkle the powder into $p.~
+$n sprinkles the powder into $p.~
+$n sprinkles the powder into $p.~
+You sprinkle the powder into $p.~
+$n sprinkles the powder into $p.~
+
+sprinkle_itm_ovr~
+You sprinkle $p over $N's head.~
+$n sprinkles $p over your head.~
+$n sprinkles $p over $N's head.~
+You sprinkle $p over your head.~
+$n sprinkles $p over $s head.~
+
+Sprinkle_Obj~
+You sprinkle $p over $N.~
+$n sprinkles $p over you.~
+$n sprinkles $p over $N.~
+You sprinkle $p over yourself.~
+$n sprinkles $p over $mself.~
+
+sprinkle_stones~
+You gently sprinkle $p over the small stones.~
+$n gently sprinkles $p over the small stones.~
+$n gently sprinkles $p over the small stones.~
+You gently sprinkle $p over the small stones.~
+$n gently sprinkles $p over the small stones.~
+
+squeeze~
+You squeeze $p in your hand.~
+$n makes a fist and squeezes $p.~
+$n squeezes $p in $s hand.~
+You squeeze $p in your hand.~
+$n squeezes $p in $s hand.~
+
+Squeeze_aloe~
+Squeezing $p, you extract some fresh aloe.~
+$n squeezes $p, extracting fresh aloe from it.~
+$n squeezes $p, extracting fresh aloe from it.~
+Squeezing $p, you extract some fresh aloe.~
+$n squeezes $p, extracting fresh aloe from it.~
+
+squeeze_obj~
+You place $p in your hand and squeeze it at $N.~
+$n places $p in $s hand and squeezes at you.~
+$n places $p in $s hand and squeezes at $N.~
+You place $p in your hand and squeeze it.~
+$n places $p in $s hand and squeezes it.~
+
+stand_circle~
+You position yourself in the exact center of the circle.~
+$n positions $mself in the exact center of the circle.~
+$n positions $mself in the exact center of the circle.~
+You position yourself in the exact center of the circle.~
+$n positions $mself in the exact center of the circle.~
+
+star_pray~
+The star shoots forth and winks out of existence as you pray over it.~
+The star shoots forth and winks out of existence as $n prays over it.~
+The star shoots forth and winks out of existence as $n prays over it.~
+The star shoots forth and winks out of existence as you pray over it.~
+The star shoots forth and winks out of existence as $n prays over it.~
+
+Stare~
+You stare deeply into $p.~
+~
+$n stares deeply into $p.~
+You stare deeply into $p.~
+$n stares deeply into $p.~
+
+Stare_at~
+You stare intently at $N.~
+$n stares intently at you.~
+$n stares intently at $N.~
+You stare intently at yourself.~
+$n stares intently at $mself.~
+
+stare_into~
+You stare directly into the eyes of a figurine of a hawk.~
+~
+$n stares at a figurine of a hawk.~
+~
+~
+
+steam~
+The entrails suddenly combust, releasing a thick, misty steam.~
+The entrails suddenly combust, releasing a thick, misty steam.~
+The entrails suddenly combust, releasing a thick, misty steam.~
+The entrails suddenly combust, releasing a thick, misty steam.~
+The entrails suddenly combust, releasing a thick, misty steam.~
+
+stomp~
+@yYou stamp your foot with all your might as the power of $g flows through you.@n~
+@y$n stamps $s foot sending shockwaves through the ground.@n~
+@y$n stamps $s foot sending shockwaves through the ground.@n~
+@yYou stamp your foot with all your might as the power of $g flows through you.@n~
+@y$n stamps $s foot sending shockwaves through the ground.@n~
+
+strength~
+Suddenly, you are filled with strength far beyond your own.~
+$n gasps suddenly, taking in a sharp breath.~
+$n gasps suddenly, taking in a sharp breath.~
+Suddenly, you are filled with strength far beyond your own.~
+$n gasps suddenly, taking in a sharp breath.~
+
+swirl_bone~
+Swirling bones surround $N rattling and creaking as they encircle $M.~
+Swirling bones surround you rattling and creaking as they encircle you.~
+Swirling bones surround $N rattling and creaking as they encircle $M.~
+Swirling bones encircle you making a delightful rattling sound.~
+Swirling bones encircle $n as $e chuckles in delight..~
+
+swirl_liquid~
+You swirl the contents of $p, mixing it.~
+$n swirls the contents of $p, mixing it.~
+$n swirls the contents of $p, mixing it.~
+You swirl the contents of $p, mixing it.~
+$n swirls the contents of $p, mixing it.~
+
+symbol_heavens~
+You hold your symbol to the heavens and command the power of $g.~
+$n holds $s symbol to the heavens and commands the power of $g.~
+$n holds $s symbol to the heavens and commands the power of $g.~
+You hold your symbol to the heavens and command the power of $g.~
+$n holds $s symbol to the heavens and commands the power of $g.~
+
+symbol_life~
+With an upraised finger, you draw an inverted symbol of life over $N.~
+With $s finger, $n draws an inverted symbol of life over you.~
+With $s finger, $n draws an inverted symbol of life over $N.~
+With an upraised finger, you draw an inverted symbol of life.~
+With $s finger, $n draws an inverted symbol of life over $mself.~
+
+take_orb~
+You reach into $p and withdraw a glowing orb of pure energy.~
+$n reaches into $p and withdraws a glowing orb of pure energy.~
+$n reaches into $p and withdraws a glowing orb of pure energy.~
+You reach into $p and withdraw a glowing orb of pure energy.~
+$n reaches into $p and withdraws a glowing orb of pure energy.~
+
+Take_Pinch~
+You open $p and take out a small pinch.~
+$n opens $p and takes out a small pinch.~
+$n opens $p and takes out a small pinch.~
+You open $p and take out a small pinch.~
+$n opens $p and takes out a small pinch.~
+
+target_kneel_before~
+$N kneels before you.~
+You kneel before $n.~
+$N kneels before $n.~
+You kneel.~
+$n kneels.~
+
+target_pledge~
+$N pledges $Mself to the protection of others.~
+You pledge yourself to the protection of others.~
+$N pledges $Mself to the protection of others.~
+You pledge yourself to the protection of others.~
+$n pledges $mself to the protection of others.~
+
+test_action~
+You bend down to the ground touching $p to it and looking at $N.~
+$n bends down to the ground touching $p and looking at you.~
+$n bends down to the ground touching $p and looking at $N.~
+~
+~
+
+thorn_command~
+With but a murmur, $p takes flight, encircling $N.~
+$n murmurs and $p takes flight, encircling you.~
+$n murmurs and $p takes flight, encircling $N.~
+With but a murmur, $p takes flight, encircling you.~
+$n murmurs and $p takes flight, encircling $m.~
+
+Throw~
+You throw $p at $N.~
+$n throws $p at you.~
+$n throws $p at $N.~
+You throw $p at yourself.~
+$n throws $p at $mself.~
+
+Throw_Dust~
+You throw the dust at $N.~
+$n throws the dust at you.~
+$n throws the dust at $N.~
+You throw the dust at yourself.~
+$n throws the dust at $mself.~
+
+throw_orb~
+You throw the orb with unerring accuracy at $P.~
+$n throws the orb with unerring accuracy at you!~
+$n throws the orb with unerring accuracy at $N!~
+You throw the orb with unerring accuracy at yourself!~
+$n throws the orb with unerring accuracy at $mself!~
+
+throw_orb~
+You throw the nacreous orb at $N.~
+$n throws the nacreous orb at you.~
+$n throws the nacreous orb at $N.~
+You throw the nacreous orb at your feet.~
+$n throws the nacreous orb at $s own feet.~
+
+toss~
+You toss a maelstrom of stones into the air!~
+$n tosses a maelstrom of stones into the air!~
+$n tosses a maelstrom of stones into the air!~
+A maelstrom of stones is tossed at you!~
+A maelstrom of stones are tossed at $n.~
+
+toss_air~
+You toss $p into the air.~
+$n tosses $p into the air.~
+$n tosses $p into the air.~
+You toss $p into the air.~
+$n tosses $p into the air.~
+
+toss_powder~
+You toss $p in the air, covering your body.~
+$n tosses $p in the air, covering $s body.~
+$n tosses $p in the air, covering $s body.~
+You toss $p in the air, covering your body.~
+$n tosses $p in the air, covering $s body.~
+
+Touch~
+You try to touch $N.~
+$n tries to touch you!~
+$n tries to touch $N.~
+You try to touch yourself.~
+$n tries to touch $mself.~
+
+touch_eyes~
+You gently lay your hand over $N's eyes.~
+$n gently lays $s hand over your eyes.~
+$n gently lays $s hand over $N's eyes.~
+You gently lay your hand over your eyes.~
+$n gently lays $s hand over $s eyes.~
+
+touch_forehead~
+You touch $p to your forehead.~
+$n touches $p to $s forehead.~
+$n touches $p to $s forehead.~
+You touch $p to your forehead.~
+$n touches $p to $s forehead.~
+
+touch_item~
+You slowly lower $p, touching $N's head, arms, torso and finally $S legs with it.~
+$n slowly lowers $p, touching your head, your arms, your torso and finally your legs with it.~
+$n slowly lowers $p, touching $N's head, arms, torso and finally $S legs with it.~
+You slowly lower $p, touching your head, your arms, your torso and finally your legs with it.~
+$n slowly lowers $p, touching $s head, arms, torso and finally $s legs with it.~
+
+trace_symbol~
+You trace a symbol of $g above the gem.~
+$n traces a symbol of $g above the gem.~
+$n traces a symbol of $g above the gem.~
+You trace a symbol of $g above the gem.~
+$n traces a symbol of $g above the gem.~
+
+transfer~
+You focus your mind and transfer your magical energy into $p.~
+$n transfers $s magical energy into $p.~
+$n transfers $s magical energy into $p.~
+You focus your mind and transfer your magical energy into $p.~
+$n transfers $s magical energy into $p.~
+
+Troll_flesh~
+A piece of troll flesh dissolves into nothingness.~
+A piece of troll flesh held by $n dissolves into nothingness.~
+A piece of troll flesh held by $n dissolves into nothingness.~
+A piece of troll flesh dissolves into nothingness.~
+A piece of troll flesh held by $n dissolves into nothingness.~
+
+turn_undead~
+You order $N to begone from this place.~
+$n orders you to begone from this place.~
+$n orders $N to begone from this place.~
+~
+~
+
+understand~
+Filled with renewed understanding, you raise your eyes from the ground.~
+$n raises $s head, $s eyes aflame with renewed understanding.~
+$n raises $s head, $s eyes aflame with renewed understanding.~
+Filled with renewed understanding, you raise your eyes from the ground.~
+$n raises $s head, $s eyes aflame with renewed understanding.~
+
+unknown1~
+You sprinkle the $p which you crushed over your body.~
+$n sprinkles the $p which $e crushed over $s body.~
+$n sprinkles the $p which $e crushed over $s body.~
+~
+~
+
+use_this_first~
+You touch $N between the eyes with $p.~
+$n touches you between the eyes with $p.~
+$n touches $N between the eyes with $p.~
+You touch yourself between the eyes with $p.~
+$n touches $mself between the eyes with $p.~
+
+vision~
+When the mist clears, a vision about $P appears to you.~
+$n stares at $P intently, as if in a trance.~
+$n stares at $P intently, as if in a trance.~
+When the mist clears, a vision about $P appears to you.~
+$n stares at $P intently, as if in a trance.~
+
+warmth_spread~
+An aura of warmth creeps out from $p to surround $N.~
+An aura of warmth creeps out from $p to surround you.~
+An aura of warmth creeps out from $p to surround $N.~
+An aura of warmth creeps out from $p to surround you.~
+An aura of warmth creeps out from $p to surround $n.~
+
+wave_obj_arc~
+You wave $p in a slow arc before you.~
+$n waves $p in a slow arc before you.~
+$n waves $p in a slow arc before $m.~
+You wave $p in a slow arc before you.~
+$n waves $p in a slow arc before $m.~
+
+wax_drip~
+Wax drips off $p, forming a star in your palm.~
+Wax drips off $p, forming a star in $n's palm.~
+Wax drips off $p, forming a star in $n's palm.~
+Wax drips off $p, forming a star in your palm.~
+Wax drips off $p, forming a star in $n's palm.~
+
+Weave~
+You weave your hands in a mystical pattern.~
+$n weaves $s hands in a mystical pattern.~
+$n weaves $s hands in a mystical pattern.~
+You weave your hands in a mystical pattern.~
+$n weaves $s hands in a mystical pattern.~
+
+Weave_Hypnotic~
+You weave your hands in a hypnotic motion.~
+$n weaves $s hands in a hypnotic motion.~
+$n weaves $s hands in a hypnotic motion.~
+You weave your hands in a hypnotic motion.~
+$n weaves $s hands in a hypnotic motion.~
+
+whisper~
+You whisper an arcane formula.~
+$n whispers an arcane formula.~
+$n whispers an arcane formula.~
+You whisper an arcane formula.~
+$n whispers an arcane formula.~
+
+Whistle~
+You whistle gently to $N.~
+$n whistles gently to you.~
+$n whistles gently to $N.~
+You whistle gently to yourself.~
+$n whistles gently to $mself.~
+
+Yell~
+You yell in rage at $N.~
+$n yells in rage at you.~
+$n yells in rage at $N.~
+You yell in rage at yourself.~
+$n yells in rage at $mself.~
+
+Zzap~
+@CA brilliant arc of energy jumps from the rod, hitting $N!@n~
+@CA brilliant arc of energy jumps from the rod, hitting you!@n~
+@CA brilliant arc of energy jumps from the rod, hitting $N!@n~
+~
+~
+
+skin_tear~
+The droplets of blood fester, and $N's skin twists on $S bones.~
+The droplets of blood fester, and your skin twists on your bones.~
+The droplets of blood fester, and $N's skin twists on $S bones.~
+~
+~
+
+corpse_eat~
+With an evil grin you drain the life energies from $p.~
+With a wicked grin $n drains $p of its life energies, satisfying $s dark hunger.~
+With a wicked grin $n drains $p of its life energies, satisfying $s dark hunger.~
+With an evil grin you drain the life energies from $p.~
+With a wicked grin $n drains $p of its life energies, satisfying $s dark hunger.~
+
+sor_gshield~
+A cloud of demonic energy surrounds $N the faint screams of lost souls echoing as it envelops $M.~
+A cloud of demonic energy surrounds you the faint screams of lost souls echoing as it envelops you.~
+A cloud of demonic energy surrounds $N the faint screams of lost souls echoing as it envelops $M.~
+A cloud of demonic energy surrounds you, the screams of the damned echoing in your ears.~
+A cloud of demonic energy surrounds $n, the screams of the damned echoing as it envelops $m.~
+
+est_name~
+~
+~
+~
+~
+~
+
+solidify~
+The ground flickers briefly, solidifying beneath $n's feet.~
+Flickering briefly, the ground solidifies beneath $n's feet.~
+~
+~
+~
+
+dragon~
+You concentrate on the image of a dragon to call to your side.~
+$n closes $s eyes and concentrates.~
+$n closes $s eyes and concentrates.~
+You concentrate on the image of a dragon to call to your side.~
+$n closes $s eyes and concentrates.~
+
+dshield~
+With a howl, black flames swirl around $n, consuming $p.~
+With a howl, black flames swirl around you, consuming $p.~
+With a howl, black flames swirl around $N, consuming $p.~
+With a howl, black flames swirl around you, consuming $p.~
+With a howl, black flames swirl around $n, consuming $p.~
+
+sorc_simul~
+~
+~
+$n closes $s eyes and points at $N, a cascade of @rblood flames@n arc between them.~
+You cast the bonds of servitude upon your familiar sealing it to your blood and will.~
+$n closes $s eyes and points at $N, a cascade of @rblood flames@n arc between them.~
+
+sorc_ribbon~
+$n raises $s hands as @rblood red ribbons@n of magic swirl around $m.~
+~
+$n raises $s hands as @rblood red ribbons@n of magic swirl around $m.~
+You raise your hands and evoke as @rblood red ribbons@n of magic swirl around you.~
+$n raises $s hands as @rblood red ribbons@n of magic swirl around $m.~
+
+dance_song~
+@C$n lift's up $s voice in song.@n~
+~
+@C$n lift's up $s voice in song.@n~
+@CYou lift up your voice in song.@n~
+@C$n lift's up $s voice in song.@n~
+
+song_toad~
+~
+~
+~
+~
+~
+
+song_brook~
+~
+~
+~
+@bA bubbling like a brook fills your mind and refreshes your body.@n~
+@b$n song fills your mind with the sound of water as it refreshes your body.@n~
+
+chant_war~
+~
+~
+~
+@RThe energy of the chant guides your weapons.@n~
+@R$ns chant focuses your resolve and steadies your arm.@n~
+
+song_summer~
+~
+~
+~
+@YThe energy of summer infuses through your body as you sing.@n~
+@YThe energy of summer infuses your body as $n sings.@n~
+
+song_winter~
+~
+~
+~
+@CSwirling frost surrounds you as you sing.@n~
+@CSwirling frost surrounds you as $n sings.@n~
+
+song_wheat~
+~
+~
+~
+@yThe smell of freshly cooked bread fills the air as your hunger is slightly abated.@n~
+@yThe smell of freshly cooked bread fills the air as your hunger is slightly abated.@n~
+
+chant_battle~
+~
+~
+~
+@rThe crescendos of the chant rise your combat skills as you recite the epic song of heroic deeds.@n~
+@r$ns crescendo of chants fills your body with the focused energy.@n~
+
+song_buck~
+@GThe sweet song regenerates your tired body.@n~
+~
+~
+@GThe sweet song regenerates your tired body.@n~
+@G$ns sweet song regenerates your tired body.@n~
+
+song_serenity~
+~
+~
+~
+@bYour mind is refreshed as the song dances through it.@n~
+@bYour mind is refreshed as $n's song reverberates through you.@n~
+
+song_shadow~
+~
+~
+~
+@wThe shadows draw close as you whisper Khephera's song.@n~
+@wShadows surround you as $n whispers a soft song.@n~
+
+2nd_sorc_cut~
+You slash your palm with $p, watching the blood flow.~
+$n slashes $s palm with $p, watching the blood flow.~
+$n slashes $s palm with $p, watching the blood flow.~
+You slash your palm with $p, watching the blood flow.~
+$n slashes $s palm with $p, watching the blood flow.~
+
+nature_idol~
+@gYou hold forth $p and bow down to worship the power of nature.@n~
+~
+~
+You hold forth $p and bow down to worship the power of nature.~
+~
+
+holy_scroll~
+You hold forth $p and begin to chant to $g~
+$N holds forth $p and begins to chant.~
+~
+You hold forth $p and begin to chant to $g.~
+$N holds forth $p and begins to chant.~
+
+sprinkle_water~
+Calling upon $g you sprinkle droplets of water upon $P's forehead.~
+$N calls to $G as $e sprinkles glowing water upon your forehead.~
+Calling upon $g $n sprinkles droplets of water upon $P's forehead.~
+Calling upon $g you sprinkle droplets of water upon your forehead.~
+Calling upon $g $n sprinkles droplets of water upon their forehead.~
+
+divine_ignite~
+@rHolding $p before you it bursts into divine flames and crumbles to ash.@n~
+@rAs $n holds $p before $m it bursts into flames and crumbles to ash.~
+@rAs $n holds $p before $m it bursts into flames and crumbles to ash.~
+~
+~
+
+scroll_divine~
+As you recite the scriptures of $g the $p bursts into holy flame and crumbles to dust.~
+As $n recites the scriptures of $g the $p bursts into holy flame and crumbles to dust.~
+As $n recites the scriptures of $g the $p bursts into holy flame and crumbles to dust.~
+As you recite the scriptures of $g the $p bursts into holy flame and crumbles to dust.~
+As $n recites the scriptures of $g the $p bursts into holy flame and crumbles to dust.~
+
+song_river~
+~
+~
+~
+@bThe melody drifts along, reminding you of the river, and picnics.@n~
+@b$n's melody drifts along, bring up fond memories.@n~
+
+howl_wolf~
+~
+~
+~
+Your song is reminescent of the howling wolves.~
+$n's song is reminescent of the howling wolves.~
+
+blood_dripping~
+You carefully turn your hand over $p, the blood drips directly onto it.~
+$n carefully turns $s hand over $p, the blood drips directly onto it.~
+$n carefully turns $s hand over $p, the blood drips directly onto it.~
+You carefully turn your hand over $p, the blood drips directly onto it.~
+$n carefully turns $s hand over $p, the blood drips directly onto it.~
+
+song of the river~
+~
+~
+~
+@BThe roar of a river lifts your spirts.@n~
+@BThe roar of a river lifts your spirts.@n~
+
+sngaut~
+~
+~
+~
+@yThe swirling wind of autumn to coat your skin.@n~
+@yThe swirling wind of autumn to coat your skin.@n~
+
+sngox~
+~
+~
+~
+@GThe health of an ox is cruising through your veins.@n~
+@GThe health of an ox is cruising through your veins.@n~
+
+sngcar~
+~
+~
+~
+@rThe sounds of a pitched battle fill you with rage and determination.@n~
+@rThe sounds of a pitched battle fill you with rage and determination.@n~
+
+sngharvest~
+~
+~
+~
+@yYour hunger subsides as the song envolopes you.@n~
+@yYour hunger subsides as the song envolopes you.@n~
+
+sngseraphim~
+~
+~
+~
+@CThe lyrics bring the peaceful calm of a great seraphim to dwell in your mind.@n~
+@CThe lyrics bring the peaceful calm of a great seraphim to dwell in your mind.@n~
+
+sngsumequ~
+~
+~
+~
+@YThe last breath of summer@n @cand@n @ythe first sigh of autumn@n @csurround you.@n~
+@YThe last breath of summer@n @cand@n @ythe first sigh of autumn@n @csurround you.@n~
+
+sngswift~
+~
+~
+~
+@CThe lyrics of the song cause your steps to land quicker.@n~
+@CThe lyrics of the song cause your steps to land quicker.@n~
+
+sngwinequ~
+~
+~
+~
+@CThe last howl of winter@n @cand@n @Gthe first chuckle of spring@n @cswirl around you.@n~
+@CThe last howl of winter@n @cand@n @Gthe first chuckle of spring@n @cswirl around you.@n~
+
+sngeter~
+~
+~
+~
+@RThe song of pure battle influences your actions.@n~
+@RThe song of pure battle influences your actions.@n~
+
+sngwalrus~
+~
+~
+~
+@GAs the song fills your ears the stoic nature of the walrus warms your blood.@n~
+@GAs the song fills your ears the stoic nature of the walrus warms your blood.@n~
+
+sngrenewal~
+~
+~
+~
+@BThe roar of a river lifts your spirts@n @Cand@n @yyou hunger subsides as the song envolopes you.@n~
+@BThe roar of a river lifts your spirts@n @Cand@n @yyou hunger subsides as the song envolopes you.@n~
+
+sngspriequ~
+~
+~
+~
+@YMemories of the last spring equinox come to you.@n~
+@RMemories of the last spring equinox come to you.@n~
+
+sngharvequ~
+~
+~
+~
+The songs of the harvest, come and infiltrate your thoughts.~
+The songs of the harvest, come and infiltrate your thoughts.~
+
+sngblurring~
+~
+~
+~
+@bYou movements quicken as you concentrate on the song of blurring blades.@n~
+@bYou movements quicken as you concentrate on the song of blurring blades.@n~
+
+sngcelest~
+~
+~
+~
+@CThe notes seem to drift down from the heavens filling your mind with energy.@n~
+@CThe notes seem to drift down from the heavens filling your mind with energy.@n~
+
+sngdragon~
+~
+~
+~
+You feel the presence of a dragon behind you.~
+You feel the presence of a dragon behind you.~
+
+sngseason~
+~
+~
+~
+@gA wind blows in from all@n @Cf@n@Go@n@Yu@n@yr@n @gdirections as the lilting song rises into the air.@n~
+@gA wind blows in from all@n @Cf@n@Go@n@Yu@n@yr@n @gdirections as the lilting song rises into the air.@n~
+
+sngcheetah~
+~
+~
+~
+@yThe song fills your legs with the speed of a cheetah.@n~
+@yThe song fills your legs with the speed of a cheetah.@n~
+
+defol~
+@YBlowing gently over your open hand a gush of summer air rushes at $N.@n~
+@YAs $n blows gently across $s open hand a gush of summer air assials you.@n~
+@YAs $n blows gently across $s open hand a gush of summer air assials $N.@n~
+@YAs you blow across your open hand a gush of summer air assials you.@n~
+@YAs $n blows across $s open hand a gush of summer air assials $m.@n~
+
+trail1~
+@gBending down you show $N a hidden trail.@n~
+@gBending down $n shows you a hidden trail.@n~
+@gBending down $n shows $N a hidden trail.@n~
+@gBending down to the ground you search for a hidden trail.@n~
+@gBending down $n hunts for the signs of a hidden trail.@n~
+
+trail2~
+@gSlowly you show $N the tell-tale signs of hidden animal trails.@n~
+@gSlowly $n shows you the tell-tale signs of hidden animal trails.@n~
+@gSlowly $n shows $N the tell-tale signs of hidden animal trails.@n~
+@gCarefully you study the tell-tale signs of hidden animal trails.@n~
+@gCarefuly $n studies the tell-tale signs of hidden animal trails.@n~
+
+trail 2~
+~
+~
+~
+~
+~
+
+trail3~
+@gAs you teach $m, $N becomes increasingly aware of the trails around $m.@n~
+@gAs $n teaches you, you become increasingly aware of the trails around you.@n~
+@gAs $n teaches $N, $N becomes increasingly aware of the trails around $m.@n~
+@gAs you study the trail signs you become increasingly aware of hidden animal trails all around you.@n~
+@gAs $e studies the trail signs $n becomes increasingly aware of hidden animal trail around $e.@n~
+
+eel1~
+@yClosing your eyes you envision a large electric eel wrapping around $N.@n~
+@yIt feels like something large and slippery is wrapping it's self around you.@n~
+@yThe faint outline of a large eel seems to wrap itself around $N.@n~
+~
+~
+
+eel2~
+@yRubbing a bit of iron in your hand you send an electric charge through the image of the eel.@n~
+@y$n starts to rub a bit of iron in $s hand and the air around you becomes charged.@n~
+@y$n starts to rub a bit of iron in $s hand and the hairs on $N begin to stand on end.@n~
+~
+~
+
+tallow1~
+@RCarefully you light $p and hold it before you.@n~
+@R$n lights $p and holds it high.@n~
+@R$n lights $p and holds it high.@n~
+~
+~
+
+tallow2~
+@RFocusing your mind upon the flame you will it to come to life and strike $N.@n~
+@R$n appears to lose $mself in concentration.@n~
+@R$n appears to lose $mself in concentration.@n~
+~
+~
+
+caress1~
+@GGently you brush your hand along $N's face.@n~
+@GGently $n brushes $s hand along your face.@n~
+@GGently $n brushes $s hand along $N's face.@n~
+@GYou concentrate on the gentle breath of spring.@n~
+@G$n closes $s eyes and a slight breeze ruffles $s hair.@n~
+
+finger1~
+~
+~
+~
+@yYou chant a softly calling upon the winds of autumn to protect you and the surrounding plant life.@n~
+@y$n chants softly, after a short while a faint breeze flows in from the west.@n~
+
+touch1~
+@CBlowing gently over your open hand a blast of wintery air assaults $N.@n~
+@CAs $n blows gently across $s open hand a blast of wintery air assaults you.@n~
+@CAs $n blows gently across $s open hand a blast of wintery air assaults $N.@n~
+~
+~
+
+animal1~
+@yCarefully you arrange $p on the ground in an appetizing maner.@n~
+~
+@y$n carefully lies $p out in an appetizing maner.@n~
+@RSELF@n~
+@y$n carefully lies $p out in an appitizing maner.@n~
+
+animal2~
+@ySoftly you chant ancient words of calling.@n~
+~
+@ySoftly $n chants strange words that seem to draw your spirit towards $m.@n~
+~
+~
+
+animal3~
+@yClosing your eyes you send a silent call to all the creatures of the wilderness.@n~
+~
+@y$n closes $s eyes and a slight twinge of yearning pricks the back of your mind.@n~
+~
+~
+
+good1~
+@RCarefully you place a small red berry on the ground.@n~
+~
+@RCarefully $n places a small red berry on the ground.@n~
+@RSelf@n~
+@RSelf@n~
+
+good2~
+@RStarting slowly you sing a song of when the world was young.@n~
+~
+@R$n starts to sing of ancient times.@n~
+~
+~
+
+good3~
+@RA faint mist of magic seems to rise out of the ground around the berry.@n~
+~
+@RA faint mist of magic seems to rise out of the ground around the berry.@n~
+~
+~
+
+good4~
+@RBefore your eyes the berry seems to absorb this magic mist and grow plumper and juicier.@n~
+~
+@RBefore your eyes the berry seems to absorb this magic mist and grow plumper and juicier.@n~
+~
+~
+
+good5~
+~
+~
+~
+~
+~
+
+lashing~
+@GSoftly you whisper to $p willing it to life.@n~
+@GSoftly $n whispers to $p.@n~
+@GSoftly $n whispers to $p.@n~
+~
+~
+
+firefly1~
+OTHER~
+~
+~
+@CWhistling a little tone you call out for a firefly.@n~
+@C$n whistles a short tune.@n~
+
+firefly2~
+@CSuddenly a swarm of fireflies desends. Carefully $n choses one.@n~
+~
+~
+@CSuddenly a swarm of fireflies descend on you. Carefully you chose one.@n~
+@CSuddenly a swarm of fireflies descends. Carefully $n choses one.@n~
+
+sor_coat~
+Coating $p in your palm, you point $p at $N.~
+Coating $p in $s's palm, $n points $p at you.~
+Coating $p in $s palm, $n points $p at $N.~
+~
+~
+
+black_flame_target~
+Black flames leap from $p to $N.~
+Black flames leap from $p to you.~
+Black flames leap from $p to $N.~
+~
+~
+
+cut_own_palm~
+You slit your palm with $p.~
+$n slits $s palm with $p.~
+$n slits $s palm with $p.~
+~
+~
+
+obj_pulsate~
+$p beings to pulsate rapidly.~
+$p begins to pulsate rapidly.~
+$p begins to pulsate rapidly.~
+~
+~
+
+bind_arch_demon_stone~
+You bind $p with a linked chain of bone.~
+$n binds $p with a linked chain of bone.~
+$n binds $p with a linked chain of bone.~
+~
+~
+
+prison_of_bone~
+A prison of bone leaps to surround $N.~
+A prison of bone leaps to surround you.~
+A prison of bone leaps to surround $N.~
+~
+~
+
+praise_god~
+You hold $p ahigh and give praise to $g.~
+$n holds $p ahigh and gives praise to $g.~
+$n holds $p ahigh and gives praise to $g.~
+You hold $p ahigh and give praise to $g.~
+$n holds $p ahigh and gives praise to $g.~
+
+place_item_below_xharax~
+You carefully place $p below the seal of Xharax.~
+$n carefully places $p below the seal of Xharax.~
+$n carefully places $p below the seal of Xharax.~
+You carefully place $p below the seal of Xharax.~
+$n carefully places $p below the seal of Xharax.~
+
+escaping_essence~
+You cautiously allow some of the essence to escape, passing through the seal.~
+$n cautiously allows some of the essence to escape, passing through the seal.~
+$n cautiously allows some of the essence to escape, passing through the seal.~
+You cautiously allow some of the essence to escape, passing through the seal.~
+$n cautiously allows some of the essence to escape, passing through the seal.~
+
+fade_due_essence~
+$N breathes in deeply the essence and begins to fade as $E does so.~
+You breathe in deeply the essence and begin to fade as you do so.~
+$N breathes in deeply the essence and begins to fade as $E does so.~
+You breathe in deeply the essence and being to fade as you do so.~
+$N breathes in deeply the essence and begins to fade as $E does so.~
+
+tireless~
+~
+~
+~
+@CThe upbeat tune fills your spirit with wanderlust.@n~
+~
+
+shill1~
+@mWhispering softly you mummur a soft blessing.@n~
+~
+@mWhispering softly $n mummors a soft blessing.@n~
+SELF~
+~
+
+shill2~
+@mClosing your eyes you concentrate on the living power of nature around you.@n~
+~
+@m$n closes $s eys and appears to be concentrating intently on something.@n~
+~
+~
+
+shill3~
+@mSlowly you run your hand down the length of the staff.@n~
+~
+@mSlowly $n runs $s hand down the length of the staff.@n~
+~
+~
+
+owl1~
+~
+~
+~
+@yClosing your eyes you still your mind and concentrate on the image of an owl.@n~
+@y$n closes $s eyes and appears to be concentrating intensly.@n~
+
+owl2~
+~
+~
+~
+@ySoftly you begin to hoot to yourself.@n~
+@ySoftly $n begins to hoot to $mself.~
+
+owl3~
+~
+~
+~
+@yThe wisdom of an ancient owl swells within your heart.@n~
+@y$n seems to swell with some inner power.@n~
+
+snake1~
+~
+~
+~
+@gSlowly you begin to sway from side to side.@n~
+@gSlowly $n begins to sway from side to side.@n~
+
+snake2~
+~
+~
+~
+@gThe spirit of a snake seems to consume you and you begin to slither along the ground.@n~
+@gThe spirit of a snake appears to consume $n and $e begins to slither along the ground.@n~
+
+snake3~
+~
+~
+~
+@gRegaining your composure you stand up and brush the dirt from you still hissing to yourself.@n~
+@gRegaining a little composure $n stands up and brushes away some dirt still hissing to $mself.@n~
+
+parch1~
+@yChanting an ancient phrase you toss $p in the air.@n~
+@yChanting softly $n tosses $p in the air.@n~
+@yChanting softly $n tosses $p in the air.@n~
+~
+~
+
+parch2~
+@yA hot wind begins to swirl around you as $p begins to multiply.@n~
+@yA hot wind begins to swirl around you as $p begins to multiply.@n~
+@yA hot wind begins to swirl around you as $p begins to multiply.@n~
+~
+~
+
+poison1~
+@gBitting off a peice of $p you feel the poison seep into your blood.@n~
+@gBitting off a peice of $p $n looks a little sick.@n~
+@gBitting off a peice of $p $n looks a little sick.@n~
+~
+~
+
+poison2~
+@gFocusing your mind on the poison in your blood you place a hand on $N.@n~
+@gLooking extremly focused $n places a hand on you.@n~
+@g@gLooking extremly focused $n places a hand on $N.@n~
+~
+~
+
+poison3~
+@gYou shiver slightly as you will the poison from you and into $N.@n~
+@g$n shivers slightly and then looks well again.@n~
+@g$n shivers slightly and then looks well again.@n~
+~
+~
+
+twirl_object_head~
+You twirl $p around your head.~
+$n twirls $p around $s head.~
+$n twirls $p around $s head.~
+~
+~
+
+kiss_wind_summer~
+@rYou gently kiss your fingers, holding onto $p.  You then put your fingers high into the air.@n~
+@r$n gently kisses $s fingers, then puts them high into the air.@n~
+@r$n gently kisses $s fingers, then puts them high into the air.@n~
+~
+~
+
+crush_obj_snow_fall~
+@eYou crush $p and throw it at $N, snow starts falling around $M.@n~
+@e$n crushes $p and throws it at you, snow starts falling around you.@n~
+@e$n crushes $p and throws it at $N, snow starts falling around $M.@n~
+~
+~
+
+soft_smells~
+@cYou notice the soft smells of nature surrounding you.@n~
+@cYou notice the soft smells of nature surrounding you.@n~
+@cYou notice the soft smells of nature surrounding you.@n~
+@cYou notice the soft smells of nature surrounding you.@n~
+@cYou notice the soft smells of nature surrounding you.@n~
+
+whispering_wind~
+@cThe gentle winds of spring start to wrap themselvs about $N.@n~
+@cThe gentle winds of spring start to wrap themselvs about you.@n~
+@cThe gentle winds of spring start to wrap themselvs about $N.@n~
+@cThe gentle winds of spring start to wrap thmselves about you.@n~
+@cThe gentle winds of spring start to wrap themselves about $N.@n~
+
+rub_into_target~
+You rub $p into $P.~
+You rub $p into $P.~
+You rub $p into $P.~
+You rub $p into $P.~
+You rub $p into $P.~
+
+pound_obj_ground~
+@gYou pound $p onto the ground, the earth vibrates with the impact.@n~
+@g$n pounds $p onto the ground, the earth vibrates with the impact.@n~
+@g$n pounds $p onto the ground, the earth vibrates with the impact.@n~
+@gYou pound $p onto the ground, the earth vibrates with the impact.@n~
+@g$n pounds $p onto the ground, the earth vibrates with the impact.@n~
+
+place_obj_ground~
+@yYou take $p and place it on the ground.@n~
+@yYou take $p and place it on the ground.@n~
+@yYou take $p and place it on the ground.@n~
+@yYou take $p and place it on the ground.@n~
+@yYou take $p and place it on the ground.@n~
+
+insects_start_arriving~
+@RInsects start swarming onto $p, starting to devour it.@n~
+@RInsects start swarming onto $p, starting to devour it.@n~
+@RInsects start swarming onto $p, starting to devour it.@n~
+@RInsects start swarming onto $p, starting to devour it.@n~
+@RInsects start swarming onto $p, starting to devour it.@n~
+
+still_hungry_insects~
+@RThe insects finish devouring $p, they start eating everything in sight.@n~
+@RThe insects finish devouring $p, they start eating everything in sight.@n~
+@RThe insects finish devouring $p, they start eating everything in sight.@n~
+@RThe insects finish devouring $p, they start eating everything in sight.@n~
+@RThe insects finish devouring $p, they start eating everything in sight.@n~
+
+rub_forehead~
+@gYou rub the forehead of $N, carefully stroking $S skin.@n~
+@g$n rubs your forehead, carefully stroking your skin.@n~
+@g$n rubs the forehead of $N, carefully stroking $S skin.@n~
+~
+~
+
+

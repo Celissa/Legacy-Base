@@ -1,0 +1,3795 @@
+#M2_AREA
+2
+
+Kassanin Forest~
+Sleeping~
+Area - Kassanin Forest~
+~
+~
+
+1 0
+2
+1
+#ROOMS
+
+#3000
+Path along a limestone wall~
+Tall grass approaches the limestone wall to the west, thinning out a few
+feet from its base.  The well-trodden path along the wall continues north
+and south along its lengh, while to the east, the grass grows wild as it
+approaches the edge of a light forest.
+~
+[Sleeping] limestone w
+~
+33030145 3 5 0
+D0
+~
+~
+0 -1 11834 10 10 5
+D1
+~
+~
+0 -1 3006 10 10 5
+D2
+~
+~
+0 -1 3001 10 10 5
+-1
+S
+
+#3001
+Path along a limestone wall~
+A crude limestone wall runs north and south to the west, followed closely
+by a beaten path of cracked dirt.  Patches of grass approach the path
+from the east, spreading from tall grasses surrounding a light forest a
+bit further off in that direction.
+~
+[Sleeping] limestone w
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3000 10 10 5
+D1
+~
+~
+0 -1 3011 10 10 5
+D2
+~
+~
+0 -1 3002 10 10 5
+-1
+S
+
+#3002
+Path along a limestone wall~
+This path continues north and south along a wall of limestone to the west. 
+The earth is beaten and cracked from sun and wear, preventing the tall
+grasses to the east from growing onward.  The grass only continues for a
+short distance east from the path before being swallowed by a row of
+trees.
+~
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3001 10 10 5
+D1
+~
+~
+0 -1 3016 10 10 5
+D2
+~
+~
+0 -1 3003 10 10 5
+-1
+S
+
+#3003
+Path along a limestone wall~
+A path of cracked earth follows closely the perimeter of a crude
+limestone wall to the west, leading north and south along its length. 
+Tall grass lines the path, disappearing into the thickets and underbrush
+of a light forest to the east.
+~
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3002 10 10 5
+D1
+~
+~
+0 -1 3021 10 10 5
+D2
+~
+~
+0 -1 3004 10 10 5
+-1
+S
+
+#3004
+Path along a limestone wall~
+Weeds and patches of grass line a well-beaten path which leads north and
+south along a makeshift wall of limestone to the west.  To the south, the
+path appears to meet its end in a jutting rock face.  To the east, the
+grass begins to give way to a light forest.
+~
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3003 10 10 5
+D1
+~
+~
+0 -1 3026 10 10 5
+D2
+~
+~
+0 -1 3005 10 10 5
+-1
+S
+
+#3005
+End of the path~
+A beaten path comes to an end here, leading north along a limestone wall
+to the west.  Tall grass becomes sparce as it approaches the cracked
+earth of the path, but grows thicker as it nears the edge of a light
+forest to the east.  A rock face juts upwards from the ground to the
+south.
+~
+[Sleeping] 'tent town' west - limestone?
+[Sleeping] with high climb should be able to climb to cliff area
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3004 10 10 5
+D1
+~
+~
+0 -1 3031 10 10 5
+-1
+S
+
+#3006
+Tall grass~
+Tall grass surrounds you, continuing to the east and south.  To the
+southeast, the grass is choked out by the underbrush and thickets of a
+light forest.  A road runs alongside the grass to the north, while to the
+west, a small wall of limestone marks the edge of a village.
+~
+[Sleeping] bush?
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 11835 10 10 5
+D1
+~
+~
+0 -1 3007 10 10 5
+D2
+~
+~
+0 -1 3011 10 10 5
+D3
+~
+~
+0 -1 3000 10 10 5
+-1
+S
+
+#3007
+Tall grass~
+The edge of a forest to the south encroaches upon this small field of
+thick, tall grass.  A road lines the field to the north, leading west
+towards a small village, and east deeper into a forest.  A patch of grass
+lies flat against the ground.
+~
+[Sleeping] bush here?
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 11836 10 10 5
+D1
+~
+~
+0 -1 3008 10 10 5
+D2
+~
+~
+0 -1 3012 10 10 5
+D3
+~
+~
+0 -1 3006 10 10 5
+E
+patch~
+The shape of the patch suggests that perhaps last night a deer spent the
+night sleeping there.
+~
+-1
+S
+
+#3008
+Tall grass~
+Light forest surrounds this small field of tall grass to the east and
+south.  The field continues to the west, and is paved over by a road to
+the north.  Small holes dot the ground, making the footing choppy at best.
+~
+[Sleeping] bush here
+[Sleeping] action: root holes
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 11837 10 10 5
+D1
+~
+~
+0 -1 3009 10 10 5
+D2
+~
+~
+0 -1 3013 10 10 5
+D3
+~
+~
+0 -1 3007 10 10 5
+E
+holes~
+The holes are about two hands or so in diameter, perhaps made by
+groundhogs and the like.
+~
+-1
+S
+
+#3009
+Edge of a light forest~
+A few birch saplings surround a young cherry tree here at the edge of a
+light forest.  A road lies to the north, heading east and west.  To the
+west, a small field of grass spreads away from the forest.  The forest
+grows thicker to the south and east.
+~
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 11838 10 10 5
+D1
+~
+~
+0 -1 3010 10 10 5
+D2
+~
+~
+0 -1 3014 10 10 5
+D3
+~
+~
+0 -1 3008 10 10 5
+E
+cherry tree~
+The young tree is only about fifteen or twenty feet high, and may bear
+fruit next year, but certainly not this season.
+~
+E
+birch saplings~
+The saplings are probably only four or five years old.  In a few more
+years, they will more than double in size.
+~
+-1
+S
+
+#3010
+Edge of a light forest~
+A large walnut tree rises into the sky, flanked by a small birch tree on
+one side and an elm on the other.  A tiny pine grows near a rising stone
+face to the northeast.  A road lies to the north, while to the south, the
+forest grows thicker amongst the light underbrush.
+~
+[Sleeping] tall grass
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 11839 10 10 5
+D1
+~
+~
+0 -1 3054 10 10 5
+D2
+~
+~
+0 -1 3015 10 10 5
+D3
+~
+~
+0 -1 3009 10 10 5
+-1
+S
+
+#3011
+Tall grass~
+The grasses sway in a gentle breeze, nearly four feet high and growing
+thick and full.  Across thinning grass to the west, the ramshackle walls
+of Kassanin can be seen, while to the east, the grasses disappear in
+favor of a light forest of pine, birch, and oak.  The grassy field
+continues to the north and south.
+~
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3006 10 10 5
+D1
+~
+~
+0 -1 3012 10 10 5
+D2
+~
+~
+0 -1 3016 10 10 5
+D3
+~
+~
+0 -1 3001 10 10 5
+-1
+S
+
+#3012
+Light forest~
+Under Construction.
+~
+[Sleeping] light forest
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3007 10 10 5
+D1
+~
+~
+0 -1 3013 10 10 5
+D2
+~
+~
+0 -1 3017 10 10 5
+D3
+~
+~
+0 -1 3011 10 10 5
+-1
+S
+
+#3013
+Light forest~
+Under Construction.
+~
+[Sleeping] light forest
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3008 10 10 5
+D1
+~
+~
+0 -1 3014 10 10 5
+D2
+~
+~
+0 -1 3018 10 10 5
+D3
+~
+~
+0 -1 3012 10 10 5
+-1
+S
+
+#3014
+Light forest~
+Under Construction.
+~
+[Sleeping] light forest
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3009 10 10 5
+D1
+~
+~
+0 -1 3015 10 10 5
+D2
+~
+~
+0 -1 3019 10 10 5
+D3
+~
+~
+0 -1 3013 10 10 5
+-1
+S
+
+#3015
+Light forest~
+Under Construction.
+~
+[Sleeping] light forest
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3010 10 10 5
+D1
+~
+~
+0 -1 3053 10 10 5
+D2
+~
+~
+0 -1 3020 10 10 5
+D3
+~
+~
+0 -1 3014 10 10 5
+-1
+S
+
+#3016
+Tall grass~
+A field of grass rolls north and south, betwixt the shoddy limestone wall
+of Kassanin to the west and a light forest to the east.  A few blades of
+grass show signs of nibbling, a sure sign that wildlife does indeed
+venture beyond the shade of the forest.
+~
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3011 10 10 5
+D1
+~
+~
+0 -1 3017 10 10 5
+D2
+~
+~
+0 -1 3021 10 10 5
+D3
+~
+~
+0 -1 3002 10 10 5
+-1
+S
+
+#3017
+Light forest~
+Under Construction.
+~
+[Sleeping] light forest
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3012 10 10 5
+D1
+~
+~
+0 -1 3018 10 10 5
+D2
+~
+~
+0 -1 3022 10 10 5
+D3
+~
+~
+0 -1 3016 10 10 5
+-1
+S
+
+#3018
+Light forest~
+Under Construction.
+~
+[Sleeping] light forest
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3013 10 10 5
+D1
+~
+~
+0 -1 3019 10 10 5
+D2
+~
+~
+0 -1 3023 10 10 5
+D3
+~
+~
+0 -1 3017 10 10 5
+-1
+S
+
+#3019
+Light forest~
+Under Construction.
+~
+[Sleeping] light forest
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3014 10 10 5
+D1
+~
+~
+0 -1 3020 10 10 5
+D2
+~
+~
+0 -1 3024 10 10 5
+D3
+~
+~
+0 -1 3018 10 10 5
+-1
+S
+
+#3020
+Light forest~
+Under Construction.
+~
+[Sleeping] light forest
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3015 10 10 5
+D1
+~
+~
+0 -1 3052 10 10 5
+D2
+~
+~
+0 -1 3025 10 10 5
+D3
+~
+~
+0 -1 3019 10 10 5
+-1
+S
+
+#3021
+Tall grass~
+A small clearing lies surrounded by tall, thick waves of grass.  The
+grassy field spreads north and south, closed in on the west by a
+ramshackle limestone wall, and encroached upon on the east by a light
+forest.  In the center of the clearing, a large rock rests on the ground.
+~
+[Sleeping] move rock = snake
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3016 10 10 5
+D1
+~
+~
+0 -1 3022 10 10 5
+D2
+~
+~
+0 -1 3026 10 10 5
+D3
+~
+~
+0 -1 3003 10 10 5
+-1
+S
+
+#3022
+Light forest~
+Under Construction.
+~
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3017 10 10 5
+D1
+~
+~
+0 -1 3023 10 10 5
+D2
+~
+~
+0 -1 3027 10 10 5
+D3
+~
+~
+0 -1 3021 10 10 5
+-1
+S
+
+#3023
+Light forest~
+Under Construction.
+~
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3018 10 10 5
+D1
+~
+~
+0 -1 3024 10 10 5
+D2
+~
+~
+0 -1 3028 10 10 5
+D3
+~
+~
+0 -1 3022 10 10 5
+-1
+S
+
+#3024
+Light forest~
+Under Construction.
+~
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3019 10 10 5
+D1
+~
+~
+0 -1 3025 10 10 5
+D2
+~
+~
+0 -1 3029 10 10 5
+D3
+~
+~
+0 -1 3023 10 10 5
+-1
+S
+
+#3025
+Light forest~
+Under Construction.
+~
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3020 10 10 5
+D1
+~
+~
+0 -1 3051 10 10 5
+D2
+~
+~
+0 -1 3030 10 10 5
+D3
+~
+~
+0 -1 3024 10 10 5
+-1
+S
+
+#3026
+Tall grass~
+The light forest to the east begins to trespass upon this field of tall
+grass, which spreads north and south between the forest and the shoddy
+limestone wall to the west.  An old log, presumably a fallen tree from
+the forest, has somehow found its way here.
+~
+[Sleeping] log hollow perhaps
+[Sleeping] bugs, whatever
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3021 10 10 5
+D1
+~
+~
+0 -1 3027 10 10 5
+D2
+~
+~
+0 -1 3031 10 10 5
+D3
+~
+~
+0 -1 3004 10 10 5
+-1
+S
+
+#3027
+Light forest~
+Under Construction.
+~
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3022 10 10 5
+D1
+~
+~
+0 -1 3028 10 10 5
+D2
+~
+~
+0 -1 3032 10 10 5
+D3
+~
+~
+0 -1 3026 10 10 5
+-1
+S
+
+#3028
+Light forest~
+Under Construction.
+~
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3023 10 10 5
+D1
+~
+~
+0 -1 3029 10 10 5
+D2
+~
+~
+0 -1 3033 10 10 5
+D3
+~
+~
+0 -1 3027 10 10 5
+-1
+S
+
+#3029
+Light forest~
+Under Construction.
+~
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3024 10 10 5
+D1
+~
+~
+0 -1 3030 10 10 5
+D2
+~
+~
+0 -1 3034 10 10 5
+D3
+~
+~
+0 -1 3028 10 10 5
+-1
+S
+
+#3030
+Light forest~
+Under Construction.
+~
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3025 10 10 5
+D1
+~
+~
+0 -1 3050 10 10 5
+D2
+~
+~
+0 -1 3035 10 10 5
+D3
+~
+~
+0 -1 3029 10 10 5
+-1
+S
+
+#3031
+Tall grass~
+The tall green grass of the field nearby extends to the north, while to
+the south and east, it disappears into the arms of a light forest.  To
+the west, the crude limestone walls of Kassanin stand, a barrier of sorts
+against the wilderness.
+~
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3026 10 10 5
+D1
+~
+~
+0 -1 3032 10 10 5
+D2
+~
+~
+0 -1 3036 10 10 5
+D3
+~
+~
+0 -1 3005 10 10 5
+-1
+S
+
+#3032
+Light forest~
+Under Construction.
+~
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3027 10 10 5
+D1
+~
+~
+0 -1 3033 10 10 5
+D2
+~
+~
+0 -1 3037 10 10 5
+D3
+~
+~
+0 -1 3031 10 10 5
+-1
+S
+
+#3033
+Light forest~
+Under Construction.
+~
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3028 10 10 5
+D1
+~
+~
+0 -1 3034 10 10 5
+D2
+~
+~
+0 -1 3038 10 10 5
+D3
+~
+~
+0 -1 3032 10 10 5
+-1
+S
+
+#3034
+Light forest~
+Under Construction.
+~
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3029 10 10 5
+D1
+~
+~
+0 -1 3035 10 10 5
+D2
+~
+~
+0 -1 3039 10 10 5
+D3
+~
+~
+0 -1 3033 10 10 5
+-1
+S
+
+#3035
+Light forest~
+Under Construction.
+~
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3030 10 10 5
+D1
+~
+~
+0 -1 3049 10 10 5
+D2
+~
+~
+0 -1 3040 10 10 5
+D3
+~
+~
+0 -1 3034 10 10 5
+-1
+S
+
+#3036
+Light forest~
+A few trees have made their home in this corner of the forest, closed in
+on the west and south by a sheer rock face.  To the north, a grassy field
+extends along the western edge of the forest, while to the east, the
+forest grows a bit thicker.  A few markings have been etched on the face
+of the cliff.
+~
+[Sleeping] rock face sw
+[Sleeping] with high climb should be able to climb to cliff area
+[Sleeping] some quest clue for someone in village - kidnapping perhaps
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3031 10 10 5
+D1
+~
+~
+0 -1 3037 10 10 5
+E
+markings~
+The markings are intelligible.
+~
+-1
+S
+
+#3037
+Light forest~
+A mighty rock face looms to the south, marking the edge of the forest. 
+The trees grow more densely to the north and east, thinning out somewhat
+to the west.  An old pine has fallen against the rock of the cliff, and
+looks as if it may be climbed.
+~
+[Sleeping] rock face s
+[Sleeping] climb tree, small nest in cliff alcove ?
+[Sleeping] up is 3162
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3032 10 10 5
+D1
+~
+~
+0 -1 3038 10 10 5
+D3
+~
+~
+0 -1 3036 10 10 5
+-1
+S
+
+#3038
+Light forest - small grove~
+A rough semicircle of trees enclose a small altar embedded in the rock
+face to the southwest, a small grove of some sort.  Beyond the line of trees,
+the wild light forest extends away from the cliff in all directions.  The
+forest is quiet and still, peaceful.
+~
+[Sleeping] rangerly spot perhaps
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3033 10 10 5
+D1
+~
+~
+0 -1 3039 10 10 5
+D2
+~
+~
+0 -1 3041 10 10 5
+D3
+~
+~
+0 -1 3037 10 10 5
+-1
+S
+
+#3039
+Light forest~
+Under Construction.
+~
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3034 10 10 5
+D1
+~
+~
+0 -1 3040 10 10 5
+D2
+~
+~
+0 -1 3042 10 10 5
+D3
+~
+~
+0 -1 3038 10 10 5
+-1
+S
+
+#3040
+Light forest~
+Several large pine trees dominate the area, but a pair of birch trees
+nearly entwine together at their apex to form a strange archway leading
+east.  To the south, the forest thins out quite a bit as a clearing
+appears at the base of a cliff.  To the southeast, an outcropping of that
+cliff juts into the forest.  To the north, east, and west, the forest
+continues.
+~
+[Sleeping] outrcopping se, clearing s
+[Sleeping] birches
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3035 10 10 5
+D1
+~
+~
+0 -1 3044 10 10 5
+D2
+~
+~
+0 -1 3043 10 10 5
+D3
+~
+~
+0 -1 3039 10 10 5
+-1
+S
+
+#3041
+Light forest~
+The trees of the forest line the edge of ground where the angled face of
+a cliff cuts across the earth from northwest to southeast, as if pushed
+back by the advancing rock.  The trees continue away from the cliff to
+the north, but follow it as it bends to the east.  A small ladder is
+spiked to the cliff, leading up to a small alcove in the rock face.
+~
+[Sleeping] rock face sw
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3038 10 10 5
+D1
+~
+~
+0 -1 3042 10 10 5
+D4
+~
+~
+0 -1 3164 10 10 5
+-1
+S
+
+#3042
+Light forest~
+The sheer face of the cliff to the south is dotted by shrubs which stick
+out of every nook and cranny along its height.  The light trees of the
+forest grow more densely to the north, away from the suffocating presence
+of the rock face.  Along the rock face to the east and west, the forest
+continues.
+~
+[Sleeping] rock face s
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3039 10 10 5
+D1
+~
+~
+0 -1 3043 10 10 5
+D3
+~
+~
+0 -1 3041 10 10 5
+-1
+S
+
+#3043
+Forest clearing near an outcropping~
+The sheer face of the cliff to the south juts out to the east, forming a
+tight corner in the forest.  The positioning of the rocks must prevent
+much light from making its way in, as only a few small trees a good
+distance from the cliff have thrived.  Beyond the shadow of the cliffs,
+however, the forest begins, and continues off to the northwest.
+~
+[Sleeping] rock face s, rock e
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3040 10 10 5
+D3
+~
+~
+0 -1 3042 10 10 5
+-1
+S
+
+#3044
+Light forest~
+~
+[Sleeping] outcropping s
+[Sleeping] birch arch w
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3049 10 10 5
+D1
+~
+~
+0 -1 3045 10 10 5
+D3
+~
+~
+0 -1 3040 10 10 5
+-1
+S
+
+#3045
+Light forest~
+Under Construction.
+~
+[Sleeping] outcroping sw
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3060 10 10 5
+D1
+~
+~
+0 -1 3065 10 10 5
+D2
+~
+~
+0 -1 3046 10 10 5
+D3
+~
+~
+0 -1 3044 10 10 5
+-1
+S
+
+#3046
+Light forest~
+The massive cliff to the south marks the edge of the forest, while a
+slight incline leads west up the back of a moss-covered outcropping.  A
+slender elm raises its limbs to the sky, surrounded by pines.  To the
+north and east, the forest continues.
+~
+[Sleeping] w slight incline up rock
+[Sleeping] cliff s
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3045 10 10 5
+D1
+~
+~
+0 -1 3064 10 10 5
+D3
+~
+~
+0 -1 3047 10 10 5
+A
+~
+~
+act_tochar( "You make your way up the mossy rise.", ch );
+continue;
+~
+!
+3 0 8
+-1
+S
+
+#3047
+Atop a mossy rise~
+There is a sharp downward gradient to the east, leading away from this
+moss-covered stone rise.  A nearly vertical climb up the back of the rock
+leads up.  To the south, the sheer face of a cliff blocks the way, and to
+the north this jutting outcropping falls off sharply.
+~
+[Sleeping] up to top of rock
+[Sleeping] cliff s
+~
+33030145 3 9 0
+D1
+~
+~
+0 -1 3046 10 10 5
+D4
+~
+~
+1024 -1 3048 10 10 5
+-1
+S
+
+#3048
+Atop the outcropping~
+Across the arc of view from west to north and back to east, trees become
+forest, dotted by mountain peaks rising in the distance.  To the south,
+the outrcopping follows a narrow ridge to the top of the mighty cliff.  A
+nearly vertical climb down the back of the rock leads down to a mossy
+rise.
+~
+[Sleeping] top of rock
+[Sleeping] nice view
+[Sleeping] access to cliff to s (new area)
+~
+33030145 3 9 0
+D5
+~
+~
+1024 -1 3047 10 10 5
+-1
+S
+
+#3049
+Light forest~
+Under Construction.
+~
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3050 10 10 5
+D1
+~
+~
+0 -1 3060 10 10 5
+D2
+~
+~
+0 -1 3044 10 10 5
+D3
+~
+~
+0 -1 3035 10 10 5
+-1
+S
+
+#3050
+Light forest~
+Under Construction.
+~
+~
+33030145 3 9 0
+D1
+~
+~
+0 -1 3059 10 10 5
+D2
+~
+~
+0 -1 3049 10 10 5
+D3
+~
+~
+0 -1 3030 10 10 5
+-1
+S
+
+#3051
+blah~
+Under Construction.
+~
+[Sleeping] below rock
+~
+33030145 3 9 0
+D3
+~
+~
+0 -1 3025 10 10 5
+D4
+~
+~
+0 -1 3061 10 10 5
+-1
+S
+
+#3052
+blah~
+Under Construction.
+~
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3053 10 10 5
+D1
+~
+~
+0 -1 3057 10 10 5
+D3
+~
+~
+0 -1 3020 10 10 5
+-1
+S
+
+#3053
+Light forest~
+Under Construction.
+~
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3054 10 10 5
+D1
+~
+~
+0 -1 3056 10 10 5
+D2
+~
+~
+0 -1 3052 10 10 5
+D3
+~
+~
+0 -1 3015 10 10 5
+-1
+S
+
+#3054
+Path of underbrush~
+Surrounded by trees on all sides, this small patch of underbrush
+nonetheless has grown into a dense thicket.  To the west, the outline of
+a large walnut tree reses above the small trees of the forest.  To the
+north, the forest approaches the base of a stone.  To the south and east,
+the forest continues.
+~
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3158 10 10 5
+D1
+~
+~
+0 -1 3055 10 10 5
+D2
+~
+~
+0 -1 3053 10 10 5
+D3
+~
+~
+0 -1 3010 10 10 5
+A
+~
+~
+act_tochar("You push your way through the thicket.", ch );
+continue;
+~
+!
+3 0 15
+-1
+S
+
+#3055
+Light forest~
+Small trees sprout from the dark earth every several feet, starting to
+form a light canopy.  A pile of leaves has gathered around the trunk of a
+hickory, shrouding its gnarled roots.  The forest continues in all
+directions.
+~
+[Sleeping] search leaves, etc
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3062 10 10 5
+D1
+~
+~
+0 -1 3151 10 10 5
+D2
+~
+~
+0 -1 3056 10 10 5
+D3
+~
+~
+0 -1 3054 10 10 5
+-1
+S
+
+#3056
+Light forest~
+Under Construction.
+~
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3055 10 10 5
+D1
+~
+~
+0 -1 3152 10 10 5
+D2
+~
+~
+0 -1 3057 10 10 5
+D3
+~
+~
+0 -1 3053 10 10 5
+-1
+S
+
+#3057
+Light forest~
+Under Construction.
+~
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3056 10 10 5
+D1
+~
+~
+0 -1 3153 10 10 5
+D2
+~
+~
+0 -1 3058 10 10 5
+D3
+~
+~
+0 -1 3052 10 10 5
+-1
+S
+
+#3058
+Light forest~
+Under Construction.
+~
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3057 10 10 5
+D1
+~
+~
+0 -1 3068 10 10 5
+D2
+~
+~
+0 -1 3059 10 10 5
+-1
+S
+
+#3059
+Light forest~
+Under Construction.
+~
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3058 10 10 5
+D1
+~
+~
+0 -1 3067 10 10 5
+D2
+~
+~
+0 -1 3060 10 10 5
+D3
+~
+~
+0 -1 3050 10 10 5
+-1
+S
+
+#3060
+Light forest~
+Under Construction.
+~
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3059 10 10 5
+D1
+~
+~
+0 -1 3066 10 10 5
+D2
+~
+~
+0 -1 3045 10 10 5
+D3
+~
+~
+0 -1 3049 10 10 5
+-1
+S
+
+#3061
+blah~
+Under Construction.
+~
+[Sleeping] top of rock
+~
+33030145 3 9 0
+D5
+~
+~
+0 -1 3051 10 10 5
+-1
+S
+
+#3062
+Light forest near a ravine~
+An old oak tree has fallen and now its upper half juts out across the
+chasm to the east, leaving this section of the forest strangely empty.  A
+few birches have begun to grow without the dwarfing presence of the oak. 
+To the west, the forest thins as it approaches a stone rise.  Trees dot
+the edge of the ravine as the forest follows it north and south.
+~
+[Sleeping] ravine e
+[Sleeping] fallen trunk leads out onto it
+[Sleeping] hollow, search it
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3063 10 10 5
+D1
+~
+~
+0 -1 3160 10 10 5
+D2
+~
+~
+0 -1 3055 10 10 5
+D3
+~
+~
+0 -1 3158 10 10 5
+A
+~
+~
+if( rflag( reset0, find_room( 3160 ) ) ) {
+  act_tochar( "You step out onto the fallen trunk.", ch );
+  continue;
+  }
+else
+  act_tochar( "The trunk has fallen, there is nowhere to go.", ch );
+~
+!
+3 0 2
+-1
+S
+
+#3063
+The edge of a ravine~
+A few pines brave the edge of a ravine which drops off sharply to the
+north and east.  To the southwest, a massive stone rises out of the
+forest.  A road lies to the west, while to the south, the forest follows
+the edge of the ravine.
+~
+[Sleeping] light forest
+[Sleeping] ravine n,e
+~
+33030145 3 9 0
+D2
+~
+~
+0 -1 3062 10 10 5
+D3
+~
+~
+0 -1 11841 10 10 5
+E
+ravine d down n north e east~
+At the base of the ravine, a small creek trickles along from north to
+south.
+~
+-1
+S
+
+#3064
+Light forest~
+Under Construction.
+~
+[Sleeping] lake ne
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3065 10 10 5
+D1
+~
+~
+0 -1 3095 10 10 5
+D3
+~
+~
+0 -1 3046 10 10 5
+-1
+S
+
+#3065
+Light forest~
+Under Construction.
+~
+[Sleeping] lake e
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3066 10 10 5
+D2
+~
+~
+0 -1 3064 10 10 5
+D3
+~
+~
+0 -1 3045 10 10 5
+-1
+S
+
+#3066
+Light forest~
+Under Construction.
+~
+[Sleeping] lake e
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3067 10 10 5
+D2
+~
+~
+0 -1 3065 10 10 5
+D3
+~
+~
+0 -1 3060 10 10 5
+-1
+S
+
+#3067
+Light forest~
+Under Construction.
+~
+[Sleeping] lake e
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3068 10 10 5
+D2
+~
+~
+0 -1 3066 10 10 5
+D3
+~
+~
+0 -1 3059 10 10 5
+-1
+S
+
+#3068
+Light forest~
+Under Construction.
+~
+[Sleeping] lake se
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3153 10 10 5
+D1
+~
+~
+0 -1 3069 10 10 5
+D2
+~
+~
+0 -1 3067 10 10 5
+D3
+~
+~
+0 -1 3058 10 10 5
+-1
+S
+
+#3069
+Light forest~
+Under Construction.
+~
+[Sleeping] lake s
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3154 10 10 5
+D1
+~
+~
+0 -1 3070 10 10 5
+D2
+~
+~
+0 -1 3300 10 10 5
+D3
+~
+~
+0 -1 3068 10 10 5
+-1
+S
+
+#3070
+blah~
+Under Construction.
+~
+[Sleeping] lake s
+[Sleeping] ravine n
+~
+33030145 3 9 0
+D1
+~
+~
+0 -1 3071 10 10 5
+D3
+~
+~
+0 -1 3069 10 10 5
+-1
+S
+
+#3071
+blah~
+Under Construction.
+~
+[Sleeping] lake s
+[Sleeping] ravine n
+~
+33030145 3 9 0
+D1
+~
+~
+0 -1 3072 10 10 5
+D3
+~
+~
+0 -1 3070 10 10 5
+-1
+S
+
+#3072
+blah~
+Under Construction.
+~
+[Sleeping] lake s
+[Sleeping] ravine n
+~
+33030145 3 9 0
+D1
+~
+~
+0 -1 3073 10 10 5
+D3
+~
+~
+0 -1 3071 10 10 5
+-1
+S
+
+#3073
+blah~
+Under Construction.
+~
+[Sleeping] lake s,e
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3074 10 10 5
+D3
+~
+~
+0 -1 3072 10 10 5
+-1
+S
+
+#3074
+blah~
+Under Construction.
+~
+[Sleeping] lake se
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3125 10 10 5
+D1
+~
+~
+0 -1 3075 10 10 5
+D2
+~
+~
+0 -1 3073 10 10 5
+D3
+~
+~
+0 -1 3155 10 10 5
+-1
+S
+
+#3075
+blah~
+Under Construction.
+~
+[Sleeping] lake s
+[Sleeping] small bridge over thin part of lake
+~
+33030145 3 9 0
+D1
+~
+~
+0 -1 3076 10 10 5
+D3
+~
+~
+0 -1 3074 10 10 5
+-1
+S
+
+#3076
+blah~
+Under Construction.
+~
+[Sleeping] lake w
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3096 10 10 5
+D1
+~
+~
+0 -1 3139 10 10 5
+D2
+~
+~
+0 -1 3077 10 10 5
+D3
+~
+~
+0 -1 3075 10 10 5
+-1
+S
+
+#3077
+blah~
+Under Construction.
+~
+[Sleeping] lake sw
+[Sleeping] lake s,w
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3076 10 10 5
+D1
+~
+~
+0 -1 3078 10 10 5
+-1
+S
+
+#3078
+blah~
+Under Construction.
+~
+[Sleeping] lake sw
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3139 10 10 5
+D2
+~
+~
+0 -1 3079 10 10 5
+D3
+~
+~
+0 -1 3077 10 10 5
+-1
+S
+
+#3079
+blah~
+Under Construction.
+~
+[Sleeping] lake w
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3078 10 10 5
+D2
+~
+~
+0 -1 3080 10 10 5
+-1
+S
+
+#3080
+blah~
+Under Construction.
+~
+[Sleeping] lake w
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3079 10 10 5
+D2
+~
+~
+0 -1 3081 10 10 5
+-1
+S
+
+#3081
+blah~
+Under Construction.
+~
+[Sleeping] lake w
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3080 10 10 5
+D2
+~
+~
+0 -1 3082 10 10 5
+-1
+S
+
+#3082
+blah~
+Under Construction.
+~
+[Sleeping] lake w
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3081 10 10 5
+D2
+~
+~
+0 -1 3083 10 10 5
+-1
+S
+
+#3083
+blah~
+Under Construction.
+~
+[Sleeping] lake w
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3082 10 10 5
+D2
+~
+~
+0 -1 3084 10 10 5
+-1
+S
+
+#3084
+blah~
+Under Construction.
+~
+[Sleeping] lake nw
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3083 10 10 5
+D3
+~
+~
+0 -1 3085 10 10 5
+-1
+S
+
+#3085
+blah~
+Under Construction.
+~
+[Sleeping] lake n
+~
+33030145 3 9 0
+D1
+~
+~
+0 -1 3084 10 10 5
+D3
+~
+~
+0 -1 3086 10 10 5
+-1
+S
+
+#3086
+blah~
+Under Construction.
+~
+[Sleeping] lake n,w
+~
+33030145 3 9 0
+D1
+~
+~
+0 -1 3085 10 10 5
+D2
+~
+~
+0 -1 3087 10 10 5
+-1
+S
+
+#3087
+blah~
+Under Construction.
+~
+[Sleeping] lake nw
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3086 10 10 5
+D3
+~
+~
+0 -1 3088 10 10 5
+-1
+S
+
+#3088
+blah~
+Under Construction.
+~
+[Sleeping] lake n
+~
+33030145 3 9 0
+D1
+~
+~
+0 -1 3087 10 10 5
+D3
+~
+~
+0 -1 3089 10 10 5
+-1
+S
+
+#3089
+blah~
+Under Construction.
+~
+[Sleeping] lake n
+~
+33030145 3 9 0
+D1
+~
+~
+0 -1 3088 10 10 5
+D3
+~
+~
+0 -1 3090 10 10 5
+-1
+S
+
+#3090
+blah~
+Under Construction.
+~
+[Sleeping] lake ne
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3091 10 10 5
+D1
+~
+~
+0 -1 3089 10 10 5
+-1
+S
+
+#3091
+blah~
+Under Construction.
+~
+[Sleeping] lake n,e
+~
+33030145 3 9 0
+D2
+~
+~
+0 -1 3090 10 10 5
+D3
+~
+~
+0 -1 3092 10 10 5
+-1
+S
+
+#3092
+blah~
+Under Construction.
+~
+[Sleeping] lake ne
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3093 10 10 5
+D1
+~
+~
+0 -1 3091 10 10 5
+-1
+S
+
+#3093
+blah~
+Under Construction.
+~
+[Sleeping] lake n,e
+~
+33030145 3 9 0
+D2
+~
+~
+0 -1 3092 10 10 5
+D3
+~
+~
+0 -1 3094 10 10 5
+-1
+S
+
+#3094
+blah~
+Under Construction.
+~
+[Sleeping] lake ne
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3095 10 10 5
+D1
+~
+~
+0 -1 3093 10 10 5
+-1
+S
+
+#3095
+blah~
+Under Construction.
+~
+[Sleeping] lake n,e
+~
+33030145 3 9 0
+D2
+~
+~
+0 -1 3094 10 10 5
+D3
+~
+~
+0 -1 3064 10 10 5
+-1
+S
+
+#3096
+blah~
+Under Construction.
+~
+[Sleeping] lake/river w
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3097 10 10 5
+D1
+~
+~
+0 -1 3134 10 10 5
+D2
+~
+~
+0 -1 3076 10 10 5
+D3
+~
+~
+0 -1 3110 10 10 5
+-1
+S
+
+#3097
+blah~
+Under Construction.
+~
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3098 10 10 5
+D1
+~
+~
+0 -1 3133 10 10 5
+D2
+~
+~
+0 -1 3096 10 10 5
+D3
+~
+~
+0 -1 3111 10 10 5
+-1
+S
+
+#3098
+blah~
+Under Construction.
+~
+[Sleeping] bramble wall e
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3099 10 10 5
+D2
+~
+~
+0 -1 3097 10 10 5
+D3
+~
+~
+0 -1 3112 10 10 5
+-1
+S
+
+#3099
+blah~
+Under Construction.
+~
+[Sleeping] bramble wall se
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3115 10 10 5
+D1
+~
+~
+0 -1 3100 10 10 5
+D2
+~
+~
+0 -1 3098 10 10 5
+D3
+~
+~
+0 -1 3113 10 10 5
+-1
+S
+
+#3100
+blah~
+Under Construction.
+~
+[Sleeping] bramble wall e
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3101 10 10 5
+D3
+~
+~
+0 -1 3099 10 10 5
+-1
+S
+
+#3101
+blah~
+Under Construction.
+~
+[Sleeping] bramble wall e
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3102 10 10 5
+D2
+~
+~
+0 -1 3100 10 10 5
+D3
+~
+~
+0 -1 3115 10 10 5
+-1
+S
+
+#3102
+blah~
+Under Construction.
+~
+[Sleeping] bramble wall se
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3118 10 10 5
+D1
+~
+~
+0 -1 3103 10 10 5
+D2
+~
+~
+0 -1 3101 10 10 5
+D3
+~
+~
+0 -1 3116 10 10 5
+-1
+S
+
+#3103
+blah~
+Under Construction.
+~
+[Sleeping] bramble wall s
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3119 10 10 5
+D1
+~
+~
+0 -1 3104 10 10 5
+D3
+~
+~
+0 -1 3102 10 10 5
+-1
+S
+
+#3104
+blah~
+Under Construction.
+~
+[Sleeping] bramble wall s
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3105 10 10 5
+D1
+~
+~
+0 -1 3131 10 10 5
+D3
+~
+~
+0 -1 3103 10 10 5
+-1
+S
+
+#3105
+blah~
+Under Construction.
+~
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3121 10 10 5
+D1
+~
+~
+0 -1 3106 10 10 5
+D2
+~
+~
+0 -1 3104 10 10 5
+D3
+~
+~
+0 -1 3119 10 10 5
+-1
+S
+
+#3106
+blah~
+Under Construction.
+~
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3107 10 10 5
+D1
+~
+~
+0 -1 3142 10 10 5
+D2
+~
+~
+0 -1 3131 10 10 5
+D3
+~
+~
+0 -1 3105 10 10 5
+-1
+S
+
+#3107
+blah~
+Under Construction.
+~
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3108 10 10 5
+D1
+~
+~
+0 -1 3141 10 10 5
+D2
+~
+~
+0 -1 3106 10 10 5
+D3
+~
+~
+0 -1 3121 10 10 5
+-1
+S
+
+#3108
+blah~
+Under Construction.
+~
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3109 10 10 5
+D1
+~
+~
+0 -1 3140 10 10 5
+D2
+~
+~
+0 -1 3107 10 10 5
+D3
+~
+~
+0 -1 3122 10 10 5
+-1
+S
+
+#3109
+blah~
+Under Construction.
+~
+[Sleeping] bridge over BIG river, perhaps log over it
+[Sleeping] w is 1674, e is 1676, below is 1675
+[Nnilb] ? 16 36
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3124 10 10 5
+D2
+~
+~
+0 -1 3108 10 10 5
+-1
+S
+
+#3110
+blah~
+Under Construction.
+~
+[Sleeping] river just n of bridge
+~
+33030145 6 9 0
+D0
+~
+~
+0 -1 3111 10 10 5
+D1
+~
+~
+0 -1 3096 10 10 5
+D2
+~
+~
+0 -1 3157 10 10 5
+D3
+~
+~
+0 -1 3125 10 10 5
+-1
+S
+
+#3111
+blah~
+Under Construction.
+~
+~
+33030145 6 9 0
+D0
+~
+~
+0 -1 3112 10 10 5
+D1
+~
+~
+0 -1 3097 10 10 5
+D2
+~
+~
+0 -1 3110 10 10 5
+D3
+~
+~
+0 -1 3126 10 10 5
+-1
+S
+
+#3112
+blah~
+Under Construction.
+~
+~
+33030145 6 9 0
+D0
+~
+~
+0 -1 3113 10 10 5
+D1
+~
+~
+0 -1 3098 10 10 5
+D2
+~
+~
+0 -1 3111 10 10 5
+D3
+~
+~
+0 -1 3127 10 10 5
+-1
+S
+
+#3113
+blah~
+Under Construction.
+~
+~
+33030145 6 9 0
+D0
+~
+~
+0 -1 3114 10 10 5
+D1
+~
+~
+0 -1 3099 10 10 5
+D2
+~
+~
+0 -1 3112 10 10 5
+D3
+~
+~
+0 -1 3128 10 10 5
+-1
+S
+
+#3114
+blah~
+Under Construction.
+~
+~
+33030145 6 9 0
+D1
+~
+~
+0 -1 3115 10 10 5
+D2
+~
+~
+0 -1 3113 10 10 5
+D3
+~
+~
+0 -1 3130 10 10 5
+-1
+S
+
+#3115
+blah~
+Under Construction.
+~
+~
+33030145 6 9 0
+D0
+~
+~
+0 -1 3116 10 10 5
+D1
+~
+~
+0 -1 3101 10 10 5
+D2
+~
+~
+0 -1 3099 10 10 5
+D3
+~
+~
+0 -1 3114 10 10 5
+-1
+S
+
+#3116
+blah~
+Under Construction.
+~
+~
+33030145 6 9 0
+D0
+~
+~
+0 -1 3117 10 10 5
+D1
+~
+~
+0 -1 3102 10 10 5
+D2
+~
+~
+0 -1 3115 10 10 5
+-1
+S
+
+#3117
+blah~
+Under Construction.
+~
+~
+33030145 6 9 0
+D1
+~
+~
+0 -1 3118 10 10 5
+D2
+~
+~
+0 -1 3116 10 10 5
+-1
+S
+
+#3118
+blah~
+Under Construction.
+~
+~
+33030145 6 9 0
+D1
+~
+~
+0 -1 3119 10 10 5
+D2
+~
+~
+0 -1 3102 10 10 5
+D3
+~
+~
+0 -1 3117 10 10 5
+-1
+S
+
+#3119
+blah~
+Under Construction.
+~
+~
+33030145 6 9 0
+D0
+~
+~
+0 -1 3120 10 10 5
+D1
+~
+~
+0 -1 3105 10 10 5
+D2
+~
+~
+0 -1 3103 10 10 5
+D3
+~
+~
+0 -1 3118 10 10 5
+-1
+S
+
+#3120
+blah~
+Under Construction.
+~
+~
+33030145 6 9 0
+D1
+~
+~
+0 -1 3121 10 10 5
+D2
+~
+~
+0 -1 3119 10 10 5
+-1
+S
+
+#3121
+blah~
+Under Construction.
+~
+~
+33030145 6 9 0
+D0
+~
+~
+0 -1 3122 10 10 5
+D1
+~
+~
+0 -1 3107 10 10 5
+D2
+~
+~
+0 -1 3105 10 10 5
+D3
+~
+~
+0 -1 3120 10 10 5
+-1
+S
+
+#3122
+blah~
+Under Construction.
+~
+~
+33030145 6 9 0
+D1
+~
+~
+0 -1 3108 10 10 5
+D2
+~
+~
+0 -1 3121 10 10 5
+D3
+~
+~
+0 -1 3123 10 10 5
+-1
+S
+
+#3123
+blah~
+Under Construction.
+~
+~
+33030145 6 9 0
+D0
+~
+~
+0 -1 11918 10 10 5
+D1
+~
+~
+0 -1 3122 10 10 5
+-1
+S
+
+#3124
+blah~
+Under Construction.
+~
+[Sleeping] before a cave
+[Sleeping] oh gee, looks like it has been caved in (until area is biult there)
+~
+33030145 3 9 0
+D2
+~
+~
+0 -1 3109 10 10 5
+-1
+S
+
+#3125
+blah~
+Under Construction.
+~
+[Sleeping] stone face w
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3126 10 10 5
+D1
+~
+~
+0 -1 3110 10 10 5
+D2
+~
+~
+0 -1 3074 10 10 5
+-1
+S
+
+#3126
+blah~
+Under Construction.
+~
+[Sleeping] stone face w
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3127 10 10 5
+D1
+~
+~
+0 -1 3111 10 10 5
+D2
+~
+~
+0 -1 3125 10 10 5
+-1
+S
+
+#3127
+blah~
+Under Construction.
+~
+[Sleeping] stone face n, must enter river to east
+~
+33030145 3 9 0
+D1
+~
+~
+0 -1 3112 10 10 5
+D2
+~
+~
+0 -1 3126 10 10 5
+-1
+S
+
+#3128
+blah~
+Under Construction.
+~
+[Sleeping] small shore
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3130 10 10 5
+D1
+~
+~
+0 -1 3113 10 10 5
+D3
+~
+~
+0 -1 3129 10 10 5
+-1
+S
+
+#3129
+blah~
+Under Construction.
+~
+[Sleeping] hidden little area offriver
+[Sleeping] attach cave of bandits/etc here
+~
+33030145 3 9 0
+D1
+~
+~
+0 -1 3128 10 10 5
+-1
+S
+
+#3130
+blah~
+Under Construction.
+~
+~
+33030145 3 9 0
+D1
+~
+~
+0 -1 3114 10 10 5
+D2
+~
+~
+0 -1 3128 10 10 5
+-1
+S
+
+#3131
+blah~
+Under Construction.
+~
+[Sleeping] entrance to brambles s
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3106 10 10 5
+D1
+~
+~
+0 -1 3143 10 10 5
+D2
+~
+~
+0 -1 3132 10 10 5
+D3
+~
+~
+0 -1 3104 10 10 5
+-1
+S
+
+#3132
+blah~
+Under Construction.
+~
+[Sleeping] brambles to s (bramble maze area to be built)
+[Sleeping] bramble wall e
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3131 10 10 5
+-1
+S
+
+#3133
+blah~
+Under Construction.
+~
+[Sleeping] brambles n,e
+[Sleeping] light forest
+~
+33030145 3 9 0
+D2
+~
+~
+0 -1 3134 10 10 5
+D3
+~
+~
+0 -1 3097 10 10 5
+-1
+S
+
+#3134
+blah~
+Under Construction.
+~
+[Sleeping] brambles ne
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3133 10 10 5
+D1
+~
+~
+0 -1 3135 10 10 5
+D2
+~
+~
+0 -1 3139 10 10 5
+D3
+~
+~
+0 -1 3096 10 10 5
+-1
+S
+
+#3135
+blah~
+Under Construction.
+~
+[Sleeping] brambles n
+~
+33030145 3 9 0
+D1
+~
+~
+0 -1 3136 10 10 5
+D2
+~
+~
+0 -1 3138 10 10 5
+D3
+~
+~
+0 -1 3134 10 10 5
+-1
+S
+
+#3136
+blah~
+Under Construction.
+~
+[Sleeping] brambles n
+[Sleeping] brambles e
+~
+33030145 3 9 0
+D2
+~
+~
+0 -1 3137 10 10 5
+D3
+~
+~
+0 -1 3135 10 10 5
+-1
+S
+
+#3137
+blah~
+Under Construction.
+~
+[Sleeping] brambles ne
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3136 10 10 5
+D1
+~
+~
+0 -1 3150 10 10 5
+D3
+~
+~
+0 -1 3138 10 10 5
+-1
+S
+
+#3138
+blah~
+Under Construction.
+~
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3135 10 10 5
+D1
+~
+~
+0 -1 3137 10 10 5
+D3
+~
+~
+0 -1 3139 10 10 5
+-1
+S
+
+#3139
+blah~
+Under Construction.
+~
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3134 10 10 5
+D1
+~
+~
+0 -1 3138 10 10 5
+D2
+~
+~
+0 -1 3078 10 10 5
+D3
+~
+~
+0 -1 3076 10 10 5
+-1
+S
+
+#3140
+blah~
+Under Construction.
+~
+[Sleeping] cliff e
+[Sleeping] long drop into river to n
+~
+33030145 3 9 0
+D2
+~
+~
+0 -1 3141 10 10 5
+D3
+~
+~
+0 -1 3108 10 10 5
+-1
+S
+
+#3141
+blah~
+Under Construction.
+~
+[Sleeping] cliff e
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3140 10 10 5
+D2
+~
+~
+0 -1 3142 10 10 5
+D3
+~
+~
+0 -1 3107 10 10 5
+-1
+S
+
+#3142
+blah~
+Under Construction.
+~
+[Sleeping] cliff e
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3141 10 10 5
+D2
+~
+~
+0 -1 3143 10 10 5
+D3
+~
+~
+0 -1 3106 10 10 5
+-1
+S
+
+#3143
+blah~
+Under Construction.
+~
+[Sleeping] cliff e
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3142 10 10 5
+D2
+~
+~
+0 -1 3144 10 10 5
+D3
+~
+~
+0 -1 3131 10 10 5
+-1
+S
+
+#3144
+blah~
+Under Construction.
+~
+[Sleeping] brambles w
+[Sleeping] cliff e
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3143 10 10 5
+D2
+~
+~
+0 -1 3145 10 10 5
+-1
+S
+
+#3145
+blah~
+Under Construction.
+~
+[Sleeping] brambles w
+[Sleeping] cliff e
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3144 10 10 5
+D2
+~
+~
+0 -1 3146 10 10 5
+-1
+S
+
+#3146
+blah~
+Under Construction.
+~
+[Sleeping] brambles w
+[Sleeping] cliff e
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3145 10 10 5
+D2
+~
+~
+0 -1 3147 10 10 5
+-1
+S
+
+#3147
+blah~
+Under Construction.
+~
+[Sleeping] brambles w
+[Sleeping] cliff e
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3146 10 10 5
+D2
+~
+~
+0 -1 3148 10 10 5
+-1
+S
+
+#3148
+blah~
+Under Construction.
+~
+[Sleeping] brambles w
+[Sleeping] cliff e
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3147 10 10 5
+D2
+~
+~
+0 -1 3149 10 10 5
+-1
+S
+
+#3149
+blah~
+Under Construction.
+~
+[Sleeping] brambles nw
+[Sleeping] cliff e
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3148 10 10 5
+D3
+~
+~
+0 -1 3150 10 10 5
+-1
+S
+
+#3150
+blah~
+Under Construction.
+~
+[Sleeping] brambles n
+~
+33030145 3 9 0
+D1
+~
+~
+0 -1 3149 10 10 5
+D3
+~
+~
+0 -1 3137 10 10 5
+-1
+S
+
+#3151
+Light forest~
+A tall walnut tree rises high into the light canopy of the forest,
+replete with heavy branches suitable for climbing.  About halfway up the
+tree you can see a hole, perhaps where some creature makes its nest. 
+Pine trees line the edge of a ravine to the northeast, while the forest
+spreads away from the chasm to the south and west 
+~
+[Sleeping] ravine n,e
+[Sleeping] climb tree
+[Sleeping] reset walnuts
+~
+33030145 3 9 0
+D2
+~
+~
+0 -1 3152 10 10 5
+D3
+~
+~
+0 -1 3055 10 10 5
+-1
+S
+
+#3152
+Light forest~
+Under Construction.
+~
+[Sleeping] ravine e
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3151 10 10 5
+D2
+~
+~
+0 -1 3153 10 10 5
+D3
+~
+~
+0 -1 3056 10 10 5
+-1
+S
+
+#3153
+Light forest~
+Under Construction.
+~
+[Sleeping] ravine ne
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3152 10 10 5
+D1
+~
+~
+0 -1 3154 10 10 5
+D2
+~
+~
+0 -1 3068 10 10 5
+D3
+~
+~
+0 -1 3057 10 10 5
+-1
+S
+
+#3154
+Light forest~
+Under Construction.
+~
+[Sleeping] ravine n,e
+~
+33030145 3 9 0
+D2
+~
+~
+0 -1 3069 10 10 5
+D3
+~
+~
+0 -1 3153 10 10 5
+-1
+S
+
+#3155
+blah~
+Under Construction.
+~
+[Sleeping] base of ravine
+[Sleeping] area continues (new area)
+[Sleeping] stone face n
+~
+33030145 3 9 0
+D1
+~
+~
+0 -1 3074 10 10 5
+-1
+S
+
+#3156
+blah~
+Under Construction.
+~
+[Sleeping] n edge of lake
+[Sleeping] s new area lake
+~
+33030145 6 9 0
+D0
+~
+~
+0 -1 3157 10 10 5
+-1
+S
+
+#3157
+blah~
+Under Construction.
+~
+[Sleeping] under bridge
+~
+33030145 6 9 0
+D0
+~
+~
+0 -1 3110 10 10 5
+D2
+~
+~
+0 -1 3156 10 10 5
+-1
+S
+
+#3158
+Before a stone rise~
+A few pines grow near the edge of a massive stone, whose broad face
+blocks the horizon to the north and west.  A faint trail of grass leads
+up its face, which looks not unlike that of an elf.  The forest sprawls
+onward to the south and east.
+~
+~
+33030145 3 9 0
+D1
+~
+~
+0 -1 3062 10 10 5
+D2
+~
+~
+0 -1 3054 10 10 5
+D4
+~
+~
+0 -1 3159 10 10 5
+A
+~
+~
+act_tochar( "You follow the trail up the stone rise.", ch );
+continue;
+~
+!
+3 0 16
+-1
+S
+
+#3159
+Atop a stone rise~
+A panorama of trees and mountains spreads itself across every horizon. 
+To the west, a mighty range of craggy, snow-topped peaks looms, aged and
+cold.  From the north around to the east, a mighty river's path flows
+through the forest.  A road leading through the forest appears a faint
+line from this vantage.  A faint trail leads down the stone face into a
+light forest.
+~
+~
+33030145 3 9 0
+D5
+~
+~
+0 -1 3158 10 10 5
+-1
+S
+
+#3160
+On a trunk suspended above a ravine~
+The heavy trunk of an oak juts out over a ravine, hanging precariously
+above a long drop to the stream below.  The base of the fallen tree lies
+to the west.  Across the ravine to the east, more trees dot the rolling
+landscape.
+~
+[Sleeping] rope down to new area (not yet)
+[Sleeping] perhaps back exit from other area.  perhaps nothing.
+[Sleeping] too much weight and fall go boom.
+[Sleeping] toggle reset0
+[Sleeping] down to 3161
+~
+33030145 3 9 0
+D3
+~
+~
+0 -1 3062 10 10 5
+A
+~
+~
+if( weight( room ) > 100000 ) {
+  send_to_room( "The trunk breaks under the weight upon it.", room );
+  remove_rflag( reset0, room );
+  transfer_all( room, find_room( 3161 ) );
+  }
+continue;
+~
+!
+1 0 8
+-1
+S
+
+#3161
+In a ravine~
+Under Construction.
+~
+[Sleeping] up to 3160
+[Sleeping] need climb action
+~
+33030145 3 9 0
+-1
+S
+
+#3162
+Atop a leaning pine~
+~
+[Sleeping] d is 3037
+~
+33030145 3 9 0
+D2
+~
+~
+0 -1 3163 10 10 5
+-1
+S
+
+#3163
+Small cliff alcove~
+Under Construction.
+~
+~
+33030145 3 9 0
+D0
+~
+~
+0 -1 3162 10 10 5
+D1
+~
+~
+0 -1 3164 10 10 5
+-1
+S
+
+#3164
+Small cliff alcove~
+Under Construction.
+~
+~
+33030145 3 9 0
+D3
+~
+~
+0 -1 3163 10 10 5
+D5
+~
+~
+0 -1 3041 10 10 5
+-1
+S
+
+#0
+

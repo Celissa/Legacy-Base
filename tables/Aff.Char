@@ -1,0 +1,3552 @@
+#M2_TABLE
+
+3
+197
+
+armor~
+~
+Grants divine protection~
+You sense a divine protection.~
+You feel a divine protection.~
+An aura of protection surrounds $n.~
+You feel less protected.~
+$n's aura of protection fades.~
+0
+17
+0
+0
+0
+2~
+~
+~
+~
+
+bless~
+~
+Grants the wearer bless.~
+You feel righteous.~
+You feel righteous.~
+~
+You feel less righteous.~
+~
+0
+18
+0
+0
+0
+2~
+~
+~
+~
+
+blind~
+~
+Blinds you.~
+You can't see a thing!~
+You have been blinded!~
+$n is blinded!~
+You can see again.~
+$n is no longer blind.~
+0
+18
+0
+0
+0
+-5~
+~
+~
+~
+
+displacement~
+~
+Grants displacement~
+Your position appears shifted.~
+You fade slightly and light seems to reflect abnormally off of you.~
+$n fades slightly and light seems to reflect abnormally off of $m.~
+You are no longer displaced.~
+$n is no longer displaced.~
+0
+17
+0
+0
+0
+0~
+~
+~
+~
+
+weaken~
+~
+~
+You feel cold and weak.~
+You feel the ice in your veins.~
+$n has been turned partly to ice!~
+You feel your strength return.~
+~
+0
+1
+0
+0
+0
+-2~
+~
+~
+~
+
+curse~
+~
+Is cursed! ( decreases hitroll by 3 )~
+You feel cursed.~
+You feel forsaken by the gods.~
+$n has been cursed.~
+You feel the gods' favor return to you.~
+~
+0
+18
+0
+0
+0
+-3~
+~
+~
+~
+
+detect.evil~
+detect evil~
+Gives you the power to detect evil.~
+You can sense evil.~
+You can sense evil working around you.~
+~
+You can no longer detect evil.~
+~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+detect.hidden~
+detect hidden~
+Gives the power to detect hidden.~
+You can detect hidden.~
+Your awareness of your surroundings has improved.~
+~
+You feel less aware of your surroundings.~
+~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+see.invisible~
+See Invisible~
+allows one to see the invisible plane.~
+You can see invisible.~
+Your eyes begin to tingle.~
+~
+Your eyes stop tingling.~
+~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+detect.magic~
+detect magic~
+Grants one the ability to detect magic.~
+You can detect magic.~
+You can see the magic around you.~
+~
+You no longer see the working of magic.~
+~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+faerie.fire~
+faerie fire~
+Outlines you with faerie fire.~
+You are surrounded by a soft red glow.~
+You are outlined with a faint glow.~
+$n is surrounded by a reddish glow.~
+Your outline fades.~
+$n has lost $s reddish glow.~
+0
+17
+0
+0
+0
+-2*L~
+~
+~
+~
+
+fire.shield~
+fire shield~
+Surrounds you with a billowing shield of flame.~
+You are surrounded by a billowing shield of flame.~
+The air around you bursts into flames forming a shield of fire!~
+The air around $n bursts into flames forming a shield of fire!~
+The air around you flickers and the flames die.~
+The air around $n flickers and the flames die.~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+hidden~
+~
+Hides you from your enemies.~
+You feel hidden.~
+You are now hiding.~
+~
+You feel detected.~
+cat~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+infravision~
+~
+Allows you to see in the infra-red plane.~
+Your eyes have adjusted to the dark.~
+Your eyes have adjusted to the dark.~
+~
+You can no longer see in the dark.~
+~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+invisible~
+~
+Makes you invisible.~
+You are invisible.~
+Your outline shimmers as you fade out of sight.~
+$n's outline shimmers as $e fades out of sight.~
+Your image shimmers as you fade into sight.~
+$n's image shimmers as $e fades into sight.~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+holy.wrath~
+holy wrath~
+Gives you the anger of gods.~
+You feel angry.~
+You seem angry!~
+$n seems angry.~
+Your wrath subsides.~
+$n calms down.~
+0
+19
+0
+0
+0
+2~
+~
+~
+~
+
+poisoned~
+~
+Poisons you.~
+You feel sick!~
+You feel sick!~
+$n looks sick.~
+You are no longer poisoned.~
+$n looks better.~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+protection~
+~
+Protects you with a magical shield.~
+You are protected.~
+You are outlined with a faint glow.~
+~
+Your outline fades.~
+~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+sanctuary~
+~
+~
+You are surrounded by a white aura.~
+You are surrounded by a white aura.~
+$n is surrounded by a white aura.~
+The white aura around you fades.~
+The white aura around $n fades.~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+asleep~
+~
+Traps you in a magical sleep.~
+You are asleep.~
+You have been magically slept.~
+~
+You no longer feel sleepy.~
+~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+sneak~
+~
+Allows you to move without a noise.~
+You are trying to sneak around.~
+You try to walk around quietly.~
+~
+~
+~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+regeneration~
+~
+Makes wounds heal faster.~
+Your feel energized.~
+You feel energized.~
+$n looks energized.~
+You feel less energized.~
+~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+fast~
+~
+Increases your speed.~
+You are fast.~
+You feel faster.~
+~
+You slow down.~
+~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+water.walking~
+water walking~
+Grants the ability to walk on water.~
+You can walk on water.~
+~
+~
+~
+~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+water.breath~
+water breathing~
+Grants the ability to breath underwater.~
+You can breath underwater.~
+You can now breathe underwater.~
+$n can now breathe under water.~
+You can no longer breathe underwater.~
+~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+invulnerability~
+~
+Gives you greater protection from physical attacks.~
+You are shimmering.~
+Your body starts to shimmer.~
+$n starts to shimmer.~
+You feel more vulnerable to injury.~
+$n has stopped shimmering.~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+web.spider~
+entangled by webs~
+[BUG] Traps you in a sticky web.~
+You are entangled!!~
+YOU ARE ENTANGLED!!~
+$n becomes entangled.~
+You break out of the web holding you.~
+$n breaks through the web holding $m.~
+0
+0
+0
+2
+0
+(17+L)*8~
+(L+25)/2~
+-20~
+~
+
+confusion~
+~
+Confuses the mind.~
+You are confused.~
+You forget your name.~
+$n starts to drool.~
+You begin to remember.~
+$n appears normal again.~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+hallucination~
+~
+Causes you to hallucinate.~
+You reel at the colors.~
+You see colors.~
+$n twitches slightly.~
+The world returns to normal color.~
+$n looks less dazed now.~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+slow~
+~
+Causes lethargy~
+The world zips past you.~
+You feel lethargic.~
+$n seems to slow down.~
+The world slows down.~
+$n perks up.~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+prot.plants~
+protection from plants~
+Protects you from plants.~
+You feel safe from plants.~
+You feel safe from plants.~
+$n glows briefly green.~
+You no longer feel protected from plants.~
+~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+vitality~
+~
+Increases the damage you can take.~
+You feel tough!~
+You feel tough!~
+~
+You feel weaker.~
+~
+0
+13
+0
+0
+0
+30~
+~
+~
+~
+
+detect.good~
+detect good~
+Grants the power to detect good.~
+You can sense good.~
+You can sense good working around you.~
+~
+You can no longer detect good.~
+~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+life.saving~
+life saving~
+Protects from death!~
+You are protected from death.~
+You are protected from death.~
+~
+You feel vulnerable to dying.~
+~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+sleep.resist~
+sleep resistant~
+Shields from magical sleep.~
+You feel wide-awake.~
+You feel wide-awake.~
+~
+You feel slightly tired.~
+~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+poison.resist~
+poison resistant~
+Grants increased poison resistance.~
+You feel tough.~
+You feel tough.~
+~
+You feel vulnerable.~
+~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+ogre.strength~
+ogre strength~
+Grants one the strength of an ogre.~
+You have the strength of an ogre.~
+You feel the blood of giants flowing in your veins.~
+~
+You feel yourself returning to normal strength.~
+~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+silence~
+~
+Covers one in a cloak of silence.~
+You are unable to make a sound.~
+You feel a cloak of silence envelop you.~
+$n is unable to utter a sound.~
+You feel the cloak of silence enveloping you lift.~
+$n is able to speak again.~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+tongues~
+~
+Grants you knowledge of all languages.~
+You know all languages.~
+Your mind fills with knowledge of strange words.~
+~
+You feel some knowledge slip away from you.~
+~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+cont.light~
+continual light~
+Provides a continual source of light.~
+You are providing power for a ball of light.~
+You start providing power for a ball of light.~
+~
+You stop providing power for a ball of light.~
+~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+plague~
+~
+??~
+You are diseased.~
+The room starts to spin and suddenly, you feel quite ill.~
+$n cries out in pain and suddenly looks quite sick.~
+You feel cured of the plague.~
+$n looks a lot healthier.~
+0
+5
+0
+0
+0
+0~
+~
+~
+~
+
+tomb.rot~
+tomb rot~
+A rotting disease infects you.~
+You have been infected with tomb rot.~
+You have been afflicted with tomb rot.~
+$n has been afflicted with tomb rot.~
+You feel the rotting disease leave your body.~
+The rotting disease infecting $n has passed.~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+rabies~
+~
+??~
+You have rabies??~
+~
+~
+You feel the rotting disease leave your body.~
+~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+paralysis~
+~
+??~
+You are paralysed.~
+You suddenly feel your body stiffen?!~
+$n suddenly stops moving, paraylsed.~
+You body slowly begins to respond again.~
+$n quivers slightly and looks to be returning to life.~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+float~
+~
+Permits levitation in the vertical plane~
+You gently float above the ground.~
+You gently float above the ground.~
+You see $n slowly float off the ground.~
+You feel subject to gravity once more.~
+You see $n slowly float back down to the ground.~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+barkskin~
+~
+Increases your flesh's resistance to damage.~
+Your flesh is hardened.~
+You feel your flesh harden.~
+~
+You feel your flesh return to normal.~
+~
+0
+7
+0
+0
+0
+0-25~
+~
+~
+~
+
+pass.door~
+pass door~
+Allows one to pass through closed doors.~
+You are able to pass through doors.~
+You feel as if you could walk through a closed door.~
+~
+You can no longer pass through closed doors.~
+~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+Axe.Prof~
+axe proficiency~
+Gives a +1 tohit/damage with axes.~
+You are noticably skilled with axes.~
+You feel more proficient with axes.~
+~
+You feel less proficient with axes.~
+~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+sword.prof~
+sword proficiency~
+Gives a +1 tohit/damage with swords.~
+You are noticably skilled with swords.~
+You feel more proficient with swords.~
+~
+You feel less proficient with swords.~
+~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+bow.prof~
+bow proficiency~
+Makes one able to shoot a bow.~
+You gain +1 hit/damage when using a bow.~
+You are now able to shoot bows.~
+~
+You can no longer shoot bows.~
+~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+lght.sensitive~
+light sensitive~
+Makes one sensitive to light.~
+You are sensitive to light.~
+You are now sensitive to light.~
+~
+You are no longer sensitive to light.~
+~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+death.pale~
+death pale~
+You feel weak from your recent death.~
+You feel the lingering touch of death.~
+You feel the lingering touch of death.~
+$n becomes pale and deathlike as the warmth leaves his body.~
+You feel back at full strength.~
+$n looks rosy with health again.~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+sense.danger~
+sense danger~
+Gives the power to sense hidden beings.~
+You can sense the life around you.~
+You are more aware of the life around you.~
+~
+You are less aware of the life around you.~
+~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+resist.fire~
+resist fire~
+Increases your resistance to fire.~
+You are more resistant to fire.~
+You feel suddenly quite cold.~
+~
+You feel much warmer.~
+~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+resist.cold~
+resist cold~
+Grants increased cold resistance.~
+You are more resistant to cold.~
+A powerful warmth envelops your body.~
+~
+You shiver as you are overcome by a sudden chill.~
+~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+haste~
+~
+Grants Haste~
+Your movements are hastened.~
+Your movements accelerate, and the world crawls slowly by.~
+$n begins jittering, $s movements lightning fast.~
+Your movements slow and the world returns to normal speed.~
+$n slows down, $s muscles relaxing.~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+prot.vs.evil~
+protection from evil~
+Grants the wearer protection from evil.~
+You are protected from evil.~
+You are protected from evil.~
+~
+Your protection from evil fades.~
+~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+prot.vs.good~
+protection from good~
+Provides protection for evil folks versus good.~
+You are protected from good.~
+You feel safer from good foes.~
+$n is protected from good foes.~
+You feel less protected from good.~
+$n is no longer protected from good.~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+fly~
+~
+~
+You are flying in the air.~
+You float off the ground flying above it.~
+$n floats off the ground, flying above it.~
+You hurtle into the ground, your stupidity for flying so high.~
+$n crashes into the ground, $s stupidity for flying so high.~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+sense.life~
+sense life~
+You are able to sense hidden life around you.~
+You can sense life.~
+Your awareness of the life around you has improved.~
+~
+You feel less aware of the life around you.~
+~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+true.sight~
+true sight~
+Allows you to see good/evil alignments as well as invisible beings.~
+You have the power to see things as they truly are.~
+You can now see things truly.~
+~
+You can no longer see things quite so truly.~
+~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+resist.acid~
+resist acid~
+Makes one more resistant to acid attacks.~
+You are more resistant to acid.~
+You feel better protected from acid.~
+~
+You feel as if acid would injure you more.~
+~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+resist.shock~
+resist shock~
+Makes you more resistant to electric attacks.~
+You are more resistant to shock.~
+You feel as if you can better withstand electricity.~
+~
+You feel more vulnerable to electricity.~
+~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+thorn.shield~
+thorn shield~
+Creates a shield of dangerous thorns.~
+You are protected by a shield of thorns.~
+A shield of thorns forms around you!~
+A shield of thorns forms around $n!~
+You are no longer protected by a shield of thorns.~
+$n is no longer protected by a shield of thorns.~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+choking~
+~
+You choke.~
+You are choking.~
+You start to gasp for breath.~
+$n starts to gasp for breath.~
+3~
+~
+0
+0
+0
+0
+0
+0~
+~
+~
+~
+
+ion.shield~
+ion shield~
+Creates a shield of electric particles.~
+You are protected by a shield of electricity.~
+A barrier of electrical energy surrounds you!~
+A barrier of electrical energy surrounds $n!~
+Your shield of electricity sparks once and fades away.~
+The sparking shield of energy surrounding $n disappears.~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+camouflage~
+~
+You are camouflaged.~
+You are camouflaged.~
+~
+~
+~
+~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+see.camouflage~
+see camouflage~
+You can see things that are camouflaged.~
+You can see camouflaged things.~
+You can now see camouflaged things.~
+~
+~
+~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+ensnare~
+~
+[BUG] Trapped by vines.~
+Animated vines surround you, hindering your movement.~
+Animated vines surround you, hindering your movement.~
+Animated vines surround $n, hindering $s movement.~
+The vines start to lose their grip on you.~
+The vines start to lose their grip on $n.~
+0
+0
+0
+2
+0
+(55+L)*9~
+(L+65)/2~
+-20~
+~
+
+ensnare_trapped~
+~
+[BUG] The vines have you caught, unable to move.~
+You are fully entangled by the vines.~
+The vines manage to catch your limbs, restraining you.~
+The vines manage to catch $n's limbs, restraining $m.~
+You manage to break free from some of the vines.~
+$n manages to break free from some of the vines.~
+0
+0
+2
+0
+0
+who~
+-50~
+~
+~
+
+all~
+~
+~
+If you are affected by this, please let an immortal know.~
+~
+~
+~
+~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+move.water.only~
+move in the water only (for fish)~
+~
+~
+~
+~
+~
+~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+compan.strength~
+companion strength~
+You share the strength of the animals.~
+You share the strength of your pets.~
+You draw on your pet's strength.~
+$n draws on $s pet's strength.~
+You no longer share your pet's strength.~
+$n no longer shares $s pet's strength.~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+briartangle~
+~
+Trapped within the briars.~
+You are caught in the briars.~
+You are caught in the briars.~
+$n is caught in some briars.~
+You break out of the briars holding you.~
+$n breaks through the briars holding $m.~
+0
+0
+0
+2
+0
+(85+L)*12~
+(L+75)/2~
+-50~
+~
+
+skin.of.iron~
+skin of iron~
+You have the durability of iron.~
+Your skin feels as hard as iron.~
+Your skin feels as hard as iron.~
+$n's skin takes on a greyish tinge.~
+Your skin feels soft as butter.~
+$n's skin returns to its normal shade.~
+0
+9
+0
+0
+0
+-60+3*L~
+~
+~
+~
+
+spot.hidden~
+spot hidden~
+Using your abilities to detect the hidden.~
+You are being perceptive.~
+You start looking into the shadows more carefully.~
+$n starts peering carefully into the shadows.~
+You stop trying to see hidden things.~
+$n stops trying to see into the shadows.~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+pained~
+~
+Suffering from pain.~
+You suffer from nerve pain.~
+You are afflicted with a nerve attack.~
+$n has been afflicted with a nerve attack.~
+You recover from the pain.~
+$n recovers from the pain.~
+0
+18
+19
+0
+0
+-2*L~
+-2*L~
+~
+~
+
+hoarfrost~
+~
+an ice shield~
+You are surrounded by a shield of freezing cold.~
+Frost rimes around you into a slicing shield.~
+Frost surrounds $n into a slicing shield.~
+The ice melts and water splashes onto the ground.~
+The ice surrounding $n melts and the water splashes onto the ground.~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+vigor~
+~
+Increases the damage you can take even more.~
+You feel as healthy as a horse.~
+You feel as healthy as a horse.~
+$n's body broadens a bit, and you see more musculature.~
+You feel sickly.~
+$n's body thins out, and withers a bit.~
+0
+13
+0
+0
+0
+30+10*L~
+~
+~
+~
+
+holy.aura~
+holy aura~
+The gods of light defend you.~
+The holy powers defend you.~
+The holy powers surround you, and an aura of light spreads out.~
+The holy powers surround $n, and an aura of light spreads out.~
+The protecting powers disappear.~
+The protecting powers disappear.~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+unholy.aura~
+unholy aura~
+The gods of dark defend you.~
+The unholy powers defend you.~
+The unholy powers surround you, and an aura of darkness spreads out.~
+The unholy powers surround $n, and an aura of darkness spreads out.~
+A shrieking scream and the powers disperse.~
+A shrieking scream and the powers disperse.~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+uncease.vigil~
+unceasing vigilance~
+Guardian of others.~
+You are the guardian of others.~
+You feel the presence of your god, and feel like you can withstand anything.~
+$n appears to be stronger and more protected.~
+You feel your guardianship dissipate.~
+$n's guardianship vanishes.~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+divine.might~
+divine might~
+The dvine empower you.~
+The divine powers have increased your strength.~
+Your god empowers you for battle.~
+$n's god empowers $m for battle.~
+The empowering affect of your god vanishes.~
+The empowering affect of $n's god vanishes.~
+0
+18
+19
+0
+0
+L/2~
+L/2~
+~
+~
+
+hardiness~
+~
+Using your abilities to increase your endurance.~
+You are resistant to damage.~
+You are able to withstand more punishment.~
+$n's muscles ripple along $s body.~
+You are unable to withstand as much.~
+$n's muscles appear to have relaxed.~
+0
+13
+0
+0
+0
+L*10~
+~
+~
+~
+
+hamstring~
+~
+You have been hamstrung.~
+You have been hamstrung.~
+You have been hamstrung.~
+$n is hamstrung.~
+Your tendons have healed from that slice.~
+$n's tendons have healed from the slice.~
+0
+1
+2
+0
+0
+-20~
+-20~
+~
+~
+
+bandage~
+~
+you put some band-aids on.~
+you have some bandaids~
+you put some band-aids on.~
+~
+the band-aids fall off.~
+the band-aids on $n fall off.~
+0
+21
+0
+0
+0
+L*2~
+~
+~
+~
+
+gloom~
+~
+The heavy weight of gloom and despair.~
+The weight of gloom and despair pull you down.~
+The heavy weight of gloom and despair wrack you.~
+The heavy weight of gloom and despair wrack $n.~
+The gloom and despair lift.~
+The gloom and despair leaves $n's face.~
+0
+18
+14
+0
+0
+-L/2~
+-3*L~
+~
+~
+
+soul.tear~
+soul tear~
+Your soul torn from your body.~
+You feel lost and confused, as if something is missing.~
+Your soul is ripped from your body.~
+$n's soul is ripped from $s body.~
+You become less confused as whatever was missing came home.~
+$n looks like $e found what was wrong.~
+0
+2
+0
+0
+0
+-(1+L)/3~
+~
+~
+~
+
+blight~
+~
+the blight~
+the blight.~
+You have been afflicted with the blight.~
+$n has been afflicted with the blight.~
+You feel like the blight has passed.~
+$n looks a little better.~
+0
+14
+0
+0
+0
+-10-L*3~
+~
+~
+~
+
+gift.of.night~
+gift of the night~
+Terrifying nightmares plague you.~
+The terrifying nigmares crush your sanity.~
+You are afflicted with a terrifying nightmare.~
+$n's mind is afflicted with horrifying nightmares.~
+The nightmares disperse.~
+$n looks relieved as $s nightmares pass.~
+0
+10
+0
+0
+0
+-L~
+~
+~
+~
+
+ghost.armor~
+ghost armor~
+You are surrounded by dark spirits.~
+You are surrounded by dark spirits.~
+The dark spirits surround you and protect you.~
+The dark spirits surround $n and protect $m.~
+The dark spirits abandon you.~
+The dark spirits abandon $n.~
+0
+17
+24
+6
+10
+L/3~
+L/2~
+L/2~
+L/2~
+
+forsaken~
+~
+Flesh burned by acid and fire.~
+Your flesh has been burned by acid and fire.~
+Your skin has been painfully burned.~
+$n's skin has been painfully burned.~
+You have healed your burns.~
+$n's burns have healed.~
+0
+2
+0
+0
+0
+-L/2~
+~
+~
+~
+
+skin.of.cadaver~
+skin of the cadaver~
+You are covered by the skin of the dead.~
+You are covered by the skin of the dead.~
+You skin thickens and grows clammy.~
+$n's skin thickens and grows clammy.~
+Your skin returns to its natural condition.~
+$n's skin returns to its natural condition.~
+0
+17
+2
+0
+0
+L/5~
+-5+L/2~
+~
+~
+
+starve.madness~
+starving madness~
+You are as hungry as the beast.~
+You are as hungry as the beast.~
+The raging hunger affects you.~
+The raging hunger affects $n.~
+You hunger slates somewhat.~
+$n stops drooling.~
+0
+17
+19
+0
+0
+-L/2~
+(2+L)/2~
+~
+~
+
+ghost.chains~
+ghost chains~
+Ghostly chains entrap.~
+You are entrangled by a set of ghostly chains.~
+The ghostly chains wrap tightly about you.~
+The ghostly chains wrap tightly about $n.~
+The ghostly chains dissipate from you.~
+The ghostly chains dissipate from $n.~
+0
+0
+0
+6
+2
+(15+L)*7~
+(L+20)/2~
+-L*7~
+-L*8~
+
+mind.blank~
+mind blank~
+Ultimate control over mind and body.~
+You have mastered control over your mind and body.~
+You concentrate fully upon your mind and body.~
+$n grows thoughtful, and you see a shiver pass through $s body.~
+You careful control is shattered.~
+$n's careful control is shattered.~
+0
+10
+6
+0
+0
+2*L~
+2*L~
+~
+~
+
+bane~
+~
+Afflicted by a serious curse.~
+You have been afflicted by a complicated and serious curse.~
+A serious curse has struck you.~
+A serious curse has struck $n.~
+The curse has lifted.~
+$n's curse has lifted.~
+0
+18
+19
+2
+17
+-(L+2)/3~
+-(L+2)/3~
+-L/2~
+-(L+2)/3~
+
+shield.of.bones~
+shield of bones~
+Protected by a shield of bones.~
+You are surrounded by a shield of bones.~
+A shield of bones starts swirling about your body.~
+A shield of bones starts swirling about $n's body.~
+The bones surrounding you drop to the ground shattering on impact.~
+The bones surrounding $n drop to the ground and shatter.~
+0
+17
+6
+0
+0
+L/5~
+L/2~
+~
+~
+
+death.mask~
+death mask~
+The spirits allow you passage.~
+The wan feeling of death accompanies you.~
+You cloak yourself from the dead.~
+$n cloaks $mself from the dead.~
+Your cloak of death vanishes.~
+$n's cloak of death vanishes.~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+death.skin~
+~
+Death has taken you.~
+You look and smell like the dead.~
+Your skin fades to grey in color and gains a distinct odor.~
+$n's skin fades to grey in color and gains a distinct odor.~
+You look healthier.~
+$n looks healthier and smells better.~
+0
+17
+14
+0
+0
+L/3~
+-80+4*L~
+~
+~
+
+blood.bond~
+blood bond~
+Your blood is shared with others.~
+You have a blood bond with an another.~
+You share your blood, and form a blood bond.~
+$n shares $s blood, and forms a blood bond.~
+Your blood bond has worn off.~
+$n's blood bond has worn off.~
+0
+21
+20
+0
+0
+-3*L~
+3*L~
+~
+~
+
+doom~
+~
+Misfortune and misery.~
+Misfortune afflicts you with a terrible doom.~
+A terrible doom has been inflicted upon you.~
+A terrible doom has been inflicted upon $n.~
+A terrible doom has bypassed you.~
+A terrible doom has bypassed $n.~
+0
+18
+19
+17
+10
+-L/3~
+-L/3~
+-L/2~
+1*(1+L)~
+
+dead.man.eyes~
+dead man's eyes~
+A dead mans sight.~
+You see through death's eyes.~
+The eye flares a blood red, then orbits your head.~
+The eye flares a blood red, then orbits $n's head.~
+The dead man's eye vanishes in a flame.~
+$n's floating eye vanishes in a flame.~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+skull.watch~
+skull watch~
+[BUG] This should not be on an item.~
+You are being assisted by your skull watch.~
+~
+~
+~
+~
+0
+12
+13
+8
+10
+15+L*2~
+10+2*L~
+L/2~
+L/2~
+
+ghost.shield~
+ghost shield~
+The spirits will rend your opponents.~
+You are surrounded by the angry spirits.~
+The dark spirits surround you, screaming for death.~
+The spirits surround $n, screaming for death.~
+With a last shuddering scream, the spirits vanish into the ether.~
+With a last shuddering scream, the spirits surrounding $n vanish into the ether.~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+demon.shield~
+demon shield~
+A guardian demonic force.~
+You are protected by a demonic force.~
+The demons surround you, screaming for blood.~
+The demons surround $n, screaming for blood.~
+The demons flee, having broken from your control.~
+The demons flee, but attempt to steal your life first...and fail.~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+calm~
+~
+[BUG] This shouldn't be here.~
+You have been calmed of the rages of battle.~
+The rage of battle settles from your battle, and inner peace takes over.~
+$n has been calmed of $s battle rage.~
+The thrill of battle comes back.~
+$n's thrill of battle returns.~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+solidify~
+~
+~
+~
+~
+~
+~
+~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+shatter.resolve~
+shatter resolve~
+Your resolve is devastated.~
+Your resolve has been dissolved.~
+You feel useless, your resolve missing.~
+$n looks useless.~
+Your resolve returns with a vengence.~
+$n's resolve returns with a vengence.~
+0
+10
+12
+20
+14
+-5*L~
+-10*L~
+-2*L~
+-10*L~
+
+simulcrum~
+~
+You and your familiar are bonded in pain and misery.~
+You familiar has become your dark simulcrum.~
+Using your dark arts you shadow with your familiar.~
+Using $s dark art knowledge, $n uses shadow magic with $s familiar.~
+~
+~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+SngHummingToad~
+song of the humming toad~
+Humming toad call~
+You're affected by the humming toad call.~
+@GThe croaking of toads raises your spirits.@n~
+~
+@GThe croaking fades into the distance.@n~
+~
+0
+13
+21
+0
+0
+L/2~
+L/4~
+~
+~
+
+brook~
+song of the brook~
+Song of the brook.~
+You're affected by the song of the brook.~
+@BYour spirits are lifted by the burbbling sound of a brook.@n~
+~
+@BYour thirst returns as the notes of the song fade.@n~
+~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+ChantWar~
+chant of war~
+Will cause your blood to race.~
+You're affected by the chant of war.~
+@RThe notes of the song causes your blood to race.@n~
+~
+@RYour blood slows as the song comes to an end.@n~
+~
+0
+18
+0
+0
+0
+L/4~
+~
+~
+~
+
+SngSummer~
+song of the summer~
+The warmth of summer will protect you.~
+You feel the warmth of summer.~
+@YThe soft song fill you with the warmth of a summers day.@n~
+~
+@YThe cold returns as the song leaves you.@n~
+~
+0
+7
+8
+0
+0
+L/2~
+-10+L~
+~
+~
+
+SongWint~
+song of winter~
+The protection of winter will entwine you.~
+You feel a shivery touch.~
+@CA cool frost swirls about as the song echoes about.@n~
+@CA cool frost dances from $n cooling everyone it touches.@n~
+@CThe cooling frost melts away as the song ends.@n~
+@CThe cooling frost melts away as $n song ends.@n~
+0
+8
+7
+0
+0
+L/2~
+-10+L~
+~
+~
+
+SngWheat~
+song of wheat~
+Your hunger will be abated somewhat.~
+Your hunger is somewhat abated.~
+@yYour hunger abates as the song washes through you.@n~
+~
+@yYour hunger returns as the song ends.@n~
+~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+ChantBattle~
+chant of battle~
+You battle skills will be improved.~
+Your battle skills are highly focused.~
+@RAnger wells up in you as the song begins to infuse your limbs with power.@n~
+~
+@RThe rage fades as the song ends.@n~
+~
+0
+19
+0
+0
+0
+L/4~
+~
+~
+~
+
+SngSpring~
+song of spring~
+The protection of the spring will encompass you.~
+You are surrounded by tendrils of energy.~
+@GThe song calls from the ground tendrils of the living energy of spring to surround you.@n~
+~
+@GThe tendrils of energy fade back into the ground as the song fades.@n~
+~
+0
+9
+23
+0
+0
+L/2~
+-10+L~
+~
+~
+
+SngSeren~
+song of serenity~
+You thoughts will be clear, and refreshed.~
+Your mind feels refreshed~
+@CEnergy flows into your mind as the song buzzes about.@n~
+~
+@CYour thoughts slow down as the song leaves.@n~
+~
+0
+20
+0
+0
+0
+L~
+~
+~
+~
+
+SngShadow~
+song of the shadow~
+Iniara's will shall protect you from some vision.~
+Iniara's will surrounds you.~
+@MDarkness swirls around, clinging to everything it touches.@n~
+@MDarkness swirls from $n the black clouds clinging to everything.@n~
+@MThe grip of darkness lifts.@n~
+@MThe grip of darkness lifts from the area as the song ends.@n~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+SngRiver~
+song of the river~
+The quiet, and peace of the river.~
+You're filled with the roar of the river.~
+@BThe roar of a river lifts your spirts.@n~
+~
+@BThe river's roar fades.@n~
+~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+SngHarvest~
+song of the harvest~
+Your hunger is abated.~
+Your hunger is abated.~
+@yYour hunger subsides as the song envolopes you.@n~
+~
+@yYour hunger returns as the song fades.@n~
+~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+SngBuck~
+song of the buck~
+The spirit of a buck shall infuse your being.~
+Your spirit is filled with the life of a buck.~
+@GThe simple song fills your soul with the life and beauty of a spring buck.@n~
+~
+@GThe life of the buck drains from you as the song ends.@n~
+~
+0
+21
+0
+0
+0
+L~
+~
+~
+~
+
+SngOx~
+song of the ox~
+The spirit of an ox shall assist you.~
+The health of a ox fills you.~
+@GThe notes sending the health of an ox cruising through your veins.@n~
+~
+@GThe notes fade taking the ox in you with them.@n~
+~
+0
+21
+0
+0
+0
+3*L/2~
+~
+~
+~
+
+SngWalrus~
+song of the walrus~
+The spirit of the walrus' will inhabit you.~
+Your blood is warmed.~
+@GAs the song fills your ears the stoic nature of the walrus warms your blood.@n~
+~
+@GYour blood cools as the nature of the walrus fades with the notes.@n~
+~
+0
+21
+0
+0
+0
+3*L~
+~
+~
+~
+
+SngSeraphim~
+song of the seraphim~
+The seraphim shall provide you with peace of mind.~
+The calm of a seraphim dwells in your mind.~
+@CThe lyrics bring the peaceful calm of a great seraphim to dwell in your mind.@n~
+~
+@CAs the lyrics come to an end the calm leaves your mind.@n~
+~
+0
+20
+0
+0
+0
+3*L/2~
+~
+~
+~
+
+SngCelestial~
+song of the celestial~
+The celestial beings shall provide your peace of mind.~
+Your mind is filled with the engery of the heavens.~
+@CThe notes seem to drift down from the heavens filling your mind with energy.@n~
+~
+@CThe notes fade back into the heavens.@n~
+~
+0
+20
+0
+0
+0
+3*L~
+~
+~
+~
+
+SngTireless~
+song of the tireless traveler~
+Your feet shall be moved by an upbeat tune.~
+An upbeat tune compels your feet to move.~
+@CThe upbeat tune fills your spirit with wanderlust.@n~
+~
+@CThe wanderlust fades as the notes of the song fade into the past.@n~
+~
+0
+22
+0
+0
+0
+L~
+~
+~
+~
+
+SngSwift~
+song of the swift~
+Your steps will land quicker.~
+Your steps land quicker.~
+@CThe lyrics of the song cause your steps to land quicker.@n~
+~
+@CYour feet slow their rythm as the song fades.@n~
+~
+0
+22
+0
+0
+0
+3*L/2~
+~
+~
+~
+
+SngCheetah~
+song of the cheetah~
+The spirit of a cheetah will assist you.~
+The speed of a cheetah cruises through your legs.~
+@yThe song fills your legs with the speed of a cheetah.@n~
+~
+@yThe cheetah's speed fades from your limbs as the song fades.@n~
+~
+0
+22
+0
+0
+0
+3*L~
+~
+~
+~
+
+SngAutumn~
+song of autumn~
+You will be protected by the wind of autumn.~
+Your skin is coated with the wind of autumn.~
+@yThe song calls forth a chilling wind of autumn to coat your skin.@n~
+~
+@yThe chilling wind leaves your skin leaving you feeling vulnerable.@n~
+~
+0
+23
+9
+0
+0
+L/2~
+-10+L~
+~
+~
+
+SngSumEquinox~
+song of the summer equinox~
+The winds of summer and autumn will protect you.~
+The winds of summer and autumn swirl around you.~
+@YThe last breath of summer@n @cand@n @ythe first sigh of autumn@n @csurround you.@n~
+~
+@cThe winds of@n @Ysummer@n @cand@n @yautumn@n @cdie down as the lyrics fade into the distance.@n~
+~
+0
+7
+23
+0
+0
+3*L/2~
+3*L/2~
+~
+~
+
+SngWinEquinox~
+song of the winter equinox~
+The howl of winter and chuckle of spring shall surround you.~
+The winds of winter and spring swirl around you.~
+@CThe last howl of winter@n @cand@n @Gthe first chuckle of spring@n @cswirl around you.@n~
+~
+@cAs the song ends the winds of @Cwinter@n @cand@n @Gspring@n @ccease to swirl around you.@n~
+~
+0
+8
+9
+0
+0
+3*L/2~
+3*L/2~
+~
+~
+
+SngSeaMastery~
+song of seasons mastery~
+Song of Seasons Mastery~
+The four winds shall protect you.~
+@gA wind blows in from all@n @Cf@n@Go@n@Yu@n@yr@n @gdirections as the lilting song rises into the air.@n~
+~
+@gThe swirling wind stills and fades as the song comes to a silent end.@n~
+~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+SngCarnage~
+song of carnage~
+Rage and determination shall fill you.~
+You are filled with rage and determination.~
+@rThe sounds of a pitched battle fill you with rage and determination.@n~
+~
+@rRage and focus leave you as the sounds of the battle pass.@n~
+~
+0
+18
+19
+0
+0
+L/2~
+L/2~
+~
+~
+
+SngEterBattle~
+song of eternal battle~
+You are influenced by a song of pure battle.~
+You are influenced by a song of pure battle.~
+The song of pure battle influences your actions.~
+~
+The song of pure battle leaves your presence.~
+~
+0
+18
+19
+0
+0
+L/2+2~
+L/2+2~
+~
+~
+
+SngBlurring~
+song of blurring blades~
+This song quickens your movenments.~
+The blurring blades quicken your movements.~
+You movements quicken as you concentrate on the song of blurring blades.~
+Movements quicken as the song of blurring blades is listened to.~
+The effects of the blurring blades fade as you stop singing.~
+Movements slow down as the song of blurring blades leaves your sight.~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+natures.bless~
+natures bless~
+Nature has blessed you with strength.~
+Nature has blessed you with strength.~
+You feel stronger and buffer.~
+$n looks bigger and more ferocious.~
+You have returned to your normal state.~
+$n looks more normal.~
+0
+13
+18
+19
+0
+3*L/2~
+1~
+1~
+~
+
+natures.imbued~
+natures imbrued~
+Nature has imbued you with extraordinary strength.~
+Nature has imbued you with extraordinary strength.~
+Your natural weaponry and defenses improve.~
+$n's natural weaponry and defenses look better.~
+You return to normal.~
+$n returns to normal.~
+0
+13
+18
+19
+0
+3*L~
+2~
+2~
+~
+
+natures.infuse~
+natures infusion~
+Nature has infused you with supernatural strength.~
+Nature has infused you with supernatural strength.~
+You grow almost thirty percent in size.~
+$n grows a considerable amount in size.~
+You return to normal.~
+$n returns to normal.~
+0
+13
+18
+19
+0
+9*L/2~
+3~
+3~
+~
+
+natures.spirit~
+natures spirit~
+You are inhabited by the spirit of nature.~
+You have been infused with natures' spirit.~
+You grow almost fifty percent bigger.~
+$n grows almost fifty percent bigger.~
+You return to normal.~
+$n returns to normal.~
+0
+13
+18
+19
+0
+6*L~
+4~
+4~
+~
+
+natures.calling~
+natures calling~
+You become a force of nature.~
+You have become a force of nature.~
+You double in size and strength.~
+$n doubles in size, and looks far more ferocious.~
+You return to normal.~
+$n returns to normal.~
+0
+13
+18
+19
+0
+15*L/2~
+5~
+5~
+~
+
+SngLullaby~
+lullaby~
+You will rest like a baby.~
+The song has you relaxing like a baby.~
+The lullaby settles into your bones, relaxing you immensely.~
+The lullaby has $n relaxing immensely.~
+The lullaby leaves your thoughts, you feel rested and refreshed.~
+The lullaby leaves $n's thoughts.~
+0
+21
+20
+22
+0
+L~
+L~
+L~
+~
+
+SngEnchantSleep~
+song of the enchanted sleep~
+Your rest is enchanted by the muses.~
+Your rest is enchanted by the muses.~
+The enchanted rest takes over your bones, and you have trouble doing anything.~
+$n appears to be having trouble doing much.~
+The exhausted feeling leaves your bones, leaving you must more refreshed.~
+$n looks far more refreshed.~
+0
+21
+20
+22
+0
+2*L~
+2*L~
+2*L~
+~
+
+SngDragonStance~
+song of the dragons' stance~
+You tap into the dragons intelligence.~
+You have tapped into the dragons intelligence.~
+You feel the presence of a dragon behind you.~
+You see an image of a dragon superimposed on $n.~
+The presence of the dragon departs.~
+The image of the dragon flashes high into the sky.~
+0
+3
+20
+0
+0
+L/5~
+2*L~
+~
+~
+
+SngBearStance~
+song of the bears' stance~
+You gain the health of a grizzly.~
+You have the health of a grizzly.~
+You have gained the health of a bear.~
+~
+The health of the bear vanishes.~
+~
+0
+5
+21
+0
+0
+L/5~
+2*L~
+~
+~
+
+SngCatStance~
+song of the cats' stance~
+You acquire the grace of a cat.~
+You have the grace of a cat.~
+You have acquired the grace of a cat.~
+~
+You fumble, as your grace vanishes.~
+~
+0
+2
+22
+0
+0
+L/5~
+2*L~
+~
+~
+
+SngSwirlBlade~
+song of the swirling blade~
+You accuracy is improved.~
+Your accuracy is legendary.~
+You swift movements and graceful arc improve your accuracy.~
+~
+Your accuracy falters.~
+~
+0
+18
+19
+0
+0
+L~
+-10+L~
+~
+~
+
+SngIronResolve~
+song of iron resolve~
+Your resolve becomes impenetrable.~
+Your resolve is imprenetrable.~
+Your mind becomes that of iron.~
+~
+You mind softens, and becomes organic again.~
+~
+0
+10
+6
+22
+0
+2*L~
+2*L~
+-60+3*L~
+~
+
+SngWhirlDeath~
+song of whirling death~
+You become surrounded by a shield of flashing blades.~
+You are surrounded by a shield of flashing blades.~
+Magical blades, encompass you, surrounding you with death.~
+~
+The magical blades clash, and crumble into dust.~
+~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+flame.shield~
+flame shield~
+You will be surrounded by a weak flame.~
+You are surrounded by a weak flame.~
+A flickering flame flowers around you.~
+A flickering flame flowers around $n.~
+The weak flame dies.~
+The weak flame surrounding $n dies.~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+fiery.shield~
+fiery shield~
+A raging fire will roar around you.~
+A raging fire roars around you.~
+A raging fire envelops you.~
+A raging fire envelops $n.~
+The raging fire glimmers and dies.~
+The raging fire surrounding $n glimmers and dies.~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+shield.inferno~
+shield of the inferno~
+Pure fire surrounds you, no gaps or spaces in the least.~
+Pure fire surrounds you, no gaps or spaces in the least.~
+Fire surrounds you, and threads itself together, forming a perfect barrier.~
+Fire surrounds $n, and threads itself together, forming a perfect barrier.~
+The barrier crackles and pops, vanishing in an instant.~
+The barrier surrounding $n vanishes in an instant.~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+frost.shield~
+frost shield~
+A thin shield of frost will surround you.~
+A thin shield of frost has surrounded you.~
+A thin veil of cold wisps around you.~
+A thin veil of cold wisp around $n.~
+The frost drips away and vanishes.~
+The thin layer of frost drips away and vanishes from $n.~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+hoar.shield~
+hoar shield~
+You will be surrounded by a coating of hoar.~
+You are surrounded by a coating of hoar.~
+A thick layer of hoar has surrounded you.~
+A thick layer of hoat has surrounded $n.~
+The thick layer of hoar dissipates.~
+The layer of hoar surrounding $n dissipates.~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+absolute.zero~
+absolute zero~
+You are surrounded by a shield of cold that will freeze anything.~
+You are surrounded by a wall of thick and heavy frost.~
+The air around you solidifies into a solid sheet of frost.~
+The air around $n solidifies into a solid sheet of frost.~
+The surrounding ice, crashes to the ground, melting instantaneously.~
+The ice surrounding $n, crashes to the ground, melting instantaneously.~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+spark.shield~
+spark shield~
+A weak voltage will run around you.~
+A weak voltage runs around you.~
+A weak voltage circulates about you.~
+A weak voltage circulates about $n.~
+The weak voltage dissipates.~
+The weak voltage circulating about $n dissipates.~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+shock.shield~
+shock shield~
+A minor shock will run around you.~
+A minor shock circulates in the air about you.~
+A minor shock starts floating around you.~
+A minor shock starts floating around $n.~
+The minor shock vanishes.~
+The minor shock floating around $n vanishes.~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+shield.of.light~
+shield of lightning~
+Lightning will arc about you.~
+Lighting is arcing about you.~
+A blue bolt of lightning springs from the ground, and flies around you.~
+A blue bolt of lightning springs from the ground and flies around $n.~
+The blue bolt of lighting dissappears into the ground.~
+The blue bolt of lighting surrounding $n dissappears into the ground.~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+shield.erosion~
+shield of erosion~
+An acidic veil will protect you.~
+An misty veil is surrounding you.~
+A greenish-blue misty veil surrounds you.~
+A greenish-blue misty veil surrounds $n.~
+The misty veil dissipates into the air.~
+The misty veil surrounding $n dissipates.~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+corr.shield~
+corrosive shield~
+A heavy misting of acid will surround you.~
+A heavy misting of acid surrounds you.~
+A blanket of mist surrounds you, there is an acrid smell.~
+A blanket of mist surrounds $n, there is an acrid smell.~
+The blanket of mist and smell disappear.~
+The blanket of mist about $n vanishes.~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+caustic.shield~
+caustic shield~
+A sharpy acrid shield will protect you.~
+A sharply acrid shield is protecting you.~
+A sharply acrid smell surrounds you.~
+A sharply acrid smell surrounds $n.~
+The sharply acrid smell vanishes.~
+The sharply acrid smell vanishes.~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+SngSprEquinox~
+song of the spring equinox~
+The resistance of the spring equinox will flow through your body.~
+The spring equinox flows through your body.~
+Memories of the last spring equinox come to you.~
+Memories of the last spring equinox come to you.~
+The memories of the equinox fade.~
+The memories of the equinox fade.~
+0
+9
+7
+0
+0
+3*L/2~
+3*L/2~
+~
+~
+
+SngHarvEquinox~
+song of the harvest equinox~
+The songs of the harvest will infect you.~
+You are infected with the songs of the harvest.~
+The songs of the harvest, come and infiltrate your thoughts.~
+The songs of the harvest, come and infiltrate your thoughts.~
+The lingering song fades from your thoughts.~
+The lingering song fades from your thoughts.~
+0
+23
+8
+0
+0
+3*L/2~
+3*L/2~
+~
+~
+
+aura.evil~
+evil aura~
+Evil glances your way.~
+Evil is glancing your way, providing marginal protection.~
+You feel your god providing a bit of protection.~
+You feel $n's god providing him with a bit of protection.~
+The aura fades, you feel less protected.~
+$n's aura fades, $e looks sickly.~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+dreadful.aura~
+dreadful aura~
+A frightful gaze will peer upon you.~
+A frightful gaze is focused on you.~
+You feel your gods gaze, directed at you.~
+Frightening images pass through your mind.~
+The gaze fades, and disappears.~
+The images cease, and you feel more relaxed.~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+wicked.aura~
+wicked aura~
+The baleful influence of the evil gods will surround you.~
+You are surrounded by the baleful influence of your god.~
+The baleful influence of your god surrounds you.~
+The baleful influence of $n's god surrounds $m.~
+The baleful influence of your god vanishes.~
+The baleful influence of $n's god vanishes.~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+blessed.aura~
+blessed aura~
+You will be protected by the gentle and good goods.~
+You are protected by the gentle and good gods.~
+The good gods smile upon you, and you feel protected.~
+The good gods smile up at $n.~
+The smile of the good gods fade.~
+The smile of the good gods fade.~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+hallowed.aura~
+hallowed aura~
+A hallowed aura shall protect thee, as if in a temple to the greater good gods.~
+You are protected by a hallowed aura.~
+A hallowed aura springs forth around you.~
+A hallowed aura springs forth around $n.~
+The hallowed aura fades.~
+The hallowed aura about $n fades.~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+saints.aura~
+saints' aura~
+You will be protected by gods divine touch.~
+You are protected by the gods divine touch.~
+The good gods touch protects you.~
+The good gods touch protects $n.~
+The gods touch leaves you.~
+The gods touch leaves $n.~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+bone.prison~
+prison of bone~
+You will be hampered by a prison of bone.~
+You are hampered by a cage of bone.~
+A mystical cage of bone surrounds you, hampering your movements.~
+A mystical cage of bone surrounds $n, hampering $s movements.~
+With a crash, the bones hampering your movements crash to the ground, shattering.~
+With a crash, the bones hampering $n movements crash to the ground, shattering.~
+0
+0
+0
+0
+0
+(40+L)*9~
+(50+L)/2~
+-30~
+~
+
+life.tap~
+life tap~
+Life will be stolen from someone.~
+You have stolen life from someone.~
+You have leeched life from your victim.~
+~
+You must find another victim, quickly.~
+~
+0
+5
+13
+0
+0
+L/5~
+L*5+10~
+~
+~
+
+wraith.form~
+wraith form~
+Your form becomes that of a wraith.~
+Your form is that of a wraith.~
+You shimmer, and you feel protected like you were a wraith.~
+$n's form shimmers, and fades.~
+You feel more solid now.~
+$n looks more solid now.~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+green.finger~
+green finger~
+The winds of autumn will protect you.~
+The winds of autumn protect you.~
+The winds of autumn start protecting you.~
+The winds around $n seem to be protecting $m.~
+The winds of autumn fade away.~
+The winds surrounding $n fade.~
+0
+17
+0
+0
+0
+2~
+~
+~
+~
+
+Unused100~
+natures' boon~
+~
+~
+~
+~
+~
+~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+tree.form~
+tree form~
+Your form will inherit some advantages of the giant oak tree.~
+Your form has properties of a tree.~
+You feel the diffuse embrace of the ancient oak tree.~
+You feel a breeze, and $n seems to be swaying in it.~
+The abilities of the oak vanish.~
+$n looks to have regained $s senses.~
+0
+17
+5
+7
+0
+L/2~
+1~
+-50+2*L~
+~
+
+slow.entangle~
+slowed by entangling vines~
+You will be slowed by the entangling vines.~
+You have been slowed by the entangling vines.~
+The entangling vines have slowed you.~
+$n has been slowed by the vines.~
+You break out of the vines.~
+$n breaks out of the vines.~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+vine.entangling~
+entangling vine~
+You will be entangled by the vines.~
+You have been entangled by the vines.~
+The vines entangle your movements, preventing you from doing anything.~
+The vines entangle $n, preventing $m from any movement.~
+You break free of the vines.~
+$n breaks free of the vines.~
+0
+0
+0
+2
+0
+(17+L)*8~
+(L+25)/2~
+-20~
+~
+
+natures.shield~
+natures shielding~
+You will be protected from the harsh elements.~
+You are protected from the harsh elements.~
+Nature shields you from its harshest elements.~
+$n has been surrounded by nature's protective powers.~
+The harsh elements start bothering you.~
+$n shivers as a quiet wind goes by.~
+0
+7
+23
+9
+8
+10+L~
+10+L~
+10+L~
+10+L~
+
+trail.blaze~
+trail blaze~
+Your gain an ability to blaze paths through the wilds.~
+You blaze paths like its second nature.~
+You see hidden paths around you.~
+~
+Your perceptions dull.~
+~
+0
+14
+22
+0
+0
+10*L~
+L/2~
+~
+~
+
+path.find~
+path find~
+The paths available to you shall leap to your senses.~
+~
+~
+~
+~
+~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+gift.owl~
+gift of the owl~
+You will gain the wisdom of an owl.~
+You have the wisdom of an owl.~
+You gain the wisdom of an owl.~
+~
+You insight disappears, leaving you a little befuddled.~
+~
+0
+4
+0
+0
+0
+1~
+~
+~
+~
+
+caress.nature~
+caress of nature~
+Natures' caress will comfort you.~
+Natures' caress is comforting you.~
+Your physical regenerative powers increase.~
+~
+You feel ragged, and less recuperative.~
+~
+0
+21
+0
+0
+0
+3*L/2~
+~
+~
+~
+
+gift.bear~
+gift of the bear~
+The health of the kodiak will be yours.~
+The healh of the kodiak rushes through your veins.~
+Your muscles ripple, and your health improves.~
+~
+Your muscles ripple, and your health decreases.~
+~
+0
+5
+0
+0
+0
+L/5~
+~
+~
+~
+
+gift.snake~
+gift of the snake~
+You will be protected by the nature of the serpent.~
+You have been protected by the nature of the serpent.~
+A ghostly serpent raises before you, and you feel it protect you.~
+~
+The ghostly serpent vanishes from your perceptions.~
+~
+0
+24
+23
+0
+0
+L/2~
+L/2~
+~
+~
+
+gift.lion~
+gift of the lion~
+The strength of the majestic mountain lion will reside in you.~
+The mountain lions' strength inhabits you.~
+You feel the tremendous strength of the majestic mountain lion.~
+~
+The strength of the the mountain lion leaves you.~
+~
+0
+1
+0
+0
+0
+L/5~
+~
+~
+~
+
+caress.gaia~
+caress of gaia~
+The caress of gaia shall help you heal.~
+The caress of gaia is boosting your healing.~
+The caress of gaia comforts your soul.~
+~
+The caress of gaia departs, leaving you feeling lost.~
+~
+0
+21
+20
+0
+0
+2*L~
+2*L~
+~
+~
+
+gift.hawk~
+gift of the hawk~
+The grace of the hawk will inhabit you.~
+The grace of the hawk fills your soul.~
+Your head fills with thoughts of flying and speed.~
+~
+Your thoughts return to the earth.~
+~
+0
+2
+14
+22
+0
+L/5~
+10*L~
+3*L~
+~
+
+gift.wyrm~
+gift of the wyrm~
+The knowledge of the wyrm will encompass you.~
+The knowledge of the wyrms' possesses you.~
+Draconic abilities fill your blood, the rage coming through.~
+~
+You calm down, and relax as the rage departs.~
+~
+0
+1
+5
+17
+0
+L/5~
+L/5~
+L/2~
+~
+
+wilderness.lore~
+wilderness lore~
+Your knowledge of the wild will become impressive.~
+Your wilderness lore is exemplary.~
+You gain insight into the wild.~
+~
+Your insight into the wild fades.~
+~
+0
+14
+22
+0
+0
+20*L+50~
+4*L+10~
+~
+~
+
+bramble.skin~
+bramble skin~
+Your skin will acquire small brambles on it.~
+Your skin is covered in brambles.~
+Your skin crawls, and brambles cover it.~
+~
+Your skin returns to normal, as the brambles recede.~
+~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+thistle.skin~
+thistle skin~
+Thistles shall cause harm to your opponents.~
+Your skin is covered with a protective layer of thistles.~
+Your skin crawls as thistles cover it.~
+~
+Your skin returns to normal.~
+~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+healing.circle~
+circle of healing~
+The healing of nature will bless you.~
+Natures healing is blessing you with its affects.~
+Natures healing calms your nerves and heals your wounds.~
+Natures healing surrounds $n.~
+Natures healing dissipates from the area.~
+~
+0
+0
+0
+0
+0
+10*L~
+~
+~
+~
+
+druidic.ring~
+druidic ring~
+The powers of the ancient druids will increase your regeneration.~
+Your regenerative powers have been boosted by the druids.~
+The ancient druids power help your regenerative powers.~
+~
+The ancient druids power depart.~
+~
+0
+0
+0
+0
+0
+15*L~
+15*L~
+15*L~
+~
+
+water.walk~
+water walking~
+You will be capable of walking on water.~
+You can walk on water.~
+You feel as if water is no obstacle.~
+~
+You think you will sink through the water.~
+~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+wind.walk~
+wind walk~
+You will be able to traverse with the winds.~
+You can fly like the birds.~
+You feet grow light, and you find yourself capable of short flights.~
+~
+You come to the ground gently, returning to mother earth.~
+~
+0
+0
+0
+0
+0
+~
+~
+~
+~
+
+obscuring.mist~
+obscuring mist~
+The thick mists will help prevent some blows.~
+The obscuring mists, protect you.~
+Mists envelope you, protecting you from harm.~
+~
+The mists dissipate.~
+~
+0
+17
+0
+0
+0
+L~
+~
+~
+~
+
+

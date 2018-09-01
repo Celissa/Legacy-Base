@@ -1,0 +1,3353 @@
+#M2_AREA
+2
+
+Hobgoblin Marauders~
+Rikahn~
+Hobgoblin Marauders~
+~
+~
+
+10 0
+0
+1
+#ROOMS
+
+#4060
+A Path Through A Dense Forest~
+With firelight dancing along the trees from a blazing bonfire to the
+east, this portion of the forest emanates an uneasy sense of dread. 
+Towering oak trees flank the north and south sides of the trail, with
+trampled saplings lying dead on the ground.  Growing darker as it
+progresses further into the forest, the pathway runs east to west.
+~
+[Eliza] done
+~
+167247881 3 7 0
+D0
+~
+~
+0 -1 4088 10 10 5
+D1
+~
+~
+0 -1 4061 10 10 5
+D3
+~
+~
+0 -1 4089 10 10 5
+E
+towering oak trees 1 north 1 south~
+Enormous oak trees stand close together in an impenetrable mass of wood
+and leaves on both sides of this trampled passageway.  Ancient layers of
+bark cover the trees in an armored shell, while small bits of moss cling
+to their sprawling branches.
+~
+E
+trampled saplings ground~
+Once a symbol of promising life within the valley, slender saplings have
+instead been trampled to death by careless travelers, wishing to make an
+easier path to walk upon through the forest.  Layers of dried leaves and
+branches coat the ground below the crushed saplings.
+~
+A
+1 south~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+Towering oak trees prevent passage in that direction.
+~
+!
+0 0 0
+-1
+S
+
+#4061
+A Path Through a Dense Forest~
+Three narrow paths cut through the dense forest intersect in a trampled
+clearing, where shorter saplings have been hacked down and arranged into
+an unsteady pile.  The dying embers of an old campfire smolder on the
+ground, emitting a light haze of smoke that lingers in the air.  A
+brightly burning bonfire is visible far to the west, where the thick
+clusters of trees thin out into an open field, while darker paths lead to
+the north and south.
+~
+[Eliza] Done.
+~
+167247873 3 6 0
+D0
+~
+~
+0 -1 4062 10 10 5
+D2
+~
+~
+0 -1 4077 10 10 5
+D3
+~
+~
+0 -1 4060 10 10 5
+E
+trampled clearing ground saplings~
+An unrecognizable tangle of footprints have trampled the tender foliage,
+once growing lush and full in this valley, into a slowly rotting bed of
+mulch.  Many of the younger saplings have been arranged into an unsteady
+pile, lying in wait for some intruder to expose themselves by stepping on
+the branches.
+~
+E
+dying embers old campfire smolder smoke haze~
+Branches no wider than a sword's blade smolder on the ground, the charred
+remnants of a fire lit to provide a cooking surface for preparing meals. 
+Miniscule scraps of gristle and fat lie scattered around the campfire,
+discarded by someone with a finicky palate.  A light haze of smoke
+lingers in the air, emanating from the dying blaze and the raging bonfire
+to the west.
+~
+E
+bright burning bonfire west~
+An open field is visible to the west, where a roaring bonfire burns
+bright into the sky.  Encircling the blaze are thick tree trunks,
+provided as seating for those who would gather around its warmth.
+~
+E
+dark path north south~
+Blocked from the bonfire's illumination by close-growing foliage, two
+paths extend to the north and south into darkness.  Each path is only
+slightly wider than an ogre's breadth, with leaves and twigs trampled
+unceremoniously into mulch.
+~
+A
+east~
+*~
+act_tochar( #no, ch );
+~
+E
+no~
+A stand of elm trees prevents you from moving in that direction.
+~
+!
+0 0 0
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 )
+  send_to_room( #pop, room, sight );
+else if( i == 2 )
+  send_to_room( #pop2, room, sound );
+else {
+  send_to_room( #pop3, room, touch );
+  loop( all_in_room )
+    if( !is_mob( rch ) )
+    damage( mob, rch, 0, fire, "the spark" );
+}
+~
+E
+pop~
+@RA glowing ember rises up into the air, drifting into the sky.@n
+~
+E
+pop2~
+@eThe fire cracks and hisses as the damp wood burns.@n
+~
+E
+pop3~
+@RA spark lands gently on your arm, causing slight discomfort.@n
+~
+!
+2 150 0
+A
+smell sniff inhale~
+haze smoke~
+act_tochar( #smoke, ch );
+interpret( ch, "cough" );
+~
+E
+smoke~
+The smoky haze drifting from the fires makes you cough.
+~
+!
+0 0 0
+5115 9 1509949540 3 0
+1358 17 1509949540 -2 0
+-1
+S
+
+#4062
+A Path Through a Dense Forest~
+An impenetrable stand of thick elms bars passage to the north, their
+leafy sprigs obscuring the view of the rest of the valley.  A cluster of
+thinner branches are entangled to the west, like a spider web of twigs,
+their leaves fallen to the ground, slowly decomposing.  A particularly
+tall tree stands to the south-east, its flexible branches stretched
+northward at regular intervals up its trunk.  The heavily trampled
+walkway of rotting foliage leads back to the south, further into forest.
+~
+[Eliza] Done.
+~
+167247872 3 6 0
+D1
+flexible leaf-covered branches~
+flexible leaf-covered branches~
+2251 -1 4063 10 10 5
+D2
+~
+~
+0 -1 4061 10 10 5
+E
+impenetrable stand thick elms north leafy sprigs~
+A cluster of close-growing elms force the passageway to come to an end in
+this cul-de-sac in the forest.  Heavy branches sprawl outward from the
+thick trunks, spreading a heavy cover of foliage that shades the forest
+floor.
+~
+E
+thinner entangled twigs west~
+A thick tangle of arms-breadth branches dangle in mid-air from the
+clusters of trees to the north and west, creating the illusion of a
+wooden spider web stretching between the bark-covered trunks.
+~
+E
+tall tree southeast flexible east~
+Towering high into the sky, one tree to the southeast dwarfs all other
+nearby trees by a considerable margin.  Although its trunk is broad and
+covered with a thick layer of bark, its branches grow thin and bend
+easily in the breeze.  Of particular interest is an evenly-gapped layer
+of branches that grow from the north side of the tree, blocking the view
+of something to the east.
+~
+A
+move clear pull~
+flexible branches~
+if( is_open( room, east ) )
+  act_tochar( #already, ch );
+else {
+act_tochar( #open, ch );
+  act_notchar( #open2, ch );
+  open( room, east );
+  }
+~
+E
+already~
+The branches have already been pulled aside.
+~
+E
+open~
+You pull back a section of branches, revealing a trail to the east.
+~
+E
+open2~
+$n pulls back a section of branches, revealing a trail to the east.
+~
+!
+0 0 0
+A
+~
+~
+if( is_open( room, east ) ) {
+  wait( 1 );
+  send_to_room( #close, room );
+  close( room, east );
+  }
+~
+E
+close~
+The branches snap back into place, blocking the trail to the east.
+~
+!
+1 0 2
+A
+east~
+~
+if( is_open( room, east ) )
+  continue;
+act_tochar( #no, ch );
+end;
+~
+E
+no~
+A tall tree's branches prevent you from moving in that direction.
+~
+!
+0 0 0
+A
+north~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+An impenetrable stand of thick elms bar your efforts to move north.
+~
+!
+0 0 0
+A
+west~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+A spiderweb of thin branches prevents you from moving in that direction.
+~
+!
+0 0 0
+A
+open~
+branches flexible 1 east~
+act_tochar( #no, ch );
+~
+E
+no~
+There is no door or wall there.
+~
+!
+0 0 0
+A
+look~
+flexible branches 1 east~
+if( is_open( room, east ) ) {
+  act_tochar( #east, ch );
+  end;
+  }
+act_tochar( #east2, ch );
+~
+E
+east~
+The flexible branches have already been pulled back.
+~
+E
+east2~
+A particularly tall tree stands to the southeast, its flexible branches
+stretching northward at regular intervals up its trunk.
+~
+!
+0 0 0
+A
+climb scale~
+thick tall elm trees~
+act_tochar( #no, ch );
+~
+E
+no~
+The tree's limbs are too flexible to climb onto.
+~
+!
+0 0 0
+-1
+S
+
+#4063
+Small Field In The Forest~
+A twisted tangle of vegetation bars passage in most directions in this
+cramped cul-de-sac within the densely packed forest.  All of the shorter
+saplings along the path have been trampled down into the leafy mulch
+covering the ground, or hacked off near the roots and discarded to one
+side.  Leafy branches run parallel to the ground to the west, rising up
+at regular intervals into the canopy of darkness high above.
+~
+[Rikahn] Exit west is hidden, must move branches
+[Rikahn] Exit east is hidden, must move vegetation
+[Eliza] Done.
+~
+167247872 3 6 0
+D1
+tangle of vegetation~
+tangle vegetation~
+2187 -1 4064 10 10 5
+D3
+flexible leaf-covered branches~
+flexible leaf-covered branches~
+2251 -1 4062 10 10 5
+E
+massive tangle vegetation 1 east~
+An ancient tangle of branches poke through dense bushes that grow around
+the sides of this small enclosed field within the forest.  Small violet
+buds grow from the tips of the bushes in all directions, adding a splash
+of color in an otherwise drab forest.  One narrow section of vegetation
+to the east appears slightly discolored, as if it had been cut loose from
+its life-giving branches.
+~
+E
+shorter saplings trampled mulch ground~
+All of the shorter saplings that once grew in the middle of this
+artificial clearing lay either trampled on the ground or torn asunder
+from their roots and discarded to one side.  Rich soil accelerates the
+decomposition of old leaves that have fallen to the ground, leaving a
+dense layer of compost.
+~
+E
+leafy branches parallel 1 west~
+Strangely growing at even intervals, a steady pattern of thin branches
+grow out from the northern side of a towering tree, rising to the
+southwest, blocking passage from the west side of the field.  Each
+flexible branch sways in a light breeze, blowing through the forest,
+revealing shifting views of the trees beyond.
+~
+A
+pull move clear~
+leafy branches~
+if( is_open( room, west ) )
+  act_tochar( #already, ch );
+else {
+  act_tochar( #open, ch );
+  act_notchar( #open2, ch );
+  open( room, west );
+  }
+~
+E
+already~
+The branches have already been pulled aside.
+~
+E
+open~
+You pull on a section of branches, revealing a trail to the west.
+~
+E
+open2~
+$n pulls on a section of branches, revealing a trail to the west.
+~
+!
+0 0 0
+A
+pull move clear~
+massive tangle vegetation~
+if( is_open( room, east ) )
+  act_tochar( #already, ch );
+else {
+  act_tochar( #open, ch );
+  act_notchar( #open2, ch );
+  open( room, east );
+  }
+~
+E
+already~
+The trail to the east is already clear.
+~
+E
+open~
+You push aside a tangle of vegetation, revealing a trail to the east.
+~
+E
+open2~
+$n pushes aside a tangle of vegetation, revealing a trail to the east.
+~
+!
+0 0 0
+A
+~
+~
+if( is_open( room, east ) ) {
+  wait( 1 );
+  send_to_room( #close, room );
+  close( room, east );
+  }
+~
+E
+close~
+The tangle of branches snaps back into place to the east.
+~
+!
+1 0 2
+A
+~
+~
+if( is_open( room, west ) ) {
+  wait( 1 );
+  send_to_room( #close, room );
+  close( room, west );
+  }
+~
+E
+close~
+The tangle of branches snaps back into place to the west.
+~
+!
+1 0 8
+A
+east~
+~
+if( is_open( room, east ) )
+  continue;
+act_tochar( #no, ch );
+~
+E
+no~
+A massive tangle of vegetation prevents you from moving in that direction.
+~
+!
+0 0 0
+A
+west~
+~
+if( is_open( room, west ) )
+  continue;
+act_tochar( #no, ch );
+~
+E
+no~
+A tall tree's leafy branches prevent you from moving in that direction.
+~
+!
+0 0 0
+A
+1 south 1 north~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+Tall trees prevent you from moving in that direction.
+~
+!
+0 0 0
+A
+open~
+leafy branches massive tangle vegetation 1 west 1 east~
+act_tochar( #no, ch );
+~
+E
+no~
+There is no door or wall there.
+~
+!
+0 0 0
+5107 9 1509949540 3 0
+-1
+S
+
+#4064
+A Path Leading Up a Hill~
+Thick snarls of shrubbery block the east side of this path that leads
+along the side of a tall hill.  Slanting higher to the south, the shallow
+bed of rocks that lines the ground crunch and settle with every footstep. 
+Leafy vegetation blocks passage to the west, where the forest settles
+into a small valley of densely-packed trees.  The shale pathway also
+leads down the hill to the north, where the trees begin to grow lush and
+full.
+~
+[Rikahn] Exit west is hidden, must move vegetation
+[Rikahn] 1/8 chance to slip down the hill
+[Eliza] Done.
+~
+167247872 3 6 0
+D0
+~
+~
+0 -1 4065 10 10 5
+D2
+~
+~
+0 -1 4066 10 10 5
+D3
+tangle of vegetation~
+tangle vegetation~
+2187 -1 4063 10 10 5
+E
+thick tangles shrubbery east~
+Fully-grown shrubs sprout from the ground in a solid wall of stems and
+buds, blocking travel to the east.  Each newly sprouted bud has a sliver
+of yellow poking through, as its season for blooming has not yet arrived.
+~
+E
+shallow bed rocks ground shale pathway~
+Tumbled down from the rise above, thousands of shale chips lie scattered
+along the ground in a wide aisle, running completely up and down the
+hillside.  Long streaks of displaced rocks are visible where someone has
+fallen down and slid down the slippery passage.
+~
+A
+pull move clear~
+vegetation~
+if( is_open( room, west ) )
+  act_tochar( #already, ch );
+else {
+  act_tochar( #open, ch );
+  act_notchar( #open2, ch );
+  open( room, west );
+  }
+~
+E
+already~
+The trail to the west is already clear.
+~
+E
+open~
+You move aside the vegetation, exposing a trail to the west.
+~
+E
+open2~
+$n moves aside some vegetation, exposing a trail to the west.
+~
+!
+0 0 0
+A
+~
+~
+i = random( 1, 8 );
+if( find_stat( ch, level ) < 91 ) {
+  if( is_player( ch ) ) {
+    if( i == 2 ) {
+      act_tochar( #slip, ch );
+      act_notchar( #slip2, ch );
+      transfer( ch, find_room( 4065 ) );
+      act_notchar( #arri, ch );
+      end;
+      }
+    }
+  }
+continue;
+~
+E
+slip~
+@cYou slip on the unstable layer of shale covering the ground, sending
+you sliding downhill!@n 
+~
+E
+slip2~
+@c$n slips on the unstable layer of shale covering the ground, sending $m
+sliding downhill!@n 
+~
+E
+arri~
+@c$n comes sliding downhill across the layer of unstable shale.@n 
+~
+!
+1 0 13
+A
+~
+~
+continue;
+~
+E
+to_char~
+@mStepping gingerly, you walk slowly uphill.@n
+~
+!
+3 0 4
+A
+~
+~
+continue;
+~
+E
+to_char~
+@mAttempting to avoid the slippery rocks, you make your way downhill.@n
+
+~
+!
+3 0 1
+A
+east~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+A cluster of elm trees prevents you from moving in that direction.
+~
+!
+0 0 0
+A
+west~
+~
+if( is_open( room, west ) )
+  continue;
+act_tochar( #no, ch );
+~
+E
+no~
+A thick tangle of vegetation blocks passage to the west.
+~
+!
+0 0 0
+A
+open~
+vegetation 1 west~
+act_tochar( #no, ch );
+~
+E
+no~
+There is no door or wall there.
+~
+!
+0 0 0
+A
+look~
+vegetation 1 west~
+if( is_open( room, west ) ) {
+  act_tochar( #west, ch );
+  end;
+  }
+act_tochar( #west2, ch );
+~
+E
+west~
+The tangle of vegetation has already been pulled back.
+~
+E
+west2~
+Leafy vegetation blocks passage to the west, where the forest settles
+into a small valley of densely-packed trees.
+~
+!
+0 0 0
+A
+~
+~
+if( is_open( room, west ) ) {
+  wait( 1 );
+  send_to_room( #close, room );
+  close( room, west );
+  }
+~
+E
+close~
+The vegetation to the west snaps back into place.
+~
+!
+1 0 8
+5115 9 1509949540 3 0
+29 0 1509949540 -2 0
+-1
+S
+
+#4065
+A Path Leading Up a Hill~
+Coming to a halt at a leafy shrub, sharp rocks line the pathway that
+runs down the side of a rolling tree-covered hill.  The natural walkway
+drifts off across the incline to the east, next to the enormous shrub, and
+also leads back up the hill to the south.  Numerous branches intertwine
+between densely packed trees to the west, barring any passage in that
+direction.
+~
+[Eliza] Done.
+~
+167247872 3 6 0
+D1
+~
+~
+0 -1 4067 10 10 5
+D2
+~
+~
+0 -1 4064 10 10 5
+E
+enormous leafy shrub~
+Spreading out as far as the eye can see, an enormous shrub of evergreen
+leaves and hairy bluish-black berries grows alongside the south end of
+this narrow path through the forest, extending east and west deep into
+the heart of the valley.
+~
+E
+sharp rocks pathway ground~
+A deep pile of sharp shale chips have collected at the bottom of this
+tall hill, with more rocks skittering down on top of the stack every
+minute.  All of the rocks are uniformly dusky gray, apparently fallen
+down from the cliff visible at the summit.
+~
+E
+branches intertwine~
+Fully grown elm trees stand tall to the west, with their branches spread
+out in intertwining patterns that disappear into the thick hedge to the
+north.  Each branch sports hundreds of dark green leaves.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@mGlancing at the treacherous trail up the hill, you begin to trek
+upwards.@n 
+~
+!
+3 0 4
+A
+north~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+A leafy shrub bars passage in that direction.
+~
+!
+0 0 1
+A
+west~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+A thick tangle of branches bars passage in that direction.
+~
+!
+0 0 8
+A
+~
+sharp rocks pathway ground~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #search, ch );
+  act_notchar( #search2, ch );
+  if( random( 1, 5 ) == 3 )
+    obj_to_char( oload( 7556 ), ch );
+  else
+    obj_to_char( oload( 78 ), ch );
+  end;
+  }
+act_tochar( #nothing );
+~
+E
+search~
+You rummage through the rock chips and find something!
+~
+E
+search2~
+$n rummages through the rock chips and finds something interesting.
+~
+E
+nothing~
+You rummage through the rock chips but find nothing of interest.
+~
+!
+9 0 0
+-1
+S
+
+#4066
+A Path Leading Up a Hill~
+The trees begin to thin out as the hill rises in altitude, the windy
+weather taking its toll on the leaves and branches that have snapped off,
+covering the ground in a thick layer of compost.  Rocks from the hill's
+bare summit have dislodged, rolling down the rise to form a shifting path
+of loose shale.  This unstable clearing leads further up the hill to the
+south, or back down into the lush valley to the north.
+~
+[Rikahn] 1/8 chance to slip down the hill
+[Eliza] Done
+~
+167247872 3 6 0
+D0
+~
+~
+0 -1 4064 10 10 5
+D2
+~
+~
+0 -1 4074 10 10 5
+E
+lush valley 1 north~
+Standing midway up a large hill provides a wondrous view of a lush, green
+valley to the north, where thousands of trees in all shapes and sizes
+sway slightly in a seemingly endless breeeze.  A flock of birds can be
+seen soaring down the length of the valley, although they all seem to
+give this part of the hillside a wide berth.
+~
+E
+rocks shifting path loose shale~
+A layer of thin gray rocks covers the ground, making the trail which
+leads up and down the hillside very unstable and treacherous.  Having
+eroded or fallen down from the cliff further uphill to the south,
+clusters of shale chips cascade down in miniature avalanches with every
+footstep.
+~
+A
+~
+~
+i = random( 1, 8 );
+if( find_stat( ch, level ) < 91 ) {
+  if( is_player( ch ) ) {
+    if( i == 2 ) {
+      act_tochar( #slip, ch );
+      act_notchar( #slip2, ch );
+      transfer( ch, find_room( 4064 ) );
+      act_notchar( #arri, ch );
+      acode( find_room( 4064 ), 2 );
+      end;
+      }
+    }
+  }
+continue;
+~
+E
+slip~
+@cYou slip on the unstable layer of shale covering the ground, sending
+you sliding downhill!@n 
+~
+E
+slip2~
+@c$n slips on the unstable layer of shale covering the ground, sending $m
+sliding downhill!@n 
+~
+E
+arri~
+@c$n comes sliding downhill on the layer of unstable shale.@n
+~
+!
+1 0 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@mThe ground underfoot threatens to destabilize as you plod up the
+hill.@n 
+~
+!
+3 0 4
+A
+~
+~
+continue;
+~
+E
+to_char~
+@mClinging to the tree branches for support, you make your way down the
+hill.@n 
+~
+!
+3 0 1
+A
+1 west 1 east~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+There is no trail in that direction.
+~
+!
+0 0 0
+5107 9 1509949540 3 0
+5107 9 1509949540 3 0
+1974 17 1509949540 -2 0
+-1
+S
+
+#4067
+Dead-End Passage~
+Sandwiched between a tall, leafy shrub to the north and a cluster of
+trees to the south, this passage narrows as it leads right up to a rock
+shelf, barring passage to the east.  Thin layers of shale are stacked on
+top of each other, flaking off and lying in shattered pieces on the
+ground at the bottom of the jutting cliff.  The only traversable
+direction from this cul-de-sac is the trail that winds its way to the
+west.
+~
+[Rikahn] If any hobgoblins are in 4069, they throw rocks down at you (acode)
+[Eliza] Done.
+~
+167247872 3 5 0
+D3
+~
+~
+0 -1 4065 10 10 5
+E
+tall leafy shrub 1 north~
+Spreading out as far as the eye can see, an enormous shrub of evergreen
+leaves and hairy bluish-black berries grows alongside the south end of
+this narrow path through the forest, extending east and west deep into
+the heart of the valley.
+~
+E
+rock shelf shale cliff 1 east~
+Rising twelve feet above the ground, a stratified cliff of shale causes
+this pathway through the forest to come to an end.  Brittle layers of
+rock flake off and fall at the slightest touch, making any attempt to
+scale the cliff to be dangerous indeed.
+~
+E
+shattered pieces ground~
+Thin chips of shale lie stacked upon one another after breaking off of
+the unstable cliff to the east and shattering upon impact with the ground. 
+The edges of each chip are sharp, and mar the surface of anything they
+come in contact with.
+~
+A
+~
+~
+set_rflag( reset0, room );
+if( mob_in_room( 5106, find_room( 4069 ) ) )
+  remove_rflag( reset0, room );
+if( mob_in_room( 5107, find_room( 4069 ) ) )
+  remove_rflag( reset0, room );
+if( mob_in_room( 5116, find_room( 4069 ) ) )
+  remove_rflag( reset0, room );
+if( mob_in_room( 5115, find_room( 4069 ) ) )
+  remove_rflag( reset0, room );
+if( !rflag( reset0, room ) ) {
+  send_to_room( #lob, find_room( 4067 ) );
+  loop( all_in_room ) {
+    if( random( 1, 10 ) < 9 ) {
+      i = random( 1, 10 );
+      dam_message( rch, i, "the sharp rock" );
+      inflict( rch, mob, i, "being hit in the head with a rock" );
+      }
+    }
+  }
+~
+E
+lob~
+@YCackling with glee, a hobgoblin taunts you from the rock shelf to the
+east, throwing rocks down at you!@n 
+~
+!
+2 1000 0
+A
+climb~
+cliff east shale rock shelf~
+act_tochar( #slippery, ch );
+act_notchar( #slippery2, ch );
+~
+E
+slippery~
+You attempt to climb the rock shelf to the east, but it is too steep.
+~
+E
+slippery2~
+$n attempts to climb the rock shelf to the east, but it is too steep.
+~
+!
+0 0 0
+A
+north~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+A leafy shrub bars passage in that direction.
+~
+!
+0 0 0
+A
+east~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+A cliff rises up to the east.  Would you prefer to try to climb it
+instead of walk into it?
+~
+!
+0 0 0
+A
+south~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+A cluster of elm trees prevents you from moving in that direction.
+~
+!
+0 0 0
+A
+~
+layers shale rocks ground~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #search, ch );
+  act_notchar( #search2, ch );
+  obj_to_char( oload( 1974 ), ch );
+  end;
+  }
+act_tochar( #nothing, ch );
+~
+E
+search~
+You pick through the rock chips and find a handful of useful stones.
+~
+E
+search2~
+$n picks through the rock chips and finds a handful of useful stones.
+~
+E
+nothing~
+You rummage through the stones but find nothing of interest.
+~
+!
+9 0 0
+5115 9 1509949540 3 0
+5106 9 1509949540 3 0
+-1
+S
+
+#4068
+A Path Leading Up a Hill~
+Narrow ledges of shale, jutting forth from the ground, create a natural set
+of wide steps alongside this tall hill.  Trees grow interspersed with
+patches of topsoil nestled between groups of rocks, slightly shading the
+forest floor.  A slippery combination of shale chips and leafy mulch lies
+treacherously on the ground, creating a hazard for anyone attempting to
+scale this hill.  The series of steps run north and south, while a path
+into the trees can be seen to the west.
+~
+[Eliza] Done.
+~
+167247872 3 6 0
+D0
+~
+~
+0 -1 4069 10 10 5
+D2
+~
+~
+0 -1 4070 10 10 5
+D3
+~
+~
+0 -1 4081 10 10 5
+E
+narrow ledges shale wide steps~
+Rocky ledges provide a series of natural steps up the hillside.  Each
+step is covered with thousands of bits of shale, creating a slippery
+surface.
+~
+E
+slippery shale chips leafy mulch ground~
+A dangerously slippery mix of dead leaves and shale chips blankets the
+ground, making this hill a treacherous place to explore.  Long ruts in
+the rocks indicate where something has fallen and slid downward at an
+alarming rate.
+~
+E
+trees patches topsoil~
+Although most of the valley is almost overgrown with trees, this natural
+pathway has only a few fully-grown trees, with patches of soil few and
+far between.  Thicker clusters of elms are visible along the sides of the
+path.
+~
+A
+east~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+An enormous oak tree prevents you from moving in that direction.
+~
+!
+0 0 0
+A
+~
+~
+i = random( 1, 8 );
+if( is_player( ch ) ) {
+  if( find_stat( ch, level ) < 91 ) {
+    if( i == 4 ) {
+      act_tochar( #slip, ch );
+      act_notchar( #slip2, ch );
+      interpret( ch, "+sit" );
+      end;
+      }
+    }
+  }
+continue;
+~
+E
+slip~
+@cThe unstable layer of shale causes you to lose your footing.@n
+~
+E
+slip2~
+@cThe unstable layer of shale causes $n to lose $s footing.@n
+~
+E
+to_char~
+@mBarely managing to keep your footing, you continue on your journey.@n
+
+~
+!
+3 0 5
+1974 17 1509949540 -2 0
+-1
+S
+
+#4069
+A Treacherous Plateau~
+The path running up and down the hill comes to an end on a small plateau
+that overlooks part of the forested valley to the north.  A crumbling
+shelf of shale juts from the ground, providing a level surface to stand
+upon.  The edges of the plateau are well-worn with age, crumbling into
+small chips that cascade down over the edge.  A narrow path through the
+forest can be seen below to the west, although the treacherous ledge makes
+it impossible to reach without serious injury.
+~
+[Eliza] Done.
+~
+167247872 3 5 0
+D2
+~
+~
+0 -1 4068 10 10 5
+E
+small plateau shelf shale ground~
+Leveling out from the steep slope of the hill, this rocky plateau
+overlooks a forest path down to the west, and the remainder of the valley
+to the north.  Comprised of the same shale that juts from other portions
+of the hillside, the edges have flaked off and tumble down into the
+foliage below.
+~
+E
+chips cascade treacherous ledge 1 west~
+A deep layer of rock chips lay on the ground, resting here after tumbling
+down the steep hillside.  Many of the bits have been swept over the edge
+of the plateau, with more succumbing to the pull of gravity every minute.
+~
+A
+climb~
+shelf ledge plateau edge 1 west 1 down~
+act_tochar( #ouch, ch );
+act_notchar( #ouch2, ch );
+transfer( ch, find_room( 4067 ) );
+act_notchar( #ouch3, ch );
+i = 5d5+25;
+dam_message( ch, i, "falling off the cliff" );
+inflict( ch, mob, i, "falling off a cliff" );
+~
+E
+ouch~
+You attempt to climb down the ledge, but lose your grip and go tumbling
+down.@n 
+~
+E
+ouch2~
+$n attempts to climb down the ledge, but loses $s grip and goes tumbling
+down.
+~
+E
+ouch3~
+$n comes tumbling down the cliff.
+~
+!
+0 0 0
+A
+1 west~
+~
+act_tochar( #umm, ch );
+~
+E
+umm~
+The only way to get down to the path below would be to climb down,
+although it looks extremely treacherous.
+~
+!
+0 0 8
+A
+1 east 1 north~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+The only safe passage is to head back uphill to the south.
+~
+!
+0 0 0
+A
+~
+~
+i = random( 1, 8 );
+if( is_player( ch ) ) {
+  if( find_stat( ch, level ) < 91 ) {
+    if( i == 4 ) {
+      act_tochar( #slip, ch );
+      act_notchar( #slip2, ch );
+      interpret( ch, "+sit" );
+      end;
+      }
+    }
+  }
+continue;
+~
+E
+slip~
+@cThe unstable layer of shale causes you to lose your footing.@n
+~
+E
+slip2~
+@cThe unstable layer of shale causes $n to lose $s footing.@n
+~
+E
+to_char~
+@mBarely managing to keep your footing, you climb uphill.@n
+~
+!
+3 0 4
+5107 9 1509949540 3 0
+78 17 1509949540 -2 0
+81 17 1509949540 -2 0
+-1
+S
+
+#4070
+A Path Leading Up a Hill~
+A flat projection of rock juts forth from the ground, interrupting the
+linear slope of the steep hill.  Very little topsoil remains around the
+perimeter of the ledge, and the resulting lack of trees provides a
+panoramic view of the valley below.  A hazy band of smoke trails into the
+sky in the distance to the west, swirled into dazzling patterns by the
+buffeting winds constantly sweeping down the hill.  The flat shelf
+extends to the east, while the remainder of the path can be traversed to
+the north and south.
+~
+[Eliza] Done.
+~
+167247872 3 6 0
+D0
+~
+~
+0 -1 4068 10 10 5
+D1
+~
+~
+0 -1 4071 10 10 5
+D2
+~
+~
+0 -1 4072 10 10 5
+E
+flat projection rock ledge shelf~
+A narrow band of flat rock, projecting out of the ground, provides a
+stable pathway to walk upon, contrary to the steeply sloped hillside. 
+Barren of topsoil, no plant life grows upon its surface.
+~
+E
+hazy band smoke swirled patterns~
+The flames of a campfire can barely be seen through the thick foliage to
+the west, but its smoke can be seen drifting up into the sky, swirled
+about by the winds that vigorously pass through the valley.  The smell of
+roasting meat permeates the air, causing mouths to water.
+~
+A
+~
+~
+if( mob_in_room( 5114, find_room( 4084 ) ) )
+  send_to_room( #howl, room );
+~
+E
+howl~
+@rA bloodcurdling howl echoes through the forest, originating from
+somewhere to the northeast.@n 
+~
+!
+2 200 0
+A
+~
+~
+i = random( 1, 8 );
+if( is_player( ch ) ) {
+  if( find_stat( ch, level ) < 91 ) {
+    if( i == 4 ) {
+      act_tochar( #slip, ch );
+      act_notchar( #slip2, ch );
+      interpret( ch, "+sit" );
+      end;
+      }
+    }
+  }
+continue;
+~
+E
+slip~
+@cThe unstable layer of shale causes you to lose your footing.@n
+~
+E
+slip2~
+@cThe unstable layer of shale causes $n to lose $s footing.@n
+~
+E
+to_char~
+@mAlmost losing your footing on the slippery shale, you continue
+onward.@n 
+~
+!
+3 0 7
+A
+west~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+A heavy concentration of trees bars passage in that direction.
+~
+!
+0 0 0
+5116 9 1509949540 3 0
+5116 9 1509949540 3 0
+78 17 1509949540 -2 0
+-1
+S
+
+#4071
+Narrow Trail~
+A narrow shelf of solid rock protrudes horizontally from the ground,
+providing a stable platform for traversing the steeply sloped hillside. 
+Muddy steps have been dug in the ground leading down the rise to the
+north, with the displaced mulch and dirt flung carelessly into the
+treeline.  A brown banner soaked in blood dangles overhead from an
+extended tree branch, marking the camp as captured land.  The flat ledge
+continues to the west, back into open territory.
+~
+[Tryne] i wanna steal the damn banner, quest requirement perhaps?
+[Rikahn] added futile search acode for now, will work on possible results later
+[Eliza] *giggle* Done.
+~
+167247872 3 6 0
+D0
+~
+~
+0 -1 4083 10 10 5
+D3
+~
+~
+0 -1 4070 10 10 5
+E
+narrow shelf solid rock horizontal flat ledge~
+Flattening out across the hillside, a rock shelf devoid of soil and
+plants provides a stable purchase for someone to travel upon.  Only a few
+feet wide, it intersects a path that also runs downhill along a muddy
+path.
+~
+E
+muddy steps dug~
+Winding its way further into the valley, a slightly muddy path marks the
+way underneath the banner and back into the trees.  The dirt and leaves
+that once covered the ground have been strewn about onto the trees,
+creating a smelly mess.
+~
+E
+displaced mulch dirt~
+The dirt and leaves that once covered the ground have been thrown about
+using careless abandon.  Spatters of mud and leaves now coat the
+surrounding trees in a gory mess that has begun to reek of decomposing
+mulch.
+~
+E
+brown banner soaked blood dangles overhead~
+Hanging down from a leafless tree branch, a brown banner embroidered with
+black swords ripples in the wind.  Completely soaked in blood that slowly
+drips down onto the ground, the banner looks like it been hung recently.
+~
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 ) {
+  send_to_room( #action1, room );
+  end;
+  }
+if( i == 2 ) {
+  send_to_room( #action2, room );
+  end;
+  }
+if( i == 3 ) {
+  send_to_room( #action3, room );
+  end;
+  }
+~
+E
+action1~
+@rThe blood-soaked banner flutters as a gust of wind blows through the
+valley.@n 
+~
+E
+action2~
+@rA drop of blood falls from the banner and lands on your shoulder.@n
+~
+E
+action3~
+@rA glop of mud falls off of one of the trees with a sickening sound.@n
+
+~
+!
+2 200 0
+A
+1 east 1 south~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+A contiguous stand of elm trees bars passage in that direction.
+~
+!
+0 0 0
+A
+get take grab steal~
+brown banner blood~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  i = random( 1, 3 );
+  if( i == 1 ) {
+    act_tochar( #try1a, ch );
+    act_notchar( #try1b, ch );
+    end;
+    }
+  if( i == 2 ) {
+    act_tochar( #try2a, ch );
+    act_notchar( #try2b, ch );
+    end;
+    }
+  if( i == 3 ) {
+    act_tochar( #try3a, ch );
+    act_notchar( #try3b, ch );
+    end;
+    }
+  }
+act_tochar( #jump, ch );
+act_notchar( #jump2, ch );
+~
+E
+try1a~
+You jump as high as you can, but your fingertips only brush the bottom of
+the banner.
+~
+E
+try1b~
+$n jumps as high as $e can, but only manages to brush the bottom of the
+banner with $s fingertips.
+~
+E
+try2a~
+You spring up with all of your might, but can't get a good grip on the
+blood-soaked cloth.
+~
+E
+try2b~
+$n springs up with all of $s might, but can't get a good grip on the
+blood-soaked cloth.
+~
+E
+try3a~
+You take a running leap at the banner, but miss it by inches.
+~
+E
+try3b~
+$n takes a running leap at the banner, but misses it by inches.
+~
+E
+jump~
+You jump as high as you can, but can't seem to reach the banner.
+~
+E
+jump2~
+$n jumps as high as $e can, but can't seem to reach the banner.
+~
+!
+0 0 0
+-1
+S
+
+#4072
+A Path Leading Up a Hill~
+A gray mosaic of rock chips covers the ground, with rutted tracks leading
+downhill where larger chunks have slipped free and tumbled northward. 
+The origin of the stony debris is a crumbling shale cliff topping the
+crest of the hill to the south, water and erosion causing countless
+pieces to fall off and tumble downward.  The lush forest of the valley
+begins to thin out at this altitude, where most of the life-giving soil
+has washed away deeper into the valley.  A mulch-covered path extends to
+the west, away from the slippery path.
+~
+[Eliza] Done.
+~
+167247872 3 6 0
+D0
+~
+~
+0 -1 4070 10 10 5
+D2
+~
+~
+0 -1 4078 10 10 5
+D3
+~
+~
+0 -1 4073 10 10 5
+E
+gray mosaic rock chips~
+Thousands of rock chips have tumbled from the cliff above, coming to a
+rest next to and on top of each other, creating an extremely unstable
+walkway.  With every step, more rocks are sent hurtling downhill.
+~
+E
+rutted tracks larger chunks~
+Long ruts that widen further downhill are left behind by someone who has
+fallen and slid down the hill, or larger chunks of rock that dislodged
+others in tiny avalanches of shale.  The pathway is extremely unstable,
+and could lose its cohesion at any moment.
+~
+E
+crumbling shale cliff 1 south~
+Further uphill to the south, a towering shale cliff is the origin of all
+of the rocky debris that litters the ground.  Its stratified gray layers
+are visible from here, along with ragged gaps where chunks of the stone
+have broken apart.
+~
+E
+lush forest valley~
+Fewer trees grow at this altitude than in the middle of the lush valley,
+the victim of thinner air and less topsoil.  What few trees manage to
+grow nearby are devoid of most of their leaves, blown away by gusting
+winds, tumbling from the cliff.
+~
+A
+~
+~
+i = random( 1, 8 );
+if( is_player( ch ) ) {
+  if( find_stat( ch, level ) < 91 ) {
+    if( i == 4 ) {
+      act_tochar( #slip, ch );
+      act_notchar( #slip2, ch );
+      interpret( ch, "+sit" );
+      end;
+      }
+    }
+  }
+continue;
+~
+E
+slip~
+@cThe unstable layer of shale causes you to lose your footing.@n
+~
+E
+slip2~
+@cThe unstable layer of shale causes $n to lose $s footing.@n
+~
+E
+to_char~
+@mClinging to a tree limb, you prevent yourself from falling while
+traversing the slippery shale.@n 
+~
+!
+3 0 13
+A
+east~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+A heavy concentration of foliage makes travel to the east impossible.
+~
+!
+0 0 0
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 )
+  send_to_room( #action1, room );
+if( i == 2 )
+  send_to_room( #action2, room );
+if( i == 3 )
+  send_to_room( #action3, room );
+~
+E
+action1~
+@cA gust of wind blows through the forest, scattering the dried leaves
+upon the ground.@n 
+~
+E
+action2~
+@cLoose shale chips cascade down the hillside, causing a miniature
+avalanche.@n 
+~
+E
+action3~
+@cThe shadow of a large avian in flight runs along the ground, though its
+origin cannot be seen in the sky.@n 
+~
+!
+2 200 0
+5107 9 1509949540 3 0
+5106 9 1509949540 3 0
+1974 17 1509949540 -2 0
+-1
+S
+
+#4073
+Rocky Ledge~
+The rocky ground is covered with a thick layer of decomposing leaves and
+branches that have fallen from the thin trees that pepper this portion of
+the hillside.  A noxious odor rises up from the mulch, though it is
+quickly swept away by a constant breeze that blows through the open
+forest.  This shelf runs level alongside the hill, though treacherous
+paths up and down the hill are visible to the east and west.
+~
+[Eliza] Done.
+~
+167247872 3 6 0
+D1
+~
+~
+0 -1 4072 10 10 5
+D3
+~
+~
+0 -1 4074 10 10 5
+E
+rocky ground thick layer decomposing leaves branches~
+Fallen leaves and moist soil mix together in a decomposing layer of
+rotting vegetation to blanket the ground.  Every disturbance sends a wave
+of rotting stench into the air, assaulting the senses.
+~
+E
+treacherous paths 1 east 1 west~
+Although this shelf is stable, the paths that run up and down the hill on
+both sides are extremely treacherous.  The slope of the paths are
+extremely steep, and countless slippery shale chips precariously rest
+atop the ground.  One wrong step could send someone hurtling downhill at
+a rapid pace.
+~
+A
+1 north 1 south~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+Fully-grown trees bar passage in that direction.
+~
+!
+0 0 0
+A
+~
+~
+send_to_room( #mulch, room );
+~
+E
+mulch~
+@rThe noxious odor of rotting leaves wafts through the air.@n
+~
+!
+2 200 0
+A
+~
+decomposing leaves branches mulch ground~
+act_tochar( #nothing, ch );
+~
+E
+nothing~
+After rummaging through the leaves and branches, you find nothing of
+interest.
+~
+!
+9 0 0
+-1
+S
+
+#4074
+A Path Leading Up a Hill~
+Fewer leaves remain on the trees as this natural trail rises in altitude,
+and what few remain on the branches are dry and brittle.  A chilling wind
+passes through the bare forest, hardly slowed down by the massive tangle
+of thin limbs.  Rocks skitter across the thin layer of shale that has
+fallen from the rocky hilltop above, cascading in a miniature avalanche
+of pebbles down the hillside.  Gaps are present between the trees leading
+downhill to the north or uphill to the south, and a precarious rock shelf
+runs alongside the incline to the east.
+~
+[Rikahn] 1/8 chance to slip down the hill
+[Eliza] Done.
+~
+167247872 3 6 0
+D0
+~
+~
+0 -1 4066 10 10 5
+D1
+~
+~
+0 -1 4073 10 10 5
+D2
+~
+~
+0 -1 4076 10 10 5
+E
+leaves trees branches~
+Unlike the full, lush trees that dominate the center of the valley, most
+of the trees at this altitude are thin and sparse.  A domineering wind
+whisks through the trees, causing leaves to dry and break off of their
+branches, tumbling to the ground.
+~
+E
+rocks shale layer ground avalanche pebbles~
+Tumbled down from the crumbling cliff atop the hill, a river of shale
+chips covers the ground in a treacherous layer across the forest floor. 
+Long, deep gouges that point downward slash along rocks, where someone or
+something has slid downhill.
+~
+E
+rock shelf incline 1 east~
+A horizontal shelf of rock projects outward from the steep slope to the
+east, providing safe passage for traversing the otherwise dangerous slope.
+~
+A
+~
+~
+i = random( 1, 8 );
+if( find_stat( ch, level ) < 91 ) {
+  if( is_player( ch ) ) {
+    if( i == 2 ) {
+      act_tochar( #slip, ch );
+      act_notchar( #slip2, ch );
+      transfer( ch, find_room( 4066 ) );
+      act_notchar( #arri, ch );
+      acode( find_room( 4066 ), 1 );
+      end;
+      }
+    }
+  }
+continue;
+~
+E
+slip~
+@cYou slip on the unstable layer of shale covering the ground, sending
+you sliding downhill!@n 
+~
+E
+slip2~
+@c$n slips on the unstable layer of shale covering the ground, sending $m
+sliding downhill!@n 
+~
+E
+arri~
+@c$n comes sliding downhill on the layer of unstable shale.@n
+~
+!
+1 0 7
+A
+~
+~
+continue;
+~
+E
+to_char~
+@mGingerly you pick your way up the last portion of the trail.@n
+~
+!
+3 0 4
+A
+~
+~
+continue;
+~
+E
+to_char~
+@mThe rocky trail shifts slightly as you walk carefully down the hill.@n
+~
+!
+3 0 1
+A
+1 west~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+A large elm tree prevents you from moving in that direction.
+~
+!
+0 0 0
+5116 9 1509949540 3 0
+29 0 1509949540 -2 0
+-1
+S
+
+#4075
+A Rocky Ledge~
+Following alongside a vertical wall of dusky gray shale, this treacherous
+path is covered with fragments of rock that have fallen down from the
+cliffside.  Very few trees are growing at this altitude, and those that
+do stand here are struggling to survive.  A trail winds its way into the
+vigorously growing forest further along the descending slope to the north.
+~
+[Eliza] Done.
+~
+167247872 3 6 0
+D0
+~
+~
+0 -1 4079 10 10 5
+D1
+~
+~
+0 -1 4076 10 10 5
+E
+vertical wall dusky gray shale~
+Completely impossible to scale, a twenty-foot high wall of crumbling rock
+rises into the sky.  Comprised of thin layers of sediment, portions of
+the wall break away with every touch, adding yet more sharp pieces to the
+already substantial pile of shale on the ground.
+~
+E
+treacherous path fragments rock ground~
+Having broken from the cliff to the south, a deep layer of sharp rock
+chips covers the ground, creating a dangerously unstable surface upon
+which to walk.  Every footstep shifts the slippery chips, sending
+hundreds of the tiny shale pieces tumbling downhill.
+~
+E
+trees stand forest~
+Although growing full and green further down into the valley, the trees at
+this altitude are sparse and thin.  The thinner air and rockier ground
+prevent the trees from receiving as much nourishment as they demand, and
+the bits of rock that fall down from the cliff strip the trees of their
+leaves and branches.
+~
+A
+south~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+A tall cliff prevents you from continuing further uphill.
+~
+!
+0 0 0
+A
+climb scale~
+cliff shale 1 south 1 west~
+act_tochar( #no, ch );
+~
+E
+no~
+The tall shale cliff is much too unstable to attempt to climb.
+~
+!
+0 0 0
+A
+west~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+A tall shale cliff prevents you from moving in that direction.
+~
+!
+0 0 0
+5116 9 1509949540 3 0
+-1
+S
+
+#4076
+A Rocky Ledge~
+The ground, too rocky to supwardport much life, is nearly bare of tree
+growth.  A vertical wall of fragmented shale rises upward to the south,
+many of its pieces flaking off and falling down the hillside northward. 
+A treacherous pathway of brittle shale chips leads alongside the cliff to
+the west, and a gap between the trees leads downward.
+~
+[Rikahn] 1/8 chance to slip down the hill
+[Eliza] Done.
+~
+167247872 3 6 0
+D0
+~
+~
+0 -1 4074 10 10 5
+D3
+~
+~
+0 -1 4075 10 10 5
+E
+new ground rocky pathway brittle chips~
+Coating the ground in an unstable layer of gray tiles, countless flakes
+of shale have broken from the cliff wall to the south.  Each miniature
+tile is thin yet wide, with sharp edges and a dull texture.  The flat
+rock chips threaten to position with every footstep, sending some
+skittering down the hillside.
+~
+E
+vertical wall fragmented shale~
+Rising some twenty feet into the air, a vertical cliff, comprised mostly
+of stratified layers of shale, blocks most of the wind that sweeps
+through the lower parts of the valley.  Uneven chunks of rock have broken
+from the wall and shattered on the ground, falling victim to the elements
+over the years.
+~
+E
+gap trees 1 north 1 down~
+Though very few trees grow near the rocky summit of this mountain, they
+stand tall and dense further downhill.  Not too far down the slope, two
+large oak trees flank a wide path of shale chips that have cascaded
+downward in a river of rock.
+~
+A
+~
+~
+i = random( 1, 8 );
+if( find_stat( ch, level ) < 91 ) {
+  if( is_player( ch ) ) {
+    if( i == 2 ) {
+      act_tochar( #slip, ch );
+      act_notchar( #slip2, ch );
+      transfer( ch, find_room( 4074 ) );
+      act_notchar( #arri, ch );
+      acode( find_room( 4074 ), 1 );
+      end;
+      }
+    }
+  }
+continue;
+~
+E
+slip~
+@cYou slip on the unstable layer of shale covering the ground, sending
+you sliding downhill!@n 
+~
+E
+slip2~
+@c$n slips on the unstable layer of shale covering the ground, sending $m
+sliding downhill!@n 
+~
+E
+arri~
+@c$n comes sliding downhill on the layer of unstable shale.@n
+~
+!
+1 0 9
+A
+~
+~
+continue;
+~
+E
+to_char~
+@mYou carefully descend the hill, scattering bits of shale.@n
+~
+!
+3 0 1
+A
+south~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+A tall cliff prevents you from continuing uphill.
+~
+!
+0 0 0
+A
+east~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+A thick tree bars passage to the east.
+~
+!
+0 0 0
+A
+climb scale~
+cliff shale 1 south~
+act_tochar( #no, ch );
+~
+E
+no~
+The shale cliff is much too unstable to attempt to climb.
+~
+!
+0 0 0
+5106 9 1509949540 3 0
+5106 9 1509949540 3 0
+78 17 1509949540 -2 0
+-1
+S
+
+#4077
+A Path Through a Dense Forest~
+Densely packed foliage obscures the sides of this trampled path through
+the aging forest.  A particularly broad elm tree blocks passage to the
+south, its thick limbs tangled among the smaller trees to the east and
+west.  A decomposing layer of dead leaves and twigs lines the forest
+floor, emitting a rotten stench that grows with every footstep. 
+Ominously quiet, the typical sounds of birds and animals in the
+wilderness are missing completely.
+~
+[Eliza] Done.
+~
+167247872 3 5 0
+D0
+~
+~
+0 -1 4061 10 10 5
+E
+broad elm tree thick limbs 1 south~
+Its trunk at least twelve feet thick, an ancient elm stands as nature's
+sentinel, preventing further passage to the south.  Great limbs, full
+with leaves, sprawl overhead, blocking out most of the sky.
+~
+E
+decomposing layer dead leaves twigs floor ground~
+Once lush, green foliage has been stripped from the nearby trees and
+trampled into a decomposing brown mush, slowly rotting on the ground,
+discharging a fetid stench into the air.
+~
+E
+rotten stench~
+It is pretty hard to see a smell.
+~
+E
+birds animals~
+Although we attempt to enhance the mysticism of this game by giving
+thorough descriptions, it is still impossible to see a sound.
+~
+E
+densely packed foliage sides forest~
+Intertwined branches and leaves spread out across the sides of this
+trampled path, obscuring the view of the forest beyond.
+~
+A
+1 south~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+A giant elm tree blocks passage to the south.
+~
+!
+0 0 0
+A
+1 west 1 east~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+A cluster of trees prevents you from moving in that direction.
+~
+!
+0 0 0
+A
+push pull move~
+densely packed foliage 1 east 1 west 1 south~
+act_tochar( #no, ch );
+~
+E
+no~
+The foliage is too dense to be moved aside.
+~
+!
+0 0 0
+A
+~
+decomposing layer leaves twigs forest floor ground~
+act_tochar( #nothing, ch );
+~
+E
+nothing~
+You rummage through the leaves but find nothing of interest.
+~
+!
+9 0 0
+A
+climb scale~
+broad elm tree 1 east 1 south 1 west~
+act_tochar( #no, ch );
+~
+E
+no~
+The tree limbs are too fragile and tangled to be climbable.
+~
+!
+0 0 0
+-1
+S
+
+#4078
+Summit Of The Hill~
+Offering a brief respite from the convoluting winds that plague the
+valley, a shale cliff rises skyward from the summit of the hill. 
+Stratified layers of stone lay exposed to the elements, with ragged
+chunks broken off and shattered on the ground underfoot.  Progressively
+smaller pieces skitter down the slope, gravitating downward in cascading
+rivulets.  The flat shelf beneath the cliff continues to the west, while
+the dangerously unstable bed of rocks descends to the north.  A dusky
+cave opens to the east, disappearing into darkness.
+~
+[Eliza] Done.
+~
+167247872 3 6 0
+D0
+~
+~
+0 -1 4072 10 10 5
+D1
+~
+~
+0 -1 4086 10 10 5
+D3
+~
+~
+0 -1 4085 10 10 5
+E
+shale cliff stratified layers 1 south~
+Buffering the wind, a tall shale cliff rises high above the forest to the
+south.  Layers of gray sediment stacked upon one another can be seen
+within the cliff, with many pieces having flaked off and fallen to the
+ground.
+~
+E
+ragged chunks ground~
+Countless pieces of shale have broken from the fragile cliff face and
+dropped to the ground, creating an unstable pathway that leads down the
+hillside to the north.  With every step, the bits shift and cascade in
+tiny avalanches.
+~
+E
+dusky cave opening 1 east~
+Hacked out of the east side of the cliff, a dusky cave entrance leads
+through the hillside into darkness.  Obviously man-made by the shape of
+the opening, it is just tall enough for someone to enter without stooping.
+~
+A
+south~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+A tall cliff prevents you from moving further uphill.
+~
+!
+0 0 0
+A
+climb scale~
+shale cliff rocks 1 south~
+act_tochar( #no, ch );
+~
+E
+no~
+The cliff is much too steep to attempt to climb.
+~
+!
+0 0 0
+A
+~
+~
+i = random( 1, 8 );
+if( is_player( ch ) ) {
+  if( find_stat( ch, level ) < 91 ) {
+    if( i == 4 ) {
+      act_tochar( #slip, ch );
+      act_notchar( #slip2, ch );
+      interpret( ch, "+sit" );
+      end;
+      }
+    }
+  }
+continue;
+~
+E
+slip~
+@cThe unstable layer of shale causes you to lose your footing.@n
+~
+E
+slip2~
+@cThe unstable layer of shale causes $n to lose $s footing.@n
+~
+E
+to_char~
+@mFinding a stable handhold in the cliff's surface, you manage to walk
+over the shale without incident.@n 
+~
+!
+3 0 11
+29 0 1509949540 -2 0
+-1
+S
+
+#4079
+A Path Through a Dense Forest~
+Jagged pieces of broken shale skitter along the steep hillside with every
+footstep, causing a miniature avalanche to cascade noisily downward. 
+Trees, stripped almost completely bare, line the sides of this open path,
+the foliage wind-swept to the ground.  Chilling bursts of air gust
+through the stripped forest, stirring up dried leaves and dust from the
+rocky summit of the cliff high above.  The path continues up and down
+the hill, the loose gravel coating the ground making the trek in either
+direction quite dangerous.
+~
+[Eliza] Done.
+~
+167247872 3 6 0
+D0
+~
+~
+0 -1 4080 10 10 5
+D2
+~
+~
+0 -1 4075 10 10 5
+E
+jagged pieces broken shale ground avalanche~
+A heavy layer of jagged rock pieces covers the ground, having fallen down
+from the unstable cliff uphill to the south.  A torrent of chips shift
+downhill with every errant footstep, daisy-chaining into small avalanches
+of rock.
+~
+E
+trees bare leaves~
+Evidently once full with leaves, the nearby trees are almost completely
+stripped of foliage because of the whipping wind that buffets this side
+of the valley, and the shale chips that tumble down from above.  A fine
+cloud of dust and rock debris billows from the summit of the bluff,
+leaving a fine gray coating over everything.
+~
+A
+~
+~
+if( race( ch ) == hobgoblin )
+  continue;
+else
+  act_tochar( #climb, ch );
+~
+E
+to_char~
+@cYou climb up the rock column.@n
+~
+E
+to_room~
+@c$n climbs up the rock column.@n
+~
+E
+climb~
+You cannot walk up the side of a rock column.
+~
+!
+3 0 1
+A
+1 west 1 east~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+A cluster of oak trees prevents you from moving in that direction.
+~
+!
+0 0 0
+A
+climb~
+rock column cliff 1 north 1 up~
+act_tochar( #climb, ch );
+act_notchar( #climb2, ch );
+transfer( ch, find_room( 4080 ) );
+act_notchar( #arrive, ch );
+~
+E
+climb~
+@cYou climb up the rock column.@n
+~
+E
+climb2~
+@c$n climbs up the rock column.@n
+~
+E
+arrive~
+@c$n climbs up from below.@n
+~
+!
+0 0 0
+-1
+S
+
+#4080
+An Isolated Plateau~
+Rising from the earth, this rock column overlooks much of the nearby
+forest, the treetops swaying in the endless gusts of wind that seem to
+pervade this valley.  The summit of the shelf spans five feet across,
+with various eroded cavities around its breadth, providing a steady climb
+down to a path leading back up the hill to the south.  A thick
+cross-section of a tree trunk has been hefted up to the middle of the
+plateau, with various spellbooks and potions strewn about its surface.
+~
+[Eliza] Done.
+~
+167247872 3 5 0
+D2
+~
+~
+0 -1 4079 10 10 5
+E
+rock column plateau summit~
+Spanning five feet across across the top, a rock column stands near the
+edge of the trees.  With a somewhat smooth surface, it makes an excellent
+vantage point over the rest of the valley.  Small pits have been chipped
+from the side of the column in order to gain access to its peak.
+~
+E
+eroded cavities breadth~
+Oval pits six inches in diameter have been gouged into the side of the
+rock column, either by natural erosion, or in some places artificially
+chipped out to provide handholds for climbing up and down.
+~
+E
+thick cross-section tree trunk~
+An enormous expenditure of manpower must have been used in order to get
+this tree trunk to the top of the rock column.  Two and a half feet
+across and three feet thick, this cross-section of a tree's trunk has
+been lugged up to the center of the small plateau to be used as a
+makeshift table.  Various spellmaking books and implements are strewn
+about its surface, held securely in place by mid-sized rocks.
+~
+E
+spellbooks potions surface~
+Two spellbooks lay on top of the makeshift table, weighted open to
+particular pages by rocks that also prevent the books from blowing away
+in the wind.  A mortar and pestle rests to one side, with some
+tan-colored herbs and orange flowers partially ground inside the bowl. 
+Two beige ceramic jars filled with flint and berries sit near the edge of
+the trunk, their wax seals broken and discarded upon the ground.
+~
+A
+~
+~
+if( race( ch ) == hobgoblin )
+  continue;
+else
+  act_tochar( #mustclimb, ch );
+~
+E
+to_char~
+@cUsing the cavities as handholds, you climb down the rock column and
+trek back uphill.@n 
+~
+E
+to_room~
+@cUsing the cavities as handholds, $n climbs down the rock column and
+treks back uphill.@n 
+~
+E
+mustclimb~
+Walking straight off a cliff would probably hurt.
+~
+!
+3 0 4
+A
+get steal take grab search~
+spellbooks potions tree trunk~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #grab, ch );
+  act_notchar( #grab2, ch );
+  i = random( 1, 5 );
+  if( i == 1 ) {
+    obj_to_char( oload( 662 ), ch );
+    end;
+    }
+  obj_to_char( oload( 68 ), ch );
+  end;
+  }
+act_tochar( #nograb, ch );
+~
+E
+grab~
+You search amongst the potions and find one finished.
+~
+E
+grab2~
+$n searches amongst the potions and finds one finished.
+~
+E
+nograb~
+None of the remaining potions appear finished, as their vials are not yet
+sealed.  It would be extremely unwise to try to quaff an incomplete
+potion.
+~
+!
+0 0 0
+A
+push pull~
+cross-section tree trunk table~
+act_tochar( #heavy, ch );
+~
+E
+heavy~
+No matter how hard you push, the tree trunk doesn't budge an inch.
+~
+!
+0 0 0
+A
+climb scale~
+rock column 1 south 1 down~
+act_tochar( #climb, ch );
+act_notchar( #climb2, ch );
+transfer( ch, find_room( 4079 ) );
+act_notchar( #arrive, ch );
+~
+E
+climb~
+@cUsing the cavities as handholds, you climb down the rock column and
+trek back uphill.@n 
+~
+E
+climb2~
+@cUsing the cavities as handholds, $n climbs down the rock column and
+treks back uphill.@n 
+~
+E
+arrive~
+@c$n climbs down the rock column to the north.@n
+~
+!
+0 0 0
+A
+1 west 1 east 1 north~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+The only safe way to get off of the rock column is to the south.
+~
+!
+0 0 0
+5117 9 1509949540 3 0
+-1
+S
+
+#4081
+A Path Through The Trees~
+Winding its way along the hillside, this slim path through the trees
+leads both up the hill to the south, and towards a wider trail to the
+east.  A number of branches have been snapped off near the base of the
+tree, evidently cleared out by someone seeking quicker passage through
+the forest.  A thin layer of rock chips line the ground, partially
+obscured by blowing leaves cascading downhill.
+~
+[Eliza] Done.
+~
+167247872 3 6 0
+D1
+~
+~
+0 -1 4068 10 10 5
+D2
+~
+~
+0 -1 4082 10 10 5
+E
+slim path trees~
+Carved out between the clusters of elm trees, this artificial path leads
+both uphill to the south, and along the hill to the east.  The trail
+appears to have been created by someone who broke off a number of
+branches, then discarded them.
+~
+E
+numerous branches snapped~
+All of the branches that once pointed towards the center of the path have
+been roughly snapped off, then discarded among the other trees.  Sticky
+rivulets of sap ooze from the broken limbs, frozen in mid-air as they dry.
+~
+E
+thin layer rock chips blowing leaves~
+A thick layer of dried leaves covers the ground, slowly rotting and
+turning black.  Some rock chips and newer leaves obscure much of the
+mulch, knocked onto the narrow path from the wide run of shale to the
+east.
+~
+A
+north~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+A tangle of tree branches blocks the way.
+~
+!
+0 0 0
+A
+west~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+The trunk of an old oak tree bars passage to the west.
+~
+!
+0 0 0
+5106 9 1509949540 3 0
+5106 9 1509949540 3 0
+29 0 1509949540 -2 0
+-1
+S
+
+#4082
+A Ring of Stones~
+Vast amounts of labor have gone into the preparation of this hobgoblin's
+refuge.  A wide two foot high circle of stones encircles a flattened
+section of earth, with all of the leaves and debris completely removed. 
+A conical cairn of logs burns bright, sending dangerous embers airborne
+into the forest.  The scent of roasting meat drifts though the air,
+emanating from a side of beef, slowly rotating on a spit above the flame. 
+The dense layer of leafy branches, stretching from the surrounding tree
+trunks, bars passage through the remainder of the forest except down the
+hill to the north.
+~
+[Eliza] Done.
+~
+167247872 3 5 0
+D0
+~
+~
+0 -1 4081 10 10 5
+E
+wide circle stones~
+Flat gray stones have been stacked upon one another in a rough circle
+around the clearing, with the only break in the wall located where a path
+winds its way into the forest to the north.  The rocks are still covered
+with dirt, indicating they were recently unearthed.
+~
+E
+flattened earth~
+Meticulously cleared of all mulch and branches, this circular clearing
+within the forest is relatively smooth and clean.  In the middle of the
+circle, a cone-shaped campfire burns brightly, cooking a spit of beef
+that rotates above the flame.
+~
+E
+conical cairn logs campfire~
+Sitting in the center of the clearing, dead branches have been stacked in
+a cone shape and lit ablaze, providing light and heat for this camping
+area.  A side of beef rotates slowly above the campfire, the smell of
+roasting meat wafting outward.
+~
+E
+side beef rotates spit~
+Two iron triangles support a metal spit over the roaring campfire. 
+Thrust upon the spit is a side of beef that slowly rotates as the hot air
+causes the spit to sway.  Every few seconds fat drippings sizzle into the
+fire, causing a raucous hiss to echo into the forest.
+~
+E
+dense layer leafy branches tree trunks~
+Surrounding the clearing on three sides, old elm trees stand as they have
+for years, their thick leafy branches sprawled out in all directions. 
+Heavy bushes near the base of the trees enhance the blockade, their the
+only traversible path leading off to the north back down the hill.
+~
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 ) {
+  send_to_room( #action1, room );
+  end;
+  }
+if( i == 2 ) {
+  send_to_room( #action2, room );
+  end;
+  }
+if( i == 3 ) {
+  send_to_room( #action3, room );
+  end;
+  }
+~
+E
+action1~
+@rA small ember drifts up from the campfire, landing on your arm with a
+painful bite before extinguishing.@n 
+~
+E
+action2~
+@rThe hiss of burning fat dripping into the campfire, echoes out into the
+forest.@n 
+~
+E
+action3~
+@rThe campfire briefly roars up, its flames licking the bottom of the
+rotating spit.@n 
+~
+!
+2 250 0
+A
+get take steal grab slice~
+side beef spit meat~
+if( rflag( reset0, room ) ) {
+  i = random( 1, 3 );
+  if( i == 2 )
+    remove_rflag( reset0, room );
+  act_tochar( #beef, ch );
+  act_notchar( #beef2, ch );
+  obj_to_char( oload( 7548 ), ch );
+  end;
+  }
+act_tochar( #nobeef, ch );
+~
+E
+beef~
+You carefully carve a slice of meat away from the side of beef.
+~
+E
+beef2~
+$n carefully carves a slice of meat away from the side of beef.
+~
+E
+nobeef~
+There is not enough meat left on the bone to slice.
+~
+!
+0 0 0
+A
+1 west 1 south 1 east~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+A dense layer of leafy branches stretching forth from the surrounding
+tree trunks prevent you from moving in that direction.
+~
+!
+0 0 0
+5113 9 1509949540 3 0
+2689 17 1509949540 -2 0
+-1
+S
+
+#4083
+Muddy Trail~
+Shoveled from the ground in apparent haste, dirt and decomposing leaves
+have been spattered across the trees that line this narrow trail, as if
+some sort of cataclysm had befallen this portion of the forest.  Winding
+its way up and down the side of a hillside, this muddy trail weaves
+around sharp rocky outcroppings and tree stumps in a desperate attempt to
+provide a stable path through the otherwise treacherous forest.  A
+distinctly rotten smell emanates from the end of the path to the north,
+overpowering even the raucous mulch dangling from the branches.
+~
+[Eliza] done
+~
+167247872 3 6 0
+D0
+~
+~
+0 -1 4084 10 10 5
+D2
+~
+~
+0 -1 4071 10 10 5
+E
+shoveled ground dirt decomposing leaves spattered trees~
+Looking as if a miniature cyclone had ripped through the forest, the dirt
+and leaves that once neatly covered the ground are now spattered in a
+messy pattern all over the trees that flank the muddy path that runs
+north and south.
+~
+E
+muddy trail rock outcroppings stumps ground~
+Weaving its way back and forth from north to south, a slightly muddy path
+winds its way around tree stumps and large rocks in an effort to make an
+organized trail through the forest.  All of the displaced dirt and leaves
+have been flung with reckless abandon into the trees flanking the path,
+causing a gory effect.
+~
+E
+rotten smell~
+How do you plan on seeing a smell?
+~
+A
+1 west 1 east~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+A row of mud-caked trees prevents you from traveling that way.
+~
+!
+0 0 0
+5107 9 1509949540 3 0
+5116 9 1509949540 3 0
+-1
+S
+
+#4084
+Bottom Of The Hill~
+The wretched smell of rotting flesh attacks the senses, emanating through
+the forest from an old corpse laying dismembered on the ground. 
+Spread-eagled in a symmetrical pattern, this poor soul was apparently
+sacrificed as an offering to whichever god these canine creatures worship. 
+The surrounding leaves and rocks have been cleared away to make a level
+plain, with a ring of unearthed stones lining the outer edge.  Giant
+torches are placed in a hexagonal pattern between the stones and the
+corpse, flaring up into the sky.  The only exit from this altar of evil
+is back up the hill to the south, along a muddy path.
+~
+[Tryne] think they should be able to get this many torches? :P
+[Rikahn] You'd be surprised how many players despise carrying torches as regular light sources.  Code gives 33% chance that they can't get any more torches this reset, and setting it up where you could only get 1 out of 6 just didn't seem right.  Not sure how many people will even find the break code
+[Eliza] Done for my purposes.
+~
+167248896 3 5 0
+D2
+~
+~
+0 -1 4083 10 10 5
+E
+spread-eagled symmetrical pattern sacrifice~
+Laid out in a symmetrical pattern, this corpse's hands and legs are
+staked to the ground.  Apparently murdered in a bizarre sacrifice, all
+sorts of puncture wounds cover the body's surface.
+~
+E
+leaves rocks clearing plain~
+All of the fallen leaves and branches, once lying  strewn about the
+ground, have been swept into the treeline, creating a clearing now
+occupied by some sort of sacrificial altar.
+~
+E
+ring unearthed stones~
+A ring of smooth-worn stones lines the outside of the swept clearing,
+each stone coated with dried blood.  The stones are placed side by side,
+butting up against the treeline.
+~
+E
+giant torches hexagonal~
+Six giant torches on top of long poles are stuck into the ground in an
+even hexagonal pattern, surrounding the sacrificial corpse on the ground. 
+Each torch is ablaze with a tall flame, sending thin trails of smoke into
+the sky.
+~
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 ) {
+  send_to_room( #action1, room );
+  end;
+  }
+if( i == 2 ) {
+  send_to_room( #action2, room );
+  end;
+  }
+if( i == 3 ) {
+  send_to_room( #action3, room );
+  end;
+  }
+~
+E
+action1~
+@rOne of the torches almost extinguishes in a strong gust of wind,
+blowing through the forest.@n 
+~
+E
+action2~
+@rTiny black flies flit about the corpse, laying maggots then flying
+off.@n 
+~
+E
+action3~
+@rThe sound of an owl hooting echoes through the forest.@n
+~
+!
+2 0 0
+A
+search get take steal grab~
+giant torches~
+act_tochar( #notorch, ch );
+~
+E
+notorch~
+The giant torches are firmly planted in the ground.
+~
+!
+0 0 0
+A
+break snap destroy~
+giant torches~
+if( rflag( reset0, room ) ) {
+  i = random( 1, 3 );
+  if( i == 2 )
+    remove_rflag( reset0, room );
+  act_tochar( #break, ch );
+  act_notchar( #break2, ch );
+  obj_to_char( oload( 26 ), ch );
+  end;
+  }
+act_tochar( #notorch, ch );
+~
+E
+break~
+You snap the top off of one of the torches, breaking it off into your
+hand.
+~
+E
+break2~
+$n breaks the top off of one of the torches.
+~
+E
+notorch~
+None of the remaining torches are worth keeping.
+~
+!
+0 0 0
+A
+1 west 1 north 1 east~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+The foliage on the other side of the ring of stones is too thick to
+travel further in that direction.
+~
+!
+0 0 0
+5114 9 1509949540 3 0
+419 17 1509949540 -2 0
+-1
+S
+
+#4085
+Sheltered From The Wind~
+Sheltered on three sides, this pocket of protection from the elements
+promotes tranquility and harmony with nature.  A tall cliff rises up to
+the south, blocking the whipping winds that have stripped away the leaves
+near the top of the nearby oak trees, growing lush and full at their
+bases.  The lilting sounds of birdcalls echo throughout the valley,
+whisked away by the whistling wind passing high overhead.  The only
+traversible path out of this peaceful setting is along the cliff lying
+eastward.
+~
+[Eliza] Done.
+~
+167247872 3 5 0
+D1
+~
+~
+0 -1 4078 10 10 5
+E
+tall cliff south~
+A solid sheet of rock rises some twenty feet straight up into the air
+with its crest out of sight in the distance.  Comprised of layer upon
+layer of thin shale, the cliff blocks all passage to the south.
+~
+E
+oak trees lush leaves~
+Old oak trees grow lush and full near their bases, blocked from the
+ravaging winds by the tall cliff to the south.  The tips of the trees
+have been stripped of their leaves and most of the smaller branches, sent
+tumbling through the air and down to the ground to decompose.
+~
+E
+lilting birdcalls whistling wind~
+It is extremely difficult to see a sound.
+~
+A
+~
+~
+send_to_room( #action1, room );
+~
+E
+action1~
+@cThin whisps of wind blow around the cul-de-sac.@n
+~
+!
+2 200 0
+A
+1 south 1 west~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+A tall cliff prevents you from moving in that direction.
+~
+!
+0 0 0
+A
+climb scale~
+1 south 1 west~
+act_tochar( #no, ch );
+~
+E
+no~
+The cliff is much too unstable to attempt climbing up its side.
+~
+!
+0 0 0
+A
+north~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+The thick branches of the oak trees to the north prevent you from moving
+in that direction.
+~
+!
+0 0 0
+78 17 1509949540 -2 0
+-1
+S
+
+#4086
+Dusky Cave Opening~
+Visibly hacked out by unnatural means, this crude cave provides refuge
+from the chilling winds and unchecked elements that affect the rest of
+the valley outside.  Jagged marks mar the sides of the chamber walls,
+where metal implements were used to pry apart the layers of shale that
+make up this tiny cavern within the hillside.  Most of the broken rock
+has been swept outside and downhill, although enough debris remains to
+necessitate caution while navigating the narrow passageway.  The exit to
+the outside opens to the west, and the remainder of the cave lies just to
+the north.
+~
+[Eliza] Done.
+~
+167378948 11 6 0
+D0
+~
+~
+0 -1 4087 10 10 5
+D3
+~
+~
+0 -1 4078 10 10 5
+E
+jagged marks chamber walls~
+Hacked from the fragile rock walls, this passageway bears the marks of
+the crude methods used to create the narrow tunnel inside of the cliff. 
+Long, broad gouges are tinged with silver flecks of metal, where whatever
+instruments were used to break apart the rocks made contact.
+~
+E
+broken rock chips ground~
+Although an attempt has been made to keep the artificial cave clean, some
+bits of rock remain scattered on the chamber floor, requiring its
+occupants to be careful when entering or leaving through the opening.
+~
+A
+~
+~
+send_to_room( #action1, room );
+~
+E
+action1~
+@cThe rush of wind, blowing through the cave opening, howls along the
+passageway.@n 
+~
+!
+2 200 0
+A
+1 east 1 south~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+The tunnel only continues to the north and the west.
+~
+!
+0 0 0
+78 17 1509949540 -2 0
+-1
+S
+
+#4087
+Cave Of Darkness~
+Crudely hacked from the the hillside, this dark chamber has been created
+in order to house a member of the healing arts.  Numerous anatomical
+charts and scrolls lies open on the floor, although what creatures are being
+depicted cannot be determined at first glance.  An oval ring of white
+candles lies unlit in the center of the cave, surrounding a shallow bowl
+of seeping herbal tea left uncovered to cool.  The only passage from the
+the cavern is a narrow tunnel to the south.
+~
+[Eliza] Done.
+~
+167378948 11 5 0
+D2
+~
+~
+0 -1 4086 10 10 5
+E
+anatomical charts scrolls floor~
+Dusty tomes and cracked scrolls of anatomical knowledge are strewn about
+the floor, held open by stones in the seams of the pages.  The creatures
+being crudely detailed appear to be hobgoblins, though some pages show
+kobolds and bugbears as well.
+~
+E
+oval ring white candles~
+Arranged in an oval, a ring of squat white candles sit unlit, though
+pools of molten wax surrounding the wicks indicate they were recently
+extinguished.  Sitting around a ceramic bowl containing hot tea, it
+appears as if the candles were used as a cooking source.
+~
+E
+shallow bowl seeping herbal tea~
+A shallow ceramic bowl is filled with a tan liquid, apparently steeping
+the flavor from tiny brown leaves that float on its surface.  The bowl is
+hot to the touch, the concoction apparently recently brewed.
+~
+A
+~
+~
+send_to_room( #action1, room );
+~
+E
+action1~
+@cA dreary moaning sound emanates from the south, where the wind blows
+into the cave opening.@n 
+~
+!
+2 200 0
+A
+search get take grab steal~
+oval ring white candles~
+if( rflag( reset0, room ) ) {
+  i = random( 1, 3 );
+  if( i == 2 )
+    remove_rflag( reset0, room );
+  act_tochar( #candle, ch );
+  act_notchar( #candle2, ch );
+  obj_to_char( oload( 330 ), ch );
+  end;
+  }
+act_tochar( #nocandle, ch );
+~
+E
+candle~
+You reach down and pick up one of the white candles.
+~
+E
+candle2~
+$n reaches down and picks up one of the white candles.
+~
+E
+nocandle~
+None of the remaining candles are worth taking.
+~
+!
+0 0 0
+A
+get search take grab steal~
+ceramic shallow bowl tan liquid~
+act_tochar( #nobowl, ch );
+~
+E
+nobowl~
+The bowl is too hot to pick up.
+~
+!
+0 0 0
+A
+search get take grab steal~
+anatomical charts scrolls~
+act_tochar( #scrolls, ch );
+act_notchar( #scrolls2, ch );
+~
+E
+scrolls~
+As you pick up one of the anatomical scrolls, its thin paper crumbles in
+your hand.
+~
+E
+scrolls2~
+As $n picks up one of the anatomical scrolls, its thin paper crumbles in
+$s hand.
+~
+!
+0 0 0
+A
+1 west 1 north 1 east~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+The only exit out of this cave is to the south.
+~
+!
+0 0 0
+5160 9 1509949540 3 0
+7422 17 1509949540 -2 11
+-1
+S
+
+#4088
+A Path Through A Dense Forest~
+Massive oak trees crowd the narrow footpath, their gnarled roots
+disrupting the surface.  Leafy boughs hang low overhead, shading the
+forest floor to the extent that little grows; there is not enough
+sunlight penetrating.  The sound of a swift-flowing river seems to
+permeate the area, and the source is quite evident: a wide river cuts
+through the forest directly to the north.  The hard-packed dirt of the
+ground drops off steeply, leaving nearly a foot-high drop to the riverbed. 
+A slightly muddy path leads away from the river.  A series of stones
+provides steps up to an old plank bridge that crosses the river northward.
+~
+[Guin] room needs to reflect bridge and a leaving code for it.
+[Guin] Done.
+~
+167247873 3 9 0
+D0
+~
+~
+0 -1 6763 10 10 5
+D2
+~
+~
+0 -1 4060 10 10 5
+D4
+~
+~
+0 -1 4090 10 10 5
+E
+river~
+The calm, flowing river looks soothing; although no sunlight seems to
+reflect off of its surface, the waters still hold their own beauty.
+~
+E
+series stones steps plank bridge~
+A half dozen or so flat stones have been stacked one atop the other to
+form shallow steps that lead to an old plank bridge.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou climb the shallow steps upward to the bridge, preparing to cross
+the river.@n 
+~
+E
+to_room~
+@G$n climbs the shallow steps upward to the bridge, preparing to cross
+the river.@n 
+~
+!
+3 0 16
+-1
+S
+
+#4089
+A Path Through A Dense Forest~
+Grand oak trees rise up from the cluttered forest floor, their gnarled
+and twisting roots mostly concealed by leaf litter and decomposing
+material.  The sound of a rushing river permeates the area, and the
+source can be seen to the north.  A wide river has cut a path through the
+forest, and the ground drops almost a foot in a steep, root-laced bank. 
+A slightly muddy footpath leads away from the river.
+~
+[Guin] Done.
+~
+167247881 3 9 0
+D0
+~
+~
+0 -1 6744 10 10 5
+D1
+~
+~
+0 -1 4060 10 10 5
+-1
+S
+
+#4090
+Old Plank Bridge~
+Nestled between two rickety posts, a narrow plank lies at the top of a
+steep incline and stretches northwards, high above the gushing river. 
+The posts stand about seven feet in height, and secured to the top of
+each is a length of thick rope, which extends out over the river
+providing support for the unstable bridge with lashings of three-inch
+thick leather straps attached to the plank at regular intervals.  Leading
+up from the riverbank are a series of stone steps, although the majority
+of them are covered in a layer of slushy mud.
+~
+[Guin] River below
+[Guin] Leaving down finished.
+[Guin] Done.
+~
+167247873 3 9 0
+D0
+~
+~
+0 -1 6754 10 10 5
+D5
+~
+~
+0 -1 4088 10 10 5
+E
+posts ragged sturdy rope~
+These posts are made from roughly hewn oak trunks and appear to have been
+standing for quite some time.  They seem to have sunk a foot or two over
+the years and lean at rather skewed angles from the vertical that they
+used to be.  There seems to be a deep groove carved around the top of
+each pole, and the thick rope sits snugly in it.  Although battered and
+frayed by the elements, the rope is still thick and durable, and by all
+appearances looks as though it should still be holding strong for many
+years to come.
+~
+E
+lashings leather straps~
+With a two-inch overlap below the rope, the leather is secured tightly by
+a couple of wooden pegs driven through the thick material and shaped to
+make it extremely difficult to remove them from their position.  The
+lashings run from one rope to the other rope, cradling the weathered
+plank between them.  The leather is cracked from exposure to the
+elements, but for the most part it is still intact.
+~
+E
+plank~
+Two inches thick by three feet wide, this plank would not be the easiest
+place to pass by someone, with barely enough room for one person as it is. 
+The wood is a pale brown hue, the colour bleached out from it by the sun. 
+Its surface has been smoothed from many years of passage and it appears
+that it once was coated in a slurry of tar and sand to keep the weather
+out.
+~
+E
+stone steps mud~
+These appear to be no more than a half dozen flat stones stacked on top
+of each other to form a few shallow steps that lead down to the ground
+below.  In the centre of the impromptu steps there is a slight dip from
+where many footfalls have slowly smoothed and eroded the sandstone rocks.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou descend the shallow stone steps downward to solid ground.@n
+~
+E
+to_room~
+@G$n descends the shallow stone steps downward to solid ground.@n
+~
+!
+3 0 32
+-1
+S
+
+#0
+

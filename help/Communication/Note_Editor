@@ -1,0 +1,20 @@
+<html>
+<body>
+The note board editor works somewhat differently than the editor used for<br>
+other features on the mud.<br>
+<br>
+A) The '?' feature for replacing words on a line currently doesn't work. <br>
+Corrections must be made by line replacement.<br>
+<br>
+The syntax for this would be note [line#] [new line].<br>
+<br>
+B) You can prefix a line with a backslash '\' to allow you to put a<br>
+number or indent at the start of a line.<br>
+<br>
+C) You can format a note to the end by typing [line#]-.  [line#]-[line#]<br>
+still formats a specific part of the note.<br>
+<br>
+D) The note buffer won't auto-echo back at you, re-type 'note' to get it<br>
+to send you the note that you're editing.<br>
+</html>
+</body>

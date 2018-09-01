@@ -1,0 +1,1603 @@
+#M2_AREA
+2
+
+Ferret Den~
+Murdo Guin~
+Ferret Den~
+~
+~
+
+15 0
+0
+0
+#ROOMS
+
+#68500
+Skirting the Palisade~
+Winding around the looming palisade wall, a small animal trail picks its
+way ponderously through the sparse trees of the forest's edge, fading
+into tufts of wild grass on the otherwise bare ground to the west. 
+Unlike so many fallen victim to the necessities of fortifications, the
+tree to the east was obviously felled by the hand of nature...slightly
+rotting and covered with moss.  Beyond the line of trees some way to the
+north, bright fields of gold and brown lined with green sprawl outward
+from the town.
+~
+[Guin] Connects to 44538.
+[Guin] Done
+~
+167247880 3 6 0
+D1
+~
+~
+0 -1 68501 10 10 5
+D3
+~
+~
+0 -1 44538 10 10 5
+E
+palisade 1 north wall~
+The pine trunks have been set into the earth, each one lashed together
+with loops of hemp rope.  A scattering of axe marks scar some of the
+wood, where someone has made a half-hearted attempt to break the defense.
+~
+E
+tree 1 east~
+The felled tree is scarred with black, the mark of a lightning bolt
+during some fierce storm.  The wood of the old giant is rotting, the bark
+nearly gone...taken by time and weather, or stripped for nesting by some
+creature.  A blanket of bright green moss covers the trunk and the
+remains of what roots are left intact.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gClimbing up and over the log, you follow the path toward the east@n.
+~
+E
+to_room~
+@gClimbing up and over the log, $n follows the path toward the east@n.
+~
+!
+3 0 2
+-1
+S
+
+#68501
+Behind a Fallen Tree~
+Beyond the rotting log, a slight dip in the earth is ringed by grass and
+weeds, covered almost haphazardly with several fresh branches and their
+browning leaves.  Scratch marks in the log's grey wood and a persistent
+system of animal tracks cross the dirt over and over, nearing the base of
+the shelter the dead tree provides.
+~
+[Murdo] acode entering, all halflings with high con flinch, all halflings with middle con shiver, all halflings with low con whimper.
+[Guin] Done.
+~
+167247880 3 6 0
+D3
+~
+~
+0 -1 68500 10 10 5
+D5
+~
+~
+227 -1 68502 10 10 5
+E
+tracks~
+Countless pairs of tracks crisscross the earth around and beneath the old
+felled log, each layer of them blurring the ones before.  The handful to
+the prints that can be made out clearly resemble the image of a slightly
+distorted human hand.
+~
+E
+dip grass weeds branches~
+In the darkness beneath the tree, shrouded by wind-swept leaves and
+branches, a hole much larger than it appears, provides the barest glimpse
+of a burrow beyond.
+~
+A
+~
+~
+if( race( ch ) == halfling ) {
+  if( random( 0, 6 ) < 5 ) {
+    if( find_stat( ch, con ) < 10 ) {
+      interpret( ch, "whimper" );
+      continue;
+    }
+    if( find_stat( ch, con ) < 15 ) {
+      interpret( ch, "emote flinches instinctively." );
+      continue;
+    }
+    else {
+      interpret( ch, "scowl" );
+      continue;
+    }
+  }
+}
+~
+!
+1 0 8
+A
+~
+~
+act_notchar( #climb, ch );
+~
+E
+climb~
+@g$n levers $mself up and out of the hole from below@n.
+~
+!
+1 0 32
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gClimbing up and over the log, you follow the path toward the west@n.
+~
+E
+to_room~
+@gClimbing up and over the log, $n follows the path toward the west@n.
+~
+!
+3 0 8
+A
+clear move~
+leaves dirt hole gap~
+if( !is_open( room, down ) ) {
+  act_tochar( #down, ch );
+  act_notchar( #odown, ch );
+  open( room, down );
+  end;
+}
+act_tochar( #already, ch );
+~
+E
+down~
+@gYou brush aside the leaves, revealing a hole in the ground below@n.
+~
+E
+odown~
+@g$n brushes aside the leaves, revealing a hole in the ground below@n.
+~
+E
+already~
+@gThe leaves have already been moved, clearing the opening below@n.
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou lower yourself through the opening into the darkness of the hole
+below@n.
+~
+E
+to_room~
+@g$n lowers $mself through the opening into the darkness of the hole
+below@n.
+~
+!
+3 0 32
+A
+~
+~
+send_to_room( #growl, room );
+~
+E
+growl~
+@cThe faintest of scrabbling, scratching sounds can be heard coming from
+somewhere below@n.
+~
+!
+2 150 0
+-1
+S
+
+#68502
+Beneath the Fallen Log - Burrow~
+Dim light from above trickles helplessly down the slope of loose soil
+that winds its way into the narrow tunnel.  As little as four feet high
+at points, the burrow curves away from the entrance into the darkness
+northward.  Several pale white bones lay scattered in the dirt below the
+rounded walls.  A hole, covered with dried leaves and newly cut branches,
+lies overhead.
+~
+[Guin] no.mob
+[Guin] Done.
+~
+167378948 11 5 0
+D0
+~
+~
+0 -1 68503 10 10 5
+D4
+~
+~
+227 -1 68501 10 10 5
+E
+bones plate white~
+More than a dozen bones, pick cleaned and gleaming white, are scattered
+randomly around the burrow floor.  Near one wall, a handful of the bones
+form a low pile, as if placed there deliberately.  They look to be the
+size of a small mammal or large rodent.
+~
+E
+hole leaves branches~
+A hole, large enough to squeeze through, lies overhead.  Covered with
+fallen leaves and new-cut branches, it might lead up and out of the
+burrow.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou turn northward, inching along the low, confined tunnel@n.
+~
+E
+to_room~
+@y$n turns northward, inching along the low, confined tunnel.@n.
+~
+!
+3 0 1
+A
+open clear~
+1 up leaves dirt hole gap~
+if( !is_open( room, up ) ) {
+  act_tochar( #down, ch );
+  act_notchar( #odown, ch );
+  open( room, up );
+  end;
+}
+act_tochar( #already, ch );
+~
+E
+down~
+@gYou clear the leaves from the opening overhead.  A few trickle
+downward, landing at your feet on the burrow floor@n.
+~
+E
+odown~
+@g$n clears the leaves from the opening overhead.  A few trickle
+downward, landing at $s feet on the burrow floor@n.
+~
+E
+already~
+@gThe leaves have already been cleared from the opening overhead@n.
+~
+!
+0 0 16
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou lever yourself up and out of the hole@n.
+~
+E
+to_room~
+@g$n levers $mself up and out of the hole@n.
+~
+!
+3 0 16
+-1
+S
+
+#68503
+Dark Passage - Burrow~
+The featureless tunnel continues onward, its dirt walls dug through
+hard-packed soil and held in place by a latticework of thread-like roots. 
+Darkness is pervasive here, the only light a pale glow in the room to the
+south.  Gathered in the low spots along the floor and lying against the
+earthen walls, a variety of debris has collected in piles of varying
+sizes.  The passage takes a turn to east here, further into the burrow.
+~
+[Guin] Done.
+~
+167378949 11 5 0
+D1
+~
+~
+0 -1 68504 10 10 5
+D2
+~
+~
+0 -1 68502 10 10 5
+E
+variety pile debris~
+Several low mounds of debris have collected along the earthen floor. 
+Casual observation shows the piles are made up of collections of small
+animal bones, dead leaves, dried grasses and even a stick or two.
+~
+A
+search~
+debris pile~
+act_tochar( #nothing, ch );
+act_notchar( #rnothing, ch );
+~
+E
+nothing~
+@cYou sift through the collection of debris carefully but find nothing
+of any use@n.
+~
+E
+rnothing~
+@c$n sifts through the collection of debris carefully, but apparently
+finds nothing of use@n.
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gAvoiding the intrusive root, you continue eastward through the
+darkness@n.
+~
+E
+to_room~
+@gAvoiding the intrusive root, $n continues eastward through the
+darkness@n.
+~
+!
+3 0 2
+362 9 1509949540 3 0
+362 9 1509949540 3 0
+-1
+S
+
+#68504
+Dark Passage - Burrow~
+Low and confined, the narrow passage creates a sense of claustrophobia as
+it continues to the west and south.  The floor below is uneven, irregular
+in construction, and a gnarly tree root extends outward from the eastern
+wall, makes the footing even more treacherous.  Patches of loose soil lie
+to the north, where the tunnel takes a sharp downward slope.
+~
+[Murdo] random.. once per reset... if giant ferret south, loop through group until you find a character of less than large size with cloth armor in the body location, then drag him/her two south (trip out jump code) to start combat there until group runs to catch up.
+[Guin] change leaving message.
+~
+167378949 11 5 0
+D2
+~
+~
+0 -1 68506 10 10 5
+D3
+~
+~
+0 -1 68503 10 10 5
+D5
+~
+~
+0 -1 68505 10 10 5
+E
+gnarly tree root 1 east~
+A thick old root gropes outward from the eastern wall, the small
+offshoots curled like claws where they dig into the tunnel floor.  The
+wood of the root is pale, nearly white in color, save where it is stained
+grey-brown from the dirt surrounding it.
+~
+E
+1 north slope 1 down soil loose~
+Wide patches of loose soil lie to the north where the tunnel turns into a
+downward slope, as if the ground was deliberately disturbed to make
+passage more difficult in that direction.
+~
+A
+~
+~
+if( is_player( ch ) ) {
+  if( rflag( reset0, room ) ) {
+    if( random( 0, 6 ) < 5 ) {
+      rch = rand_player( room );
+      if( find_stat( rch, str ) < 16 ) {
+        if( !players_room( find_room( 68506 ) ) ) {
+          act_tochar( #grab, rch );
+          act_notchar( #ograb, rch );
+          send_to_room( "Squealing and snarling, a bristling giant ferret drags something in from the north, still kicking.", find_room( 68508 ) );
+          transfer( rch, find_room( 68508 ) );
+          mob = mload( 362, find_room( 68508 ) );
+          attack( mob, rch, 1d10, "pounce" );
+          remove_rflag( reset0, room );
+          end;
+        }
+      }
+      remove_rflag( reset0, room );
+      act_tochar( #nograb, rch );
+      act_notchar( #onograb, rch );
+      mob = mload( 362, room );
+      attack( mob, rch, 1d10, "pounce" );
+    }
+  }
+}
+~
+E
+grab~
+@RWith a noise somewhere between a squeal and a roar, a @wgiant ferret@R
+scurries in from the darkness of the tunnels and siezes you by the boot,
+pulling you off your feet and dragging you down the bumpy passage
+south!@n 
+~
+E
+ograb~
+@RWith a noise somewhere between a squeal and a roar, a @wgiant ferret@R
+suddenly scurries in from the darkness of the tunnels and siezes $n by
+the boot, pulling $m off $s feet and dragging $m away to the south!@n 
+~
+E
+nograb~
+@RA @wgiant ferret@R scrambles in from the south and tries to drag you
+back down the tunnel, but you manage to break free.@n 
+~
+E
+onograb~
+@RA @wgiant ferret@R scrambles in from the south and tries to drag $n
+back down the tunnel, but $e manages to break free.@n 
+~
+!
+1 0 58
+A
+~
+~
+if( is_player( ch ) )
+  if( find_stat( ch, dex ) < random( 1, 15 ) ) {
+  act_tochar( #slip, ch );
+  act_notchar( #rslip, ch );
+  end;
+}
+act_tochar( #almostslip, ch );
+act_notchar( #ralmostslip, ch );
+continue;
+~
+E
+slip~
+$n slips on a loose patch of soil and lands in a heap at the bottom of
+the slope@n.
+~
+E
+rslip~
+@yYou slip on a loose patch of soil and land in a heap at the bottom of
+the slope@n.
+~
+E
+almostslip~
+@yYou slip on a loose patch of soil but keep your footing, continuing
+downward along the slope@n.
+~
+E
+ralmostslip~
+@y$n slips on a loose patch of soil but retains $s footing, continuing
+down the slope@n.
+~
+!
+3 1 32
+-1
+S
+
+#68505
+Bottom of the Slope - Burrow~
+The chamber at the top of the slippery slope is larger in height and
+width than others in the burrow.  The piles of small rodent and bird
+bones that appear elsewhere in the burrow are present here, along with a
+scattering of larger bones and patches of fur in varying hues and colors. 
+Overhead, darkness hangs like a funeral shroud, veiling within its
+shadows whatever might be hidden there.  Tapering inward, the walls form
+a low exit to the east.
+~
+[Guin] Done.
+~
+167378949 11 5 0
+D1
+~
+~
+0 -1 68513 10 10 5
+D4
+~
+~
+0 -1 68504 10 10 5
+E
+1 east exit~
+Lying just to the east, a low exit bisects the chamber, a thick draping
+of spider webs festooning it.  The irregularly-shaped formation leads
+into and out of the darkness.
+~
+E
+piles rodent bird bones fur~
+Piles of tiny bones rest in piles of varying sizes here and there within
+the shadowy corners of the room.  Other bones, larger in size are
+scattered here and here across the floor and patches of fur are caught on
+the irregular projections along the walls.  The wiry hairs create
+splashes of rusty red and silvery grey in the otherwise grey-brown
+surroundings.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou slip on a patch of loose soil but manage to traverse the slope
+successfully@n.
+~
+E
+to_room~
+@y$n slips on a patch of loose soil but manages to traverse the slope
+successfully@n.
+~
+!
+3 0 16
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yPushing the webs aside, you take the passageway to the east@n.
+~
+E
+to_room~
+@yPushing the webs aside, $n takes the passageway to the east@n.
+~
+!
+3 0 2
+A
+~
+pile debris~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  i = random( 1, 100 );
+  if( i < 3 ) {
+    // this is a 2% item.
+    obj = oload( 56 );
+    if( can_handle( ch, obj ) ) {
+      act_tochar( #found, ch, obj );
+      act_notchar( #rfound, ch, obj );
+      obj_to_char( obj, ch );
+      end;
+    }
+  }
+  else if( i < 8 ) {
+    // this is a 5% item.
+    obj = oload( 2, random( 1, 5 ) );
+    if( can_handle( ch, obj ) ) {
+      act_tochar( #found, ch, obj );
+      act_notchar( #rfound, ch, obj );
+      obj_to_char( obj, ch );
+      end;
+    }
+  }
+}
+act_tochar( #nada, ch );
+act_notchar( #rnada, ch );
+~
+E
+found~
+You search carefully through the pile, and find $p.
+~
+E
+rfound~
+$n searches carefully through the pile, and finds $p.
+~
+E
+nada~
+You find nothing of interest.
+~
+E
+rnada~
+$n doesn't seem to find anything of interest.
+~
+!
+9 0 0
+362 9 1509949540 3 0
+362 9 1509949540 3 0
+-1
+S
+
+#68506
+Deeper into the Burrow~
+This wide section of the tunnels seems to have been recently disturbed. 
+Ample piles of freshly-dug earth rest in scattered piles along the walls. 
+Off to the east, a narrow opening leads to a much smaller passageway and
+to the west, a diminutive hole might be the beginnings of yet another. 
+The primary route leads to the north and southward, disappearing into the
+darkness in both directions.
+~
+[Murdo] Entering code, 33% chance, once per reset... random char gets jumped by a small ferret. 3-6 seconds, a few funny poses, a few very small inflicts, and combat starts.
+[Murdo] action two disallows you from attacking the small ferret before his poses are through. If there is a giant ferret present, character attacks that instead.
+[Guin] Done.
+[Mad Murdo] NOTE: The entering code is f*cked for several reasons, and frankly I don't even know how it got that way. Disabled completely until I can rewrite it.
+[Mad Murdo] Same with the attack.
+~
+167378949 11 5 0
+D0
+~
+~
+0 -1 68504 10 10 5
+D1
+~
+~
+0 -1 68507 10 10 5
+D2
+~
+~
+0 -1 68508 10 10 5
+E
+1 west diminutive hole~
+An opening, barely large enough to fit a fist into, resides in the
+western wall, the dirt surrounding it irregular and loose, as if it were
+recently disturb.  Beyond the hole, darkness prevails.
+~
+E
+1 east smaller passageway passage~
+Bisecting the larger tunnel, a narrower passage leads off to the east. 
+The opening, itself, bears the signs of digging and claws, as if so
+recently built, there as been no time for the local denizens to wear it
+smooth.
+~
+E
+piles earth~
+Mounds of loose soil flank the opening to the east, and another lies
+directly beneath the newly begun one on the western wall.  The piles of
+dirt are signs of a healthy and growing population within the earthen
+burrow.
+~
+A
+~
+~
+if( rflag( reset1, room ) ) {
+  mob = mob_in_room( 362, room );
+  if( mob ) {
+    attack( mob, ch, 1d5, "quick slash" );
+    end;
+  }
+  if( mob_in_room( 2513, room ) ) {
+    act_tochar( "You frantically try to swat the creature off without hitting its victim by accident.", ch );
+    end;
+  }
+  continue;
+}
+~
+!
+0 0 0
+A
+~
+~
+if( !rflag( reset1, room ) ) {
+  act_tochar( #slip, ch );
+  end;
+}
+continue;
+~
+E
+to_char~
+@ySqueezing through the opening, you follow the passage to the east@n.
+~
+E
+to_room~
+@ySqueezing through the opening, $n follows the passage to the east@n.
+~
+E
+slip~
+You slip on the loose soil and make little progress.
+~
+!
+3 0 2
+A
+~
+~
+if( !rflag( reset1, room ) ) {
+  act_tochar( #slip, ch );
+  end;
+}
+continue;
+~
+E
+slip~
+You slip on the loose soil and make little progress.
+~
+!
+3 0 5
+A
+~
+~
+if( !is_mob( ch ) ) {
+  if( rflag( reset0, room ) ) {
+    remove_rflag( reset0, room );
+    remove_rflag( reset1, room );
+    if( random( 1, 2 ) == 1 ) {
+      ch = rand_player( room );
+      act_tochar( #leap, ch );
+      act_notchar( #rleap, ch );
+      mob = mload( 2513, room );
+      damage( mob, ch, 1d3, physical, "sharp claws" );
+      wait( 1 );
+      if( mob ) {
+        i = random( 0, 2 );
+        if( i == 0 ) {
+          act_tochar( #arm, ch );
+          act_notchar( #rarm, ch );
+          damage( mob, ch, 1d5, physical, "sharp claws" );
+        }
+        else if( i == 1 ) {
+          act_tochar( #collar, ch );
+          act_notchar( #rcollar, ch );
+          damage( mob, ch, 1d8, physical, "sharp claws" );
+        }
+        else {
+          if( race( ch ) != lizardman ) {
+            if( sex( ch ) == 1 ) {
+              act_tochar( #groin, ch );
+              act_notchar( #rgroin, ch );
+              damage( mob, ch, 1d10, physical, "sharp claws" );
+            }
+            else {
+              act_tochar( #hair, ch );
+              act_notchar( #rhair, ch );
+              damage( mob, ch, 1d8, physical, "sharp claws" );
+            }
+          }
+          else {
+            act_tochar( #back, ch );
+            act_notchar( #rback, ch );
+          }
+        }
+        wait( 1 );
+        act_tochar( #throw, ch );
+        act_notchar( #rthrow, ch );
+        attack( mob, ch, 1d3, "sharp claws" );
+        if( !rflag( reset1, room ) )
+          set_rflag( reset1, room );
+      }
+    }
+  }
+}
+if( !rflag( reset1, room ) )
+  set_rflag( reset1, room );
+~
+E
+leap~
+@YWith a chittering squeal, a savage little @rferret@Y leaps onto you
+from out of a craggy hole in the tunnel wall!@n 
+~
+E
+rleap~
+@YWith a chittering squeal, a savage little @rferret@Y leaps onto $n from
+out of a craggy hole in the tunnel wall!@n 
+~
+E
+arm~
+@YThe small @rferret@Y scrambles up your arm with painfully sharp
+claws!@n 
+~
+E
+rarm~
+@YThe @rferret@Y scrambles up $n's arm with razor-sharp claws, as $n
+flails wildly and tries to grab it with $s other hand!@n 
+~
+E
+collar~
+@YYou spin about, flailing your arms, as the @rferret@Y scrambles over
+your shoulder and tries to worm its way down the back of your collar!@n
+~
+E
+rcollar~
+@Y$n spins about, flailing $s arms, as the @rferret@Y scrambles over $s
+shoulder and tries to worm its way down the back of $s collar!@n 
+~
+E
+groin~
+@YDeftly avoiding your attempts to grab it, the @rferret@Y scrambles down
+your back and hangs with the grasp of its razor-sharp claws by the inside
+of your thigh!!@n 
+~
+E
+rgroin~
+@YDeftly avoiding $s attempts to grab it, the @rferret@Y scrambles down
+$n's back and hangs by the grasp of its razor-sharp claws by the inside
+of $s thigh!!@n 
+~
+E
+hair~
+@YWith an evil squeak, the @rferret@Y manages to firmly and painfully
+entangle both of its claws in your hair!@n 
+~
+E
+rhair~
+@YLetting out a triumphant squeak, the @rferret@Y climbs across $n's
+shoulder and painfully tangles its claws in $s hair!@n 
+~
+E
+back~
+@YThe @rferret@Y quickly scrambles down your back, evading capture.@n
+~
+E
+rback~
+@YThe @rferret@Y deftly scrambles down $n's back.  $e flails $s tail and
+manages to smack $sself on the head!@n 
+~
+E
+rthrow~
+@Y$n manages to sieze the little creature, and with a tearing noise $e
+pulls it off and heaves it at the base of the tunnel wall.@n 
+~
+E
+throw~
+@YYou manage to seize the creature and toss it to the ground!@n
+~
+!
+0 0 7
+-1
+S
+
+#68507
+Narrow Passage - Burrow~
+The freshly dug passage turns sharply here, the loose dirt of the walls
+and ceiling overhead seeming more than a little unstable.  Torn and
+dangling rootlike tendrils, not yet recovered from their wrenching, have
+yet to form the latticework of support seen elsewhere in the burrow and
+only a scattering of tracks show in the soft soil underfoot.
+~
+[Guin] Done.
+~
+167378949 11 5 0
+D2
+~
+~
+0 -1 68509 10 10 5
+D3
+~
+~
+0 -1 68506 10 10 5
+E
+tracks soil~
+Less than a dozen pair of tracks are impressed in the soft soil of the
+tunnel floor.  Hand-like in shape, they lead both to and from the room to
+the south.
+~
+362 9 1509949540 3 0
+362 9 1509949540 3 0
+-1
+S
+
+#68508
+Odd-Shaped Cavity in the Burrow Wall~
+The tunnel's western wall boasts an odd-shaped cavity approximately a
+foot off the uneven floor.  Slightly over four feet long and less than
+half that high, the soil around the hole is solidly packed, with a
+variety of crisscrossing roots holding the soil in place.  Just beneath
+the hole, a dozen or more large-sized bones form a neat stack.  Other
+bones, much smaller in size, are strewn carelessly round this section of
+the passage.  A slope drops sharply downward, leading to lower level of
+the warren.
+~
+[Guin] Done.
+~
+167378949 11 5 0
+D0
+~
+~
+0 -1 68506 10 10 5
+D5
+~
+~
+0 -1 68510 10 10 5
+E
+1 west cavity hole bones~
+The cavity takes on the shape of a corpse approximately the size of a
+human child.  The surrounding earth is hard as stone and held firmly in
+place by a webwork of rootlike filaments.  Below the hole, stacked
+against the base of the tunnel wall, a dozen or so bones have collected
+in a pile.  Present there are rib bones and a skull.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou half slip and slide down the slope, into the darkness below@n.
+~
+E
+to_room~
+@y$n half slips and slides down the slope, into the darkness below@n.
+~
+!
+3 0 32
+362 9 1509949540 3 0
+362 9 1509949540 3 0
+-1
+S
+
+#68509
+Den~
+The tunnel deadends in a cozy chamber with a very low ceiling and
+confining walls.  Tucked against the back wall, something or someone has
+created a deep, comfortable nest.  Smooth walls are crisscrossed with
+root-like tendrils and the hard-packed floor is close to even.  Other
+than the nest, the room is relatively featureless.
+~
+[Murdo] female giant ferret, aggressive, more dangerous depending on number of babies present (mpcode)
+[Murdo] 1-3 giant ferret babies, nest of grass and leaves and moss and stolen cloth and whatnot
+[Guin] Done.
+~
+167378957 11 5 0
+D0
+~
+~
+0 -1 68507 10 10 5
+E
+nest deep comfortable~
+The nest is deep-sided and cozy, with room enough for newborn or young
+ferret cubs.  In construction, it is made of dead-grass clippings,
+colorful fallen leaves, pieces of old cloth, feathers and other items
+often found in inhabited areas.
+~
+A
+~
+~
+if( rflag( reset0, room ) ) {
+  i = num_mob( 276, room );
+  if( i > 2 )
+    remove_rflag( status2, room );
+  else if( i == 2 )
+    remove_rflag( status1, room );
+  else if( i == 1 )
+    remove_rflag( status0, room );
+  else
+    remove_rflag( reset1, room );
+}
+~
+!
+1 0 1
+A
+~
+nest~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  i = random( 1, 100 );
+  if( i < 3 ) {
+    obj = oload( 7162 );
+    if( can_handle( ch, obj ) ) {
+      act_tochar( #found, ch, obj );
+      act_notchar( #rfound, ch, obj );
+      obj_to_char( obj, ch );
+      end;
+    }
+  }
+  else if( i < 8 ) {
+    obj = oload( 3648, random( 1, 5 ) );
+    if( can_handle( ch, obj ) ) {
+      act_tochar( #found, ch, obj );
+      act_notchar( #rfound, ch, obj );
+      obj_to_char( obj, ch );
+      end;
+    }
+  }
+}
+act_tochar( #nada, ch );
+act_notchar( #rnada, ch );
+~
+E
+found~
+Searching carefully through the nest, you find $p.
+~
+E
+rfound~
+Searching carefully through the nest, $n finds $p.
+~
+E
+nada~
+You find nothing of interesting in the nest.
+~
+E
+rnada~
+$n finds nothing of interest in the nest.
+~
+!
+9 0 0
+361 41 1509949540 3 0
+276 73 1509949490 3 0
+276 73 1509949455 3 0
+276 73 1509949465 3 0
+-1
+S
+
+#68510
+Descent into Darkness~
+This branch of the burrow slopes downward gradually, descending ever
+deeper below the earth's surface.  So too does the tunnel narrow, the
+solid earthen walls giving way to jagged stones.  Like the floor
+underfoot, the roof overhead is rough and uneven, with one thick tree
+root protruding downward to block part of the passageway.
+~
+[Guin] Done.
+~
+167378948 11 5 0
+D0
+~
+~
+0 -1 68511 10 10 5
+D4
+~
+~
+0 -1 68508 10 10 5
+E
+walls stones~
+Stones of all shapes and sizes jut outward at irregular intervals from
+the solid earthen walls.  While only a few appear at the higher end of
+the tunnel branch, they become more frequent at the lower end of the
+descent.
+~
+E
+tree root~
+A twisty old root, thick as an ogres's arm, plunges downward from the
+ceiling and disappears into the tunnel floor, making the tunnel even
+harder to navigate.
+~
+A
+~
+~
+~
+E
+to_char~
+@yYou squeeze past the root, heading north@n.
+~
+E
+to_room~
+@y$n squeezes past the root, heading north@n.
+~
+!
+3 0 4
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou make your way up the steep ascent with some difficulty@n.
+~
+E
+to_char~
+@y$n make $s way up the steep ascent with some difficulty@n.
+~
+!
+3 0 16
+362 9 1509949540 3 0
+362 9 1509949540 3 0
+-1
+S
+
+#68511
+Above a Deep Den - Burrow~
+The walls through this section of the burrow are mostly rock now, the
+footing uneven with irregularly set slabs of stone, tilting this way and
+that.  This cave-like chamber is low and confined, and movement is
+constricted by a fairly wide opening centered in the floor.  Overhead,
+the ceiling is still composed mostly of earth while thick cobwebs festoon
+it from side to side.  There is little to be seen in any direction,
+except darkess.
+~
+[Murdo] room is no.scan
+[Murdo] entering code, once per reset, two giant ferrets load and attack.
+[Guin] Done.
+~
+167379012 11 5 0
+D2
+~
+~
+0 -1 68510 10 10 5
+D5
+~
+~
+0 -1 68512 10 10 5
+E
+1 down opening floor~
+Centered in the chamber floor, a fairly wide opening accesses the area
+below.  Nothing can be seen there, beyond the range of your light source.
+~
+A
+~
+~
+if( !is_player( ch ) )
+  end;
+if( num_mob( 362, room ) < 3 ) {
+  if( rflag( reset0, room ) ) {
+    remove_rflag( reset0, room );
+    i = players_room( room );
+    if( i == 1 )
+      rflag( status0, room );
+    if( i == 2 )
+      rflag( status1, room );
+    if( i > 2 )
+      rflag( status2, room );
+    act_room( #ambush, ch );
+    mob = mload( 362, room );
+    attack( mob, ch, 2d5, "quick swipe" );
+    rch = rand_player( room );
+    mob = mload( 362, room );
+    attack( mob, rch, 2d4, "quick swipe" );
+  }
+}
+~
+E
+ambush~
+~
+!
+1 0 4
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou lower yourself through the opening in the floor@n.
+~
+E
+to_room~
+@y$n lowers $mself through the opening in the floor@n.
+~
+!
+3 0 32
+-1
+S
+
+#68512
+Deep Den~
+Moist, stagnant air pools here at the burrow's end, a cavernous chamber
+dug from the surrounding dirt, its entrance squeezing through several
+buried stones above and to the east.  The walls, rising upward in a
+malformed dome overhead, are supported by thick tree roots, delving deep
+into the earth.  From the farthest depths of the shadowy crevices up to
+just a few feet shy of the opening, a treasure trove of trash waits
+desperately for the less discriminating adventurer.  Several piles rise
+from the sea of loose soil, wide and high and sporting a vast variety of
+"things".  At the center amidst the hollows of a well-travelled mound,
+tattered clothing, grasses, leaves and rags form a nest for the cave's
+denizen.
+~
+[Guin] Ring for Old Bigglesoot's quest is 3814(quest 80)
+[Mad Murdo] In-battle switch done, check to make sure rand_player works with non-imm.
+[Mad Murdo] Need to do: fall and sit random, fix mob damage, add item resets, color for ad's and mpd's
+[Mad Murdo] leaving before attack function executes, here and small ferrets...
+[Guin] Done.
+[Mad Murdo] Mob should be aggressive. Change code to shift mob into room from alcove to start combat, so he doesn't jump the gun.
+~
+167378956 11 5 0
+D3
+~
+~
+494 -1 68514 10 10 5
+D4
+~
+~
+0 -1 68511 10 10 5
+E
+walls tree roots~
+Thick tree roots, some easily a foot and more in diameter, plunge
+earthward from the surface world high above.  The chamber appears to have
+been carefully formed about the roots, so they serve as braces to hold
+the dirt-dug walls in place.
+~
+E
+things pile mound clothing grass rags nest~
+A two-foot high mound of items lies at the back of the chamber, the
+notorious 'thief's' treasure hoard.  All manner of things make up the
+pile, halfling-sized clothing, childrens' toys, glittering items that
+look to be gems or jewelry.  Perched atop the jealously guarded
+accumulation, a variety of items...both of nature and man-made...have
+been gathered into a nest for sleeping.
+~
+A
+~
+~
+if( rflag( reset0, room ) ) {
+  mob = mob_in_room( 363, room );
+  if( mob ) {
+    remove_rflag( reset0, room );
+    remove_rflag( status0, room );
+    act_room( #sniff, mob );
+    
+    // dreaded wait( ) ;)
+    wait( 1 );
+    
+    // re-set variables, then pick a victim
+    mob = mob_in_room( 363, room );
+    victim = ch;
+    if( race( victim ) != halfling ) {
+      // if the entering character isn't a halfling, do a search for one
+      loop( all_in_room ) {
+        // scan the room
+        if( victim == ch ) {
+          // since we haven't found a halfling yet, check to see if rch is one
+          if( race( rch ) == halfling ) {
+            // mmm lunch, set victim to a rch so we can eat him later
+            // also, because we've found one now, victim != ch meaning it won't keep looking
+            victim = rch;
+          }
+        }
+      }
+    }
+    
+    // ok we store victim as an integer now, otherwise with the
+    // wait( )'s we'll lose who we're supposed to be jumping
+    set_integer( room, "/seltha/ferret/victim", vnum( victim ) );
+    
+    // start talking about the upcoming meal ;)
+    if( race( victim ) == halfling ) {
+      act_tochar( #hsnarl, victim, obj, mob );
+      act_notchar( #hosnarl, victim, obj, mob );
+    }
+    else {
+      act_tochar( #teeth, ch, obj, mob );
+      act_notchar( #oteeth, ch, obj, mob );
+    }
+    
+    // and now do the dreaded wait( )
+    wait( 1 );
+    
+    // now retrieve the appropriate values for future use
+    mob = mob_in_room( 363, room );
+    victim = player_in_room( get_integer( room, "/seltha/ferret/victim" ), room );
+    set_rflag( status0, room );
+    if( race( victim ) == halfling )
+      act_room( #hengage, mob );
+    else
+      act_room( #engage, mob );
+    
+    // and finally do the attack
+    attack( mob, victim, 3d4+2, "gnarled claw" );
+  }
+}
+~
+E
+sniff~
+From amidst the junk at the far end of the room, a large, grisly shape
+lifts its head and sniffs at the air.
+~
+E
+hsnarl~
+$N widens $S beady red eyes and snarls at you!
+~
+E
+hosnarl~
+$N widens $S beady red eyes and snarls at $n!
+~
+E
+hengage~
+A grizzled old giant grey ferret scrambles lightly across the teetering
+mounds of detritus and leaps to the ground in front of you with an old
+and sickly squeal.
+~
+E
+teeth~
+$N widens $S beady red eyes and bares $S teeth at you!
+~
+E
+oteeth~
+$N widens $S beady red eyes and bares $S teeth at $n!
+~
+E
+engage~
+A grizzled old giant grey ferret scrambles lightly across the teetering
+mounds of detritus and leaps to the ground in front of you with an old
+and sickly squeal!
+~
+!
+1 0 16
+A
+~
+~
+mob = mob_in_room( 363, room );
+if( mob ) {
+  if( !rflag( status0, room ) ) {
+    act_tochar( #nope, ch );
+    end;
+  }
+}
+continue;
+~
+E
+to_char~
+@yYou lever yourself up through the hole overhead@n.
+~
+E
+to_room~
+@y$n levers $mself up through the hole overhead@n.
+~
+E
+nope~
+You try to scramble up the hole, but can't get a decent grip.
+~
+!
+3 0 16
+A
+~
+pile nest mound~
+if( !is_player( ch ) )
+  end;
+if( !mob_in_room( 363, room ) ) {
+  if( get_integer( room, "/Cayln/FerretPop" ) == 0 ) {
+    set_integer( room, "/Cayln/FerretPop", 1 );
+    act_notchar( #seesearch, ch );
+    i = random( 1, 20 );
+    if( i < 3 )
+      obj = oload( 2607 );
+    else if( i < 6 ) 
+      obj = oload( 116 );
+    else if( i < 9 ) 
+      obj = oload( 3814 );
+    else if( i < 12 ) 
+      obj = oload( 1708 );
+    else if( i < 15 ) 
+      obj = oload( 2361 );
+    else if( i < 18 ) 
+      obj = oload( 2191 );
+  }
+}
+if( !obj ) {
+  send_to_char( #nothing, ch );
+  act_notchar( #rnothing, ch );
+  end;
+}
+else {
+  if( !can_handle( ch, obj ) ) {
+    act_tochar( #to_room_found, ch, obj );
+    act_notchar( #rto_room_found, ch, obj );
+    obj_to_room( obj, room );
+  }
+  else {
+    act_tochar( #to_pers_found, ch, obj );
+    act_notchar( #rto_pers_found, ch, obj );
+    obj_to_char( obj, ch );
+  }
+}
+~
+E
+seesearch~
+@c$n rummages through the treasure hoard@n.
+~
+E
+feathered~
+@YYou find an fine, feathered hat within the hoard of treasure@n.
+~
+E
+boots~
+@yYou find a pair of old boots worn down at the heels among the junk in
+the pile@n.
+~
+E
+ring~
+@CYou retrieve what seems to be an old dried stick with a ring looped
+around it from the treasure pile@n.
+~
+E
+doll~
+@MYou find a child's doll, obviously well-loved, near the nest's edge@n.
+~
+E
+pants~
+@GYou find a pair of filthy old pants at the bottom of the pile@n.
+~
+E
+nothing~
+@cYou search the treasure hoard but find nothing of value@n.
+~
+E
+gem~
+@RYou gather a perfectly formed cut ruby in the mound of loot@n.
+~
+E
+to_room_found~
+@cYou retrieve $p from the bottom of the pile, but are unable to
+carry it@n.
+~
+E
+rto_room_found~
+@c$n retrieves $p from the bottom of the pile, but is unable to
+carry it@n.
+~
+E
+to_pers_found~
+@cYou retrieve $p from the bottom of the pile.@n
+~
+E
+rto_pers_found~
+@c$n finds $p at the bottom of the pile.@n
+~
+E
+rnothing~
+@c$n finds nothing of interest.@n
+~
+!
+9 0 0
+A
+~
+~
+set_integer( room, "/Cayln/FerretPop", 0 );
+~
+!
+16 0 0
+363 9 1509949540 3 0
+-1
+S
+
+#68513
+Cozy Den - Burrow~
+The tunnel deadends in a cozy chamber with a very low ceiling and
+confining walls.  Tucked against the back wall, something or someone has
+created a deep, comfortable nest.  Smooth walls are crisscrossed with
+root-like tendrils and the hard-packed floor is close to even.  Other
+than the nest, the room is relatively featureless.
+~
+[Guin] Done
+~
+138018821 11 5 0
+D3
+~
+~
+0 -1 68505 10 10 5
+E
+nest~
+The nest is deep-sided and cozy, with room enough for newborn or young
+ferret cubs.  In construction, it is made of dead-grass clippings,
+colorful fallen leaves and pieces of old cloth, feathers and other items
+often found in inhabited areas.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yPushing the webs aside, you take the low passage to the west@n.
+~
+E
+to_room~
+@yPushing the webs aside, $n takes the low passage to the west@n.
+~
+!
+3 0 8
+A
+~
+~
+if( rflag( reset0, room ) ) {
+  i = num_mob( 276, room );
+  if( i > 2 ) {
+    remove_rflag( status2, room );
+    end;
+  }
+  if( i == 2 ) {
+    remove_rflag( status1, room );
+    end;
+  }
+  if( i == 1 ) {
+    remove_rflag( status0, room );
+    end;
+  }
+  if( i == 0 ) {
+    remove_rflag( reset1, room );
+    end;
+  }
+}
+~
+!
+1 0 8
+361 41 1509949540 3 0
+276 73 1509949490 3 0
+276 73 1509949455 3 0
+276 73 1509949465 3 0
+-1
+S
+
+#68514
+Mob Storage~
+Under Construction.
+~
+[Murdo] this room can't be reached by players. This is where Old Gray goes if his mpcode has him hide.
+~
+167378948 11 5 0
+D1
+~
+~
+494 -1 68512 10 10 5
+A
+~
+~
+if( mob_in_room( 363, find_room( 68514 ) ) ) {
+  mob = mob_in_room( 363, find_room( 68514 ) );
+  room = find_room( 68512 );
+  wait( 2 );
+  i = random( 1, 4 );
+  if( i == 1 )
+    send_to_room( #hat, room );
+  else if( i == 2 )
+    send_to_room( #rustle, room );
+  else if( i == 3 )
+    send_to_room( #doll, room );
+  else {
+    send_to_room( #dress, room );
+    j = 1;
+  }
+  wait( 2 );
+  rch = rand_player( room );
+  if( rch ) {
+    if( j == 1 ) {
+      transfer( mob, room );
+      send_to_room( #fallattack, room );
+      mob = mob_in_room( 363, room );
+      attack( mob, rch, 1d4, "weak swipe" );
+      end;
+    }
+    transfer( mob, room );
+    send_to_room( #attack, room );
+    mob = mob_in_room( 363, room );
+    attack( mob, rch, 2d10, "savage swipe" );
+  }
+  transfer( mob, room );
+}
+~
+E
+hat~
+A worn old womans hat rises from a pile of dirty cloth, a frightful
+demonstration of passe halfling fashion resting atop the large, grey,
+grisled head of a ferret.  He peers warily for a moment, then disappears... 
+leaving the soiled bonnet where it lay.
+~
+E
+rustle~
+There is a rustle to the west, and the sound of scrabbling pebbles.
+~
+E
+doll~
+From amidst the rubble, the cheerful squeak of a trod-upon doll is
+followed by a snarl and the savage tearing of cloth, its unassuming love
+decidedly not returned.
+~
+E
+dress~
+As though possessed by the restless ghost of the wearer, an oversized and
+tattered dress with a horrifying coordination of colors shifts and and
+rustles on a nearby pile of junk.
+~
+E
+fallattack~
+Caught up inside the tattered dress, the old grey ferret leaps out to
+attack ..  but stumbles and trips upon the fabric.
+~
+E
+attack~
+From out of the rubble, the old grey ferret leaps and launches a surprise
+attack, whiskers twitching with wild abandon!
+~
+!
+0 0 0
+-1
+S
+
+#0
+

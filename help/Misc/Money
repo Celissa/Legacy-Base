@@ -1,0 +1,21 @@
+<html>
+<body>
+The money system here contains four types of coins:<br>
+Copper<br>
+Silver = 10 copper<br>
+Gold = 10 silver<br>
+Platinum = 10 gold<br>
+<br>
+In order to give coins to another pc, type:<br>
+give [number_of_coins]*[coin_type] [pc_name]<br>
+eg, give 3*gold greyclaw<br>
+<br>
+To drop coins, simply type:<br>
+drop [number_of_coins]*[coin_type]<br>
+ eg, drop 2*copper<br>
+<br>
+Note: using the abbreviations: cp, sp, gp, pp, will not work.<br>
+<br>
+Other help files that may be useful include help Bank.<br>
+</html>
+</body>

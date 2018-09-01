@@ -1,0 +1,1432 @@
+#M2_AREA
+2
+
+High Mountains~
+AzerinII~
+~
+~
+~
+
+70 0
+3
+0
+#ROOMS
+
+#9550
+Ice-Coated Tunnel~
+Layers of ice and snow line the tunnel, the brutal cold of the high
+mountains forcing itself deep into the passageway.  Southwards the tunnel
+heads out from under the mountain and into the frozen side of the
+mountains, a dense forest of pines just below the ice caps.  Westwards
+the passage opens into a circular chamber, a stairwell set in its centre.
+~
+~
+33030145 12 5 0
+D2
+~
+~
+0 -1 9551 10 10 5
+D3
+~
+~
+0 -1 1391 10 10 5
+-1
+S
+
+#9551
+Tunnel in to The Mountain~
+Mounds of snow and ice flow over the stonework of the passageway, only
+the center of the trail remaining free of the deep drifts.  The air is
+bitterly cold, each breath biting at the mouth and lungs.  Westwards a
+circular chamber opens up a stairwell set in its center, a strange bundle
+of wood and bones dumped beside it.  Eastwards the road opens out onto
+the massive range, the icy peaks gleaming.
+~
+~
+33030145 12 9 0
+D0
+~
+~
+0 -1 9550 10 10 5
+D1
+~
+~
+0 -1 9552 10 10 5
+-1
+S
+
+#9552
+Road Across The High Mountains~
+Almost as high up as you can possibly go on this peak of the Everwinter
+Mountains the roadway could have only been built by the master dwarven
+crafters.  Although coated in layers of snow and ice it is much clearer
+than the surounding deep drifts that build upon the peak.  Under the
+howling gale the road cuts eastwards towards the shelter of a dense pine
+forest and westwards into the shadow of the rising cliffs.
+~
+[Azerin] put a train north or south-west for cloudies entrance, this is HIGH up
+[Azerin] err trail north, bit steep for a train
+~
+33030145 12 9 0
+D1
+~
+~
+0 -1 9553 10 10 5
+D3
+~
+~
+0 -1 9551 10 10 5
+-1
+S
+
+#9553
+Road Across The High Mountains~
+Bending under an underhang the roadway becomes increasingly clear of the
+mounds of snow that plague the high lands.  Dagger-like icicles drape
+from the jutting stones lip, their surfaces sparkling in the light. 
+Southwards the road descends steeply untill it enters a dark snow-coated
+forest.  From the roadway a panarama of snow-filled vallies and icy peaks
+spread to the north and east, the range continue onto the horizon.
+~
+~
+33030145 12 9 0
+D2
+~
+~
+0 -1 9554 10 10 5
+D3
+~
+~
+0 -1 9552 10 10 5
+-1
+S
+
+#9554
+Road Across The High Mountains~
+Walls of bricks have been used to re-enforce the roadway from the
+onslaught of the often harsh winter.  Even so much of the road here is
+covered in cracks and splits, left from when ice melts then refreezes,
+the effect slowly tearing the stones appart.  Southwards the road dips
+down into the heart of a towering forest and is lost from sight.  A
+scattering of white mountain pines rise about the road, the vangard of
+the southern woods.  Under the protection of the great trees the bitting
+wind abates somewhat.
+~
+~
+33030145 12 9 0
+D0
+~
+~
+0 -1 9553 10 10 5
+D2
+~
+~
+0 -1 9555 10 10 5
+-1
+S
+
+#9555
+Road Across The High Mountains - Edge of The Forest~
+The roadway cuts down a steep bank and enters the forest proper, its
+cobbled surface quickly covered with mounds of needles.  The giant white
+pines tower over the mountain side, their straight trunks seemingly
+impervious to the howling winds and driving snow.  Slightly warmer than
+the surrounding snow banks the forest sends of drifting clouds of steam
+from its heart.
+~
+[Azerin] down is road thru a zone to be done, ill do it =- nother pine/ice forests who knows
+[Azerin] no mob to stop giants wandering
+~
+33030153 12 9 0
+D0
+~
+~
+0 -1 9554 10 10 5
+D5
+~
+~
+0 -1 9556 10 10 5
+-1
+S
+
+#9556
+Ancient Pine Forest~
+White pines grow amongst the rocks and snow of the mountain slope, the
+hearty trees seemingly unafected by the vicious wind and winters this far
+above the sea.  Some tales mention that elven druids created the white
+pine as a symbol of strenght and purity, their semi-magical nature would
+help explain their survival in such an inhospitable place.  Undeterred by
+the change of landscape the dwarven roadway heads onwards into the deep
+forest.
+~
+~
+33030145 12 9 0
+D1
+~
+~
+0 -1 9557 10 10 5
+D4
+~
+~
+0 -1 9555 10 10 5
+-1
+S
+
+#9557
+Ancient Pine Forest~
+Under the projective branches of the forest the dwarven roadway winds
+onwards, bending around the trees as it heads southwards and westwards. 
+Mounds of fresh and not-so-fresh pine needles line the way, the smell of
+decay hanging on the air.  A narrow forest trail leaves the road and
+heads eastwards, its floor slightly clearer than the surrounding forest.
+~
+[Azerin] east will be a zone
+~
+33030145 12 9 0
+D1
+~
+~
+0 -1 65000 10 10 5
+D2
+~
+~
+0 -1 9558 10 10 5
+D3
+~
+~
+0 -1 9556 10 10 5
+-1
+S
+
+#9558
+Ancient Pine Forest~
+Towering pine trees gather close to the cobbled road, their last years
+needles covering it in a planket of gummy leaves.  Southwards the trees
+draw even closer, their branches forming a tunnel-like roof above the
+road.  Chunks of frost and snow dot the roots of the massive white pines
+where gaps in the thick canopy have allowed a few flurries of snow to
+filter through.
+~
+~
+33030145 12 9 0
+D0
+~
+~
+0 -1 9557 10 10 5
+D2
+~
+~
+0 -1 9559 10 10 5
+-1
+S
+
+#9559
+Ancient Pine Forest~
+Under the shadow of the white pines the roadway continues onwards across
+the high mountain forest.  Built by the dwarven nation long ago the
+roadway has now fallen into disrepair, only the great craftswork of their
+people has allowed it to remain useable for so long.  The land slopes
+down westwards from the trail, the slope increasing in steepness as it
+nears a great cliff, the forest growing to its very edge.
+~
+~
+33030145 12 9 0
+D0
+~
+~
+0 -1 9558 10 10 5
+D2
+~
+~
+0 -1 9560 10 10 5
+-1
+S
+
+#9560
+Ancient Pine Forest~
+The forest ends at a steep slope, the tall trees to large to grow down
+its shale and snow bank.  Undetered by the dangers the roadway disapears
+over the cliff and begins a quick descent into the snow.  Northwards the
+road heads into the deep pine forest, its cobbles coated in pine needles
+rather than the more normal snow.
+~
+[Azerin] end of pine zone maybe depending on how inspired i am
+[Azerin] might make this a giant zone
+~
+33030145 12 9 0
+D0
+~
+~
+0 -1 9559 10 10 5
+D5
+~
+~
+0 -1 9561 10 10 5
+-1
+S
+
+#9561
+Dwarven Roadway - Across Everwinter Mountains~
+To the south the landscape drops away as the mountain splits into a
+dizzying cliff over five hundred feet in height.  The pines grow to its
+edge, some of the smaller ones growing on slim ledges below the ledge. 
+The roadway heads eastwards alarmingly close to the deadly drop, the
+cobbles once more covered in drifts of ice and snow.
+~
+~
+33030145 12 9 0
+D1
+~
+~
+0 -1 9562 10 10 5
+D4
+~
+~
+0 -1 9560 10 10 5
+-1
+S
+
+#9562
+Dwarven Roadway - Across Everwinter Mountains~
+Hung with icicles the roadway cuts a dangerous path along the edge of a
+massive snowy slip, the bottom hundreds of feet below.  Bitterly cold the
+alpine conditions are unforgiving and brutal on anyone unfortunate enough
+to be exposed to their fury.  Despite the freezing condtions a forest of
+towering pines rises to the west, the trees somehow able to survive the
+high mountain side.
+~
+~
+33030145 12 9 0
+D1
+~
+~
+0 -1 9563 10 10 5
+D3
+~
+~
+0 -1 9561 10 10 5
+-1
+S
+
+#9563
+Dwarven Roadway - Across Everwinter Mountains~
+Years of perpetual blizzards have warped the landscape into spires of ice
+and snow leaving little living save a few extremely hardy tussock grasses. 
+The roadway cuts under the mantle of winter heading besides a dangerous
+cliff face as it continues onwards its journey taking it over the high
+peaks of the Everwinter Mountains.
+~
+~
+33030145 12 9 0
+D1
+~
+~
+0 -1 9564 10 10 5
+D3
+~
+~
+0 -1 9562 10 10 5
+-1
+S
+
+#9564
+Dwarven Roadway - Across Everwinter Mountains~
+Hacked from the hard granite and slabs of shale the roadway continues
+onwards across what should be near impossible terrain.  Built by the
+dwarves there is little doubt that a less hardy race would have perished
+in the attempt to construct such a high road.  A steep cliff spirals from
+the roadside; its flanks coated in deep snow and ice the fall into its
+depths a guarantee of a cold grave.
+~
+~
+33030145 12 9 0
+D2
+~
+~
+0 -1 9565 10 10 5
+D3
+~
+~
+0 -1 9563 10 10 5
+-1
+S
+
+#9565
+Dwarven Roadway - Across Everwinter Mountains~
+Stone and ice rise above the roadway the monuments of rock encased in
+years of constant winter that grips the highest peaks of the mountain
+range.  Under their shadow the slender road snakes onwards, undeterred by
+blizzard or rock fall on its journey across the mountains.  Below a
+landscape of ice and snow burries all under its think blanket, little
+life moves across its frozen slopes.
+~
+~
+33030145 12 9 0
+D0
+~
+~
+0 -1 9564 10 10 5
+D2
+~
+~
+0 -1 9566 10 10 5
+-1
+S
+
+#9566
+Dwarven Roadway - Across Everwinter Mountains~
+Winding around rocky spire and icy slope the roadway continues onwards
+its surface coated in a dusting of snow, blown across by the gusting wind. 
+Underfoot the cobbles remain strong despite the endless assault the
+mountain climate throws against it.  Far below the icy land gives way to
+pine forests and then sprawling plains, each one dissected by the silvery
+gleam of distant rivers.
+~
+~
+33030145 12 9 0
+D0
+~
+~
+0 -1 9565 10 10 5
+D5
+~
+~
+0 -1 9567 10 10 5
+-1
+S
+
+#9567
+Dwarven Roadway - Across Everwinter Mountains~
+The remains of rock spires lie scattered about the stone, their bases
+rising like tombstones through the snow to indicate where they once stood. 
+Perhaps cast down by ice or wind the spires would have once risen like
+fangs above the road, each one over thirty feet in height.  In mute
+witness to the brutally harsh landscape the roadway continues onwards,
+its destination unclear in the land of ice and snow.
+~
+~
+33030145 12 9 0
+D1
+~
+~
+0 -1 9568 10 10 5
+D4
+~
+~
+0 -1 9566 10 10 5
+-1
+S
+
+#9568
+Dwarven Roadway - Across Everwinter Mountains~
+Weaving its way through peak and pass the dwarven roadway continues
+onwards into the heart of the Everwinter range.  Below the road razor
+sharp rocks leer out of an icy cliff side, the drop several hundreds of
+feet down.  Beyond the snow and ice a forest of pines encircle the flanks
+of this mountain, the tips of the trees coated in a light dusting of snow. 
+Far to the southeast a sinewy river snakes through the bottom of a rocky
+basin land.
+~
+~
+33030145 12 9 0
+D1
+~
+~
+0 -1 9569 10 10 5
+D3
+~
+~
+0 -1 9567 10 10 5
+-1
+S
+
+#9569
+Dwarven Roadway - Across Everwinter Mountains~
+A ruddy glow escapes a fissure at the roadside, the ice and snow melted
+from its side as it sends forth waves of hot air.  A runoff of muddy
+water dribbles across the road from its base, the streams progress short
+lived as it quickly freezes again a few yards below the road.  Around the
+vent a scattering of tussock plants grow, using the slightly warmer soil
+to dig their tough roots into.
+~
+~
+33030145 12 9 0
+D1
+~
+~
+0 -1 9570 10 10 5
+D3
+~
+~
+0 -1 9568 10 10 5
+-1
+S
+
+#9570
+Dwarven Roadway - Across Everwinter Mountains~
+Ice capped pillars flank the roadway, each of their tops capped with a
+leering gargoyle.  Beards of ice drape from their pointed chins and long
+tongues adding to their grotesque appearance.  Under their bat-like wings
+the road cuts around a great crumbling cliff, heading southwards and
+westwards on its seemingly endless journey.
+~
+~
+33030145 12 9 0
+D2
+~
+~
+0 -1 9571 10 10 5
+D3
+~
+~
+0 -1 9569 10 10 5
+-1
+S
+
+#9571
+Dwarven Roadway - Across Everwinter Mountains~
+A wall of ice and rock rises to the south, its surface marred by cracks
+and crevaces that would make for a difficult climb.  Like a true dwarven
+road the passageway takes the most direct route through the blocking
+cliff, dissapearing under ground to avoid it.  Northwards the road
+strikes out across the edge of a dizzing drop, snow and ice lining its
+progress.
+~
+~
+33030145 12 9 0
+D0
+~
+~
+0 -1 9570 10 10 5
+D5
+~
+~
+0 -1 9572 10 10 5
+-1
+S
+
+#9572
+Dwarven Roadway~
+The road slopes gently allowing passage up and down for anyone who wishes
+to pass this way.  Cut into the living stone of the mountian itself the
+roadway is obvouisly the work of dwarves.  Only dwarves could have cut a
+road this wide and long through the mountian and it still be standing
+enons later with no visible wear.  A series of simple yet effective stone
+colums keep the moutian top above from craving in the road.
+~
+~
+33030145 12 9 0
+D4
+~
+~
+0 -1 9571 10 10 5
+D5
+~
+~
+0 -1 9573 10 10 5
+-1
+S
+
+#9573
+Dwarven Roadway~
+Here the road leads you through the mountian.  One way leads you deeper
+into the heart of the mountian to the east, the other leads upwards
+towards perhaps to the outdoors.  A line of torches down either wall
+light cast shadows throughout this gigantic tunnel.  The skill required
+to build a tunnel this large through the mountian could only be that of
+the dwarves.  A massive iron gate blocks the way eastwards, heavy iron
+rivits sealing it shut.
+~
+~
+33030145 12 9 0
+D1
+iron gate~
+~
+195 -1 9574 10 10 5
+D4
+~
+~
+0 -1 9572 10 10 5
+-1
+S
+
+#9574
+Dwarven Roadway~
+Passing deeper into the mountian you marvel at the wonder of this road. 
+Carved out of the core of the mountain it has not weakened or faded with
+the passage of time.  A series of bronze rings are set into the wall at
+equal intervals with a length of rope passing through.  The rope
+continues along the length of the wall and out of sight to the south.
+~
+~
+33030145 12 9 0
+D2
+~
+~
+0 -1 9575 10 10 5
+D3
+~
+~
+195 -1 9573 10 10 5
+E
+bronze rings rope~
+Attached to the stone wall, bronze rings provide support to a length of
+rope to use as a guide.  Each ring appears to be polished and well kept. 
+The rope is slender and clean, sagging slightly at the gap between the
+hooks.
+~
+A
+get~
+rings rope bronze~
+act_tochar( "Pulling on the rope and rings, they refuse to budge.", ch );
+~
+!
+0 0 0
+A
+pull tug~
+rope clean slender~
+act_tochar( "You tug on the rope, it gives slightly as the slack is taken up from between each hook.", ch );
+wait( 1 );
+act_tochar( "As you let go, the little rope you gathered slowly settles back to is initial position", ch );
+~
+!
+0 0 0
+-1
+S
+
+#9575
+Dwarven Roadway~
+The smooth, tunneled road continues from north to south.  Along the a
+wall are bronze rings holding a rope handrail.  The carved walls to the
+mountain are slighly damp with moisture.  To the south an archway forms a
+divide between this larger tunnel and a smaller tunnel with lower ceiling.
+~
+~
+33030144 12 9 0
+D0
+~
+~
+0 -1 9574 10 10 5
+D2
+~
+~
+0 -1 9576 10 10 5
+A
+south~
+~
+// Test for character size and dont repeat message for each group member
+act_tochar( "You stoop through the archway to the $d" );
+act_notchar( "$n stoops through the archway to the $d" );
+continue;
+~
+!
+3 0 0
+-1
+S
+
+#9576
+Dwarven Roadway~
+Double braided rope mounted to the wall, provides a helpful handrail
+along the lengthy tunnel.  A frigid gentle breeze makes its way down to
+you from the north.  A small trickle of water runs down the tunnel wall. 
+The smooth, tunneled road extends off to the north and south.
+~
+~
+33030145 12 9 0
+D0
+~
+~
+0 -1 9575 10 10 5
+D2
+~
+~
+0 -1 9577 10 10 5
+-1
+S
+
+#9577
+Dwarven Roadway~
+The air is cold, and the walls are damp with condensation.  Bronze rings
+set into the tunnel walls maintain the rigidity of the rope handrail. 
+With no indication of an exit in either direction, the tunnel stretches
+endlessly to the north and south.
+~
+~
+33030145 12 9 0
+D0
+~
+~
+0 -1 9576 10 10 5
+D2
+~
+~
+0 -1 9578 10 10 5
+-1
+S
+
+#9578
+Dwarven Roadway~
+A series of bronze rings are set into the wall at equal intervals with a
+length of rope passing through.  The rope continues along the length of
+the wall and out of sight to the north.  Water drips from the surface of
+the walls and ceiling forming a puddle across the smooth tunnel floor.
+~
+~
+33030145 12 9 0
+D0
+~
+~
+0 -1 9577 10 10 5
+D2
+~
+~
+0 -1 9579 10 10 5
+-1
+S
+
+#9579
+Dwarven Roadway~
+Underneath the shaft opening, a large lift sits motionless in the center
+of the room.  A chain hangs down from the shaft, evidently the operating
+mechanism for the lift.  This well lit end of the tunnel is provided by
+the many torches flickering in the gentle, cool breeze.
+~
+[Larken] nice lift in desc perhaps we can make it the only way up and
+down here...  would break up the road some.
+~
+33030145 12 9 0
+D0
+~
+~
+0 -1 9578 10 10 5
+D4
+~
+~
+0 -1 9580 10 10 5
+-1
+S
+
+#9580
+Dwarven Roadway~
+Under Construction.
+~
+~
+33030145 12 9 0
+D4
+~
+~
+0 -1 9581 10 10 5
+D5
+~
+~
+0 -1 9579 10 10 5
+-1
+S
+
+#9581
+Dwarven Roadway~
+Under Construction.
+~
+~
+33030145 12 9 0
+D1
+~
+~
+0 -1 9582 10 10 5
+D5
+~
+~
+0 -1 9580 10 10 5
+-1
+S
+
+#9582
+Dwarven Roadway~
+Under Construction.
+~
+~
+33030145 12 9 0
+D1
+~
+~
+0 -1 9583 10 10 5
+D3
+~
+~
+0 -1 9581 10 10 5
+-1
+S
+
+#9583
+Dwarven Roadway~
+Under Construction.
+~
+~
+33030145 12 9 0
+D1
+~
+~
+0 -1 9584 10 10 5
+D3
+~
+~
+0 -1 9582 10 10 5
+-1
+S
+
+#9584
+Dwarven Roadway~
+Under Construction.
+~
+~
+33030145 12 9 0
+D1
+~
+~
+0 -1 9585 10 10 5
+D3
+~
+~
+0 -1 9583 10 10 5
+-1
+S
+
+#9585
+Dwarven Roadway~
+Under Construction.
+~
+~
+33030145 12 9 0
+D2
+~
+~
+0 -1 9586 10 10 5
+D3
+~
+~
+0 -1 9584 10 10 5
+-1
+S
+
+#9586
+Dwarven Roadway~
+Under Construction.
+~
+~
+33030145 12 9 0
+D0
+~
+~
+0 -1 9585 10 10 5
+D4
+~
+~
+0 -1 9587 10 10 5
+-1
+S
+
+#9587
+Dwarven Roadway~
+Under Construction.
+~
+~
+33030145 12 9 0
+D1
+~
+~
+0 -1 9588 10 10 5
+D5
+~
+~
+0 -1 9586 10 10 5
+-1
+S
+
+#9588
+Dwarven Roadway~
+Under Construction.
+~
+~
+33030145 12 9 0
+D1
+~
+~
+0 -1 9589 10 10 5
+D3
+~
+~
+0 -1 9587 10 10 5
+-1
+S
+
+#9589
+Dwarven Roadway~
+Under Construction.
+~
+~
+33030145 12 9 0
+D2
+~
+~
+0 -1 9590 10 10 5
+D3
+~
+~
+0 -1 9588 10 10 5
+-1
+S
+
+#9590
+Dwarven Roadway~
+Under Construction.
+~
+~
+33030145 12 9 0
+D0
+~
+~
+0 -1 9589 10 10 5
+D1
+~
+~
+0 -1 9591 10 10 5
+-1
+S
+
+#9591
+Dwarven Roadway~
+Under Construction.
+~
+~
+33030145 12 9 0
+D1
+~
+~
+0 -1 9592 10 10 5
+D3
+~
+~
+0 -1 9590 10 10 5
+-1
+S
+
+#9592
+Dwarven Roadway~
+Under Construction.
+~
+~
+33030145 12 9 0
+D1
+~
+~
+0 -1 9593 10 10 5
+D3
+~
+~
+0 -1 9591 10 10 5
+-1
+S
+
+#9593
+Dwarven Roadway~
+Under Construction.
+~
+~
+33030145 12 9 0
+D1
+~
+~
+0 -1 9594 10 10 5
+D3
+~
+~
+0 -1 9592 10 10 5
+-1
+S
+
+#9594
+Dwarven Roadway~
+Under Construction.
+~
+~
+33030145 12 9 0
+D1
+~
+~
+0 -1 9595 10 10 5
+D3
+~
+~
+0 -1 9593 10 10 5
+-1
+S
+
+#9595
+Dwarven Roadway~
+Under Construction.
+~
+~
+33030145 12 9 0
+D1
+~
+~
+0 -1 9596 10 10 5
+D3
+~
+~
+0 -1 9594 10 10 5
+-1
+S
+
+#9596
+Dwarven Roadway~
+Under Construction.
+~
+~
+33030145 12 9 0
+D1
+~
+~
+0 -1 9597 10 10 5
+D3
+~
+~
+0 -1 9595 10 10 5
+-1
+S
+
+#9597
+Dwarven Roadway~
+Under Construction.
+~
+~
+33030145 12 9 0
+D1
+~
+~
+0 -1 9598 10 10 5
+D3
+~
+~
+0 -1 9596 10 10 5
+-1
+S
+
+#9598
+Dwarven Roadway~
+Under Construction.
+~
+~
+33030145 12 9 0
+D1
+~
+~
+0 -1 9599 10 10 5
+D3
+~
+~
+0 -1 9597 10 10 5
+-1
+S
+
+#9599
+Dwarven Roadway~
+Under Construction.
+~
+~
+33030145 12 9 0
+D0
+~
+~
+0 -1 9600 10 10 5
+D3
+~
+~
+0 -1 9598 10 10 5
+-1
+S
+
+#9600
+Dwarven Roadway~
+Under Construction.
+~
+~
+33030145 12 9 0
+D1
+~
+~
+0 -1 9601 10 10 5
+D2
+~
+~
+0 -1 9599 10 10 5
+-1
+S
+
+#9601
+Dwarven Roadway - Steep Ramp~
+Under Construction.
+~
+~
+33030145 12 9 0
+D3
+~
+~
+0 -1 9600 10 10 5
+D4
+~
+~
+0 -1 9602 10 10 5
+-1
+S
+
+#9602
+Dwarven Roadway - Steep Ramp~
+Under Construction.
+~
+~
+33030145 12 9 0
+D4
+~
+~
+0 -1 9603 10 10 5
+D5
+~
+~
+0 -1 9601 10 10 5
+-1
+S
+
+#9603
+Dwarven Roadway - Steep Ramp~
+Under Construction.
+~
+~
+33030145 12 9 0
+D4
+~
+~
+0 -1 9604 10 10 5
+D5
+~
+~
+0 -1 9602 10 10 5
+-1
+S
+
+#9604
+Dwarven Roadway - Steep Ramp~
+Under Construction.
+~
+~
+33030145 12 9 0
+D3
+~
+~
+0 -1 9627 10 10 5
+D5
+~
+~
+0 -1 9603 10 10 5
+-1
+S
+
+#9627
+Dwarven Roadway - Undermountain Path~
+Under Construction.
+~
+~
+33030145 12 9 0
+D1
+~
+~
+0 -1 9604 10 10 5
+D3
+~
+~
+0 -1 9628 10 10 5
+-1
+S
+
+#9628
+Dwarven Roadway - Undermountain Path~
+Under Construction.
+~
+~
+33030145 12 9 0
+D1
+~
+~
+0 -1 9627 10 10 5
+D2
+~
+~
+0 -1 9629 10 10 5
+-1
+S
+
+#9629
+Dwarven Roadway - Undermountain Path~
+Under Construction.
+~
+~
+33030145 12 9 0
+D0
+~
+~
+0 -1 9628 10 10 5
+D2
+~
+~
+0 -1 9630 10 10 5
+-1
+S
+
+#9630
+Dwarven Roadway - Undermountain Path~
+Under Construction.
+~
+~
+33030145 12 9 0
+D0
+~
+~
+0 -1 9629 10 10 5
+D2
+~
+~
+0 -1 9631 10 10 5
+-1
+S
+
+#9631
+Dwarven Roadway - Undermountain Path~
+Under Construction.
+~
+~
+33030145 12 9 0
+D0
+~
+~
+0 -1 9630 10 10 5
+D3
+~
+~
+0 -1 9632 10 10 5
+-1
+S
+
+#9632
+Dwarven Roadway - Undermountain Path~
+Under Construction.
+~
+~
+33030145 12 9 0
+D1
+~
+~
+0 -1 9631 10 10 5
+D3
+~
+~
+0 -1 9633 10 10 5
+-1
+S
+
+#9633
+Dwarven Roadway - Undermountain Path~
+Carving its way across the mountain range the dwarven road is a remnant
+of when the dwarven nations were a powerful force in these peaks.  Made
+from stone work unsurpased, even after the many years the road shows only
+small amounts of decay.  Lashings of steel shore up any structual
+weaknesses ensuring the road will continue to function for many years to
+come.
+~
+~
+33030145 12 9 0
+D1
+~
+~
+0 -1 9632 10 10 5
+D3
+~
+~
+0 -1 9634 10 10 5
+-1
+S
+
+#9634
+Dwarven Roadway - Undermountain Path~
+Under the massive wieght of the mountain runs the dwarven roadway, its
+roof supported by thick white-stone pillars and lashings of steel rods. 
+Towards the east the roadway begins to climb slightly, enough of an angle
+that the shallow side gutters begin to draw down an increasing flow of
+water.  Southwards the passage winds into the darkness, the air slightly
+less still then before.
+~
+~
+33030145 12 9 0
+D1
+~
+~
+0 -1 9633 10 10 5
+D2
+~
+~
+0 -1 9635 10 10 5
+-1
+S
+
+#9635
+Dwarven Roadway - Undermountain Path~
+The roots of petrified trees poke through the surface of the side walls,
+the ancient woods turned to stone by eons of time and perfect conditions. 
+Around each one a single dwarven rune marks them, as if the crafter was
+acknoledging natures on crafting skills.  Unadorned cobbles line the
+roads base enabling wagons and foot traffic to pass under the mountains
+with ease.
+~
+~
+33030145 12 9 0
+D0
+~
+~
+0 -1 9634 10 10 5
+D3
+~
+~
+0 -1 9636 10 10 5
+-1
+S
+
+#9636
+Dwarven Roadway - Undermountain Path~
+A few mounds of leaves mar the otherwise presteen corridor, the leaf
+litter obviously fallen through the ventilation shaft onto the road.  A
+scattering of empty sconces jut from the passages walls, at one time they
+would have offered a blaze of light.  Rusting strips of rivited steel
+have been lashed to the stone blocks of the wall, greatly increasing the
+force the stones can withstand.  Wide enough to allow a single wagon to
+run down this road must have been a major dwarven tradeway in its time.
+~
+~
+33030145 12 9 0
+D1
+~
+~
+0 -1 9635 10 10 5
+D3
+~
+~
+0 -1 9637 10 10 5
+-1
+S
+
+#9637
+Dwarven Roadway - Undermountain Path~
+Arches of white stone support the tunnels ceiling, their keystones marked
+with a dwarven rune.  Underfoot the floor is clear of the normal rocks
+and debris, only a faint layer of dust marring the near spotless finish. 
+Copper sconces, set high in the wall would have provided light for a
+traveler, sadly they are now devoid of any torch.
+~
+~
+33030145 12 9 0
+D0
+~
+~
+0 -1 9638 10 10 5
+D1
+~
+~
+0 -1 9636 10 10 5
+-1
+S
+
+#9638
+Dwarven Ruins - Ancient Passageway~
+Cloaked in cobwebs the passageway runs south and westwards under the
+mountains.  Narrow ventilation shafts, covered by bronze grates, allow a
+faint amount of air to filter down into the tomb-like tunnel.  Small gaps
+in the cobbled roadway allows water to seep away, leaving the road clear
+of the normal clutter that plagues a less well designed tunnel.
+~
+~
+33030145 12 9 0
+D2
+~
+~
+0 -1 9637 10 10 5
+D3
+~
+~
+0 -1 9639 10 10 5
+-1
+S
+
+#9639
+Dwarven Ruins - Ancient Passageway~
+Archways of white stone begin to brace the blocks of heavy stone that
+form the tunnels roof.  Each archway has been re-enforced by strips of
+rivited steel, the metal starting to rust in patches.  Into the road
+cobbles have been set to ensure the passage stays as flat and sure footed
+underfoot.
+~
+~
+33030145 12 9 0
+D1
+~
+~
+0 -1 9638 10 10 5
+D3
+~
+~
+0 -1 9640 10 10 5
+-1
+S
+
+#9640
+Dwarven Ruins - Ancient Passageway~
+The smooth stone walls have been carved out of the mountainside, their
+only mark where each slab has been re-enforced by steel bracing.  A
+shallow ditch runs beside the roadway, drawing off water down into
+copper-grated drains.  To the west the tunnel ends in a stone door whilst
+to the east it continues onwards into the darkness.
+~
+~
+33030145 12 9 0
+D1
+~
+~
+0 -1 9639 10 10 5
+D3
+~
+~
+0 -1 9641 10 10 5
+-1
+S
+
+#9641
+Dwarven Ruins - Ancient Passageway~
+Crafted from the mountains by the dwarves these halls and passages appear
+abandoned by them, only their skillful work enabling the underpass to
+remain useable.  Small cracks cover some of the stout pillars that
+support the cieling, and indication perhaps that their time is drawing to
+a close.  A very un-dwarven door has been set into the western wall, its
+spider-web pattern more like something a vyan would engrave.
+~
+~
+33030145 12 9 0
+D1
+~
+~
+0 -1 9640 10 10 5
+D3
+stone door~
+~
+471 -1 7971 10 10 5
+-1
+S
+
+#0
+

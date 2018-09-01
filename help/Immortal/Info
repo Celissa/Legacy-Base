@@ -1,0 +1,12 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+info          : displays last 5 info entries of every type<br>
+info [on|off] : turns info globally on or off<br>
+info [type]   : displays last 20 info entries for the specified type<br>
+<br>
+<h1> Description </h1>
+See also: auction, iflag, messages, options<br>
+</html>
+</body>

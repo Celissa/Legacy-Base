@@ -1,0 +1,8000 @@
+#M2_AREA
+2
+
+Slave Pits~
+Rikahn~
+slave pits~
+~
+~
+
+10 0
+0
+1
+#ROOMS
+
+#2700
+Tar'Ippal Slave Pit Rbug Room~
+~
+[Rikahn] Zone Concept: Pkill zone with roleplaying reasons to visit for
+both light-raced players and dark-raced players.  Dark overlords command
+a pit of light slaves.  The slaves were captured exploring nearby and
+taken to the pit, where they have been methodically tortured and used to
+expand the caverns.  The slaves have begun to revolt, infuriating the
+overlords into beating them savagely, sometimes to the point of death. 
+Dark-raced players should visit the zone to assist the overlords in
+slaughtering the rebellious slaves, whereas light-raced players should
+free the slaves by killing the overlords.
+[Rikahn] The pit itself is flagged as a pkill zone, though the two
+landings overlooking the pit are not.  Overlords and slaves are allowed
+to roam the zone freely, with occasional acodes emulating the torture of
+the slaves.
+[Rikahn] Slaves are L10, Overlords are L25.  Intentional.  This is
+primarily a dark-raced killing field.  Crossing racial lines causes the
+overlords to call for assistance and do more damage, same with slaves.
+[Rikahn] Rdescs are intentionally somewhat short, reducing spam while
+players are exploring the pkill portion of the zone.
+~
+200933444 11 5 0
+-1
+S
+
+#2701
+Edge of the Slave Pit~
+A tangled rope ladder dangles down from above, its lowest rungs coiled up
+in a pile on the ground.  Attached to a wooden landing high above that
+juts forth from a southern cliff, it appears sturdy enough to climb
+without breaking.  A sprawling cavern opens up to the north and east,
+although what perils await is difficult to tell through the inky darkness.
+~
+** ABOVE IS 2723 **
+[Eliza] Done.
+~
+-335937468 11 9 0
+D0
+~
+~
+0 -1 2705 10 10 5
+D1
+~
+~
+0 -1 2736 10 10 5
+D4
+~
+~
+0 -1 2723 10 10 5
+E
+tangled rope ladder lowest rungs coiled pile ground~
+Danging down from the wooden landing above, the rope ladder is strong
+and sturdy.  Two-inch thick lengths are knotted a foot apart, making an
+easy climb.  The bottom sections of the rope are coiled on the ground,
+the rest of the ladder kept somewhat taut by the ladder's weight.
+~
+E
+wooden landing cliff 1 south~
+A vertical cliff rises up to the south, the only means of travel in that
+direction a rope ladder that dangles down from above.  Scratch marks are
+visible on top of the stone, left by slaves attempting to escape.
+~
+A
+up~
+*~
+if( find_stat( ch, level ) > 90 )
+  continue;
+if( is_player( ch ) ) {
+  act_tochar( #no, ch );
+  end;
+  }
+continue;
+~
+E
+no~
+Walking straight up a vertical wall isn't one of your known skills. 
+Climbing up the ladder would probably better suit your abilities.
+~
+!
+0 0 0
+A
+~
+~
+if( find_stat( ch, level ) )
+  continue;
+if( race( ch ) == master ) {
+  act_notchar( #overlord, ch );
+  transfer( ch, find_room( 2723 ) );
+  act_notchar( #overlord2, ch );
+  end;
+}
+if( race( ch ) == slave ) {
+  i = random( 1, 3 );
+  if( i == 2 ) {
+    act_notchar( #slave, ch );
+    transfer( ch, find_room( 2723 ) );
+    act_notchar( #slave2, ch );
+    if( mob_in_room( 1382, find_room( 2723 ) ) || mob_in_room( 1383, find_room( 2723 ) ) || mob_in_room( 1384, find_room( 2723 ) ) || mob_in_room( 1385, find_room( 2723 ) ) ) {
+      wait( 1 );
+      act_notchar( #slapped, ch );
+      transfer( ch, find_room( 2701 ) );
+      act_notchar( #slapped2, ch );
+      end;
+    }
+    end;
+  }
+  act_notchar( #slave3, ch );
+  transfer( ch, find_room( 2701 ) );
+}
+~
+E
+overlord~
+@y$n climbs up the ladder.@n
+~
+E
+overlord2~
+@y$n climbs up the ladder from below.@n
+~
+E
+slave~
+@y$n slowly climbs up the ladder, barely making it to the top.@n
+~
+E
+slave2~
+@y$n climbs up the ladder from below, weak and emaciated.@n
+~
+E
+slave3~
+@y$n attempts to climb up the ladder, but doesn't have the strength to
+make it all the way up.@n 
+~
+E
+slapped~
+@y$n cringes as the overlord tosses $m back over the edge!@n
+~
+E
+slapped2~
+@y$n tumbles to the ground, sent flying by the overlord above.@n
+~
+!
+3 0 16
+A
+climb scale~
+tangled rope ladder 1 up~
+if( is_pet( ch ) ) {
+  if( can_fly( ch ) ) {
+    act_notchar( #pet, ch );
+    transfer( ch, find_room( 2723 ) );
+    act_notchar( #pet2, ch );
+    end;
+    }
+  }
+if( is_player( ch ) ) {
+  act_tochar( #climb, ch );
+  act_notchar( #climb2, ch );
+  transfer( ch, find_room( 2723 ) );
+  act_notchar( #arrive, ch );
+  end;
+  }
+~
+E
+pet~
+@G$n flies up to the ledge above.@n
+~
+E
+pet2~
+@G$n flies up from below.@n
+~
+E
+climb~
+@mYou climb up the ladder to the landing above.@n
+~
+E
+climb2~
+@m$n climbs up the ladder to the landing above.@n
+~
+E
+arrive~
+@m$n climbs up the ladder from below.@n
+~
+!
+0 0 0
+A
+~
+~
+if( mob_in_room( 5298, room ) || mob_in_room( 5299, room ) || mob_in_room( 5300, room ) || mob_in_room( 5301, room ) ) {
+  if( mob_in_room( 5302, room ) || mob_in_room( 5303, room ) || mob_in_room( 5304, room ) || mob_in_room( 5305, room ) ) {
+    if( rflag( status2, room ) ) {
+      remove_rflag( status2, room );
+      wait( 2 );
+      i = 0;
+      j = 0;
+      if( mob_in_room( 5298, room ) )
+        i = 1;
+      if( mob_in_room( 5299, room ) )
+        i = 2;
+      if( mob_in_room( 5300, room ) )
+        i = 3;
+      if( mob_in_room( 5301, room ) )
+        i = 4;
+      if( mob_in_room( 5302, room ) )
+        j = 1;
+      if( mob_in_room( 5303, room ) )
+        j = 2;
+      if( mob_in_room( 5304, room ) )
+        j = 3;
+      if( mob_in_room( 5305, room ) )
+        j = 4;
+      if( i == 1 ) {
+        if( j == 1 )
+          send_to_room( #trollgnome, room );
+        if( j == 2 )
+          send_to_room( #trollhalfling, room );
+        if( j == 3 )
+          send_to_room( #trollelf, room );
+        if( j == 4 )
+          send_to_room( #trolldwarf, room );
+        }
+      if( i == 2 ) {
+        if( j == 1 )
+          send_to_room( #ogregnome, room );
+        if( j == 2 )
+          send_to_room( #ogrehalfling, room );
+        if( j == 3 )
+          send_to_room( #ogreelf, room );
+        if( j == 4 )
+          send_to_room( #ogredwarf, room );
+        }
+      if( i == 3 ) {
+        if( j == 1 )
+          send_to_room( #vyangnome, room );
+        if( j == 2 )
+          send_to_room( #vyanhalfling, room );
+        if( j == 3 )
+          send_to_room( #vyanelf, room );
+        if( j == 4 )
+          send_to_room( #vyandwarf, room );
+        }
+      if( i == 4 ) {
+        if( j == 1 )
+          send_to_room( #orcgnome, room );
+        if( j == 2 )
+          send_to_room( #orchalfling, room );
+        if( j == 3 )
+          send_to_room( #orcelf, room );
+        if( j == 4 )
+          send_to_room( #orcdwarf, room );
+        }
+      wait( 6 );
+      set_rflag( status2, room );
+      }
+    }
+  }
+~
+E
+trollgnome~
+@rThe troll overlord violently shoves a gnome slave, demanding he work
+faster.@n 
+~
+E
+trollhalfling~
+@rThe troll overlord violently shoves a halfling slave, demanding he work
+faster.@n 
+~
+E
+trollelf~
+@rThe troll overlord violently shoves an elf slave, demanding he work
+faster.@n 
+~
+E
+trolldwarf~
+@rThe troll overlord violently shoves a dwarf slave, demanding he work
+faster.@n 
+~
+E
+ogregnome~
+@rThe ogre overlord violently shoves a gnome slave, demanding he work
+faster.@n 
+~
+E
+ogrehalfling~
+@rThe ogre overlord violently shoves a halfling slave, demanding he work
+faster.@n 
+~
+E
+ogreelf~
+@rThe ogre overlord violently shoves an elf slave, demanding he work
+faster.@n 
+~
+E
+ogredwarf~
+@rThe ogre overlord violently shoves a dwarf slave, demanding he work
+faster.@n 
+~
+E
+vyangnome~
+@rThe vyan overlord violently shoves a gnome slave, demanding he work
+faster.@n 
+~
+E
+vyanhalfling~
+@rThe vyan overlord violently shoves a halfling slave, demanding he work
+faster.@n 
+~
+E
+vyanelf~
+@rThe vyan overlord violently shoves an elf slave, demanding he work
+faster.@n 
+~
+E
+vyandwarf~
+@rThe vyan overlord violently shoves a dwarf slave, demanding he work
+faster.@n 
+~
+E
+orcgnome~
+@rThe orc overlord violently shoves a gnome slave's back, demanding he
+work faster.@n 
+~
+E
+orchalfling~
+@rThe orc overlord violently shoves a halfling slave's back, demanding he
+work faster.@n 
+~
+E
+orcelf~
+@rThe orc overlord violently shoves an elf slave's back, demanding he
+work faster.@n 
+~
+E
+orcdwarf~
+@rThe orc overlord violently shoves a dwarf slave's back, demanding he
+work faster.@n 
+~
+!
+1 0 19
+5304 9 1509949540 3 0
+233 9 1509949540 3 0
+-1
+S
+
+#2702
+Edge of the Slave Pit~
+The cold stone walls turn inward to the north, leading back into the
+musty-smelling cavern.  A vertical shelf leads upwards to the south,
+where a wooden platform projects from a ledge visible high above. 
+Dangling over the edge of the platform is a thick rope ladder, its lower
+rungs weighted down with heavy iron discs.
+~
+** ABOVE IS 2725 **
+[Eliza] Done.
+~
+-335937468 11 9 0
+D0
+~
+~
+0 -1 2703 10 10 5
+D3
+~
+~
+0 -1 2736 10 10 5
+D4
+~
+~
+0 -1 2725 10 10 5
+E
+stone walls vertical shelf~
+Rising straight up into the air, a stone wall blocks access further to
+the south.  About twenty feet up, a ledge breaks the vertical climb,
+although the only access to those lofty heights is a rope ladder,
+dangling down from above.
+~
+E
+wooden platform ledge 1 up~
+Built on top and over the lip of the cliff to the south, a wooden
+platform offers a safe haven for the evil overlords.  Allowing them to
+overlook much of the cavern from one location, the landing appears to be
+the only exit out of the slave pit.
+~
+E
+thick rope ladder lower rungs heavy iron discs~
+Knotted a foot apart, rope rungs offer purchase for climbing the hemp
+ladder that hangs from the wooden platform above.  Weighted down at its
+base by dense iron discs, it remains taut enough to stay in place even
+when being used.
+~
+A
+up~
+*~
+if( find_stat( ch, level ) > 90 )
+  continue;
+if( is_player( ch ) ) {
+  act_tochar( #no, ch );
+  end;
+  }
+continue;
+~
+E
+no~
+You should probably use the ladder instead of trying to walk up the wall.
+~
+!
+0 0 0
+A
+~
+~
+if( find_stat( ch, level ) > 90 )
+  continue;
+if( race( ch ) == master ) {
+  act_notchar( #overlord, ch );
+  transfer( ch, find_room( 2725 ) );
+  act_notchar( #overlord2, ch );
+  end;
+  }
+if( race( ch ) == slave ) {
+  i = random( 1, 3 );
+  if( i == 2 ) {
+    act_notchar( #slave, ch );
+    transfer( ch, find_room( 2725 ) );
+    act_notchar( #slave2, ch );
+    end;
+    }
+  act_notchar( #slave3, ch );
+  transfer( ch, find_room( 2702 ) );
+  }
+~
+E
+overlord~
+@y$n climbs up the ladder.@n
+~
+E
+overlord2~
+@y$n climbs up the ladder from below.@n
+~
+E
+slave~
+@y$n slowly climbs up the ladder, barely making it to the top.@n
+~
+E
+slave2~
+@y$n climbs up the ladder from below, barely making it to the top.@n
+~
+E
+slave3~
+@y$n attemps to climb up the ladder, but doesn't have the strength to
+make it all the way up.@n 
+~
+!
+3 0 16
+A
+climb scale~
+thick rope ladder rungs 1 up~
+if( is_pet( ch ) ) {
+  if( can_fly( ch ) ) {
+    act_notchar( #pet, ch );
+    transfer( ch, find_room( 2723 ) );
+    act_notchar( #pet2, ch );
+    end;
+  }
+}
+else {
+  act_notchar( #pclimb, ch, obj, mob, sight );
+  transfer( ch, find_room( 2716 ) );
+  act_notchar( #arrive, ch, obj, mob, sight );
+}
+if( is_player( ch ) ) {
+  act_tochar( #climb, ch );
+  act_notchar( #climb2, ch );
+  transfer( ch, find_room( 2725 ) );
+  act_notchar( #arrive, ch );
+  end;
+}
+~
+E
+pet~
+@G$n flies up to the ledge above.@n
+~
+E
+pet2~
+@G$n flies up from below.@n
+~
+E
+climb~
+@mYou climb up the ladder to the landing above.@n
+~
+E
+climb2~
+@m$n climbs up the ladder to the landing above.@n
+~
+E
+arrive~
+@m$n climbs up the ladder from below.@n
+~
+E
+pclimb~
+@mUnwillingly, $n climbs up.@n
+~
+!
+0 0 0
+A
+~
+~
+if( mob_in_room( 5298, room ) || mob_in_room( 5299, room ) || mob_in_room( 5300, room ) || mob_in_room( 5301, room ) ) {
+  if( mob_in_room( 5302, room ) || mob_in_room( 5303, room ) || mob_in_room( 5304, room ) || mob_in_room( 5305, room ) ) {
+    if( rflag( status2, room ) ) {
+      remove_rflag( status2, room );
+      wait( 2 );
+      i = 0;
+      j = 0;
+      if( mob_in_room( 5298, room ) )
+        i = 1;
+      if( mob_in_room( 5299, room ) )
+        i = 2;
+      if( mob_in_room( 5300, room ) )
+        i = 3;
+      if( mob_in_room( 5301, room ) )
+        i = 4;
+      if( mob_in_room( 5302, room ) )
+        j = 1;
+      if( mob_in_room( 5303, room ) )
+        j = 2;
+      if( mob_in_room( 5304, room ) )
+        j = 3;
+      if( mob_in_room( 5305, room ) )
+        j = 4;
+      if( i == 1 ) {
+        if( j == 1 )
+          send_to_room( #trollgnome, room );
+        if( j == 2 )
+          send_to_room( #trollhalfling, room );
+        if( j == 3 )
+          send_to_room( #trollelf, room );
+        if( j == 4 )
+          send_to_room( #trolldwarf, room );
+      }
+      if( i == 2 ) {
+        if( j == 1 )
+          send_to_room( #ogregnome, room );
+        if( j == 2 )
+          send_to_room( #ogrehalfling, room );
+        if( j == 3 )
+          send_to_room( #ogreelf, room );
+        if( j == 4 )
+          send_to_room( #ogredwarf, room );
+      }
+      if( i == 3 ) {
+        if( j == 1 )
+          send_to_room( #vyangnome, room );
+        if( j == 2 )
+          send_to_room( #vyanhalfling, room );
+        if( j == 3 )
+          send_to_room( #vyanelf, room );
+        if( j == 4 )
+          send_to_room( #vyandwarf, room );
+      }
+      if( i == 4 ) {
+        if( j == 1 )
+          send_to_room( #orcgnome, room );
+        if( j == 2 )
+          send_to_room( #orchalfling, room );
+        if( j == 3 )
+          send_to_room( #orcelf, room );
+        if( j == 4 )
+          send_to_room( #orcdwarf, room );
+      }
+      wait( 6 );
+      set_rflag( status2, room );
+    }
+  }
+}
+~
+E
+trollgnome~
+@rThe troll overlord violently shoves a gnome slave, demanding he work
+faster.@n 
+~
+E
+trollhalfling~
+@rThe troll overlord violently shoves a halfling slave, demanding he work
+faster.@n 
+~
+E
+trollelf~
+@rThe troll overlord violently shoves an elf slave, demanding he work
+faster.@n 
+~
+E
+trolldwarf~
+@rThe troll overlord violently shoves a dwarf slave, demanding he work
+faster.@n 
+~
+E
+ogregnome~
+@rThe ogre overlord violently shoves a gnome slave, demanding he work
+faster.@n 
+~
+E
+ogrehalfling~
+@rThe ogre overlord violently shoves a halfling slave, demanding he work
+faster.@n 
+~
+E
+ogreelf~
+@rThe ogre overlord violently shoves an elf slave, demanding he work
+faster.@n 
+~
+E
+ogredwarf~
+@rThe ogre overlord violently shoves a dwarf slave, demanding he work
+faster.@n 
+~
+E
+vyangnome~
+@rThe vyan overlord violently shoves a gnome slave, demanding he work
+faster.@n 
+~
+E
+vyanhalfling~
+@rThe vyan overlord violently shoves a halfling slave, demanding he work
+faster.@n 
+~
+E
+vyanelf~
+@rThe vyan overlord violently shoves an elf slave, demanding he work
+faster.@n 
+~
+E
+vyandwarf~
+@rThe vyan overlord violently shoves a dwarf slave, demanding he work
+faster.@n 
+~
+E
+orcgnome~
+@rThe orc overlord violently shoves a gnome slave's back, demanding he
+work faster.@n 
+~
+E
+orchalfling~
+@rThe orc overlord violently shoves a halfling slave's back, demanding he
+work faster.@n 
+~
+E
+orcelf~
+@rThe orc overlord violently shoves an elf slave's back, demanding he
+work faster.@n 
+~
+E
+orcdwarf~
+@rThe orc overlord violently shoves a dwarf slave's back, demanding he
+work faster.@n 
+~
+!
+1 0 25
+5301 9 1509949540 3 0
+5304 9 1509949540 3 0
+-1
+S
+
+#2703
+Slave Pit~
+Situated near its middle, this portion of the cavern is quiet in
+relationship to the hotspots of activity around the pit's perimeter.  A
+rock column is visible to the northwest, that the overlords use to stand
+over the slaves and shout orders.  Ladders leading upwards can be seen
+far to the north and south, the only means of escaping alive.  The dank
+pit extends in all directions, drifting into darkness.
+~
+[Eliza] Done.
+~
+-335937468 11 9 0
+D0
+~
+~
+0 -1 2710 10 10 5
+D1
+~
+~
+0 -1 2729 10 10 5
+D2
+~
+~
+0 -1 2702 10 10 5
+D3
+~
+~
+0 -1 2704 10 10 5
+E
+rock column northwest~
+Rising up a few feet off of the floor, a circular column of rock has been
+left alone through the cavern's mining as a vantage point for the
+overlords to shout orders and observe the slaves.
+~
+E
+ladders upwards 1 north 1 south~
+Their outlines barely visible in the dusky cavern, ladders can just be
+seen, leading upward into the ceiling in the distance far to the
+north and south.  Evidently the only exits out of the pit, numerous
+tracks in the floor lead in their directions.
+~
+A
+~
+~
+if( mob_in_room( 5298, room ) || mob_in_room( 5299, room ) || mob_in_room( 5300, room ) || mob_in_room( 5301, room ) ) {
+  if( mob_in_room( 5302, room ) || mob_in_room( 5303, room ) || mob_in_room( 5304, room ) || mob_in_room( 5305, room ) ) {
+    if( rflag( status2, room ) ) {
+      remove_rflag( status2, room );
+      wait( 2 );
+      i = 0;
+      j = 0;
+      if( mob_in_room( 5298, room ) )
+        i = 1;
+      if( mob_in_room( 5299, room ) )
+        i = 2;
+      if( mob_in_room( 5300, room ) )
+        i = 3;
+      if( mob_in_room( 5301, room ) )
+        i = 4;
+      if( mob_in_room( 5302, room ) )
+        j = 1;
+      if( mob_in_room( 5303, room ) )
+        j = 2;
+      if( mob_in_room( 5304, room ) )
+        j = 3;
+      if( mob_in_room( 5305, room ) )
+        j = 4;
+      if( i == 1 ) {
+        if( j == 1 )
+          send_to_room( #trollgnome, room );
+        if( j == 2 )
+          send_to_room( #trollhalfling, room );
+        if( j == 3 )
+          send_to_room( #trollelf, room );
+        if( j == 4 )
+          send_to_room( #trolldwarf, room );
+        }
+      if( i == 2 ) {
+        if( j == 1 )
+          send_to_room( #ogregnome, room );
+        if( j == 2 )
+          send_to_room( #ogrehalfling, room );
+        if( j == 3 )
+          send_to_room( #ogreelf, room );
+        if( j == 4 )
+          send_to_room( #ogredwarf, room );
+        }
+      if( i == 3 ) {
+        if( j == 1 )
+          send_to_room( #vyangnome, room );
+        if( j == 2 )
+          send_to_room( #vyanhalfling, room );
+        if( j == 3 )
+          send_to_room( #vyanelf, room );
+        if( j == 4 )
+          send_to_room( #vyandwarf, room );
+        }
+      if( i == 4 ) {
+        if( j == 1 )
+          send_to_room( #orcgnome, room );
+        if( j == 2 )
+          send_to_room( #orchalfling, room );
+        if( j == 3 )
+          send_to_room( #orcelf, room );
+        if( j == 4 )
+          send_to_room( #orcdwarf, room );
+        }
+      wait( 6 );
+      set_rflag( status2, room );
+      }
+    }
+  }
+~
+E
+trollgnome~
+@rThe troll overlord cracks his whip at the gnome slave's back, leaving a
+bloody welt.@n 
+~
+E
+trollhalfling~
+@rThe troll overlord cracks his whip at the halfling slave's back,
+leaving a bloody welt.@n 
+~
+E
+trollelf~
+@rThe troll overlord cracks his whip at the elf slave's back, leaving a
+bloody welt.@n 
+~
+E
+trolldwarf~
+@rThe troll overlord cracks his whip at the dwarf slave's back, leaving a
+bloody welt.@n 
+~
+E
+ogregnome~
+@rThe ogre overlord cracks his whip at the gnome slave's back, leaving a
+bloody welt.@n 
+~
+E
+ogrehalfling~
+@rThe ogre overlord cracks his whip at the halfling slave's back, leaving
+a bloody welt.@n 
+~
+E
+ogreelf~
+@rThe ogre overlord cracks his whip at the elf slave's back, leaving a
+bloody welt.@n 
+~
+E
+ogredwarf~
+@rThe ogre overlord cracks his whip at the dwarf slave's back, leaving a
+bloody welt.@n 
+~
+E
+vyangnome~
+@rThe vyan overlord cracks his whip at the gnome slave's back, leaving a
+bloody welt.@n 
+~
+E
+vyanhalfling~
+@rThe vyan overlord cracks his whip at the halfling slave's back, leaving
+a bloody welt.@n 
+~
+E
+vyanelf~
+@rThe vyan overlord cracks his whip at the elf slave's back, leaving a
+bloody welt.@n 
+~
+E
+vyandwarf~
+@rThe vyan overlord cracks his whip at the dwarf slave's back, leaving a
+bloody welt.@n 
+~
+E
+orcgnome~
+@rThe orc overlord cracks his whip at the gnome slave's back, leaving a
+bloody welt.@n 
+~
+E
+orchalfling~
+@rThe orc overlord cracks his whip at the halfling slave's back, leaving
+a bloody welt.@n 
+~
+E
+orcelf~
+@rThe orc overlord cracks his whip at the elf slave's back, leaving a
+bloody welt.@n 
+~
+E
+orcdwarf~
+@rThe orc overlord cracks his whip at the dwarf slave's back, leaving a
+bloody welt.@n 
+~
+!
+1 0 15
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 )
+  send_to_room( #action1, room );
+if( i == 2 )
+  send_to_room( #action2, room );
+if( i == 3 ) {
+  if( mob_in_room( 5302, room ) || mob_in_room( 5303, room ) || mob_in_room( 5304, room ) || mob_in_room( 5305, room ) )
+    send_to_room( #action3, room );
+  end;
+  }
+~
+E
+action1~
+@gSomething skitters across your foot, disappearing in the darkness
+before it can be identified.@n 
+~
+E
+action2~
+@gThe buzz of a fly zips by your ear.@n
+~
+E
+action3~
+@gA slave tugs at your arm, begging for mercy.@n
+~
+!
+2 200 0
+5298 9 1509949540 3 0
+-1
+S
+
+#2704
+Slave Pit~
+Centralized within the slave pits, this portion of the chamber appears to
+be a staging point for the slave labor.  Numerous tracks in the dusty
+floor head off in all directions, leading towards the various mining
+operations within the cavern.  A column of rock overlooks the pit to the
+north, used as a pulpit for the overlords to shout their orders at the
+slaves.
+~
+[Eliza] Done.
+~
+-335937468 11 9 0
+D0
+~
+~
+0 -1 2709 10 10 5
+D1
+~
+~
+0 -1 2703 10 10 5
+D2
+~
+~
+0 -1 2736 10 10 5
+D3
+~
+~
+0 -1 2705 10 10 5
+E
+various mining operations cavern~
+Though unseen through the inky blackness of the subterranean cavern, the
+sounds of pickaxes striking rock can be heard clinking throughout the
+chamber.  A choking mist of dust hangs in the air, where coal dust has
+been stirred up from the mining efforts.
+~
+E
+column rock overlooks pulpit 1 north~
+Circular in shape, a three-foot tall rock column has been built up to the
+north.  Just tall enough to see the entire pit from its plateau, the
+column is constantly being used by the overlords to shout orders down to
+the slaves.
+~
+E
+race slave~
+No description.
+~
+A
+~
+~
+if( race( ch ) == master )
+  continue;
+~
+E
+to_char~
+@yYou climb on top of the rock column, looking for more slaves to
+torture.@n 
+~
+E
+to_room~
+@y$n climbs on top of the rock column to the north, looking for more
+slaves to torture.@n 
+~
+!
+3 0 1
+A
+~
+~
+if( race( ch ) == slave )
+  continue;
+~
+E
+to_char~
+@yYou climb on top of the rock column, hiding from the overlords.@n
+~
+E
+to_room~
+@y$n climbs on top of the rock column to the north, attempting to hide
+from the overlords.@n
+~
+!
+3 0 1
+A
+~
+~
+if( find_stat( ch, level ) > 90 )
+  continue;
+if( race( ch ) != master ) {
+  if( race( ch ) != slave ) {
+    act_tochar( #no, ch );
+    end;
+    }
+  }
+~
+E
+no~
+A three-foot tall rock column prevents you from walking in that direction.
+~
+!
+3 0 1
+A
+climb jump hop~
+rock column 1 north~
+act_tochar( #jump, ch );
+act_notchar( #jump2, ch );
+transfer( ch, find_room( 2709 ) );
+act_notchar( #arrive, ch );
+~
+E
+jump~
+@mYou jump on top of the rock column.@n
+~
+E
+jump2~
+@m$n jumps up onto the rock column to the north.@n
+~
+E
+arrive~
+@m$n jumps onto the rock column from the south.@n
+~
+!
+0 0 0
+A
+~
+~
+if( mob_in_room( 5298, room ) || mob_in_room( 5299, room ) || mob_in_room( 5300, room ) || mob_in_room( 5301, room ) ) {
+  if( mob_in_room( 5302, room ) || mob_in_room( 5303, room ) || mob_in_room( 5304, room ) || mob_in_room( 5305, room ) ) {
+    if( rflag( status2, room ) ) {
+      remove_rflag( status2, room );
+      wait( 2 );
+      i = 0;
+      j = 0;
+      if( mob_in_room( 5298, room ) )
+        i = 1;
+      if( mob_in_room( 5299, room ) )
+        i = 2;
+      if( mob_in_room( 5300, room ) )
+        i = 3;
+      if( mob_in_room( 5301, room ) )
+        i = 4;
+      if( mob_in_room( 5302, room ) )
+        j = 1;
+      if( mob_in_room( 5303, room ) )
+        j = 2;
+      if( mob_in_room( 5304, room ) )
+        j = 3;
+      if( mob_in_room( 5305, room ) )
+        j = 4;
+      if( i == 1 ) {
+        if( j == 1 )
+          send_to_room( #trollgnome, room );
+        if( j == 2 )
+          send_to_room( #trollhalfling, room );
+        if( j == 3 )
+          send_to_room( #trollelf, room );
+        if( j == 4 )
+          send_to_room( #trolldwarf, room );
+        }
+      if( i == 2 ) {
+        if( j == 1 )
+          send_to_room( #ogregnome, room );
+        if( j == 2 )
+          send_to_room( #ogrehalfling, room );
+        if( j == 3 )
+          send_to_room( #ogreelf, room );
+        if( j == 4 )
+          send_to_room( #ogredwarf, room );
+        }
+      if( i == 3 ) {
+        if( j == 1 )
+          send_to_room( #vyangnome, room );
+        if( j == 2 )
+          send_to_room( #vyanhalfling, room );
+        if( j == 3 )
+          send_to_room( #vyanelf, room );
+        if( j == 4 )
+          send_to_room( #vyandwarf, room );
+        }
+      if( i == 4 ) {
+        if( j == 1 )
+          send_to_room( #orcgnome, room );
+        if( j == 2 )
+          send_to_room( #orchalfling, room );
+        if( j == 3 )
+          send_to_room( #orcelf, room );
+        if( j == 4 )
+          send_to_room( #orcdwarf, room );
+        }
+      wait( 6 );
+      set_rflag( status2, room );
+      }
+    }
+  }
+~
+E
+trollgnome~
+@rA gnome slave cringes away from the troll overlord, begging for
+mercy.@n 
+~
+E
+trollhalfling~
+@rA halfling slave cringes away from the troll overlord, begging for
+mercy.@n 
+~
+E
+trollelf~
+@rAn elf slave cringes away from the troll overlord, begging for mercy.@n
+
+~
+E
+trolldwarf~
+@rA dwarf slave cringes away from the troll overlord, begging for
+mercy.@n 
+~
+E
+ogregnome~
+@rA gnome slave cringes away from the ogre overlord, begging for mercy.@n 
+~
+E
+ogrehalfling~
+@rA halfling slave cringes away from the ogre overlord, begging for
+mercy.@n 
+~
+E
+ogreelf~
+@rAn elf slave cringes away from the ogre overlord, begging for mercy.@n
+
+~
+E
+ogredwarf~
+@rA dwarf slave cringes away from the ogre overlord, begging for mercy.@n
+
+~
+E
+vyangnome~
+@rA gnome slave cringes away from the vyan overlord, begging for mercy.@n
+
+~
+E
+vyanhalfling~
+@rA halfling slave cringes away from the vyan overlord, begging for
+mercy.@n 
+~
+E
+vyanelf~
+@rAn elf slave cringes away from the vyan overlord, begging for mercy.@n
+
+~
+E
+vyandwarf~
+@rA dwarf slave cringes away from the vyan overlord, begging for mercy.@n
+
+~
+E
+orcgnome~
+@rA gnome slave cringes away from the orc overlord, begging for mercy.@n 
+~
+E
+orchalfling~
+@rA halfling slave cringes away from the orc overlord, begging for
+mercy.@n 
+~
+E
+orcelf~
+@rAn elf slave cringes away from the orc overlord, begging for mercy.@n
+
+~
+E
+orcdwarf~
+@rA dwarf slave cringes away from the orc overlord, begging for mercy.@n
+
+~
+!
+1 0 15
+A
+~
+~
+if( mob_in_room( 5300, find_room( 2709 ) ) )
+  send_to_room( #crack, room );
+~
+E
+crack~
+@gThe vyan overlord, standing on the outpost to the north, shouts out
+orders to the slaves within the pit.@n 
+~
+!
+2 100 0
+A
+look~
+numerous tracks dusty floor~
+if( find_skill( ch, track ) > 5 ) {
+  act_tochar( #track, ch );
+  end;
+  }
+act_tochar( #track2, ch );
+end;
+~
+E
+track~
+Although many of the tracks have been swept away through shifts in the
+dust and overlaps, there are enough intact prints to determine that quite
+a few different races have come walking through this chamber recently. 
+The distinct patterns of ogre and troll feet can be seen leading
+northward, ending at the stone column.  The stubby prints of dwarf and
+gnome feet trail to the east and west; the tracks must have been moving
+very slow, as their trails are elongated out as if dragged.
+~
+E
+track2~
+There are so many footprints leading off in all directions that it is
+very difficult to determine who could have made them.
+~
+!
+0 0 0
+-1
+S
+
+#2705
+Slave Pit~
+The putrid cavern dips down to the west, where mining continues to take
+place further underground.  The air is thick with black fog, specks of
+dust hovering in the air after being stirred up from below.  The chamber
+remains level in all other directions, except for a rock column that
+stands to the northeast, used as an outpost for the cruel overlords.
+~
+[Eliza] What does frowsty mean, in random acode, adata 2?
+[Eliza] Done.
+[Rikahn] modified acode
+~
+-335937468 11 9 0
+D0
+~
+~
+0 -1 2708 10 10 5
+D1
+~
+~
+0 -1 2704 10 10 5
+D2
+~
+~
+0 -1 2701 10 10 5
+D3
+~
+~
+0 -1 2706 10 10 5
+E
+putrid cavern dips down 1 west~
+Sloping at a somewhat steep angle, the cavern takes a downward dip to the
+west, where a vein of coal is being mined from the walls.  The floor is
+coated with a layer of black dust, making travel difficult at best.
+~
+E
+air thick black fog specks dust~
+With no wind to sweep it away, a thick cloud of coal dust hangs in
+mid-air, making it difficult to breathe.  A thin layer clings to your
+clothes, constantly replenished as it comes in contact with you.
+~
+E
+rock column northeast outpost~
+Rising up from the chamber floor by just a few feet, a column of rock was
+left alone during the excavation of the enormous slave pit.  Used as a
+vantage point to oversee the slaves, it offers an excellent view of the
+entire cavern at once.
+~
+A
+~
+~
+if( mob_in_room( 5298, room ) || mob_in_room( 5299, room ) || mob_in_room( 5300, room ) || mob_in_room( 5301, room ) ) {
+  if( mob_in_room( 5302, room ) || mob_in_room( 5303, room ) || mob_in_room( 5304, room ) || mob_in_room( 5305, room ) ) {
+    if( rflag( status2, room ) ) {
+      remove_rflag( status2, room );
+      wait( 2 );
+      i = 0;
+      j = 0;
+      if( mob_in_room( 5298, room ) )
+        i = 1;
+      if( mob_in_room( 5299, room ) )
+        i = 2;
+      if( mob_in_room( 5300, room ) )
+        i = 3;
+      if( mob_in_room( 5301, room ) )
+        i = 4;
+      if( mob_in_room( 5302, room ) )
+        j = 1;
+      if( mob_in_room( 5303, room ) )
+        j = 2;
+      if( mob_in_room( 5304, room ) )
+        j = 3;
+      if( mob_in_room( 5305, room ) )
+        j = 4;
+      if( i == 1 ) {
+        if( j == 1 )
+          send_to_room( #trollgnome, room );
+        if( j == 2 )
+          send_to_room( #trollhalfling, room );
+        if( j == 3 )
+          send_to_room( #trollelf, room );
+        if( j == 4 )
+          send_to_room( #trolldwarf, room );
+        }
+      if( i == 2 ) {
+        if( j == 1 )
+          send_to_room( #ogregnome, room );
+        if( j == 2 )
+          send_to_room( #ogrehalfling, room );
+        if( j == 3 )
+          send_to_room( #ogreelf, room );
+        if( j == 4 )
+          send_to_room( #ogredwarf, room );
+        }
+      if( i == 3 ) {
+        if( j == 1 )
+          send_to_room( #vyangnome, room );
+        if( j == 2 )
+          send_to_room( #vyanhalfling, room );
+        if( j == 3 )
+          send_to_room( #vyanelf, room );
+        if( j == 4 )
+          send_to_room( #vyandwarf, room );
+        }
+      if( i == 4 ) {
+        if( j == 1 )
+          send_to_room( #orcgnome, room );
+        if( j == 2 )
+          send_to_room( #orchalfling, room );
+        if( j == 3 )
+          send_to_room( #orcelf, room );
+        if( j == 4 )
+          send_to_room( #orcdwarf, room );
+        }
+      wait( 6 );
+      set_rflag( status2, room );
+      }
+    }
+  }
+~
+E
+trollgnome~
+@rA gnome slave grovels at the troll overlord's feet.@n 
+~
+E
+trollhalfling~
+@rA halfling slave grovels at the troll overlord's feet.@n 
+~
+E
+trollelf~
+@rAn elf slave grovels at the troll overlord's feet.@n 
+~
+E
+trolldwarf~
+@rA dwarf slave grovels at the troll overlord's feet.@n 
+~
+E
+ogregnome~
+@rA gnome slave grovels at the ogre overlord's feet.@n 
+~
+E
+ogrehalfling~
+@rA halfling slave grovels at the ogre overlord's feet.@n 
+~
+E
+ogreelf~
+@rAn elf slave grovels at the ogre overlord's feet.@n 
+~
+E
+ogredwarf~
+@rA dwarf slave grovels at the ogre overlord's feet.@n 
+~
+E
+vyangnome~
+@rA gnome slave grovels at the vyan overlord's feet.@n 
+~
+E
+vyanhalfling~
+@rA halfling slave grovels at the vyan overlord's feet.@n 
+~
+E
+vyanelf~
+@rAn elf slave grovels at the vyan overlord's feet.@n 
+~
+E
+vyandwarf~
+@rA dwarf slave grovels at the vyan overlord's feet.@n 
+~
+E
+orcgnome~
+@rA gnome slave grovels at the orc overlord's feet.@n 
+~
+E
+orchalfling~
+@rA halfling slave grovels at the orc overlord's feet.@n 
+~
+E
+orcelf~
+@rAn elf slave grovels at the orc overlord's feet.@n 
+~
+E
+orcdwarf~
+@rA dwarf slave grovels at the orc overlord's feet.@n 
+~
+!
+1 0 15
+A
+~
+~
+if( race( ch ) != master ) {
+  if( race( ch ) != slave ) {
+    if( race( ch ) != rodent ) {
+      continue;
+      end;
+      }
+    }
+  }
+~
+E
+to_char~
+@mYou carefully walk down the incline to the west.@n
+~
+E
+to_room~
+@m$n carefully walks down the incline to the west.@n
+~
+!
+3 0 8
+A
+~
+~
+if( race( ch ) == master )
+  continue;
+~
+E
+to_char~
+@yYou head down the incline to the west.@n
+~
+E
+to_room~
+@y$n charges down the incline to the west, making sure the slaves are
+hard at work.@n 
+~
+!
+3 0 8
+A
+~
+~
+if( race( ch ) == slave )
+  continue;
+~
+E
+to_char~
+@yYou head down the incline to the west.@n
+~
+E
+to_room~
+@y$n shuffles down the incline to the west, steeling $mself for more
+backbreaking work.@n 
+~
+!
+3 0 8
+A
+~
+~
+if( race( ch ) == rodent )
+  continue;
+~
+E
+to_char~
+@cYou head down the incline to the west.@n
+~
+E
+to_room~
+@c$n waddles down the incline to the west, searching for food.@n
+~
+!
+3 0 8
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 )
+  send_to_room( #action1, room );
+if( i == 2 )
+  send_to_room( #action2, room );
+if( i == 3 ) {
+  if( mob_in_room( 5302, find_room( 2706 ) ) )
+    send_to_room( #action3, room );
+  end;
+  }
+~
+E
+action1~
+@gA thick cloud of dust roils up from the chamber to the west, leaving a
+dusty film on your clothes.@n 
+~
+E
+action2~
+@gThe scent of fresh sweat and unclean bodies wafts through the air.@n
+~
+E
+action3~
+@g*clink* The sound of a pickaxe striking a rock rings in from the
+west.@n 
+~
+!
+2 200 0
+5298 9 1509949540 3 0
+-1
+S
+
+#2706
+Slave Pit~
+Nestled at the bottom of a steep incline to the east, this landing ends
+at a mining excavation underway in the west wall.  Blocky gashes in the
+mountainside expose mineral deposits, each one ready to be pried out for
+smelting.  A new section of the pit is being carved out nearby to the
+north, where the slaves have begun digging a tunnel westward.
+~
+[Rikahn] where is this crisscross? I can't find it
+[Eliza] fixed it already..just noting it for the future.
+[Eliza] Done.
+~
+-335937468 11 9 0
+D0
+~
+~
+0 -1 2707 10 10 5
+D1
+~
+~
+0 -1 2705 10 10 5
+E
+steep incline 1 east~
+This gaping section of the cavern has been mined out with a downward
+slope, enabling the slaves to get a direct position in front of the ore
+for mining.  The ground is covered with dust, making the trek upwards
+rather difficult.
+~
+E
+mining excavation blocky gashes 1 west~
+Squared-off chunks of mountainside are missing, slowly chipped out by the
+slaves and carted off to be processed.  Rich chunks of ore gleam out from
+the otherwise dull sides of the cavern, although their true size and
+value cannot be gauged at first glance.
+~
+E
+mineral deposits~
+Glinting in the light, tiny pockets of rich mineral ore contrast against
+the dull gray mountainside.  Most of the pieces are no bigger than a
+pebble, but chunks the size of fists poke out in some places.
+~
+E
+tunnel~
+Its entrance barely visible from this angle, a shallow tunnel has been
+started by the slaves in an effort to get a clearer view at a rich vein
+of ore.
+~
+A
+~
+~
+if( mob_in_room( 5298, room ) || mob_in_room( 5299, room ) || mob_in_room( 5300, room ) || mob_in_room( 5301, room ) ) {
+  if( mob_in_room( 5302, room ) || mob_in_room( 5303, room ) || mob_in_room( 5304, room ) || mob_in_room( 5305, room ) ) {
+    if( rflag( status2, room ) ) {
+      remove_rflag( status2, room );
+      wait( 2 );
+      i = 0;
+      j = 0;
+      if( mob_in_room( 5298, room ) )
+        i = 1;
+      if( mob_in_room( 5299, room ) )
+        i = 2;
+      if( mob_in_room( 5300, room ) )
+        i = 3;
+      if( mob_in_room( 5301, room ) )
+        i = 4;
+      if( mob_in_room( 5302, room ) )
+        j = 1;
+      if( mob_in_room( 5303, room ) )
+        j = 2;
+      if( mob_in_room( 5304, room ) )
+        j = 3;
+      if( mob_in_room( 5305, room ) )
+        j = 4;
+      if( i == 1 ) {
+        if( j == 1 )
+          send_to_room( #trollgnome, room );
+        if( j == 2 )
+          send_to_room( #trollhalfling, room );
+        if( j == 3 )
+          send_to_room( #trollelf, room );
+        if( j == 4 )
+          send_to_room( #trolldwarf, room );
+        }
+      if( i == 2 ) {
+        if( j == 1 )
+          send_to_room( #ogregnome, room );
+        if( j == 2 )
+          send_to_room( #ogrehalfling, room );
+        if( j == 3 )
+          send_to_room( #ogreelf, room );
+        if( j == 4 )
+          send_to_room( #ogredwarf, room );
+        }
+      if( i == 3 ) {
+        if( j == 1 )
+          send_to_room( #vyangnome, room );
+        if( j == 2 )
+          send_to_room( #vyanhalfling, room );
+        if( j == 3 )
+          send_to_room( #vyanelf, room );
+        if( j == 4 )
+          send_to_room( #vyandwarf, room );
+        }
+      if( i == 4 ) {
+        if( j == 1 )
+          send_to_room( #orcgnome, room );
+        if( j == 2 )
+          send_to_room( #orchalfling, room );
+        if( j == 3 )
+          send_to_room( #orcelf, room );
+        if( j == 4 )
+          send_to_room( #orcdwarf, room );
+        }
+      wait( 6 );
+      set_rflag( status2, room );
+      }
+    }
+  }
+~
+E
+trollgnome~
+@rThe troll overlord cracks his whip at the gnome slave's back, leaving a
+bloody welt.@n 
+~
+E
+trollhalfling~
+@rThe troll overlord cracks his whip at the halfling slave's back,
+leaving a bloody welt.@n 
+~
+E
+trollelf~
+@rThe troll overlord cracks his whip at the elf slave's back, leaving a
+bloody welt.@n 
+~
+E
+trolldwarf~
+@rThe troll overlord cracks his whip at the dwarf slave's back, leaving a
+bloody welt.@n 
+~
+E
+ogregnome~
+@rThe ogre overlord cracks his whip at the gnome slave's back, leaving a
+bloody welt.@n 
+~
+E
+ogrehalfling~
+@rThe ogre overlord cracks his whip at the halfling slave's back, leaving
+a bloody welt.@n 
+~
+E
+ogreelf~
+@rThe ogre overlord cracks his whip at the elf slave's back, leaving a
+bloody welt.@n 
+~
+E
+ogredwarf~
+@rThe ogre overlord cracks his whip at the dwarf slave's back, leaving a
+bloody welt.@n 
+~
+E
+vyangnome~
+@rThe vyan overlord cracks his whip at the gnome slave's back, leaving a
+bloody welt.@n 
+~
+E
+vyanhalfling~
+@rThe vyan overlord cracks his whip at the halfling slave's back, leaving
+a bloody welt.@n 
+~
+E
+vyanelf~
+@rThe vyan overlord cracks his whip at the elf slave's back, leaving a
+bloody welt.@n 
+~
+E
+vyandwarf~
+@rThe vyan overlord cracks his whip at the dwarf slave's back, leaving a
+bloody welt.@n 
+~
+E
+orcgnome~
+@rThe orc overlord cracks his whip at the gnome slave's back, leaving a
+bloody welt.@n 
+~
+E
+orchalfling~
+@rThe orc overlord cracks his whip at the halfling slave's back, leaving
+a bloody welt.@n 
+~
+E
+orcelf~
+@rThe orc overlord cracks his whip at the elf slave's back, leaving a
+bloody welt.@n 
+~
+E
+orcdwarf~
+@rThe orc overlord cracks his whip at the dwarf slave's back, leaving a
+bloody welt.@n 
+~
+!
+1 0 6
+A
+~
+~
+if( race( ch ) != master ) {
+  if( race( ch ) != slave ) {
+    if( race( ch ) != rodent ) {
+      continue;
+      end;
+      }
+    }
+  }
+~
+E
+to_char~
+@mStraining against the steep slope, you climb up the incline to the
+east.@n 
+~
+E
+to_room~
+@m$n climbs up the incline to the east.@n
+~
+!
+3 0 2
+A
+~
+~
+if( race( ch ) == master )
+  continue;
+~
+E
+to_char~
+@yYou climb up the incline to the east.@n
+~
+E
+to_room~
+@ySatisfied that the slaves are being sufficiently beaten, $n climbs up
+the incline to the east.@n 
+~
+!
+3 0 2
+A
+~
+~
+if( race( ch ) == slave )
+  continue;
+~
+E
+to_char~
+@yYou climb up the incline to the east.@n
+~
+E
+to_room~
+@y$n crawls up the incline to the east, too weak to make the trek
+upright.@n 
+~
+!
+3 0 2
+A
+~
+~
+if( race( ch ) == rodent )
+  continue;
+~
+E
+to_char~
+@cYou climb up the incline to the east.@n
+~
+E
+to_room~
+@c$n skitters up the incline to the east.@n
+~
+!
+3 0 2
+A
+get take grab steal search~
+mineral deposits ore~
+act_tochar( #no, ch );
+~
+E
+no~
+How do you plan on extracting the ore from the mountainside, with your
+bare hands?
+~
+!
+0 0 0
+A
+pry mine pick extract~
+mineral deposits ore~
+if( is_wearing( 1632, ch ) || has_obj( 1632, ch ) ) {
+  if( rflag( reset0, room ) || rflag( reset1, room ) || rflag( reset2, room ) ) {
+    remove_rflag( reset0, room );
+    remove_rflag( reset1, room );
+    remove_rflag( reset2, room );
+    act_tochar( #heavy, ch );
+    act_notchar( #heavy2, ch );
+    i = random( 1, 10 );
+    if( i == 6 ) {
+      obj_to_char( oload( 1612 ), ch );
+      end;
+      }
+    obj_to_char( oload( 1811 ), ch );
+    end;
+    }
+  act_tochar( #already, ch );
+  end;
+  }
+if( is_wearing( 2589, ch ) || has_obj( 2589, ch ) ) {
+  if( rflag( reset0, room ) ) {
+    remove_rflag( reset0, room );
+    act_tochar( #pick1a, ch );
+    act_notchar( #pick1b, ch );
+    end;
+    }
+  if( rflag( reset1, room ) ) {
+    remove_rflag( reset1, room );
+    act_tochar( #pick2a, ch );
+    act_notchar( #pick2b, ch );
+    end;
+    }
+  if( rflag( reset2, room ) ) {
+    remove_rflag( reset2, room );
+    act_tochar( #pick3a, ch );
+    act_notchar( #pick3b, ch );
+    i = random( 1, 10 );
+    if( i == 10 ) {
+      obj_to_char( oload( 927 ), ch );
+      end;
+      }
+    if( i == 4 ) {
+      obj_to_char( oload( 932 ), ch );
+      end;
+      }
+    obj_to_char( oload( 943 ), ch );
+    end;
+    }
+  act_tochar( #already, ch );
+  end;
+  }
+act_tochar( #no, ch );
+~
+E
+heavy~
+@cYou swing the heavy pickaxe, striking the rock face with all of your
+might.  A chunk of ore breaks off of the wall, landing in your palm.@n
+~
+E
+heavy2~
+@C$n swings $s heavy pickaxe, striking the rock face with all of $s might. 
+A chunk of ore breaks off the wall, landing in $s palm.@n 
+~
+E
+already~
+Just as you are about to swing your pickaxe, you notice that none of the
+mineral deposits are big enough to work up a sweat over.
+~
+E
+pick1a~
+@cYou swing at the mineral deposits with your pickaxe, but it barely
+chips the surface.
+~
+E
+pick1b~
+@c$n swings at the mineral deposits with $s pickaxe, but barely chips the
+surface.@n 
+~
+E
+pick2a~
+@cYou swing at the mineral deposits with your pickaxe, opening a crack
+near one of the deposits, but it still won't break free.@n 
+~
+E
+pick2b~
+@c$n swings at the mineral deposits with $s pickaxe, opening a crack near
+one, but it still won't break free.@n 
+~
+E
+pick3a~
+@cYou swing at the mineral deposits with your pickaxe, finally breaking
+a piece free!  You quickly pick up the fruits of your labor.@n
+~
+E
+pick3b~
+@c$n swings at the mineral deposits with $s pickaxe, finally breaking a
+piece free!  Before anyone can grab it, $e picks it up.@n 
+~
+E
+no~
+You may think you're strong as an ox, but ripping mineral deposits out of
+a stone wall with your bare hands isn't even remotely within your grasp. 
+Maybe you should find some mining equipment?
+~
+!
+0 0 0
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 )
+  send_to_room( #action1, room );
+if( i == 2 )
+  send_to_room( #action2, room );
+if( i == 3 ) {
+  if( mob_in_room( 5302, find_room( 2706 ) ) )
+    send_to_room( #action3, room );
+  end;
+  }
+~
+E
+action1~
+@gThe thick cloud of fog makes breathing nearly unbearable.@n
+~
+E
+action2~
+@gThe rotting stench of death hangs in the air, never waning.@n
+~
+E
+action3~
+@gThe gnome slave weakly swings his pickaxe at the stone wall, trying to
+mine the minerals contained within.@n 
+~
+!
+2 200 0
+5302 9 1509949540 3 0
+-1
+S
+
+#2707
+Slave Pit~
+A diagonal stripe of black coal contrasts with the gray stone walls,
+looking like a streak of death.  Chunks of the coarse material have been
+mined out, leaving pockmarks in the surface.  Situated on a narrow
+horizontal landing, this chamber lies slightly below the rest of the
+slave pit, the only access back into the main chamber being a wide
+incline to the east, or continuing along the wall to the south.
+~
+[Eliza] Done.
+~
+-335937468 11 9 0
+D1
+~
+~
+0 -1 2708 10 10 5
+D2
+~
+~
+0 -1 2706 10 10 5
+E
+diagonal stripe black coal streak death pockmarks surface~
+Peppered with pockmarks along the surface from mining, a jagged vein of
+coal has been uncovered during the cavern excavation.  Chunks of the
+precious minerals have been chipped away and carted off back to the
+nearby town for processing.
+~
+E
+gray stone walls~
+The strata of gray rock in this section of the cavern is a little lighter
+in color than the rest, but only by a few shades.  A dusky black vein of
+coal sticks out like a sore thumb in comparison.
+~
+E
+narrow horizontal landing~
+Only a few feet wide, the floor of this chamber has been allowed to level
+out so the slaves can work on the gaping coal vein to the west.  Sloping
+upwards to the east, an incline leads into the rest of the cavern.
+~
+E
+wide incline 1 east~
+Sloping upwards at a somewhat steep angle, the only access up into the
+remainder of the cavern is an incline to the east.  Somewhat slippery to
+traverse, it is coated with a thin layer of coal dust.
+~
+A
+~
+~
+if( mob_in_room( 5298, room ) || mob_in_room( 5299, room ) || mob_in_room( 5300, room ) || mob_in_room( 5301, room ) ) {
+  if( mob_in_room( 5302, room ) || mob_in_room( 5303, room ) || mob_in_room( 5304, room ) || mob_in_room( 5305, room ) ) {
+    if( rflag( status2, room ) ) {
+      remove_rflag( status2, room );
+      wait( 2 );
+      i = 0;
+      j = 0;
+      if( mob_in_room( 5298, room ) )
+        i = 1;
+      if( mob_in_room( 5299, room ) )
+        i = 2;
+      if( mob_in_room( 5300, room ) )
+        i = 3;
+      if( mob_in_room( 5301, room ) )
+        i = 4;
+      if( mob_in_room( 5302, room ) )
+        j = 1;
+      if( mob_in_room( 5303, room ) )
+        j = 2;
+      if( mob_in_room( 5304, room ) )
+        j = 3;
+      if( mob_in_room( 5305, room ) )
+        j = 4;
+      if( i == 1 ) {
+        if( j == 1 )
+          send_to_room( #trollgnome, room );
+        if( j == 2 )
+          send_to_room( #trollhalfling, room );
+        if( j == 3 )
+          send_to_room( #trollelf, room );
+        if( j == 4 )
+          send_to_room( #trolldwarf, room );
+        }
+      if( i == 2 ) {
+        if( j == 1 )
+          send_to_room( #ogregnome, room );
+        if( j == 2 )
+          send_to_room( #ogrehalfling, room );
+        if( j == 3 )
+          send_to_room( #ogreelf, room );
+        if( j == 4 )
+          send_to_room( #ogredwarf, room );
+        }
+      if( i == 3 ) {
+        if( j == 1 )
+          send_to_room( #vyangnome, room );
+        if( j == 2 )
+          send_to_room( #vyanhalfling, room );
+        if( j == 3 )
+          send_to_room( #vyanelf, room );
+        if( j == 4 )
+          send_to_room( #vyandwarf, room );
+        }
+      if( i == 4 ) {
+        if( j == 1 )
+          send_to_room( #orcgnome, room );
+        if( j == 2 )
+          send_to_room( #orchalfling, room );
+        if( j == 3 )
+          send_to_room( #orcelf, room );
+        if( j == 4 )
+          send_to_room( #orcdwarf, room );
+        }
+      wait( 6 );
+      set_rflag( status2, room );
+      }
+    }
+  }
+~
+E
+trollgnome~
+@rA gnome slave grovels at the troll overlord's feet.@n 
+~
+E
+trollhalfling~
+@rA halfling slave grovels at the troll overlord's feet.@n 
+~
+E
+trollelf~
+@rAn elf slave grovels at the troll overlord's feet.@n 
+~
+E
+trolldwarf~
+@rA dwarf slave grovels at the troll overlord's feet.@n 
+~
+E
+ogregnome~
+@rA gnome slave grovels at the ogre overlord's feet.@n 
+~
+E
+ogrehalfling~
+@rA halfling slave grovels at the ogre overlord's feet.@n 
+~
+E
+ogreelf~
+@rAn elf slave grovels at the ogre overlord's feet.@n 
+~
+E
+ogredwarf~
+@rA dwarf slave grovels at the ogre overlord's feet.@n 
+~
+E
+vyangnome~
+@rA gnome slave grovels at the vyan overlord's feet.@n 
+~
+E
+vyanhalfling~
+@rA halfling slave grovels at the vyan overlord's feet.@n 
+~
+E
+vyanelf~
+@rAn elf slave grovels at the vyan overlord's feet.@n 
+~
+E
+vyandwarf~
+@rA dwarf slave grovels at the vyan overlord's feet.@n 
+~
+E
+orcgnome~
+@rA gnome slave grovels at the orc overlord's feet.@n 
+~
+E
+orchalfling~
+@rA halfling slave grovels at the orc overlord's feet.@n 
+~
+E
+orcelf~
+@rAn elf slave grovels at the orc overlord's feet.@n 
+~
+E
+orcdwarf~
+@rA dwarf slave grovels at the orc overlord's feet.@n 
+~
+!
+1 0 6
+A
+~
+~
+if( race( ch ) != master ) 
+  if( race( ch ) != slave ) 
+    if( race( ch ) != rodent ) 
+      continue;
+~
+E
+to_char~
+@mStraining against the steep slope, you climb up the incline to the
+east.@n 
+~
+E
+to_room~
+@m$n climbs up the incline to the east.@n
+~
+!
+3 0 2
+A
+~
+~
+if( race( ch ) == master )
+  continue;
+~
+E
+to_char~
+@yYou climb up the incline to the east.@n
+~
+E
+to_room~
+@yLooking for more slaves to push around, $n climbs up the incline to the
+east.@n 
+~
+!
+3 0 2
+A
+~
+~
+if( race( ch ) == slave )
+  continue;
+~
+E
+to_char~
+@yYou climb up the incline to the east.@n
+~
+E
+to_room~
+@y$n slowly climbs up the incline to the east, attempting to get some
+fresher air.@n 
+~
+!
+3 0 2
+A
+~
+~
+if( race( ch ) == rodent )
+  continue;
+~
+E
+to_char~
+@cYou climb up the incline to the east.@n
+~
+E
+to_room~
+@c$n skitters up the incline to the east.@n
+~
+!
+3 0 2
+A
+get take grab steal search~
+diagonal stripe black coal vein~
+act_tochar( #no, ch );
+~
+E
+no~
+You are unable to pry the coal from the mountainside with your bare hands.
+~
+!
+0 0 0
+A
+pry mine pick extract~
+mineral deposits coal~
+if( is_wearing( 1632, ch ) || has_obj( 1632, ch ) || is_wearing( 2589, ch ) || has_obj( 2589, ch ) ) {
+  if( rflag( reset0, room ) ) {
+    remove_rflag( reset0, room );
+    i = random( 1, 10 );
+    if( i == 4 ) {
+      act_tochar( #swing, ch );
+      act_notchar( #swing2, ch );
+      obj_to_char( oload( 1999 ), ch );
+      end;
+      }
+    }
+  act_tochar( #dust, ch );
+  act_notchar( #dust2, ch );
+  end;
+  }
+act_tochar( #duh, ch );
+~
+E
+swing~
+You swing your pickaxe at the vein of coal, breaking off a good-sized
+chunk.
+~
+E
+swing2~
+$n swings $s pickaxe at the vein of coal, breaking off a good-sized chunk.
+~
+E
+dust~
+You swing your pickaxe at the vein of coal, barely breaking the surface. 
+A choking cloud of dust rises up into the air.
+~
+E
+dust2~
+$n swings $s pickaxe at the vein of coal, barely breaking the surface.  A
+choking cloud of dust rises up into the air.
+~
+E
+duh~
+You are unable to pry the coal from the mountainside with your bare hands.
+~
+!
+0 0 0
+5305 9 1509949540 3 0
+233 9 1509949540 3 0
+-1
+S
+
+#2708
+Slave Pit~
+The stench of rancid sweat pours in from the west, where a vein of ore is
+being concentrated upon by the slave labor.  Sloped downward from the
+rest of the pit, the chamber is filled with soot and floating dust.  The
+air seems fresher in the other directions, although it is difficult to tell
+with so many nauseating scents mixing together.  A flattened spire of
+rock stands a few feet above the ground to the east, overlooking the rest
+of the cavern.
+~
+[Eliza] Done.
+~
+-335937468 11 9 0
+D0
+~
+~
+0 -1 2715 10 10 5
+D1
+~
+~
+0 -1 2709 10 10 5
+D2
+~
+~
+0 -1 2705 10 10 5
+D3
+~
+~
+0 -1 2707 10 10 5
+E
+vein ore sloped chamber 1 west~
+Streaking across the wall like a gaping wound, a deathly-black vein of
+coal has been exposed by the slave laborers.  Clouds of thick dust fill
+the air from its excavation, the overlords not caring what sort of
+unhealthy affects it might cause the slaves.
+~
+E
+soot floating dust~
+Floating through the air like a dense fog, miniature specks of soot and
+dust obscure most of the chamber to the west.  A lack of wind in this
+underground cavern leaves the cloud hovering in mid-air, slowly falling
+to the ground.
+~
+E
+flattened spire rock 1 east~
+A circular plateau of rock rises up three feet above the rest of the
+cavern, giving the overlords an excellent vantage point down into the
+slave pit itself.  Its edges are vertical and rough, though traversible
+if desired.
+~
+A
+~
+~
+if( race( ch ) == master )
+  continue;
+~
+E
+to_char~
+@yYou jump on top of the rock column to the east, seeking out more slaves
+to whip.@n 
+~
+E
+to_room~
+@y$n jumps onto the rock column to the east, seeking out more slaves to
+whip.@n 
+~
+!
+3 0 2
+A
+~
+~
+if( race( ch ) == slave )
+  continue;
+~
+E
+to_char~
+@yYou hop on top of the rock column, attempting to elude the overlords.@n
+~
+E
+to_room~
+@y$n hops on top of the rock column, attempting to elude the cruel
+overlords.@n 
+~
+!
+3 0 2
+A
+~
+~
+if( find_stat( ch, level ) > 90 )
+  continue;
+if( race( ch ) != master ) {
+  if( race( ch ) != slave ) {
+      act_tochar( #no, ch );
+      end;
+      }
+    }
+~
+E
+no~
+A three-foot tall rock column prevents you from walking in that direction.
+~
+!
+3 0 2
+A
+climb jump hop~
+rock column 1 east~
+act_tochar( #jump, ch );
+act_notchar( #jump2, ch );
+transfer( ch, find_room( 2709 ) );
+act_notchar( #arrive, ch );
+~
+E
+jump~
+@mYou jump on top of the rock column.@n
+~
+E
+jump2~
+@m$n jumps up onto the rock column to the east.@n
+~
+E
+arrive~
+@m$n jumps onto the rock column from the west.@n
+~
+!
+0 0 0
+A
+~
+~
+if( mob_in_room( 5298, room ) || mob_in_room( 5299, room ) || mob_in_room( 5300, room ) || mob_in_room( 5301, room ) ) {
+  if( mob_in_room( 5302, room ) || mob_in_room( 5303, room ) || mob_in_room( 5304, room ) || mob_in_room( 5305, room ) ) {
+    if( rflag( status2, room ) ) {
+      remove_rflag( status2, room );
+      wait( 2 );
+      i = 0;
+      j = 0;
+      if( mob_in_room( 5298, room ) )
+        i = 1;
+      if( mob_in_room( 5299, room ) )
+        i = 2;
+      if( mob_in_room( 5300, room ) )
+        i = 3;
+      if( mob_in_room( 5301, room ) )
+        i = 4;
+      if( mob_in_room( 5302, room ) )
+        j = 1;
+      if( mob_in_room( 5303, room ) )
+        j = 2;
+      if( mob_in_room( 5304, room ) )
+        j = 3;
+      if( mob_in_room( 5305, room ) )
+        j = 4;
+      if( i == 1 ) {
+        if( j == 1 )
+          send_to_room( #trollgnome, room );
+        if( j == 2 )
+          send_to_room( #trollhalfling, room );
+        if( j == 3 )
+          send_to_room( #trollelf, room );
+        if( j == 4 )
+          send_to_room( #trolldwarf, room );
+        }
+      if( i == 2 ) {
+        if( j == 1 )
+          send_to_room( #ogregnome, room );
+        if( j == 2 )
+          send_to_room( #ogrehalfling, room );
+        if( j == 3 )
+          send_to_room( #ogreelf, room );
+        if( j == 4 )
+          send_to_room( #ogredwarf, room );
+        }
+      if( i == 3 ) {
+        if( j == 1 )
+          send_to_room( #vyangnome, room );
+        if( j == 2 )
+          send_to_room( #vyanhalfling, room );
+        if( j == 3 )
+          send_to_room( #vyanelf, room );
+        if( j == 4 )
+          send_to_room( #vyandwarf, room );
+        }
+      if( i == 4 ) {
+        if( j == 1 )
+          send_to_room( #orcgnome, room );
+        if( j == 2 )
+          send_to_room( #orchalfling, room );
+        if( j == 3 )
+          send_to_room( #orcelf, room );
+        if( j == 4 )
+          send_to_room( #orcdwarf, room );
+        }
+      wait( 6 );
+      set_rflag( status2, room );
+      }
+    }
+  }
+~
+E
+trollgnome~
+@rA gnome slave cringes away from the troll overlord, begging for
+mercy.@n 
+~
+E
+trollhalfling~
+@rA halfling slave cringes away from the troll overlord, begging for
+mercy.@n 
+~
+E
+trollelf~
+@rAn elf slave cringes away from the troll overlord, begging for mercy.@n
+
+~
+E
+trolldwarf~
+@rA dwarf slave cringes away from the troll overlord, begging for
+mercy.@n 
+~
+E
+ogregnome~
+@rA gnome slave cringes away from the ogre overlord, begging for mercy.@n 
+~
+E
+ogrehalfling~
+@rA halfling slave cringes away from the ogre overlord, begging for
+mercy.@n 
+~
+E
+ogreelf~
+@rAn elf slave cringes away from the ogre overlord, begging for mercy.@n
+
+~
+E
+ogredwarf~
+@rA dwarf slave cringes away from the ogre overlord, begging for mercy.@n
+
+~
+E
+vyangnome~
+@rA gnome slave cringes away from the vyan overlord, begging for mercy.@n
+
+~
+E
+vyanhalfling~
+@rA halfling slave cringes away from the vyan overlord, begging for
+mercy.@n 
+~
+E
+vyanelf~
+@rAn elf slave cringes away from the vyan overlord, begging for mercy.@n
+
+~
+E
+vyandwarf~
+@rA dwarf slave cringes away from the vyan overlord, begging for mercy.@n
+
+~
+E
+orcgnome~
+@rA gnome slave cringes away from the orc overlord, begging for mercy.@n 
+~
+E
+orchalfling~
+@rA halfling slave cringes away from the orc overlord, begging for
+mercy.@n 
+~
+E
+orcelf~
+@rAn elf slave cringes away from the orc overlord, begging for mercy.@n
+
+~
+E
+orcdwarf~
+@rA dwarf slave cringes away from the orc overlord, begging for mercy.@n
+
+~
+!
+1 0 15
+A
+~
+~
+// mob 1384 needs references changed to 5300
+i = random( 1, 3 );
+if( i == 1 )
+  send_to_room( #action1, room );
+if( i == 2 )
+  send_to_room( #action2, room );
+if( i == 3 ) {
+  if( mob_in_room( 1384, find_room( 2709 ) ) )
+    send_to_room( #action3, room );
+  end;
+  }
+~
+E
+action3~
+@gThe vyan overlord looks down from his outpost to the east, sneering at
+you with contempt.@n 
+~
+E
+action1~
+@gThe cloud of coal dust hangs in mid-air like a fogbank of death.@n
+~
+E
+action2~
+@gA piercing scream echoes throughout the cavern.@n
+~
+!
+2 200 0
+A
+~
+~
+if( race( ch ) != master ) {
+  if( race( ch ) != slave ) {
+    if( race( ch ) != rodent ) {
+      continue;
+      end;
+      }
+    }
+  }
+~
+E
+to_char~
+@mYou carefully walk down the incline to the west.@n
+~
+E
+to_room~
+@m$n carefully walks down the incline to the west.@n
+~
+!
+3 0 8
+A
+~
+~
+if( race( ch ) == master )
+  continue;
+~
+E
+to_char~
+@yYou head down the incline to the west.@n
+~
+E
+to_room~
+@y$n walks down the incline to the west, investigating the tunnel being
+mined by the slaves.@n
+~
+!
+3 0 8
+A
+~
+~
+if( race( ch ) == slave )
+  continue;
+~
+E
+to_char~
+@yYou head down the incline to the west.@n
+~
+E
+to_room~
+@y$n plods down the incline to the west, too exhausted to work any
+longer.@n 
+~
+!
+3 0 8
+A
+~
+~
+if( race( ch ) == rodent )
+  continue;
+~
+E
+to_char~
+@cYou head down the incline to the west.@n
+~
+E
+to_room~
+@c$n's paws clatter as it walks down the incline to the west.@n
+~
+!
+3 0 8
+5303 9 1509949540 3 0
+-1
+S
+
+#2709
+Atop a Rock Column~
+Standing a few feet above the rest of the cavern floor, this rounded
+plateau overlooks most of the oppressive chamber.  Primarily used as an
+overlord outpost, ragged gashes around the edge of the column are present
+where repetetive whip cracks have chipped away pieces of rock.  The rest
+of the pit stretches out in all directions, with the only exits to the
+distant north and south.
+~
+[Eliza] Done.
+~
+-335937468 11 9 0
+D0
+~
+~
+0 -1 2714 10 10 5
+D1
+~
+~
+0 -1 2710 10 10 5
+D2
+~
+~
+0 -1 2704 10 10 5
+D3
+~
+~
+0 -1 2708 10 10 5
+E
+exits distant 1 north 1 south~
+Barely visible through the gloomy darkness within the underground pit,
+ladders are visible both to the north and the south, leading upwards to
+freedom.
+~
+E
+whip cracks chipped pieces rock ragged gashes~
+Shallow gouges have been chipped away from the edge of the plateau, the
+porous rock giving way after thousands of strikes by the overlord whips,
+snapping at the slaves below.
+~
+E
+rounded plateau column outpost~
+Somewhat circular in shape, this column of rock was left intact when the
+slave pits were excavated by slave labor.  Used as an overlord outpost,
+it offers an excellent vantage point over the rest of the cavern.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@mYou jump off the rock column to the $T.@n
+~
+E
+to_room~
+@m$n jumps off the rock column to the $T.@n
+~
+!
+3 0 15
+A
+~
+~
+if( mob_in_room( 5298, room ) || mob_in_room( 5299, room ) || mob_in_room( 5300, room ) || mob_in_room( 5301, room ) ) {
+  if( race( ch ) == slave ) {
+    act_notchar( #slave, ch );
+    i = random( 1, 4 );
+    if( i == 1 ) {
+      transfer( ch, find_room( 2710 ) );
+      act_notchar( #east2, ch );
+      end;
+      }
+    if( i == 2 ) {
+      transfer( ch, find_room( 2704 ) );
+      act_notchar( #south2, ch );
+      end;
+      }
+    if( i == 3 ) {
+      transfer( ch, find_room( 2708 ) );
+      act_notchar( #west2, ch );
+      end;
+      }
+    if( i == 4 ) {
+      transfer( ch, find_room( 2714 ) );
+      act_notchar( #north2, ch );
+      end;
+      }
+    }
+  }
+continue;
+~
+E
+east2~
+@r$n lands on the ground, knocked off the column to the west by a vicious
+overlord.@n 
+~
+E
+south2~
+@r$n lands on the ground, knocked off the column to the north by a
+vicious overlord.@n 
+~
+E
+west2~
+@r$n lands on the ground, knocked off the column to the east by a vicious
+overlord.@n 
+~
+E
+north2~
+@r$n lands on the ground, knocked off the column to the south by a
+vicious overlord.@n 
+~
+E
+slave~
+@rThe overlord roars in anger as $n climbs onto the rocky outpost. 
+Smacked with a hefty backhand, $e goes flying off the column!@n 
+~
+!
+1 0 15
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 )
+  send_to_room( #action1, room );
+if( i == 2 )
+  send_to_room( #action2, room );
+if( i == 3 ) {
+  if( mob_in_room( 5300, room ) )
+    send_to_room( #action3, room );
+  end;
+  }
+~
+E
+action1~
+@gThe sound of someone whimpering can be heard nearby, although it is too
+dark to determine to whom the pleas belong.@n 
+~
+E
+action2~
+@gThe nauseating scent of death hangs like a fog over the slave pit.@n
+~
+E
+action3~
+@GThe vyan overlord looks out upon the slave pits, sneering with
+satisfaction at the slaves' misery.@n
+~
+!
+2 200 0
+5300 9 1509949540 3 0
+5300 137 1509949540 3 0
+-1
+S
+
+#2710
+Slave Pit~
+Sprawling out in all directions, the fetid pit is blanketed in darkness. 
+Nearby to the west, a squat rock column oversees the cavern, used as an
+outpost for the violent overlords.  Further off to the north, the outline
+of a wooden ladder leading upwards out of the pit can barely be made out. 
+A heavy blanket of rancid humidity hangs in the air, almost tangible in
+strength.
+~
+[Eliza] Done.
+~
+-335937468 11 9 0
+D0
+~
+~
+0 -1 2713 10 10 5
+D1
+~
+~
+0 -1 2711 10 10 5
+D2
+~
+~
+0 -1 2703 10 10 5
+D3
+~
+~
+0 -1 2709 10 10 5
+E
+fetid pit darkness cavern~
+Barely able to see more than ten feet, the entire cavern is cloaked in
+darkness.  The fuzzy outlines of a rock column to the west and a ladder
+leading upwards to the north are all that is visible through the inky
+blackness.
+~
+E
+squat rock column outpost 1 west~
+Standing about three feet tall, a rounded plateau of rock juts up from
+the chamber floor.  Intermittent grooves are visible along its uppermost
+edge, created by repeated cracks of the overlord's whips.
+~
+E
+outline wooden ladder upwards 1 north~
+Through the darkness, you can barely make out the fuzzy edges of a wooden
+ladder, its rungs evenly spaced apart.  Leading upwards out of sight, it
+is the only exit out of the pit within eyesight.
+~
+A
+~
+~
+if( race( ch ) == master )
+  continue;
+~
+E
+to_char~
+@yYou jump on top of the rock column.@n
+~
+E
+to_room~
+@y$n jumps on top of the rock column to the west, seeking out more
+slaves to whip.@n 
+~
+!
+3 0 8
+A
+~
+~
+if( find_stat( ch, level ) > 90 )
+  continue;
+if( race( ch ) != master ) {
+  if( race( ch ) != slave ) {
+    act_tochar( #no, ch );
+    end;
+    }
+  }
+~
+E
+no~
+A three-foot tall rock column prevents you from walking in that direction.
+~
+!
+3 0 8
+A
+~
+~
+if( race( ch ) == slave )
+  continue;
+~
+E
+to_char~
+@yYou hop onto the rock column to the west.@n
+~
+E
+to_room~
+@y$n hops onto the rock column to the west, attempting to elude the cruel
+overlords.@n 
+~
+!
+3 0 8
+A
+climb jump hop~
+rock column 1 west~
+act_tochar( #jump, ch );
+act_notchar( #jump2, ch );
+transfer( ch, find_room( 2709 ) );
+act_notchar( #arrive, ch );
+~
+E
+jump~
+@mYou jump on top of the rock column.@n
+~
+E
+jump2~
+@m$n jumps up onto the rock column to the west.@n
+~
+E
+arrive~
+@m$n jumps onto the rock column from the east.@n
+~
+!
+0 0 0
+A
+~
+~
+if( mob_in_room( 5298, room ) || mob_in_room( 5299, room ) || mob_in_room( 5300, room ) || mob_in_room( 5301, room ) ) {
+  if( mob_in_room( 5302, room ) || mob_in_room( 5303, room ) || mob_in_room( 5304, room ) || mob_in_room( 5305, room ) ) {
+    if( rflag( status2, room ) ) {
+      remove_rflag( status2, room );
+      wait( 2 );
+      i = 0;
+      j = 0;
+      if( mob_in_room( 5298, room ) )
+        i = 1;
+      if( mob_in_room( 5299, room ) )
+        i = 2;
+      if( mob_in_room( 5300, room ) )
+        i = 3;
+      if( mob_in_room( 5301, room ) )
+        i = 4;
+      if( mob_in_room( 5302, room ) )
+        j = 1;
+      if( mob_in_room( 5303, room ) )
+        j = 2;
+      if( mob_in_room( 5304, room ) )
+        j = 3;
+      if( mob_in_room( 5305, room ) )
+        j = 4;
+      if( i == 1 ) {
+        if( j == 1 )
+          send_to_room( #trollgnome, room );
+        if( j == 2 )
+          send_to_room( #trollhalfling, room );
+        if( j == 3 )
+          send_to_room( #trollelf, room );
+        if( j == 4 )
+          send_to_room( #trolldwarf, room );
+        }
+      if( i == 2 ) {
+        if( j == 1 )
+          send_to_room( #ogregnome, room );
+        if( j == 2 )
+          send_to_room( #ogrehalfling, room );
+        if( j == 3 )
+          send_to_room( #ogreelf, room );
+        if( j == 4 )
+          send_to_room( #ogredwarf, room );
+        }
+      if( i == 3 ) {
+        if( j == 1 )
+          send_to_room( #vyangnome, room );
+        if( j == 2 )
+          send_to_room( #vyanhalfling, room );
+        if( j == 3 )
+          send_to_room( #vyanelf, room );
+        if( j == 4 )
+          send_to_room( #vyandwarf, room );
+        }
+      if( i == 4 ) {
+        if( j == 1 )
+          send_to_room( #orcgnome, room );
+        if( j == 2 )
+          send_to_room( #orchalfling, room );
+        if( j == 3 )
+          send_to_room( #orcelf, room );
+        if( j == 4 )
+          send_to_room( #orcdwarf, room );
+        }
+      wait( 6 );
+      set_rflag( status2, room );
+      }
+    }
+  }
+~
+E
+trollgnome~
+@rA gnome slave cringes away from the troll overlord, begging for
+mercy.@n 
+~
+E
+trollhalfling~
+@rA halfling slave cringes away from the troll overlord, begging for
+mercy.@n 
+~
+E
+trollelf~
+@rAn elf slave cringes away from the troll overlord, begging for mercy.@n
+
+~
+E
+trolldwarf~
+@rA dwarf slave cringes away from the troll overlord, begging for
+mercy.@n 
+~
+E
+ogregnome~
+@rA gnome slave cringes away from the ogre overlord, begging for mercy.@n 
+~
+E
+ogrehalfling~
+@rA halfling slave cringes away from the ogre overlord, begging for
+mercy.@n 
+~
+E
+ogreelf~
+@rAn elf slave cringes away from the ogre overlord, begging for mercy.@n
+
+~
+E
+ogredwarf~
+@rA dwarf slave cringes away from the ogre overlord, begging for mercy.@n
+
+~
+E
+vyangnome~
+@rA gnome slave cringes away from the vyan overlord, begging for mercy.@n
+
+~
+E
+vyanhalfling~
+@rA halfling slave cringes away from the vyan overlord, begging for
+mercy.@n 
+~
+E
+vyanelf~
+@rAn elf slave cringes away from the vyan overlord, begging for mercy.@n
+
+~
+E
+vyandwarf~
+@rA dwarf slave cringes away from the vyan overlord, begging for mercy.@n
+
+~
+E
+orcgnome~
+@rA gnome slave cringes away from the orc overlord, begging for mercy.@n 
+~
+E
+orchalfling~
+@rA halfling slave cringes away from the orc overlord, begging for
+mercy.@n 
+~
+E
+orcelf~
+@rAn elf slave cringes away from the orc overlord, begging for mercy.@n
+
+~
+E
+orcdwarf~
+@rA dwarf slave cringes away from the orc overlord, begging for mercy.@n
+
+~
+!
+1 0 15
+A
+~
+~
+// mob 5300 needs references changed to 5300
+if( mob_in_room( 5300, find_room( 2709 ) ) )
+  send_to_room( #crack, room );
+~
+E
+crack~
+@gThe sharp sound of a whip being cracked can be heard to the west.@n
+~
+!
+2 100 0
+5304 9 1509949540 3 0
+-1
+S
+
+#2711
+Slave Pit~
+The drone of buzzing flies hums a crescendo of sound, centered around a
+corpse hanging limply on the wall.  Shackled in mid-air at its hands and
+feet, the bloodied corpse appears to have been a dwarf slave, but it is
+difficult to tell with all of the mutilation it has endured.  The
+prisoner pit stretches out in numerous directions, although all drop off
+into darkness mere feet away.
+~
+[Eliza] Done
+~
+-335937468 11 9 0
+D1
+~
+~
+0 -1 2734 10 10 5
+D2
+~
+~
+0 -1 2729 10 10 5
+D3
+~
+~
+0 -1 2710 10 10 5
+E
+flies~
+Dozens of flies hover around the corpse, their collective wings creating
+a buzz which can be heard for some distance away.
+~
+E
+hangs wall shackled mid-air hands feet~
+Dangling in mid-air from shackles which are firmly anchored in the stone
+wall, the corpse hangs limp and lifeless.  Each steel shackle is firmly
+locked in a death grip about his wrists and ankles, bored into his skin
+almost to the bone.
+~
+A
+~
+~
+if( mob_in_room( 5298, room ) || mob_in_room( 5299, room ) || mob_in_room( 5300, room ) || mob_in_room( 5301, room ) ) {
+  if( mob_in_room( 5302, room ) || mob_in_room( 5303, room ) || mob_in_room( 5304, room ) || mob_in_room( 5305, room ) ) {
+    if( rflag( status2, room ) ) {
+      remove_rflag( status2, room );
+      wait( 2 );
+      i = 0;
+      j = 0;
+      if( mob_in_room( 5298, room ) )
+        i = 1;
+      if( mob_in_room( 5299, room ) )
+        i = 2;
+      if( mob_in_room( 5300, room ) )
+        i = 3;
+      if( mob_in_room( 5301, room ) )
+        i = 4;
+      if( mob_in_room( 5302, room ) )
+        j = 1;
+      if( mob_in_room( 5303, room ) )
+        j = 2;
+      if( mob_in_room( 5304, room ) )
+        j = 3;
+      if( mob_in_room( 5305, room ) )
+        j = 4;
+      if( i == 1 ) {
+        if( j == 1 )
+          send_to_room( #trollgnome, room );
+        if( j == 2 )
+          send_to_room( #trollhalfling, room );
+        if( j == 3 )
+          send_to_room( #trollelf, room );
+        if( j == 4 )
+          send_to_room( #trolldwarf, room );
+        }
+      if( i == 2 ) {
+        if( j == 1 )
+          send_to_room( #ogregnome, room );
+        if( j == 2 )
+          send_to_room( #ogrehalfling, room );
+        if( j == 3 )
+          send_to_room( #ogreelf, room );
+        if( j == 4 )
+          send_to_room( #ogredwarf, room );
+        }
+      if( i == 3 ) {
+        if( j == 1 )
+          send_to_room( #vyangnome, room );
+        if( j == 2 )
+          send_to_room( #vyanhalfling, room );
+        if( j == 3 )
+          send_to_room( #vyanelf, room );
+        if( j == 4 )
+          send_to_room( #vyandwarf, room );
+        }
+      if( i == 4 ) {
+        if( j == 1 )
+          send_to_room( #orcgnome, room );
+        if( j == 2 )
+          send_to_room( #orchalfling, room );
+        if( j == 3 )
+          send_to_room( #orcelf, room );
+        if( j == 4 )
+          send_to_room( #orcdwarf, room );
+        }
+      wait( 6 );
+      set_rflag( status2, room );
+      }
+    }
+  }
+~
+E
+trollgnome~
+@rThe troll overlord cracks his whip at the gnome slave's back, leaving a
+bloody welt.@n 
+~
+E
+trollhalfling~
+@rThe troll overlord cracks his whip at the halfling slave's back,
+leaving a bloody welt.@n 
+~
+E
+trollelf~
+@rThe troll overlord cracks his whip at the elf slave's back, leaving a
+bloody welt.@n 
+~
+E
+trolldwarf~
+@rThe troll overlord cracks his whip at the dwarf slave's back, leaving a
+bloody welt.@n 
+~
+E
+ogregnome~
+@rThe ogre overlord cracks his whip at the gnome slave's back, leaving a
+bloody welt.@n 
+~
+E
+ogrehalfling~
+@rThe ogre overlord cracks his whip at the halfling slave's back, leaving
+a bloody welt.@n 
+~
+E
+ogreelf~
+@rThe ogre overlord cracks his whip at the elf slave's back, leaving a
+bloody welt.@n 
+~
+E
+ogredwarf~
+@rThe ogre overlord cracks his whip at the dwarf slave's back, leaving a
+bloody welt.@n 
+~
+E
+vyangnome~
+@rThe vyan overlord cracks his whip at the gnome slave's back, leaving a
+bloody welt.@n 
+~
+E
+vyanhalfling~
+@rThe vyan overlord cracks his whip at the halfling slave's back, leaving
+a bloody welt.@n 
+~
+E
+vyanelf~
+@rThe vyan overlord cracks his whip at the elf slave's back, leaving a
+bloody welt.@n 
+~
+E
+vyandwarf~
+@rThe vyan overlord cracks his whip at the dwarf slave's back, leaving a
+bloody welt.@n 
+~
+E
+orcgnome~
+@rThe orc overlord cracks his whip at the gnome slave's back, leaving a
+bloody welt.@n 
+~
+E
+orchalfling~
+@rThe orc overlord cracks his whip at the halfling slave's back, leaving
+a bloody welt.@n 
+~
+E
+orcelf~
+@rThe orc overlord cracks his whip at the elf slave's back, leaving a
+bloody welt.@n 
+~
+E
+orcdwarf~
+@rThe orc overlord cracks his whip at the dwarf slave's back, leaving a
+bloody welt.@n 
+~
+!
+1 0 14
+A
+get take grab steal~
+bloodied corpse dwarf slave~
+act_tochar( #no, ch );
+~
+E
+no~
+Even in death, the corpse is still firmly shackled to the wall, left by
+the overlords as a stern lesson to the remaining slaves.
+~
+!
+0 0 0
+A
+~
+bloodied corpse dwarf slave~
+act_tochar( #no, ch );
+~
+E
+no~
+Whatever items the dwarf may have concealed from his captors before death
+have been found and taken away by the cruel overlords.
+~
+!
+9 0 0
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 )
+  send_to_room( #action1, room );
+if( i == 2 )
+  send_to_room( #action2, room );
+if( i == 3 )
+  send_to_room( #action3, room );
+~
+E
+action1~
+@gThe cloud of flies buzzes around the corpse in a frenzy of motion.@n
+~
+E
+action2~
+@gA guttural laugh can be heard echoing through the cavern, followed by a
+high-pitched scream of pain from one of the prisoners.@n 
+~
+E
+action3~
+@gThe smell of death hangs in the air like an oppresive fog.@n 
+~
+!
+2 200 0
+5299 9 1509949540 3 0
+5303 9 1509949540 3 0
+7340 17 1509949540 -2 0
+233 9 1509949540 3 0
+-1
+S
+
+#2713
+Edge of the Slave Pit~
+A wooden ladder rises up the side of the cliff to the north, tied
+together with lengths of hemp rope.  Leading up to a landing high above,
+the ladder appears sturdy enough to support almost any person's weight
+with ease.  The slave pit continues to the south and west, running around
+a rock column converted into an overlord outpost.
+~
+** ABOVE IS 2718 **
+[Eliza] Done.
+~
+-335937468 11 9 0
+D2
+~
+~
+0 -1 2710 10 10 5
+D3
+~
+~
+0 -1 2714 10 10 5
+D4
+~
+~
+0 -1 2718 10 10 5
+E
+wooden ladder lengths hemp rope~
+Two beams extend upwards to the landing above, with wooden planks
+inserted into notches along their length as rungs.  Knotted loops of hemp
+rope keep them in place, their frayed ends splayed out the back.
+~
+E
+cliff landing high above~
+Erected at the top of the vertical cliff to the north, a landing is held
+aloft by sturdy wooden braces.  Used as an overlook into the pit itself,
+the outpost offers a wide view from its lofty perch.
+~
+E
+rock column overlord outpost~
+Just off to the southwest, a rock column rises up from the chamber floor. 
+Approximately three feet in height, it offers an excellent vantage point
+for the overlords to supervise the slave labor.
+~
+A
+up~
+~
+if( find_stat( ch, level ) > 90 )
+  continue;
+if( is_player( ch ) ) {
+  act_tochar( #up, ch );
+  end;
+  }
+continue;
+~
+E
+up~
+You should probably use the ladder instead.
+~
+!
+0 0 0
+A
+~
+~
+if( find_stat( ch, level ) > 90 )
+  continue;
+if( is_mob( ch ) ) {
+  if( group( ch ) == 18 ) {
+    act_notchar( #overlord, ch );
+    transfer( ch, find_room( 2718 ) );
+    act_notchar( #overlord2, ch );
+    end;
+  }
+  if( group( ch ) == 19 ) {
+    i = random( 1, 3 );
+    if( i == 2 ) {
+      act_notchar( #slave, ch );
+      transfer( ch, find_room( 2718 ) );
+      act_notchar( #slave2, ch );
+      if( mob_in_room( 5298, find_room( 2718 ) ) || mob_in_room( 5299, find_room( 2718 ) ) || mob_in_room( 5300, find_room( 2718 ) ) || mob_in_room( 5301, find_room( 2718 ) ) ) {
+        wait( 1 );
+        act_notchar( #slapped, ch );
+        transfer( ch, find_room( 2713 ) );
+        act_notchar( #slapped2, ch );
+        end;
+      }
+      end;
+    }
+    act_notchar( #slave3, ch );
+    transfer( ch, find_room( 2713 ) );
+  }
+}
+~
+E
+overlord~
+@y$n climbs up the ladder.@n
+~
+E
+overlord2~
+@y$n climbs up the ladder from below.@n
+~
+E
+slave~
+@y$n slowly climbs up the ladder, barely making it to the top.@n
+~
+E
+slave2~
+@y$n climbs up the ladder from below, weak and emaciated.@n
+~
+E
+slave3~
+@y$n attempts to climb up the ladder, but doesn't have the strength to
+make it all the way up.@n 
+~
+E
+slapped~
+@y$n cringes as the overlord tosses $m back over the edge!@n
+~
+E
+slapped2~
+@y$n tumbles to the ground, sent flying by the overlord above.@n
+~
+!
+3 0 16
+A
+climb scale~
+wooden ladder hemp rope 1 up~
+if( is_pet( ch ) ) {
+  if( can_fly( ch ) ) {
+    act_notchar( #pet, ch );
+    transfer( ch, find_room( 2718 ) );
+    act_notchar( #pet2, ch );
+    end;
+    }
+  }
+if( is_player( ch ) ) {
+  act_tochar( #climb, ch );
+  act_notchar( #climb2, ch );
+  transfer( ch, find_room( 2718 ) );
+  act_notchar( #arrive, ch );
+  end;
+  }
+~
+E
+pet~
+@G$n flies up to the ledge above.@n
+~
+E
+pet2~
+@G$n flies up from below.@n
+~
+E
+climb~
+@mYou climb up the ladder to the landing above.@n
+~
+E
+climb2~
+@m$n climbs up the ladder to the landing above.@n
+~
+E
+arrive~
+@m$n climbs up the ladder from below.@n
+~
+!
+0 0 0
+A
+~
+~
+if( mob_in_room( 5298, room ) || mob_in_room( 5299, room ) || mob_in_room( 5300, room ) || mob_in_room( 5301, room ) ) {
+  if( mob_in_room( 5302, room ) || mob_in_room( 5303, room ) || mob_in_room( 5304, room ) || mob_in_room( 5305, room ) ) {
+    if( rflag( status2, room ) ) {
+      remove_rflag( status2, room );
+      wait( 2 );
+      i = 0;
+      j = 0;
+      if( mob_in_room( 5298, room ) )
+        i = 1;
+      if( mob_in_room( 5299, room ) )
+        i = 2;
+      if( mob_in_room( 5300, room ) )
+        i = 3;
+      if( mob_in_room( 5301, room ) )
+        i = 4;
+      if( mob_in_room( 5302, room ) )
+        j = 1;
+      if( mob_in_room( 5303, room ) )
+        j = 2;
+      if( mob_in_room( 5304, room ) )
+        j = 3;
+      if( mob_in_room( 5305, room ) )
+        j = 4;
+      if( i == 1 ) {
+        if( j == 1 )
+          send_to_room( #trollgnome, room );
+        if( j == 2 )
+          send_to_room( #trollhalfling, room );
+        if( j == 3 )
+          send_to_room( #trollelf, room );
+        if( j == 4 )
+          send_to_room( #trolldwarf, room );
+        }
+      if( i == 2 ) {
+        if( j == 1 )
+          send_to_room( #ogregnome, room );
+        if( j == 2 )
+          send_to_room( #ogrehalfling, room );
+        if( j == 3 )
+          send_to_room( #ogreelf, room );
+        if( j == 4 )
+          send_to_room( #ogredwarf, room );
+        }
+      if( i == 3 ) {
+        if( j == 1 )
+          send_to_room( #vyangnome, room );
+        if( j == 2 )
+          send_to_room( #vyanhalfling, room );
+        if( j == 3 )
+          send_to_room( #vyanelf, room );
+        if( j == 4 )
+          send_to_room( #vyandwarf, room );
+        }
+      if( i == 4 ) {
+        if( j == 1 )
+          send_to_room( #orcgnome, room );
+        if( j == 2 )
+          send_to_room( #orchalfling, room );
+        if( j == 3 )
+          send_to_room( #orcelf, room );
+        if( j == 4 )
+          send_to_room( #orcdwarf, room );
+        }
+      wait( 6 );
+      set_rflag( status2, room );
+      }
+    }
+  }
+~
+E
+trollgnome~
+@rThe troll overlord violently shoves a gnome slave, demanding he work
+faster.@n 
+~
+E
+trollhalfling~
+@rThe troll overlord violently shoves a halfling slave, demanding he work
+faster.@n 
+~
+E
+trollelf~
+@rThe troll overlord violently shoves an elf slave, demanding he work
+faster.@n 
+~
+E
+trolldwarf~
+@rThe troll overlord violently shoves a dwarf slave, demanding he work
+faster.@n 
+~
+E
+ogregnome~
+@rThe ogre overlord violently shoves a gnome slave, demanding he work
+faster.@n 
+~
+E
+ogrehalfling~
+@rThe ogre overlord violently shoves a halfling slave, demanding he work
+faster.@n 
+~
+E
+ogreelf~
+@rThe ogre overlord violently shoves an elf slave, demanding he work
+faster.@n 
+~
+E
+ogredwarf~
+@rThe ogre overlord violently shoves a dwarf slave, demanding he work
+faster.@n 
+~
+E
+vyangnome~
+@rThe vyan overlord violently shoves a gnome slave, demanding he work
+faster.@n 
+~
+E
+vyanhalfling~
+@rThe vyan overlord violently shoves a halfling slave, demanding he work
+faster.@n 
+~
+E
+vyanelf~
+@rThe vyan overlord violently shoves an elf slave, demanding he work
+faster.@n 
+~
+E
+vyandwarf~
+@rThe vyan overlord violently shoves a dwarf slave, demanding he work
+faster.@n 
+~
+E
+orcgnome~
+@rThe orc overlord violently shoves a gnome slave's back, demanding he
+work faster.@n 
+~
+E
+orchalfling~
+@rThe orc overlord violently shoves a halfling slave's back, demanding he
+work faster.@n 
+~
+E
+orcelf~
+@rThe orc overlord violently shoves an elf slave's back, demanding he
+work faster.@n 
+~
+E
+orcdwarf~
+@rThe orc overlord violently shoves a dwarf slave's back, demanding he
+work faster.@n 
+~
+!
+1 0 28
+5305 9 1509949540 3 0
+-1
+S
+
+#2714
+Edge of the Slave Pit~
+A narrow pathway winds it way around a rock column to the south, with
+just enough room to move between it and a sheer wall to the north. 
+Bloodied white streaks run up and down the wall closer to its base, left
+by the frantic clawing of slaves attempting to escape the violent
+overlords.  Less confined spaces are visible to the east and west, where
+a pair of ladders lead upwards.
+~
+** ABOVE IS 2717 **
+[Eliza] Done.
+~
+-335937468 11 9 0
+D1
+~
+~
+0 -1 2713 10 10 5
+D2
+~
+~
+0 -1 2709 10 10 5
+D3
+~
+~
+0 -1 2715 10 10 5
+D4
+~
+~
+0 -1 2717 10 10 5
+E
+narrow pathway~
+Squeezed between the vertical cliff and the rock column to the south,
+there is barely enough room to walk east or west through this portion of
+the cavern.
+~
+E
+sheer wall 1 north~
+A vertical rock wall rises from the cavern floor, leading upwards to the
+overlord outpost, jutting out high above.  Long streaks of blood run
+down the front of the cliff, left by the frantic scratching of slaves
+attempting to escape.
+~
+E
+pair ladders upwards~
+Twin wooden ladders, their rungs held in place with hemp ropes, lead
+upwards out of the gloomy cavern.  Each ladder flanks this passageway on
+either side, providing a means of travel to the landing above.
+~
+E
+bloodied white streaks clawing~
+Vertical chalky-looking streaks are gouged into the cliff wall to the
+north, where the fingernails of tortured slaves raked across the jagged
+rocks.  Trails of blood wind their way down the wall, the crimson trails
+still fresh and wet.
+~
+A
+up~
+~
+if( is_player( ch ) ) {
+  act_tochar( #up, ch );
+  end;
+  }
+continue;
+~
+E
+up~
+You should probably try to climb up the ladder instead of trying to walk
+up the wall.
+~
+!
+0 0 0
+A
+climb scale~
+rope ladders 1 up~
+act_tochar( #no, ch );
+~
+E
+no~
+There is no way to climb up the sheer wall from here.  However, a pair of
+thick rope ladders dangle down on either side of this passageway.
+~
+!
+0 0 0
+A
+climb jump hop~
+rock column 1 south~
+act_tochar( #jump, ch );
+act_notchar( #jump2, ch );
+transfer( ch, find_room( 2709 ) );
+act_notchar( #arrive, ch );
+~
+E
+jump~
+@mYou jump on top of the rock column.@n
+~
+E
+jump2~
+@m$n jumps up onto the rock column to the south.@n
+~
+E
+arrive~
+@m$n jumps onto the rock column from the north.@n
+~
+!
+0 0 0
+A
+~
+~
+if( race( ch ) == master )
+  continue;
+~
+E
+to_room~
+@y$n jumps up onto the rock column to the south, seeking out more slaves
+to whip.@n 
+~
+E
+to_char~
+@yYou jump on top of the rock column to the south, seeking out more
+slaves to whip.@n 
+~
+!
+3 0 4
+A
+~
+~
+if( race( ch ) == slave )
+continue;
+~
+E
+to_char~
+@yYou hop on top of the rock column, attempting to elude the overlords.@n
+
+~
+E
+to_room~
+@y$n hops on top of the rock column, attempting to elude the cruel
+overlords.@n 
+~
+!
+3 0 4
+A
+~
+~
+if( find_stat( ch, level ) > 90 )
+  continue;
+if( race( ch ) != master ) {
+  if( race( ch ) != slave ) {
+    act_tochar( #no, ch );
+    end;
+    }
+  }
+~
+E
+no~
+A three-foot tall rock column prevents you from walking in that direction.
+~
+!
+3 0 4
+A
+~
+~
+if( find_stat( ch, level ) > 90 )
+  continue;
+if( group( ch ) == 18 ) {
+  act_notchar( #master, ch );
+  transfer( ch, find_room( 2714 ) );
+  end;
+  }
+if( group( ch ) == 19 ) {
+  act_notchar( #slave, ch );
+  transfer( ch, find_room( 2714 ) );
+  end;
+  }
+~
+E
+master~
+@y$n looks up at the landing above, making sure no slaves are trying to
+escape.@n 
+~
+E
+slave~
+@y$n looks up at the landing above, trying to time $s escape.@n
+~
+!
+3 0 16
+A
+~
+~
+if( mob_in_room( 5298, room ) || mob_in_room( 5299, room ) || mob_in_room( 5300, room ) || mob_in_room( 5301, room ) ) {
+  if( mob_in_room( 5302, room ) || mob_in_room( 5303, room ) || mob_in_room( 5304, room ) || mob_in_room( 5305, room ) ) {
+    if( rflag( status2, room ) ) {
+      remove_rflag( status2, room );
+      wait( 2 );
+      i = 0;
+      j = 0;
+      if( mob_in_room( 5298, room ) )
+        i = 1;
+      if( mob_in_room( 5299, room ) )
+        i = 2;
+      if( mob_in_room( 5300, room ) )
+        i = 3;
+      if( mob_in_room( 5301, room ) )
+        i = 4;
+      if( mob_in_room( 5302, room ) )
+        j = 1;
+      if( mob_in_room( 5303, room ) )
+        j = 2;
+      if( mob_in_room( 5304, room ) )
+        j = 3;
+      if( mob_in_room( 5305, room ) )
+        j = 4;
+      if( i == 1 ) {
+        if( j == 1 )
+          send_to_room( #trollgnome, room );
+        if( j == 2 )
+          send_to_room( #trollhalfling, room );
+        if( j == 3 )
+          send_to_room( #trollelf, room );
+        if( j == 4 )
+          send_to_room( #trolldwarf, room );
+        }
+      if( i == 2 ) {
+        if( j == 1 )
+          send_to_room( #ogregnome, room );
+        if( j == 2 )
+          send_to_room( #ogrehalfling, room );
+        if( j == 3 )
+          send_to_room( #ogreelf, room );
+        if( j == 4 )
+          send_to_room( #ogredwarf, room );
+        }
+      if( i == 3 ) {
+        if( j == 1 )
+          send_to_room( #vyangnome, room );
+        if( j == 2 )
+          send_to_room( #vyanhalfling, room );
+        if( j == 3 )
+          send_to_room( #vyanelf, room );
+        if( j == 4 )
+          send_to_room( #vyandwarf, room );
+        }
+      if( i == 4 ) {
+        if( j == 1 )
+          send_to_room( #orcgnome, room );
+        if( j == 2 )
+          send_to_room( #orchalfling, room );
+        if( j == 3 )
+          send_to_room( #orcelf, room );
+        if( j == 4 )
+          send_to_room( #orcdwarf, room );
+        }
+      wait( 3 );
+      set_rflag( status2, room );
+      }
+    }
+  }
+~
+E
+trollgnome~
+@rA gnome slave cringes away from the troll overlord, begging for
+mercy.@n 
+~
+E
+trollhalfling~
+@rA halfling slave cringes away from the troll overlord, begging for
+mercy.@n 
+~
+E
+trollelf~
+@rAn elf slave cringes away from the troll overlord, begging for mercy.@n
+
+~
+E
+trolldwarf~
+@rA dwarf slave cringes away from the troll overlord, begging for
+mercy.@n 
+~
+E
+ogregnome~
+@rA gnome slave cringes away from the ogre overlord, begging for mercy.@n 
+~
+E
+ogrehalfling~
+@rA halfling slave cringes away from the ogre overlord, begging for
+mercy.@n 
+~
+E
+ogreelf~
+@rAn elf slave cringes away from the ogre overlord, begging for mercy.@n
+
+~
+E
+ogredwarf~
+@rA dwarf slave cringes away from the ogre overlord, begging for mercy.@n
+
+~
+E
+vyangnome~
+@rA gnome slave cringes away from the vyan overlord, begging for mercy.@n
+
+~
+E
+vyanhalfling~
+@rA halfling slave cringes away from the vyan overlord, begging for
+mercy.@n 
+~
+E
+vyanelf~
+@rAn elf slave cringes away from the vyan overlord, begging for mercy.@n
+
+~
+E
+vyandwarf~
+@rA dwarf slave cringes away from the vyan overlord, begging for mercy.@n
+
+~
+E
+orcgnome~
+@rA gnome slave cringes away from the orc overlord, begging for mercy.@n 
+~
+E
+orchalfling~
+@rA halfling slave cringes away from the orc overlord, begging for
+mercy.@n 
+~
+E
+orcelf~
+@rAn elf slave cringes away from the orc overlord, begging for mercy.@n
+
+~
+E
+orcdwarf~
+@rA dwarf slave cringes away from the orc overlord, begging for mercy.@n
+
+~
+!
+1 0 30
+A
+~
+~
+if( mob_in_room( 5300, find_room( 2709 ) ) )
+  send_to_room( #crack, room );
+~
+E
+crack~
+@gThe vyan overlord standing atop the rock column cracks his whip,
+shouting out orders into the darkness.@n 
+~
+!
+2 100 0
+5299 9 1509949540 3 0
+-1
+S
+
+#2715
+Edge of the Slave Pit~
+Sandwiched into one corner of the cavern, a rope ladder hangs down from a
+wooden landing far above.  Made of an extremely long length of hemp rope,
+its knotted rungs are frayed and worn.  A narrow passage leads alongside
+the northern cliff to the east, where another ladder in better condition
+can be seen in the distance.  The remainder of the cavern sprawls out to
+the south, blanketed in darkness.
+~
+** ABOVE IS 2716 **
+[Eliza] Done.
+~
+737804356 11 9 0
+D1
+~
+~
+0 -1 2714 10 10 5
+D2
+~
+~
+0 -1 2708 10 10 5
+D4
+~
+~
+0 -1 2716 10 10 5
+E
+corner rope ladder long length hemp rope knotted rungs frayed worn~
+Almost obscured by the deep shadows of the cavern, a hemp ladder leads
+upwards to a wooden landing high above.  Knotted about a foot apart, the
+rungs are frayed almost to the point of snapping.  Whether the ladder
+could reliably hold your weight is unknown.  A sturdier ladder can be
+seen further to the east, on the other side of a narrow passage.
+~
+E
+wooden landing above~
+Sticking out a few feet from the gray rock, a wooden landing has been
+built about twenty feet up the northern cliff.  A rope ladder leads up to
+its lofty perch, though the reliability of its frayed ropes could be in
+question.
+~
+E
+narrow passage cliff east~
+With just enough room for a party to pass, a narrow gap exists between
+the vertical cliff to the north, and a rock column which stands to the
+southeast.
+~
+A
+up~
+*~
+if( find_stat( ch, level ) > 90 )
+  continue;
+if( is_player( ch ) ) {
+  act_tochar( #up, ch );
+  end;
+  }
+continue;
+~
+E
+up~
+Walking straight up a vertical wall is not something you are adept at.
+~
+!
+0 0 0
+A
+~
+~
+if( find_stat( ch, level ) > 90 )
+  continue;
+if( race( ch ) == master ) {
+  act_notchar( #overlord, ch );
+  transfer( ch, find_room( 2716 ) );
+  act_notchar( #overlord2, ch );
+  end;
+  }
+if( race( ch ) == slave ) {
+  i = random( 1, 3 );
+  if( i == 2 ) {
+    act_notchar( #slave, ch );
+    transfer( ch, find_room( 2716 ) );
+    act_notchar( #slave2, ch );
+    if( mob_in_room( 1382, find_room( 2716 ) ) || mob_in_room( 1383, find_room( 2716 ) ) || mob_in_room( 1384, find_room( 2716 ) ) || mob_in_room( 1385, find_room( 2716 ) ) ) {
+      wait( 1 );
+      act_notchar( #slapped, ch );
+      transfer( ch, find_room( 2715 ) );
+      act_notchar( #slapped2, ch );
+      end;
+      }
+    end;
+    }
+  act_notchar( #slave3, ch );
+  transfer( ch, find_room( 2715 ) );
+  }
+~
+E
+overlord~
+@y$n climbs up the ladder.@n
+~
+E
+overlord2~
+@y$n climbs up the ladder from below.@n
+~
+E
+slave~
+@y$n slowly climbs up the ladder, barely making it to the top.@n
+~
+E
+slave2~
+@y$n climbs up the ladder from below, barely making it to the top.@n
+~
+E
+slave3~
+@y$n attempts to climb the ladder, but doesn't have the strength to make
+it all the way up.@n 
+~
+E
+slapped~
+@y$n cringes as the overlord tosses $m back over the edge!@n
+~
+E
+slapped2~
+@y$n tumbles to the ground, sent flying by the overlord above.@n
+~
+!
+3 0 16
+A
+climb scale~
+rope hemp ladder 1 up~
+if( is_pet( ch ) ) {
+  if( can_fly( ch ) ) {
+    act_notchar( #pet, ch );
+    transfer( ch, find_room( 2716 ) );
+    act_notchar( #pet2, ch );
+    end;
+  }
+  else {
+    act_notchar( #pclimb, ch, obj, mob, sight );
+    transfer( ch, find_room( 2716 ) );
+    act_notchar( #arrive, ch, obj, mob, sight );
+  }
+}
+if( is_player( ch ) ) {
+  if( random( 1, 3 ) == 2 ) {
+    act_tochar( #climb, ch );
+    act_notchar( #climb2, ch );
+    transfer( ch, find_room( 2716 ) );
+    act_notchar( #arrive, ch );
+    end;
+  }
+  act_tochar( #oops, ch );
+  dam_message( ch, 5d9, "falling off the broken ladder" );
+  inflict( ch, mob, 5d9, "falling off a broken ladder" );
+  position( ch, 6 );
+  end;
+}
+~
+E
+pet~
+@G$n flies up to the ledge above.@n
+~
+E
+pet2~
+@G$n flies up from below.@n
+~
+E
+climb~
+@mYou climb up the ladder to the landing above.@n
+~
+E
+climb2~
+@m$n climbs up the ladder to the landing above.@n
+~
+E
+arrive~
+@m$n arrives from below.@n
+~
+E
+oops~
+@rAbout halfway up the frayed ladder, one of the rungs snaps, sending you
+tumbling to the ground.@n 
+~
+E
+pclimb~
+@mUnwillingly, $n climbs up.@n
+~
+!
+0 0 0
+A
+~
+~
+if( mob_in_room( 5298, room ) || mob_in_room( 5299, room ) || mob_in_room( 5300, room ) || mob_in_room( 5301, room ) ) {
+  if( mob_in_room( 5302, room ) || mob_in_room( 5303, room ) || mob_in_room( 5304, room ) || mob_in_room( 5305, room ) ) {
+    if( rflag( status2, room ) ) {
+      remove_rflag( status2, room );
+      wait( 2 );
+      i = 0;
+      j = 0;
+      if( mob_in_room( 5298, room ) )
+        i = 1;
+      if( mob_in_room( 5299, room ) )
+        i = 2;
+      if( mob_in_room( 5300, room ) )
+        i = 3;
+      if( mob_in_room( 5301, room ) )
+        i = 4;
+      if( mob_in_room( 5302, room ) )
+        j = 1;
+      if( mob_in_room( 5303, room ) )
+        j = 2;
+      if( mob_in_room( 5304, room ) )
+        j = 3;
+      if( mob_in_room( 5305, room ) )
+        j = 4;
+      if( i == 1 ) {
+        if( j == 1 )
+          send_to_room( #trollgnome, room );
+        if( j == 2 )
+          send_to_room( #trollhalfling, room );
+        if( j == 3 )
+          send_to_room( #trollelf, room );
+        if( j == 4 )
+          send_to_room( #trolldwarf, room );
+        }
+      if( i == 2 ) {
+        if( j == 1 )
+          send_to_room( #ogregnome, room );
+        if( j == 2 )
+          send_to_room( #ogrehalfling, room );
+        if( j == 3 )
+          send_to_room( #ogreelf, room );
+        if( j == 4 )
+          send_to_room( #ogredwarf, room );
+        }
+      if( i == 3 ) {
+        if( j == 1 )
+          send_to_room( #vyangnome, room );
+        if( j == 2 )
+          send_to_room( #vyanhalfling, room );
+        if( j == 3 )
+          send_to_room( #vyanelf, room );
+        if( j == 4 )
+          send_to_room( #vyandwarf, room );
+        }
+      if( i == 4 ) {
+        if( j == 1 )
+          send_to_room( #orcgnome, room );
+        if( j == 2 )
+          send_to_room( #orchalfling, room );
+        if( j == 3 )
+          send_to_room( #orcelf, room );
+        if( j == 4 )
+          send_to_room( #orcdwarf, room );
+        }
+      wait( 6 );
+      set_rflag( status2, room );
+      }
+    }
+  }
+~
+E
+trollgnome~
+@rThe troll overlord violently shoves a gnome slave, demanding he work
+faster.@n 
+~
+E
+trollhalfling~
+@rThe troll overlord violently shoves a halfling slave, demanding he work
+faster.@n 
+~
+E
+trollelf~
+@rThe troll overlord violently shoves an elf slave, demanding he work
+faster.@n 
+~
+E
+trolldwarf~
+@rThe troll overlord violently shoves a dwarf slave, demanding he work
+faster.@n 
+~
+E
+ogregnome~
+@rThe ogre overlord violently shoves a gnome slave, demanding he work
+faster.@n 
+~
+E
+ogrehalfling~
+@rThe ogre overlord violently shoves a halfling slave, demanding he work
+faster.@n 
+~
+E
+ogreelf~
+@rThe ogre overlord violently shoves an elf slave, demanding he work
+faster.@n 
+~
+E
+ogredwarf~
+@rThe ogre overlord violently shoves a dwarf slave, demanding he work
+faster.@n 
+~
+E
+vyangnome~
+@rThe vyan overlord violently shoves a gnome slave, demanding he work
+faster.@n 
+~
+E
+vyanhalfling~
+@rThe vyan overlord violently shoves a halfling slave, demanding he work
+faster.@n 
+~
+E
+vyanelf~
+@rThe vyan overlord violently shoves an elf slave, demanding he work
+faster.@n 
+~
+E
+vyandwarf~
+@rThe vyan overlord violently shoves a dwarf slave, demanding he work
+faster.@n 
+~
+E
+orcgnome~
+@rThe orc overlord violently shoves a gnome slave's back, demanding he
+work faster.@n 
+~
+E
+orchalfling~
+@rThe orc overlord violently shoves a halfling slave's back, demanding he
+work faster.@n 
+~
+E
+orcelf~
+@rThe orc overlord violently shoves an elf slave's back, demanding he
+work faster.@n 
+~
+E
+orcdwarf~
+@rThe orc overlord violently shoves a dwarf slave's back, demanding he
+work faster.@n 
+~
+!
+1 0 22
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 )
+  send_to_room( #action1, room );
+if( i == 2 )
+  send_to_room( #action2, room );
+if( i == 3 )
+  send_to_room( #action3, room );
+~
+E
+action1~
+@gThe frayed rope ladder swings from side to side, set in motion by the
+last person to use it.@n 
+~
+E
+action2~
+@gUnidentifiable in the darkness, something crawls across your foot
+before disappearing as quickly as it came.@n 
+~
+E
+action3~
+@G*AUGGH!*@n@g  A painful yell can be heard from the southeast.@n
+~
+!
+2 200 0
+5305 9 1509949540 3 0
+-1
+S
+
+#2716
+Above the Slave Pit~
+Projecting over the cavern below, a wooden landing offers a safe haven
+for the overlords who control the slave pit.  A rope ladder drapes
+downward over the edge, its strands frayed and worn.  Secured to the
+platform with two thick knots, it appears unsafe in its poor condition. 
+The landing continues to the east, offering a wide view of the prisoners.
+~
+** BELOW IS 2715 **
+~
+200933444 11 9 0
+D1
+~
+~
+0 -1 2717 10 10 5
+D2
+~
+~
+0 -1 2722 10 10 5
+D5
+~
+~
+0 -1 2715 10 10 5
+E
+wooden landing~
+Sprawled out from side to side, a wooden landing is supported by thick
+wooden beams below and behind the platform itself.  Hanging out a few
+feet from the cliff below, the pit is easily secured and kept safe by the
+cruel overlords.
+~
+E
+cavern below slave pit prisoners~
+Blanketed in darkness, the northern edge of the cavern below can be seen
+twenty feet below.  Although only fuzzy shapes can be made out from this
+distance, the landing offers an excellent vantage point over the
+prisoners in the pit.
+~
+E
+rope ladder strands frayed worn thick knots~
+The ends of the rope ladder are looped around one of the support beams at
+the back of the landing, knotted repeatedly in a jumbled mess.  Each of
+the ropes appears in poor condition, with frayed strands poking out in
+all directions.  Another ladder is visible off to the east, perhaps in
+better condition.
+~
+A
+1 south 1 down~
+~
+if( find_stat( ch, level ) > 90 )
+  continue;
+if( is_player( ch ) ) {
+  act_tochar( #down, ch );
+  end;
+  }
+continue;
+~
+E
+down~
+Walking off the edge would probably hurt.
+~
+!
+0 0 0
+A
+climb scale~
+frayed rope ladder 1 south 1 down~
+if( is_pet( ch ) ) {
+  if( can_fly( ch ) ) {
+    act_notchar( #fly, ch );
+    transfer( ch, find_room( 2715 ) );
+    act_notchar( #fly2, ch );
+    end;
+    }
+  act_notchar( #thump, ch );
+  transfer( ch, find_room( 2715 ) );
+  act_notchar( #thump2, ch );
+  dam_message( ch, 10d10, "falling off the ledge" );
+  inflict( ch, mob, 10d10, "falling off a ledge" );
+  end;
+  }
+act_tochar( #climb, ch );
+if( is_invisible( ch ) ) {
+  transfer( ch, find_room( 2715 ) );
+  end;
+  }
+if( is_hidden( ch ) ) {
+  if( find_skill( ch, hide ) > 5 ) {
+    if( find_skill( ch, sneak ) > 5 ) {
+      transfer( ch, find_room( 2715 ) );
+      end;
+      }
+    }
+  }
+if( random( 1, 3 ) == 2 ) {
+  act_notchar( #climb2, ch );
+  transfer( ch, find_room( 2715 ) );
+  act_notchar( #arrive, ch );
+  end;
+  }
+act_tochar( #oops, ch );
+act_notchar( #oops2, ch );
+transfer( ch, find_room( 2715 ) );
+act_notchar( #oops3, ch );
+dam_message( ch, 5d9, "falling off a broken ladder" );
+inflict( ch, mob, 5d9, "falling off a broken ladder" );
+position( ch, 6 );
+end;
+~
+E
+climb~
+@mYou climb down the ladder into the pit below.@n
+~
+E
+climb2~
+@m$n climbs down the ladder.@n
+~
+E
+arrive~
+@m$n climbs down the ladder from above.@n
+~
+E
+fly~
+$G$n flies down into the pit.@n
+~
+E
+fly2~
+@G$n flies down from above.@n
+~
+E
+thump~
+@G$n attempts to climb down the vertical ladder, but slips and falls into
+the pit!@n 
+~
+E
+thump2~
+@G$n falls down from above, landing with a sickening sound.@n
+~
+E
+oops~
+@rAbout halfway down the frayed ladder, one of the rungs snaps, sending
+you tumbling to the ground.@n 
+~
+E
+oops2~
+@r$n begins climbing down the rope ladder to the cavern below.  About
+halfway down, one of the rungs snaps, sending $m tumbling to the
+ground!@n 
+~
+E
+oops3~
+@r$n comes tumbling down from above.@n
+~
+!
+0 0 0
+A
+~
+~
+if( find_stat( ch, level ) > 90 )
+  continue;
+if( race( ch ) == master ) {
+  act_notchar( #overlord, ch );
+  transfer( ch, find_room( 2715 ) );
+  act_notchar( #overlord2, ch );
+  end;
+  }
+if( race( ch ) == slave ) {
+  act_notchar( #slave, ch );
+  transfer( ch, find_room( 2715 ) );
+  act_notchar( #slave2, ch );
+  end;
+  }
+~
+E
+overlord~
+@y$n climbs down the ladder into the pit.@n
+~
+E
+overlord2~
+@y$n climbs down from above.@n
+~
+E
+slave~
+@y$n tumbles down into the pit, too weak to stand.@n
+~
+E
+slave2~
+@y$n tumbles down from above.@n
+~
+!
+3 0 36
+A
+jump hop~
+slave pit 1 south 1 down~
+act_tochar( #jump, ch );
+act_notchar( #jump2, ch );
+transfer( ch, find_room( 2715 ) );
+act_notchar( #splat, ch );
+dam_message( ch, 10d10, "falling into the pit" );
+inflict( ch, mob, 10d10, "jumping from a high distance" );
+~
+E
+jump~
+@RIgnoring the ladder leading downward, you jump into the pit far
+below.@n 
+~
+E
+jump2~
+@RIgnoring the ladder leading downward, $n jumps into the pit far
+below.@n 
+~
+E
+splat~
+@R$n falls to the ground from above, landing on the rock floor.@n
+~
+!
+0 0 0
+5301 9 1509949540 3 0
+-1
+S
+
+#2717
+Above the Slave Pit~
+Supported by thick oak beams, a platform of age-worn planks has been
+erected on top of a ledge overlooking the cavern below.  Situated above a
+vertical cliff, it offers an excellent outpost for the overlords to check
+on the prisoners in the slave pit.  Rotted wooden railings prevent
+onlookers from a painful fall, built at the very edge of the platform.
+~
+** BELOW IS 2714 **
+[Eliza] Done.
+~
+200933444 11 9 0
+D0
+iron-bound door~
+iron-bound door~
+131 -1 2719 10 10 5
+D1
+~
+~
+0 -1 2718 10 10 5
+D2
+~
+~
+0 -1 2721 10 10 5
+D3
+~
+~
+0 -1 2716 10 10 5
+D5
+~
+~
+0 -1 2714 10 10 5
+E
+supported thick oak beams~
+At least eight inches in diameter, the trunks of adult oak trees have
+been cut down and used as supporting beams for the wooden platform. 
+Their rounded edges have been planed flat where the planks overlap,
+giving a measure of stability.
+~
+E
+platform age-worn planks outpost~
+Faded to the point of almost being white, six-foot long wooden planks
+have been mounted next to each other atop thick support beams.  Gaps
+between the planks reveal the stone ledge the platform has been built upon,
+the dark gray stone covered in sawdust and other debris.
+~
+E
+vertical cliff cavern slave pit~
+A darkened cavern opens up below the outpost, filled with captured
+prisoners who have been forced into slave labor.  A vertical cliff drops
+twenty feet to the chamber floor, the only access down into the pit being
+two ladders on either side of this portion of the platform.
+~
+E
+rotted wooden railings~
+Separated six inches apart, a series of rotted rails rise up from the
+edge of the platform, allowing a place to lean over and look down into
+the pit without falling the twenty feet to the rocky floor below.  Grubby
+handprints mar the pockmarked surface, left by the overlords as they
+peered into the pit.
+~
+A
+1 south 1 down~
+~
+if( is_player( ch ) ) {
+  act_tochar( #down, ch );
+  end;
+  }
+continue;
+~
+E
+down~
+The wooden railings prevent you from falling into the pit far below.
+~
+!
+0 0 0
+A
+climb scale hop jump~
+wooden burnished railings 1 south 1 down~
+act_tochar( #ouch, ch );
+act_notchar( #ouch2, ch );
+transfer( ch, find_room( 2714 ) );
+act_notchar( #arrive, ch );
+dam_message( ch, 10d10, "falling into the pit" );
+inflict( ch, mob, 10d10, "jumping to their own death" );
+~
+E
+ouch~
+@RYou climb over the railings, falling into the pit far below.@n
+~
+E
+ouch2~
+@R$n climbs over the railings and falls into the pit far below.@n
+~
+E
+arrive~
+@R$n falls from above, landing on the ground with a sickening sound.@n
+~
+!
+0 0 0
+A
+~
+~
+if( race( ch ) == master ) {
+  act_notchar( #overlord, ch );
+  transfer( ch, find_room( 2717 ) );
+  end;
+  }
+if( race( ch ) == slave ) {
+  act_notchar( #slave, ch );
+  transfer( ch, find_room( 2714 ) );
+  act_notchar( #slave2, ch );
+  end;
+  }
+~
+E
+overlord~
+@y$n peers over the railing, observing the slaves below.@n
+~
+E
+slave~
+@y$n falls over the railing, landing with a sickening thud below.@n
+~
+E
+slave2~
+@y$n falls from above, landing with a sickening thud.@n
+~
+!
+3 0 36
+-1
+S
+
+#2718
+Above the Slave Pit~
+A single broken plank that has been snapped in two mars the surface of
+the otherwise orderly-built platform that dangles above the slave pit. 
+The rest of the slats have been placed neatly against one another,
+providing a stable outpost for the overlords who manage the prisoners.  A
+wooden ladder leads downward, its rungs held tightly together with slim
+lengths of hemp knots.
+~
+** BELOW IS 2713 **
+[Eliza] Done.
+~
+200933444 11 9 0
+D2
+~
+~
+0 -1 2720 10 10 5
+D3
+~
+~
+0 -1 2717 10 10 5
+D5
+~
+~
+0 -1 2713 10 10 5
+E
+single broken plank platform slats outpost~
+Wooden planks six inches wide are snugly stacked next to one another and
+supported by thick beams, giving a stable outpost for the overlords to
+observe the prisoners below.  Someone's heavy steps have broken one of
+the beams in its middle, sagging the few inches down to the rock ledge
+below it.
+~
+E
+slave pit 1 down~
+What is happening in the dusky pit far below is difficult to tell, the
+night-like blackness reducing the view to fuzzy shapes at best.  A foul
+stench rises up from the cavern, the smell of sweat and death a potent
+combination.
+~
+E
+wooden ladder rungs slim lengths hemp knots~
+Draping down into the dark pit some twenty feet below, a ladder of
+intersected beams appears to be safely climbable.  Loops of hemp rope
+have been tied at the sides of each rung, with the frayed ends tucked out
+of the way towards the back.
+~
+A
+1 south 1 down~
+~
+if( find_stat( ch, level ) > 90 )
+  continue;
+if( is_player( ch ) ) {
+  act_tochar( #down, ch );
+  end;
+  }
+continue;
+~
+E
+down~
+Taking a step off a sheer rock face would probably hurt.  Maybe you
+should find another way down?
+~
+!
+0 0 0
+A
+climb scale~
+ladder pit 1 south 1 down~
+if( is_pet( ch ) ) {
+  if( can_fly( ch ) ) {
+    act_notchar( #fly, ch );
+    transfer( ch, find_room( 2713 ) );
+    act_notchar( #fly2, ch );
+    end;
+    }
+  act_notchar( #thump, ch );
+  transfer( ch, find_room( 2713 ) );
+  act_notchar( #thump2, ch );
+  dam_message( ch, 10d10, "falling off the ledge" );
+  inflict( ch, mob, 10d10, "falling off a ledge" );
+  end;
+  }
+act_tochar( #climb, ch );
+if( is_invisible( ch ) ) {
+  transfer( ch, find_room( 2713 ) );
+  end;
+  }
+if( is_hidden( ch ) ) {
+  if( find_skill( ch, hide ) > 7 ) {
+    if( find_skill( ch, sneak ) > 7 ) {
+      transfer( ch, find_room( 2713 ) );
+      end;
+      }
+    }
+  }
+act_notchar( #climb2, ch );
+transfer( ch, find_room( 2713 ) );
+act_notchar( #arrive, ch );
+~
+E
+climb~
+@mYou climb down the ladder into the pit below.@n
+~
+E
+climb2~
+@m$n climbs down the ladder.@n
+~
+E
+arrive~
+@m$n climbs down the ladder from above.@n
+~
+E
+fly~
+@G$n flies down into the pit.@n
+~
+E
+fly2~
+@G$n flies down from above.@n
+~
+E
+thump~
+@G$n attempts to climb down the vertical ladder, but slips and falls into
+the pit!@n 
+~
+E
+thump2~
+@G$n falls down from above, landing with a sickening sound.@n
+~
+!
+0 0 0
+A
+~
+~
+if( find_stat( ch, level ) > 90 )
+  continue;
+if( race( ch ) == master ) {
+  act_notchar( #overlord, ch );
+  transfer( ch, find_room( 2713 ) );
+  act_notchar( #overlord2, ch );
+  end;
+  }
+if( race( ch ) == slave ) {
+  act_notchar( #slave, ch );
+  transfer( ch, find_room( 2713 ) );
+  act_notchar( #slave2, ch );
+  end;
+  }
+~
+E
+overlord~
+@y$n climbs down the ladder into the pit.@n
+~
+E
+overlord2~
+@y$n climbs down from above.@n
+~
+E
+slave~
+@y$n tumbles down into the pit, too weak to stand.@n
+~
+E
+slave2~
+@y$n tumbles down from above.@n
+~
+!
+3 0 36
+A
+jump hop~
+slave pit 1 down 1 south~
+act_tochar( #jump, ch );
+act_notchar( #jump2, ch );
+transfer( ch, find_room( 2715 ) );
+act_notchar( #splat, ch );
+dam_message( ch, 10d10, "falling into the pit" );
+inflict( ch, mob, 10d10, "jumping from a high distance" );
+~
+E
+jump~
+@RIgnoring the ladder leading downward, $n jumps into the pit far
+below.@n 
+~
+E
+jump2~
+@RIgnoring the ladder leading downward, $n jumps into the pit far
+below.@n 
+~
+E
+splat~
+@R$n falls to the ground from above, landing on the rock floor.@n
+~
+!
+0 0 0
+5301 9 1509949540 3 0
+-1
+S
+
+#2719
+Master's Quarters~
+This cramped chamber has been carved into an office for the slave pit's
+overlord masters.  An oak desk rests in the middle of the floor,
+scattered with papers documenting the mineral production of the slave
+labor.  A weak glow globe hangs from the ceiling, its light source faintly
+throbbing with dwindling power.  Scratch marks are visible on the eastern
+wall, organized into clusters.
+~
+[Eliza] Done.
+~
+200933444 11 9 0
+D2
+iron-bound door~
+iron-bound door~
+131 -1 2717 10 10 5
+E
+scattered papers documenting mineral production~
+Almost too thin to be written upon, sheets of woodpulp paper lie
+scattered upon the desk in the middle of the room.  Crude charts document
+the mining efforts of the slave labor, detailing the amount of coal and
+ore extracted then sent back to Tar'ippal for processing.
+~
+E
+weak glow globe ceiling~
+Housed in a glass orb that dangles from the ceiling, a white ball of
+light provides a light source for the overlord office.  Throwing a weak
+beam through the chamber, its inner light appears to be dwindling, as its
+intensity fluctuates wildly.
+~
+E
+scratch marks clusters wall 1 east~
+Organized into clusters, repetitive markings have been scratched into the
+stone wall.  Four vertical lines are intersected by one diagonal one over
+and over, although what they represent cannot be determined.  Altogether, at
+least a hundred lines are etched into the rock.
+~
+A
+get take grab search steal~
+weak glow globe ceiling light source~
+act_tochar( #no, ch );
+~
+E
+no~
+The glow globe hangs at least fifteen feet above the ground, it cannot be
+reached.
+~
+!
+0 0 0
+A
+get take grab search steal~
+scattered papers~
+if( mob_in_room( 5300, room ) ) {
+  act_tochar( #overlord, ch );
+  end;
+  }
+act_tochar( #no, ch );
+~
+E
+overlord~
+The vyan overlord frowns at your insolence.
+~
+E
+no~
+The paper is much too thin and brittle to be used again.
+~
+!
+0 0 0
+A
+~
+~
+if( mob_in_room( 5300, room ) )
+  send_to_room( #ambience, room );
+~
+E
+ambience~
+@C*AIYEEE!*@n  The scream of a dying soul carries in from the slave pit.
+
+The vyan overlord walks over to the markings on the east wall, and
+scratches another line in the stone with a smug look on his face.
+~
+!
+2 100 0
+5300 9 1509949540 3 0
+3162 17 1509949540 -2 0
+-1
+S
+
+#2720
+You Shouldn't Be Here~
+This room was created only for the illusion of a continuous zone.
+You should contact an immortal if you got in here.
+~
+~
+-335937410 11 9 0
+D0
+~
+~
+0 -1 2718 10 10 5
+A
+1 north~
+~
+if( find_stat( ch, level ) > 90 )
+  continue;
+~
+!
+0 0 0
+-1
+S
+
+#2721
+You Shouldn't Be Here~
+This room was created only for the illusion of a continuous zone.
+You should contact an immortal if you got in here.
+~
+~
+-335937410 11 9 0
+D0
+~
+~
+0 -1 2717 10 10 5
+A
+1 north~
+~
+if( find_stat( ch, level ) > 90 )
+  continue;
+~
+!
+0 0 0
+-1
+S
+
+#2722
+You Shouldn't Be Here~
+This room was created only for the illusion of a continuous zone.
+You should contact an immortal if you got in here.
+~
+~
+-335937410 11 9 0
+D0
+~
+~
+0 -1 2716 10 10 5
+A
+1 north~
+~
+if( find_stat( ch, level ) > 90 )
+  continue;
+~
+!
+0 0 0
+-1
+S
+
+#2723
+Above the Slave Pit~
+Projecting over the dark, smelly cavern to the north, a wooden platform
+provides a vantage point over the slaves held prisoner below.  A thick
+rope ladder drapes downward over the edge, the only safe access in or out
+of the pit.  The outpost of uneven planks continues to the east, offering
+alternate viewpoints of what is happening below.
+~
+** BELOW IS 2701 ** NORTH IS 2726 **
+[Eliza] Done.
+~
+200933444 11 9 0
+D0
+~
+~
+0 -1 2726 10 10 5
+D1
+~
+~
+0 -1 2724 10 10 5
+D5
+~
+~
+0 -1 2701 10 10 5
+E
+projecting wooden platform vantage point outpost uneven planks~
+Faded wooden planks have been laid out on top of some simple framework
+beams above the tunnel's floor.  A projection of longer slats hangs over
+the pit to the north, supporting a heavy rope ladder that dangles
+downward.  Burnished railings prevent the overlords from falling over the
+edge to the east, although none are present along this section of the
+platform.
+~
+E
+dark smelly cavern pit 1 downward~
+With virtually no light shining downward, the chamber below is as dark as
+a moonless night.  A foul stench drifts upward, the scent of sweaty
+bodies and rotting excrement assaulting the senses.  A thick rope ladder
+drapes downward, offering access to the inhospitable cavern.
+~
+E
+thick rope ladder~
+Anchored somewhere below the platform, the side lengths of a rope ladder
+pop up through the floorboards before dropping off of the edge and into
+the dusky pit.  Knots tied about a foot apart give stable purchase,
+although care should be taken when climbing because it is quite a drop to
+the floor below.
+~
+A
+1 north 1 down~
+*~
+if( find_stat( ch, level ) > 90 )
+  continue;
+if( is_player( ch ) ) {
+  act_tochar( #no, ch );
+  end;
+  }
+continue;
+~
+E
+no~
+Walking straight off that ledge would probably hurt.
+~
+!
+0 0 0
+A
+climb scale~
+thick rope ladder 1 north 1 down~
+if( is_pet( ch ) ) {
+  if( can_fly( ch ) ) {
+    act_notchar( #fly, ch );
+    transfer( ch, find_room( 2701 ) );
+    act_notchar( #fly2, ch );
+    end;
+    }
+  act_notchar( #thump, ch );
+  transfer( ch, find_room( 2701 ) );
+  act_notchar( #thump2, ch );
+  dam_message( ch, 10d10, "falling off the ledge" );
+  inflict( ch, mob, 10d10, "falling off a ledge" );
+  end;
+  }
+act_tochar( #climb, ch );
+if( is_invisible( ch ) ) {
+  transfer( ch, find_room( 2701 ) );
+  end;
+  }
+if( is_hidden( ch ) ) {
+  if( find_skill( ch, hide ) > 5 ) {
+    if( find_skill( ch, sneak ) > 5 ) {
+      transfer( ch, find_room( 2701 ) );
+      end;
+      }
+    }
+  }
+act_notchar( #climb2, ch );
+transfer( ch, find_room( 2701 ) );
+act_notchar( #arrive, ch );
+~
+E
+climb~
+@mYou climb down the ladder into the pit below.@n
+~
+E
+climb2~
+@m$n climbs down the ladder.@n
+~
+E
+arrive~
+@m$n climbs down the ladder from above.@n
+~
+E
+fly~
+@G$n flies down into the pit.@n
+~
+E
+fly2~
+@G$n flies down from above.@n
+~
+E
+thump~
+@G$n attempts to climb down the vertical ladder, but slips and falls into
+the pit!@n 
+~
+E
+thump2~
+@G$n falls down from above, landing with a sickening sound.@n
+~
+!
+0 0 0
+A
+~
+~
+if( find_stat( ch, level ) > 90 )
+  continue;
+if( race( ch ) == master ) {
+  act_notchar( #overlord, ch );
+  transfer( ch, find_room( 2701 ) );
+  act_notchar( #overlord2, ch );
+  end;
+  }
+if( race( ch ) == slave ) {
+  act_notchar( #slave, ch );
+  transfer( ch, find_room( 2701 ) );
+  act_notchar( #slave2, ch );
+  end;
+  }
+~
+E
+overlord~
+@y$n climbs down the ladder into the pit.@n
+~
+E
+overlord2~
+@y$n climbs down from above.@n
+~
+E
+slave~
+@y$n tumbles down into the pit, too weak to escape.@n
+~
+E
+slave2~
+@y$n tumbles down from above.@n
+~
+!
+3 0 33
+A
+jump hop~
+1 north 1 down slave pit~
+act_tochar( #jump, ch );
+act_notchar( #jump2, ch );
+transfer( ch, find_room( 2701 ) );
+act_notchar( #splat, ch );
+dam_message( ch, 10d10, "falling into the pit" );
+inflict( ch, mob, 10d10, "jumping from a high distance" );
+~
+E
+jump~
+@RIgnoring the ladder leading downward, you jump into the pit far
+below.@n 
+~
+E
+jump2~
+@RIgnoring the ladder leading downward, $n jumps into the pit far
+below.@n 
+~
+E
+splat~
+@R$n falls to the ground from above, landing on the rock floor.@n
+~
+!
+0 0 0
+A
+retract get take steal grab pull~
+thick rope ladder~
+act_tochar( #no, ch );
+act_notchar( #no2, ch );
+~
+E
+no~
+You tug as hard as you can, but can't manage to budge the weighted ladder.
+~
+E
+no2~
+@n tugs as hard as $e can, but can't manage to budge the weighted ladder.
+~
+!
+0 0 0
+-1
+S
+
+#2724
+Above the Slave Pit~
+A wide platform spreads out from side to side, overlooking a gaping pit
+deep underground.  A series of rotted wooden railings prevent the
+overlords from falling into the dusky chamber below, as well as contain
+whatever is being held within.  Gaps in the railings are visible on
+either side of this outpost, offering downward access.  A darkened tunnel
+leads southward, heading away from the raunchy-smelling pit.
+~
+** BELOW IS 2736 ** NORTH IS 2727 **
+[Eliza] Done.
+[Eliza] Connecting rooms need to be completed before we open this zone.
+[Seltha] connects to 4765
+~
+200933444 11 9 0
+D0
+~
+~
+0 -1 2727 10 10 5
+D1
+~
+~
+0 -1 2725 10 10 5
+D2
+~
+~
+0 -1 4765 10 10 5
+D3
+~
+~
+0 -1 2723 10 10 5
+D5
+~
+~
+0 -1 2736 10 10 5
+E
+wide platform~
+Spreading out a considerable distance, worn planks have been mounted
+above wooden beams, allowing a vantage point over the slave pit below.
+~
+E
+gaping pit deep underground below 1 down~
+Although the darkness below prevents a clear view, this landing is the
+only means of observing the slaves from a safe distance.  The overlords
+use this landing as a means of preventing a successful escape attempt.
+~
+E
+series rotted railings~
+Nailed together with thin wooden pegs, a set of rotted teakwood railings
+prevent anyone looking over the landing into the pit from taking a
+painful fall.
+~
+E
+darkened tunnel 1 south~
+Leading back into the network of deep underground tunnels, the opening to
+the south is framed by a stone archway.  Bloody scratch marks are visible
+along its length from slaves who have come within a handsbreadth of
+escaping before being thrown back into the pit.
+~
+A
+1 north 1 down~
+*~
+if( is_player( ch ) ) {
+  act_tochar( #no, ch );
+  end;
+  }
+continue;
+~
+E
+no~
+The wooden railings prevent you from falling into the pit far below.
+~
+!
+0 0 0
+A
+climb scale hop jump~
+wooden burnished railings 1 north 1 down~
+act_tochar( #ouch, ch );
+act_notchar( #ouch2, ch );
+transfer( ch, find_room( 2736 ) );
+act_notchar( #arrive, ch );
+dam_message( ch, 10d10, "falling into the pit" );
+inflict( ch, mob, 10d10, "jumping to their own death" );
+~
+E
+ouch~
+@RYou climb over the railings, falling into the pit far below.@n
+~
+E
+ouch2~
+@R$n climbs over the railings and falls into the pit far below.@n
+~
+E
+arrive~
+@R$n falls from above, landing on the ground with a sickening sound.@n
+~
+!
+0 0 0
+A
+~
+~
+if( find_stat( ch, level ) > 90 )
+  continue;
+if( race( ch ) == master ) {
+  act_notchar( #overlord, ch );
+  transfer( ch, find_room( 2724 ) );
+  end;
+  }
+if( race( ch ) == slave ) {
+  act_notchar( #slave, ch );
+  transfer( ch, find_room( 2736 ) );
+  act_notchar( #slave2, ch );
+  end;
+  }
+~
+E
+overlord~
+@y$n peers over the railing, observing the slaves below.@n
+~
+E
+slave~
+@y$n falls over the railing, landing with a sickening thud below.@n
+~
+E
+slave2~
+@y$n falls from above, landing with a sickening thud.@n
+~
+!
+3 0 33
+A
+~
+~
+if( !mob_in_room( 5300, room ) )
+  continue;
+if( find_stat( ch, align ) == 0 )
+  act_tochar( #good, ch );
+if( find_stat( ch, align ) == 1 )
+  act_tochar( #neutral, ch );
+if( find_stat( ch, align ) == 2 )
+  act_tochar( #evil, ch );
+if( find_stat( ch, align ) == 3 )
+  act_tochar( #good, ch );
+if( find_stat( ch, align ) == 4 )
+  act_tochar( #neutral, ch );
+if( find_stat( ch, align ) == 5 )
+  act_tochar( #evil, ch );
+if( find_stat( ch, align ) == 6 )
+  act_tochar( #good, ch );
+if( find_stat( ch, align ) == 7 )
+  act_tochar( #neutral, ch );
+if( find_stat( ch, align ) == 8 )
+  act_tochar( #evil, ch );
+if( find_stat( ch, level ) < 10 )
+  act_tochar( #small, ch );
+~
+E
+good~
+The vyan overlord looks you over with an evil sneer on his face.  He
+tells you: "You have come to rescue the slaves?  The pitiful creatures
+are beyond your help!" 
+~
+E
+neutral~
+The vyan overlord looks you over with a non-commital glance.  He tells
+you: "I do not know what business you have here, but choose your sides
+well.  Those who forget the face of their fathers tend to perish in this
+place." 
+~
+E
+evil~
+The vyan overlord sums you up with a glance, attempting to judge whether
+you are worthy of his praise.  He decides you are not.  With a sneer, he
+tells you: "We do not need your help against this slave uprisal, but we
+will not stop you.  Just make sure you stay out of our way." 
+~
+E
+small~
+The vyan overlord laughs at your appearance.  He imperiously tells you:
+"You have no business here.  Someone as weak as yourself will only manage
+to get themself hurt, and I will not pity you.  Go away, and come back
+when you are mature enough to handle the perils we face every day."
+~
+!
+1 0 4
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 )
+  send_to_room( #action1, room );
+if( i == 2 )
+  send_to_room( #action2, room );
+if( i == 3 ) {
+  if( mob_in_room( 5300, find_room( 2724 ) ) )
+    send_to_room( #action3, room );
+  end;
+  }
+~
+E
+action1~
+@gThe screams of the damned echo up from below, sending a chill into your
+soul.@n 
+~
+E
+action2~
+@gA foul stench wafts up from the slave pit, the scent of sweat and death
+making a potent combination.@n 
+~
+E
+action3~
+The vyan overlord coughs, uncomfortable in the presence of lesser beings.
+~
+!
+2 200 0
+A
+~
+~
+if( mob_in_room( 1382, room ) || mob_in_room( 1383, room ) || mob_in_room( 1384, room ) || mob_in_room( 1385, room ) ) {
+  if( race( ch ) == slave ) {
+    act_notchar( #slap, ch );
+    transfer( ch, find_room( 2736 ) );
+    act_notchar( #slap2, ch );
+    end;
+    }
+  continue;
+  }
+continue;
+~
+E
+slap~
+@rJust as the slave makes his break towards freedom, the overlord notices
+his transgression and sends him flying over the railing!@n 
+~
+E
+slap2~
+@r$n comes tumbling down from above, his escape attempt thwarted.@n 
+~
+!
+1 0 43
+5300 9 1509949540 3 0
+-1
+S
+
+#2725
+Above the Slave Pit~
+A wooden platform juts partially out over a deep pit.  Braced by extra
+beams, it provides a perfect vantage point for observing what is
+happening below.  Rotted railings stretch out six inches apart along its
+front edge, giving a measure of safety from a painful fall.  A thick rope
+ladder dangles between a gap in the railings, allowing access in and out
+of the dank-smelling cavern.
+~
+** BELOW IS 2702 ** NORTH IS 2728 **
+[Rikahn] railings modified
+[Eliza] Reviewed.
+~
+200933444 11 9 0
+D0
+~
+~
+0 -1 2728 10 10 5
+D3
+~
+~
+0 -1 2724 10 10 5
+D5
+~
+~
+0 -1 2702 10 10 5
+E
+wooden platform braced extra beams~
+Braced against the cavern walls, a platform of wooden planks offers a
+level surface for the overlords to observe the activities of the slaves
+far below.  Evenly-gapped boards are weatherworn, but still sturdy enough
+to support considerable weight.
+~
+E
+rotted railings~
+Flanking the open edge of the landing, sets of rotted wooden railings
+help prevent anyone trying to look downward from falling into the pit far
+below.
+~
+E
+thick rope ladder~
+At least two inches in diameter, the rope the ladder is made of is quite
+sturdy but heavy.  Twists and turns are knotted together, making evenly
+spaced rungs.  The ladder leads downward into the murky pit, although
+what lies at the other end can only be guessed.
+~
+A
+1 north 1 down~
+~
+if( find_stat( ch, level ) > 90 )
+  continue;
+if( is_player( ch ) ) {
+  act_tochar( #no, ch );
+  end;
+  }
+continue;
+~
+E
+no~
+There must be an easier way to get into the slave pit than trying to fly.
+~
+!
+0 0 0
+A
+climb scale~
+rope ladder 1 north 1 down~
+act_tochar( #climb, ch );
+if( is_invisible( ch ) ) {
+  transfer( ch, find_room( 2702 ) );
+  end;
+  }
+if( is_hidden( ch ) ) {
+  if( find_skill( ch, hide ) > 5 ) {
+    if( find_skill( ch, sneak ) > 5 ) {
+      transfer( ch, find_room( 2702 ) );
+      end;
+      }
+    }
+  }
+act_notchar( #climb2, ch );
+transfer( ch, find_room( 2702 ) );
+act_notchar( #arrive, ch );
+~
+E
+climb~
+@mYou climb down the ladder into the pit below.@n
+~
+E
+climb2~
+@m$n climbs down the ladder.@n
+~
+E
+arrive~
+@m$n climbs down the ladder from above.@n
+~
+!
+0 0 0
+A
+~
+~
+if( find_stat( ch, level ) > 90 )
+  continue;
+if( race( ch ) == master ) {
+  act_notchar( #overlord, ch );
+  transfer( ch, find_room( 2702 ) );
+  act_notchar( #overlord2, ch );
+  end;
+  }
+if( race( ch ) == slave ) {
+  act_notchar( #slave, ch );
+  transfer( ch, find_room( 2702 ) );
+  act_notchar( #slave2, ch );
+  end;
+  }
+~
+E
+overlord~
+@y$n climbs down the ladder into the pit below.@n
+~
+E
+overlord2~
+@y$n climbs down the ladder from above.@n
+~
+E
+slave~
+@y$n tumbles off the edge, too weak to escape.@n
+~
+E
+slave2~
+@y$n tumbles down from above.@n
+~
+!
+3 0 33
+A
+jump hop~
+1 north 1 down slave pit~
+act_tochar( #jump, ch );
+act_notchar( #jump2, ch );
+transfer( ch, find_room( 2702 ) );
+act_notchar( #splat, ch );
+dam_message( ch, 10d10, "falling into the pit" );
+inflict( ch, mob, 10d10, "jumping from a high distance" );
+~
+E
+jump~
+@RIgnoring the ladder leading downward, you jump into the pit far
+below.@n 
+~
+E
+jump2~
+@RIgnoring the ladder leading downward, $n jumps into the pit far
+below.@n 
+~
+E
+splat~
+@R$n falls to the ground from above, landing on the rock floor.@n
+~
+!
+0 0 0
+A
+retract get take steal grab pull~
+thick rope ladder~
+act_tochar( #no, ch );
+act_notchar( #no2, ch );
+~
+E
+no~
+You tug as hard as you can, but can't manage to budge the weighted ladder.
+~
+E
+no2~
+$n tugs as hard as $e can, but can't manage to budge the weighted ladder.
+~
+!
+0 0 0
+-1
+S
+
+#2726
+You Shouldn't Be Here~
+This room was created only for the illusion of a continuous zone.
+You should contact an immortal if you got in here.
+~
+~
+-335937411 11 9 0
+D2
+~
+~
+0 -1 2723 10 10 5
+A
+south~
+~
+if( find_stat( ch, level ) > 90 )
+  continue;
+~
+!
+0 0 0
+-1
+S
+
+#2727
+You Shouldn't Be Here~
+This room was created only for the illusion of a continuous zone.
+You should contact an immortal if you got in here.
+~
+~
+-335937411 11 9 0
+D2
+~
+~
+0 -1 2724 10 10 5
+A
+south~
+~
+if( find_stat( ch, level ) > 90 )
+  continue;
+~
+!
+0 0 0
+-1
+S
+
+#2728
+You Shouldn't Be Here~
+This room was created only for the illusion of a continuous zone.
+You should contact an immortal if you got in here.
+~
+~
+-335937411 11 9 0
+D2
+~
+~
+0 -1 2725 10 10 5
+A
+1 south~
+~
+if( find_stat( ch, level ) > 90 )
+  continue;
+~
+!
+0 0 0
+-1
+S
+
+#2729
+Slave Pit~
+A malodorous smell hangs in the air, reminiscent of rotting flesh and
+excrement; the source of the stench is a disgusting pool of water to
+the east.  The air within the cavern is thick with humidity, almost as
+dense as during a heavy rainstorm.  The ground is littered with tiny
+bones leftover from some sort of small rodent.  The chamber extends in
+three directions, although what adventures exist can only be guessed at.
+~
+[Eliza] Done.
+~
+-335937468 11 9 0
+D0
+~
+~
+0 -1 2711 10 10 5
+D1
+~
+~
+0 -1 2730 10 10 5
+D3
+~
+~
+0 -1 2703 10 10 5
+E
+disgusting pool water 1 east~
+Its slick surface slightly undulating, a murky pool of water has
+collected to the east.  Patches of some oily substance float atop its
+surface, scattering the light shone at it in many directions.
+~
+E
+tiny bones small rodent ground~
+Thin and brittle, the majority of a rodent skeleton rests on the ground,
+stripped of all its flesh.  The pale white bones of its spine arch up
+slightly, although its skull is nowhere to be found.
+~
+A
+get take grab search steal~
+ground tiny bones rodent~
+act_tochar( #no, ch );
+~
+E
+no~
+The fragile bones snap in your hand as you attempt to pick them up.
+~
+!
+0 0 0
+A
+~
+~
+if( race( ch ) != master ) {
+  if( race( ch ) != slave ) {
+    if( race( ch ) != rodent ) {
+      continue;
+      end;
+      }
+    }
+  }
+~
+E
+to_char~
+@mYou slowly walk into the disgusting pool, pinching your nose from the
+stench.@n 
+~
+E
+to_room~
+@mWith a look of consternation on $s face, $n walks $T.@n
+~
+!
+3 0 2
+A
+~
+~
+if( race( ch ) == master )
+  continue;
+~
+E
+to_char~
+@yYou leave $T.@n
+~
+E
+to_room~
+@y$n hops into the festering pool to the $T, splashing the slimy water in
+all directions.@n 
+~
+!
+3 0 2
+A
+~
+~
+if( race( ch ) == slave )
+  continue;
+~
+E
+to_char~
+@yYou leave $T.@n
+~
+E
+to_room~
+@y$n reluctantly wades into the pool to the east, searching for a place
+to hide from the overlords.@n 
+~
+!
+3 0 2
+A
+~
+~
+if( race( ch ) == rodent )
+  continue;
+~
+E
+to_char~
+@cYou leave $T.@n
+~
+E
+to_room~
+@c$n waddles into the slimy pool to the east in search of food.@n
+~
+!
+3 0 2
+A
+~
+~
+if( mob_in_room( 5298, room ) || mob_in_room( 5299, room ) || mob_in_room( 5300, room ) || mob_in_room( 5301, room ) ) {
+  if( mob_in_room( 5302, room ) || mob_in_room( 5303, room ) || mob_in_room( 5304, room ) || mob_in_room( 5305, room ) ) {
+    if( rflag( status2, room ) ) {
+      remove_rflag( status2, room );
+      wait( 2 );
+      i = 0;
+      j = 0;
+      if( mob_in_room( 5298, room ) )
+        i = 1;
+      if( mob_in_room( 5299, room ) )
+        i = 2;
+      if( mob_in_room( 5300, room ) )
+        i = 3;
+      if( mob_in_room( 5301, room ) )
+        i = 4;
+      if( mob_in_room( 5302, room ) )
+        j = 1;
+      if( mob_in_room( 5303, room ) )
+        j = 2;
+      if( mob_in_room( 5304, room ) )
+        j = 3;
+      if( mob_in_room( 5305, room ) )
+        j = 4;
+      if( i == 1 ) {
+        if( j == 1 )
+          send_to_room( #trollgnome, room );
+        if( j == 2 )
+          send_to_room( #trollhalfling, room );
+        if( j == 3 )
+          send_to_room( #trollelf, room );
+        if( j == 4 )
+          send_to_room( #trolldwarf, room );
+        }
+      if( i == 2 ) {
+        if( j == 1 )
+          send_to_room( #ogregnome, room );
+        if( j == 2 )
+          send_to_room( #ogrehalfling, room );
+        if( j == 3 )
+          send_to_room( #ogreelf, room );
+        if( j == 4 )
+          send_to_room( #ogredwarf, room );
+        }
+      if( i == 3 ) {
+        if( j == 1 )
+          send_to_room( #vyangnome, room );
+        if( j == 2 )
+          send_to_room( #vyanhalfling, room );
+        if( j == 3 )
+          send_to_room( #vyanelf, room );
+        if( j == 4 )
+          send_to_room( #vyandwarf, room );
+        }
+      if( i == 4 ) {
+        if( j == 1 )
+          send_to_room( #orcgnome, room );
+        if( j == 2 )
+          send_to_room( #orchalfling, room );
+        if( j == 3 )
+          send_to_room( #orcelf, room );
+        if( j == 4 )
+          send_to_room( #orcdwarf, room );
+        }
+      wait( 6 );
+      set_rflag( status2, room );
+      }
+    }
+  }
+~
+E
+trollgnome~
+@rA gnome slave threatens the troll overlord with his pickaxe.@n 
+~
+E
+trollhalfling~
+@rA halfling slave threatens the troll overlord with his pickaxe.@n 
+~
+E
+trollelf~
+@rAn elf slave threatens the troll overlord with his pickaxe.@n 
+~
+E
+trolldwarf~
+@rA dwarf slave threatens the troll overlord with his pickaxe.@n 
+~
+E
+ogregnome~
+@rA gnome slave threatens the ogre overlord with his pickaxe.@n 
+~
+E
+ogrehalfling~
+@rA halfling slave threatens the ogre overlord with his pickaxe.@n 
+~
+E
+ogreelf~
+@rAn elf slave threatens the ogre overlord with his pickaxe.@n 
+~
+E
+ogredwarf~
+@rA dwarf slave threatens the ogre overlord with his pickaxe.@n 
+~
+E
+vyangnome~
+@rA gnome slave threatens the vyan overlord with his pickaxe.@n 
+~
+E
+vyanhalfling~
+@rA halfling slave threatens the vyan overlord with his pickaxe.@n 
+~
+E
+vyanelf~
+@rAn elf slave threatens the vyan overlord with his pickaxe.@n 
+~
+E
+vyandwarf~
+@rA dwarf slave threatens the vyan overlord with his pickaxe.@n 
+~
+E
+orcgnome~
+@rA gnome slave threatens the orc overlord with his pickaxe.@n 
+~
+E
+orchalfling~
+@rA halfling slave threatens the orc overlord with his pickaxe.@n 
+~
+E
+orcelf~
+@rAn elf slave threatens the orc overlord with his pickaxe.@n 
+~
+E
+orcdwarf~
+@rA dwarf slave threatens the orc overlord with his pickaxe.@n 
+~
+!
+1 0 11
+-1
+S
+
+#2730
+Festering Pool~
+The foul stench prevalent throughout the pit becomes almost unbearable,
+the source of the noxious odors rising from a rancid pool of water
+collected in a depression in the cavern floor.  Rainbow-colored splotches
+of an oily substance float atop the greenish-gray water, constantly
+shifting in color as it drifts in oblong patches.  Tiny pieces of food
+bob up and down, even the starving slaves unwilling to consume the rotten
+morsels.
+~
+[Eliza] Done.
+[Jydan] when elf leaves, An elf slave crawls out of the festering pool, trailing slimy water to the [BUG]
+~
+-335937468 6 9 0
+D0
+~
+~
+0 -1 2734 10 10 5
+D1
+~
+~
+0 -1 2733 10 10 5
+D2
+~
+~
+0 -1 2731 10 10 5
+D3
+~
+~
+0 -1 2729 10 10 5
+E
+rancid pool greenish-gray water depression cavern floor~
+A murky pool of water has collected in a shallow depression, turned
+rancid from trash and other discarded substances thrown into it.  Fed by
+a trickle that flows in from the east, the stench rising from its surface
+is almost unbearable.
+~
+E
+rainbow-colored splotches oily substance float~
+A rainbow of color atop the pool shifts with every movement, almost
+describable as beautiful if not for its rancid source.  Slick like oil to
+the touch, the patches of goo which float on the surface coalesce into
+rounded blobs.
+~
+E
+tiny pieces food rotten morsels~
+Floating on top of the disgusting water, discarded bits of food drift in
+an endless pattern.  Thoroughly rotten and probably inedible, even the
+slaves were unwilling to eat such slop provided by the overlords.
+~
+A
+~
+~
+if( race( ch ) == master ) {
+  act_tochar( #master_leaving_self, ch );
+  act_notchar( #master_leaving_others, ch );
+}
+else if( race( ch ) == slave ) {
+  act_tochar( #slave_leaving_self, ch );
+  act_notchar( #slave_leaving_others, ch );
+}
+else if( race( ch ) == rodent ) {
+  act_tochar( #rodent_leaving_self, ch );
+  act_notchar( #rodent_leaving_others, ch );
+}
+continue;
+~
+E
+to_char~
+@mYou walk $T out of the festering pool, wringing the foul water out of
+your clothes.@n 
+~
+E
+to_room~
+@m$n steps out of the festering pool to the $T.@n
+~
+E
+master_leaving_self~
+@yYou climb out of the festering pool of water and head $T.@n
+~
+E
+master_leaving_others~
+@y$n walks $T, swearing up a storm about the foul stench on $s.
+~
+E
+slave_leaving_self~
+@yYou crawl out of the festering pool of water, heading $T.@n
+~
+E
+slave_leaving_others~
+@y$n crawls out of the festering pool, trailing slimy water to the $T@n.
+~
+E
+rodent_leaving_self~
+@yYou head $T.@n
+~
+E
+rodent_leaving_others~
+@cClutching a piece of rotten food in its teeth, $n wades out of the pool
+and scampers off to the $T.@n 
+~
+!
+3 0 15
+A
+get take grab search steal~
+tiny pieces food rancid festering pool water~
+if( rflag( reset0, room ) ) {
+  if( random( 1, 2 ) == 1 )
+    remove_rflag( reset0, room );
+  act_tochar( #pool, ch );
+  act_notchar( #pool2, ch );
+  i = random( 1, 10 );
+  if( i < 4 ) {
+    obj_to_char( oload( 1856 ), ch );
+    end;
+    }
+  if( i > 7 ) {
+    obj_to_char( oload( 694 ), ch );
+    end;
+    }
+  obj_to_char( oload( 702 ), ch );
+  end;
+  }
+act_tochar( #no, ch );
+~
+E
+pool~
+You manage to grab a piece of food from the festering pool.
+~
+E
+pool2~
+$n grabs a piece of floating food from the rancid pool.
+~
+E
+no~
+You grab for a rotting morsel, but it slips through your fingers.
+~
+!
+0 0 0
+A
+~
+~
+if( mob_in_room( 5298, room ) || mob_in_room( 5299, room ) || mob_in_room( 5300, room ) || mob_in_room( 5301, room ) ) {
+  if( mob_in_room( 5302, room ) || mob_in_room( 5303, room ) || mob_in_room( 5304, room ) || mob_in_room( 5305, room ) ) {
+    if( rflag(status2, room ) ) {
+      remove_rflag( status2, room );
+      wait( 2 );
+      i = 0;
+      j = 0;
+      if( mob_in_room( 5298, room ) )
+        i = 1;
+      if( mob_in_room( 5299, room ) )
+        i = 2;
+      if( mob_in_room( 5300, room ) )
+        i = 3;
+      if( mob_in_room( 5301, room ) )
+        i = 4;
+      if( mob_in_room( 5302, room ) )
+        j = 1;
+      if( mob_in_room( 5303, room ) )
+        j = 2;
+      if( mob_in_room( 5304, room ) )
+        j = 3;
+      if( mob_in_room( 5305, room ) )
+        j = 4;
+      if( i == 1 ) {
+        if( j == 1 )
+          send_to_room( #trollgnome, room, sight );
+        if( j == 2 )
+          send_to_room( #trollhalfling, room, sight );
+        if( j == 3 )
+          send_to_room( #trollelf, room, sight );
+        if( j == 4 )
+          send_to_room( #trolldwarf, room, sight );
+      }
+      if( i == 2 ) {
+        if( j == 1 )
+          send_to_room( #ogregnome, room, sight );
+        if( j == 2 )
+          send_to_room( #ogrehalfling, room, sight );
+        if( j == 3 )
+          send_to_room( #ogreelf, room, sight );
+        if( j == 4 )
+          send_to_room( #ogredwarf, room, sight );
+      }
+      if( i == 3 ) {
+        if( j == 1 )
+          send_to_room( #vyangnome, room, sight );
+        if( j == 2 )
+          send_to_room( #vyanhalfling, room, sight );
+        if( j == 3 )
+          send_to_room( #vyanelf, room, sight );
+        if( j == 4 )
+          send_to_room( #vyandwarf, room, sight );
+      }
+      if( i == 4 ) {
+        if( j == 1 )
+          send_to_room( #orcgnome, room, sight );
+        if( j == 2 )
+          send_to_room( #orchalfling, room, sight );
+        if( j == 3 )
+          send_to_room( #orcelf, room, sight );
+        if( j == 4 )
+          send_to_room( #orcdwarf, room, sight );
+      }
+      wait( 6 );
+      set_rflag( status2, room );
+    }
+  }
+}
+~
+E
+trollgnome~
+@rThe troll overlord pushes a gnome slave's head under the rancid water
+for a moment, making him sputter and gag.@n 
+~
+E
+trollhalfling~
+@rThe troll overlord pushes a halfling slave's head under the rancid
+water for a moment, making him sputter and gag.@n 
+~
+E
+trollelf~
+@rThe troll overlord pushes an elf slave's head under the rancid water
+for a moment, making him sputter and gag..@n 
+~
+E
+trolldwarf~
+@rThe troll overlord pushes a dwarf slave's head under the rancid water
+for a moment, making him sputter and gag.@n 
+~
+E
+ogregnome~
+@rThe ogre overlord pushes a gnome slave's head under the rancid water
+for a moment, making him sputter and gag.@n 
+~
+E
+ogrehalfling~
+@rThe ogre overlord pushes a halfling slave's head under the rancid water
+for a moment, making him sputter and gag.@n 
+~
+E
+ogreelf~
+@rThe ogre overlord pushes an elf slave's head under the rancid water for
+a moment, making him sputter and gag.@n 
+~
+E
+ogredwarf~
+@rThe ogre overlord pushes a dwarf slave's head under the rancid water
+for a moment, making him sputter and gag.@n 
+~
+E
+vyangnome~
+@rThe vyan overlord pushes a gnome slave's head under the rancid water
+for a moment, making him sputter and gag.@n 
+~
+E
+vyanhalfling~
+@rThe vyan overlord pushes a halfling slave's head under the rancid water
+for a moment, making him sputter and gag.@n 
+~
+E
+vyanelf~
+@rThe vyan overlord pushes an elf slave's head under the rancid water for
+a moment, making him sputter and gag.@n 
+~
+E
+vyandwarf~
+@rThe vyan overlord pushes a dwarf slave's head under the rancid water
+for a moment, making him sputter and gag.@n 
+~
+E
+orcgnome~
+@rThe orc overlord pushes a gnome slave's head under the rancid water for
+a moment, making him sputter and gag.@n 
+~
+E
+orchalfling~
+@rThe orc overlord pushes a halfling slave's head under the rancid water
+for a moment, making him sputter and gag.@n 
+~
+E
+orcelf~
+@rThe orc overlord pushes an elf slave's head under the rancid water for
+a moment, making him sputter and gag.@n 
+~
+E
+orcdwarf~
+@rThe orc overlord pushes a dwarf slave's head under the rancid water for
+a moment, making him sputter and gag.@n 
+~
+!
+1 0 15
+1513 17 1509949540 -2 20
+5298 9 1509949540 3 0
+-1
+S
+
+#2731
+Slave Pit~
+Slightly obscured from view, this nook has been chipped from the solid
+rock just south of a rancid pool by years of slave labor.  Pockets of
+minerals can be glimpsed along the walls, although any possessing
+substantial value have already been removed and carted away.  A ragged
+hole is visible in the southern wall, partially obscured by a cluster of
+stones stacked in front of its opening.
+~
+** SOUTH IS 2737 **
+[Eliza] Done.
+~
+-335937468 11 9 0
+D0
+~
+~
+0 -1 2730 10 10 5
+D1
+~
+~
+0 -1 2732 10 10 5
+D2
+~
+~
+162 -1 2737 10 10 5
+E
+rancid pool 1 north~
+Mostly obscured by the inky blackness of the underground cavern, a
+festering pool of water can be seen to the north.  The stench that rises
+from the murky liquid is nauseating, assaulting the senses with every
+breath.
+~
+E
+pockets minerals walls~
+Shallow pits have been chipped out of the walls, where minerals were
+excavated during the cavern's creation.  What sort of valuable ores were
+carried away can only be guessed at, as no trace remains of their
+existence except the holes now left behind.
+~
+E
+ragged hole 1 south~
+Only a little wider than a foot in diameter, a hole has been chipped away
+in the wall, leading to a cramped chamber on its other side.  Evidently
+created by the slaves as a hiding place, its entrance has been partially
+obscured by a cluster of stones.
+~
+E
+cluster stones stacked~
+Stacked upon one another in a seemingly random fashion, a pile of rocks
+partially obscures the ragged hole in the wall, making it difficult to
+notice unless looked at closely.
+~
+A
+enter climb squeeze~
+ragged hole 1 south~
+if( size( ch ) < 5 ) {
+  if( is_standing( ch ) ) {
+    act_tochar( #hole, ch );
+    act_notchar( #hole2, ch );
+    transfer( ch, find_room( 2737 ) );
+    act_notchar( #arrive, ch );
+  }
+  end;
+}
+act_tochar( #toobig, ch );
+~
+E
+hole~
+@mYou squeeze through the tiny hole.@n
+~
+E
+hole2~
+@m$n squeezes through the tiny hole, disappearing from sight.@n
+~
+E
+arrive~
+@m$n pops in through the tiny hole.@n
+~
+E
+toobig~
+You are too big to fit through the hole.
+~
+!
+0 0 0
+A
+get take search grab steal pry~
+pockets minerals~
+act_tochar( #no, ch );
+~
+E
+no~
+You attempt to pry a mineral chunk from the wall, but it holds steadfast.
+~
+!
+0 0 0
+A
+get take search grab steal~
+cluster stones stacked~
+act_tochar( #no, ch );
+~
+E
+no~
+You search through the cluster of stones, but find nothing of interest.
+~
+!
+0 0 0
+A
+~
+~
+if( race( ch ) != master ) {
+  if( race( ch ) != slave ) {
+    if( race( ch ) != rodent ) {
+      continue;
+      end;
+      }
+    }
+  }
+~
+E
+to_char~
+@mYou ease your way into the pool, careful to avoid anything that floats
+atop its surface.@n 
+~
+E
+to_room~
+@m$n eases $s way into the pool to the north.@n
+~
+!
+3 0 1
+A
+~
+~
+if( race( ch ) == master )
+  continue;
+~
+E
+to_char~
+@yYou leave $T.@n
+~
+E
+to_room~
+@y$n laughs heartily as $e splashes $s way into the pool to the north.@n
+
+~
+!
+3 0 1
+A
+~
+~
+if( race( ch ) == slave )
+  continue;
+~
+E
+to_char~
+@yYou leave $T.@n
+~
+E
+to_room~
+@y$n slinks into the pool to the north, attempting to elude the
+overlords.@n 
+~
+!
+3 0 1
+A
+~
+~
+if( race( ch ) == rodent )
+  continue;
+~
+E
+to_char~
+@cYou leave $T.@n
+~
+E
+to_room~
+@c$n paddles its way into the pool to the north, gnawing at bits of food
+floating on its surface.@n 
+~
+!
+3 0 1
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 )
+  send_to_room( #action1, room );
+if( i == 2 )
+  send_to_room( #action2, room );
+if( i == 3 )
+  send_to_room( #action3, room );
+~
+E
+action1~
+@gA nauseating stench drifts in from the north, making you gag.@n
+~
+E
+action2~
+@gThe sound of dripping water echoes throughout the cavern.@n
+~
+E
+action3~
+@gA rat peeks its head out of the ragged hole to the south, glaring at
+you momentarily before ducking back inside.@n 
+~
+!
+2 200 0
+A
+~
+~
+if( mob_in_room( 5298, room ) || mob_in_room( 5299, room ) || mob_in_room( 5300, room ) || mob_in_room( 5301, room ) ) {
+  if( mob_in_room( 5302, room ) || mob_in_room( 5303, room ) || mob_in_room( 5304, room ) || mob_in_room( 5305, room ) ) {
+    if( rflag( status2, room ) ) {
+      remove_rflag( status2, room );
+      wait( 2 );
+      i = 0;
+      j = 0;
+      if( mob_in_room( 5298, room ) )
+        i = 1;
+      if( mob_in_room( 5299, room ) )
+        i = 2;
+      if( mob_in_room( 5300, room ) )
+        i = 3;
+      if( mob_in_room( 5301, room ) )
+        i = 4;
+      if( mob_in_room( 5302, room ) )
+        j = 1;
+      if( mob_in_room( 5303, room ) )
+        j = 2;
+      if( mob_in_room( 5304, room ) )
+        j = 3;
+      if( mob_in_room( 5305, room ) )
+        j = 4;
+      if( i == 1 ) {
+        if( j == 1 )
+          send_to_room( #trollgnome, room );
+        if( j == 2 )
+          send_to_room( #trollhalfling, room );
+        if( j == 3 )
+          send_to_room( #trollelf, room );
+        if( j == 4 )
+          send_to_room( #trolldwarf, room );
+        }
+      if( i == 2 ) {
+        if( j == 1 )
+          send_to_room( #ogregnome, room );
+        if( j == 2 )
+          send_to_room( #ogrehalfling, room );
+        if( j == 3 )
+          send_to_room( #ogreelf, room );
+        if( j == 4 )
+          send_to_room( #ogredwarf, room );
+        }
+      if( i == 3 ) {
+        if( j == 1 )
+          send_to_room( #vyangnome, room );
+        if( j == 2 )
+          send_to_room( #vyanhalfling, room );
+        if( j == 3 )
+          send_to_room( #vyanelf, room );
+        if( j == 4 )
+          send_to_room( #vyandwarf, room );
+        }
+      if( i == 4 ) {
+        if( j == 1 )
+          send_to_room( #orcgnome, room );
+        if( j == 2 )
+          send_to_room( #orchalfling, room );
+        if( j == 3 )
+          send_to_room( #orcelf, room );
+        if( j == 4 )
+          send_to_room( #orcdwarf, room );
+        }
+      wait( 6 );
+      set_rflag( status2, room );
+      }
+    }
+  }
+~
+E
+trollgnome~
+@rA gnome slave threatens the troll overlord with his pickaxe.@n 
+~
+E
+trollhalfling~
+@rA halfling slave threatens the troll overlord with his pickaxe.@n 
+~
+E
+trollelf~
+@rAn elf slave threatens the troll overlord with his pickaxe.@n 
+~
+E
+trolldwarf~
+@rA dwarf slave threatens the troll overlord with his pickaxe.@n 
+~
+E
+ogregnome~
+@rA gnome slave threatens the ogre overlord with his pickaxe.@n 
+~
+E
+ogrehalfling~
+@rA halfling slave threatens the ogre overlord with his pickaxe.@n 
+~
+E
+ogreelf~
+@rAn elf slave threatens the ogre overlord with his pickaxe.@n 
+~
+E
+ogredwarf~
+@rA dwarf slave threatens the ogre overlord with his pickaxe.@n 
+~
+E
+vyangnome~
+@rA gnome slave threatens the vyan overlord with his pickaxe.@n 
+~
+E
+vyanhalfling~
+@rA halfling slave threatens the vyan overlord with his pickaxe.@n 
+~
+E
+vyanelf~
+@rAn elf slave threatens the vyan overlord with his pickaxe.@n 
+~
+E
+vyandwarf~
+@rA dwarf slave threatens the vyan overlord with his pickaxe.@n 
+~
+E
+orcgnome~
+@rA gnome slave threatens the orc overlord with his pickaxe.@n 
+~
+E
+orchalfling~
+@rA halfling slave threatens the orc overlord with his pickaxe.@n 
+~
+E
+orcelf~
+@rAn elf slave threatens the orc overlord with his pickaxe.@n 
+~
+E
+orcdwarf~
+@rA dwarf slave threatens the orc overlord with his pickaxe.@n 
+~
+!
+1 0 3
+5302 9 1509949540 3 0
+-1
+S
+
+#2732
+Slave Pit~
+The furthest corner from the masters' outposts, this portion of the
+cavern apparently serves as the sleeping chamber for the overwrought
+slaves.  The ground has been swept free of all rocks and debris, and
+oblong patches are present where their weary bodies have cleared away the
+dust.  The rotting corpse of a slave who died in his sleep lies on the
+ground, left in place as a testament to those who resist the overlord
+regime.
+~
+[Eliza] Done.
+~
+-335937468 11 9 0
+D0
+~
+~
+0 -1 2733 10 10 5
+D3
+~
+~
+0 -1 2731 10 10 5
+E
+ground rocks debris cavern chamber~
+Completely free of the rocks and debris that lie scattered upon the
+ground in other portions of the slave pit, this chamber is kept
+relatively clean and dry.
+~
+E
+oblong patches dust~
+A light layer of dust coats the ground, collected over time from the
+constant mining operations that occupy the slaves during their
+imprisonment in this musty pit.  The dust is missing in some spots, long
+oval patches cleared while the prisoners have slept.
+~
+E
+rotting corpse slave~
+This small corpse is rather far along the process of decomposition.  It
+is crawling with maggots and other small bugs.  The decaying flesh seems
+to be the source of the smell.
+~
+A
+~
+~
+if( mob_in_room( 5298, room ) || mob_in_room( 5299, room ) || mob_in_room( 5300, room ) || mob_in_room( 5301, room ) ) {
+  if( mob_in_room( 5302, room ) || mob_in_room( 5303, room ) || mob_in_room( 5304, room ) || mob_in_room( 5305, room ) ) {
+    if( rflag( status2, room ) ) {
+      remove_rflag( status2, room );
+      wait( 2 );
+      i = 0;
+      j = 0;
+      if( mob_in_room( 5298, room ) )
+        i = 1;
+      if( mob_in_room( 5299, room ) )
+        i = 2;
+      if( mob_in_room( 5300, room ) )
+        i = 3;
+      if( mob_in_room( 5301, room ) )
+        i = 4;
+      if( mob_in_room( 5302, room ) )
+        j = 1;
+      if( mob_in_room( 5303, room ) )
+        j = 2;
+      if( mob_in_room( 5304, room ) )
+        j = 3;
+      if( mob_in_room( 5305, room ) )
+        j = 4;
+      if( i == 1 ) {
+        if( j == 1 )
+          send_to_room( #trollgnome, room );
+        if( j == 2 )
+          send_to_room( #trollhalfling, room );
+        if( j == 3 )
+          send_to_room( #trollelf, room );
+        if( j == 4 )
+          send_to_room( #trolldwarf, room );
+        }
+      if( i == 2 ) {
+        if( j == 1 )
+          send_to_room( #ogregnome, room );
+        if( j == 2 )
+          send_to_room( #ogrehalfling, room );
+        if( j == 3 )
+          send_to_room( #ogreelf, room );
+        if( j == 4 )
+          send_to_room( #ogredwarf, room );
+        }
+      if( i == 3 ) {
+        if( j == 1 )
+          send_to_room( #vyangnome, room );
+        if( j == 2 )
+          send_to_room( #vyanhalfling, room );
+        if( j == 3 )
+          send_to_room( #vyanelf, room );
+        if( j == 4 )
+          send_to_room( #vyandwarf, room );
+        }
+      if( i == 4 ) {
+        if( j == 1 )
+          send_to_room( #orcgnome, room );
+        if( j == 2 )
+          send_to_room( #orchalfling, room );
+        if( j == 3 )
+          send_to_room( #orcelf, room );
+        if( j == 4 )
+          send_to_room( #orcdwarf, room );
+        }
+      wait( 6 );
+      set_rflag( status2, room );
+      }
+    }
+  }
+~
+E
+trollgnome~
+@rThe troll overlord cracks his whip at the gnome slave's back, leaving a
+bloody welt.@n 
+~
+E
+trollhalfling~
+@rThe troll overlord cracks his whip at the halfling slave's back,
+leaving a bloody welt.@n 
+~
+E
+trollelf~
+@rThe troll overlord cracks his whip at the elf slave's back, leaving a
+bloody welt.@n 
+~
+E
+trolldwarf~
+@rThe troll overlord cracks his whip at the dwarf slave's back, leaving a
+bloody welt.@n 
+~
+E
+ogregnome~
+@rThe ogre overlord cracks his whip at the gnome slave's back, leaving a
+bloody welt.@n 
+~
+E
+ogrehalfling~
+@rThe ogre overlord cracks his whip at the halfling slave's back, leaving
+a bloody welt.@n 
+~
+E
+ogreelf~
+@rThe ogre overlord cracks his whip at the elf slave's back, leaving a
+bloody welt.@n 
+~
+E
+ogredwarf~
+@rThe ogre overlord cracks his whip at the dwarf slave's back, leaving a
+bloody welt.@n 
+~
+E
+vyangnome~
+@rThe vyan overlord cracks his whip at the gnome slave's back, leaving a
+bloody welt.@n 
+~
+E
+vyanhalfling~
+@rThe vyan overlord cracks his whip at the halfling slave's back, leaving
+a bloody welt.@n 
+~
+E
+vyanelf~
+@rThe vyan overlord cracks his whip at the elf slave's back, leaving a
+bloody welt.@n 
+~
+E
+vyandwarf~
+@rThe vyan overlord cracks his whip at the dwarf slave's back, leaving a
+bloody welt.@n 
+~
+E
+orcgnome~
+@rThe orc overlord cracks his whip at the gnome slave's back, leaving a
+bloody welt.@n 
+~
+E
+orchalfling~
+@rThe orc overlord cracks his whip at the halfling slave's back, leaving
+a bloody welt.@n 
+~
+E
+orcelf~
+@rThe orc overlord cracks his whip at the elf slave's back, leaving a
+bloody welt.@n 
+~
+E
+orcdwarf~
+@rThe orc overlord cracks his whip at the dwarf slave's back, leaving a
+bloody welt.@n 
+~
+!
+1 0 9
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 )
+  send_to_room( #action1, room );
+if( i == 2 )
+  send_to_room( #action2, room );
+if( i == 3 )
+  send_to_room( #action3, room );
+~
+E
+action1~
+@gFlies buzz around the rotting corpse, laying their young to feed.@n
+~
+E
+action2~
+@gA raunchy stench emanates from the corpse, almost making you sick.@n
+~
+E
+action3~
+@gThe sound of dripping water echoes in from the north.@n
+~
+!
+2 200 0
+A
+~
+decomposing rotting corpse slave~
+act_tochar( #no, ch );
+~
+E
+no~
+The rotting corpse is completely naked, the overlords have already
+stripped it of all of its possessions.
+~
+!
+9 0 0
+419 17 1509949540 -2 0
+5303 9 1509949540 3 0
+233 9 1509949540 3 0
+-1
+S
+
+#2733
+Slave Pit~
+Crumbled rocks lie scattered upon the ground, completely slathered with a
+layer of slimy algae.  A rusty pipe protrudes down from the ceiling, with
+droplets of water falling from its jagged lip every few seconds.  Winding
+across the ground in a ribbon-thin band, the water drags miniscule bits
+of slime and silt as it trickles westward.  The chamber also continues to
+the south, the ground there a little less slippery.
+~
+[Eliza] Done.
+~
+-335937468 11 9 0
+D2
+~
+~
+0 -1 2732 10 10 5
+D3
+~
+~
+0 -1 2730 10 10 5
+E
+crumbled rocks slathered layer slimy algae~
+Rocks leftover from the pit's excavation litter the ground, ranging from
+pebble-size to fist-shaped stones.  An emerald-green coating of algae
+coats the rocks, made extremely slick by the trickle of water flowing
+through the chamber.
+~
+E
+rusty pipe ceiling droplets jagged lip~
+Jutting out at an angle, an iron pipe routes water into the slave pit
+from elsewhere in the tunnel system.  Its lip has partially rusted away,
+leaving a dangerously jagged edge.
+~
+E
+ribbon-thin band water silt~
+A narrow band of murky water trickles to the west, picking up dirt and
+algae along its path.  Flowing into a nearby rancid pool, the droplets
+falling from the rusty pipe are the only source of water for the
+imprisoned slaves.
+~
+A
+~
+~
+if( race( ch ) != master ) {
+  if( race( ch ) != slave ) {
+    if( race( ch ) != rodent ) {
+      continue;
+      end;
+      }
+    }
+  }
+~
+E
+to_char~
+@mTrying to maintain your balance, you slowly travel west.@n
+~
+E
+to_room~
+@mTreading carefully, $n walks west.@n
+~
+!
+3 0 8
+A
+~
+~
+if( race( ch ) == master )
+  continue;
+~
+E
+to_char~
+@yYou head $T.@n
+~
+E
+to_room~
+@y$n imperiously marches $T, seeking out some slaves to clean up this
+mess.@n 
+~
+!
+3 0 8
+A
+~
+~
+if( race( ch ) == slave )
+  continue;
+~
+E
+to_char~
+@yYou walk $T.@n
+~
+E
+to_room~
+@y$n scrambles to the west, evading $s captors for a brief moment.@n
+
+~
+!
+3 0 8
+A
+~
+~
+if( race( ch ) == rodent )
+  continue;
+~
+E
+to_char~
+@cYou walk $T.@n
+~
+E
+to_room~
+@c$n carefully wades into the water to the west.@n
+~
+!
+3 0 8
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 )
+  send_to_room( #action1, room );
+if( i == 2 )
+  send_to_room( #action2, room );
+if( i == 3 )
+  send_to_room( #action3, room );
+~
+E
+action1~
+@gA droplet of water falls from the rusty pipe, plopping on the slimy
+rocks.@n
+~
+E
+action2~
+@gThe sound of a piercing scream echoes throughout the cavern.@n
+~
+E
+action3~
+@gA foul stench drifts in from the west, almost making you gag.@n
+~
+!
+2 200 0
+A
+get take grab search steal~
+crumbled rocks layer slimy algae ground~
+act_tochar( #slimy, ch );
+~
+E
+slimy~
+You rummage through the rocks, but find nothing of interest.
+~
+!
+0 0 0
+A
+~
+rusty jagged pipe~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 5 ) == 3 ) {
+    act_tochar( #pipe, ch );
+    act_notchar( #pipe2, ch );
+    i = random( 1, 10 );
+    if( i < 3 ) {
+      obj_to_char( oload( 70 ), ch );
+      end;
+      }
+    if( i > 8 ) {
+      obj_to_char( oload( 75 ), ch );
+      end;
+      }
+    obj_to_char( oload( 63 ), ch );
+    end;
+    }
+  }
+act_tochar( #ouch, ch );
+act_notchar( #ouch2, ch );
+dam_message( ch, 2d2, "the rusty pipe" );
+inflict( ch, mob, 2d2, "a rusty pipe" );
+~
+E
+pipe~
+You stick your arm as far as you can into the pipe, finding something
+stashed inside!
+~
+E
+pipe2~
+$n sticks $s arm into the pipe, finding something stashed inside!
+~
+E
+ouch~
+You reach into the pipe, but find nothing inside.  As you pull your hand
+back out, its jagged lip scratches your hand.
+~
+E
+ouch2~
+$n reaches into the pipe, but finds nothing inside.  As $e pulls $s hand
+out of the pipe, the jagged lip scratches $s hand.
+~
+!
+9 0 0
+A
+~
+~
+if( is_player( ch ) ) {
+  if( find_stat( ch, dex ) < random( 10, 15 ) ) {
+    act_tochar( #slip, ch );
+    act_notchar( #slip2, ch );
+    position( ch, 6 );
+    }
+  }
+if( mob_in_room( 5298, room ) || mob_in_room( 5299, room ) || mob_in_room( 5300, room ) || mob_in_room( 5301, room ) ) {
+  if( mob_in_room( 5302, room ) || mob_in_room( 5303, room ) || mob_in_room( 5304, room ) || mob_in_room( 5305, room ) ) {
+    if( rflag( status2, room ) ) {
+      remove_rflag( status2, room );
+      wait( 2 );
+      i = 0;
+      j = 0;
+      if( mob_in_room( 5298, room ) )
+        i = 1;
+      if( mob_in_room( 5299, room ) )
+        i = 2;
+      if( mob_in_room( 5300, room ) )
+        i = 3;
+      if( mob_in_room( 5301, room ) )
+        i = 4;
+      if( mob_in_room( 5302, room ) )
+        j = 1;
+      if( mob_in_room( 5303, room ) )
+        j = 2;
+      if( mob_in_room( 5304, room ) )
+        j = 3;
+      if( mob_in_room( 5305, room ) )
+        j = 4;
+      if( i == 1 ) {
+        if( j == 1 )
+          send_to_room( #trollgnome, room );
+        if( j == 2 )
+          send_to_room( #trollhalfling, room );
+        if( j == 3 )
+          send_to_room( #trollelf, room );
+        if( j == 4 )
+          send_to_room( #trolldwarf, room );
+        }
+      if( i == 2 ) {
+        if( j == 1 )
+          send_to_room( #ogregnome, room );
+        if( j == 2 )
+          send_to_room( #ogrehalfling, room );
+        if( j == 3 )
+          send_to_room( #ogreelf, room );
+        if( j == 4 )
+          send_to_room( #ogredwarf, room );
+        }
+      if( i == 3 ) {
+        if( j == 1 )
+          send_to_room( #vyangnome, room );
+        if( j == 2 )
+          send_to_room( #vyanhalfling, room );
+        if( j == 3 )
+          send_to_room( #vyanelf, room );
+        if( j == 4 )
+          send_to_room( #vyandwarf, room );
+        }
+      if( i == 4 ) {
+        if( j == 1 )
+          send_to_room( #orcgnome, room );
+        if( j == 2 )
+          send_to_room( #orchalfling, room );
+        if( j == 3 )
+          send_to_room( #orcelf, room );
+        if( j == 4 )
+          send_to_room( #orcdwarf, room );
+        }
+      wait( 4 );
+      set_rflag( status2, room );
+      }
+    }
+  }
+~
+E
+trollgnome~
+@rA gnome slave threatens the troll overlord with his pickaxe.@n 
+~
+E
+trollhalfling~
+@rA halfling slave threatens the troll overlord with his pickaxe.@n 
+~
+E
+trollelf~
+@rAn elf slave threatens the troll overlord with his pickaxe.@n 
+~
+E
+trolldwarf~
+@rA dwarf slave threatens the troll overlord with his pickaxe.@n 
+~
+E
+ogregnome~
+@rA gnome slave threatens the ogre overlord with his pickaxe.@n 
+~
+E
+ogrehalfling~
+@rA halfling slave threatens the ogre overlord with his pickaxe.@n 
+~
+E
+ogreelf~
+@rAn elf slave threatens the ogre overlord with his pickaxe.@n 
+~
+E
+ogredwarf~
+@rA dwarf slave threatens the ogre overlord with his pickaxe.@n 
+~
+E
+vyangnome~
+@rA gnome slave threatens the vyan overlord with his pickaxe.@n 
+~
+E
+vyanhalfling~
+@rA halfling slave threatens the vyan overlord with his pickaxe.@n 
+~
+E
+vyanelf~
+@rAn elf slave threatens the vyan overlord with his pickaxe.@n 
+~
+E
+vyandwarf~
+@rA dwarf slave threatens the vyan overlord with his pickaxe.@n 
+~
+E
+orcgnome~
+@rA gnome slave threatens the orc overlord with his pickaxe.@n 
+~
+E
+orchalfling~
+@rA halfling slave threatens the orc overlord with his pickaxe.@n 
+~
+E
+orcelf~
+@rAn elf slave threatens the orc overlord with his pickaxe.@n 
+~
+E
+orcdwarf~
+@rA dwarf slave threatens the orc overlord with his pickaxe.@n 
+~
+E
+slip~
+@GYou slip on the slimy rocks, falling to the ground!@n
+~
+E
+slip2~
+@G$n slips on the slimy rocks, falling to the ground!@n
+~
+!
+1 0 12
+-1
+S
+
+#2734
+Slave Pit~
+A slim layer of lime-green lichen clings to the walls, where mining
+operations have evidently ceased.  Piles of rubble litter the chamber
+floor, broken off in the pursuit of past mineral excavations.  The
+irritable smell that drifts through the chamber grows stronger to the
+south, where a slimy pool of rancid water has collected.
+~
+[Eliza] Done.
+~
+-335937468 11 9 0
+D2
+~
+~
+0 -1 2730 10 10 5
+D3
+~
+~
+0 -1 2711 10 10 5
+E
+slim layer lime-green lichen walls~
+Only a few hairs thick, a dark-green layer of lichen grows upon the sides
+of the chamber.  The fuzzy strands poke out from the rocks, soaking up
+the humidity from the air which is almost tangibly thick.
+~
+E
+piles rubble floor~
+Numerous rocks lie scattered up byon the chamber floor, strewn about when
+this gaping cavern was mined out by slave labor.  Free of any valuable
+minerals, the gray rock bits have yet to be cleaned up by the remaining
+slaves.
+~
+E
+slimy pool water 1 south~
+Patches of some oily substance glisten atop a murky pool of water that
+has collected to the south, the patterns of color constantly changing.
+The stench that pours in from the rancid pool is extremely nauseating,
+irritable to the senses.
+~
+A
+get take search grab steal~
+piles rubble floor~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 5 ) == 3 ) {
+    act_tochar( #found, ch );
+    act_notchar( #found2, ch );
+    obj_to_char( oload( 78 ), ch );
+    end;
+    }
+  }
+act_tochar( #no, ch );
+~
+E
+no~
+You find nothing of interest within the piles of rubble.
+~
+E
+found~
+You search through the rubble and find an interesting pebble.
+~
+E
+found2~
+$n searches through the rubble and finds something of interest.
+~
+!
+0 0 0
+A
+get take search grab steal~
+slim layer lime-green lichen walls~
+act_tochar( #no, ch );
+~
+E
+no~
+Only growing for a short period of time, the lichen has not grown thick
+enough to collect yet.
+~
+!
+0 0 0
+A
+~
+~
+if( race( ch ) != master ) {
+  if( race( ch ) != slave ) {
+    if( race( ch ) != rodent ) {
+      continue;
+      end;
+      }
+    }
+  }
+~
+E
+to_char~
+@mYou wade into the festering pool of water, its stench almost
+unbearable.@n 
+~
+E
+to_room~
+@m$n wades into the festering pool to the south.@n
+~
+!
+3 0 4
+A
+~
+~
+if( race( ch ) == master )
+  continue;
+~
+E
+to_char~
+@yYou wade into the festering pool.@n
+~
+E
+to_room~
+@y$n reluctantly wades into the nauseating pool to the south, patrolling
+the slave pit.@n 
+~
+!
+3 0 4
+A
+~
+~
+if( race( ch ) == slave )
+  continue;
+~
+E
+to_char~
+@yYou wade into the festering pool.@n
+~
+E
+to_room~
+@y$n shuffles $s way into the pool to the south, attempting to evade the
+overlords.@n 
+~
+!
+3 0 4
+A
+~
+~
+if( race( ch ) == rodent )
+  continue;
+~
+E
+to_char~
+@yYou wade into the festering pool to the south.@n
+~
+E
+to_room~
+@c$n paddles into the festering pool, looking for scraps of food to
+eat.@n 
+~
+!
+3 0 4
+A
+~
+~
+if( mob_in_room( 5298, room ) || mob_in_room( 5299, room ) || mob_in_room( 5300, room ) || mob_in_room( 5301, room ) ) {
+  if( mob_in_room( 5302, room ) || mob_in_room( 5303, room ) || mob_in_room( 5304, room ) || mob_in_room( 5305, room ) ) {
+    if( rflag( status2, room ) ) {
+      remove_rflag( status2, room );
+      wait( 2 );
+      i = 0;
+      j = 0;
+      if( mob_in_room( 5298, room ) )
+        i = 1;
+      if( mob_in_room( 5299, room ) )
+        i = 2;
+      if( mob_in_room( 5300, room ) )
+        i = 3;
+      if( mob_in_room( 5301, room ) )
+        i = 4;
+      if( mob_in_room( 5302, room ) )
+        j = 1;
+      if( mob_in_room( 5303, room ) )
+        j = 2;
+      if( mob_in_room( 5304, room ) )
+        j = 3;
+      if( mob_in_room( 5305, room ) )
+        j = 4;
+      if( i == 1 ) {
+        if( j == 1 )
+          send_to_room( #trollgnome, room );
+        if( j == 2 )
+          send_to_room( #trollhalfling, room );
+        if( j == 3 )
+          send_to_room( #trollelf, room );
+        if( j == 4 )
+          send_to_room( #trolldwarf, room );
+        }
+      if( i == 2 ) {
+        if( j == 1 )
+          send_to_room( #ogregnome, room );
+        if( j == 2 )
+          send_to_room( #ogrehalfling, room );
+        if( j == 3 )
+          send_to_room( #ogreelf, room );
+        if( j == 4 )
+          send_to_room( #ogredwarf, room );
+        }
+      if( i == 3 ) {
+        if( j == 1 )
+          send_to_room( #vyangnome, room );
+        if( j == 2 )
+          send_to_room( #vyanhalfling, room );
+        if( j == 3 )
+          send_to_room( #vyanelf, room );
+        if( j == 4 )
+          send_to_room( #vyandwarf, room );
+        }
+      if( i == 4 ) {
+        if( j == 1 )
+          send_to_room( #orcgnome, room );
+        if( j == 2 )
+          send_to_room( #orchalfling, room );
+        if( j == 3 )
+          send_to_room( #orcelf, room );
+        if( j == 4 )
+          send_to_room( #orcdwarf, room );
+        }
+      wait( 6 );
+      set_rflag( status2, room );
+      }
+    }
+  }
+~
+E
+trollgnome~
+@rA gnome slave threatens the troll overlord with his pickaxe.@n 
+~
+E
+trollhalfling~
+@rA halfling slave threatens the troll overlord with his pickaxe.@n 
+~
+E
+trollelf~
+@rAn elf slave threatens the troll overlord with his pickaxe.@n 
+~
+E
+trolldwarf~
+@rA dwarf slave threatens the troll overlord with his pickaxe.@n 
+~
+E
+ogregnome~
+@rA gnome slave threatens the ogre overlord with his pickaxe.@n 
+~
+E
+ogrehalfling~
+@rA halfling slave threatens the ogre overlord with his pickaxe.@n 
+~
+E
+ogreelf~
+@rAn elf slave threatens the ogre overlord with his pickaxe.@n 
+~
+E
+ogredwarf~
+@rA dwarf slave threatens the ogre overlord with his pickaxe.@n 
+~
+E
+vyangnome~
+@rA gnome slave threatens the vyan overlord with his pickaxe.@n 
+~
+E
+vyanhalfling~
+@rA halfling slave threatens the vyan overlord with his pickaxe.@n 
+~
+E
+vyanelf~
+@rAn elf slave threatens the vyan overlord with his pickaxe.@n 
+~
+E
+vyandwarf~
+@rA dwarf slave threatens the vyan overlord with his pickaxe.@n 
+~
+E
+orcgnome~
+@rA gnome slave threatens the orc overlord with his pickaxe.@n 
+~
+E
+orchalfling~
+@rA halfling slave threatens the orc overlord with his pickaxe.@n 
+~
+E
+orcelf~
+@rAn elf slave threatens the orc overlord with his pickaxe.@n 
+~
+E
+orcdwarf~
+@rA dwarf slave threatens the orc overlord with his pickaxe.@n 
+~
+!
+1 0 12
+5302 9 1509949540 3 0
+-1
+S
+
+#2736
+Edge of the Slave Pit~
+Rivulets of blood streak down the cliff to the south, still tacky to the
+touch.  Various body parts lie in a pool of gore at the base of the wall,
+the remains of slaves who have futily attempted to escape from the pit. 
+The chamber opens up to the north, although what perils lie beyond is
+difficult to tell through the inky blackness.
+~
+**Above is 2724**
+[Eliza] Done.
+~
+-335937468 11 9 0
+D0
+~
+~
+0 -1 2704 10 10 5
+D1
+~
+~
+0 -1 2702 10 10 5
+D3
+~
+~
+0 -1 2701 10 10 5
+D4
+~
+~
+0 -1 2724 10 10 5
+E
+rivulets blood streak tacky cliff 1 south~
+Covering the cliff in runny streaks, lines of blood remain wet and tacky
+on the rock surface.  Evenly-spaced trails of fingers can be seen in the
+gore, where slaves have attempted to claw their way to freedom.
+~
+E
+various body parts pool blood remains~
+Although most of the flesh and bones that float on top of the pool of
+blood are unidentifiable, some defined body parts briefly bob to the
+surface.  Cast down to the floor by the overlords above, the remains of
+the slaves who have attempted to escapee, become a powerful symbol of
+obedience to the prisoner population.
+~
+A
+up~
+*~
+if( is_player( ch ) ) {
+  act_tochar( #no, ch );
+  end;
+  }
+continue;
+~
+E
+no~
+There is no means of getting up there from here.
+~
+!
+0 0 0
+A
+~
+~
+if( find_stat( ch, level ) > 90 )
+  continue;
+if( race( ch ) == master ) {
+  act_notchar( #master, ch );
+  transfer( ch, find_room( 2736 ) );
+  end;
+  }
+if( race( ch ) == slave ) {
+  act_notchar( #slave, ch );
+  transfer( ch, find_room( 2736 ) );
+  end;
+  }
+~
+E
+master~
+@y$n looks up at the landing above, ensuring that no slaves are trying to
+escape.@n 
+~
+E
+slave~
+@y$n looks up at the landing above, trying to time $s escape.@n
+~
+!
+3 0 16
+A
+climb scale~
+wall 1 up~
+act_tochar( #no, ch );
+~
+E
+no~
+There is no way to climb up the wall from here.
+~
+!
+0 0 0
+A
+~
+~
+if( mob_in_room( 5298, room ) || mob_in_room( 5299, room ) || mob_in_room( 5300, room ) || mob_in_room( 5301, room ) ) {
+  if( mob_in_room( 5302, room ) || mob_in_room( 5303, room ) || mob_in_room( 5304, room ) || mob_in_room( 5305, room ) ) {
+    if( rflag( status2, room ) ) {
+      remove_rflag( status2, room );
+      wait( 2 );
+      i = 0;
+      j = 0;
+      if( mob_in_room( 5298, room ) )
+        i = 1;
+      if( mob_in_room( 5299, room ) )
+        i = 2;
+      if( mob_in_room( 5300, room ) )
+        i = 3;
+      if( mob_in_room( 5301, room ) )
+        i = 4;
+      if( mob_in_room( 5302, room ) )
+        j = 1;
+      if( mob_in_room( 5303, room ) )
+        j = 2;
+      if( mob_in_room( 5304, room ) )
+        j = 3;
+      if( mob_in_room( 5305, room ) )
+        j = 4;
+      if( i == 1 ) {
+        if( j == 1 )
+          send_to_room( #trollgnome, room, sight );
+        if( j == 2 )
+          send_to_room( #trollhalfling, room, sight );
+        if( j == 3 )
+          send_to_room( #trollelf, room, sight );
+        if( j == 4 )
+          send_to_room( #trolldwarf, room, sight );
+      }
+      if( i == 2 ) {
+        if( j == 1 )
+          send_to_room( #ogregnome, room, sight );
+        if( j == 2 )
+          send_to_room( #ogrehalfling, room, sight );
+        if( j == 3 )
+          send_to_room( #ogreelf, room, sight );
+        if( j == 4 )
+          send_to_room( #ogredwarf, room, sight );
+      }
+      if( i == 3 ) {
+        if( j == 1 )
+          send_to_room( #vyangnome, room, sight );
+        if( j == 2 )
+          send_to_room( #vyanhalfling, room, sight );
+        if( j == 3 )
+          send_to_room( #vyanelf, room, sight );
+        if( j == 4 )
+          send_to_room( #vyandwarf, room, sight );
+      }
+      if( i == 4 ) {
+        if( j == 1 )
+          send_to_room( #orcgnome, room, sight );
+        if( j == 2 )
+          send_to_room( #orchalfling, room, sight );
+        if( j == 3 )
+          send_to_room( #orcelf, room, sight );
+        if( j == 4 )
+          send_to_room( #orcdwarf, room, sight );
+      }
+      wait( 6 );
+      set_rflag( status2, room );
+    }
+  }
+}
+~
+E
+trollgnome~
+@rA gnome slave grovels at the troll overlord's feet.@n 
+~
+E
+trollhalfling~
+@rA halfling slave grovels at the troll overlord's feet.@n 
+~
+E
+trollelf~
+@rAn elf slave grovels at the troll overlord's feet.@n 
+~
+E
+trolldwarf~
+@rA dwarf slave grovels at the troll overlord's feet.@n 
+~
+E
+ogregnome~
+@rA gnome slave grovels at the ogre overlord's feet.@n 
+~
+E
+ogrehalfling~
+@rA halfling slave grovels at the ogre overlord's feet.@n 
+~
+E
+ogreelf~
+@rAn elf slave grovels at the ogre overlord's feet.@n 
+~
+E
+ogredwarf~
+@rA dwarf slave grovels at the ogre overlord's feet.@n 
+~
+E
+vyangnome~
+@rA gnome slave grovels at the vyan overlord's feet.@n 
+~
+E
+vyanhalfling~
+@rA halfling slave grovels at the vyan overlord's feet.@n 
+~
+E
+vyanelf~
+@rAn elf slave grovels at the vyan overlord's feet.@n 
+~
+E
+vyandwarf~
+@rA dwarf slave grovels at the vyan overlord's feet.@n 
+~
+E
+orcgnome~
+@rA gnome slave grovels at the orc overlord's feet.@n 
+~
+E
+orchalfling~
+@rA halfling slave grovels at the orc overlord's feet.@n 
+~
+E
+orcelf~
+@rAn elf slave grovels at the orc overlord's feet.@n 
+~
+E
+orcdwarf~
+@rA dwarf slave grovels at the orc overlord's feet.@n 
+~
+!
+1 0 27
+A
+~
+pile bones heap~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  i = random( 1, 20 );
+  if( i == 13 ) {
+    act_tochar( #special, ch );
+    act_notchar( #special2, ch );
+    obj_to_char( oload( 630 ), ch );
+    end;
+    }
+  act_tochar( #copper, ch );
+  act_notchar( #copper2, ch );
+  obj_to_char( oload( 12 ), ch );
+  end;
+  }
+act_tochar( #nothing, ch );
+end;
+~
+E
+special~
+You find something special under the skeleton!
+~
+E
+special2~
+$n finds something special underneath the skeleton!
+~
+E
+copper~
+You find this slave's hidden possession... a copper coin.
+~
+E
+copper2~
+$n searches through the bones, finding the slave's hidden possession... 
+a copper coin.
+~
+E
+nothing~
+Whatever caught your eye has already been removed from the skeleton.
+~
+!
+9 0 0
+A
+~
+~
+i = random( 1, 3 );
+if( i == 1 )
+  send_to_room( #action1, room );
+if( i == 2 )
+  send_to_room( #action2, room );
+if( i == 3 ) {
+  if( mob_in_room( 5300, find_room( 2724 ) ) )
+    send_to_room( #action3, room );
+  end;
+  }
+~
+E
+action1~
+@gA cockroach scrambles across the ground, disappearing into a crack in
+the cavern floor.@n 
+~
+E
+action2~
+@gThe mixture of dust and grime, drifting through the air, almost makes
+you sneeze.@n 
+~
+E
+action3~
+*plunk* A pebble hits you on top of your head.  The vyan overlord,
+leaning over the rail above, laughs incessantly at you.
+~
+!
+2 200 0
+289 17 1509949540 -2 0
+1513 17 1509949540 -2 13
+-1
+S
+
+#2737
+Hidden Cave~
+Completely hidden from view save a tiny opening in the north wall, this
+tiny cave has been mined out by the slaves as the starting point for a
+future escape tunnel.  A small cache of supplies has been stacked in one
+corner, containing scraps of food and other prized possessions secluded
+from the overlords.
+~
+** NORTH IS 2731 **
+[Rikahn] rdesc complete
+[Rikahn] added rextras - complete
+[Rikahn] added acode - entering hole
+[Rikahn] added acode - walking north
+[Rikahn] added acode - search supplies
+[Eliza] reviewed
+~
+-335937466 11 4 0
+D0
+~
+~
+162 -1 2731 10 10 5
+E
+tiny opening wall 1 north~
+Chipped away from the wall in such a way to make its edges unnoticable at
+first glance, a jagged hole leads back into the main cavern to the north. 
+Barely big enough for an elf to squeeze through, it keeps the vicious
+overlords from discovering their plans for escape.
+~
+E
+future escape tunnel~
+A circular tunnel has been carved into the southern wall, leading upwards
+at a slight angle.  Only a few feet deep, the slaves have a long way to
+go before earning their freedom.
+~
+E
+small cache supplies corner scraps food prized possessions~
+Wrapped in strips of torn cloth, a bundle of supplies hidden by the
+slaves rests in one corner of this cramped cave.  Morsels of food, plus
+personal effects kept away from the thieving overlords are kept safe and
+sound.
+~
+A
+climb squeeze enter~
+tiny opening hole 1 north~
+if( size( ch ) < 5 ) {
+  if( is_standing( ch ) ) {
+    act_tochar( #hole, ch );
+    act_notchar( #hole2, ch );
+    transfer( ch, find_room( 2731 ) );
+    act_notchar( #arrive, ch );
+  }
+  end;
+}
+act_tochar( #toobig, ch );
+~
+E
+hole~
+@mYou squeeze through the tiny hole.@n
+~
+E
+hole2~
+@m$n squeezes through the tiny hole, disappearing from sight.@n
+~
+E
+arrive~
+@m$n pops in through the tiny hole.@n
+~
+E
+toobig~
+You are too big to fit through the hole.
+~
+!
+0 0 0
+A
+north~
+*~
+act_tochar( #no, ch );
+~
+E
+no~
+The only exit out of this cave is the tiny hole in the wall.
+~
+!
+0 0 0
+A
+get take grab search steal~
+small cache supplies scraps food prized possessions~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #search, ch );
+  act_notchar( #search2, ch );
+  i = random( 1, 40 );
+  if( i == 20 )
+    obj_to_char( oload( 621 ), ch );
+  if( i == 30 )
+    obj_to_char( oload( 1569 ), ch );
+  if( i == 10 )
+    obj_to_char( oload( 1219 ), ch );
+  if( i == 15 )
+    obj_to_char( oload( 2128 ), ch );
+  if( i < 10 )
+    obj_to_char( oload( 1856 ), ch );
+  if( i > 30 )
+    obj_to_char( oload( 694 ), ch );
+  obj_to_char( oload( 7483 ), ch );
+  end;
+  }
+act_tochar( #nothing, ch );
+~
+E
+search~
+You rummage through the supplies, finding something useful.
+~
+E
+search2~
+$n rummages through the supplies, finding something useful.
+~
+E
+nothing~
+There is nothing of value left in the meager supplies.
+~
+!
+0 0 0
+-1
+S
+
+#0
+

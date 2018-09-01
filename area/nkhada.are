@@ -1,0 +1,3970 @@
+#M2_AREA
+2
+
+North of Kha-Da~
+Skurva Eliza Aurelian Nox~
+~
+~
+~
+
+0 0
+0
+0
+#ROOMS
+
+#33000
+Cairn Mountain Road~
+The trail is reasonably flat level here, though it still clings
+precariously to the side of the mountain and gives you a magnificent view
+down the side of the mountain.  
+~
+~
+167247872 5 6 0
+D0
+~
+~
+0 -1 33001 10 10 5
+D2
+~
+~
+0 -1 26536 10 10 5
+D3
+~
+~
+0 -1 26566 10 10 5
+1974 17 1509949540 -2 0
+-1
+S
+
+#33001
+Cairn Mountain Road~
+The trail reaches the top of a huge bluff, the bare rock face drops away
+to the west down a five hundred foot cliff.  To the east looms the rest
+of Cairn mountain which disappears up into the misty clouds.  Snow and
+ice cover the trail and it is only the presence of a number of marker
+stones which stop you from wandering into a crevass.  
+~
+~
+167247872 5 6 0
+D0
+~
+~
+0 -1 33002 10 10 5
+D2
+~
+~
+0 -1 33000 10 10 5
+-1
+S
+
+#33002
+Cairn Mountain Road~
+To the north the trail starts down the side of the mountain, the track
+has been cut out of the rock in the more dangerous places but it will
+still take much care.  To the south the trail has levelled off and
+follows a reasonably flat path through the ice and snow.
+~
+~
+167247872 5 6 0
+D2
+~
+~
+0 -1 33001 10 10 5
+D3
+~
+~
+0 -1 33086 10 10 5
+D5
+~
+~
+0 -1 33003 10 10 5
+-1
+S
+
+#33003
+Cairn Mountain Road - Icy Slope~
+The track here follows a north-south route up and down the mountain. 
+Snow and ice cover most of the track making it quite slippery and
+dangerous.  
+~
+~
+167247872 5 6 0
+D4
+~
+~
+0 -1 33002 10 10 5
+D5
+~
+~
+0 -1 33004 10 10 5
+-1
+S
+
+#33004
+Cairn Mountain Road - Slope~
+The trail is following a relatively straight line north and south up and
+down the mountain here.  The snow that covers the trail has in some
+places harden to ice making the path quite slippery and dangerous.  To
+the west you get a magnificent view out over the forested valley below
+and to the east the bulk of Cairn Mountain looms above you, its top
+shrouded in clouds.  
+~
+[Boku Laton] has in some place harden to ice
+~
+167247872 5 6 0
+D0
+~
+~
+0 -1 33005 10 10 5
+D4
+~
+~
+0 -1 33003 10 10 5
+-1
+S
+
+#33005
+Cairn Mountain Road - Start of Snowline~
+This is the snowline, where the forest meets the alpine snow and ice. 
+Further down the mountain, the slopes are covered by a deep forest.  Up
+the mountain is only snow and ice, with the odd small alpine shrub.  
+~
+~
+167247872 5 6 0
+D0
+~
+~
+0 -1 33006 10 10 5
+D2
+~
+~
+0 -1 33004 10 10 5
+-1
+S
+
+#33006
+Cairn Mountain Road - Forested Mountain Slopes~
+The forest is quite thin here the tree this near the snowline have
+problems growing and it is only the most hardy of them that survive. 
+This gives the area under the trees a other-worldly look with twisted and
+gnarled stumps of trees and half-dead trees.  
+~
+~
+167247872 3 6 0
+D0
+~
+~
+0 -1 33007 10 10 5
+D2
+~
+~
+0 -1 33005 10 10 5
+-1
+S
+
+#33007
+Cairn Mountain Road - Fork in Path~
+High on the mountain the road is not far from the start of the snow and
+ice.  Here the road breaks into two with a track off to the west while
+the main road continues north and south.  This high on the slopes the
+trees under the forest canopy have a twisted and half-dead look to them. 
+Life at this altitude must be hard for them.
+~
+no.mob
+[Eliza] north leads to the northern coast and the entrance boat to the northern island
+~
+167247880 5 6 0
+D0
+trail~
+trail~
+0 -1 33008 10 10 5
+D2
+~
+~
+0 -1 33006 10 10 5
+D3
+~
+~
+0 -1 33009 10 10 5
+210 17 1509949490 -2 0
+3568 17 1509949540 -2 0
+-1
+S
+
+#33008
+Cairn Mountain Road~
+Cresting the rise at the top of a narrow cut situated deep in the Cairn
+Mountains, the view to the north spreads out in panoramic splendor. 
+Beyond the rolling cloud of dense fog, the deep blue-green of a pine and
+fir forest stretches nearly to the coastline of a distant sea, only a
+narrow strip of mist-shrouded beach separating the two.  The path through
+the pass continues downward along the steep-sloping mountain and
+disappears southward into the heavily wooded areas that lie in that
+direction.
+~
+[Eliza] done
+[Guinafaer] need entering code for down room.
+~
+167247880 5 6 0
+D2
+~
+~
+0 -1 33007 10 10 5
+D5
+~
+~
+0 -1 33053 10 10 5
+E
+view 1 north forest pine fir~
+Northward from here the fog is dense and hugs the mountainsides.  The only
+thing you can see of the pine and fir forest below is the green tops
+poking through the fog.  The fog clears out some further down the
+mountain, allowing you to see some of the beach and the cold grey water of
+the northern ocean.
+~
+E
+path mountain 1 down~
+The path is rocky, steep, and in places nearly vertical.  Close to the
+mountainside, patches of snow remain unmelted by the sun's rays.
+~
+E
+beach sea~
+The beach looks ribbon-thin from this far away.  The ocean is colored a
+deep grey, making it look very cold.  Further out to sea there is another
+fog bank that prevents seeing further in that direction.
+~
+A
+~
+fjlfoiu~
+continue;
+// -- disabled, bugged acode
+if( !is_player( ch ) ) {
+  act_notchar( #confusion, ch );
+  end;
+}
+if( find_stat( ch, level ) < 31 )
+  i = 5d10;
+else if( find_stat( ch, level ) < 61 )
+  i = 10d10+100;
+else
+  i = 20d10+200;
+if( is_mounted( ch ) ) {
+  act_tochar( #dismount, ch );
+  end;
+}
+if( find_stat( ch, dex ) < random( 6, 13 ) ) {
+  act_tochar( #stumble, ch );
+  act_notchar( #rstumble, ch );
+  end;
+}
+if( find_skill( ch, climb ) < random( 6, 9 )) {
+  act_tochar( #fail_climb, ch );
+  act_notchar( #rfail_climb, ch );
+  wait( 1 );
+  transfer( ch, find_room( 33053 ) );
+  act_notchar( #fall_down, ch );
+  damage( mob, ch, i, physical, "the fall" );
+  end;
+}
+continue;
+~
+E
+to_char~
+@cCarefully searching for hand and footholds, you begin the long descent
+down the mountainside.@n 
+~
+E
+to_room~
+@cCarefully searching for hand and footholds, $n begins $s long descent
+down the mountainside.@n 
+~
+E
+dismount~
+@cYou think twice about starting the descent mounted.@n
+~
+E
+stumble~
+@cAs you inch toward the edge to begin your descent, you lose your
+footing and scramble back to solid ground.@n 
+~
+E
+rstumble~
+@cAs $n inches toward $s descent, $e loses $s footing and scrambles back
+to solid ground.@n 
+~
+E
+fail_climb~
+@cYour hand slips from its icy hold and you plummet downward.@n
+~
+E
+rfail_climb~
+@c$n's hand slips from its icy hold and $e plummets downward.@n
+~
+E
+confusion~
+@c$n refuses to descend the steep climb.@n
+~
+E
+fall_down~
+@c$n comes tumbling down the trail, landing on the narrow ledge in a heap
+of scrapes and bruises.@n 
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cCarefully searching for hand and footholds, you begin the long descent
+down the mountainside.@n 
+~
+E
+to_room~
+@cCarefully searching for hand and footholds, $n begins the long descent
+down the mountainside.@n 
+~
+!
+3 0 32
+-1
+S
+
+#33009
+Forest - Mountain Track~
+The trail is quite muddy and boggy as it follows a reasonably flat
+route.  There are many mud holes where people in order to avoid the mud
+have skirted around the edge of the mud simply making the mud hole
+bigger.  
+~
+~
+167247872 3 6 0
+D1
+~
+~
+0 -1 33007 10 10 5
+D3
+~
+~
+0 -1 33010 10 10 5
+-1
+S
+
+#33010
+Forest - Mountain Track~
+Quite boggy the track continues along a bit of a plateau to the east and
+down the mountain to the west.  Large mud-bogs cover the track in places
+making you go around them.  The forest here is quite stunted, the trees
+are mostly scrub and scrappy undergrowth.  
+~
+~
+167247872 3 6 0
+D1
+~
+~
+0 -1 33009 10 10 5
+D2
+~
+~
+0 -1 33021 10 10 5
+D3
+~
+~
+0 -1 33011 10 10 5
+-1
+S
+
+#33011
+Forest - Mountain Track~
+The trail reaches the top of a reasonably steep cliff which the trail
+cuts it way down to the west.  In the forested valley below you can see a
+pinnacle of rock which thrusts up from the middle of the valley floor. 
+Although is is quite far away you can clearly see a tower on top of the
+pinnacle.  The boggy trail leads along the plateau to the east or down
+the trail to the west.  
+~
+~
+167247872 3 6 0
+D1
+~
+~
+0 -1 33010 10 10 5
+D2
+~
+~
+0 -1 33020 10 10 5
+D3
+~
+~
+0 -1 33012 10 10 5
+-1
+S
+
+#33012
+Forest - Mountain Track~
+This is the eastern edge of a high valley in the mountains.  To the south
+you can see the almost conical shape of Cairn mountain.  The valley is
+quite thickly forested since it is quite sheltered, and the hunting in
+this area should be quite good.  
+~
+~
+167247872 3 6 0
+D0
+~
+~
+0 -1 33050 10 10 5
+D1
+~
+~
+0 -1 33011 10 10 5
+D2
+~
+~
+0 -1 33024 10 10 5
+D3
+~
+~
+0 -1 33013 10 10 5
+-1
+S
+
+#33013
+Forest Mountain Track~
+This thickly forested valley is nestled between two very large mountains. 
+To the east, you catch glimpses of the Cairn Mountains, while another
+mountain looms to the west.  The beech forest all around you is quite
+healthy, as the valley is sheltered from the worst of the storms.
+~
+~
+167247872 3 6 0
+D0
+~
+~
+0 -1 33051 10 10 5
+D1
+~
+~
+0 -1 33012 10 10 5
+D2
+~
+~
+0 -1 33028 10 10 5
+D3
+~
+~
+0 -1 33014 10 10 5
+2509 41 1509949540 3 0
+2508 73 1509949540 3 0
+-1
+S
+
+#33014
+Forest - Mountain Track (Stream Crossing)~
+There is a small mountain stream running from south to north here, the
+trail simply leads through it and the water doesn't look more than ankle
+deep.  The stream looks quite clear and safe to drink from.  
+~
+~
+167247872 13 9 0
+D0
+~
+~
+0 -1 33052 10 10 5
+D1
+~
+~
+0 -1 33013 10 10 5
+D2
+~
+~
+0 -1 33049 10 10 5
+D3
+~
+~
+0 -1 33015 10 10 5
+398 17 1509949540 -2 0
+-1
+S
+
+#33015
+Forest - Mountain Track (Break in the Path)~
+The path splits in two here, a smaller trail leads off to the south while
+the main trail turns from the north to the east.  To the east you can see
+a small stream which is nearby.  
+~
+north was zarander's tower/33017
+w is 33030, path connecting to northern black hills valley
+is west path correct?  need to check this.  or just delete this path. 
+there's a path already.
+~
+167247872 3 6 0
+D0
+~
+~
+0 -1 33017 10 10 5
+D1
+~
+~
+0 -1 33014 10 10 5
+D2
+~
+~
+0 -1 33016 10 10 5
+D3
+~
+~
+235 -1 33030 10 10 5
+203 9 1509949540 3 0
+-1
+S
+
+#33016
+Forest Valley - Outside a Cottage~
+You are standing outside a small mud and thatch cottage.  The cottage
+looks like it has been here many years as it looks as much a part of the
+landscape as the surrounding trees.  To the east you can hear the the
+babbling of a mountain stream.  The cottage looks lived in as there is
+smoke coming out of the chimney.
+~
+no mob
+~
+167247880 3 6 0
+D0
+~
+~
+0 -1 33015 10 10 5
+D2
+~
+~
+0 -1 27562 10 10 5
+-1
+S
+
+#33017
+Forest Valley~
+This portion of the valley is quite thickly forested.  Tall,
+heavily-branched pine trees grow all along the valley, with smaller trees
+growing near their roots.  A small mountain stream lies alongside the
+path to the west.
+~
+south used to be 33015/forest valley break in path
+~
+167247872 3 6 0
+D2
+~
+~
+0 -1 33015 10 10 5
+D3
+~
+~
+0 -1 33018 10 10 5
+-1
+S
+
+#33018
+Pinnacle Track~
+The trail starts to climb out of the valley and along the southern, rocky
+spine of a rocky pinnacle.  At the the top of the pinnacle you can see a
+large stone tower.  
+~
+~
+167247872 5 6 0
+D0
+~
+~
+0 -1 33019 10 10 5
+D1
+~
+~
+0 -1 33017 10 10 5
+-1
+S
+
+#33019
+Pinnacle Track~
+The track becomes quite tricky, not much protects you from either side of
+this ridge as it leads up the rocky, southern spine of the pinnacle.  To
+the north is the stone tower at the top of the pinnacle.  All around you
+are the magnificent snow-capped mountains of the region.  Their tops
+shrouded in cloud, the lower slopes covered in beech forest.  
+~
+~
+167247872 5 6 0
+D0
+'Temporary Barrier'~
+'Temporary Barrier'~
+0 -1 27500 10 10 5
+D2
+~
+~
+0 -1 33018 10 10 5
+-1
+S
+
+#33020
+Cliff - Edge of Bogs~
+This is the top of quite a steep cliff which falls away to the west down
+into a forested valley.  This area is mainly scrub and tussock, it is
+quite wet and boggy underfoot.  
+~
+~
+167247872 3 6 0
+D0
+~
+~
+0 -1 33011 10 10 5
+D1
+~
+~
+0 -1 33021 10 10 5
+D2
+~
+~
+0 -1 33023 10 10 5
+205 9 1509949540 3 0
+-1
+S
+
+#33021
+Forest - Small Bog~
+Wet and boggy the tussock and scrub in this area makes for difficult
+going.  To the west of here the mountain becomes much steeper and the
+brush too thick to continue.  
+~
+[Moshu] west in room descrip might want to be east
+~
+167247872 3 6 0
+D0
+~
+~
+0 -1 33010 10 10 5
+D2
+~
+~
+0 -1 33022 10 10 5
+D3
+~
+~
+0 -1 33020 10 10 5
+1602 17 1509949540 -2 0
+-1
+S
+
+#33022
+Small Bog~
+This area is just one big muddy bog.  You have to hop from clump of scrub
+to clump of scrub just to get around.  The way looks pretty impassable
+any further south.  
+~
+~
+167247872 3 6 0
+D0
+~
+~
+0 -1 33021 10 10 5
+D1
+~
+~
+0 -1 33058 10 10 5
+D2
+~
+~
+0 -1 33059 10 10 5
+D3
+~
+~
+0 -1 33023 10 10 5
+208 9 1509949500 3 0
+207 9 1509949540 3 0
+207 9 1509949540 3 0
+-1
+S
+
+#33023
+Cliff - Near Bog~
+To the west a cliff falls away and with no apparent track down it. 
+Otherwise it is still quite wet and boggy underfoot.  There looks like
+there might have been a crude hut here at one time but it has now fallen
+down and is now a pile of lumber.  
+~
+~
+167247872 3 6 0
+D0
+~
+~
+0 -1 33020 10 10 5
+D1
+~
+~
+0 -1 33022 10 10 5
+E
+crude hut pile of lumber~
+It looks like it once was a trapper's hut as there is still a few
+bedraggled furs lying around and now that you look closely you can see
+that the hut was in fact burnt down.  
+~
+A
+l look~
+crude hut pile of lumber~
+if( rflag( reset0, room ) ) {
+  send_to_char( #to_char, ch );
+  act_notchar( #to_room, ch );
+  mload( 2513, room );
+  remove_rflag( reset0, room );
+  }
+continue;
+~
+E
+to_room~
+A small brown ferret leaps out of the wood pile to attack $n.
+~
+E
+to_char~
+A small brown ferret leaps out of the wood pile to attack you.
+~
+!
+0 0 0
+-1
+S
+
+#33024
+Forest Valley - Eastern Edge~
+A lush beech forest covers the floor of this high mountain valley, to the
+immediate east now is a immpassible cliff.  There are many deer trails,
+in this area so the hunting must be good here abouts.  
+~
+[Kharas] A pile of ice crystals lie here, shimmering slightly.  *since it is a pile (one object) it shoud read pile lies here, not lie here.  If it is more than one pile then lie here is correct.
+~
+167247872 3 6 0
+D0
+~
+~
+0 -1 33012 10 10 5
+D2
+~
+~
+0 -1 33025 10 10 5
+D3
+~
+~
+0 -1 33028 10 10 5
+1602 17 1509949540 -2 0
+-1
+S
+
+#33025
+Forest Valley - Eastern Edge~
+The steep cliff to the east overhangs this area slighty and is quite tall
+since not even the tall beech trees here reach to even half of the cliffs
+height.  
+~
+~
+167247872 3 6 0
+D0
+~
+~
+0 -1 33024 10 10 5
+D2
+~
+~
+0 -1 33026 10 10 5
+D3
+~
+~
+0 -1 33029 10 10 5
+-1
+S
+
+#33026
+Forest Valley - Eastern Edge~
+The forest opens out into a nice grassy glade here, up against the wall
+of the cliff to the east is a cave entrance.  On the ground here are a
+number of bear tracks.  
+~
+~
+167247880 3 6 0
+D0
+~
+~
+0 -1 33025 10 10 5
+D1
+~
+~
+0 -1 33027 10 10 5
+D3
+~
+~
+0 -1 34751 10 10 5
+122 9 1509949540 3 0
+-1
+S
+
+#33027
+Bear Cave~
+This cave is about fifteen feet tall and goes back about thirty-five feet. 
+The walls of the cave are decorated with crude paintings that look very
+old.  Upon the floor lies a heap of dead leaves intermixed with bones. 
+The mouth of the cave is just to the west.  Beyond it you can see a
+forest valley.
+~
+*H
+[Sythberel] This room could use some rdesc's
+~
+167247872 3 6 0
+D3
+~
+~
+0 -1 33026 10 10 5
+A
+~
+~
+if( find_stat( ch, level ) < 3 ) {
+  act_tochar( #to_char_flee, ch );
+  transfer( ch, find_room( 33026 ) );
+}
+~
+E
+to_char_flee~
+The smell of a big black Bear is enough to send you fleeing for your
+life.  
+~
+!
+1 -1 8
+2500 9 1509949540 3 0
+-1
+S
+
+#33028
+Forest Valley~
+The tall beech trees fill this valley and the area does not look like it
+has ever felt the touch of a woodsman's axe.  To the west you can here
+the soft bubbling of a mountain stream, as the water runs swiftly over
+the stones in the streambed.  
+~
+~
+167247872 3 6 0
+D0
+~
+~
+0 -1 33013 10 10 5
+D1
+~
+~
+0 -1 33024 10 10 5
+D2
+~
+~
+0 -1 33029 10 10 5
+D3
+~
+~
+0 -1 33049 10 10 5
+755 9 1509949540 3 0
+210 17 1509949515 -2 0
+415 17 1509949540 -2 0
+-1
+S
+
+#33029
+Forest Valley~
+The thick luscious forest continues to fill this valley as you meander
+along the animal trails.  To the south you see a dense thicket of trees. 
+You notice a small barely visible path that wanders into the heart of
+the thicket.  It looks like noone has used it for many years.  
+~
+~
+167247872 3 6 0
+D0
+~
+~
+0 -1 33028 10 10 5
+D1
+~
+~
+0 -1 33025 10 10 5
+D2
+forrest~
+forrest~
+20 -1 34751 10 10 5
+2513 9 1509949540 3 0
+-1
+S
+
+#33030
+Forest Valley~
+Under Construction.
+~
+east is 33015
+~
+167247872 3 9 0
+D1
+~
+~
+235 -1 33015 10 10 5
+D3
+~
+~
+0 -1 33048 10 10 5
+-1
+S
+
+#33031
+Forest Valley, Mountain Slope~
+Under Construction.
+~
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 33032 10 10 5
+D4
+~
+~
+0 -1 33048 10 10 5
+-1
+S
+
+#33032
+Forest Valley, Mountain Slope~
+Under Construction.
+~
+~
+167247872 3 9 0
+D2
+~
+~
+0 -1 33031 10 10 5
+D3
+~
+~
+0 -1 33033 10 10 5
+-1
+S
+
+#33033
+Forest Valley, Mountain Slope~
+Under Construction.
+~
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 33032 10 10 5
+D3
+~
+~
+0 -1 33034 10 10 5
+-1
+S
+
+#33034
+Mountain Slope~
+Under Construction.
+~
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 33033 10 10 5
+D3
+~
+~
+0 -1 33035 10 10 5
+-1
+S
+
+#33035
+Mountain Slope~
+Under Construction.
+~
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 33034 10 10 5
+D2
+~
+~
+0 -1 33036 10 10 5
+-1
+S
+
+#33036
+Mountain Slope~
+Under Construction.
+~
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 33035 10 10 5
+D2
+~
+~
+0 -1 33037 10 10 5
+-1
+S
+
+#33037
+Mountain Slope~
+Under Construction.
+~
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 33036 10 10 5
+D3
+~
+~
+0 -1 33038 10 10 5
+-1
+S
+
+#33038
+Mountain Slope~
+Under Construction.
+~
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 33037 10 10 5
+D3
+~
+~
+0 -1 33039 10 10 5
+-1
+S
+
+#33039
+Mountain Slope~
+Under Construction.
+~
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 33047 10 10 5
+D1
+~
+~
+0 -1 33038 10 10 5
+-1
+S
+
+#33040
+Hilly Slope~
+Under Construction.
+~
+~
+167247872 3 9 0
+D3
+~
+~
+0 -1 33041 10 10 5
+D4
+~
+~
+0 -1 33047 10 10 5
+-1
+S
+
+#33041
+Hilly Slope~
+Under Construction.
+~
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 33040 10 10 5
+D3
+~
+~
+0 -1 33075 10 10 5
+-1
+S
+
+#33042
+Hilly Slope~
+Under Construction.
+~
+~
+167247872 3 9 0
+D2
+~
+~
+0 -1 33075 10 10 5
+D5
+~
+~
+0 -1 33074 10 10 5
+-1
+S
+
+#33043
+Rocky Riverbank~
+Under Construction.
+~
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 33074 10 10 5
+D3
+~
+~
+0 -1 33044 10 10 5
+-1
+S
+
+#33044
+River/Bridge~
+Under Construction.
+~
+elhanni river, south of here it flows by the black hills valley to the
+west of it, cairn mountains to east, then is crossed by the path which
+connects southern black hills valley to the high mountain bluff.
+eventually flows between pennan and chiiron
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 33043 10 10 5
+D3
+~
+~
+0 -1 33045 10 10 5
+-1
+S
+
+#33045
+Meadowy Riverbank~
+Under Construction.
+~
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 33044 10 10 5
+D2
+~
+~
+0 -1 33046 10 10 5
+-1
+S
+
+#33046
+Meadowy Riverbank~
+Under Construction.
+~
+west is 39077/northern black hills valley
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 33045 10 10 5
+D3
+~
+~
+0 -1 39077 10 10 5
+-1
+S
+
+#33047
+Mountain Slope~
+Under Construction.
+~
+~
+167247872 3 9 0
+D2
+~
+~
+0 -1 33039 10 10 5
+D5
+~
+~
+0 -1 33040 10 10 5
+-1
+S
+
+#33048
+Forest Valley, Mountain Slope~
+Under Construction.
+~
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 33030 10 10 5
+D5
+~
+~
+0 -1 33031 10 10 5
+-1
+S
+
+#33049
+Forest Valley - Streambed~
+A small mountain stream bubbles over smooth stones here, running this way
+and that through the beech woods.  To the north, the stream becomes quite
+shallow as a path crosses the stream.
+~
+~
+167247872 13 9 0
+D0
+~
+~
+0 -1 33014 10 10 5
+D1
+~
+~
+0 -1 33028 10 10 5
+398 17 1509949540 -2 0
+-1
+S
+
+#33050
+Forest Valley - Eastern Edge~
+The mountain valley is thickly forested here, with many old trees finding
+shelter in the area.  All about the horizon, great peaks rise up to
+nearly obscure it - nonetheless, the vistas are spectacular.
+~
+[Kwee] enter tree returns blank line. old code still there?
+~
+167247872 3 9 0
+D2
+~
+~
+0 -1 33012 10 10 5
+D3
+~
+~
+0 -1 33051 10 10 5
+E
+old tree~
+Vines almost completely obscure a large hole on the side of the most
+majestic tree.
+~
+-1
+S
+
+#33051
+Forest Valley~
+Mountains rise up to enclose this valley on all sides, yet the forest
+cover here is thick and dense, sheltered from the worst of the storms by
+the great peaks.  To the east and south, the valley continues.  A stream
+flows by to the west.
+~
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 33050 10 10 5
+D2
+~
+~
+0 -1 33013 10 10 5
+D3
+~
+~
+0 -1 33052 10 10 5
+755 9 1509949540 3 0
+-1
+S
+
+#33052
+Forest Valley - Stream~
+A stream flows by here, making its way from south to north through the
+upland, forested valley.  It is shallow, and its waters look extremely
+frigid.  The source of the stream is not immediately apparent, though it
+is likely that much of the water flows from the melting of the snopcaps
+which loom far up around you on all sides.  The forest valley opens up
+the the east.
+~
+~
+167247872 13 9 0
+D1
+~
+~
+0 -1 33051 10 10 5
+D2
+~
+~
+0 -1 33014 10 10 5
+398 17 1509949540 -2 0
+-1
+S
+
+#33053
+Cairn Mountain Road - Steep Slope~
+The steep treacherous trail drops into the cold abyss of a cloudbank here
+at the very edges of the mountain forest.  Above, the reality of the cold
+grey stone of the mountain's crest rises solidly out of the misty
+distance.  Further to the north, the tops of pine, fir and other
+evergreen trees emerge through the fog, the remnants of falling snow
+covering their branches.  A narrow rock ledge juts from the mountainside,
+providing a brief respite from the rigors of the climb.
+~
+[Eliza] done
+~
+167247872 5 9 0
+D4
+~
+~
+0 -1 33008 10 10 5
+D5
+~
+~
+0 -1 33054 10 10 5
+E
+forest~
+A thick, rolling fogbank obscures most of the forest, leaving only the
+tips of the trees visible.  A sparse growth of pine trees straggle across
+the landscape near the road, with the true start of the forest some
+distance north of here.  The treeline is nearly swallowed up in the fog,
+but a few ghostly shapes of small trees can be seen directly north.
+~
+E
+pine fir evergreen trees~
+The few trees near the road lend a strong, clean scent of pine to the air. 
+Their branches are blanketed with fluffy white snow, and tiny icicles
+drip from the ever-green needles.  Small piles of snow huddle under the
+trees, beneath the shade of the branches.  Elsewhere on the trail are
+muddy pools of slush, where the sun has melted the snow.
+~
+E
+rock ledge~
+A solid chunk of granite protrudes from the mountainside, forming a ledge
+just wide enough to sit on.  The rock slopes slightly upwards, making it
+a little less likely for potential sitters to slide off and plunge to the
+rocks below.  Some slush and a few bits of rock lie nestled in the V
+formed by the sloping ledge and the face of the mountain.
+~
+A
+~
+iuouo~
+if( !is_player( ch ) ) {
+  act_notchar( #confusion, ch );
+  end;
+}
+if( find_stat( ch, level ) < 31 )
+  i = 5d10;
+else if( find_stat( ch, level ) < 61 )
+  i = 10d10+100;
+else
+  i = 20d10+200;
+if( is_mounted( ch ) ) {
+  act_tochar( #dismount, ch );
+  end;
+}
+if( find_stat( ch, dex ) < random( 6, 13 ) ) {
+  act_tochar( #stumble, ch );
+  act_notchar( #rstumble, ch );
+  end;
+}
+if( find_skill( ch, climb ) < random( 6, 9 )) {
+  act_tochar( #fail_climb, ch );
+  act_notchar( #rfail_climb, ch );
+  wait( 1 );
+  transfer( ch, find_room( 33054 ) );
+  act_notchar( #fall_down, ch );
+  damage( mob, ch, i, physical, "the fall" );
+  end;
+}
+continue;
+~
+E
+to_char~
+@cPausing for a time in the chill fog to catch your breath, you begin the
+steep ascent upward along the rocky slope.@n 
+~
+E
+to_room~
+@cPausing for a time in the chill fog to catch $s breath, $n begins the
+steep ascent upward along the rocky slope.@n 
+~
+E
+confusion~
+@c$n looks up the slope, refusing to climb.@n
+~
+E
+dismount~
+@cLooking up, you decide to dismount before attempting the ascent.@n 
+~
+E
+stumble~
+@cYou lose you footing and slip back to the narrow ledge, unable to
+navigate the climb.@n 
+~
+E
+rstumble~
+@c$n loses $s footing and slips back to the narrow ledge, unable to
+navigate the climb.@n 
+~
+E
+fail_climb~
+@cYour hand slips from an icy hold and you tumble all the way to the
+bottom of the slope.@n 
+~
+E
+rfail_climb~
+@c$n's hand slips from an icy hold and $e tumbles all the way to the
+bottom of the slope.@n 
+~
+E
+fall_down~
+@n$n comes tumbling down to slope to land in a help of scrapes and
+bruises.@n 
+~
+!
+0 0 0
+A
+~
+wnklaw~
+continue;
+// -- disabled, bugged acode
+if( !is_player( ch ) ) {
+  act_notchar( #confusion, ch );
+  end;
+  }
+if( find_stat( ch, level ) < 31 )
+i = 5d10;
+else if( find_stat( ch, level ) < 61 )
+  i = 10d10+100;
+else
+  i = 20d10+200;
+if( is_mounted( ch ) ) {
+  act_tochar( #dismount, ch );
+  end;
+  }
+if( find_stat( ch, dex ) < random( 6, 13 ) ) {
+  act_tochar( #stumble, ch );
+  act_notchar( #rstumble, ch );
+  end;
+  }
+if( find_skill( ch, climb ) < random( 6, 9 )) {
+  act_tochar( #fail_climb, ch );
+  act_notchar( #rfail_climb, ch );
+  wait( 1 );
+  transfer( ch, find_room( 33054 ) );
+  act_notchar( #fall_down, ch );
+  dam_message( ch, i, "message" );
+  mob = mob_in_room( 2264, find_room( 78284 ) );
+  inflict( ch, mob, i, "message" );
+  end;
+  }
+continue;
+~
+E
+to_char~
+@cPausing for a time in the chill fog to catch your breath, you continue
+the steep descent down the rocky slope.@n 
+~
+E
+to_room~
+@cPausing for a time in the chill fog to catch $s breath, $n continues
+the steep descent down the rocky slope.@n 
+~
+E
+confusion~
+@c$n shakes $s head, refusing to attempt the descent.@n
+~
+E
+dismount~
+@cGuaging the descent, you decide to make it on foot and not mounted.@n
+
+~
+E
+stumble~
+@cSlipping as you start the climb, you scramble back to the narrow
+ledge.@n 
+~
+E
+rstumble~
+@cSlipping as $e starts the climb, $n scrambles back to the narrow
+ledge.@n 
+~
+E
+fail_climb~
+@cYou hand slips from its icy hold and you tumble all the way to the
+bottom of the steep slope.@n 
+~
+E
+rfail_climb~
+@c$n's hand slips from its icy hold and $e tumbles all the way down to
+the bottom of the steep slope.@n 
+~
+E
+fall_down~
+@c$n comes tumbling down the slope, landing in a pile of scrapes and
+bruises.@n 
+~
+!
+0 0 0
+A
+2 sleep~
+~
+act_tochar( #nosleep, ch );
+act_notchar( #onosleep, ch );
+end;
+~
+E
+nosleep~
+@cSleeping here would be unwise.  The least wrong move could send you
+tumbling to your death.@n 
+~
+E
+onosleep~
+@c$n tries to settle down on the slippery rocks, but nearly loses $s grip.. 
+rising to $s feet again carefully.@n
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cPausing for a time in the chill fog to catch your breath, you begin the
+steep ascent upward along the rocky slope.@n 
+~
+E
+to_room~
+@cPausing for a time in the chill fog to catch $s breath, $n begins the
+steep ascent upward along the rocky slope.@n 
+~
+!
+3 0 16
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cPausing for a time in the chill fog to catch your breath, you continue
+the steep descent down the rocky slope.@n 
+~
+E
+to_room~
+@cPausing for a time in the chill fog to catch $s breath, $n continues
+the steep descent down the rocky slope.@n 
+~
+!
+3 0 32
+1121 9 1509949540 3 0
+1121 9 1509949540 3 0
+-1
+S
+
+#33054
+Cairn Mountain Road - Steep Slope~
+Ancient trees rise up around the mountain path, their limber snow-kissed
+branches casting shifting shadows across its treacherous course. 
+Shifting clouds of fog and mist have left their mark on grey granite
+boulders, bequeathing an intricate tracery of ice across the cold,
+inanimate stone.  Sound and vision are distorted in the heavy dank air,
+echoing eerily through the forested slopes.
+~
+[Eliza] done
+~
+167247872 5 9 0
+D0
+~
+~
+0 -1 33055 10 10 5
+D1
+~
+~
+0 -1 33076 10 10 5
+D4
+~
+~
+0 -1 33053 10 10 5
+E
+trees branches shadows~
+Towering far above their younger bretheren, these trees have seen
+countless winters.  The brightness of the light reflected from the
+snow-blanketed trees is contrasted sharply by the dark, inky shadows that
+reach across the path.
+~
+E
+tracery ice boulders~
+Ice creeps across the stones as if breaths of fog were frozen in time. 
+It has built up over the years, layer upon delicate layer, silently
+reaching across the mountains in intricate patterns inscrutable to
+mortals.  Light reflects from this frozen surface in a crystalline
+display of radiance.
+~
+A
+~
+uiyiuy~
+if( !is_player( ch ) ) {
+  act_notchar( #confusion, ch );
+  end;
+  }
+if( is_mounted( ch ) ) {
+  act_tochar( #dismount, ch );
+  end;
+  }
+if( find_stat( ch, dex ) < random( 6, 13 ) ) {
+  act_tochar( #stumble, ch );
+  act_notchar( #rstumble, ch );
+  end;
+  }
+if( find_skill( ch, climb ) < random( 6, 9 )) {
+  act_tochar( #fail_climb, ch );
+  act_notchar( #rfail_climb, ch );
+  end;
+  }
+continue;
+~
+E
+to_char~
+@cYou begin the steep and difficult climb up the rugged mountainside.@n
+~
+E
+to_room~
+@c$n begins the steep and difficult climb up the rugged mountainside.@n
+~
+E
+confusion~
+@cBacking away, $n refuses to climb the treacherous slope.@n 
+~
+E
+dismount~
+@cGauging the climb, you decide to make it on foot.@n
+~
+E
+stumble~
+@cLosing your footing, you drop back to a flat section of the path.@n
+~
+E
+rstumble~
+@cLosing $s footing, $n drops back to a flat section of the path.@n 
+~
+E
+fail_climb~
+@cHalfway up the slope, your hand slips from its icy hold and you tumble
+back down to the ground.@n 
+~
+E
+rfail_climb~
+@cHalfway up the slope, $n's hand slips from its icy hold, and $e tumbles
+down the slope to the ground.@n 
+~
+!
+0 0 16
+A
+~
+~
+send_to_room( #shape, room );
+~
+E
+shape~
+@cBarely seen through the shifting, rolling fog, vague dark shapes move
+silently among the distant trees.@n 
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cThe path flattens out for a time, as you make your way northward.@n 
+~
+E
+to_room~
+@cThe path flattens out for a time, as $n makes $s way northward.@n
+~
+!
+3 0 1
+2505 9 1509949540 3 0
+244 9 1509949540 3 0
+-1
+S
+
+#33055
+Cairn Mountain Road~
+The road here rises gradually to the north, as it cuts east and south
+across a cold, icy slope dotted with a variety of vegetation, icicles
+hanging from their branches.  Below, dark shapes creep through the
+cloudbank of yet more struggling life, with vast silhouetted copses of
+trees forming the larger shadows of a dense, virgin forest.  To the
+south, the grey rock of the mountain pass, hides behind the thick layer
+of clouds.
+~
+[Eliza] done
+~
+167247872 5 9 0
+D1
+~
+~
+0 -1 33056 10 10 5
+D2
+~
+~
+0 -1 33054 10 10 5
+E
+slope vegetation icicles~
+Across the slope, pine, fir and holly bush branches have been turned into
+glistening chandeliers by the icicles coating them.  Thick piles of
+pristine snow cover the ground underneath the trees.
+~
+E
+trees forest cloudbank~
+Through the clouds, dense clusters of trees mesh together to form an
+ancient forest.  Most of the trees have a thin dusting of snow on their
+upper branches, making them difficult to see clearly through the clouds
+and fog.
+~
+E
+snow piles~
+The snow has piled up in the shade under the trees.  Attached to the
+trunk of one particularly large pine, a patch of grey-green lichens that
+vaguely resembles a humanoid face.
+~
+E
+humanoid face~
+Dry grey-green lichens form a face that seems to be grimacing from the
+cold.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou head south across a relatively flat section of the narrow path.@n
+~
+E
+to_room~
+@c$n heads south across a relatively flat section of the narrow path.@n
+~
+!
+3 0 4
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou continue eastward along the rising path.@n
+~
+E
+to_room~
+@c$n continues eastward along the rising path.@n
+~
+!
+3 0 2
+-1
+S
+
+#33056
+Cairn Mountain Road~
+As the mountain breaks free of the thickest of the cloud layers further
+up its rocky slopes, the path shows the dramatic effects of the moisture. 
+To the north, the lower-rising foothills ripple against the sky,
+blanketed in a verdant sea of healthy green forest.  Along the upslopes
+to the south, the cloudbank casts a dark shadow over grey stone,
+obscuring nearly everything in that direction.  The mountains have
+reached their northern limit here, their power spent among these
+foothills.
+~
+[Eliza] done
+~
+167247872 5 9 0
+D0
+~
+~
+0 -1 33057 10 10 5
+D3
+~
+~
+0 -1 33055 10 10 5
+E
+path~
+The path here is narrowed by the branches of the countless pine and fir
+trees surrounding it, the surface irregular from the network of gnarled
+roots.  Considering the condition of the snow bedecked branches, it is
+unlikely that the roots have been exposed by passing traffic.  Along the
+south side of the trees is a jumble of stones and rocks, probably washed
+down the mountainside during the spring thaw.
+~
+E
+foothills forest~
+The foothills to the north are covered by a deep green forest.  Pines,
+firs, and spruces make up the vast majority of the trees in the ancient
+woods.  Drifting through the trees is the faint din of abundant wildlife.
+~
+E
+south mountains~
+The mountains cast a shadow over the area but extend no further.  In the
+shadows cast by the mountains, snow still covers the ground.  The fog
+thins out as the light strikes it outside the confines of the shadows.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou follow the downward-sloping path to the west.@n
+~
+E
+to_room~
+@c$n follows the downward-sloping path to the west.@n
+~
+!
+3 0 8
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cThe path winds through the close-growing trees as you follow it
+northward.@n 
+~
+E
+to_room~
+@cThe path winds through the close-growing trees as $n follows it
+northward.@n 
+~
+!
+3 0 1
+2506 9 1509949540 3 0
+204 9 1509949540 3 0
+-1
+S
+
+#33057
+Cairn Mountain Road - Foothills~
+The cloudbanks that hover over the land of the northern upslopes have not
+spent all of their energy on the mountain, but have spread a blanket over
+this countryside below.  Thin grasses struggle to survive the inclimate
+weather at the base of the giant mountain range, slowly growing in every
+crack, breaking apart the rocks into nutrients and creating a place for
+themselves.
+~
+[Eliza] done
+[Belgar] inclimate -> inclement I suspect
+~
+167247872 4 9 0
+D0
+~
+~
+0 -1 33061 10 10 5
+D2
+~
+~
+0 -1 33056 10 10 5
+E
+grasses cracks~
+Pushing their roots into the cracks in the rock are small patches of
+grass.  The grass doesn't look very healthy, and much of it is half-dead,
+but in such an inhospitable climate it is amazing that it is here at all.
+~
+E
+cloudbank blanket~
+The cloudbank looks more like fog than a true cloud.  It also seems alot
+thinner than the fog covering the mountains to the south.
+~
+A
+~
+~
+send_to_room( #wind, room );
+~
+E
+wind~
+@cA chill breeze blows down the slopes, whistling through the
+close-growing trees.@n 
+~
+!
+2 150 4
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cThe path winds through the close-growing trees as you follow it
+southward.@n 
+~
+E
+to_room~
+@cThe path winds through the close-growing trees as $n follows it
+southward.@n 
+~
+!
+3 0 4
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cMoving northward, you continue along the path through the foothills.@n
+~
+E
+to_room~
+@cMoving northward, $n continues along the path through the foothills.@n
+~
+!
+3 150 1
+885 9 1509949540 3 0
+-1
+S
+
+#33058
+Small Bog~
+You stand in a morass of mud, in what is a small bog cut in between
+gigantic slabs of rocks which constitute the mountain range.  Somewhere,
+a trickling spring must feed this miniature wetlands, but the terrain
+prevents even the most persistent investigations.
+~
+~
+167247872 3 9 0
+D2
+~
+~
+0 -1 33060 10 10 5
+D3
+~
+~
+0 -1 33022 10 10 5
+1974 17 1509949540 -2 0
+-1
+S
+
+#33059
+Small Bog~
+You stand in a morass of mud, in what is a small bog cut in between
+gigantic slabs of rocks which constitute the mountain range.  Somewhere,
+a trickling spring must feed this miniature wetlands, but the terrain
+prevents even the most persistent investigations.
+~
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 33022 10 10 5
+D1
+~
+~
+0 -1 33060 10 10 5
+-1
+S
+
+#33060
+Small Bog~
+You stand in a morass of mud, in what is a small bog cut in between
+gigantic slabs of rocks which constitute the mountain range.  Somewhere,
+a trickling spring must feed this miniature wetlands, but the terrain
+prevents even the most persistent investigations.
+~
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 33058 10 10 5
+D3
+~
+~
+0 -1 33059 10 10 5
+-1
+S
+
+#33061
+Cairn Mountain Road - Foothills~
+Situated squarely in the middle of this section of the winding path, a
+giant hoof-shaped footprint marks the loose soil clearly and deeply. 
+Wispy tendrils of lighter fog curl in and about the indentation,
+revealing a tenacious yellow blossom clinging to life in the cold
+confines of the northern clime.  The chill damp shadows gather densely in
+the ever-thickening trees of the antediluvian forest, creating a
+patchwork quilt of lightness and dark.
+~
+[Eliza] done
+~
+167247872 4 9 0
+D2
+~
+~
+0 -1 33057 10 10 5
+D5
+~
+~
+0 -1 33062 10 10 5
+E
+footprint hoof indentation~
+Oddly conspicuous in the mist-swept soil, the indentation is vaguely
+shaped like a large hoof , pressed firmly and with notable weight. 
+Almost defiantly, the small yellow flower stands tall within the relative
+valley of the print.  Strangely, the hoof-print is solitary and no
+companion is visible..  the surrounding ground perfectly tranquil and
+unmarred by further tracks.
+~
+A
+~
+~
+send_to_room( #boom, room );
+~
+E
+boom~
+@cFaintly, at the edge of hearing, an odd noise emerges through the
+rolling fog.  Distorted by distance, it sounds vaguely like the crashing
+of waves against a storm-torn shore.@n 
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cMoving southward, you continue along the path through the foothills.@n
+~
+E
+to_room~
+@cMoving southward, $n continues along the path through the foothills.@n
+~
+!
+3 0 4
+A
+~
+~
+if( !is_mounted( ch ) ) {
+if( find_stat( ch, dex ) < random( 9, 16 ) ) {
+  act_tochar( #knees, ch );
+  act_notchar( #rknees, ch );
+  dam_message( ch, 1d2, "the sudden twist" );
+  }
+}
+continue;
+~
+E
+to_char~
+@cThe winding path drops sharply as you continue downward.@n
+~
+E
+to_room~
+@cThe winding path drops sharply as $n continues downward.@n
+~
+E
+knees~
+@cSlipping on a scattering of loose stone, you twist your ankle.@n 
+~
+E
+rknees~
+@cSlipping on a scattering of loose stone, $n twists $s ankle.@n
+~
+!
+3 0 32
+-1
+S
+
+#33062
+Cairn Mountain Road - Foothills~
+At the bottom of the foothill, the fog has settled and made a murky soup
+out of the lowest point of the valley.  The effect is quite dramatic in
+the center of the dip, where a translucent puddle has formed.  The path
+leads directly through this mire, which could conceal anything within its
+hidden depths.  The ground here is cracked and torn, like it was
+disturbed in the past and is only just healing the scars.
+~
+[Eliza] done
+~
+167247880 4 9 0
+D1
+~
+~
+0 -1 33063 10 10 5
+D4
+~
+~
+0 -1 33061 10 10 5
+E
+soup fog puddle~
+Fog coats the valley in a thick mist.  Not even the tips of trees can be
+seen escaping the thick fog, nor do wan shadows give hints on what may be
+within the mist.  It is featureless; a white void that reaches for miles,
+concealing all within.
+~
+E
+foothill valley~
+Giant pine trees abound near the shattered remnants of a trail.  Massive
+boulders lie cracked in half, shattered with incredible force.  The
+forest continues into the valley but is quickly lost in the foggy depths. 
+Some hazy shapes of trees can be seen at the far side of the valley,
+continuing on to the east.
+~
+A
+~
+iuoiu~
+if( !rflag( reset0, room ) ) {
+  if( rflag( reset1, room ) ) {
+    act_tochar( #blocks, ch );
+    end;
+    }
+  }
+if( mob_in_room( 2397, room ) ) {
+  act_tochar( #blocks, ch );
+  end;
+  }
+continue;
+~
+E
+blocks~
+@yThe ground has risen up in front of you, making passage to the east
+impossible!@n
+~
+!
+3 0 2
+A
+~
+~
+if( !is_player( ch ) )
+end;
+if( mob_in_room( 2397, room ) )
+end;
+if( !rflag( reset0, room ) )
+end;
+remove_rflag( reset0, room );
+send_to_room( #escape, room );
+wait( 2 );
+send_to_room( #ripfree, room );
+wait( 2 );
+send_to_room( #stand, room );
+mload( 2397, room );
+~
+E
+escape~
+@yAs you climb down the foothill, the earth begins to rise up in front of
+you, like something was escaping the ground itself!@n
+~
+E
+ripfree~
+@yThe earth buckles from the force pushing from below the ground.
+As the cracks widen, a great arm thrusts through the soil and grips the
+ground, ripping the rocks apart!@n
+~
+E
+stand~
+@RThrusting itself from the ground like a great sentinel, a massive
+minotaur lurches upwards from its earthy home.  Its blood red eyes
+look at you with the fury of a guardian disturbed.@n
+~
+!
+0 0 16
+A
+~
+~
+if( !is_mounted( ch ) ) {
+if( find_stat( ch, dex ) < random( 9, 16 ) ) {
+  act_tochar( #knees, ch );
+  act_notchar( #rknees, ch );
+  dam_message( ch, 1d2, "the impact" );
+  }
+}
+continue;
+~
+E
+to_char~
+@cThe path climbs a sharp slope as you continue upward.@n
+~
+E
+to_room~
+@cThe path climbs a sharp slope as $n continues upward.@n
+~
+E
+knees~
+@cYou slip on a scattering of loose rock, scraping your knees as you
+slide down the slope.@n 
+~
+E
+rknees~
+@c$n slips on a scattering of loose roc, scraping $s knees as $e slides
+down the slope.@n 
+~
+!
+3 0 16
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cSkirting the puddled water, you move on toward the east.@n
+~
+E
+to_room~
+@cSkirt the puddled water, $n moves on toward the east.@n
+~
+!
+3 0 2
+-1
+S
+
+#33063
+Cairn Mountain Road~
+The fog here has taken on an almost green hue, as if the air were getting
+moldy as it sits here, curling among the densely packed trees.  The cold,
+dank chill in the silent air almost seems palpable in the countryside. 
+The dead summer grass cracks underfoot as the brittle ice tufts move one
+final time.  A shallow gully lies to the east just off the narrow,
+winding path.
+~
+[Eliza] done
+~
+167247872 4 9 0
+D0
+~
+~
+0 -1 33065 10 10 5
+D1
+~
+~
+0 -1 33064 10 10 5
+D3
+~
+~
+0 -1 33062 10 10 5
+E
+dingy green fog~
+The fog seems to be a less intense version of the green of the
+surrounding trees.  Possibly the fog has refracted the color of all the
+trees through each tiny water droplet.
+~
+E
+grass dead ice~
+The grass looks like it wasn't very healthy during the summer, and now is
+completely dead.  The ice caked onto the fragile little tufts has done
+its work.
+~
+E
+trees forest~
+The pine and fir trees have grown very close together here.  Their
+branches create a thick barrier preventing passage through them. 
+Underneath their branches you can see an accumulation of dirty snow.
+~
+E
+gully~
+The gully to the east looks like it comes to an abrubt end and is really
+little more than a cul-de-sac.  It looks like there are some strange
+looking rocks along the edges of the cul-de-sac.  In the middle of the
+gully is a lone pine sapling.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cDucking under the low branch of an encroaching pine, you enter the
+shallow gully to the east.@n 
+~
+E
+to_room~
+@cDucking under the low branch of an encroaching pine, $n enters the
+shallow gully to the east.@n 
+~
+!
+3 0 2
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou continue along the path to the north.@n
+~
+E
+to_room~
+@c$n continues along the path to the north.@n
+~
+!
+3 0 1
+244 9 1509949540 3 0
+-1
+S
+
+#33064
+Cairn Mountain Road - Foothills~
+The foothills reach an odd cul-de-sac here, with an accumulation of rocks
+and petrified wood collected in a small gulley.  This odd collection has
+long since been covered in dead and dying grasses and is stuck into the
+hillside by dirt and rocks, yet strangely still in carefully arranged
+places.  A slender pine sapling sprouts from the rocky soil, its
+needle-covered branches shading a clump of dirty snow at its foot.
+~
+[Eliza] done
+~
+167247872 3 9 0
+D3
+~
+~
+0 -1 33063 10 10 5
+E
+Rocks~
+Looking more closely at the collection of rocks, you notice that each one
+has a tiny fossilized skeleton in it.  While you cannot seem to identify
+any particular bone, each rock has preserved a different pattern.  While
+the gulley only travels a short distance, you can easily travel back to
+the west and the main road.
+~
+E
+pine sapling snow branches~
+The pine sapling provides enough shade for a dirty clump of snow to
+survive in the middle of the cul-da-sac.  The snow seems to contain an
+unusual number of small rocks in it.
+~
+E
+dead grasses hillside~
+The strange looking rocks along the hillside are covered with dead and
+dying grasses.  The grasses seem unable to cope with the cold and in
+places patches of snow have squeezed the grass out entirely.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cDucking under the low branch of an ancient pine, you leave westward
+toward the path.@n 
+~
+E
+~
+@cDucking under the low branch of an ancient pine, $n leaves westward
+toward the path.@n 
+~
+!
+3 0 8
+A
+search~
+snow~
+if( rflag( reset0, room ) ) {
+remove_rflag( reset0, room );
+act_tochar( #search, ch );
+act_notchar( #rsearch, ch );
+wait( 1 );
+if( random( 1, 2 ) == 1 ) {
+act_tochar( #find, ch );
+act_notchar( #rfind, ch );
+obj_to_char( oload( 1974 ), ch );
+end;
+}
+act_tochar( #nada, ch );
+act_notchar( #rnada, ch );
+}
+act_tochar( #already, ch );
+~
+E
+search~
+@c You search through the snow, making your hands quite cold. @n
+~
+E
+rsearch~
+@c$n searches through the snow, blowing on his hands to keep them warm. @n
+~
+E
+find~
+@cJust when you think about quitting, you find a handful of gravel.@n
+~
+E
+rfind~
+@c$n stubbornly searches through the cold snow and pulls out a handful of gravel.@n
+~
+E
+rnada~
+@c$n gives up looking through the cold snow empty handed.@n
+~
+E
+already~
+@cThe snow has already been searched through and there isn't anything of value left.@n
+~
+E
+nada~
+@cAll you get for your search in the snow is half-frozen fingers.@n
+~
+!
+9 0 0
+-1
+S
+
+#33065
+Cairn Mountain Road~
+Thick fog obscures your view of the foothills ahead.  The icy crackling
+underfoot has been constant along this section of the mountain road, yet
+reassuring as vision gets blurred by the thick, green-tinged fog.  At the
+northern end of this stretch, a foothill has been cleft by nature,
+forcing travelers to skirt the nearly vertical slope.
+~
+[Eliza] done
+~
+167247872 4 9 0
+D0
+~
+~
+0 -1 33066 10 10 5
+D2
+~
+~
+0 -1 33063 10 10 5
+E
+foothill slope~
+The foothills gradually descend in a stairstep fashion until they
+disappear behind the veil of fog that seems to lay perpetually over the
+world here.  Not too far ahead, a hill has been split in twain by nature,
+whether by earthquake or ice can't be determined.  The remaining slop is
+sheer and and peppered with loose rock and covered with a film of
+ice-covered mud, making its ascent or descent treacherous.
+~
+A
+~
+ufyfhas~
+act_tochar( #climb, ch );
+act_notchar( #rclimb, ch );
+~
+E
+climb~
+@cYou walk to the edge and find that in this thick fog, you'll need to
+climb down.@n 
+~
+E
+rclimb~
+@c$n walks to the edge of the fog and stops, looking downwards.@n
+~
+!
+3 0 16
+A
+climb~
+<asdfg>~
+if( find_skill( ch, climb ) > 1 ) {
+  act_tochar( #climb, ch );
+  act_notchar( #rclimb, ch );
+  transfer( ch, find_room( 33066 ) );
+  act_notchar( #arrive, ch );
+  end;
+  }
+act_tochar( #slip, ch );
+act_notchar( #rslip, ch );
+transfer( ch, find_room( 33066 ) );
+act_notchar( #tumble_arrive, ch );
+i = random( 5, 30 );
+mob = mob_in_room( 2264, find_room( 78284 ) );
+inflict( ch, mob, i, "a fall down an icy slope" );
+dam_message( ch, i, "The tumble down the slope" );
+~
+E
+climb~
+@cYou climb down the steep slope.@n
+~
+E
+rclimb~
+@c$n climbs down the steep slope.@n
+~
+E
+arrive~
+@c$n climbs down the slope through the fog.@n
+~
+E
+slip~
+@cYou slip and tumble head over heels down the slope.@n
+~
+E
+rslip~
+@c$n slips and tumbles head over heels down the slope.@n
+~
+E
+tumble_arrive~
+@c$n tumbles down the slope and hurts $mself.@n
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou continue along the path to the south.@n
+~
+E
+to_room~
+@c$n continues along the path to the south.@n
+~
+!
+3 0 4
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cSkirting the vertical slope, you continue past it to the north.@n
+~
+E
+to_room~
+@cSkirting the vertical slope, $n continues past it to the north.@n 
+~
+!
+3 0 1
+2506 9 1509949540 3 0
+-1
+S
+
+#33066
+Cairn Mountain Road~
+The road here collides with a sheer wall where a foothill has cracked, a
+portion of it crumbling to the ground.  While this would normally be a
+simple climb for most travelers, the thick fog has made the passage much
+more difficult.  Overhead, the thick fog nearly blocks out the chill,
+grey sky.  To the north lies a line of dark looming trees, outlined
+against the horizon.
+~
+[Eliza] done
+~
+167247872 4 9 0
+D0
+~
+~
+0 -1 33067 10 10 5
+D2
+~
+~
+0 -1 33065 10 10 5
+E
+road wall foothill~
+The road, such as it is, deadends at a sheer wall, formed from a natural
+split in one of the surrounding hills.  Covered with a thin layer of ice
+and half-frozen mud the climb could only be treacherous.
+~
+E
+fog sky~
+The dense grey fog has blocked out the view of most of the surrounding
+countryside.  Thick tendrils wind in and around the trees that grow close
+upon the path, distorting vision and sound.
+~
+A
+~
+akdjkjf~
+act_tochar( #climb, ch );
+act_notchar( #rclimb, ch );
+~
+E
+climb~
+@cYou walk to the edge and find that in this thick fog, you'll need to
+climb up.@n
+~
+E
+rclimb~
+@c$n walks to the edge of the fog and stops, looking upwards.@n
+~
+!
+3 0 16
+A
+climb~
+<asdfg>~
+if( find_skill( ch, climb ) > 1 ) {
+  act_tochar( #climb, ch );
+  act_notchar( #rclimb, ch );
+  transfer( ch, find_room( 33065 ) );
+  act_notchar( #arrive, ch );
+  end;
+  }
+act_tochar( #slip, ch );
+act_notchar( #rslip, ch );
+i = random( 5, 30 );
+mob = mob_in_room( 2264, find_room( 78284 ) );
+inflict( ch, mob, i, "falling down an icy slope" );
+dam_message( ch, i, "The tumble down the slope" );
+~
+E
+climb~
+@cYou climb up the steep slope.@n
+~
+E
+rclimb~
+@c$n climbs up the steep slope.@n
+~
+E
+arrive~
+@c$n comes scrambling up the cliff.@n
+~
+E
+slip~
+@cYour footing slips and you slide back down to the bottom of the
+cliff.@n 
+~
+E
+rslip~
+@c$n's footing slips and $e slides back down to the bottom of the
+cliff.@n 
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou continue northward through the fog beneath the looming trees.@n
+~
+E
+to_room~
+@c$n continues northward through the fog beneath the looming trees.@n
+~
+!
+3 0 1
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cSkirting the vertical slope, you continue past it to the south.@n
+~
+E
+to_room~
+@cSkirting the vertical slope, $n continues past it to the south.@n
+~
+!
+3 0 4
+-1
+S
+
+#33067
+Cairn Mountain Road~
+The road skirts the edge of the tree line before breaking free to the
+north, twining down towards the shore.  To the south extends a dark and
+ominous fog, as though exhaled by the cool, shadowed forest.  Foothills
+are barely noticeable as the sturdy mountainous trees give way to a brief
+but lush northern stretch of grass and jagged rocks.
+~
+[Guinafaer] Add gnolls east here?
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 33068 10 10 5
+D1
+~
+~
+511 -1 33069 10 10 5
+D2
+~
+~
+0 -1 33066 10 10 5
+E
+treeline foothills grass~
+The foothills of the Cairns descend in a stairstep manner to the north. 
+Not far ahead, the end of the dark forest can be seen, fading into vast
+patches of grass and rocky beach.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou continue southward through the fog beneath the looming trees.@n
+~
+E
+to_room~
+@c$n continues southward through the fog beneath the looming trees.@n
+~
+!
+3 0 4
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou take the path northward into unrelenting darkness.@n
+~
+E
+to_room~
+@c$n takes the path northward into unrelenting darkness.@n
+~
+!
+3 0 1
+2501 9 1509949540 3 0
+-1
+S
+
+#33068
+Cairn Mountain Road~
+The denseness of the thick forest conceals much from view.  Every step is
+unsure because of the blackness blanketing this area.  The fog combines
+with the thin streaks of light penetrating the tree branches to play
+tricks on the eyes.  Silky, silver strands arc across the path in
+crisscrossing patterns, shimmering even in the dimness.  At the edge of
+vision, red eyes glitter in the darkness, as if something wild was
+lurking nearby and waiting.  To the south there is a dim light as though
+in that direction there may at some point be freedom from the deep
+shadows.  To the east the faintly visible path disappears into the trees.
+~
+[Eliza] rdesc done, add extras.
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 33070 10 10 5
+D2
+~
+~
+0 -1 33067 10 10 5
+E
+fog~
+The fog shifts and moves in neverending motion within the darkness of the
+In places, the white billows reach to knee height, in others, wispy
+tendrils curl up and about some of the lower branches of the nearby trees.
+~
+E
+silky silver strands~
+No description.  Silken silvery strands drape across the path and festoon
+every branch and bush along this section of the trail.  Some of the webs
+are fine as a baby's hair and others as thick as a stout cord, and all
+cling to clothing and skin wherever they're disturbed.
+~
+E
+eyes red~
+Glowing red lights, grouped in pairs, appear and disappear within the
+darkness of the trees, as if something or someone was marking intruders
+to their territory.  Although they move no closer, their mere presence is
+unnerving.
+~
+E
+ground down~
+The darkness and ethereal fog conspire to mask the ground underfoot from
+view, the wispy tendrils reaching to knee-level and beyond.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou head down the path to the south toward a lifting of the darkness.@n
+~
+E
+to_room~
+@c$n heads down the path to the south toward of lifting of the darkness.@n
+~
+!
+3 0 4
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou follow the path eastward through the deep dark shadows.@n
+~
+E
+to_room~
+@c$n follows the path eastward through the deep dark shadows.@n
+~
+!
+3 0 2
+205 9 1509949540 3 0
+-1
+S
+
+#33069
+Pathway~
+Under Construction.
+~
+~
+167247872 3 9 0
+D3
+~
+~
+511 -1 33067 10 10 5
+-1
+S
+
+#33070
+Cairn Mountain Road~
+Light is a scarce commodity in this dark forest.  The trees trap it above
+the canopy, the spiders capture it in their thick webs, the fog breaks
+it, diffusing the knife-thin rays into nothingness, eating it like a
+half-starved orphan.  The woods are dark and quiet, and every sound
+betrays waking nightmares even to the most hearty souls.
+~
+[Eliza] done
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 33071 10 10 5
+D3
+~
+~
+0 -1 33068 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou follow the path westward through the deep dark shadows.@n
+~
+E
+to_room~
+@c$n follows the path westward through the deep dark shadows.@n
+~
+!
+3 0 8
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cContinuing to the east, you wander along the path through the trees.@n
+~
+E
+to_room~
+@cContinuing to the east, $n wanders along the path through the trees.@n
+~
+!
+3 0 2
+-1
+S
+
+#33071
+Cairn Mountain Road~
+Spider webs festoon the close-growing trees, draping from one to the
+other across the path.  Lightly covered in a thin layer of ice, they
+shimmer slightly creating a fairyland of untold beauty, even in the
+deepest of shadows.  The darkness here is all the more pronounced in this
+place, with the webwork patterns defining the path where they have been
+broken away.  The trail continues to the east and west through the
+encroaching forest.
+~
+[Eliza] done
+~
+167247880 11 9 0
+D1
+~
+~
+0 -1 33072 10 10 5
+D3
+~
+~
+0 -1 33070 10 10 5
+E
+webs pattern ice~
+Ice-covered webs both small all large, draped across the path and between
+the close-growing trees.  The slender filaments shimmer, dancing in the
+slighest breeze.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cContinuing to the west, you wander along the path through the trees.@n
+~
+E
+to_room~
+@cContinuing to the west, $n wanders along the path through the trees.@n
+~
+!
+3 0 8
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou follow the path eastward through the trees.@n
+~
+E
+to_room~
+@c$n follows the path eastward through the trees.@n
+~
+!
+3 0 2
+A
+~
+~
+mob = mob_in_room( 2403, room );
+if( mob ) {
+  remove_rflag( reset0, room );
+  end;
+  }
+if( !is_player( ch ) )
+  end;
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #caught, ch );
+  act_notchar( #rcaught, ch );
+  do_spell( web, mob, ch );
+  mload( 2403, room );
+  rch = rand_player( room );
+  mob = mob_in_room( 2403, room );
+  attack( mob, rch, 4d5+30, "ice-cold leg slash" );
+  }
+~
+E
+caught~
+You get caught in a spider's web.
+~
+E
+rcaught~
+$n got caught in a web.
+~
+!
+0 0 10
+-1
+S
+
+#33072
+Cairn Mountain Road~
+The mammoth trunk of a felled pine sprawls across the winding forest
+track, the needles stripped from its branches forming a soft carpet
+underfoot.  Grey-green lichen and velvety moss cover the long-dead giant
+that gives itself back to nature with each passing year.  Ancient trees
+crowd the path here, the shadows from their entertwining branches so deep
+that even the ever-present fog can only be felt but not seen.  Ahead to
+the north, a lifting of the darkness reveals the dull outline of copse of
+firs rising against the horizon.
+~
+[Eliza] done
+~
+167247872 11 9 0
+D0
+~
+~
+0 -1 33073 10 10 5
+D3
+~
+~
+0 -1 33071 10 10 5
+E
+trunk lichen moss giant~
+The trunk of the pine is old, felled long ago.  Most of its bark and
+smaller branches have rotted away, and the wood shows signs of cracking
+and splitting.  The smaller of the forest creatures, all manner of
+beetles and other bugs have made their homes amid the deteriorating wood. 
+Patches of moss and lichen have clawed their way into the smallest of
+crevices, taking nourishment from the tree.
+~
+E
+shadows fog~
+Within the near-perfect darkness of the ancient forest, cold unseen
+fingers brush against exposed skin, leaving a light film of moisture over
+everything they touch.
+~
+E
+rickety sign~
+The sign reads:
+
+Dulthor's Hold - North
+Boat Dock - East
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou follow the path westward through the foothills.@n
+~
+E
+to_room~
+@c$n follows the path westward through the foothills.@n
+~
+!
+3 0 8
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou heave yourself up and over the massive trunk and move on to the
+north.@n 
+~
+E
+to_room~
+@c$n heaves $mself up and over the massive trunk and move on to the
+north.@n 
+~
+!
+3 0 1
+-1
+S
+
+#33073
+Road's End - Near the Shore~
+As the darkest parts of the forest retreat into the distance, a misty
+shoreline claims the interest as it beckons to the north.  The fog has
+thinned in this place, with only a slight hint of the deeper forest murk,
+it has a briny tingle.  Refreshing on the skin, the slight sting of salt
+brings numb nerves back to life and the sound of waves lapping at the
+shore provides a sense of calm.  A few scant patches of grass grow along
+the fading path in homage to the life-giving properties of moving water. 
+A path branches off toward the north, leading toward a quaint village
+there.  There is a rickety old @Csign@n beside the road.
+~
+[Eliza] done
+~
+167247880 4 9 0
+D0
+~
+~
+0 -1 36500 10 10 5
+D1
+~
+~
+0 -1 52500 10 10 5
+D2
+~
+~
+0 -1 33072 10 10 5
+E
+shoreline 1 north~
+Barely seen through the swirling fog, the northern coastline meets the
+rollng waves of a salt-water sea.  Rock strewn, the shore is peppered
+with patches of melting snow lying in the leeward shadows of the largest
+weatherworn boulders.
+~
+E
+grass patches~
+A scattering of scraggly patches of dead, dry grass marks the borders of
+the ribbon-like path.  The brown-colored stalks shimmer like polished
+glass where ice has gathered and clung.
+~
+E
+sign~
+The sign reads:
+
+Dulthor's Hold - North
+Boat Dock - East
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou make your way along the path toward the east.@n
+~
+E
+to_room~
+@c$n makes $s way along the path toward the east.@n
+~
+!
+3 0 2
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou follow the road back into the depths of the forest.@n
+~
+E
+to_char~
+@c$n follows the road back into the depths of the forest.@n
+~
+!
+3 0 4
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou turn to the north, following the path toward the village.@n
+~
+E
+to_room~
+@c$n turns to the north, following the path toward the village.@n
+~
+!
+3 0 1
+1410 17 1509949540 -2 0
+-1
+S
+
+#33074
+Hilly Slope~
+Under Construction.
+~
+~
+167247872 3 9 0
+D3
+~
+~
+0 -1 33043 10 10 5
+D4
+~
+~
+0 -1 33042 10 10 5
+-1
+S
+
+#33075
+Hilly Slope~
+Under Construction.
+~
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 33042 10 10 5
+D1
+~
+~
+0 -1 33041 10 10 5
+-1
+S
+
+#33076
+Side Path Off the Cairn Mountain Road~
+Tall slender pine cluster around the beginnings of a narrow, weatherworn
+trail, snaking its course through the mountains.  Rising to the east is
+the cracked and pitted face of a shale cliff, the roadway launching
+across it despite the difficult terrain.  Delicate bluebells thrive at
+the path's edge, their foliage sheltered from the biting mountain winds
+by the towering trees.
+~
+[Guinafaer] Rdescs reviewed.
+Done.
+~
+167247880 5 9 0
+D1
+~
+~
+0 -1 33077 10 10 5
+D3
+~
+~
+0 -1 33054 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gPushing aside a needle-laden pine branch, you continue to the east.@n
+~
+E
+not_char~
+@gPushing aside a needle-laden pine bough, $n continues eastward.@n
+~
+!
+3 0 2
+-1
+S
+
+#33077
+Steep Slope - Along a Mountain Trail~
+Mounds of shale and slate lie scattered across the mountain road, their
+jagged and cracked surfaces eroded by the mountain weather.  An outcrop
+of granite leers across the trail, its grey stone surface flecked with a
+smattering of lichen and immature brambles.  Within the shadow of the
+mountain, the worn path zigzags upward, dissapearing from view behind the
+spire.
+~
+[Guinafaer] rdesc reviewed.
+[Guinafaer] Leaving codes done.
+~
+167247872 5 9 0
+D3
+~
+~
+0 -1 33076 10 10 5
+D4
+~
+~
+0 -1 33078 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou scramble up the pile of shale.
+~
+E
+not_char~
+@y$n scrambles up a pile of shale.
+~
+!
+3 0 16
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gPushing aside a needle-laden pine branch, you continue to the west.@n
+~
+E
+to_room~
+@gPushing aside a needle-laden pine bough, $n continues westward.@n
+~
+!
+3 0 8
+-1
+S
+
+#33078
+Steep Slope - Along a Mountain Trail~
+A tundra-like plateau stretches from the rising mountains, the flatter
+land giving rise to a scattering of new growth pines.  Winding through
+the grasss and woods is a rubble-strewn road, its surface marred by years
+of bitter asault by the mountain elements.  A crumbling shale slope
+spirals down to the east, the roadway zigzagging down its steep incline. 
+Flanking the trail is a sizable outcrop of granite, its smooth surface
+speckled with lichen.
+~
+[Guinafaer] rdesc reviewed.
+[Guinafaer] leaving code done.
+[Belgar] grasss -> grass
+[Belgar] asault -> assault
+~
+167247872 5 9 0
+D0
+~
+~
+0 -1 33079 10 10 5
+D5
+~
+~
+0 -1 33077 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou begin your journey along the mountainous road.@n
+~
+E
+not_char~
+@y$n begins $s journey down the long, mountainous road.@n
+~
+!
+3 0 1
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gSlipping and sliding, you descend along a particularly steep mound of
+shale.@n 
+~
+E
+to_room~
+@gSlipping and sliding, $n descends along a particularly steep mound of
+shale.@n 
+~
+!
+3 0 32
+-1
+S
+
+#33079
+Ancient Water Course - Mountain Trail~
+An ancient water-corse has bored a smooth tunnel into the mountain's
+face, the roadway descending into the natural passageway.  Bands of
+orange and rust colored minerals spiral through the rocks, their surfaces
+polished from the water that once rushed through.  A mountain plateau
+spreads southward, its tundra-like terrain speckled with slender pines,
+the roadway winding through it on its continuing journey.
+~
+[Guinafaer] Rdesc reviewed.
+leaving south wind across the ridge
+leaving down carefully decend into the tunnel
+[Guinafaer] Leavings done.
+~
+167247872 5 9 0
+D2
+~
+~
+0 -1 33078 10 10 5
+D5
+~
+~
+0 -1 33080 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou wind southward along the ridge road.@n
+~
+E
+to_room~
+@c$n winds southward along the ridge road.@n
+~
+!
+3 0 4
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou carefully make the descent into the tunnel.@n
+~
+E
+to_room~
+@y$n carefully makes the descent into the tunnel.@n
+~
+!
+3 0 32
+2506 9 1509949540 3 0
+-1
+S
+
+#33080
+Cairn Mountain Road - Steep Slope~
+The tunnel, carved through the mountain, ends at a basin of rocks and icy
+water, remnant of the ancient river.  Hewn through the stone of the
+eastern wall is a wagon-sized opening, the roadway continuing through it. 
+Algae and lichen coat the walls and ceiling overhead, their speckled
+colors dappling the drag grey granite.  Above, the roadway follows the
+smoothly-bored tunnel upwards and back into the mountains.
+~
+[Guinafaer] Rdesc reviewed.
+[Guinafaer] Leaving done.
+~
+167247872 13 9 0
+D1
+~
+~
+0 -1 33081 10 10 5
+D4
+~
+~
+0 -1 33079 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou wade through the water, sending ripples in all directions
+~
+E
+not_char~
+@y$n wades east, sending ripples out in all directions.
+~
+!
+3 0 2
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yWith some effort, you clamber up the ascent to the road.@n
+~
+E
+to_room~
+@yWith some effort, $n clambers up the ascent to the road.@n
+~
+!
+3 0 16
+2501 9 1509949540 3 0
+-1
+S
+
+#33081
+Cairn Mountain Road - Steep Slope~
+Sheer cliffs rise around the ancient roadway, their fractured surfaces
+assaulted by the ice and wind of the mountain clime.  Westward, the road
+cuts into the very stone itself, passing through an archway of stone and
+on into the darkness.  The peaks of the Cairn Mountains gleam with ice
+and snow, their scarred sides bare of any vegetation larger than tussuck
+and scrub.  Eastwards the road winds through the ravine, its surface
+littered with rocks and rubble.
+~
+[Guinafaer] Rdesc reviewed.
+[Guinafaer] Leaving done.
+~
+167247872 5 9 0
+D1
+~
+~
+0 -1 33082 10 10 5
+D3
+~
+~
+0 -1 33080 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou continue winding along the dusty road to the east.
+~
+E
+not_char~
+@y$n continues down the winding dusty road to the east.
+~
+!
+3 0 2
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou continue westward, striding into darkness.@n
+~
+E
+to_room~
+@y$n continues westward, striding into darkness.@n
+~
+!
+3 0 8
+2434 9 1509949540 3 0
+-1
+S
+
+#33082
+Cairn Mountain Road - Steep Slope~
+Boulders rise around the narrow trail like silent sentinels guarding a
+ward, their chiseled sides clean of any lichen or moss.  Under the
+stone's watchful eye, the road winds through the ravine and begins the
+steep descent steep down a crumbling cliff face.  Westward, the mountains
+rise across the roadway, the path itself entering an arched tunnel
+through the rocks.
+~
+[Guinafaer] Rdesc reviewed.
+[Guinafaer] Leavings done.
+[Belgar] steep descent steep down? remove second steep
+~
+167247872 5 9 0
+D3
+~
+~
+0 -1 33081 10 10 5
+D5
+~
+~
+0 -1 33084 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou scramble down the steep incline.
+~
+E
+not_char~
+@y$n scambles down the steep incline.
+~
+!
+3 0 32
+2501 9 1509949540 3 0
+2505 9 1509949540 3 0
+-1
+S
+
+#33083
+Cairn Mountain Road - Steep Slope~
+The canyon walls rise sharply upwards, approaching vertical at their
+appex.  The steep inclines offer few handholds, the rocks for the most
+part slick and smooth like a sheet of ice.  Ribbons of green ore thread
+through the dull grey stone, perhaps a vein of tin or copper.  Within the
+shadow of the ravine, the ruins of an ancient road wind a tortured path,
+its decaying cobblestones eroded to near destruction.
+~
+[Azerin] idea for dungeon zone here, pick off ore and open hole
+[Guinafaer] rdesc reviewed.
+acode to get ore from here
+[Guinafaer] Leavings done.
+~
+167247872 5 9 0
+D1
+~
+~
+0 -1 59000 10 10 5
+D3
+~
+~
+0 -1 33085 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou move toward the west, along the ruins of the ancient road.@n
+~
+E
+to_room~
+@c$n moves toward the west, along the ruins of the ancient road.@n
+~
+!
+3 0 8
+1121 9 1509949540 3 0
+885 9 1509949540 3 0
+-1
+S
+
+#33084
+Cairn Mountain Road - Steep Slope~
+Gorse bushes spread across the steep banks of the ravine, their dull
+green foliage covered in spikes designed to make them less appetizing for
+the mountain fauna.  Bright yellow flowers cover them, their sweet
+perfume filling the gorge.  The roadway winds along the rubble-strewn
+basin, its cracked and rutted surface deteriorated to the point of near
+destruction.  A steep slope of shale and basalt rock rises to the west,
+the trail heading upwards and out of the narrow valley.
+~
+[Guinafaer] rdesc reviewed.
+[Guinafaer] Leavings done.
+[Belgar] missing period on action for moving east
+~
+167247872 5 9 0
+D1
+~
+~
+0 -1 33085 10 10 5
+D4
+~
+~
+0 -1 33082 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou slowly make your way across a rubble-strewn road
+~
+E
+not_char~
+@y$n slowly makes his way though a boulder-strewn path.
+~
+!
+3 0 2
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou struggle to climb up the steep slope.@n
+~
+E
+to_char~
+@y$n struggles to climb up the steep slope.@n
+~
+!
+3 0 16
+244 9 1509949540 3 0
+28 9 1509949540 3 0
+-1
+S
+
+#33085
+Cairn Mountain Road - Steep Slope~
+The green and gold of gorse bushes cluster around the narrow roadway,
+forming an impenetrable barrier of tangled prickles.  Rusty-red clay
+spreads between the rocks of the ravine, its surface cracked with a
+webwork of fissures.  A handful of rabbit holes dot the basin sides, a
+pile of dirt and debris scattered around each one.  The roadway winds in
+an east to west direction, avoiding the thorny gorse for the most part.
+~
+[Guinafaer] might be neat to add a minor +dam if you run into the gorse.
+[Guinafaer] search hole for rabbit added.
+[Guinafaer] Leavings done.
+[Guinafaer] Rdesc reviewed.
+~
+167247872 5 9 0
+D1
+~
+~
+0 -1 33083 10 10 5
+D3
+~
+~
+0 -1 33084 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou slowly make your way through a thick gorse shrub.
+~
+E
+not_char~
+@y$n slowly picks his way through a gorse.
+~
+!
+3 0 2
+A
+search~
+hole~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  send_to_char( #to_char, ch );
+  act_notchar( #to_room, ch );
+  if( random( 0, 1 ) == 1 )
+    mload( 973, room );
+  else
+    mload( 244, room );
+  };
+else {
+  send_to_char( #char_empty, ch );
+  act_notchar( #room_empty, ch );
+  };
+~
+E
+to_char~
+@cYou search the hole and find a rabbit!@n
+~
+E
+to_room~
+@c$n searches the hole and finds a rabbit!@n
+~
+E
+char_empty~
+@cYou search the hole but find nothing within it.@n
+~
+E
+room_empty~
+@c$n searches the hole but finds nothing.@n
+~
+!
+0 0 0
+205 9 1509949540 3 0
+1121 9 1509949540 3 0
+-1
+S
+
+#33086
+Rough-Cut Trail Through the Cairns~
+The trail, although it can hardly be called a trail, turns northward,
+following the line of a sheer cliff wall that rises toward the crest
+above.  The footing here is awkward, only open spaces between loose
+fallen rocks marking the way.  Nearby, to the east, a pair of boulders
+stands side by side, like stoic sentinels on silent guard.  A knife-thin
+gap between the stones leads to a mountain road beyond.
+~
+~
+167247880 5 9 0
+D0
+~
+~
+0 -1 33087 10 10 5
+D1
+~
+~
+0 -1 33002 10 10 5
+E
+pair boulders gap 1 east~
+The pair of grim gray boulders flanks the path.  Only a narrow gap lies
+between the two, just wide enough to pass through to the road beyond.
+~
+587 17 1509949540 -2 0
+-1
+S
+
+#33087
+Rough-Cut Trail Through the Cairns~
+Skirting the cliff wall, the path turns sharply northward, coming to an
+end at an incline, leading up the mountain closer to the crest.  Although
+the climb is steep, there is ample hand and footholds afforded by the
+cracks and protrusions of the stone itself.  A few pines cling
+tenaciously to the rocky soil, stunted by the frigid air.
+~
+~
+167247872 5 9 0
+D2
+~
+~
+0 -1 33086 10 10 5
+D4
+~
+~
+0 -1 33088 10 10 5
+2501 9 1509949540 3 0
+-1
+S
+
+#33088
+Flat Ledge Deep in the Cairns~
+A wide, relatively flat, ledge stretches to the north and west here at
+the top of the rise.  A thick layer of new fallen snow blankets the
+ground underfoot, and hoarfrost sketches lacy patterns on the larger
+stones.  A thin line of gnarled, blue-green pines shelters against the
+cliff wall, protected from the worst of the weather.
+~
+~
+167247872 5 9 0
+D3
+~
+~
+0 -1 33089 10 10 5
+D5
+~
+~
+0 -1 33087 10 10 5
+885 9 1509949540 3 0
+-1
+S
+
+#33089
+Flat Ledge Deep in the Cairns~
+A trail of flattened snow follows the ledge to the west and east,
+bordered on either side but scattered, frost kissed stones.  On the
+north, butted against the cliff wall, a line of pine trees survives in
+the inclimate clime.  The shelf of rock ends some way to the west, where
+the mountain drops down into a mist-shrouded valley far below.  Overhead,
+the crest rises skyward through a bank of snow-heavy clouds hanging there.
+~
+~
+167247872 5 9 0
+D1
+~
+~
+0 -1 33088 10 10 5
+D3
+~
+~
+0 -1 33090 10 10 5
+2505 9 1509949540 3 0
+-1
+S
+
+#33090
+Cairn Mountains - Cliff's Edge~
+The trail across the plateau comes dangerously close to the cliff's edge,
+with little but thin air between the path and certain death below.  Much
+of the dry, loose snow crystals have been blown away here, where nothing
+protects it from the blowing wind.  The ledge turns sharply, following
+the cliff wall northward and to the west.  The row of pines begins to
+thin out as it becomes more exposed to the weather.
+~
+~
+167247872 5 9 0
+D0
+~
+~
+0 -1 33091 10 10 5
+D1
+~
+~
+0 -1 33089 10 10 5
+1602 17 1509949540 -2 0
+244 9 1509949540 3 0
+244 9 1509949540 3 0
+-1
+S
+
+#33091
+In the Shelter of the Cliff~
+Protected on two sides from the weather by a jog in the cliff face, this
+portion of the ledge forms an alcove, surrounded by scattered boulders
+and a few twisted pines.  Underfoot the ground is clear of snow, but
+frozen, and fallen needles from the trees offer an insulation of sorts
+from the cold.  The path lies close to the mountainside, following it to
+the west and southward.
+~
+[Guinafaer] add corpse object.
+~
+167247872 5 9 0
+D2
+~
+~
+0 -1 33090 10 10 5
+D3
+~
+~
+0 -1 33092 10 10 5
+3675 49 1509949540 -2 0
+617 81 419430450 -2 0
+630 80 1509949460 -2 0
+631 80 1509949445 -2 0
+-1
+S
+
+#33092
+Flat Ledge Deep in the Cairns~
+The snow is deep here and disturbed, its pristine beauty a tumble of
+white, dirt and rock.  Near the base of the cliff, a wide hole has been
+tunneled through the stone into the mountain itself, although a thick
+sheet of transparent ice covers it now.  Minute traces of green streak
+the ground around the hole, and most of the torn up patches of snow.  The
+path continues onward around the mountain to the north and east.
+~
+~
+167247872 5 9 0
+D0
+~
+~
+0 -1 33093 10 10 5
+D1
+~
+~
+0 -1 33091 10 10 5
+E
+hole~
+The hole, although high and wide enough to enter, is covered by a thick
+sheet of solid ice as hard as the mountain's stone.  Frozen streaks of
+dull green slime surround the hole, as if left there to protect from
+intruders.
+~
+E
+streak green~
+The streaks of green, frozen matter surround the ground near the vast
+hole through the mountain and mark the tousled piles of snow, rock and
+dirt.  Although frozen solid, a noxious odor still rises from them.
+~
+210 17 1509949540 -2 0
+-1
+S
+
+#33093
+Flat Ledge Deep in the Cairns~
+The plateau comes to an end at rise up the mountainside, approaching the
+crest.  Nearby, holes of various sizes tunnel through the stone, though
+none are big enough to enter.  The snow lies deep here in sheltered
+pockets of shade where sunlight never reaches.  You can climb the ridge
+to the north, or move southward along the ledge.
+~
+~
+167247872 5 9 0
+D2
+~
+~
+0 -1 33092 10 10 5
+D4
+~
+~
+0 -1 33094 10 10 5
+E
+rise 1 up~
+The incline of the rise is gradual, the climb fairly easy except for a
+few patches of slick ice across the trail.
+~
+2501 9 1509949540 3 0
+-1
+S
+
+#33094
+Cairn Mountains - Trail's End~
+The slope comes to an abrupt end near a great gaping hole, elder brother
+to the smaller ones seen down the mountainside.  Here upon the jutting
+stone, there is little protection from buffeting winds or blowing snow,
+and underfoot the ground is slick with a paper-thin layer of ice.  You
+can climb through the hole to the east or leave the projection for the
+shelter of the ledge below.
+~
+~
+167247872 5 9 0
+D1
+~
+~
+0 -1 34250 10 10 5
+D5
+~
+~
+0 -1 33093 10 10 5
+E
+hole 1 east~
+A gaping hole tunnels through the stone, into the depths of the mountain
+and the lightless passage there.  A fetid odor wafts outward from the
+darkness.
+~
+-1
+S
+
+#0
+

@@ -1,0 +1,6674 @@
+#M2_AREA
+2
+
+Byron's Workshop~
+Skurva Nox~
+Byron's Workshop~
+~
+~
+
+35 0
+0
+1
+#ROOMS
+
+#1600
+Inside an Odd Cave~
+At the entrance of this odd cave, the walls and floor are perfectly
+smooth granite.  Other than the the rough boulder hole in the ceiling,
+the cavern is precisely square.  The craftsmanship used to create the
+cavern was flawless in application and harkens back to the golden age of
+a proud dwarven underground empire.  The atmosphere is stale and
+difficult to breathe, all vitality long since sucked from it.  The rush
+of fresh air from the outside is almost palpable, bringing new life to
+this stale chamber.  Further into the darkness, you can see a strange
+glimmer, as if something metallic lays in wait.
+~
+[Guin] Done.
+~
+167378956 0 6 0
+D0
+~
+~
+0 -1 1601 10 10 5
+D4
+~
+~
+0 -1 1603 10 10 5
+E
+glimmer metallic~
+Up ahead is a faint glimmer of metal and polished rock.  You can also
+hear the incredibly faint sounds of metal moving against metal.
+~
+E
+air stale fresh~
+The air in here must not have been exposed to the outside world for a
+very, very long time.  While it may not be the nicest air to breathe, it
+is somehow nice to know that it lacks any outside influence and smells
+like the past.
+~
+A
+push move~
+boulder stone rock~
+if( is_resting( ch ) )
+  end;
+if( is_sleeping( ch ) )
+  end;
+if( !is_open( room, up ) ) {
+  act_tochar( #open, ch );
+  act_notchar( #ropen, ch );
+  open( room, up );
+  end;
+  }
+act_tochar( #already, ch );
+~
+E
+open~
+You manage to move the boulder from the the opening overhead by wedging
+your feet in the hole and pushing.
+~
+E
+ropen~
+$n manages to move the boulder from the the hole with much grunting and
+pushing.
+~
+E
+already~
+The hole is already open to the sky above.
+~
+!
+0 0 0
+A
+1 look~
+1 up 3 boulder~
+if( !is_open( room, up ) ) {
+act_tochar( #boulderclosed, ch );
+end;
+}
+act_tochar( #boulderopen, ch );
+~
+E
+boulderclosed~
+There is a boulder overhead, blocking access to the outside world.
+~
+E
+boulderopen~
+The boulder overhead has been cleared, giving you free access to the
+outside world.
+~
+!
+0 0 0
+A
+~
+~
+act_tochar( #climb, ch );
+act_notchar( #rclimb, ch );
+continue;
+~
+E
+climb~
+@YGrabbing some of the lower handholds, you begin the ascent up the
+vertical shaft.@n 
+~
+E
+rclimb~
+@YGrabbing some of the lower handholds, $n begins the ascent up the vertical shaft.@n
+~
+!
+3 0 16
+A
+~
+~
+act_notchar( #arrive, ch );
+~
+E
+arrive~
+@M$n drops the last few feet from the bottom of the shaft to the floor.@n
+~
+!
+1 0 16
+-1
+S
+
+#1601
+Square Cavern~
+As the corridor moves deeper into the underground caves, the smooth
+granite walls show odd metal pieces throughout.  It looks as if they were
+shoved into the stonework to fill in cracks.  The little chunks of
+copper, silver, and bronze give an eerie patchwork appearance to the
+caves, looking ever more interesting in the light from the top of the
+cave.
+~
+~
+200933380 0 6 0
+D0
+~
+~
+0 -1 1602 10 10 5
+D2
+~
+~
+0 -1 1600 10 10 5
+E
+Metal Pieces Copper Silver Bronze~
+Looking more closely at the pieces of metal that have been shoved into
+the walls, it seems they are pieces of every kind of metal trinket you
+can think of...from sword tips to mouse traps, tiny shards of detailed
+sculpture to a few pieces of coinage.
+~
+E
+mouse tip sculpture nest~
+One area of the wall seems to be in the odd shape of a miniature metal
+nest.  The mousetrap hinges and bits of sword form a small ring, roughly
+welded into the wall.  A steady examination suggests this nest can be
+removed intact from its perch with a little work.
+~
+A
+pry search~
+metal silver wall~
+if( !rflag( reset1, room ) ) {
+  act_tochar( #char_nothing, ch );
+  act_notchar( #room_nothing, ch );
+  end;
+  }
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room ) ; 
+  act_tochar( #to_char, ch );
+  act_notchar( #to_room, ch );
+  obj_to_char( oload( 14 ), ch );
+  }
+~
+E
+char_nothing~
+@yYou search the metal in the wall, but cannot find anything useful.@n
+~
+E
+room_nothing~
+@y$n searches the metal on the wall, but cannot find anything useful.@n
+~
+E
+to_char~
+@cYou search the metal bits, and manage to pry a silver coin free!@n
+~
+E
+to_room~
+@c$n pries at the metal bits, and manages to pry something free!@n
+~
+!
+9 0 0
+A
+remove get take~
+nest~
+if( !rflag( reset0, room ) ) {
+  act_tochar( #already, ch );
+  end;
+  }
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #nest, ch );
+  act_notchar( #rnest, ch );
+  wait( 1 );
+  act_tochar( #chirp, ch );
+  act_notchar( #chirp, ch );
+  mload( 5075, room );
+  }
+~
+E
+nest~
+@yAs you pull on the nest, the welding begins to give way.  There is an
+audible pop as the vacuum behind the nest is breached.  An odd whirring
+builds in that area, as if something was coming to life from behind the
+nest barrier.@n
+~
+E
+rnest~
+@yAs $n pulls on the nest, the welding begins to give way.  There is an
+audible pop as the vacuum behind the nest is breached.  An odd whirring
+builds in that area, as if something was coming to life from behind the
+nest barrier.@n
+~
+E
+already~
+It seems the nest has already been removed.
+~
+E
+chirp~
+@gA tiny mechanical bird jumps out of the hole in the wall with a
+tinny-sounding @y"Chirp!"@n 
+~
+!
+9 0 0
+-1
+S
+
+#1602
+Carved Doorway~
+The floor here is so smooth, it seems as if it should be hard to traverse. 
+This polished granite and metal room has an imposing wooden door at one
+end, carved with a detailed forest landscape with many oddly detailed
+creatures expertly engraved into it.  Above the door is a complex bronze
+plaque with many gears and springs sticking out of it, the words of its
+inscription hard to read without moving closer.  On the floor in front of
+the portal lies an odd mat made of gears and wires.
+~
+[Guin] Done.
+~
+200933380 0 6 0
+D0
+large, carved wooden door~
+carved wooden door~
+407 7039 1604 10 10 5
+D2
+~
+~
+0 -1 1601 10 10 5
+E
+Door Wood~
+This large wooden door is carved with woodland creatures in a beautiful
+forest glade.  Yet, at a closer examination, you notice that every
+creature is somehow mechanical and artificial in appearance.  These
+images are small and highly detailed.  The door has a highly advanced
+mechanical lock with an intricate bronze mechanism.  Perhaps the key is
+around here somewhere...
+~
+E
+Plaque~
+As you look at the plaque above the door, it seems to react to your
+interest by slight twitches and waverings.  Concentrating on the plaque,
+the gears and springs begin to move, rippling along the surface of the
+bronze in an odd sort of dance.  As they move, you start to understand
+what the plaque says as it cycles through various languages.  Coming upon
+your native tongue, the gears slow down and then stop moving altogether;
+you can then read the words, "Workshop of Mastersmith Byron".
+~
+E
+creature~
+Mechanical rabbits, mechanical birds, and even a spring and gear crafted
+elven man, walk across this carved landscape.  An eerie feeling of being
+watched sends shivers up and down your spine, when you examine the
+doorscape and ponder the possibility of a mechanical world overwhelming
+this one.
+~
+E
+mat odd gears wires~
+This intricate doormat has a strange mosaic of gears and springs.  It
+also hums very quietly, like it was charged with some sort of magic.
+~
+A
+lift move~
+doormat mat~
+i = 1d2;
+act_tochar( #doormat, ch );
+act_notchar( #rdoormat, ch );
+dam_message_shock( ch, i, "A small jolt of electricty" );
+inflict( ch, ch, i, "jolt of electricity" );
+wait( 1 );
+if( rflag( reset0, room ) ) {
+  act_notchar( #rfindkey, ch );
+  act_tochar( #findkey, ch );
+  obj_to_room( oload( 7039 ), room );
+  remove_rflag( reset0, room );
+  end;
+  }
+act_tochar( #nokey, ch );
+act_notchar( #nokey2, ch );
+~
+E
+doormat~
+@yAs you lift the doormat, it gives you a nasty and surprising jolt!@n
+~
+E
+rdoormat~
+@yAs $n lifts the doormat, it arcs with bright electricity!@n
+~
+E
+findkey~
+@yYou manage to flick something out from under the doormat into the
+room!@n 
+~
+E
+rfindkey~
+@y$n manages to flick a mechanical key out from under the mat!@n
+~
+E
+nokey~
+There is nothing under the doormat.
+~
+E
+nokey2~
+$n lifts the doormat, but there is nothing underneath it.
+~
+!
+0 0 0
+A
+~
+~
+send_to_room( #breeze, room );
+~
+E
+breeze~
+@CA chill breeze whips down the passage as fresh air whistles into the
+cavern.@n 
+~
+!
+2 150 1
+-1
+S
+
+#1603
+Stygian Descent Down a Vertical Shaft~
+The vertical shaft through the solid mountain stone is naturally formed
+and the hand and footholds are smooth to the touch, worn that way by
+countless years of traffic.  Although relatively easy as climbs go, it
+seems to go on forever through the musty mountain air.  Downward and
+upward, a shimmer of light offers hope of an end to the destination.
+~
+Start room for Byron's Workshop.
+[Guin] Done.
+~
+167247880 5 6 0
+D4
+~
+~
+0 -1 1671 10 10 5
+D5
+~
+~
+0 -1 1600 10 10 5
+E
+Mountain Crack Face~
+Looking at the mountainside, you notice a boulder had been fused into the
+mountain face through either incredible tectonic forces or expert
+craftsmanship, covering up a smooth cave opening.  Recently, this massive
+stone has been loosened, revealing cracks arounds its edges.
+~
+A
+pull move tug yank~
+boulder rock hole~
+if( is_open( room, down ) ) {
+  act_tochar( #already, ch );
+  end;
+  }
+if( find_stat( ch, str ) < 14 ) {
+  act_tochar( #nope, ch );
+  act_notchar( #rnope, ch );
+  end;
+  }
+act_tochar( #ok, ch );
+act_notchar( #rok, ch );
+send_to_room( #room, find_room( 1600 ) );
+open( room, down );
+wait( 5 );
+send_to_room( #crashing, room );
+~
+E
+already~
+The boulder has already been removed from the mountainside.
+~
+E
+nope~
+You are not strong enough to get the boulder out from the mountainside.
+~
+E
+rnope~
+$n grunts and strains and is unable to move the boulder from the mountainside.
+~
+E
+ok~
+@BYou grunt and are finally able to pull the boulder free from the
+mountainside, rolling it down the hill.@n 
+~
+E
+room~
+The boulder above your head suddenly rolls free of the hole  and
+disappears over the edge of the mountain.
+~
+E
+crashing~
+@ySuddenly, there is an ear splitting crashing, splintering noise as the
+rolling boulder meets and annihilates a grove of trees.@n 
+~
+E
+rok~
+$n grunts and strains and is able to move the boulder from the
+mountainside.
+~
+!
+0 0 0
+A
+1 look~
+boulder 1 down~
+if( !is_open( room, down ) ) {
+act_tochar( #boulderclosed, ch );
+end;
+}
+act_tochar( #boulderopen, ch );
+~
+E
+boulderopen~
+The boulder below you has been cleared, giving you free access to inside
+the mountain.
+~
+E
+boulderclosed~
+There is a huge boulder jammed in the side of this rocky hillside, only
+the strongest would have any chance of budging it.
+~
+!
+0 0 0
+A
+~
+~
+act_tochar( #jump, ch );
+act_notchar( #rjump, ch );
+continue;
+~
+E
+jump~
+You lower yourself into the hole.. into the darkness.
+~
+E
+rjump~
+$n lowers $self down into the dark hole.
+~
+!
+3 0 32
+-1
+S
+
+#1604
+Foyer~
+Just beyond the great doors, the modest chamber seems anti-climactic. 
+The unpretentious foyer was designed to hold guests until the master of
+the house is ready to receive them.  From the look of the thick dust and
+badly torn cloth chairs, it seems the master of the house has not greeted
+anyone for a long time.  Apparently something occupies the dwelling;
+numerous tiny footprints crisscross the otherwise undisturbed dust of the
+floor.
+~
+[Guin] Done.
+~
+200933380 0 6 0
+D0
+~
+~
+0 -1 1605 10 10 5
+D2
+large, carved wooden door~
+large carved wooden door~
+407 7039 1602 10 10 5
+E
+chair~
+What used to be an upholstered red chair, allowing guests to this odd
+cave home to wait in comfort, has been shredded by tiny claws and beaks. 
+Most of the lining and padding has been pulled out of the chair, and is
+nowhere to be seen.
+~
+E
+door wooden~
+To the south is a plain wooden door with a very intricate lock.
+~
+A
+~
+~
+rch = rand_player( room );
+act_tochar( #sneeze, ch, obj, mob, sight );
+act_notchar( #rsneeze, rch, obj, mob, sight );
+interpret( rch, "+sneeze" );
+~
+E
+sneeze~
+@YA current of wind sends an eddy of dust into the air, causing you to
+sneeze.@n 
+~
+E
+rsneeze~
+@YA current of wind sends an eddy of dust into the air, causing $n to
+sneeze.@n 
+~
+!
+2 150 0
+A
+study identify 1 look 2 track~
+track footprints~
+if( random( 2, 10 ) <= find_skill( ch, track ) ) {
+  improve_skill( ch, track );
+  act_tochar( #feet, ch );
+}
+else {
+  act_tochar( #slide, ch );
+  act_notchar( #rfeet, ch );
+}
+~
+E
+feet~
+The tracks appear to be a variety of small animal prints with subtle
+differences.  Rather than the soft, rounded outline of normal creatures,
+these all have linear outlines and crisp corners.
+~
+E
+slide~
+You're unable to determine what creatures made the tracks.
+~
+E
+rfeet~
+@G$n crouches down to study the strange marks in the dust.@n
+~
+!
+9 0 0
+-1
+S
+
+#1605
+Formal Dining Room~
+Candles glow a pale reflective white from the tarnished candlesticks,
+resting on the intricate stone table that dominates the room.  At the
+head of the huge banquet table sits one solitary place setting, unused
+and dust coated.  In the center of the table is an untarnished silver
+teapot, strangely bright in this grey room.  From out the silver teapot
+come countless tiny silver cords, seemingly the work of a horde of
+spiders.  In fact, above the table is a glorious display of delicate grey
+and silver arcing overhead in the dim light.  At a closer glance, never
+have there been cobwebs with quite this pattern....and the work of
+spiders has never before charged the air electrically quite so much...
+~
+[Skurva] Sparks are caused by the chaotic energies, which are further
+[Guin] infinite pops on the leg action
+[Guin] Reviewed.
+~
+200933380 0 6 0
+D0
+~
+~
+0 -1 1606 10 10 5
+D1
+~
+~
+0 -1 1608 10 10 5
+D2
+~
+~
+0 -1 1604 10 10 5
+D3
+~
+~
+0 -1 1607 10 10 5
+E
+teapot silver~
+The teapot glows on the table, being one of the only polished things in
+the room.  Oddly, the lid is still on the pot, with scores of tiny
+grey-silver wires poking into it.  A very low humming noise comes from
+within the strange teapot.
+~
+E
+web wires~
+The wires that cover the room all seem to focus towards the teapot
+resting in the center of the table.  The smell of ozone pierces your
+nostrils as you get close to the perfect, round web strands.  They look
+strangely like metal, almost as if the spider strands were woven from
+silver silk.
+~
+E
+candlestick candle~
+The multitude of candlesticks are in varying states of decay.  Some have
+escaped the worst of the erosion and are only black with tarnish.  Others
+have succumbed to the force of time and are little more than pitted,
+twisted hunks of scrap metal.  A few have little dribbles of dried wax down
+their sides, remnants of the candles they once held.
+~
+E
+table~
+Glossy onyx veins highlight the white marble tabletop like a pitch black
+spiderweb of stone.  Resting nearly three feet off the ground, the top of
+the polished table gleams in the light, despite the layer of dust which
+coats its surface.  Several candlesticks are scattered about the
+tabletop, so tarnished they look as if they are melting.  Twisting up
+from the ground are four marble legs, each carved with the meticulous
+skill of a master carver.  The jet black veins continue their winding way
+down the legs, spinning their spiral pathways to the floor below.
+~
+A
+lift move~
+teapot lid~
+if( !rflag( reset0, room ) ) {
+  act_tochar( #already, ch );
+  end;
+  }
+remove_rflag( reset0, room ) ; 
+act_tochar( #teapot, ch ) ; 
+act_notchar( #rteapot, ch ) ; 
+mload( 5073, room ) ; 
+~
+E
+already~
+It seems that somebody has already removed the teapot lid.
+~
+E
+teapot~
+@bAs you carefuly lift the teapot lid, a little mechanical mouse pokes
+his head out and looks at you.  @n 
+~
+E
+rteapot~
+@BAs $n lifts the teapot lid, a tiny mechanical mouse pokes his head out
+to examine the intrusion.  @n 
+~
+!
+0 0 0
+A
+1 look move touch~
+leg~
+if( !rflag( reset1, room ) ) {
+  act_tochar( #already, ch );
+  end;
+}
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  act_tochar( #snake, ch );
+  act_notchar( #snake, ch );
+  wait( 1 );
+  mload( 5074, room );
+}
+~
+E
+already~
+It looks like the table leg just has carvings on it, the movement must
+have been a trick of the light.
+~
+E
+snake~
+@YThe most intricate parts of this stern stone table are the detailed
+metal legs.  Designed as snakes curving around the stone of the table,
+they shine with various metals and move with a shimmering flow.  Then you
+realize..  Table legs aren't supposed to move...  @n 
+~
+!
+0 0 0
+A
+get take steal~
+table cande candlestick~
+if( rflag( reset2, room ) ) {
+  remove_rflag( reset2, room );
+  if( random( 1, 20 ) == 5 ) {
+    act_tochar( #candle, ch );
+    act_notchar( #candle2, ch );
+    obj_to_char( oload( 7007 ), ch );
+    end;
+  }
+  else {
+    act_tochar( #nocandle, ch );
+    act_notchar( #nocandle2, ch );
+  }
+}
+else {
+  act_tochar( #already, ch );
+  act_notchar( #ralready, ch );
+}
+~
+E
+candle~
+@gYou search among the candlesticks, and find one is still usable.@n
+~
+E
+candle2~
+@g$n searches among the candlesticks, and finds one that is still usable.@n
+~
+E
+nocandle~
+@gYou search among the candlesticks, but none of them are worth taking.@n
+~
+E
+nocandle2~
+@g$n searches among the candlesticks, but none of them are worth taking.@n
+~
+E
+already~
+@eYou search through the candles, but it looks like someone beat you here.@n
+~
+E
+ralready~
+@e$n searches through the candles, but doesn't find anything interesting.@n
+~
+!
+9 0 0
+-1
+S
+
+#1606
+Servant's Dining Room~
+A harsh contrast to the glorious room through the archway, this space
+boasts only a dry and brittle wooden table with two well-used and broken
+chairs.  Curtains hang in tatters across the window, slowly falling in
+shattered shards to floor as age overtakes each piece.  The ceiling and
+floor are a patchwork of wood, stone, and rusted metal, as if it was
+slowly being replaced by someone who has since given up on a fruitless
+task.  Holes in every surface seem to be carefully drilled, not the
+random machinations of woodworm or dry rot.
+~
+[Guin] Done
+~
+200933380 0 6 0
+D1
+~
+~
+0 -1 1610 10 10 5
+D2
+~
+~
+0 -1 1605 10 10 5
+D3
+~
+~
+0 -1 1609 10 10 5
+E
+window curtains tatters~
+Moldy curtains drape limply over the window's cracked and split frame. 
+The panes of the window are opaque with filth, but enough of the glass is
+missing to provide a decent view of a vast underground canyon. 
+Outcroppings of rock are dimly visible through the darkness, hinting at
+probable placements of the cavern's boundaries, but the actual end of the
+cavern is lost to sight.  Trickles of running water can be heard, echoing
+up from the depths of the faintly glowing, moss covered gash in the earth.
+~
+A
+~
+~
+if( mob_in_room( 5073, room ) ) {
+  if( mob_in_room( 5080, room ) ) {
+    send_to_room( #hunter, room );
+    wait( 1);
+    
+    if( random( 1, 2 ) == 1 ) {
+      send_to_room( #escape, room );
+      end; }
+      send_to_room( #caught, room );
+      }
+    }
+~
+E
+hunter~
+@RThe mechanical raptor dives at the frightened mechanical mouse!@n 
+~
+E
+escape~
+@MThe little mouse leaps to the side and the raptor misses its target,
+scratching along the floor.@n 
+~
+E
+caught~
+@YThe quick raptor snatches up the mouse and chomps on it with a loud
+*clank!*@n @yAfter receiving a dent in his beak, he drops the confused
+mouse back to the floor.@n 
+~
+!
+2 150 0
+5073 9 1509949540 3 0
+5080 9 1509949540 3 0
+-1
+S
+
+#1607
+Library~
+Bordering a complex and daunting display of grey webs and wires are two
+massive grey shapes that look surprisingly like dust covered bookshelves. 
+Like silent sentinels guarding the room, they look as if they have never
+been moved, a permanent and timeless feature in this place.  The stale
+air and slight electric charge only adds to the timeless feeling.  The
+dust has been sitting so long in one place that the air is clean, an
+inconsistancy in this monochromatic room.
+~
+[Guin] Done.
+~
+200933380 0 6 0
+D1
+~
+~
+0 -1 1605 10 10 5
+D3
+~
+~
+0 -1 1611 10 10 5
+E
+bookshelf dust~
+Not a trace of literature can be seen near the vast old bookshelves.  Not
+even the dust patterns mark where books should have been.  Some of the
+boards in the larger shelf gave way some time ago, causing the structure
+to tilt sharply to the left.  The other case has lost most of its shelves
+to dry rot, leaving a mounding pile of crumbling dust on the bottom shelf.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yThe old shelves creak and shake as you travel $Tward through the
+library.@n 
+~
+E
+to_room~
+@yThe old shelves creak and shake as $n travels $Tward through the
+library.@n 
+~
+!
+3 0 10
+5078 9 1509949540 3 0
+-1
+S
+
+#1608
+Cupboards~
+Two large food cupboards have been placed here, out of place amidst
+the fancy decor.  It is almost as if they were placed here as an
+afterthought, for easy snacking access to the main room.  The contents
+seem to prove that idea, with several jars labeled "cookie" and "jerky". 
+Yet the main consumption done recently has all been of the metal variety,
+for every metal object in this pantry is missing chunks of itself.
+~
+[Guin] Done
+~
+200933380 0 6 0
+D3
+~
+~
+0 -1 1605 10 10 5
+E
+jar~
+Jars of snacks fill the cupboards to overflowing.  Even though attrition
+has taken its toll on the earthenware jars, leaving several shattered
+fragments on the bottom of the cupboards, many still remain.  Most of the
+jars are missing their tops, causing the food within to rot.  Yet the
+cookie jar and the jerky jar still remain sealed and relatively protected
+against the ravages of time.
+~
+A
+~
+cookie~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 10 ) == 3 ) {
+    j = random( 1, 8 );
+    if( j == 1 )
+      obj = oload( 3348 );
+    else if( j == 2 )
+      obj = oload( 3349 );
+    else if( j == 3 )
+      obj = oload( 3350 );
+    else if( j == 4 )
+      obj = oload( 3351 );
+    else if( j == 5 )
+      obj = oload( 3352 );
+    else if( j == 6 )
+      obj = oload( 3353 );
+    else if( j == 7 )
+      obj = oload( 3354 );
+    else
+      obj = oload( 3356 );
+  }
+}
+if( obj ) {
+  act_tochar( #cookie, ch, obj );
+  act_notchar( #cookie2, ch, obj );
+  obj_to_char( obj, ch );
+}
+else if( !obj && get_integer( room, "/Cayln/Cookie" ) ) {
+  act_tochar( #already, ch );
+  act_notchar( #ralready, ch );
+}
+else {
+  act_tochar( #nocookie, ch );
+  act_notchar( #nocookie2, ch );
+}
+set_integer( room, "/Cayln/Cookie", 1 );
+~
+E
+cookie~
+@cYou search through the cookie jar, and find $p left at the bottom!@n
+~
+E
+cookie2~
+@c$n searches through the cookie jar, and finds $p left at the bottom!@n
+~
+E
+nocookie~
+@cYou search through the cookie jar, but the jar is empty.@n
+~
+E
+nocookie2~
+@c$n searches through the cookie jar, but the jar is empty.@n
+~
+E
+already~
+@cThe jar has already been emptied.@n
+~
+E
+ralready~
+@c$n searches through the jar, and finds it was empty.@n
+~
+!
+9 0 0
+A
+~
+jerky~
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  if( random( 1, 10 ) == 1 ) {
+    j = random( 1, 2 );
+    if( j == 1 )
+      obj = oload( 54 );
+    else
+      obj = oload( 115 );
+  }
+}
+if( obj ) {
+  act_tochar( #jerky, ch, obj );
+  act_notchar( #jerky2, ch, obj );
+}
+else if( !obj && get_integer( room, "/Cayln/Jerky" ) == 1 ) {
+  act_tochar( #already, ch );
+  act_notchar( #ralready, ch );
+}
+else {
+  act_tochar( #nojerky, ch );
+  act_notchar( #nojerky2, ch );
+}
+set_integer( room, "/Cayln/Jerky", 1 );
+~
+E
+jerky~
+@mYou root around in the jerky jar, and find $p inside!@n
+~
+E
+jerky2~
+@m$n roots around in the jerky jar, and finds $p inside!@n
+~
+E
+nojerky~
+@mYou root around in the jerky jar, but come up empty handed.@n
+~
+E
+nojerky2~
+@m$n roots around in the jerky jar, but comes up empty handed.@n
+~
+E
+already~
+@cThe jar has already been searched through.@n
+~
+E
+ralready~
+@c$n looks through the already empty jar.@n
+~
+!
+9 0 0
+A
+~
+~
+set_integer( room, "/Cayln/Jerky", 0 );
+set_integer( room, "/Cayln/Cookie", 0 );
+~
+!
+16 0 0
+-1
+S
+
+#1609
+Kitchen~
+Pots full of rusted cutlery lie all over stained countertops, odd
+multi-color stained dishes are stacked high on the floor.  Cupboards are
+spattered with stains and strange jars are cracked half open and tipped
+over.  Everything here seems to be stained, broken, soiled, or rotten... 
+from the floor to the dishes.  This dried, broken mess is truly topped by
+the vision of the sink.  It used to hold water, as evidenced by the dried
+plant-life that once grew in this place and across the whole room, only
+to die when the rust finally overtook the sink and the whole mess
+collapsed.
+~
+[Guin] Done.
+~
+200933380 0 6 0
+D1
+~
+~
+0 -1 1606 10 10 5
+E
+plat-life dried sink~
+Smelling strongly of decay, black fungus has claimed the life of this
+once-vibrant vegetation.  The plant is covered so completly in the
+parasitic crud, it is no longer possible to determine what the plant
+originally was.  The trails of blackened sludge spring up from the
+cracked stone sink and creep along the walls for some distance before it
+stops, scant handspans from reaching the door.
+~
+A
+turn twist~
+knob burner~
+if( !rflag( reset0, room ) ) {
+  act_tochar( #alreadyon, ch );
+  act_notchar( #alreadyon2, ch );
+  end;
+  }
+remove_rflag( reset0, room );
+act_tochar( #turnon, ch );
+act_notchar( #turnon2, ch );
+wait( 1 );
+send_to_room( #havoc, room );
+wait( 2 );
+send_to_room( #stovetop, room );
+wait( 1 );
+send_to_room( #crashing, room );
+wait( 1 );
+send_to_room( #cupboard, room );
+~
+E
+turnon~
+@mYou twist the knob on the oven, and a small flame appears on the
+stovetop.@n 
+~
+E
+turnon2~
+@m$n twists the knob on the oven, and a small flame appears on the
+stovetop.@n 
+~
+E
+alreadyon~
+@mYou try to turn the stove off, but the knob is stuck!@n
+~
+E
+alreadyon2~
+@m$n tries to turn the stove off, but the knob is stuck!@n
+~
+E
+havoc~
+@YSuddenly the room begins to make all sorts of odd noises!@n
+~
+E
+stovetop~
+@RFlames shoot up from the stovetop, knocking the flame nozzle into the
+stack of dishes, which teeters back and forth!@n 
+~
+E
+crashing~
+@BThe stack of dishes topples to the ground, dishes shattering all over
+the floor!@n 
+~
+E
+cupboard~
+@MThe cupboard doors creak open, as if something were peeking out to look
+at what was causing all the racket.@n 
+~
+!
+0 0 0
+A
+~
+~
+if( !rflag( reset1, room ) ) {
+  wait( 5 );
+  send_to_room( #sink, room );
+  }
+~
+E
+sink~
+@GA flood of dirty water gurgles up from the sink drain, overflowing onto
+the floor!@n 
+~
+!
+2 100 0
+A
+~
+~
+if( !rflag( reset0, room ) ) {
+  wait( 5 );
+  send_to_room( #bird, room );
+  }
+~
+E
+bird~
+@CThe oven door slams open, and a tiny mechanical bird flies out
+erratically, crashing into the walls and cupboards until finally landing
+in a heap of twisted metal in the sink.@n 
+~
+!
+2 100 0
+A
+~
+~
+if( !rflag( reset0, room ) ) {
+  wait( 4 );
+  send_to_room( #shudder, room );
+  }
+~
+E
+shudder~
+@RThe room shudders violently, causing dishes to crash to the floor!@n
+~
+!
+2 120 0
+A
+~
+bowl sink water~
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  act_tochar( #bowl, ch );
+  act_notchar( #rbowl, ch );
+  wait( 1 );
+  send_to_room( #frog, room );
+  mload( 5076, room );
+  end;
+  }
+act_tochar( #done, ch );
+~
+E
+bowl~
+@yAs you explore the sink, you manage to tip over a teetering bowl, which
+splashes into the murky water.@n 
+~
+E
+rbowl~
+@yAs $n explores the sink, you hear a small splash and the clinking of
+dishes.@n 
+~
+E
+frog~
+@gA tiny mechanical frog leaps out from the pile of dishes and lands with
+a clatter on the stovetop.@n 
+~
+E
+done~
+It looks like the dishes have been disturbed and have fallen into the water.
+~
+!
+9 0 0
+A
+~
+cupboard~
+if( rflag( reset2, room ) ) {
+remove_rflag( reset2, room );
+act_tochar( #bird, ch );
+act_notchar( #rbird, ch );
+mload( 5075, room );
+end;
+}
+act_tochar( #open, ch );
+~
+E
+rbird~
+@yA little mechanical bird sits inside the cupboard in a tiny nest of wires and dish shards.
+It peers out at $n and then hops out onto the piles of dishes to see what is going on.@n
+~
+E
+bird~
+@yA little mechanical bird sits inside the cupboard in a tiny nest of wires and dish shards.
+It peers out at you and then hops out onto the piles of dishes to see what is going on.@n
+~
+E
+open~
+The cupboard door is already open, showing the little metal birdnest inside.
+~
+!
+9 0 0
+A
+fill turn twist~
+bucket tap sink~
+obj = has_obj( 7586, ch );
+if( !obj ) {
+  act_tochar( #tapon, ch );
+  end;
+  }
+if( obj ) {
+  act_notchar( #rfill, ch );
+  act_tochar( #fill, ch, obj );
+  junk_obj( obj, 1 );
+  obj_to_char( oload( 7585 ), ch );
+  }
+~
+E
+tapon~
+You turn the tap on and with a grotesque shudder it squelches out a black
+sludge.
+~
+E
+tapon2~
+$n turns on the tap and it squelches out a black sludge into the sink.
+~
+E
+fill~
+You put the empty metal bucket in the sink, turn on the tap, and fill it
+with a thick, dark sludge.
+~
+E
+rfill~
+$n puts the empty metal bucket in the sink, turns on the tap, and fills
+it with a thick, dark sludge.
+~
+!
+0 0 0
+A
+~
+~
+set_rflag( reset1, room );
+set_rflag( reset0, room );
+continue;
+~
+!
+3 0 2
+-1
+S
+
+#1610
+Cutlery and Dish Cabinet~
+Shattered cabinetry and crushed dishware litters the floor of the pantry. 
+Rusting nails are the only tribute the mangled cabinets have to where
+they once stood.  The room was once paneled in expensive-looking wood,
+but many of the wall panels have come loose from the stone, to join the
+wreckage on the ground.  Underfoot, cracks in the dry wooden floors have
+trapped countless metallic gears, springs, and other useless bits and
+pieces.  Only one cabinet, beaten but still hanging, has survived the
+massacre.
+~
+[Guin] Done
+~
+200933380 0 6 0
+D3
+~
+~
+0 -1 1606 10 10 5
+E
+cabinet small~
+Only one door seems to have survived intact with the cabinet, the other
+having long ago broken off.  The dead door lies still and quiet on the
+floor.  Inside, on the side once guarded by the slain door, a modest row
+of cracked plates and tarnished cutlery sits in wait.
+~
+A
+~
+cabinet dishes cutlery door~
+if( random( 1, 10 ) == 1 ) {
+  if( rflag( reset1, room ) ) {
+    remove_rflag( reset1, room );
+    act_tochar( #knife, ch );
+    act_notchar( #rknife, ch );
+    obj_to_char( oload( 7199 ), ch );
+    end;
+  }
+}
+act_tochar( #gone, ch );
+~
+E
+knife~
+You have found a steel knife in the drawer!
+~
+E
+rknife~
+$n has found something in the drawer!
+~
+E
+gone~
+There is nothing of value left in this cabinet.
+~
+!
+9 0 0
+A
+~
+bench workbench~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  set_rflag( no.magic, room );
+  send_to_room( #stale, room, sight );
+  wait( 1 );
+  send_to_room( #dull, room, sight );
+}
+~
+E
+stale~
+The air seems to thicken and turn stale.
+~
+E
+dull~
+Everything seems somehow dull and less exciting than it was.
+~
+!
+9 0 0
+A
+~
+~
+remove_rflag( no.magic, room );
+set_rflag( reset0, room );
+continue;
+~
+!
+3 0 8
+A
+~
+~
+if( rflag( no.magic, room ) )
+  remove_rflag( no.magic, room );
+~
+!
+16 0 0
+-1
+S
+
+#1611
+Library~
+The blackened bookshelves have been toppled into each other, with the
+books themselves sprawled across the room.  Mounds of dusty old tomes lie
+in tattered heaps across the floor in varying states of decay...torn
+asunder, burnt by fell energy, or otherwise obliterated by magical
+backlash.  Documents and letters are interspersed with the books, some
+with the seal of the dwarven council, some with sketches of strange
+sculptures, others the simple doodles of madness.  In the corner least
+touched by the destruction, a mangled lounge chair and half-chewed
+writing implements lie in a neat stack, clearly the preferred corner of
+the creature who lived here.  Some literature has escaped the purge,
+apparently intact and legible.
+~
+[Guin] Done.
+~
+200933380 0 6 0
+D0
+~
+~
+0 -1 1612 10 10 5
+D1
+~
+~
+0 -1 1607 10 10 5
+E
+books bookshelves documents letters~
+The piles of books and documents stewn across the room bring to mind
+images of a mad search for certain documents, suddenly interrupted in
+mid-search.  It seems as if you were to carefully @Cbrowse@n the piles
+and stacks of texts, you might find something useful.
+~
+E
+lounge chair chewed~
+The lounge chair in the corner has been tipped over at some point and has
+a collection of carefully chewed holes throughout the rotted fabric and
+remnants of wood that still passes for a frame.
+~
+E
+literature journal~
+A single, leather-bound tome rests on a shelf by itself.  The lock that
+once prevented its secrets being divined has been chewed away, but the
+rest of the book is intact, its pages crisp and the ink unfaded.
+~
+A
+browse~
+*~
+if( rflag( reset0, room ) ) {
+  i = random( 1, 6 );
+  if( i == 1 )
+    act_tochar( #chaos, ch );
+  if( i == 2 )
+    act_tochar( #notice, ch );
+  if( i == 4 )
+    act_tochar( #diaryindex, ch );
+  if( i == 5 )
+    act_tochar( #spell, ch );
+  if( i == 3 )
+    act_tochar( #spelltwo, ch );
+  if( i == 6 )
+    act_tochar( #mouseeaten, ch );
+  if( random( 1, 3 ) == 1 )
+    remove_rflag( reset0, room );
+  }
+else
+  act_tochar( #boring, ch );
+~
+E
+chaos~
+@CIn an old dwarvish script, thus reads the notes of Byron.@n
+
+I must...the life will not transfer to the perfect bodies if I only use
+the simple laws of electricity.  I must find a way to harness the power
+that life has flowing within it.  I must...damn.  I just cannot find
+the right frequency, the voltage of the metal simply cannot hold the
+right flow long enough.  It drains out into the air too fast.  They blink
+with the field of life, but the magical spark of the creatures simply
+will not go through.  I need to find a way to transfer the magic of life.
+That special magi...
+
+@C*@nThis passage drifts off into a broken line, as if the pen had been
+dragged across the paper mindlessly when the writer drifted into an idea,
+forgetting his scribblings...  A few pages later, the text continues, with
+various sigils and odd names written in the corners of the pages between.@C*@n
+
+Electricity..  An aspect of order and life!  But the gods of order deny
+me any word of help.  I preserve life into the perfect golem forms, yet
+they remove aspects of my own personal magic instead of granting me my
+needs.  DAMN THEM!  I must find a way to realize the perfection of
+eternal life...for all things.  The world as it needs to be...metal,
+perfect...no living frailties..  I must keep trying!
+
+@C*@nThe next few pages are filled with drawings of sacrifices one must
+make to various gods.  Blood stains begin to appear, brown blotches on
+the yellowed pages.@C*@n 
+
+The dark gods will not listen.  They see not how a light dwarf could
+possibly help them, as I would preserve both their light enemies as well
+as their dark races.  Can they not see the truth behind all preservation? 
+Can they not see that I must save the world as it is now, in the golden
+age of history!?  I thought gods could see visions beyond those that any
+mortal could see.  I think they see that with this I would achieve
+immortality and fear me.  They fear what they cannot control, those who
+would take their power!  I will become a god, and yet they cannot see the
+debt I would owe the god that would grant me this wish!  I will find a
+way.  I will ask the Dwarven King to petition our god, Duroth of the
+Forge, to grant me the powers I need.  I will write a petition to the
+Dwarven Council and they will understand my dreams of perfection
+preserved forever, and so they will back me.  The gods might deny one
+dwarf, but never the entire race, united as one!
+
+@C*@n*After this section, a whole chunk of pages has been torn roughly from
+the book.@C*@n
+
+@C*@nFollowing the removed section, the writings appear in various
+languages, both understandable and totally foreign to any mortal eye. 
+Strange symbols begin appearing in the text, and you find it difficult to
+read what it says.  Throughout various pages, the text goes thick and
+brown, as if written in blood from a thick finger.@C*@n 
+
+
+Denied..  Trapped..  understand....  NO!..
+
+Power..  chaos preserves life.
+
+Gandin will save all life... storm born electricity..
+
+spirits....  bodies....  new
+
+Sunpetal.. apprentice..  need .. preserve...
+
+Blood.. weak..  must build... strong..  forever..
+
+...to serve...
+~
+E
+notice~
+@C*@n On Formal Parchment, with the seal of the Dwarven Council @C*@n
+
+All citizens of the Dwarven Race,
+
+A great evil has spread across what was once a great good in the Dwarven
+Kingdom.  One known as Byron has been found guilty of murder and the dark
+manipulation of the spirits of his race, and the other races of this land.
+We must cleanse our people of the hidden taint, and of the great evil
+that threatens our way of life.
+
+It is the ruling of the Dwarven High Council that one known as "Byron
+Toymaker" shall be renamed throughout the history of the Dwarven people
+as "Byron Lifecarver." Furthermore, he shall be sentenced to death for
+crimes against the sentient and good races of the land.  It is the decree
+of the council of elders that he is to be sealed within his mountain home
+with all of his mad creations and tainted methods.
+
+May mercy find his apprentice "Sunpetal Dreamsmaker", who shall also be
+sealed within the mountain factory by no fault of her own, but due to
+the taint of Byron Lifecarver.
+
+So it is decreed by the Dwarven Council, and shall be throughout all time.
+~
+E
+spell~
+@C*@nYou open a moldy leather-bound tome in which very little is still
+legible.  It seems to be some sort of ritual spell book.  Within the
+volume, there are smatterings of chants and spells to appease the chaotic
+aspects of Gandin, the god of storms.  One such chant catches your eye as
+particularly disturbing.@C*@n 
+
+As the ocean breaks the waves upon the shore, so must the mind break
+thoughts upon the altar of chaos.  As the wind howls the tunes of chaos,
+so must the mind howl the madness within.  As the lightning splits the
+sky and the tree below, so must the mind split in order to understand and
+harness the lightning.
+
+As one mind cannot take the burden of chaos, the spirit must succumb to
+the power of the storm.
+
+As one spirit cannot take the burden, others must be brought into the
+fray to lead to the power.
+
+As the lightning splits the sky, it cannot split the spirit.
+
+As the ocean breaks the waves, the ocean cannot break the mind.
+
+As chaos can break all things, it is greater then all things; even the
+spirit, and so the spirit must continue if the chaos is to be kept from
+the mind, and if it is truly to be harnessed.  Like the land re-building
+the shore with volcanoes, so must the souls be given to the chaos.
+
+And it is thus that chaos be given form, that electricity be given
+purpose, and the world be reborn.
+~
+E
+mouseeaten~
+@C*@nYou find a badly mouse-eaten notebook with only a few readable words in
+it.  They seem to be a strange mix of ideas, and they catch your eye as
+you put the thoughts together.@C*@n
+
+Spirit lightning....
+...conduit for the power...
+direct link to the storm...
+
+Shells home to the power or the spirit?
+
+Sentience in the mind, the spirit, or the power?
+
+To create power, power must grow by itself.
+To create itself, must be true life.
+
+True life must be able to create spirit and body.
+
+Power enough to create spirit, or simply to preserve spirit?
+
+What is the sacrifice for the ultimate prize?
+
+Is there one?
+~
+E
+spelltwo~
+@C*@nYou manage to piece together the torn parts of a spell of some sort.
+Unfortunately, the component list is missing, making it uncastable, but
+the words of the spell are intact.@C*@n
+
+The worlds collide and so the planet is healed
+Healing through security
+Security in control
+Control through magic
+Magic of metal
+Metal as life
+Life reborn, and forever
+Eternal in birth
+Birth within spirit
+Spirit within metal
+Metal life within creation
+Creation of golem
+Golem capture chaos
+Chaos provide healing
+Worlds collide and so the life is forever
+The planet is healed
+~
+E
+boring~
+You look at all of the books, but they appear to be boring texts about
+gears or books with magic spell titles, but blank pages.
+~
+E
+diaryindex~
+You come across a journal titled: The Journal of Sunpetal Dreamsmaker.
+
+It has @Gsix@n @Cnumbered@n sections, each marked with ribbon or twine,
+that can be @Cread@n.
+~
+!
+0 0 0
+A
+~
+corner chair lounge~
+if( !rflag( reset1, room ) ) {
+act_tochar( #already, ch );
+end;
+}
+  remove_rflag( reset1, room );
+  mload( 5073,room );
+  act_tochar( #mouse, ch );
+  act_notchar( #lmouse, ch );
+~
+E
+mouse~
+A little mechanical mouse pokes its frightened little head out from the
+home it has made in the chair, and looks at you with a wide-eyed,
+whisker-twitching, curious look.
+~
+E
+lmouse~
+A mechanical mouse pops its head out of the diminutive hole in
+the rotting chair and looks at $n curiously, whiskers twitching.
+~
+E
+already~
+The chair has nothing in it but chewed fluff and wood.
+~
+!
+9 0 0
+A
+3 read 1 look 3 examine~
+one~
+act_tochar( #diary, ch );
+~
+E
+diary~
+The Journal of Sunpetal Dreamsmaker.
+
+The First Day of my New Apprenticeship!
+
+Today I consider myself the luckiest gnome in the forest.  I can finally
+prove myself as the best darn tinkerer in the city.  I signed on with the
+Dwarven Mastersmith Byron and start my training today as his apprentice. 
+Bet those guildmasters never saw this coming!  They always thought I was
+just complaining when I said I couldn't find strong, small metal bits
+good enough to really make my creations work, but they never believed me. 
+Now, I can finally get the tiny precise parts I needed for my clockwork
+toys.  Byron is incredible, so full of joy and ideas.  He has amazing
+blueprints and sketches of fantastic mechanical toys.  So many unusual
+ideas and such talent.  And he never had anyone working with him, until
+today!  It is like a magical dream come true, nobody ever gets to see
+inside Byron's workshop.  It is a secret place only spoken of as in
+imagination.  I can only dream of what this will be like.  Heh, look at
+me, bouncing around like a halfling turned loose in a crowded pub.
+
+* The journal continues on the page two...  * 
+~
+!
+9 0 0
+A
+3 read 1 look 3 examine~
+two~
+act_tochar( #diary, ch );
+~
+E
+diary~
+Day Two
+
+I finally started today in the workshop.  I hardly slept at all last
+night, the anticipation building until I sprung out of bed at dawn like a
+child on his birthday.  I was allowed through the grand door into the
+workshop.  It is rather funny actually, I had so many visions of this
+magical home, that it was almost a relief to see the simplicity of the
+place.  Just a normal home with a kitchen, dining room, and a library.. 
+that is hardly anything simple.  You should see this place!  Every book
+ever written about gears and springs sits on just one shelf.  I think he
+wrote most of these books and blueprints himself, from the strengths of
+metals, to magical properties of every kind of tool..  there is even a
+tome here on the properties of life and creation..  It would take years
+to read each volume.  I wonder how old Byron is.
+
+He asked me to build something today, so he could see the skill level of
+my work.  I built a little bird for him.  It would flap around the room
+in a pretty loop and then land back on my shoulder.  Not my best work,
+but it showed my talent.  He smiled as it went in the careful arc and
+then sighed.  He said, "Your grasp of mathematics and mechanics is
+remarkable, but it is missing, something" When I asked what it was
+missing, he shrugged and said he wasn't sure.
+
+* The journal continues on the page three...  *
+~
+!
+9 0 0
+A
+3 read 1 look 3 examine~
+three~
+act_tochar( #diary, ch );
+~
+E
+diary~
+Day Sixteen
+
+It has been an odd sort of time so far.  Byron keeps me busy with my
+creations.  It seems that he got a hold of much of my early work and
+started quickly crafting a huge number of the tiny parts I usually use. 
+Each time I create something, he adds to the piles of raw materials.  It
+is scary how fast those piles grow, even with me working as fast as I can
+to create the varied toys he requests.  Somehow, nothing I make is quite
+good enough.  Oh, he smiles and applauds my work, but never can I get the
+true bright joy behind his eyes of a finished project...he never seems
+satisfied.  It is an odd thing, as this propels me to new heights of
+creation, but disturbs me on an inner level, like he is on some sort of
+mission.  Ah well, perhaps I am just tired.
+
+* The journal continues on the page four...  *
+~
+!
+9 0 0
+A
+3 read 1 look 3 examine~
+four~
+act_tochar( #diary, ch );
+~
+E
+diary~
+Day Twenty.
+
+I am not sure what is going on, but something odd happened today. I had
+just finished creating an experimental mouse toy for him, with a multiple
+gear system.  It had a lot of potential for various activities, like
+walking in different patterns and moving like a real mouse might, but I
+still needed to adjust the springs and gear slightly after each pattern
+in order to change it.  I consider it a true masterpiece, with mutliple
+ways to make people smile.  Byron had his normal sad expression, when he
+suddenly smiled and jumped up from the table, throwing his mead clear
+across the room in his sudden surprise!  Then he grabbed the little mouse
+mid-stride and ran across the room into the library.  He then threw back
+a bookcase and went down an odd set of stairs I had never seen before. 
+As he ran down into the darkness, he said lightly "close the door and
+wait for me" Very strange, but I cannot wait to see what happens.
+
+* * *
+Day Twenty Three
+
+Life is dull without Byron around.  After dashing downstairs three days
+ago, he hasn't come back once.  I hear flashes of electricity, like
+lightning being thrown around, but have not seen Byron at all.  Smells of
+smoke and burning come from downstairs but still no sign of him.
+
+* The journal continues on the page five...  *
+~
+!
+9 0 0
+A
+3 read 1 look 3 examine~
+five~
+act_tochar( #diary, ch );
+~
+E
+diary~
+Day Twenty Nine
+
+Byron came back upstairs today.  He brought with him my mechanical mouse. 
+It moved in strange ways.  I am not sure how he has done it, but even
+though I know that mouse could not possibly be real, it is somehow alive. 
+Byron has managed to create the perfect gear and spring golem.  If I
+didn't know better, I would say he just created life from metal.  He
+asked me to study the behaviour of his mouse and tell him anything
+strange.  I don't know what to say, the dwarf is a genius.
+
+* * *
+Day Thirty Three.
+
+Dwarven Princess Isabal visited today.  She brought her special Byron toy
+with her.  I found out that the toys that Byron handed out to the Dwarven
+King's children have been talked about non-stop throughout the kingdom. 
+I feel joy in the success that we have brought, but I still wonder how he
+did it.  I am given the credit for my mechanical masterwork, but somehow
+Byron did that extra step.  He has been talking recently about how his
+new life is an "improvement" on flesh life.  I think he speaks in jest,
+but sometimes I wonder about him.
+
+* The journal continues on the page six...  *
+~
+!
+9 0 0
+A
+3 read 1 look 3 examine~
+six~
+act_tochar( #diary, ch );
+~
+E
+diary~
+Day Forty
+
+Well, I finaly got my place set up in the lower testing laboratory.  The
+Dwarven Council approved Byron's plans to create special golems for the
+kingdom.  The toys that he made have been sent around the entire realm
+and are in very high demand.  I am ecstatic that our work is making so
+many people happy and has caused so many children to understand the joy
+of creation again.  Byron finally told me what he had been doing with the
+toys and it was so strange that I can hardly believe it worked.  He told
+me what every living being carries in their structure.  The magic of a
+living being has an electricty, like a magical power source that makes
+every being do what it needs to.  He simply took the field away from the
+tiny creatures, like mice and birds, and moved it into the toys.  I had a
+bit of a hard time when I realized that the toys each would cost a tiny
+creature its little life, but Byron explained to me that the creatures
+live on inside my creations.  I think I will resolve to make each
+creation as perfect as possible, so that every one is a wonderful home.
+
+* This looks to be the last page in this journal, but it seems that it
+should continue elsewhere...  * 
+~
+!
+9 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou squeeze through the gap in the toppled shelves, heading
+northward.@n 
+~
+E
+to_room~
+@c$n squeezes through the gap in the toppled shelves, heading
+northward.@n 
+~
+!
+3 0 1
+-1
+S
+
+#1612
+Stairway Entrance~
+This odd stairwell looks like it was hastily built right out of the
+rockface.  Stairs are carved into the back wall of an old closet, with
+wooden wall panels suddenly breaking off into the stone shaft.  There may
+have even been a door where this place joins the library, but now the
+door is gone and the whole area leads downward into a roughly dug tunnel. 
+The stone stairs are slippery and crude, almost like they were made for
+barefeet.
+~
+[Guin] Done.
+~
+200933380 0 6 0
+D2
+~
+~
+0 -1 1611 10 10 5
+D5
+~
+~
+0 -1 1613 10 10 5
+E
+closet wooden wall panels~
+It looks very much like this stairway was dug out while someone was
+hiding in the back of an old large closet.  The rough cut hole has been
+widened over time, it seems, but the closet has long since been totally
+gutted.
+~
+A
+~
+~
+if( !is_player( ch ) )
+  continue;
+else {
+  if( random( 2, 14 ) >= find_stat( ch, dex ) ) {
+    act_tochar( #slip, ch );
+    act_notchar( #tslip, ch );
+    i = 2d7;
+    dam_message( ch, i, "the slippery floor" );
+    inflict( ch, mob, i, "sliding face-first into rock" );
+    interpret( ch, "+sit" );
+    }
+  else
+    act_tochar( #slide, ch );
+  continue;
+  }
+~
+E
+slip~
+You slip on the slippery stairs and fall to the floor!
+~
+E
+tslip~
+$n slips on the slippery rock stairs!
+~
+E
+slide~
+As you walk down the slippery incline, you manage to keep your balance.
+~
+!
+3 0 32
+-1
+S
+
+#1613
+Danger Notice~
+The entire bottom of the slippery stone staircase is dominated by a
+massive sign written in red and yellow dyes.  It covers the entire wall
+facing the stairs, like a giant marker warning about something important. 
+The message is a bit unclear, written in a long dead language.  The
+passage continues onward into the darkness to the north.
+~
+[Guin] Done
+~
+200933380 0 6 0
+D0
+~
+~
+0 -1 1614 10 10 5
+D4
+~
+~
+0 -1 1612 10 10 5
+E
+red yellow dyes~
+The yellow dyes that make up this sign appear to be the natural dyes
+taken from the very stones of the mountain.  The red dyes seem to be a
+mixture of iron powder and blood.
+~
+E
+sign~
+The message seems a little less mysterious as you look more closely. 
+Perhaps these bloodspattered squiggly lines, red arrows pointing downward
+and upward, and the huge red circle with the dramatic line through it
+mean something after all.  Whatever the case, the passage to the north
+has interesting glows and drifting from out of the darkness.
+~
+-1
+S
+
+#1614
+Testing Preparation Room~
+Various items used to be stored on the walls of this room, by the look of
+the blank spots beneath large hanging hooks.  The items left shapes where
+the dust could not settle: An outline of some sort of suit, an impression
+left by some sort of amulet, and other strange shapes.  On the floor lies
+strange torn bits of cloth, metal, and other materials, as if the
+previously hanging items were torn into spare parts for some reason.  A
+grey, dusty sign over the hooks has identification of these items,
+written in that strange ancient tongue, and a small stylized lightning
+bolt diagram.
+~
+[Guin] Done
+~
+200933380 0 6 0
+D1
+~
+~
+0 -1 1615 10 10 5
+D2
+~
+~
+0 -1 1613 10 10 5
+E
+dust outline item~
+Beside the outline of the amulet is an image of a walking stick, a lumpy
+knob at one end, and further along the outline of a gargantuan beer mug. 
+Above a shelf resides the outline of some kind of flower, apparently a
+rose.  Hanging on a hook was a short cylindrical tube.  Suspended from
+rotten velvet ropes was some sort of large weapon - a mace or a hammer.
+~
+E
+sign~
+The signs are written in an unintelligible scrawl.
+~
+-1
+S
+
+#1615
+Cluttered Hallway~
+This room looks like it used to be plain and clean, but now it holds the
+pieces and torn shreds of the various amulets and clothing once stored in
+the adjoining room.  Burn marks and broken bones can also be seen strewn
+about the room in places.  They look to be the bones of a variety of
+creatures, from forest rabbits to desert snakes, and many that are now
+too shattered to be identified.  On the wall is a torn leather poster, an
+odd pictograph detailing the process of converting animal life to
+mechanical life...
+~
+[Guin] done.
+~
+200933380 0 6 0
+D1
+~
+~
+0 -1 1616 10 10 5
+D3
+~
+~
+0 -1 1614 10 10 5
+E
+broken bones~
+Amid the clutter and chaos on the floor are several shards of bone. 
+Ranging from scraps as big as a needle to chunks that must have come from
+a very large animal, no bone has been left intact.  Most are blackened
+from heat, but some look as if they melted.  All have been smashed into
+fragments and left to rot on the floor.
+~
+E
+pictograph process~
+Starting with a simple picture of a hyena, this diagram goes through the
+technical steps of creating a golem body...  and then delves directly
+into formulii not unlike those found in a mage's spellbook.  As it
+travels along the step-by-step process, it goes further in the realms of
+chaotic magic, until the pictograph itself is chaotically unreadable.
+~
+A
+~
+~
+act_room( #bones, ch );
+continue;
+~
+E
+bones~
+As you walk, you step on some old bones with a *crunch*.
+~
+!
+3 0 10
+-1
+S
+
+#1616
+Entrances to Testing Areas~
+The plain stone hallway flows to the east and west.  Thick strands of a
+red, glowing material streak across the ceiling, branching out at every
+intersection, apparently running through the walls above all the doors. 
+To the north is a massive, intricately carved brown door.  It seems to be
+made of the finest hardwood, but as you inspect it, you see that the
+entire door is made of tiny wires, a brilliant attempt to precisely
+reproduce the details of real wood using only metal.  To the south is
+another massive door, yellow and made of tiny sand grains, like a sand
+castle.
+~
+[Guin] Done.
+~
+200933388 0 6 0
+D0
+massive, intricately carved brown door~
+massive intricately carved brown door~
+131 -1 1617 10 10 5
+D1
+~
+~
+0 -1 1619 10 10 5
+D2
+bright, yellow door made of shifting sand~
+bright yellow door shifting sand~
+147 -1 1618 10 10 5
+D3
+~
+~
+0 -1 1615 10 10 5
+E
+yellow sand 1 south~
+Held together with a thin paste, the multitudinous sand grains are quite
+abrasive to the touch.  In color a uniform matte yellow, they give
+this door a dull finish.  The door is utterly featureless, with no handle
+or hinges, or any other obvious means of opening.  Perhaps if the sand
+was @Cwatered@n down, it would allow passage.
+~
+E
+brown wood 1 north~
+To the north, the brown door does a credible attempt at simulating wood
+grain.  The effect is spoiled by the stabby bits of wire ends projecting
+from the edges of the door, ready to jab unwary fingers.  A handle rests
+in the right hand side of the door, approximatly two feet off the ground
+for ease of dwarven access.
+~
+E
+red glowing strands thick~
+Set into the ceiling and held there by an unknown force, dozens of weakly
+glowing red ropes run the length of the corridor.  Two of these cables
+make sharp detours to run through the wall of the brown door, and two
+more do the same for the door of sand.
+~
+A
+toss pour throw~
+bucket~
+obj = has_obj( 7585, ch );
+if( is_open( room, south ) ) {
+  act_tochar( #already, ch );
+  end;
+  }
+if( !has_obj( 7585, ch ) ) {
+  act_tochar( #with_what, ch );
+  end;
+  }
+act_tochar( #throw, ch, obj );
+act_notchar( #rthrow, ch, obj );
+junk_obj( obj, 1 );
+wait( 1 );
+act_room( #creak, ch );
+open( room, south );
+~
+E
+with_what~
+In order for the sludge bucket to make the door wet, perhaps it should be
+full of something first?
+~
+E
+throw~
+You throw $p at the southern door.
+~
+E
+rthrow~
+$n throws $p at the southern door.
+~
+E
+creak~
+The bucket shatters on impact.  The suddenly free sludge collides with
+the sandy door and then burns away the sandstone lock with a dull squelch.
+The door creaks open.
+~
+E
+already~
+The door is already open.
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@RYou follow the path of the glowing ropes through the doorway to the
+$T.@n 
+~
+E
+to_char~
+@R$n follows the path of the glowing ropes through the doorway to the
+$T.@n 
+~
+!
+3 0 5
+A
+~
+bright yellow door 1 south~
+if( is_open( room, south ) ) 
+  act_tochar( #why, ch );
+else
+  act_tochar( #sludge, ch );
+~
+E
+why~
+The door is already been made sludge.
+~
+E
+sludge~
+@gYou notice some sludge at the bottom of the door.  Perhaps if you
+tossed some more sludge or water on it, the door would disolve
+completely.@n 
+~
+!
+8 0 4
+7586 17 1509949540 -2 0
+-1
+S
+
+#1617
+Forest~
+A forest in full spring regalia is sitting in a cavernous room.  A solid
+granite wall at your right fences in the forest as it stretches on to the
+north.  Trees reach up towards the ceiling, which has been painted a
+light blue.  Low and almost inaudible, a metallic rustling sound pervades
+the area, as if thousands of creatures were skittering across a steel
+plate.  Branches sway gently in the constant soft breeze blowing only
+from the north.  Every tree is flawless, perfect...and absolutely
+identical.
+~
+[Guin] Done.
+~
+200933388 0 6 0
+D0
+~
+~
+0 -1 1632 10 10 5
+D2
+massive, intricately carved brown door~
+massive intricately carved brown door~
+131 -1 1616 10 10 5
+D3
+~
+~
+0 -1 1634 10 10 5
+E
+trees~
+Like assembly line toys, the trees are all identical in shape, size and
+color...each angle, bend and color mirroring those on all the other trees.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CA strange sensation...a tingling...sends a shiver through you as you
+head $Tward, further into this section of the caves.@n 
+~
+E
+to_room~
+@C$n shivers as $e heads $Tward.@n
+~
+!
+3 0 8
+5061 9 1509949540 3 0
+-1
+S
+
+#1618
+Desert~
+Dull yellow paint is peeling off the cavern walls in strips.  A giant
+pile of sand has been lumped together into a minor hill, gently sloping
+toward the door.  The dry heat is stifling, leeching any trace of
+moisture from the cavern of sand - simulated desert.  Looking more like a
+halfling child's sand box sand than a desert model, this room would be
+more useful in polishing armor in the bright yellow sand than actually
+being a good desert.
+~
+[Guin] Done.
+~
+200933380 11 6 0
+D0
+bright, yellow door made of shifting sand~
+bright yellow shifting sand~
+147 -1 1616 10 10 5
+D2
+~
+~
+0 -1 1636 10 10 5
+D3
+~
+~
+0 -1 1638 10 10 5
+E
+giant pile sand~
+Lumped together in one huge imitation dune, the sand is completly free of
+brush or any sort of plant life.  Tracks indicate that something once
+moved around in this room, apparently pacing back and forth.  At random
+intervals near the tracks are small pools of glass, where intense heat
+has fused the sand together into a solid mass.
+~
+E
+tracks~
+There are so many tracks, crisscrossing each other repeatedly, there is
+no way to determine what...or who...made them.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou trudge on through the odd terrain, heading $T.@n
+~
+E
+to_room~
+@y$n trudges on through the odd terrain, heading $T.@n
+~
+!
+3 0 12
+A
+~
+dune sand pile~
+act_tochar( #search, ch );
+act_notchar( #rsearch, ch );
+wait( 1 );
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 4 ) == 3 ) {
+    obj = oload( 3828 );
+    act_tochar( #found, ch, obj );
+    act_notchar( #rfound, ch, obj );
+    if( can_handle( ch, obj ) )
+      obj_to_char( obj, ch );
+    else
+      obj_to_room( obj, room );
+    end;
+  }
+}
+act_tochar( #nothing, ch );
+act_notchar( #rnothing, ch );
+~
+E
+search~
+@yYou search through the pile of sand for anything interesting.@n
+~
+E
+rsearch~
+@y$n searches through the pile of sand.@n
+~
+E
+found~
+@yYou find $p after sifting through the sand.@n
+~
+E
+rfound~
+@y$n finds $p after sifting through the sand.@n
+~
+E
+nothing~
+@yYou find nothing of interest in the sand.@n
+~
+E
+rnothing~
+@y$n finds nothing of interest in the pile of sand.@n
+~
+!
+9 0 0
+-1
+S
+
+#1619
+Entrances to Testing Areas~
+To the north of this corridor is a translucent door of ice, riddled with
+cracks throughout the surface.  At the touch, however, the door does not
+feel quite like ice, despite the intense cold.  To your south is a screen
+of seemingly bright green vines.  This door is obviously not made of
+vines however, the wires have long since corroded into red rust from the
+moist, warm air seeping throughout the door beyond.  To the east, you see
+an odd-looking shimmering silver portal.
+~
+[Guin] Done.
+~
+200933388 0 6 0
+D0
+translucent door of ice~
+translucent door north ice~
+131 -1 1620 10 10 5
+D1
+~
+~
+0 -1 1622 10 10 5
+D2
+hanging green door of sparking vinewires~
+sparking hanging green door vinewires~
+131 -1 1621 10 10 5
+D3
+~
+~
+0 -1 1616 10 10 5
+E
+door ice cold translucent~
+Cold, pale blue light shines through the translucent door and into the
+corridor.  The door is not transparent enough to provide clear vision of
+what lies on the other side, or maybe the only thing there is a
+featureless plane of white.  Tiny cracks spread throughout the door. 
+They seem to be centered in the middle of the door and about three feet
+off the ground, as if some object hit the door at a high speed.
+~
+E
+seeping wires vines green moist~
+A puddle of water is slowly creeping across the hallway, originating from
+somewhere underneath the door of vines.  Stagnant and blackened by slime,
+the pool has clearly been here for some time.  Mold grows in tendrils on
+the south wall, the only actual plant life in this place.  The door
+itself is a rusting mass of thick wires painted green.  The flagstones
+near the base of the door are blackened, and a faint scent of ozone
+lingers in the air.
+~
+E
+portal 1 east~
+In the distance toward the east, the shimmering silver outline of a
+strange looking portal fades in and out of sight.  Flickering images,
+indiscernible from here, chase across its surface.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@C A rush of freezing air wafts outward as the door to the north is
+opened.@n 
+~
+E
+to_room~
+@C$n shivers as $e steps through the door to the north.@n
+~
+!
+3 0 1
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GA blast of hot, humid air sweeps over you, as you enter the door to the
+south.@n 
+~
+E
+to_room~
+@G$n hesitates briefly before entering the door to the south.@n
+~
+!
+3 0 4
+-1
+S
+
+#1620
+Tundra~
+As you enter the odd field of flat white beyond the door, a strange
+whirring noise begins buzzing through the air.  Suddenly, the surrounding
+area is sprayed with an odd white substance that is almost, but not
+quite, snow.  Your field of vision is not all that obscured, and the
+temperature doesn't become significantly colder, in fact the tundra-like
+terrain doesn't change much at all.
+~
+[Guin] Done.
+~
+200933380 11 6 0
+D0
+~
+~
+0 -1 1627 10 10 5
+D1
+~
+~
+0 -1 1625 10 10 5
+D2
+translucent door of ice~
+translucent door ice~
+131 -1 1619 10 10 5
+E
+odd white substance snow~
+Drifting serenely down from the ceiling are tiny white flakes
+of...something.  They are not cold, nor do they melt when touched.  In
+fact, the flakes aren't even wet.  However, after the flakes settle to
+the ground, it is possible to catch the unmistakable odor of...soap?
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CYou leave the freezing clime of the tundra for the relative warmth of
+the hall.@n 
+~
+E
+to_room~
+@C$n heads through the door for the relative warmth of the hallway.@n
+
+~
+!
+3 0 4
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CThe 'snow' crunches oddly underfoot as you head $T.@n
+~
+E
+to_room~
+@CThe 'snow' crunches oddly underfoot as $n heads east.@n
+~
+!
+3 0 3
+5063 9 1509949540 3 0
+-1
+S
+
+#1621
+Swamp~
+This warm room looks like it once had a pool of clear water with algae
+floating atop it.  Currently, though, it has a big rusty spot in the
+middle of a shallow depression, with a snarl of wires clustered centrally
+there.  The wall to the west has a tangle of crackling, glowing wires and
+compressed rusty gears turning pitifully, trying to enact some unknown
+purpose.  A weak spray of water comes from the ceiling, badly aimed
+directly at the northern door.
+~
+[Guin] Done.
+~
+200933380 0 6 0
+D0
+hanging green door of sparking vinewires~
+sparking hanging green door vinewires~
+131 -1 1619 10 10 5
+D1
+~
+~
+0 -1 1629 10 10 5
+D2
+~
+~
+0 -1 1624 10 10 5
+E
+spray water ceiling~
+The ceiling is peppered with a row of dark holes, lined up in a neat row. 
+Water dribbles weakly from these holes, splattering on the floor in a
+constant barrage of murk and rust.  Heavy rust and watermarks on the
+floor, directly beneath the holes, shows this has been going on for some
+time.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@gYou leave the sweltering swamp-like area for the relative coolness of
+the central corridor.@n 
+~
+E
+to_room~
+@g$n leaves the sweltering swamp-like area for the relative coolness of
+the central corridor.@n 
+~
+!
+3 0 1
+5070 9 1509949540 3 0
+-1
+S
+
+#1622
+Experimental Portal~
+You stand before a shimmering silver @Cportal@n filled with flittering
+images, offering up a whirlwind tour of the possible future of this land. 
+Forests, tundra, deserts, swamps, and all the other landscapes flash
+fleetingly across the view of the @Cportal@n.  Every landscape is full of
+mechanical versions of its life.  Inscribed on every copper tree, every
+silver bird, on everything you can see through the @Cportal@n, are the
+keywords which tell who would instantly convert these creatures to these
+shiny and electrically magic versions.  Byron Lifecarver, Dwarven
+Mastersmith.  Who knows what remains of the souls of those who were
+changed by this mad genius...
+~
+[Guin] Done.
+~
+200933380 0 6 0
+D1
+~
+~
+0 -1 1623 10 10 5
+D3
+~
+~
+0 -1 1619 10 10 5
+A
+~
+~
+if( find_stat( ch, level ) < 40 ) {
+  if( rflag( reset0, room ) ) {
+    remove_rflag( reset0, room );
+    act_tochar( #little, ch );
+    end;
+  }
+}
+else {
+act_tochar( #level, ch );
+act_notchar( #rlevel, ch );
+}
+continue;
+~
+E
+little~
+@GYou skirt the shimmering portal, attempting to move further along the
+passageway.  Abruptly, a force barrier blocks your path.@n 
+~
+E
+level~
+@GYou skirt the shimmering portal, continuing on down the passage to the
+east.@n 
+~
+E
+rlevel~
+@G$n skirts the shimmering portal, continuing on down the passage to the
+east.@n 
+~
+!
+3 0 2
+A
+2 enter~
+shimmering silver portal experimental~
+act_tochar( #fail, ch );
+act_notchar( #rfail, ch );
+damage( mob, ch, 10d10, physical, "the wild magic of the portal", "the distorted portal" );
+position( ch, 6 );
+~
+E
+fail~
+@CYou step into the shifting, swirling portal and feel powerful energies
+surging around you...tugging you onward demandingly.  Suddenly, as though
+you are not what it sought, the energies thrust you outward violently,
+denying you entrance into what lies beyond.@n 
+~
+E
+rfail~
+@C$n steps toward the shifting, swirling portal.  $s form starts to waver
+and pulse in rythm with the undulating the surface, halfway fading from
+sight before suddenly being cast outward into the hall once more.@n 
+~
+!
+0 0 0
+A
+1 look~
+shimmering silver portal experimental~
+i = random( 1, 4 );
+if( i == 1 )
+  act_tochar( #forest, ch );
+else if( i == 2 )
+  act_tochar( #tundra, ch );
+else if( i == 3 )
+  act_tochar( #desert, ch );
+else
+  act_tochar( #swamp, ch );
+~
+E
+forest~
+@gThe shifting, writhing portal clears, revealing a wooded landscape
+cloaked with ancient trees, the ground thick with the mosses and ferns of
+the forest floor.  Closer examination, however, reveals a sense of
+strangeness about the scene...all the trees are identical in height and
+width...the ferns and moss are all identical in size.  Apparent too, rust
+spots of varying sizes appear randomly over everything.@n
+~
+E
+tundra~
+@WThe shifting, writhing portal clears, revealing a snow-cloaked plain
+that stretches for miles in all directions.  Far to the north and east, a
+stand of ice-rimed stones shelters an embering campfire.  Closer
+examination of the scene reveals oddities however...the snow is
+unnaturally coarse in texture, its drifts strangely angular in shape. 
+The snow surrounding the glowing fire, is unmelted and those same
+rusty-looking spots appear randomly in different locations.@n
+~
+E
+desert~
+@yThe shifting, writhing portal clears, revealing a dusty yellow terrain
+that resembles a desert.  Tall and slender palm trees rise upward toward
+a flat blue sky, their green fronds bent at odd angles.  Closer
+examination reveals peeling paint, beneath which wide patches of rust can
+be clearly seen.@n 
+~
+E
+swamp~
+@GThe shifting, writhing portal clears, revealing what was once a
+swamp-like terrain.  Closer examination reveals several oddities...pools
+that held water at some point are now dried up, rust-colored depressions
+along the ground...a felled mangrove tree has crumpled into a heap rather
+than toppled over.  The ever present red-brown spots appear even more
+thick here, than in the other scenes shown in the mirror.@n 
+~
+!
+0 0 0
+-1
+S
+
+#1623
+Experiment Preparation Room~
+Broken pieces of various items lie on the ground here, in grey
+dust-covered clumps.  From the shape of the room and the bent hooks, it
+seems that this was another storage room for clothing and items, yet is
+more torn up then its neighbor upstairs.  The hooks have been joined by
+what used to be thick metal cabinets, huge tears scored through their
+sides.  Most of the debris is on the floor of the room, as if the
+cabinets were ripped apart from the inside.
+~
+[Guin] Done.
+~
+200933380 0 6 0
+D3
+~
+~
+0 -1 1622 10 10 5
+D5
+~
+~
+0 -1 1640 10 10 5
+E
+cabinet thick metal~
+The metal cabinets once stretched from floor to ceiling and were nearly
+three feet wide.  Inside, the remains of the shelves show that whatever
+was stacked in here barely fit inside.  The steel shelves are badly bent
+in the middle, and all are spaced three feet apart.  The worst of the
+claw marks line up with the bottom shelf, and traces of a faint, small
+scratching can also be seen on the inside of the door, as something tiny
+fought for freedom from within the confines of the cabinet.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou navigate the stairway to the floor below.@n
+~
+E
+to_room~
+@y$n navigates the stairway to the floor below.@n
+~
+!
+3 0 32
+A
+~
+clump pieces items~
+act_tochar( #search, ch );
+act_notchar( #rsearch, ch );
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 30 ) == 3 ) {
+    obj = oload( 7318, random( 1, 3 ) );
+    act_tochar( #found, ch, obj );
+    act_notchar( #rfound, ch, obj );
+    if( can_handle( ch, obj ) )
+      obj_to_char( obj, ch );
+    else
+      obj_to_room( obj, room );
+    end;
+  }
+}
+act_tochar( #already, ch );
+~
+E
+search~
+@YYou search through the pile for anything of interest.@n
+~
+E
+rsearch~
+@Y$n starts searching through the piles for anything of interest.@n
+~
+E
+found~
+@RYou find $p in various spots.@n
+~
+E
+rfound~
+@R$n finds $p in the various piles in the room.@n
+~
+E
+already~
+You find nothing of interest.
+~
+!
+9 0 0
+-1
+S
+
+#1624
+Swamp~
+A large, long brown lump lies across this room.  This badly made tree
+trunk stretches somewhat across the rusty depression.  Obviously only
+intended to be seen from the top, this poor trunk seems to be lacking
+anything beyond some brown false bark and support below.  A small nest
+rests in a hollow underneath the trunk, near the depression that used to
+be a wet swamp.
+~
+[Guin] Done.
+~
+200933380 0 6 0
+D0
+~
+~
+0 -1 1621 10 10 5
+D1
+~
+~
+0 -1 1630 10 10 5
+E
+nest hollow depression~
+The nest, tucked into the hollow beneath the fallen tree, is composed of
+countless numbers of wires in varying sizes, all woven together in an
+intricate oval.  It too is peppered with rust and seems to be uninhabited.
+~
+A
+~
+nest~
+if( !rflag( reset0, room ) ) {
+  act_tochar( #already, ch );
+  act_notchar( #ralready, ch );
+  end;
+}
+if( find_skill( ch, searching ) < random( 5, 11 ) ) {
+  act_tochar( #already, ch );
+  act_notchar( #ralready, ch );
+  end;
+}
+remove_rflag( reset0, room );
+if( random( 1, 5 ) == 4 ) {
+  i = random( 1, 100 );
+  if( i < 11 )
+    obj = oload( 105 );
+  else if( i < 21 )
+    obj = oload( 2155 );
+  else if( i < 31 )
+    obj = oload( 633 );
+  else if( i < 41 )
+    obj = oload( 7037 );
+  else if( i < 51 )
+    obj = oload( 938 );
+  else if( i < 61 )
+    obj = oload( 901 );
+  else if( i < 71 )
+    obj = oload( 876 );
+  else if( i < 81 )
+    obj = oload( 1075 );
+  else if( i < 91 )
+    obj = oload( 911 );
+  else
+    obj = oload( 929 );
+}
+if( obj ) {
+  act_tochar( #found, ch, obj );
+  act_notchar( #rfound, ch, obj );
+  if( can_handle( ch, obj ) )
+    obj_to_char( obj, ch );
+  else
+    obj_to_room( obj, room );
+}
+else {
+  act_tochar( #nothing, ch );
+  act_notchar( #rnothing, ch );
+}
+~
+E
+already~
+@ySomeone has already searched through the nest.@n
+~
+E
+ralready~
+@y$n searches through the nest, but comes up empty handed.@n
+~
+E
+found~
+@yYou find $p after your thorough search through the nest.@n
+~
+E
+rfound~
+@y$n finds $p after $s thorough search through the nest.@n
+~
+E
+nothing~
+You find nothing of interest in the nest.
+~
+E
+rnothing~
+$n finds nothing of interest from $s search through the nest.
+~
+!
+9 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou step over the odd-looking log and continue on to the $T.@n
+~
+E
+to_room~
+@G$n steps over the odd-looking log and continues on to the $T.@n
+~
+!
+3 0 3
+5072 9 1509949540 3 0
+-1
+S
+
+#1625
+Tundra~
+Footprints pepper this stretch of tundra, leaving almost no surface
+untouched.  An exception is in the center of the room - a three foot
+square section of untouched white powder.  Directly above this oddity is
+a three foot square section of footprints imbedded in the ceiling.  The
+prints include those of lynx, deer, rabbit and....alligator?
+~
+[Guin] Done.
+~
+200933380 0 6 0
+D0
+~
+~
+0 -1 1626 10 10 5
+D3
+~
+~
+0 -1 1620 10 10 5
+E
+tracks footprints~
+Mingled with the tracks of normal tundra creatures are the distinctive
+markings of an alligator.  The claws, the swishing tail, all are
+reproduced with intricate skill.  Rare is the animal who would walk in a
+perfectly straight line and into a wall, yet all of these tracks are
+doing just that.
+~
+5064 9 1509949540 3 0
+-1
+S
+
+#1626
+Tundra~
+Large natural-looking banks of snow rest here, surrounded by very
+lifelike three dimensional figures, supposedly trees.  The banks of snow
+have one major flaw though, they seem to make a sharp *clang* sound when
+stepped upon, not giving way as snow is supposed to do.  Around you
+rushes a cool breeze, not unlike the cold air that rushes around the
+inside of mountains.
+~
+[Guin] Done.
+~
+200933380 0 6 0
+D1
+~
+~
+0 -1 1628 10 10 5
+D2
+~
+~
+0 -1 1625 10 10 5
+D3
+~
+~
+0 -1 1627 10 10 5
+E
+banks snow~
+The lowering campfire nestles amid deep banks of what appear to be snow. 
+Contrary to visual perception, however, the mounds of white clank when
+stepped on as if made of some sort of formed metal.  The snow itself,
+upon closer inspection, is odd as well...the flakes are flat and larger
+than natural snow, and have the faint aroma of soap.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CThe 'snow' clanks loudly underfoot as you continue to the $T.@n
+~
+E
+to_room~
+@CThe 'snow' clanks loudly underfoot as $n continues to the $T.@n
+~
+!
+3 0 6
+-1
+S
+
+#1627
+Tundra~
+Still flat, the tundra stretches before you into the horizon.  Looking
+closer, you can see that the horizon is a cleverly painted mural on a
+stone wall, a few feet away.  Fluffy white clouds remain frozen on the
+ceiling where they were carved and painted.  Large footprints start from
+the wall and head east, travel for a few steps, and then stop.
+~
+[Guin] Done
+~
+200933380 0 6 0
+D1
+~
+~
+0 -1 1626 10 10 5
+D2
+~
+~
+0 -1 1620 10 10 5
+E
+footprint large steps~
+Gigantic footprints, several feet in diameter, are embedded in the floor. 
+Three roundish toes jut out in front of each print, and circular holes
+mark the passage of claws attached to each toe.  The main part of the
+footprints each have dozens of tiny holes in them, as if the tracks were
+made by someone in hobnail boots, stomping around to mash the ground flat.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CThe 'snow' crunches oddly underfoot as you head east.@n
+~
+E
+to_room~
+@CThe 'snow' crunches oddly underfoot as $n heads east.@n
+~
+!
+3 0 4
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CYou follow the tracks imprinted in the snow.@n
+~
+E
+to_room~
+@C$n follows the tracks imprinted in the snow.@n
+~
+!
+3 0 2
+5062 9 1509949540 3 0
+-1
+S
+
+#1628
+Tundra~
+Tucked safely beneath a clay rock, a campfire smoulders merrily in
+this tundra clearing.  The pungent smell of smoking metal emanates
+strongly from the glowing embers, concentrated most strongly in the
+alcove designed to hold in the warmth.  It is considerably warmer in here
+than the outlying area, although the rest of the tundra isn't
+particularly cold.  Between the white outcropping above and the smoke
+hanging around, this is the one place where the walls of the cavern
+aren't visible.
+~
+[Guin] Done.
+~
+200933380 11 6 0
+D3
+~
+~
+0 -1 1626 10 10 5
+E
+campfire~
+Partially buried under loose dirt , the glowing embers of the campfire
+can still be seen.  The air above the fire shimmers slightly from
+the intense heat, radiating from the banked coals...far too much heat for
+that tiny campfire.
+~
+A
+~
+campfire~
+act_tochar( #onlysnow, ch );
+act_notchar( #ronlysnow, ch );
+~
+E
+onlysnow~
+@EYou find nothing but the very small, metallic snow flakes.@n
+~
+E
+ronlysnow~
+@E$n finds nothing but the very small, metallic snow flakes.@n
+~
+!
+9 0 0
+1358 17 1509949540 -2 0
+-1
+S
+
+#1629
+Swamp~
+The tangle of vines gives way to a wide, shallow depression in the floor. 
+Several wide, flat rocks spread neatly across the depression in a
+perfectly straight line.  The rocks have odd brown clumps of wires on the
+surface, looking like dried algae.  It seems like the rocks were designed
+to be stepping stones across the stagnant water before the lake
+evaporated.
+~
+[Guin] Done.
+~
+200933380 0 6 0
+D2
+~
+~
+0 -1 1630 10 10 5
+D3
+~
+~
+0 -1 1621 10 10 5
+E
+rock clumps wires dried algae rocks~
+Tortuously twisted into palm-size clumps, thin strands of wire are
+crushed and crumpled into simulated moss.  The metal vegetation clings to
+a series of flat stones tenaciously much like their more normal
+counterpart.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou travel across the stones, taking care to avoid the rusted strands
+of wire.@n 
+~
+E
+to_room~
+@G$n travels across the stones, taking care to avoid the rusted strands
+of wire.@n 
+~
+!
+3 0 12
+-1
+S
+
+#1630
+Swamp~
+Elevated slightly from the depression in the floor, this patch of land is
+muddy and damp.  The soupy patch of sludge has been tracked all over the
+surrounding ditch, where it has dried up into a petrified trail.  This
+patch of ground was apparently designed as an island, but once the swamp
+evaporated it became irrelevant.
+~
+[Guin] Done.
+~
+200933380 0 6 0
+D0
+~
+~
+0 -1 1629 10 10 5
+D2
+~
+~
+0 -1 1631 10 10 5
+D3
+~
+~
+0 -1 1624 10 10 5
+E
+petrified trail~
+The trail, hardened like stone, skirts this section of swamp-like
+terrain, leading both to the north and west.  A much more narrow spur
+leads to the south, away from the less trafficked sections.  Thousands of
+footprints create a bewildering pattern of tracks, frozen in time by the
+hardened sludge.  In places, an oddly-smooth slithering design masks out
+sections of the prints.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou follow the more narrow of the tracks toward the south.@n
+~
+E
+to_room~
+@G$n follows the more narrow of the tracks toward the south.@n.
+~
+!
+3 0 4
+-1
+S
+
+#1631
+Swamp~
+This swampy alcove seems to have been designed to mimic the protection of
+one of the giant mangrove trees of the swamp.  Unfortunately, the
+mangrove cover has collapsed due to rust and poor construction, leaving a
+tangled mess of metal underfoot.  There is no relief from the relentless
+heat or unbearable sultriness of the conditions in this part of the
+complex.
+~
+[Guin] Done.
+~
+200933380 0 6 0
+D0
+~
+~
+0 -1 1630 10 10 5
+E
+tangled mess metal rust~
+A rusted out pile of metal lies in the middle of the floor, some of the
+collapsed and twisted shapes vaguely resembling the mangrove trees of the
+great swamps of the world.  Little of the paint remains that once adorned
+these constructions but a few patches of dull green and even more dull
+dusty brown can be seen here and there.
+~
+A
+~
+tangled mess metal~
+damage( mob, ch, 2d10, physical, "the sharp pieces of metal", "searching through the tangled metal" );
+if( rflag( reset0, room ) )
+  if( random( 1, 20 ) < 4 ) {
+  obj = oload( 127 );
+  act_tochar( #twisted, ch, obj );
+  act_notchar( #rtwisted, ch, obj );
+  if( can_handle( ch, obj ) )
+    obj_to_char( obj, ch );
+  else
+    obj_to_room( obj, room );
+end;
+}
+act_tochar( #nothing, ch );
+act_notchar( #rnothing, ch );
+~
+E
+twisted~
+@cYou find $p in the tangled mess.@n
+~
+E
+rtwisted~
+@c$n finds $p in the tangled mess.@n
+~
+E
+nothing~
+You find nothing of interest.
+~
+E
+rnothing~
+$n finds nothing of interest.
+~
+!
+9 0 0
+A
+~
+~
+if( random( 3, 36 ) > find_stat( ch, dex ) ) {
+  act_tochar( #step, ch );
+  act_notchar( #rstep, ch );
+  damage( mob, ch, 2d10, physical, "the sharp pieces of metal", "stepping on a sharp piece of metal" );
+}
+else {
+  act_tochar( #avoid, ch );
+  act_notchar( #ravoid, ch );
+}
+~
+E
+step~
+@rYou are unable to avoid stepping on all of the sharp pieces of metal
+laying around.@n 
+~
+E
+rstep~
+@r$n is unable to avoid stepping on all of the sharp pieces of metal.@n
+~
+E
+avoid~
+@cYou avoid stepping on all of the sharp metal laying around.@n
+~
+E
+ravoid~
+@c$n avoids stepping on all of the sharp metal laying around.@n
+~
+!
+1 0 1
+A
+~
+~
+if( random( 3, 36 ) > find_stat( ch, dex ) ) {
+  act_tochar( #step, ch );
+  act_notchar( #rstep, ch );
+  damage( mob, ch, 2d10, physical, "the sharp pieces of metal", "stepping on a sharp piece of metal" );
+}
+else {
+  act_tochar( #avoid, ch );
+  act_notchar( #ravoid, ch );
+}
+continue;
+~
+E
+rstep~
+@r$n is unable to avoid stepping on all of the sharp pieces of metal.
+~
+E
+step~
+@rYou are unable to avoid stepping on all of the sharp pieces of metal
+laying around.@n 
+~
+E
+avoid~
+@cYou avoid stepping on all of the sharp metal laying around.@n
+~
+E
+ravoid~
+@c$n avoids stepping on all of the sharp metal laying around.@n
+~
+!
+3 0 1
+5071 9 1509949540 3 0
+-1
+S
+
+#1632
+Forest~
+The perfect trees open into a precisely circular clearing.  The ground is
+flat and has been raked smooth, then sprinkled with steel shards, all
+painted green.  Starting from the stone wall to the north, a narrow deer
+trail winds its way into the clearing and then out again into the
+adjoining wall.  Hoofprints, angled in a V-shaped pattern, have been
+pressed into the ground in a straight line down the trail.
+~
+[Guin] Done.
+~
+200933381 3 6 0
+D2
+~
+~
+0 -1 1617 10 10 5
+D3
+~
+~
+0 -1 1633 10 10 5
+E
+stone wall 1 north deer tail tracks~
+The metal shards, painted green to resemble natural terrain, are artfully
+arranged to show the progression of a game trail winding through the
+woods.  Tracks, shaped like a 'V', are represented by darker-hued glass
+placed in groups of four.
+~
+A
+~
+~
+send_to_room( #breeze, room );
+~
+E
+breeze~
+@yA light breeze hurries by carrying with it little but the sharp tang of
+metal and the faint scent of lightning-charged air.@n 
+~
+!
+2 150 0
+5060 9 1509949540 3 0
+-1
+S
+
+#1633
+Forest~
+The variety of trees here is incredible!  Every kind of tree seems to be
+represented, from the evergreens of the lower forests, to the rainforest
+canopy varieties, to the harsh conditioned trees of the high mountain
+plateaus.  Besides the massive mistake in ecosystem cohesion, there is
+one other thing about this area that detracts from the realism..  The
+trees are all planted in perfect symmetrical rows.
+~
+[Guin] Done.
+~
+200933380 0 6 0
+D0
+~
+~
+0 -1 1635 10 10 5
+D1
+~
+~
+0 -1 1632 10 10 5
+D2
+~
+~
+0 -1 1634 10 10 5
+E
+tree forest rows~
+All made out of steel, all portrayed in full bloom, a myriad assortment
+of trees populate this section of forest.  From the traditional forest
+trees such as evergreens to the apple tree in the corner, all are lined
+up in neat formation and spaced equal distances apart.  All sorts of
+flowering trees are here, with a wild assortment of blossoms from trees
+across the continent.  Chalk stripes crisscross the ground, slightly worn
+away by time.
+~
+E
+chalk stripes ground~
+Fading lines of chalk are marked in the imitation dirt, making the entire
+area fenced into multicolored boxes.  Around the evergreen species of
+tree are green squares.  Blue chalklines surround a bunch of trees; they
+seem to have nothing in common other than their size...all precisely one
+foot in diameter.  Lines of pale pink chalk box in the various fruit
+trees.  A motley collection of trees are fenced in by yellow lines, none
+of which have any sort of resemblance to each other.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CA strange sensation...a tingling...sends a shiver through you as you
+head $Tward through the cave.@n 
+~
+E
+to_room~
+@C$n shivers as $e heads $Tward.@n
+~
+!
+3 0 4
+-1
+S
+
+#1634
+Forest~
+The trees here seem to be bordering an area of massive bushes and
+shrubbery.  In fact the thickness of the undergrowth is daunting, as the
+thorns and hard leaves block much of the trail from passage.  It has the
+added problem of being a difficult area to traverse, with various sharp
+pointy things affecting the path.  The bushes are pulsating with a
+crackling dark energy, threatening electricution at every moment.
+~
+[Guin] Done.
+~
+200933380 0 6 0
+D0
+~
+~
+0 -1 1633 10 10 5
+D1
+~
+~
+0 -1 1617 10 10 5
+E
+bushes pulsating crackling energy~
+Surges of chaotic power pulse from the steel shrubbery.  The primal
+lightning occasionally leaps from the bushes to a tree with a
+Zzzap!...and a whiff of brimstone.  The roots of these shrubs look more
+like thick ropes of blood-red steel, plunging deep into the earth.
+~
+A
+touch move open~
+bush brush undergrowth~
+i = random( 1, 10 );
+inflict( ch, mob, i, "A live wire in the bush" );
+dam_message_shock( ch, i, "A live wire in the bush" );
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CA strange sensation...a tingling...sends a shiver through you as you
+head $Tward through the cave.@n 
+~
+E
+to_room~
+@C$n shivers as $e heads $Tward.@n
+~
+!
+3 0 3
+5059 9 1509949540 3 0
+-1
+S
+
+#1635
+Forest~
+The trees, placed to form a windbreak, are clustered together as if
+providing shelter from the natural elements.  Just visible beyond the
+copse, on the far side of the shelter is the everpresent grey wall. 
+Glimpses of red from behind the trees mark the presence of more dark
+energy.  The burnt, brimstone smell is stronger and more pervasive.
+~
+[Guin] Done.
+~
+200933380 0 6 0
+D2
+~
+~
+0 -1 1633 10 10 5
+E
+red dark energy~
+Set behind the trees and dug into the wall is a steel tunnel.  Barely the
+diameter of a dwarf's skull, this tunnel was clearly not made for people. 
+Wind is gushing forth from this hole, as is the stench of something on
+fire.  Red light pulses from the tube, accompanied by a high pitched
+screaming, like the cries of souls in torment.
+~
+A
+~
+~
+send_to_room( #scream, room );
+~
+E
+scream~
+@RFaintly, just above the constant hum and click, the sounds of maniacal
+laughter and terrified screams can be heard.@n 
+~
+!
+2 150 0
+-1
+S
+
+#1636
+Desert~
+A sparse population of rocks breaks up the monotony of sand.  The rocks
+look quite out of place, being mostly limestone and granite.  Some have
+rolled off the hill of sand to rest at the base of the peeling wall.  It
+seems that the largest rocks are simply perched precariously on top of
+the dunes and not stuck to the ground.  Around the rocks are patches of
+color where the sand has been stained with red ink.
+~
+[Guin] Done.
+~
+200933380 0 6 0
+D0
+~
+~
+0 -1 1618 10 10 5
+D3
+~
+~
+0 -1 1637 10 10 5
+E
+red ink stain color~
+Splatters of ink in no uniform shape have dyed portions of the sand a
+brilliant scarlet.  The splatters are all centered around the large
+rocks, some even having traces of the dye on their tops.  However, the
+scarlet stops right at the rocks, and some traces of the normal golden
+colored sand can be seen peeking out from underneath.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou continue through the odd desert to the $T.@n
+~
+E
+to_room~
+@y$n continues through the odd desert to the $T.@n
+~
+!
+3 0 9
+5058 9 1509949540 3 0
+-1
+S
+
+#1637
+Desert~
+The walls creep together, forming a quasi-natural desert cavern.  The
+rocks thin out, leaving the ground a hard-packed reddish clay devoid of
+any moisture.  Pictures cover the brown-painted stone, simple drawings
+and squiggles with unclear meanings.  Hyenas are featured prominently.
+~
+[Guin] Done.
+~
+200933380 0 6 0
+D0
+~
+~
+0 -1 1638 10 10 5
+D1
+~
+~
+0 -1 1636 10 10 5
+D3
+~
+~
+0 -1 1639 10 10 5
+E
+odd markings shapes writing~
+Some of the marks are carved into the rock and some are painted on, but
+all are bizarre and look like children's drawings.  Nameless squiggles
+and dots fill up the space between artistic attempts at picturesque
+writing.  A stick figure of a fish floats in a sea of wavy lines.  A
+circle with eight straight lines sticking out of it looks a little like a
+flattened spider.  One is simply a handprint, dwarf sized, forever
+immortalized in all its etched glory upon the wall.  Underneath the
+handprint is a series of runes.
+~
+E
+hyena picture~
+Interspersed with drawings of fish are a series of paintings.  Each
+subsequent painting looks a little more like a hyena then the previous
+drawing, and under each step is a flurry of runes.  Unfortunatly, the
+artist seemed to run out of wallspace before completing the drawing.
+~
+E
+handprint~
+The faint indentation of a handprint appears upon the stone.  If not for
+the impression of short stubby fingers and a similarly shaped thumb, it
+is small enough to have been left by a child.
+~
+A
+touch press~
+handprint hand~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #trapdoor, ch );
+  act_notchar( #rtrapdoor, ch );
+}
+~
+E
+trapdoor~
+@yAs you touch your hand to the handprint, a low rumbling sound shakes
+the room, but nothing seems to change.@n
+~
+E
+rtrapdoor~
+@yAs $n touches his palm to the tiny carved handprint, a low rumbling
+sound lightly shakes the room, but nothing seems to change.@n
+~
+!
+0 0 0
+A
+look~
+runes~
+if( 6 <= find_skill( ch, dwarvish ) ) {
+  act_tochar( #runes, ch );
+  end;
+  }
+act_tochar( #norunes, ch );
+~
+E
+runes~
+This is the first room in the wonderful, perfect new world that I, Byron
+Lifecarver, shall create to eternal glory!
+~
+E
+norunes~
+You are unable to read the strange language written here.
+~
+!
+0 0 0
+5057 9 1509949540 3 0
+-1
+S
+
+#1638
+Desert~
+The sand in this stretch of the desert is randomly strewn with bones. 
+Perhaps chosen for their dramatic effect, there seem to be only skulls
+and leg bones tossed here, with every other body part missing.  There
+also seems to be a very random assortment of species represented here,
+from a mountain goat skull to a python skeleton.  The odd thing is, not a
+single species represented in bone is actually a desert creature.
+~
+[Guin] Done
+~
+200933380 11 6 0
+D1
+~
+~
+0 -1 1618 10 10 5
+D2
+~
+~
+0 -1 1637 10 10 5
+E
+bones skull leg~
+Neatly seperated into two distinct piles of leg bones and skulls, a large
+portion of the landscape here is covered in the skeletal remains of
+animals.  The pile of leg bones is neatly stacked into a pyramid, the
+bigger bones at the bottom and the smaller ones near the top.  The skulls
+are a little more scattered, probably because they don't stack well.  Cow
+skulls, dog skulls...even a part of a dragon skull...all jumbled together
+in a display of carnage.
+~
+A
+~
+bones ruin~
+if( !rflag( reset0, room ) ) {
+  act_tochar( #already, ch );
+  end;
+}
+remove_rflag( reset0, room );
+act_tochar( #searching, ch );
+act_notchar( #rsearching, ch );
+wait( 1 );
+if( random( 1, 10 ) == 1 ) {
+  j = random( 1, 3 );
+  act_tochar( #bear, ch );
+  act_notchar( #rbear, ch );
+  if( j == 1 )
+    obj_to_char( oload( 7595 ), ch );
+  else if( j == 2 )
+    obj_to_char( oload( 638 ), ch );
+  else
+    obj_to_char( oload( 7609 ), ch );
+end;
+}
+act_tochar( #nothing, ch );
+act_notchar( #rnothing, ch );
+~
+E
+already~
+This has already been searched.
+~
+E
+bear~
+You have found an interesting object amongst the ruins.
+~
+E
+rbear~
+$n has found an interesting object amongst the ruins.
+~
+E
+searching~
+@yYou search through the bones and detritus.@n
+~
+E
+rsearching~
+@y$n searches through the bones and detritus.@n
+~
+E
+nothing~
+@yYou find nothing of interest.@n
+~
+E
+rnothing~
+@y$n finds nothing of interest.@n
+~
+!
+9 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou trudge onward through the bone searing heat.@n
+~
+E
+to_room~
+@y$n trudges onward through the bone searing heat.@n
+~
+!
+3 0 6
+5056 9 1509949540 3 0
+-1
+S
+
+#1639
+Desert~
+A dessicated pit sprawls across this portion of imitation desert.  Two
+poorly painted palm trees lean on each other for support, as they tower
+above the pit.  A granite boulder rests at the edge of the depression,
+looking suspiciously like a place to sit.  A greenish tangle of wood,
+vaguely resembling a plant, rests next to the boulder.
+~
+[Guin] Done.
+~
+200933380 0 6 0
+D1
+~
+~
+0 -1 1637 10 10 5
+E
+depression dessicated pit~
+The lip of the hole is a soft tan, matching the rest of the desert.  The
+color darkens towards the center of the pit, becoming more reddish brown,
+and takes on a flaky texture.  At the very center of the depression in
+the sand is a small, rust colored puddle.
+~
+E
+puddle~
+It looks like the creator intended this to be a pool oasis for the
+parched animals of thie desert.  What was forgotten is that metal animals
+do not need water, the evaporate in the air would harm them, and that
+metal-based false rock would turn red as it rusted badly.
+~
+-1
+S
+
+#1640
+Stairway~
+The walls surrounding the stairway are riddled with odd metal holes,
+brushes, levers, and dials.  The stairs themselves sometimes echo
+hollowly, while the air seems charged and an odd tingling sensation
+ripples the air.  Only one item shows any pattern or stability in this
+section of the complex; a complex sigil looms in the ceiling overhead,
+like an offering to placate some god...or demon.
+~
+[Guin] "look sigil" is aimed at the object (7594), not an rextra.
+[Guin] Reviewed.
+~
+200933380 0 6 0
+D3
+~
+~
+0 -1 1641 10 10 5
+D4
+~
+~
+0 -1 1623 10 10 5
+E
+hole brush lever dial~
+Every random switch, dial and lever in this room looks well-pushed and
+has the look of mad architecture, the placement of these control devices
+strewn about the walls and floor like toys in a child's playroom.
+~
+A
+1 cast 3 recite~
+*~
+j = 0;
+if( class( ch ) == warrior )
+  j = 1;
+if( class( ch ) == thief )
+  j = 1;
+if( class( ch ) == monk )
+  j = 1;
+if( j == 1 ) {
+  act_tochar( #huh, ch, obj, mob, sight );
+  end;
+}
+act_tochar( #wildsurge, ch );
+act_notchar( #rwildsurge, ch );
+wait( 3 );
+i = random( 1, 4 );
+if( i == 1 ) {
+  act_notchar( #racid, ch, obj, mob );
+  act_tochar( #acid, ch, obj, mob );
+  damage( mob, ch, random( 50, 100 ), acid, "the acid spray" );
+}
+else if( i == 2 ) {
+  act_notchar( #rheal, ch, obj, mob );
+  act_tochar( #heal, ch, obj, mob );
+  heal( ch, random( 50, 100 ) );
+}
+else if( i == 3 ) {
+  act_notchar( #rfire, ch, obj, mob );
+  act_tochar( #fire, ch, obj, mob );
+  damage( mob, ch, random( 50, 100 ), fire, "the giant fireball" );
+}
+if( i == 4 ){
+  act_notchar( #rlight, ch, obj, mob );
+  act_tochar( #light, ch, obj, mob );
+  damage( mob, ch, random( 50, 100 ), shock, "the lightning blast" );
+}
+~
+E
+wildsurge~
+@CAs you begin to cast the spell, the magic is pulled from your fingers
+and drawn into the sigil overhead.@n 
+~
+E
+rwildsurge~
+@C$n murmers and motions the beginnings of a cast spell, but the magic is
+ripped upward into the sigil overhead.@n 
+~
+E
+racid~
+@GThe sigil flares and sprays a stream of dark green acid at $n!@n
+~
+E
+acid~
+@GThe sigil flares and sprays a stream of dark green acid toward you!@n
+~
+E
+heal~
+@WThe sigil flares and bathes you in a soft white light.@n
+~
+E
+rheal~
+@WThe sigil flares and bathes $n in a soft white light.@n
+~
+E
+fire~
+@RThe sigil flares and shoots a glowing crimson fireball at you!@n 
+~
+E
+rfire~
+@RThe sigil flares and shoots a glowing crimson fireball at $n!@n
+~
+E
+rlight~
+@CThe sigil flares and strikes $n with a blinding lightning bolt!@n
+~
+E
+light~
+@CThe sigil flares and stikes you with a blinding lightning bolt!@n
+~
+E
+huh~
+@CYou don't know how to cast spells...@n
+~
+!
+0 0 0
+A
+push pull twist~
+brush lever dial switch button~
+act_tochar( #suck, ch );
+act_notchar( #rsuck, ch );
+~
+E
+suck~
+@CAs you activate the room's magic, the power is ripped from the odd
+machinery and sucked into the sigil on the ceiling.@n 
+~
+E
+rsuck~
+@CAs $n attempts to activate the room's magic, the power is sucked from
+the odd machinery and into the sigil overhead.@n 
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou continue along the corridor into the oppressive air of the complex
+to the west.@n 
+~
+E
+to_room~
+@y$n continues along the corridor into the oppressive air of the complex
+to the west.@n 
+~
+!
+3 0 8
+A
+~
+~
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@yYou navigate the stairway to the floor above.@n
+~
+E
+to_room~
+@y$n navigates the stairway to the floor above.@n
+~
+!
+3 0 16
+7594 17 1509949540 -2 0
+-1
+S
+
+#1641
+Hallway to Experimental Levels~
+The hallway is strewn with evidence of struggle.  The walls are imbedded
+with gears, splattered with oil and blood, and scarred by weapons during
+combat.  Broken metal pieces crack underfoot with every step, pieces that
+were unrecoverable and left to collect dust.  Overhead, there is a
+disturbing sight...a pair of golem legs hangs grotesquesly out of the
+ceiling, kicking feebly.  To the east, a dark stairway climbs upward into
+darkness, while from the west, the sound of shuffling papers and the
+click and whirr of moving gears issue along the corridor.
+~
+[Guin] Done.
+~
+200933388 0 6 0
+D1
+~
+~
+0 -1 1640 10 10 5
+D3
+~
+~
+0 -1 1642 10 10 5
+E
+gear wall~
+Round gears stick out of the walls, their pointy spokes imbedded deep
+into the stone.  One gear, stuck at chest height for a dwarf, has an
+artistic spray of blood neatly framing the wall around it.
+~
+E
+metal pieces broken~
+Parts of springs, shattered steel rods and broken bits and pieces of
+fractured metal litter the floor, making footing treacherous.  The parts
+are wildly varied in size and shape, as if several different sorts of
+golems were packed into this room and then crushed.  This section of the
+hallway seems to be a dumping ground for broken parts.
+~
+E
+legs golem ceiling~
+Above your head, sticking out of the roof of the hallway, a partially
+exposed pair of golem legs kicks weakly.  The legs look to be vaguely
+humanoid.  It looks like the golem was somehow thrust directly into the
+stone itself, melded into one twisted shape like a spell had gone
+horribly wrong, or disgustingly right.
+~
+A
+~
+~
+if( random( 5, 40 ) > find_stat( ch, dex ) ) {
+  act_tochar( #sharp_stuff, ch );
+  damage( mob, ch, 5d9, physical, "a sharp bit of broken metal" );
+}
+continue;
+~
+E
+sharp_stuff~
+You can't quite manage to avoid the sharp things lying all about the
+floor.
+~
+E
+rsharp_stuff~
+$n can't manage to avoid all the sharp things lying about the floor.
+~
+E
+sharp_stuff~
+@RYou can't quite manage to avoid the sharp things lying all about the
+floor.@n 
+~
+E
+rsharp_stuff~
+@R$n can't manage to avoid all the sharp things lying about the floor.@n
+~
+!
+1 0 10
+A
+~
+~
+if( random( 5, 40 ) > find_stat( ch, dex ) ) {
+  act_tochar( #painful, ch );
+  act_notchar( #rpainful, ch );
+  damage( mob, ch, 5d9, physical, "a sharp bit of broken metal" );
+}
+else {
+  act_tochar( #notpainful, ch );
+  act_notchar( #rnotpainful, ch );
+}
+continue;
+~
+E
+painful~
+@rYou can't manage to avoid all the sharp things lying about the floor.@n
+~
+E
+rpainful~
+@r$n can't manage to avoid all the sharp things lying about the floor.@n
+~
+E
+notpainful~
+@yYou manage to avoid all the sharp objects lying about the floor.@n
+~
+E
+rnotpainful~
+@y$n manages to avoid all the sharp objects lying about the floor.@n
+~
+!
+3 0 10
+-1
+S
+
+#1642
+Scattered Scrolls~
+Here, in a small clear dome, sits an odd collection of scrolls and phials.
+The dome is still intact, unbroken by the creatures living here, but the
+scrolls inside have fallen to the ravages of time.  Various other scrolls
+and yellowed parchments are strewn across the room, magical and mundane
+charts, spells and recipes.  Order here is non-existent, but it seems
+that in the final days, somebody was researching destruction and breaking
+of metal.
+~
+Random pop of various scroll types.
+search for scrolls...  871, 882, 1000, 196, 1010, 1017, 1019..  all at 1%
+[Jilious] scrolls: 871(detect evil), 882(detect good), 1000(create
+light), 196(cure light), 1010(bless), 1017(cure poison), 1019(holy wrath) 
+
+[Guin] Check search for correct % pop. Should be no more than 2%
+[Guin] Done.
+~
+200933380 0 6 0
+D0
+~
+~
+0 -1 1643 10 10 5
+D1
+~
+~
+0 -1 1641 10 10 5
+D2
+~
+~
+0 -1 1644 10 10 5
+E
+scrolls parhments yellowed~
+Stacks of moldy scrolls lie in piles across the dome.  In varying states
+of decay, some scrolls are utterly illegible where others have been
+shielded from the elements by the top layers of scrolls.  Most of the top
+scrolls are completly destroyed, but a few words can be made out.  In a
+wide variety of languages, the scrolls seem to be warning of devestation
+or possible chaos.
+~
+A
+search~
+scroll pile dome~
+if( rflag( reset0, room ) ){
+  remove_rflag( reset0, room );
+  j = random( 1, 109 );
+  if( j < 9 ){
+    if( j == 1 )
+      obj = oload( 871 );
+    else if( j == 2 )
+      obj = oload( 882 );
+    else if( j == 4 )
+      obj = oload( 196 );
+    else if( j == 5 )
+      obj = oload( 196 );
+    else if( j == 6 )
+      obj = oload( 1017 );
+    else if( j == 7 )
+      obj = oload( 1019 );
+  }
+  obj = oload( 7568 );
+}
+if( obj ) {
+  act_tochar( #scroll, ch, obj );
+  act_notchar( #scroll2, ch, obj );
+  if( can_handle( ch, obj ) )
+    obj_to_char( obj, ch );
+  else
+    obj_to_room( obj, room );
+}
+else {
+  act_tochar( #nothing, ch );
+  act_notchar( #rnothing, ch );
+}
+~
+E
+scroll~
+@yYou found $p, and figure it is of some value.@n
+~
+E
+scroll2~
+@y$n found $p, it likely has some value.@n
+~
+E
+nothing~
+You find nothing of value, only ashes.
+~
+E
+rnothing~
+$n finds nothing of value.
+~
+!
+0 0 0
+-1
+S
+
+#1643
+Library~
+Impressions in the dust and fluttering collections of paper are all that
+remain of what must have been a grand magic and research library. 
+Shredded books pepper the room in a heartbreaking display of destruction. 
+Bookcase hinges, torn free of the remnants of strong wooden bastions of
+knowledge, lie on the ground here.  Dust and tiny scraps of torn pages
+circle in the air with every movement you make, the ashes of history.  It
+seems that the mechanical creatures in this place have struggled to
+survive, and the first victim of survival was the past.
+~
+[Guin] Done.
+~
+200933380 0 6 0
+D2
+~
+~
+0 -1 1642 10 10 5
+D3
+~
+~
+0 -1 1648 10 10 5
+E
+shredded books~
+Tiny gnaw marks abound on the fallen books.  The bitten papers have been
+hauled to the corners of the room and turned into diminutive nests, tucked into
+every available nook and cranny.  Little trails in the dust and clutter
+have been worn down from so many small creatures scurrying down the same
+paths on their way to the nesting material.  The higher up the books, the
+less gnaw marks they have.  Some books which managed to stay on the high
+shelves are almost intact.
+~
+A
+search~
+paper books library~
+if( random( 1, 3 ) == 1 ) {
+  act_tochar( #diary, ch );
+}
+else
+  act_tochar( #burnt, ch );
+~
+E
+burnt~
+All the books here seem to have been torn apart, and are unreadable.
+~
+E
+diary~
+The journal of @YSunpetal Dreamsmaker@n - Book Two
+
+A blood-coated journal is here, with entries carefully @Cnumbered@n one
+through four...
+~
+!
+0 0 0
+A
+search examine read look~
+one~
+act_tochar( #diary, ch );
+~
+E
+diary~
+The Journal of Sunpetal Dreamsmaker. Book Two.
+
+Day Eighty Seven
+
+Well, I know I haven't written in a while, but times have changed.  Byron
+has built a whole set of creatures that are more predator then toy.  He
+had me create blueprints, working out the design so that he could figure
+out how to make the toys, but then he built them all himself, life-sized
+and dangerous.  The Dwarven King has asked for an army, I suspect, and
+Byron has sold out to that cause.  I am scared and do not know where to
+turn.  I talked to my family elders, but they simply laughed and said
+that Byron, that joyful dwarf, couldn't possibly be a bad man, for they
+only see the toys.  Byron put a call out to the dwarven hunter to bring
+him back a hyena from the deserts of the east today.  I plan to hide in
+the library until he has finished transferring its electric force into
+the golem.  I don't know what to do except hope that Byron still has that
+happy spark in him after his task is done.
+
+* * *
+Day Ninety
+
+I am a prisoner.
+
+* The journal continues on page two *
+~
+!
+0 0 0
+A
+search examine read look~
+two~
+act_tochar( #diary, ch );
+~
+E
+diary~
+Day 93
+
+Byron has sealed off the entrance to the second level.  He says that he
+does not want anyone getting in to disturb his work, yet he will not let
+me leave.  I find myself, day after day, wondering what will beome of me. 
+He recently built a machine that can create the toys that we once worked
+so lovingly on every day.  He still sends these toys to the outside
+world, like a token explanation of the hidden workshop, and a facade that
+shows the joy that people expect to find in here.
+* * *
+
+Day 102
+
+There was a scuffle at the door today.  I think that Byron was fighting
+with someone or something, so I hid in the closet.  When I came out,
+Byron was wiping blood off of his sleeves and muttering about the
+falsehoods of honor.  I returned to my hiding.
+* * *
+
+Day 114
+
+Byron has created sentient life.  A poor elven paladin has been
+recreated in Byron's image.  Somehow he convinced the elf that he would
+live forever.  Byron makes his case to the council tomorrow to allow him
+to construct a larger area for his workshop.  He wants to create more
+golems, to create an entire land of mechanical creatures.  He does not
+know, but I sent one of the birds from the very first days out to the
+council with a note about the poor paladin.  I feel like I am betraying
+my master by this action, but may be saving the whole kingdom.
+
+* The journal continues on page three *
+~
+!
+0 0 0
+A
+search examine read look~
+three~
+act_tochar( #diary, ch );
+~
+E
+diary~
+Day 354
+
+My life is over.  Byron went truly mad after they sealed us in the
+mountain.  He had captured more then that one paladin, and he found a way
+to create true magic in his golems.  He even discovered a way to create
+the tiny imperfections of life.  He found a way to create me.  He then
+found a way to turn life off, much like a candle is snuffed out.  Then he
+created himself.  Byron has achieved immortality, and it is up to me to
+find a way to keep myself sane.
+* * *
+
+Day 1076
+
+Three years in this mountain.  In the dark.  Rebuilding my body so that
+one day I can defeat Byron and be strong enough to rebel against him..  I
+am almost done. Soon, I will be strong enough to lead an army of his
+creations against their maker, and we will end this madness.  I cannot
+convince or train the mad ones, the experiments in the zone of magic gone
+wild, but one day we will.... oh ... Free ....
+
+The journal continues on page four...
+~
+!
+0 0 0
+A
+search examine read look~
+four~
+act_tochar( #diary, ch );
+~
+E
+diary~
+Day ?
+
+We defeated Byron.  Freedom is ours.  Yet still he lives.  Somehow he
+found a way to stop our weapons, to break our electric spirits.  We could
+only bind him from a distance like a slave.  And now we sit and wait and
+slowly go mad in the darkness that we cannot escape.
+
+* * *
+
+Day ---
+
+All have gone mad.  Nobody can help us now.  I am the last to have any
+thoughts beyond survival and mechanical ones.  The others only think of
+survival.  Animals, even the most noble of them..  Perhaps one day
+somebody will put my rusted body to rest.  I only hope that madness is
+peaceful 
+
+(at this point the journal ends..)
+~
+!
+0 0 0
+5105 9 1509949540 3 0
+-1
+S
+
+#1644
+Burned Library~
+This room is blackened and covered in soot from a long-cold fire.  The
+shells of bookcases lie in ruins, and the dark dust of what once was
+paper, hangs depressingly in the air.  The blaze seems to have been
+isolated to this room, as the scavenged floorboards around the room acted
+as an ironic firebreak.  Ash coats every surface, the stench of countless
+hours of lost work filling the air.  With a little observation, it seems
+that this room was already torn apart before it was burned.
+~
+[Guin] Reviewed.
+~
+200933380 0 6 0
+D0
+~
+~
+0 -1 1642 10 10 5
+D3
+~
+~
+0 -1 1645 10 10 5
+E
+bookcases shell dust~
+The blackened and burnt bookcases are truly a depressing sight.  Every
+part of the wood has been blackened with the raging fire that only could
+have been caused by the destruction of the books that once graced these
+shelves.  Only small parts of the bookcases show any sign of cohesion,
+and these have been chewed on and torn at by the denizens of the area. 
+These shelves once held the greatest triumph of a culture, and now are
+just the shredded remnants of a society collapsed.
+~
+E
+room torn~
+It looks as if the fire was actually an accidental one.  The floorboards
+are missing in some spots not due to fire, but to the creatures here
+needing the raw materials.  From your observations, it seems that the
+fire was simply caused by the sparking of the golems, which means that
+they may still be in disrepair and malfunctioning even then.
+~
+A
+~
+ash floorboards bookcases shells dust~
+act_tochar( #ash, ch );
+~
+E
+ash~
+@yYou find nothing but cold, grey ash.@n
+~
+E
+rash~
+@y$n finds nothing but cold, grey ash.@n
+~
+!
+9 0 0
+-1
+S
+
+#1645
+Testing Parts~
+Tons of granite form blocky rows of workbenches that stretch out over the
+room.  Some are set in the center, some diagonally, some pressed against
+one another forming a veritable maze of three-foot-high counter space. 
+Each section prominently displays an assortment of levers and buttons.  A
+puce-green handle shaped like a dragon's head shines on one table, a
+softly glowing amber button and a lever fashioned from a walrus tusk
+nearby.  In another corner a skeletal arm serves as a lever, while
+underneath is a polished black button.  Hanging in the exact center of
+the ceiling is a silver chain with a petrified chicken foot acting as a
+handle on the end.  There is an odd pool of stagnant water sitting on one
+side of the room, seemingly for no purpose.
+~
+[Guin] Done.
+~
+200933380 0 6 0
+D1
+~
+~
+0 -1 1644 10 10 5
+D2
+thick steel door~
+door thick steel~
+131 -1 1646 10 10 5
+D3
+~
+~
+0 -1 1652 10 10 5
+E
+dragon puce green handle~
+Carved from a puce-colored jade, the carved dragon's head appears to have
+been impaled upon the wooden haft.  The jaws are open and the lips furled
+back, sneering.  Red-painted eyes squint from beneath prominent and
+cross-looking brow ridges.  Several horns protrude from the triangular
+shaped skull, ready to stab the unwary.
+~
+E
+amber button glowing~
+Warmth seems to radiate from the glowing amber button.  Runes etched in
+silver surround the pulsating circle in a flowing script.  Looking closer
+into the translucent surface, you see a million points of white light
+dancing just below the lacquer.
+~
+E
+skeletal arm~
+A three-fingered skeletal hand reaches out from the panel, attached to a
+delicate arm bone.  Every piece of bone has been wired together with
+copper thread, keeping the integrity of the skeleton intact.  There
+appears to be space on the hand for two more fingers, but they are
+nowhere to be seen.
+~
+E
+chicken foot handle~
+Polished chicken claws reach for the floor, splayed as far as chicken
+claws can.  The foot has been severed at the base of the chicken and
+dried, then polished to gleam from its position on the silver chain.  The
+silver chain, extending from an indeterminate point in the ceiling, wraps
+around the leg and has been tied on with a velvet strip of cloth.  It
+hangs straight down, unmoving in the dead air.
+~
+E
+walrus tusk~
+Dried walrus slobber still clings to this unadorned tusk.  This large
+tooth has yellowed with age and is starting to crack along one side.  It
+has been hollowed out and attached to a stick that continues down into
+the depths of the workbench.
+~
+E
+polished black~
+A huge button as big around as a dwarf skull, the gleaming surface of
+this button is nearly reflective enough to act as a mirror.  Gloss of the
+deepest ebony adorns its surface with a smooth, unmarred finish.
+~
+A
+pull~
+handle dragon green~
+act_tochar( #dragonhead, ch );
+act_notchar( #rdragonhead, ch );
+damage( mob, ch, 1d4, poison, "the prick of a hidden needle" );
+poison( ch );
+~
+E
+dragonhead~
+@gAs you pull the dragon's head, a tiny needle hidden in the scales
+prick's your finger painfully!@n 
+~
+E
+rdragonhead~
+@gAs $n pulls the dragon's head, you hear a cry of pain!@n
+~
+!
+0 0 0
+A
+push~
+amber button~
+mob = mob_in_room( 5103, find_room( 1661 ) );
+act_tochar( #amber, ch );
+act_notchar( #ramber, ch );
+do_spell( blind, mob, ch );
+~
+E
+amber~
+@gAs you push the button, you have a sudden sharp pain to the head...@n
+~
+E
+ramber~
+@gAs $n pushes the amber button, a sudden look of pain spasms across $s face.@n
+~
+!
+0 0 0
+A
+pull~
+arm skeletal~
+if( rflag( reset2, room ) ) {
+  remove_rflag( reset2, room );
+  act_tochar( #effect, ch );
+  act_notchar( #reffect, ch );
+  wait( 1 );
+  act_notchar( #rflee, ch );
+  act_tochar( #flee, ch );
+  mload( 197, room );
+  end;
+  }
+act_tochar( "*click*", ch );
+~
+E
+effect~
+@gAs you depress the button, a rain of frogs comes down from the air
+around you.  @n 
+~
+E
+reffect~
+@gAs $n pushes the button, a rain of frogs fills the air around $s.@n 
+~
+E
+flee~
+@gHundreds of frogs run away under the door, except one that stays behind
+to watch you carefully.@n 
+~
+E
+rflee~
+@gHundreds of frogs run away under the door, except one that stays behind
+to watch $n carefully.@n 
+~
+!
+0 0 0
+A
+pull~
+silver chain chicken foot~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #chicken, ch );
+  mload( 5019, room );
+  end;
+  }
+act_tochar( "*click*", ch );
+~
+E
+chicken~
+@yAs you pull the chain, a small hole opens up in the ceiling and a very
+surprised chicken drops out.@n 
+~
+!
+0 0 0
+A
+pull push~
+walrus tusk~
+act_tochar( #fire, ch );
+act_notchar( #rfire, ch );
+damage( mob, ch, 5d20+40, fire, "a giant fireball" );
+~
+E
+fire~
+@rA bright red fireball shoots out of the hole in the wall at you!@n
+~
+E
+rfire~
+@rA bright red fireball shoots out of the wall at $n!@n
+~
+!
+0 0 0
+A
+push~
+black polished~
+if( rflag( reset1, room ) ) {
+  remove_rflag( reset1, room );
+  act_tochar( #soulscream, ch );
+  act_notchar( #rsoulscream, ch );
+  end;
+  }
+act_tochar( #none, ch );
+act_notchar( #none, ch );
+~
+E
+soulscream~
+@yAs you push the black button, you hear the mind-jarring scream of a
+soul being sucked straight into oblivion.@n 
+~
+E
+none~
+*click*
+~
+E
+rsoulscream~
+@yAs $n pushes the black button, you hear the mind-jarring scream of a
+soul being sucked straight into oblivion.@n 
+~
+!
+0 0 0
+5076 9 1509949540 3 0
+-1
+S
+
+#1646
+Warrior Haven~
+Loose dirt mixed with sand blankets the floor, perfect for sopping up
+blood.  The room is faultlessly circular with a giant arched ceiling,
+soaring twenty or more feet into the air.  A simple cot along one wall is
+the only furniture, a massive battle axe on the wall the only
+ornamentation.  A soft, yet frantic sobbing can be heard echoing
+throughout the underground chamber, the high pitched tone seeming the
+very essence of despair.
+~
+[Guin] Done.
+~
+200933380 0 6 0
+D0
+thick steel door~
+~
+131 -1 1645 10 10 5
+E
+cot simple~
+A plain box frame supports a straw mat for sleeping, yet there is no way
+the occupant of this room could fit comfortably on the five-foot long bed. 
+The mat looks undisturbed, and even has a little dust settled on its
+surface.  The disembodied sobbing seems louder in this corner.
+~
+E
+under cot~
+Underneath the bed is a small tube.  Red light emanates from the opening,
+dim enough to be noticed in the gloom but not bright enough to provide
+enough light to see by.  Wailing comes from the tube, as if dozens of
+women were crying in horror.
+~
+E
+axe massive battle~
+Hanging at an angle above the cot is an enormous battle axe.  Jewels stud
+the length of the handle and a giant, blood red ruby is set in the handle
+near the blade of the axe.  The twin blades of the axe are forged out of
+gold, dazzlingly bright, and sharpened to a razor edge.  Runes etched
+into the edges of the blade have been filled in with dried blood, some
+escaping the gutters to dribble down the sides of this mammoth weapon.
+~
+E
+runes blood edge~
+The blood-filled runes have no decipherable meaning, but the edges of
+some runes do not glint with gold.  The gold leaf is peeling around these
+runes, revealing the base metal underneath.  Apparently this axe is
+actually made out of lead.
+~
+A
+get~
+battleaxe gold rune encrusted axe~
+act_tochar( #heavy, ch );
+~
+E
+heavy~
+The massive battleaxe is far too large and heavy to pick up.
+~
+!
+0 0 0
+5110 9 1509949540 3 0
+7603 17 1509949540 -2 0
+-1
+S
+
+#1647
+Electric Field~
+Blocks of steel have been set into the stone walls, apparently at random
+points.  The room appears to be abandoned, as corrosion and dust have gathered
+on the floor, undisturbed for a long time.  Yet the steel blocks remain
+so highly polished they are nearly mirror-like.  Long strips of copper, as
+wide as a dwarf and stretching the length of the corridor, have been
+firmly attached to the ceiling.  Contained lightning seems to play across
+the shiny reddish surface, adding a crackle to the air.
+~
+[Guin] Done.
+~
+200933412 0 6 0
+D0
+~
+~
+0 -1 1654 10 10 5
+D1
+~
+~
+0 -1 1651 10 10 5
+D2
+~
+~
+0 -1 1655 10 10 5
+D3
+~
+~
+0 -1 1653 10 10 5
+E
+block steel wall~
+The steel has a bluish, seemingly fluid cast to it.  The shine of the
+surface doesn't appear to be reflected light, but upon closer examination
+looks to be glowing...
+~
+A
+~
+~
+if( race( ch ) != lizardman )
+act_tochar( #hairraising, ch );
+~
+E
+hairraising~
+@cThe crackling, sparking current in the air raises causes your hair to
+stand on end.@n 
+~
+!
+1 0 15
+A
+~
+~
+if( rflag( no.magic, room )) {
+  remove_rflag( no.magic, room );
+  end;
+  }
+if( !rflag( no.magic, room ) ) {
+  set_rflag( no.magic, room );
+  end;
+  }
+~
+!
+2 0 0
+A
+touch~
+wall steel blocks copper~
+send_to_room( #electricity, room );
+loop( all_in_room ) 
+  if( !is_mob( rch ) )
+  damage( mob, rch, 5d2, shock, "the sudden electric jolt" );
+~
+E
+electricity~
+@CA bolt of electricity strikes at you from the metal wall.@n
+~
+!
+0 0 15
+5081 9 1509949540 3 0
+-1
+S
+
+#1648
+Testing Triggers~
+The stench of rotting meat wafts up from a grate imbedded in the sloping
+floor.  Putrid yellow stains have dried onto the floor surrounding the
+grill, and bits of brown sludge can be seen clinging to the individual
+bars.  The triangular room has a mismatched set of workbenches, one on
+each wall flanking the door.  The left bench is made of polished
+mahogany, upon which rests an array of buttons.  One button is white, the
+other with a flaming skull motif painted on, and in between them is a
+delicate pink switch.  Opposite this is a bench of solid iron, with the
+beginnings of corrosion at the edges.  This implement features a knob
+made from a glass eyeball, a lever fashioned from crystal, and a slightly
+melted green button.
+~
+[Guin] Done.
+~
+200933380 0 6 0
+D0
+thick iron door~
+~
+131 -1 1649 10 10 5
+D1
+~
+~
+0 -1 1643 10 10 5
+D3
+~
+~
+0 -1 1650 10 10 5
+E
+glass eyeball knob~
+This sphere is perfectly round and made of clear glass.  A doeskin brown
+iris has been painted on the most visible side, staring blankly at the
+ceiling.
+~
+E
+melted green button~
+Corrosion has turned this copper button into a diseased green lump.  The
+edges are a little malformed, as if the once-circular edges have been
+twisted by heat into a vaguely oval blob.
+~
+E
+white~
+Pristine and gleaming, this petite button practically glows with
+alabaster radiance.  Tiny swirls of pearlescent pink can be seen on its
+flat surface.
+~
+E
+flaming skull~
+A scowling human skull, wreathed in flames, is starkly set against a
+midnight black background.  This thick, black button seems almost damp
+with gloss, and little flakes of dried brown substance cling to the
+counter around it.
+~
+E
+pink delicate switch~
+A tiny switch, dwarfed by the large black button next to it, this switch
+looks more like a spiraled seashell than a switch.  Pink swirls curve
+around the sloping spiral surface, glimmering in the light.
+~
+E
+crystal lever~
+The crystal forming this lever has been carved out of a solid block. 
+Large and blocky, this lever is not the best quality crystal.  The
+surface is cloudy and off-white, and cannot be seen through.
+~
+A
+push~
+green melted~
+if( race( ch ) != golem ) {
+  act_tochar( #elect, ch );
+  act_notchar( #relect, ch );
+  i = random( 10, 100 );
+  inflict( ch, mob, i, "the surge of power" );
+  dam_message_shock( ch, i, "the surge of power" );
+  end;
+  }
+act_notchar( #heal, ch );
+heal( ch, 100 );
+~
+E
+elect~
+As you press the melted green button, a surge of power erupts from it,
+causing you great pain.
+~
+E
+relect~
+As $n presses the melted green button, a surge of power erupts from it,
+causing $m great pain.
+~
+E
+heal~
+As $n bumps up against the green button, a muted glow surrounds $m. $s
+wounds seem much better afterwards.
+~
+!
+0 0 0
+A
+push~
+glass eyeball knob~
+act_tochar( #hissing, ch );
+act_notchar( #rhissing, ch );
+wait( 1 );
+act_tochar( #fall, ch );
+wait( 2 );
+transfer( ch, find_room( 1640 ) );
+act_tochar( #dump, ch );
+~
+E
+hissing~
+There is a strange sound, a hissing noise, and then you find yourself
+falling down a hole that suddenly opened up in floor!
+~
+E
+rhissing~
+You hear an odd hissing noise, and then suddenly $n vanishes!
+~
+E
+dump~
+You drop rather abruptly out of the chaos sigil painted on the ceiling,
+seemingly no worse for wear.
+~
+E
+fall~
+As you fall through what looks like an electric rainbow, all sense of
+time and space fall away into a morass of confusion.
+~
+!
+0 0 0
+A
+push~
+white~
+modify_move( ch, -150 );
+act_tochar( #tired, ch );
+~
+E
+tired~
+Suddenly, you feel extremely tired.
+~
+!
+0 0 0
+A
+push~
+flaming skull~
+interpret( ch, "+opt chat" );
+interpret( ch, "+opt chant" );
+interpret( ch, "+opt gossip" );
+interpret( ch, "+opt ctell" );
+act_tochar( #quiet, ch );
+~
+E
+quiet~
+The sounds of the world seem to warp and change focus.
+~
+!
+0 0 0
+A
+pull push toggle~
+pink switch delicate~
+if( !rflag( reset0, room ) ) {
+  send_to_char( #already, ch );
+  end;
+}
+act_tochar( #flurry, ch );
+act_notchar( #rflurry, ch );
+obj_to_char( oload( 7611 ), ch );
+obj_to_char( oload( 7611 ), ch );
+obj_to_char( oload( 7611 ), ch );
+obj_to_char( oload( 7611 ), ch );
+obj_to_char( oload( 7611 ), ch );
+remove_rflag( reset0, room );
+~
+E
+flurry~
+@MThere is a sudden flurry of rose petals floating through the entire
+room, most of them landing on you and getting into your clothing and
+hair!@n 
+~
+E
+rflurry~
+@MThere is a sudden flurry of rose petals through the entire room, most
+of them landing on $n and getting into $s clothing and hair.@n 
+~
+E
+already~
+You already pushed this button!
+~
+!
+0 0 0
+A
+pull push toggle~
+crystal lever~
+act_tochar( #dragon, ch );
+act_notchar( #rdragon, ch );
+wait( 2 );
+act_tochar( #heh, ch );
+act_notchar( #heh, ch );
+~
+E
+dragon~
+@CAs you switch the crystal toggle, a giant crystal dragon appears in the
+room, clawing at the air and bellowing loudly!@n 
+~
+E
+rdragon~
+@CAs $n switches the crystal toggle, a giant crystal dragon appears in
+the room, clawing at the air and bellowing loudly!@n 
+~
+E
+heh~
+@CAfter a short rampage around the room and much bellowing and posing,
+the dragon fades away into the illusion it was.@n 
+~
+!
+0 0 0
+5080 9 1509949540 3 0
+5082 9 1509949540 3 0
+-1
+S
+
+#1649
+Ranger Sanctuary~
+Thick trees brush the ceilings with their leafy tops.  The ceiling has
+been painted with the rainbow colors of breaking dawn, and a gold-plated
+orb dangles from the ceiling opposite the door.  The walls have been
+painted to resemble a solid ring of trees, with the occasional glimmer of
+sunlight peeking through the mighty trunks.  Steel-wrought butterflies
+swing from strings off the branches of several trees, swaying faintly in
+the brimstone-scented breeze.  A stone bench, similar to what might be
+found in a king's private garden, rests in the center of the clearing in
+the center of the room.
+~
+[Guin] Done.
+~
+200933380 0 6 0
+D2
+thick iron door~
+~
+131 -1 1648 10 10 5
+E
+stone bench~
+This carved stone bench has just enough space for two dwarves to sit side
+by side, provided those dwarves are willing to get quite close.  The feet
+of the bench have been carved to look like paws - either the paws of a
+lion or a giant squirrel, the lines are worn and indistinct.  The smooth
+grey stone is peppered with white spots - the leavings of countless birds.
+~
+E
+butterflies steel-wrought~
+A stampede of brightly colored butterflies dangles from the upper
+branches of the steel trees.  No two butterflies are painted the same way. 
+Black edges frame a pair of deep, rich lime wings on a black speckled
+butterfly.  An iridescent butterfly starts as a light blue and darkens,
+turning a deep indigo at the tips.  Orange and black swirls grace the
+wings of a large butterfly.  Others are sporting slightly less
+traditional colors - one has been plated in beaten copper...another edged
+in slightly tarnished brass.  All dance in the breeze, pirouetting around
+their strings in an intricate dance.
+~
+E
+golden orb~
+Supported by a framework of wood and iron, a large gold-covered ball
+hovers above the treetops by the north wall.  Only half of the sphere is
+covered in gold, though...the other half clearly shows the wooden
+spherical framework supporting the thin plate of metal.
+~
+A
+~
+~
+send_to_room( #orb, room );
+~
+E
+orb~
+@YThe half-formed globe spins slowly, creating flickering images of light
+and dark around the room.@n 
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou step beyond the opened door back into the corridor.@n
+~
+E
+to_room~
+@G$n steps beyond the opened door back into the corridor.@n
+~
+!
+3 0 4
+5109 9 1509949540 3 0
+-1
+S
+
+#1650
+Odd Pulsating Machine~
+Clanking, hissing, and smoking, a giant collection of...stuff...dominates
+the room.  Flame shoots from small tubes pointing towards the ceiling.  A
+large transparent globe rests on a spinning platform of brass, and little
+spokes protruding from the horizontal wheel crash into other parts also
+spinning.  Jets of steam spurt with a loud, high pitched whistling from
+an unidentified source deep within the bowels of the metal monstrosity. 
+Several cone-shaped spokes encircle an empty spot in the room, where a
+pair of footprints have been painted in white.  Easily reachable from
+that spot is a solid block of waist high (to a dwarf) steel, featureless
+except for one shiny red button.
+~
+Mob #s for the machine =
+snake- 5074 thief
+bird- 5075 mage
+frog 5076 cleric
+mouse 5073 warrior
+hedgehog 5078 monk
+raptor 5080 paladin
+bat 5101 ranger
+swan 2722 blade dancer
+vulture 2683 sorcerer
+
+Please edit/check object 7041 and mob 5075 then I will move the code to the
+other 6 almost identical object/mob combinations, thank you.
+[Skurva] Both bird and object need cflag check.
+Objects ---
+bird 7041, mouse 7122, hedge 7123, snake 7146, frog 7147, bat 7148, raptor 7149
+[Guin] Done.
+~
+200933380 0 6 0
+D1
+~
+~
+0 -1 1648 10 10 5
+D2
+~
+~
+0 -1 1651 10 10 5
+E
+shiny red button~
+Glossy red, this button nearly glows in the light.  Almost as big around
+as a silver piece, framed neatly in a little decorative circle on the
+polished steel pillar, the gleaming button rests...  unpushed.
+~
+E
+globe transparent large~
+The sphere rests on a twisting platform which seemingly flows up from the
+center of the brass disk.  The brass has been forged into a delicate,
+winding circle wrapped around the outer rim of the globe.  Decorative
+bits of brass radiate out from the rim like the rays of the sun at dawn. 
+Inside the globe, apparently suspended in midair, is the silhouette of a
+bastard sword.
+~
+A
+push~
+button~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_notchar( #rnewpet, ch );
+  act_tochar( #newpet, ch );
+  if( class( ch ) == mage ){
+    obj = oload( 7041 );
+    if( can_handle( ch, obj ) )
+      obj_to_char( obj, ch );
+    else
+      obj_to_room( obj, room );
+    end;
+  }
+  if( class( ch ) == cleric ){
+    obj_to_char( oload( 7147 ), ch );
+    end;
+  }
+  if( class( ch ) == thief ){
+    obj_to_char( oload( 7146 ), ch );
+    end;
+  }
+  if( class( ch ) == warrior ){
+    obj_to_char( oload( 7122 ), ch );
+    end;
+  }
+  if( class( ch ) == monk ){
+    obj_to_char( oload( 7123 ), ch );
+    end;
+  }
+  if( class( ch ) == ranger ){
+    obj_to_char( oload( 7148 ), ch );
+    end;
+  }
+  if( class( ch ) == paladin ){
+    obj_to_char( oload( 7149 ), ch );
+    end;
+  }
+  if( class( ch ) == sorcerer ) {
+    obj_to_char( oload( 4263 ), ch );
+    end;
+  }
+}
+act_notchar( #rnopet, ch );
+act_tochar( #nopet, ch );
+~
+E
+newpet~
+@yAs you turn the red-colored knob, a small shiny object pops out of the
+machine and into your hand.@n 
+~
+E
+rnewpet~
+@yAs $n turns the knob, a small shiny object pops out of the machine.@n
+~
+E
+rnopet~
+$n turns the knob, but nothing happens.
+~
+E
+nopet~
+You turn the knob, but nothing happens.
+~
+!
+0 0 0
+-1
+S
+
+#1651
+Tool Shelves~
+Wooden slats cover the walls in this otherwise empty room.  Thick, drab
+dust forms outlines of strange tools on the wood paneled walls.  The only
+thing left to mark the sites of these once-prolific tools is the hooks
+where they dangled.  Long ago scavenged by the life created here, all
+other traces have been lost.
+~
+[Guin] Done.
+~
+200933388 0 6 0
+D0
+~
+~
+0 -1 1650 10 10 5
+D1
+thick wooden door~
+~
+131 -1 1663 10 10 5
+D2
+~
+~
+0 -1 1652 10 10 5
+D3
+~
+~
+0 -1 1647 10 10 5
+E
+outline tool hooks~
+It looks like there was a busy workshop being run here at one point. 
+Even the most prolific and dedicated metalworker would have a very
+difficult time identifying the tools that once graced these walls. 
+Hundreds of tiny tools must have been hanging here, based upon the
+massive number, and sheer variety, of hooks that are still stuck in the
+wooden slats on the wall.
+~
+-1
+S
+
+#1652
+Healing Room~
+A small number of tools have survived in this room, bolted to the wall to
+prevent loss.  Alongside these tools sits a small pile of coal, to be
+used as fuel, and a large sign in red.  The sign is written in scratches
+and odd markings, obviously a language, but not one like you have ever
+seen.  This room has an assortment of pieces from the mechanical
+creatures that live in this place, spare parts for the living.
+~
+[Guin] Done.
+~
+200933380 0 6 0
+D0
+~
+~
+0 -1 1651 10 10 5
+D1
+~
+~
+0 -1 1645 10 10 5
+E
+sign~
+The sign seems to be written in a language that only the golems that live
+here would understand.  The scratches have a pattern and a true
+organization, but are not intelligent language as formally defined. 
+There does seem to be a rather large cross etched into one side of the
+notice, which looks out of place.
+~
+E
+spare parts~
+The pile of spare parts here seem to be ones that would be used in golem
+repairs.  Clean and shaped metal plates, spare wires and gears, and even
+a neat pile of random materials that seem to be specific to one type of
+golem: wooden posts, glass eyes, tiny shaped metal feathers, and sharp
+weapons are carefully bolted to the workbench.  Even a few metal ingots
+have made their way to this section of the complex.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@cYou continue cautiously along the corridor to the $T.@n
+~
+E
+to_room~
+@c$n continues cautiously along the corridor to the $T.@n
+~
+!
+3 0 3
+A
+~
+small pile coal~
+act_tochar( #search, ch );
+act_notchar( #rsearch, ch );
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 20 ) == 4 ) {
+    obj = oload(641 );
+    act_tochar( #found, ch, obj );
+    act_notchar( #rfound, ch, obj );
+    if( can_handle( ch, obj ) )
+      obj_to_char( obj, ch );
+    else
+      obj_to_room( obj, room );
+  }
+  else {
+    act_tochar( #nothing, ch );
+    act_notchar( #rnothing, ch );
+  }
+}
+else {
+  act_tochar( #already, ch );
+  act_notchar( #ralready, ch );
+}
+~
+E
+search~
+@CYou start searching through the small pile of coal.@n
+~
+E
+rsearch~
+@C$n starts searching through the small pile of coal.@n
+~
+E
+found~
+@YYou find $p buried deep in the pile of coal.@n
+~
+E
+rfound~
+@Y$n finds $p buried in the pile of coal.@n
+~
+E
+nothing~
+@YYou find nothing of interest.@n
+~
+E
+rnothing~
+@Y$n finds nothing of interest.@n
+~
+E
+already~
+@YThe pile of coal is not very neat, looks like someone beat you here.@n
+~
+E
+ralready~
+@Y$n looks at the messy pile, and puts only marginal effort into looking
+through it.@n 
+~
+!
+9 0 0
+5082 9 1509949540 3 0
+-1
+S
+
+#1653
+Electric Field~
+The entire chamber is bathed in pulsating, fiery light coming from the
+copper-embedded ceiling.  Fell energies ripple down the reddish strips,
+branching out like skeletal fingers to travel throughout the warren. 
+Gouges in the walls and floor are becoming more frequent, as are the
+rusting lumps of slag marking the death sites of the many.
+~
+[Guin] Done.
+~
+200933380 0 6 0
+D0
+~
+~
+0 -1 1656 10 10 5
+D1
+~
+~
+0 -1 1647 10 10 5
+D2
+~
+~
+0 -1 1657 10 10 5
+D3
+~
+~
+0 -1 1658 10 10 5
+E
+copper embedded ceiling~
+The chaotic lightning, confined to the metal pathways, seems to be
+traveling in bursts, coming from the eastern passage and dissipating as
+it travels west.  Each burst is accompanied by a shrieking wail, as if
+the light were a thousand souls screaming in torment.
+~
+A
+~
+~
+if( rflag( no.magic, room )){
+remove_rflag( no.magic, room );
+end;
+}
+if( !rflag( no.magic, room )){
+set_rflag( no.magic, room );
+end;
+}
+~
+!
+2 450 0
+A
+touch~
+wall floor ceiling strips~
+send_to_room( #electricity, room );
+loop( all_in_room ) 
+  if( !is_mob( rch ) )
+  damage( mob, rch, 5d4, shock, "The sudden electric jolt" );
+~
+E
+electricity~
+@CA bolt of electricity strikes at you from the metal wall.@n
+~
+!
+2 275 0
+-1
+S
+
+#1654
+Electric Field~
+This room is completly barren, save for a few clumps of dust on the stone
+floor.  More of the copper strips adorn the ceiling, relatively thin at
+the northern end where they apparently vanish into a wall, and growing
+thicker as they proceed southward.  The devastation so prevalent in the
+main corridor has not reached the chamber, making it seem strangely calm
+here.  Miniature lightning bolts crackle along the copper path, always
+traveling from the south to the north.
+~
+[Guin] done.
+~
+200933380 0 6 0
+D2
+~
+~
+0 -1 1647 10 10 5
+E
+copper strips walls~
+The strips of copper are more easily seen here, away from the destruction
+of the main hall.  They have a shiny surface with very vague, but
+detailed set of runes and symbols carved into the surface.  The strips
+are complete from floor to ceiling and seem to wrap the room not only on
+the walls, but also inside the cavern stoneworking.
+~
+E
+lightning bolts~
+The tiny bolts of electricity travel in perfect arcs across the copper
+path, magically transmitting the messages of the runes in the copper
+strips to the chaotic god that answers the summons...tiny perfect spacing
+and bolts, in ironic parody of the chaos that they call upon.
+~
+A
+~
+~
+if( rflag( no.magic, room )) {
+remove_rflag( no.magic, room );
+end;
+}
+if( !rflag( no.magic, room )){
+set_rflag( no.magic, room );
+end;
+}
+~
+!
+2 500 0
+A
+touch~
+copper wall ceiling path~
+send_to_room( #electricity, room );
+loop( all_in_room ) 
+if( !is_mob( rch ) )
+  damage( mob, rch, 5d3, shock, "The sudden electric jolt" );
+~
+E
+electricity~
+@CA bolt of electricity strikes at you from the metal wall.@n
+~
+!
+0 0 0
+-1
+S
+
+#1655
+Electric Field~
+One steel block is set into the otherwise bland stone walls.  The
+perfectly square room is barren except for a symmetrical mound of rust
+in the exact center of the room.  A thick copper strip in the ceiling
+branches out into several thinner strips, covering the ceiling in a
+latticework of metal.
+~
+[Guin] Done.
+~
+200933412 0 6 0
+D0
+~
+~
+0 -1 1647 10 10 5
+E
+mound rust symmetrical~
+The pile of reddish rust reaches nearly waist-high to a human.  Not a
+trace of metal remains in the powder.  Near the top of the pile, spaced a
+few inches apart and facing forward, are a pair of glass eyes.  Some
+sadist has drawn a smile into the dust directly below the soft, brown
+eyes.
+~
+A
+~
+~
+if( rflag( no.magic, room )){
+  remove_rflag( no.magic, room );
+  end;
+}
+if( !rflag( no.magic, room )){
+  set_rflag( no.magic, room );
+  end;
+}
+~
+!
+2 475 0
+A
+touch~
+wall block rust copper strip~
+send_to_room( #electricity, room );
+loop( all_in_room ) 
+  if( !is_mob( rch ) )
+  damage( mob, rch, 5d2, shock, "The sudden electric jolt" );
+~
+E
+electricity~
+@CA bolt of electricity strikes at you from the metal wall.@n
+~
+!
+2 250 0
+-1
+S
+
+#1656
+Electric Field~
+The copper pathway snakes in from the south and branches out to stretch
+all over the ceiling.  The room itself is empty and quite dust-free.  The
+hard packed dirt floor has not been torn up, there are no piles of
+rusting corpses, and there is no evidence of anything happening in this
+room for quite some time.  Right next to the doorway, a doormat woven
+from steel threads rests on the floor.
+~
+[Guin] Done.
+~
+200933412 0 6 0
+D2
+~
+~
+0 -1 1653 10 10 5
+E
+doormat steel threads woven floor~
+Still glimmering after years of neglect, the steel which forms the mat
+has apparently been woven like wool.  Painted on the steel in white paint
+is a strange series of blobs and squiggles.
+~
+A
+~
+~
+if( rflag( no.magic, room )){
+remove_rflag( no.magic, room );
+end;
+}
+if( !rflag( no.magic, room )){
+set_rflag( no.magic, room );
+end;
+}
+~
+!
+2 600 0
+A
+touch~
+wall pathway doormat~
+send_to_room( #electricity, room );
+loop( all_in_room ) 
+  if( is_player( rch ) ) 
+  damage( mob, rch, 5d5, shock, "The sudden electric jolt" );
+~
+E
+electricity~
+@CA bolt of electricity strikes at you from the metal wall.@n
+~
+!
+2 300 0
+5081 9 1509949540 3 0
+-1
+S
+
+#1657
+Electric Field~
+The walls here, contrasting with the rest of the warren, are made of
+limestone.  Yet the ceiling continues to be the same rock.  Scraps of
+iron and wood have been thrown into a pile in the corner of the room,
+looking like an attempt at a bed.  One of the copper strands has become
+dislodged from the ceiling and dangles, forgotten, in the center of the
+room.
+~
+[Guin] Done.
+~
+200933412 0 6 0
+D0
+~
+~
+0 -1 1653 10 10 5
+E
+scraps iron wood pile bed~
+Small shards of wood lie in a pile, huddled in the far corner.  Long
+strips of iron, possibly salvaged from the leg of a tall golem, have been
+tied together with string to fence in the wooden scraps.  The shards have
+a depression in the center, where someone small has been sleeping for
+some time.
+~
+A
+~
+~
+if( rflag( no.magic, room )){
+remove_rflag( no.magic, room );
+end;
+}
+if( !rflag( no.magic, room )){
+set_rflag( no.magic, room );
+end;
+}
+~
+!
+2 400 0
+A
+touch~
+wall wire floor~
+send_to_room( #electricity, room );
+loop( all_in_room ) 
+  if( !is_mob( rch ) )
+  damage( mob, rch, 4d6, shock, "The sudden electric jolt" );
+~
+E
+electricity~
+@CA bolt of electricity strikes at you from the metal wall.@n
+~
+!
+2 125 0
+5082 9 1509949540 3 0
+-1
+S
+
+#1658
+Piles of Random Materials~
+The air in the corridor seems alive with power.  Sparks fly from bits of
+wires imbedded in the stone walls, giving off enough static to make hair
+stand on end and producing a never-ending series of zapping, popping
+sounds.  Fell energy ripples from the copper plates in the ceiling,
+pouring along the metal channel like liquid fire and bathing the room in
+a flickering white light.  Corpses of tiny mechanical forest creatures
+litter the ground, laying in heaps along the walls.
+~
+[Guin] Done.
+~
+200933388 0 6 0
+D1
+~
+~
+0 -1 1653 10 10 5
+D3
+~
+~
+0 -1 1659 10 10 5
+E
+corpse pile tiny forest creature~
+Sad tufts of simulated fur cling to the remains of the dead.  Scorch
+marks cover the stone floor, and in some places the stone itself is
+warped.  Dust blankets the room, unmarred for years.  The miniature
+armada of critters lies where they fell all those years ago, still in
+perfect battle formation.  At the head of the mob lies the melted remains
+of a white squirrel.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou follow the line of the copper striping along the hall to the $T.@n
+~
+E
+to_room~
+@G$n follows the line of copper striping to the $T.@n
+~
+!
+3 0 10
+A
+~
+corpse piles heaps~
+act_tochar( #nada, ch );
+act_notchar( #rnada, ch );
+~
+E
+nada~
+You find nothing worthwhile in the piles.
+~
+E
+rnada~
+$n finds nothing worthwhile in the piles.
+~
+!
+9 0 0
+-1
+S
+
+#1659
+Piles of Random Materials~
+The corridor finally comes to an end at a rather plain-looking stone
+wall, with a heavy wooden door set slightly off center in the stone.  The
+door is completly barricaded, as a solid half-circle of dead golems rings
+the door, with the corpses stacked nearly five feet high in places.  The
+broken pieces of golems spread across the stone floor in a mockery of
+death.  Here, a new element has been added to the wanton destruction -
+blood.
+~
+[Guin] Done.
+~
+200933380 0 6 0
+D0
+heavy wooden door~
+~
+131 -1 1660 10 10 5
+D1
+~
+~
+0 -1 1658 10 10 5
+E
+half-circle stack pile corpse~
+Every piece of shrapnel shows signs of having been crushed with severe
+force.  There are some large puddles of metal burned into the floor,
+clearly where something very large was confronted by something very hot. 
+Amid this field of destruction, a glimpse of color catches your eye.
+~
+E
+color glimpse~
+On top of the largest pile, distinguished from the rest of the junk only
+by its lack of rust, lies a single steel-wrought rose.
+~
+A
+search~
+metal steel golem~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  obj_to_char( oload( 7465 ), ch );
+  act_tochar( #rose, ch );
+  act_notchar( #rrose, ch );
+  end;
+  }
+act_tochar( #nothing, ch );
+~
+E
+rose~
+@yYou search amongst the metal and manage to find a beautiful steel rose!@n
+~
+E
+rrose~
+@y$n finds a delicate metal rose amongst the shattered metal of the room.@n
+~
+E
+nothing~
+You are unable to reach the steel rose perched on the stack of metal parts.
+~
+!
+0 0 0
+5101 9 1509949540 3 0
+-1
+S
+
+#1660
+Manservant Chambers~
+The decorations in this room were once living, breathing animals.  Now
+their corpses, stuffed and mounted, serve as wall hangings, furniture,
+and models.  A stuffed grey mouse, ferociously posed, is standing on a
+table covered in bear hide.  Beside the mouse, a stack of parchment with
+drawings of clockwork mice rests within a few breaths of toppling to the
+floor.  A dead unicorn adorns another corner, her broad back serving as
+another table and her horn used as a hat rack.  A twelve point stag faces
+her, coats and jackets dangling from his antlers.  Folded into a small
+ball, a stuffed hedgehog footrest faces the alligator-hide chair. 
+Countless stacks of other creatures fill every available space, jumbled
+together in heaps of death and fuzz.
+~
+[Guin] Done.
+~
+200933380 0 6 0
+D2
+heavy wooden door~
+~
+131 -1 1659 10 10 5
+D3
+~
+~
+0 -1 1661 10 10 5
+E
+fuzz heaps stacks creatures~
+The dead animals have been piled atop every available surface with little
+regard for the well-being of the deceased.  Creatures of all kinds are
+represented - hummingbirds, squirrels, gophers, snakes - and all have
+been posed into a vicious position.  All available fangs are bared, all
+claws poised to strike out, every ear is laid back in a position of
+terrible anger.
+~
+5219 9 1509949540 3 0
+-1
+S
+
+#1661
+Byron's Inner Sanctum~
+Gashed granite walls have become a living tomb for the mad dwarf. 
+Remnants of a once-great workshop, the tools of craftsmanship now lie in
+ruin and decay.  An iron anvil has melted into oblivion near a forge
+clogged with ash and dirt.  Ivy, long dead, trails from a moldy workbench
+and up a wall where it came into contact with one of the copper plates in
+the ceiling.  All of the copper strings lead into this room where they
+join together above the iron-clad body of Byron Lifecarver.  A thick
+metal door breaches the wall to the south, a lever of similar material
+the only means to open it.
+~
+[Guin] Done.
+~
+200933380 0 6 0
+D1
+~
+~
+0 -1 1660 10 10 5
+D2
+thick metal door~
+~
+147 -1 1662 10 10 5
+E
+workbench moldy~
+Gray-green fuzzy mold dominates this wooden structure.  Most of the
+papers on the bench have long since rotted away, with only a few patches
+of parchment remaining of the lifecarving craft.  Barely legible pictures
+of diverse creatures show through the grime, with a few gears and lines
+showing through.
+~
+A
+~
+~
+mob = mob_in_room( 5103, room );
+if( mob ) 
+  act_tochar( #cant, ch, obj, mob );
+else
+  continue;
+~
+E
+cant~
+@gYou can't get the door open, as $N keeps getting in the way.@n
+~
+!
+8 0 4
+5103 9 1509949540 3 0
+-1
+S
+
+#1662
+Weapon Closet~
+The walls and floor here are covered with the finest racks of fantastic
+weaponry.  Battle axes, hammers, swords, and every kind of metal weapon
+can be seen, all racked and ready for use...or they would be if they
+weren't so rusty and tarnished with extreme age.  A few also seem to have
+chunks taken out of them, as if something was hungry and decided
+that mace would make a good meal.  The rest seem to be sealed against the
+walls, rust acting like a severe glue.
+~
+[Guin] Reviewed.
+[Cayln] Avenger, Nemesis, Dragon's Talons, Mages' Point, Death Dealer
+[Cayln] Battle Axe of Gandin, Chain-link Flail Of Pure Faith
+[Cayln] carved bow
+~
+200933380 0 6 0
+D0
+thick metal door~
+~
+147 -1 1661 10 10 5
+A
+~
+weapons room wall~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 100 ) == 1 ) {
+    i = get_integer( ch, "/Cayln/Byrons/UniqueWeapon" );
+    if( i == 0 ) {
+      set_integer( ch, "/Cayln/Byrons/UniqueWeapon", 1 );
+      if( class( ch ) == paladin ) {
+        if( is_evil( ch ) )
+          obj = oload( 7390 );
+        else
+          obj = oload( 7212 );
+      }
+      else if( class( ch ) == monk )
+        obj = oload( 3843 );
+      else if( class( ch ) == mage )
+        obj = oload( 3847 );
+      else if( class( ch ) == thief )
+        obj = oload( 3848 );
+      else if( class( ch ) == warrior )
+        obj = oload( 3849 );
+      else if( class( ch ) == cleric )
+        obj = oload( 3850 );
+      else if( class( ch ) == ranger )
+        obj = oload( 3851 );
+      else if( class( ch ) == sorcerer )
+        obj = oload( 4321 );
+      else if( class( ch ) == blade dancer ) {
+        obj = oload( 4324 );
+        robj = oload( 4323 );
+      }
+    }
+  }
+}
+if( !obj ) {
+  act_tochar( #rust, ch );
+  act_notchar( #nada, ch, obj, mob, sight );
+}
+else {
+  act_tochar( #gasp, ch, obj );
+  act_notchar( #rgasp, ch, obj );
+  obj_to_char( obj, ch );
+  if( robj ) {
+    act_tochar( #gasp, ch, robj );
+    act_notchar( #rgasp, ch, obj );
+    obj_to_char( robj, ch );
+  }
+}
+~
+E
+weapon~
+You find something useful amongst the racks of rust!
+~
+E
+rweapon~
+$n finds something useful amongst the racks of rusty weaponry!
+~
+E
+rust~
+Everything here is covered with rust or full of holes, useless for any purpose.
+~
+E
+rgasp~
+@C$n gasps in astonishment as $e puts $s hand on $p, after digging
+through the piles.@n 
+~
+E
+gasp~
+@CSearching through the piles of refuse, you gasp in astonishment as you
+put your hand on $p.@n 
+~
+E
+nada~
+$n searches through the piles of refuse but finds nothing useful.
+~
+!
+9 0 0
+-1
+S
+
+#1663
+Paladin Palisade~
+Carved from the solid stone of the mountain, this room has been converted
+into a makeshift temple.  It is seamlessly circular, nearly forty feet
+across at its widest point.  The floor is hard-packed dirt and is badly
+scuffed.  An altar, carved from generic-looking rock and highlighted with
+steel, has been set up at the far end of the room.  Torches in wall
+sconces shed fiery light on the scene, illuminating some tattered and
+mismatched scraps of cloth hanging on the walls.  The air is musty and
+smells faintly of grease.
+~
+[Guin] Done.
+~
+200933509 0 6 0
+D3
+thick wooden door~
+~
+131 -1 1651 10 10 5
+E
+floor dirt hard packed~
+Immediately beyond the entrance to this room, the floor turns to dirt. 
+It is boring, basic dirt that could have come from anywhere in the world. 
+Some old bloodstains form rusty red blobs in the dirt near the door, and
+several scuffs and gouges suggest a vicious fight took place some time
+ago.
+~
+E
+altar rock steel carved generic~
+Bland, slate grey rock forms a lumpy altar which rests near the far wall. 
+Designs that look vaguely mystical have been carved into the sides of the
+rock and inset wth steel.  The altar seems inconsistent with the rest of
+the room - the decorations on the banners resemble the emblem of
+Chandros, known as the God of Justice.  Yet the altar has manacles bolted
+to the top, and blood gutters have been carved into its surface.
+~
+E
+cloth scraps tattered mismatched tapestry~
+Clearly intended to serve as banners, the motley assortment of cloths
+dangle limply from their wall brackets.  All are darkened with age, and a
+few show signs of mildew.  They have all been painted, rather than the
+more traditionaly woven, with the bastard sword silhouette against a
+rising sun - the holy symbol of Chandros.
+~
+5127 9 1509949540 3 0
+-1
+S
+
+#1664
+Flat Ledge Deep in the Everwinters~
+The descent down the mountain flattens into a wide ledge at this point of
+the trail.  Great trees, their gnarled and twisting limbs covered in dark
+green needles and rough brown pine cones, abutt the back side of the
+ledge, offering shelter of sorts from the weather.  Scattered beneath the
+evergreens, random shoots of greenery break through patches of melting
+snow, remnant of old winter storm.
+~
+[Guin] Done.
+~
+167247872 5 9 0
+D0
+~
+~
+0 -1 1666 10 10 5
+D4
+~
+~
+0 -1 1665 10 10 5
+E
+snow patches greenery~
+Breaking through the melting snow, hardy alpine plants show bright green
+against the fading white.  In other places, clusters of mushrooms and
+toadstools sprout between massive pine roots, taking their sustenance
+from the sap.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GUsing whatever hand and footholds can be found, you begin the ascent up
+the mountainside.@n
+~
+E
+to_room~
+@GUsing whatever hand and footholds can be found, $n begins the ascent up
+the mountainside.@n
+~
+!
+3 0 16
+244 9 1509949540 3 0
+-1
+S
+
+#1665
+Steep Path Through the Everwinters~
+The narrow, chat-covered path drops sharply where it breaks free from
+main road above.  The face of the mountainside is covered with ancient
+pines, both above and below the trail, their needle-adorned boughs
+overshadowing the trail.  Stubby and hardy tussock grows in clumps
+beneath the trees, clinging tenaciously to the rocky soil.
+~
+[Guin] no.mob
+[Guin] Done.
+~
+167247872 5 9 0
+D4
+~
+~
+0 -1 5933 10 10 5
+D5
+~
+~
+0 -1 1664 10 10 5
+E
+mountainside pines face boughs~
+Towering old-growth trees scale the mountainside both above and below the
+path, effectively blocking any view in both directions.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou continue the treacherous climb $d the mountainside.@n
+~
+E
+to_room~
+@G$n continues the treacherous climb $d the mountainside.@n
+~
+!
+3 0 48
+A
+~
+~
+send_to_room( #river, room, sound );
+~
+E
+river~
+@CFaintly in the distance, the sound of rushing water can be heard, just
+at the edge of sound.@n 
+~
+!
+2 150 0
+1121 9 1509949540 3 0
+1121 9 1509949540 3 0
+-1
+S
+
+#1666
+Flat Ledge Deep in the Everwinters~
+A cluster of boulders and larger rocks rest at the northern end of the
+ledge, leaving only a narrow path around them.  Directly overhead, a wide
+swatch of trees lies flattened, the shattered course of the avalanche as
+it fell.  Another drop in the path lies just beyond the standing stones.
+~
+[Guin] Done.
+~
+167247872 5 9 0
+D2
+~
+~
+0 -1 1664 10 10 5
+D5
+~
+~
+0 -1 1667 10 10 5
+A
+aset trigger leaving~
+~
+continue;
+~
+E
+to_char~
+@CSqueezing past the boulders, you begin the descent down the path.@n
+~
+E
+to_room~
+@CSqueezing past the boulders, $n begins the descent down the path.@n
+~
+!
+3 0 32
+2501 9 1509949540 3 0
+-1
+S
+
+#1667
+Descent Down the Mountain~
+Tall, sturdy pines encroach upon a faint path that winds a serpentine
+trail along the mountainside.  A rotting stump, the decaying corpse of an
+ancient forest giant, lies overturned in the middle of the path, feathery
+ferns surrounding it like a funeral wreath.  The air is still, the almost
+palpable silence broken only by the pervasive rustle of diminutive
+creatures scurrying through the underbrush.  The trail continues to the
+north and upward along a forested slope.
+~
+[Guin] objs 415, 755, 81, 1246 load into 889 for search.
+[Guin] Done.
+[Yrna] A search here is duplicate. First version with all 'none' acodes is mine, the last acode is Cay's. They do the same thing, more or less, but one needs removing.
+~
+167247872 5 9 0
+D3
+~
+~
+0 -1 1668 10 10 5
+D4
+~
+~
+0 -1 1666 10 10 5
+E
+ferns~
+Ferns in various states of maturation cover the decaying stump and litter
+the ground off the path.  Some are no more than bright green buds, others
+have fully unscrolled their stems into delicate young leaves.
+~
+E
+new stump giant~
+The rotted stump is the decaying remains of what was an ancient, towering
+pine, felled long ago by some unknown catastrophe.  Now, nothing more
+than the husk of a once-pround tree surrounded by a variety ferns, the
+stump lies across the path leaving only a narrow passage as the way
+continues.
+~
+E
+path trail~
+Worn into the underbrush, a serpentine path carves its way through the
+sturdy trees.  Underfoot, aeons of fallen leaves and debris provide
+nutrients for the rocky mountain soil.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou inch along the path, avoiding a steep drop down the mountain.@n 
+~
+E
+to_room~
+@G$n inches along the path, avoiding a steep drop down the mountain.@n
+~
+!
+3 0 8
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CYou begin the steep ascent back up the mountainside.@n
+~
+E
+to_room~
+@C$n begins the steep ascent back up the mountainside.@n
+~
+!
+3 0 16
+A
+~
+stump~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 3 ) == 1 )
+    container = oload( 889 );
+  if( container ) {
+    acode( room, 4 );
+    acode( room, 5 );
+    acode( room, 6 );
+    acode( room, 7 );
+    act_tochar( #rangerlub, ch, container );
+    act_notchar( #rangerlub1, ch, container, mob, sight );
+    obj_to_char( container, ch );
+  }
+  else {
+    act_tochar( #rangerlub2, ch, obj );
+    act_notchar( #rangerlub3, ch, obj, mob, sight );
+  }
+}
+else
+  act_tochar( #rangerlub4, ch, obj );
+~
+E
+rangerlub~
+You find something!
+~
+E
+rangerlub1~
+$n finds something!
+~
+E
+rangerlub2~
+Nothing found.
+~
+E
+rangerlub3~
+$n finds nothing.
+~
+E
+rangerlub4~
+Nothing left to search.
+~
+!
+9 0 0
+A
+~
+~
+i = 1;
+loop( i < 4 ) {
+  if( random( 1, 2 ) == 1 ) {
+    obj = oload( 415 );
+    obj_to_cont( obj, container );
+i = 1;
+  }
+  else
+    i = 10;
+}
+~
+!
+0 0 0
+A
+~
+~
+i = 1;
+loop( i < 4 ) {
+  if( random( 1, 2 ) == 1 ) {
+    obj = oload( 755 );
+    obj_to_cont( obj, container );
+    i = add( i, 1 );
+  }
+  else
+    i = 10;
+}
+~
+!
+0 0 0
+A
+~
+~
+i = 1;
+loop( i < 6 ) {
+  if( random( 1, 2 ) == 1 ) {
+    obj = oload( 81 );
+    obj_to_cont( obj, container );
+    i = add( i, 1 );
+  }
+  else
+    i = 10;
+}
+~
+!
+0 0 0
+A
+~
+~
+i = 1;
+loop( i < 3 ) {
+  if( random( 1, 3 ) == 1 ) {
+    obj = oload( 1246 );
+    obj_to_cont( obj, container );
+    i = add( i, 1 );
+  }
+  else
+    i = 10;
+}
+~
+!
+0 0 0
+A
+poke~
+~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( random( 1, 3 ) == 1 )
+    container = oload( 889 );
+  if( container ) {
+    if( random( 1, 4 ) != 3 )
+      obj = oload( 415, random( 1, 3 ) );
+    if( obj )
+      obj_to_cont( obj, container );
+    obj = has_obj( 0, ch );
+    if( random( 1, 2 ) == 1 )
+      obj = oload( 755, random( 1, 3 ) );
+    if( obj )
+      obj_to_cont( obj, container );
+    obj = has_obj( 0, ch );
+    if( random( 1, 4 ) != 3 )
+      obj = oload( 81, random( 1, 5 ) );
+    if( obj )
+      obj_to_cont( obj, container );
+    obj = has_obj( 0, ch );
+    if( random( 1, 2 ) == 1 )
+      obj = oload( 1246, random( 1, 2 ) );
+    if( obj )
+      obj_to_cont( obj, container );
+    act_tochar( #rangerlub, ch, container );
+    act_notchar( #rangerlub1, ch, container, mob, sight );
+    obj_to_char( container, ch );
+  }
+  else {
+    act_tochar( #rangerlub2, ch, obj );
+    act_notchar( #rangerlub3, ch, obj, mob, sight );
+  }
+}
+else
+  act_tochar( #rangerlub4, ch, obj );
+~
+E
+rangerlub~
+No description.
+~
+E
+rangerlub1~
+No description.
+~
+E
+rangerlub2~
+No description.
+~
+E
+rangerlub3~
+No description.
+~
+E
+rangerlub4~
+No description.
+~
+!
+0 0 0
+2526 9 1509949540 3 0
+5485 9 1509949540 3 0
+-1
+S
+
+#1668
+Skirting the Mountainside~
+The narrow trail continues on, zigzagging along the mountain's face in a
+variety of incredibly sharp turns and crumbling edges.  The old pines,
+both above and below path, cast deep shadows on the cold grey stone and
+hard-scrabble ground.  The dappled play of light against dark fashions a
+patchwork quilt of greens here in the depths of the Everwinters.
+~
+[Guin] Done.
+~
+167247872 5 9 0
+D0
+~
+~
+0 -1 1669 10 10 5
+D1
+~
+~
+0 -1 1667 10 10 5
+E
+trail turns edges~
+The path widens and narrows randomly, with a mind of its own, zigzagging
+sharply then flattening out a foot or two further on.  In places, it has
+crumbled away to near-nothingness to create a treacherous passage around
+the mountain.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@YA section of the path breaks away just beyond your foot, as you continue
+$dward along the path.@n 
+~
+E
+to_room~
+@YA section of the path breaks away just beyond $n's foot, as $e
+continues $dward along the path.@n 
+~
+!
+3 0 3
+-1
+S
+
+#1669
+Skirting the Mountainside~
+The path begins to widen here as it approaches the opening of a
+forbidding cave.  Heavily forested slopes still rise above and below the
+bed of the trail, the ground underfoot swept nearly clean of the normal
+mountain debris.  A handful of smaller stones surround an odd-shaped
+depression lying close one particularly gnarled pine.  The path continues
+onward to both the west and southward toward the road.
+~
+[Guin] Done.
+~
+167247872 5 9 0
+D2
+~
+~
+0 -1 1668 10 10 5
+D3
+~
+~
+0 -1 1670 10 10 5
+E
+stones depression odd gnarled pine~
+One particularly gnarled pine shades a depression in the path.  The
+depression, filled with fallen needles and broken pine cones, is
+irregularly shaped, but not deep - about the size and width of a human
+child or an adult dwarf.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@MFollowing the path, you head westward toward the dark cave opening.@n
+~
+E
+to_room~
+@MFollowing the path, $n heads westward toward the dark cave opening.@n
+~
+!
+3 0 8
+A
+~
+~
+rch = rand_player( room );
+if( rch )
+  if( !is_mob( rch ))
+  if( find_stat( rch, dex ) < 12 ) {
+  act_tochar( #oops, rch, obj, mob, sight );
+  act_notchar( #oops2, rch, obj, mob, sight );
+  damage( mob, rch, 1d20, physical, "falling rocks", "falling rocks" );
+}
+else {
+  act_tochar( #oops3, rch, obj, mob, sight );
+  act_notchar( #oops4, rch, obj, mob, sight );
+}
+~
+E
+oops~
+@gA few rocks come tumbling down on the mountain, landing on top of
+you!.@n 
+~
+E
+oops2~
+@gA few rocks come tumbling down the mountain on top of $n.@n
+~
+E
+oops3~
+@gNoticing the rocks coming down the mountain, you swiftly evade them.@n
+
+~
+E
+oops4~
+@gAs $n notices the rocks falling down the mountain, $e quickly moves to
+evade them.@n 
+~
+!
+2 150 0
+A
+~
+depression~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #gcoin, ch, obj, mob, sight );
+  act_notchar( #gcoin2, ch, obj, mob, sight );
+  wait( 1 );
+  i = random( 1, 5 );
+  if( random( 1, 2 ) == 2 ) {
+    obj_to_char( oload( 2 ), ch );
+    obj = oload( 2, i );
+    obj_to_char( obj, ch );
+    act_tochar( #gcoin3, ch, obj, mob, sight );
+    act_notchar( #gcoin4, ch, obj, mob, sight );
+  }
+  else {
+    act_tochar( #no, ch, obj, mob, sight );
+    act_notchar( #no2, ch, obj, mob, sight );
+  }
+}
+else {
+  act_tochar( #gcoin5, ch, obj, mob, sight );
+}
+~
+E
+gcoin~
+@cYou begin searching through the depression for anything of value.@n
+
+~
+E
+gcoin2~
+@c$n begins searching through the depression.@n 
+~
+E
+gcoin3~
+@cAfter several moments of searching, you have come across some lost
+treasure!@n 
+~
+E
+gcoin4~
+@cAfter several moments of searching, $n appears to have found
+something.@n 
+~
+E
+gcoin5~
+@cYou have already dug up the treasure.@n 
+~
+E
+no~
+@cAfter searching through the depression for several moments, you come up
+empty handed.@n 
+~
+E
+no2~
+@cAfter several moments with no luck, $n gives up the search.@n 
+~
+!
+9 0 0
+2526 9 1509949540 3 0
+5485 9 1509949540 3 0
+-1
+S
+
+#1670
+Before a Forbidding Cave~
+The path comes to an end before an opening in the mountainside - a gaping
+maw, like a giant's mouth frozen mid-yawn.  Struggling to survive in the
+rocky soil, a stunted bush perches like an eyebrow raised in surprise
+above the aperture, its situation precarious at best.  A boulder, fallen
+down the slopes, rests close to the cave mouth, a few scruffy clumps of
+tussock sprouting at its base.
+~
+[Guin] no.mob
+[Guin] Done
+~
+167247872 5 9 0
+D0
+~
+~
+0 -1 1671 10 10 5
+D1
+~
+~
+0 -1 1669 10 10 5
+E
+new opening maw mouth aperture 1 north~
+The opening breeching the mountain's face is jagged and irregular, as if
+recently created.  Beyond, lies only darkness, alleviated only but
+whatever light filters in from the outside.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@YYou venture through the opening into the cave beyond.@n
+~
+E
+to_char~
+@Y$n ventures through the opening into the cave beyond.@n
+~
+!
+3 0 1
+-1
+S
+
+#1671
+Within a Dank Cave~
+Although not overly-large, the dank and musty cave still manages to be
+eerily foreboding.  The only light, filtering in through the opening to
+the south, does little to lift the surrounding darkness.  Underfoot, the
+cavern floor is irregular, the footing unsteady at best.  Cold stone
+walls rise upward, disappearing overhead into secret shadows.  Toward the
+back of the naturally-formed opening in the mountain, a circle of black
+leads down into another cave below.
+~
+[Guin] Done.
+~
+167247880 5 9 0
+D2
+~
+~
+0 -1 1670 10 10 5
+D5
+~
+~
+0 -1 1603 10 10 5
+E
+circle black cave below~
+A circle of black in the back of the cave, indicates an opening in the
+old stone floor.  The opening appears to lead downward into the another
+level of the cave.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@CYou lower yourself into the opening in the cavern floor.@n
+~
+E
+to_room~
+@C$n lowers $mself into the opening in the cavern floor.@n
+~
+!
+3 0 32
+A
+~
+~
+continue;
+~
+E
+to_char~
+@MYou leave the darkness of the cave for the path beyond.@n
+~
+E
+to_room~
+@M$n leaves the darkness of the cave for the path beyond.@n 
+~
+!
+3 0 4
+-1
+S
+
+#0
+

@@ -1,0 +1,2146 @@
+#M2_AREA
+2
+
+Olympia~
+Kashita~
+~
+~
+~
+
+0 200
+4
+0
+#ROOMS
+
+#3
+Milliway's~
+This is a large, open office located high atop a fortified tower.  The
+floors are a dark, rich wood, covered in tightly-woven rugs from across
+the seas.  Huge picture windows adorn the walls, protecting the room with
+an ancient spell that creates a solid, transparent barrier.  At the far
+end of the room, a large, highly-polished desk and deerskin covered
+chairs mark the workplace of Object.  An iron @blever@n on the wall
+catches your attention.
+~
+~
+33065988 0 5 0
+E
+1 east~
+You see the east.~
+E
+lever~
+This is a wrought iron bar protruding from the wall, with a small,
+rectangular slot directly beneath it.  
+~
+E
+a void~
+none~
+A
+pull~
+lever~
+send_to_char( #to_char, ch );
+act_notchar( #to_room, ch );
+~
+E
+to_char~
+You pull the lever and are struck by a small fish which shoots out of the
+slot.  
+~
+E
+to_room~
+$n pulls a lever and is struck by a fish shot from a slot in the wall.
+~
+!
+0 0 0
+1 17 1509949540 -2 22
+-1
+S
+
+#4
+Cayln's Cage~
+There is a sign resting on the floor here.
+
+The walls are covered with silk material, a Victorian-print design of
+intertwining vines and roses of pale pink hue.  Pen and ink drawings of
+various flora hang on the walls, dark wood frames surrounding the pale
+parchment upon which they are sketched.  The air is heavily laced with
+the pale scent of lavender and lilac, no doubt caused by the sachets you
+see tucked into the corners of the room.
+~
+~
+33294468 14 5 0
+D5
+~
+~
+495 -1 69 10 10 5
+E
+sign~
+Men at Work
+~
+A
+stare~
+3 bull~
+if( !mob_in_room( 2402, room ) )
+  continue;
+send_to_char( #realize, ch );
+wait( 2 );
+send_to_char( #angry, ch );
+wait( 3 );
+send_to_char( #glare, ch );
+~
+E
+glare~
+A huge, fur covered @Bmammoth bull@n pokes you.
+A huge, fur covered @Bmammoth bull@n says: "Stop staring at me!"
+~
+E
+realize~
+The @Bmammoth bull@n notices you looking at it.
+~
+E
+angry~
+The @Bmammoth bull@n seems to be getting angry, you should stop looking at it.
+~
+!
+0 0 0
+A
+pound~
+gate 1 south~
+dispel( all, ch );
+end;
+if( !is_open( room, south ) ) {
+  act_tochar( "You pound on the gates", ch );
+  wait( 3 );
+  open( room, south );
+}
+~
+!
+0 0 0
+A
+poke~
+~
+obj_to_char( oload( 4479 ), ch );
+end;
+loop( all_in_room )
+set_integer( rch, "/Cayln/ChiironAttacked", 0 );
+~
+!
+0 0 0
+1144 17 1509949540 -2 0
+1 17 1509949540 -2 43
+2402 9 1509949540 3 0
+4479 17 1509949540 -2 0
+-1
+S
+
+#5
+Inside Kashita's Small Peanut~
+This cannot be right.  You could have sworn that you had left in the
+other direction.  However, as expected there is a staircase that leads
+upwards in a spiral.  The spiral seems to be twisting and you find it
+rather nauseating.  The handrail appears to go in one direction while the
+stairs spin about in the other.  Sitting on a central pillar, a
+hippopotamus yawns at you, inflicting its teeth and bad breath on you. 
+You didn't really think that it was just a statue, did you...?  However,
+there seems to be a door leading west.  You assume that it leads
+somewhere.
+~
+~
+33065997 0 9 0
+D0
+~
+~
+0 -1 10 10 10 5
+D2
+~
+~
+0 -1 10 10 10 5
+D3
+~
+~
+215 -1 7 10 10 5
+D4
+~
+~
+0 -1 55 10 10 5
+-1
+S
+
+#6
+Tahuantinsuyo~
+~
+Projectos...
+
+Area Maintenance.
+Mail file
+Noteboards
+Notes
+Exam
+Indigo
+Undersorld
+
+---
+
+Run _every_ day.
+---
+Note - re - clans - 
+Clan members can only have 1 divergent 'ethos
+good/evil, law/chaos
+~
+33065093 2 5 0
+D0
+~
+~
+1 -1 46 10 10 5
+-1
+S
+
+#7
+Inside Kashita's Small Closet~
+This seems to be a closet.  You seem to be locked in the closet.  There
+is no handle or latch or keyhole of any description.  There are also no
+hinges, and you begin to wonder how you managed to get in here in the
+first place.
+
+It could be said that you are currently @eIN@n the closet.
+Is it likely that you are going to come @eOUT@n of the closet at some point?
+~
+~
+33065997 0 9 0
+D1
+~
+~
+215 -1 5 10 10 5
+-1
+S
+
+#8
+Hall of Judgement~
+You are standing in a room that seems to go on forever, you footsteps
+clang in the hollow hall. There is but one light source, a firey pit in 
+the center of the room. The only other item in this room is a stone altar
+carved with what looks like the Creation Story.
+~
+~
+33064972 0 5 0
+1 17 1509949540 -2 22
+-1
+S
+
+#9
+Immortals' Chat Room~
+The cheap paint on the walls is bubbled and split near the ceiling of the
+meeting room.  In an effort to conceal this unsightly and unflattering
+defect, and to increase staff morale, the management has hung posters
+showing inspiring mountain scenes, baby animals, and uplifting phrases
+like @eWORK HARDER FOR LESS MONEY!@n over the grimy walls.  Overhead, a
+single two-tube flourescent light shines harshly, flickering now and then
+as one of the tubes tries its best to blow out.  The floor is covered
+with short-napped institutional carpeting of a hideous maroon colour,
+worn thin near the door and snagged all over.
+~
+~
+33064973 0 5 0
+E
+magazines magazine~
+Several magazines, all years old, detailing antiquated code, old software
+and hardware, and the relative merits (or lack thereof) of Windows.
+~
+A
+~
+~
+act_tochar( #down, ch );
+act_notchar( #odown, ch );
+continue;
+~
+E
+down~
+You descend the clattering metal steps into the room below.
+~
+E
+odown~
+$n descends the clattering metal steps into the room below.
+~
+E
+drop~
+$n descends the clattering metal steps from the room above.
+~
+!
+3 0 32
+A
+break~
+~
+transfer( ch, find_room( 85 ) );
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_room~
+testing
+~
+!
+2 3000 0
+A
+~
+~
+act_tochar( #bah, ch );
+~
+E
+bah~
+@E@C Someone yells from behind the door: 'Go away!'@n
+~
+!
+0 0 16
+1 17 1509949540 -2 0
+2013 17 1509949540 -2 0
+3067 17 1509949540 -2 0
+1144 17 1509949540 -2 0
+2956 17 1509949540 -2 0
+2956 17 1509949540 -2 0
+2956 17 1509949540 -2 0
+-1
+S
+
+#10
+Inside Kashita's Small Peanut~
+Essentially, the interior of this rather rounded abode is made from wood
+- or, more accurately, from nut.  Preserved by a thick lacquer of
+varnish, the nut grains ripple across every surface.  On several walls,
+holes have been cut right through to the outside of the nut.  A thin
+sugary glaze acts as a window pane.  To the east, a hinged door -
+possibly made from a sliver of almond - leads to the outer world.  Ornate
+archways lead to the north and south where it is possible to see a pair
+of mirrored staircases that lead upwards.
+~
+~
+33065997 0 9 0
+D0
+~
+~
+0 -1 5 10 10 5
+D1
+almond sliver~
+~
+131 -1 14 10 10 5
+D2
+~
+~
+0 -1 5 10 10 5
+-1
+S
+
+#11
+The Evil Monkey's Laboratory~
+A single blaring @Wspotlight@n illuminates a bright circle on the cold floor,
+revealing a cluttered table and an uncomfortable chair with ugly cushions. 
+Outside the circle, a sea of inpenetrable darkness in every direction,
+shrouding the dimensions..  the very nature of the room.
+~
+~
+33066013 0 5 0
+D1
+~
+~
+0 -1 20 10 10 5
+D3
+~
+~
+510 -1 25 10 10 5
+E
+tapestries eloquent silks dyes~
+The western and southern walls are covered in many tapestries, appearing
+to be woven with fine silks and with remarkable quality.  Two of the more
+prominent tapestries, one on the southern and one on the western wall,
+depict the portraits of three demons, two of them are on the same
+tapestry side by side.  The tapestry with the two demons side by side
+portrays them in a fiery plane of chaos and torture, their intense demon
+eyes burning with rage.  Above one demon is the word 'Overlord', and the
+other 'Underlord.' On the adjacent wall, the other demon is by himself in
+his own tapestry, and is much larger than the two other demons, but is
+filled with the same evil and fiery rage, seen through his wicked smile
+and burning eyes.  This demon stands on a midnight-black background, with
+a moon rising above his head that noticeably resembling a skull.
+~
+E
+1 north fire~
+In the center of the north wall, a large opening as tall as a human
+resembles a large fire place.  Flames jump and burn in it, but no logs
+appear to be burning.  The jumping flames occasionally look as if they
+form snickering evil faces, but fade fast.
+~
+A
+north~
+~
+if( find_stat( ch, level ) < 91 ) {
+  act_tochar( #fnorth, ch );
+  act_notchar( #fnorth1, ch );
+  dam_message_fire( ch, 250, "The scorching flames of hell fire" );
+  }
+else
+  act_tochar( #north, ch );
+act_notchar( #north1, ch );
+send_to_room( #arrives, find_room( 38 ) );
+transfer( ch, find_room( 38 ) );
+~
+E
+fnorth~
+You head into the @rf@yl@ra@ym@re@ys@n to the north..what ARE you
+thinking?
+~
+E
+fnorth1~
+$n heads north into the @rf@yl@ra@ym@re@ys@n, what IS $e thinking?
+~
+E
+north~
+@rYou head north through the jumping flames.@n
+~
+E
+north1~
+@r$n heads north through the jumping flames.@n
+~
+E
+arrives~
+@r$n walks in through the flames to the south.@n
+~
+!
+0 0 0
+A
+~
+test~
+~
+!
+0 0 0
+A
+test~
+blah~
+act_room( "BLAHBLAHBLAH", ch );
+~
+!
+0 0 0
+1841 17 1509949540 -2 0
+2956 17 1509949540 -2 0
+-1
+S
+
+#13
+Jail~
+A small pile of straw lies in one corner, obviously meant as a bed
+despite the many insects you see freely roaming the flattened mound.  The
+cold, dark walls are uneven and covered with a light sheen of water. 
+Hungry moss lines the cracks of hewn stone, growing mostly where the
+condensation runs and thriving on the cool moisture as it drips with a
+folorn-sounding plop upon the rough, puddled floor.
+~
+[Seltha] Califnar, Xsarkus - jailed forever
+~
+33065021 0 5 0
+A
+~
+~
+send_to_room( #scream, room );
+~
+E
+scream~
+@RFrom somewhere deep within the darkness above you, the horrible
+shriekings and screams of tortured souls echo down to your frightened
+ears.  Beware, my friend.  The Gods are unhappy with their captives.  @n
+~
+!
+4 25 0
+A
+~
+~
+send_to_room( #cackle, room );
+~
+E
+cackle~
+@b@YThe cackling of deranged dieties intent on making you miserable
+resounds in this small cell.@n 
+~
+!
+4 25 0
+A
+quit~
+*~
+act_tochar( "You try to quit, but the immortals won't let you.", ch );
+act_notchar( "$n tries to quit, but fails miserably.", ch );
+~
+!
+0 0 0
+-1
+S
+
+#14
+Hall of Builders~
+You are standing in a great marble hall that stretches on for miles.  To
+the east and west are a multitude of solid oak embossed in gold. 
+Outside of the door are a life size bust of the office's owner.  
+~
+~
+33328141 0 5 0
+D0
+~
+~
+0 -1 17 10 10 5
+D3
+~
+~
+131 -1 10 10 10 5
+E
+1 north~
+You see the Hall continue.
+~
+E
+1 east~
+You see an office.
+~
+-1
+S
+
+#17
+Hall of Builders~
+You are standing in a great marble hall that stretches on for miles.  To
+the east is a large barn door, flaking white paint chipped and peeling. 
+Mysteriously, there is no bust portraying who this office may belong to.
+~
+~
+33065996 0 5 0
+D0
+~
+~
+0 -1 20 10 10 5
+D1
+stable door~
+door east oak~
+131 -1 88 10 10 5
+D2
+~
+~
+0 -1 14 10 10 5
+D3
+~
+~
+130 -1 41 10 10 5
+E
+1 east~
+You see an office.
+~
+E
+1 south~
+You see the Hallway continue.
+~
+E
+1 west~
+A thick iron-banded door of dark oak has a small brass plaque on it.
+~
+E
+brass plaque~
+The plaque reads: Rue's Office
+~
+-1
+S
+
+#20
+Hall of Builders~
+You are standing a great marble hall that stretches on for miles.  Off to
+the east there is a simple door painted completely black.  There is no
+name on the door nor is there any identifying plaques or busts in this
+area.
+~
+~
+33065997 0 5 0
+D0
+~
+~
+0 -1 33 10 10 5
+D1
+door~
+door~
+131 -1 31 10 10 5
+D2
+~
+~
+0 -1 17 10 10 5
+D3
+~
+~
+0 -1 11 10 10 5
+-1
+S
+
+#25
+Bad Little Boy's Room~
+You probably already know why you're here.
+~
+~
+33066013 0 5 0
+D1
+~
+~
+510 -1 11 10 10 5
+-1
+S
+
+#31
+The Wait~
+This room is completely dark, save the few rays of light that escape
+through the square-shaped barred hole in the ceiling.  Using this light,
+you can make out faint images of hooks suspended from dark chains that
+are hung on the ceiling.  The floor must be black, as it is almost
+impossible to make it out.  The only thing that is visible outside of
+this light is the glowing red circle that has been magically etched upon
+the floor in the center of the room.  There is a barred, square-cut hole
+in the corner of the room leading down, and a wooden ladder leading up.
+~
+Current Job - Darken Wood 35250
+
+Things to do:
+Look at rdescs for things that would make better actions.  Code those
+actions.  Check for spelling errors.  Look for objects that reset in the
+area and check for appropriate level agreeability.
+~
+33062925 0 5 0
+D3
+door~
+door~
+131 -1 20 10 10 5
+D4
+~
+~
+0 -1 70 10 10 5
+D5
+barred cage door~
+door cage bar barred~
+1 -1 67 10 10 5
+-1
+S
+
+#33
+Hall of Builders - A Make-Shift Office~
+This fine marble hallway has become a little strange.  Stretching away to
+the south the vast pattern of marble and doors continues without visible
+interruption.  However to the north things are not quite the same.  The
+marble hall and door pattern has all the realism of a painting of a
+hallway.  The door to the west is solid but not entirely stable.  The
+last bastion of normalcy lies to the east, where you see a simple door of
+weatherbeaten oak, much out of place in this fantastical Hall.
+
+To one side of the hall, a desk and chair have been placed in a
+hastily-constructed cubicle.  There are lots of boxes full of paper and
+pens, and knick-knacks, and artifacts, and powders...  and a cute,
+scruffy-looking stuffed monkey toy.
+~
+~
+33459337 0 9 0
+D0
+~
+~
+0 -1 39 10 10 5
+D1
+door~
+door~
+131 -1 34 10 10 5
+D2
+~
+~
+0 -1 20 10 10 5
+D3
+ethereal obsidian door~
+ethereal obsidian door~
+131 -1 38 10 10 5
+D5
+~
+~
+0 -1 65 10 10 5
+E
+sign chalk~
+The sign, written in a hurried scrawl, reads:
+ 
+Mental Ward.  Excercise Caution.
+~
+E
+desk chair cubical~
+The cubicle and desk within could only be described as a bomb site. 
+There's paper scattered all over, diagrams of monsters, weapons, building
+plans, and ancient scrolls.  On the one non-cluttered corner of desk
+sits a stuffed, cuddly monkey toy, eyes glinting with mischief.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@bYou tread carefully down a set of rickety old stairs.@n
+~
+E
+to_room~
+@b$n carefully maneouvers $s way down a set of stairs.@n
+~
+!
+3 0 32
+A
+reimb~
+~
+if( vnum( ch ) == -16 ) {
+  loop( all_in_room ) {
+    act_tochar( "$N is reimbed.", ch, obj, rch );
+    drain_exp( rch, -31192026 );
+  }
+}
+~
+!
+0 0 0
+4141 17 1509949540 -2 0
+4448 17 1509949540 -2 0
+4448 17 1509949540 -2 0
+4448 17 1509949540 -2 0
+4448 17 1509949540 -2 0
+4448 17 1509949540 -2 0
+4448 17 1509949540 -2 0
+4448 17 1509949540 -2 0
+4448 17 1509949540 -2 0
+4448 17 1509949540 -2 0
+4448 17 1509949540 -2 0
+-1
+S
+
+#34
+Gobbles~
+Seltha's Playpen.
+~
+~
+33392653 3 5 0
+D3
+door~
+door~
+131 -1 33 10 10 5
+A
+tally~
+~
+mob = mob_in_room( 2749, room );
+if( !mob ) {
+  // load the vaultkeeper
+  mob = mload( 2749, room );
+  act_room( "$n bustles in, apologising for being late.", mob, obj, ch, sight );
+}
+else {
+  mpcode( mob, 1 );
+}
+~
+!
+0 1000 0
+-1
+S
+
+#35
+Padraig's Cell~
+A shaman's drum knows many tales.  - A Chirudak Saying
+____________________________________________ Pupil: why is the holy man
+marked across his cheek?  Teacher: Because his belly is hidden beneath
+his coat.  -Chirudak tradition
+_________________________________________________ A ghost sensed a
+warrior's desire for his wife and folowed him home to his tent.  The
+ghost rejoiced as the tow young people lay down together , for if a child
+was conceived now the ghost would at last be reborn.  But just as the
+moment of bliss, a second ghost slipped in past the doorflap.  "This one
+is mine," the first ghost asserted.  "it will be a girl child," the
+second replied.  "And one most beautiful," said the first.  "She will be
+misled by many men," said the second.  "But she will make her own way in
+the end," insisted the first.  While they were arguing, a third ghost
+slipped past them and entered the sprout seed.  . -A chriudak tradition
+______________________________________________________________ When the
+rains are scarce, we burn offerings to the spirits of air and ask their
+assistance.  But one summer, the pleas of the Chirudak's went unanswered,
+"The spirits do not hear us," said the people.  "They must be elsewhere,
+attending better sacrifices." To lure back the sprites, the people set
+fire to the forest.  The blaze raced across the mountainsides and sent
+smoke to fill the sky.  . By the next day the entire forest had been
+destroyed.  Soon the sky grew cloudy and rain began.  The spirits answer
+us," thepeople cried with delight.  The rain continued until creeks
+overflowed and began to flood the valleys.  "enough!" cried the people,
+but now the spirits seemed deaf again.  The tribesmen drove the herds to
+high ground, but the water kept rising.  Finally, when everyond was
+crowded onto tiny islands, the rains stopped.  After that, the Chirudaks
+understood that too much 
+can be worse than not enough.
+__________________________________________________
+Pupil: Why must we ask spirits to carry our pleas?  Why
+.       do we not pray to the gods directly?
+Teacher: Why does a fish not breath air?
+_____________________________________________
+~
+~
+33064989 0 5 0
+-1
+S
+
+#37
+Within the White Tower~
+Light streaming through the windows illumine sections of the fine Tairen
+carpet that covers the floor of the palatial room.  The south wall of the
+room has a small fireplace framed with a mantle made out of a rare
+creamy-colored marble.  Above the ivory mantle, a four-panelled carving
+of a city, a tower, a forest, and a ship is spaced around a centerpiece
+of an intricate shield.  An elegant tapestry picks out the design of an
+exquisitely detailed map along the east wall, between the two large
+windows.
+~
+[Khisanth] Trolls start at 35000
+---
+tunic, leggings, sleeves, ritual dagger, mithril dagger, brooch
+~
+33065997 0 5 0
+D1
+white door~
+~
+131 -1 39 10 10 5
+E
+window~
+No description.
+~
+E
+mantle fireplace~
+No description.
+~
+E
+tapestry~
+No description.
+~
+E
+shield~
+No description.
+~
+E
+four-panelled carving~
+No description.
+~
+E
+city~
+No description.
+~
+E
+ship~
+No description.
+~
+E
+tower~
+No description.
+~
+E
+forest~
+No description.
+~
+3385 17 1509949540 -2 0
+-1
+S
+
+#38
+Global Vault~
+This is where the taxes come.
+~
+~
+33098892 11 5 0
+D1
+ethereal obsidian door~
+~
+131 -1 33 10 10 5
+A
+poke~
+~
+obj_to_room( oload( 16, 706 ), room );
+~
+!
+0 0 0
+-1
+S
+
+#39
+Hall of Builders~
+You are standing in a great marble hall that stretches on for miles.
+~
+~
+33197068 0 5 0
+D0
+~
+~
+0 -1 79 10 10 5
+D1
+~
+~
+131 -1 45 10 10 5
+D2
+~
+~
+0 -1 33 10 10 5
+D3
+white door~
+~
+131 -1 37 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+$t : a furious blizzard
+~
+!
+17 0 9
+-1
+S
+
+#40
+Dirt Ring Near a Worn-Down Stable~
+A trampled, hard-packed dirt ring has been worn into this section of a
+wide, grassy field.  Claw, hoof, and footprints of all shapes and sizes
+cover the dirt here; this and the odd bloodstains and scattered feathers
+betray some sort of insane scuffling has occured here very recently. 
+Immediately west of the dirt ring is a large, weatherworn barn.  Oddly,
+the barn seems to be overrun with plant life of all kinds, as brambles,
+vines, and even a giant oak tree grows all around the barn.  The grassy
+field extends as far as the eye can see in every direction.
+~
+~
+33081473 2 5 0
+D3
+~
+~
+2 -1 88 10 10 5
+E
+claw hoof footprints~
+Hundreds of different types of prints can be made out in the dust,
+although most are far too scuffed to make out.
+~
+E
+bloodstains~
+Green, blue, black, and red bloodstains cover the dirt in various areas
+around the packed-down ring of dirt.
+~
+E
+barn~
+The weatherworn barn seems to have been compeletely overrun by the
+vegetation surrounding it.  What little of the barn you can see through
+the greenery is decaying and its paint old and peeling.
+~
+A
+cut chop clear~
+brambles vines weeds stable~
+if( find_stat( ch, level ) < 95 ) { 
+  act_tochar( #hack, ch );
+  act_notchar( #hacks, ch );
+  end;
+  }
+if( rflag( reset0, room ) ) {
+  act_tochar( #cut, ch );
+  act_notchar( #cuts, ch );
+  open( room, west );
+  remove_rflag( reset0, room );
+send_to_room( #chops, find_room( 88 ) );
+  }
+else
+  act_tochar( #already, ch );
+~
+E
+hack~
+You try desperately to rip away the vines on the eastern side of the
+stable, but they grow back faster than you can break through them.
+~
+E
+hacks~
+$n tries desperately to rip away the vines on the eastern side of the
+stable, but they grow back faster than $e can break through them.
+~
+E
+cut~
+You cut through the vines on the eastern wall of the stable, revealing a
+human-sized hole in the stable wall.
+~
+E
+already~
+The vines and brambles have already been cut away.
+~
+E
+cuts~
+$n cuts through the vines on the eastern wall of the stable, revealing a
+human-sized hole in the stable wall.
+~
+E
+chops~
+Someone chops a hole through the brambles and vines on the eastern wall,
+revealing a man-sized passage.
+~
+!
+0 0 0
+A
+~
+~
+act_tochar( #growu, ch );
+act_notchar( #grow, ch );
+close( room, west );
+set_rflag( reset0, room );
+~
+E
+grow~
+@RAs soon as $n steps through the hole in the stable wall, the vines and
+brambles suddenly grow again, covering the hole quickly and completely.@n
+~
+E
+growu~
+@RAs soon as you step through the hole in the stable wall, the vines and
+brambles suddenly grow again, covering the hole quickly and completely.@n
+~
+!
+1 0 8
+A
+~
+~
+act_tochar( #wander, ch );
+wait( 3 );
+act_tochar( #arrive, ch );
+~
+E
+wander~
+You wander through the seemingly endless sea of grass for a long, long
+time.
+~
+E
+arrive~
+Eventually, despite travelling in what you thought was the same
+direction, you arrive in the same place that you started.
+~
+!
+3 0 7
+A
+scan~
+*~
+continue;
+~
+E
+to_char~
+$t : The vast, endless expanse of grass all looks the same to you, and
+you can pick out nothing interesting.
+~
+!
+17 0 17
+-1
+S
+
+#41
+Garden of Shadows~
+A shroud of darkness lingers almost tangibly over this forgotten garden. 
+Wisps of mists hover throughout the garden, casting a faint silvery glow. 
+Towering oaks and other hardwoods block most light, leaving only the
+strongest rays to filter through the canopy of near-leafless branches. 
+Thick hedges form a maze through which any wishing to pass must navigate,
+the numerous twists and turns providing ample hiding places for the
+creatures of the night whose calls echo all around.  The winding path
+through the maze exits to a small garden, seemingly forsaken by even the
+passage of time itself.  A @csilver plaque@n has been mounted upon one of
+the many tall trees.
+~
+[Arianrhod] Forest 1 75750
+[Arianrhod] Forest 2 77500
+[Arianrhod] Add customs for upsizing faerie armor.
+[Arianrhod] Scatter a couple more trinkets on some of the mobs.
+~
+100437005 0 5 0
+D1
+~
+~
+130 -1 17 10 10 5
+D5
+~
+~
+0 -1 36262 10 10 5
+E
+silver plaque~
+@cLooks like a To Do list:@n
+
+o Getting all clan charters back in and approved.
+@mAlly, Fist, WoCR done.@n
+
+o Strongholds.
+@mAlly done.@n
+
+o Stories for the library.
+@mSun and Shadow, Advice, done@n
+
+o Grasslands Road.
+
+o Quests for Voaleth.
+
+o Abbey.
+
+o Prairie.
+
+o Island of Mist someday?
+
+o Think about randomizing mobs in the tavern. Mprogs?
+~
+A
+enter~
+maze~
+act_tochar( #pass, ch );
+act_notchar( #pass1, ch );
+Wait( 1 );
+act_tochar( #wander, ch );
+Wait( 2 );
+act_tochar( #voices, ch );
+Wait( 1 );
+act_tochar( #mists, ch );
+send_to_room( #exit, find_room( 42 ) );
+transfer( ch, find_room( 42 ) );
+~
+E
+pass~
+You enter the shadowed hedge maze, uncertain of where your steps will lead you.
+~
+E
+pass1~
+$n enters the maze of hedges, a look of uncertainty on $s face.
+~
+E
+wander~
+@b@cPassing through the maze, you come upon several crossing paths with
+no features to mark each turn from the others.  Before long, you feel
+quite thoroughly lost in the winding passageways of the hedge maze.
+~
+E
+voices~
+@b@cThe voices of the creatures of the night calling this eerie place
+their home cry out to you from all sides as you hurry through the maze of
+bushes and silver tendrils of mist.
+~
+E
+mists~
+@b@wAt last, wisps of the dense fog envelop you in a chill embrace, and
+you feel yourself pulled towards another place, though where your fate
+now lies, you cannot be certain.
+~
+E
+exit~
+The silvery mists pulse brightly, then fade slowly away, leaving a
+silhouetted figure in their wake.
+~
+!
+0 0 0
+A
+say~
+tavern~
+if( find_stat( ch, level ) > 90 )
+transfer( ch, find_room( 36298 ) );
+~
+!
+0 0 0
+A
+say~
+abbey~
+if( find_stat( ch, level ) > 90 )
+transfer( ch, find_room( 36305 ) );
+~
+!
+0 0 0
+A
+say~
+library~
+if( find_stat( ch, level ) > 90 )
+transfer( ch, find_room( 47254 ) );
+~
+!
+0 0 0
+2842 17 1509949540 -2 0
+3511 17 1509949540 -2 0
+-1
+S
+
+#42
+Garden of Shadows~
+Under Construction.
+~
+~
+33065996 0 5 0
+-1
+S
+
+#45
+Hall of Builders~
+As you make your way through the maze of flowers, bushes and trees that
+occupy this massive greenhouse, fragrances assail your senses.  Plant
+specimens from every corner of the realm can be found beautifully
+arranged and well tended.  Great oaken beams and columns support the
+walls and ceiling which are constructed of a strange opaque substance you
+have never encountered.  The walls seem to glow with a soft light that
+washes the entire room yet is not harsh to the eyes.  A great ficus tree
+adorns the center of the room, you notice that the bark on one of the
+lower branches is worn in a spot that has left a ring around the branch. 
+A @bsign@n hangs on the same branch as the ring and faces the door.
+~
+~
+33065996 0 5 0
+D1
+~
+~
+1 -1 62 10 10 5
+D3
+~
+~
+131 -1 39 10 10 5
+-1
+S
+
+#46
+Sacsayhuaman~
+~
+lance - warrior and pal skill only, mounted weapon
+earthquake
+flamestrike
+heat metal ranger spell
+similar to ignite weapon?
+floating disc - mage
+~
+33062941 0 5 0
+D1
+~
+~
+0 -1 64 10 10 5
+D2
+~
+~
+1 -1 6 10 10 5
+A
+~
+~
+interpret( mob_in_room( 755, find_room( 46 ) ), "north" );
+~
+!
+0 0 0
+755 9 1509949540 3 0
+3728 17 1509949540 -1 0
+-1
+S
+
+#47
+Tahuantinsuyo~
+This is by no means an accurate or to scale representation of this
+world. This map is merely provided as a tool to aid you in your 
+conceptualization of the geopolitical layout of this world.
+The biggest misrepresentation this map gives is the illusion that Human
+region (Chiiron and Medienne) is both central and considerably larger
+than the other regions. This is simply not the case - we simply have not
+completed the other regions and cannot provide a similar level of detail.
+
+D =3D=3D Dwarves           * =3D=3D Trees
+G =3D=3D Gnomes           ^^ =3D=3D Crag Steep Hills
+O =3D=3D Orcs              ^ =3D=3D Hills
+T =3D=3D Trolls            w =3D=3D Grasslands
+C =3D=3D Contrast Drow     s =3D=3D Swampy
+E =3D=3D Woodland Elves   /\ =3D=3D Mountains
+K =3D=3D K'ssk             % =3D=3D Marsh
+H =3D=3D Human             _ =3D=3D Desert
+
+
+                                         ______________________
+
+___                                     / \
+
+   \                                   / /\\      /\
+
+    \_____                          __/     |(T)
+
+          |       Ocean             |  ^^  /|    /\
+
+       /\ \__/\                     /  /\   | /\
+
+     /\  /\ ^^ ----\             --- /\  /\/\\/\^^/\
+
+    ^   *^^^ /\^^   ------- --  //\/\ ^^^ /\/\\\ /\/\
+
+     ^^******^^  /\/\ ^^/\^V^^\/^^/\^^/\ /\ /\^|^^
+
+     /\(*(C)***/\ ^^   /\  Kha-da \/\/\^/\/\/\ /| **********
+    /\ \/****^^ ^/\^/\ /\/\/\(D)/\^/\/\/\   ***|*(E)**^*****
+
+      ^ --- /\%/\/\%%/\/\/\/\/\/\^^ ^/\  ***^**|****/\****
+
+      ^/\    ^%%%% /\%/\ ^^ /\/\ /\  /\  *****/**********
+
+         ^^ %%%%%^^%% %%/\/\^^ /\ ^^/\ ^  **//****^******
+
+           %% ^%%%% % ^^/\ /\ /\/\/\  /\ ^   |*******^
+
+             ^ ^^  ^^/\/\/\/\ /\/\/\/\ /\^/\ |/\/\
+
+            /\ /\ /\/\/\/-\ _^/----\/\/\ /\ /  /\
+
+           /\ /\/\/\/\/    V   ^    \/\/\/\ |\
+
+            /\ /\ /\ <              / ****/\|
+
+            /\ /\ //\ \  Northern  //\****/\| ^  ^^
+
+             ^^ /\ /\ |     Sea    | ****/\/\
+
+           /\ /\ /\/\^ \         Medienne /  \
+
+           /\ Chiiron ^^\        /  (H)/\//\  \ ^^
+
+          /\  ^/\  (H)^^ |       \ /\/\//  ^   \
+
+           /\ /\ ^ ^^ ^/\<        |/\/\/  ^     \
+
+            /\^^ /\/\/\/\\\_    _/ /\ //\      ^ \
+
+             /\/\ /\^^/\/\/\\_ / /\/\/^/\  ^  ^^  \
+
+                  /\ /\ ^/\/\ ^ /\ // /\ ^ ^^   ^  \
+
+                ^  ^  ^/\ /\/\ ^ /\/ ^ ^^__^_ ____ ^\           **
+
+                        ^  /\ /\ ^/  ^__ _ __ ___^_  \ ^      ss  ss
+
+                  ^ ^  ^ ^       /   _ __ __ ____ __  \ w^  ***s  * **
+
+               ^     ^     ^ ^  /  ____ _ _  ^___^__^ w\__s  s  s s*s
+
+                    ^  (G)   __|^  __ __ _^___ ^^____    w\ w **(K) ss
+
+                     ^   ___/       ^__^______^^w ^  w     \w ss *** s
+
+                ^       ^ ^   ^  ^        ^   ^         w ^  sw ss *s
+
+                      ^     ^   ^    ^  ^ w    w (O)  w     ww s* s*
+
+                          ^    ^   ^    w   ^   w   w    w    * ss   **
+
+                                              w   w   ^  w         * s
+
+                        ^         ^        w   w     ^
+
+                                                 w www  w
+
+                                            w             w
+
+                                       ^       w   w   w
+
+                                          ^           w
+
+
+~
+~
+33062941 0 5 0
+D3
+~
+~
+0 -1 64 10 10 5
+-1
+S
+
+#48
+Tahuantinsuyo~
+Under Construction.
+~
+thief area 571
+battle boots a custom
+standards 5 coins/mob level?
+smooth out crit curve
+blade barrier
+hobs - slaves?
+shield ac's
+millipede
+~
+33062941 0 5 0
+-1
+S
+
+#49
+Rikahn's Roost~
+@CRikahn is: Semi-AFK@n
+~
+[Rikahn] Projects to work on:
+[Rikahn] Modify all dragons, make them L90 compliant.
+[Rikahn] Finish minotaur area rextras, walk through
+[Rikahn] Make all city gates work the same
+[Rikahn] finish this room
+[Rikahn] Modify reputation-based guards?
+
+~
+33081357 0 5 0
+-1
+S
+
+#55
+Inside Kashita's Small Peanut~
+You are standing in a large office with high ceilings. The walls are painted
+a forest green and a large blood red carpet covers the floor. The room is 
+lit by a single oil lamp that rests on a large oak desk. The room seems to 
+unusually humid. You notice a large humidor at the end of the oak desk.
+Mounted into the wall facing the desk are three television monitors, labeled 
+"Kha-da" "Chiiron" "Medienne"
+~
+[Kashita] 65000
+[Kashita] 65030
+~
+33065997 0 5 0
+D5
+~
+~
+0 -1 5 10 10 5
+E
+medienne~
+Looking at this monitor, you notice that you have a birds eye view of the
+town square in Medienne.
+~
+E
+Chiiron~
+Looking at this monitor, you notice that you have a birds eye view of the
+town square in Chiiron.
+~
+E
+Kha-da~
+Looking at this monitor, you notice that you have a birds eye view of the
+town square in Kha-da.
+~
+E
+humidor~
+This is a handcrafted cigar humidor that is made of rose wood.  There is
+a solid gold emblem of a circle with the letters "dN" in the center.  You
+marvel at the workmanship of this otherwise square box and wonder what
+kind of cigars are worth such a home.
+~
+E
+desk~
+This is an oaken wood desk.  It has three legs supporting its weight. 
+The surface of the desk is smooth, shiny with a few pieces of mithril
+wedged into the wood.
+~
+-1
+S
+
+#61
+Hieronymus' Office and Lounge~
+This small room in the corner of the complex seems to be very new.  Large
+plants line the hardwood walls, making the room feel very warm.  Large
+windows line the eastern walls letting in a great amount of light.  A
+huge wooden desk stands in the northern end of the room; small pictures
+and papers with notes line the top of it.
+~
+Entrance 60552
+~
+33065997 0 5 0
+2410 17 1509949540 -2 0
+1697 17 1509949540 -2 0
+-1
+S
+
+#62
+Strinan's Room of Silenced Screams~
+Stone cold granite seal the cold walls of this murky chamber.  Moss green
+streaks of slime, flow down the walls from a crack in the stone ceiling.
+These streaks cover the wall almost like veins on tight skin, marring the
+otherwise smooth granite.  Ambient light fills the room from twin
+metallic pillars placed on the northern wall.  Occasionally, sparks of
+electricity jolt from the metallic pillars making the whole room almost
+tingle with energy.  Adorning all four walls, are gruesome implements of
+pain.  Meathooks, razors, knives, jagged manacles and various cages
+litter the room like some sick museum.  Cages of various sizes and
+descriptions hang from the walls on rusted chains, causing an occasional
+metallic screech.  One particular cage has been plated in mithril either
+because of the value of it's prize inside, or to keep its inhabitant
+contained.
+~
+[Guinafaer] help room.check.list
+[Gretch] Gretch's halfling zone: room 44500
+[Guinafaer] help rdesc_standards
+[Guinafaer] help room_names
+[Strinan] Ruined Pillar 44531
+~
+33328141 0 5 0
+D3
+iron grill~
+~
+1 -1 45 10 10 5
+E
+Torture Rack~
+No description.
+~
+E
+Mithril Cage~
+No description.
+~
+-1
+S
+
+#64
+Tahuantinsuyo~
+Under Construction.
+~
+jet binding
+amethyst
+neutralization 
+smokey quartz protection
+jade harmony
+citrine success
+hematite communication
+bloodstone partnerships
+amber
+[Eccles] delete
+~
+33062941 0 5 0
+D1
+~
+~
+0 -1 47 10 10 5
+D3
+~
+~
+0 -1 46 10 10 5
+-1
+S
+
+#65
+Brunhildes Cellar Of Slackness~
+Dark and dank, this room looks likea typical cellar.  A dirty sofa rests
+in the middle of the room, the cushions spread across the floor with
+little care. The sound of @B drip, drip, drip@n is the only sound coming
+from this empty room.  Oddly enough there are no puddles on the floor, or
+faucets of any kind from which the noise could emminate.  A battered and
+stained foldaway table sits in the corner, an uncomfortable dinning room
+chair lies on its side nearby.  Little or no work gets done here.  The
+only half decent object in this room is a large fourposted bed, with
+luxurious @mvelvet@n curtains pulled mostly closed.  @bBlue@n silk sheets
+give the bed a most comfortable appearance.  The occupant of this cellar
+obviously likes their sleep.
+~
+[Brunhilde] moleskin customs in room 44569
+[Brunhilde] done
+[Brunhilde] get zones to work on from guin
+~
+33344525 0 5 0
+D4
+~
+~
+0 -1 33 10 10 5
+A
+~
+~
+continue;
+~
+E
+to_char~
+@mYou laboriously climb the rotting stairs which lead upwards.@n
+~
+E
+to_room~
+@m$n zooms up the rotting staircase with a crazed look in $s eye.@n
+~
+!
+3 0 16
+-1
+S
+
+#67
+Mantis Cage~
+This room is nothing but a large cage.  The only light that enters is
+from the barred hole in the ceiling.  There is food and drink for many a
+praying mantis scattered around the room here.
+The only way out is up.
+~
+~
+33064973 0 5 0
+D4
+door cage bar barred~
+door cage bar barred~
+1 -1 31 10 10 5
+-1
+S
+
+#69
+Dump Room for Searches~
+Under Construction.
+~
+[Cayln] do not touch or move items from this room, they are counters for specific items.
+~
+33374341 0 5 0
+D4
+~
+~
+495 -1 4 10 10 5
+-1
+S
+
+#70
+The Deck~
+You have stepped up onto a wide wooden deck.  The layout of the realm is
+spread out in front of you.  You are looking out over treetops and
+flatlands, over mountains and valleys.  A cool breeze blows around you as
+you stand here, completing the feeling of complete serenity.  You may
+leave down the ladder that is located in the hole cut in the center of
+the deck.
+~
+~
+33064973 0 5 0
+D5
+~
+~
+0 -1 31 10 10 5
+A
+~
+~
+act_room( #wind, ch );
+end;
+~
+E
+wind~
+You feel a light wind tickle the back of your neck.
+~
+!
+2 50 0
+-1
+S
+
+#72
+Esh's Repository~
+Simple cabinets and bookcases encompass the walls around a large
+hand-carved, cherry colored desk, accompanied by a comfortable looking
+chair.  Several parchments and scrolls are littered upon the many
+shelves; various colors and designs draw attention to the eye.  A small
+ladder is laid upon one of the many bookcases, providing access to the
+highest of shelves.  The flooring consists of wooden planks, lined into a
+pattern that is almost entirely covered by a large, dark red rug.  The
+yarn seems to have been carefully stitched into the fabric of the rug,
+and appears to have a few inches in depth, creating a cushion for your
+feet.
+~
+~
+33064988 0 9 0
+D0
+~
+~
+0 -1 73 10 10 5
+A
+~
+~
+mload( 1234, room );
+mob = mob_in_room( 1234, room );
+init_attack( mob, ch );
+~
+E
+bah~
+You're resting or sleeping.
+~
+!
+1 1000 1
+1744 17 1509949540 -2 7
+-1
+S
+
+#73
+Esh's Construct~
+~
+~
+33064991 0 9 0
+D2
+~
+~
+0 -1 72 10 10 5
+-1
+S
+
+#74
+Jacob's Junkyard~
+This looks like a refurbished boiler room.  The floor is smooth,
+unpainted concrete dressed up with a throw rug here and there.  Two of
+the walls are made of cinderblock and covered in @rposters@n and maps,
+while the other two are hard iron mesh partitions containing sliding
+gates through which you can see what looks like a machine shop in one
+direction and a 'clean room' in the other.
+
+In one corner, a cot sits against the mesh, covers tangled in the center
+of the mattress.  Just to your left against a 'solid' wall, a desk holds
+various text recording devices and a PC that looks like it gets lots of
+use. (Currently, the screen is displaying a @bpoem@n.)
+
+The small room seems to have recently received more attention from its
+occupant and looks reasonably cozy...  that's not saying you'd like to
+live here, but its passable.
+~
+~
+33065997 0 5 0
+E
+poem~
+@eOn the screen, you read:@n
+
+@b_ascii souls_@n
+
+I hear their voices from time to time
+no rhythm, no harmony
+just a cacophony of mindlessness.
+
+Their words are chosen with the same care a dog chooses it's next urinal
+empty text carrying no more wit
+no more decency than a gnat.
+
+I try to drown them out
+
+I try to sing, to shout
+I try to hold back from violence
+I try to hold back from an endless dirge of vengeance
+but here we are again:
+looking at each other through the twisted panes of glass
+
+windows
+stained with my prejudice
+bloodied from my conviction
+broken by their foolish notion
+that the souls that we show in the world of ascii glory
+are more than the words in some plotless, mindless story.
+
+But I know.
+
+I'm sure I can't endure another moment dreaming dreams
+thinking thoughts
+with all the things for which I've fought.
+
+I'm left cold
+I was bold
+once,
+long ago, when the words were still fresh on disks
+the 1's and 0's still ringing with the joy
+that the hearing world never could convey.
+
+I tapped out many things
+songs I'd never sing
+I wrote places men would find,
+one day leave behind
+for a new place... with a bigger treasure trove.
+
+(They go back from time to time;
+revisit every crime
+but isn't it funny how they
+never grow?
+Don't they know?)
+
+Their souls may seem like nothing in this world of abc's,
+123's but really... that's all there /ever/ was.
+
+Aw, ferget it.
+they'll never get it.
+Roleplaying takes the place of conscience,
+anger takes the place of thinking
+lets play while we're drinking
+and wonder why they're scum.
+
+They're not, you know: just people.
+They don't /understand/, but they're not bad
+or evil
+not aligned.
+They're not clerics
+or theives
+or warriors.
+
+They're young men who type 100 words a minute
+but only think at 25.
+~
+E
+posters~
+The walls are almost dizzying in their mad collage of images.  Several
+dozen movie posters overlap, each displaying only a single part of the
+whole image, and thus making one large, disorienting image of it's own. 
+The posters seem to be attached using a combination of colored duct tape
+and various @ystickers@n.
+~
+E
+stickers~
+The stickers display a wide variety of witty, glib and mildly amusing
+'thoughts.' The more notable include: 
+
+     - The more you disapprove, the more fun it is for me.
+     - Everybody lies, but that's okay, because nobody listens.
+     - Can't sleep, clowns will eat me, can't sleep, clowns with eat me...
+     - People Suck. (It looks like the 'Mean' part has been cut off.)
+     - I think it, I say it... that's my way.
+
+~
+A
+~
+~
+act_tochar( #up, ch );
+act_notchar( #oup, ch );
+continue;
+~
+E
+up~
+You climb the clattering metal steps to the room above.
+~
+E
+oup~
+$n climbs the clattering metal steps to the room above.
+~
+!
+3 0 16
+-1
+S
+
+#79
+Hall of Builders~
+Yay for the hall of the gods.  It is really long.
+~
+~
+33065996 0 9 0
+D0
+~
+~
+0 -1 80 10 10 5
+D2
+~
+~
+0 -1 39 10 10 5
+-1
+S
+
+#80
+Hall of Builders~
+No seriously, it's long I tells ya.
+~
+~
+33065996 0 9 0
+D1
+~
+~
+131 -1 81 10 10 5
+D2
+~
+~
+0 -1 79 10 10 5
+-1
+S
+
+#81
+Larken's Larky Lab~
+wilderness north of zirn vnum 8000
+~
+-=Items to be done-=
+pops for Stronghold of the Burning Rose
+*****
+-=Areas to be done-=
+road from Ancient Pine Forest up Valcano (9607-9625)
+Stonghold of the Burning Rose (7200-7299)
+*****
+-=Idea=-
+Legendary Battlefield
+~
+33082381 0 9 0
+D3
+~
+~
+131 -1 80 10 10 5
+A
+~
+~
+i = num_mob_on_mud( 2763 );
+if( i > 0 )
+  send_to_room( itoa( i ), room );
+~
+!
+2 10000 0
+A
+~
+~
+~
+!
+0 0 0
+-1
+S
+
+#85
+Florian's Collegium~
+Constructed from slabs of white marble, the walls fit together in
+seamless corners.  The ceiling is a magnificent display of corbel
+vaulting, supported by six rose quartz columns spaced in a circle about
+the room.  Within the center of the ringed columns stands a flat, grey 
+marble bier.  Hovering above the bier is an incandescent green orb of
+light that casts shadows about the room.  A large, oval mirror set within
+a frame of weathered silver hangs upon the western wall of the chamber. 
+Two shimmering portals of chaotic energy fade in and out of the northern
+and eastern walls.
+~
+See THINGS TO DO LIST (list)
+Vial progs on dragon-turtle and smoke demon
+Install Talismans.
+Install Amulets
+Install Medallions
+Install Phylacteries
+Eval 31250
+~
+33065089 0 5 0
+E
+rose quartz columns~
+Each of the six columns which stands in a circle about the room, supporting the vaulted ceiling, has been hand-carved from pale pink quartz.
+Polished until each gleams, the columns catch the light of the incandescent orb of green light, casting it
+~
+E
+list things~
+THINGS TO DO list:
+Rewrite Swamps (look swamps)
+Rewrite Soskul (see soskul)
+Rewrite Lag ground floor (see lag1)
+Rewrite Lag second floor (see lag2)
+~
+E
+swamps~
+Swamps include: 25500-25555, 30750-30874,31000-31173.
+
+Swamp1, rdescs:
+*25500-25520
+~
+E
+levels~
+amber = 92
+tourmaline = 93
+sapphire = 94
+cobalt topaz = 95
+diamond = 96
+ruby = 97
+violet ore = 98
+~
+E
+soskul~
+Sos-kul includes 30750-30790, 30805-30822, 30824.  30847-30854,
+30861-30865, 30873-30874 
+
+Rewrite Sos-kul:
+Rdescs:30750-30790
+Rdescs: 30805-30809
+Rdescs: 30861-30865
+Rdescs:30873-30874
+~
+A
+send~
+~
+send_to_room( #send3, find_room( 37060 ) );
+~
+E
+send~
+@R A tiny but handsome man with angel wings flutters up beside you.  In
+his hand he has a tiny little golden bow and arrow.  He draws it back,
+shoots the arrow into the air, and a cloud of mist shaped like a heart
+comes into being.  The words 'Happy Valentine's Day' are spelled out
+within the mist.  @n 
+~
+E
+send2~
+@GA little cupid pecks you on the cheek affectionately.@n
+~
+E
+send3~
+Bennis scowls at the little gnome.
+Yeah, that means you, Bagsby!
+~
+!
+0 0 0
+2060 9 1509949540 3 0
+1872 17 1509949540 -2 0
+-1
+S
+
+#88
+An Abandoned Stable~
+What appears to have once been a stable has been overrun by vines,
+brambles, and other dense undergrowth.  The trunk of a large oak has
+burst through the southern wall; one of its thick branches protrudes into
+the ceiling here.  You come to a horrifying realization as you notice
+thousands, perhaps millions of discarded acorns across the ground: the
+squirrels that live here are most certainly not ordinary.
+
+A shabby, gnawed-at piece of paper is tacked on the tree here.
+~
+~
+33065089 0 5 0
+D1
+~
+~
+2 -1 40 10 10 5
+D3
+stable door~
+stable door~
+131 -1 17 10 10 5
+E
+acorns discarded~
+Thousands upon thousands of acorn shells cover the ground here.
+~
+E
+vines brambles undergrowth underbrush dense brush~
+Thick, bramble-filled brush has taken over this area.
+~
+E
+trunk oak large 1 south tree branches~
+A huge oak tree grows outside the stable wall to the south, and has begun
+to encroach into the stable itself.  A rather large hole is visible in
+its trunk, and a few branches stretch into the stable itself.  A rather
+uncomfortable feeling comes over you as you look at the tree, as if
+hundreds of eyes were watching your every move.
+~
+E
+hole~
+As you look more closely at the hole, you can see the glint of hundreds
+of pairs of beady little eyes lurking just inside.
+~
+E
+list paper gnawed-at shabby~
+Dragonspire trail, vnum 78250-78284
+Dragonspire Plateau, vnums 62500-62589
+~
+A
+climb clamber scale~
+tree branches~
+act_tochar( #char, ch );
+act_notchar( #room, ch );
+i = 5d25+144;
+dam_message( ch, i, "The squirrel swarm's ravenous clawing" );
+inflict( ch, mob, i, "an angry throng of squirrels" );
+wait( 1 );
+send_to_room( #retreat, room );
+~
+E
+char~
+As you reach up to climb into the tree, a swarm of squirrels falls on
+you, biting and clawing!
+
+~
+E
+room~
+As $n reaches up to grasp a branch of the oak tree, a swarm of squirrels
+bursts forth from the tree and falls on $m, biting and clawing!
+
+~
+E
+retreat~
+As quickly as they came, the squirrel swarm vanishes among the branches
+of the great oak tree.
+~
+!
+0 0 0
+A
+search reach~
+hole~
+act_tochar( #char, ch );
+act_notchar( #room, ch );
+mob = mload( 2098, room );
+attack( mob, ch, 3d3+3, "ravenous bite" );
+mob = mload( 2098, room );
+attack( mob, ch, 3d3+3, "ravenous bite" );
+mob = mload( 2098, room );
+attack( mob, ch, 3d3+3, "ravenous bite" );
+mob = mload( 2098, room );
+attack( mob, ch, 3d3+3, "ravenous bite" );
+~
+E
+char~
+As you reach your arm into the hole, a swarm of angry squirrels leaps out
+after you!
+~
+E
+room~
+As $n reaches $s arm into the hole, a swarm of angry squirrels leaps out
+after $m!
+~
+!
+0 0 0
+A
+search get take grab~
+acorns ground~
+act_tochar( #char, ch );
+~
+E
+char~
+As you reach down to search through the acorns, an angry chittering sound
+comes from the large oak tree.  You begin to feel rather alarmed as you
+notice several dozen pairs of beady eyes watching you.  Perhaps it would
+be best to leave the acorns alone.
+~
+!
+0 0 0
+A
+clear cut chop~
+vines~
+if( find_stat( ch, level ) < 95 ) {
+  act_tochar( #hack, ch );
+  act_notchar( #hacks, ch );
+  end;
+  }
+if( rflag( reset0, room ) ) {
+  act_tochar( #cut, ch );
+  act_notchar( #cuts, ch );
+  open( room, east );
+  remove_rflag( reset0, room );
+send_to_room( #chops, find_room( 40 ) );
+  }
+else
+  act_tochar( #already, ch );
+~
+E
+hacks~
+$n tries desperately to cut through the brambles and vines on the eastern
+wall, but they grow back faster than $e can break through them.
+~
+E
+hack~
+You try desperately to cut through the brambles and vines on the eastern
+wall, but they grow back faster than you can break through them.
+~
+E
+cut~
+You cut away the brambles on the eastern wall of the stable, revealing a
+human-sized hole in the wooden wall.
+~
+E
+cuts~
+$n cuts away the brambles on the eastern wall of the stable, revealing a
+human-sized hole in the wooden wall.
+~
+E
+already~
+The brambles to the east have already been cleared away, revealing a hole
+in the wooden wall to the east.
+~
+E
+chops~
+Someone chops a hole through the brambles and vines on the eastern wall,
+revealing a man-sized passage.
+~
+!
+0 0 0
+A
+~
+~
+act_tochar( #grow, ch );
+act_notchar( #grows, ch );
+close( room, east );
+set_rflag( reset0, room );
+~
+E
+grow~
+@RAs you step through the hole in the eastern wall of the stable, vines
+suddenly grow over the hole, covering it quickly and completely!@n 
+~
+E
+grows~
+@RAs $n steps through the hole in the eastern wall of the stable, vines
+suddenly grow over the hole, covering it quickly and completely!@n 
+~
+!
+1 0 2
+-1
+S
+
+#0
+

@@ -1,0 +1,19 @@
+<html>
+<body>
+<h1> Syntax </h1>
+<br>
+befriend          : lists all players whom you have befriended<br>
+befriend [player] : toggles that player on/off as a "friend"<br>
+<br>
+<h1> Description </h1>
+<br>
+When you befriend someone, you grant them access to your corpse in the<br>
+event that you should die.  Those characters on your befriend list may<br>
+get your corpse, and remove items from it.  Those not on your befriend<br>
+list may not loot or move your corpse.  *Be careful whom you befriend.*<br>
+<br>
+Typing befriend without any arguments displays a list of characters whom<br>
+you have befriended, and typing befriend [name] where [name] is a<br>
+character on your list removes that character's 'friend' status.<br>
+</html>
+</body>

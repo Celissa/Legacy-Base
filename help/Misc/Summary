@@ -1,0 +1,35 @@
+<html>
+<body>
++-----------------------------------------------------------------------------+<br>
+|                                                                             |<br>
+|                  Welcome to Legacy's Dawning - Help!                      |<br>
+|                                                                             |<br>
++-----------------------------------------------------------------------------+<br>
+<br>
+The following commands will help you along your journeys, whether you are a new<br>
+player or a seasoned veteran.<br>
+<br>
+     Index             : List all help file categories<br>
+     Help [subject]    : Display help file on a given subject<br>
+     Command           : List all command categories<br>
+     Command [subject] : Display all commands within a given category<br>
+     Options           : Display/Change your character's option flags<br>
+     Iflag             : Display/Change system and noteboard information<br>
+     Message           : Display/Change operational messages displayed to you<br>
+     Color             : Set your terminal type and color preferences<br>
+     Score             : See your character's statistics<br>
+     Identity {id}     : See your character's appearance information<br>
+     Inventory {inv}   : See what items your character is holding<br>
+<br>
+Recommended reading:<br>
+<br>
+     Help newbie       : Information pointers for new players<br>
+     Help pray         : Information about dieties and their assistance<br>
+     Help syntax       : How commands are structured for this system<br>
+<br>
+If you cannot find a particular help file by name, browse the index listings.<br>
+If all else fails, contact an immortal by typing 'request imm need help please'<br>
+<br>
++-----------------------------------------------------------------------------+<br>
+</html>
+</body>

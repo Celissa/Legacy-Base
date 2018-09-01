@@ -1,0 +1,4521 @@
+#M2_AREA
+2
+
+Naga~
+Azerin Glynis Aurelian~
+Nagas~
+~
+~
+
+35 0
+0
+0
+#ROOMS
+
+#4500
+Lush Jungle~
+A tangled mass of vines and creepers loop down from the high canopy
+overhead, causing passage in any direction to be a constant struggle. 
+Tall trees tower skywards, rough red bark covered in tiny epiphytes,
+branching out into an umbrella canopy at approximately one hundred feet. 
+At the base of the mighty trees, a carpet of moss and ferns spread,
+thriving in the filtered light that escapes through gaps overhead.  A few
+large boulders, covered in moss, lie in a jumbled heap to the north.  To
+the south the lush vegetation seems to be thinning.  In the low areas and
+small depressions, brackish water gathers into pools, a swarming mass of
+tiny insects dipping and diving amongst them.
+~
+[Eliza] reviewed
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 4501 10 10 5
+D2
+~
+~
+0 -1 31173 10 10 5
+E
+north~
+To the north, the land rises upwards.  Although not a hard climb, it is
+made more difficult by the tangled nature of the jungle.  A few large
+boulders lie scatted in the way, blocking any view of what lies beyond.
+~
+E
+vines creepers~
+The vine tendrils cover the area in a tangled mass of looping and
+encasing green.  Almost like a mass of giant serpents they spread out
+across the landscape, exploring any nook and cranny for purchase.  Often
+they completely smother the lower base of the tall trees and bury smaller
+plants in their suffocating embrace.
+~
+E
+trees~
+Supported by a mass of thick roots, the tall trees dominated the skyline. 
+Their towering trunks are rough and cracked, allowing fungi, moss and
+epiphytes to grown on them.  The canopy their branches form blocks most
+of the light from reaching the jungle floor.
+~
+E
+l south~
+The land drops downward and the ground looks to be increasingly boggy. 
+From the south, the sounds of frogs and the drone of insects can be heard. 
+The smell of decay fills the air, suggesting that a swampland lies
+somewhere in that direction.
+~
+E
+moss ferns~
+Across the jungle floor spread the lush, damp carpet of yellow and green
+mosses, covering everything in its path.  Out of it grow a countless
+variety of ferns.  From the tiny maidenhair to larger tree ferns, they
+dominate the lower strata of the jungle.
+~
+E
+boulders~
+Coated in a thin layer of moss and lichen, the boulders tumbled down to
+rest here a long ago.  Several of the rocks are the size of an ogre,
+while most are only halfling size.
+~
+E
+fungi~
+Supported by thick, woody stems, the fungi umbrella-shaped caps glint with
+dew.  Growing amongst the cracks of bark and decaying vegetation, they
+thrive in the damp darkness.
+~
+E
+brackish water pools depressions~
+The brackish pools offer the perfect environment for all manner of tiny
+blood sucking insects to thrive.  The waters are thick with swimming larva
+and the air around them filled with buzzing mosquitoes.
+~
+A
+hack slash cut chop~
+vine obstruction 1 south~
+if( rflag( reset0, find_room( 31173 ) ) ) {
+  if( has_obj( 3553, ch ) ) {
+    remove_rflag( reset0, find_room( 31173 ) );
+    act_tochar( #hack, ch );
+    act_notchar( #rhack, ch );
+  }
+  else
+    act_tochar( #no_machete, ch );
+}
+else
+  act_tochar( #already, ch );
+~
+E
+hack~
+With a few good swings of the sharp machete you manage to clear way
+enough vines to allow passage southward.
+~
+E
+rhack~
+$n hacks at the vines and creepers for a few minutes, clearing the way
+southward.
+~
+E
+no_machete~
+You lack the tool to hack the vines down.
+~
+E
+already~
+The vines have already been hacked down.
+~
+!
+0 0 1
+A
+1 look~
+l vine south path~
+if( rflag( reset0, room ) ) {
+  act_tochar( #blocked, ch );
+  end;
+}
+act_tochar( #not_blocked, ch );
+~
+E
+blocked~
+The vine tendrils cover the area in a tangled mass of looping and
+encasing green.  Almost like a mass of giant serpents they spread out
+across the landscape, exploring any nook and cranny for purchase.  Often
+they completely smother the lower base of the tall trees and bury smaller
+plants in their suffocating embrace.
+
+In one spot, the vines are slightly thinner and less dense; perhaps with
+the right tool it could be cleared enough to allow passage.
+~
+E
+not_blocked~
+The vine tendrils cover the area in a tangled mass of looping and
+encasing green.  Almost like a mass of giant serpents they spread out
+across the landscape, exploring any nook and cranny for purchase.  Often
+they completely smother the lower base of the tall trees and bury smaller
+plants in their suffocating embrace.
+
+The vines and creepers to the south have been hacked down forming narrow
+passageway.
+~
+!
+0 0 0
+A
+~
+~
+if( rflag( reset0, find_room( 31173 ) ) ) {
+  act_tochar( #blocked, ch );
+  act_notchar( #rblocked, ch );
+  end;
+}
+continue;
+~
+E
+blocked~
+You attempt to head southward but the vines and creepers block your
+passage.
+~
+E
+rblocked~
+$n attempts to head southward but the vines and creepers blocks $s
+passage.
+~
+E
+to_char~
+Using the remaining vines as support you scramble down the incline and
+head southward.
+~
+E
+to_room~
+Using the remaining vines as support $n scrambles down the incline and
+head southward.
+~
+!
+3 0 4
+A
+~
+~
+continue;
+~
+E
+to_char~
+Grabbing hold of some of the vines and creepers, you manage to scrabble
+over the boulders and continue northward.
+~
+E
+to_room~
+Grabbing hold of some of the vines and creepers, $n manages to scrabble
+over the boulders and continue northward.
+~
+!
+3 0 1
+-1
+S
+
+#4501
+Lush Jungle~
+Towering trees and lush undergrowth crowd together, struggling for light
+and other resources.  Everywhere there is a proliferation of growth and
+color.  Thick leafed plants send forth red and yellow flowers in an
+attempt to attract the plentiful insect life.  Tangled masses of vines
+and creepers envelop most of the large trees, their thick looping
+tendrils reaching from the jungle canopy to the floor.  The calls of
+hidden animals echo throughout the area, the chatter broken only when the
+guttural call of a predator sounds.  Cascading from the high foliage is a
+misty rain, which combines with the trapped heat of the jungle basin to
+make breathing a laborious affair.  To the north a faint path leads into
+the lush vegetation, quickly disappearing from view as the greenery swallows
+it up.  Southward the jungle appears to be thinning, although still
+densely packed.
+~
+[Eliza] reviewed
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 4502 10 10 5
+D2
+~
+~
+0 -1 4500 10 10 5
+E
+thick-leafed plants undergrowth trees~
+Varying shades of green surround you, bathed in the pale glow of the
+falling mist.  Gemlike drops of clear rain fall from the widespread
+leaves, landing with muffled sounds on the lush undergrowth carpeting the
+jungle floor.  The heavy perfumes of flowers fill the damp air with their
+spice, creating a nearly-intoxicating combination when mixed with the
+rich scent of growing plants and moist earth.  The plants themselves seem
+full of vigor, high-arched stalks supporting wide-veined leaves and
+clusters of waxy red and yellow flowers.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GBranches, leaves and vines pull at your arms as you travel northward
+along the overgrown path.@n
+~
+E
+to_room~
+$n pushes through the greenery, traveling north along the faint path.
+~
+!
+3 0 1
+-1
+S
+
+#4502
+Lush Jungle - Overgrown Path~
+Almost completely overgrown, the path through the dense jungle is hardly
+better to travel along than the impenetrable foliage surrounding it. 
+Vines and creepers lie half hidden, ready to trip up the unwary, sending
+them spilling to the jungle floor.  Barely perceivable through the wide
+growths are two rocky outcrops, strange in their symmetrical shape;
+perhaps not as natural as first impressions would lead a viewer to
+believe.  From the high foliage of the jungle canopy falls a damp cloud
+of misty-rain, that finds its way under leaf and frond, eventually
+reaching the leaf-littered jungle floor.  Overhead small animals scuttle
+around, using the masses of vines as walkway.  Passage to the east and
+west is blocked by the jungle, while the small path continues its winding
+journey northward and southward through the deep jungle.
+~
+[Eliza] reviewed.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 4503 10 10 5
+D2
+~
+~
+0 -1 4501 10 10 5
+E
+path~
+Winding its way through the jungle, the path is little more than a muddy
+stain across the leaf-littered floor.  Overgrown with tangled vines and
+small shrubs, it is easy to lose sight of where it leads.  Along side the
+path at several points are small trickling streams, fed by the constant
+misty rain.
+~
+E
+vines creepers~
+Masses of vines and creepers loop down from the high canopy to the jungle
+basin.  At the sides of the small path they almost form a wall, so dense
+as to hinder movement off the path.  The occasional tendril snakes across
+the trail, ready to trip up the unwary.
+~
+E
+disabled~
+The white stones are roughly pyramidal in shape.  They stand about six
+feet high, and as half as wide.  Covered in moss and vines it is
+difficult to get anything other tha rough idea of their original
+appearance.  They look as though they were hand-carved rather a natural
+formation.  Unfortunately the impenetrable jungle hinders any closer
+inspection.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GBranches, leaves and vines pull at your arms as you travel southward
+along the overgrown path.@n 
+~
+E
+to_room~
+$n pushes through the overgrown greenery and heads southward on the faint
+path.
+~
+!
+3 0 4
+A
+1 east 1 west~
+~
+act_tochar( #no, ch );
+~
+E
+no~
+You try to push your way through the dense underbrush but quickly give up. 
+Perhaps you could cut a new trail through the jungle.
+~
+!
+0 0 0
+A
+cut clear hack slash~
+greenery jungle underbrush~
+act_tochar( #time, ch );
+act_notchar( #time2, ch );
+modify_move( ch, -12 );
+~
+E
+time~
+@yAfter hacking at the dense underbrush for a few moments, you quickly
+give up this fruitless exercise.@n 
+~
+E
+time2~
+@y$n hacks at the dense underbrush for a few moments, scattering a few
+vines and leaves but succeeding at only wasting time.
+~
+!
+0 0 0
+A
+~
+~
+i = 2d15;
+if( find_stat( ch, dex ) > 7 )
+  continue;
+else {
+  act_tochar( #twist, ch );
+  act_notchar( #twist2, ch );
+  dam_message( ch, i, "a nasty ankle twist" );
+  inflict( ch, ch, i, "creeping vine" );
+  interpret( ch, "+sit" );
+  end;
+  }
+~
+E
+twist~
+@gAs you travel the overgrown path, your foot becomes entangled in a
+small creeper vine twisting your ankle painfully!
+~
+E
+twist2~
+$n catches $s foot in a small creeper vine, twisting $s leg awkwardly.
+~
+!
+3 0 1
+A
+1 look~
+rock outcrops~
+if( rflag( reset0, room ) ) {
+act_tochar( #look, ch );
+end;
+}
+act_tochar( #look2, ch );
+~
+E
+look~
+The white stones are roughly pyramidal in shape.  They stand about six
+feet high, and as half as wide.  Covered in moss and vines it is
+difficult to get anything other tha rough idea of their original
+appearance.  They look as though they were hand-carved rather a natural
+formation.  Unfortunately the impenetrable jungle hinders any closer
+inspection.
+~
+E
+look2~
+The white stones are roughly pyramidal in shape.  They stand about six
+feet high, and as half as wide.  A portion of the moss and viney
+coverings has been cleared from the small outcropping, revealing more
+detail.  These rocks were hand-carved as ancient engravings are barely
+visible on their surface.  Although to faint to read now, they do bespeak
+an intelligence was at work in their creation.
+~
+!
+0 0 6
+A
+clear clean uncover~
+rock outcroppings moss vine~
+if( rflag( reset0, room ) ) {
+  act_tochar( #clear, ch );
+  act_notchar( #clear2, ch );
+  obj_to_char( oload( 2941 ), ch );
+  remove_rflag( reset0, room );
+  end;
+  }
+else
+  act_tochar( #no, ch );
+~
+E
+clear~
+You reach your hand out and clear the loose moss off of the rocky
+outcropping.
+~
+E
+clear2~
+$n reaches out to the small outcropping and clears a small portion of the
+moss from it.
+~
+E
+no~
+The remaining moss and vines are too entrenched on the outcropping to be
+easily removed.
+~
+!
+0 0 0
+-1
+S
+
+#4503
+Lush Jungle - Small Clearing~
+Without warning the jungle opens up into a small clearing.  Oddly, there
+is very little growth here; thick leaf-litter covers most of the area,
+and even this seems to be void of the normal shoot and ferns found
+elsewhere.  Overhead the canopy spreads out, enshrouding the area in
+shadows.  From the high branches of the jungle trees, a multitude of
+entangling vines cascade downwards to nearly touch the ground.  The small
+trail leads southward into the thick jungle and northward, where it
+appears to end in a small clearing.
+~
+[Eliza] reviewed
+[Terelle] my horse swung south to here...should he be able to? i admit, hes very talented..but hey
+~
+167247876 3 9 0
+D0
+~
+~
+0 -1 4504 10 10 5
+D2
+~
+~
+0 -1 4502 10 10 5
+E
+clearing leaf-litter~
+Rotting leaves and twisted branches lie scattered on the ground, some of
+the heavier branches appear half-buried in the ground.  Perhaps the area
+is not as solid as it would seem.
+~
+E
+canopy~
+Made from the entwined branches of countless trees, the high canopy is
+home to much of the jungle's bird life.  Fluttering between the dense
+branches are multicolored parrots, their cries filling the air.  The
+umbrella of growth absorbs much of the sunlight, leaving little to filter
+down.
+~
+E
+trail~
+The path winds into the clearing and seems to disappear almost
+immediately.  Something about its sudden end leaves you feeling
+uncomfortable.
+~
+E
+vines~
+Looping down from the high branches, the vines have entwined throughout
+the area, exploiting their fellow plants as best as they can.  The
+majority of the vines are thicker than an ogre's arm, strong and supple;
+they form a difficult barrier to anyone heading off the overgrown path.
+~
+A
+swing~
+1 north vine~
+if( random( 7, 12 ) < find_stat( ch, dex ) ) {
+  act_tochar( #swing, ch );
+  act_notchar( #swing2, ch );
+  transfer( ch, find_room( 4504 ) );
+  act_notchar( #arrive, ch );
+}
+else {
+  act_tochar( #fall, ch );
+  act_notchar( #fall2, ch );
+  damage( mob, ch, 5d5, physical, "the fall", "slipping off a vine" );
+}
+~
+E
+swing~
+You grab a stout vine, pulling on it to test its strength.  Satisfied
+that it is not going to snap and send you to your death in the quicksand
+beyond, you prepare for the swing.  With a good run, you leap into the
+air the vine jerks taut and holds as you swing through the air over the
+deadly ground below.
+~
+E
+swing2~
+$n grabs one of the stout looking vines in $s hands and gives it a pull. 
+Nodding and mumbling quietly, $e takes one last look at the quicksand
+and then walks a few feet back for a run up.  With a nod, $e sprints
+toward the edge and leaps skyward. The vine jerks taut as $e sails
+northward toward solid ground.
+~
+E
+fall~
+You grab a stout vine, pulling on it to test its strength.  Satisfied
+that it is not going to snap and send you to your death in the quicksand
+quicksand beyond you prepare for the swing.  With a good run up, you leap
+into the air, the vine jerks taut, and to your horror *SNAPS* sending you
+crashing to the ground!
+~
+E
+fall2~
+$n grabs one of the stout looking vines in $s hands and gives it a pull. 
+Nodding and mumbling quietly, $e takes one last look at the quicksand and
+then walks a few feet back for a run up.  With a nod, they sprint towards
+the edge and leap skyward.  The vine jerks taut and with a sudden *SNAP*
+it breaks, sending $m crashing to the ground!
+~
+E
+arrive~
+$n swings across the quicksand on a free-hanging vine and lands on solid
+ground.
+~
+!
+0 0 0
+A
+~
+~
+act_tochar( #sand, ch );
+act_notchar( #rsand, ch );
+~
+E
+sand~
+@rAs you move forward, the ground beneath you seems to liquify.  Slurping
+dark waters start to pull at you, and with a desparate lunge you manage
+to scramble back out of this hidden deathtrap.@n 
+~
+E
+rsand~
+@rAs $n moves forward, the ground beneath $m seems to liquify.  Slurping
+dark waters begin to pull $m under, and with a desparate lunge $e manages
+to scramble back out of this hidden deathtrap.@n 
+~
+!
+3 0 1
+A
+~
+~
+send_to_room( #bird, room );
+~
+E
+bird~
+The shrill calls of birds fill the air as a territorial dispute erupts in
+the canopy overhead.
+~
+!
+2 150 0
+-1
+S
+
+#4504
+Lush Jungle - White Stone Wall~
+From out of the dense jungle rises a large crumbling wall.  Twisted vines
+and abundant creepers have attempted to encase its white stones in a
+thick green mantle.  Large broad-leafed plants and small ferns flourish
+in the shadows of the wall.  Once the wall would have served as stout
+protection, now however the rocks are being defeated by the green
+onslaught of the jungle.  A large tree grows besides the wall, the gap
+just wide enough to allow passage to the east.
+~
+[Eliza] reviewed
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 4506 10 10 5
+D2
+~
+~
+0 -1 4503 10 10 5
+D3
+~
+~
+0 -1 4505 10 10 5
+E
+wall stones creepers~
+Made from slabs of white stone joined with dull gray mortar, the wall has
+barely withstood the onslaught of the jungle.  Tendrils of vines and
+creepers pry into the stones as they encase the wall in a tangle of green. 
+The jungle is quick to exploit any crack, small plants flourishing in
+between the crumbling stones.  A few of the stones have fallen, crashing
+to the ground at the base of the wall.
+~
+E
+broad-leafed plants ferns~
+Across the jungle floor spreads a verdant growth of shade-loving shrubs,
+vines and ferns.  The masses of leaf litter offer ideal growing
+conditions for the multitude of plants.  Beneath the taller tree ferns
+and broadleaf plants are browning bracken and yellow mosses.  A faint
+misty rain cascades down from the high canopy overhead.
+~
+E
+vines~
+Using everything as a frame on which to climb, the jungle vines have
+succeeded in encasing great of the area in their tangled grip.  As round
+as an ogre's arm, they could look as if they could support great weights
+before snapping.
+~
+A
+~
+~
+act_tochar( #sand, ch );
+act_notchar( #rsand, ch );
+~
+E
+sand~
+@rAs you head southward, the ground underfoot begins to liquify.  Suddenly you
+realize your danger - the area is filled with hidden quicksand!  With a
+determined struggle, you manage to scramble back out of the deadly
+mire.@n 
+~
+E
+rsand~
+@rAs $n heads southward, the ground under $m begins to liquify.  Suddenly
+$e realizes the danger.  The area appears to be filled with hidden
+quicksand!  With a determined struggle, $n manages to scramble back out
+of the deadly mire.@n 
+~
+!
+3 0 4
+A
+swing~
+vines 1 south~
+if( random( 7, 12 ) < find_stat( ch, dex ) ) {
+  act_tochar( #swing, ch );
+  act_notchar( #swing2, ch );
+  transfer( ch, find_room( 4503 ) );
+  act_notchar( #arrive, ch );
+  }
+else {
+  act_tochar( #fall, ch );
+  act_notchar( #fall2, ch );
+  i = 1d15;
+  inflict( ch, ch, i, "slipping off a vine" );
+  dam_message( ch, i, "the fall" );
+  }
+~
+E
+swing~
+You grab a stout looking vine and back against the wall, hoping it will
+hold your weight as you sprint toward the deadly ground and leap into the
+air.  The vine groans and splits a bit but holds, allowing you to reach
+firm ground to the south.
+~
+E
+swing2~
+$n grabs stout looking vine and back against the wall, then sprints
+towards the deadly ground, leaping into the air.  The vine groans and
+splits a bit, but holds, allowing $m to reach firm ground to the south.
+~
+E
+fall~
+You grab one of the stout looking vines and give it a quick pull to test
+its strength.  Backing up against the wall you begin you run up.  At the
+last second your foot trips on a hidden root, the vine slips from your
+grasp and you crash to the ground!
+~
+E
+fall2~
+$n grabs one of the stout looking vines in $s hands and gives it a pull. 
+Nodding and mumbling quietly, $e takes one last look at the quicksand
+and then walks a few feet back for a run up.  With a nod $e sprints
+toward the edge, but at the last minute $e stumblings, the vine slipping out
+of $s grasp and tumbling to the ground!
+~
+E
+arrive~
+$n swings across the quicksand on a free-hanging vine and lands on solid
+ground.
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+You force your way around tangled roots and continue onward.
+~
+E
+to_room~
+$n forces $s way around some tangled roots and continue westward.
+~
+!
+3 0 8
+A
+~
+~
+continue;
+~
+E
+to_char~
+With your back against the wall, you squeeze past the tree.
+~
+E
+to_room~
+With $s back against the northern wall, $n squeezes bewteen the tree
+and wall, and heads eastward.
+~
+!
+3 0 2
+A
+~
+~
+continue;
+~
+E
+to_char~
+The vine shudders as it hits into a high tree branch and begins to swing
+back southwards towards the dangerous ground.  You let go and drop a few
+feet, thankfully onto solid ground.
+~
+!
+1 0 4
+-1
+S
+
+#4505
+Lush Jungle - Large Tree~
+Here the wall has been grievously damaged by the growth of a large tree,
+slumping to half its original height, and spilling rocks and debris as it
+fell.  The masses of thick roots from the mighty tree have spread out
+covering most of the fallen rocks from the wall with a spidery network. 
+Seizing an opportunity, encroaching vines and dense shrubs have quickly
+filled the area, racing to be the first to seek the filtered light.  In
+the shadows of the larger plants, small ferns and damp moss flourish,
+drinking in the water that tumbles from the canopy overhead.  The thick
+jungle and unstable wall stop any further progress west.  It is possible,
+however, to move over the rubble and head east into shadowy jungle.
+~
+[Eliza] reviewed
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 4504 10 10 5
+E
+tree wall roots rubble~
+Encased with the roots of the large trees and the tangled vines, the wall
+has slumped in several locations.  The resulting rubble has piled up
+against the base of the wall.  Carpeting the majority of the broken and
+cracked stones is a thick layer of moss.  Closer to the tree roots a few
+small holes appear in the rubble pile, perhaps the lairs of jungle
+creatures.
+~
+E
+vines shrubs~
+The tangle of vines scrabbles over the walls and rubble, using the ruins
+as a frame to grow upon.  In the tighter coils, soil has been trapped
+allowing a few small broadleaf plants to find root.  Other smaller plants
+appear to be epiphytes, growing directly on the vines and trees, using
+the constant misty rain to provide water and nutrients.
+~
+E
+hole~
+The small openings are no wider than a gnome's hand span, but deep enough
+that what lies within cannot be ascertained by a casual glance.
+~
+A
+search~
+rubble debris~
+if( rflag( Reset0, room ) ) {
+  act_tochar( #search, ch );
+  act_notchar( #search2, ch );
+  remove_rflag( Reset0, room );
+  mload( 165, room );
+  }
+else {
+  act_tochar( #nothing, ch );
+  act_notchar( #nothing2, ch );
+  }
+~
+E
+search~
+You rummage through the rubble, finding a nasty millipede!
+~
+E
+search2~
+$n rummages through the rubble, finding a nasty millipede!
+~
+E
+nothing~
+You rummage through the debris, finding nothing.
+~
+E
+nothing2~
+$n rummages through the debris, finding nothing.
+~
+!
+0 0 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+You scramble up the rubble pile and manage to continue onwards.
+~
+E
+to_room~
+$n scrambles up the rubble pile and continues onwards.
+~
+!
+3 0 2
+-1
+S
+
+#4506
+Lush Jungle~
+Almost completely encased in the rampant jungle growth, it is difficult
+to see where plants end and the wall begins.  A few flashes of white
+stone can just be seen through the green expanse.  Overhead the high
+trees form an umbrella of branches, where small animals forage,
+scampering from tree to tree without ever having to touch the ground. 
+The jungle is filled with the sounds of birdcalls and the jabbering of
+hidden creatures.  Underfoot, a carpet of thick moss thrives in the
+filtered light and constant misty rain.  It appears possible to squeeze
+past a large tree and continue westwards or head down a short incline
+into a moss-covered clearing.
+~
+[Eliza] reviewed
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 4507 10 10 5
+D3
+~
+~
+0 -1 4504 10 10 5
+E
+wall white stone vines~
+A few white stones can be seen poking through the wall of green, all that
+is visible of the stone wall.  Still with its height intact, the wall has
+offered the perfect growing frame for the jungles quick-growing vines and
+creepers.
+~
+E
+small animals canopy trees~
+The shadows of the high canopy make it difficult to gain exact details of
+the small creatures; perhaps they are monkeys or large squirrels.  Under
+the protection of the tree branches they can live their lives without
+ever descending to the ground.  The density of the canopy and close
+proximity of trees forms an interlocked system of walkways.
+~
+E
+moss~
+Carpeting most of the jungle floor, the lush green blanket of moss is
+ideally suited for the damp shade of the jungle basin.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+You scramble down the moss covered bank and continue into the dense
+jungle.
+~
+E
+to_room~
+$n scrambles down the moss covered bank and continues eastward.
+~
+!
+3 0 2
+A
+~
+~
+continue;
+~
+E
+to_char~
+With your back against the wall, you squeeze past the tree and head
+westward.
+~
+E
+to_room~
+With $s back against the wall, $n squeezes past the tree and continues
+westward.
+~
+!
+3 0 8
+A
+~
+~
+send_to_room( #bc, room );
+~
+E
+bc~
+@MThe sound of birdcalls fill the air as a flock of brightly plumed
+parrots fly overhead.@n 
+~
+!
+2 150 0
+-1
+S
+
+#4507
+Lush Jungle - Small Clearing~
+In the center of the clearing is a large tree stump, now almost
+completely covered in moss and small white fungi.  There is no sign of
+the tree itself, since by the look of the stump it was felled some time
+ago.  Half-buried rows of cobbled stones can be seen poking out of the
+green carpet at several locations, perhaps part of an ancient road. 
+Encircling the clearing the jungle would probably prevent passage in most
+directions.  It is possible, however, to head west up a moss-covered bank
+or perhaps, force passage along the ancient road northward.
+~
+[Eliza] reviewed
+[Carriaganail] nasty millipede should be agro?
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 4508 10 10 5
+D3
+~
+~
+0 -1 4506 10 10 5
+E
+stump~
+Several yards in diameter, the old stump is covered in a fine coating of
+moss and fungi.  The center of it has rotted away, forming a small pool of
+stagnant water with tiny weeds growing out of it.  Skimming across its
+dark surface are large mosquitoes.
+~
+E
+moss fungi~
+Tiny white caps of the delicate toadstools manage to breach the damp
+mossy carpet of the jungle floor.  The amount of rotting vegetation in
+the undergrowth offers ample food for the fungi to flourish.
+~
+E
+road~
+Most of the road has disappeared under the constant onslaught of the
+jungle, leaving a patchwork of cobbles poking out from the leaf-littered
+ground.  Although badly overgrown, what remains of the road still offers
+a much clearer passageway.
+~
+E
+pool~
+The stagnant water is filled with the larvae of mosquitoes and debris of
+decaying wood.  Across its surface a small green pondweed flourishes, on
+its tiny leaves insects rest.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+You grab a handful of moss and vines and scramble up the bank, continuing
+westward.
+~
+E
+to_room~
+$n grabs handsful of moss and vines and scrambles up the bank westward.
+~
+!
+3 0 8
+A
+~
+~
+continue;
+~
+E
+to_char~
+Pushing aside some of the crowding ferns you strike out northwards along
+the path.
+~
+E
+to_room~
+$n pushes aside some of the ferns that cover the road and heads
+northwards.
+~
+!
+3 0 1
+-1
+S
+
+#4508
+Ancient Road~
+The narrow, overgrown road winds through the lush green jungle, heading
+in a north-south direction.  Covering most of the cobbles is deep
+leaf-litter and soft green moss.  The air is filled with bird calls and
+the smell of damp and decay.  To the north, just visible through the
+jungle, the road seems to end at a wall, a dark red circle cut in it,
+perhaps a form of gate or tunnel.  Southward the road continues into
+deeper jungle, quickly being swallowed from view.
+~
+[Eliza] reviewed
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 4509 10 10 5
+D2
+~
+~
+0 -1 4507 10 10 5
+E
+road~
+Made from tightly packed cobbles, the road has endured the encroachment
+of the jungle surprisingly well.  Small patches of broken stones have
+allowed the occasional tree fern to sprout, but mostly the road is clear
+of large debris.  The ever-present moss carpets a large portion of the
+stones, giving the road a patchwork look.
+~
+E
+ferns~
+Tall tree ferns combine with shorter palm ferns to form a wall of fronds,
+which grow towards the light.  From under the lowest ferns spreads a
+carpet of moss and white fungi.  A light misty rain falls constantly,
+blanketing the area in a warm dampness.
+~
+E
+moss fungi~
+A deep blanket of green moss covers most of the area, blanketing the jungle
+floor as well as climbing up into the high canopy overhead.  Pushing
+their way through the carpet are a collection of small, bright red
+toadstools, their umbrella's dusted with dirt and dew.
+~
+E
+toadstools~
+The white caps of the tiny fungi glint with dew, some of the delicate
+stems bent with the weight of a single drop of water.
+~
+E
+dark red circle~
+It is doubtful that the large red gate would be visible through the lush
+jungle if not for its color.  Although it is hard to make out much detail
+from here, the gate seems impressively large, and set into a high stone
+wall.
+~
+572 9 1509949540 3 0
+-1
+S
+
+#4509
+Before a Large Gate~
+The ancient road ends at a large circular gate made from red wood
+reinforced with strong iron bands.  Above the gate is a stone arch, its
+keystone cut from black rock in striking contrast to the white stone used
+to build the rest of the wall.  In much better condition here, the road
+is clear of the normal moss and ferns that carpet it elsewhere. 
+Stretching westward and eastward is a large, crumbling white stone wall,
+mostly overgrown with vines and creepers.
+~
+[Eliza] reviewed
+~
+167247872 3 9 0
+D0
+red wood gate~
+~
+391 -1 4510 10 10 5
+D2
+~
+~
+0 -1 4508 10 10 5
+E
+red wood gate~
+The stout ironbound doors have been constructed from the red-colored wood
+of the jungle trees.  The strength and skill of its finish has left it
+standing and in better condition than the crumbling stone wall around it.
+~
+E
+keystone~
+The black keystone is carved into a neat triangle, framed in striking
+contrast with the white stone of the wall.  The stone gives support to
+the wall and arch that rise above the gate.  Inscribed on the stone is a
+silvery painting of two large serpents locked together, perhaps in battle?
+~
+E
+vines creepers~
+Looping down from the high branches are a multitude of different shaped
+vines, some covered in leaves, others completely devoid of any life. 
+From the end of some of the smaller vines extend water-filled pitchers. 
+Small insects that alight on the lip of the pitcher often slip, fall in
+and drown.  Across the lush jungle floor, an entangled mass of creepers
+grow, most so encrusted with moss and fungi as to become
+indistinguishable from the rest of the ground.
+~
+E
+road~
+Most of the road has disappeared under the constant onslaught of the
+jungle leaving a patchwork of cobbles to poke out from the leaf-littered
+ground.  Although badly overgrown, what remains of the road still offers
+a much clearer passageway.
+~
+E
+button~
+A small raised button in the shape of a serpent has been set into the
+wall just besides the gate.
+~
+E
+wall~
+The stout walls are draped in the wild growth of the jungle.  Further away
+from the gate, the white stones have disappeared completely under the
+carpet of green.  An arch of stone surrounds the red wood gate, its
+smooth surface gleaming with moisture from the misty rain.  Set into the
+stonework is a small serpent shaped button.
+~
+A
+push~
+button~
+if( is_open( room, north ) ) {
+  act_tochar( #close, ch );
+  act_notchar( #close2, ch );
+  close( room, north );
+ send_to_room( #close3, find_room( 4509 ) );
+  }
+else {
+  act_tochar( #open, ch );
+  act_notchar( #open2, ch );
+  open( room, north );
+send_to_room( #open3, find_room( 4509 ) );
+  }
+~
+E
+close~
+You push the button and it pops out with a click.
+~
+E
+close2~
+$n pushes at something besides the door.
+~
+E
+close3~
+Without a sound, the doors swing shut.
+~
+E
+open~
+The button slides in with a click.
+~
+E
+open2~
+$n pushes at something besides the door.
+~
+E
+open3~
+Without a sound, the doors swing open.
+~
+!
+0 0 0
+-1
+S
+
+#4510
+Before a Large Gate~
+The jungle has mostly reclaimed the cobbled courtyard that spreads out
+before a large@n @rred-wood gate@n. This entire place has a feel of being
+consumed by the green waves of verdant growth.  Lush vegetation
+obscures the view in most directions, although it appears possible to
+continue northwards into crumbling ruins or follow the wall around to the
+east and west.  The sounds of birdcalls echo throughout the canopy high
+above.
+~
+[Eliza] reviewed
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 4511 10 10 5
+D1
+~
+~
+0 -1 4520 10 10 5
+D2
+red wood gate~
+~
+391 -1 4509 10 10 5
+D3
+~
+~
+0 -1 4522 10 10 5
+E
+cobbled courtyard~
+Poking through the blanketing moss and leaf litter of the jungle floor are
+many small cobbelstones.  At one time this area  was a courtyard of
+sorts.  Now so badly overgrown, it is almost indistinguishable from the
+jungle surrounds.
+~
+E
+lush vegetation~
+The lush jungle vegetation has overwhelmed much of the ruins.  From the
+dense greenery, the sounds of unseen animals and birds echo around.
+~
+E
+crumbling ruins wall~
+Without a doubt, the jungle is winning the war to reclaim the ruins back
+into its fold.  Large tree ferns combine with thick broadleaf shrubs to
+form an impressive wall of green.  Burrowing into the walls and rocks
+are the prying tendrils of a variety of creepers and vines.  Even on the
+bare rock, small epiphytes grow without the need of soil to hinder them. 
+An arch of stone surrounds the red wood gate, its smooth surface gleaming
+with moisture from the misty rain.  Inset into the stonework is a small
+serpent-shaped button.
+~
+E
+gate red wood~
+The stout ironbound doors have been constructed from the red-colored wood
+of the jungle trees.  The strength and skill of its crafting has left it
+standing better than the crumbling stone walls around it.
+~
+E
+button~
+A small raised button in the shape of a serpent has been set into the
+wall just besides the gate.
+~
+A
+push~
+button~
+if( is_open( room, south ) ) {
+  act_tochar( #close, ch );
+  act_notchar( #close2, ch );
+  close( room, south );
+send_to_room( #close3, find_room( 4510 ) );
+  }
+else {
+  act_tochar( #open, ch );
+  act_notchar( #open2, ch );
+  open( room, south );
+send_to_room( #open3, find_room( 4510 ) );
+  }
+~
+E
+close~
+You push the button and it pops out with a click.
+~
+E
+close2~
+$n pushes at something besides the door.
+~
+E
+close3~
+Without a sound, the doors swing closed.
+~
+E
+open~
+You push the button and it slides in with a click.
+~
+E
+open2~
+$n pushes at something besides the door.
+~
+E
+open3~
+The door to the south opens.
+~
+!
+0 0 0
+-1
+S
+
+#4511
+Jungle Ruins - Clearing~
+From out of the cobbled path, several trees have sprouted, ripping
+through the stonework with their prying roots.  Such is the devastation
+wrought on the ruined buildings here that their purpose has become
+unclear.  A few walls and rubble piles lie mostly buried in vines and
+creepers, as the jungle quickly erases any sign of civilization in a
+blanket of green.  Growing in the high canopy, countless flowering
+vines add a splash of color to the otherwise green expanse.  Darting
+around the flowers are small birds, their wings a blur of motion as they
+dip their long beaks into the flowers, feeding on insects hiding
+within the blooms.  The trail southward disappears into the verdant
+jungle, its destination unclear.  Northward, rubble and vines would make
+passage difficult, but still clearer than the vegetation to the east and
+west.
+~
+[Eliza] reviewed
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 4512 10 10 5
+D2
+~
+~
+0 -1 4510 10 10 5
+D3
+vegetation~
+~
+162 -1 4523 10 10 5
+E
+cobbled path~
+Scattered cobbles lie in broken piles, cast aside by the roots of the
+tall trees.  The path is barely clearer than the jungle that surrounds it. 
+Three paths meet here in a junction; the remains of a smaller trail head
+westwards into the lush vegetation.  Buried by rubble, the northern path has
+long disappeared, however to the south the cobbled path continues onwards.
+~
+E
+rubble piles vines creepers~
+Mounds of shattered stone and woodwork partially block the way northward. 
+The everpresent vines and creepers cling to the stones, encasing them in
+a network of green.  Now mostly destroyed, the purpose of the building
+has been lost to the jungle, an indication of the fate that awaits the
+remainder of the ruin.
+~
+E
+birds flower~
+Tiny gold and green birds dip their long beaks into the large flowers,
+perhaps trying to catch the insects that are attracted to the bright
+blooms.
+~
+A
+move~
+vegetation vines~
+if( !is_open( room, West ) ) {
+  act_tochar( #move, ch );
+  act_notchar( #move2, ch );
+  open( room, West );
+  }
+else
+  act_tochar( #already, ch );
+~
+E
+move~
+You push aside the thick vegetation, revealing the way west.
+~
+E
+move2~
+$n pushes aside the thick vegetation, revealing the way west.
+~
+E
+already~
+The vegetation has already been pushed aside.
+~
+!
+0 0 0
+A
+~
+~
+if( rflag( Reset0, room ) ) {
+  if( size( ch ) > 4 ) {
+    if( is_player( ch ) ) {
+      act_tochar( #toolarge, ch );
+      act_notchar( #toolarge2, ch );
+      end;
+      }
+    }
+  else {
+    act_tochar( #gonorth, ch );
+    act_notchar( #gonorth2, ch );
+    continue;
+    }
+  }
+else {
+  act_tochar( #gonorth, ch );
+  act_notchar( #gonorth2, ch );
+  continue;
+  }
+~
+E
+toolarge~
+You're too large to make your way through the debris, perhaps you can
+move some of it.
+~
+E
+gonorth~
+You make your way through the rubble.
+~
+E
+gonorth2~
+$n makes $s way through the debris.
+~
+E
+toolarge2~
+$n is too large to make it through the path of debris.  Perhaps if some
+of it was moved out of the way, $e would be able to fit.
+~
+!
+3 0 1
+A
+move~
+debris rubble~
+if( rflag( Reset0, room ) ) {
+  act_tochar( #clear, ch );
+  act_notchar( #clear2, ch );
+  remove_rflag( Reset0, room );
+  }
+else
+  act_tochar( #already, ch );
+~
+E
+clear~
+You clear away the debris and rubble to the north.
+~
+E
+clear2~
+$n clears away the debris and rubble to the north.
+~
+E
+already~
+The path is already clear.
+~
+!
+0 0 0
+2368 9 1509949540 3 0
+2368 9 1509949540 3 0
+-1
+S
+
+#4512
+Fork in the Path~
+Rising out of the jungle to the west is a large crumbling ruin.  Twisted
+vines and thick creepers cling to its walls, encasing it in a mantle of
+green.  Squat white-stone pillars thrust up from the jungle floor, giving
+support to the ruin's low flat roof.  A long sloped ramp leads up to a
+circular door made from redwood and bound in iron.  In the filtered light
+that escapes the canopy of trees overhead, it is difficult to make out
+much fine detail, although it appears to be covered in frescoes.  To the
+west the trail ends before the building, while east it heads back into
+dense jungle and is quickly lost from sight.  The masses of vines and
+multitude of plants prevent passage northward, however it is possible to
+climb the heaps of rubble and continue south.
+~
+[Eliza] reviewed
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 4513 10 10 5
+D2
+~
+~
+0 -1 4511 10 10 5
+D3
+~
+~
+0 -1 4519 10 10 5
+E
+crumbling ruin pillars~
+A lack of maintenance has allowed the jungle to take over the ruins. 
+Many crumbling buildings have been lost to the sea of green.  The squat
+building westwards seems to be in better repair, although it to has been
+encased in the masses of vines and creepers.  In front of the building is
+a small clearing; the pillars that support its flat roof free of any
+jungle growth.  From this distance it is hard to see much detail, however
+the structure still appears to have some damaged stonework, whether
+caused by the jungle or something else is unclear.
+~
+E
+vines creepers~
+Swarming over the trees and ruins, the vines and creepers tear apart the
+stones in their quest for growing space.
+~
+E
+door red wood~
+From here the circular door's dark red wood appears to glow against the
+greens of the jungle.
+~
+E
+trees canopy~
+Overhead the masses of branches from the tall trees intertwine into a
+dense canopy which blocks light, enshrouding the area in gloom.
+~
+E
+frescoes~
+Little detail can be made out from this distance.  Much of the frescoe
+has been buried in the scrambling vines.
+~
+E
+trail~
+The trail winds through the jungle basin, once formed from cobbled tiles,
+now in several locations it is nothing more than a muddy path.
+~
+E
+rubble~
+The mounds of rubble once would have been a reasonably large building,
+now however it only serves to partially block passage south.
+~
+A
+~
+~
+if( rflag( Reset0, find_room( 4511 ) ) ) {
+  if( random( 0, 14 ) < find_stat( ch, dex ) ) {
+    act_tochar( #climb, ch );
+    act_notchar( #climb2, ch );
+    continue;
+    }
+  else {
+    act_tochar( #slip, ch );
+    act_notchar( #slip2, ch );
+    i = 2d3;
+    inflict( ch, ch, i, "falling off of rocks" );
+    dam_message( ch, i, "the fall" );
+    }
+  }
+else
+  continue;
+~
+E
+climb~
+You climb the great heaps of rock.
+~
+E
+climb2~
+$n climbs the great heaps of rock.
+~
+E
+slip~
+You slip and fall on the rocks!
+~
+E
+slip2~
+$n slips and falls on the rocks!
+~
+!
+3 0 4
+2383 9 1509949540 3 0
+-1
+S
+
+#4513
+Corner of a Crumbling Wall~
+Large ferns sprout from the damp soil, their huge fronds spread out over
+the area in an umbrella of green.  Flourishing beneath the ferns are many
+mounds of moss.  Poking through the mossy carpet are slender orchids, their
+delicate stems bent over under the weight of fragile pink flowers.  Every
+surface is coated with light dew left by the misty water that falls down
+from the canopy above.  Half hidden by the ferns, is the corner of two
+walls, one running west the other heading north.  The dense jungle makes
+it difficult to determine much more of the surroundings.
+~
+[Eliza] reviewed
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 4514 10 10 5
+D3
+~
+~
+0 -1 4512 10 10 5
+E
+ferns soil fronds unbrella~
+Lush and green, the fronds of the ferns spread out into an umbrella that
+catches the droplets of rain.  Furry brown shoots sprout from the center
+of the plants, the new fronds to replace some of the older, dying ones. 
+Under the ferns, leaf litter rots away, enriching the damp soil as it
+composts.
+~
+E
+moss orchids~
+Covering most of the jungle basin is a damp carpet of moss.  Thrusting
+through the blanket in sever locations are tiny orchards, their stems
+covered with bright flowers.
+~
+E
+walls~
+In the junction of the crumbling white-stone wall, masses of ferns grow. 
+The wall, itself is in danger of being lost in the proliferation of
+jungle growth.  A few stones have crumbled from the top of the wall, to
+light half-buried at its base, but on the whole the wall seems in
+remarkably good condition.
+~
+-1
+S
+
+#4514
+Jungle Path - Small Pool~
+Surrounded by rocks and ferns is a shallow depression filled with
+green-blue water, fed by the constant misty rain that falls from the
+canopy above.  Water lilies grow around the edges; the air is filled with
+the sounds of small buzzing beetles and other small insects, attracted to
+the lilies large white and gold flowers.  Beside the pool stands a squat
+stone; carved into a rough triangle, its purpose is unclear.
+~
+[Eliza] reviewed
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 4515 10 10 5
+D2
+~
+~
+0 -1 4513 10 10 5
+E
+rocks ferns~
+Surrounding the small pool are many small ferns, a few dipping their
+green fronds into the crystal clear water.  Rough and broken rocks lie
+scattered around the pool, perhaps left from a long ruined building.
+~
+E
+lilies flowers~
+Across the surface of the pool, the circular leaves of the lilies grow; a
+few large flowers float besides them, the rest of the plant hidden
+beneath the rippling waters.
+~
+E
+beetles insects~
+Rainbow-shelled beetles and tiny flies dance above the pool's surface,
+occasionally alighting on a lily pad or on one of the brightly colored
+flowers.
+~
+E
+squat stone triangle~
+Cut from white stone into a rough pyramid shape, the squat stone sits
+besides the small pool.  Covering its weatherworn surface are the faint
+traces of runes, almost completely obliterated by years of exposure.
+~
+3492 17 1509949540 -2 0
+-1
+S
+
+#4515
+Jungle Path - Corner of a Crumbling Wall~
+The narrow jungle path winds around several massive tree stumps before
+reaching the corner of the crumbling stone wall.  Running southward and
+westward, the wall has been swamped with the verdant growth of the jungle. 
+In some places the wall has collapsed into mounds of overgrown rubble. 
+To the west the path seems to open out into a small clearing, while to
+the south the dense jungle quickly swallows the narrow path in its green
+blanket.
+~
+[Eliza] reviewed
+~
+167247872 3 9 0
+D2
+~
+~
+0 -1 4514 10 10 5
+D3
+~
+~
+0 -1 4516 10 10 5
+E
+stump saplings fungi~
+Around the stumps, slender shoots of saplings grow.  Across the stumps, large
+orange and red crescent fungi grow, their bright fleshy caps resting on
+each other like a miniature staircase.  The smell of decay fills the
+air, the wood quickly decomposing in the damp conditions.
+~
+E
+rubble path wall~
+Partially covered by stones that have tumbled from the stone wall, the
+path, is hardly clearer than the jungle basin.  Beside the path, the
+remaining wall runs broken down in several locations, the lush jungle
+tearing stones apart in an effort to find a purchase to grow.
+~
+E
+clearing~
+The felling of several trees has formed a rare occurrence in the lush
+jungle, a small clearing.
+~
+-1
+S
+
+#4516
+Jungle Clearing~
+Several smaller trees have been felled to make a clearing in the dense
+jungle.  In the center of the glade is a smooth earthen-colored stone,
+clear of the normal moss and lichen that spreads out over most of the
+ground, it gleams with dew.  To the east, barely visible through the
+vegetation is a crumbling stone wall.  A cobbled trail winds southward,
+quickly disappearing from view in the lush greenery.  To the west the
+trail leads to a small hut.
+~
+[Eliza] reviewed
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 4515 10 10 5
+D3
+~
+~
+0 -1 4517 10 10 5
+E
+earthen-colored stone~
+The raised stone slab forms a crude dais; deep groves across its surface
+form a spider web of lines.  In the center of the stone a shallow
+depression has been cut, seven small stones embedded around it.
+~
+E
+cobbled trail~
+Running southward, the cobbled trail might have once been a major roadway. 
+Now, however, the lush jungle has obliterated the ancient road's
+destination.
+~
+E
+small hut~
+The small hut as been constructed out of redwood planks, lashed together
+with a fibrous rope.  The roof is a mixture of bracken, moss and
+branches, probably fairly waterproof.
+~
+E
+tiny embedded~
+The tiny black stones are shaped like almonds, and firmly attached to the
+dais.
+~
+-1
+S
+
+#4517
+Before a Small Hut~
+The jungle path ends in front of a unpretentious wooden hut.  Outside the
+hut, a clearing has been hacked out of the lush jungle, the embers from a
+recent fire slowly sending wisps of smoke into the air.  The walls of the
+structure are made from reclaimed stones and freshly cut white wood
+planks.  The roof has been covered in mounds of dried moss and bracken,
+aiding in keeping water out.  Through the jungle a white stone wall runs
+east and west; once it probably separated the area from the jungle.
+~
+[Eliza] reviewed.
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 4516 10 10 5
+D2
+hut door~
+~
+131 -1 4518 10 10 5
+E
+hut roof moss bracken~
+The small hut as been constructed out of white wood planks, lashed together
+with a fibrous rope.  The roof is a mixture of bracken, moss and
+branches, probably fairly waterproof.
+~
+E
+clearing~
+Hacked from the surrounding jungle, the small clearing is filled with new
+growth, the jungle quickly trying to reclaim the space.
+~
+E
+white stone wall~
+About ten feet at its highest point, the white stone walls have been
+covered in jungle growth.  Around the base of the wall, several mounds of
+stones lie, evidence of the destructive powers of the jungle.
+~
+2369 9 1509949540 3 0
+-1
+S
+
+#4518
+Small Hut~
+Inside the hut is clean and dry.  A bed made from stitched furs laid
+across bracken and moss rests against the south wall.  Narrow shelves
+have been built into the eastern wall; a jumble of ceramic vases, plates
+and a few bones piled on it.  Above the door is an ancient looking
+tortoise shell, perhaps once used as a shield.
+~
+[Eliza] reviewed.
+~
+167247876 0 5 0
+D0
+hut door~
+~
+131 -1 4517 10 10 5
+E
+hut~
+Inside the hut is warm and dry, the thatched roof above succeeding in
+stopping the dampness of the jungle from penetrating.
+~
+E
+bed bracken moss~
+Although made from dried bracken and moss, the bed does not appear to be
+that uncomfortable.  Built directly on the dirt-packed floor, it offers
+some coolness to counteract the often hot and humid jungle outside.
+~
+E
+shelves~
+Firmly attached to the hut wall, the narrow shelves have been stacked with
+an odd assortment of items including broken and dust-covered vases, and
+bones.
+~
+E
+ceramic vases plates bones~
+Most of the ceramic goods have been cracked and broken; interspersed
+through them are bones, bleached white from exposure to the elements.  So
+many items have been piled on the shelves, it is difficult to see if any
+of them has any value.
+~
+E
+tortoise shell shield~
+The ancient shell looks like it would crumble to dust if touched, its use
+as a shield long past.
+~
+A
+~
+shelves~
+if( mob_in_room( 2384, room ) ) {
+  act_tochar( #stops, ch );
+  end;
+  }
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( find_skill( ch, searching ) > random( 5, 13) ) {
+    act_tochar( #tochar, ch );
+    act_notchar( #notchar, ch );
+    obj_to_char( oload( 1006 ), ch );
+    end;
+    }
+  }
+act_tochar( #notochar, ch );
+act_notchar( #nonotchar, ch );
+~
+E
+notochar~
+$n searches the shelves, but seems unable to find anything of use.
+~
+E
+nonotchar~
+You search the clutted shelves, prying and poking for several minutes,
+but find nothing useful.
+~
+E
+tochar~
+You search the cluttered shelves and to your delight you find something!
+~
+E
+notchar~
+$n searches the clutted shelves and their several minutes of effort
+appear to have paid off!
+~
+E
+stops~
+The lizardman stops you from doing that.
+~
+!
+9 0 0
+A
+get take~
+shield~
+act_tochar( #no, ch );
+act_notchar( #rno, ch );
+~
+E
+no~
+As you reach for the shield you realize that its in no condition to be
+moved.
+~
+E
+rno~
+As $n reaches for the ancient shield they pause and seem to reconsider.
+~
+!
+0 0 0
+2384 9 1509949540 3 0
+-1
+S
+
+#4519
+Before a Crumbling Ruin~
+From out of the verdant growth rises a large squat building, its domed
+roof supported by numerous pillars, carved with patterns of snakes. 
+Frescoes cover the ruined walls, most of them nearly hidden by tendrils
+and strong vines, and the entire building is in danger of disappearing
+from sight altogether.  Solid-looking, iron-bound circular redwood doors,
+serve as the entrance to the building, a sloping ramp leading up to them. 
+Encircling the building scores of great trees cast long shadows over this
+section of jungle.  From high up in the tree's canopy, droplets of damp
+mist trickle downward to the ground.
+~
+[Eliza] reviewed
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 4512 10 10 5
+D3
+red wood door~
+~
+195 -1 4532 10 10 5
+E
+squat building pillars roof~
+Perhaps a temple or meeting hall, the squat building seems to be in
+better condition that the rest of the ruins.  Supported by large, carved
+pillars, much of the stone work has been encased in vines and thick
+jungle growth.
+~
+E
+frescoes snakes vines~
+Glimpses of the once bright frescos can be seen through the thick,
+entwining vines and creepers.  Most seem to be of serpents and serpent
+men, working and hunting in the thick jungle.  Beside the door, the
+frescoes depict a stormy ocean and a great serpent coils around a tiny
+ship in a crushing embrace.
+~
+E
+iron-bound redwood doors~
+Cut from the dark red wood of the forest trees and bound in thick bands
+of iron, the doors seem very sturdy.  At the base of the door is a small
+raised plate, around its edges are engravings of intertwined serpents.
+~
+E
+trees canopy~
+Giant redwood trees tower above the ruins, their entwined branches
+forming a thick canopy of green.  The sturdiness of the branches and
+their close proximity to each other creates an ideal treetop road for the
+agile jungle creatures that make it their home.
+~
+E
+l plate~
+A small bronze plate set just above the stone work.  Around its edges are
+engraved pictures of intertwined serpents.  Its surface has been covered
+in fine scratches, perhaps from something being placed upon it.
+~
+A
+sit stand push~
+plate~
+if( !is_open( room, west ) ) {
+  if( race( ch ) != reptile ) {
+    act_tochar( #no, ch );
+    act_notchar( #rno, ch );
+    end;
+    }
+  else {
+    act_notchar( #rpet, ch );
+    open( room, west );
+    act_room( #open, ch );
+    }
+  }
+else {
+  if( race( ch ) != reptile ) {
+    act_tochar( #no, ch );
+    act_notchar( #rno, ch );
+    end;
+    }
+  else {
+    act_notchar( #rpet, ch );
+    close( room, west );
+    act_room( #close, ch );
+    }
+  }
+~
+E
+rno~
+$n stands upon the plate but nothing seems to happen.
+~
+E
+open~
+The small plate sinks down till it is flush with the stonework. The
+door to the west opens without a sound.
+~
+E
+rpet~
+$n scuttles up on to the plate.
+~
+E
+no~
+You stand upon the plate but nothing seems to happen.
+~
+E
+close~
+The small plate pops up with a faint *click*.  The door to the west
+closes.
+~
+!
+0 0 0
+A
+~
+~
+if( race( ch ) == reptile )
+if( !is_follower( ch ) )
+interpret( ch, "push button" );
+~
+!
+1 0 2
+196 9 1509949540 3 0
+-1
+S
+
+#4520
+Path - Lush Jungle~
+Large trees rise out of the tangled undergrowth; their tall branches
+intertwine overhead forming a thick canopy.  Barely any light filters
+down to the ferns and broadleaf shrubs that cluster around the tree roots. 
+From out of the leaf-littered ground, clumps of small orchids flower,
+their colorful blossoms attracting many small insects.  Through the
+jungle a small overgrown path winds, heading northwards and westward, the
+jungle obscuring any view of where it might lead.
+~
+[Eliza] reviewed.
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 4521 10 10 5
+D3
+~
+~
+0 -1 4510 10 10 5
+E
+trees canopy roots~
+The masses of branches and leaves of the high trees greedily block most
+of the sunlight that falls on the jungle.  Only filtered light flickers
+between small gaps to offer illumination to the tree ferns and small
+broadleaf shrubs.  In the tangled roots the trees flourish, fed by
+constant misty rain that tumbles from the canopy.
+~
+E
+ferns broadleaf shrubs~
+The masses of broadleaf plants compete with the slender saplings and the
+larger ferns for the pitiful amount of light that reaches the jungle
+basin.  Rich leaf litter rots away around them, feeding nutrients to the
+lush plants.
+~
+E
+orchids insects~
+The delicate plants send up stems covered with gold and red colored
+flowers.  The drone of bees and beetles attracted to the flowers fills
+the air.
+~
+E
+path~
+Overgrown with vines and ferns the path's cobbles disappear under a sea
+of green. When it becomes visible again the cobbles have been replaced
+with a plain dirt-packed trail.
+~
+-1
+S
+
+#4521
+Before a Large Tree~
+A huge tree has fallen here, its death gouging up the ground and
+splintering the wall apart.  Over ten-foot in diameter, the tree blocks
+progress to the north.  Masses of shattered branches mix with the jumbled
+stones of the wall.  From the roots of the trees smaller saplings have
+sprouted, racing to reclaim the canopy space that the giant's fall
+created.  In the damp ground around the fallen tree, countless small
+toadstools grow.
+~
+[Eliza] reviewed
+~
+167247872 3 9 0
+D2
+~
+~
+0 -1 4520 10 10 5
+E
+tree roots branches~
+Recently felled, the tree has smashed itself a resting spot in the
+tightly packed jungle.  Splinters of branches and snapped trees form a
+nest beneath its shattered trunk.  Chunks of bark hangs off the tree like
+strips of torn flesh, the smell of gum filling the air as splintered
+wounds bleed sap.
+~
+E
+saplings~
+Out of the death of the ancient tree springs a proliferation of new life. 
+The jungle wastes nothing, and space is a precious resource that the
+saplings scrabble to claim as their own.  The most successful will grow
+to fill the open canopy, leading to the death of those who are left in
+the gloomy shade below.
+~
+E
+toadstools~
+Tiny black caps sit atop the slender gray stems of the little toadstools. 
+Some of the fragile fungi have been broken by the weight of water
+droplets from the falling, misty rain.
+~
+A
+search~
+tree~
+if( !rflag( reset0, room ) ) {
+  act_tochar( #search, ch );
+  act_notchar( #search1, ch );
+  end;
+  }
+remove_rflag( reset0, room );
+i = random( 1, 25 );
+if( i == 5 ) {
+  act_tochar( #woody, ch );
+  act_notchar( #wood1, ch );
+  obj_to_char( oload( 3556 ), ch );
+  }
+else {
+  act_tochar( #search, ch );
+  act_notchar( #search1, ch );
+  }
+~
+E
+search~
+@gYou search around the fallen tree, but everything seems intact.@n
+~
+E
+search1~
+@g$n searches around the fallen tree, but does not come up with
+anything.@n 
+~
+E
+woody~
+@gYou search around the dead tree, and come up with a big, loose
+branch!@n 
+~
+E
+wood1~
+@g$n searches around the dead tree, and come up with a big, loose
+branch.@n 
+~
+!
+0 0 0
+2368 9 1509949540 3 0
+-1
+S
+
+#4522
+Jungle Path~
+A narrow path winds its way through the jungle, around trees and over
+small dips and rises before disappearing into the half-light gloom. 
+Birdcalls sound overhead, brightly-colored parrots debating territorial
+issues with each other, as they fly between the branches of the high
+canopy.  A gentle mist-like rain falls from above; it alights on the
+smaller plants, collecting on leaves and in flowers, coating them in
+sparking dew.
+~
+[Eliza] reviewed
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 4510 10 10 5
+D3
+~
+~
+0 -1 4524 10 10 5
+E
+path~
+Once perhaps a main road, now the jungle has encroached so far as to make
+it more like a goat track.  Although overgrown and rough, it is still
+much better than the impenetrable tangle of the jungle itself.
+~
+E
+trees canopy~
+High above, the tangled masses of branches meet to form an umbrella that
+blocks most of the light from the jungle floor.  Only those plants that
+can survive in the shade of the great trees can cope with the gloomy
+growing conditions, others having to wait until one of the ancient trees
+falls to gain enough space and light to begin the race towards the high
+canopy.
+~
+E
+plants flowers~
+Drenched with the misty rain that tumbles from the canopy, the jungle
+basin is filled with a staggering array of plant life.  Ferns, creepers,
+saplings and broad leaf shrubs jostle for space and access to what little
+light that filters this far down.  Bright flowers bloom on several
+plants, attracting a multitude of crawling and flying insects.
+~
+A
+~
+~
+act_room( #birds );
+~
+E
+birds~
+A flock of brightly-colored birds flies over head, their calls echoing
+throughout the jungle.
+~
+!
+2 150 0
+-1
+S
+
+#4523
+Jungle ruins - Clearing~
+Enshrouded by the canopy of thick trees, a ruined tower rises here.  The
+top stories have fallen into the shell, sending rubble scattering across
+the jungle floor.  Three of the four walls remain, held together more by
+vines and creepers than mortar.  Around the tower, masses of broadleaf
+plants and vines grow, enjoying the damp conditions and filtered light. 
+From out of the rubble surrounding the tower, slender saplings have
+sprouted, finding purchase in the moss-covered rocks.
+~
+[Eliza] reviewed
+~
+167247872 3 9 0
+D1
+vegetation~
+~
+162 -1 4511 10 10 5
+E
+canopy trees~
+Over one hundred feet in height, the tall trees form an impressive web of
+branches that blocks most of the light from ever reaching the jungle
+floor.  Some of the trees' root systems are equally impressive, covering
+wide sections of ground in a mass of tendrils.
+~
+E
+tower walls vines creepers rubble moss-covered rocks nest~
+Only three of the four walls now stand, forming a semi-circle of rock. 
+Encased in the mantle of green from masses of vines and creepers, the
+ruin will soon disappear into the jungle.  Spilling out of the
+semi-circle of walls is a mound, of moss-covered rubble.  Atop the mound,
+a huge nest over ten feet in diameter and three feet high has been built
+from bracken and branches.
+~
+E
+vines creepers~
+Forming a network of tendrils, the vines and creepers probably offer more
+support to the ruined tower than its ancient mortar.
+~
+E
+broadleaf plants saplings~
+Five-fingers, pepper trees and tiny beech trees grow together, drinking
+in the misty rain and filtered light.
+~
+A
+move~
+vines vegetation~
+if( !is_open( room, West ) ) {
+  act_tochar( #move, ch );
+  act_notchar( #move2, ch );
+  open( room, West );
+  }
+else
+  act_tochar( #already, ch );
+~
+E
+move~
+You push aside the thick vegetation, revealing the way east.
+~
+E
+move2~
+$n pushes aside the thick vegetation, revealing the way east.
+~
+E
+already~
+The vegetation has already been pushed aside
+~
+!
+0 0 0
+2368 9 1509949540 3 0
+-1
+S
+
+#4524
+Jungle Path~
+The path continues along the crumbling stone wall, winding its way around
+fallen branches and clumped ferns.  To the south is a more solid, but
+still ruined building, at least three of its four walls standing.  An
+overgrown trail leads to a break in the near-solid wall of vegetation. 
+Overhead, the canopy serves as home for several brightly colored birds,
+their calls filling the air.
+~
+[Eliza] reviewed
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 4522 10 10 5
+D2
+~
+~
+0 -1 4525 10 10 5
+D3
+~
+~
+0 -1 4528 10 10 5
+E
+crumbling stone wall~
+Perhaps at one stage in its life, the white-stone wall would have been a
+stout defense against enemies.  Now however, the years of neglect have
+left it more useful as a climbing frame for the masses of vines and
+creepers that grow in the lush jungle.
+~
+E
+ruined building~
+Shattered remains of the ruined building lie scattered across the jungle
+floor, bleached stones standing out against the predominate greens of the
+plant life.
+~
+E
+path branches ferns~
+The small path winds into the darkness of the thick jungle, its
+destination obscured by the verdant growth.  At several points large
+branches lie rotting across the trail.  Fallen from the high canopy, they
+now feed the forest floor, large ferns and thick moss clustering around
+them.
+~
+E
+canopy vines~
+Overhead the thick canopy has been formed from the interlocking of the
+giant trees' branches.  The density of the greenery blocks most of the
+light from reaching the jungle floor.  Tumbling down from the canopy is
+looping coils of vines, some longer than the trees themselves.  They
+exploit any surface, entangling and enveloping branches and trunks of
+trees and sending tendrils scattering across the jungle basin.
+~
+2368 9 1509949540 3 0
+2368 9 1509949540 3 0
+-1
+S
+
+#4525
+Jungle Ruins~
+With much of its walls and roof covered with green and gold-leafed vines,
+it is difficult to determine what the building was, apart from the fact
+it is low with a single story.  The walls are made from blocks of stone,
+weathering the seasons and neglect better than the wooden roof that has
+collapsed into the building.  Moss and fungi sprout from the rotting
+wood, the sickly sweet smell of decay hanging heavy in the air.  From the
+canopy of trees overhead, a gentle misty-rain falls dripping from leaf,
+and frond to form small trickling streams.  Barely visible through the
+dark jungle is a north-south running stone wall, that like the ruined
+building, is overrun with thick jungle creepers, vines, and moss.  A
+badly overgrown trail winds from the building and continues southwards;
+while a path heads northwards into the gloom of the jungle.
+~
+[Eliza] reviewed
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 4524 10 10 5
+D2
+~
+~
+0 -1 4526 10 10 5
+E
+wall vines creepers~
+Encrusted with the entangling vines and creepers of the jungle the old
+stone wall has almost completely disappeared from view.  The vines are
+typical of the jungle; they loop over ruins and trees alike, embracing
+any surface with their prying tendrils.  Much of the devastation wrought
+on the ruins is due to the vines verdant growth.
+~
+E
+moss fungi rotting wood building stones walls~
+Long beards of moss dangle down from the rotting wood of the building. 
+Dripping water from the high canopy collects in small depressions and on
+the broad leaves of the jungle plants, before being absorbed into the
+lush blanket of moss.  The stones of the crumbling ruin has been water
+stained and weatherworn, their cracked and pitted surface even more moss
+overgrown.  Beside the ancient structure basket fungi grow, their
+interwoven stems attract a number of tiny insects.  More fungi sprout
+from the rotting wood, forming an fleshy umbrella of bright orange caps.
+~
+E
+canopy~
+The high canopy absorbs most of the rain and sunlight enshrouding the
+basin in gloom.
+~
+E
+streams~
+Slowly the tiny streams splash and gurgle their muddy way westwards.  A
+swarm of tiny insects dance across its surface, attracted to its
+sparkling waters.
+~
+E
+path trail~
+All the jungle paths suffer from the lack of maintenance, most are barely
+better to traverse than the jungle basin.  Rocks and rubble from the
+ruins combine with vines and tree roots to bury the trails in several
+locations.
+~
+-1
+S
+
+#4526
+Jungle Path~
+Verdant jungle growth mingles with the crumbling ruins to produce
+patchwork of white and green.  Tendrils of vines surge over the stones,
+often completely obscuring them from sight.  Ruined walls of buildings
+thrust out from the sea of green like the jagged teeth of some lurking
+beast.  Barely visible through the jungle to the east is a north-south
+running wall; encased by vines and creepers its destination is quickly
+lost from view through the wild jungle.  An overgrown trail winds
+northward, like the wall it follows, its destination obscured by the
+exuberant jungle vegetation.  To the west the jungle seems to open out
+into a clearing.
+~
+[Eliza] reviewed
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 4525 10 10 5
+D3
+~
+~
+0 -1 4527 10 10 5
+E
+crumbling ruins buildings~
+Crumbling and ruined buildings rise out of the lush vegetation.  Most are
+covered in a mantel of green as the jungle slowly tears them down in its
+quest for growing space.  Cracked and pitted mounds of stones spill
+across the jungle basin; all that is left of some of the older structures.
+~
+E
+vines creepers wall~
+Beneath the weight of countless jungle creepers and vines, the wall has
+slumped in places.  Piles of broken and crumbling stones rest against the
+walls' base, most covered in a thick layer of moss and patchy lichen. 
+The wall itself runs in a north-south direction, its defensive capacities
+long since compromised by the rampant jungle growth.
+~
+E
+trail~
+Layers of moss, leaf litter, and the tendrils of vines and creepers join
+with the tangling roots of the high trees to make passage along the small
+trail almost as difficult as traveling in the jungle itself.  A few muddy
+clearings are the only indication that the path runs northwards besides
+the crumbling wall.
+~
+E
+clearing~
+To the west the jungle parts and opens into a cobbled clearing.  Five
+large standing stones have been formed into a broken circle in its center.
+~
+-1
+S
+
+#4527
+Jungle Clearing - Standing Stones~
+The overgrown path ends in a ruin-surrounded clearing.  The jungle floor
+is a conglomeration of leaf litter, moss and cobbled tiles.  In the center of
+the clearing is a circle of five large standing stones, almost pyramidal
+in shape.  Around the clearing are large piles of dead and dying vines
+that have been cut from the surrounding area and off the stones.  The
+canopy overhead opens up, allowing a clear view of the sky.
+~
+[Eliza] reviewed
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 4526 10 10 5
+E
+standing stones~
+Thrusting upwards from the clearing are five huge stones.  Over ten-foot
+high and as wide at the base they have been set in a perfect circle. 
+Faded runic writing covers the weatherworn stones, their swirling
+patterns completely erased in several places.  Pale stains across the
+stones show where vines and creepers have been recently removed,
+obviously the inhabitants of the ruins believing that they have some
+importance.
+~
+E
+piles vines~
+The smell of decay fills the air from the huge mounds of rotting leaf
+litter and vines that have been cleared from the clearing.  Multitudes of
+tiny golden beetles scuttle across the decaying vegetation, grazing on it
+as they go.
+~
+E
+path clearing~
+Snaking through the wild vegetation of the lush jungle runs the white
+stone-cobbled path.  Although overgrown in several places, it offers a
+more stable footing than the deep moss carpets to either side.  The path
+ends in the cobbled courtyard.
+~
+E
+leaf-litter moss cobbled tiles~
+Covering the floor of the jungle in a mottled coat of greens and browns
+is a mixture of moss, leaves and branches.  At some places the carpet is
+deep enough for a heavy tread to sink a foot into it.  These depressions
+quickly fill up with a mixture of mud and water.  Thankfully, a cobbled
+path runs through the basin, allowing a more stable passageway.
+~
+E
+sky canopy~
+The lack of trees surrounding the standing stones allows a clear view of
+the open sky, a rare sight in the dense jungle.
+~
+E
+runes~
+Time has erased many of the swirling runes; most are barely legible at
+best.  Unfortunately the language used to write them has been lost to the
+jungle.
+~
+2370 9 1509949540 3 0
+2370 9 1509949540 3 0
+-1
+S
+
+#4528
+Jungle ruins - Intersection of paths~
+The lush jungle growth parts briefly at the point where three paths
+intersect.  Although clearer than its surroundings, the paths are still
+covered in tangled roots and leaf-litter from the tall trees that form
+the canopy overhead.  Due to the gloomy half-light, it is hard to see the
+final destinations of the paths.
+~
+[Eliza] reviewed
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 4524 10 10 5
+D2
+~
+~
+0 -1 4552 10 10 5
+D3
+~
+~
+0 -1 4529 10 10 5
+E
+paths~
+The narrow paths seem to be swallowed in the greenery of the rampant
+jungle plant-life.  At the junction of the three paths, a small clearing
+has been hacked, although the gloom of the area and the thick vegetation
+makes the destinations of the paths, impossible to see.
+~
+E
+roots leaf-litter trees canopy~
+Piles of damp and rotting leaf-litter spread in amongst the thick tangle
+of roots of the massive trees.  Some of the root systems are as large as
+a tree themselves, making an ideal home for the smaller creatures of the
+jungle basin.  The towering trees grow in such close proximity to each
+other as to intertwine their branches, forming a matted layer in the
+canopy, blocking most light from reaching the jungle floor.
+~
+-1
+S
+
+#4529
+Lush Jungle - Before a River~
+The path ends at the banks of a slow moving river.  The blue-green
+waterway sluggishly makes its way in a southerly direction.  Overhead the
+canopy of trees spreads out, blanketing the area in gloomy shadows. 
+Thick jungle rises up from across the river, dense and impenetrable. 
+Long and looping vines fall from the branches of the trees overhead and
+tumble down along the path and down the riverbank.
+~
+[Eliza] reviewed
+[Terelle] should down be a water room?
+[aurelian] Terrain set to shallows
+~
+167247872 13 9 0
+D1
+~
+~
+0 -1 4528 10 10 5
+D5
+~
+~
+0 -1 4530 10 10 5
+E
+river~
+The broad river sparkles brightly, framed against the deep greens of the
+jungle.  Wide and sluggish, at first glance it appears a gentle river;,
+only with further study do the darker undercurrents and hidden rips
+become visible.
+~
+E
+canopy trees~
+High overhead the branches of the large trees meet to form an umbrella of
+green.
+~
+E
+vines~
+Long and looping vines fall from the branches of the trees overhead and
+tumble down along the path and down the riverbank.
+~
+E
+path~
+Muddy pools of water form in small depressions along the winding path. 
+The path itself ends suddenly at the bank of a broad river.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+Grabbing hold of some of the ample @gvines@n, you easily scramble down
+the riverbank.
+~
+E
+to_room~
+Grabbing hold of some of the ample @gvines@n, $n easily scrambles down
+the riverbank.
+~
+!
+3 0 32
+-1
+S
+
+#4530
+River Bank~
+The river winds its way in a southerly direction.  Although deep and slow
+moving, it does not look inviting to swim in; eddies and under-currents
+ripple its blue-green surface.  A small inlet of smooth rocks has been
+built here, trapping some of the water to make a shallow pool.  The only
+way onwards is to climb the bank to the east and enter the jungle 
+~
+[Eliza] reviewed
+[Zylee] need a period at end of room desc.
+~
+167247872 3 9 0
+D4
+~
+~
+0 -1 4529 10 10 5
+E
+inlet rocks~
+The shallow inlet has been built with small stones, trapping some of the
+river water.  Perhaps it was constructed to allow water to be drawn
+safely, rather than risking the unknown dangers of the muddy river.
+~
+E
+bank vines~
+Clay and dark peat make up the majority of the riverbank.  Studded with
+rocks and covered in twisting vines, it would be an easy climb.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+Reaching out, you manage to grab a hold of some thick @gvines@n and pull
+yourself up the riverbank.
+~
+E
+to_room~
+Reaching out, $n manages to grab a hold of some thick @gvines@n and
+scramble up the riverbank.
+~
+!
+3 0 16
+324 17 1509949540 -2 0
+607 9 1509949540 3 0
+-1
+S
+
+#4531
+Before a crumbling ruin~
+Under Construction.
+~
+~
+167247876 3 9 0
+-1
+S
+
+#4532
+Antechamber~
+The room seems to have been designed to impress anyone entering the
+building.  Elegant arches frame all the doors and passageways.  Covering
+the walls are highly detailed frescoes, the work of many months and many
+artisans.  Carved pillars rise from the corners, shaped like jungle trees
+spreading their branches across the domed roof.  Jewel-toned stained
+glass with details of monkeys and birds, have been added to the jungle
+scene; whatever light that strikes them sends waves of color sparkling
+into the room.
+~
+[Eliza] reviewed.
+~
+167247876 0 6 0
+D0
+~
+~
+0 -1 4535 10 10 5
+D1
+red wood door~
+~
+195 -1 4519 10 10 5
+D2
+~
+~
+0 -1 4536 10 10 5
+D3
+circular door~
+~
+131 -1 4533 10 10 5
+E
+arches~
+The graceful arches have been carved with clouds and suns on the right
+arch and stars and moons on the left.
+~
+E
+frescoes~
+In similar themes to the rooftop glasswork, the frescoes show detailed
+scenes of jungle life.  Creatures as small as butterflies and as large as
+jaguars have been captured in the artwork.
+~
+E
+carved pillars trees roof~
+Shaped like the trees of the jungle outside, the elegant pillars rise up
+and spread their stony branches across the domed roof.  The fine details
+are impressive, even the grain of the bark has been carved.
+~
+E
+stain glass birds monkeys~
+The animals have been beautifully crafted from multi-colored glass in
+similar fashion to a fresco.  Ring-tailed lemurs, parrots and
+hummingbirds dance in the green-glass canopy.
+~
+E
+l door~
+Cut from the dark red wood of the forest trees and bound in thick bands
+of iron, the doors seem very sturdy.  At the base of the door is a small
+raised plate, around its edges are engravings of intertwined serpents.
+~
+E
+plate~
+A small bronze plate set just above the stone work.  Around its edges are
+engraved pictures of intertwined serpents.  Its surface has been covered
+in fine scratches, perhaps from something being placed upon it.
+~
+A
+sit stand push~
+plate~
+if( !is_open( room, east ) ) {
+  if( race( ch ) != reptile ) {
+    act_tochar( #no, ch );
+    act_notchar( #rno, ch );
+    end;
+    }
+  else {
+    act_notchar( #rpet, ch );
+    open( room, east );
+    act_room( #open, ch );
+    }
+  }
+else {
+  if( race( ch ) != reptile ) {
+    act_tochar( #no, ch );
+    act_notchar( #rno, ch );
+    end;
+    }
+  else {
+    act_notchar( #rpet, ch );
+    close( room, east );
+    act_room( #close, ch );
+    }
+  }
+~
+E
+rno~
+$n stands upon the plate but nothing seems to happen.
+~
+E
+now~
+No description.
+delete now
+new no
+~
+E
+no~
+You stand upon the plate but nothing seems to happen.
+~
+E
+rpet~
+$n scuttles up on to the plate.
+~
+E
+open~
+The small plate sinks down till it is flush with the stonework. The
+door to the east opens with a faint *click*.
+~
+E
+close~
+The small plate pops up with an audible *click*.  The door to the east
+swings inwards and closes.
+~
+!
+0 0 0
+-1
+S
+
+#4533
+Small Shrine~
+Four white-stone pillars rise from each of the corners and meet in the
+middle of the roof, forming elegant support for the room.  Small cracks
+and chips in the walls have allowed clumps of moss and lichen to find a
+hold, giving the stone a patchwork finish.  Set in the northern wall is a
+small altar of black stone.  Thick layers of dried bracken have been
+spread on the floor, the smell of rot filling the air.  To the east, an
+arch frames a circular door, while to the west a dark tunnel-like
+corridor disappears into the gloom.
+~
+[Eliza] reviewed
+~
+167247876 0 6 0
+D1
+circular door~
+~
+131 -1 4532 10 10 5
+D3
+~
+~
+0 -1 4534 10 10 5
+E
+pillars~
+The four pillars rise from the corners and curve in at the roof.  They
+meet in the center, where they attach to a black sun-shaped keystone. 
+The surfaces of the pillars are covered with thousands of engraved
+pictures of serpents, moving through a forest of huge, towering trees.
+~
+E
+cracks chips moss lichen~
+Mosses and lichen grow over the rooms walls and floor, flourishing in the
+damp and dark conditions.  The fine cracks and chips in the walls and
+altar have allowed them to spread, obliterating vast sections of the
+frescoes in a waves of green.
+~
+E
+altar~
+The small stone altar has cracked and split from years of neglect.  Moss
+and lichen have found purchase in the tiny fractures, giving the stones
+a green tinge.
+~
+E
+bracken~
+The mounds of bracken have been piled into rough nests, perhaps used by
+the naga to rest.
+~
+E
+arch~
+At the apex of the arch a serpent head has been carved, perhaps it is
+meant to keep out evil spirits or keep them in.  The eyes of the serpent
+appear to be black pits in the shrouded gloom.
+~
+E
+frescoes~
+Almost invisible under the carpet of moss and lichen, the frescoes appear
+to be of a battle scene between naga and humans.  Unfortunately, the
+damage the years of neglect have dealt obscures the finer details.
+~
+2371 9 1509949540 3 0
+2371 9 1509949540 3 0
+-1
+S
+
+#4534
+Tunnel-Like Hallway~
+Almost a tunnel, the smooth stone walls of the hallway slope outwards
+from the floor and inwards at the ceiling, where they join into a dark
+colored keystones.  Across the walls are frescos depicting a great battle
+between a gold dragon and a black dragon.  Small cracks in the ceiling,
+have allowed water to seep into the hall, where it lies in shallow pools. 
+Some of the frescos also show some signs of water damage; the once clear
+picture is in danger of being destroyed.  An ornate archway frames a red
+wood door to the west whilst the corridor itself continues eastward into
+darkness.
+~
+[Eliza] reviewed
+~
+167247876 0 6 0
+D1
+~
+~
+0 -1 4533 10 10 5
+D3
+red-wood door~
+~
+131 -1 4538 10 10 5
+E
+frescoes dragon~
+Spreading over half the smooth stone walls, the frescoes are made from
+thousands of small tiles that depict a huge battle between two titanic
+adversaries, a fierce golden dragon and a berserk black dragon.  Between
+the mighty foes, an elven maiden stands seemingly unphased or unaware of
+the earth-shattering conflict taking place around her.  She holds a
+bushel of wheat in her right hand and an emerald-shelled egg in her left.
+~
+E
+cracks~
+Dancing across the smooth stone walls are multitudes of fine cracks and
+fissures.  A small amount of maintenance could probably halt the
+destruction before it spreads, but as for now the structure of the
+hallway seems fairly good.
+~
+E
+pools water~
+Swirls and ripples stir the brackish pool's dark surface.  Thrusting out
+of several of the pools are broken, rotting branches surrounded by mounds
+of decaying leaves, their rot filling the air with a sickly-sweet smell.
+~
+E
+ornate archway~
+Jutting, grotesque faces of daemons and serpents leer at you from the
+highly carved archway.
+~
+-1
+S
+
+#4535
+Bend in a Tunnel-like Hall~
+The smooth stone walls of the hall slope outwards at the floor and then
+back in at the ceiling, giving the corridor a tunnel-like shape.  Fine
+cracks and splits mar the stones, in these gaps small patches of lichen
+have begun to grow.  Flickering flames dance across the walls, cast from
+a shallow, semi-circular bowl that juts out of the wall.  Greasy looking
+oil fills the bowl, a small burning tallow wick floating in it.
+~
+[Eliza] reviewed
+~
+167247876 0 5 0
+D2
+~
+~
+0 -1 4532 10 10 5
+D3
+~
+~
+0 -1 4549 10 10 5
+E
+wall fine cracks splits lichen~
+Sprouting from the cracks and splits in the walls are red and tan colored
+lichens.  The first to conquer the smooth walls, they make it possible
+for larger plants too eventually gain purchase.
+~
+-1
+S
+
+#4536
+Bend in a Tunnel-Like Hall~
+Here the hallway bends slowly around and continues to the north or
+westward.  Smooth stone walls of the hall slopes outward at the floor
+and then back in at the ceiling, giving the corridor a tunnel shape. 
+Roots and tendrils seem to have broken though the southern wall, allowing
+a glimpse of the jungle outside the crumbling ruins.
+~
+[Eliza] reviewed
+~
+167247876 0 5 0
+D0
+~
+~
+0 -1 4532 10 10 5
+D3
+~
+~
+0 -1 4537 10 10 5
+E
+walls roots tendrils ruins jungle~
+Prying roots and tendrils from the verdant jungle outside have torn
+several holes in the walls and ceiling.  Through them, the lush jungle
+basin can be seen.  Waves of green appear to wash against the ruins,
+trying to bury them and embrace them back to nature.  The cries of jungle
+animals can be heard from the high canopy.
+~
+-1
+S
+
+#4537
+Tunnel-Like Hall~
+Running in an east-west direction, the hallway is shrouded in gloom and
+partially filled with rotting bracken and rubble.  A few gaps in the roof
+have allowed rain and masses of vines to pry their way into the ruins. 
+Green and gray-colored moss covers the area in a thick spongy layer,
+clinging to every available surface and thriving in the damp and gloom.
+~
+[Eliza] reviewed
+~
+167247876 0 5 0
+D1
+~
+~
+0 -1 4536 10 10 5
+D3
+~
+~
+0 -1 4551 10 10 5
+E
+bracken rubble~
+Rotting bracken mixes with stones fallen from the roof and walls to
+partially block the hallway.  The smell of decay fills the air as the
+rich coating of fungi quickly consumes the dead foliage.
+~
+E
+gaps vines~
+Tendrils from vines have thrust their way into the hall, breaking stones
+and tearing open small holes in the roof and walls.  Water stains mar the
+surface, evidence of the damage that the elements are inflicting on the
+ruins.
+~
+E
+moss~
+The lush carpet of moss is ideally suited to these damp, dark growing
+conditions.  It spreads over most of the surfaces, helping in the
+decomposition of the rotting bracken.
+~
+-1
+S
+
+#4538
+Grand Shrine~
+Rising far overhead is the domed roof of this huge chamber supported by
+the many pillars that line the north and south walls.  In the eastern
+wall, an intricately carved archway frames a large circular red wood door. 
+Although impressive in its original design, the neglect of maintenance is
+beginning to take its toll.  Small holes in the ceiling are surrounded by
+a fine lacework of cracks, which would be invisible if not for the water
+stains that accompany them.  To the west sits a large stone altar, the
+wall behind it carved with a huge picture of a golden dragon.
+~
+[Eliza] reviewed
+~
+167247876 0 7 0
+D1
+red-wood door~
+~
+131 -1 4534 10 10 5
+D3
+stone pannel~
+~
+2479 -1 4539 10 10 5
+E
+roof domed~
+The high roof has been covered in frescos of great battles between naga
+and humans.  Many of them depict scenes of dead and dying creatures
+being hacked apart by dark-winged demons.  Cracks and fissures mar the
+great works, several areas are now blank, their pictures lost to the
+decay.
+~
+E
+holes lacework cracks water stains~
+Filtered light shines in through the larger cracks and holes.  Tendrils
+of cracks and fissures cover the roof and walls, allowing water to seep in
+and stain the once bright frescos.  The entire roof looks unstable, ready
+to collapse if struck with a forceful blow.
+~
+E
+golden dragon~
+With great wings spread out above it, the golden dragon seems in
+mid-swoop.  Huge and life-like, the noble beast's eyes watch the room. 
+Even the gigantic painting is not immune to the ravages of time; a fine
+crack runs from the floor up to its middle, detracting from the
+painting's beauty.
+~
+E
+altar~
+The great altar has been cut from a black and silver streaked rock.  Its
+dark surface has been polished smooth and carved with thousands of
+engravings of serpents.  The area surrounding it is bathed in soft light.
+~
+A
+~
+altar crack dragon~
+if( !is_open( room, west ) ) {
+  act_tochar( #panel, ch );
+  act_notchar( #panel2, ch );
+  open( room, west );
+  }
+else
+  continue;
+~
+E
+panel~
+You search around, finding a secret panel!
+~
+E
+panel2~
+$n searches around, finding a secret panel!
+~
+!
+9 0 0
+2372 9 1509949540 3 0
+2372 9 1509949540 3 0
+2369 9 1509949510 3 0
+2369 9 1509949470 3 0
+-1
+S
+
+#4539
+Private Room~
+Unlike much of the temple this room has been well maintained.  Covering
+the walls and ceilings are brightly colored frescoes.  Framing both the
+north and south doors are stone arches, dull black surfaces covered
+with a silvery script.  Four pillars support the high ceiling, their
+shadows cast across the room.
+~
+[Eliza] reviewed
+~
+167247876 0 6 0
+D0
+~
+~
+0 -1 4540 10 10 5
+D1
+stone panel~
+~
+2479 -1 4538 10 10 5
+D2
+~
+~
+0 -1 4541 10 10 5
+D3
+stone pannel~
+~
+2179 -1 4542 10 10 5
+E
+walls frescoes~
+Covering the stone walls are thousands of small tiles that make up a huge
+fresco of an entwined serpent.  Most of the serpent's tiled body has been
+covered in thin sheets of beaten gold and silver, giving it a metallic
+finish.  The deep red eye of the serpent seems to be watching, waiting
+for an opportunity to leap to life.
+~
+E
+eye~
+Upon closer inspection, the eye appears to be some sort of button.
+~
+E
+pillars~
+Carved from white stone, the pillars lend strength to the high roof
+overhead.  Strangely, they seem to have a soft illumination to them, not
+bright enough to supply much light, but enough to send shadows scattering
+across the room.
+~
+E
+arches~
+Framing the two doorways, the arches have been inscribed with runes and
+glyphs, perhaps for an esoteric reasons or perhaps for their aesthetic
+value.
+~
+E
+script silvery~
+The silvery runes and glyphs cover the black rocks.  Written in an
+unknown esoteric language, their meaning has become indecipherable.
+~
+A
+touch push~
+eye~
+if( rflag( Reset1, find_room( 4542 ) ) ) {
+  if( !is_open( room, west ) ) {
+    act_tochar( #opw, ch );
+    act_notchar( #ropw, ch );
+    act_room( #glow, ch );
+    open( find_room( 4539 ), west );
+    }
+  else {
+    act_tochar( #cpw, ch );
+    act_notchar( #rcpw, ch );
+    act_room( #cglow, ch );
+    close( room, west );
+    }
+  }
+else {
+  act_tochar( #noopen, ch );
+  act_notchar( #noopen2, ch );
+  }
+~
+E
+opw~
+@YAs you touch the eye it begins to glow!@n 
+~
+E
+ropw~
+@YAs $n touches something on the west wall part of the fresco begins to
+glow!@n 
+~
+E
+glow~
+@rThe west wall begins to glow!@n
+@rWith a scraping noise a narrow door opens!@n
+~
+E
+cpw~
+@YAs you touch the eye it begins to glow!@r
+~
+E
+rcpw~
+@rThe west wall begins to glow!@n
+~
+E
+cglow~
+@rWith a scraping noise narrow door closes!@n 
+~
+E
+noopen~
+You push the eye, but nothing happens.
+~
+E
+noopen2~
+$n pushes on the eye, but nothing happens.
+~
+!
+0 0 0
+A
+~
+1 east panel~
+if( !is_open( room, east ) ) {
+  act_tochar( #panel, ch );
+  act_notchar( #panel2, ch );
+  open( room, east );
+  }
+else
+  continue;
+~
+E
+panel~
+You search around, finding a secret panel.
+~
+E
+panel2~
+$n searches around, finding a secret panel.
+~
+!
+9 0 0
+2376 9 1509949540 3 0
+2369 9 1509949540 3 0
+-1
+S
+
+#4540
+Meditation Chamber~
+This room is bare, plain and unadorned.  The high roof overhead forms a
+dome, small fragments of glass has been built into the stone work,
+allowing a faint filtered light to fill the room.  Missing are the normal
+bright frescoes that cover much of the temple.  The only visible exit is
+a round opening in the southern wall.
+~
+[Eliza] reviewed
+~
+167247876 0 6 0
+D2
+~
+~
+0 -1 4539 10 10 5
+E
+glass~
+The glass catches and refracts any light, sending tiny rainbows across
+the walls.
+~
+1047 17 1509949455 -2 0
+2372 9 1509949540 3 0
+-1
+S
+
+#4541
+Ancient Libarary~
+At each corner of the chamber, a pillar rises up to support the domed
+roof.  In the center of the room, a large stone slab forms a crude
+but effective table.  Thick pools of wax have dried upon much of its
+surface, left perhaps from many years of candlelit reading.  The only
+way out of the room is a round opening in the northern wall.
+~
+[Eliza] reviewed
+~
+167247876 0 6 0
+D0
+~
+~
+0 -1 4539 10 10 5
+E
+pillars~
+Caked in soot and grime, it is hard to tell that the pillars are carved
+from a white stone.  In the middle of each pillar an alcove has been cut,
+and a beaten-copper sconce has been attached to its base.
+~
+E
+table stone slab~
+Made from a huge block of earthen-colored rock, the stone slab is over
+ten feet in length and five feet in height.  Larger than the doorways, it
+must have been placed here before the walls were built.  The slab serves
+as a crude table.
+~
+E
+wax pools~
+Built up from years of melting candles, the wax pool spreads across the
+stone slabs' surface.  In the middle of the hardened wax, several words
+have been etched.
+~
+E
+words~
+Etched into the wax are the following words:
+"Balarack" "sisstarak" "Kerigora".
+~
+2370 9 1509949540 3 0
+1362 17 1509949540 -2 0
+-1
+S
+
+#4542
+Secret Room~
+In the center of the room is a large slab of rock.  Carved into the
+likeness of the head of a gold dragon, its mouth is wide open ready to
+bite or breath on some hapless victim.  The life-like details captured in
+the rock are vaguely disturbing.  The walls and ceiling of the room are
+smooth and unadorned.  Pillars in each of the four corners rise and curve
+across to meet at the center of the roof, where they join into a black
+keystone.
+~
+[Eliza] aquamarine vnum 983.
+[Eliza] reviewed
+[Moxie] when put gem eye, I got breathed on, but the message just before the erodes damage, needed a full stop.
+[Moxie] odd dragon behaviour. I "put gem neckp" and it puts it in the dragons eye. Then, later when the down exit is open, i "put gem" and the exit closes downwards
+[Moxie] addendum to abov typo ... gem in eye also vanishs, the dragon no longer has a second eye, the gem has vanished with no message
+[Moxie] since put gem worked before with an aqua and tourmaline, and breathed on me, i tried an emerald, and had no effect, not even a Syntax message, whats different about an emerald to a aqua, which doesn't merit a message?
+~
+167247884 0 6 0
+D1
+stone panel~
+~
+2179 -1 4539 10 10 5
+D5
+dragon's mouth~
+~
+235 -1 4543 10 10 5
+E
+slab rock~
+The large slab has been carved from a single white stone.  Over four feet
+wide and six feet long, it must have taken a tremendous amount of effort
+to drag it here.
+~
+E
+pillars~
+The four pillars rise from the corners and curve inward at the roof.  They
+meet in the center, where they attach to a black star-shaped keystone. 
+The surfaces of the pillars are covered with thousands of engraved
+pictures of serpents.
+~
+E
+black keystone~
+The black keystone is star shaped, its five points radiating out across
+the roof.  Where each of the four pillars join to the rock they seem to
+have absorbed some of the darkness from the keystone.
+~
+A
+place insert~
+gem~
+if( rflag( reset0, room ) ) {
+  obj = has_obj( 983, ch );
+  if( obj ) {
+    junk_obj( obj, 1 );
+    act_tochar( #diamond, ch );
+    act_notchar( #diamond2, ch );
+    remove_rflag( Reset0, room );
+    act_tochar( #gothit, ch );
+    act_notchar( #gothit2, ch );
+    remove_rflag( reset1, room );
+    damage( mob, ch, 3d5+10, acid, "the acrid cloud" );
+    open( room, down );
+    close( room, east );
+  }
+  else {
+    if( has_obj( 998, ch ) || has_obj( 1039, ch ) ) {
+      obj = has_obj( 998, ch );
+      if( obj )
+        junk_obj( obj, 1 );
+      else {
+        obj = has_obj( 1039, ch );
+        if( obj )
+          junk_obj( obj, 1 );
+      }
+      act_tochar( #insertnone, ch );
+      act_notchar( #insertnone2, ch );
+      act_tochar( #gothit, ch );
+      act_notchar( #gothit2, ch );
+      damage( mob, ch, 3d10+20, acid, "the acrid cloud" );
+    }
+  }
+}
+else {
+  act_tochar( #already, ch );
+  act_notchar( #already2, ch );
+}
+~
+E
+diamond~
+As you place the gem into the socket, the eyes glow briefly and an opening
+appears in the dragon's mouth.
+~
+E
+diamond2~
+As $n places a gem into the socket, the eyes glow briefly and an opening
+appears in the dragon's mouth.
+~
+E
+already~
+Both eye sockets already contain gems.
+~
+E
+already2~
+$n stares at the dragon's eyes, lost in thought.
+~
+E
+nogem~
+You lack a gem.
+~
+E
+gothit~
+@gBillowing clouds of acrid gas escape the nostrils of the dragon, filling the
+room@n
+~
+E
+insertnone~
+You insert a sea green gem into the dragon's eye.
+~
+E
+insertnone2~
+$n inserts a sea green gem into the dragon's eye.
+~
+E
+gothit2~
+@gBillowing clouds of acrid gas surround $n, burning $m!@n
+~
+!
+0 0 0
+A
+remove~
+gem~
+if( rflag( Reset0, room ) )
+  act_tochar( #nope, ch );
+else {
+  act_tochar( #take, ch );
+  act_notchar( #take2, ch );
+  close( room, Down );
+  open( room, East );
+  set_rflag( Reset0, room );
+  obj_to_char( oload( 983 ), ch );
+  }
+~
+E
+nope~
+There is no gem in the socket.
+~
+E
+take~
+You remove the gem.
+~
+E
+take2~
+$n removes the gem.
+~
+!
+0 0 0
+A
+look~
+dragon~
+if( rflag( reset0, room ) )
+  act_tochar( #nogem, ch );
+else
+  act_tochar( #gem, ch );
+~
+E
+nogem~
+The sculptured face of the great beast seems almost alive.  Its right
+sea-green eye glares out at you, however the left eye is missing, the
+dark socket remaining makes the creature appear grim and unpleasant.
+~
+E
+gem~
+Blazing sea-green eyes glare out from the sculpture, making the dragon's
+face appear to be almost alive.  A dark opening between its carved jaws
+leads downwards into the darkness.
+~
+!
+0 0 0
+-1
+S
+
+#4543
+Flooded Chamber~
+The small room has been hacked from the hard stone, leaving the walls
+rough and cracked.  Seeping down the walls are trickling streams, their
+source unknown.  The floor of the room is covered with shallow, brackish
+water.  The air is damp and stale making breathing uncomfortable. 
+Overhead, an opening leads out of the flooded chamber, while a gloomy
+passageway heads eastwards.
+~
+[Eliza] reviewed
+~
+167247876 13 5 0
+D1
+~
+~
+0 -1 4544 10 10 5
+D4
+dragon's mouth~
+~
+235 -1 4542 10 10 5
+E
+water shallow brackish~
+The brackish water is cold and filled with mud and debris.  Ripples sent
+out from movement disappear into the darkness, making stealthy travel
+along the flooded chamber impossible.
+~
+E
+streams trickling~
+Perhaps fed from rainwater seepage, the small trickling stream's constant
+flow has flooded the floor of the chamber.  The water has a faint earthen
+smell to it, perhaps heavy in mineral content.
+~
+E
+l up~
+Above you the stone slabs appear to have a narrow gap between them. 
+Around the edges faint scratches have been clawed, perhaps someone's
+attempt to find a way to open a passage.
+~
+A
+move open~
+stone slabs passage~
+if( is_open( room, up ) ) {
+  act_tochar( #nope, ch );
+  end;
+}
+act_tochar( #open, ch );
+act_notchar( #ropen, ch );
+open( room, up );
+~
+E
+nope~
+The slab has already been moved aside to expose the passageway.
+~
+E
+open~
+Struggling hard, you manage to force the stone slab aside, exposing the
+passageway up, out of here.
+~
+E
+ropen~
+Struggling hard, $n manages to force the stone slab aside, exposing the
+passageway up, out of here.
+~
+!
+0 0 0
+-1
+S
+
+#4544
+Flooded Passageway~
+The flooded passageway twists and turns as it runs in an east-west
+direction.  The ceiling is low, and like the walls, hacked out of the
+stone, giving it a rough and pitted finish.  Slimy green algae grows
+around the trickling streams that slowly flood the chamber.  Although
+still shallow, the flooded floor makes travel unpleasant.
+~
+[Eliza] reviewed
+~
+167247876 13 5 0
+D1
+~
+~
+0 -1 4545 10 10 5
+D3
+~
+~
+0 -1 4543 10 10 5
+E
+slimy algae streams~
+The brackish water that trickles down the walls is a perfect environment
+for the slimy green alga to grow.  The water, perhaps seeping rain, fills
+the floor of the passageway and makes the air damp and uncomfortable to
+breathe.
+~
+-1
+S
+
+#4545
+Gloomy Chamber~
+Shallow water fills the floor of the chamber.  The rough walls and roof
+have been hacked out of the natural rock, the constant trickle of water
+coating them with grime.  Arched exits allow passage into what appears to
+be rooms, although the general gloom of the place makes it hard to make
+out more details.
+~
+[Eliza] reviewed
+~
+167247884 13 5 0
+D0
+~
+~
+0 -1 4548 10 10 5
+D1
+~
+~
+0 -1 4547 10 10 5
+D2
+~
+~
+0 -1 4546 10 10 5
+D3
+~
+~
+0 -1 4544 10 10 5
+E
+water grime~
+The constant trickle of water has eroded small channels in the chambers
+of the chamber, their sides lined with mineral deposits and a grimy coat
+of dirt and algae.
+~
+E
+arched~
+At the apex of the arch a serpent head has been carved, perhaps it is
+meant to keep out evil spirits or keep them in.  The eyes of the serpent
+appear to be black pits in the shrouded gloom.
+~
+-1
+S
+
+#4546
+Small Circular Room~
+Shallow water fills the floor of the small circular room.  The air is
+almost as damp as the stones from which the chamber has been hacked. 
+Small trickles of water run down the rough rocks.  Cut into the southern
+wall is a large alcove.  An archway in the wall allows passageway to the
+north.
+~
+[Eliza] reviewed
+~
+167247876 13 5 0
+D0
+~
+~
+0 -1 4545 10 10 5
+E
+water~
+The brackish water slowly seeps down the grime covered walls and floods
+the floor.  Cracks and fissures in the ceilings spread out into an
+intricate web of lines, indicating that this place is not as stable as it
+once was.
+~
+E
+archway~
+At the apex of the arch a serpent head has been carved, perhaps it is
+meant to keep out evil spirits or keep them in.  The eyes of the serpent
+appear to be black pits in the shrouded gloom.
+~
+E
+alcove~
+The large alcove has been cut into the back wall.  Around the outside of
+the alcove thousands of runes have been etched.  A chilling darkness
+seems to flow from the back recesses of it.
+~
+E
+runes~
+The tiny runes have been written in silvery ink.  The script swirls and
+dances across the black stone wall.
+~
+A
+~
+alcove~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #monster, ch );
+  act_notchar( #monster2, ch );
+  mload( 2381, room );
+  end;
+}
+else {
+  if( rflag( reset1, room ) ) {
+    remove_rflag( reset1, room );
+    i = random( 1, 10 );
+    if( i == 1 ) {
+      obj = oload( 196 );
+      act_tochar( #search1, ch, obj );
+      act_notchar( #rsearch1, ch, obj );
+      obj_to_char( obj, ch );
+    }
+    else if( i == 2 ) {
+      obj = oload( 1004 );
+      act_tochar( #search2, ch, obj );
+      act_notchar( #search2, ch, obj );
+      obj_to_char( obj, ch );
+    }
+    if( i == 3 ) {
+      obj = oload( 1008 );
+      act_tochar( #search3, ch, obj );
+      act_notchar( #search3, ch, obj );
+      obj_to_char( obj, ch );
+    }
+  }
+}
+if( !obj ) {
+  act_tochar( #nothing, ch );
+  act_notchar( #nothing2, ch );
+}
+~
+E
+monster~
+@yAs you begin to search the alcove a billowing cloud of darkness pours
+from it, swirling around your feet and chilling the air.  The cloud
+begins to take a serpentine form!@n 
+~
+E
+monster2~
+As $n begins to search the alcove a billowing cloud of darkness pours
+from it, swirling around $s feet and chilling the air.  The cloud begins
+to take a serpentine form!
+~
+E
+nothing~
+You search the alcove but it appears to be empty.
+~
+E
+nothing2~
+$n searches the alcove but it appears to be empty.
+~
+E
+search1~
+You search the dark alcove and discover $p in perfect condition.
+~
+E
+search2~
+You stretch your hand in as far as it will go, your finger tips brush
+against something and with a little more effort you manage to pull out $p.
+~
+E
+search3~
+With a quick glance inside the alcove you reach in and retrieve $p.
+~
+E
+rsearch1~
+$n search the dark alcove and discovers $p.
+~
+E
+rsearch2~
+$n searches the alcove for a while, straining to reach an object, at last
+they pull out $p.
+~
+E
+rsearch3~
+Wasting little time $n reaches into the alcove and pulls out $p.
+~
+!
+9 0 0
+A
+read~
+runes~
+if( is_blind( ch ) ) {
+  act_tochar( #cant_see, ch );
+  end;
+  }
+remove_rflag( reset2, room );
+act_tochar( #read, ch );
+wait( 1 );
+send_to_room( #rread, room );
+do_spell( silence, mob, ch );
+if( rflag( reset2, find_room( 4548 ) ) )
+  end;
+if( rflag( reset2, find_room( 4547 ) ) )
+  end;
+wait( 1 );
+act_tochar( #rumble, ch );
+open( find_room( 4543 ), up );
+~
+E
+read~
+As you begin to read the runes they start to glow.
+~
+E
+rread~
+@RThe runes surrounding the alcove begin to glow, then sudden blaze with
+ruby-colored fire!@n 
+~
+E
+rumble~
+A rumbling sound of stone grating upon stone echo's through the room.
+~
+E
+cant_see~
+In your present state you are unable to read the runes.
+~
+!
+0 0 0
+-1
+S
+
+#4547
+Gloomy Chamber~
+The small room has been hacked from the surrounding rocks leaving the
+walls and ceiling rough and broken.  Cut into the eastern wall is a large
+alcove.  Around the gloom-filled alcove are countless swirling runes,
+forming a pattern of sorts.  An arched opening leads westwards back into
+the darkness.
+~
+[Eliza] reviewed
+~
+167247876 13 5 0
+D3
+~
+~
+0 -1 4545 10 10 5
+E
+runes~
+The tiny runes have been written in silvery ink.  The script swirls and
+dances across the black stone wall.
+~
+E
+alcove~
+The large alcove has been cut into the back wall.  Around the outside of
+the alcove thousands of runes have been etched.  A chilling darkness
+seems to flow from the back recesses of it.
+~
+E
+arched~
+At the apex of the arch a serpent head has been carved, perhaps it is
+meant to keep out evil spirits or keep them in.  The eyes of the serpent
+appear to be black pits in the shrouded gloom.
+~
+A
+~
+alcove~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #monster, ch, obj );
+  act_notchar( #monster2, ch, obj );
+  mload( 2381, room );
+  end;
+}
+else {
+  if( rflag( reset1, room ) ) {
+    remove_rflag( reset1, room );
+    i = random( 1, 10 );
+    if( i == 1 ) {
+      obj = oload( 3533 );
+      act_tochar( #search1, ch, obj );
+      act_notchar( #rsearch1, ch, obj );
+      obj_to_char( obj, ch );
+    }
+    if( i == 2 ) {
+      obj = oload( 998 );
+      act_tochar( #search2, ch, obj );
+      act_notchar( #rsearch2, ch, obj );
+      obj_to_char( obj, ch );
+    }
+    if( i == 3 ) {
+      obj = oload( 1039 );
+      act_tochar( #search2, ch, obj );
+      act_notchar( #rsearch2, ch, obj );
+      obj_to_char( obj, ch );
+    }
+  }
+}
+if( !obj ) {
+  act_tochar( #nothing, ch, obj );
+  act_notchar( #nothing2, ch, obj );
+}
+~
+E
+monster~
+@yAs you begin to search the alcove a billowing cloud of darkness pours
+from it, swirling around your feet and chilling the air.  The cloud
+begins to take a serpentine form!@n 
+~
+E
+monster2~
+As $n begins to search the alcove a billowing cloud of darkness pours
+from it, swirling around $s feet and chilling the air.  The cloud begins
+to take a serpentine form!
+~
+E
+nothing~
+You search the alcove but find nothing.
+~
+E
+nothing2~
+$n searches around, but finds nothing.
+~
+E
+search1~
+You search the alcove and discover $p in the farthest corner!
+~
+E
+search2~
+You search the alcove and discover $p!
+~
+E
+rsearch1~
+$n searches the alcove, discovering $p.
+~
+E
+rsearch2~
+$n searches the alcove and discovers $p!
+~
+!
+9 0 0
+A
+read~
+runes~
+if( is_blind( ch ) ) {
+  act_tochar( #cant_see, ch );
+  end;
+  }
+remove_rflag( reset2, room );
+act_tochar( #read, ch );
+wait( 1 );
+send_to_room( #rread, room );
+do_spell( sleep, mob, ch );
+if( rflag( reset2, find_room( 4546 ) ) )
+  end;
+if( rflag( reset2, find_room( 4548 ) ) )
+  end;
+wait( 1 );
+act_tochar( #rumble, ch );
+open( find_room( 4543 ), up );
+~
+E
+read~
+As you begin to read the runes they start to glow.
+~
+E
+rread~
+@GThe runes surrounding the alcove begin to glow, then suddenly they burn
+with a green flame!@n 
+~
+E
+rumble~
+A rumbling sound of stone grating upon stone echo's through the room.
+~
+E
+cant_see~
+In your present state you are unable to read the runes.
+~
+!
+0 0 0
+-1
+S
+
+#4548
+Gloomy Chamber~
+The small, circular room is awash with the brackish water that seeps down
+the walls.  Cut into the northern wall is a large alcove.  An opening in
+the south leads back into the flooded chambers.  The air is musty and
+damp and a chilling presence seems to haunt this area.
+~
+[Eliza] reviewed
+~
+167247876 13 5 0
+D2
+~
+~
+0 -1 4545 10 10 5
+E
+alcove~
+The large alcove has been cut into the back wall.  Around the outside of
+the alcove thousands of runes have been etched.  A chilling darkness
+seems to flow from the back recesses of it.
+~
+E
+water brackish walls~
+The water drips constantly from cracks and fissures in the ceiling and
+northern wall.  The water in the chamber is about a foot deep, cold and
+brackish.  Bits of foam and scum float on its surface.  Clinging to the
+damp walls are dripping lines of algae and grime.
+~
+E
+runes~
+The tiny runes have been written in silvery ink.  The script swirls and
+dances across the black stone wall.
+~
+A
+~
+alcove~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  act_tochar( #monster, ch, obj );
+  act_notchar( #monster2, ch, obj );
+  mload( 2381, room );
+  end;
+}
+else {
+  if( rflag( reset1, room ) ) {
+    remove_rflag( reset1, room );
+    i = random( 1, 10 );
+    if( i == 1 ) {
+      obj = oload( 9 );
+      act_tochar( #search1, ch, obj );
+      act_notchar( #rsearch1, ch, obj );
+      obj_to_char( obj, ch );
+    }
+    if( i == 2 ) {
+      obj = oload( 2876 );
+      act_tochar( #search2, ch, obj );
+      act_notchar( #rsearch2, ch, obj );
+      obj_to_char( obj, ch );
+    }
+    if( i == 3 ) {
+      obj = oload( 939 );
+      act_tochar( #search3, ch, obj );
+      act_notchar( #rsearch3, ch, obj );
+      obj_to_char( obj, ch );
+    }
+  }
+}
+if( !obj ) {
+  act_tochar( #nothing, ch, obj );
+  act_notchar( #nothing2, ch, obj );
+}
+~
+E
+monster~
+@yAs you begin to search the alcove a billowing cloud of darkness pours
+from it, swirling around your feet and chilling the air.  The cloud
+begins to take a serpentine form.
+~
+E
+nothing~
+You search the alcove but it appears to be empty.
+~
+E
+nothing2~
+$n searches the alcove but it appears to be empty 
+~
+E
+monster2~
+@yAs $n begins to search the alcove a billowing cloud of darkness pours
+from it, swirling around $s feet and chilling the air.  The cloud begins
+to take a serpentine form!@n 
+~
+E
+search1~
+As you search around in the alcove your hand brushes a small bottle,
+grabbing it you discover you have found $p!
+~
+E
+search2~
+You search the alcove and find it empty, as you withdraw your arm it
+knocks against $p that you had missed!
+~
+E
+search3~
+You reach your hand into the alcove and rummage around discovering $p.
+~
+E
+rsearch1~
+$n begins to search the alcove and after a few minutes pulls out $p.
+~
+E
+rsearch2~
+$n fumbles around inside the alcove and doesn't appear to discover
+anything, when just about to give up $e knocks $p out and just manages to
+grab it before it hits the floor.
+~
+E
+rsearch3~
+$n reaches $e hand into the alcove and rummage around discovering $p.
+~
+!
+9 0 0
+A
+read~
+runes~
+if( is_blind( ch ) ) {
+  act_tochar( #cant_see, ch );
+  end;
+  }
+remove_rflag( reset2, room );
+act_tochar( #read, ch );
+wait( 1 );
+send_to_room( #rread, room );
+do_spell( blind, mob, ch );
+if( rflag( reset2, find_room( 4546 ) ) )
+  end;
+if( rflag( reset2, find_room( 4547 ) ) )
+  end;
+wait( 1 );
+act_tochar( #rumble, ch );
+open( find_room( 4543 ), up );
+~
+E
+rread~
+@CThe runes surrounding the alcove begin to glow, then suddenly blaze with
+light!@n 
+~
+E
+read~
+As you begin to read the runes they start to glow.
+~
+E
+rumble~
+A rumbling sound of stone grating upon stone echo's through the room.
+~
+E
+cant_see~
+In your present state you are unable to read the runes.
+~
+!
+0 0 0
+-1
+S
+
+#4549
+Tunnel-Like Hall~
+Almost a tunnel, the smooth stone walls of the hallway slope outwards
+from the floor and inwards at the ceiling where they join into a dark
+colored keystone.  Across the walls are frescos depicting a fleet of
+tall ships.  The figurehead of the lead ship is in the shape of a golden
+dragon.  Tendrils of vines poke through small fissures in the ceiling;
+these cracks have allowed water to seep into the hall where it collects
+in brackish pools.  Eastward the hallway begins to bend, whilst
+westward it ends in a circular door of white wood.
+~
+[Eliza] reviewed
+~
+167247876 0 5 0
+D1
+~
+~
+0 -1 4535 10 10 5
+D3
+white wood door~
+white wood door~
+131 -1 4550 10 10 5
+E
+walls keystones~
+The oddly shaped walls give the corridor its tunnel-like appearance.  As
+the curved walls reach the ceiling, they join into black keystones. 
+Elegant carvings of trees adorn the dark stone, however several have been
+marred with cracks and fissures caused by the prying tendrils.
+~
+E
+frescos ships~
+The elegant white wood ships cut through the rough sea, sails billowing
+in a strong breeze.  Scuttling around on deck are elves dressed in bright
+garb and high crested helms.  The ships themselves are in the shapes of
+swans and dragons.  Carved from the bow are proud golden figureheads
+which watch over their passage.
+~
+E
+tendrils vines fissures cracks~
+Thrusting through the stone roof spread the tendrils of vines and
+creepers.  The cracks and splits mar some of the frescoes and allow a
+faint trickle of water to tumble in.  The sounds of the jungle can be
+heard faintly, the distant cries of birds and the chatter of animals
+echoing even here.
+~
+E
+pools~
+Brackish pools of muddy water spread out across the floor.  Wiggling
+mosquito larva swim in it searching for food, while the adults dance on
+the water's surface.
+~
+-1
+S
+
+#4550
+Cluttered Room~
+The floor of the room is filled with dried bracken and moss, piled into
+large nest-like mounds.  In some, there appears to be small bits of fur,
+feathers and soft down.  The walls and ceiling are covered in fine
+hairline cracks, and although no holes have appeared, it is only a matter
+of time.  The air here seems stale, smelling faintly metallic.  An arch
+in the east wall frames a circular white-wood door.
+~
+[Eliza] add search.;)
+[Eliza] reviewed
+~
+167247876 0 5 0
+D1
+white wood door~
+white wood door~
+131 -1 4549 10 10 5
+E
+bracken moss mounds nest fur feathers down~
+The mounds of bracken have been piled into rough nests, perhaps used by
+the naga to rest.  Lining the center of them is a thick layer of feathers
+and down, as well as a few broken scales and bits of skin and bone.
+~
+E
+walls ceiling cracks~
+Fissures and cracks dance across the walls, evidence that maintenance is
+long over due.
+~
+E
+arch~
+The white-stone arch has been carved with serpents, its headstone shaped
+into a leering serpent face, mouth open, and fangs threatening.
+~
+A
+~
+nest mounds~
+if( rflag( reset0, room ) ) {
+  remove_rflag( reset0, room );
+  if( find_skill( ch, searching ) > random( 3, 13) ) {
+    i = random( 1, 10 );
+    if( i == 1 ) {
+      act_tochar( #first_item, ch );
+      act_notchar( #rfirst_item, ch );
+      obj_to_char( oload( 214 ), ch );
+    }
+    if( i == 2 ) {
+      act_tochar( #second_item, ch );
+      act_notchar( #rsecond_item, ch );
+      obj_to_char( oload( 1121 ), ch );
+    }
+    if( i == 3 ) {
+      act_tochar( #third_item, ch );
+      act_notchar( #rthird_item, ch );
+      obj_to_char( oload( 1307 ), ch );
+    }
+    if( i == 4 ) {
+      act_tochar( #forth_item, ch );
+      act_notchar( #rforth_item, ch );
+      obj_to_char( oload( 2 ), ch );
+    }
+    if( i == 5 ) {
+      act_tochar( #fifth_item, ch );
+      act_notchar( #rfifth_item, ch );
+      obj_to_char( oload( 1017 ), ch );
+    }
+    end;
+  }
+}
+act_tochar( #tochar, ch );
+act_notchar( #notchar, ch );
+~
+E
+tochar~
+You spend several minutes picking through the nest but are unable to find
+anything of value.
+~
+E
+notchar~
+$n spends several minutes picking through the nest but seems unable to
+find anything of value.
+~
+E
+second_item~
+You move aside some of the branches and find a small duck feather trapped
+underneath.
+~
+E
+rsecond_item~
+$n moves aside some of the branches and find a small duck feather trapped
+underneath.
+~
+E
+third_item~
+Under some of the dry ferns you find a snake skin.
+~
+E
+rthird_item~
+Under some of the dry ferns $n finds a snake skin.
+~
+E
+forth_item~
+You search around in the nest for several minutes and discover a single
+gold coin.
+~
+E
+rforth_item~
+$n searchs around in the nest for several minutes and appears to discover
+something.
+~
+E
+fifth_item~
+You pry and poke around in the nest for several minutes, under a pile of
+ rotting bracken you discover a small scroll!
+~
+E
+rfifth_item~
+$n spends several minutes picking through the nest and while searching
+some rotting bracken discovers a small scroll.
+~
+E
+first_item~
+You search around and at the bottom of the nest find a few lizard scales.
+~
+E
+rfirst_item~
+$n searchs around and at the bottom of the nest and finds a few lizard
+scales.
+~
+!
+9 0 0
+2371 9 1509949540 3 0
+2368 9 1509949540 3 0
+-1
+S
+
+#4551
+Ancient Ruins - Small Pool~
+In the middle of the large circular room is a shallow pool, one end of
+which has been shaped into a serpent's head.  Carved out of the floor
+below the head is a small bowl-shaped depression.  The walls and ceiling
+of the room have been covered in frescoes, most still in reasonable
+condition.  From a few cracks in the roof, tendrils of vines have begun
+to work their way inside, slowly prying into the stone to gain a purchase
+for their roots.  The only way out of the room is a tunnel-like hallway
+that head eastward.
+~
+[Guin] reviewed
+~
+167247876 0 5 0
+D1
+~
+~
+0 -1 4537 10 10 5
+E
+serpent's head carved~
+The white stone has been carved into the visage of a large serpent. 
+Mouth wide and fangs thrusting forward, it appears to be in mid-lunge.  A
+faint green stain runs from its mouth, perhaps where a liquid once flowed
+into the bowl-like depression below.
+~
+E
+bowl-like depression~
+The small stone bowl appears to be set to catch any liquid that would
+fall from the stone serpent's mouth.  A light green stain runs around the
+rim of the bowl, perhaps left from years of use.
+~
+E
+frescoes~
+Formed from the many minute tiles is a scene of war and death.  The epic
+struggle details battles between naga, serpents and their humanoid foes. 
+Blood flows forming into a river of red.  Swimming and playing in the
+crimson stream are twisted demonic figures, delighting in the destruction
+the battle has wrought.
+~
+E
+cracks tendrils vines~
+Forcing their way into the ruins are the long runners of masses of vines. 
+Their tendrils snake across the roof and walls, prying into the stones
+and frescoes.  Covering the ruins is a lacework of fine cracks, caused by
+the tendrils and the lack of maintenance the ruins have seen.
+~
+2369 9 1509949540 3 0
+3552 17 1509949540 -2 0
+-1
+S
+
+#4552
+Jungle Path - Before an Ancient Bridge~
+The path ends at the ruins of an ancient bridge that once crossed the
+slow-moving river to the west.  Spanning less than a quarter of the
+blue-green waterway, the stone bridge offers little aid in crossing the
+sluggish expanse.  Overhead the canopy of trees spreads out, blanketing
+the area in gloomy shadows.  Thick jungle rises up from across the river,
+the remains of the end of the bridge just visible in dense vegetation.
+~
+[Eliza] reviewed
+~
+167247872 3 9 0
+D0
+~
+~
+0 -1 4528 10 10 5
+D3
+~
+~
+0 -1 4553 10 10 5
+E
+ancient bridge~
+Time and lack of maintenance have left the bridge to fall into a ruined
+state.  The center of the bridge is now missing; probably it fell into
+the river and was washed away.  The broken support struts can just be
+seen under the swirling blue-green waters.
+~
+E
+river~
+The blue-green waters of the river swirl around the ruined bridge, the
+rips and currents clawing at the old stones.  Deep and dangerous, the
+river would challenge the skills of the strongest swimmer.  Around the
+steep bank, the river dredges up mud and debris, hiding any dangers that
+lurk beneath the maelstrom.
+~
+E
+canopy~
+At the river's edge, the canopy formed from the tightly packed tree
+branches thins.  Gaps between the branches allow more light to filter
+down.  In the sunny clearings, larger tree ferns and broadleaf plants
+flourish alongside young saplings.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+You carefully make your way onto the crumbling bridge.
+~
+E
+to_room~
+$n carefully makes $s way onto the crumbling bridge.
+~
+!
+3 0 8
+-1
+S
+
+#4553
+Upon a Ruined Bridge~
+The crumbling stones of the bridge shudder under the constant assault
+from the swirling @bwaters@n below.  At one stage the bridge would have
+been an impressive structure, some of its grandiose construction still
+visible in its remains.  The end of the bridge is a mess of broken and
+cracked stones, dangerously unstable.  On the far bank, the remains of
+the bridge have almost disappeared beneath the dense jungle growth.
+~
+[Eliza] reviewed
+~
+167247872 3 9 0
+D1
+~
+~
+0 -1 4552 10 10 5
+E
+stones bridge~
+Carved from white stone, the ancient bridge once spanned the wide
+river, allowing access to the far bank.  The effort to construct it
+suggested that perhaps this once was a major road or at least lead to
+some place of importance.  Now the central sections have disappeared,
+most likely, collapsed into the deep river, and washed away.
+~
+E
+waters river bank~
+The river moves beneath the bridge, powerful currents and eddies clawing
+at the stone work, slowly eroding the stones away.  Rubble and other
+debris churned from the steep bank stain the waters of the river brown.
+~
+E
+jungle~
+Across the river the jungle seems identical to the verdant growth on this
+side.  Rising out of the canopy of the trees are three tall towers,
+perhaps more of the ruins.  Unfortunately without a way to cross the
+swirling river, further investigation is impossible.
+~
+E
+tower~
+Built from the white stone the graceful towers rise out of the canopy. 
+Sharply angled red-tiled roofs and narrow arrow slits can just be seen
+at this distance.  A inter-linked series of walkways appear to join each
+of the towers together.
+~
+A
+~
+non~
+send_to_room( #fish, room );
+~
+E
+fish~
+With a sudden splash a fish leaps out of the river and snaps at some
+swarming insects.
+~
+!
+2 150 0
+A
+~
+~
+continue;
+~
+E
+to_char~
+With some relief, you make your way back onto more solid ground.
+~
+E
+to_room~
+Leaving the crumbling bridge behind them, $n heads back to more solid
+ground.
+~
+!
+3 0 2
+-1
+S
+
+#4554
+The void between walls~
+In the roots and rocks of the ground a small hole has been dug, just
+enough space for a small critter.
+~
+~
+167247876 13 9 0
+-1
+S
+
+#0
+

@@ -1,0 +1,1400 @@
+#M2_AREA
+2
+
+Abbey to Chandros~
+Maflarel Salai~
+~
+~
+~
+
+0 0
+2
+1
+#ROOMS
+
+#2600
+Foyer~
+Upon entering this grand chamber, it is quickly apparent that it was
+built more for function than for style.  Firmly attached to the heavy
+oaken doors on both the northern and the southern ends of the foyer,
+large oaken planks and iron brackets designed to be used to bar the doors. 
+Indeed, upon closer examination, the foyer seems almost like a gatehouse,
+complete with murder holes in the ceiling, though few gatehouses bear
+grand tapestries to cover the otherwise bare stone walls.  To the east
+and west, a pair of raised portcullis lead into what appears to be guard
+towers.
+~
+[Maflarel] Main entrance is to the south
+[Maflarel] make door barring codes
+[Maflarel] requires high strength and stuff
+[Salai] After much thought, I can't see how a door barring system would
+be feasible here.  Why would the guards use such a system that required
+being in the actual foyer to bar and unbar the doors?  How about the
+portcullis idea?
+[Maflarel] hmm, how about some kind of barring or locking mechanism on
+the inside of the northern doors?  or maybe even a portcullis on there.
+[Guin] This area goes south, across the river Duile, and east of Dun T.
+~
+33030145 0 9 0
+D0
+~
+~
+0 -1 2603 10 10 5
+D1
+~
+~
+0 -1 2602 10 10 5
+D3
+~
+~
+0 -1 2601 10 10 5
+-1
+S
+
+#2601
+Southwestern Tower~
+This chamber is obviously a guard tower on the corner of the abbey. 
+Crossletted arrowslits abound on the outward facing walls, and the
+entrance archways both look to be sealable by means of portcullis.  A
+pair of levers by the archways are clearly visible, as are barrels of
+bolts and arrows rimming the walls, and a rack of bows and crossbows. 
+Spiralling upwards, a central staircase heads to the floor above.
+~
+[Salai] barrels of bolts and arrows.  A rack of bows and crossbows. 
+There for the taking?  [Salai] hmm, the guards would prolly stop people
+from taking the stuff [Salai] if guards are killed, make racks damaged in
+fight and searchable for a servicable weapon 
+~
+33030145 0 9 0
+D0
+~
+~
+0 -1 2608 10 10 5
+D1
+~
+~
+0 -1 2600 10 10 5
+D4
+~
+~
+0 -1 2620 10 10 5
+E
+barrels~
+The barrels are made of fine oak and banded with iron.  They are piled up
+on their sides against the walls, with their ends open to allow quick
+access to the bolts and arrows contained within.
+~
+E
+arrows~
+The arrows are made of oak and have fine goosefeather fletching.  Their
+heads are heavy and triangular, and while still very sharp, are designed
+to concuss even well-protected foes rather than penetrate armor.
+~
+E
+bolts~
+The bolts are made of oak and have narrow but sturdy leaf-shaped steel
+heads, allowing them to stand up to a lot of punishment and penetrate
+through tough armor.
+~
+E
+rack~
+The bow rack is attached to the wall.  It has many wooden rings which are
+used to hold weapons without damaging them.  Bows and crossbows hang off
+most of the rings, placed for easy access in times of need.
+~
+-1
+S
+
+#2602
+Southeastern Tower~
+This chamber is obviously a guard tower on the corner of the abbey. 
+Crossletted arrowslits abound on the outward facing walls, and the
+entrance archways both look to be sealable by means of portcullis.  A
+pair of levers by the archways are clearly visible, as are barrels of
+bolts and arrows rimming the walls, and a rack of bows and crossbows. 
+Spiralling upwards, a central staircase heads to the floor above.
+~
+~
+33030145 0 9 0
+D0
+~
+~
+0 -1 2607 10 10 5
+D3
+~
+~
+0 -1 2600 10 10 5
+D4
+~
+~
+0 -1 2618 10 10 5
+-1
+S
+
+#2603
+Hall of Worship~
+On either side of a wide central aisle, oaken pews reinforced with bands
+of strong iron line the floor of this area.  The walls rise up high on
+each side of the chamber; the southern end dominated by a huge archway,
+the dull spikes of a portcullis clearly visible poking out of its apex. 
+Balconies are visible on the second floor, looking down into the temple
+hall itself, or up past them to the finely painted ceiling.
+~
+~
+33030145 0 9 0
+D0
+~
+~
+0 -1 2604 10 10 5
+D2
+~
+~
+0 -1 2600 10 10 5
+-1
+S
+
+#2604
+Hall of Worship~
+The main hall of worship stretches out northwards to the altar, and
+further south into more seating areas.  The high vaulted ceiling of this
+chamber is painted with intricate designs of knights in shining silver
+plate, bearing broadswords and maces against their foes.  Taking up the
+majority of the floorspace apart from a central aisle, strong oaken pews
+stand set in two even rows.  Even these are not free of the knightly
+tendencies towards defence; they seem to be reinforced with iron.  The
+walls are mostly plain and bare, barring torch sconces and a pair of
+strong oaken doors in the east and west walls.
+~
+~
+33030145 0 9 0
+D0
+~
+~
+0 -1 2605 10 10 5
+D1
+~
+~
+0 -1 2606 10 10 5
+D2
+~
+~
+0 -1 2603 10 10 5
+D3
+~
+~
+0 -1 2609 10 10 5
+-1
+S
+
+#2605
+Altar to Chandros~
+Dominating the majority of this chamber is a large stone altar, carved of
+smooth white marble.  The marbled surface of the altar is glimmering with
+silvery streaks, running like veins over its surface.  A simple while
+cloth is spread over much of the cool stone surface.  The altar itself
+bears no adornment, but the wall behind it does little to hide the god to
+which it is attuned - a great seal of Chandros, a shield twenty feet in
+height is emblazoned with his symbol in bright steel.
+~
+[Maflarel] make a secret passage north
+~
+33030145 0 9 0
+D0
+~
+~
+0 -1 2612 10 10 5
+D2
+~
+~
+0 -1 2604 10 10 5
+-1
+S
+
+#2606
+Northern Barracks~
+Row upon row of bunks fill this room.  While there remains enough room
+for two men abreast to walk between the beds, there is little more space
+than that.  Each bed has a small locker at the foot, presumably for
+personal possessions.  The bunk beds look as if they have been
+meticulously and carefully made, each bed a perfect mirror image of all
+the others.  The western wall bears a rich mahogany door which has been
+embossed with the wrought iron symbol of a downward pointing sword over a
+rising sun.
+~
+[Maflarel] make trapdoor leading down
+[Salai] Similar problem with this room as with 2607.  Made is somewhat ambiguous.
+~
+33030145 0 9 0
+D0
+~
+~
+0 -1 2614 10 10 5
+D1
+~
+~
+0 -1 2615 10 10 5
+D2
+~
+~
+0 -1 2607 10 10 5
+D3
+~
+~
+0 -1 2604 10 10 5
+D5
+~
+~
+0 -1 2654 10 10 5
+-1
+S
+
+#2607
+Southern Barracks~
+The southern half of this chamber is dominated by rows of bunkbeds, all
+of which look to have been made with a great care and attention to detail. 
+Each bed has a small locker at the foot, presumably for personal
+possessions, and the brass buckles have been finely polished to an almost
+reflective quality.
+~
+'made' is ambigious. Do you mean 'made' as in contstructed, or 'made' as in tidied?
+~
+33030145 0 9 0
+D0
+~
+~
+0 -1 2606 10 10 5
+D2
+~
+~
+0 -1 2602 10 10 5
+-1
+S
+
+#2608
+Kitchen Fire Pits~
+The source of the nearby heat is apparent upon entering this room, for
+there are two large firepits built into the floor.  Crossing the firepits
+are at least three spits, and hooks hang out overhead for hanging
+cauldrons and other pots on.  Stacked tidily against the western wall is
+a large pile of freshly chopped firewood, an axe hung next to it on a
+hook.  Three large barrels of water and several fire pokers also adorn
+the walls of this cooking area.
+~
+[Maflarel] acode for touching the fire and getting burnt =)
+~
+33030145 0 9 0
+D0
+~
+~
+0 -1 2609 10 10 5
+D2
+~
+~
+0 -1 2601 10 10 5
+E
+pokers~
+Long, heavy, and blackened, the pokers are made of some unidentifiable
+metal.  Their grasping ends are insulated with a thick layer of cloth. 
+Like everything else in this place, they could probably make an effective
+weapon as well as a utilitarian tool.
+~
+E
+firepits fires pits~
+Full of glowing coals and burning wood, these firepits are hot enough to
+fry half a cow in minutes.  Even the thick granite edging the pits shows
+a few small cracks from heat stress.
+~
+E
+hooks~
+Attached to the granite ceiling by large bolts, the iron hooks are thick
+and strong, perfect for hanging fortress-sized soup cauldrons from.
+~
+E
+spit~
+These large metal spits are made of iron, and balanced about four feet
+above the fire pits upon a pair of crossed wooden posts.  Each end of the
+spit has a wooden crank handle attached for rotating the fine choices of
+large game meat that seem to be indicated by the height at which the pole
+is set above the flames.
+~
+E
+firewood wood pile~
+The firewood is divided into two different types.  The smaller portion is
+made up of lighter, smaller pieces of pine kindling should the fires ever
+need to be relit, while the majority of pieces are of a thicker and
+heavier oak to sustain the burning flames.
+~
+E
+barrels~
+The water in the barrels is amazingly clear, as if their contents were
+changed due to a regimental alacrity rather than due to any degree of
+necessity.
+~
+-1
+S
+
+#2609
+Kitchens~
+This area seems to be the food preparation part of the kitchen.  Benches
+are built into all of the walls, barely leaving space to exit through the
+doorways.  Large hooks hang any number of items, from pots and pans to
+knives and cutlery.  A large oaken table resides in the centre of the
+room, and the southern end of the chamber is noticably warmer than its
+opposite, the certain indicator of a heat source on the other side of the
+archway.
+~
+[Maflarel] Add an exit west later (for the kitchen gardens)
+~
+33030145 0 9 0
+D0
+~
+~
+0 -1 2610 10 10 5
+D1
+~
+~
+0 -1 2604 10 10 5
+D2
+~
+~
+0 -1 2608 10 10 5
+E
+benches~
+The wooden benches are bolted to the walls with thick leather straps. 
+They are sturdy enough to hold the huge variety of cooking implements and
+food containers.  There are many sealed vials of dried and pickled food,
+sufficient to feed the garrison for many months.
+~
+-1
+S
+
+#2610
+Kitchen Stairwell~
+This simple room is little more than a bare landing between the floors
+above and below.  A huge spiral staircase of stone dominates the chamber,
+leaving only a little room to pass through north or south.  The floors
+seem rather dust-free, as if the area was well travelled, or at the least
+swept on a regular basis.
+~
+~
+33030145 0 9 0
+D0
+~
+~
+0 -1 2611 10 10 5
+D2
+~
+~
+0 -1 2609 10 10 5
+D4
+~
+~
+0 -1 2623 10 10 5
+D5
+~
+~
+0 -1 2651 10 10 5
+-1
+S
+
+#2611
+Northwestern Tower~
+This chamber is obviously a guard tower on the corner of the abbey. 
+Crossletted arrowslits abound on the outward facing walls, and the
+entrance archways both look to be sealable by means of portcullis.  A
+pair of levers by the archways are clearly visible, as are barrels of
+bolts and arrows rimming the walls, and a rack of bows and crossbows. 
+Spiralling upwards, a central staircase heads to the floor above.
+~
+~
+33030145 0 9 0
+D1
+~
+~
+0 -1 2612 10 10 5
+D2
+~
+~
+0 -1 2610 10 10 5
+D4
+~
+~
+0 -1 2624 10 10 5
+-1
+S
+
+#2612
+Hallway~
+~
+~
+33030145 0 9 0
+D1
+~
+~
+0 -1 2613 10 10 5
+D2
+~
+~
+0 -1 2605 10 10 5
+D3
+~
+~
+0 -1 2611 10 10 5
+-1
+S
+
+#2613
+Northeastern Tower~
+This chamber is obviously a guard tower on the corner of the abbey. 
+Crossletted arrowslits abound on the outward facing walls, and the
+entrance archways both look to be sealable by means of portcullis.  A
+pair of levers by the archways are clearly visible, as are barrels of
+bolts and arrows rimming the walls, and a rack of bows and crossbows. 
+Spiralling upwards, a central staircase heads to the floor above.
+~
+~
+33030145 0 9 0
+D2
+~
+~
+0 -1 2614 10 10 5
+D3
+~
+~
+0 -1 2612 10 10 5
+D4
+~
+~
+0 -1 2626 10 10 5
+-1
+S
+
+#2614
+Study~
+This simple room, panelled with oak and floored with a soft red carpet,
+seems to have been set aside for peaceful study and quiet relaxation. 
+The thick oaken doors to the north and the south look as if they would do
+a great deal to keep the noise from other adjoining rooms from
+interfering.  Several sturdy oaken tables and matching chairs are the
+only visible furnishings, barring the candlesticks and torch sconces
+lighting the room with a soft, dim glow.  The centre of the chamber on
+the right hand side shows an open trapdoor, leading downwards.
+~
+[Maflarel] chamber for the knights to study in without disturbing those in the library below
+[Maflarel] book on a table in one of the rextras
+~
+33030145 0 9 0
+D0
+~
+~
+0 -1 2613 10 10 5
+D2
+~
+~
+0 -1 2606 10 10 5
+D5
+~
+~
+0 -1 2650 10 10 5
+-1
+S
+
+#2615
+Stables~
+The scents and aromas of fresh hay and horses permeate the area.  Filled
+with stalls, these stables are set up partially open on the east side, to
+allow for quick mounted exits, as well as providing sufficient protection
+from the elements for the mounted beasts.  The western side of the
+stables has a reinforced oaken door set in it, the wrought iron symbol of
+a downward pointing sword over a rising sun emblazoned on its surface.
+~
+[Maflarel] eastern side of all three stables will be open eventually.. 
+concentrating on temple interiors for now.
+~
+33030145 0 9 0
+D0
+~
+~
+0 -1 2616 10 10 5
+D2
+~
+~
+0 -1 2617 10 10 5
+D3
+~
+~
+0 -1 2606 10 10 5
+-1
+S
+
+#2616
+Stables~
+This section of the stables seems meticulously cleaner than the rest of
+the stables, probably because there are few signs that the horses are put
+to rest.  This section seems to have been set aside for storage - several
+folded saddle blankets, bales of fresh hay, and buckets cover much of the
+floor space, while feed bags, bridles, and other miscellaneous riding
+implements hang on hooks on the northern wall.  The thatched roof
+overhead seems to be in disrepair in places, small holes and several
+spots where it seems evident that the straw is rotting and will need to
+be replaced soon.
+~
+~
+33030145 0 9 0
+D2
+~
+~
+0 -1 2615 10 10 5
+-1
+S
+
+#2617
+Stables~
+The strong stone walls of the abbey rise up to the west, meeting with a
+rougher, more hastily built wall to the south.  Strong posts to the east
+hold up the thatched roof, providing a partial protection for the horses
+in poor weather.  The whole area smells of fresh hay and horse droppings,
+as if the stables are well and often used.  Against the southern wall
+rests a simple wooden pitchfork and wood handled shovel, most likely used
+for mucking out the stables.
+~
+[Maflarel] possible acodes for getting a shovel/pitchfork
+~
+33030145 0 9 0
+D0
+~
+~
+0 -1 2615 10 10 5
+-1
+S
+
+#2618
+Southeastern Tower~
+The staircase spirals in both directions from this squared room, the
+second floor of the guard tower.  Overhanging barbicans make this room
+seem larger than the one below, barrels of oil stocking the room as well
+as crossbow quarrels, bolts, and javelins.  The familiar spikes of raised
+portcullis' poke out through the openings to the archways, levers nearby
+ready to lower them.
+~
+~
+33030145 0 9 0
+D0
+~
+~
+0 -1 2629 10 10 5
+D3
+~
+~
+0 -1 2619 10 10 5
+D4
+~
+~
+0 -1 2633 10 10 5
+D5
+~
+~
+0 -1 2602 10 10 5
+-1
+S
+
+#2619
+Upper Gatehouse~
+The instantly noticable feature about this chamber is the number of large
+holes in the floor.  In fact, upon examination it seems that the holes
+are of similar size, and seem to be dispersed relatively evenly among its
+surface.  Examinging the room further, the reason is obvious; small rocks
+and boulders rest against the walls, ready to be pushed through the
+murder holes should there lower gatehouse be breached.  The room is
+otherwise barren, except for crossletted arrow slits, looking out over
+the main gates.
+~
+[Maflarel] gatehouse with murder holes plenty of rocks.
+~
+33030145 0 9 0
+D1
+~
+~
+0 -1 2618 10 10 5
+D3
+~
+~
+0 -1 2620 10 10 5
+-1
+S
+
+#2620
+Southwestern Tower~
+The staircase spirals in both directions from this squared room, the
+second floor of the guard tower.  Overhanging barbicans make this room
+seem larger than the one below, barrels of oil stocking the room as well
+as crossbow quarrels, bolts, and javelins.  The familiar spikes of raised
+portcullis' poke out through the openings to the archways, levers nearby
+ready to lower them.
+~
+~
+33030145 0 9 0
+D0
+~
+~
+0 -1 2621 10 10 5
+D1
+~
+~
+0 -1 2619 10 10 5
+D4
+~
+~
+0 -1 2635 10 10 5
+D5
+~
+~
+0 -1 2601 10 10 5
+-1
+S
+
+#2621
+Great Hall of Chandros~
+This section of the great all is set with a large number of oaken tables
+and chairs, as if the hall is built for serving over a hundred people. 
+To the east the hall is open, and the temple hall itself can be clearly
+seen over the railed balcony to the east.  Torch sconces ring the walls
+as well as many fine tapestries and paintings, and a large table can be
+clearly seen on a raised platform in the northern end of the hall.
+~
+~
+33030145 0 9 0
+D0
+~
+~
+0 -1 2622 10 10 5
+D2
+~
+~
+0 -1 2620 10 10 5
+-1
+S
+
+#2622
+Great Hall of Chandros~
+The great hall extending out in all directions is a rather regal and
+flamboyant affair.  The walls are rimmed with tapestries, suits of
+armour, and a series of paintings.  The northern end of the hall is
+dominated by a large oaken table, extending across the width of the room,
+which has been built onto a small, two foot tall raised platform.  Behind
+the centre of the table is a large seal hanging on the wall, boldly
+displaying the crest of Chandros.  Beside the crest, partly obscured by a
+large tapestry depicting mounted knights in battle is a small oaken
+service door.  To the east a balcony overlooks the temple hall itself,
+the holy altar of Chandros clearly visible to all.
+~
+~
+33030145 0 9 0
+D0
+~
+~
+0 -1 2623 10 10 5
+D2
+~
+~
+0 -1 2621 10 10 5
+-1
+S
+
+#2623
+Kitchen Staircase~
+~
+~
+33030145 0 9 0
+D0
+~
+~
+0 -1 2624 10 10 5
+D2
+~
+~
+0 -1 2622 10 10 5
+D5
+~
+~
+0 -1 2610 10 10 5
+-1
+S
+
+#2624
+Northwestern Tower~
+The staircase spirals in both directions from this squared room, the
+second floor of the guard tower.  Overhanging barbicans make this room
+seem larger than the one below, barrels of oil stocking the room as well
+as crossbow quarrels, bolts, and javelins.  The familiar spikes of raised
+portcullis' poke out through the openings to the archways, levers nearby
+ready to lower them.
+~
+~
+33030145 0 9 0
+D1
+~
+~
+0 -1 2625 10 10 5
+D2
+~
+~
+0 -1 2623 10 10 5
+D4
+~
+~
+0 -1 2638 10 10 5
+D5
+~
+~
+0 -1 2611 10 10 5
+-1
+S
+
+#2625
+Hallway~
+This room is almost completely bare, aside from the large staircase of
+stone that spirals upwards.  The staircase itself is made of rough
+granite, and spirals in a smooth anticlockwise arc.  The staircase,
+although roughly hewn, seems free of dust as if it, and this area is used
+often.  The only entrances into the chamber, the rooms directly east and
+west, are marked by plain stone archways, the barbed tips of portcullises
+clearly visible poking out from their apex.
+~
+[Maflarel] Spiral staircase leading upwards towards the bell tower
+~
+33030145 0 9 0
+D1
+~
+~
+0 -1 2626 10 10 5
+D3
+~
+~
+0 -1 2624 10 10 5
+D4
+~
+~
+0 -1 2637 10 10 5
+-1
+S
+
+#2626
+Northeastern Tower~
+The staircase spirals in both directions from this squared room, the
+second floor of the guard tower.  Overhanging barbicans make this room
+seem larger than the one below, barrels of oil stocking the room as well
+as crossbow quarrels, bolts, and javelins.  The familiar spikes of raised
+portcullis' poke out through the openings to the archways, levers nearby
+ready to lower them.
+~
+~
+33030145 0 9 0
+D2
+~
+~
+0 -1 2627 10 10 5
+D3
+~
+~
+0 -1 2625 10 10 5
+D4
+~
+~
+0 -1 2636 10 10 5
+D5
+~
+~
+0 -1 2613 10 10 5
+-1
+S
+
+#2627
+Corridor of Contemplation~
+A small wooden cabinet sits beside the reinforced door of oak that
+dominates the western wall.  The cabinet is open and has no lock, and
+seems to contain simple items such as candles, sticks of incense, and oil
+burners.  Opposite the door, a mahogany railing topping a series of iron
+bars makes for a solid balcony that permits view both of the temple hall
+and altar below, but also of the great hall across the way.  The soft
+reddish carpet on the floor is the only other piece of finery furnishing
+these rather cold, drab settings.
+~
+~
+33030145 0 9 0
+D0
+~
+~
+0 -1 2626 10 10 5
+D1
+~
+~
+0 -1 2632 10 10 5
+D2
+~
+~
+0 -1 2628 10 10 5
+-1
+S
+
+#2628
+Corridor of Contemplation~
+Softest carpet of a fine red colour is the only testament to comfort in
+this long corridor.  The western edge of it is rimmed by a balcony of
+well varnished mahogany, which allows a view of the temple hall on the
+lower floor.  A reinforced door of hard oak stands proundly in its frame
+on the eastern wall, flanked on either side by a pair of solid iron torch
+sconces.
+~
+~
+33030145 0 9 0
+D0
+~
+~
+0 -1 2627 10 10 5
+D1
+~
+~
+0 -1 2631 10 10 5
+D2
+~
+~
+0 -1 2629 10 10 5
+-1
+S
+
+#2629
+Corridor of Contemplation~
+A balcony of finely smoothed mahogany runs along the western side of this
+hallway, allowing a magnificent view of the temple floor below.  The
+simple stonework of the floor has been covered in a soft reddish carpet,
+a faintest hint at luxury in the generally drab settings.  The hall is
+otherwise bare, apart from the reinforced oaken door set into the eastern
+wall.
+~
+~
+33030145 0 9 0
+D0
+~
+~
+0 -1 2628 10 10 5
+D1
+~
+~
+0 -1 2630 10 10 5
+D2
+~
+~
+0 -1 2618 10 10 5
+-1
+S
+
+#2630
+Meditation Chamber~
+Lit only by the dim light of a burning candle, this plain stone chamber
+is rather unappealing to the eye.  A small shelf holds the candle and a
+small incense burner in place above the simple straw of a weaved
+meditation mat, the only comfort between the floor and whoever uses this
+room.
+~
+~
+33030145 0 9 0
+D3
+~
+~
+0 -1 2629 10 10 5
+-1
+S
+
+#2631
+Meditation Chamber~
+The stone in this chamber is very rough-hewn, almost as if little care
+was taken to finely smooth or carve it.  A simple square meditation mat
+fashioned of straw is the only thing covering the floors, and beyond that
+the only other discernible objects are a small oil burning lamp and a
+large wax candle.
+~
+~
+33030145 0 9 0
+D3
+~
+~
+0 -1 2628 10 10 5
+-1
+S
+
+#2632
+Meditation Chamber~
+The door opens into a small, square room.  The stone is very rough-hewn,
+as if no attempt to finery was made in this room.  A small incense burner
+and a larger circular candle sit on a small shelf facing north, the only
+objects in the chamber barring a simple meditation mat on the floor.
+~
+~
+33030145 0 9 0
+D3
+~
+~
+0 -1 2627 10 10 5
+-1
+S
+
+#2633
+Southeastern Tower~
+The stairs exit to a battlemented rooftop here, complete with a
+reinforced oaken trapdoor, a wooden beam to bar it with, and a large
+ballista.  The ballista looks to be mounted on a swivelling platform,
+enabling it to aim upwards or downwards, and in all directions, allowing
+it to track any enemy approaching.
+~
+~
+33030145 0 9 0
+D0
+~
+~
+0 -1 2644 10 10 5
+D3
+~
+~
+0 -1 2634 10 10 5
+D5
+~
+~
+0 -1 2618 10 10 5
+-1
+S
+
+#2634
+Southern Battlements~
+The battlements here overlook the main entrance to the abbey, the great
+gates directly to the south.  Stationed atop the machicolated battlements
+here are three large cauldrons, each filled with a dark, viscous
+substance and sitting atop a small pile of firewood.  Ballistae are
+visible guarding the corner towers both to the east and the west, and
+northwards lies an open area and the stench of fresh droppings.
+~
+[Maflarel] cauldrons are boiling oil, for lighting and pouring onto attackers
+~
+33030145 0 9 0
+D0
+~
+~
+0 -1 2647 10 10 5
+D1
+~
+~
+0 -1 2633 10 10 5
+D3
+~
+~
+0 -1 2635 10 10 5
+-1
+S
+
+#2635
+Southwestern Tower~
+The stairs exit to a battlemented rooftop here, complete with a
+reinforced oaken trapdoor, a wooden beam to bar it with, and a large
+ballista.  The ballista looks to be mounted on a swivelling platform,
+enabling it to aim upwards or downwards, and in all directions, allowing
+it to track any enemy approaching.
+~
+~
+33030145 0 9 0
+D0
+~
+~
+0 -1 2641 10 10 5
+D1
+~
+~
+0 -1 2634 10 10 5
+D5
+~
+~
+0 -1 2620 10 10 5
+-1
+S
+
+#2636
+Northeastern Tower~
+The stairs exit to a battlemented rooftop here, complete with a
+reinforced oaken trapdoor, a wooden beam to bar it with, and a large
+ballista.  The ballista looks to be mounted on a swivelling platform,
+enabling it to aim upwards or downwards, and in all directions, allowing
+it to track any enemy approaching.
+~
+~
+33030145 0 9 0
+D2
+~
+~
+0 -1 2642 10 10 5
+D5
+~
+~
+0 -1 2626 10 10 5
+-1
+S
+
+#2637
+Bell Tower Stairwell~
+~
+~
+33030145 0 9 0
+D2
+~
+~
+0 -1 2645 10 10 5
+D4
+~
+~
+0 -1 2648 10 10 5
+D5
+~
+~
+0 -1 2625 10 10 5
+-1
+S
+
+#2638
+Northwestern Tower~
+The stairs exit to a battlemented rooftop here, complete with a
+reinforced oaken trapdoor, a wooden beam to bar it with, and a large
+ballista.  The ballista looks to be mounted on a swivelling platform,
+enabling it to aim upwards or downwards, and in all directions, allowing
+it to track any enemy approaching.
+~
+~
+33030145 0 9 0
+D2
+~
+~
+0 -1 2639 10 10 5
+D5
+~
+~
+0 -1 2624 10 10 5
+-1
+S
+
+#2639
+Western Battlements~
+Under Construction.
+~
+~
+33030145 0 9 0
+D0
+~
+~
+0 -1 2638 10 10 5
+D2
+~
+~
+0 -1 2640 10 10 5
+-1
+S
+
+#2640
+Western Battlements~
+Under Construction.
+~
+~
+33030145 0 9 0
+D0
+~
+~
+0 -1 2639 10 10 5
+D2
+~
+~
+0 -1 2641 10 10 5
+-1
+S
+
+#2641
+Western Battlements~
+~
+~
+33030145 0 9 0
+D0
+~
+~
+0 -1 2640 10 10 5
+D1
+~
+~
+0 -1 2647 10 10 5
+D2
+~
+~
+0 -1 2635 10 10 5
+-1
+S
+
+#2642
+Eastern Battlements~
+It seems as if no attention to comfort was made in the design of these
+battlements; they are obviously very spartan and built solely for
+defensive purposes.  The granite stones are rough and angular, but would
+provide a solid defensive platform for firing arrows or other projectiles
+from.
+~
+~
+33030145 0 9 0
+D0
+~
+~
+0 -1 2636 10 10 5
+D2
+~
+~
+0 -1 2643 10 10 5
+-1
+S
+
+#2643
+Eastern Battlements~
+The cold harsh stone of the battlements stretched out to the north and
+south, lining the side of the abbey with a defensive shield.  Though
+built entirely for protection, the wall provides a magnificent view of
+the plains to the east, and a pair of armoured knights can be seen on
+horseback near the castle walls and stable adjoining, jousting eachother
+with lances.
+~
+~
+33030145 0 9 0
+D0
+~
+~
+0 -1 2642 10 10 5
+D2
+~
+~
+0 -1 2644 10 10 5
+-1
+S
+
+#2644
+Eastern Battlements~
+This section of the eastern wall is rough and scarred, the battlement
+crumbling slightly.  Deep scratches can be visibly seen in parallel in
+the stone of the floor, almost as if made by the claws of some huge beast. 
+Even so, the protective stone barrier looks almost as sturdy as the parts
+neighbouring it.
+~
+~
+33030145 0 9 0
+D0
+~
+~
+0 -1 2643 10 10 5
+D2
+~
+~
+0 -1 2633 10 10 5
+D3
+~
+~
+0 -1 2647 10 10 5
+-1
+S
+
+#2645
+High Priest's Chamber~
+Immediately upon passing through the door, the most dominant feature of
+the room is clear; an imposing oaken desk facing directly towards the
+door.  Behind the desk on the wall hangs a great shield, too large for
+even a troll to wield, emblazoned with the now familiar crest of Chandros. 
+Spread around the room are many personal trophies, a jagged two-handed
+sword, a large feathered wing, and a set of silvery horseshoes.  Off to
+one side, almost forgotten, is a simple oaken bed, tidily made up with
+plain cloth sheets.; 
+~
+[Maflarel] Make the south exit invisible somehow
+[Maflarel] (secret treasure room)
+~
+33030145 0 9 0
+D0
+~
+~
+0 -1 2637 10 10 5
+D2
+~
+~
+0 -1 2646 10 10 5
+-1
+S
+
+#2646
+Secret Treasure Chamber~
+Under Construction.
+~
+~
+33030145 0 9 0
+D0
+~
+~
+0 -1 2645 10 10 5
+-1
+S
+
+#2647
+Aviary of Chandros~
+This central area of the castle looks almost like some kind of staging
+point.  The buttressed tower to the north rises up to an apex containing
+the gazebo-like bell tower, topped with an upside-down bastard sword to
+signify the cross of Chandros.  Built onto the buttresses are a series of
+stone shelves, laden with saddles and tack.  The floor of this area is
+covered with hay, and it seems almost like a stables built onto the top
+of the tower, complete with fresh horse droppings.
+~
+[Maflarel] area is used for the refitting of special mounts.. such as pegasi cavalry
+~
+33030145 0 9 0
+D1
+~
+~
+0 -1 2644 10 10 5
+D2
+~
+~
+0 -1 2634 10 10 5
+D3
+~
+~
+0 -1 2641 10 10 5
+-1
+S
+
+#2648
+Bell Tower Stairwell~
+Under Construction.
+~
+~
+33030145 0 9 0
+D4
+~
+~
+0 -1 2649 10 10 5
+D5
+~
+~
+0 -1 2637 10 10 5
+-1
+S
+
+#2649
+Bell Tower Apex~
+Under Construction.
+~
+~
+33030145 0 9 0
+D5
+~
+~
+0 -1 2648 10 10 5
+-1
+S
+
+#2650
+Library of Chandros~
+The walls of this room are rimmed with oak shelves reaching high up to
+the ceiling, filled to the brim with leather bound tomes.  There seems to
+be little dust on the books or on the rich red carpets, indicating that
+the room is taken good care of.  The southern end of the room contains
+desks and comfortable chairs for quiet reading, while opposite then sits
+a huge mahogany desk, piled high with many books and scroll cases.  A
+small brass sign is affixed to the front of the desk.
+~
+[Maflarel] sign is labelled 'librarian'
+[Maflarel] librarian is a monk, who gets antsy if people not of the faith look at the books too much
+~
+33030145 0 9 0
+D4
+~
+~
+0 -1 2614 10 10 5
+-1
+S
+
+#2651
+Kitchen Basement and Pantry~
+This small dark room is only lit by the light from a single torch sconce,
+and whatever sunlight manages to make it down the stairwell above.  The
+shelved walls contain various type of food, such as sacks of grain, the
+last harvest of vegetables, and a good supply of stale bread trenchers. 
+You can quite clearly notice the evidence of a rat infestation at some
+point...  some crude mousetraps baited with cheese are on the floor, and
+a wicker basket with a coarse blanket in it sits atop a wooden crate near
+the stairwell.
+~
+[Maflarel] wicker basket is for cat... make a housecat mob :)
+~
+33030145 0 9 0
+D1
+~
+~
+0 -1 2652 10 10 5
+D2
+~
+~
+0 -1 2653 10 10 5
+D4
+~
+~
+0 -1 2610 10 10 5
+-1
+S
+
+#2652
+Servants Quarters~
+This simple room is obviously well inhabited.  No less than a dozen beds
+rim the walls, small strongboxes near them to contain personal belongings. 
+By the looks of some of the clothing hanging from the pegs, it seems that
+this is the sleeping area for the servants.  Aprons and sack-cloth smocks
+hang from pegs on the wall, and some shovels and hard leather boots rest
+against the wall near the door.
+~
+~
+33030145 0 9 0
+D3
+~
+~
+0 -1 2651 10 10 5
+-1
+S
+
+#2653
+Wine Cellar~
+This part of the cellar is very dusty, almost as if it was seldom used. 
+Indeed, the only footsteps that can be made out in the dust seem to go to
+the wine racks closest to the door.  The racks of bottles extend all the
+way around the room, though on the opposite side of the doorway rests
+several small barrels of strong smelling, rich beer.
+~
+[Maflarel] bottles dated by age in extra, newest ones closest to door
+~
+33030145 0 9 0
+D0
+~
+~
+0 -1 2651 10 10 5
+-1
+S
+
+#2654
+Armoury~
+Under Construction.
+~
+~
+33030145 0 9 0
+D4
+~
+~
+0 -1 2606 10 10 5
+-1
+S
+
+#0
+

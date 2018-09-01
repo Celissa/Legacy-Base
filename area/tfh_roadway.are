@@ -1,0 +1,1373 @@
+#M2_AREA
+2
+
+Ancient Roadway~
+Azerin~
+Ancient Roadway~
+~
+~
+
+20 0
+0
+1
+#ROOMS
+
+#4450
+Forest Ruins - Ancient Roadway~
+At the base of a crumbling wall, a moss-covered cobbled road begins to
+wind into the forested hills in an easterly direction.  Archways of roses
+flourish across the trail, their thorny vegetation bedecked in soft pink
+flowers.  An intricately carved basin lies overgrown to the north,
+perhaps the remnants of a fountain or bathing pool.  The broken statues
+of aquatic creatures surround it, the weatherworn rock pitted and cracked. 
+Under the onslaught of the tree roots, the ground underfoot is warped and
+buckled, the once grand buildings cast asunder.
+~
+[Guin] Attaches to 4234 westward
+[Estrella] Done.
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 4451 10 10 5
+D3
+~
+~
+0 -1 4234 10 10 5
+E
+carved basin 1 north fountain pool~
+The stone masonry that has gone into the creation of this ornate basin
+would have, in its youth, far surpassed that of other such fountains. 
+The centrepiece that rises from the algae-covered water is now but a
+crumbling chunk of weather-beaten rock, the features having been broken
+off by vandals some time past.  The etched lip of the basin is all that
+hints at the past splendour of this font.
+~
+-1
+S
+
+#4451
+Ancient Roadway Through the Woods~
+Twists of amber colored roots spiral across the forested trail, their
+splayed ends digging into the rich loam of the woodlands.  A squat slab
+of rock lies on the northern side of the trail, one of its chunky ends
+perched upon another cracked stone, perhaps the remnants of a cairn of
+some kind.  Overhead the spears of fir needles thrust skywards, their
+rough bark branches clashing together to form a tunnel of growth.
+~
+[Estrella] Done.
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 4452 10 10 5
+D3
+~
+~
+0 -1 4450 10 10 5
+E
+squat slab 1 northern rock stone cairn~
+Probably the base of a stone cairn, the cracked stone at the bottom seem
+nestled in a small depression, though it is most likely that the fallen
+debris from the forest has, over time, settled around the rock and begun
+the slow process of decomposition.  Another squat slab rests one end on
+the rock, the other end pressing down into the soft forest floor.  A few
+remnant chunks of stone lie half buried beneath a layer of soil,
+indicating that these squared-off slabs once formed a mighty cairn.
+~
+-1
+S
+
+#4452
+Ancient Roadway Through the Woods~
+The tangled masses of trees begin to thin toward the east, a patchwork
+of clover fields replacing the forested hills.  Carried on the wind is
+the distant splash of water, perhaps the trail nearing the coast or
+mountain river.  To the north, a pathway rises sharply through the
+steepening landscape into the Everwinter Mountains, the gray-stone spires
+grim and bare of life.  Underfoot the cobbles of the ancient road allow
+for an easy passage eastward or westward.
+~
+[Guin] Up connects to 47441 - Road to Ebon Citadel.
+[Estrella] Done.
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 4453 10 10 5
+D3
+~
+~
+0 -1 4451 10 10 5
+D4
+~
+~
+0 -1 47441 10 10 5
+E
+1 north pathway~
+A rough path follows the angles and curves of the landscape as it rises
+ever upward into the grim gray mountains known as the Everwinters.  The
+terrain is harsh and the climb long with little to be seen beyond the
+first bend in the path.  Very little grows along the sides of the steep
+trail, the sheer incline providing minimal stability for the hardy plants
+that struggle to survive on the rock-strewn slopes.
+~
+A
+~
+~
+continue;
+~
+E
+to_char~
+@GYou take your first steps on the arduous journey into the heart of the
+mountains.@n 
+~
+E
+to_room~
+@G$n takes $s first steps on the arduous journey into the heart of the
+mountains.@n 
+~
+!
+3 0 16
+980 9 1509949540 3 0
+-1
+S
+
+#4453
+Ancient Roadway Through the Woods~
+Clover and lupins flourish across the rolling foothills of the Everwinter
+Mountains; the cream flowers of the clover and the violaceous bloom of
+the lupins attracting a swarm of tiny insects and bees.  Westwards, a
+pine forest spreads over the mountains edge, the towering trees offering
+shelter to animals and perhaps other more dangerous denizens.  Towards
+the east an ancient cobbled road meanders towards the distant ocean that
+spreads as far as the eye can see.
+~
+[Estrella] Done.
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 4454 10 10 5
+D3
+~
+~
+0 -1 4452 10 10 5
+A
+~
+~
+send_to_room( #lupin,room );
+~
+E
+lupin~
+@mTouched by a slight breeze, the clover and lupins sway in the wind, the
+gentle movements causing the insects and bees to stir from their flowers.@n
+~
+!
+2 150 0
+2289 9 1509949540 3 0
+-1
+S
+
+#4454
+Through the Hills~
+The crumbling path winds through the bracken covered hills that snuggle
+against the Everwinter Mountains.  In the shadows of rocky outcrops, the
+ground appears to be permanently frost-coated, the soil frozen from the
+constant cold.  A stand of white pine trees gather close to the roadside,
+their northern sides bent and bare from the bitter winds.  A scattering
+of standing stones rise from the hill's flank, their moss-covered
+surfaces carved with strange oghams.
+~
+[Estrella] Done.
+[Estrella] oghams say "Beware the Icefinger Woods'
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 4455 10 10 5
+D3
+~
+~
+0 -1 4453 10 10 5
+E
+stones moss-covered carved strange oghams~
+A series of notches and lines have been carefully inscribed into the
+stone surfaces, though over time the grooves have become overgrown with
+dark green moss.  Recently, the moss has been scraped aside, allowing a
+partial view of the ancient runes, though in some places the combination
+of weather and plant roots has caused a faster degradation of the rock
+face, making the entire script difficult, though not impossible, to read.
+~
+A
+read~
+oghams runes~
+act_tochar( #read, ch );
+act_notchar( #rread, ch );
+~
+E
+read~
+@eAfter a few moments studying the ancient oghams, you decipher a few
+words:@n 
+
+@r|> o \|| 0 \| o      > ^/ o      -|| /\ o |\ -|| _/- |-\ o \|      \|| . . <| <_@n
+~
+E
+rread~
+@r$n studies the oghams for a few moments with a bemused look on $s
+face.@n 
+~
+!
+0 0 0
+-1
+S
+
+#4455
+Through the Hills~
+Ducking under an overhang of rock, the ancient trail heads in an easterly
+direction through the erosion-scared foothills of the Everwinter
+Mountains.  In the distance, the wide expanse of the ocean spreads across
+to the horizon, a scattering of islands barely visible.  Scraggy brambles
+and immature raspberry bushes cling to the thin soil beside the road,
+their thorny tendrils able to deter most animals from attempting to eat
+them.  Westwards the roadway descends into a wooded vale.
+~
+[Estrella] Done.
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 4456 10 10 5
+D3
+~
+~
+0 -1 4454 10 10 5
+2526 9 1509949540 3 0
+-1
+S
+
+#4456
+Before a Bridge~
+Bending sharply to the north, the ancient roadway runs to the start of a
+high walled bridge, which spans a mountain ravine, a rushing stream
+pouring down the gorges middle.  Statues of dwarven warriors guard both
+ends of the bridge, a clear indication as to its crafters.  The lack of
+maintenance has apparently made the bridge unsafe, although only a few
+cracks showing on some of the stones.  Beyond the bridge, the roadway
+descends beside the river, the hills becoming gentler and increasingly
+wooded as they spread eastward.  A @Gsign@n is planted in the ground next
+to one of the statues.
+~
+[Estrella] Done.
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 4457 10 10 5
+D3
+~
+~
+0 -1 4455 10 10 5
+E
+statues dwarven warriors~
+Standing tall, with sharpened battle-axes in their hands, the dwarves
+that guard the bridge have been made in the likeness of stout warriors. 
+Over time, the stone slabs from which they were hewn have become chipped
+and weatherworn, their surfaces now a pitted maze of niches hollowed into
+the once smooth rock.
+~
+E
+sign~
+The hastily constructed sign is made from scraps of wood.  It reads:
+@RDanger!  Bridge out!@n 
+~
+-1
+S
+
+#4457
+Upon The Bridge~
+Only the faintest vibrations can be felt through the bridge's solid span,
+the rumbling stream below making little impact on the well-crafted
+structure.  Every stone's surface has been carved with swirling patterns,
+perhaps the mark of the engineer who constructed it.  A scattering of
+lichen and moss grow between the cobbles of the roadway, their fine
+tendrils lying across the worn stone.  Eastwards, the road dips down as
+it continues to run beside the river gorge, its destination perhaps the
+distance coastline.  Beyond the river way, a light woodland spreads, the
+trees a mixture of fir and pines.
+~
+[Estrella] Done.
+[Estrella] random added for water
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 4458 10 10 5
+D2
+~
+~
+0 -1 4456 10 10 5
+E
+lichen moss tendrils~
+With roots lodged firmly between the flagstones, the moss and lichen
+appear to be a permanent fixture on the bridge.  Forming a mottled
+covering over a few of the more pitted stones, the tendrils weave their
+way through the minor depressions, the delicate network of leaves
+protected from most of the footfalls that pass over the bridge.
+~
+A
+~
+~
+send_to_room( #water, room );
+~
+E
+water~
+@BThe rumbling of turbulent waters rise from the ravine below; the
+vibrations caused by the torrent barely noticeable upon the sturdy
+bridge.@n 
+~
+!
+2 150 0
+-1
+S
+
+#4458
+Before a Bridge~
+Statues of dwarven warriors guard the entrance to a single span white
+stone bridge.  The bridge crosses a deep river gorge, which would
+otherwise block passage to the west.  Clumps of moss and lichen coat much
+of the roadway leading to it, although the structure itself appears to be
+in remarkably good condition.  High overhead, an outcrop of rock casts a
+deep shadow across the path; fingers of frost cover the stones coated in
+the gloom.  Southward, the roadway briefly runs beside the river before
+cutting back to the east and entering a fir forest.  Beyond the bridge on
+the western side, the road begins to cut its way across the rugged
+hillside and into the Everwinter Mountains.
+~
+third room of lancers
+[Estrella] Done.
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 4459 10 10 5
+D2
+~
+~
+0 -1 4457 10 10 5
+E
+statues dwarven warriors~
+Standing tall, with sharpened battle-axes in their hands, the dwarves
+that guard the bridge have been made in the likeness of stout warriors. 
+Over time, the stone slabs from which they were hewn have become chipped
+and weatherworn, their surfaces now a pitted maze of niches hollowed into
+the once smooth rock.
+~
+-1
+S
+
+#4459
+Ancient Roadway~
+The narrow cobbled road runs beside the crumbling mountain gorge, the
+cliffs edge dropping down about thirty feet to a splashing stream. 
+Eastwards, a scattering of pine trees begins to cover the landscape until
+they form into a dense forest that extends to the coastal cliffs.  Rugged
+foothills rise up around the roadway, their eroded slops reaching to the
+start of the Everwinter Mountains.  To the west, a white-stone bridge
+spans the ravine, its entrance guarded by the statues of dwarven warriors.
+~
+second room of lancers
+[Estrella] Done.
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 4460 10 10 5
+D3
+~
+~
+0 -1 4458 10 10 5
+A
+~
+~
+send_to_room( #water, room );
+~
+E
+water~
+@BRising from the river that winds through the deep gorge, the sound of
+water splashing against rocks can be heard above the chitter of the
+surrounding forest.@n 
+~
+!
+2 150 0
+-1
+S
+
+#4460
+Ancient Roadway~
+The trail meanders through the craggy hills in an easterly direction; as
+it winds, the landscape changes from the desolate rock and occasional
+thorn bush to more lush woodlands.  Flanking the roadway to the south is
+the scarred remnants of an old landslide, the shale and rubble coated in
+a damp layer of moss and orange-speckled lichen.  Ascending slightly, the
+road to the west runs beside the crumbling side of a mountain gorge, the
+sound of water echoing from far below.
+~
+first room of lancers
+[Estrella] Done.
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 4461 10 10 5
+D3
+~
+~
+0 -1 4459 10 10 5
+E
+1 south scarred remnans landslide shale rubble moss lichen~
+Covering the scar caused by an old landslide, the moss and lichen
+flourish on the exposed hard-packed clay.  The contrast in colour between
+the dark greenish brown moss and the orange-speckled lichen gives the
+rubble an almost piebald appearance, the grey rock occasionally showing
+through a thinner patch of plant tendrils.
+~
+5489 9 1509949540 3 0
+5490 9 1509949540 3 0
+-1
+S
+
+#4461
+Edge of The Icefinger Woods~
+Trees begin to rise around the crumbling cobbled road, their tangled
+roots spreading across the dew-spangled ground. Branches drape downwards
+and meet at the roads center, leaving little space to continue onwards. 
+The fir and pine trees reach about thirty feet in height, their spans at
+least double that in size.  Umbrella ferns and bracken grow under the
+forest's canopy, their mottled foliage camouflaging what lies within.
+~
+[Estrella] Done.
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 4462 10 10 5
+D3
+~
+~
+0 -1 4460 10 10 5
+A
+~
+~
+send_to_room( #wind, room );
+~
+E
+wind~
+@cHauntingly, a cool breeze sifts through the pines and firs, barely
+rustling the foliage as it passes by.@n 
+~
+!
+2 150 0
+-1
+S
+
+#4462
+Icefinger Woods~
+The trees part a little, allowing for an easier passage down the cobbled
+road, only the occasional grasping root crossing the trail.  The splayed
+branches of the pine trees effectively blanket the sky, leaving only
+glimpses of it.  The still air hangs heavy with the sent of pine gum and
+damp, the normally strong mountain winds unable to penetrate the wall of
+wood.  Meandering off in a northerly direction, a particularly large root
+winds through the trunks forming a hazardous path through the thickening
+trees.
+~
+[Guin] Connects to 8500 northward.
+[Guin] Driders North.
+[Estrella] Done.
+[Guin] Done.
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 8500 10 10 5
+D1
+~
+~
+0 -1 4463 10 10 5
+D3
+~
+~
+0 -1 4461 10 10 5
+E
+1 north root path~
+Writhing to and fro, the large root sends out lesser tendrils that twist
+off in random directions.  The main artery continues on a treacherous
+northbound path, its surface scraped and scarred from overuse.
+~
+A
+~
+~
+if( is_player( ch ) ) {
+  if( find_stat( ch, dex ) < 20 ) {
+    if( random( 1,4 ) == 2 ) {
+      act_tochar( #slip, ch, obj );
+      act_notchar( #rslip, ch, obj, mob, sight );
+      position( ch, 6 );
+      end;
+    }
+  }
+}
+continue;
+~
+E
+slip~
+@rAttempting to follow the massive root north, you lose your footing on a
+slippery patch of bark and unceremoniously fall over.@n
+~
+E
+rslip~
+@rAttempting to follow the massive root north, $n loses $s footing on a
+slippery patch of bark and unceremoniously falls over.@n
+~
+E
+to_char~
+@YWith plenty of unceremonious arm waving, you skid along the slippery
+root to the $d.@n 
+~
+E
+to_room~
+@YWith plenty of unceremonious arm waving, $n skids along the slippery
+root to the $d.@n 
+~
+!
+3 0 1
+-1
+S
+
+#4463
+Icefinger Woods~
+An opening in the woodlands has allowed masses of clover and buttercups
+to flourish, the flowers attracting swarms of tiny bees and beetles with
+their nectar.  The remnants of a fallen pine lies at the northern end of
+the clearing, its rotting bark canvassed with purple-capped toadstools
+and umbrella fungi.  The cobbled road winds in an east-west direction,
+each way flanked by the fir and pine trees.
+~
+[Estrella] Done.
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 4464 10 10 5
+D3
+~
+~
+0 -1 4462 10 10 5
+E
+pine 1 northern bark rotting fallen~
+Having lain on the loamy ground for quite some time, the fallen pine is
+now a crumbling mass of worm-eaten wood.  The pale flesh of the trunk
+that lies exposed is riddled with crevices and holes, presumably created
+by the inhabitants of the slowly decaying tree.
+~
+E
+purple-capped purple capped toadstools umbrella fungi~
+Precariously balanced along the length of decaying pine, an almost
+oval-shaped smattering of toadstools and umbrella fungi leach the rich
+nutrients from the soft pulp.  The bright colours of the mushrooms stand
+out amidst the muted creams and yellows of the other prolific plants that
+thrive in this glade.
+~
+-1
+S
+
+#4464
+Icefinger Woods~
+Draping branches of fir trees form a matted canopy above the cobbled
+trail, their dense needles blocking out most of the sunlight.  The
+undergrowth is dominated by mounds of dead branches, ferns and the
+gnarled roots of trees, leaving little space for would-be explorers. 
+Towards the west, the forest opens up into a clover filled clearing, the
+sound of buzzing insects carried on the breeze.  Eastwards, the forest
+continues across the rolling foothills of the Everwinter Mountains.
+~
+[Estrella] Done.
+[Guin] Done.
+~
+167247872 12 9 0
+D1
+gobbles~
+~
+0 -1 4465 10 10 5
+D3
+~
+~
+0 -1 4463 10 10 5
+A
+~
+~
+send_to_room( #breeze, room );
+~
+E
+breeze~
+@CSifting through the treetops, an icy breeze rustles the needles, some
+drifting to the ground as their branches are shaken.@n 
+~
+!
+2 20 0
+-1
+S
+
+#4465
+Icefinger Woods~
+Churned mud coats the lower portion of the closely standing trees.  Many
+of the lower branches of these fir trees hang over the faint trail, their
+prickly needles obstructing the path.
+~
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 4466 10 10 5
+D3
+~
+~
+0 -1 4464 10 10 5
+-1
+S
+
+#4466
+Icefinger Woods~
+Continuing on its winding path, the muddy trail ducks and weaves between
+the trunks of the pines and firs that dominate the forest.  Choking the
+track, needles and twigs poke out of rutted pathway, the uneven ground
+treacherous for the inattentive.
+~
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 4467 10 10 5
+D3
+~
+~
+0 -1 4465 10 10 5
+-1
+S
+
+#4467
+Icefinger Woods~
+Looming fir and pine trees tower of the rutted muddy path, the trail in
+dire need of maintenance.  Low-hanging branches boasting prickly needles
+obstruct what minimal head space there is.
+~
+~
+167247872 12 9 0
+D2
+~
+~
+0 -1 4468 10 10 5
+D3
+~
+~
+0 -1 4466 10 10 5
+-1
+S
+
+#4468
+Icefinger Woods~
+Towering fir trees rise above the roadway, their branches draped in moss
+and silvery spider webs.  Frostferns thrive within the dark recesses of
+the trunks the shade loving plants enjoying the gloom.  The sliver of a
+road cuts east and northwards, its edges blurred by fronds and roots.
+~
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 4467 10 10 5
+D1
+~
+~
+0 -1 4469 10 10 5
+-1
+S
+
+#4469
+Icefinger Woods~
+Blue-bells and frostferns gather around the shadowy roots of the mighty
+pines.  Masses of cobwebs lurk in the twisted canopy of gnarled branches,
+their creators no where to be seen.
+~
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 4470 10 10 5
+D3
+~
+~
+0 -1 4468 10 10 5
+-1
+S
+
+#4470
+Edge of Icefinger Woods~
+The woods begin to break up to the east, replaced by bare rock, grass and
+rolling hills.  The landscape appears to take some time to shake off the
+mantle of the forest and return to a more savory vegetation.
+~
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 4471 10 10 5
+D3
+~
+~
+0 -1 4469 10 10 5
+-1
+S
+
+#4471
+Roadway Across The Hills~
+Mountain beech and fir trees scatter about the rubble stewn hillside,
+their dark green foliage filtering out much of the natural light.  Ferns
+and bracken grow in small clusters about their trunks, the plants
+surviving only in the trees shade.
+~
+~
+167247872 12 9 0
+D1
+~
+~
+0 -1 4472 10 10 5
+D3
+~
+~
+0 -1 4470 10 10 5
+-1
+S
+
+#4472
+Roadway Across The Hills~
+A huge black stone boulder jutts from the ground to the south-east, its
+rough surface poc marked by its volcanic birth.  Clumps of shale sparkle
+with quartz viens around the road, the stacks of rocks offering home to a
+vast amount of skink and gecko.
+~
+~
+167247872 12 9 0
+D0
+~
+~
+0 -1 4473 10 10 5
+D3
+~
+~
+0 -1 4471 10 10 5
+-1
+S
+
+#4473
+Roadway Across The Hills~
+Following the contours of the landscape, the dirt trail meanders this way
+and that, seemingly finding the longest, most awkward path through the
+hills.  Stretching away to the west, a gloomy fir and pine forest cloaks
+the hillside, while pleasant to look at, it does not appear welcoming to
+the traveller.
+~
+~
+167247872 4 9 0
+D0
+~
+~
+0 -1 4474 10 10 5
+D2
+~
+~
+0 -1 4472 10 10 5
+-1
+S
+
+#4474
+Roadway Across The Hills~
+Cutting into the hillside, this crude trail is not much more than an
+animal track.  Loose dirt and stones lay scattered across the path,
+scuffed out of the way by passing feet.
+~
+~
+167247872 4 9 0
+D0
+~
+~
+0 -1 4475 10 10 5
+D2
+~
+~
+0 -1 4473 10 10 5
+-1
+S
+
+#4475
+Roadway Across The Hills~
+Dust and slate pile around the dry roadway, the open wounds of a scarred
+mountain side spilling forth for all to avoid.  A deep fir forest thrives
+to the west, its lush vegetation dominating the landscape.
+~
+~
+167247872 4 9 0
+D2
+~
+~
+0 -1 4474 10 10 5
+D5
+~
+~
+0 -1 4476 10 10 5
+-1
+S
+
+#4476
+Roadway Across The Hills~
+Dust and detritus combine into an uneven floor of the rocky cavern. 
+Shale walls rise above the roadway, the flat stones stacked upon each
+other in a pancake fashion.  Behind them sandstone pillars stretch
+skyward the tops warped into spirals by the desert wind.  In the shadowy
+recesses of the stone ramparts the roadway continues onwards.
+~
+~
+167247872 4 9 0
+D1
+~
+~
+0 -1 4477 10 10 5
+D4
+~
+~
+0 -1 4475 10 10 5
+-1
+S
+
+#4477
+Roadway Across The Hills~
+The road begins to climb into the mountains, the path zigzagging up the
+lower roots of the range.  Southwards a basin of grey-ash colored rocks
+forms into what appears to be a long dry lakebed.  A handful of termite
+nests and thorn trees mark the borders of what would have been the waters
+edge.  Gleaming salt crystals sparkle from the lakes floor.
+~
+~
+167247872 4 9 0
+D1
+~
+~
+0 -1 4478 10 10 5
+D3
+~
+~
+0 -1 4476 10 10 5
+-1
+S
+
+#4478
+Roadway Across The Hills~
+Massive termite nests grow like trees around the dusty red-stone road,
+several of the insect's homes well over ten feet high.  The badlands
+radiate from the roadway, in each direction the majority of the land
+covered in sharp-edged rock formations and sand filled basins.  The
+eastern land appears burn with the sun, the rocks fiery colors where to
+the west the ones under the mountains shadow are more often grey or black
+in hue.  Hills of slate spread southwards, the jumbled heaps left when
+the eroding forces of wind and sun have torn the earth and soft stone
+from them.
+~
+~
+167247872 4 9 0
+D2
+~
+~
+0 -1 4479 10 10 5
+D3
+~
+~
+0 -1 4477 10 10 5
+-1
+S
+
+#4479
+Roadway Across The Hills~
+The road runs through the badland gouges, continuing on its east-west
+passage.  Towards the west the rocks that surround it begin to turn from
+reds, yellows and oranges towards more muted ash and black as the road
+begins to rise into the edge of the mountains.  Mounds of shale lie in
+jumbled heaps across the badlands, some of the stacks reaching fifty feet
+in height.
+~
+~
+167247872 4 9 0
+D0
+~
+~
+0 -1 4478 10 10 5
+D2
+~
+~
+0 -1 4480 10 10 5
+-1
+S
+
+#4480
+Roadway Across The Hills~
+Banded burnt red and dusty orange stones form a border to the north and
+south of the roadway.  The sharp-edged rocks rise to about thirty feet
+above the road, in their shadow sagebrush and thorn trees grow.  Many of
+the rock formations have been sculptured by the wind and sun, several
+dotted with holes that turn the blustering wind into howls and whistles.
+~
+~
+167247872 4 9 0
+D0
+~
+~
+0 -1 4479 10 10 5
+D1
+~
+~
+0 -1 4481 10 10 5
+-1
+S
+
+#4481
+Roadway Across The Hills~
+Pancake rocks lie stacked upon each other, the shadowed gaps between them
+filled with scraggy sagebrush and snake holes.  The road winds across the
+arid lands heading in an east-west direction, its boarders marked by the
+occasional smooth white-washed stone, many of which have begun to fade
+into the background rubble.  At several points the road disappears into
+the dust and stones of the badland plateau.
+~
+~
+167247872 4 9 0
+D1
+~
+~
+0 -1 4482 10 10 5
+D3
+~
+~
+0 -1 4480 10 10 5
+-1
+S
+
+#4482
+Hills End - Light Woods~
+A jagged rim of rock rises to the north like the teeth of a carnivore. 
+The yellow stone has been chiseled from years of erosion, turning them to
+fine points.  Broken plateaus of rubble form shelves to the west and
+south, patches of stand form between them like pools in a tidal reef. 
+The roadway cuts westwards through a gorge heading towards the towering
+mountains and eastwards towards undulating hills.
+~
+~
+167247872 4 9 0
+D1
+~
+~
+0 -1 4483 10 10 5
+D3
+~
+~
+0 -1 4481 10 10 5
+-1
+S
+
+#4483
+Roadway Through Light Woods~
+Sparsely spread beech trees filter the light, casting dappled shadows
+across the ground.  Serving as a highway for woodland creatures, the
+tangled canopy arches overhead.  A few broken limbs have been dragged off
+the path, leaving the ground scraped clear of debris.
+~
+~
+167247872 4 9 0
+D1
+~
+~
+0 -1 4484 10 10 5
+D3
+~
+~
+0 -1 4482 10 10 5
+-1
+S
+
+#4484
+Roadway Through Light Woods~
+Mountain beech trees cluster close together, their branches mingling
+overhead.  Winding between the moss-covered tree trunks, the path weaves
+its way through the light, verdant forest.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 4485 10 10 5
+D3
+~
+~
+0 -1 4483 10 10 5
+-1
+S
+
+#4485
+Roadway Through Light Woods~
+Protruding from the loamy soil, the roots of these mountain beeches
+provide a sheltered alcove for small ferns and wild flowers.  A gentle
+breeze rustles the leaves of the canopy overhead, filling the forest with
+the constant bustle of woodland life.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 4486 10 10 5
+D3
+~
+~
+0 -1 4484 10 10 5
+-1
+S
+
+#4486
+Roadway - Edge of The Woods~
+Mountain beech trees grow close together, their branches forming a
+tangled canopy that allows small birds and other shy wildlife a sheltered
+home.  Ferns and wild flowers grow about their roots, the splash of color
+a welcome break from the drab brown and greens of the forest.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 4487 10 10 5
+D3
+~
+~
+0 -1 4485 10 10 5
+-1
+S
+
+#4487
+Roadway - Grass And Beech~
+The last remaining beech trees start to dissapear from the growing
+grasslands, the land becoming too dry and salty for the trees liking. 
+Westwards the roadway climbs onwards into the light woods, beyond the
+beech trees bare hills rise to the foot of the massive Everwinter Range.
+~
+~
+167247872 0 9 0
+D3
+~
+~
+0 -1 4486 10 10 5
+D5
+~
+~
+0 -1 4488 10 10 5
+-1
+S
+
+#4488
+Roadway Across The Plains~
+The road begins to climb into the rocky hills, the grassland quickly
+replaced by a light woods.  Eastwards the road winds onwards across the
+grasslands and towards the sea.
+~
+[Zuig] planes should be plains - unless transdimensional.
+~
+167247872 2 9 0
+D1
+~
+~
+0 -1 4489 10 10 5
+D4
+~
+~
+0 -1 4487 10 10 5
+-1
+S
+
+#4489
+Roadway Across The Plains~
+The burnt out remains of a cluster of houses gather around the roadway. 
+Scorched thatching and cinder-coated beams lies scattered across the
+ground, a few hack marks in some of the timbers.
+~
+[Zuig] planes should be plains - unless transdimensional.
+~
+167247872 2 9 0
+D1
+~
+~
+0 -1 4490 10 10 5
+D3
+~
+~
+0 -1 4488 10 10 5
+-1
+S
+
+#4490
+Roadway Across The Plains~
+A waterbed runs beside the roadway, its rubble-filled bottom stained with
+dried algae and shriveled waterweeds.  A few stagnant pools spread about
+the northern bank, the last remnants of a reasonable sized river.  The
+roadway cuts westwards across the river where the exposed rocks review a
+shallow ford.
+~
+[Zuig] planes should be plains - unless transdimensional.
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 4491 10 10 5
+D3
+~
+~
+0 -1 4489 10 10 5
+-1
+S
+
+#4491
+Roadway Across The Plains~
+The road passes under the branches of a lightning scared oak, the
+blacking trunk split near in twain and its insides turned from wood to
+charcoal.  The smell of ozone still hangs in the air around the tree.  A
+few slender saplings sprout around the dead tree, the young oaks racing
+to take the place of the fallen giant.
+~
+[Zuig] planes should be plains - unless transdimensional.
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 4492 10 10 5
+D3
+~
+~
+0 -1 4490 10 10 5
+-1
+S
+
+#4492
+Roadway Across The Plains~
+Fields of grass and hemlock stretch across the rolling hills, the mottled
+greens and browns of their vegetation swaying in a light breeze.  A
+black-stone bridge spans a stream to the southeast; the fast-following
+water flaked by stands of rushes.  Southwards the land dips steeply
+downwards, forming into a forest-filled valley.
+~
+[Zuig] planes should be plains - unless transdimensional.
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 4493 10 10 5
+D3
+~
+~
+0 -1 4491 10 10 5
+-1
+S
+
+#4493
+Roadway Across The Plains~
+Young mountain beechs grow around and through the muddy trail, the
+churned path dried somewhat by their grasping roots.  Westwards the road
+begins a long wind towards the mountains, a scattering of light forests
+standing before the alpine reaches.
+~
+[Zuig] planes should be plains - unless transdimensional.
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 4494 10 10 5
+D3
+~
+~
+0 -1 4492 10 10 5
+-1
+S
+
+#4494
+Roadway Across The Plains~
+Winding through the low hills the roadway cuts in a north-south direction. 
+Dried grass gathers around the roots of flanking oak trees, their dappled
+foliage shadowing the roadway.  Towards the west a great range of
+mountains stretches, the high peaks caped with a sliver of ice and snow. 
+The mountains bend northwards and westwards forming an encircling wall of
+stone that the valley nestles in.
+~
+[Zuig] planes should be plains - unless transdimensional.
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 4495 10 10 5
+D3
+~
+~
+0 -1 4493 10 10 5
+-1
+S
+
+#4495
+Roadway Across The Plains~
+A dry river bed cuts down from the western hills, its bottom filled with
+rocks and rubble but not a drop of water.  The road meanders southwards
+its surface more liquid the the dusty riverbed.
+~
+[Zuig] planes should be plains - unless transdimensional.
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 4496 10 10 5
+D2
+~
+~
+0 -1 4494 10 10 5
+-1
+S
+
+#4496
+Roadway Across The Plains~
+Elephant grass and wire-weed grow together around the muddy track, the
+towering grasses offering a touch of shade to the exposed road.  Rocks
+and termite mounds rise amongst them, the stones a left over from ancient
+volcanic activity, the mounds much more recent.
+~
+[Zuig] planes should be plains - unless transdimensional.
+~
+167247872 0 9 0
+D0
+~
+~
+0 -1 4497 10 10 5
+D2
+~
+~
+0 -1 4495 10 10 5
+-1
+S
+
+#4497
+Roadway Coastal Shrub~
+Termite mounds rise through the grasslands, each of them over eight foot
+Southwards the roadway continues onwards, heading for the growing
+mountains and deep forests.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 4498 10 10 5
+D2
+~
+~
+0 -1 4496 10 10 5
+-1
+S
+
+#4498
+Roadway Coastal Shrub~
+Sagebush and thorn brushes sprout around the edge of a muddy road, its
+uneven surface churning eastwards and westwards.  Forested hills rise to
+the west, the low hills slowly transforming into a giant mountain range
+further onwards.
+~
+[Zuig] coastal shrub
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 4499 10 10 5
+D3
+~
+~
+0 -1 4497 10 10 5
+-1
+S
+
+#4499
+Before A New Settlement~
+A split trunk of wood has been propped up against a stone, burnt into its
+rings are the words 'Zirnath - city of the free people".  Scrawled under
+that in crude handwriting is "If its free, stop taxing me!" A muddy road
+heads westwards while a fine dwarven road, crafted from gleaming
+cobblestones heads eastwards.
+~
+~
+167247872 0 9 0
+D1
+~
+~
+0 -1 150000 10 10 5
+D3
+~
+~
+0 -1 4498 10 10 5
+2642 9 1509949540 3 0
+2642 9 1509949540 3 0
+4435 17 1509949540 -2 0
+-1
+S
+
+#0
+
